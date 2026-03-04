@@ -123,25 +123,6 @@ client = Client(
 )
 ```
 
-## Development
-
-### Regenerating the SDK
-
-The SDK is auto-generated from the Fiber AI OpenAPI spec. To regenerate:
-
-```bash
-# Install the generator
-pip install openapi-python-client
-
-# Run the generate script
-./scripts/generate.sh
-```
-
-### Requirements
-
-- Python 3.9+
-- [openapi-python-client](https://github.com/openapi-generators/openapi-python-client) (for code generation)
-
 ## Links
 
 - [Fiber AI](https://fiber.ai) — Main website
