@@ -1,0 +1,7 @@
+from enum import IntEnum
+
+class TextToCompanySearchParamsResponse200OutputSearchParamsEmployeeCountV2Type0UpperBoundInclusiveType7(IntEnum):
+    VALUE_5000 = 5000
+
+    def __str__(self) -> str:
+        return str(self.value)

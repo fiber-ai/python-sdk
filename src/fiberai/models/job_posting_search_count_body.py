@@ -1,0 +1,90 @@
+from collections.abc import Mapping
+from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+
+from attrs import define as _attrs_define
+from attrs import field as _attrs_field
+
+from ..types import UNSET, Unset
+
+from typing import cast
+
+if TYPE_CHECKING:
+  from ..models.job_posting_search_count_body_search_params import JobPostingSearchCountBodySearchParams
+
+
+
+
+
+T = TypeVar("T", bound="JobPostingSearchCountBody")
+
+
+
+@_attrs_define
+class JobPostingSearchCountBody:
+    """ 
+        Attributes:
+            api_key (str): Your Fiber API key
+            search_params (JobPostingSearchCountBodySearchParams): Job search filter parameters
+     """
+
+    api_key: str
+    search_params: 'JobPostingSearchCountBodySearchParams'
+    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+
+
+
+
+
+    def to_dict(self) -> dict[str, Any]:
+        from ..models.job_posting_search_count_body_search_params import JobPostingSearchCountBodySearchParams
+        api_key = self.api_key
+
+        search_params = self.search_params.to_dict()
+
+
+        field_dict: dict[str, Any] = {}
+        field_dict.update(self.additional_properties)
+        field_dict.update({
+            "apiKey": api_key,
+            "searchParams": search_params,
+        })
+
+        return field_dict
+
+
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.job_posting_search_count_body_search_params import JobPostingSearchCountBodySearchParams
+        d = dict(src_dict)
+        api_key = d.pop("apiKey")
+
+        search_params = JobPostingSearchCountBodySearchParams.from_dict(d.pop("searchParams"))
+
+
+
+
+        job_posting_search_count_body = cls(
+            api_key=api_key,
+            search_params=search_params,
+        )
+
+
+        job_posting_search_count_body.additional_properties = d
+        return job_posting_search_count_body
+
+    @property
+    def additional_keys(self) -> list[str]:
+        return list(self.additional_properties.keys())
+
+    def __getitem__(self, key: str) -> Any:
+        return self.additional_properties[key]
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        self.additional_properties[key] = value
+
+    def __delitem__(self, key: str) -> None:
+        del self.additional_properties[key]
+
+    def __contains__(self, key: str) -> bool:
+        return key in self.additional_properties

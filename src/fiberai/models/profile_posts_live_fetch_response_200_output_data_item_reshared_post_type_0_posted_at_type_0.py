@@ -1,0 +1,111 @@
+from collections.abc import Mapping
+from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+
+from attrs import define as _attrs_define
+from attrs import field as _attrs_field
+
+from ..types import UNSET, Unset
+
+from ..types import UNSET, Unset
+from typing import cast, Union
+from typing import Union
+
+
+
+
+
+
+T = TypeVar("T", bound="ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0PostedAtType0")
+
+
+
+@_attrs_define
+class ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0PostedAtType0:
+    """ 
+        Attributes:
+            no_later_than (Union[None, Unset, str]):
+            no_earlier_than (Union[None, Unset, str]):
+     """
+
+    no_later_than: Union[None, Unset, str] = UNSET
+    no_earlier_than: Union[None, Unset, str] = UNSET
+    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+
+
+
+
+
+    def to_dict(self) -> dict[str, Any]:
+        no_later_than: Union[None, Unset, str]
+        if isinstance(self.no_later_than, Unset):
+            no_later_than = UNSET
+        else:
+            no_later_than = self.no_later_than
+
+        no_earlier_than: Union[None, Unset, str]
+        if isinstance(self.no_earlier_than, Unset):
+            no_earlier_than = UNSET
+        else:
+            no_earlier_than = self.no_earlier_than
+
+
+        field_dict: dict[str, Any] = {}
+        field_dict.update(self.additional_properties)
+        field_dict.update({
+        })
+        if no_later_than is not UNSET:
+            field_dict["noLaterThan"] = no_later_than
+        if no_earlier_than is not UNSET:
+            field_dict["noEarlierThan"] = no_earlier_than
+
+        return field_dict
+
+
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        d = dict(src_dict)
+        def _parse_no_later_than(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        no_later_than = _parse_no_later_than(d.pop("noLaterThan", UNSET))
+
+
+        def _parse_no_earlier_than(data: object) -> Union[None, Unset, str]:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(Union[None, Unset, str], data)
+
+        no_earlier_than = _parse_no_earlier_than(d.pop("noEarlierThan", UNSET))
+
+
+        profile_posts_live_fetch_response_200_output_data_item_reshared_post_type_0_posted_at_type_0 = cls(
+            no_later_than=no_later_than,
+            no_earlier_than=no_earlier_than,
+        )
+
+
+        profile_posts_live_fetch_response_200_output_data_item_reshared_post_type_0_posted_at_type_0.additional_properties = d
+        return profile_posts_live_fetch_response_200_output_data_item_reshared_post_type_0_posted_at_type_0
+
+    @property
+    def additional_keys(self) -> list[str]:
+        return list(self.additional_properties.keys())
+
+    def __getitem__(self, key: str) -> Any:
+        return self.additional_properties[key]
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        self.additional_properties[key] = value
+
+    def __delitem__(self, key: str) -> None:
+        del self.additional_properties[key]
+
+    def __contains__(self, key: str) -> bool:
+        return key in self.additional_properties
