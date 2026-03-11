@@ -1,161 +1,200 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_academic_qualification_type_0_item import (
+    KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemAcademicQualificationType0Item,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_employment_type_type_0_item import (
+    KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemEmploymentTypeType0Item,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_job_function_type_0_item import (
+    KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemJobFunctionType0Item,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_seniority_type_1 import (
+    KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_seniority_type_2_type_1 import (
+    KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType2Type1,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_seniority_type_3_type_1 import (
+    KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType3Type1,
+)
 from ..types import UNSET, Unset
-
-from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_academic_qualification_type_0_item import KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemAcademicQualificationType0Item
-from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_employment_type_type_0_item import KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemEmploymentTypeType0Item
-from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_job_function_type_0_item import KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemJobFunctionType0Item
-from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_seniority_type_1 import KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1
-from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_seniority_type_2_type_1 import KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType2Type1
-from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_seniority_type_3_type_1 import KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType3Type1
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0 import KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0
-
-
-
+    from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0 import (
+        KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,
+    )
 
 
 T = TypeVar("T", bound="KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0Item")
 
 
-
 @_attrs_define
 class KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0Item:
-    """ 
-        Attributes:
-            company_details
-                (Union['KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0', None,
-                Unset]):
-            crunchbase_slug (Union[None, Unset, str]):
-            linkedin_company_id (Union[None, Unset, str]):
-            is_current (Union[None, Unset, bool]):
-            company_name (Union[None, Unset, str]):
-            locality (Union[None, Unset, str]):
-            start_date (Union[None, Unset, str]):
-            end_date (Union[None, Unset, str]):
-            summary (Union[None, Unset, str]):
-            title (Union[None, Unset, str]):
-            seniority (Union[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1,
-                KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType2Type1,
-                KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType3Type1, None, Unset]):
-            job_function (Union[None, Unset,
-                list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemJobFunctionType0Item]]):
-            employment_type (Union[None, Unset,
-                list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemEmploymentTypeType0Item]]):
-            academic_qualification (Union[None, Unset, list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperienc
-                esType0ItemAcademicQualificationType0Item]]):
-            company_start_date (Union[None, Unset, str]):
-            company_end_date (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        company_details (KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0
+            | None | Unset):
+        crunchbase_slug (None | str | Unset):
+        linkedin_company_id (None | str | Unset):
+        is_current (bool | None | Unset):
+        company_name (None | str | Unset):
+        locality (None | str | Unset):
+        start_date (None | str | Unset):
+        end_date (None | str | Unset):
+        summary (None | str | Unset):
+        title (None | str | Unset):
+        seniority (KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1 |
+            KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType2Type1 |
+            KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType3Type1 | None | Unset):
+        job_function
+            (list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemJobFunctionType0Item] | None |
+            Unset):
+        employment_type
+            (list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemEmploymentTypeType0Item] | None
+            | Unset):
+        academic_qualification
+            (list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemAcademicQualificationType0Item]
+            | None | Unset):
+        company_start_date (None | str | Unset):
+        company_end_date (None | str | Unset):
+    """
 
-    company_details: Union['KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0', None, Unset] = UNSET
-    crunchbase_slug: Union[None, Unset, str] = UNSET
-    linkedin_company_id: Union[None, Unset, str] = UNSET
-    is_current: Union[None, Unset, bool] = UNSET
-    company_name: Union[None, Unset, str] = UNSET
-    locality: Union[None, Unset, str] = UNSET
-    start_date: Union[None, Unset, str] = UNSET
-    end_date: Union[None, Unset, str] = UNSET
-    summary: Union[None, Unset, str] = UNSET
-    title: Union[None, Unset, str] = UNSET
-    seniority: Union[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1, KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType2Type1, KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType3Type1, None, Unset] = UNSET
-    job_function: Union[None, Unset, list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemJobFunctionType0Item]] = UNSET
-    employment_type: Union[None, Unset, list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemEmploymentTypeType0Item]] = UNSET
-    academic_qualification: Union[None, Unset, list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemAcademicQualificationType0Item]] = UNSET
-    company_start_date: Union[None, Unset, str] = UNSET
-    company_end_date: Union[None, Unset, str] = UNSET
+    company_details: (
+        KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0 | None | Unset
+    ) = UNSET
+    crunchbase_slug: None | str | Unset = UNSET
+    linkedin_company_id: None | str | Unset = UNSET
+    is_current: bool | None | Unset = UNSET
+    company_name: None | str | Unset = UNSET
+    locality: None | str | Unset = UNSET
+    start_date: None | str | Unset = UNSET
+    end_date: None | str | Unset = UNSET
+    summary: None | str | Unset = UNSET
+    title: None | str | Unset = UNSET
+    seniority: (
+        KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1
+        | KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType2Type1
+        | KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType3Type1
+        | None
+        | Unset
+    ) = UNSET
+    job_function: (
+        list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemJobFunctionType0Item]
+        | None
+        | Unset
+    ) = UNSET
+    employment_type: (
+        list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemEmploymentTypeType0Item]
+        | None
+        | Unset
+    ) = UNSET
+    academic_qualification: (
+        list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemAcademicQualificationType0Item]
+        | None
+        | Unset
+    ) = UNSET
+    company_start_date: None | str | Unset = UNSET
+    company_end_date: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0 import KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0
-        company_details: Union[None, Unset, dict[str, Any]]
+        from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0 import (
+            KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,
+        )
+
+        company_details: dict[str, Any] | None | Unset
         if isinstance(self.company_details, Unset):
             company_details = UNSET
-        elif isinstance(self.company_details, KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0):
+        elif isinstance(
+            self.company_details,
+            KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,
+        ):
             company_details = self.company_details.to_dict()
         else:
             company_details = self.company_details
 
-        crunchbase_slug: Union[None, Unset, str]
+        crunchbase_slug: None | str | Unset
         if isinstance(self.crunchbase_slug, Unset):
             crunchbase_slug = UNSET
         else:
             crunchbase_slug = self.crunchbase_slug
 
-        linkedin_company_id: Union[None, Unset, str]
+        linkedin_company_id: None | str | Unset
         if isinstance(self.linkedin_company_id, Unset):
             linkedin_company_id = UNSET
         else:
             linkedin_company_id = self.linkedin_company_id
 
-        is_current: Union[None, Unset, bool]
+        is_current: bool | None | Unset
         if isinstance(self.is_current, Unset):
             is_current = UNSET
         else:
             is_current = self.is_current
 
-        company_name: Union[None, Unset, str]
+        company_name: None | str | Unset
         if isinstance(self.company_name, Unset):
             company_name = UNSET
         else:
             company_name = self.company_name
 
-        locality: Union[None, Unset, str]
+        locality: None | str | Unset
         if isinstance(self.locality, Unset):
             locality = UNSET
         else:
             locality = self.locality
 
-        start_date: Union[None, Unset, str]
+        start_date: None | str | Unset
         if isinstance(self.start_date, Unset):
             start_date = UNSET
         else:
             start_date = self.start_date
 
-        end_date: Union[None, Unset, str]
+        end_date: None | str | Unset
         if isinstance(self.end_date, Unset):
             end_date = UNSET
         else:
             end_date = self.end_date
 
-        summary: Union[None, Unset, str]
+        summary: None | str | Unset
         if isinstance(self.summary, Unset):
             summary = UNSET
         else:
             summary = self.summary
 
-        title: Union[None, Unset, str]
+        title: None | str | Unset
         if isinstance(self.title, Unset):
             title = UNSET
         else:
             title = self.title
 
-        seniority: Union[None, Unset, str]
+        seniority: None | str | Unset
         if isinstance(self.seniority, Unset):
             seniority = UNSET
-        elif isinstance(self.seniority, KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1):
+        elif isinstance(
+            self.seniority, KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1
+        ):
             seniority = self.seniority.value
-        elif isinstance(self.seniority, KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType2Type1):
+        elif isinstance(
+            self.seniority,
+            KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType2Type1,
+        ):
             seniority = self.seniority.value
-        elif isinstance(self.seniority, KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType3Type1):
+        elif isinstance(
+            self.seniority,
+            KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType3Type1,
+        ):
             seniority = self.seniority.value
         else:
             seniority = self.seniority
 
-        job_function: Union[None, Unset, list[str]]
+        job_function: list[str] | None | Unset
         if isinstance(self.job_function, Unset):
             job_function = UNSET
         elif isinstance(self.job_function, list):
@@ -164,11 +203,10 @@ class KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0Ite
                 job_function_type_0_item = job_function_type_0_item_data.value
                 job_function.append(job_function_type_0_item)
 
-
         else:
             job_function = self.job_function
 
-        employment_type: Union[None, Unset, list[str]]
+        employment_type: list[str] | None | Unset
         if isinstance(self.employment_type, Unset):
             employment_type = UNSET
         elif isinstance(self.employment_type, list):
@@ -177,11 +215,10 @@ class KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0Ite
                 employment_type_type_0_item = employment_type_type_0_item_data.value
                 employment_type.append(employment_type_type_0_item)
 
-
         else:
             employment_type = self.employment_type
 
-        academic_qualification: Union[None, Unset, list[str]]
+        academic_qualification: list[str] | None | Unset
         if isinstance(self.academic_qualification, Unset):
             academic_qualification = UNSET
         elif isinstance(self.academic_qualification, list):
@@ -190,27 +227,24 @@ class KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0Ite
                 academic_qualification_type_0_item = academic_qualification_type_0_item_data.value
                 academic_qualification.append(academic_qualification_type_0_item)
 
-
         else:
             academic_qualification = self.academic_qualification
 
-        company_start_date: Union[None, Unset, str]
+        company_start_date: None | str | Unset
         if isinstance(self.company_start_date, Unset):
             company_start_date = UNSET
         else:
             company_start_date = self.company_start_date
 
-        company_end_date: Union[None, Unset, str]
+        company_end_date: None | str | Unset
         if isinstance(self.company_end_date, Unset):
             company_end_date = UNSET
         else:
             company_end_date = self.company_end_date
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if company_details is not UNSET:
             field_dict["company_details"] = company_details
         if crunchbase_slug is not UNSET:
@@ -246,13 +280,21 @@ class KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0Ite
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0 import KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0
+        from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0 import (
+            KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,
+        )
+
         d = dict(src_dict)
-        def _parse_company_details(data: object) -> Union['KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0', None, Unset]:
+
+        def _parse_company_details(
+            data: object,
+        ) -> (
+            KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -260,109 +302,112 @@ class KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0Ite
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                company_details_type_0 = KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0.from_dict(data)
-
-
+                company_details_type_0 = KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0.from_dict(
+                    data
+                )
 
                 return company_details_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0', None, Unset], data)
+            return cast(
+                KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0
+                | None
+                | Unset,
+                data,
+            )
 
         company_details = _parse_company_details(d.pop("company_details", UNSET))
 
-
-        def _parse_crunchbase_slug(data: object) -> Union[None, Unset, str]:
+        def _parse_crunchbase_slug(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         crunchbase_slug = _parse_crunchbase_slug(d.pop("crunchbase_slug", UNSET))
 
-
-        def _parse_linkedin_company_id(data: object) -> Union[None, Unset, str]:
+        def _parse_linkedin_company_id(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         linkedin_company_id = _parse_linkedin_company_id(d.pop("linkedin_company_id", UNSET))
 
-
-        def _parse_is_current(data: object) -> Union[None, Unset, bool]:
+        def _parse_is_current(data: object) -> bool | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, bool], data)
+            return cast(bool | None | Unset, data)
 
         is_current = _parse_is_current(d.pop("is_current", UNSET))
 
-
-        def _parse_company_name(data: object) -> Union[None, Unset, str]:
+        def _parse_company_name(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         company_name = _parse_company_name(d.pop("company_name", UNSET))
 
-
-        def _parse_locality(data: object) -> Union[None, Unset, str]:
+        def _parse_locality(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         locality = _parse_locality(d.pop("locality", UNSET))
 
-
-        def _parse_start_date(data: object) -> Union[None, Unset, str]:
+        def _parse_start_date(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         start_date = _parse_start_date(d.pop("start_date", UNSET))
 
-
-        def _parse_end_date(data: object) -> Union[None, Unset, str]:
+        def _parse_end_date(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         end_date = _parse_end_date(d.pop("end_date", UNSET))
 
-
-        def _parse_summary(data: object) -> Union[None, Unset, str]:
+        def _parse_summary(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         summary = _parse_summary(d.pop("summary", UNSET))
 
-
-        def _parse_title(data: object) -> Union[None, Unset, str]:
+        def _parse_title(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         title = _parse_title(d.pop("title", UNSET))
 
-
-        def _parse_seniority(data: object) -> Union[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1, KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType2Type1, KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType3Type1, None, Unset]:
+        def _parse_seniority(
+            data: object,
+        ) -> (
+            KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1
+            | KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType2Type1
+            | KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -370,39 +415,51 @@ class KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0Ite
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                seniority_type_1 = KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1(data)
-
-
+                seniority_type_1 = (
+                    KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1(data)
+                )
 
                 return seniority_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                seniority_type_2_type_1 = KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType2Type1(data)
-
-
+                seniority_type_2_type_1 = (
+                    KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType2Type1(data)
+                )
 
                 return seniority_type_2_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                seniority_type_3_type_1 = KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType3Type1(data)
-
-
+                seniority_type_3_type_1 = (
+                    KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType3Type1(data)
+                )
 
                 return seniority_type_3_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1, KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType2Type1, KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType3Type1, None, Unset], data)
+            return cast(
+                KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1
+                | KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType2Type1
+                | KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         seniority = _parse_seniority(d.pop("seniority", UNSET))
 
-
-        def _parse_job_function(data: object) -> Union[None, Unset, list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemJobFunctionType0Item]]:
+        def _parse_job_function(
+            data: object,
+        ) -> (
+            list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemJobFunctionType0Item]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -412,22 +469,34 @@ class KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0Ite
                     raise TypeError()
                 job_function_type_0 = []
                 _job_function_type_0 = data
-                for job_function_type_0_item_data in (_job_function_type_0):
-                    job_function_type_0_item = KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemJobFunctionType0Item(job_function_type_0_item_data)
-
-
+                for job_function_type_0_item_data in _job_function_type_0:
+                    job_function_type_0_item = (
+                        KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemJobFunctionType0Item(
+                            job_function_type_0_item_data
+                        )
+                    )
 
                     job_function_type_0.append(job_function_type_0_item)
 
                 return job_function_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemJobFunctionType0Item]], data)
+            return cast(
+                list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemJobFunctionType0Item]
+                | None
+                | Unset,
+                data,
+            )
 
         job_function = _parse_job_function(d.pop("job_function", UNSET))
 
-
-        def _parse_employment_type(data: object) -> Union[None, Unset, list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemEmploymentTypeType0Item]]:
+        def _parse_employment_type(
+            data: object,
+        ) -> (
+            list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemEmploymentTypeType0Item]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -437,22 +506,34 @@ class KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0Ite
                     raise TypeError()
                 employment_type_type_0 = []
                 _employment_type_type_0 = data
-                for employment_type_type_0_item_data in (_employment_type_type_0):
-                    employment_type_type_0_item = KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemEmploymentTypeType0Item(employment_type_type_0_item_data)
-
-
+                for employment_type_type_0_item_data in _employment_type_type_0:
+                    employment_type_type_0_item = KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemEmploymentTypeType0Item(
+                        employment_type_type_0_item_data
+                    )
 
                     employment_type_type_0.append(employment_type_type_0_item)
 
                 return employment_type_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemEmploymentTypeType0Item]], data)
+            return cast(
+                list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemEmploymentTypeType0Item]
+                | None
+                | Unset,
+                data,
+            )
 
         employment_type = _parse_employment_type(d.pop("employment_type", UNSET))
 
-
-        def _parse_academic_qualification(data: object) -> Union[None, Unset, list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemAcademicQualificationType0Item]]:
+        def _parse_academic_qualification(
+            data: object,
+        ) -> (
+            list[
+                KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemAcademicQualificationType0Item
+            ]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -462,40 +543,44 @@ class KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0Ite
                     raise TypeError()
                 academic_qualification_type_0 = []
                 _academic_qualification_type_0 = data
-                for academic_qualification_type_0_item_data in (_academic_qualification_type_0):
-                    academic_qualification_type_0_item = KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemAcademicQualificationType0Item(academic_qualification_type_0_item_data)
-
-
+                for academic_qualification_type_0_item_data in _academic_qualification_type_0:
+                    academic_qualification_type_0_item = KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemAcademicQualificationType0Item(
+                        academic_qualification_type_0_item_data
+                    )
 
                     academic_qualification_type_0.append(academic_qualification_type_0_item)
 
                 return academic_qualification_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemAcademicQualificationType0Item]], data)
+            return cast(
+                list[
+                    KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0ItemAcademicQualificationType0Item
+                ]
+                | None
+                | Unset,
+                data,
+            )
 
         academic_qualification = _parse_academic_qualification(d.pop("academic_qualification", UNSET))
 
-
-        def _parse_company_start_date(data: object) -> Union[None, Unset, str]:
+        def _parse_company_start_date(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         company_start_date = _parse_company_start_date(d.pop("company_start_date", UNSET))
 
-
-        def _parse_company_end_date(data: object) -> Union[None, Unset, str]:
+        def _parse_company_end_date(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         company_end_date = _parse_company_end_date(d.pop("company_end_date", UNSET))
-
 
         kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item = cls(
             company_details=company_details,
@@ -515,7 +600,6 @@ class KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0Ite
             company_start_date=company_start_date,
             company_end_date=company_end_date,
         )
-
 
         kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item.additional_properties = d
         return kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item

@@ -1,261 +1,309 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.company_search_response_200_output_data_item_li_category_type_1 import (
+    CompanySearchResponse200OutputDataItemLiCategoryType1,
+)
+from ..models.company_search_response_200_output_data_item_li_category_type_2_type_1 import (
+    CompanySearchResponse200OutputDataItemLiCategoryType2Type1,
+)
+from ..models.company_search_response_200_output_data_item_li_category_type_3_type_1 import (
+    CompanySearchResponse200OutputDataItemLiCategoryType3Type1,
+)
+from ..models.company_search_response_200_output_data_item_standard_industries_type_0_item import (
+    CompanySearchResponse200OutputDataItemStandardIndustriesType0Item,
+)
+from ..models.company_search_response_200_output_data_item_tags_type_0_item import (
+    CompanySearchResponse200OutputDataItemTagsType0Item,
+)
 from ..types import UNSET, Unset
-
-from ..models.company_search_response_200_output_data_item_li_category_type_1 import CompanySearchResponse200OutputDataItemLiCategoryType1
-from ..models.company_search_response_200_output_data_item_li_category_type_2_type_1 import CompanySearchResponse200OutputDataItemLiCategoryType2Type1
-from ..models.company_search_response_200_output_data_item_li_category_type_3_type_1 import CompanySearchResponse200OutputDataItemLiCategoryType3Type1
-from ..models.company_search_response_200_output_data_item_standard_industries_type_0_item import CompanySearchResponse200OutputDataItemStandardIndustriesType0Item
-from ..models.company_search_response_200_output_data_item_tags_type_0_item import CompanySearchResponse200OutputDataItemTagsType0Item
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.company_search_response_200_output_data_item_custom_data_type_0 import CompanySearchResponse200OutputDataItemCustomDataType0
-  from ..models.company_search_response_200_output_data_item_employee_count_consensus_type_0 import CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0
-  from ..models.company_search_response_200_output_data_item_role_count_matches_type_0_item import CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item
-  from ..models.company_search_response_200_output_data_item_accelerators_type_0_item import CompanySearchResponse200OutputDataItemAcceleratorsType0Item
-  from ..models.company_search_response_200_output_data_item_fortune_rankings_type_0_item import CompanySearchResponse200OutputDataItemFortuneRankingsType0Item
-  from ..models.company_search_response_200_output_data_item_funding_rounds_type_0_item import CompanySearchResponse200OutputDataItemFundingRoundsType0Item
-  from ..models.company_search_response_200_output_data_item_location_consensus_type_0 import CompanySearchResponse200OutputDataItemLocationConsensusType0
-  from ..models.company_search_response_200_output_data_item_best_funding_round_type_0 import CompanySearchResponse200OutputDataItemBestFundingRoundType0
-  from ..models.company_search_response_200_output_data_item_similar_companies_type_0_item import CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item
-  from ..models.company_search_response_200_output_data_item_li_industries_type_0_item import CompanySearchResponse200OutputDataItemLiIndustriesType0Item
-  from ..models.company_search_response_200_output_data_item_full_funding_rounds_type_0_item import CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item
-  from ..models.company_search_response_200_output_data_item_li_locations_type_0_item import CompanySearchResponse200OutputDataItemLiLocationsType0Item
-  from ..models.company_search_response_200_output_data_item_funding_round_stats_type_0 import CompanySearchResponse200OutputDataItemFundingRoundStatsType0
-  from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0 import CompanySearchResponse200OutputDataItemLiJobPostsStatsType0
-  from ..models.company_search_response_200_output_data_item_num_matching_locations_type_0 import CompanySearchResponse200OutputDataItemNumMatchingLocationsType0
-  from ..models.company_search_response_200_output_data_item_employee_trends_type_0_item import CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item
-  from ..models.company_search_response_200_output_data_item_stock_info_consensus_type_0 import CompanySearchResponse200OutputDataItemStockInfoConsensusType0
-  from ..models.company_search_response_200_output_data_item_acquisitions_type_0_item import CompanySearchResponse200OutputDataItemAcquisitionsType0Item
-  from ..models.company_search_response_200_output_data_item_investors_type_0_item import CompanySearchResponse200OutputDataItemInvestorsType0Item
-  from ..models.company_search_response_200_output_data_item_investment_stats_type_0 import CompanySearchResponse200OutputDataItemInvestmentStatsType0
-
-
-
+    from ..models.company_search_response_200_output_data_item_accelerators_type_0_item import (
+        CompanySearchResponse200OutputDataItemAcceleratorsType0Item,
+    )
+    from ..models.company_search_response_200_output_data_item_acquisitions_type_0_item import (
+        CompanySearchResponse200OutputDataItemAcquisitionsType0Item,
+    )
+    from ..models.company_search_response_200_output_data_item_best_funding_round_type_0 import (
+        CompanySearchResponse200OutputDataItemBestFundingRoundType0,
+    )
+    from ..models.company_search_response_200_output_data_item_custom_data_type_0 import (
+        CompanySearchResponse200OutputDataItemCustomDataType0,
+    )
+    from ..models.company_search_response_200_output_data_item_employee_count_consensus_type_0 import (
+        CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0,
+    )
+    from ..models.company_search_response_200_output_data_item_employee_trends_type_0_item import (
+        CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item,
+    )
+    from ..models.company_search_response_200_output_data_item_fortune_rankings_type_0_item import (
+        CompanySearchResponse200OutputDataItemFortuneRankingsType0Item,
+    )
+    from ..models.company_search_response_200_output_data_item_full_funding_rounds_type_0_item import (
+        CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item,
+    )
+    from ..models.company_search_response_200_output_data_item_funding_round_stats_type_0 import (
+        CompanySearchResponse200OutputDataItemFundingRoundStatsType0,
+    )
+    from ..models.company_search_response_200_output_data_item_funding_rounds_type_0_item import (
+        CompanySearchResponse200OutputDataItemFundingRoundsType0Item,
+    )
+    from ..models.company_search_response_200_output_data_item_investment_stats_type_0 import (
+        CompanySearchResponse200OutputDataItemInvestmentStatsType0,
+    )
+    from ..models.company_search_response_200_output_data_item_investors_type_0_item import (
+        CompanySearchResponse200OutputDataItemInvestorsType0Item,
+    )
+    from ..models.company_search_response_200_output_data_item_li_industries_type_0_item import (
+        CompanySearchResponse200OutputDataItemLiIndustriesType0Item,
+    )
+    from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0 import (
+        CompanySearchResponse200OutputDataItemLiJobPostsStatsType0,
+    )
+    from ..models.company_search_response_200_output_data_item_li_locations_type_0_item import (
+        CompanySearchResponse200OutputDataItemLiLocationsType0Item,
+    )
+    from ..models.company_search_response_200_output_data_item_location_consensus_type_0 import (
+        CompanySearchResponse200OutputDataItemLocationConsensusType0,
+    )
+    from ..models.company_search_response_200_output_data_item_num_matching_locations_type_0 import (
+        CompanySearchResponse200OutputDataItemNumMatchingLocationsType0,
+    )
+    from ..models.company_search_response_200_output_data_item_role_count_matches_type_0_item import (
+        CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item,
+    )
+    from ..models.company_search_response_200_output_data_item_similar_companies_type_0_item import (
+        CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item,
+    )
+    from ..models.company_search_response_200_output_data_item_stock_info_consensus_type_0 import (
+        CompanySearchResponse200OutputDataItemStockInfoConsensusType0,
+    )
 
 
 T = TypeVar("T", bound="CompanySearchResponse200OutputDataItem")
 
 
-
 @_attrs_define
 class CompanySearchResponse200OutputDataItem:
-    """ 
-        Attributes:
-            linkedin_id (Union[None, Unset, str]):
-            accelerator_statuses (Union[None, Unset, list[str]]):
-            accelerators (Union[None, Unset, list['CompanySearchResponse200OutputDataItemAcceleratorsType0Item']]):
-            blog_urls (Union[None, Unset, list[str]]):
-            custom_data (Union['CompanySearchResponse200OutputDataItemCustomDataType0', None, Unset]):
-            domains (Union[None, Unset, list[str]]):
-            emails (Union[None, Unset, list[str]]):
-            phone_numbers (Union[None, Unset, list[str]]):
-            employee_count_consensus (Union['CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0', None,
-                Unset]):
-            facebook_urls (Union[None, Unset, list[str]]):
-            fortune_rankings (Union[None, Unset, list['CompanySearchResponse200OutputDataItemFortuneRankingsType0Item']]):
-            founded_on_consensus (Union[None, Unset, str]):
-            github_usernames (Union[None, Unset, list[str]]):
-            instagram_handles (Union[None, Unset, list[str]]):
-            latest_funding_consensus (Union[None, Unset, float]):
-            linkedin_slugs (Union[None, Unset, list[str]]):
-            linkedin_primary_slug (Union[None, Unset, str]):
-            li_org_id (Union[None, Unset, str]):
-            li_category (Union[CompanySearchResponse200OutputDataItemLiCategoryType1,
-                CompanySearchResponse200OutputDataItemLiCategoryType2Type1,
-                CompanySearchResponse200OutputDataItemLiCategoryType3Type1, None, Unset]):
-            li_job_posts_stats (Union['CompanySearchResponse200OutputDataItemLiJobPostsStatsType0', None, Unset]):
-            li_description (Union[None, Unset, str]):
-            li_follower_count (Union[None, Unset, float]):
-            li_headline (Union[None, Unset, str]):
-            li_industries (Union[None, Unset, list['CompanySearchResponse200OutputDataItemLiIndustriesType0Item']]):
-            li_locations (Union[None, Unset, list['CompanySearchResponse200OutputDataItemLiLocationsType0Item']]):
-            li_specialties (Union[None, Unset, list[str]]):
-            location_consensus (Union['CompanySearchResponse200OutputDataItemLocationConsensusType0', None, Unset]):
-            market_cap_usd (Union[None, Unset, float]):
-            naics_codes (Union[None, Unset, list[str]]):
-            names (Union[None, Unset, list[str]]):
-            preferred_name (Union[None, Unset, str]):
-            revenue_usd (Union[None, Unset, float]):
-            standard_industries (Union[None, Unset,
-                list[CompanySearchResponse200OutputDataItemStandardIndustriesType0Item]]):
-            status_consensus (Union[None, Unset, str]):
-            stock_info_consensus (Union['CompanySearchResponse200OutputDataItemStockInfoConsensusType0', None, Unset]):
-            tags (Union[None, Unset, list[CompanySearchResponse200OutputDataItemTagsType0Item]]):
-            total_funding_consensus (Union[None, Unset, float]):
-            twitter_handles (Union[None, Unset, list[str]]):
-            websites (Union[None, Unset, list[str]]):
-            wellfound_slugs (Union[None, Unset, list[str]]):
-            youtube_urls (Union[None, Unset, list[str]]):
-            role_count_matches (Union[None, Unset,
-                list['CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item']]):
-            num_matching_locations (Union['CompanySearchResponse200OutputDataItemNumMatchingLocationsType0', None, Unset]):
-            linkedin_ids (Union[None, Unset, list[str]]):
-            last_sort_key (Union[None, Unset, str]):
-            relevance_score (Union[None, Unset, float]):
-            num_li_locations (Union[None, Unset, float]):
-            location_name (Union[None, Unset, str]):
-            crunchbase_slug (Union[None, Unset, str]):
-            crunchbase_rank (Union[None, Unset, float]):
-            primary_role (Union[None, Unset, str]):
-            roles (Union[None, Unset, list[str]]):
-            short_description (Union[None, Unset, str]):
-            long_description (Union[None, Unset, str]):
-            crunchbase_category_groups (Union[None, Unset, list[str]]):
-            crunchbase_categories (Union[None, Unset, list[str]]):
-            is_subsidiary (Union[None, Unset, bool]):
-            parent (Union[None, Unset, str]):
-            num_funding_rounds (Union[None, Unset, float]):
-            funding_rounds (Union[None, Unset, list['CompanySearchResponse200OutputDataItemFundingRoundsType0Item']]):
-            num_exits (Union[None, Unset, float]):
-            investors (Union[None, Unset, list['CompanySearchResponse200OutputDataItemInvestorsType0Item']]):
-            acquisitions (Union[None, Unset, list['CompanySearchResponse200OutputDataItemAcquisitionsType0Item']]):
-            best_funding_round (Union['CompanySearchResponse200OutputDataItemBestFundingRoundType0', None, Unset]):
-            funding_stage (Union[None, Unset, str]):
-            alt_industries (Union[None, Unset, list[str]]):
-            alt_keywords (Union[None, Unset, list[str]]):
-            alt_description (Union[None, Unset, str]):
-            employee_trends (Union[None, Unset, list['CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item']]):
-            logo_url (Union[None, Unset, str]):
-            similar_companies (Union[None, Unset, list['CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item']]):
-            full_funding_rounds (Union[None, Unset,
-                list['CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item']]):
-            funding_round_stats (Union['CompanySearchResponse200OutputDataItemFundingRoundStatsType0', None, Unset]):
-            investment_stats (Union['CompanySearchResponse200OutputDataItemInvestmentStatsType0', None, Unset]):
-            is_investor (Union[None, Unset, bool]):
-            investor_type (Union[None, Unset, str]):
-            investor_categories (Union[None, Unset, list[str]]):
-     """
+    """
+    Attributes:
+        linkedin_id (None | str | Unset):
+        accelerator_statuses (list[str] | None | Unset):
+        accelerators (list[CompanySearchResponse200OutputDataItemAcceleratorsType0Item] | None | Unset):
+        blog_urls (list[str] | None | Unset):
+        custom_data (CompanySearchResponse200OutputDataItemCustomDataType0 | None | Unset):
+        domains (list[str] | None | Unset):
+        emails (list[str] | None | Unset):
+        phone_numbers (list[str] | None | Unset):
+        employee_count_consensus (CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0 | None | Unset):
+        facebook_urls (list[str] | None | Unset):
+        fortune_rankings (list[CompanySearchResponse200OutputDataItemFortuneRankingsType0Item] | None | Unset):
+        founded_on_consensus (None | str | Unset):
+        github_usernames (list[str] | None | Unset):
+        instagram_handles (list[str] | None | Unset):
+        latest_funding_consensus (float | None | Unset):
+        linkedin_slugs (list[str] | None | Unset):
+        linkedin_primary_slug (None | str | Unset):
+        li_org_id (None | str | Unset):
+        li_category (CompanySearchResponse200OutputDataItemLiCategoryType1 |
+            CompanySearchResponse200OutputDataItemLiCategoryType2Type1 |
+            CompanySearchResponse200OutputDataItemLiCategoryType3Type1 | None | Unset):
+        li_job_posts_stats (CompanySearchResponse200OutputDataItemLiJobPostsStatsType0 | None | Unset):
+        li_description (None | str | Unset):
+        li_follower_count (float | None | Unset):
+        li_headline (None | str | Unset):
+        li_industries (list[CompanySearchResponse200OutputDataItemLiIndustriesType0Item] | None | Unset):
+        li_locations (list[CompanySearchResponse200OutputDataItemLiLocationsType0Item] | None | Unset):
+        li_specialties (list[str] | None | Unset):
+        location_consensus (CompanySearchResponse200OutputDataItemLocationConsensusType0 | None | Unset):
+        market_cap_usd (float | None | Unset):
+        naics_codes (list[str] | None | Unset):
+        names (list[str] | None | Unset):
+        preferred_name (None | str | Unset):
+        revenue_usd (float | None | Unset):
+        standard_industries (list[CompanySearchResponse200OutputDataItemStandardIndustriesType0Item] | None | Unset):
+        status_consensus (None | str | Unset):
+        stock_info_consensus (CompanySearchResponse200OutputDataItemStockInfoConsensusType0 | None | Unset):
+        tags (list[CompanySearchResponse200OutputDataItemTagsType0Item] | None | Unset):
+        total_funding_consensus (float | None | Unset):
+        twitter_handles (list[str] | None | Unset):
+        websites (list[str] | None | Unset):
+        wellfound_slugs (list[str] | None | Unset):
+        youtube_urls (list[str] | None | Unset):
+        role_count_matches (list[CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item] | None | Unset):
+        num_matching_locations (CompanySearchResponse200OutputDataItemNumMatchingLocationsType0 | None | Unset):
+        linkedin_ids (list[str] | None | Unset):
+        last_sort_key (None | str | Unset):
+        relevance_score (float | None | Unset):
+        num_li_locations (float | None | Unset):
+        location_name (None | str | Unset):
+        crunchbase_slug (None | str | Unset):
+        crunchbase_rank (float | None | Unset):
+        primary_role (None | str | Unset):
+        roles (list[str] | None | Unset):
+        short_description (None | str | Unset):
+        long_description (None | str | Unset):
+        crunchbase_category_groups (list[str] | None | Unset):
+        crunchbase_categories (list[str] | None | Unset):
+        is_subsidiary (bool | None | Unset):
+        parent (None | str | Unset):
+        num_funding_rounds (float | None | Unset):
+        funding_rounds (list[CompanySearchResponse200OutputDataItemFundingRoundsType0Item] | None | Unset):
+        num_exits (float | None | Unset):
+        investors (list[CompanySearchResponse200OutputDataItemInvestorsType0Item] | None | Unset):
+        acquisitions (list[CompanySearchResponse200OutputDataItemAcquisitionsType0Item] | None | Unset):
+        best_funding_round (CompanySearchResponse200OutputDataItemBestFundingRoundType0 | None | Unset):
+        funding_stage (None | str | Unset):
+        alt_industries (list[str] | None | Unset):
+        alt_keywords (list[str] | None | Unset):
+        alt_description (None | str | Unset):
+        employee_trends (list[CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item] | None | Unset):
+        logo_url (None | str | Unset):
+        similar_companies (list[CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item] | None | Unset):
+        full_funding_rounds (list[CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item] | None | Unset):
+        funding_round_stats (CompanySearchResponse200OutputDataItemFundingRoundStatsType0 | None | Unset):
+        investment_stats (CompanySearchResponse200OutputDataItemInvestmentStatsType0 | None | Unset):
+        is_investor (bool | None | Unset):
+        investor_type (None | str | Unset):
+        investor_categories (list[str] | None | Unset):
+    """
 
-    linkedin_id: Union[None, Unset, str] = UNSET
-    accelerator_statuses: Union[None, Unset, list[str]] = UNSET
-    accelerators: Union[None, Unset, list['CompanySearchResponse200OutputDataItemAcceleratorsType0Item']] = UNSET
-    blog_urls: Union[None, Unset, list[str]] = UNSET
-    custom_data: Union['CompanySearchResponse200OutputDataItemCustomDataType0', None, Unset] = UNSET
-    domains: Union[None, Unset, list[str]] = UNSET
-    emails: Union[None, Unset, list[str]] = UNSET
-    phone_numbers: Union[None, Unset, list[str]] = UNSET
-    employee_count_consensus: Union['CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0', None, Unset] = UNSET
-    facebook_urls: Union[None, Unset, list[str]] = UNSET
-    fortune_rankings: Union[None, Unset, list['CompanySearchResponse200OutputDataItemFortuneRankingsType0Item']] = UNSET
-    founded_on_consensus: Union[None, Unset, str] = UNSET
-    github_usernames: Union[None, Unset, list[str]] = UNSET
-    instagram_handles: Union[None, Unset, list[str]] = UNSET
-    latest_funding_consensus: Union[None, Unset, float] = UNSET
-    linkedin_slugs: Union[None, Unset, list[str]] = UNSET
-    linkedin_primary_slug: Union[None, Unset, str] = UNSET
-    li_org_id: Union[None, Unset, str] = UNSET
-    li_category: Union[CompanySearchResponse200OutputDataItemLiCategoryType1, CompanySearchResponse200OutputDataItemLiCategoryType2Type1, CompanySearchResponse200OutputDataItemLiCategoryType3Type1, None, Unset] = UNSET
-    li_job_posts_stats: Union['CompanySearchResponse200OutputDataItemLiJobPostsStatsType0', None, Unset] = UNSET
-    li_description: Union[None, Unset, str] = UNSET
-    li_follower_count: Union[None, Unset, float] = UNSET
-    li_headline: Union[None, Unset, str] = UNSET
-    li_industries: Union[None, Unset, list['CompanySearchResponse200OutputDataItemLiIndustriesType0Item']] = UNSET
-    li_locations: Union[None, Unset, list['CompanySearchResponse200OutputDataItemLiLocationsType0Item']] = UNSET
-    li_specialties: Union[None, Unset, list[str]] = UNSET
-    location_consensus: Union['CompanySearchResponse200OutputDataItemLocationConsensusType0', None, Unset] = UNSET
-    market_cap_usd: Union[None, Unset, float] = UNSET
-    naics_codes: Union[None, Unset, list[str]] = UNSET
-    names: Union[None, Unset, list[str]] = UNSET
-    preferred_name: Union[None, Unset, str] = UNSET
-    revenue_usd: Union[None, Unset, float] = UNSET
-    standard_industries: Union[None, Unset, list[CompanySearchResponse200OutputDataItemStandardIndustriesType0Item]] = UNSET
-    status_consensus: Union[None, Unset, str] = UNSET
-    stock_info_consensus: Union['CompanySearchResponse200OutputDataItemStockInfoConsensusType0', None, Unset] = UNSET
-    tags: Union[None, Unset, list[CompanySearchResponse200OutputDataItemTagsType0Item]] = UNSET
-    total_funding_consensus: Union[None, Unset, float] = UNSET
-    twitter_handles: Union[None, Unset, list[str]] = UNSET
-    websites: Union[None, Unset, list[str]] = UNSET
-    wellfound_slugs: Union[None, Unset, list[str]] = UNSET
-    youtube_urls: Union[None, Unset, list[str]] = UNSET
-    role_count_matches: Union[None, Unset, list['CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item']] = UNSET
-    num_matching_locations: Union['CompanySearchResponse200OutputDataItemNumMatchingLocationsType0', None, Unset] = UNSET
-    linkedin_ids: Union[None, Unset, list[str]] = UNSET
-    last_sort_key: Union[None, Unset, str] = UNSET
-    relevance_score: Union[None, Unset, float] = UNSET
-    num_li_locations: Union[None, Unset, float] = UNSET
-    location_name: Union[None, Unset, str] = UNSET
-    crunchbase_slug: Union[None, Unset, str] = UNSET
-    crunchbase_rank: Union[None, Unset, float] = UNSET
-    primary_role: Union[None, Unset, str] = UNSET
-    roles: Union[None, Unset, list[str]] = UNSET
-    short_description: Union[None, Unset, str] = UNSET
-    long_description: Union[None, Unset, str] = UNSET
-    crunchbase_category_groups: Union[None, Unset, list[str]] = UNSET
-    crunchbase_categories: Union[None, Unset, list[str]] = UNSET
-    is_subsidiary: Union[None, Unset, bool] = UNSET
-    parent: Union[None, Unset, str] = UNSET
-    num_funding_rounds: Union[None, Unset, float] = UNSET
-    funding_rounds: Union[None, Unset, list['CompanySearchResponse200OutputDataItemFundingRoundsType0Item']] = UNSET
-    num_exits: Union[None, Unset, float] = UNSET
-    investors: Union[None, Unset, list['CompanySearchResponse200OutputDataItemInvestorsType0Item']] = UNSET
-    acquisitions: Union[None, Unset, list['CompanySearchResponse200OutputDataItemAcquisitionsType0Item']] = UNSET
-    best_funding_round: Union['CompanySearchResponse200OutputDataItemBestFundingRoundType0', None, Unset] = UNSET
-    funding_stage: Union[None, Unset, str] = UNSET
-    alt_industries: Union[None, Unset, list[str]] = UNSET
-    alt_keywords: Union[None, Unset, list[str]] = UNSET
-    alt_description: Union[None, Unset, str] = UNSET
-    employee_trends: Union[None, Unset, list['CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item']] = UNSET
-    logo_url: Union[None, Unset, str] = UNSET
-    similar_companies: Union[None, Unset, list['CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item']] = UNSET
-    full_funding_rounds: Union[None, Unset, list['CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item']] = UNSET
-    funding_round_stats: Union['CompanySearchResponse200OutputDataItemFundingRoundStatsType0', None, Unset] = UNSET
-    investment_stats: Union['CompanySearchResponse200OutputDataItemInvestmentStatsType0', None, Unset] = UNSET
-    is_investor: Union[None, Unset, bool] = UNSET
-    investor_type: Union[None, Unset, str] = UNSET
-    investor_categories: Union[None, Unset, list[str]] = UNSET
+    linkedin_id: None | str | Unset = UNSET
+    accelerator_statuses: list[str] | None | Unset = UNSET
+    accelerators: list[CompanySearchResponse200OutputDataItemAcceleratorsType0Item] | None | Unset = UNSET
+    blog_urls: list[str] | None | Unset = UNSET
+    custom_data: CompanySearchResponse200OutputDataItemCustomDataType0 | None | Unset = UNSET
+    domains: list[str] | None | Unset = UNSET
+    emails: list[str] | None | Unset = UNSET
+    phone_numbers: list[str] | None | Unset = UNSET
+    employee_count_consensus: CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0 | None | Unset = UNSET
+    facebook_urls: list[str] | None | Unset = UNSET
+    fortune_rankings: list[CompanySearchResponse200OutputDataItemFortuneRankingsType0Item] | None | Unset = UNSET
+    founded_on_consensus: None | str | Unset = UNSET
+    github_usernames: list[str] | None | Unset = UNSET
+    instagram_handles: list[str] | None | Unset = UNSET
+    latest_funding_consensus: float | None | Unset = UNSET
+    linkedin_slugs: list[str] | None | Unset = UNSET
+    linkedin_primary_slug: None | str | Unset = UNSET
+    li_org_id: None | str | Unset = UNSET
+    li_category: (
+        CompanySearchResponse200OutputDataItemLiCategoryType1
+        | CompanySearchResponse200OutputDataItemLiCategoryType2Type1
+        | CompanySearchResponse200OutputDataItemLiCategoryType3Type1
+        | None
+        | Unset
+    ) = UNSET
+    li_job_posts_stats: CompanySearchResponse200OutputDataItemLiJobPostsStatsType0 | None | Unset = UNSET
+    li_description: None | str | Unset = UNSET
+    li_follower_count: float | None | Unset = UNSET
+    li_headline: None | str | Unset = UNSET
+    li_industries: list[CompanySearchResponse200OutputDataItemLiIndustriesType0Item] | None | Unset = UNSET
+    li_locations: list[CompanySearchResponse200OutputDataItemLiLocationsType0Item] | None | Unset = UNSET
+    li_specialties: list[str] | None | Unset = UNSET
+    location_consensus: CompanySearchResponse200OutputDataItemLocationConsensusType0 | None | Unset = UNSET
+    market_cap_usd: float | None | Unset = UNSET
+    naics_codes: list[str] | None | Unset = UNSET
+    names: list[str] | None | Unset = UNSET
+    preferred_name: None | str | Unset = UNSET
+    revenue_usd: float | None | Unset = UNSET
+    standard_industries: list[CompanySearchResponse200OutputDataItemStandardIndustriesType0Item] | None | Unset = UNSET
+    status_consensus: None | str | Unset = UNSET
+    stock_info_consensus: CompanySearchResponse200OutputDataItemStockInfoConsensusType0 | None | Unset = UNSET
+    tags: list[CompanySearchResponse200OutputDataItemTagsType0Item] | None | Unset = UNSET
+    total_funding_consensus: float | None | Unset = UNSET
+    twitter_handles: list[str] | None | Unset = UNSET
+    websites: list[str] | None | Unset = UNSET
+    wellfound_slugs: list[str] | None | Unset = UNSET
+    youtube_urls: list[str] | None | Unset = UNSET
+    role_count_matches: list[CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item] | None | Unset = UNSET
+    num_matching_locations: CompanySearchResponse200OutputDataItemNumMatchingLocationsType0 | None | Unset = UNSET
+    linkedin_ids: list[str] | None | Unset = UNSET
+    last_sort_key: None | str | Unset = UNSET
+    relevance_score: float | None | Unset = UNSET
+    num_li_locations: float | None | Unset = UNSET
+    location_name: None | str | Unset = UNSET
+    crunchbase_slug: None | str | Unset = UNSET
+    crunchbase_rank: float | None | Unset = UNSET
+    primary_role: None | str | Unset = UNSET
+    roles: list[str] | None | Unset = UNSET
+    short_description: None | str | Unset = UNSET
+    long_description: None | str | Unset = UNSET
+    crunchbase_category_groups: list[str] | None | Unset = UNSET
+    crunchbase_categories: list[str] | None | Unset = UNSET
+    is_subsidiary: bool | None | Unset = UNSET
+    parent: None | str | Unset = UNSET
+    num_funding_rounds: float | None | Unset = UNSET
+    funding_rounds: list[CompanySearchResponse200OutputDataItemFundingRoundsType0Item] | None | Unset = UNSET
+    num_exits: float | None | Unset = UNSET
+    investors: list[CompanySearchResponse200OutputDataItemInvestorsType0Item] | None | Unset = UNSET
+    acquisitions: list[CompanySearchResponse200OutputDataItemAcquisitionsType0Item] | None | Unset = UNSET
+    best_funding_round: CompanySearchResponse200OutputDataItemBestFundingRoundType0 | None | Unset = UNSET
+    funding_stage: None | str | Unset = UNSET
+    alt_industries: list[str] | None | Unset = UNSET
+    alt_keywords: list[str] | None | Unset = UNSET
+    alt_description: None | str | Unset = UNSET
+    employee_trends: list[CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item] | None | Unset = UNSET
+    logo_url: None | str | Unset = UNSET
+    similar_companies: list[CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item] | None | Unset = UNSET
+    full_funding_rounds: list[CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item] | None | Unset = UNSET
+    funding_round_stats: CompanySearchResponse200OutputDataItemFundingRoundStatsType0 | None | Unset = UNSET
+    investment_stats: CompanySearchResponse200OutputDataItemInvestmentStatsType0 | None | Unset = UNSET
+    is_investor: bool | None | Unset = UNSET
+    investor_type: None | str | Unset = UNSET
+    investor_categories: list[str] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.company_search_response_200_output_data_item_custom_data_type_0 import CompanySearchResponse200OutputDataItemCustomDataType0
-        from ..models.company_search_response_200_output_data_item_employee_count_consensus_type_0 import CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0
-        from ..models.company_search_response_200_output_data_item_role_count_matches_type_0_item import CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item
-        from ..models.company_search_response_200_output_data_item_accelerators_type_0_item import CompanySearchResponse200OutputDataItemAcceleratorsType0Item
-        from ..models.company_search_response_200_output_data_item_fortune_rankings_type_0_item import CompanySearchResponse200OutputDataItemFortuneRankingsType0Item
-        from ..models.company_search_response_200_output_data_item_funding_rounds_type_0_item import CompanySearchResponse200OutputDataItemFundingRoundsType0Item
-        from ..models.company_search_response_200_output_data_item_location_consensus_type_0 import CompanySearchResponse200OutputDataItemLocationConsensusType0
-        from ..models.company_search_response_200_output_data_item_best_funding_round_type_0 import CompanySearchResponse200OutputDataItemBestFundingRoundType0
-        from ..models.company_search_response_200_output_data_item_similar_companies_type_0_item import CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item
-        from ..models.company_search_response_200_output_data_item_li_industries_type_0_item import CompanySearchResponse200OutputDataItemLiIndustriesType0Item
-        from ..models.company_search_response_200_output_data_item_full_funding_rounds_type_0_item import CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item
-        from ..models.company_search_response_200_output_data_item_li_locations_type_0_item import CompanySearchResponse200OutputDataItemLiLocationsType0Item
-        from ..models.company_search_response_200_output_data_item_funding_round_stats_type_0 import CompanySearchResponse200OutputDataItemFundingRoundStatsType0
-        from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0 import CompanySearchResponse200OutputDataItemLiJobPostsStatsType0
-        from ..models.company_search_response_200_output_data_item_num_matching_locations_type_0 import CompanySearchResponse200OutputDataItemNumMatchingLocationsType0
-        from ..models.company_search_response_200_output_data_item_employee_trends_type_0_item import CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item
-        from ..models.company_search_response_200_output_data_item_stock_info_consensus_type_0 import CompanySearchResponse200OutputDataItemStockInfoConsensusType0
-        from ..models.company_search_response_200_output_data_item_acquisitions_type_0_item import CompanySearchResponse200OutputDataItemAcquisitionsType0Item
-        from ..models.company_search_response_200_output_data_item_investors_type_0_item import CompanySearchResponse200OutputDataItemInvestorsType0Item
-        from ..models.company_search_response_200_output_data_item_investment_stats_type_0 import CompanySearchResponse200OutputDataItemInvestmentStatsType0
-        linkedin_id: Union[None, Unset, str]
+        from ..models.company_search_response_200_output_data_item_best_funding_round_type_0 import (
+            CompanySearchResponse200OutputDataItemBestFundingRoundType0,
+        )
+        from ..models.company_search_response_200_output_data_item_custom_data_type_0 import (
+            CompanySearchResponse200OutputDataItemCustomDataType0,
+        )
+        from ..models.company_search_response_200_output_data_item_employee_count_consensus_type_0 import (
+            CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0,
+        )
+        from ..models.company_search_response_200_output_data_item_funding_round_stats_type_0 import (
+            CompanySearchResponse200OutputDataItemFundingRoundStatsType0,
+        )
+        from ..models.company_search_response_200_output_data_item_investment_stats_type_0 import (
+            CompanySearchResponse200OutputDataItemInvestmentStatsType0,
+        )
+        from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0 import (
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0,
+        )
+        from ..models.company_search_response_200_output_data_item_location_consensus_type_0 import (
+            CompanySearchResponse200OutputDataItemLocationConsensusType0,
+        )
+        from ..models.company_search_response_200_output_data_item_num_matching_locations_type_0 import (
+            CompanySearchResponse200OutputDataItemNumMatchingLocationsType0,
+        )
+        from ..models.company_search_response_200_output_data_item_stock_info_consensus_type_0 import (
+            CompanySearchResponse200OutputDataItemStockInfoConsensusType0,
+        )
+
+        linkedin_id: None | str | Unset
         if isinstance(self.linkedin_id, Unset):
             linkedin_id = UNSET
         else:
             linkedin_id = self.linkedin_id
 
-        accelerator_statuses: Union[None, Unset, list[str]]
+        accelerator_statuses: list[str] | None | Unset
         if isinstance(self.accelerator_statuses, Unset):
             accelerator_statuses = UNSET
         elif isinstance(self.accelerator_statuses, list):
             accelerator_statuses = self.accelerator_statuses
 
-
         else:
             accelerator_statuses = self.accelerator_statuses
 
-        accelerators: Union[None, Unset, list[dict[str, Any]]]
+        accelerators: list[dict[str, Any]] | None | Unset
         if isinstance(self.accelerators, Unset):
             accelerators = UNSET
         elif isinstance(self.accelerators, list):
@@ -264,21 +312,19 @@ class CompanySearchResponse200OutputDataItem:
                 accelerators_type_0_item = accelerators_type_0_item_data.to_dict()
                 accelerators.append(accelerators_type_0_item)
 
-
         else:
             accelerators = self.accelerators
 
-        blog_urls: Union[None, Unset, list[str]]
+        blog_urls: list[str] | None | Unset
         if isinstance(self.blog_urls, Unset):
             blog_urls = UNSET
         elif isinstance(self.blog_urls, list):
             blog_urls = self.blog_urls
 
-
         else:
             blog_urls = self.blog_urls
 
-        custom_data: Union[None, Unset, dict[str, Any]]
+        custom_data: dict[str, Any] | None | Unset
         if isinstance(self.custom_data, Unset):
             custom_data = UNSET
         elif isinstance(self.custom_data, CompanySearchResponse200OutputDataItemCustomDataType0):
@@ -286,55 +332,53 @@ class CompanySearchResponse200OutputDataItem:
         else:
             custom_data = self.custom_data
 
-        domains: Union[None, Unset, list[str]]
+        domains: list[str] | None | Unset
         if isinstance(self.domains, Unset):
             domains = UNSET
         elif isinstance(self.domains, list):
             domains = self.domains
 
-
         else:
             domains = self.domains
 
-        emails: Union[None, Unset, list[str]]
+        emails: list[str] | None | Unset
         if isinstance(self.emails, Unset):
             emails = UNSET
         elif isinstance(self.emails, list):
             emails = self.emails
 
-
         else:
             emails = self.emails
 
-        phone_numbers: Union[None, Unset, list[str]]
+        phone_numbers: list[str] | None | Unset
         if isinstance(self.phone_numbers, Unset):
             phone_numbers = UNSET
         elif isinstance(self.phone_numbers, list):
             phone_numbers = self.phone_numbers
 
-
         else:
             phone_numbers = self.phone_numbers
 
-        employee_count_consensus: Union[None, Unset, dict[str, Any]]
+        employee_count_consensus: dict[str, Any] | None | Unset
         if isinstance(self.employee_count_consensus, Unset):
             employee_count_consensus = UNSET
-        elif isinstance(self.employee_count_consensus, CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0):
+        elif isinstance(
+            self.employee_count_consensus, CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0
+        ):
             employee_count_consensus = self.employee_count_consensus.to_dict()
         else:
             employee_count_consensus = self.employee_count_consensus
 
-        facebook_urls: Union[None, Unset, list[str]]
+        facebook_urls: list[str] | None | Unset
         if isinstance(self.facebook_urls, Unset):
             facebook_urls = UNSET
         elif isinstance(self.facebook_urls, list):
             facebook_urls = self.facebook_urls
 
-
         else:
             facebook_urls = self.facebook_urls
 
-        fortune_rankings: Union[None, Unset, list[dict[str, Any]]]
+        fortune_rankings: list[dict[str, Any]] | None | Unset
         if isinstance(self.fortune_rankings, Unset):
             fortune_rankings = UNSET
         elif isinstance(self.fortune_rankings, list):
@@ -343,65 +387,61 @@ class CompanySearchResponse200OutputDataItem:
                 fortune_rankings_type_0_item = fortune_rankings_type_0_item_data.to_dict()
                 fortune_rankings.append(fortune_rankings_type_0_item)
 
-
         else:
             fortune_rankings = self.fortune_rankings
 
-        founded_on_consensus: Union[None, Unset, str]
+        founded_on_consensus: None | str | Unset
         if isinstance(self.founded_on_consensus, Unset):
             founded_on_consensus = UNSET
         else:
             founded_on_consensus = self.founded_on_consensus
 
-        github_usernames: Union[None, Unset, list[str]]
+        github_usernames: list[str] | None | Unset
         if isinstance(self.github_usernames, Unset):
             github_usernames = UNSET
         elif isinstance(self.github_usernames, list):
             github_usernames = self.github_usernames
 
-
         else:
             github_usernames = self.github_usernames
 
-        instagram_handles: Union[None, Unset, list[str]]
+        instagram_handles: list[str] | None | Unset
         if isinstance(self.instagram_handles, Unset):
             instagram_handles = UNSET
         elif isinstance(self.instagram_handles, list):
             instagram_handles = self.instagram_handles
 
-
         else:
             instagram_handles = self.instagram_handles
 
-        latest_funding_consensus: Union[None, Unset, float]
+        latest_funding_consensus: float | None | Unset
         if isinstance(self.latest_funding_consensus, Unset):
             latest_funding_consensus = UNSET
         else:
             latest_funding_consensus = self.latest_funding_consensus
 
-        linkedin_slugs: Union[None, Unset, list[str]]
+        linkedin_slugs: list[str] | None | Unset
         if isinstance(self.linkedin_slugs, Unset):
             linkedin_slugs = UNSET
         elif isinstance(self.linkedin_slugs, list):
             linkedin_slugs = self.linkedin_slugs
 
-
         else:
             linkedin_slugs = self.linkedin_slugs
 
-        linkedin_primary_slug: Union[None, Unset, str]
+        linkedin_primary_slug: None | str | Unset
         if isinstance(self.linkedin_primary_slug, Unset):
             linkedin_primary_slug = UNSET
         else:
             linkedin_primary_slug = self.linkedin_primary_slug
 
-        li_org_id: Union[None, Unset, str]
+        li_org_id: None | str | Unset
         if isinstance(self.li_org_id, Unset):
             li_org_id = UNSET
         else:
             li_org_id = self.li_org_id
 
-        li_category: Union[None, Unset, str]
+        li_category: None | str | Unset
         if isinstance(self.li_category, Unset):
             li_category = UNSET
         elif isinstance(self.li_category, CompanySearchResponse200OutputDataItemLiCategoryType1):
@@ -413,7 +453,7 @@ class CompanySearchResponse200OutputDataItem:
         else:
             li_category = self.li_category
 
-        li_job_posts_stats: Union[None, Unset, dict[str, Any]]
+        li_job_posts_stats: dict[str, Any] | None | Unset
         if isinstance(self.li_job_posts_stats, Unset):
             li_job_posts_stats = UNSET
         elif isinstance(self.li_job_posts_stats, CompanySearchResponse200OutputDataItemLiJobPostsStatsType0):
@@ -421,25 +461,25 @@ class CompanySearchResponse200OutputDataItem:
         else:
             li_job_posts_stats = self.li_job_posts_stats
 
-        li_description: Union[None, Unset, str]
+        li_description: None | str | Unset
         if isinstance(self.li_description, Unset):
             li_description = UNSET
         else:
             li_description = self.li_description
 
-        li_follower_count: Union[None, Unset, float]
+        li_follower_count: float | None | Unset
         if isinstance(self.li_follower_count, Unset):
             li_follower_count = UNSET
         else:
             li_follower_count = self.li_follower_count
 
-        li_headline: Union[None, Unset, str]
+        li_headline: None | str | Unset
         if isinstance(self.li_headline, Unset):
             li_headline = UNSET
         else:
             li_headline = self.li_headline
 
-        li_industries: Union[None, Unset, list[dict[str, Any]]]
+        li_industries: list[dict[str, Any]] | None | Unset
         if isinstance(self.li_industries, Unset):
             li_industries = UNSET
         elif isinstance(self.li_industries, list):
@@ -448,11 +488,10 @@ class CompanySearchResponse200OutputDataItem:
                 li_industries_type_0_item = li_industries_type_0_item_data.to_dict()
                 li_industries.append(li_industries_type_0_item)
 
-
         else:
             li_industries = self.li_industries
 
-        li_locations: Union[None, Unset, list[dict[str, Any]]]
+        li_locations: list[dict[str, Any]] | None | Unset
         if isinstance(self.li_locations, Unset):
             li_locations = UNSET
         elif isinstance(self.li_locations, list):
@@ -461,21 +500,19 @@ class CompanySearchResponse200OutputDataItem:
                 li_locations_type_0_item = li_locations_type_0_item_data.to_dict()
                 li_locations.append(li_locations_type_0_item)
 
-
         else:
             li_locations = self.li_locations
 
-        li_specialties: Union[None, Unset, list[str]]
+        li_specialties: list[str] | None | Unset
         if isinstance(self.li_specialties, Unset):
             li_specialties = UNSET
         elif isinstance(self.li_specialties, list):
             li_specialties = self.li_specialties
 
-
         else:
             li_specialties = self.li_specialties
 
-        location_consensus: Union[None, Unset, dict[str, Any]]
+        location_consensus: dict[str, Any] | None | Unset
         if isinstance(self.location_consensus, Unset):
             location_consensus = UNSET
         elif isinstance(self.location_consensus, CompanySearchResponse200OutputDataItemLocationConsensusType0):
@@ -483,45 +520,43 @@ class CompanySearchResponse200OutputDataItem:
         else:
             location_consensus = self.location_consensus
 
-        market_cap_usd: Union[None, Unset, float]
+        market_cap_usd: float | None | Unset
         if isinstance(self.market_cap_usd, Unset):
             market_cap_usd = UNSET
         else:
             market_cap_usd = self.market_cap_usd
 
-        naics_codes: Union[None, Unset, list[str]]
+        naics_codes: list[str] | None | Unset
         if isinstance(self.naics_codes, Unset):
             naics_codes = UNSET
         elif isinstance(self.naics_codes, list):
             naics_codes = self.naics_codes
 
-
         else:
             naics_codes = self.naics_codes
 
-        names: Union[None, Unset, list[str]]
+        names: list[str] | None | Unset
         if isinstance(self.names, Unset):
             names = UNSET
         elif isinstance(self.names, list):
             names = self.names
 
-
         else:
             names = self.names
 
-        preferred_name: Union[None, Unset, str]
+        preferred_name: None | str | Unset
         if isinstance(self.preferred_name, Unset):
             preferred_name = UNSET
         else:
             preferred_name = self.preferred_name
 
-        revenue_usd: Union[None, Unset, float]
+        revenue_usd: float | None | Unset
         if isinstance(self.revenue_usd, Unset):
             revenue_usd = UNSET
         else:
             revenue_usd = self.revenue_usd
 
-        standard_industries: Union[None, Unset, list[str]]
+        standard_industries: list[str] | None | Unset
         if isinstance(self.standard_industries, Unset):
             standard_industries = UNSET
         elif isinstance(self.standard_industries, list):
@@ -530,17 +565,16 @@ class CompanySearchResponse200OutputDataItem:
                 standard_industries_type_0_item = standard_industries_type_0_item_data.value
                 standard_industries.append(standard_industries_type_0_item)
 
-
         else:
             standard_industries = self.standard_industries
 
-        status_consensus: Union[None, Unset, str]
+        status_consensus: None | str | Unset
         if isinstance(self.status_consensus, Unset):
             status_consensus = UNSET
         else:
             status_consensus = self.status_consensus
 
-        stock_info_consensus: Union[None, Unset, dict[str, Any]]
+        stock_info_consensus: dict[str, Any] | None | Unset
         if isinstance(self.stock_info_consensus, Unset):
             stock_info_consensus = UNSET
         elif isinstance(self.stock_info_consensus, CompanySearchResponse200OutputDataItemStockInfoConsensusType0):
@@ -548,7 +582,7 @@ class CompanySearchResponse200OutputDataItem:
         else:
             stock_info_consensus = self.stock_info_consensus
 
-        tags: Union[None, Unset, list[str]]
+        tags: list[str] | None | Unset
         if isinstance(self.tags, Unset):
             tags = UNSET
         elif isinstance(self.tags, list):
@@ -557,57 +591,52 @@ class CompanySearchResponse200OutputDataItem:
                 tags_type_0_item = tags_type_0_item_data.value
                 tags.append(tags_type_0_item)
 
-
         else:
             tags = self.tags
 
-        total_funding_consensus: Union[None, Unset, float]
+        total_funding_consensus: float | None | Unset
         if isinstance(self.total_funding_consensus, Unset):
             total_funding_consensus = UNSET
         else:
             total_funding_consensus = self.total_funding_consensus
 
-        twitter_handles: Union[None, Unset, list[str]]
+        twitter_handles: list[str] | None | Unset
         if isinstance(self.twitter_handles, Unset):
             twitter_handles = UNSET
         elif isinstance(self.twitter_handles, list):
             twitter_handles = self.twitter_handles
 
-
         else:
             twitter_handles = self.twitter_handles
 
-        websites: Union[None, Unset, list[str]]
+        websites: list[str] | None | Unset
         if isinstance(self.websites, Unset):
             websites = UNSET
         elif isinstance(self.websites, list):
             websites = self.websites
 
-
         else:
             websites = self.websites
 
-        wellfound_slugs: Union[None, Unset, list[str]]
+        wellfound_slugs: list[str] | None | Unset
         if isinstance(self.wellfound_slugs, Unset):
             wellfound_slugs = UNSET
         elif isinstance(self.wellfound_slugs, list):
             wellfound_slugs = self.wellfound_slugs
 
-
         else:
             wellfound_slugs = self.wellfound_slugs
 
-        youtube_urls: Union[None, Unset, list[str]]
+        youtube_urls: list[str] | None | Unset
         if isinstance(self.youtube_urls, Unset):
             youtube_urls = UNSET
         elif isinstance(self.youtube_urls, list):
             youtube_urls = self.youtube_urls
 
-
         else:
             youtube_urls = self.youtube_urls
 
-        role_count_matches: Union[None, Unset, list[dict[str, Any]]]
+        role_count_matches: list[dict[str, Any]] | None | Unset
         if isinstance(self.role_count_matches, Unset):
             role_count_matches = UNSET
         elif isinstance(self.role_count_matches, list):
@@ -616,11 +645,10 @@ class CompanySearchResponse200OutputDataItem:
                 role_count_matches_type_0_item = role_count_matches_type_0_item_data.to_dict()
                 role_count_matches.append(role_count_matches_type_0_item)
 
-
         else:
             role_count_matches = self.role_count_matches
 
-        num_matching_locations: Union[None, Unset, dict[str, Any]]
+        num_matching_locations: dict[str, Any] | None | Unset
         if isinstance(self.num_matching_locations, Unset):
             num_matching_locations = UNSET
         elif isinstance(self.num_matching_locations, CompanySearchResponse200OutputDataItemNumMatchingLocationsType0):
@@ -628,119 +656,115 @@ class CompanySearchResponse200OutputDataItem:
         else:
             num_matching_locations = self.num_matching_locations
 
-        linkedin_ids: Union[None, Unset, list[str]]
+        linkedin_ids: list[str] | None | Unset
         if isinstance(self.linkedin_ids, Unset):
             linkedin_ids = UNSET
         elif isinstance(self.linkedin_ids, list):
             linkedin_ids = self.linkedin_ids
 
-
         else:
             linkedin_ids = self.linkedin_ids
 
-        last_sort_key: Union[None, Unset, str]
+        last_sort_key: None | str | Unset
         if isinstance(self.last_sort_key, Unset):
             last_sort_key = UNSET
         else:
             last_sort_key = self.last_sort_key
 
-        relevance_score: Union[None, Unset, float]
+        relevance_score: float | None | Unset
         if isinstance(self.relevance_score, Unset):
             relevance_score = UNSET
         else:
             relevance_score = self.relevance_score
 
-        num_li_locations: Union[None, Unset, float]
+        num_li_locations: float | None | Unset
         if isinstance(self.num_li_locations, Unset):
             num_li_locations = UNSET
         else:
             num_li_locations = self.num_li_locations
 
-        location_name: Union[None, Unset, str]
+        location_name: None | str | Unset
         if isinstance(self.location_name, Unset):
             location_name = UNSET
         else:
             location_name = self.location_name
 
-        crunchbase_slug: Union[None, Unset, str]
+        crunchbase_slug: None | str | Unset
         if isinstance(self.crunchbase_slug, Unset):
             crunchbase_slug = UNSET
         else:
             crunchbase_slug = self.crunchbase_slug
 
-        crunchbase_rank: Union[None, Unset, float]
+        crunchbase_rank: float | None | Unset
         if isinstance(self.crunchbase_rank, Unset):
             crunchbase_rank = UNSET
         else:
             crunchbase_rank = self.crunchbase_rank
 
-        primary_role: Union[None, Unset, str]
+        primary_role: None | str | Unset
         if isinstance(self.primary_role, Unset):
             primary_role = UNSET
         else:
             primary_role = self.primary_role
 
-        roles: Union[None, Unset, list[str]]
+        roles: list[str] | None | Unset
         if isinstance(self.roles, Unset):
             roles = UNSET
         elif isinstance(self.roles, list):
             roles = self.roles
 
-
         else:
             roles = self.roles
 
-        short_description: Union[None, Unset, str]
+        short_description: None | str | Unset
         if isinstance(self.short_description, Unset):
             short_description = UNSET
         else:
             short_description = self.short_description
 
-        long_description: Union[None, Unset, str]
+        long_description: None | str | Unset
         if isinstance(self.long_description, Unset):
             long_description = UNSET
         else:
             long_description = self.long_description
 
-        crunchbase_category_groups: Union[None, Unset, list[str]]
+        crunchbase_category_groups: list[str] | None | Unset
         if isinstance(self.crunchbase_category_groups, Unset):
             crunchbase_category_groups = UNSET
         elif isinstance(self.crunchbase_category_groups, list):
             crunchbase_category_groups = self.crunchbase_category_groups
 
-
         else:
             crunchbase_category_groups = self.crunchbase_category_groups
 
-        crunchbase_categories: Union[None, Unset, list[str]]
+        crunchbase_categories: list[str] | None | Unset
         if isinstance(self.crunchbase_categories, Unset):
             crunchbase_categories = UNSET
         elif isinstance(self.crunchbase_categories, list):
             crunchbase_categories = self.crunchbase_categories
 
-
         else:
             crunchbase_categories = self.crunchbase_categories
 
-        is_subsidiary: Union[None, Unset, bool]
+        is_subsidiary: bool | None | Unset
         if isinstance(self.is_subsidiary, Unset):
             is_subsidiary = UNSET
         else:
             is_subsidiary = self.is_subsidiary
 
-        parent: Union[None, Unset, str]
+        parent: None | str | Unset
         if isinstance(self.parent, Unset):
             parent = UNSET
         else:
             parent = self.parent
 
-        num_funding_rounds: Union[None, Unset, float]
+        num_funding_rounds: float | None | Unset
         if isinstance(self.num_funding_rounds, Unset):
             num_funding_rounds = UNSET
         else:
             num_funding_rounds = self.num_funding_rounds
 
-        funding_rounds: Union[None, Unset, list[dict[str, Any]]]
+        funding_rounds: list[dict[str, Any]] | None | Unset
         if isinstance(self.funding_rounds, Unset):
             funding_rounds = UNSET
         elif isinstance(self.funding_rounds, list):
@@ -749,17 +773,16 @@ class CompanySearchResponse200OutputDataItem:
                 funding_rounds_type_0_item = funding_rounds_type_0_item_data.to_dict()
                 funding_rounds.append(funding_rounds_type_0_item)
 
-
         else:
             funding_rounds = self.funding_rounds
 
-        num_exits: Union[None, Unset, float]
+        num_exits: float | None | Unset
         if isinstance(self.num_exits, Unset):
             num_exits = UNSET
         else:
             num_exits = self.num_exits
 
-        investors: Union[None, Unset, list[dict[str, Any]]]
+        investors: list[dict[str, Any]] | None | Unset
         if isinstance(self.investors, Unset):
             investors = UNSET
         elif isinstance(self.investors, list):
@@ -768,11 +791,10 @@ class CompanySearchResponse200OutputDataItem:
                 investors_type_0_item = investors_type_0_item_data.to_dict()
                 investors.append(investors_type_0_item)
 
-
         else:
             investors = self.investors
 
-        acquisitions: Union[None, Unset, list[dict[str, Any]]]
+        acquisitions: list[dict[str, Any]] | None | Unset
         if isinstance(self.acquisitions, Unset):
             acquisitions = UNSET
         elif isinstance(self.acquisitions, list):
@@ -781,11 +803,10 @@ class CompanySearchResponse200OutputDataItem:
                 acquisitions_type_0_item = acquisitions_type_0_item_data.to_dict()
                 acquisitions.append(acquisitions_type_0_item)
 
-
         else:
             acquisitions = self.acquisitions
 
-        best_funding_round: Union[None, Unset, dict[str, Any]]
+        best_funding_round: dict[str, Any] | None | Unset
         if isinstance(self.best_funding_round, Unset):
             best_funding_round = UNSET
         elif isinstance(self.best_funding_round, CompanySearchResponse200OutputDataItemBestFundingRoundType0):
@@ -793,39 +814,37 @@ class CompanySearchResponse200OutputDataItem:
         else:
             best_funding_round = self.best_funding_round
 
-        funding_stage: Union[None, Unset, str]
+        funding_stage: None | str | Unset
         if isinstance(self.funding_stage, Unset):
             funding_stage = UNSET
         else:
             funding_stage = self.funding_stage
 
-        alt_industries: Union[None, Unset, list[str]]
+        alt_industries: list[str] | None | Unset
         if isinstance(self.alt_industries, Unset):
             alt_industries = UNSET
         elif isinstance(self.alt_industries, list):
             alt_industries = self.alt_industries
 
-
         else:
             alt_industries = self.alt_industries
 
-        alt_keywords: Union[None, Unset, list[str]]
+        alt_keywords: list[str] | None | Unset
         if isinstance(self.alt_keywords, Unset):
             alt_keywords = UNSET
         elif isinstance(self.alt_keywords, list):
             alt_keywords = self.alt_keywords
 
-
         else:
             alt_keywords = self.alt_keywords
 
-        alt_description: Union[None, Unset, str]
+        alt_description: None | str | Unset
         if isinstance(self.alt_description, Unset):
             alt_description = UNSET
         else:
             alt_description = self.alt_description
 
-        employee_trends: Union[None, Unset, list[dict[str, Any]]]
+        employee_trends: list[dict[str, Any]] | None | Unset
         if isinstance(self.employee_trends, Unset):
             employee_trends = UNSET
         elif isinstance(self.employee_trends, list):
@@ -834,17 +853,16 @@ class CompanySearchResponse200OutputDataItem:
                 employee_trends_type_0_item = employee_trends_type_0_item_data.to_dict()
                 employee_trends.append(employee_trends_type_0_item)
 
-
         else:
             employee_trends = self.employee_trends
 
-        logo_url: Union[None, Unset, str]
+        logo_url: None | str | Unset
         if isinstance(self.logo_url, Unset):
             logo_url = UNSET
         else:
             logo_url = self.logo_url
 
-        similar_companies: Union[None, Unset, list[dict[str, Any]]]
+        similar_companies: list[dict[str, Any]] | None | Unset
         if isinstance(self.similar_companies, Unset):
             similar_companies = UNSET
         elif isinstance(self.similar_companies, list):
@@ -853,11 +871,10 @@ class CompanySearchResponse200OutputDataItem:
                 similar_companies_type_0_item = similar_companies_type_0_item_data.to_dict()
                 similar_companies.append(similar_companies_type_0_item)
 
-
         else:
             similar_companies = self.similar_companies
 
-        full_funding_rounds: Union[None, Unset, list[dict[str, Any]]]
+        full_funding_rounds: list[dict[str, Any]] | None | Unset
         if isinstance(self.full_funding_rounds, Unset):
             full_funding_rounds = UNSET
         elif isinstance(self.full_funding_rounds, list):
@@ -866,11 +883,10 @@ class CompanySearchResponse200OutputDataItem:
                 full_funding_rounds_type_0_item = full_funding_rounds_type_0_item_data.to_dict()
                 full_funding_rounds.append(full_funding_rounds_type_0_item)
 
-
         else:
             full_funding_rounds = self.full_funding_rounds
 
-        funding_round_stats: Union[None, Unset, dict[str, Any]]
+        funding_round_stats: dict[str, Any] | None | Unset
         if isinstance(self.funding_round_stats, Unset):
             funding_round_stats = UNSET
         elif isinstance(self.funding_round_stats, CompanySearchResponse200OutputDataItemFundingRoundStatsType0):
@@ -878,7 +894,7 @@ class CompanySearchResponse200OutputDataItem:
         else:
             funding_round_stats = self.funding_round_stats
 
-        investment_stats: Union[None, Unset, dict[str, Any]]
+        investment_stats: dict[str, Any] | None | Unset
         if isinstance(self.investment_stats, Unset):
             investment_stats = UNSET
         elif isinstance(self.investment_stats, CompanySearchResponse200OutputDataItemInvestmentStatsType0):
@@ -886,33 +902,30 @@ class CompanySearchResponse200OutputDataItem:
         else:
             investment_stats = self.investment_stats
 
-        is_investor: Union[None, Unset, bool]
+        is_investor: bool | None | Unset
         if isinstance(self.is_investor, Unset):
             is_investor = UNSET
         else:
             is_investor = self.is_investor
 
-        investor_type: Union[None, Unset, str]
+        investor_type: None | str | Unset
         if isinstance(self.investor_type, Unset):
             investor_type = UNSET
         else:
             investor_type = self.investor_type
 
-        investor_categories: Union[None, Unset, list[str]]
+        investor_categories: list[str] | None | Unset
         if isinstance(self.investor_categories, Unset):
             investor_categories = UNSET
         elif isinstance(self.investor_categories, list):
             investor_categories = self.investor_categories
 
-
         else:
             investor_categories = self.investor_categories
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if linkedin_id is not UNSET:
             field_dict["linkedin_id"] = linkedin_id
         if accelerator_statuses is not UNSET:
@@ -1070,42 +1083,81 @@ class CompanySearchResponse200OutputDataItem:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.company_search_response_200_output_data_item_custom_data_type_0 import CompanySearchResponse200OutputDataItemCustomDataType0
-        from ..models.company_search_response_200_output_data_item_employee_count_consensus_type_0 import CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0
-        from ..models.company_search_response_200_output_data_item_role_count_matches_type_0_item import CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item
-        from ..models.company_search_response_200_output_data_item_accelerators_type_0_item import CompanySearchResponse200OutputDataItemAcceleratorsType0Item
-        from ..models.company_search_response_200_output_data_item_fortune_rankings_type_0_item import CompanySearchResponse200OutputDataItemFortuneRankingsType0Item
-        from ..models.company_search_response_200_output_data_item_funding_rounds_type_0_item import CompanySearchResponse200OutputDataItemFundingRoundsType0Item
-        from ..models.company_search_response_200_output_data_item_location_consensus_type_0 import CompanySearchResponse200OutputDataItemLocationConsensusType0
-        from ..models.company_search_response_200_output_data_item_best_funding_round_type_0 import CompanySearchResponse200OutputDataItemBestFundingRoundType0
-        from ..models.company_search_response_200_output_data_item_similar_companies_type_0_item import CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item
-        from ..models.company_search_response_200_output_data_item_li_industries_type_0_item import CompanySearchResponse200OutputDataItemLiIndustriesType0Item
-        from ..models.company_search_response_200_output_data_item_full_funding_rounds_type_0_item import CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item
-        from ..models.company_search_response_200_output_data_item_li_locations_type_0_item import CompanySearchResponse200OutputDataItemLiLocationsType0Item
-        from ..models.company_search_response_200_output_data_item_funding_round_stats_type_0 import CompanySearchResponse200OutputDataItemFundingRoundStatsType0
-        from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0 import CompanySearchResponse200OutputDataItemLiJobPostsStatsType0
-        from ..models.company_search_response_200_output_data_item_num_matching_locations_type_0 import CompanySearchResponse200OutputDataItemNumMatchingLocationsType0
-        from ..models.company_search_response_200_output_data_item_employee_trends_type_0_item import CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item
-        from ..models.company_search_response_200_output_data_item_stock_info_consensus_type_0 import CompanySearchResponse200OutputDataItemStockInfoConsensusType0
-        from ..models.company_search_response_200_output_data_item_acquisitions_type_0_item import CompanySearchResponse200OutputDataItemAcquisitionsType0Item
-        from ..models.company_search_response_200_output_data_item_investors_type_0_item import CompanySearchResponse200OutputDataItemInvestorsType0Item
-        from ..models.company_search_response_200_output_data_item_investment_stats_type_0 import CompanySearchResponse200OutputDataItemInvestmentStatsType0
+        from ..models.company_search_response_200_output_data_item_accelerators_type_0_item import (
+            CompanySearchResponse200OutputDataItemAcceleratorsType0Item,
+        )
+        from ..models.company_search_response_200_output_data_item_acquisitions_type_0_item import (
+            CompanySearchResponse200OutputDataItemAcquisitionsType0Item,
+        )
+        from ..models.company_search_response_200_output_data_item_best_funding_round_type_0 import (
+            CompanySearchResponse200OutputDataItemBestFundingRoundType0,
+        )
+        from ..models.company_search_response_200_output_data_item_custom_data_type_0 import (
+            CompanySearchResponse200OutputDataItemCustomDataType0,
+        )
+        from ..models.company_search_response_200_output_data_item_employee_count_consensus_type_0 import (
+            CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0,
+        )
+        from ..models.company_search_response_200_output_data_item_employee_trends_type_0_item import (
+            CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item,
+        )
+        from ..models.company_search_response_200_output_data_item_fortune_rankings_type_0_item import (
+            CompanySearchResponse200OutputDataItemFortuneRankingsType0Item,
+        )
+        from ..models.company_search_response_200_output_data_item_full_funding_rounds_type_0_item import (
+            CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item,
+        )
+        from ..models.company_search_response_200_output_data_item_funding_round_stats_type_0 import (
+            CompanySearchResponse200OutputDataItemFundingRoundStatsType0,
+        )
+        from ..models.company_search_response_200_output_data_item_funding_rounds_type_0_item import (
+            CompanySearchResponse200OutputDataItemFundingRoundsType0Item,
+        )
+        from ..models.company_search_response_200_output_data_item_investment_stats_type_0 import (
+            CompanySearchResponse200OutputDataItemInvestmentStatsType0,
+        )
+        from ..models.company_search_response_200_output_data_item_investors_type_0_item import (
+            CompanySearchResponse200OutputDataItemInvestorsType0Item,
+        )
+        from ..models.company_search_response_200_output_data_item_li_industries_type_0_item import (
+            CompanySearchResponse200OutputDataItemLiIndustriesType0Item,
+        )
+        from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0 import (
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0,
+        )
+        from ..models.company_search_response_200_output_data_item_li_locations_type_0_item import (
+            CompanySearchResponse200OutputDataItemLiLocationsType0Item,
+        )
+        from ..models.company_search_response_200_output_data_item_location_consensus_type_0 import (
+            CompanySearchResponse200OutputDataItemLocationConsensusType0,
+        )
+        from ..models.company_search_response_200_output_data_item_num_matching_locations_type_0 import (
+            CompanySearchResponse200OutputDataItemNumMatchingLocationsType0,
+        )
+        from ..models.company_search_response_200_output_data_item_role_count_matches_type_0_item import (
+            CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item,
+        )
+        from ..models.company_search_response_200_output_data_item_similar_companies_type_0_item import (
+            CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item,
+        )
+        from ..models.company_search_response_200_output_data_item_stock_info_consensus_type_0 import (
+            CompanySearchResponse200OutputDataItemStockInfoConsensusType0,
+        )
+
         d = dict(src_dict)
-        def _parse_linkedin_id(data: object) -> Union[None, Unset, str]:
+
+        def _parse_linkedin_id(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         linkedin_id = _parse_linkedin_id(d.pop("linkedin_id", UNSET))
 
-
-        def _parse_accelerator_statuses(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_accelerator_statuses(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1116,14 +1168,15 @@ class CompanySearchResponse200OutputDataItem:
                 accelerator_statuses_type_0 = cast(list[str], data)
 
                 return accelerator_statuses_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         accelerator_statuses = _parse_accelerator_statuses(d.pop("accelerator_statuses", UNSET))
 
-
-        def _parse_accelerators(data: object) -> Union[None, Unset, list['CompanySearchResponse200OutputDataItemAcceleratorsType0Item']]:
+        def _parse_accelerators(
+            data: object,
+        ) -> list[CompanySearchResponse200OutputDataItemAcceleratorsType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1133,22 +1186,21 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 accelerators_type_0 = []
                 _accelerators_type_0 = data
-                for accelerators_type_0_item_data in (_accelerators_type_0):
-                    accelerators_type_0_item = CompanySearchResponse200OutputDataItemAcceleratorsType0Item.from_dict(accelerators_type_0_item_data)
-
-
+                for accelerators_type_0_item_data in _accelerators_type_0:
+                    accelerators_type_0_item = CompanySearchResponse200OutputDataItemAcceleratorsType0Item.from_dict(
+                        accelerators_type_0_item_data
+                    )
 
                     accelerators_type_0.append(accelerators_type_0_item)
 
                 return accelerators_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['CompanySearchResponse200OutputDataItemAcceleratorsType0Item']], data)
+            return cast(list[CompanySearchResponse200OutputDataItemAcceleratorsType0Item] | None | Unset, data)
 
         accelerators = _parse_accelerators(d.pop("accelerators", UNSET))
 
-
-        def _parse_blog_urls(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_blog_urls(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1159,14 +1211,13 @@ class CompanySearchResponse200OutputDataItem:
                 blog_urls_type_0 = cast(list[str], data)
 
                 return blog_urls_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         blog_urls = _parse_blog_urls(d.pop("blog_urls", UNSET))
 
-
-        def _parse_custom_data(data: object) -> Union['CompanySearchResponse200OutputDataItemCustomDataType0', None, Unset]:
+        def _parse_custom_data(data: object) -> CompanySearchResponse200OutputDataItemCustomDataType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1176,17 +1227,14 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 custom_data_type_0 = CompanySearchResponse200OutputDataItemCustomDataType0.from_dict(data)
 
-
-
                 return custom_data_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanySearchResponse200OutputDataItemCustomDataType0', None, Unset], data)
+            return cast(CompanySearchResponse200OutputDataItemCustomDataType0 | None | Unset, data)
 
         custom_data = _parse_custom_data(d.pop("custom_data", UNSET))
 
-
-        def _parse_domains(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_domains(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1197,14 +1245,13 @@ class CompanySearchResponse200OutputDataItem:
                 domains_type_0 = cast(list[str], data)
 
                 return domains_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         domains = _parse_domains(d.pop("domains", UNSET))
 
-
-        def _parse_emails(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_emails(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1215,14 +1262,13 @@ class CompanySearchResponse200OutputDataItem:
                 emails_type_0 = cast(list[str], data)
 
                 return emails_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         emails = _parse_emails(d.pop("emails", UNSET))
 
-
-        def _parse_phone_numbers(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_phone_numbers(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1233,14 +1279,15 @@ class CompanySearchResponse200OutputDataItem:
                 phone_numbers_type_0 = cast(list[str], data)
 
                 return phone_numbers_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         phone_numbers = _parse_phone_numbers(d.pop("phone_numbers", UNSET))
 
-
-        def _parse_employee_count_consensus(data: object) -> Union['CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0', None, Unset]:
+        def _parse_employee_count_consensus(
+            data: object,
+        ) -> CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1248,19 +1295,18 @@ class CompanySearchResponse200OutputDataItem:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                employee_count_consensus_type_0 = CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0.from_dict(data)
-
-
+                employee_count_consensus_type_0 = (
+                    CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0.from_dict(data)
+                )
 
                 return employee_count_consensus_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0', None, Unset], data)
+            return cast(CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0 | None | Unset, data)
 
         employee_count_consensus = _parse_employee_count_consensus(d.pop("employee_count_consensus", UNSET))
 
-
-        def _parse_facebook_urls(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_facebook_urls(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1271,14 +1317,15 @@ class CompanySearchResponse200OutputDataItem:
                 facebook_urls_type_0 = cast(list[str], data)
 
                 return facebook_urls_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         facebook_urls = _parse_facebook_urls(d.pop("facebook_urls", UNSET))
 
-
-        def _parse_fortune_rankings(data: object) -> Union[None, Unset, list['CompanySearchResponse200OutputDataItemFortuneRankingsType0Item']]:
+        def _parse_fortune_rankings(
+            data: object,
+        ) -> list[CompanySearchResponse200OutputDataItemFortuneRankingsType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1288,32 +1335,32 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 fortune_rankings_type_0 = []
                 _fortune_rankings_type_0 = data
-                for fortune_rankings_type_0_item_data in (_fortune_rankings_type_0):
-                    fortune_rankings_type_0_item = CompanySearchResponse200OutputDataItemFortuneRankingsType0Item.from_dict(fortune_rankings_type_0_item_data)
-
-
+                for fortune_rankings_type_0_item_data in _fortune_rankings_type_0:
+                    fortune_rankings_type_0_item = (
+                        CompanySearchResponse200OutputDataItemFortuneRankingsType0Item.from_dict(
+                            fortune_rankings_type_0_item_data
+                        )
+                    )
 
                     fortune_rankings_type_0.append(fortune_rankings_type_0_item)
 
                 return fortune_rankings_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['CompanySearchResponse200OutputDataItemFortuneRankingsType0Item']], data)
+            return cast(list[CompanySearchResponse200OutputDataItemFortuneRankingsType0Item] | None | Unset, data)
 
         fortune_rankings = _parse_fortune_rankings(d.pop("fortune_rankings", UNSET))
 
-
-        def _parse_founded_on_consensus(data: object) -> Union[None, Unset, str]:
+        def _parse_founded_on_consensus(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         founded_on_consensus = _parse_founded_on_consensus(d.pop("founded_on_consensus", UNSET))
 
-
-        def _parse_github_usernames(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_github_usernames(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1324,14 +1371,13 @@ class CompanySearchResponse200OutputDataItem:
                 github_usernames_type_0 = cast(list[str], data)
 
                 return github_usernames_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         github_usernames = _parse_github_usernames(d.pop("github_usernames", UNSET))
 
-
-        def _parse_instagram_handles(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_instagram_handles(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1342,24 +1388,22 @@ class CompanySearchResponse200OutputDataItem:
                 instagram_handles_type_0 = cast(list[str], data)
 
                 return instagram_handles_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         instagram_handles = _parse_instagram_handles(d.pop("instagram_handles", UNSET))
 
-
-        def _parse_latest_funding_consensus(data: object) -> Union[None, Unset, float]:
+        def _parse_latest_funding_consensus(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         latest_funding_consensus = _parse_latest_funding_consensus(d.pop("latest_funding_consensus", UNSET))
 
-
-        def _parse_linkedin_slugs(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_linkedin_slugs(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1370,34 +1414,39 @@ class CompanySearchResponse200OutputDataItem:
                 linkedin_slugs_type_0 = cast(list[str], data)
 
                 return linkedin_slugs_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         linkedin_slugs = _parse_linkedin_slugs(d.pop("linkedin_slugs", UNSET))
 
-
-        def _parse_linkedin_primary_slug(data: object) -> Union[None, Unset, str]:
+        def _parse_linkedin_primary_slug(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         linkedin_primary_slug = _parse_linkedin_primary_slug(d.pop("linkedin_primary_slug", UNSET))
 
-
-        def _parse_li_org_id(data: object) -> Union[None, Unset, str]:
+        def _parse_li_org_id(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         li_org_id = _parse_li_org_id(d.pop("li_org_id", UNSET))
 
-
-        def _parse_li_category(data: object) -> Union[CompanySearchResponse200OutputDataItemLiCategoryType1, CompanySearchResponse200OutputDataItemLiCategoryType2Type1, CompanySearchResponse200OutputDataItemLiCategoryType3Type1, None, Unset]:
+        def _parse_li_category(
+            data: object,
+        ) -> (
+            CompanySearchResponse200OutputDataItemLiCategoryType1
+            | CompanySearchResponse200OutputDataItemLiCategoryType2Type1
+            | CompanySearchResponse200OutputDataItemLiCategoryType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1407,37 +1456,39 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 li_category_type_1 = CompanySearchResponse200OutputDataItemLiCategoryType1(data)
 
-
-
                 return li_category_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 li_category_type_2_type_1 = CompanySearchResponse200OutputDataItemLiCategoryType2Type1(data)
 
-
-
                 return li_category_type_2_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 li_category_type_3_type_1 = CompanySearchResponse200OutputDataItemLiCategoryType3Type1(data)
 
-
-
                 return li_category_type_3_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[CompanySearchResponse200OutputDataItemLiCategoryType1, CompanySearchResponse200OutputDataItemLiCategoryType2Type1, CompanySearchResponse200OutputDataItemLiCategoryType3Type1, None, Unset], data)
+            return cast(
+                CompanySearchResponse200OutputDataItemLiCategoryType1
+                | CompanySearchResponse200OutputDataItemLiCategoryType2Type1
+                | CompanySearchResponse200OutputDataItemLiCategoryType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         li_category = _parse_li_category(d.pop("li_category", UNSET))
 
-
-        def _parse_li_job_posts_stats(data: object) -> Union['CompanySearchResponse200OutputDataItemLiJobPostsStatsType0', None, Unset]:
+        def _parse_li_job_posts_stats(
+            data: object,
+        ) -> CompanySearchResponse200OutputDataItemLiJobPostsStatsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1447,47 +1498,43 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 li_job_posts_stats_type_0 = CompanySearchResponse200OutputDataItemLiJobPostsStatsType0.from_dict(data)
 
-
-
                 return li_job_posts_stats_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanySearchResponse200OutputDataItemLiJobPostsStatsType0', None, Unset], data)
+            return cast(CompanySearchResponse200OutputDataItemLiJobPostsStatsType0 | None | Unset, data)
 
         li_job_posts_stats = _parse_li_job_posts_stats(d.pop("li_job_posts_stats", UNSET))
 
-
-        def _parse_li_description(data: object) -> Union[None, Unset, str]:
+        def _parse_li_description(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         li_description = _parse_li_description(d.pop("li_description", UNSET))
 
-
-        def _parse_li_follower_count(data: object) -> Union[None, Unset, float]:
+        def _parse_li_follower_count(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         li_follower_count = _parse_li_follower_count(d.pop("li_follower_count", UNSET))
 
-
-        def _parse_li_headline(data: object) -> Union[None, Unset, str]:
+        def _parse_li_headline(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         li_headline = _parse_li_headline(d.pop("li_headline", UNSET))
 
-
-        def _parse_li_industries(data: object) -> Union[None, Unset, list['CompanySearchResponse200OutputDataItemLiIndustriesType0Item']]:
+        def _parse_li_industries(
+            data: object,
+        ) -> list[CompanySearchResponse200OutputDataItemLiIndustriesType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1497,22 +1544,23 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 li_industries_type_0 = []
                 _li_industries_type_0 = data
-                for li_industries_type_0_item_data in (_li_industries_type_0):
-                    li_industries_type_0_item = CompanySearchResponse200OutputDataItemLiIndustriesType0Item.from_dict(li_industries_type_0_item_data)
-
-
+                for li_industries_type_0_item_data in _li_industries_type_0:
+                    li_industries_type_0_item = CompanySearchResponse200OutputDataItemLiIndustriesType0Item.from_dict(
+                        li_industries_type_0_item_data
+                    )
 
                     li_industries_type_0.append(li_industries_type_0_item)
 
                 return li_industries_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['CompanySearchResponse200OutputDataItemLiIndustriesType0Item']], data)
+            return cast(list[CompanySearchResponse200OutputDataItemLiIndustriesType0Item] | None | Unset, data)
 
         li_industries = _parse_li_industries(d.pop("li_industries", UNSET))
 
-
-        def _parse_li_locations(data: object) -> Union[None, Unset, list['CompanySearchResponse200OutputDataItemLiLocationsType0Item']]:
+        def _parse_li_locations(
+            data: object,
+        ) -> list[CompanySearchResponse200OutputDataItemLiLocationsType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1522,22 +1570,21 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 li_locations_type_0 = []
                 _li_locations_type_0 = data
-                for li_locations_type_0_item_data in (_li_locations_type_0):
-                    li_locations_type_0_item = CompanySearchResponse200OutputDataItemLiLocationsType0Item.from_dict(li_locations_type_0_item_data)
-
-
+                for li_locations_type_0_item_data in _li_locations_type_0:
+                    li_locations_type_0_item = CompanySearchResponse200OutputDataItemLiLocationsType0Item.from_dict(
+                        li_locations_type_0_item_data
+                    )
 
                     li_locations_type_0.append(li_locations_type_0_item)
 
                 return li_locations_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['CompanySearchResponse200OutputDataItemLiLocationsType0Item']], data)
+            return cast(list[CompanySearchResponse200OutputDataItemLiLocationsType0Item] | None | Unset, data)
 
         li_locations = _parse_li_locations(d.pop("li_locations", UNSET))
 
-
-        def _parse_li_specialties(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_li_specialties(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1548,14 +1595,15 @@ class CompanySearchResponse200OutputDataItem:
                 li_specialties_type_0 = cast(list[str], data)
 
                 return li_specialties_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         li_specialties = _parse_li_specialties(d.pop("li_specialties", UNSET))
 
-
-        def _parse_location_consensus(data: object) -> Union['CompanySearchResponse200OutputDataItemLocationConsensusType0', None, Unset]:
+        def _parse_location_consensus(
+            data: object,
+        ) -> CompanySearchResponse200OutputDataItemLocationConsensusType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1565,27 +1613,23 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 location_consensus_type_0 = CompanySearchResponse200OutputDataItemLocationConsensusType0.from_dict(data)
 
-
-
                 return location_consensus_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanySearchResponse200OutputDataItemLocationConsensusType0', None, Unset], data)
+            return cast(CompanySearchResponse200OutputDataItemLocationConsensusType0 | None | Unset, data)
 
         location_consensus = _parse_location_consensus(d.pop("location_consensus", UNSET))
 
-
-        def _parse_market_cap_usd(data: object) -> Union[None, Unset, float]:
+        def _parse_market_cap_usd(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         market_cap_usd = _parse_market_cap_usd(d.pop("market_cap_usd", UNSET))
 
-
-        def _parse_naics_codes(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_naics_codes(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1596,14 +1640,13 @@ class CompanySearchResponse200OutputDataItem:
                 naics_codes_type_0 = cast(list[str], data)
 
                 return naics_codes_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         naics_codes = _parse_naics_codes(d.pop("naics_codes", UNSET))
 
-
-        def _parse_names(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_names(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1614,34 +1657,33 @@ class CompanySearchResponse200OutputDataItem:
                 names_type_0 = cast(list[str], data)
 
                 return names_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         names = _parse_names(d.pop("names", UNSET))
 
-
-        def _parse_preferred_name(data: object) -> Union[None, Unset, str]:
+        def _parse_preferred_name(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         preferred_name = _parse_preferred_name(d.pop("preferred_name", UNSET))
 
-
-        def _parse_revenue_usd(data: object) -> Union[None, Unset, float]:
+        def _parse_revenue_usd(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         revenue_usd = _parse_revenue_usd(d.pop("revenue_usd", UNSET))
 
-
-        def _parse_standard_industries(data: object) -> Union[None, Unset, list[CompanySearchResponse200OutputDataItemStandardIndustriesType0Item]]:
+        def _parse_standard_industries(
+            data: object,
+        ) -> list[CompanySearchResponse200OutputDataItemStandardIndustriesType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1651,32 +1693,32 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 standard_industries_type_0 = []
                 _standard_industries_type_0 = data
-                for standard_industries_type_0_item_data in (_standard_industries_type_0):
-                    standard_industries_type_0_item = CompanySearchResponse200OutputDataItemStandardIndustriesType0Item(standard_industries_type_0_item_data)
-
-
+                for standard_industries_type_0_item_data in _standard_industries_type_0:
+                    standard_industries_type_0_item = CompanySearchResponse200OutputDataItemStandardIndustriesType0Item(
+                        standard_industries_type_0_item_data
+                    )
 
                     standard_industries_type_0.append(standard_industries_type_0_item)
 
                 return standard_industries_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[CompanySearchResponse200OutputDataItemStandardIndustriesType0Item]], data)
+            return cast(list[CompanySearchResponse200OutputDataItemStandardIndustriesType0Item] | None | Unset, data)
 
         standard_industries = _parse_standard_industries(d.pop("standard_industries", UNSET))
 
-
-        def _parse_status_consensus(data: object) -> Union[None, Unset, str]:
+        def _parse_status_consensus(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         status_consensus = _parse_status_consensus(d.pop("status_consensus", UNSET))
 
-
-        def _parse_stock_info_consensus(data: object) -> Union['CompanySearchResponse200OutputDataItemStockInfoConsensusType0', None, Unset]:
+        def _parse_stock_info_consensus(
+            data: object,
+        ) -> CompanySearchResponse200OutputDataItemStockInfoConsensusType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1684,19 +1726,18 @@ class CompanySearchResponse200OutputDataItem:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                stock_info_consensus_type_0 = CompanySearchResponse200OutputDataItemStockInfoConsensusType0.from_dict(data)
-
-
+                stock_info_consensus_type_0 = CompanySearchResponse200OutputDataItemStockInfoConsensusType0.from_dict(
+                    data
+                )
 
                 return stock_info_consensus_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanySearchResponse200OutputDataItemStockInfoConsensusType0', None, Unset], data)
+            return cast(CompanySearchResponse200OutputDataItemStockInfoConsensusType0 | None | Unset, data)
 
         stock_info_consensus = _parse_stock_info_consensus(d.pop("stock_info_consensus", UNSET))
 
-
-        def _parse_tags(data: object) -> Union[None, Unset, list[CompanySearchResponse200OutputDataItemTagsType0Item]]:
+        def _parse_tags(data: object) -> list[CompanySearchResponse200OutputDataItemTagsType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1706,32 +1747,28 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 tags_type_0 = []
                 _tags_type_0 = data
-                for tags_type_0_item_data in (_tags_type_0):
+                for tags_type_0_item_data in _tags_type_0:
                     tags_type_0_item = CompanySearchResponse200OutputDataItemTagsType0Item(tags_type_0_item_data)
-
-
 
                     tags_type_0.append(tags_type_0_item)
 
                 return tags_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[CompanySearchResponse200OutputDataItemTagsType0Item]], data)
+            return cast(list[CompanySearchResponse200OutputDataItemTagsType0Item] | None | Unset, data)
 
         tags = _parse_tags(d.pop("tags", UNSET))
 
-
-        def _parse_total_funding_consensus(data: object) -> Union[None, Unset, float]:
+        def _parse_total_funding_consensus(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         total_funding_consensus = _parse_total_funding_consensus(d.pop("total_funding_consensus", UNSET))
 
-
-        def _parse_twitter_handles(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_twitter_handles(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1742,14 +1779,13 @@ class CompanySearchResponse200OutputDataItem:
                 twitter_handles_type_0 = cast(list[str], data)
 
                 return twitter_handles_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         twitter_handles = _parse_twitter_handles(d.pop("twitter_handles", UNSET))
 
-
-        def _parse_websites(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_websites(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1760,14 +1796,13 @@ class CompanySearchResponse200OutputDataItem:
                 websites_type_0 = cast(list[str], data)
 
                 return websites_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         websites = _parse_websites(d.pop("websites", UNSET))
 
-
-        def _parse_wellfound_slugs(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_wellfound_slugs(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1778,14 +1813,13 @@ class CompanySearchResponse200OutputDataItem:
                 wellfound_slugs_type_0 = cast(list[str], data)
 
                 return wellfound_slugs_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         wellfound_slugs = _parse_wellfound_slugs(d.pop("wellfound_slugs", UNSET))
 
-
-        def _parse_youtube_urls(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_youtube_urls(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1796,14 +1830,15 @@ class CompanySearchResponse200OutputDataItem:
                 youtube_urls_type_0 = cast(list[str], data)
 
                 return youtube_urls_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         youtube_urls = _parse_youtube_urls(d.pop("youtube_urls", UNSET))
 
-
-        def _parse_role_count_matches(data: object) -> Union[None, Unset, list['CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item']]:
+        def _parse_role_count_matches(
+            data: object,
+        ) -> list[CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1813,22 +1848,25 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 role_count_matches_type_0 = []
                 _role_count_matches_type_0 = data
-                for role_count_matches_type_0_item_data in (_role_count_matches_type_0):
-                    role_count_matches_type_0_item = CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item.from_dict(role_count_matches_type_0_item_data)
-
-
+                for role_count_matches_type_0_item_data in _role_count_matches_type_0:
+                    role_count_matches_type_0_item = (
+                        CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item.from_dict(
+                            role_count_matches_type_0_item_data
+                        )
+                    )
 
                     role_count_matches_type_0.append(role_count_matches_type_0_item)
 
                 return role_count_matches_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item']], data)
+            return cast(list[CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item] | None | Unset, data)
 
         role_count_matches = _parse_role_count_matches(d.pop("role_count_matches", UNSET))
 
-
-        def _parse_num_matching_locations(data: object) -> Union['CompanySearchResponse200OutputDataItemNumMatchingLocationsType0', None, Unset]:
+        def _parse_num_matching_locations(
+            data: object,
+        ) -> CompanySearchResponse200OutputDataItemNumMatchingLocationsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1836,19 +1874,18 @@ class CompanySearchResponse200OutputDataItem:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                num_matching_locations_type_0 = CompanySearchResponse200OutputDataItemNumMatchingLocationsType0.from_dict(data)
-
-
+                num_matching_locations_type_0 = (
+                    CompanySearchResponse200OutputDataItemNumMatchingLocationsType0.from_dict(data)
+                )
 
                 return num_matching_locations_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanySearchResponse200OutputDataItemNumMatchingLocationsType0', None, Unset], data)
+            return cast(CompanySearchResponse200OutputDataItemNumMatchingLocationsType0 | None | Unset, data)
 
         num_matching_locations = _parse_num_matching_locations(d.pop("num_matching_locations", UNSET))
 
-
-        def _parse_linkedin_ids(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_linkedin_ids(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1859,84 +1896,76 @@ class CompanySearchResponse200OutputDataItem:
                 linkedin_ids_type_0 = cast(list[str], data)
 
                 return linkedin_ids_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         linkedin_ids = _parse_linkedin_ids(d.pop("linkedin_ids", UNSET))
 
-
-        def _parse_last_sort_key(data: object) -> Union[None, Unset, str]:
+        def _parse_last_sort_key(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         last_sort_key = _parse_last_sort_key(d.pop("last_sort_key", UNSET))
 
-
-        def _parse_relevance_score(data: object) -> Union[None, Unset, float]:
+        def _parse_relevance_score(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         relevance_score = _parse_relevance_score(d.pop("relevance_score", UNSET))
 
-
-        def _parse_num_li_locations(data: object) -> Union[None, Unset, float]:
+        def _parse_num_li_locations(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         num_li_locations = _parse_num_li_locations(d.pop("num_li_locations", UNSET))
 
-
-        def _parse_location_name(data: object) -> Union[None, Unset, str]:
+        def _parse_location_name(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         location_name = _parse_location_name(d.pop("location_name", UNSET))
 
-
-        def _parse_crunchbase_slug(data: object) -> Union[None, Unset, str]:
+        def _parse_crunchbase_slug(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         crunchbase_slug = _parse_crunchbase_slug(d.pop("crunchbase_slug", UNSET))
 
-
-        def _parse_crunchbase_rank(data: object) -> Union[None, Unset, float]:
+        def _parse_crunchbase_rank(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         crunchbase_rank = _parse_crunchbase_rank(d.pop("crunchbase_rank", UNSET))
 
-
-        def _parse_primary_role(data: object) -> Union[None, Unset, str]:
+        def _parse_primary_role(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         primary_role = _parse_primary_role(d.pop("primary_role", UNSET))
 
-
-        def _parse_roles(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_roles(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1947,34 +1976,31 @@ class CompanySearchResponse200OutputDataItem:
                 roles_type_0 = cast(list[str], data)
 
                 return roles_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         roles = _parse_roles(d.pop("roles", UNSET))
 
-
-        def _parse_short_description(data: object) -> Union[None, Unset, str]:
+        def _parse_short_description(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         short_description = _parse_short_description(d.pop("short_description", UNSET))
 
-
-        def _parse_long_description(data: object) -> Union[None, Unset, str]:
+        def _parse_long_description(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         long_description = _parse_long_description(d.pop("long_description", UNSET))
 
-
-        def _parse_crunchbase_category_groups(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_crunchbase_category_groups(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1985,14 +2011,13 @@ class CompanySearchResponse200OutputDataItem:
                 crunchbase_category_groups_type_0 = cast(list[str], data)
 
                 return crunchbase_category_groups_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         crunchbase_category_groups = _parse_crunchbase_category_groups(d.pop("crunchbase_category_groups", UNSET))
 
-
-        def _parse_crunchbase_categories(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_crunchbase_categories(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -2003,44 +2028,42 @@ class CompanySearchResponse200OutputDataItem:
                 crunchbase_categories_type_0 = cast(list[str], data)
 
                 return crunchbase_categories_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         crunchbase_categories = _parse_crunchbase_categories(d.pop("crunchbase_categories", UNSET))
 
-
-        def _parse_is_subsidiary(data: object) -> Union[None, Unset, bool]:
+        def _parse_is_subsidiary(data: object) -> bool | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, bool], data)
+            return cast(bool | None | Unset, data)
 
         is_subsidiary = _parse_is_subsidiary(d.pop("is_subsidiary", UNSET))
 
-
-        def _parse_parent(data: object) -> Union[None, Unset, str]:
+        def _parse_parent(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         parent = _parse_parent(d.pop("parent", UNSET))
 
-
-        def _parse_num_funding_rounds(data: object) -> Union[None, Unset, float]:
+        def _parse_num_funding_rounds(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         num_funding_rounds = _parse_num_funding_rounds(d.pop("num_funding_rounds", UNSET))
 
-
-        def _parse_funding_rounds(data: object) -> Union[None, Unset, list['CompanySearchResponse200OutputDataItemFundingRoundsType0Item']]:
+        def _parse_funding_rounds(
+            data: object,
+        ) -> list[CompanySearchResponse200OutputDataItemFundingRoundsType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -2050,32 +2073,32 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 funding_rounds_type_0 = []
                 _funding_rounds_type_0 = data
-                for funding_rounds_type_0_item_data in (_funding_rounds_type_0):
-                    funding_rounds_type_0_item = CompanySearchResponse200OutputDataItemFundingRoundsType0Item.from_dict(funding_rounds_type_0_item_data)
-
-
+                for funding_rounds_type_0_item_data in _funding_rounds_type_0:
+                    funding_rounds_type_0_item = CompanySearchResponse200OutputDataItemFundingRoundsType0Item.from_dict(
+                        funding_rounds_type_0_item_data
+                    )
 
                     funding_rounds_type_0.append(funding_rounds_type_0_item)
 
                 return funding_rounds_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['CompanySearchResponse200OutputDataItemFundingRoundsType0Item']], data)
+            return cast(list[CompanySearchResponse200OutputDataItemFundingRoundsType0Item] | None | Unset, data)
 
         funding_rounds = _parse_funding_rounds(d.pop("funding_rounds", UNSET))
 
-
-        def _parse_num_exits(data: object) -> Union[None, Unset, float]:
+        def _parse_num_exits(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         num_exits = _parse_num_exits(d.pop("num_exits", UNSET))
 
-
-        def _parse_investors(data: object) -> Union[None, Unset, list['CompanySearchResponse200OutputDataItemInvestorsType0Item']]:
+        def _parse_investors(
+            data: object,
+        ) -> list[CompanySearchResponse200OutputDataItemInvestorsType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -2085,22 +2108,23 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 investors_type_0 = []
                 _investors_type_0 = data
-                for investors_type_0_item_data in (_investors_type_0):
-                    investors_type_0_item = CompanySearchResponse200OutputDataItemInvestorsType0Item.from_dict(investors_type_0_item_data)
-
-
+                for investors_type_0_item_data in _investors_type_0:
+                    investors_type_0_item = CompanySearchResponse200OutputDataItemInvestorsType0Item.from_dict(
+                        investors_type_0_item_data
+                    )
 
                     investors_type_0.append(investors_type_0_item)
 
                 return investors_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['CompanySearchResponse200OutputDataItemInvestorsType0Item']], data)
+            return cast(list[CompanySearchResponse200OutputDataItemInvestorsType0Item] | None | Unset, data)
 
         investors = _parse_investors(d.pop("investors", UNSET))
 
-
-        def _parse_acquisitions(data: object) -> Union[None, Unset, list['CompanySearchResponse200OutputDataItemAcquisitionsType0Item']]:
+        def _parse_acquisitions(
+            data: object,
+        ) -> list[CompanySearchResponse200OutputDataItemAcquisitionsType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -2110,22 +2134,23 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 acquisitions_type_0 = []
                 _acquisitions_type_0 = data
-                for acquisitions_type_0_item_data in (_acquisitions_type_0):
-                    acquisitions_type_0_item = CompanySearchResponse200OutputDataItemAcquisitionsType0Item.from_dict(acquisitions_type_0_item_data)
-
-
+                for acquisitions_type_0_item_data in _acquisitions_type_0:
+                    acquisitions_type_0_item = CompanySearchResponse200OutputDataItemAcquisitionsType0Item.from_dict(
+                        acquisitions_type_0_item_data
+                    )
 
                     acquisitions_type_0.append(acquisitions_type_0_item)
 
                 return acquisitions_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['CompanySearchResponse200OutputDataItemAcquisitionsType0Item']], data)
+            return cast(list[CompanySearchResponse200OutputDataItemAcquisitionsType0Item] | None | Unset, data)
 
         acquisitions = _parse_acquisitions(d.pop("acquisitions", UNSET))
 
-
-        def _parse_best_funding_round(data: object) -> Union['CompanySearchResponse200OutputDataItemBestFundingRoundType0', None, Unset]:
+        def _parse_best_funding_round(
+            data: object,
+        ) -> CompanySearchResponse200OutputDataItemBestFundingRoundType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -2135,27 +2160,23 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 best_funding_round_type_0 = CompanySearchResponse200OutputDataItemBestFundingRoundType0.from_dict(data)
 
-
-
                 return best_funding_round_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanySearchResponse200OutputDataItemBestFundingRoundType0', None, Unset], data)
+            return cast(CompanySearchResponse200OutputDataItemBestFundingRoundType0 | None | Unset, data)
 
         best_funding_round = _parse_best_funding_round(d.pop("best_funding_round", UNSET))
 
-
-        def _parse_funding_stage(data: object) -> Union[None, Unset, str]:
+        def _parse_funding_stage(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         funding_stage = _parse_funding_stage(d.pop("funding_stage", UNSET))
 
-
-        def _parse_alt_industries(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_alt_industries(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -2166,14 +2187,13 @@ class CompanySearchResponse200OutputDataItem:
                 alt_industries_type_0 = cast(list[str], data)
 
                 return alt_industries_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         alt_industries = _parse_alt_industries(d.pop("alt_industries", UNSET))
 
-
-        def _parse_alt_keywords(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_alt_keywords(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -2184,24 +2204,24 @@ class CompanySearchResponse200OutputDataItem:
                 alt_keywords_type_0 = cast(list[str], data)
 
                 return alt_keywords_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         alt_keywords = _parse_alt_keywords(d.pop("alt_keywords", UNSET))
 
-
-        def _parse_alt_description(data: object) -> Union[None, Unset, str]:
+        def _parse_alt_description(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         alt_description = _parse_alt_description(d.pop("alt_description", UNSET))
 
-
-        def _parse_employee_trends(data: object) -> Union[None, Unset, list['CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item']]:
+        def _parse_employee_trends(
+            data: object,
+        ) -> list[CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -2211,32 +2231,34 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 employee_trends_type_0 = []
                 _employee_trends_type_0 = data
-                for employee_trends_type_0_item_data in (_employee_trends_type_0):
-                    employee_trends_type_0_item = CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item.from_dict(employee_trends_type_0_item_data)
-
-
+                for employee_trends_type_0_item_data in _employee_trends_type_0:
+                    employee_trends_type_0_item = (
+                        CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item.from_dict(
+                            employee_trends_type_0_item_data
+                        )
+                    )
 
                     employee_trends_type_0.append(employee_trends_type_0_item)
 
                 return employee_trends_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item']], data)
+            return cast(list[CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item] | None | Unset, data)
 
         employee_trends = _parse_employee_trends(d.pop("employee_trends", UNSET))
 
-
-        def _parse_logo_url(data: object) -> Union[None, Unset, str]:
+        def _parse_logo_url(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         logo_url = _parse_logo_url(d.pop("logo_url", UNSET))
 
-
-        def _parse_similar_companies(data: object) -> Union[None, Unset, list['CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item']]:
+        def _parse_similar_companies(
+            data: object,
+        ) -> list[CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -2246,22 +2268,25 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 similar_companies_type_0 = []
                 _similar_companies_type_0 = data
-                for similar_companies_type_0_item_data in (_similar_companies_type_0):
-                    similar_companies_type_0_item = CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item.from_dict(similar_companies_type_0_item_data)
-
-
+                for similar_companies_type_0_item_data in _similar_companies_type_0:
+                    similar_companies_type_0_item = (
+                        CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item.from_dict(
+                            similar_companies_type_0_item_data
+                        )
+                    )
 
                     similar_companies_type_0.append(similar_companies_type_0_item)
 
                 return similar_companies_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item']], data)
+            return cast(list[CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item] | None | Unset, data)
 
         similar_companies = _parse_similar_companies(d.pop("similar_companies", UNSET))
 
-
-        def _parse_full_funding_rounds(data: object) -> Union[None, Unset, list['CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item']]:
+        def _parse_full_funding_rounds(
+            data: object,
+        ) -> list[CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -2271,22 +2296,25 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 full_funding_rounds_type_0 = []
                 _full_funding_rounds_type_0 = data
-                for full_funding_rounds_type_0_item_data in (_full_funding_rounds_type_0):
-                    full_funding_rounds_type_0_item = CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item.from_dict(full_funding_rounds_type_0_item_data)
-
-
+                for full_funding_rounds_type_0_item_data in _full_funding_rounds_type_0:
+                    full_funding_rounds_type_0_item = (
+                        CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item.from_dict(
+                            full_funding_rounds_type_0_item_data
+                        )
+                    )
 
                     full_funding_rounds_type_0.append(full_funding_rounds_type_0_item)
 
                 return full_funding_rounds_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item']], data)
+            return cast(list[CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item] | None | Unset, data)
 
         full_funding_rounds = _parse_full_funding_rounds(d.pop("full_funding_rounds", UNSET))
 
-
-        def _parse_funding_round_stats(data: object) -> Union['CompanySearchResponse200OutputDataItemFundingRoundStatsType0', None, Unset]:
+        def _parse_funding_round_stats(
+            data: object,
+        ) -> CompanySearchResponse200OutputDataItemFundingRoundStatsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -2294,19 +2322,20 @@ class CompanySearchResponse200OutputDataItem:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                funding_round_stats_type_0 = CompanySearchResponse200OutputDataItemFundingRoundStatsType0.from_dict(data)
-
-
+                funding_round_stats_type_0 = CompanySearchResponse200OutputDataItemFundingRoundStatsType0.from_dict(
+                    data
+                )
 
                 return funding_round_stats_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanySearchResponse200OutputDataItemFundingRoundStatsType0', None, Unset], data)
+            return cast(CompanySearchResponse200OutputDataItemFundingRoundStatsType0 | None | Unset, data)
 
         funding_round_stats = _parse_funding_round_stats(d.pop("funding_round_stats", UNSET))
 
-
-        def _parse_investment_stats(data: object) -> Union['CompanySearchResponse200OutputDataItemInvestmentStatsType0', None, Unset]:
+        def _parse_investment_stats(
+            data: object,
+        ) -> CompanySearchResponse200OutputDataItemInvestmentStatsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -2316,37 +2345,32 @@ class CompanySearchResponse200OutputDataItem:
                     raise TypeError()
                 investment_stats_type_0 = CompanySearchResponse200OutputDataItemInvestmentStatsType0.from_dict(data)
 
-
-
                 return investment_stats_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanySearchResponse200OutputDataItemInvestmentStatsType0', None, Unset], data)
+            return cast(CompanySearchResponse200OutputDataItemInvestmentStatsType0 | None | Unset, data)
 
         investment_stats = _parse_investment_stats(d.pop("investment_stats", UNSET))
 
-
-        def _parse_is_investor(data: object) -> Union[None, Unset, bool]:
+        def _parse_is_investor(data: object) -> bool | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, bool], data)
+            return cast(bool | None | Unset, data)
 
         is_investor = _parse_is_investor(d.pop("is_investor", UNSET))
 
-
-        def _parse_investor_type(data: object) -> Union[None, Unset, str]:
+        def _parse_investor_type(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         investor_type = _parse_investor_type(d.pop("investor_type", UNSET))
 
-
-        def _parse_investor_categories(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_investor_categories(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -2357,12 +2381,11 @@ class CompanySearchResponse200OutputDataItem:
                 investor_categories_type_0 = cast(list[str], data)
 
                 return investor_categories_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         investor_categories = _parse_investor_categories(d.pop("investor_categories", UNSET))
-
 
         company_search_response_200_output_data_item = cls(
             linkedin_id=linkedin_id,
@@ -2443,7 +2466,6 @@ class CompanySearchResponse200OutputDataItem:
             investor_type=investor_type,
             investor_categories=investor_categories,
         )
-
 
         company_search_response_200_output_data_item.additional_properties = d
         return company_search_response_200_output_data_item

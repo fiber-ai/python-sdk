@@ -1,6 +1,9 @@
 from enum import Enum
 
-class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemFundingRoundsType0ItemRoundTypeType3Type1(str, Enum):
+
+class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemFundingRoundsType0ItemRoundTypeType3Type1(
+    str, Enum
+):
     ANGEL = "angel"
     CONVERTIBLE_NOTE = "convertible_note"
     CORPORATE_ROUND = "corporate_round"

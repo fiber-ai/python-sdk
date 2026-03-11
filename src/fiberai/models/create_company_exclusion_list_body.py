@@ -1,40 +1,29 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import Union
-
-
-
-
-
-
 T = TypeVar("T", bound="CreateCompanyExclusionListBody")
-
 
 
 @_attrs_define
 class CreateCompanyExclusionListBody:
-    """ 
-        Attributes:
-            api_key (str): Your Fiber API key
-            name (str): Name of the company exclusion list
-            is_organization_wide (Union[Unset, bool]): Is the company exclusion list organization wide Default: False.
-     """
+    """
+    Attributes:
+        api_key (str): Your Fiber API key
+        name (str): Name of the company exclusion list
+        is_organization_wide (bool | Unset): Is the company exclusion list organization wide Default: False.
+    """
 
     api_key: str
     name: str
-    is_organization_wide: Union[Unset, bool] = False
+    is_organization_wide: bool | Unset = False
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         api_key = self.api_key
@@ -43,19 +32,18 @@ class CreateCompanyExclusionListBody:
 
         is_organization_wide = self.is_organization_wide
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "apiKey": api_key,
-            "name": name,
-        })
+        field_dict.update(
+            {
+                "apiKey": api_key,
+                "name": name,
+            }
+        )
         if is_organization_wide is not UNSET:
             field_dict["isOrganizationWide"] = is_organization_wide
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -71,7 +59,6 @@ class CreateCompanyExclusionListBody:
             name=name,
             is_organization_wide=is_organization_wide,
         )
-
 
         create_company_exclusion_list_body.additional_properties = d
         return create_company_exclusion_list_body

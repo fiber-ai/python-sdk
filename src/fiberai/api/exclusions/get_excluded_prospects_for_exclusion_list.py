@@ -1,36 +1,46 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union, cast
+from typing import Any
 
 import httpx
 
-from ...client import AuthenticatedClient, Client
-from ...types import Response, UNSET
 from ... import errors
-
+from ...client import AuthenticatedClient, Client
 from ...models.get_excluded_prospects_for_exclusion_list_body import GetExcludedProspectsForExclusionListBody
-from ...models.get_excluded_prospects_for_exclusion_list_response_200 import GetExcludedProspectsForExclusionListResponse200
-from ...models.get_excluded_prospects_for_exclusion_list_response_400 import GetExcludedProspectsForExclusionListResponse400
-from ...models.get_excluded_prospects_for_exclusion_list_response_401 import GetExcludedProspectsForExclusionListResponse401
-from ...models.get_excluded_prospects_for_exclusion_list_response_402 import GetExcludedProspectsForExclusionListResponse402
-from ...models.get_excluded_prospects_for_exclusion_list_response_403 import GetExcludedProspectsForExclusionListResponse403
-from ...models.get_excluded_prospects_for_exclusion_list_response_404 import GetExcludedProspectsForExclusionListResponse404
-from ...models.get_excluded_prospects_for_exclusion_list_response_429 import GetExcludedProspectsForExclusionListResponse429
-from ...models.get_excluded_prospects_for_exclusion_list_response_500 import GetExcludedProspectsForExclusionListResponse500
-from typing import cast
-
+from ...models.get_excluded_prospects_for_exclusion_list_response_200 import (
+    GetExcludedProspectsForExclusionListResponse200,
+)
+from ...models.get_excluded_prospects_for_exclusion_list_response_400 import (
+    GetExcludedProspectsForExclusionListResponse400,
+)
+from ...models.get_excluded_prospects_for_exclusion_list_response_401 import (
+    GetExcludedProspectsForExclusionListResponse401,
+)
+from ...models.get_excluded_prospects_for_exclusion_list_response_402 import (
+    GetExcludedProspectsForExclusionListResponse402,
+)
+from ...models.get_excluded_prospects_for_exclusion_list_response_403 import (
+    GetExcludedProspectsForExclusionListResponse403,
+)
+from ...models.get_excluded_prospects_for_exclusion_list_response_404 import (
+    GetExcludedProspectsForExclusionListResponse404,
+)
+from ...models.get_excluded_prospects_for_exclusion_list_response_429 import (
+    GetExcludedProspectsForExclusionListResponse429,
+)
+from ...models.get_excluded_prospects_for_exclusion_list_response_500 import (
+    GetExcludedProspectsForExclusionListResponse500,
+)
+from ...models.get_excluded_prospects_for_exclusion_list_response_503 import (
+    GetExcludedProspectsForExclusionListResponse503,
+)
+from ...types import Response
 
 
 def _get_kwargs(
     *,
     body: GetExcludedProspectsForExclusionListBody,
-
 ) -> dict[str, Any]:
     headers: dict[str, Any] = {}
-
-
-    
-
-    
 
     _kwargs: dict[str, Any] = {
         "method": "post",
@@ -39,70 +49,70 @@ def _get_kwargs(
 
     _kwargs["json"] = body.to_dict()
 
-
     headers["Content-Type"] = "application/json"
 
     _kwargs["headers"] = headers
     return _kwargs
 
 
-
-def _parse_response(*, client: Union[AuthenticatedClient, Client], response: httpx.Response) -> Optional[Union[GetExcludedProspectsForExclusionListResponse200, GetExcludedProspectsForExclusionListResponse400, GetExcludedProspectsForExclusionListResponse401, GetExcludedProspectsForExclusionListResponse402, GetExcludedProspectsForExclusionListResponse403, GetExcludedProspectsForExclusionListResponse404, GetExcludedProspectsForExclusionListResponse429, GetExcludedProspectsForExclusionListResponse500]]:
+def _parse_response(
+    *, client: AuthenticatedClient | Client, response: httpx.Response
+) -> (
+    GetExcludedProspectsForExclusionListResponse200
+    | GetExcludedProspectsForExclusionListResponse400
+    | GetExcludedProspectsForExclusionListResponse401
+    | GetExcludedProspectsForExclusionListResponse402
+    | GetExcludedProspectsForExclusionListResponse403
+    | GetExcludedProspectsForExclusionListResponse404
+    | GetExcludedProspectsForExclusionListResponse429
+    | GetExcludedProspectsForExclusionListResponse500
+    | GetExcludedProspectsForExclusionListResponse503
+    | None
+):
     if response.status_code == 200:
         response_200 = GetExcludedProspectsForExclusionListResponse200.from_dict(response.json())
-
-
 
         return response_200
 
     if response.status_code == 400:
         response_400 = GetExcludedProspectsForExclusionListResponse400.from_dict(response.json())
 
-
-
         return response_400
 
     if response.status_code == 401:
         response_401 = GetExcludedProspectsForExclusionListResponse401.from_dict(response.json())
-
-
 
         return response_401
 
     if response.status_code == 402:
         response_402 = GetExcludedProspectsForExclusionListResponse402.from_dict(response.json())
 
-
-
         return response_402
 
     if response.status_code == 403:
         response_403 = GetExcludedProspectsForExclusionListResponse403.from_dict(response.json())
-
-
 
         return response_403
 
     if response.status_code == 404:
         response_404 = GetExcludedProspectsForExclusionListResponse404.from_dict(response.json())
 
-
-
         return response_404
 
     if response.status_code == 429:
         response_429 = GetExcludedProspectsForExclusionListResponse429.from_dict(response.json())
-
-
 
         return response_429
 
     if response.status_code == 500:
         response_500 = GetExcludedProspectsForExclusionListResponse500.from_dict(response.json())
 
-
-
         return response_500
+
+    if response.status_code == 503:
+        response_503 = GetExcludedProspectsForExclusionListResponse503.from_dict(response.json())
+
+        return response_503
 
     if client.raise_on_unexpected_status:
         raise errors.UnexpectedStatus(response.status_code, response.content)
@@ -110,7 +120,19 @@ def _parse_response(*, client: Union[AuthenticatedClient, Client], response: htt
         return None
 
 
-def _build_response(*, client: Union[AuthenticatedClient, Client], response: httpx.Response) -> Response[Union[GetExcludedProspectsForExclusionListResponse200, GetExcludedProspectsForExclusionListResponse400, GetExcludedProspectsForExclusionListResponse401, GetExcludedProspectsForExclusionListResponse402, GetExcludedProspectsForExclusionListResponse403, GetExcludedProspectsForExclusionListResponse404, GetExcludedProspectsForExclusionListResponse429, GetExcludedProspectsForExclusionListResponse500]]:
+def _build_response(
+    *, client: AuthenticatedClient | Client, response: httpx.Response
+) -> Response[
+    GetExcludedProspectsForExclusionListResponse200
+    | GetExcludedProspectsForExclusionListResponse400
+    | GetExcludedProspectsForExclusionListResponse401
+    | GetExcludedProspectsForExclusionListResponse402
+    | GetExcludedProspectsForExclusionListResponse403
+    | GetExcludedProspectsForExclusionListResponse404
+    | GetExcludedProspectsForExclusionListResponse429
+    | GetExcludedProspectsForExclusionListResponse500
+    | GetExcludedProspectsForExclusionListResponse503
+]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -121,11 +143,20 @@ def _build_response(*, client: Union[AuthenticatedClient, Client], response: htt
 
 def sync_detailed(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: GetExcludedProspectsForExclusionListBody,
-
-) -> Response[Union[GetExcludedProspectsForExclusionListResponse200, GetExcludedProspectsForExclusionListResponse400, GetExcludedProspectsForExclusionListResponse401, GetExcludedProspectsForExclusionListResponse402, GetExcludedProspectsForExclusionListResponse403, GetExcludedProspectsForExclusionListResponse404, GetExcludedProspectsForExclusionListResponse429, GetExcludedProspectsForExclusionListResponse500]]:
-    r""" Get excluded prospects for exclusion list
+) -> Response[
+    GetExcludedProspectsForExclusionListResponse200
+    | GetExcludedProspectsForExclusionListResponse400
+    | GetExcludedProspectsForExclusionListResponse401
+    | GetExcludedProspectsForExclusionListResponse402
+    | GetExcludedProspectsForExclusionListResponse403
+    | GetExcludedProspectsForExclusionListResponse404
+    | GetExcludedProspectsForExclusionListResponse429
+    | GetExcludedProspectsForExclusionListResponse500
+    | GetExcludedProspectsForExclusionListResponse503
+]:
+    r"""Get excluded prospects for exclusion list
 
      Get excluded prospects for a specific exclusion list with pagination
 
@@ -142,13 +173,11 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[GetExcludedProspectsForExclusionListResponse200, GetExcludedProspectsForExclusionListResponse400, GetExcludedProspectsForExclusionListResponse401, GetExcludedProspectsForExclusionListResponse402, GetExcludedProspectsForExclusionListResponse403, GetExcludedProspectsForExclusionListResponse404, GetExcludedProspectsForExclusionListResponse429, GetExcludedProspectsForExclusionListResponse500]]
-     """
-
+        Response[GetExcludedProspectsForExclusionListResponse200 | GetExcludedProspectsForExclusionListResponse400 | GetExcludedProspectsForExclusionListResponse401 | GetExcludedProspectsForExclusionListResponse402 | GetExcludedProspectsForExclusionListResponse403 | GetExcludedProspectsForExclusionListResponse404 | GetExcludedProspectsForExclusionListResponse429 | GetExcludedProspectsForExclusionListResponse500 | GetExcludedProspectsForExclusionListResponse503]
+    """
 
     kwargs = _get_kwargs(
         body=body,
-
     )
 
     response = client.get_httpx_client().request(
@@ -157,13 +186,24 @@ def sync_detailed(
 
     return _build_response(client=client, response=response)
 
+
 def sync(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: GetExcludedProspectsForExclusionListBody,
-
-) -> Optional[Union[GetExcludedProspectsForExclusionListResponse200, GetExcludedProspectsForExclusionListResponse400, GetExcludedProspectsForExclusionListResponse401, GetExcludedProspectsForExclusionListResponse402, GetExcludedProspectsForExclusionListResponse403, GetExcludedProspectsForExclusionListResponse404, GetExcludedProspectsForExclusionListResponse429, GetExcludedProspectsForExclusionListResponse500]]:
-    r""" Get excluded prospects for exclusion list
+) -> (
+    GetExcludedProspectsForExclusionListResponse200
+    | GetExcludedProspectsForExclusionListResponse400
+    | GetExcludedProspectsForExclusionListResponse401
+    | GetExcludedProspectsForExclusionListResponse402
+    | GetExcludedProspectsForExclusionListResponse403
+    | GetExcludedProspectsForExclusionListResponse404
+    | GetExcludedProspectsForExclusionListResponse429
+    | GetExcludedProspectsForExclusionListResponse500
+    | GetExcludedProspectsForExclusionListResponse503
+    | None
+):
+    r"""Get excluded prospects for exclusion list
 
      Get excluded prospects for a specific exclusion list with pagination
 
@@ -180,23 +220,31 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[GetExcludedProspectsForExclusionListResponse200, GetExcludedProspectsForExclusionListResponse400, GetExcludedProspectsForExclusionListResponse401, GetExcludedProspectsForExclusionListResponse402, GetExcludedProspectsForExclusionListResponse403, GetExcludedProspectsForExclusionListResponse404, GetExcludedProspectsForExclusionListResponse429, GetExcludedProspectsForExclusionListResponse500]
-     """
-
+        GetExcludedProspectsForExclusionListResponse200 | GetExcludedProspectsForExclusionListResponse400 | GetExcludedProspectsForExclusionListResponse401 | GetExcludedProspectsForExclusionListResponse402 | GetExcludedProspectsForExclusionListResponse403 | GetExcludedProspectsForExclusionListResponse404 | GetExcludedProspectsForExclusionListResponse429 | GetExcludedProspectsForExclusionListResponse500 | GetExcludedProspectsForExclusionListResponse503
+    """
 
     return sync_detailed(
         client=client,
-body=body,
-
+        body=body,
     ).parsed
+
 
 async def asyncio_detailed(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: GetExcludedProspectsForExclusionListBody,
-
-) -> Response[Union[GetExcludedProspectsForExclusionListResponse200, GetExcludedProspectsForExclusionListResponse400, GetExcludedProspectsForExclusionListResponse401, GetExcludedProspectsForExclusionListResponse402, GetExcludedProspectsForExclusionListResponse403, GetExcludedProspectsForExclusionListResponse404, GetExcludedProspectsForExclusionListResponse429, GetExcludedProspectsForExclusionListResponse500]]:
-    r""" Get excluded prospects for exclusion list
+) -> Response[
+    GetExcludedProspectsForExclusionListResponse200
+    | GetExcludedProspectsForExclusionListResponse400
+    | GetExcludedProspectsForExclusionListResponse401
+    | GetExcludedProspectsForExclusionListResponse402
+    | GetExcludedProspectsForExclusionListResponse403
+    | GetExcludedProspectsForExclusionListResponse404
+    | GetExcludedProspectsForExclusionListResponse429
+    | GetExcludedProspectsForExclusionListResponse500
+    | GetExcludedProspectsForExclusionListResponse503
+]:
+    r"""Get excluded prospects for exclusion list
 
      Get excluded prospects for a specific exclusion list with pagination
 
@@ -213,28 +261,35 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[GetExcludedProspectsForExclusionListResponse200, GetExcludedProspectsForExclusionListResponse400, GetExcludedProspectsForExclusionListResponse401, GetExcludedProspectsForExclusionListResponse402, GetExcludedProspectsForExclusionListResponse403, GetExcludedProspectsForExclusionListResponse404, GetExcludedProspectsForExclusionListResponse429, GetExcludedProspectsForExclusionListResponse500]]
-     """
-
+        Response[GetExcludedProspectsForExclusionListResponse200 | GetExcludedProspectsForExclusionListResponse400 | GetExcludedProspectsForExclusionListResponse401 | GetExcludedProspectsForExclusionListResponse402 | GetExcludedProspectsForExclusionListResponse403 | GetExcludedProspectsForExclusionListResponse404 | GetExcludedProspectsForExclusionListResponse429 | GetExcludedProspectsForExclusionListResponse500 | GetExcludedProspectsForExclusionListResponse503]
+    """
 
     kwargs = _get_kwargs(
         body=body,
-
     )
 
-    response = await client.get_async_httpx_client().request(
-        **kwargs
-    )
+    response = await client.get_async_httpx_client().request(**kwargs)
 
     return _build_response(client=client, response=response)
 
+
 async def asyncio(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: GetExcludedProspectsForExclusionListBody,
-
-) -> Optional[Union[GetExcludedProspectsForExclusionListResponse200, GetExcludedProspectsForExclusionListResponse400, GetExcludedProspectsForExclusionListResponse401, GetExcludedProspectsForExclusionListResponse402, GetExcludedProspectsForExclusionListResponse403, GetExcludedProspectsForExclusionListResponse404, GetExcludedProspectsForExclusionListResponse429, GetExcludedProspectsForExclusionListResponse500]]:
-    r""" Get excluded prospects for exclusion list
+) -> (
+    GetExcludedProspectsForExclusionListResponse200
+    | GetExcludedProspectsForExclusionListResponse400
+    | GetExcludedProspectsForExclusionListResponse401
+    | GetExcludedProspectsForExclusionListResponse402
+    | GetExcludedProspectsForExclusionListResponse403
+    | GetExcludedProspectsForExclusionListResponse404
+    | GetExcludedProspectsForExclusionListResponse429
+    | GetExcludedProspectsForExclusionListResponse500
+    | GetExcludedProspectsForExclusionListResponse503
+    | None
+):
+    r"""Get excluded prospects for exclusion list
 
      Get excluded prospects for a specific exclusion list with pagination
 
@@ -251,12 +306,12 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[GetExcludedProspectsForExclusionListResponse200, GetExcludedProspectsForExclusionListResponse400, GetExcludedProspectsForExclusionListResponse401, GetExcludedProspectsForExclusionListResponse402, GetExcludedProspectsForExclusionListResponse403, GetExcludedProspectsForExclusionListResponse404, GetExcludedProspectsForExclusionListResponse429, GetExcludedProspectsForExclusionListResponse500]
-     """
+        GetExcludedProspectsForExclusionListResponse200 | GetExcludedProspectsForExclusionListResponse400 | GetExcludedProspectsForExclusionListResponse401 | GetExcludedProspectsForExclusionListResponse402 | GetExcludedProspectsForExclusionListResponse403 | GetExcludedProspectsForExclusionListResponse404 | GetExcludedProspectsForExclusionListResponse429 | GetExcludedProspectsForExclusionListResponse500 | GetExcludedProspectsForExclusionListResponse503
+    """
 
-
-    return (await asyncio_detailed(
-        client=client,
-body=body,
-
-    )).parsed
+    return (
+        await asyncio_detailed(
+            client=client,
+            body=body,
+        )
+    ).parsed

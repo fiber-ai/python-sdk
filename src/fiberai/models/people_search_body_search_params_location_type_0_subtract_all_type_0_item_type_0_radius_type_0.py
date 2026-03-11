@@ -1,62 +1,50 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.people_search_body_search_params_location_type_0_subtract_all_type_0_item_type_0_radius_type_0_unit import PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusType0Unit
-
-
-
-
-
+from ..models.people_search_body_search_params_location_type_0_subtract_all_type_0_item_type_0_radius_type_0_unit import (
+    PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusType0Unit,
+)
 
 T = TypeVar("T", bound="PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusType0")
 
 
-
 @_attrs_define
 class PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusType0:
-    """ 
-        Attributes:
-            unit (PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusType0Unit):
-            quantity (float):
-     """
+    """
+    Attributes:
+        unit (PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusType0Unit):
+        quantity (float):
+    """
 
     unit: PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusType0Unit
     quantity: float
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         unit = self.unit.value
 
         quantity = self.quantity
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "unit": unit,
-            "quantity": quantity,
-        })
+        field_dict.update(
+            {
+                "unit": unit,
+                "quantity": quantity,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         unit = PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusType0Unit(d.pop("unit"))
-
-
-
 
         quantity = d.pop("quantity")
 
@@ -64,7 +52,6 @@ class PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusTy
             unit=unit,
             quantity=quantity,
         )
-
 
         people_search_body_search_params_location_type_0_subtract_all_type_0_item_type_0_radius_type_0.additional_properties = d
         return people_search_body_search_params_location_type_0_subtract_all_type_0_item_type_0_radius_type_0

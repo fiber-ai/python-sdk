@@ -1,50 +1,53 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4_job_function import CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4JobFunction
-from ..models.company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4_rule import CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4Rule
-from typing import cast
-from typing import cast, Union
+from ..models.company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4_job_function import (
+    CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4JobFunction,
+)
+from ..models.company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4_rule import (
+    CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4Rule,
+)
 
 if TYPE_CHECKING:
-  from ..models.company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4_range_type_1 import CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType1
-  from ..models.company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4_range_type_0 import CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType0
-
-
-
+    from ..models.company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4_range_type_0 import (
+        CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType0,
+    )
+    from ..models.company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4_range_type_1 import (
+        CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType1,
+    )
 
 
 T = TypeVar("T", bound="CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4")
 
 
-
 @_attrs_define
 class CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4:
-    """ 
-        Attributes:
-            rule (CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4Rule):
-            job_function (CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4JobFunction):
-            range_ (Union['CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType0',
-                'CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType1']):
-     """
+    """
+    Attributes:
+        rule (CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4Rule):
+        job_function (CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4JobFunction):
+        range_ (CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType0 |
+            CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType1):
+    """
 
     rule: CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4Rule
     job_function: CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4JobFunction
-    range_: Union['CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType0', 'CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType1']
+    range_: (
+        CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType0
+        | CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType1
+    )
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4_range_type_1 import CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType1
-        from ..models.company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4_range_type_0 import CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType0
+        from ..models.company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4_range_type_0 import (
+            CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType0,
+        )
+
         rule = self.rule.value
 
         job_function = self.job_function.value
@@ -55,63 +58,65 @@ class CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4:
         else:
             range_ = self.range_.to_dict()
 
-
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "rule": rule,
-            "jobFunction": job_function,
-            "range": range_,
-        })
+        field_dict.update(
+            {
+                "rule": rule,
+                "jobFunction": job_function,
+                "range": range_,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4_range_type_1 import CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType1
-        from ..models.company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4_range_type_0 import CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType0
+        from ..models.company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4_range_type_0 import (
+            CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType0,
+        )
+        from ..models.company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4_range_type_1 import (
+            CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType1,
+        )
+
         d = dict(src_dict)
         rule = CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4Rule(d.pop("rule"))
 
+        job_function = CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4JobFunction(
+            d.pop("jobFunction")
+        )
 
-
-
-        job_function = CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4JobFunction(d.pop("jobFunction"))
-
-
-
-
-        def _parse_range_(data: object) -> Union['CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType0', 'CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType1']:
+        def _parse_range_(
+            data: object,
+        ) -> (
+            CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType0
+            | CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType1
+        ):
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                range_type_0 = CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType0.from_dict(data)
-
-
+                range_type_0 = CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType0.from_dict(
+                    data
+                )
 
                 return range_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             if not isinstance(data, dict):
                 raise TypeError()
-            range_type_1 = CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType1.from_dict(data)
-
-
+            range_type_1 = CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4RangeType1.from_dict(
+                data
+            )
 
             return range_type_1
 
         range_ = _parse_range_(d.pop("range"))
-
 
         company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4 = cls(
             rule=rule,
             job_function=job_function,
             range_=range_,
         )
-
 
         company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4.additional_properties = d
         return company_search_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4

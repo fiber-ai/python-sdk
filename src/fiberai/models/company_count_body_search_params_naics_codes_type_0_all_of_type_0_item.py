@@ -1,53 +1,41 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-
-
-
-
-
-
 T = TypeVar("T", bound="CompanyCountBodySearchParamsNaicsCodesType0AllOfType0Item")
-
 
 
 @_attrs_define
 class CompanyCountBodySearchParamsNaicsCodesType0AllOfType0Item:
-    """ 
-        Attributes:
-            code (str):
-            title (str):
-     """
+    """
+    Attributes:
+        code (str):
+        title (str):
+    """
 
     code: str
     title: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         code = self.code
 
         title = self.title
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "code": code,
-            "title": title,
-        })
+        field_dict.update(
+            {
+                "code": code,
+                "title": title,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -60,7 +48,6 @@ class CompanyCountBodySearchParamsNaicsCodesType0AllOfType0Item:
             code=code,
             title=title,
         )
-
 
         company_count_body_search_params_naics_codes_type_0_all_of_type_0_item.additional_properties = d
         return company_count_body_search_params_naics_codes_type_0_all_of_type_0_item

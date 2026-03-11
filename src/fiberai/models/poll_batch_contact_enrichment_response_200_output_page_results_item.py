@@ -1,52 +1,47 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.poll_batch_contact_enrichment_response_200_output_page_results_item_outputs_type_0 import PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0
-  from ..models.poll_batch_contact_enrichment_response_200_output_page_results_item_inputs import PollBatchContactEnrichmentResponse200OutputPageResultsItemInputs
-
-
-
+    from ..models.poll_batch_contact_enrichment_response_200_output_page_results_item_inputs import (
+        PollBatchContactEnrichmentResponse200OutputPageResultsItemInputs,
+    )
+    from ..models.poll_batch_contact_enrichment_response_200_output_page_results_item_outputs_type_0 import (
+        PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0,
+    )
 
 
 T = TypeVar("T", bound="PollBatchContactEnrichmentResponse200OutputPageResultsItem")
 
 
-
 @_attrs_define
 class PollBatchContactEnrichmentResponse200OutputPageResultsItem:
-    """ 
-        Attributes:
-            inputs (PollBatchContactEnrichmentResponse200OutputPageResultsItemInputs): The input details provided for this
-                person
-            outputs (Union['PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0', None, Unset]): The
-                reveal result for this person
-     """
+    """
+    Attributes:
+        inputs (PollBatchContactEnrichmentResponse200OutputPageResultsItemInputs): The input details provided for this
+            person
+        outputs (None | PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0 | Unset): The reveal
+            result for this person
+    """
 
-    inputs: 'PollBatchContactEnrichmentResponse200OutputPageResultsItemInputs'
-    outputs: Union['PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0', None, Unset] = UNSET
+    inputs: PollBatchContactEnrichmentResponse200OutputPageResultsItemInputs
+    outputs: None | PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0 | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.poll_batch_contact_enrichment_response_200_output_page_results_item_outputs_type_0 import PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0
-        from ..models.poll_batch_contact_enrichment_response_200_output_page_results_item_inputs import PollBatchContactEnrichmentResponse200OutputPageResultsItemInputs
+        from ..models.poll_batch_contact_enrichment_response_200_output_page_results_item_outputs_type_0 import (
+            PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0,
+        )
+
         inputs = self.inputs.to_dict()
 
-        outputs: Union[None, Unset, dict[str, Any]]
+        outputs: dict[str, Any] | None | Unset
         if isinstance(self.outputs, Unset):
             outputs = UNSET
         elif isinstance(self.outputs, PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0):
@@ -54,30 +49,33 @@ class PollBatchContactEnrichmentResponse200OutputPageResultsItem:
         else:
             outputs = self.outputs
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "inputs": inputs,
-        })
+        field_dict.update(
+            {
+                "inputs": inputs,
+            }
+        )
         if outputs is not UNSET:
             field_dict["outputs"] = outputs
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.poll_batch_contact_enrichment_response_200_output_page_results_item_outputs_type_0 import PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0
-        from ..models.poll_batch_contact_enrichment_response_200_output_page_results_item_inputs import PollBatchContactEnrichmentResponse200OutputPageResultsItemInputs
+        from ..models.poll_batch_contact_enrichment_response_200_output_page_results_item_inputs import (
+            PollBatchContactEnrichmentResponse200OutputPageResultsItemInputs,
+        )
+        from ..models.poll_batch_contact_enrichment_response_200_output_page_results_item_outputs_type_0 import (
+            PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0,
+        )
+
         d = dict(src_dict)
         inputs = PollBatchContactEnrichmentResponse200OutputPageResultsItemInputs.from_dict(d.pop("inputs"))
 
-
-
-
-        def _parse_outputs(data: object) -> Union['PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0', None, Unset]:
+        def _parse_outputs(
+            data: object,
+        ) -> None | PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -87,21 +85,17 @@ class PollBatchContactEnrichmentResponse200OutputPageResultsItem:
                     raise TypeError()
                 outputs_type_0 = PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0.from_dict(data)
 
-
-
                 return outputs_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0', None, Unset], data)
+            return cast(None | PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0 | Unset, data)
 
         outputs = _parse_outputs(d.pop("outputs", UNSET))
-
 
         poll_batch_contact_enrichment_response_200_output_page_results_item = cls(
             inputs=inputs,
             outputs=outputs,
         )
-
 
         poll_batch_contact_enrichment_response_200_output_page_results_item.additional_properties = d
         return poll_batch_contact_enrichment_response_200_output_page_results_item

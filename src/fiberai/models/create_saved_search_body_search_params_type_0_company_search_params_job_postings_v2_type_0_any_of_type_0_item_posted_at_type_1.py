@@ -1,93 +1,129 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_strategy import (
+    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1Strategy,
+)
 from ..types import UNSET, Unset
-
-from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_strategy import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1Strategy
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0
-  from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_2 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2
-  from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_1 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1
+    from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_0 import (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_1 import (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1,
+    )
+    from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_2 import (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2,
+    )
 
 
-
-
-
-T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1")
-
+T = TypeVar(
+    "T", bound="CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1"
+)
 
 
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1:
-    """ 
-        Attributes:
-            strategy (CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1
-                Strategy):
-            window (Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAt
-                Type1WindowType0', 'CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPos
-                tedAtType1WindowType1', 'CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0It
-                emPostedAtType1WindowType2', None, Unset]):
-     """
+    """
+    Attributes:
+        strategy (CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1
+            Strategy):
+        window (CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1Wi
+            ndowType0 | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtTyp
+            e1WindowType1 | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedA
+            tType1WindowType2 | None | Unset):
+    """
 
-    strategy: CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1Strategy
-    window: Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0', 'CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1', 'CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2', None, Unset] = UNSET
+    strategy: (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1Strategy
+    )
+    window: (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0
+        | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1
+        | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2
+        | None
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_2 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_1 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_0 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_1 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_2 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2,
+        )
+
         strategy = self.strategy.value
 
-        window: Union[None, Unset, dict[str, Any]]
+        window: dict[str, Any] | None | Unset
         if isinstance(self.window, Unset):
             window = UNSET
-        elif isinstance(self.window, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0):
+        elif isinstance(
+            self.window,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0,
+        ):
             window = self.window.to_dict()
-        elif isinstance(self.window, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1):
+        elif isinstance(
+            self.window,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1,
+        ):
             window = self.window.to_dict()
-        elif isinstance(self.window, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2):
+        elif isinstance(
+            self.window,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2,
+        ):
             window = self.window.to_dict()
         else:
             window = self.window
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "strategy": strategy,
-        })
+        field_dict.update(
+            {
+                "strategy": strategy,
+            }
+        )
         if window is not UNSET:
             field_dict["window"] = window
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_2 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_1 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_0 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_1 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_2 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2,
+        )
+
         d = dict(src_dict)
-        strategy = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1Strategy(d.pop("strategy"))
+        strategy = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1Strategy(
+            d.pop("strategy")
+        )
 
-
-
-
-        def _parse_window(data: object) -> Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0', 'CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1', 'CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2', None, Unset]:
+        def _parse_window(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0
+            | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1
+            | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -95,43 +131,48 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                window_type_0 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0.from_dict(data)
-
-
+                window_type_0 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0.from_dict(
+                    data
+                )
 
                 return window_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                window_type_1 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1.from_dict(data)
-
-
+                window_type_1 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1.from_dict(
+                    data
+                )
 
                 return window_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                window_type_2 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2.from_dict(data)
-
-
+                window_type_2 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2.from_dict(
+                    data
+                )
 
                 return window_type_2
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0', 'CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1', 'CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2', None, Unset], data)
+            return cast(
+                CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0
+                | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1
+                | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2
+                | None
+                | Unset,
+                data,
+            )
 
         window = _parse_window(d.pop("window", UNSET))
-
 
         create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1 = cls(
             strategy=strategy,
             window=window,
         )
-
 
         create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1.additional_properties = d
         return create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1

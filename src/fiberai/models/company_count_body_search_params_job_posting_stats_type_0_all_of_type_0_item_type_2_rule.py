@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType2Rule(str, Enum):
     SENIORITY = "seniority"
 

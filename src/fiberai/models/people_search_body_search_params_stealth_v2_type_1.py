@@ -1,63 +1,85 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.people_search_body_search_params_stealth_v2_type_1_status import (
+    PeopleSearchBodySearchParamsStealthV2Type1Status,
+)
 from ..types import UNSET, Unset
-
-from ..models.people_search_body_search_params_stealth_v2_type_1_status import PeopleSearchBodySearchParamsStealthV2Type1Status
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.people_search_body_search_params_stealth_v2_type_1_stealth_duration_type_0 import PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0
-  from ..models.people_search_body_search_params_stealth_v2_type_1_left_stealth_at_type_1 import PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType1
-  from ..models.people_search_body_search_params_stealth_v2_type_1_entered_stealth_at_type_0 import PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0
-  from ..models.people_search_body_search_params_stealth_v2_type_1_left_stealth_at_type_0 import PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0
-  from ..models.people_search_body_search_params_stealth_v2_type_1_entered_stealth_at_type_1 import PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1
-
-
-
+    from ..models.people_search_body_search_params_stealth_v2_type_1_entered_stealth_at_type_0 import (
+        PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0,
+    )
+    from ..models.people_search_body_search_params_stealth_v2_type_1_entered_stealth_at_type_1 import (
+        PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1,
+    )
+    from ..models.people_search_body_search_params_stealth_v2_type_1_left_stealth_at_type_0 import (
+        PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0,
+    )
+    from ..models.people_search_body_search_params_stealth_v2_type_1_left_stealth_at_type_1 import (
+        PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType1,
+    )
+    from ..models.people_search_body_search_params_stealth_v2_type_1_stealth_duration_type_0 import (
+        PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0,
+    )
 
 
 T = TypeVar("T", bound="PeopleSearchBodySearchParamsStealthV2Type1")
 
 
-
 @_attrs_define
 class PeopleSearchBodySearchParamsStealthV2Type1:
-    """ 
-        Attributes:
-            status (PeopleSearchBodySearchParamsStealthV2Type1Status):
-            left_stealth_at (Union['PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0',
-                'PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType1', None, Unset]):
-            entered_stealth_at (Union['PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0',
-                'PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1', None, Unset]):
-            stealth_duration (Union['PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0', None, Unset]):
-     """
+    """
+    Attributes:
+        status (PeopleSearchBodySearchParamsStealthV2Type1Status):
+        left_stealth_at (None | PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0 |
+            PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType1 | Unset):
+        entered_stealth_at (None | PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0 |
+            PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1 | Unset):
+        stealth_duration (None | PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0 | Unset):
+    """
 
     status: PeopleSearchBodySearchParamsStealthV2Type1Status
-    left_stealth_at: Union['PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0', 'PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType1', None, Unset] = UNSET
-    entered_stealth_at: Union['PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0', 'PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1', None, Unset] = UNSET
-    stealth_duration: Union['PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0', None, Unset] = UNSET
+    left_stealth_at: (
+        None
+        | PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0
+        | PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType1
+        | Unset
+    ) = UNSET
+    entered_stealth_at: (
+        None
+        | PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0
+        | PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1
+        | Unset
+    ) = UNSET
+    stealth_duration: None | PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0 | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.people_search_body_search_params_stealth_v2_type_1_stealth_duration_type_0 import PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0
-        from ..models.people_search_body_search_params_stealth_v2_type_1_left_stealth_at_type_1 import PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType1
-        from ..models.people_search_body_search_params_stealth_v2_type_1_entered_stealth_at_type_0 import PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0
-        from ..models.people_search_body_search_params_stealth_v2_type_1_left_stealth_at_type_0 import PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0
-        from ..models.people_search_body_search_params_stealth_v2_type_1_entered_stealth_at_type_1 import PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1
+        from ..models.people_search_body_search_params_stealth_v2_type_1_entered_stealth_at_type_0 import (
+            PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0,
+        )
+        from ..models.people_search_body_search_params_stealth_v2_type_1_entered_stealth_at_type_1 import (
+            PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1,
+        )
+        from ..models.people_search_body_search_params_stealth_v2_type_1_left_stealth_at_type_0 import (
+            PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0,
+        )
+        from ..models.people_search_body_search_params_stealth_v2_type_1_left_stealth_at_type_1 import (
+            PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType1,
+        )
+        from ..models.people_search_body_search_params_stealth_v2_type_1_stealth_duration_type_0 import (
+            PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0,
+        )
+
         status = self.status.value
 
-        left_stealth_at: Union[None, Unset, dict[str, Any]]
+        left_stealth_at: dict[str, Any] | None | Unset
         if isinstance(self.left_stealth_at, Unset):
             left_stealth_at = UNSET
         elif isinstance(self.left_stealth_at, PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0):
@@ -67,7 +89,7 @@ class PeopleSearchBodySearchParamsStealthV2Type1:
         else:
             left_stealth_at = self.left_stealth_at
 
-        entered_stealth_at: Union[None, Unset, dict[str, Any]]
+        entered_stealth_at: dict[str, Any] | None | Unset
         if isinstance(self.entered_stealth_at, Unset):
             entered_stealth_at = UNSET
         elif isinstance(self.entered_stealth_at, PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0):
@@ -77,7 +99,7 @@ class PeopleSearchBodySearchParamsStealthV2Type1:
         else:
             entered_stealth_at = self.entered_stealth_at
 
-        stealth_duration: Union[None, Unset, dict[str, Any]]
+        stealth_duration: dict[str, Any] | None | Unset
         if isinstance(self.stealth_duration, Unset):
             stealth_duration = UNSET
         elif isinstance(self.stealth_duration, PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0):
@@ -85,12 +107,13 @@ class PeopleSearchBodySearchParamsStealthV2Type1:
         else:
             stealth_duration = self.stealth_duration
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "status": status,
-        })
+        field_dict.update(
+            {
+                "status": status,
+            }
+        )
         if left_stealth_at is not UNSET:
             field_dict["leftStealthAt"] = left_stealth_at
         if entered_stealth_at is not UNSET:
@@ -100,22 +123,35 @@ class PeopleSearchBodySearchParamsStealthV2Type1:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.people_search_body_search_params_stealth_v2_type_1_stealth_duration_type_0 import PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0
-        from ..models.people_search_body_search_params_stealth_v2_type_1_left_stealth_at_type_1 import PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType1
-        from ..models.people_search_body_search_params_stealth_v2_type_1_entered_stealth_at_type_0 import PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0
-        from ..models.people_search_body_search_params_stealth_v2_type_1_left_stealth_at_type_0 import PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0
-        from ..models.people_search_body_search_params_stealth_v2_type_1_entered_stealth_at_type_1 import PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1
+        from ..models.people_search_body_search_params_stealth_v2_type_1_entered_stealth_at_type_0 import (
+            PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0,
+        )
+        from ..models.people_search_body_search_params_stealth_v2_type_1_entered_stealth_at_type_1 import (
+            PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1,
+        )
+        from ..models.people_search_body_search_params_stealth_v2_type_1_left_stealth_at_type_0 import (
+            PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0,
+        )
+        from ..models.people_search_body_search_params_stealth_v2_type_1_left_stealth_at_type_1 import (
+            PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType1,
+        )
+        from ..models.people_search_body_search_params_stealth_v2_type_1_stealth_duration_type_0 import (
+            PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0,
+        )
+
         d = dict(src_dict)
         status = PeopleSearchBodySearchParamsStealthV2Type1Status(d.pop("status"))
 
-
-
-
-        def _parse_left_stealth_at(data: object) -> Union['PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0', 'PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType1', None, Unset]:
+        def _parse_left_stealth_at(
+            data: object,
+        ) -> (
+            None
+            | PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0
+            | PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -125,27 +161,35 @@ class PeopleSearchBodySearchParamsStealthV2Type1:
                     raise TypeError()
                 left_stealth_at_type_0 = PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0.from_dict(data)
 
-
-
                 return left_stealth_at_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 left_stealth_at_type_1 = PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType1.from_dict(data)
 
-
-
                 return left_stealth_at_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0', 'PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType1', None, Unset], data)
+            return cast(
+                None
+                | PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0
+                | PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType1
+                | Unset,
+                data,
+            )
 
         left_stealth_at = _parse_left_stealth_at(d.pop("leftStealthAt", UNSET))
 
-
-        def _parse_entered_stealth_at(data: object) -> Union['PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0', 'PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1', None, Unset]:
+        def _parse_entered_stealth_at(
+            data: object,
+        ) -> (
+            None
+            | PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0
+            | PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -153,29 +197,36 @@ class PeopleSearchBodySearchParamsStealthV2Type1:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                entered_stealth_at_type_0 = PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0.from_dict(data)
-
-
+                entered_stealth_at_type_0 = PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0.from_dict(
+                    data
+                )
 
                 return entered_stealth_at_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                entered_stealth_at_type_1 = PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1.from_dict(data)
-
-
+                entered_stealth_at_type_1 = PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1.from_dict(
+                    data
+                )
 
                 return entered_stealth_at_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0', 'PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1', None, Unset], data)
+            return cast(
+                None
+                | PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType0
+                | PeopleSearchBodySearchParamsStealthV2Type1EnteredStealthAtType1
+                | Unset,
+                data,
+            )
 
         entered_stealth_at = _parse_entered_stealth_at(d.pop("enteredStealthAt", UNSET))
 
-
-        def _parse_stealth_duration(data: object) -> Union['PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0', None, Unset]:
+        def _parse_stealth_duration(
+            data: object,
+        ) -> None | PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -185,15 +236,12 @@ class PeopleSearchBodySearchParamsStealthV2Type1:
                     raise TypeError()
                 stealth_duration_type_0 = PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0.from_dict(data)
 
-
-
                 return stealth_duration_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0', None, Unset], data)
+            return cast(None | PeopleSearchBodySearchParamsStealthV2Type1StealthDurationType0 | Unset, data)
 
         stealth_duration = _parse_stealth_duration(d.pop("stealthDuration", UNSET))
-
 
         people_search_body_search_params_stealth_v2_type_1 = cls(
             status=status,
@@ -201,7 +249,6 @@ class PeopleSearchBodySearchParamsStealthV2Type1:
             entered_stealth_at=entered_stealth_at,
             stealth_duration=stealth_duration,
         )
-
 
         people_search_body_search_params_stealth_v2_type_1.additional_properties = d
         return people_search_body_search_params_stealth_v2_type_1

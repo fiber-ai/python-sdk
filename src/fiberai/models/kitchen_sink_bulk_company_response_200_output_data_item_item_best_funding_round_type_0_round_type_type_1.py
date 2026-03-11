@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class KitchenSinkBulkCompanyResponse200OutputDataItemItemBestFundingRoundType0RoundTypeType1(str, Enum):
     ANGEL = "angel"
     CONVERTIBLE_NOTE = "convertible_note"

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV2Type0NoneOfType0ItemType2Type(str, Enum):
     DYNAMIC_GROUPS = "dynamic-groups"
 

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCombinedSearchResponse200OutputDataCompaniesItemEmployeeTrendsType0ItemFunctionsType1(str, Enum):
     ACCOUNTING = "accounting"
     ADMINISTRATIVE = "administrative"

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0AnyOfType0ItemType0Type(str, Enum):
     PLAIN = "plain"
 

@@ -1,6 +1,9 @@
 from enum import Enum
 
-class TextToCombinedSearchResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0NoneOfType0ItemBatchSelectionType1Strategy(str, Enum):
+
+class TextToCombinedSearchResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0NoneOfType0ItemBatchSelectionType1Strategy(
+    str, Enum
+):
     ONLY_THESE_BATCHES = "only-these-batches"
 
     def __str__(self) -> str:

@@ -1,78 +1,67 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_movement_type import GetSavedSearchRunProfilesResponse200OutputProfilesItemMovementType
-from typing import cast
+from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_movement_type import (
+    GetSavedSearchRunProfilesResponse200OutputProfilesItemMovementType,
+)
 
 if TYPE_CHECKING:
-  from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile import GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile
-
-
-
+    from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile import (
+        GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile,
+    )
 
 
 T = TypeVar("T", bound="GetSavedSearchRunProfilesResponse200OutputProfilesItem")
 
 
-
 @_attrs_define
 class GetSavedSearchRunProfilesResponse200OutputProfilesItem:
-    """ 
-        Attributes:
-            profile (GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile):
-            movement_type (GetSavedSearchRunProfilesResponse200OutputProfilesItemMovementType):
-     """
+    """
+    Attributes:
+        profile (GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile):
+        movement_type (GetSavedSearchRunProfilesResponse200OutputProfilesItemMovementType):
+    """
 
-    profile: 'GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile'
+    profile: GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile
     movement_type: GetSavedSearchRunProfilesResponse200OutputProfilesItemMovementType
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile import GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile
         profile = self.profile.to_dict()
 
         movement_type = self.movement_type.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "profile": profile,
-            "movementType": movement_type,
-        })
+        field_dict.update(
+            {
+                "profile": profile,
+                "movementType": movement_type,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile import GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile
+        from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile import (
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile,
+        )
+
         d = dict(src_dict)
         profile = GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile.from_dict(d.pop("profile"))
 
-
-
-
         movement_type = GetSavedSearchRunProfilesResponse200OutputProfilesItemMovementType(d.pop("movementType"))
-
-
-
 
         get_saved_search_run_profiles_response_200_output_profiles_item = cls(
             profile=profile,
             movement_type=movement_type,
         )
-
 
         get_saved_search_run_profiles_response_200_output_profiles_item.additional_properties = d
         return get_saved_search_run_profiles_response_200_output_profiles_item

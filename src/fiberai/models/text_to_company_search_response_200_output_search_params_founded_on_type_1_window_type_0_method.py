@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCompanySearchResponse200OutputSearchParamsFoundedOnType1WindowType0Method(str, Enum):
     LASTN = "lastN"
 

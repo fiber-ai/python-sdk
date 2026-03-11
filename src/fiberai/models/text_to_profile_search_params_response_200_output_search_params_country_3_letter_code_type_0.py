@@ -1,47 +1,44 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.text_to_profile_search_params_response_200_output_search_params_country_3_letter_code_type_0_any_of_type_0_item import (
+    TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0AnyOfType0Item,
+)
+from ..models.text_to_profile_search_params_response_200_output_search_params_country_3_letter_code_type_0_none_of_type_0_item import (
+    TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0NoneOfType0Item,
+)
 from ..types import UNSET, Unset
-
-from ..models.text_to_profile_search_params_response_200_output_search_params_country_3_letter_code_type_0_any_of_type_0_item import TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0AnyOfType0Item
-from ..models.text_to_profile_search_params_response_200_output_search_params_country_3_letter_code_type_0_none_of_type_0_item import TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0NoneOfType0Item
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
 
 T = TypeVar("T", bound="TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0")
 
 
-
 @_attrs_define
 class TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0:
-    """ 
-        Attributes:
-            any_of (Union[None, Unset,
-                list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0AnyOfType0Item]]):
-            none_of (Union[None, Unset,
-                list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0NoneOfType0Item]]):
-     """
+    """
+    Attributes:
+        any_of (list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0AnyOfType0Item] | None
+            | Unset):
+        none_of (list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0NoneOfType0Item] |
+            None | Unset):
+    """
 
-    any_of: Union[None, Unset, list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0AnyOfType0Item]] = UNSET
-    none_of: Union[None, Unset, list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0NoneOfType0Item]] = UNSET
+    any_of: (
+        list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0AnyOfType0Item] | None | Unset
+    ) = UNSET
+    none_of: (
+        list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0NoneOfType0Item]
+        | None
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        any_of: Union[None, Unset, list[str]]
+        any_of: list[str] | None | Unset
         if isinstance(self.any_of, Unset):
             any_of = UNSET
         elif isinstance(self.any_of, list):
@@ -50,11 +47,10 @@ class TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeTy
                 any_of_type_0_item = any_of_type_0_item_data.value
                 any_of.append(any_of_type_0_item)
 
-
         else:
             any_of = self.any_of
 
-        none_of: Union[None, Unset, list[str]]
+        none_of: list[str] | None | Unset
         if isinstance(self.none_of, Unset):
             none_of = UNSET
         elif isinstance(self.none_of, list):
@@ -63,15 +59,12 @@ class TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeTy
                 none_of_type_0_item = none_of_type_0_item_data.value
                 none_of.append(none_of_type_0_item)
 
-
         else:
             none_of = self.none_of
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if any_of is not UNSET:
             field_dict["anyOf"] = any_of
         if none_of is not UNSET:
@@ -79,12 +72,17 @@ class TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeTy
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        def _parse_any_of(data: object) -> Union[None, Unset, list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0AnyOfType0Item]]:
+
+        def _parse_any_of(
+            data: object,
+        ) -> (
+            list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0AnyOfType0Item]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -94,22 +92,34 @@ class TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeTy
                     raise TypeError()
                 any_of_type_0 = []
                 _any_of_type_0 = data
-                for any_of_type_0_item_data in (_any_of_type_0):
-                    any_of_type_0_item = TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0AnyOfType0Item(any_of_type_0_item_data)
-
-
+                for any_of_type_0_item_data in _any_of_type_0:
+                    any_of_type_0_item = (
+                        TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0AnyOfType0Item(
+                            any_of_type_0_item_data
+                        )
+                    )
 
                     any_of_type_0.append(any_of_type_0_item)
 
                 return any_of_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0AnyOfType0Item]], data)
+            return cast(
+                list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0AnyOfType0Item]
+                | None
+                | Unset,
+                data,
+            )
 
         any_of = _parse_any_of(d.pop("anyOf", UNSET))
 
-
-        def _parse_none_of(data: object) -> Union[None, Unset, list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0NoneOfType0Item]]:
+        def _parse_none_of(
+            data: object,
+        ) -> (
+            list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0NoneOfType0Item]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -119,26 +129,31 @@ class TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeTy
                     raise TypeError()
                 none_of_type_0 = []
                 _none_of_type_0 = data
-                for none_of_type_0_item_data in (_none_of_type_0):
-                    none_of_type_0_item = TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0NoneOfType0Item(none_of_type_0_item_data)
-
-
+                for none_of_type_0_item_data in _none_of_type_0:
+                    none_of_type_0_item = (
+                        TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0NoneOfType0Item(
+                            none_of_type_0_item_data
+                        )
+                    )
 
                     none_of_type_0.append(none_of_type_0_item)
 
                 return none_of_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0NoneOfType0Item]], data)
+            return cast(
+                list[TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0NoneOfType0Item]
+                | None
+                | Unset,
+                data,
+            )
 
         none_of = _parse_none_of(d.pop("noneOf", UNSET))
-
 
         text_to_profile_search_params_response_200_output_search_params_country_3_letter_code_type_0 = cls(
             any_of=any_of,
             none_of=none_of,
         )
-
 
         text_to_profile_search_params_response_200_output_search_params_country_3_letter_code_type_0.additional_properties = d
         return text_to_profile_search_params_response_200_output_search_params_country_3_letter_code_type_0

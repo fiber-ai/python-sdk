@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class GetSavedSearchRunProfilesResponse200OutputProfilesItemMovementType(str, Enum):
     DEPARTED = "departed"
     JOINED = "joined"

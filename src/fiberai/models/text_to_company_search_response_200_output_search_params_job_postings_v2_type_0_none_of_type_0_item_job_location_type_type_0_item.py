@@ -1,6 +1,9 @@
 from enum import Enum
 
-class TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemJobLocationTypeType0Item(str, Enum):
+
+class TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemJobLocationTypeType0Item(
+    str, Enum
+):
     HYBRID = "Hybrid"
     ON_SITE = "On-site"
     REMOTE = "Remote"

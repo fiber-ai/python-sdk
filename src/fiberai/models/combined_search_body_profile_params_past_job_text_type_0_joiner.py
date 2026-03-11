@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyProfileParamsPastJobTextType0Joiner(str, Enum):
     AND = "and"
     OR = "or"

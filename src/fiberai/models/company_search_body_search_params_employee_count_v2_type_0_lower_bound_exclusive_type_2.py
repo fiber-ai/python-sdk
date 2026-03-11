@@ -1,5 +1,6 @@
 from enum import IntEnum
 
+
 class CompanySearchBodySearchParamsEmployeeCountV2Type0LowerBoundExclusiveType2(IntEnum):
     VALUE_10 = 10
 

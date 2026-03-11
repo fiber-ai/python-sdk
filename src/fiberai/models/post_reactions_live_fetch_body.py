@@ -1,56 +1,54 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
 from ..models.post_reactions_live_fetch_body_reaction_type_type_1 import PostReactionsLiveFetchBodyReactionTypeType1
-from ..models.post_reactions_live_fetch_body_reaction_type_type_2_type_1 import PostReactionsLiveFetchBodyReactionTypeType2Type1
-from ..models.post_reactions_live_fetch_body_reaction_type_type_3_type_1 import PostReactionsLiveFetchBodyReactionTypeType3Type1
+from ..models.post_reactions_live_fetch_body_reaction_type_type_2_type_1 import (
+    PostReactionsLiveFetchBodyReactionTypeType2Type1,
+)
+from ..models.post_reactions_live_fetch_body_reaction_type_type_3_type_1 import (
+    PostReactionsLiveFetchBodyReactionTypeType3Type1,
+)
 from ..types import UNSET, Unset
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
 
 T = TypeVar("T", bound="PostReactionsLiveFetchBody")
 
 
-
 @_attrs_define
 class PostReactionsLiveFetchBody:
-    """ 
-        Attributes:
-            api_key (str): Your Fiber API key
-            content_id (str): You can get LinkedIn posts from the Profile or Company Posts endpoints. (e.g.,
-                'urn:li:activity:7123456789012345678' or 'urn:li:ugcPost:7391650829398675456')
-            reaction_type (Union[None, PostReactionsLiveFetchBodyReactionTypeType1,
-                PostReactionsLiveFetchBodyReactionTypeType2Type1, PostReactionsLiveFetchBodyReactionTypeType3Type1, Unset]):
-                Type of reaction to fetch. If null, all reactions will be fetched.
-            cursor (Union[None, Unset, str]): Pagination cursor for fetching additional pages of posts
-     """
+    """
+    Attributes:
+        api_key (str): Your Fiber API key
+        content_id (str): You can get LinkedIn posts from the Profile or Company Posts endpoints. (e.g.,
+            'urn:li:activity:7123456789012345678' or 'urn:li:ugcPost:7391650829398675456')
+        reaction_type (None | PostReactionsLiveFetchBodyReactionTypeType1 |
+            PostReactionsLiveFetchBodyReactionTypeType2Type1 | PostReactionsLiveFetchBodyReactionTypeType3Type1 | Unset):
+            Type of reaction to fetch. If null, all reactions will be fetched.
+        cursor (None | str | Unset): Pagination cursor for fetching additional pages of posts
+    """
 
     api_key: str
     content_id: str
-    reaction_type: Union[None, PostReactionsLiveFetchBodyReactionTypeType1, PostReactionsLiveFetchBodyReactionTypeType2Type1, PostReactionsLiveFetchBodyReactionTypeType3Type1, Unset] = UNSET
-    cursor: Union[None, Unset, str] = UNSET
+    reaction_type: (
+        None
+        | PostReactionsLiveFetchBodyReactionTypeType1
+        | PostReactionsLiveFetchBodyReactionTypeType2Type1
+        | PostReactionsLiveFetchBodyReactionTypeType3Type1
+        | Unset
+    ) = UNSET
+    cursor: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         api_key = self.api_key
 
         content_id = self.content_id
 
-        reaction_type: Union[None, Unset, str]
+        reaction_type: None | str | Unset
         if isinstance(self.reaction_type, Unset):
             reaction_type = UNSET
         elif isinstance(self.reaction_type, PostReactionsLiveFetchBodyReactionTypeType1):
@@ -62,27 +60,26 @@ class PostReactionsLiveFetchBody:
         else:
             reaction_type = self.reaction_type
 
-        cursor: Union[None, Unset, str]
+        cursor: None | str | Unset
         if isinstance(self.cursor, Unset):
             cursor = UNSET
         else:
             cursor = self.cursor
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "apiKey": api_key,
-            "contentId": content_id,
-        })
+        field_dict.update(
+            {
+                "apiKey": api_key,
+                "contentId": content_id,
+            }
+        )
         if reaction_type is not UNSET:
             field_dict["reactionType"] = reaction_type
         if cursor is not UNSET:
             field_dict["cursor"] = cursor
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -91,7 +88,15 @@ class PostReactionsLiveFetchBody:
 
         content_id = d.pop("contentId")
 
-        def _parse_reaction_type(data: object) -> Union[None, PostReactionsLiveFetchBodyReactionTypeType1, PostReactionsLiveFetchBodyReactionTypeType2Type1, PostReactionsLiveFetchBodyReactionTypeType3Type1, Unset]:
+        def _parse_reaction_type(
+            data: object,
+        ) -> (
+            None
+            | PostReactionsLiveFetchBodyReactionTypeType1
+            | PostReactionsLiveFetchBodyReactionTypeType2Type1
+            | PostReactionsLiveFetchBodyReactionTypeType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -101,45 +106,44 @@ class PostReactionsLiveFetchBody:
                     raise TypeError()
                 reaction_type_type_1 = PostReactionsLiveFetchBodyReactionTypeType1(data)
 
-
-
                 return reaction_type_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 reaction_type_type_2_type_1 = PostReactionsLiveFetchBodyReactionTypeType2Type1(data)
 
-
-
                 return reaction_type_type_2_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 reaction_type_type_3_type_1 = PostReactionsLiveFetchBodyReactionTypeType3Type1(data)
 
-
-
                 return reaction_type_type_3_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, PostReactionsLiveFetchBodyReactionTypeType1, PostReactionsLiveFetchBodyReactionTypeType2Type1, PostReactionsLiveFetchBodyReactionTypeType3Type1, Unset], data)
+            return cast(
+                None
+                | PostReactionsLiveFetchBodyReactionTypeType1
+                | PostReactionsLiveFetchBodyReactionTypeType2Type1
+                | PostReactionsLiveFetchBodyReactionTypeType3Type1
+                | Unset,
+                data,
+            )
 
         reaction_type = _parse_reaction_type(d.pop("reactionType", UNSET))
 
-
-        def _parse_cursor(data: object) -> Union[None, Unset, str]:
+        def _parse_cursor(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         cursor = _parse_cursor(d.pop("cursor", UNSET))
-
 
         post_reactions_live_fetch_body = cls(
             api_key=api_key,
@@ -147,7 +151,6 @@ class PostReactionsLiveFetchBody:
             reaction_type=reaction_type,
             cursor=cursor,
         )
-
 
         post_reactions_live_fetch_body.additional_properties = d
         return post_reactions_live_fetch_body

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class GetCurrentCompaniesInSavedSearchBodyStatusesType0Item(str, Enum):
     DEPARTED = "departed"
     JOINED = "joined"

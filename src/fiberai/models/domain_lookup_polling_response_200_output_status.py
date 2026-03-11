@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class DomainLookupPollingResponse200OutputStatus(str, Enum):
     DONE = "DONE"
     FAILED = "FAILED"

@@ -1,6 +1,9 @@
 from enum import Enum
 
-class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType0Strategy(str, Enum):
+
+class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType0Strategy(
+    str, Enum
+):
     ABSOLUTE = "absolute"
 
     def __str__(self) -> str:

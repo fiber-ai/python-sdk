@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyProfileParamsJobStatusType1LeftAtType1WindowType1Method(str, Enum):
     WITHIN = "within"
 

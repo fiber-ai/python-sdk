@@ -1,91 +1,76 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
-
-T = TypeVar("T", bound="SyncCombinedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType0ItemCompanyDetailsType0")
-
+T = TypeVar(
+    "T", bound="SyncCombinedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType0ItemCompanyDetailsType0"
+)
 
 
 @_attrs_define
 class SyncCombinedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType0ItemCompanyDetailsType0:
-    """ 
-        Attributes:
-            linkedin_ids (Union[None, Unset, list[str]]):
-            li_org_id (Union[None, Unset, str]):
-            linkedin_primary_slug (Union[None, Unset, str]):
-            domains (Union[None, Unset, list[str]]):
-            preferred_name (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        linkedin_ids (list[str] | None | Unset):
+        li_org_id (None | str | Unset):
+        linkedin_primary_slug (None | str | Unset):
+        domains (list[str] | None | Unset):
+        preferred_name (None | str | Unset):
+    """
 
-    linkedin_ids: Union[None, Unset, list[str]] = UNSET
-    li_org_id: Union[None, Unset, str] = UNSET
-    linkedin_primary_slug: Union[None, Unset, str] = UNSET
-    domains: Union[None, Unset, list[str]] = UNSET
-    preferred_name: Union[None, Unset, str] = UNSET
+    linkedin_ids: list[str] | None | Unset = UNSET
+    li_org_id: None | str | Unset = UNSET
+    linkedin_primary_slug: None | str | Unset = UNSET
+    domains: list[str] | None | Unset = UNSET
+    preferred_name: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        linkedin_ids: Union[None, Unset, list[str]]
+        linkedin_ids: list[str] | None | Unset
         if isinstance(self.linkedin_ids, Unset):
             linkedin_ids = UNSET
         elif isinstance(self.linkedin_ids, list):
             linkedin_ids = self.linkedin_ids
 
-
         else:
             linkedin_ids = self.linkedin_ids
 
-        li_org_id: Union[None, Unset, str]
+        li_org_id: None | str | Unset
         if isinstance(self.li_org_id, Unset):
             li_org_id = UNSET
         else:
             li_org_id = self.li_org_id
 
-        linkedin_primary_slug: Union[None, Unset, str]
+        linkedin_primary_slug: None | str | Unset
         if isinstance(self.linkedin_primary_slug, Unset):
             linkedin_primary_slug = UNSET
         else:
             linkedin_primary_slug = self.linkedin_primary_slug
 
-        domains: Union[None, Unset, list[str]]
+        domains: list[str] | None | Unset
         if isinstance(self.domains, Unset):
             domains = UNSET
         elif isinstance(self.domains, list):
             domains = self.domains
 
-
         else:
             domains = self.domains
 
-        preferred_name: Union[None, Unset, str]
+        preferred_name: None | str | Unset
         if isinstance(self.preferred_name, Unset):
             preferred_name = UNSET
         else:
             preferred_name = self.preferred_name
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if linkedin_ids is not UNSET:
             field_dict["linkedin_ids"] = linkedin_ids
         if li_org_id is not UNSET:
@@ -99,12 +84,11 @@ class SyncCombinedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        def _parse_linkedin_ids(data: object) -> Union[None, Unset, list[str]]:
+
+        def _parse_linkedin_ids(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -115,34 +99,31 @@ class SyncCombinedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType
                 linkedin_ids_type_0 = cast(list[str], data)
 
                 return linkedin_ids_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         linkedin_ids = _parse_linkedin_ids(d.pop("linkedin_ids", UNSET))
 
-
-        def _parse_li_org_id(data: object) -> Union[None, Unset, str]:
+        def _parse_li_org_id(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         li_org_id = _parse_li_org_id(d.pop("li_org_id", UNSET))
 
-
-        def _parse_linkedin_primary_slug(data: object) -> Union[None, Unset, str]:
+        def _parse_linkedin_primary_slug(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         linkedin_primary_slug = _parse_linkedin_primary_slug(d.pop("linkedin_primary_slug", UNSET))
 
-
-        def _parse_domains(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_domains(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -153,22 +134,20 @@ class SyncCombinedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType
                 domains_type_0 = cast(list[str], data)
 
                 return domains_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         domains = _parse_domains(d.pop("domains", UNSET))
 
-
-        def _parse_preferred_name(data: object) -> Union[None, Unset, str]:
+        def _parse_preferred_name(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         preferred_name = _parse_preferred_name(d.pop("preferred_name", UNSET))
-
 
         sync_combined_search_response_200_output_profiles_item_detailed_work_experiences_type_0_item_company_details_type_0 = cls(
             linkedin_ids=linkedin_ids,
@@ -177,7 +156,6 @@ class SyncCombinedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType
             domains=domains,
             preferred_name=preferred_name,
         )
-
 
         sync_combined_search_response_200_output_profiles_item_detailed_work_experiences_type_0_item_company_details_type_0.additional_properties = d
         return sync_combined_search_response_200_output_profiles_item_detailed_work_experiences_type_0_item_company_details_type_0

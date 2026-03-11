@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PeopleSearchCountBodySearchParamsCountry3LetterCodeType0AnyOfType0Item(str, Enum):
     ABW = "ABW"
     AFG = "AFG"

@@ -1,53 +1,41 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-
-
-
-
-
-
 T = TypeVar("T", bound="GetSavedSearchRunCompaniesResponse200WarningsType0Item")
-
 
 
 @_attrs_define
 class GetSavedSearchRunCompaniesResponse200WarningsType0Item:
-    """ 
-        Attributes:
-            field (str): Full path to extraneous field (e.g., 'searchParams.ExtraField')
-            message (str): Warning message
-     """
+    """
+    Attributes:
+        field (str): Full path to extraneous field (e.g., 'searchParams.ExtraField')
+        message (str): Warning message
+    """
 
     field: str
     message: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         field = self.field
 
         message = self.message
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "field": field,
-            "message": message,
-        })
+        field_dict.update(
+            {
+                "field": field,
+                "message": message,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -60,7 +48,6 @@ class GetSavedSearchRunCompaniesResponse200WarningsType0Item:
             field=field,
             message=message,
         )
-
 
         get_saved_search_run_companies_response_200_warnings_type_0_item.additional_properties = d
         return get_saved_search_run_companies_response_200_warnings_type_0_item

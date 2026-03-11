@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType1WindowType1Method(str, Enum):
     WITHIN = "within"
 

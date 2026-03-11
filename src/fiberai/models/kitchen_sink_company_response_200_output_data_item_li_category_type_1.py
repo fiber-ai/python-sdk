@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class KitchenSinkCompanyResponse200OutputDataItemLiCategoryType1(str, Enum):
     C = "C"
     S = "S"

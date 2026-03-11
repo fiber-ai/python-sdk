@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class JobPostingSearchBodySearchParamsCompaniesType1Identifier(str, Enum):
     DOMAIN = "domain"
 

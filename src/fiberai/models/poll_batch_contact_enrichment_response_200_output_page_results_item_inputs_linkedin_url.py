@@ -1,48 +1,36 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-
-
-
-
-
-
 T = TypeVar("T", bound="PollBatchContactEnrichmentResponse200OutputPageResultsItemInputsLinkedinUrl")
-
 
 
 @_attrs_define
 class PollBatchContactEnrichmentResponse200OutputPageResultsItemInputsLinkedinUrl:
-    """ 
-        Attributes:
-            value (str): A LinkedIn URL, like 'https://www.linkedin.com/in/jake'
-     """
+    """
+    Attributes:
+        value (str): A LinkedIn URL, like 'https://www.linkedin.com/in/jake'
+    """
 
     value: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
         value = self.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "value": value,
-        })
+        field_dict.update(
+            {
+                "value": value,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -52,7 +40,6 @@ class PollBatchContactEnrichmentResponse200OutputPageResultsItemInputsLinkedinUr
         poll_batch_contact_enrichment_response_200_output_page_results_item_inputs_linkedin_url = cls(
             value=value,
         )
-
 
         poll_batch_contact_enrichment_response_200_output_page_results_item_inputs_linkedin_url.additional_properties = d
         return poll_batch_contact_enrichment_response_200_output_page_results_item_inputs_linkedin_url

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchResponse200OutputProfilesItemCurrentJobType0SeniorityType3Type1(str, Enum):
     ASSOCIATE = "Associate"
     DIRECTOR = "Director"

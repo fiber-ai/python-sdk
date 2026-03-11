@@ -1,55 +1,65 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_strategy import (
+    SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1Strategy,
+)
 from ..types import UNSET, Unset
-
-from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_strategy import SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1Strategy
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_2 import SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType2
-  from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_0 import SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0
-  from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_1 import SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType1
-
-
-
+    from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_0 import (
+        SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0,
+    )
+    from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_1 import (
+        SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType1,
+    )
+    from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_2 import (
+        SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType2,
+    )
 
 
 T = TypeVar("T", bound="SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1")
 
 
-
 @_attrs_define
 class SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1:
-    """ 
-        Attributes:
-            strategy (SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1Strategy):
-            window (Union['SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0',
-                'SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType1',
-                'SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType2', None, Unset]):
-     """
+    """
+    Attributes:
+        strategy (SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1Strategy):
+        window (None | SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0 |
+            SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType1 |
+            SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType2 | Unset):
+    """
 
     strategy: SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1Strategy
-    window: Union['SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0', 'SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType1', 'SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType2', None, Unset] = UNSET
+    window: (
+        None
+        | SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0
+        | SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType1
+        | SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType2
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_2 import SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType2
-        from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_0 import SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0
-        from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_1 import SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType1
+        from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_0 import (
+            SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0,
+        )
+        from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_1 import (
+            SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType1,
+        )
+        from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_2 import (
+            SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType2,
+        )
+
         strategy = self.strategy.value
 
-        window: Union[None, Unset, dict[str, Any]]
+        window: dict[str, Any] | None | Unset
         if isinstance(self.window, Unset):
             window = UNSET
         elif isinstance(self.window, SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0):
@@ -61,31 +71,42 @@ class SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1:
         else:
             window = self.window
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "strategy": strategy,
-        })
+        field_dict.update(
+            {
+                "strategy": strategy,
+            }
+        )
         if window is not UNSET:
             field_dict["window"] = window
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_2 import SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType2
-        from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_0 import SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0
-        from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_1 import SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType1
+        from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_0 import (
+            SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0,
+        )
+        from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_1 import (
+            SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType1,
+        )
+        from ..models.sync_combined_search_body_profile_params_started_at_company_type_1_window_type_2 import (
+            SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType2,
+        )
+
         d = dict(src_dict)
         strategy = SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1Strategy(d.pop("strategy"))
 
-
-
-
-        def _parse_window(data: object) -> Union['SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0', 'SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType1', 'SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType2', None, Unset]:
+        def _parse_window(
+            data: object,
+        ) -> (
+            None
+            | SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0
+            | SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType1
+            | SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType2
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -95,41 +116,40 @@ class SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1:
                     raise TypeError()
                 window_type_0 = SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0.from_dict(data)
 
-
-
                 return window_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 window_type_1 = SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType1.from_dict(data)
 
-
-
                 return window_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 window_type_2 = SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType2.from_dict(data)
 
-
-
                 return window_type_2
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0', 'SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType1', 'SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType2', None, Unset], data)
+            return cast(
+                None
+                | SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType0
+                | SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType1
+                | SyncCombinedSearchBodyProfileParamsStartedAtCompanyType1WindowType2
+                | Unset,
+                data,
+            )
 
         window = _parse_window(d.pop("window", UNSET))
-
 
         sync_combined_search_body_profile_params_started_at_company_type_1 = cls(
             strategy=strategy,
             window=window,
         )
-
 
         sync_combined_search_body_profile_params_started_at_company_type_1.additional_properties = d
         return sync_combined_search_body_profile_params_started_at_company_type_1

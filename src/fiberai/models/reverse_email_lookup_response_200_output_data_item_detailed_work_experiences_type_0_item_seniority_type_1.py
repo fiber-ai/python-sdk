@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1(str, Enum):
     ASSOCIATE = "Associate"
     DIRECTOR = "Director"

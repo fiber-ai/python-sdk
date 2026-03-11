@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsEmployeeTrendsType0ObeysNoneType0ItemCountCriteriaType1Type(str, Enum):
     PERCENT_CHANGE = "percent_change"
 

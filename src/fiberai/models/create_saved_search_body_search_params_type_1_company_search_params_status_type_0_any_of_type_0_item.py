@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsStatusType0AnyOfType0Item(str, Enum):
     ACQUIRED = "acquired"
     ACTIVE = "active"

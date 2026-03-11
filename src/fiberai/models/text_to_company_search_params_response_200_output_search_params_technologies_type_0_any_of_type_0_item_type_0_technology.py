@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCompanySearchParamsResponse200OutputSearchParamsTechnologiesType0AnyOfType0ItemType0Technology(str, Enum):
     AIRFLOW = "Airflow"
     ALGOLIA = "Algolia"

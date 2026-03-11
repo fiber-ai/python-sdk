@@ -1,45 +1,36 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from typing import cast
-
 if TYPE_CHECKING:
-  from ..models.add_prospects_to_exclusion_list_body_prospects_item import AddProspectsToExclusionListBodyProspectsItem
-
-
-
+    from ..models.add_prospects_to_exclusion_list_body_prospects_item import (
+        AddProspectsToExclusionListBodyProspectsItem,
+    )
 
 
 T = TypeVar("T", bound="AddProspectsToExclusionListBody")
 
 
-
 @_attrs_define
 class AddProspectsToExclusionListBody:
-    """ 
-        Attributes:
-            api_key (str): Your Fiber API key
-            list_id (str): Id of the prospect exclusion list to add prospects to
-            prospects (list['AddProspectsToExclusionListBodyProspectsItem']): Prospects to add to the exclusion list. Max
-                5000 prospects can be added at a time.
-     """
+    """
+    Attributes:
+        api_key (str): Your Fiber API key
+        list_id (str): Id of the prospect exclusion list to add prospects to
+        prospects (list[AddProspectsToExclusionListBodyProspectsItem]): Prospects to add to the exclusion list. Max 5000
+            prospects can be added at a time.
+    """
 
     api_key: str
     list_id: str
-    prospects: list['AddProspectsToExclusionListBodyProspectsItem']
+    prospects: list[AddProspectsToExclusionListBodyProspectsItem]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.add_prospects_to_exclusion_list_body_prospects_item import AddProspectsToExclusionListBodyProspectsItem
         api_key = self.api_key
 
         list_id = self.list_id
@@ -49,24 +40,24 @@ class AddProspectsToExclusionListBody:
             prospects_item = prospects_item_data.to_dict()
             prospects.append(prospects_item)
 
-
-
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "apiKey": api_key,
-            "listId": list_id,
-            "prospects": prospects,
-        })
+        field_dict.update(
+            {
+                "apiKey": api_key,
+                "listId": list_id,
+                "prospects": prospects,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.add_prospects_to_exclusion_list_body_prospects_item import AddProspectsToExclusionListBodyProspectsItem
+        from ..models.add_prospects_to_exclusion_list_body_prospects_item import (
+            AddProspectsToExclusionListBodyProspectsItem,
+        )
+
         d = dict(src_dict)
         api_key = d.pop("apiKey")
 
@@ -74,20 +65,16 @@ class AddProspectsToExclusionListBody:
 
         prospects = []
         _prospects = d.pop("prospects")
-        for prospects_item_data in (_prospects):
+        for prospects_item_data in _prospects:
             prospects_item = AddProspectsToExclusionListBodyProspectsItem.from_dict(prospects_item_data)
 
-
-
             prospects.append(prospects_item)
-
 
         add_prospects_to_exclusion_list_body = cls(
             api_key=api_key,
             list_id=list_id,
             prospects=prospects,
         )
-
 
         add_prospects_to_exclusion_list_body.additional_properties = d
         return add_prospects_to_exclusion_list_body

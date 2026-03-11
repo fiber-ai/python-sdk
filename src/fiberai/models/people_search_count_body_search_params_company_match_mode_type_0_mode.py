@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PeopleSearchCountBodySearchParamsCompanyMatchModeType0Mode(str, Enum):
     STRICT = "strict"
 

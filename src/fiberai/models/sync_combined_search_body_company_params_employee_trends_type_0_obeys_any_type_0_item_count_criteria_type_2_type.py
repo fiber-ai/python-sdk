@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType2Type(str, Enum):
     CURRENT_COUNT = "current_count"
 

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PeopleSearchCountBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusType1Unit(str, Enum):
     KILOMETERS = "kilometers"
 

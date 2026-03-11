@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCurrentJobType0EmploymentTypeType0Item(str, Enum):
     CONTRACT = "Contract"
     FULL_TIME = "Full-time"

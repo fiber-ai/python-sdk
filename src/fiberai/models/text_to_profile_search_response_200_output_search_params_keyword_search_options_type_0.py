@@ -1,70 +1,74 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.text_to_profile_search_response_200_output_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0
-
-
-
+    from ..models.text_to_profile_search_response_200_output_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import (
+        TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,
+    )
 
 
 T = TypeVar("T", bound="TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0")
 
 
-
 @_attrs_define
 class TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0:
-    """ 
-        Attributes:
-            fields_to_search_over
-                (Union['TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0', None,
-                Unset]):
-     """
+    """
+    Attributes:
+        fields_to_search_over (None |
+            TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0 | Unset):
+    """
 
-    fields_to_search_over: Union['TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0', None, Unset] = UNSET
+    fields_to_search_over: (
+        None | TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0 | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.text_to_profile_search_response_200_output_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0
-        fields_to_search_over: Union[None, Unset, dict[str, Any]]
+        from ..models.text_to_profile_search_response_200_output_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import (
+            TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,
+        )
+
+        fields_to_search_over: dict[str, Any] | None | Unset
         if isinstance(self.fields_to_search_over, Unset):
             fields_to_search_over = UNSET
-        elif isinstance(self.fields_to_search_over, TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0):
+        elif isinstance(
+            self.fields_to_search_over,
+            TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,
+        ):
             fields_to_search_over = self.fields_to_search_over.to_dict()
         else:
             fields_to_search_over = self.fields_to_search_over
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if fields_to_search_over is not UNSET:
             field_dict["fieldsToSearchOver"] = fields_to_search_over
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.text_to_profile_search_response_200_output_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0
+        from ..models.text_to_profile_search_response_200_output_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import (
+            TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,
+        )
+
         d = dict(src_dict)
-        def _parse_fields_to_search_over(data: object) -> Union['TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0', None, Unset]:
+
+        def _parse_fields_to_search_over(
+            data: object,
+        ) -> (
+            None
+            | TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -72,22 +76,25 @@ class TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                fields_to_search_over_type_0 = TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0.from_dict(data)
-
-
+                fields_to_search_over_type_0 = TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0.from_dict(
+                    data
+                )
 
                 return fields_to_search_over_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0', None, Unset], data)
+            return cast(
+                None
+                | TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0
+                | Unset,
+                data,
+            )
 
         fields_to_search_over = _parse_fields_to_search_over(d.pop("fieldsToSearchOver", UNSET))
-
 
         text_to_profile_search_response_200_output_search_params_keyword_search_options_type_0 = cls(
             fields_to_search_over=fields_to_search_over,
         )
-
 
         text_to_profile_search_response_200_output_search_params_keyword_search_options_type_0.additional_properties = d
         return text_to_profile_search_response_200_output_search_params_keyword_search_options_type_0

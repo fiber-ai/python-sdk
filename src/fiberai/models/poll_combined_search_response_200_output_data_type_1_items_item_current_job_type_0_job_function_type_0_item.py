@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PollCombinedSearchResponse200OutputDataType1ItemsItemCurrentJobType0JobFunctionType0Item(str, Enum):
     ACCOUNTING = "Accounting"
     ADMINISTRATIVE = "Administrative"

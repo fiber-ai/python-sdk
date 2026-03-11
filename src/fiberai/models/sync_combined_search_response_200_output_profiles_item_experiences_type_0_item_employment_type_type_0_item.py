@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchResponse200OutputProfilesItemExperiencesType0ItemEmploymentTypeType0Item(str, Enum):
     CONTRACT = "Contract"
     FULL_TIME = "Full-time"

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyCountBodySearchParamsEmployeeTrendsType0ObeysAnyType0ItemJobFunction(str, Enum):
     ACCOUNTING = "accounting"
     ADMINISTRATIVE = "administrative"

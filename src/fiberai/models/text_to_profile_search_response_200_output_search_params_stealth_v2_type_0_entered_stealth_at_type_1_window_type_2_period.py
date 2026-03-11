@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToProfileSearchResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1WindowType2Period(str, Enum):
     DAY = "day"
     MONTH = "month"

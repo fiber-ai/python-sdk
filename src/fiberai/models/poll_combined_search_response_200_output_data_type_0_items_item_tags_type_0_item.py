@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PollCombinedSearchResponse200OutputDataType0ItemsItemTagsType0Item(str, Enum):
     IS_GOVERNMENT = "is-government"
     IS_SCHOOL = "is-school"

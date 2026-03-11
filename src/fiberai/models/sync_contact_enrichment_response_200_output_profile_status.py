@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncContactEnrichmentResponse200OutputProfileStatus(str, Enum):
     COMPLETED = "completed"
     FAILED = "failed"

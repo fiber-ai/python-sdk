@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanySearchBodySearchParamsLastFundedOnType1WindowType0Method(str, Enum):
     LASTN = "lastN"
 

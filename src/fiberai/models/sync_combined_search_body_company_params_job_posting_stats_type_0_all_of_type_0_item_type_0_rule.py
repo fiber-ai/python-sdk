@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Rule(str, Enum):
     TOTAL = "total"
 

@@ -1,6 +1,9 @@
 from enum import Enum
 
-class TextToCombinedSearchResponse200OutputCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType0Strategy(str, Enum):
+
+class TextToCombinedSearchResponse200OutputCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType0Strategy(
+    str, Enum
+):
     RADIAL_DISTANCE = "radial-distance"
 
     def __str__(self) -> str:

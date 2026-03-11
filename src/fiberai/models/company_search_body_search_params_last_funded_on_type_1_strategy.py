@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanySearchBodySearchParamsLastFundedOnType1Strategy(str, Enum):
     RELATIVE = "relative"
 

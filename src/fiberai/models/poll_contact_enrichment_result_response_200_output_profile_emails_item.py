@@ -1,66 +1,57 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.poll_contact_enrichment_result_response_200_output_profile_emails_item_status import (
+    PollContactEnrichmentResultResponse200OutputProfileEmailsItemStatus,
+)
+from ..models.poll_contact_enrichment_result_response_200_output_profile_emails_item_type import (
+    PollContactEnrichmentResultResponse200OutputProfileEmailsItemType,
+)
 from ..types import UNSET, Unset
-
-from ..models.poll_contact_enrichment_result_response_200_output_profile_emails_item_status import PollContactEnrichmentResultResponse200OutputProfileEmailsItemStatus
-from ..models.poll_contact_enrichment_result_response_200_output_profile_emails_item_type import PollContactEnrichmentResultResponse200OutputProfileEmailsItemType
-from ..types import UNSET, Unset
-from typing import Union
-
-
-
-
-
 
 T = TypeVar("T", bound="PollContactEnrichmentResultResponse200OutputProfileEmailsItem")
 
 
-
 @_attrs_define
 class PollContactEnrichmentResultResponse200OutputProfileEmailsItem:
-    """ 
-        Attributes:
-            email (str):
-            type_ (PollContactEnrichmentResultResponse200OutputProfileEmailsItemType):
-            status (Union[Unset, PollContactEnrichmentResultResponse200OutputProfileEmailsItemStatus]):
-     """
+    """
+    Attributes:
+        email (str):
+        type_ (PollContactEnrichmentResultResponse200OutputProfileEmailsItemType):
+        status (PollContactEnrichmentResultResponse200OutputProfileEmailsItemStatus | Unset):
+    """
 
     email: str
     type_: PollContactEnrichmentResultResponse200OutputProfileEmailsItemType
-    status: Union[Unset, PollContactEnrichmentResultResponse200OutputProfileEmailsItemStatus] = UNSET
+    status: PollContactEnrichmentResultResponse200OutputProfileEmailsItemStatus | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         email = self.email
 
         type_ = self.type_.value
 
-        status: Union[Unset, str] = UNSET
+        status: str | Unset = UNSET
         if not isinstance(self.status, Unset):
             status = self.status.value
 
-
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "email": email,
-            "type": type_,
-        })
+        field_dict.update(
+            {
+                "email": email,
+                "type": type_,
+            }
+        )
         if status is not UNSET:
             field_dict["status"] = status
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -69,25 +60,18 @@ class PollContactEnrichmentResultResponse200OutputProfileEmailsItem:
 
         type_ = PollContactEnrichmentResultResponse200OutputProfileEmailsItemType(d.pop("type"))
 
-
-
-
         _status = d.pop("status", UNSET)
-        status: Union[Unset, PollContactEnrichmentResultResponse200OutputProfileEmailsItemStatus]
-        if isinstance(_status,  Unset):
+        status: PollContactEnrichmentResultResponse200OutputProfileEmailsItemStatus | Unset
+        if isinstance(_status, Unset):
             status = UNSET
         else:
             status = PollContactEnrichmentResultResponse200OutputProfileEmailsItemStatus(_status)
-
-
-
 
         poll_contact_enrichment_result_response_200_output_profile_emails_item = cls(
             email=email,
             type_=type_,
             status=status,
         )
-
 
         poll_contact_enrichment_result_response_200_output_profile_emails_item.additional_properties = d
         return poll_contact_enrichment_result_response_200_output_profile_emails_item

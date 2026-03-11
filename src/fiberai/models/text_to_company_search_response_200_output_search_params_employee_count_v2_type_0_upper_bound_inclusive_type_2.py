@@ -1,5 +1,6 @@
 from enum import IntEnum
 
+
 class TextToCompanySearchResponse200OutputSearchParamsEmployeeCountV2Type0UpperBoundInclusiveType2(IntEnum):
     VALUE_10 = 10
 

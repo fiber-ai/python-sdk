@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0AnyOfType0ItemType2Rule(str, Enum):
     SENIORITY = "seniority"
 

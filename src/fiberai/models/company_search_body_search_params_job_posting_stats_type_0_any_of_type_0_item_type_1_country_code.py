@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType1CountryCode(str, Enum):
     ABW = "ABW"
     AFG = "AFG"

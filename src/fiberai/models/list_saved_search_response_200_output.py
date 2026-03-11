@@ -1,101 +1,86 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.list_saved_search_response_200_output_saved_searches_item import ListSavedSearchResponse200OutputSavedSearchesItem
-
-
-
+    from ..models.list_saved_search_response_200_output_saved_searches_item import (
+        ListSavedSearchResponse200OutputSavedSearchesItem,
+    )
 
 
 T = TypeVar("T", bound="ListSavedSearchResponse200Output")
 
 
-
 @_attrs_define
 class ListSavedSearchResponse200Output:
-    """ 
-        Attributes:
-            saved_searches (list['ListSavedSearchResponse200OutputSavedSearchesItem']): The saved searches
-            next_cursor (Union[None, Unset, str]): The next cursor. You can call this endpoint again with this cursor to get
-                the next page of results. If null, there are no more results.
-     """
+    """
+    Attributes:
+        saved_searches (list[ListSavedSearchResponse200OutputSavedSearchesItem]): The saved searches
+        next_cursor (None | str | Unset): The next cursor. You can call this endpoint again with this cursor to get the
+            next page of results. If null, there are no more results.
+    """
 
-    saved_searches: list['ListSavedSearchResponse200OutputSavedSearchesItem']
-    next_cursor: Union[None, Unset, str] = UNSET
+    saved_searches: list[ListSavedSearchResponse200OutputSavedSearchesItem]
+    next_cursor: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.list_saved_search_response_200_output_saved_searches_item import ListSavedSearchResponse200OutputSavedSearchesItem
         saved_searches = []
         for saved_searches_item_data in self.saved_searches:
             saved_searches_item = saved_searches_item_data.to_dict()
             saved_searches.append(saved_searches_item)
 
-
-
-        next_cursor: Union[None, Unset, str]
+        next_cursor: None | str | Unset
         if isinstance(self.next_cursor, Unset):
             next_cursor = UNSET
         else:
             next_cursor = self.next_cursor
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "savedSearches": saved_searches,
-        })
+        field_dict.update(
+            {
+                "savedSearches": saved_searches,
+            }
+        )
         if next_cursor is not UNSET:
             field_dict["nextCursor"] = next_cursor
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.list_saved_search_response_200_output_saved_searches_item import ListSavedSearchResponse200OutputSavedSearchesItem
+        from ..models.list_saved_search_response_200_output_saved_searches_item import (
+            ListSavedSearchResponse200OutputSavedSearchesItem,
+        )
+
         d = dict(src_dict)
         saved_searches = []
         _saved_searches = d.pop("savedSearches")
-        for saved_searches_item_data in (_saved_searches):
+        for saved_searches_item_data in _saved_searches:
             saved_searches_item = ListSavedSearchResponse200OutputSavedSearchesItem.from_dict(saved_searches_item_data)
-
-
 
             saved_searches.append(saved_searches_item)
 
-
-        def _parse_next_cursor(data: object) -> Union[None, Unset, str]:
+        def _parse_next_cursor(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         next_cursor = _parse_next_cursor(d.pop("nextCursor", UNSET))
-
 
         list_saved_search_response_200_output = cls(
             saved_searches=saved_searches,
             next_cursor=next_cursor,
         )
-
 
         list_saved_search_response_200_output.additional_properties = d
         return list_saved_search_response_200_output

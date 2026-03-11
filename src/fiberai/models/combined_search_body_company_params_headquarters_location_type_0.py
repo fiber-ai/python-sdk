@@ -1,86 +1,89 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.combined_search_body_company_params_headquarters_location_type_0_subtract_all_type_0_item_type_0 import CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0
-  from ..models.combined_search_body_company_params_headquarters_location_type_0_union_all_type_0_item_type_0 import CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0
-
-
-
+    from ..models.combined_search_body_company_params_headquarters_location_type_0_subtract_all_type_0_item_type_0 import (
+        CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0,
+    )
+    from ..models.combined_search_body_company_params_headquarters_location_type_0_union_all_type_0_item_type_0 import (
+        CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0,
+    )
 
 
 T = TypeVar("T", bound="CombinedSearchBodyCompanyParamsHeadquartersLocationType0")
 
 
-
 @_attrs_define
 class CombinedSearchBodyCompanyParamsHeadquartersLocationType0:
-    """ 
-        Attributes:
-            union_all (Union[None, Unset,
-                list['CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0']]):
-            subtract_all (Union[None, Unset,
-                list['CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0']]):
-     """
+    """
+    Attributes:
+        union_all (list[CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0] | None | Unset):
+        subtract_all (list[CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0] | None |
+            Unset):
+    """
 
-    union_all: Union[None, Unset, list['CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0']] = UNSET
-    subtract_all: Union[None, Unset, list['CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0']] = UNSET
+    union_all: list[CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0] | None | Unset = (
+        UNSET
+    )
+    subtract_all: (
+        list[CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0] | None | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.combined_search_body_company_params_headquarters_location_type_0_subtract_all_type_0_item_type_0 import CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0
-        from ..models.combined_search_body_company_params_headquarters_location_type_0_union_all_type_0_item_type_0 import CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0
-        union_all: Union[None, Unset, list[dict[str, Any]]]
+        from ..models.combined_search_body_company_params_headquarters_location_type_0_subtract_all_type_0_item_type_0 import (
+            CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0,
+        )
+        from ..models.combined_search_body_company_params_headquarters_location_type_0_union_all_type_0_item_type_0 import (
+            CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0,
+        )
+
+        union_all: list[dict[str, Any]] | None | Unset
         if isinstance(self.union_all, Unset):
             union_all = UNSET
         elif isinstance(self.union_all, list):
             union_all = []
             for union_all_type_0_item_data in self.union_all:
                 union_all_type_0_item: dict[str, Any]
-                if isinstance(union_all_type_0_item_data, CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0):
+                if isinstance(
+                    union_all_type_0_item_data,
+                    CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0,
+                ):
                     union_all_type_0_item = union_all_type_0_item_data.to_dict()
 
                 union_all.append(union_all_type_0_item)
 
-
         else:
             union_all = self.union_all
 
-        subtract_all: Union[None, Unset, list[dict[str, Any]]]
+        subtract_all: list[dict[str, Any]] | None | Unset
         if isinstance(self.subtract_all, Unset):
             subtract_all = UNSET
         elif isinstance(self.subtract_all, list):
             subtract_all = []
             for subtract_all_type_0_item_data in self.subtract_all:
                 subtract_all_type_0_item: dict[str, Any]
-                if isinstance(subtract_all_type_0_item_data, CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0):
+                if isinstance(
+                    subtract_all_type_0_item_data,
+                    CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0,
+                ):
                     subtract_all_type_0_item = subtract_all_type_0_item_data.to_dict()
 
                 subtract_all.append(subtract_all_type_0_item)
 
-
         else:
             subtract_all = self.subtract_all
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if union_all is not UNSET:
             field_dict["unionAll"] = union_all
         if subtract_all is not UNSET:
@@ -88,14 +91,20 @@ class CombinedSearchBodyCompanyParamsHeadquartersLocationType0:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.combined_search_body_company_params_headquarters_location_type_0_subtract_all_type_0_item_type_0 import CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0
-        from ..models.combined_search_body_company_params_headquarters_location_type_0_union_all_type_0_item_type_0 import CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0
+        from ..models.combined_search_body_company_params_headquarters_location_type_0_subtract_all_type_0_item_type_0 import (
+            CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0,
+        )
+        from ..models.combined_search_body_company_params_headquarters_location_type_0_union_all_type_0_item_type_0 import (
+            CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0,
+        )
+
         d = dict(src_dict)
-        def _parse_union_all(data: object) -> Union[None, Unset, list['CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0']]:
+
+        def _parse_union_all(
+            data: object,
+        ) -> list[CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -105,13 +114,18 @@ class CombinedSearchBodyCompanyParamsHeadquartersLocationType0:
                     raise TypeError()
                 union_all_type_0 = []
                 _union_all_type_0 = data
-                for union_all_type_0_item_data in (_union_all_type_0):
-                    def _parse_union_all_type_0_item(data: object) -> 'CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0':
+                for union_all_type_0_item_data in _union_all_type_0:
+
+                    def _parse_union_all_type_0_item(
+                        data: object,
+                    ) -> CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0:
                         if not isinstance(data, dict):
                             raise TypeError()
-                        union_all_type_0_item_type_0 = CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0.from_dict(data)
-
-
+                        union_all_type_0_item_type_0 = (
+                            CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0.from_dict(
+                                data
+                            )
+                        )
 
                         return union_all_type_0_item_type_0
 
@@ -120,14 +134,18 @@ class CombinedSearchBodyCompanyParamsHeadquartersLocationType0:
                     union_all_type_0.append(union_all_type_0_item)
 
                 return union_all_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0']], data)
+            return cast(
+                list[CombinedSearchBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0] | None | Unset,
+                data,
+            )
 
         union_all = _parse_union_all(d.pop("unionAll", UNSET))
 
-
-        def _parse_subtract_all(data: object) -> Union[None, Unset, list['CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0']]:
+        def _parse_subtract_all(
+            data: object,
+        ) -> list[CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -137,13 +155,18 @@ class CombinedSearchBodyCompanyParamsHeadquartersLocationType0:
                     raise TypeError()
                 subtract_all_type_0 = []
                 _subtract_all_type_0 = data
-                for subtract_all_type_0_item_data in (_subtract_all_type_0):
-                    def _parse_subtract_all_type_0_item(data: object) -> 'CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0':
+                for subtract_all_type_0_item_data in _subtract_all_type_0:
+
+                    def _parse_subtract_all_type_0_item(
+                        data: object,
+                    ) -> CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0:
                         if not isinstance(data, dict):
                             raise TypeError()
-                        subtract_all_type_0_item_type_0 = CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0.from_dict(data)
-
-
+                        subtract_all_type_0_item_type_0 = (
+                            CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0.from_dict(
+                                data
+                            )
+                        )
 
                         return subtract_all_type_0_item_type_0
 
@@ -152,18 +175,19 @@ class CombinedSearchBodyCompanyParamsHeadquartersLocationType0:
                     subtract_all_type_0.append(subtract_all_type_0_item)
 
                 return subtract_all_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0']], data)
+            return cast(
+                list[CombinedSearchBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0] | None | Unset,
+                data,
+            )
 
         subtract_all = _parse_subtract_all(d.pop("subtractAll", UNSET))
-
 
         combined_search_body_company_params_headquarters_location_type_0 = cls(
             union_all=union_all,
             subtract_all=subtract_all,
         )
-
 
         combined_search_body_company_params_headquarters_location_type_0.additional_properties = d
         return combined_search_body_company_params_headquarters_location_type_0

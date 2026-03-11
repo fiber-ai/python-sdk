@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanySearchBodySearchParamsEmployeeTrendsType0ObeysAllType0ItemCountCriteriaType0Type(str, Enum):
     NUMERIC_CHANGE = "numeric_change"
 

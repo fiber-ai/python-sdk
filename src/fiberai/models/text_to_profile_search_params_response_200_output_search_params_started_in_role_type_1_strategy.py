@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1Strategy(str, Enum):
     RELATIVE = "relative"
 

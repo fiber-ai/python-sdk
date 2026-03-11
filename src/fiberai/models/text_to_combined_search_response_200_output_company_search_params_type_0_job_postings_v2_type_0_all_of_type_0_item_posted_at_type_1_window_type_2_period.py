@@ -1,6 +1,9 @@
 from enum import Enum
 
-class TextToCombinedSearchResponse200OutputCompanySearchParamsType0JobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Period(str, Enum):
+
+class TextToCombinedSearchResponse200OutputCompanySearchParamsType0JobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Period(
+    str, Enum
+):
     DAY = "day"
     MONTH = "month"
     QUARTER = "quarter"

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType2Which(str, Enum):
     CURRENT = "current"
     PREVIOUS = "previous"

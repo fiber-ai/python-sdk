@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEmploymentTypeType0Item(str, Enum):
     CONTRACT = "Contract"
     FULL_TIME = "Full-time"

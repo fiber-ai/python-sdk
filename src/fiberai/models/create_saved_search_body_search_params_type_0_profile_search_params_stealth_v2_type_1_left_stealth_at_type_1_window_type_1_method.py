@@ -1,6 +1,9 @@
 from enum import Enum
 
-class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type1LeftStealthAtType1WindowType1Method(str, Enum):
+
+class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type1LeftStealthAtType1WindowType1Method(
+    str, Enum
+):
     WITHIN = "within"
 
     def __str__(self) -> str:

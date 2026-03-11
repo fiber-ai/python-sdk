@@ -1,6 +1,9 @@
 from enum import Enum
 
-class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type0EnteredStealthAtType1WindowType0Method(str, Enum):
+
+class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type0EnteredStealthAtType1WindowType0Method(
+    str, Enum
+):
     LASTN = "lastN"
 
     def __str__(self) -> str:

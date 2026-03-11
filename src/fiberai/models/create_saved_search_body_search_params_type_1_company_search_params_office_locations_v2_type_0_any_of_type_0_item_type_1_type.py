@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType1Type(str, Enum):
     COUNTRY_OR_REGION = "country-or-region"
 

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType0Type(str, Enum):
     WORLDWIDE = "worldwide"
 

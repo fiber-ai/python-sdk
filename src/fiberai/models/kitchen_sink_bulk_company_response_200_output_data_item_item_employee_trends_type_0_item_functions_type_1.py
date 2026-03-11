@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class KitchenSinkBulkCompanyResponse200OutputDataItemItemEmployeeTrendsType0ItemFunctionsType1(str, Enum):
     ACCOUNTING = "accounting"
     ADMINISTRATIVE = "administrative"

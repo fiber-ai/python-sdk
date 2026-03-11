@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToProfileSearchResponse200OutputSearchParamsStartedAtCompanyType1WindowType1Method(str, Enum):
     WITHIN = "within"
 

@@ -1,6 +1,9 @@
 from enum import Enum
 
-class CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1Method(str, Enum):
+
+class CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1Method(
+    str, Enum
+):
     WITHIN = "within"
 
     def __str__(self) -> str:

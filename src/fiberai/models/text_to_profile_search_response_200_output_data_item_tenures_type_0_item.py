@@ -1,89 +1,76 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.text_to_profile_search_response_200_output_data_item_tenures_type_0_item_date_range import TextToProfileSearchResponse200OutputDataItemTenuresType0ItemDateRange
-
-
-
+    from ..models.text_to_profile_search_response_200_output_data_item_tenures_type_0_item_date_range import (
+        TextToProfileSearchResponse200OutputDataItemTenuresType0ItemDateRange,
+    )
 
 
 T = TypeVar("T", bound="TextToProfileSearchResponse200OutputDataItemTenuresType0Item")
 
 
-
 @_attrs_define
 class TextToProfileSearchResponse200OutputDataItemTenuresType0Item:
-    """ 
-        Attributes:
-            date_range (TextToProfileSearchResponse200OutputDataItemTenuresType0ItemDateRange):
-            titles (list[str]):
-            localities (list[str]):
-            linkedin_company_id (Union[None, Unset, str]):
-            company_name (Union[None, Unset, str]):
-            range_length_days (Union[None, Unset, float]):
-     """
+    """
+    Attributes:
+        date_range (TextToProfileSearchResponse200OutputDataItemTenuresType0ItemDateRange):
+        titles (list[str]):
+        localities (list[str]):
+        linkedin_company_id (None | str | Unset):
+        company_name (None | str | Unset):
+        range_length_days (float | None | Unset):
+    """
 
-    date_range: 'TextToProfileSearchResponse200OutputDataItemTenuresType0ItemDateRange'
+    date_range: TextToProfileSearchResponse200OutputDataItemTenuresType0ItemDateRange
     titles: list[str]
     localities: list[str]
-    linkedin_company_id: Union[None, Unset, str] = UNSET
-    company_name: Union[None, Unset, str] = UNSET
-    range_length_days: Union[None, Unset, float] = UNSET
+    linkedin_company_id: None | str | Unset = UNSET
+    company_name: None | str | Unset = UNSET
+    range_length_days: float | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.text_to_profile_search_response_200_output_data_item_tenures_type_0_item_date_range import TextToProfileSearchResponse200OutputDataItemTenuresType0ItemDateRange
         date_range = self.date_range.to_dict()
 
         titles = self.titles
 
-
-
         localities = self.localities
 
-
-
-        linkedin_company_id: Union[None, Unset, str]
+        linkedin_company_id: None | str | Unset
         if isinstance(self.linkedin_company_id, Unset):
             linkedin_company_id = UNSET
         else:
             linkedin_company_id = self.linkedin_company_id
 
-        company_name: Union[None, Unset, str]
+        company_name: None | str | Unset
         if isinstance(self.company_name, Unset):
             company_name = UNSET
         else:
             company_name = self.company_name
 
-        range_length_days: Union[None, Unset, float]
+        range_length_days: float | None | Unset
         if isinstance(self.range_length_days, Unset):
             range_length_days = UNSET
         else:
             range_length_days = self.range_length_days
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "date_range": date_range,
-            "titles": titles,
-            "localities": localities,
-        })
+        field_dict.update(
+            {
+                "date_range": date_range,
+                "titles": titles,
+                "localities": localities,
+            }
+        )
         if linkedin_company_id is not UNSET:
             field_dict["linkedin_company_id"] = linkedin_company_id
         if company_name is not UNSET:
@@ -93,52 +80,47 @@ class TextToProfileSearchResponse200OutputDataItemTenuresType0Item:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.text_to_profile_search_response_200_output_data_item_tenures_type_0_item_date_range import TextToProfileSearchResponse200OutputDataItemTenuresType0ItemDateRange
+        from ..models.text_to_profile_search_response_200_output_data_item_tenures_type_0_item_date_range import (
+            TextToProfileSearchResponse200OutputDataItemTenuresType0ItemDateRange,
+        )
+
         d = dict(src_dict)
-        date_range = TextToProfileSearchResponse200OutputDataItemTenuresType0ItemDateRange.from_dict(d.pop("date_range"))
-
-
-
+        date_range = TextToProfileSearchResponse200OutputDataItemTenuresType0ItemDateRange.from_dict(
+            d.pop("date_range")
+        )
 
         titles = cast(list[str], d.pop("titles"))
 
-
         localities = cast(list[str], d.pop("localities"))
 
-
-        def _parse_linkedin_company_id(data: object) -> Union[None, Unset, str]:
+        def _parse_linkedin_company_id(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         linkedin_company_id = _parse_linkedin_company_id(d.pop("linkedin_company_id", UNSET))
 
-
-        def _parse_company_name(data: object) -> Union[None, Unset, str]:
+        def _parse_company_name(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         company_name = _parse_company_name(d.pop("company_name", UNSET))
 
-
-        def _parse_range_length_days(data: object) -> Union[None, Unset, float]:
+        def _parse_range_length_days(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         range_length_days = _parse_range_length_days(d.pop("range_length_days", UNSET))
-
 
         text_to_profile_search_response_200_output_data_item_tenures_type_0_item = cls(
             date_range=date_range,
@@ -148,7 +130,6 @@ class TextToProfileSearchResponse200OutputDataItemTenuresType0Item:
             company_name=company_name,
             range_length_days=range_length_days,
         )
-
 
         text_to_profile_search_response_200_output_data_item_tenures_type_0_item.additional_properties = d
         return text_to_profile_search_response_200_output_data_item_tenures_type_0_item

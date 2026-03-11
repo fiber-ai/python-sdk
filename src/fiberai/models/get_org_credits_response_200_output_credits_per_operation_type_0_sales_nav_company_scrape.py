@@ -1,76 +1,67 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from typing import cast
-
 if TYPE_CHECKING:
-  from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_sales_nav_company_scrape_levels_item import GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrapeLevelsItem
-
-
-
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_sales_nav_company_scrape_levels_item import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrapeLevelsItem,
+    )
 
 
 T = TypeVar("T", bound="GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrape")
 
 
-
 @_attrs_define
 class GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrape:
-    """ 
-        Attributes:
-            levels (list['GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrapeLevelsItem']):
-     """
+    """
+    Attributes:
+        levels (list[GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrapeLevelsItem]):
+    """
 
-    levels: list['GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrapeLevelsItem']
+    levels: list[GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrapeLevelsItem]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_sales_nav_company_scrape_levels_item import GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrapeLevelsItem
         levels = []
         for levels_item_data in self.levels:
             levels_item = levels_item_data.to_dict()
             levels.append(levels_item)
 
-
-
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "levels": levels,
-        })
+        field_dict.update(
+            {
+                "levels": levels,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_sales_nav_company_scrape_levels_item import GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrapeLevelsItem
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_sales_nav_company_scrape_levels_item import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrapeLevelsItem,
+        )
+
         d = dict(src_dict)
         levels = []
         _levels = d.pop("levels")
-        for levels_item_data in (_levels):
-            levels_item = GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrapeLevelsItem.from_dict(levels_item_data)
-
-
+        for levels_item_data in _levels:
+            levels_item = (
+                GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrapeLevelsItem.from_dict(
+                    levels_item_data
+                )
+            )
 
             levels.append(levels_item)
-
 
         get_org_credits_response_200_output_credits_per_operation_type_0_sales_nav_company_scrape = cls(
             levels=levels,
         )
-
 
         get_org_credits_response_200_output_credits_per_operation_type_0_sales_nav_company_scrape.additional_properties = d
         return get_org_credits_response_200_output_credits_per_operation_type_0_sales_nav_company_scrape

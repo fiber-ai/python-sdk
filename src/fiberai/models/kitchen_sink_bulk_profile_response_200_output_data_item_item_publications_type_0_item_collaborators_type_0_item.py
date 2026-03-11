@@ -1,58 +1,44 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
-
 T = TypeVar("T", bound="KitchenSinkBulkProfileResponse200OutputDataItemItemPublicationsType0ItemCollaboratorsType0Item")
-
 
 
 @_attrs_define
 class KitchenSinkBulkProfileResponse200OutputDataItemItemPublicationsType0ItemCollaboratorsType0Item:
-    """ 
-        Attributes:
-            name (Union[None, Unset, str]):
-            url (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        name (None | str | Unset):
+        url (None | str | Unset):
+    """
 
-    name: Union[None, Unset, str] = UNSET
-    url: Union[None, Unset, str] = UNSET
+    name: None | str | Unset = UNSET
+    url: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        name: Union[None, Unset, str]
+        name: None | str | Unset
         if isinstance(self.name, Unset):
             name = UNSET
         else:
             name = self.name
 
-        url: Union[None, Unset, str]
+        url: None | str | Unset
         if isinstance(self.url, Unset):
             url = UNSET
         else:
             url = self.url
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if name is not UNSET:
             field_dict["name"] = name
         if url is not UNSET:
@@ -60,36 +46,32 @@ class KitchenSinkBulkProfileResponse200OutputDataItemItemPublicationsType0ItemCo
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        def _parse_name(data: object) -> Union[None, Unset, str]:
+
+        def _parse_name(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         name = _parse_name(d.pop("name", UNSET))
 
-
-        def _parse_url(data: object) -> Union[None, Unset, str]:
+        def _parse_url(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         url = _parse_url(d.pop("url", UNSET))
-
 
         kitchen_sink_bulk_profile_response_200_output_data_item_item_publications_type_0_item_collaborators_type_0_item = cls(
             name=name,
             url=url,
         )
-
 
         kitchen_sink_bulk_profile_response_200_output_data_item_item_publications_type_0_item_collaborators_type_0_item.additional_properties = d
         return kitchen_sink_bulk_profile_response_200_output_data_item_item_publications_type_0_item_collaborators_type_0_item

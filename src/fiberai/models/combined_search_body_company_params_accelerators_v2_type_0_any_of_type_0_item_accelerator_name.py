@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyCompanyParamsAcceleratorsV2Type0AnyOfType0ItemAcceleratorName(str, Enum):
     A16Z_SPEEDRUN = "a16z_speedrun"
     ACCEL_ATOMS = "accel_atoms"

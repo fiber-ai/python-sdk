@@ -1,78 +1,69 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.sync_combined_search_body_company_params_job_posting_stats_type_0_all_of_type_0_item_type_0_rule import SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Rule
-from typing import cast
+from ..models.sync_combined_search_body_company_params_job_posting_stats_type_0_all_of_type_0_item_type_0_rule import (
+    SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Rule,
+)
 
 if TYPE_CHECKING:
-  from ..models.sync_combined_search_body_company_params_job_posting_stats_type_0_all_of_type_0_item_type_0_count import SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Count
-
-
-
+    from ..models.sync_combined_search_body_company_params_job_posting_stats_type_0_all_of_type_0_item_type_0_count import (
+        SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Count,
+    )
 
 
 T = TypeVar("T", bound="SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0")
 
 
-
 @_attrs_define
 class SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0:
-    """ 
-        Attributes:
-            rule (SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Rule):
-            count (SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Count):
-     """
+    """
+    Attributes:
+        rule (SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Rule):
+        count (SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Count):
+    """
 
     rule: SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Rule
-    count: 'SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Count'
+    count: SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Count
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.sync_combined_search_body_company_params_job_posting_stats_type_0_all_of_type_0_item_type_0_count import SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Count
         rule = self.rule.value
 
         count = self.count.to_dict()
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "rule": rule,
-            "count": count,
-        })
+        field_dict.update(
+            {
+                "rule": rule,
+                "count": count,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.sync_combined_search_body_company_params_job_posting_stats_type_0_all_of_type_0_item_type_0_count import SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Count
+        from ..models.sync_combined_search_body_company_params_job_posting_stats_type_0_all_of_type_0_item_type_0_count import (
+            SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Count,
+        )
+
         d = dict(src_dict)
         rule = SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Rule(d.pop("rule"))
 
-
-
-
-        count = SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Count.from_dict(d.pop("count"))
-
-
-
+        count = SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType0Count.from_dict(
+            d.pop("count")
+        )
 
         sync_combined_search_body_company_params_job_posting_stats_type_0_all_of_type_0_item_type_0 = cls(
             rule=rule,
             count=count,
         )
-
 
         sync_combined_search_body_company_params_job_posting_stats_type_0_all_of_type_0_item_type_0.additional_properties = d
         return sync_combined_search_body_company_params_job_posting_stats_type_0_all_of_type_0_item_type_0

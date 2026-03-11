@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType0Identifier(str, Enum):
     LINKEDINSLUG = "linkedinSlug"
 

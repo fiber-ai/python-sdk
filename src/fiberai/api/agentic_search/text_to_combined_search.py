@@ -1,12 +1,10 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union, cast
+from typing import Any
 
 import httpx
 
-from ...client import AuthenticatedClient, Client
-from ...types import Response, UNSET
 from ... import errors
-
+from ...client import AuthenticatedClient, Client
 from ...models.text_to_combined_search_body import TextToCombinedSearchBody
 from ...models.text_to_combined_search_response_200 import TextToCombinedSearchResponse200
 from ...models.text_to_combined_search_response_400 import TextToCombinedSearchResponse400
@@ -16,21 +14,15 @@ from ...models.text_to_combined_search_response_403 import TextToCombinedSearchR
 from ...models.text_to_combined_search_response_404 import TextToCombinedSearchResponse404
 from ...models.text_to_combined_search_response_429 import TextToCombinedSearchResponse429
 from ...models.text_to_combined_search_response_500 import TextToCombinedSearchResponse500
-from typing import cast
-
+from ...models.text_to_combined_search_response_503 import TextToCombinedSearchResponse503
+from ...types import Response
 
 
 def _get_kwargs(
     *,
     body: TextToCombinedSearchBody,
-
 ) -> dict[str, Any]:
     headers: dict[str, Any] = {}
-
-
-    
-
-    
 
     _kwargs: dict[str, Any] = {
         "method": "post",
@@ -39,70 +31,70 @@ def _get_kwargs(
 
     _kwargs["json"] = body.to_dict()
 
-
     headers["Content-Type"] = "application/json"
 
     _kwargs["headers"] = headers
     return _kwargs
 
 
-
-def _parse_response(*, client: Union[AuthenticatedClient, Client], response: httpx.Response) -> Optional[Union[TextToCombinedSearchResponse200, TextToCombinedSearchResponse400, TextToCombinedSearchResponse401, TextToCombinedSearchResponse402, TextToCombinedSearchResponse403, TextToCombinedSearchResponse404, TextToCombinedSearchResponse429, TextToCombinedSearchResponse500]]:
+def _parse_response(
+    *, client: AuthenticatedClient | Client, response: httpx.Response
+) -> (
+    TextToCombinedSearchResponse200
+    | TextToCombinedSearchResponse400
+    | TextToCombinedSearchResponse401
+    | TextToCombinedSearchResponse402
+    | TextToCombinedSearchResponse403
+    | TextToCombinedSearchResponse404
+    | TextToCombinedSearchResponse429
+    | TextToCombinedSearchResponse500
+    | TextToCombinedSearchResponse503
+    | None
+):
     if response.status_code == 200:
         response_200 = TextToCombinedSearchResponse200.from_dict(response.json())
-
-
 
         return response_200
 
     if response.status_code == 400:
         response_400 = TextToCombinedSearchResponse400.from_dict(response.json())
 
-
-
         return response_400
 
     if response.status_code == 401:
         response_401 = TextToCombinedSearchResponse401.from_dict(response.json())
-
-
 
         return response_401
 
     if response.status_code == 402:
         response_402 = TextToCombinedSearchResponse402.from_dict(response.json())
 
-
-
         return response_402
 
     if response.status_code == 403:
         response_403 = TextToCombinedSearchResponse403.from_dict(response.json())
-
-
 
         return response_403
 
     if response.status_code == 404:
         response_404 = TextToCombinedSearchResponse404.from_dict(response.json())
 
-
-
         return response_404
 
     if response.status_code == 429:
         response_429 = TextToCombinedSearchResponse429.from_dict(response.json())
-
-
 
         return response_429
 
     if response.status_code == 500:
         response_500 = TextToCombinedSearchResponse500.from_dict(response.json())
 
-
-
         return response_500
+
+    if response.status_code == 503:
+        response_503 = TextToCombinedSearchResponse503.from_dict(response.json())
+
+        return response_503
 
     if client.raise_on_unexpected_status:
         raise errors.UnexpectedStatus(response.status_code, response.content)
@@ -110,7 +102,19 @@ def _parse_response(*, client: Union[AuthenticatedClient, Client], response: htt
         return None
 
 
-def _build_response(*, client: Union[AuthenticatedClient, Client], response: httpx.Response) -> Response[Union[TextToCombinedSearchResponse200, TextToCombinedSearchResponse400, TextToCombinedSearchResponse401, TextToCombinedSearchResponse402, TextToCombinedSearchResponse403, TextToCombinedSearchResponse404, TextToCombinedSearchResponse429, TextToCombinedSearchResponse500]]:
+def _build_response(
+    *, client: AuthenticatedClient | Client, response: httpx.Response
+) -> Response[
+    TextToCombinedSearchResponse200
+    | TextToCombinedSearchResponse400
+    | TextToCombinedSearchResponse401
+    | TextToCombinedSearchResponse402
+    | TextToCombinedSearchResponse403
+    | TextToCombinedSearchResponse404
+    | TextToCombinedSearchResponse429
+    | TextToCombinedSearchResponse500
+    | TextToCombinedSearchResponse503
+]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -121,11 +125,20 @@ def _build_response(*, client: Union[AuthenticatedClient, Client], response: htt
 
 def sync_detailed(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: TextToCombinedSearchBody,
-
-) -> Response[Union[TextToCombinedSearchResponse200, TextToCombinedSearchResponse400, TextToCombinedSearchResponse401, TextToCombinedSearchResponse402, TextToCombinedSearchResponse403, TextToCombinedSearchResponse404, TextToCombinedSearchResponse429, TextToCombinedSearchResponse500]]:
-    r""" Search companies and prospects from text
+) -> Response[
+    TextToCombinedSearchResponse200
+    | TextToCombinedSearchResponse400
+    | TextToCombinedSearchResponse401
+    | TextToCombinedSearchResponse402
+    | TextToCombinedSearchResponse403
+    | TextToCombinedSearchResponse404
+    | TextToCombinedSearchResponse429
+    | TextToCombinedSearchResponse500
+    | TextToCombinedSearchResponse503
+]:
+    r"""Search companies and prospects from text
 
      Takes free-form text (e.g., 'Senior Product Managers from Series A to C FinTech startups in New
     York') and produces standardized filters (industries, funding stages, headcount ranges, locations,
@@ -148,13 +161,11 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[TextToCombinedSearchResponse200, TextToCombinedSearchResponse400, TextToCombinedSearchResponse401, TextToCombinedSearchResponse402, TextToCombinedSearchResponse403, TextToCombinedSearchResponse404, TextToCombinedSearchResponse429, TextToCombinedSearchResponse500]]
-     """
-
+        Response[TextToCombinedSearchResponse200 | TextToCombinedSearchResponse400 | TextToCombinedSearchResponse401 | TextToCombinedSearchResponse402 | TextToCombinedSearchResponse403 | TextToCombinedSearchResponse404 | TextToCombinedSearchResponse429 | TextToCombinedSearchResponse500 | TextToCombinedSearchResponse503]
+    """
 
     kwargs = _get_kwargs(
         body=body,
-
     )
 
     response = client.get_httpx_client().request(
@@ -163,13 +174,24 @@ def sync_detailed(
 
     return _build_response(client=client, response=response)
 
+
 def sync(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: TextToCombinedSearchBody,
-
-) -> Optional[Union[TextToCombinedSearchResponse200, TextToCombinedSearchResponse400, TextToCombinedSearchResponse401, TextToCombinedSearchResponse402, TextToCombinedSearchResponse403, TextToCombinedSearchResponse404, TextToCombinedSearchResponse429, TextToCombinedSearchResponse500]]:
-    r""" Search companies and prospects from text
+) -> (
+    TextToCombinedSearchResponse200
+    | TextToCombinedSearchResponse400
+    | TextToCombinedSearchResponse401
+    | TextToCombinedSearchResponse402
+    | TextToCombinedSearchResponse403
+    | TextToCombinedSearchResponse404
+    | TextToCombinedSearchResponse429
+    | TextToCombinedSearchResponse500
+    | TextToCombinedSearchResponse503
+    | None
+):
+    r"""Search companies and prospects from text
 
      Takes free-form text (e.g., 'Senior Product Managers from Series A to C FinTech startups in New
     York') and produces standardized filters (industries, funding stages, headcount ranges, locations,
@@ -192,23 +214,31 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[TextToCombinedSearchResponse200, TextToCombinedSearchResponse400, TextToCombinedSearchResponse401, TextToCombinedSearchResponse402, TextToCombinedSearchResponse403, TextToCombinedSearchResponse404, TextToCombinedSearchResponse429, TextToCombinedSearchResponse500]
-     """
-
+        TextToCombinedSearchResponse200 | TextToCombinedSearchResponse400 | TextToCombinedSearchResponse401 | TextToCombinedSearchResponse402 | TextToCombinedSearchResponse403 | TextToCombinedSearchResponse404 | TextToCombinedSearchResponse429 | TextToCombinedSearchResponse500 | TextToCombinedSearchResponse503
+    """
 
     return sync_detailed(
         client=client,
-body=body,
-
+        body=body,
     ).parsed
+
 
 async def asyncio_detailed(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: TextToCombinedSearchBody,
-
-) -> Response[Union[TextToCombinedSearchResponse200, TextToCombinedSearchResponse400, TextToCombinedSearchResponse401, TextToCombinedSearchResponse402, TextToCombinedSearchResponse403, TextToCombinedSearchResponse404, TextToCombinedSearchResponse429, TextToCombinedSearchResponse500]]:
-    r""" Search companies and prospects from text
+) -> Response[
+    TextToCombinedSearchResponse200
+    | TextToCombinedSearchResponse400
+    | TextToCombinedSearchResponse401
+    | TextToCombinedSearchResponse402
+    | TextToCombinedSearchResponse403
+    | TextToCombinedSearchResponse404
+    | TextToCombinedSearchResponse429
+    | TextToCombinedSearchResponse500
+    | TextToCombinedSearchResponse503
+]:
+    r"""Search companies and prospects from text
 
      Takes free-form text (e.g., 'Senior Product Managers from Series A to C FinTech startups in New
     York') and produces standardized filters (industries, funding stages, headcount ranges, locations,
@@ -231,28 +261,35 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[TextToCombinedSearchResponse200, TextToCombinedSearchResponse400, TextToCombinedSearchResponse401, TextToCombinedSearchResponse402, TextToCombinedSearchResponse403, TextToCombinedSearchResponse404, TextToCombinedSearchResponse429, TextToCombinedSearchResponse500]]
-     """
-
+        Response[TextToCombinedSearchResponse200 | TextToCombinedSearchResponse400 | TextToCombinedSearchResponse401 | TextToCombinedSearchResponse402 | TextToCombinedSearchResponse403 | TextToCombinedSearchResponse404 | TextToCombinedSearchResponse429 | TextToCombinedSearchResponse500 | TextToCombinedSearchResponse503]
+    """
 
     kwargs = _get_kwargs(
         body=body,
-
     )
 
-    response = await client.get_async_httpx_client().request(
-        **kwargs
-    )
+    response = await client.get_async_httpx_client().request(**kwargs)
 
     return _build_response(client=client, response=response)
 
+
 async def asyncio(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: TextToCombinedSearchBody,
-
-) -> Optional[Union[TextToCombinedSearchResponse200, TextToCombinedSearchResponse400, TextToCombinedSearchResponse401, TextToCombinedSearchResponse402, TextToCombinedSearchResponse403, TextToCombinedSearchResponse404, TextToCombinedSearchResponse429, TextToCombinedSearchResponse500]]:
-    r""" Search companies and prospects from text
+) -> (
+    TextToCombinedSearchResponse200
+    | TextToCombinedSearchResponse400
+    | TextToCombinedSearchResponse401
+    | TextToCombinedSearchResponse402
+    | TextToCombinedSearchResponse403
+    | TextToCombinedSearchResponse404
+    | TextToCombinedSearchResponse429
+    | TextToCombinedSearchResponse500
+    | TextToCombinedSearchResponse503
+    | None
+):
+    r"""Search companies and prospects from text
 
      Takes free-form text (e.g., 'Senior Product Managers from Series A to C FinTech startups in New
     York') and produces standardized filters (industries, funding stages, headcount ranges, locations,
@@ -275,12 +312,12 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[TextToCombinedSearchResponse200, TextToCombinedSearchResponse400, TextToCombinedSearchResponse401, TextToCombinedSearchResponse402, TextToCombinedSearchResponse403, TextToCombinedSearchResponse404, TextToCombinedSearchResponse429, TextToCombinedSearchResponse500]
-     """
+        TextToCombinedSearchResponse200 | TextToCombinedSearchResponse400 | TextToCombinedSearchResponse401 | TextToCombinedSearchResponse402 | TextToCombinedSearchResponse403 | TextToCombinedSearchResponse404 | TextToCombinedSearchResponse429 | TextToCombinedSearchResponse500 | TextToCombinedSearchResponse503
+    """
 
-
-    return (await asyncio_detailed(
-        client=client,
-body=body,
-
-    )).parsed
+    return (
+        await asyncio_detailed(
+            client=client,
+            body=body,
+        )
+    ).parsed

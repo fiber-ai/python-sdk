@@ -1,438 +1,621 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
-from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
-
-from ..types import UNSET, Unset
-from typing import cast
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_design import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_human_resources import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_marketing import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_science import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_entrepreneurship import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_management import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_accounting import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_healthcare_services import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_quality_assurance import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_sales import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_supply_chain import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_administrative import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_distribution import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_strategy_planning import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_information_technology import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_community_social_services import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_advertising import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_program_product_management import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_customer_service import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_finance import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_general_business import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_art_creative import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_real_estate import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_arts_and_design import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_writing_editing import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_public_relations import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_research import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_education import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_operations import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_product_management import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_engineering import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_consulting import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_health_care_provider import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_military_protective_services import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_manufacturing import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_legal import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_other import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_production import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_business_development import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_project_management import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_analyst import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_purchasing import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_training import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_support import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_accounting import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_administrative import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_advertising import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_analyst import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_art_creative import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_arts_and_design import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_business_development import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_community_social_services import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_consulting import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_customer_service import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_design import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_distribution import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_education import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_engineering import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_entrepreneurship import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_finance import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_general_business import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_health_care_provider import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_healthcare_services import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_human_resources import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_information_technology import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_legal import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_management import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_manufacturing import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_marketing import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_military_protective_services import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_operations import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_other import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_product_management import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_production import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_program_product_management import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_project_management import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_public_relations import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_purchasing import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_quality_assurance import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_real_estate import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_research import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_sales import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_science import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_strategy_planning import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_supply_chain import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_support import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_training import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_writing_editing import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing,
+    )
 
 
-
-
-
-T = TypeVar("T", bound="KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0")
-
+T = TypeVar(
+    "T", bound="KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0"
+)
 
 
 @_attrs_define
 class KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0:
-    """ 
-        Attributes:
-            arts_and_design (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFun
-                ctionsStatsType0ArtsAndDesign]):
-            business_development (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJ
-                obFunctionsStatsType0BusinessDevelopment]):
-            community_social_services (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0P
-                ureeJobFunctionsStatsType0CommunitySocialServices]):
-            consulting (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting]):
-            education (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education]):
-            engineering (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering]):
-            entrepreneurship (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFu
-                nctionsStatsType0Entrepreneurship]):
-            healthcare_services (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJo
-                bFunctionsStatsType0HealthcareServices]):
-            human_resources (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFun
-                ctionsStatsType0HumanResources]):
-            information_technology (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0Pure
-                eJobFunctionsStatsType0InformationTechnology]):
-            legal (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal]):
-            military_protective_services (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsTyp
-                e0PureeJobFunctionsStatsType0MilitaryProtectiveServices]):
-            operations (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations]):
-            program_product_management (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0
-                PureeJobFunctionsStatsType0ProgramProductManagement]):
-            real_estate (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate]):
-            sales (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales]):
-            support (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support]):
-            administrative (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunc
-                tionsStatsType0Administrative]):
-            finance (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance]):
-            marketing (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing]):
-            purchasing (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing]):
-            product_management (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJob
-                FunctionsStatsType0ProductManagement]):
-            advertising (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising]):
-            analyst (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst]):
-            customer_service (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFu
-                nctionsStatsType0CustomerService]):
-            distribution (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFuncti
-                onsStatsType0Distribution]):
-            design (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design]):
-            general_business (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFu
-                nctionsStatsType0GeneralBusiness]):
-            management (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management]):
-            manufacturing (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunct
-                ionsStatsType0Manufacturing]):
-            other (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other]):
-            public_relations (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFu
-                nctionsStatsType0PublicRelations]):
-            project_management (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJob
-                FunctionsStatsType0ProjectManagement]):
-            production (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production]):
-            quality_assurance (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobF
-                unctionsStatsType0QualityAssurance]):
-            research (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research]):
-            science (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science]):
-            supply_chain (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain]):
-            training (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training]):
-            health_care_provider (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJ
-                obFunctionsStatsType0HealthCareProvider]):
-            accounting (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting]):
-            art_creative (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative]):
-            strategy_planning (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobF
-                unctionsStatsType0StrategyPlanning]):
-            writing_editing (Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFun
-                ctionsStatsType0WritingEditing]):
-     """
+    """
+    Attributes:
+        arts_and_design
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign
+            | Unset):
+        business_development (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsSt
+            atsType0BusinessDevelopment | Unset):
+        community_social_services (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFuncti
+            onsStatsType0CommunitySocialServices | Unset):
+        consulting
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting |
+            Unset):
+        education
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education |
+            Unset):
+        engineering
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering |
+            Unset):
+        entrepreneurship (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsT
+            ype0Entrepreneurship | Unset):
+        healthcare_services (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsSta
+            tsType0HealthcareServices | Unset):
+        human_resources (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsTy
+            pe0HumanResources | Unset):
+        information_technology (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctions
+            StatsType0InformationTechnology | Unset):
+        legal (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal |
+            Unset):
+        military_protective_services (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFun
+            ctionsStatsType0MilitaryProtectiveServices | Unset):
+        operations
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations |
+            Unset):
+        program_product_management (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunct
+            ionsStatsType0ProgramProductManagement | Unset):
+        real_estate
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate |
+            Unset):
+        sales (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales |
+            Unset):
+        support
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support |
+            Unset):
+        administrative (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsTyp
+            e0Administrative | Unset):
+        finance
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance |
+            Unset):
+        marketing
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing |
+            Unset):
+        purchasing
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing |
+            Unset):
+        product_management (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStat
+            sType0ProductManagement | Unset):
+        advertising
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising |
+            Unset):
+        analyst
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst |
+            Unset):
+        customer_service (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsT
+            ype0CustomerService | Unset):
+        distribution
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution
+            | Unset):
+        design (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design
+            | Unset):
+        general_business (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsT
+            ype0GeneralBusiness | Unset):
+        management
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management |
+            Unset):
+        manufacturing
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing
+            | Unset):
+        other (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other |
+            Unset):
+        public_relations (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsT
+            ype0PublicRelations | Unset):
+        project_management (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStat
+            sType0ProjectManagement | Unset):
+        production
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production |
+            Unset):
+        quality_assurance (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStats
+            Type0QualityAssurance | Unset):
+        research
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research |
+            Unset):
+        science
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science |
+            Unset):
+        supply_chain
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain |
+            Unset):
+        training
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training |
+            Unset):
+        health_care_provider (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsSt
+            atsType0HealthCareProvider | Unset):
+        accounting
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting |
+            Unset):
+        art_creative
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative |
+            Unset):
+        strategy_planning (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStats
+            Type0StrategyPlanning | Unset):
+        writing_editing (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsTy
+            pe0WritingEditing | Unset):
+    """
 
-    arts_and_design: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign'] = UNSET
-    business_development: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment'] = UNSET
-    community_social_services: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices'] = UNSET
-    consulting: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting'] = UNSET
-    education: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education'] = UNSET
-    engineering: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering'] = UNSET
-    entrepreneurship: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship'] = UNSET
-    healthcare_services: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices'] = UNSET
-    human_resources: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources'] = UNSET
-    information_technology: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology'] = UNSET
-    legal: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal'] = UNSET
-    military_protective_services: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices'] = UNSET
-    operations: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations'] = UNSET
-    program_product_management: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement'] = UNSET
-    real_estate: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate'] = UNSET
-    sales: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales'] = UNSET
-    support: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support'] = UNSET
-    administrative: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative'] = UNSET
-    finance: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance'] = UNSET
-    marketing: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing'] = UNSET
-    purchasing: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing'] = UNSET
-    product_management: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement'] = UNSET
-    advertising: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising'] = UNSET
-    analyst: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst'] = UNSET
-    customer_service: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService'] = UNSET
-    distribution: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution'] = UNSET
-    design: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design'] = UNSET
-    general_business: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness'] = UNSET
-    management: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management'] = UNSET
-    manufacturing: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing'] = UNSET
-    other: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other'] = UNSET
-    public_relations: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations'] = UNSET
-    project_management: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement'] = UNSET
-    production: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production'] = UNSET
-    quality_assurance: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance'] = UNSET
-    research: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research'] = UNSET
-    science: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science'] = UNSET
-    supply_chain: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain'] = UNSET
-    training: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training'] = UNSET
-    health_care_provider: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider'] = UNSET
-    accounting: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting'] = UNSET
-    art_creative: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative'] = UNSET
-    strategy_planning: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning'] = UNSET
-    writing_editing: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing'] = UNSET
-
-
-
-
+    arts_and_design: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign
+        | Unset
+    ) = UNSET
+    business_development: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment
+        | Unset
+    ) = UNSET
+    community_social_services: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices
+        | Unset
+    ) = UNSET
+    consulting: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting
+        | Unset
+    ) = UNSET
+    education: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education
+        | Unset
+    ) = UNSET
+    engineering: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering
+        | Unset
+    ) = UNSET
+    entrepreneurship: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship
+        | Unset
+    ) = UNSET
+    healthcare_services: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices
+        | Unset
+    ) = UNSET
+    human_resources: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources
+        | Unset
+    ) = UNSET
+    information_technology: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology
+        | Unset
+    ) = UNSET
+    legal: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal | Unset
+    ) = UNSET
+    military_protective_services: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices
+        | Unset
+    ) = UNSET
+    operations: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations
+        | Unset
+    ) = UNSET
+    program_product_management: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement
+        | Unset
+    ) = UNSET
+    real_estate: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate
+        | Unset
+    ) = UNSET
+    sales: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales | Unset
+    ) = UNSET
+    support: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support
+        | Unset
+    ) = UNSET
+    administrative: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative
+        | Unset
+    ) = UNSET
+    finance: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance
+        | Unset
+    ) = UNSET
+    marketing: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing
+        | Unset
+    ) = UNSET
+    purchasing: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing
+        | Unset
+    ) = UNSET
+    product_management: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement
+        | Unset
+    ) = UNSET
+    advertising: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising
+        | Unset
+    ) = UNSET
+    analyst: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst
+        | Unset
+    ) = UNSET
+    customer_service: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService
+        | Unset
+    ) = UNSET
+    distribution: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution
+        | Unset
+    ) = UNSET
+    design: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design | Unset
+    ) = UNSET
+    general_business: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness
+        | Unset
+    ) = UNSET
+    management: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management
+        | Unset
+    ) = UNSET
+    manufacturing: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing
+        | Unset
+    ) = UNSET
+    other: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other | Unset
+    ) = UNSET
+    public_relations: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations
+        | Unset
+    ) = UNSET
+    project_management: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement
+        | Unset
+    ) = UNSET
+    production: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production
+        | Unset
+    ) = UNSET
+    quality_assurance: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance
+        | Unset
+    ) = UNSET
+    research: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research
+        | Unset
+    ) = UNSET
+    science: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science
+        | Unset
+    ) = UNSET
+    supply_chain: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain
+        | Unset
+    ) = UNSET
+    training: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training
+        | Unset
+    ) = UNSET
+    health_care_provider: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider
+        | Unset
+    ) = UNSET
+    accounting: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting
+        | Unset
+    ) = UNSET
+    art_creative: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative
+        | Unset
+    ) = UNSET
+    strategy_planning: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning
+        | Unset
+    ) = UNSET
+    writing_editing: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing
+        | Unset
+    ) = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_design import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_human_resources import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_marketing import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_science import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_entrepreneurship import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_management import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_accounting import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_healthcare_services import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_quality_assurance import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_sales import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_supply_chain import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_administrative import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_distribution import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_strategy_planning import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_information_technology import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_community_social_services import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_advertising import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_program_product_management import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_customer_service import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_finance import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_general_business import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_art_creative import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_real_estate import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_arts_and_design import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_writing_editing import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_public_relations import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_research import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_education import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_operations import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_product_management import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_engineering import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_consulting import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_health_care_provider import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_military_protective_services import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_manufacturing import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_legal import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_other import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_production import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_business_development import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_project_management import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_analyst import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_purchasing import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_training import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_support import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support
-        arts_and_design: Union[Unset, dict[str, Any]] = UNSET
+        arts_and_design: dict[str, Any] | Unset = UNSET
         if not isinstance(self.arts_and_design, Unset):
             arts_and_design = self.arts_and_design.to_dict()
 
-        business_development: Union[Unset, dict[str, Any]] = UNSET
+        business_development: dict[str, Any] | Unset = UNSET
         if not isinstance(self.business_development, Unset):
             business_development = self.business_development.to_dict()
 
-        community_social_services: Union[Unset, dict[str, Any]] = UNSET
+        community_social_services: dict[str, Any] | Unset = UNSET
         if not isinstance(self.community_social_services, Unset):
             community_social_services = self.community_social_services.to_dict()
 
-        consulting: Union[Unset, dict[str, Any]] = UNSET
+        consulting: dict[str, Any] | Unset = UNSET
         if not isinstance(self.consulting, Unset):
             consulting = self.consulting.to_dict()
 
-        education: Union[Unset, dict[str, Any]] = UNSET
+        education: dict[str, Any] | Unset = UNSET
         if not isinstance(self.education, Unset):
             education = self.education.to_dict()
 
-        engineering: Union[Unset, dict[str, Any]] = UNSET
+        engineering: dict[str, Any] | Unset = UNSET
         if not isinstance(self.engineering, Unset):
             engineering = self.engineering.to_dict()
 
-        entrepreneurship: Union[Unset, dict[str, Any]] = UNSET
+        entrepreneurship: dict[str, Any] | Unset = UNSET
         if not isinstance(self.entrepreneurship, Unset):
             entrepreneurship = self.entrepreneurship.to_dict()
 
-        healthcare_services: Union[Unset, dict[str, Any]] = UNSET
+        healthcare_services: dict[str, Any] | Unset = UNSET
         if not isinstance(self.healthcare_services, Unset):
             healthcare_services = self.healthcare_services.to_dict()
 
-        human_resources: Union[Unset, dict[str, Any]] = UNSET
+        human_resources: dict[str, Any] | Unset = UNSET
         if not isinstance(self.human_resources, Unset):
             human_resources = self.human_resources.to_dict()
 
-        information_technology: Union[Unset, dict[str, Any]] = UNSET
+        information_technology: dict[str, Any] | Unset = UNSET
         if not isinstance(self.information_technology, Unset):
             information_technology = self.information_technology.to_dict()
 
-        legal: Union[Unset, dict[str, Any]] = UNSET
+        legal: dict[str, Any] | Unset = UNSET
         if not isinstance(self.legal, Unset):
             legal = self.legal.to_dict()
 
-        military_protective_services: Union[Unset, dict[str, Any]] = UNSET
+        military_protective_services: dict[str, Any] | Unset = UNSET
         if not isinstance(self.military_protective_services, Unset):
             military_protective_services = self.military_protective_services.to_dict()
 
-        operations: Union[Unset, dict[str, Any]] = UNSET
+        operations: dict[str, Any] | Unset = UNSET
         if not isinstance(self.operations, Unset):
             operations = self.operations.to_dict()
 
-        program_product_management: Union[Unset, dict[str, Any]] = UNSET
+        program_product_management: dict[str, Any] | Unset = UNSET
         if not isinstance(self.program_product_management, Unset):
             program_product_management = self.program_product_management.to_dict()
 
-        real_estate: Union[Unset, dict[str, Any]] = UNSET
+        real_estate: dict[str, Any] | Unset = UNSET
         if not isinstance(self.real_estate, Unset):
             real_estate = self.real_estate.to_dict()
 
-        sales: Union[Unset, dict[str, Any]] = UNSET
+        sales: dict[str, Any] | Unset = UNSET
         if not isinstance(self.sales, Unset):
             sales = self.sales.to_dict()
 
-        support: Union[Unset, dict[str, Any]] = UNSET
+        support: dict[str, Any] | Unset = UNSET
         if not isinstance(self.support, Unset):
             support = self.support.to_dict()
 
-        administrative: Union[Unset, dict[str, Any]] = UNSET
+        administrative: dict[str, Any] | Unset = UNSET
         if not isinstance(self.administrative, Unset):
             administrative = self.administrative.to_dict()
 
-        finance: Union[Unset, dict[str, Any]] = UNSET
+        finance: dict[str, Any] | Unset = UNSET
         if not isinstance(self.finance, Unset):
             finance = self.finance.to_dict()
 
-        marketing: Union[Unset, dict[str, Any]] = UNSET
+        marketing: dict[str, Any] | Unset = UNSET
         if not isinstance(self.marketing, Unset):
             marketing = self.marketing.to_dict()
 
-        purchasing: Union[Unset, dict[str, Any]] = UNSET
+        purchasing: dict[str, Any] | Unset = UNSET
         if not isinstance(self.purchasing, Unset):
             purchasing = self.purchasing.to_dict()
 
-        product_management: Union[Unset, dict[str, Any]] = UNSET
+        product_management: dict[str, Any] | Unset = UNSET
         if not isinstance(self.product_management, Unset):
             product_management = self.product_management.to_dict()
 
-        advertising: Union[Unset, dict[str, Any]] = UNSET
+        advertising: dict[str, Any] | Unset = UNSET
         if not isinstance(self.advertising, Unset):
             advertising = self.advertising.to_dict()
 
-        analyst: Union[Unset, dict[str, Any]] = UNSET
+        analyst: dict[str, Any] | Unset = UNSET
         if not isinstance(self.analyst, Unset):
             analyst = self.analyst.to_dict()
 
-        customer_service: Union[Unset, dict[str, Any]] = UNSET
+        customer_service: dict[str, Any] | Unset = UNSET
         if not isinstance(self.customer_service, Unset):
             customer_service = self.customer_service.to_dict()
 
-        distribution: Union[Unset, dict[str, Any]] = UNSET
+        distribution: dict[str, Any] | Unset = UNSET
         if not isinstance(self.distribution, Unset):
             distribution = self.distribution.to_dict()
 
-        design: Union[Unset, dict[str, Any]] = UNSET
+        design: dict[str, Any] | Unset = UNSET
         if not isinstance(self.design, Unset):
             design = self.design.to_dict()
 
-        general_business: Union[Unset, dict[str, Any]] = UNSET
+        general_business: dict[str, Any] | Unset = UNSET
         if not isinstance(self.general_business, Unset):
             general_business = self.general_business.to_dict()
 
-        management: Union[Unset, dict[str, Any]] = UNSET
+        management: dict[str, Any] | Unset = UNSET
         if not isinstance(self.management, Unset):
             management = self.management.to_dict()
 
-        manufacturing: Union[Unset, dict[str, Any]] = UNSET
+        manufacturing: dict[str, Any] | Unset = UNSET
         if not isinstance(self.manufacturing, Unset):
             manufacturing = self.manufacturing.to_dict()
 
-        other: Union[Unset, dict[str, Any]] = UNSET
+        other: dict[str, Any] | Unset = UNSET
         if not isinstance(self.other, Unset):
             other = self.other.to_dict()
 
-        public_relations: Union[Unset, dict[str, Any]] = UNSET
+        public_relations: dict[str, Any] | Unset = UNSET
         if not isinstance(self.public_relations, Unset):
             public_relations = self.public_relations.to_dict()
 
-        project_management: Union[Unset, dict[str, Any]] = UNSET
+        project_management: dict[str, Any] | Unset = UNSET
         if not isinstance(self.project_management, Unset):
             project_management = self.project_management.to_dict()
 
-        production: Union[Unset, dict[str, Any]] = UNSET
+        production: dict[str, Any] | Unset = UNSET
         if not isinstance(self.production, Unset):
             production = self.production.to_dict()
 
-        quality_assurance: Union[Unset, dict[str, Any]] = UNSET
+        quality_assurance: dict[str, Any] | Unset = UNSET
         if not isinstance(self.quality_assurance, Unset):
             quality_assurance = self.quality_assurance.to_dict()
 
-        research: Union[Unset, dict[str, Any]] = UNSET
+        research: dict[str, Any] | Unset = UNSET
         if not isinstance(self.research, Unset):
             research = self.research.to_dict()
 
-        science: Union[Unset, dict[str, Any]] = UNSET
+        science: dict[str, Any] | Unset = UNSET
         if not isinstance(self.science, Unset):
             science = self.science.to_dict()
 
-        supply_chain: Union[Unset, dict[str, Any]] = UNSET
+        supply_chain: dict[str, Any] | Unset = UNSET
         if not isinstance(self.supply_chain, Unset):
             supply_chain = self.supply_chain.to_dict()
 
-        training: Union[Unset, dict[str, Any]] = UNSET
+        training: dict[str, Any] | Unset = UNSET
         if not isinstance(self.training, Unset):
             training = self.training.to_dict()
 
-        health_care_provider: Union[Unset, dict[str, Any]] = UNSET
+        health_care_provider: dict[str, Any] | Unset = UNSET
         if not isinstance(self.health_care_provider, Unset):
             health_care_provider = self.health_care_provider.to_dict()
 
-        accounting: Union[Unset, dict[str, Any]] = UNSET
+        accounting: dict[str, Any] | Unset = UNSET
         if not isinstance(self.accounting, Unset):
             accounting = self.accounting.to_dict()
 
-        art_creative: Union[Unset, dict[str, Any]] = UNSET
+        art_creative: dict[str, Any] | Unset = UNSET
         if not isinstance(self.art_creative, Unset):
             art_creative = self.art_creative.to_dict()
 
-        strategy_planning: Union[Unset, dict[str, Any]] = UNSET
+        strategy_planning: dict[str, Any] | Unset = UNSET
         if not isinstance(self.strategy_planning, Unset):
             strategy_planning = self.strategy_planning.to_dict()
 
-        writing_editing: Union[Unset, dict[str, Any]] = UNSET
+        writing_editing: dict[str, Any] | Unset = UNSET
         if not isinstance(self.writing_editing, Unset):
             writing_editing = self.writing_editing.to_dict()
 
-
         field_dict: dict[str, Any] = {}
 
-        field_dict.update({
-        })
+        field_dict.update({})
         if arts_and_design is not UNSET:
             field_dict["Arts and Design"] = arts_and_design
         if business_development is not UNSET:
@@ -524,494 +707,669 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0Pur
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_design import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_human_resources import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_marketing import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_science import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_entrepreneurship import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_management import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_accounting import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_healthcare_services import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_quality_assurance import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_sales import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_supply_chain import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_administrative import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_distribution import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_strategy_planning import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_information_technology import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_community_social_services import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_advertising import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_program_product_management import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_customer_service import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_finance import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_general_business import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_art_creative import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_real_estate import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_arts_and_design import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_writing_editing import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_public_relations import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_research import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_education import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_operations import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_product_management import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_engineering import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_consulting import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_health_care_provider import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_military_protective_services import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_manufacturing import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_legal import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_other import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_production import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_business_development import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_project_management import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_analyst import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_purchasing import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_training import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_support import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_accounting import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_administrative import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_advertising import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_analyst import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_art_creative import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_arts_and_design import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_business_development import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_community_social_services import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_consulting import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_customer_service import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_design import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_distribution import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_education import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_engineering import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_entrepreneurship import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_finance import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_general_business import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_health_care_provider import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_healthcare_services import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_human_resources import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_information_technology import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_legal import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_management import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_manufacturing import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_marketing import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_military_protective_services import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_operations import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_other import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_product_management import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_production import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_program_product_management import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_project_management import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_public_relations import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_purchasing import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_quality_assurance import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_real_estate import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_research import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_sales import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_science import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_strategy_planning import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_supply_chain import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_support import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_training import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_writing_editing import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing,
+        )
+
         d = dict(src_dict)
         _arts_and_design = d.pop("Arts and Design", UNSET)
-        arts_and_design: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign]
-        if isinstance(_arts_and_design,  Unset):
+        arts_and_design: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign
+            | Unset
+        )
+        if isinstance(_arts_and_design, Unset):
             arts_and_design = UNSET
         else:
-            arts_and_design = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign.from_dict(_arts_and_design)
-
-
-
+            arts_and_design = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign.from_dict(
+                _arts_and_design
+            )
 
         _business_development = d.pop("Business Development", UNSET)
-        business_development: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment]
-        if isinstance(_business_development,  Unset):
+        business_development: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment
+            | Unset
+        )
+        if isinstance(_business_development, Unset):
             business_development = UNSET
         else:
-            business_development = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment.from_dict(_business_development)
-
-
-
+            business_development = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment.from_dict(
+                _business_development
+            )
 
         _community_social_services = d.pop("Community & Social Services", UNSET)
-        community_social_services: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices]
-        if isinstance(_community_social_services,  Unset):
+        community_social_services: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices
+            | Unset
+        )
+        if isinstance(_community_social_services, Unset):
             community_social_services = UNSET
         else:
-            community_social_services = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices.from_dict(_community_social_services)
-
-
-
+            community_social_services = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices.from_dict(
+                _community_social_services
+            )
 
         _consulting = d.pop("Consulting", UNSET)
-        consulting: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting]
-        if isinstance(_consulting,  Unset):
+        consulting: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting
+            | Unset
+        )
+        if isinstance(_consulting, Unset):
             consulting = UNSET
         else:
-            consulting = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting.from_dict(_consulting)
-
-
-
+            consulting = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting.from_dict(
+                _consulting
+            )
 
         _education = d.pop("Education", UNSET)
-        education: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education]
-        if isinstance(_education,  Unset):
+        education: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education
+            | Unset
+        )
+        if isinstance(_education, Unset):
             education = UNSET
         else:
-            education = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education.from_dict(_education)
-
-
-
+            education = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education.from_dict(
+                _education
+            )
 
         _engineering = d.pop("Engineering", UNSET)
-        engineering: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering]
-        if isinstance(_engineering,  Unset):
+        engineering: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering
+            | Unset
+        )
+        if isinstance(_engineering, Unset):
             engineering = UNSET
         else:
-            engineering = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering.from_dict(_engineering)
-
-
-
+            engineering = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering.from_dict(
+                _engineering
+            )
 
         _entrepreneurship = d.pop("Entrepreneurship", UNSET)
-        entrepreneurship: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship]
-        if isinstance(_entrepreneurship,  Unset):
+        entrepreneurship: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship
+            | Unset
+        )
+        if isinstance(_entrepreneurship, Unset):
             entrepreneurship = UNSET
         else:
-            entrepreneurship = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship.from_dict(_entrepreneurship)
-
-
-
+            entrepreneurship = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship.from_dict(
+                _entrepreneurship
+            )
 
         _healthcare_services = d.pop("Healthcare Services", UNSET)
-        healthcare_services: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices]
-        if isinstance(_healthcare_services,  Unset):
+        healthcare_services: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices
+            | Unset
+        )
+        if isinstance(_healthcare_services, Unset):
             healthcare_services = UNSET
         else:
-            healthcare_services = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices.from_dict(_healthcare_services)
-
-
-
+            healthcare_services = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices.from_dict(
+                _healthcare_services
+            )
 
         _human_resources = d.pop("Human Resources", UNSET)
-        human_resources: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources]
-        if isinstance(_human_resources,  Unset):
+        human_resources: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources
+            | Unset
+        )
+        if isinstance(_human_resources, Unset):
             human_resources = UNSET
         else:
-            human_resources = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources.from_dict(_human_resources)
-
-
-
+            human_resources = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources.from_dict(
+                _human_resources
+            )
 
         _information_technology = d.pop("Information Technology", UNSET)
-        information_technology: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology]
-        if isinstance(_information_technology,  Unset):
+        information_technology: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology
+            | Unset
+        )
+        if isinstance(_information_technology, Unset):
             information_technology = UNSET
         else:
-            information_technology = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology.from_dict(_information_technology)
-
-
-
+            information_technology = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology.from_dict(
+                _information_technology
+            )
 
         _legal = d.pop("Legal", UNSET)
-        legal: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal]
-        if isinstance(_legal,  Unset):
+        legal: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal
+            | Unset
+        )
+        if isinstance(_legal, Unset):
             legal = UNSET
         else:
-            legal = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal.from_dict(_legal)
-
-
-
+            legal = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal.from_dict(
+                _legal
+            )
 
         _military_protective_services = d.pop("Military & Protective Services", UNSET)
-        military_protective_services: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices]
-        if isinstance(_military_protective_services,  Unset):
+        military_protective_services: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices
+            | Unset
+        )
+        if isinstance(_military_protective_services, Unset):
             military_protective_services = UNSET
         else:
-            military_protective_services = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices.from_dict(_military_protective_services)
-
-
-
+            military_protective_services = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices.from_dict(
+                _military_protective_services
+            )
 
         _operations = d.pop("Operations", UNSET)
-        operations: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations]
-        if isinstance(_operations,  Unset):
+        operations: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations
+            | Unset
+        )
+        if isinstance(_operations, Unset):
             operations = UNSET
         else:
-            operations = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations.from_dict(_operations)
-
-
-
+            operations = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations.from_dict(
+                _operations
+            )
 
         _program_product_management = d.pop("Program & Product Management", UNSET)
-        program_product_management: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement]
-        if isinstance(_program_product_management,  Unset):
+        program_product_management: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement
+            | Unset
+        )
+        if isinstance(_program_product_management, Unset):
             program_product_management = UNSET
         else:
-            program_product_management = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement.from_dict(_program_product_management)
-
-
-
+            program_product_management = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement.from_dict(
+                _program_product_management
+            )
 
         _real_estate = d.pop("Real Estate", UNSET)
-        real_estate: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate]
-        if isinstance(_real_estate,  Unset):
+        real_estate: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate
+            | Unset
+        )
+        if isinstance(_real_estate, Unset):
             real_estate = UNSET
         else:
-            real_estate = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate.from_dict(_real_estate)
-
-
-
+            real_estate = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate.from_dict(
+                _real_estate
+            )
 
         _sales = d.pop("Sales", UNSET)
-        sales: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales]
-        if isinstance(_sales,  Unset):
+        sales: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales
+            | Unset
+        )
+        if isinstance(_sales, Unset):
             sales = UNSET
         else:
-            sales = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales.from_dict(_sales)
-
-
-
+            sales = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales.from_dict(
+                _sales
+            )
 
         _support = d.pop("Support", UNSET)
-        support: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support]
-        if isinstance(_support,  Unset):
+        support: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support
+            | Unset
+        )
+        if isinstance(_support, Unset):
             support = UNSET
         else:
-            support = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support.from_dict(_support)
-
-
-
+            support = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support.from_dict(
+                _support
+            )
 
         _administrative = d.pop("Administrative", UNSET)
-        administrative: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative]
-        if isinstance(_administrative,  Unset):
+        administrative: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative
+            | Unset
+        )
+        if isinstance(_administrative, Unset):
             administrative = UNSET
         else:
-            administrative = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative.from_dict(_administrative)
-
-
-
+            administrative = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative.from_dict(
+                _administrative
+            )
 
         _finance = d.pop("Finance", UNSET)
-        finance: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance]
-        if isinstance(_finance,  Unset):
+        finance: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance
+            | Unset
+        )
+        if isinstance(_finance, Unset):
             finance = UNSET
         else:
-            finance = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance.from_dict(_finance)
-
-
-
+            finance = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance.from_dict(
+                _finance
+            )
 
         _marketing = d.pop("Marketing", UNSET)
-        marketing: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing]
-        if isinstance(_marketing,  Unset):
+        marketing: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing
+            | Unset
+        )
+        if isinstance(_marketing, Unset):
             marketing = UNSET
         else:
-            marketing = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing.from_dict(_marketing)
-
-
-
+            marketing = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing.from_dict(
+                _marketing
+            )
 
         _purchasing = d.pop("Purchasing", UNSET)
-        purchasing: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing]
-        if isinstance(_purchasing,  Unset):
+        purchasing: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing
+            | Unset
+        )
+        if isinstance(_purchasing, Unset):
             purchasing = UNSET
         else:
-            purchasing = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing.from_dict(_purchasing)
-
-
-
+            purchasing = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing.from_dict(
+                _purchasing
+            )
 
         _product_management = d.pop("Product Management", UNSET)
-        product_management: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement]
-        if isinstance(_product_management,  Unset):
+        product_management: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement
+            | Unset
+        )
+        if isinstance(_product_management, Unset):
             product_management = UNSET
         else:
-            product_management = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement.from_dict(_product_management)
-
-
-
+            product_management = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement.from_dict(
+                _product_management
+            )
 
         _advertising = d.pop("Advertising", UNSET)
-        advertising: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising]
-        if isinstance(_advertising,  Unset):
+        advertising: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising
+            | Unset
+        )
+        if isinstance(_advertising, Unset):
             advertising = UNSET
         else:
-            advertising = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising.from_dict(_advertising)
-
-
-
+            advertising = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising.from_dict(
+                _advertising
+            )
 
         _analyst = d.pop("Analyst", UNSET)
-        analyst: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst]
-        if isinstance(_analyst,  Unset):
+        analyst: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst
+            | Unset
+        )
+        if isinstance(_analyst, Unset):
             analyst = UNSET
         else:
-            analyst = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst.from_dict(_analyst)
-
-
-
+            analyst = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst.from_dict(
+                _analyst
+            )
 
         _customer_service = d.pop("Customer Service", UNSET)
-        customer_service: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService]
-        if isinstance(_customer_service,  Unset):
+        customer_service: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService
+            | Unset
+        )
+        if isinstance(_customer_service, Unset):
             customer_service = UNSET
         else:
-            customer_service = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService.from_dict(_customer_service)
-
-
-
+            customer_service = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService.from_dict(
+                _customer_service
+            )
 
         _distribution = d.pop("Distribution", UNSET)
-        distribution: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution]
-        if isinstance(_distribution,  Unset):
+        distribution: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution
+            | Unset
+        )
+        if isinstance(_distribution, Unset):
             distribution = UNSET
         else:
-            distribution = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution.from_dict(_distribution)
-
-
-
+            distribution = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution.from_dict(
+                _distribution
+            )
 
         _design = d.pop("Design", UNSET)
-        design: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design]
-        if isinstance(_design,  Unset):
+        design: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design
+            | Unset
+        )
+        if isinstance(_design, Unset):
             design = UNSET
         else:
-            design = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design.from_dict(_design)
-
-
-
+            design = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design.from_dict(
+                _design
+            )
 
         _general_business = d.pop("General Business", UNSET)
-        general_business: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness]
-        if isinstance(_general_business,  Unset):
+        general_business: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness
+            | Unset
+        )
+        if isinstance(_general_business, Unset):
             general_business = UNSET
         else:
-            general_business = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness.from_dict(_general_business)
-
-
-
+            general_business = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness.from_dict(
+                _general_business
+            )
 
         _management = d.pop("Management", UNSET)
-        management: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management]
-        if isinstance(_management,  Unset):
+        management: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management
+            | Unset
+        )
+        if isinstance(_management, Unset):
             management = UNSET
         else:
-            management = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management.from_dict(_management)
-
-
-
+            management = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management.from_dict(
+                _management
+            )
 
         _manufacturing = d.pop("Manufacturing", UNSET)
-        manufacturing: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing]
-        if isinstance(_manufacturing,  Unset):
+        manufacturing: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing
+            | Unset
+        )
+        if isinstance(_manufacturing, Unset):
             manufacturing = UNSET
         else:
-            manufacturing = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing.from_dict(_manufacturing)
-
-
-
+            manufacturing = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing.from_dict(
+                _manufacturing
+            )
 
         _other = d.pop("Other", UNSET)
-        other: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other]
-        if isinstance(_other,  Unset):
+        other: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other
+            | Unset
+        )
+        if isinstance(_other, Unset):
             other = UNSET
         else:
-            other = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other.from_dict(_other)
-
-
-
+            other = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other.from_dict(
+                _other
+            )
 
         _public_relations = d.pop("Public Relations", UNSET)
-        public_relations: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations]
-        if isinstance(_public_relations,  Unset):
+        public_relations: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations
+            | Unset
+        )
+        if isinstance(_public_relations, Unset):
             public_relations = UNSET
         else:
-            public_relations = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations.from_dict(_public_relations)
-
-
-
+            public_relations = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations.from_dict(
+                _public_relations
+            )
 
         _project_management = d.pop("Project Management", UNSET)
-        project_management: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement]
-        if isinstance(_project_management,  Unset):
+        project_management: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement
+            | Unset
+        )
+        if isinstance(_project_management, Unset):
             project_management = UNSET
         else:
-            project_management = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement.from_dict(_project_management)
-
-
-
+            project_management = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement.from_dict(
+                _project_management
+            )
 
         _production = d.pop("Production", UNSET)
-        production: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production]
-        if isinstance(_production,  Unset):
+        production: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production
+            | Unset
+        )
+        if isinstance(_production, Unset):
             production = UNSET
         else:
-            production = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production.from_dict(_production)
-
-
-
+            production = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production.from_dict(
+                _production
+            )
 
         _quality_assurance = d.pop("Quality Assurance", UNSET)
-        quality_assurance: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance]
-        if isinstance(_quality_assurance,  Unset):
+        quality_assurance: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance
+            | Unset
+        )
+        if isinstance(_quality_assurance, Unset):
             quality_assurance = UNSET
         else:
-            quality_assurance = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance.from_dict(_quality_assurance)
-
-
-
+            quality_assurance = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance.from_dict(
+                _quality_assurance
+            )
 
         _research = d.pop("Research", UNSET)
-        research: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research]
-        if isinstance(_research,  Unset):
+        research: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research
+            | Unset
+        )
+        if isinstance(_research, Unset):
             research = UNSET
         else:
-            research = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research.from_dict(_research)
-
-
-
+            research = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research.from_dict(
+                _research
+            )
 
         _science = d.pop("Science", UNSET)
-        science: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science]
-        if isinstance(_science,  Unset):
+        science: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science
+            | Unset
+        )
+        if isinstance(_science, Unset):
             science = UNSET
         else:
-            science = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science.from_dict(_science)
-
-
-
+            science = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science.from_dict(
+                _science
+            )
 
         _supply_chain = d.pop("Supply Chain", UNSET)
-        supply_chain: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain]
-        if isinstance(_supply_chain,  Unset):
+        supply_chain: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain
+            | Unset
+        )
+        if isinstance(_supply_chain, Unset):
             supply_chain = UNSET
         else:
-            supply_chain = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain.from_dict(_supply_chain)
-
-
-
+            supply_chain = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain.from_dict(
+                _supply_chain
+            )
 
         _training = d.pop("Training", UNSET)
-        training: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training]
-        if isinstance(_training,  Unset):
+        training: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training
+            | Unset
+        )
+        if isinstance(_training, Unset):
             training = UNSET
         else:
-            training = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training.from_dict(_training)
-
-
-
+            training = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training.from_dict(
+                _training
+            )
 
         _health_care_provider = d.pop("Health Care Provider", UNSET)
-        health_care_provider: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider]
-        if isinstance(_health_care_provider,  Unset):
+        health_care_provider: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider
+            | Unset
+        )
+        if isinstance(_health_care_provider, Unset):
             health_care_provider = UNSET
         else:
-            health_care_provider = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider.from_dict(_health_care_provider)
-
-
-
+            health_care_provider = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider.from_dict(
+                _health_care_provider
+            )
 
         _accounting = d.pop("Accounting", UNSET)
-        accounting: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting]
-        if isinstance(_accounting,  Unset):
+        accounting: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting
+            | Unset
+        )
+        if isinstance(_accounting, Unset):
             accounting = UNSET
         else:
-            accounting = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting.from_dict(_accounting)
-
-
-
+            accounting = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting.from_dict(
+                _accounting
+            )
 
         _art_creative = d.pop("Art / Creative", UNSET)
-        art_creative: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative]
-        if isinstance(_art_creative,  Unset):
+        art_creative: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative
+            | Unset
+        )
+        if isinstance(_art_creative, Unset):
             art_creative = UNSET
         else:
-            art_creative = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative.from_dict(_art_creative)
-
-
-
+            art_creative = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative.from_dict(
+                _art_creative
+            )
 
         _strategy_planning = d.pop("Strategy / Planning", UNSET)
-        strategy_planning: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning]
-        if isinstance(_strategy_planning,  Unset):
+        strategy_planning: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning
+            | Unset
+        )
+        if isinstance(_strategy_planning, Unset):
             strategy_planning = UNSET
         else:
-            strategy_planning = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning.from_dict(_strategy_planning)
-
-
-
+            strategy_planning = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning.from_dict(
+                _strategy_planning
+            )
 
         _writing_editing = d.pop("Writing / Editing", UNSET)
-        writing_editing: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing]
-        if isinstance(_writing_editing,  Unset):
+        writing_editing: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing
+            | Unset
+        )
+        if isinstance(_writing_editing, Unset):
             writing_editing = UNSET
         else:
-            writing_editing = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing.from_dict(_writing_editing)
-
-
-
+            writing_editing = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing.from_dict(
+                _writing_editing
+            )
 
         kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0 = cls(
             arts_and_design=arts_and_design,
@@ -1061,4 +1419,3 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0Pur
         )
 
         return kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0
-

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyCompanyParamsExactCompanyV2Type0NoneOfType0ItemType1Identifier(str, Enum):
     LINKEDIN_URL = "linkedin-url"
 

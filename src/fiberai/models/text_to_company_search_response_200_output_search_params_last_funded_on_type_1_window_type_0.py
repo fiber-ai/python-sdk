@@ -1,40 +1,34 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.text_to_company_search_response_200_output_search_params_last_funded_on_type_1_window_type_0_method import TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowType0Method
-from ..models.text_to_company_search_response_200_output_search_params_last_funded_on_type_1_window_type_0_period import TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowType0Period
-
-
-
-
-
+from ..models.text_to_company_search_response_200_output_search_params_last_funded_on_type_1_window_type_0_method import (
+    TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowType0Method,
+)
+from ..models.text_to_company_search_response_200_output_search_params_last_funded_on_type_1_window_type_0_period import (
+    TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowType0Period,
+)
 
 T = TypeVar("T", bound="TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowType0")
 
 
-
 @_attrs_define
 class TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowType0:
-    """ 
-        Attributes:
-            method (TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowType0Method):
-            period (TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowType0Period):
-            quantity (float):
-     """
+    """
+    Attributes:
+        method (TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowType0Method):
+        period (TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowType0Period):
+        quantity (float):
+    """
 
     method: TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowType0Method
     period: TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowType0Period
     quantity: float
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         method = self.method.value
@@ -43,31 +37,24 @@ class TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowTyp
 
         quantity = self.quantity
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "method": method,
-            "period": period,
-            "quantity": quantity,
-        })
+        field_dict.update(
+            {
+                "method": method,
+                "period": period,
+                "quantity": quantity,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         method = TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowType0Method(d.pop("method"))
 
-
-
-
         period = TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowType0Period(d.pop("period"))
-
-
-
 
         quantity = d.pop("quantity")
 
@@ -76,7 +63,6 @@ class TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType1WindowTyp
             period=period,
             quantity=quantity,
         )
-
 
         text_to_company_search_response_200_output_search_params_last_funded_on_type_1_window_type_0.additional_properties = d
         return text_to_company_search_response_200_output_search_params_last_funded_on_type_1_window_type_0

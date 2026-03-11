@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType1(str, Enum):
     CELEBRATE = "CELEBRATE"
     FUNNY = "FUNNY"

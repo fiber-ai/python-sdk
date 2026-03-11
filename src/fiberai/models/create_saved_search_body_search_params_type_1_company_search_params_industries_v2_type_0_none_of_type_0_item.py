@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsIndustriesV2Type0NoneOfType0Item(str, Enum):
     ADMINISTRATIVE_SERVICES = "Administrative Services"
     AEROSPACE_MILITARY = "Aerospace & Military"

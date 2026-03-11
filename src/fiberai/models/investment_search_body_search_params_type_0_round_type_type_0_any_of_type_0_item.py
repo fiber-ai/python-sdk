@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class InvestmentSearchBodySearchParamsType0RoundTypeType0AnyOfType0Item(str, Enum):
     ANGEL = "angel"
     CONVERTIBLE_NOTE = "convertible_note"

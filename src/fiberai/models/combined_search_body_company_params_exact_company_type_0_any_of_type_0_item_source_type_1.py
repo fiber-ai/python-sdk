@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyCompanyParamsExactCompanyType0AnyOfType0ItemSourceType1(str, Enum):
     CSV = "csv"
 

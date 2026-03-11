@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsLastFundedOnType0Strategy(str, Enum):
     ABSOLUTE = "absolute"
 

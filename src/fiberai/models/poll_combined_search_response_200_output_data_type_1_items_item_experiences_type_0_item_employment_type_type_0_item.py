@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PollCombinedSearchResponse200OutputDataType1ItemsItemExperiencesType0ItemEmploymentTypeType0Item(str, Enum):
     CONTRACT = "Contract"
     FULL_TIME = "Full-time"

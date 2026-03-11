@@ -1,633 +1,621 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
-from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
-
-from ..types import UNSET, Unset
-from typing import Union
-
-
-
-
-
 
 T = TypeVar("T", bound="CompanyLiveEnrichResponse200OutputCompanyLocationsStatsType0")
 
 
-
 @_attrs_define
 class CompanyLiveEnrichResponse200OutputCompanyLocationsStatsType0:
-    """ 
-        Attributes:
-            usa (Union[Unset, float]):
-            gbr (Union[Unset, float]):
-            fra (Union[Unset, float]):
-            ind (Union[Unset, float]):
-            bra (Union[Unset, float]):
-            deu (Union[Unset, float]):
-            esp (Union[Unset, float]):
-            can (Union[Unset, float]):
-            aus (Union[Unset, float]):
-            nld (Union[Unset, float]):
-            ita (Union[Unset, float]):
-            zaf (Union[Unset, float]):
-            bel (Union[Unset, float]):
-            chn (Union[Unset, float]):
-            tur (Union[Unset, float]):
-            mex (Union[Unset, float]):
-            che (Union[Unset, float]):
-            nor (Union[Unset, float]):
-            are (Union[Unset, float]):
-            swe (Union[Unset, float]):
-            pol (Union[Unset, float]):
-            idn (Union[Unset, float]):
-            arg (Union[Unset, float]):
-            prt (Union[Unset, float]):
-            col (Union[Unset, float]):
-            chl (Union[Unset, float]):
-            pak (Union[Unset, float]):
-            dnk (Union[Unset, float]):
-            jpn (Union[Unset, float]):
-            nga (Union[Unset, float]):
-            sgp (Union[Unset, float]):
-            per (Union[Unset, float]):
-            nzl (Union[Unset, float]):
-            aut (Union[Unset, float]):
-            irl (Union[Unset, float]):
-            mys (Union[Unset, float]):
-            bgd (Union[Unset, float]):
-            egy (Union[Unset, float]):
-            isr (Union[Unset, float]):
-            sau (Union[Unset, float]):
-            phl (Union[Unset, float]):
-            fin (Union[Unset, float]):
-            irn (Union[Unset, float]):
-            rou (Union[Unset, float]):
-            cze (Union[Unset, float]):
-            grc (Union[Unset, float]):
-            hkg (Union[Unset, float]):
-            hun (Union[Unset, float]):
-            ken (Union[Unset, float]):
-            mar (Union[Unset, float]):
-            vnm (Union[Unset, float]):
-            rus (Union[Unset, float]):
-            ukr (Union[Unset, float]):
-            ecu (Union[Unset, float]):
-            tha (Union[Unset, float]):
-            lka (Union[Unset, float]):
-            kor (Union[Unset, float]):
-            bgr (Union[Unset, float]):
-            gha (Union[Unset, float]):
-            srb (Union[Unset, float]):
-            twn (Union[Unset, float]):
-            hrv (Union[Unset, float]):
-            ltu (Union[Unset, float]):
-            pri (Union[Unset, float]):
-            svk (Union[Unset, float]):
-            tun (Union[Unset, float]):
-            est (Union[Unset, float]):
-            ven (Union[Unset, float]):
-            cri (Union[Unset, float]):
-            pan (Union[Unset, float]):
-            ury (Union[Unset, float]):
-            lbn (Union[Unset, float]):
-            lux (Union[Unset, float]):
-            cyp (Union[Unset, float]):
-            npl (Union[Unset, float]):
-            jor (Union[Unset, float]):
-            svn (Union[Unset, float]):
-            mtq (Union[Unset, float]):
-            qat (Union[Unset, float]):
-            glp (Union[Unset, float]):
-            uga (Union[Unset, float]):
-            dza (Union[Unset, float]):
-            gtm (Union[Unset, float]):
-            cmr (Union[Unset, float]):
-            lva (Union[Unset, float]):
-            dom (Union[Unset, float]):
-            aze (Union[Unset, float]):
-            geo (Union[Unset, float]):
-            sen (Union[Unset, float]):
-            tza (Union[Unset, float]):
-            zwe (Union[Unset, float]):
-            kwt (Union[Unset, float]):
-            mlt (Union[Unset, float]):
-            omn (Union[Unset, float]):
-            bol (Union[Unset, float]):
-            slv (Union[Unset, float]):
-            arm (Union[Unset, float]):
-            pry (Union[Unset, float]):
-            irq (Union[Unset, float]):
-            khm (Union[Unset, float]):
-            bih (Union[Unset, float]):
-            ago (Union[Unset, float]):
-            bhr (Union[Unset, float]):
-            alb (Union[Unset, float]):
-            kaz (Union[Unset, float]):
-            civ (Union[Unset, float]):
-            eth (Union[Unset, float]):
-            mus (Union[Unset, float]):
-            zmb (Union[Unset, float]):
-            mkd (Union[Unset, float]):
-            cod (Union[Unset, float]):
-            blr (Union[Unset, float]):
-            moz (Union[Unset, float]):
-            reu (Union[Unset, float]):
-            tto (Union[Unset, float]):
-            guf (Union[Unset, float]):
-            isl (Union[Unset, float]):
-            mmr (Union[Unset, float]):
-            hnd (Union[Unset, float]):
-            rwa (Union[Unset, float]):
-            mdg (Union[Unset, float]):
-            ben (Union[Unset, float]):
-            uzb (Union[Unset, float]):
-            nam (Union[Unset, float]):
-            bwa (Union[Unset, float]):
-            mda (Union[Unset, float]):
-            jey (Union[Unset, float]):
-            nic (Union[Unset, float]):
-            sdn (Union[Unset, float]):
-            jam (Union[Unset, float]):
-            imn (Union[Unset, float]):
-            bfa (Union[Unset, float]):
-            mng (Union[Unset, float]):
-            mne (Union[Unset, float]):
-            mco (Union[Unset, float]):
-            tgo (Union[Unset, float]):
-            afg (Union[Unset, float]):
-            lby (Union[Unset, float]):
-            xkx (Union[Unset, float]):
-            cym (Union[Unset, float]):
-            mwi (Union[Unset, float]):
-            som (Union[Unset, float]):
-            png (Union[Unset, float]):
-            mdv (Union[Unset, float]):
-            mli (Union[Unset, float]):
-            gin (Union[Unset, float]):
-            pse (Union[Unset, float]):
-            gab (Union[Unset, float]):
-            lie (Union[Unset, float]):
-            hti (Union[Unset, float]):
-            syr (Union[Unset, float]):
-            brb (Union[Unset, float]):
-            yem (Union[Unset, float]):
-            ggy (Union[Unset, float]):
-            ncl (Union[Unset, float]):
-            and_ (Union[Unset, float]):
-            sur (Union[Unset, float]):
-            myt (Union[Unset, float]):
-            kgz (Union[Unset, float]):
-            bhs (Union[Unset, float]):
-            gib (Union[Unset, float]):
-            cog (Union[Unset, float]):
-            fji (Union[Unset, float]):
-            blm (Union[Unset, float]):
-            cuw (Union[Unset, float]):
-            cub (Union[Unset, float]):
-            sle (Union[Unset, float]):
-            blz (Union[Unset, float]):
-            ner (Union[Unset, float]):
-            lbr (Union[Unset, float]):
-            vir (Union[Unset, float]):
-            pyf (Union[Unset, float]):
-            gum (Union[Unset, float]):
-            mrt (Union[Unset, float]):
-            abw (Union[Unset, float]):
-            syc (Union[Unset, float]):
-            guy (Union[Unset, float]):
-            lso (Union[Unset, float]):
-            swz (Union[Unset, float]):
-            ssd (Union[Unset, float]):
-            lca (Union[Unset, float]):
-            mac (Union[Unset, float]):
-            smr (Union[Unset, float]):
-            lao (Union[Unset, float]):
-            brn (Union[Unset, float]):
-            tcd (Union[Unset, float]):
-            bmu (Union[Unset, float]):
-            vgb (Union[Unset, float]):
-            prk (Union[Unset, float]):
-            btn (Union[Unset, float]):
-            bdi (Union[Unset, float]):
-            fro (Union[Unset, float]):
-            tjk (Union[Unset, float]):
-            gmb (Union[Unset, float]):
-            stp (Union[Unset, float]):
-            ant (Union[Unset, float]):
-            vct (Union[Unset, float]):
-            dji (Union[Unset, float]):
-            cpv (Union[Unset, float]):
-            tkm (Union[Unset, float]):
-            atg (Union[Unset, float]):
-            tca (Union[Unset, float]):
-            kna (Union[Unset, float]):
-            grd (Union[Unset, float]):
-            asm (Union[Unset, float]):
-            vut (Union[Unset, float]):
-            gnq (Union[Unset, float]):
-            grl (Union[Unset, float]):
-            sxm (Union[Unset, float]):
-            mnp (Union[Unset, float]):
-            com (Union[Unset, float]):
-            tls (Union[Unset, float]):
-            sjm (Union[Unset, float]):
-            caf (Union[Unset, float]):
-            dma (Union[Unset, float]):
-            maf (Union[Unset, float]):
-            wsm (Union[Unset, float]):
-            bes (Union[Unset, float]):
-            mhl (Union[Unset, float]):
-            aia (Union[Unset, float]):
-            ton (Union[Unset, float]):
-            cok (Union[Unset, float]):
-            slb (Union[Unset, float]):
-            spm (Union[Unset, float]):
-            gnb (Union[Unset, float]):
-            ata (Union[Unset, float]):
-            tuv (Union[Unset, float]):
-            ala (Union[Unset, float]):
-            iot (Union[Unset, float]):
-            eri (Union[Unset, float]):
-            plw (Union[Unset, float]):
-            fsm (Union[Unset, float]):
-            nru (Union[Unset, float]):
-            pcn (Union[Unset, float]):
-            flk (Union[Unset, float]):
-            msr (Union[Unset, float]):
-            vat (Union[Unset, float]):
-            kir (Union[Unset, float]):
-            shn (Union[Unset, float]):
-            niu (Union[Unset, float]):
-            wlf (Union[Unset, float]):
-            hmd (Union[Unset, float]):
-            cxr (Union[Unset, float]):
-            nfk (Union[Unset, float]):
-            atf (Union[Unset, float]):
-            cck (Union[Unset, float]):
-            sgs (Union[Unset, float]):
-            bvt (Union[Unset, float]):
-            umi (Union[Unset, float]):
-            esh (Union[Unset, float]):
-            tkl (Union[Unset, float]):
-            x_south_asia (Union[Unset, float]):
-            x_south_east_europe (Union[Unset, float]):
-            x_northern_africa (Union[Unset, float]):
-            x_pacific (Union[Unset, float]):
-            x_south_west_europe (Union[Unset, float]):
-            x_southern_africa (Union[Unset, float]):
-            x_west_indies (Union[Unset, float]):
-            x_south_america (Union[Unset, float]):
-            x_south_west_asia (Union[Unset, float]):
-            x_central_europe (Union[Unset, float]):
-            x_eastern_europe (Union[Unset, float]):
-            x_western_europe (Union[Unset, float]):
-            x_central_america (Union[Unset, float]):
-            x_western_africa (Union[Unset, float]):
-            x_south_atlantic_ocean (Union[Unset, float]):
-            x_south_east_asia (Union[Unset, float]):
-            x_central_africa (Union[Unset, float]):
-            x_north_america (Union[Unset, float]):
-            x_east_asia (Union[Unset, float]):
-            x_northern_europe (Union[Unset, float]):
-            x_eastern_africa (Union[Unset, float]):
-            x_southern_indian_ocean (Union[Unset, float]):
-            x_southern_europe (Union[Unset, float]):
-            x_central_asia (Union[Unset, float]):
-            x_northern_asia (Union[Unset, float]):
-            x_asia (Union[Unset, float]):
-            x_europe (Union[Unset, float]):
-            x_africa (Union[Unset, float]):
-            x_oceania (Union[Unset, float]):
-            x_americas (Union[Unset, float]):
-            x_antarctica (Union[Unset, float]):
-            x_atlantic_ocean (Union[Unset, float]):
-            x_indian_ocean (Union[Unset, float]):
-            x_middle_east (Union[Unset, float]):
-            x_mena (Union[Unset, float]):
-            x_emea (Union[Unset, float]):
-            x_european_union (Union[Unset, float]):
-            x_efta (Union[Unset, float]):
-            x_apac (Union[Unset, float]):
-            x_latam (Union[Unset, float]):
-            x_anglosphere (Union[Unset, float]):
-            x_dach (Union[Unset, float]):
-            x_nordics (Union[Unset, float]):
-            x_benelux (Union[Unset, float]):
-            x_gcc (Union[Unset, float]):
-            x_brics (Union[Unset, float]):
-            x_g20 (Union[Unset, float]):
-            x_oecd (Union[Unset, float]):
-            x_sanctioned (Union[Unset, float]):
-     """
+    """
+    Attributes:
+        usa (float | Unset):
+        gbr (float | Unset):
+        fra (float | Unset):
+        ind (float | Unset):
+        bra (float | Unset):
+        deu (float | Unset):
+        esp (float | Unset):
+        can (float | Unset):
+        aus (float | Unset):
+        nld (float | Unset):
+        ita (float | Unset):
+        zaf (float | Unset):
+        bel (float | Unset):
+        chn (float | Unset):
+        tur (float | Unset):
+        mex (float | Unset):
+        che (float | Unset):
+        nor (float | Unset):
+        are (float | Unset):
+        swe (float | Unset):
+        pol (float | Unset):
+        idn (float | Unset):
+        arg (float | Unset):
+        prt (float | Unset):
+        col (float | Unset):
+        chl (float | Unset):
+        pak (float | Unset):
+        dnk (float | Unset):
+        jpn (float | Unset):
+        nga (float | Unset):
+        sgp (float | Unset):
+        per (float | Unset):
+        nzl (float | Unset):
+        aut (float | Unset):
+        irl (float | Unset):
+        mys (float | Unset):
+        bgd (float | Unset):
+        egy (float | Unset):
+        isr (float | Unset):
+        sau (float | Unset):
+        phl (float | Unset):
+        fin (float | Unset):
+        irn (float | Unset):
+        rou (float | Unset):
+        cze (float | Unset):
+        grc (float | Unset):
+        hkg (float | Unset):
+        hun (float | Unset):
+        ken (float | Unset):
+        mar (float | Unset):
+        vnm (float | Unset):
+        rus (float | Unset):
+        ukr (float | Unset):
+        ecu (float | Unset):
+        tha (float | Unset):
+        lka (float | Unset):
+        kor (float | Unset):
+        bgr (float | Unset):
+        gha (float | Unset):
+        srb (float | Unset):
+        twn (float | Unset):
+        hrv (float | Unset):
+        ltu (float | Unset):
+        pri (float | Unset):
+        svk (float | Unset):
+        tun (float | Unset):
+        est (float | Unset):
+        ven (float | Unset):
+        cri (float | Unset):
+        pan (float | Unset):
+        ury (float | Unset):
+        lbn (float | Unset):
+        lux (float | Unset):
+        cyp (float | Unset):
+        npl (float | Unset):
+        jor (float | Unset):
+        svn (float | Unset):
+        mtq (float | Unset):
+        qat (float | Unset):
+        glp (float | Unset):
+        uga (float | Unset):
+        dza (float | Unset):
+        gtm (float | Unset):
+        cmr (float | Unset):
+        lva (float | Unset):
+        dom (float | Unset):
+        aze (float | Unset):
+        geo (float | Unset):
+        sen (float | Unset):
+        tza (float | Unset):
+        zwe (float | Unset):
+        kwt (float | Unset):
+        mlt (float | Unset):
+        omn (float | Unset):
+        bol (float | Unset):
+        slv (float | Unset):
+        arm (float | Unset):
+        pry (float | Unset):
+        irq (float | Unset):
+        khm (float | Unset):
+        bih (float | Unset):
+        ago (float | Unset):
+        bhr (float | Unset):
+        alb (float | Unset):
+        kaz (float | Unset):
+        civ (float | Unset):
+        eth (float | Unset):
+        mus (float | Unset):
+        zmb (float | Unset):
+        mkd (float | Unset):
+        cod (float | Unset):
+        blr (float | Unset):
+        moz (float | Unset):
+        reu (float | Unset):
+        tto (float | Unset):
+        guf (float | Unset):
+        isl (float | Unset):
+        mmr (float | Unset):
+        hnd (float | Unset):
+        rwa (float | Unset):
+        mdg (float | Unset):
+        ben (float | Unset):
+        uzb (float | Unset):
+        nam (float | Unset):
+        bwa (float | Unset):
+        mda (float | Unset):
+        jey (float | Unset):
+        nic (float | Unset):
+        sdn (float | Unset):
+        jam (float | Unset):
+        imn (float | Unset):
+        bfa (float | Unset):
+        mng (float | Unset):
+        mne (float | Unset):
+        mco (float | Unset):
+        tgo (float | Unset):
+        afg (float | Unset):
+        lby (float | Unset):
+        xkx (float | Unset):
+        cym (float | Unset):
+        mwi (float | Unset):
+        som (float | Unset):
+        png (float | Unset):
+        mdv (float | Unset):
+        mli (float | Unset):
+        gin (float | Unset):
+        pse (float | Unset):
+        gab (float | Unset):
+        lie (float | Unset):
+        hti (float | Unset):
+        syr (float | Unset):
+        brb (float | Unset):
+        yem (float | Unset):
+        ggy (float | Unset):
+        ncl (float | Unset):
+        and_ (float | Unset):
+        sur (float | Unset):
+        myt (float | Unset):
+        kgz (float | Unset):
+        bhs (float | Unset):
+        gib (float | Unset):
+        cog (float | Unset):
+        fji (float | Unset):
+        blm (float | Unset):
+        cuw (float | Unset):
+        cub (float | Unset):
+        sle (float | Unset):
+        blz (float | Unset):
+        ner (float | Unset):
+        lbr (float | Unset):
+        vir (float | Unset):
+        pyf (float | Unset):
+        gum (float | Unset):
+        mrt (float | Unset):
+        abw (float | Unset):
+        syc (float | Unset):
+        guy (float | Unset):
+        lso (float | Unset):
+        swz (float | Unset):
+        ssd (float | Unset):
+        lca (float | Unset):
+        mac (float | Unset):
+        smr (float | Unset):
+        lao (float | Unset):
+        brn (float | Unset):
+        tcd (float | Unset):
+        bmu (float | Unset):
+        vgb (float | Unset):
+        prk (float | Unset):
+        btn (float | Unset):
+        bdi (float | Unset):
+        fro (float | Unset):
+        tjk (float | Unset):
+        gmb (float | Unset):
+        stp (float | Unset):
+        ant (float | Unset):
+        vct (float | Unset):
+        dji (float | Unset):
+        cpv (float | Unset):
+        tkm (float | Unset):
+        atg (float | Unset):
+        tca (float | Unset):
+        kna (float | Unset):
+        grd (float | Unset):
+        asm (float | Unset):
+        vut (float | Unset):
+        gnq (float | Unset):
+        grl (float | Unset):
+        sxm (float | Unset):
+        mnp (float | Unset):
+        com (float | Unset):
+        tls (float | Unset):
+        sjm (float | Unset):
+        caf (float | Unset):
+        dma (float | Unset):
+        maf (float | Unset):
+        wsm (float | Unset):
+        bes (float | Unset):
+        mhl (float | Unset):
+        aia (float | Unset):
+        ton (float | Unset):
+        cok (float | Unset):
+        slb (float | Unset):
+        spm (float | Unset):
+        gnb (float | Unset):
+        ata (float | Unset):
+        tuv (float | Unset):
+        ala (float | Unset):
+        iot (float | Unset):
+        eri (float | Unset):
+        plw (float | Unset):
+        fsm (float | Unset):
+        nru (float | Unset):
+        pcn (float | Unset):
+        flk (float | Unset):
+        msr (float | Unset):
+        vat (float | Unset):
+        kir (float | Unset):
+        shn (float | Unset):
+        niu (float | Unset):
+        wlf (float | Unset):
+        hmd (float | Unset):
+        cxr (float | Unset):
+        nfk (float | Unset):
+        atf (float | Unset):
+        cck (float | Unset):
+        sgs (float | Unset):
+        bvt (float | Unset):
+        umi (float | Unset):
+        esh (float | Unset):
+        tkl (float | Unset):
+        x_south_asia (float | Unset):
+        x_south_east_europe (float | Unset):
+        x_northern_africa (float | Unset):
+        x_pacific (float | Unset):
+        x_south_west_europe (float | Unset):
+        x_southern_africa (float | Unset):
+        x_west_indies (float | Unset):
+        x_south_america (float | Unset):
+        x_south_west_asia (float | Unset):
+        x_central_europe (float | Unset):
+        x_eastern_europe (float | Unset):
+        x_western_europe (float | Unset):
+        x_central_america (float | Unset):
+        x_western_africa (float | Unset):
+        x_south_atlantic_ocean (float | Unset):
+        x_south_east_asia (float | Unset):
+        x_central_africa (float | Unset):
+        x_north_america (float | Unset):
+        x_east_asia (float | Unset):
+        x_northern_europe (float | Unset):
+        x_eastern_africa (float | Unset):
+        x_southern_indian_ocean (float | Unset):
+        x_southern_europe (float | Unset):
+        x_central_asia (float | Unset):
+        x_northern_asia (float | Unset):
+        x_asia (float | Unset):
+        x_europe (float | Unset):
+        x_africa (float | Unset):
+        x_oceania (float | Unset):
+        x_americas (float | Unset):
+        x_antarctica (float | Unset):
+        x_atlantic_ocean (float | Unset):
+        x_indian_ocean (float | Unset):
+        x_middle_east (float | Unset):
+        x_mena (float | Unset):
+        x_emea (float | Unset):
+        x_european_union (float | Unset):
+        x_efta (float | Unset):
+        x_apac (float | Unset):
+        x_latam (float | Unset):
+        x_anglosphere (float | Unset):
+        x_dach (float | Unset):
+        x_nordics (float | Unset):
+        x_benelux (float | Unset):
+        x_gcc (float | Unset):
+        x_brics (float | Unset):
+        x_g20 (float | Unset):
+        x_oecd (float | Unset):
+        x_sanctioned (float | Unset):
+    """
 
-    usa: Union[Unset, float] = UNSET
-    gbr: Union[Unset, float] = UNSET
-    fra: Union[Unset, float] = UNSET
-    ind: Union[Unset, float] = UNSET
-    bra: Union[Unset, float] = UNSET
-    deu: Union[Unset, float] = UNSET
-    esp: Union[Unset, float] = UNSET
-    can: Union[Unset, float] = UNSET
-    aus: Union[Unset, float] = UNSET
-    nld: Union[Unset, float] = UNSET
-    ita: Union[Unset, float] = UNSET
-    zaf: Union[Unset, float] = UNSET
-    bel: Union[Unset, float] = UNSET
-    chn: Union[Unset, float] = UNSET
-    tur: Union[Unset, float] = UNSET
-    mex: Union[Unset, float] = UNSET
-    che: Union[Unset, float] = UNSET
-    nor: Union[Unset, float] = UNSET
-    are: Union[Unset, float] = UNSET
-    swe: Union[Unset, float] = UNSET
-    pol: Union[Unset, float] = UNSET
-    idn: Union[Unset, float] = UNSET
-    arg: Union[Unset, float] = UNSET
-    prt: Union[Unset, float] = UNSET
-    col: Union[Unset, float] = UNSET
-    chl: Union[Unset, float] = UNSET
-    pak: Union[Unset, float] = UNSET
-    dnk: Union[Unset, float] = UNSET
-    jpn: Union[Unset, float] = UNSET
-    nga: Union[Unset, float] = UNSET
-    sgp: Union[Unset, float] = UNSET
-    per: Union[Unset, float] = UNSET
-    nzl: Union[Unset, float] = UNSET
-    aut: Union[Unset, float] = UNSET
-    irl: Union[Unset, float] = UNSET
-    mys: Union[Unset, float] = UNSET
-    bgd: Union[Unset, float] = UNSET
-    egy: Union[Unset, float] = UNSET
-    isr: Union[Unset, float] = UNSET
-    sau: Union[Unset, float] = UNSET
-    phl: Union[Unset, float] = UNSET
-    fin: Union[Unset, float] = UNSET
-    irn: Union[Unset, float] = UNSET
-    rou: Union[Unset, float] = UNSET
-    cze: Union[Unset, float] = UNSET
-    grc: Union[Unset, float] = UNSET
-    hkg: Union[Unset, float] = UNSET
-    hun: Union[Unset, float] = UNSET
-    ken: Union[Unset, float] = UNSET
-    mar: Union[Unset, float] = UNSET
-    vnm: Union[Unset, float] = UNSET
-    rus: Union[Unset, float] = UNSET
-    ukr: Union[Unset, float] = UNSET
-    ecu: Union[Unset, float] = UNSET
-    tha: Union[Unset, float] = UNSET
-    lka: Union[Unset, float] = UNSET
-    kor: Union[Unset, float] = UNSET
-    bgr: Union[Unset, float] = UNSET
-    gha: Union[Unset, float] = UNSET
-    srb: Union[Unset, float] = UNSET
-    twn: Union[Unset, float] = UNSET
-    hrv: Union[Unset, float] = UNSET
-    ltu: Union[Unset, float] = UNSET
-    pri: Union[Unset, float] = UNSET
-    svk: Union[Unset, float] = UNSET
-    tun: Union[Unset, float] = UNSET
-    est: Union[Unset, float] = UNSET
-    ven: Union[Unset, float] = UNSET
-    cri: Union[Unset, float] = UNSET
-    pan: Union[Unset, float] = UNSET
-    ury: Union[Unset, float] = UNSET
-    lbn: Union[Unset, float] = UNSET
-    lux: Union[Unset, float] = UNSET
-    cyp: Union[Unset, float] = UNSET
-    npl: Union[Unset, float] = UNSET
-    jor: Union[Unset, float] = UNSET
-    svn: Union[Unset, float] = UNSET
-    mtq: Union[Unset, float] = UNSET
-    qat: Union[Unset, float] = UNSET
-    glp: Union[Unset, float] = UNSET
-    uga: Union[Unset, float] = UNSET
-    dza: Union[Unset, float] = UNSET
-    gtm: Union[Unset, float] = UNSET
-    cmr: Union[Unset, float] = UNSET
-    lva: Union[Unset, float] = UNSET
-    dom: Union[Unset, float] = UNSET
-    aze: Union[Unset, float] = UNSET
-    geo: Union[Unset, float] = UNSET
-    sen: Union[Unset, float] = UNSET
-    tza: Union[Unset, float] = UNSET
-    zwe: Union[Unset, float] = UNSET
-    kwt: Union[Unset, float] = UNSET
-    mlt: Union[Unset, float] = UNSET
-    omn: Union[Unset, float] = UNSET
-    bol: Union[Unset, float] = UNSET
-    slv: Union[Unset, float] = UNSET
-    arm: Union[Unset, float] = UNSET
-    pry: Union[Unset, float] = UNSET
-    irq: Union[Unset, float] = UNSET
-    khm: Union[Unset, float] = UNSET
-    bih: Union[Unset, float] = UNSET
-    ago: Union[Unset, float] = UNSET
-    bhr: Union[Unset, float] = UNSET
-    alb: Union[Unset, float] = UNSET
-    kaz: Union[Unset, float] = UNSET
-    civ: Union[Unset, float] = UNSET
-    eth: Union[Unset, float] = UNSET
-    mus: Union[Unset, float] = UNSET
-    zmb: Union[Unset, float] = UNSET
-    mkd: Union[Unset, float] = UNSET
-    cod: Union[Unset, float] = UNSET
-    blr: Union[Unset, float] = UNSET
-    moz: Union[Unset, float] = UNSET
-    reu: Union[Unset, float] = UNSET
-    tto: Union[Unset, float] = UNSET
-    guf: Union[Unset, float] = UNSET
-    isl: Union[Unset, float] = UNSET
-    mmr: Union[Unset, float] = UNSET
-    hnd: Union[Unset, float] = UNSET
-    rwa: Union[Unset, float] = UNSET
-    mdg: Union[Unset, float] = UNSET
-    ben: Union[Unset, float] = UNSET
-    uzb: Union[Unset, float] = UNSET
-    nam: Union[Unset, float] = UNSET
-    bwa: Union[Unset, float] = UNSET
-    mda: Union[Unset, float] = UNSET
-    jey: Union[Unset, float] = UNSET
-    nic: Union[Unset, float] = UNSET
-    sdn: Union[Unset, float] = UNSET
-    jam: Union[Unset, float] = UNSET
-    imn: Union[Unset, float] = UNSET
-    bfa: Union[Unset, float] = UNSET
-    mng: Union[Unset, float] = UNSET
-    mne: Union[Unset, float] = UNSET
-    mco: Union[Unset, float] = UNSET
-    tgo: Union[Unset, float] = UNSET
-    afg: Union[Unset, float] = UNSET
-    lby: Union[Unset, float] = UNSET
-    xkx: Union[Unset, float] = UNSET
-    cym: Union[Unset, float] = UNSET
-    mwi: Union[Unset, float] = UNSET
-    som: Union[Unset, float] = UNSET
-    png: Union[Unset, float] = UNSET
-    mdv: Union[Unset, float] = UNSET
-    mli: Union[Unset, float] = UNSET
-    gin: Union[Unset, float] = UNSET
-    pse: Union[Unset, float] = UNSET
-    gab: Union[Unset, float] = UNSET
-    lie: Union[Unset, float] = UNSET
-    hti: Union[Unset, float] = UNSET
-    syr: Union[Unset, float] = UNSET
-    brb: Union[Unset, float] = UNSET
-    yem: Union[Unset, float] = UNSET
-    ggy: Union[Unset, float] = UNSET
-    ncl: Union[Unset, float] = UNSET
-    and_: Union[Unset, float] = UNSET
-    sur: Union[Unset, float] = UNSET
-    myt: Union[Unset, float] = UNSET
-    kgz: Union[Unset, float] = UNSET
-    bhs: Union[Unset, float] = UNSET
-    gib: Union[Unset, float] = UNSET
-    cog: Union[Unset, float] = UNSET
-    fji: Union[Unset, float] = UNSET
-    blm: Union[Unset, float] = UNSET
-    cuw: Union[Unset, float] = UNSET
-    cub: Union[Unset, float] = UNSET
-    sle: Union[Unset, float] = UNSET
-    blz: Union[Unset, float] = UNSET
-    ner: Union[Unset, float] = UNSET
-    lbr: Union[Unset, float] = UNSET
-    vir: Union[Unset, float] = UNSET
-    pyf: Union[Unset, float] = UNSET
-    gum: Union[Unset, float] = UNSET
-    mrt: Union[Unset, float] = UNSET
-    abw: Union[Unset, float] = UNSET
-    syc: Union[Unset, float] = UNSET
-    guy: Union[Unset, float] = UNSET
-    lso: Union[Unset, float] = UNSET
-    swz: Union[Unset, float] = UNSET
-    ssd: Union[Unset, float] = UNSET
-    lca: Union[Unset, float] = UNSET
-    mac: Union[Unset, float] = UNSET
-    smr: Union[Unset, float] = UNSET
-    lao: Union[Unset, float] = UNSET
-    brn: Union[Unset, float] = UNSET
-    tcd: Union[Unset, float] = UNSET
-    bmu: Union[Unset, float] = UNSET
-    vgb: Union[Unset, float] = UNSET
-    prk: Union[Unset, float] = UNSET
-    btn: Union[Unset, float] = UNSET
-    bdi: Union[Unset, float] = UNSET
-    fro: Union[Unset, float] = UNSET
-    tjk: Union[Unset, float] = UNSET
-    gmb: Union[Unset, float] = UNSET
-    stp: Union[Unset, float] = UNSET
-    ant: Union[Unset, float] = UNSET
-    vct: Union[Unset, float] = UNSET
-    dji: Union[Unset, float] = UNSET
-    cpv: Union[Unset, float] = UNSET
-    tkm: Union[Unset, float] = UNSET
-    atg: Union[Unset, float] = UNSET
-    tca: Union[Unset, float] = UNSET
-    kna: Union[Unset, float] = UNSET
-    grd: Union[Unset, float] = UNSET
-    asm: Union[Unset, float] = UNSET
-    vut: Union[Unset, float] = UNSET
-    gnq: Union[Unset, float] = UNSET
-    grl: Union[Unset, float] = UNSET
-    sxm: Union[Unset, float] = UNSET
-    mnp: Union[Unset, float] = UNSET
-    com: Union[Unset, float] = UNSET
-    tls: Union[Unset, float] = UNSET
-    sjm: Union[Unset, float] = UNSET
-    caf: Union[Unset, float] = UNSET
-    dma: Union[Unset, float] = UNSET
-    maf: Union[Unset, float] = UNSET
-    wsm: Union[Unset, float] = UNSET
-    bes: Union[Unset, float] = UNSET
-    mhl: Union[Unset, float] = UNSET
-    aia: Union[Unset, float] = UNSET
-    ton: Union[Unset, float] = UNSET
-    cok: Union[Unset, float] = UNSET
-    slb: Union[Unset, float] = UNSET
-    spm: Union[Unset, float] = UNSET
-    gnb: Union[Unset, float] = UNSET
-    ata: Union[Unset, float] = UNSET
-    tuv: Union[Unset, float] = UNSET
-    ala: Union[Unset, float] = UNSET
-    iot: Union[Unset, float] = UNSET
-    eri: Union[Unset, float] = UNSET
-    plw: Union[Unset, float] = UNSET
-    fsm: Union[Unset, float] = UNSET
-    nru: Union[Unset, float] = UNSET
-    pcn: Union[Unset, float] = UNSET
-    flk: Union[Unset, float] = UNSET
-    msr: Union[Unset, float] = UNSET
-    vat: Union[Unset, float] = UNSET
-    kir: Union[Unset, float] = UNSET
-    shn: Union[Unset, float] = UNSET
-    niu: Union[Unset, float] = UNSET
-    wlf: Union[Unset, float] = UNSET
-    hmd: Union[Unset, float] = UNSET
-    cxr: Union[Unset, float] = UNSET
-    nfk: Union[Unset, float] = UNSET
-    atf: Union[Unset, float] = UNSET
-    cck: Union[Unset, float] = UNSET
-    sgs: Union[Unset, float] = UNSET
-    bvt: Union[Unset, float] = UNSET
-    umi: Union[Unset, float] = UNSET
-    esh: Union[Unset, float] = UNSET
-    tkl: Union[Unset, float] = UNSET
-    x_south_asia: Union[Unset, float] = UNSET
-    x_south_east_europe: Union[Unset, float] = UNSET
-    x_northern_africa: Union[Unset, float] = UNSET
-    x_pacific: Union[Unset, float] = UNSET
-    x_south_west_europe: Union[Unset, float] = UNSET
-    x_southern_africa: Union[Unset, float] = UNSET
-    x_west_indies: Union[Unset, float] = UNSET
-    x_south_america: Union[Unset, float] = UNSET
-    x_south_west_asia: Union[Unset, float] = UNSET
-    x_central_europe: Union[Unset, float] = UNSET
-    x_eastern_europe: Union[Unset, float] = UNSET
-    x_western_europe: Union[Unset, float] = UNSET
-    x_central_america: Union[Unset, float] = UNSET
-    x_western_africa: Union[Unset, float] = UNSET
-    x_south_atlantic_ocean: Union[Unset, float] = UNSET
-    x_south_east_asia: Union[Unset, float] = UNSET
-    x_central_africa: Union[Unset, float] = UNSET
-    x_north_america: Union[Unset, float] = UNSET
-    x_east_asia: Union[Unset, float] = UNSET
-    x_northern_europe: Union[Unset, float] = UNSET
-    x_eastern_africa: Union[Unset, float] = UNSET
-    x_southern_indian_ocean: Union[Unset, float] = UNSET
-    x_southern_europe: Union[Unset, float] = UNSET
-    x_central_asia: Union[Unset, float] = UNSET
-    x_northern_asia: Union[Unset, float] = UNSET
-    x_asia: Union[Unset, float] = UNSET
-    x_europe: Union[Unset, float] = UNSET
-    x_africa: Union[Unset, float] = UNSET
-    x_oceania: Union[Unset, float] = UNSET
-    x_americas: Union[Unset, float] = UNSET
-    x_antarctica: Union[Unset, float] = UNSET
-    x_atlantic_ocean: Union[Unset, float] = UNSET
-    x_indian_ocean: Union[Unset, float] = UNSET
-    x_middle_east: Union[Unset, float] = UNSET
-    x_mena: Union[Unset, float] = UNSET
-    x_emea: Union[Unset, float] = UNSET
-    x_european_union: Union[Unset, float] = UNSET
-    x_efta: Union[Unset, float] = UNSET
-    x_apac: Union[Unset, float] = UNSET
-    x_latam: Union[Unset, float] = UNSET
-    x_anglosphere: Union[Unset, float] = UNSET
-    x_dach: Union[Unset, float] = UNSET
-    x_nordics: Union[Unset, float] = UNSET
-    x_benelux: Union[Unset, float] = UNSET
-    x_gcc: Union[Unset, float] = UNSET
-    x_brics: Union[Unset, float] = UNSET
-    x_g20: Union[Unset, float] = UNSET
-    x_oecd: Union[Unset, float] = UNSET
-    x_sanctioned: Union[Unset, float] = UNSET
-
-
-
-
+    usa: float | Unset = UNSET
+    gbr: float | Unset = UNSET
+    fra: float | Unset = UNSET
+    ind: float | Unset = UNSET
+    bra: float | Unset = UNSET
+    deu: float | Unset = UNSET
+    esp: float | Unset = UNSET
+    can: float | Unset = UNSET
+    aus: float | Unset = UNSET
+    nld: float | Unset = UNSET
+    ita: float | Unset = UNSET
+    zaf: float | Unset = UNSET
+    bel: float | Unset = UNSET
+    chn: float | Unset = UNSET
+    tur: float | Unset = UNSET
+    mex: float | Unset = UNSET
+    che: float | Unset = UNSET
+    nor: float | Unset = UNSET
+    are: float | Unset = UNSET
+    swe: float | Unset = UNSET
+    pol: float | Unset = UNSET
+    idn: float | Unset = UNSET
+    arg: float | Unset = UNSET
+    prt: float | Unset = UNSET
+    col: float | Unset = UNSET
+    chl: float | Unset = UNSET
+    pak: float | Unset = UNSET
+    dnk: float | Unset = UNSET
+    jpn: float | Unset = UNSET
+    nga: float | Unset = UNSET
+    sgp: float | Unset = UNSET
+    per: float | Unset = UNSET
+    nzl: float | Unset = UNSET
+    aut: float | Unset = UNSET
+    irl: float | Unset = UNSET
+    mys: float | Unset = UNSET
+    bgd: float | Unset = UNSET
+    egy: float | Unset = UNSET
+    isr: float | Unset = UNSET
+    sau: float | Unset = UNSET
+    phl: float | Unset = UNSET
+    fin: float | Unset = UNSET
+    irn: float | Unset = UNSET
+    rou: float | Unset = UNSET
+    cze: float | Unset = UNSET
+    grc: float | Unset = UNSET
+    hkg: float | Unset = UNSET
+    hun: float | Unset = UNSET
+    ken: float | Unset = UNSET
+    mar: float | Unset = UNSET
+    vnm: float | Unset = UNSET
+    rus: float | Unset = UNSET
+    ukr: float | Unset = UNSET
+    ecu: float | Unset = UNSET
+    tha: float | Unset = UNSET
+    lka: float | Unset = UNSET
+    kor: float | Unset = UNSET
+    bgr: float | Unset = UNSET
+    gha: float | Unset = UNSET
+    srb: float | Unset = UNSET
+    twn: float | Unset = UNSET
+    hrv: float | Unset = UNSET
+    ltu: float | Unset = UNSET
+    pri: float | Unset = UNSET
+    svk: float | Unset = UNSET
+    tun: float | Unset = UNSET
+    est: float | Unset = UNSET
+    ven: float | Unset = UNSET
+    cri: float | Unset = UNSET
+    pan: float | Unset = UNSET
+    ury: float | Unset = UNSET
+    lbn: float | Unset = UNSET
+    lux: float | Unset = UNSET
+    cyp: float | Unset = UNSET
+    npl: float | Unset = UNSET
+    jor: float | Unset = UNSET
+    svn: float | Unset = UNSET
+    mtq: float | Unset = UNSET
+    qat: float | Unset = UNSET
+    glp: float | Unset = UNSET
+    uga: float | Unset = UNSET
+    dza: float | Unset = UNSET
+    gtm: float | Unset = UNSET
+    cmr: float | Unset = UNSET
+    lva: float | Unset = UNSET
+    dom: float | Unset = UNSET
+    aze: float | Unset = UNSET
+    geo: float | Unset = UNSET
+    sen: float | Unset = UNSET
+    tza: float | Unset = UNSET
+    zwe: float | Unset = UNSET
+    kwt: float | Unset = UNSET
+    mlt: float | Unset = UNSET
+    omn: float | Unset = UNSET
+    bol: float | Unset = UNSET
+    slv: float | Unset = UNSET
+    arm: float | Unset = UNSET
+    pry: float | Unset = UNSET
+    irq: float | Unset = UNSET
+    khm: float | Unset = UNSET
+    bih: float | Unset = UNSET
+    ago: float | Unset = UNSET
+    bhr: float | Unset = UNSET
+    alb: float | Unset = UNSET
+    kaz: float | Unset = UNSET
+    civ: float | Unset = UNSET
+    eth: float | Unset = UNSET
+    mus: float | Unset = UNSET
+    zmb: float | Unset = UNSET
+    mkd: float | Unset = UNSET
+    cod: float | Unset = UNSET
+    blr: float | Unset = UNSET
+    moz: float | Unset = UNSET
+    reu: float | Unset = UNSET
+    tto: float | Unset = UNSET
+    guf: float | Unset = UNSET
+    isl: float | Unset = UNSET
+    mmr: float | Unset = UNSET
+    hnd: float | Unset = UNSET
+    rwa: float | Unset = UNSET
+    mdg: float | Unset = UNSET
+    ben: float | Unset = UNSET
+    uzb: float | Unset = UNSET
+    nam: float | Unset = UNSET
+    bwa: float | Unset = UNSET
+    mda: float | Unset = UNSET
+    jey: float | Unset = UNSET
+    nic: float | Unset = UNSET
+    sdn: float | Unset = UNSET
+    jam: float | Unset = UNSET
+    imn: float | Unset = UNSET
+    bfa: float | Unset = UNSET
+    mng: float | Unset = UNSET
+    mne: float | Unset = UNSET
+    mco: float | Unset = UNSET
+    tgo: float | Unset = UNSET
+    afg: float | Unset = UNSET
+    lby: float | Unset = UNSET
+    xkx: float | Unset = UNSET
+    cym: float | Unset = UNSET
+    mwi: float | Unset = UNSET
+    som: float | Unset = UNSET
+    png: float | Unset = UNSET
+    mdv: float | Unset = UNSET
+    mli: float | Unset = UNSET
+    gin: float | Unset = UNSET
+    pse: float | Unset = UNSET
+    gab: float | Unset = UNSET
+    lie: float | Unset = UNSET
+    hti: float | Unset = UNSET
+    syr: float | Unset = UNSET
+    brb: float | Unset = UNSET
+    yem: float | Unset = UNSET
+    ggy: float | Unset = UNSET
+    ncl: float | Unset = UNSET
+    and_: float | Unset = UNSET
+    sur: float | Unset = UNSET
+    myt: float | Unset = UNSET
+    kgz: float | Unset = UNSET
+    bhs: float | Unset = UNSET
+    gib: float | Unset = UNSET
+    cog: float | Unset = UNSET
+    fji: float | Unset = UNSET
+    blm: float | Unset = UNSET
+    cuw: float | Unset = UNSET
+    cub: float | Unset = UNSET
+    sle: float | Unset = UNSET
+    blz: float | Unset = UNSET
+    ner: float | Unset = UNSET
+    lbr: float | Unset = UNSET
+    vir: float | Unset = UNSET
+    pyf: float | Unset = UNSET
+    gum: float | Unset = UNSET
+    mrt: float | Unset = UNSET
+    abw: float | Unset = UNSET
+    syc: float | Unset = UNSET
+    guy: float | Unset = UNSET
+    lso: float | Unset = UNSET
+    swz: float | Unset = UNSET
+    ssd: float | Unset = UNSET
+    lca: float | Unset = UNSET
+    mac: float | Unset = UNSET
+    smr: float | Unset = UNSET
+    lao: float | Unset = UNSET
+    brn: float | Unset = UNSET
+    tcd: float | Unset = UNSET
+    bmu: float | Unset = UNSET
+    vgb: float | Unset = UNSET
+    prk: float | Unset = UNSET
+    btn: float | Unset = UNSET
+    bdi: float | Unset = UNSET
+    fro: float | Unset = UNSET
+    tjk: float | Unset = UNSET
+    gmb: float | Unset = UNSET
+    stp: float | Unset = UNSET
+    ant: float | Unset = UNSET
+    vct: float | Unset = UNSET
+    dji: float | Unset = UNSET
+    cpv: float | Unset = UNSET
+    tkm: float | Unset = UNSET
+    atg: float | Unset = UNSET
+    tca: float | Unset = UNSET
+    kna: float | Unset = UNSET
+    grd: float | Unset = UNSET
+    asm: float | Unset = UNSET
+    vut: float | Unset = UNSET
+    gnq: float | Unset = UNSET
+    grl: float | Unset = UNSET
+    sxm: float | Unset = UNSET
+    mnp: float | Unset = UNSET
+    com: float | Unset = UNSET
+    tls: float | Unset = UNSET
+    sjm: float | Unset = UNSET
+    caf: float | Unset = UNSET
+    dma: float | Unset = UNSET
+    maf: float | Unset = UNSET
+    wsm: float | Unset = UNSET
+    bes: float | Unset = UNSET
+    mhl: float | Unset = UNSET
+    aia: float | Unset = UNSET
+    ton: float | Unset = UNSET
+    cok: float | Unset = UNSET
+    slb: float | Unset = UNSET
+    spm: float | Unset = UNSET
+    gnb: float | Unset = UNSET
+    ata: float | Unset = UNSET
+    tuv: float | Unset = UNSET
+    ala: float | Unset = UNSET
+    iot: float | Unset = UNSET
+    eri: float | Unset = UNSET
+    plw: float | Unset = UNSET
+    fsm: float | Unset = UNSET
+    nru: float | Unset = UNSET
+    pcn: float | Unset = UNSET
+    flk: float | Unset = UNSET
+    msr: float | Unset = UNSET
+    vat: float | Unset = UNSET
+    kir: float | Unset = UNSET
+    shn: float | Unset = UNSET
+    niu: float | Unset = UNSET
+    wlf: float | Unset = UNSET
+    hmd: float | Unset = UNSET
+    cxr: float | Unset = UNSET
+    nfk: float | Unset = UNSET
+    atf: float | Unset = UNSET
+    cck: float | Unset = UNSET
+    sgs: float | Unset = UNSET
+    bvt: float | Unset = UNSET
+    umi: float | Unset = UNSET
+    esh: float | Unset = UNSET
+    tkl: float | Unset = UNSET
+    x_south_asia: float | Unset = UNSET
+    x_south_east_europe: float | Unset = UNSET
+    x_northern_africa: float | Unset = UNSET
+    x_pacific: float | Unset = UNSET
+    x_south_west_europe: float | Unset = UNSET
+    x_southern_africa: float | Unset = UNSET
+    x_west_indies: float | Unset = UNSET
+    x_south_america: float | Unset = UNSET
+    x_south_west_asia: float | Unset = UNSET
+    x_central_europe: float | Unset = UNSET
+    x_eastern_europe: float | Unset = UNSET
+    x_western_europe: float | Unset = UNSET
+    x_central_america: float | Unset = UNSET
+    x_western_africa: float | Unset = UNSET
+    x_south_atlantic_ocean: float | Unset = UNSET
+    x_south_east_asia: float | Unset = UNSET
+    x_central_africa: float | Unset = UNSET
+    x_north_america: float | Unset = UNSET
+    x_east_asia: float | Unset = UNSET
+    x_northern_europe: float | Unset = UNSET
+    x_eastern_africa: float | Unset = UNSET
+    x_southern_indian_ocean: float | Unset = UNSET
+    x_southern_europe: float | Unset = UNSET
+    x_central_asia: float | Unset = UNSET
+    x_northern_asia: float | Unset = UNSET
+    x_asia: float | Unset = UNSET
+    x_europe: float | Unset = UNSET
+    x_africa: float | Unset = UNSET
+    x_oceania: float | Unset = UNSET
+    x_americas: float | Unset = UNSET
+    x_antarctica: float | Unset = UNSET
+    x_atlantic_ocean: float | Unset = UNSET
+    x_indian_ocean: float | Unset = UNSET
+    x_middle_east: float | Unset = UNSET
+    x_mena: float | Unset = UNSET
+    x_emea: float | Unset = UNSET
+    x_european_union: float | Unset = UNSET
+    x_efta: float | Unset = UNSET
+    x_apac: float | Unset = UNSET
+    x_latam: float | Unset = UNSET
+    x_anglosphere: float | Unset = UNSET
+    x_dach: float | Unset = UNSET
+    x_nordics: float | Unset = UNSET
+    x_benelux: float | Unset = UNSET
+    x_gcc: float | Unset = UNSET
+    x_brics: float | Unset = UNSET
+    x_g20: float | Unset = UNSET
+    x_oecd: float | Unset = UNSET
+    x_sanctioned: float | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
         usa = self.usa
@@ -1230,11 +1218,9 @@ class CompanyLiveEnrichResponse200OutputCompanyLocationsStatsType0:
 
         x_sanctioned = self.x_sanctioned
 
-
         field_dict: dict[str, Any] = {}
 
-        field_dict.update({
-        })
+        field_dict.update({})
         if usa is not UNSET:
             field_dict["USA"] = usa
         if gbr is not UNSET:
@@ -1837,8 +1823,6 @@ class CompanyLiveEnrichResponse200OutputCompanyLocationsStatsType0:
             field_dict["X-SANCTIONED"] = x_sanctioned
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -2747,4 +2731,3 @@ class CompanyLiveEnrichResponse200OutputCompanyLocationsStatsType0:
         )
 
         return company_live_enrich_response_200_output_company_locations_stats_type_0
-

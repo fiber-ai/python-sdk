@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyPostsLiveFetchResponse200ChargeInfoType3Method(str, Enum):
     FREE = "free"
 

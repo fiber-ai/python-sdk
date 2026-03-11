@@ -1,46 +1,36 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item import ProfileCommentsLiveFetchResponse200OutputCommentsType0Item
-
-
-
+    from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item import (
+        ProfileCommentsLiveFetchResponse200OutputCommentsType0Item,
+    )
 
 
 T = TypeVar("T", bound="ProfileCommentsLiveFetchResponse200Output")
 
 
-
 @_attrs_define
 class ProfileCommentsLiveFetchResponse200Output:
-    """ 
-        Attributes:
-            comments (Union[None, Unset, list['ProfileCommentsLiveFetchResponse200OutputCommentsType0Item']]):
-            cursor (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        comments (list[ProfileCommentsLiveFetchResponse200OutputCommentsType0Item] | None | Unset):
+        cursor (None | str | Unset):
+    """
 
-    comments: Union[None, Unset, list['ProfileCommentsLiveFetchResponse200OutputCommentsType0Item']] = UNSET
-    cursor: Union[None, Unset, str] = UNSET
+    comments: list[ProfileCommentsLiveFetchResponse200OutputCommentsType0Item] | None | Unset = UNSET
+    cursor: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item import ProfileCommentsLiveFetchResponse200OutputCommentsType0Item
-        comments: Union[None, Unset, list[dict[str, Any]]]
+        comments: list[dict[str, Any]] | None | Unset
         if isinstance(self.comments, Unset):
             comments = UNSET
         elif isinstance(self.comments, list):
@@ -49,21 +39,18 @@ class ProfileCommentsLiveFetchResponse200Output:
                 comments_type_0_item = comments_type_0_item_data.to_dict()
                 comments.append(comments_type_0_item)
 
-
         else:
             comments = self.comments
 
-        cursor: Union[None, Unset, str]
+        cursor: None | str | Unset
         if isinstance(self.cursor, Unset):
             cursor = UNSET
         else:
             cursor = self.cursor
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if comments is not UNSET:
             field_dict["comments"] = comments
         if cursor is not UNSET:
@@ -71,13 +58,17 @@ class ProfileCommentsLiveFetchResponse200Output:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item import ProfileCommentsLiveFetchResponse200OutputCommentsType0Item
+        from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item import (
+            ProfileCommentsLiveFetchResponse200OutputCommentsType0Item,
+        )
+
         d = dict(src_dict)
-        def _parse_comments(data: object) -> Union[None, Unset, list['ProfileCommentsLiveFetchResponse200OutputCommentsType0Item']]:
+
+        def _parse_comments(
+            data: object,
+        ) -> list[ProfileCommentsLiveFetchResponse200OutputCommentsType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -87,36 +78,33 @@ class ProfileCommentsLiveFetchResponse200Output:
                     raise TypeError()
                 comments_type_0 = []
                 _comments_type_0 = data
-                for comments_type_0_item_data in (_comments_type_0):
-                    comments_type_0_item = ProfileCommentsLiveFetchResponse200OutputCommentsType0Item.from_dict(comments_type_0_item_data)
-
-
+                for comments_type_0_item_data in _comments_type_0:
+                    comments_type_0_item = ProfileCommentsLiveFetchResponse200OutputCommentsType0Item.from_dict(
+                        comments_type_0_item_data
+                    )
 
                     comments_type_0.append(comments_type_0_item)
 
                 return comments_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['ProfileCommentsLiveFetchResponse200OutputCommentsType0Item']], data)
+            return cast(list[ProfileCommentsLiveFetchResponse200OutputCommentsType0Item] | None | Unset, data)
 
         comments = _parse_comments(d.pop("comments", UNSET))
 
-
-        def _parse_cursor(data: object) -> Union[None, Unset, str]:
+        def _parse_cursor(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         cursor = _parse_cursor(d.pop("cursor", UNSET))
-
 
         profile_comments_live_fetch_response_200_output = cls(
             comments=comments,
             cursor=cursor,
         )
-
 
         profile_comments_live_fetch_response_200_output.additional_properties = d
         return profile_comments_live_fetch_response_200_output

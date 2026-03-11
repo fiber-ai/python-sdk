@@ -1,63 +1,71 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.kitchen_sink_company_body_company_identifier_type_2 import KitchenSinkCompanyBodyCompanyIdentifierType2
-  from ..models.kitchen_sink_company_body_company_domain_type_0 import KitchenSinkCompanyBodyCompanyDomainType0
-  from ..models.kitchen_sink_company_body_company_name_type_0 import KitchenSinkCompanyBodyCompanyNameType0
-  from ..models.kitchen_sink_company_body_company_identifier_type_0 import KitchenSinkCompanyBodyCompanyIdentifierType0
-  from ..models.kitchen_sink_company_body_company_identifier_type_1 import KitchenSinkCompanyBodyCompanyIdentifierType1
-
-
-
+    from ..models.kitchen_sink_company_body_company_domain_type_0 import KitchenSinkCompanyBodyCompanyDomainType0
+    from ..models.kitchen_sink_company_body_company_identifier_type_0 import (
+        KitchenSinkCompanyBodyCompanyIdentifierType0,
+    )
+    from ..models.kitchen_sink_company_body_company_identifier_type_1 import (
+        KitchenSinkCompanyBodyCompanyIdentifierType1,
+    )
+    from ..models.kitchen_sink_company_body_company_identifier_type_2 import (
+        KitchenSinkCompanyBodyCompanyIdentifierType2,
+    )
+    from ..models.kitchen_sink_company_body_company_name_type_0 import KitchenSinkCompanyBodyCompanyNameType0
 
 
 T = TypeVar("T", bound="KitchenSinkCompanyBody")
 
 
-
 @_attrs_define
 class KitchenSinkCompanyBody:
-    """ 
-        Attributes:
-            api_key (str): Your Fiber API key
-            company_identifier (Union['KitchenSinkCompanyBodyCompanyIdentifierType0',
-                'KitchenSinkCompanyBodyCompanyIdentifierType1', 'KitchenSinkCompanyBodyCompanyIdentifierType2', None, Unset]):
-            company_name (Union['KitchenSinkCompanyBodyCompanyNameType0', None, Unset]):
-            company_domain (Union['KitchenSinkCompanyBodyCompanyDomainType0', None, Unset]):
-            num_companies (Union[Unset, int]):  Default: 1.
-     """
+    """
+    Attributes:
+        api_key (str): Your Fiber API key
+        company_identifier (KitchenSinkCompanyBodyCompanyIdentifierType0 | KitchenSinkCompanyBodyCompanyIdentifierType1
+            | KitchenSinkCompanyBodyCompanyIdentifierType2 | None | Unset):
+        company_name (KitchenSinkCompanyBodyCompanyNameType0 | None | Unset):
+        company_domain (KitchenSinkCompanyBodyCompanyDomainType0 | None | Unset):
+        num_companies (int | Unset):  Default: 1.
+    """
 
     api_key: str
-    company_identifier: Union['KitchenSinkCompanyBodyCompanyIdentifierType0', 'KitchenSinkCompanyBodyCompanyIdentifierType1', 'KitchenSinkCompanyBodyCompanyIdentifierType2', None, Unset] = UNSET
-    company_name: Union['KitchenSinkCompanyBodyCompanyNameType0', None, Unset] = UNSET
-    company_domain: Union['KitchenSinkCompanyBodyCompanyDomainType0', None, Unset] = UNSET
-    num_companies: Union[Unset, int] = 1
+    company_identifier: (
+        KitchenSinkCompanyBodyCompanyIdentifierType0
+        | KitchenSinkCompanyBodyCompanyIdentifierType1
+        | KitchenSinkCompanyBodyCompanyIdentifierType2
+        | None
+        | Unset
+    ) = UNSET
+    company_name: KitchenSinkCompanyBodyCompanyNameType0 | None | Unset = UNSET
+    company_domain: KitchenSinkCompanyBodyCompanyDomainType0 | None | Unset = UNSET
+    num_companies: int | Unset = 1
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.kitchen_sink_company_body_company_identifier_type_2 import KitchenSinkCompanyBodyCompanyIdentifierType2
         from ..models.kitchen_sink_company_body_company_domain_type_0 import KitchenSinkCompanyBodyCompanyDomainType0
+        from ..models.kitchen_sink_company_body_company_identifier_type_0 import (
+            KitchenSinkCompanyBodyCompanyIdentifierType0,
+        )
+        from ..models.kitchen_sink_company_body_company_identifier_type_1 import (
+            KitchenSinkCompanyBodyCompanyIdentifierType1,
+        )
+        from ..models.kitchen_sink_company_body_company_identifier_type_2 import (
+            KitchenSinkCompanyBodyCompanyIdentifierType2,
+        )
         from ..models.kitchen_sink_company_body_company_name_type_0 import KitchenSinkCompanyBodyCompanyNameType0
-        from ..models.kitchen_sink_company_body_company_identifier_type_0 import KitchenSinkCompanyBodyCompanyIdentifierType0
-        from ..models.kitchen_sink_company_body_company_identifier_type_1 import KitchenSinkCompanyBodyCompanyIdentifierType1
+
         api_key = self.api_key
 
-        company_identifier: Union[None, Unset, dict[str, Any]]
+        company_identifier: dict[str, Any] | None | Unset
         if isinstance(self.company_identifier, Unset):
             company_identifier = UNSET
         elif isinstance(self.company_identifier, KitchenSinkCompanyBodyCompanyIdentifierType0):
@@ -69,7 +77,7 @@ class KitchenSinkCompanyBody:
         else:
             company_identifier = self.company_identifier
 
-        company_name: Union[None, Unset, dict[str, Any]]
+        company_name: dict[str, Any] | None | Unset
         if isinstance(self.company_name, Unset):
             company_name = UNSET
         elif isinstance(self.company_name, KitchenSinkCompanyBodyCompanyNameType0):
@@ -77,7 +85,7 @@ class KitchenSinkCompanyBody:
         else:
             company_name = self.company_name
 
-        company_domain: Union[None, Unset, dict[str, Any]]
+        company_domain: dict[str, Any] | None | Unset
         if isinstance(self.company_domain, Unset):
             company_domain = UNSET
         elif isinstance(self.company_domain, KitchenSinkCompanyBodyCompanyDomainType0):
@@ -87,12 +95,13 @@ class KitchenSinkCompanyBody:
 
         num_companies = self.num_companies
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "apiKey": api_key,
-        })
+        field_dict.update(
+            {
+                "apiKey": api_key,
+            }
+        )
         if company_identifier is not UNSET:
             field_dict["companyIdentifier"] = company_identifier
         if company_name is not UNSET:
@@ -104,19 +113,32 @@ class KitchenSinkCompanyBody:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.kitchen_sink_company_body_company_identifier_type_2 import KitchenSinkCompanyBodyCompanyIdentifierType2
         from ..models.kitchen_sink_company_body_company_domain_type_0 import KitchenSinkCompanyBodyCompanyDomainType0
+        from ..models.kitchen_sink_company_body_company_identifier_type_0 import (
+            KitchenSinkCompanyBodyCompanyIdentifierType0,
+        )
+        from ..models.kitchen_sink_company_body_company_identifier_type_1 import (
+            KitchenSinkCompanyBodyCompanyIdentifierType1,
+        )
+        from ..models.kitchen_sink_company_body_company_identifier_type_2 import (
+            KitchenSinkCompanyBodyCompanyIdentifierType2,
+        )
         from ..models.kitchen_sink_company_body_company_name_type_0 import KitchenSinkCompanyBodyCompanyNameType0
-        from ..models.kitchen_sink_company_body_company_identifier_type_0 import KitchenSinkCompanyBodyCompanyIdentifierType0
-        from ..models.kitchen_sink_company_body_company_identifier_type_1 import KitchenSinkCompanyBodyCompanyIdentifierType1
+
         d = dict(src_dict)
         api_key = d.pop("apiKey")
 
-        def _parse_company_identifier(data: object) -> Union['KitchenSinkCompanyBodyCompanyIdentifierType0', 'KitchenSinkCompanyBodyCompanyIdentifierType1', 'KitchenSinkCompanyBodyCompanyIdentifierType2', None, Unset]:
+        def _parse_company_identifier(
+            data: object,
+        ) -> (
+            KitchenSinkCompanyBodyCompanyIdentifierType0
+            | KitchenSinkCompanyBodyCompanyIdentifierType1
+            | KitchenSinkCompanyBodyCompanyIdentifierType2
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -126,37 +148,37 @@ class KitchenSinkCompanyBody:
                     raise TypeError()
                 company_identifier_type_0 = KitchenSinkCompanyBodyCompanyIdentifierType0.from_dict(data)
 
-
-
                 return company_identifier_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 company_identifier_type_1 = KitchenSinkCompanyBodyCompanyIdentifierType1.from_dict(data)
 
-
-
                 return company_identifier_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 company_identifier_type_2 = KitchenSinkCompanyBodyCompanyIdentifierType2.from_dict(data)
 
-
-
                 return company_identifier_type_2
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['KitchenSinkCompanyBodyCompanyIdentifierType0', 'KitchenSinkCompanyBodyCompanyIdentifierType1', 'KitchenSinkCompanyBodyCompanyIdentifierType2', None, Unset], data)
+            return cast(
+                KitchenSinkCompanyBodyCompanyIdentifierType0
+                | KitchenSinkCompanyBodyCompanyIdentifierType1
+                | KitchenSinkCompanyBodyCompanyIdentifierType2
+                | None
+                | Unset,
+                data,
+            )
 
         company_identifier = _parse_company_identifier(d.pop("companyIdentifier", UNSET))
 
-
-        def _parse_company_name(data: object) -> Union['KitchenSinkCompanyBodyCompanyNameType0', None, Unset]:
+        def _parse_company_name(data: object) -> KitchenSinkCompanyBodyCompanyNameType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -166,17 +188,14 @@ class KitchenSinkCompanyBody:
                     raise TypeError()
                 company_name_type_0 = KitchenSinkCompanyBodyCompanyNameType0.from_dict(data)
 
-
-
                 return company_name_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['KitchenSinkCompanyBodyCompanyNameType0', None, Unset], data)
+            return cast(KitchenSinkCompanyBodyCompanyNameType0 | None | Unset, data)
 
         company_name = _parse_company_name(d.pop("companyName", UNSET))
 
-
-        def _parse_company_domain(data: object) -> Union['KitchenSinkCompanyBodyCompanyDomainType0', None, Unset]:
+        def _parse_company_domain(data: object) -> KitchenSinkCompanyBodyCompanyDomainType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -186,15 +205,12 @@ class KitchenSinkCompanyBody:
                     raise TypeError()
                 company_domain_type_0 = KitchenSinkCompanyBodyCompanyDomainType0.from_dict(data)
 
-
-
                 return company_domain_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['KitchenSinkCompanyBodyCompanyDomainType0', None, Unset], data)
+            return cast(KitchenSinkCompanyBodyCompanyDomainType0 | None | Unset, data)
 
         company_domain = _parse_company_domain(d.pop("companyDomain", UNSET))
-
 
         num_companies = d.pop("numCompanies", UNSET)
 
@@ -205,7 +221,6 @@ class KitchenSinkCompanyBody:
             company_domain=company_domain,
             num_companies=num_companies,
         )
-
 
         kitchen_sink_company_body.additional_properties = d
         return kitchen_sink_company_body

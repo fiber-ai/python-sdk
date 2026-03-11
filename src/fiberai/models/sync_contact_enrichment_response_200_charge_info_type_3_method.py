@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncContactEnrichmentResponse200ChargeInfoType3Method(str, Enum):
     FREE = "free"
 

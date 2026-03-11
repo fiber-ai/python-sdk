@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCurrentJobType0SeniorityType3Type1(str, Enum):
     ASSOCIATE = "Associate"
     DIRECTOR = "Director"

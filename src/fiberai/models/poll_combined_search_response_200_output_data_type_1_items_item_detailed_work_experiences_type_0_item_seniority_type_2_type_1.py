@@ -1,6 +1,9 @@
 from enum import Enum
 
-class PollCombinedSearchResponse200OutputDataType1ItemsItemDetailedWorkExperiencesType0ItemSeniorityType2Type1(str, Enum):
+
+class PollCombinedSearchResponse200OutputDataType1ItemsItemDetailedWorkExperiencesType0ItemSeniorityType2Type1(
+    str, Enum
+):
     ASSOCIATE = "Associate"
     DIRECTOR = "Director"
     ENTRY_LEVEL = "Entry level"

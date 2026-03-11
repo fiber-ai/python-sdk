@@ -1,55 +1,65 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.people_search_body_search_params_started_at_company_type_1_strategy import (
+    PeopleSearchBodySearchParamsStartedAtCompanyType1Strategy,
+)
 from ..types import UNSET, Unset
-
-from ..models.people_search_body_search_params_started_at_company_type_1_strategy import PeopleSearchBodySearchParamsStartedAtCompanyType1Strategy
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.people_search_body_search_params_started_at_company_type_1_window_type_1 import PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType1
-  from ..models.people_search_body_search_params_started_at_company_type_1_window_type_0 import PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0
-  from ..models.people_search_body_search_params_started_at_company_type_1_window_type_2 import PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2
-
-
-
+    from ..models.people_search_body_search_params_started_at_company_type_1_window_type_0 import (
+        PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0,
+    )
+    from ..models.people_search_body_search_params_started_at_company_type_1_window_type_1 import (
+        PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType1,
+    )
+    from ..models.people_search_body_search_params_started_at_company_type_1_window_type_2 import (
+        PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2,
+    )
 
 
 T = TypeVar("T", bound="PeopleSearchBodySearchParamsStartedAtCompanyType1")
 
 
-
 @_attrs_define
 class PeopleSearchBodySearchParamsStartedAtCompanyType1:
-    """ 
-        Attributes:
-            strategy (PeopleSearchBodySearchParamsStartedAtCompanyType1Strategy):
-            window (Union['PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0',
-                'PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType1',
-                'PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2', None, Unset]):
-     """
+    """
+    Attributes:
+        strategy (PeopleSearchBodySearchParamsStartedAtCompanyType1Strategy):
+        window (None | PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0 |
+            PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType1 |
+            PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2 | Unset):
+    """
 
     strategy: PeopleSearchBodySearchParamsStartedAtCompanyType1Strategy
-    window: Union['PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0', 'PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType1', 'PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2', None, Unset] = UNSET
+    window: (
+        None
+        | PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0
+        | PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType1
+        | PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.people_search_body_search_params_started_at_company_type_1_window_type_1 import PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType1
-        from ..models.people_search_body_search_params_started_at_company_type_1_window_type_0 import PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0
-        from ..models.people_search_body_search_params_started_at_company_type_1_window_type_2 import PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2
+        from ..models.people_search_body_search_params_started_at_company_type_1_window_type_0 import (
+            PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0,
+        )
+        from ..models.people_search_body_search_params_started_at_company_type_1_window_type_1 import (
+            PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType1,
+        )
+        from ..models.people_search_body_search_params_started_at_company_type_1_window_type_2 import (
+            PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2,
+        )
+
         strategy = self.strategy.value
 
-        window: Union[None, Unset, dict[str, Any]]
+        window: dict[str, Any] | None | Unset
         if isinstance(self.window, Unset):
             window = UNSET
         elif isinstance(self.window, PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0):
@@ -61,31 +71,42 @@ class PeopleSearchBodySearchParamsStartedAtCompanyType1:
         else:
             window = self.window
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "strategy": strategy,
-        })
+        field_dict.update(
+            {
+                "strategy": strategy,
+            }
+        )
         if window is not UNSET:
             field_dict["window"] = window
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.people_search_body_search_params_started_at_company_type_1_window_type_1 import PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType1
-        from ..models.people_search_body_search_params_started_at_company_type_1_window_type_0 import PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0
-        from ..models.people_search_body_search_params_started_at_company_type_1_window_type_2 import PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2
+        from ..models.people_search_body_search_params_started_at_company_type_1_window_type_0 import (
+            PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0,
+        )
+        from ..models.people_search_body_search_params_started_at_company_type_1_window_type_1 import (
+            PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType1,
+        )
+        from ..models.people_search_body_search_params_started_at_company_type_1_window_type_2 import (
+            PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2,
+        )
+
         d = dict(src_dict)
         strategy = PeopleSearchBodySearchParamsStartedAtCompanyType1Strategy(d.pop("strategy"))
 
-
-
-
-        def _parse_window(data: object) -> Union['PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0', 'PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType1', 'PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2', None, Unset]:
+        def _parse_window(
+            data: object,
+        ) -> (
+            None
+            | PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0
+            | PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType1
+            | PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -95,41 +116,40 @@ class PeopleSearchBodySearchParamsStartedAtCompanyType1:
                     raise TypeError()
                 window_type_0 = PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0.from_dict(data)
 
-
-
                 return window_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 window_type_1 = PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType1.from_dict(data)
 
-
-
                 return window_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 window_type_2 = PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2.from_dict(data)
 
-
-
                 return window_type_2
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0', 'PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType1', 'PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2', None, Unset], data)
+            return cast(
+                None
+                | PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType0
+                | PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType1
+                | PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2
+                | Unset,
+                data,
+            )
 
         window = _parse_window(d.pop("window", UNSET))
-
 
         people_search_body_search_params_started_at_company_type_1 = cls(
             strategy=strategy,
             window=window,
         )
-
 
         people_search_body_search_params_started_at_company_type_1.additional_properties = d
         return people_search_body_search_params_started_at_company_type_1

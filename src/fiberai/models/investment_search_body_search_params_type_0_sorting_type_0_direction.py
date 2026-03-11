@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class InvestmentSearchBodySearchParamsType0SortingType0Direction(str, Enum):
     ASC = "asc"
     DESC = "desc"

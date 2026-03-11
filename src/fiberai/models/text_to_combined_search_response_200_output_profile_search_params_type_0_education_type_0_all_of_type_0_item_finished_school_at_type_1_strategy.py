@@ -1,6 +1,9 @@
 from enum import Enum
 
-class TextToCombinedSearchResponse200OutputProfileSearchParamsType0EducationType0AllOfType0ItemFinishedSchoolAtType1Strategy(str, Enum):
+
+class TextToCombinedSearchResponse200OutputProfileSearchParamsType0EducationType0AllOfType0ItemFinishedSchoolAtType1Strategy(
+    str, Enum
+):
     RELATIVE = "relative"
 
     def __str__(self) -> str:

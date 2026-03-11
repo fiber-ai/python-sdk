@@ -1,6 +1,9 @@
 from enum import Enum
 
-class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2Which(str, Enum):
+
+class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2Which(
+    str, Enum
+):
     CURRENT = "current"
     PREVIOUS = "previous"
 

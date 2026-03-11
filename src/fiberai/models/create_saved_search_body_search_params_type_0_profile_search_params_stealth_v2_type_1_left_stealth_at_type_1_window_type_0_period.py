@@ -1,6 +1,9 @@
 from enum import Enum
 
-class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type1LeftStealthAtType1WindowType0Period(str, Enum):
+
+class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type1LeftStealthAtType1WindowType0Period(
+    str, Enum
+):
     DAY = "day"
     MONTH = "month"
     QUARTER = "quarter"

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyProfileParamsCompanyMatchModeType0Mode(str, Enum):
     STRICT = "strict"
 

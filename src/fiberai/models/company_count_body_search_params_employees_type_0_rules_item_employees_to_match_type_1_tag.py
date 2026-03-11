@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyCountBodySearchParamsEmployeesType0RulesItemEmployeesToMatchType1Tag(str, Enum):
     FINITERANGE = "finiteRange"
 

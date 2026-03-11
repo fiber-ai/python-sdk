@@ -1,185 +1,283 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.company_count_body_search_params_exact_company_type_0 import CompanyCountBodySearchParamsExactCompanyType0
-  from ..models.company_count_body_search_params_job_posting_stats_type_0 import CompanyCountBodySearchParamsJobPostingStatsType0
-  from ..models.company_count_body_search_params_tlds_type_0 import CompanyCountBodySearchParamsTldsType0
-  from ..models.company_count_body_search_params_fortune_rankings_type_0 import CompanyCountBodySearchParamsFortuneRankingsType0
-  from ..models.company_count_body_search_params_industries_v2_type_0 import CompanyCountBodySearchParamsIndustriesV2Type0
-  from ..models.company_count_body_search_params_last_funded_on_type_1 import CompanyCountBodySearchParamsLastFundedOnType1
-  from ..models.company_count_body_search_params_office_locations_v2_type_0 import CompanyCountBodySearchParamsOfficeLocationsV2Type0
-  from ..models.company_count_body_search_params_num_words_in_name_type_0 import CompanyCountBodySearchParamsNumWordsInNameType0
-  from ..models.company_count_body_search_params_founded_on_type_1 import CompanyCountBodySearchParamsFoundedOnType1
-  from ..models.company_count_body_search_params_employees_type_0 import CompanyCountBodySearchParamsEmployeesType0
-  from ..models.company_count_body_search_params_headquarters_state_name_type_0 import CompanyCountBodySearchParamsHeadquartersStateNameType0
-  from ..models.company_count_body_search_params_total_funding_usd_type_0 import CompanyCountBodySearchParamsTotalFundingUSDType0
-  from ..models.company_count_body_search_params_tags_type_0 import CompanyCountBodySearchParamsTagsType0
-  from ..models.company_count_body_search_params_crunchbase_category_groups_type_0 import CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0
-  from ..models.company_count_body_search_params_headquarters_country_code_type_0 import CompanyCountBodySearchParamsHeadquartersCountryCodeType0
-  from ..models.company_count_body_search_params_founded_on_type_0 import CompanyCountBodySearchParamsFoundedOnType0
-  from ..models.company_count_body_search_params_stage_type_0 import CompanyCountBodySearchParamsStageType0
-  from ..models.company_count_body_search_params_naics_codes_type_0 import CompanyCountBodySearchParamsNaicsCodesType0
-  from ..models.company_count_body_search_params_status_type_0 import CompanyCountBodySearchParamsStatusType0
-  from ..models.company_count_body_search_params_last_funded_on_type_0 import CompanyCountBodySearchParamsLastFundedOnType0
-  from ..models.company_count_body_search_params_last_funding_usd_type_0 import CompanyCountBodySearchParamsLastFundingUSDType0
-  from ..models.company_count_body_search_params_accelerators_v2_type_0 import CompanyCountBodySearchParamsAcceleratorsV2Type0
-  from ..models.company_count_body_search_params_revenue_usd_type_0 import CompanyCountBodySearchParamsRevenueUSDType0
-  from ..models.company_count_body_search_params_linkedin_industries_type_0 import CompanyCountBodySearchParamsLinkedinIndustriesType0
-  from ..models.company_count_body_search_params_investors_type_0 import CompanyCountBodySearchParamsInvestorsType0
-  from ..models.company_count_body_search_params_keywords_type_0 import CompanyCountBodySearchParamsKeywordsType0
-  from ..models.company_count_body_search_params_employee_count_v2_type_0 import CompanyCountBodySearchParamsEmployeeCountV2Type0
-  from ..models.company_count_body_search_params_technologies_type_0 import CompanyCountBodySearchParamsTechnologiesType0
-  from ..models.company_count_body_search_params_name_like_type_0 import CompanyCountBodySearchParamsNameLikeType0
-  from ..models.company_count_body_search_params_employee_trends_type_0 import CompanyCountBodySearchParamsEmployeeTrendsType0
-  from ..models.company_count_body_search_params_special_flags_type_0 import CompanyCountBodySearchParamsSpecialFlagsType0
-  from ..models.company_count_body_search_params_headquarters_location_type_0 import CompanyCountBodySearchParamsHeadquartersLocationType0
-  from ..models.company_count_body_search_params_crunchbase_categories_type_0 import CompanyCountBodySearchParamsCrunchbaseCategoriesType0
-  from ..models.company_count_body_search_params_job_postings_v2_type_0 import CompanyCountBodySearchParamsJobPostingsV2Type0
-  from ..models.company_count_body_search_params_exact_company_v2_type_0 import CompanyCountBodySearchParamsExactCompanyV2Type0
-
-
-
+    from ..models.company_count_body_search_params_accelerators_v2_type_0 import (
+        CompanyCountBodySearchParamsAcceleratorsV2Type0,
+    )
+    from ..models.company_count_body_search_params_crunchbase_categories_type_0 import (
+        CompanyCountBodySearchParamsCrunchbaseCategoriesType0,
+    )
+    from ..models.company_count_body_search_params_crunchbase_category_groups_type_0 import (
+        CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0,
+    )
+    from ..models.company_count_body_search_params_employee_count_v2_type_0 import (
+        CompanyCountBodySearchParamsEmployeeCountV2Type0,
+    )
+    from ..models.company_count_body_search_params_employee_trends_type_0 import (
+        CompanyCountBodySearchParamsEmployeeTrendsType0,
+    )
+    from ..models.company_count_body_search_params_employees_type_0 import CompanyCountBodySearchParamsEmployeesType0
+    from ..models.company_count_body_search_params_exact_company_type_0 import (
+        CompanyCountBodySearchParamsExactCompanyType0,
+    )
+    from ..models.company_count_body_search_params_exact_company_v2_type_0 import (
+        CompanyCountBodySearchParamsExactCompanyV2Type0,
+    )
+    from ..models.company_count_body_search_params_fortune_rankings_type_0 import (
+        CompanyCountBodySearchParamsFortuneRankingsType0,
+    )
+    from ..models.company_count_body_search_params_founded_on_type_0 import CompanyCountBodySearchParamsFoundedOnType0
+    from ..models.company_count_body_search_params_founded_on_type_1 import CompanyCountBodySearchParamsFoundedOnType1
+    from ..models.company_count_body_search_params_headquarters_country_code_type_0 import (
+        CompanyCountBodySearchParamsHeadquartersCountryCodeType0,
+    )
+    from ..models.company_count_body_search_params_headquarters_location_type_0 import (
+        CompanyCountBodySearchParamsHeadquartersLocationType0,
+    )
+    from ..models.company_count_body_search_params_headquarters_state_name_type_0 import (
+        CompanyCountBodySearchParamsHeadquartersStateNameType0,
+    )
+    from ..models.company_count_body_search_params_industries_v2_type_0 import (
+        CompanyCountBodySearchParamsIndustriesV2Type0,
+    )
+    from ..models.company_count_body_search_params_investors_type_0 import CompanyCountBodySearchParamsInvestorsType0
+    from ..models.company_count_body_search_params_job_posting_stats_type_0 import (
+        CompanyCountBodySearchParamsJobPostingStatsType0,
+    )
+    from ..models.company_count_body_search_params_job_postings_v2_type_0 import (
+        CompanyCountBodySearchParamsJobPostingsV2Type0,
+    )
+    from ..models.company_count_body_search_params_keywords_type_0 import CompanyCountBodySearchParamsKeywordsType0
+    from ..models.company_count_body_search_params_last_funded_on_type_0 import (
+        CompanyCountBodySearchParamsLastFundedOnType0,
+    )
+    from ..models.company_count_body_search_params_last_funded_on_type_1 import (
+        CompanyCountBodySearchParamsLastFundedOnType1,
+    )
+    from ..models.company_count_body_search_params_last_funding_usd_type_0 import (
+        CompanyCountBodySearchParamsLastFundingUSDType0,
+    )
+    from ..models.company_count_body_search_params_linkedin_industries_type_0 import (
+        CompanyCountBodySearchParamsLinkedinIndustriesType0,
+    )
+    from ..models.company_count_body_search_params_naics_codes_type_0 import CompanyCountBodySearchParamsNaicsCodesType0
+    from ..models.company_count_body_search_params_name_like_type_0 import CompanyCountBodySearchParamsNameLikeType0
+    from ..models.company_count_body_search_params_num_words_in_name_type_0 import (
+        CompanyCountBodySearchParamsNumWordsInNameType0,
+    )
+    from ..models.company_count_body_search_params_office_locations_v2_type_0 import (
+        CompanyCountBodySearchParamsOfficeLocationsV2Type0,
+    )
+    from ..models.company_count_body_search_params_revenue_usd_type_0 import CompanyCountBodySearchParamsRevenueUSDType0
+    from ..models.company_count_body_search_params_special_flags_type_0 import (
+        CompanyCountBodySearchParamsSpecialFlagsType0,
+    )
+    from ..models.company_count_body_search_params_stage_type_0 import CompanyCountBodySearchParamsStageType0
+    from ..models.company_count_body_search_params_status_type_0 import CompanyCountBodySearchParamsStatusType0
+    from ..models.company_count_body_search_params_tags_type_0 import CompanyCountBodySearchParamsTagsType0
+    from ..models.company_count_body_search_params_technologies_type_0 import (
+        CompanyCountBodySearchParamsTechnologiesType0,
+    )
+    from ..models.company_count_body_search_params_tlds_type_0 import CompanyCountBodySearchParamsTldsType0
+    from ..models.company_count_body_search_params_total_funding_usd_type_0 import (
+        CompanyCountBodySearchParamsTotalFundingUSDType0,
+    )
 
 
 T = TypeVar("T", bound="CompanyCountBodySearchParams")
 
 
-
 @_attrs_define
 class CompanyCountBodySearchParams:
-    """ Search parameters for company search API.
+    """Search parameters for company search API.
 
-        Attributes:
-            exact_company_v2 (Union['CompanyCountBodySearchParamsExactCompanyV2Type0', None, Unset]):
-            domains (Union[None, Unset, list[str]]):
-            headquarters_country_code (Union['CompanyCountBodySearchParamsHeadquartersCountryCodeType0', None, Unset]):
-            headquarters_state_name (Union['CompanyCountBodySearchParamsHeadquartersStateNameType0', None, Unset]):
-            employee_count_v2 (Union['CompanyCountBodySearchParamsEmployeeCountV2Type0', None, Unset]):
-            keywords (Union['CompanyCountBodySearchParamsKeywordsType0', None, Unset]):
-            industries_v2 (Union['CompanyCountBodySearchParamsIndustriesV2Type0', None, Unset]):
-            stage (Union['CompanyCountBodySearchParamsStageType0', None, Unset]):
-            total_funding_usd (Union['CompanyCountBodySearchParamsTotalFundingUSDType0', None, Unset]):
-            last_funding_usd (Union['CompanyCountBodySearchParamsLastFundingUSDType0', None, Unset]):
-            last_funded_on (Union['CompanyCountBodySearchParamsLastFundedOnType0',
-                'CompanyCountBodySearchParamsLastFundedOnType1', None, Unset]):
-            founded_on (Union['CompanyCountBodySearchParamsFoundedOnType0', 'CompanyCountBodySearchParamsFoundedOnType1',
-                None, Unset]):
-            name_like (Union['CompanyCountBodySearchParamsNameLikeType0', None, Unset]):
-            exact_company (Union['CompanyCountBodySearchParamsExactCompanyType0', None, Unset]):
-            accelerators_v2 (Union['CompanyCountBodySearchParamsAcceleratorsV2Type0', None, Unset]):
-            employee_trends (Union['CompanyCountBodySearchParamsEmployeeTrendsType0', None, Unset]):
-            headquarters_location (Union['CompanyCountBodySearchParamsHeadquartersLocationType0', None, Unset]):
-            linkedin_slugs (Union[None, Unset, list[str]]):
-            special_flags (Union['CompanyCountBodySearchParamsSpecialFlagsType0', None, Unset]):
-            employees (Union['CompanyCountBodySearchParamsEmployeesType0', None, Unset]):
-            revenue_usd (Union['CompanyCountBodySearchParamsRevenueUSDType0', None, Unset]):
-            naics_codes (Union['CompanyCountBodySearchParamsNaicsCodesType0', None, Unset]):
-            fortune_rankings (Union['CompanyCountBodySearchParamsFortuneRankingsType0', None, Unset]):
-            job_postings_v2 (Union['CompanyCountBodySearchParamsJobPostingsV2Type0', None, Unset]):
-            job_posting_stats (Union['CompanyCountBodySearchParamsJobPostingStatsType0', None, Unset]):
-            office_locations_v2 (Union['CompanyCountBodySearchParamsOfficeLocationsV2Type0', None, Unset]):
-            tlds (Union['CompanyCountBodySearchParamsTldsType0', None, Unset]):
-            num_words_in_name (Union['CompanyCountBodySearchParamsNumWordsInNameType0', None, Unset]):
-            status (Union['CompanyCountBodySearchParamsStatusType0', None, Unset]):
-            technologies (Union['CompanyCountBodySearchParamsTechnologiesType0', None, Unset]):
-            investors (Union['CompanyCountBodySearchParamsInvestorsType0', None, Unset]):
-            tags (Union['CompanyCountBodySearchParamsTagsType0', None, Unset]):
-            crunchbase_categories (Union['CompanyCountBodySearchParamsCrunchbaseCategoriesType0', None, Unset]):
-            crunchbase_category_groups (Union['CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0', None, Unset]):
-            linkedin_industries (Union['CompanyCountBodySearchParamsLinkedinIndustriesType0', None, Unset]):
-            crunchbase_slugs (Union[None, Unset, list[str]]):
-     """
+    Attributes:
+        exact_company_v2 (CompanyCountBodySearchParamsExactCompanyV2Type0 | None | Unset):
+        domains (list[str] | None | Unset):
+        headquarters_country_code (CompanyCountBodySearchParamsHeadquartersCountryCodeType0 | None | Unset):
+        headquarters_state_name (CompanyCountBodySearchParamsHeadquartersStateNameType0 | None | Unset):
+        employee_count_v2 (CompanyCountBodySearchParamsEmployeeCountV2Type0 | None | Unset):
+        keywords (CompanyCountBodySearchParamsKeywordsType0 | None | Unset):
+        industries_v2 (CompanyCountBodySearchParamsIndustriesV2Type0 | None | Unset):
+        stage (CompanyCountBodySearchParamsStageType0 | None | Unset):
+        total_funding_usd (CompanyCountBodySearchParamsTotalFundingUSDType0 | None | Unset):
+        last_funding_usd (CompanyCountBodySearchParamsLastFundingUSDType0 | None | Unset):
+        last_funded_on (CompanyCountBodySearchParamsLastFundedOnType0 | CompanyCountBodySearchParamsLastFundedOnType1 |
+            None | Unset):
+        founded_on (CompanyCountBodySearchParamsFoundedOnType0 | CompanyCountBodySearchParamsFoundedOnType1 | None |
+            Unset):
+        name_like (CompanyCountBodySearchParamsNameLikeType0 | None | Unset):
+        exact_company (CompanyCountBodySearchParamsExactCompanyType0 | None | Unset):
+        accelerators_v2 (CompanyCountBodySearchParamsAcceleratorsV2Type0 | None | Unset):
+        employee_trends (CompanyCountBodySearchParamsEmployeeTrendsType0 | None | Unset):
+        headquarters_location (CompanyCountBodySearchParamsHeadquartersLocationType0 | None | Unset):
+        linkedin_slugs (list[str] | None | Unset):
+        special_flags (CompanyCountBodySearchParamsSpecialFlagsType0 | None | Unset):
+        employees (CompanyCountBodySearchParamsEmployeesType0 | None | Unset):
+        revenue_usd (CompanyCountBodySearchParamsRevenueUSDType0 | None | Unset):
+        naics_codes (CompanyCountBodySearchParamsNaicsCodesType0 | None | Unset):
+        fortune_rankings (CompanyCountBodySearchParamsFortuneRankingsType0 | None | Unset):
+        job_postings_v2 (CompanyCountBodySearchParamsJobPostingsV2Type0 | None | Unset):
+        job_posting_stats (CompanyCountBodySearchParamsJobPostingStatsType0 | None | Unset):
+        office_locations_v2 (CompanyCountBodySearchParamsOfficeLocationsV2Type0 | None | Unset):
+        tlds (CompanyCountBodySearchParamsTldsType0 | None | Unset):
+        num_words_in_name (CompanyCountBodySearchParamsNumWordsInNameType0 | None | Unset):
+        status (CompanyCountBodySearchParamsStatusType0 | None | Unset):
+        technologies (CompanyCountBodySearchParamsTechnologiesType0 | None | Unset):
+        investors (CompanyCountBodySearchParamsInvestorsType0 | None | Unset):
+        tags (CompanyCountBodySearchParamsTagsType0 | None | Unset):
+        crunchbase_categories (CompanyCountBodySearchParamsCrunchbaseCategoriesType0 | None | Unset):
+        crunchbase_category_groups (CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0 | None | Unset):
+        linkedin_industries (CompanyCountBodySearchParamsLinkedinIndustriesType0 | None | Unset):
+        crunchbase_slugs (list[str] | None | Unset):
+    """
 
-    exact_company_v2: Union['CompanyCountBodySearchParamsExactCompanyV2Type0', None, Unset] = UNSET
-    domains: Union[None, Unset, list[str]] = UNSET
-    headquarters_country_code: Union['CompanyCountBodySearchParamsHeadquartersCountryCodeType0', None, Unset] = UNSET
-    headquarters_state_name: Union['CompanyCountBodySearchParamsHeadquartersStateNameType0', None, Unset] = UNSET
-    employee_count_v2: Union['CompanyCountBodySearchParamsEmployeeCountV2Type0', None, Unset] = UNSET
-    keywords: Union['CompanyCountBodySearchParamsKeywordsType0', None, Unset] = UNSET
-    industries_v2: Union['CompanyCountBodySearchParamsIndustriesV2Type0', None, Unset] = UNSET
-    stage: Union['CompanyCountBodySearchParamsStageType0', None, Unset] = UNSET
-    total_funding_usd: Union['CompanyCountBodySearchParamsTotalFundingUSDType0', None, Unset] = UNSET
-    last_funding_usd: Union['CompanyCountBodySearchParamsLastFundingUSDType0', None, Unset] = UNSET
-    last_funded_on: Union['CompanyCountBodySearchParamsLastFundedOnType0', 'CompanyCountBodySearchParamsLastFundedOnType1', None, Unset] = UNSET
-    founded_on: Union['CompanyCountBodySearchParamsFoundedOnType0', 'CompanyCountBodySearchParamsFoundedOnType1', None, Unset] = UNSET
-    name_like: Union['CompanyCountBodySearchParamsNameLikeType0', None, Unset] = UNSET
-    exact_company: Union['CompanyCountBodySearchParamsExactCompanyType0', None, Unset] = UNSET
-    accelerators_v2: Union['CompanyCountBodySearchParamsAcceleratorsV2Type0', None, Unset] = UNSET
-    employee_trends: Union['CompanyCountBodySearchParamsEmployeeTrendsType0', None, Unset] = UNSET
-    headquarters_location: Union['CompanyCountBodySearchParamsHeadquartersLocationType0', None, Unset] = UNSET
-    linkedin_slugs: Union[None, Unset, list[str]] = UNSET
-    special_flags: Union['CompanyCountBodySearchParamsSpecialFlagsType0', None, Unset] = UNSET
-    employees: Union['CompanyCountBodySearchParamsEmployeesType0', None, Unset] = UNSET
-    revenue_usd: Union['CompanyCountBodySearchParamsRevenueUSDType0', None, Unset] = UNSET
-    naics_codes: Union['CompanyCountBodySearchParamsNaicsCodesType0', None, Unset] = UNSET
-    fortune_rankings: Union['CompanyCountBodySearchParamsFortuneRankingsType0', None, Unset] = UNSET
-    job_postings_v2: Union['CompanyCountBodySearchParamsJobPostingsV2Type0', None, Unset] = UNSET
-    job_posting_stats: Union['CompanyCountBodySearchParamsJobPostingStatsType0', None, Unset] = UNSET
-    office_locations_v2: Union['CompanyCountBodySearchParamsOfficeLocationsV2Type0', None, Unset] = UNSET
-    tlds: Union['CompanyCountBodySearchParamsTldsType0', None, Unset] = UNSET
-    num_words_in_name: Union['CompanyCountBodySearchParamsNumWordsInNameType0', None, Unset] = UNSET
-    status: Union['CompanyCountBodySearchParamsStatusType0', None, Unset] = UNSET
-    technologies: Union['CompanyCountBodySearchParamsTechnologiesType0', None, Unset] = UNSET
-    investors: Union['CompanyCountBodySearchParamsInvestorsType0', None, Unset] = UNSET
-    tags: Union['CompanyCountBodySearchParamsTagsType0', None, Unset] = UNSET
-    crunchbase_categories: Union['CompanyCountBodySearchParamsCrunchbaseCategoriesType0', None, Unset] = UNSET
-    crunchbase_category_groups: Union['CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0', None, Unset] = UNSET
-    linkedin_industries: Union['CompanyCountBodySearchParamsLinkedinIndustriesType0', None, Unset] = UNSET
-    crunchbase_slugs: Union[None, Unset, list[str]] = UNSET
+    exact_company_v2: CompanyCountBodySearchParamsExactCompanyV2Type0 | None | Unset = UNSET
+    domains: list[str] | None | Unset = UNSET
+    headquarters_country_code: CompanyCountBodySearchParamsHeadquartersCountryCodeType0 | None | Unset = UNSET
+    headquarters_state_name: CompanyCountBodySearchParamsHeadquartersStateNameType0 | None | Unset = UNSET
+    employee_count_v2: CompanyCountBodySearchParamsEmployeeCountV2Type0 | None | Unset = UNSET
+    keywords: CompanyCountBodySearchParamsKeywordsType0 | None | Unset = UNSET
+    industries_v2: CompanyCountBodySearchParamsIndustriesV2Type0 | None | Unset = UNSET
+    stage: CompanyCountBodySearchParamsStageType0 | None | Unset = UNSET
+    total_funding_usd: CompanyCountBodySearchParamsTotalFundingUSDType0 | None | Unset = UNSET
+    last_funding_usd: CompanyCountBodySearchParamsLastFundingUSDType0 | None | Unset = UNSET
+    last_funded_on: (
+        CompanyCountBodySearchParamsLastFundedOnType0 | CompanyCountBodySearchParamsLastFundedOnType1 | None | Unset
+    ) = UNSET
+    founded_on: (
+        CompanyCountBodySearchParamsFoundedOnType0 | CompanyCountBodySearchParamsFoundedOnType1 | None | Unset
+    ) = UNSET
+    name_like: CompanyCountBodySearchParamsNameLikeType0 | None | Unset = UNSET
+    exact_company: CompanyCountBodySearchParamsExactCompanyType0 | None | Unset = UNSET
+    accelerators_v2: CompanyCountBodySearchParamsAcceleratorsV2Type0 | None | Unset = UNSET
+    employee_trends: CompanyCountBodySearchParamsEmployeeTrendsType0 | None | Unset = UNSET
+    headquarters_location: CompanyCountBodySearchParamsHeadquartersLocationType0 | None | Unset = UNSET
+    linkedin_slugs: list[str] | None | Unset = UNSET
+    special_flags: CompanyCountBodySearchParamsSpecialFlagsType0 | None | Unset = UNSET
+    employees: CompanyCountBodySearchParamsEmployeesType0 | None | Unset = UNSET
+    revenue_usd: CompanyCountBodySearchParamsRevenueUSDType0 | None | Unset = UNSET
+    naics_codes: CompanyCountBodySearchParamsNaicsCodesType0 | None | Unset = UNSET
+    fortune_rankings: CompanyCountBodySearchParamsFortuneRankingsType0 | None | Unset = UNSET
+    job_postings_v2: CompanyCountBodySearchParamsJobPostingsV2Type0 | None | Unset = UNSET
+    job_posting_stats: CompanyCountBodySearchParamsJobPostingStatsType0 | None | Unset = UNSET
+    office_locations_v2: CompanyCountBodySearchParamsOfficeLocationsV2Type0 | None | Unset = UNSET
+    tlds: CompanyCountBodySearchParamsTldsType0 | None | Unset = UNSET
+    num_words_in_name: CompanyCountBodySearchParamsNumWordsInNameType0 | None | Unset = UNSET
+    status: CompanyCountBodySearchParamsStatusType0 | None | Unset = UNSET
+    technologies: CompanyCountBodySearchParamsTechnologiesType0 | None | Unset = UNSET
+    investors: CompanyCountBodySearchParamsInvestorsType0 | None | Unset = UNSET
+    tags: CompanyCountBodySearchParamsTagsType0 | None | Unset = UNSET
+    crunchbase_categories: CompanyCountBodySearchParamsCrunchbaseCategoriesType0 | None | Unset = UNSET
+    crunchbase_category_groups: CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0 | None | Unset = UNSET
+    linkedin_industries: CompanyCountBodySearchParamsLinkedinIndustriesType0 | None | Unset = UNSET
+    crunchbase_slugs: list[str] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.company_count_body_search_params_exact_company_type_0 import CompanyCountBodySearchParamsExactCompanyType0
-        from ..models.company_count_body_search_params_job_posting_stats_type_0 import CompanyCountBodySearchParamsJobPostingStatsType0
-        from ..models.company_count_body_search_params_tlds_type_0 import CompanyCountBodySearchParamsTldsType0
-        from ..models.company_count_body_search_params_fortune_rankings_type_0 import CompanyCountBodySearchParamsFortuneRankingsType0
-        from ..models.company_count_body_search_params_industries_v2_type_0 import CompanyCountBodySearchParamsIndustriesV2Type0
-        from ..models.company_count_body_search_params_last_funded_on_type_1 import CompanyCountBodySearchParamsLastFundedOnType1
-        from ..models.company_count_body_search_params_office_locations_v2_type_0 import CompanyCountBodySearchParamsOfficeLocationsV2Type0
-        from ..models.company_count_body_search_params_num_words_in_name_type_0 import CompanyCountBodySearchParamsNumWordsInNameType0
-        from ..models.company_count_body_search_params_founded_on_type_1 import CompanyCountBodySearchParamsFoundedOnType1
-        from ..models.company_count_body_search_params_employees_type_0 import CompanyCountBodySearchParamsEmployeesType0
-        from ..models.company_count_body_search_params_headquarters_state_name_type_0 import CompanyCountBodySearchParamsHeadquartersStateNameType0
-        from ..models.company_count_body_search_params_total_funding_usd_type_0 import CompanyCountBodySearchParamsTotalFundingUSDType0
-        from ..models.company_count_body_search_params_tags_type_0 import CompanyCountBodySearchParamsTagsType0
-        from ..models.company_count_body_search_params_crunchbase_category_groups_type_0 import CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0
-        from ..models.company_count_body_search_params_headquarters_country_code_type_0 import CompanyCountBodySearchParamsHeadquartersCountryCodeType0
-        from ..models.company_count_body_search_params_founded_on_type_0 import CompanyCountBodySearchParamsFoundedOnType0
-        from ..models.company_count_body_search_params_stage_type_0 import CompanyCountBodySearchParamsStageType0
-        from ..models.company_count_body_search_params_naics_codes_type_0 import CompanyCountBodySearchParamsNaicsCodesType0
-        from ..models.company_count_body_search_params_status_type_0 import CompanyCountBodySearchParamsStatusType0
-        from ..models.company_count_body_search_params_last_funded_on_type_0 import CompanyCountBodySearchParamsLastFundedOnType0
-        from ..models.company_count_body_search_params_last_funding_usd_type_0 import CompanyCountBodySearchParamsLastFundingUSDType0
-        from ..models.company_count_body_search_params_accelerators_v2_type_0 import CompanyCountBodySearchParamsAcceleratorsV2Type0
-        from ..models.company_count_body_search_params_revenue_usd_type_0 import CompanyCountBodySearchParamsRevenueUSDType0
-        from ..models.company_count_body_search_params_linkedin_industries_type_0 import CompanyCountBodySearchParamsLinkedinIndustriesType0
-        from ..models.company_count_body_search_params_investors_type_0 import CompanyCountBodySearchParamsInvestorsType0
+        from ..models.company_count_body_search_params_accelerators_v2_type_0 import (
+            CompanyCountBodySearchParamsAcceleratorsV2Type0,
+        )
+        from ..models.company_count_body_search_params_crunchbase_categories_type_0 import (
+            CompanyCountBodySearchParamsCrunchbaseCategoriesType0,
+        )
+        from ..models.company_count_body_search_params_crunchbase_category_groups_type_0 import (
+            CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0,
+        )
+        from ..models.company_count_body_search_params_employee_count_v2_type_0 import (
+            CompanyCountBodySearchParamsEmployeeCountV2Type0,
+        )
+        from ..models.company_count_body_search_params_employee_trends_type_0 import (
+            CompanyCountBodySearchParamsEmployeeTrendsType0,
+        )
+        from ..models.company_count_body_search_params_employees_type_0 import (
+            CompanyCountBodySearchParamsEmployeesType0,
+        )
+        from ..models.company_count_body_search_params_exact_company_type_0 import (
+            CompanyCountBodySearchParamsExactCompanyType0,
+        )
+        from ..models.company_count_body_search_params_exact_company_v2_type_0 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0,
+        )
+        from ..models.company_count_body_search_params_fortune_rankings_type_0 import (
+            CompanyCountBodySearchParamsFortuneRankingsType0,
+        )
+        from ..models.company_count_body_search_params_founded_on_type_0 import (
+            CompanyCountBodySearchParamsFoundedOnType0,
+        )
+        from ..models.company_count_body_search_params_founded_on_type_1 import (
+            CompanyCountBodySearchParamsFoundedOnType1,
+        )
+        from ..models.company_count_body_search_params_headquarters_country_code_type_0 import (
+            CompanyCountBodySearchParamsHeadquartersCountryCodeType0,
+        )
+        from ..models.company_count_body_search_params_headquarters_location_type_0 import (
+            CompanyCountBodySearchParamsHeadquartersLocationType0,
+        )
+        from ..models.company_count_body_search_params_headquarters_state_name_type_0 import (
+            CompanyCountBodySearchParamsHeadquartersStateNameType0,
+        )
+        from ..models.company_count_body_search_params_industries_v2_type_0 import (
+            CompanyCountBodySearchParamsIndustriesV2Type0,
+        )
+        from ..models.company_count_body_search_params_investors_type_0 import (
+            CompanyCountBodySearchParamsInvestorsType0,
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0,
+        )
+        from ..models.company_count_body_search_params_job_postings_v2_type_0 import (
+            CompanyCountBodySearchParamsJobPostingsV2Type0,
+        )
         from ..models.company_count_body_search_params_keywords_type_0 import CompanyCountBodySearchParamsKeywordsType0
-        from ..models.company_count_body_search_params_employee_count_v2_type_0 import CompanyCountBodySearchParamsEmployeeCountV2Type0
-        from ..models.company_count_body_search_params_technologies_type_0 import CompanyCountBodySearchParamsTechnologiesType0
+        from ..models.company_count_body_search_params_last_funded_on_type_0 import (
+            CompanyCountBodySearchParamsLastFundedOnType0,
+        )
+        from ..models.company_count_body_search_params_last_funded_on_type_1 import (
+            CompanyCountBodySearchParamsLastFundedOnType1,
+        )
+        from ..models.company_count_body_search_params_last_funding_usd_type_0 import (
+            CompanyCountBodySearchParamsLastFundingUSDType0,
+        )
+        from ..models.company_count_body_search_params_linkedin_industries_type_0 import (
+            CompanyCountBodySearchParamsLinkedinIndustriesType0,
+        )
+        from ..models.company_count_body_search_params_naics_codes_type_0 import (
+            CompanyCountBodySearchParamsNaicsCodesType0,
+        )
         from ..models.company_count_body_search_params_name_like_type_0 import CompanyCountBodySearchParamsNameLikeType0
-        from ..models.company_count_body_search_params_employee_trends_type_0 import CompanyCountBodySearchParamsEmployeeTrendsType0
-        from ..models.company_count_body_search_params_special_flags_type_0 import CompanyCountBodySearchParamsSpecialFlagsType0
-        from ..models.company_count_body_search_params_headquarters_location_type_0 import CompanyCountBodySearchParamsHeadquartersLocationType0
-        from ..models.company_count_body_search_params_crunchbase_categories_type_0 import CompanyCountBodySearchParamsCrunchbaseCategoriesType0
-        from ..models.company_count_body_search_params_job_postings_v2_type_0 import CompanyCountBodySearchParamsJobPostingsV2Type0
-        from ..models.company_count_body_search_params_exact_company_v2_type_0 import CompanyCountBodySearchParamsExactCompanyV2Type0
-        exact_company_v2: Union[None, Unset, dict[str, Any]]
+        from ..models.company_count_body_search_params_num_words_in_name_type_0 import (
+            CompanyCountBodySearchParamsNumWordsInNameType0,
+        )
+        from ..models.company_count_body_search_params_office_locations_v2_type_0 import (
+            CompanyCountBodySearchParamsOfficeLocationsV2Type0,
+        )
+        from ..models.company_count_body_search_params_revenue_usd_type_0 import (
+            CompanyCountBodySearchParamsRevenueUSDType0,
+        )
+        from ..models.company_count_body_search_params_special_flags_type_0 import (
+            CompanyCountBodySearchParamsSpecialFlagsType0,
+        )
+        from ..models.company_count_body_search_params_stage_type_0 import CompanyCountBodySearchParamsStageType0
+        from ..models.company_count_body_search_params_status_type_0 import CompanyCountBodySearchParamsStatusType0
+        from ..models.company_count_body_search_params_tags_type_0 import CompanyCountBodySearchParamsTagsType0
+        from ..models.company_count_body_search_params_technologies_type_0 import (
+            CompanyCountBodySearchParamsTechnologiesType0,
+        )
+        from ..models.company_count_body_search_params_tlds_type_0 import CompanyCountBodySearchParamsTldsType0
+        from ..models.company_count_body_search_params_total_funding_usd_type_0 import (
+            CompanyCountBodySearchParamsTotalFundingUSDType0,
+        )
+
+        exact_company_v2: dict[str, Any] | None | Unset
         if isinstance(self.exact_company_v2, Unset):
             exact_company_v2 = UNSET
         elif isinstance(self.exact_company_v2, CompanyCountBodySearchParamsExactCompanyV2Type0):
@@ -187,17 +285,16 @@ class CompanyCountBodySearchParams:
         else:
             exact_company_v2 = self.exact_company_v2
 
-        domains: Union[None, Unset, list[str]]
+        domains: list[str] | None | Unset
         if isinstance(self.domains, Unset):
             domains = UNSET
         elif isinstance(self.domains, list):
             domains = self.domains
 
-
         else:
             domains = self.domains
 
-        headquarters_country_code: Union[None, Unset, dict[str, Any]]
+        headquarters_country_code: dict[str, Any] | None | Unset
         if isinstance(self.headquarters_country_code, Unset):
             headquarters_country_code = UNSET
         elif isinstance(self.headquarters_country_code, CompanyCountBodySearchParamsHeadquartersCountryCodeType0):
@@ -205,7 +302,7 @@ class CompanyCountBodySearchParams:
         else:
             headquarters_country_code = self.headquarters_country_code
 
-        headquarters_state_name: Union[None, Unset, dict[str, Any]]
+        headquarters_state_name: dict[str, Any] | None | Unset
         if isinstance(self.headquarters_state_name, Unset):
             headquarters_state_name = UNSET
         elif isinstance(self.headquarters_state_name, CompanyCountBodySearchParamsHeadquartersStateNameType0):
@@ -213,7 +310,7 @@ class CompanyCountBodySearchParams:
         else:
             headquarters_state_name = self.headquarters_state_name
 
-        employee_count_v2: Union[None, Unset, dict[str, Any]]
+        employee_count_v2: dict[str, Any] | None | Unset
         if isinstance(self.employee_count_v2, Unset):
             employee_count_v2 = UNSET
         elif isinstance(self.employee_count_v2, CompanyCountBodySearchParamsEmployeeCountV2Type0):
@@ -221,7 +318,7 @@ class CompanyCountBodySearchParams:
         else:
             employee_count_v2 = self.employee_count_v2
 
-        keywords: Union[None, Unset, dict[str, Any]]
+        keywords: dict[str, Any] | None | Unset
         if isinstance(self.keywords, Unset):
             keywords = UNSET
         elif isinstance(self.keywords, CompanyCountBodySearchParamsKeywordsType0):
@@ -229,7 +326,7 @@ class CompanyCountBodySearchParams:
         else:
             keywords = self.keywords
 
-        industries_v2: Union[None, Unset, dict[str, Any]]
+        industries_v2: dict[str, Any] | None | Unset
         if isinstance(self.industries_v2, Unset):
             industries_v2 = UNSET
         elif isinstance(self.industries_v2, CompanyCountBodySearchParamsIndustriesV2Type0):
@@ -237,7 +334,7 @@ class CompanyCountBodySearchParams:
         else:
             industries_v2 = self.industries_v2
 
-        stage: Union[None, Unset, dict[str, Any]]
+        stage: dict[str, Any] | None | Unset
         if isinstance(self.stage, Unset):
             stage = UNSET
         elif isinstance(self.stage, CompanyCountBodySearchParamsStageType0):
@@ -245,7 +342,7 @@ class CompanyCountBodySearchParams:
         else:
             stage = self.stage
 
-        total_funding_usd: Union[None, Unset, dict[str, Any]]
+        total_funding_usd: dict[str, Any] | None | Unset
         if isinstance(self.total_funding_usd, Unset):
             total_funding_usd = UNSET
         elif isinstance(self.total_funding_usd, CompanyCountBodySearchParamsTotalFundingUSDType0):
@@ -253,7 +350,7 @@ class CompanyCountBodySearchParams:
         else:
             total_funding_usd = self.total_funding_usd
 
-        last_funding_usd: Union[None, Unset, dict[str, Any]]
+        last_funding_usd: dict[str, Any] | None | Unset
         if isinstance(self.last_funding_usd, Unset):
             last_funding_usd = UNSET
         elif isinstance(self.last_funding_usd, CompanyCountBodySearchParamsLastFundingUSDType0):
@@ -261,7 +358,7 @@ class CompanyCountBodySearchParams:
         else:
             last_funding_usd = self.last_funding_usd
 
-        last_funded_on: Union[None, Unset, dict[str, Any]]
+        last_funded_on: dict[str, Any] | None | Unset
         if isinstance(self.last_funded_on, Unset):
             last_funded_on = UNSET
         elif isinstance(self.last_funded_on, CompanyCountBodySearchParamsLastFundedOnType0):
@@ -271,7 +368,7 @@ class CompanyCountBodySearchParams:
         else:
             last_funded_on = self.last_funded_on
 
-        founded_on: Union[None, Unset, dict[str, Any]]
+        founded_on: dict[str, Any] | None | Unset
         if isinstance(self.founded_on, Unset):
             founded_on = UNSET
         elif isinstance(self.founded_on, CompanyCountBodySearchParamsFoundedOnType0):
@@ -281,7 +378,7 @@ class CompanyCountBodySearchParams:
         else:
             founded_on = self.founded_on
 
-        name_like: Union[None, Unset, dict[str, Any]]
+        name_like: dict[str, Any] | None | Unset
         if isinstance(self.name_like, Unset):
             name_like = UNSET
         elif isinstance(self.name_like, CompanyCountBodySearchParamsNameLikeType0):
@@ -289,7 +386,7 @@ class CompanyCountBodySearchParams:
         else:
             name_like = self.name_like
 
-        exact_company: Union[None, Unset, dict[str, Any]]
+        exact_company: dict[str, Any] | None | Unset
         if isinstance(self.exact_company, Unset):
             exact_company = UNSET
         elif isinstance(self.exact_company, CompanyCountBodySearchParamsExactCompanyType0):
@@ -297,7 +394,7 @@ class CompanyCountBodySearchParams:
         else:
             exact_company = self.exact_company
 
-        accelerators_v2: Union[None, Unset, dict[str, Any]]
+        accelerators_v2: dict[str, Any] | None | Unset
         if isinstance(self.accelerators_v2, Unset):
             accelerators_v2 = UNSET
         elif isinstance(self.accelerators_v2, CompanyCountBodySearchParamsAcceleratorsV2Type0):
@@ -305,7 +402,7 @@ class CompanyCountBodySearchParams:
         else:
             accelerators_v2 = self.accelerators_v2
 
-        employee_trends: Union[None, Unset, dict[str, Any]]
+        employee_trends: dict[str, Any] | None | Unset
         if isinstance(self.employee_trends, Unset):
             employee_trends = UNSET
         elif isinstance(self.employee_trends, CompanyCountBodySearchParamsEmployeeTrendsType0):
@@ -313,7 +410,7 @@ class CompanyCountBodySearchParams:
         else:
             employee_trends = self.employee_trends
 
-        headquarters_location: Union[None, Unset, dict[str, Any]]
+        headquarters_location: dict[str, Any] | None | Unset
         if isinstance(self.headquarters_location, Unset):
             headquarters_location = UNSET
         elif isinstance(self.headquarters_location, CompanyCountBodySearchParamsHeadquartersLocationType0):
@@ -321,17 +418,16 @@ class CompanyCountBodySearchParams:
         else:
             headquarters_location = self.headquarters_location
 
-        linkedin_slugs: Union[None, Unset, list[str]]
+        linkedin_slugs: list[str] | None | Unset
         if isinstance(self.linkedin_slugs, Unset):
             linkedin_slugs = UNSET
         elif isinstance(self.linkedin_slugs, list):
             linkedin_slugs = self.linkedin_slugs
 
-
         else:
             linkedin_slugs = self.linkedin_slugs
 
-        special_flags: Union[None, Unset, dict[str, Any]]
+        special_flags: dict[str, Any] | None | Unset
         if isinstance(self.special_flags, Unset):
             special_flags = UNSET
         elif isinstance(self.special_flags, CompanyCountBodySearchParamsSpecialFlagsType0):
@@ -339,7 +435,7 @@ class CompanyCountBodySearchParams:
         else:
             special_flags = self.special_flags
 
-        employees: Union[None, Unset, dict[str, Any]]
+        employees: dict[str, Any] | None | Unset
         if isinstance(self.employees, Unset):
             employees = UNSET
         elif isinstance(self.employees, CompanyCountBodySearchParamsEmployeesType0):
@@ -347,7 +443,7 @@ class CompanyCountBodySearchParams:
         else:
             employees = self.employees
 
-        revenue_usd: Union[None, Unset, dict[str, Any]]
+        revenue_usd: dict[str, Any] | None | Unset
         if isinstance(self.revenue_usd, Unset):
             revenue_usd = UNSET
         elif isinstance(self.revenue_usd, CompanyCountBodySearchParamsRevenueUSDType0):
@@ -355,7 +451,7 @@ class CompanyCountBodySearchParams:
         else:
             revenue_usd = self.revenue_usd
 
-        naics_codes: Union[None, Unset, dict[str, Any]]
+        naics_codes: dict[str, Any] | None | Unset
         if isinstance(self.naics_codes, Unset):
             naics_codes = UNSET
         elif isinstance(self.naics_codes, CompanyCountBodySearchParamsNaicsCodesType0):
@@ -363,7 +459,7 @@ class CompanyCountBodySearchParams:
         else:
             naics_codes = self.naics_codes
 
-        fortune_rankings: Union[None, Unset, dict[str, Any]]
+        fortune_rankings: dict[str, Any] | None | Unset
         if isinstance(self.fortune_rankings, Unset):
             fortune_rankings = UNSET
         elif isinstance(self.fortune_rankings, CompanyCountBodySearchParamsFortuneRankingsType0):
@@ -371,7 +467,7 @@ class CompanyCountBodySearchParams:
         else:
             fortune_rankings = self.fortune_rankings
 
-        job_postings_v2: Union[None, Unset, dict[str, Any]]
+        job_postings_v2: dict[str, Any] | None | Unset
         if isinstance(self.job_postings_v2, Unset):
             job_postings_v2 = UNSET
         elif isinstance(self.job_postings_v2, CompanyCountBodySearchParamsJobPostingsV2Type0):
@@ -379,7 +475,7 @@ class CompanyCountBodySearchParams:
         else:
             job_postings_v2 = self.job_postings_v2
 
-        job_posting_stats: Union[None, Unset, dict[str, Any]]
+        job_posting_stats: dict[str, Any] | None | Unset
         if isinstance(self.job_posting_stats, Unset):
             job_posting_stats = UNSET
         elif isinstance(self.job_posting_stats, CompanyCountBodySearchParamsJobPostingStatsType0):
@@ -387,7 +483,7 @@ class CompanyCountBodySearchParams:
         else:
             job_posting_stats = self.job_posting_stats
 
-        office_locations_v2: Union[None, Unset, dict[str, Any]]
+        office_locations_v2: dict[str, Any] | None | Unset
         if isinstance(self.office_locations_v2, Unset):
             office_locations_v2 = UNSET
         elif isinstance(self.office_locations_v2, CompanyCountBodySearchParamsOfficeLocationsV2Type0):
@@ -395,7 +491,7 @@ class CompanyCountBodySearchParams:
         else:
             office_locations_v2 = self.office_locations_v2
 
-        tlds: Union[None, Unset, dict[str, Any]]
+        tlds: dict[str, Any] | None | Unset
         if isinstance(self.tlds, Unset):
             tlds = UNSET
         elif isinstance(self.tlds, CompanyCountBodySearchParamsTldsType0):
@@ -403,7 +499,7 @@ class CompanyCountBodySearchParams:
         else:
             tlds = self.tlds
 
-        num_words_in_name: Union[None, Unset, dict[str, Any]]
+        num_words_in_name: dict[str, Any] | None | Unset
         if isinstance(self.num_words_in_name, Unset):
             num_words_in_name = UNSET
         elif isinstance(self.num_words_in_name, CompanyCountBodySearchParamsNumWordsInNameType0):
@@ -411,7 +507,7 @@ class CompanyCountBodySearchParams:
         else:
             num_words_in_name = self.num_words_in_name
 
-        status: Union[None, Unset, dict[str, Any]]
+        status: dict[str, Any] | None | Unset
         if isinstance(self.status, Unset):
             status = UNSET
         elif isinstance(self.status, CompanyCountBodySearchParamsStatusType0):
@@ -419,7 +515,7 @@ class CompanyCountBodySearchParams:
         else:
             status = self.status
 
-        technologies: Union[None, Unset, dict[str, Any]]
+        technologies: dict[str, Any] | None | Unset
         if isinstance(self.technologies, Unset):
             technologies = UNSET
         elif isinstance(self.technologies, CompanyCountBodySearchParamsTechnologiesType0):
@@ -427,7 +523,7 @@ class CompanyCountBodySearchParams:
         else:
             technologies = self.technologies
 
-        investors: Union[None, Unset, dict[str, Any]]
+        investors: dict[str, Any] | None | Unset
         if isinstance(self.investors, Unset):
             investors = UNSET
         elif isinstance(self.investors, CompanyCountBodySearchParamsInvestorsType0):
@@ -435,7 +531,7 @@ class CompanyCountBodySearchParams:
         else:
             investors = self.investors
 
-        tags: Union[None, Unset, dict[str, Any]]
+        tags: dict[str, Any] | None | Unset
         if isinstance(self.tags, Unset):
             tags = UNSET
         elif isinstance(self.tags, CompanyCountBodySearchParamsTagsType0):
@@ -443,7 +539,7 @@ class CompanyCountBodySearchParams:
         else:
             tags = self.tags
 
-        crunchbase_categories: Union[None, Unset, dict[str, Any]]
+        crunchbase_categories: dict[str, Any] | None | Unset
         if isinstance(self.crunchbase_categories, Unset):
             crunchbase_categories = UNSET
         elif isinstance(self.crunchbase_categories, CompanyCountBodySearchParamsCrunchbaseCategoriesType0):
@@ -451,7 +547,7 @@ class CompanyCountBodySearchParams:
         else:
             crunchbase_categories = self.crunchbase_categories
 
-        crunchbase_category_groups: Union[None, Unset, dict[str, Any]]
+        crunchbase_category_groups: dict[str, Any] | None | Unset
         if isinstance(self.crunchbase_category_groups, Unset):
             crunchbase_category_groups = UNSET
         elif isinstance(self.crunchbase_category_groups, CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0):
@@ -459,7 +555,7 @@ class CompanyCountBodySearchParams:
         else:
             crunchbase_category_groups = self.crunchbase_category_groups
 
-        linkedin_industries: Union[None, Unset, dict[str, Any]]
+        linkedin_industries: dict[str, Any] | None | Unset
         if isinstance(self.linkedin_industries, Unset):
             linkedin_industries = UNSET
         elif isinstance(self.linkedin_industries, CompanyCountBodySearchParamsLinkedinIndustriesType0):
@@ -467,21 +563,18 @@ class CompanyCountBodySearchParams:
         else:
             linkedin_industries = self.linkedin_industries
 
-        crunchbase_slugs: Union[None, Unset, list[str]]
+        crunchbase_slugs: list[str] | None | Unset
         if isinstance(self.crunchbase_slugs, Unset):
             crunchbase_slugs = UNSET
         elif isinstance(self.crunchbase_slugs, list):
             crunchbase_slugs = self.crunchbase_slugs
 
-
         else:
             crunchbase_slugs = self.crunchbase_slugs
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if exact_company_v2 is not UNSET:
             field_dict["exactCompanyV2"] = exact_company_v2
         if domains is not UNSET:
@@ -557,47 +650,105 @@ class CompanyCountBodySearchParams:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.company_count_body_search_params_exact_company_type_0 import CompanyCountBodySearchParamsExactCompanyType0
-        from ..models.company_count_body_search_params_job_posting_stats_type_0 import CompanyCountBodySearchParamsJobPostingStatsType0
-        from ..models.company_count_body_search_params_tlds_type_0 import CompanyCountBodySearchParamsTldsType0
-        from ..models.company_count_body_search_params_fortune_rankings_type_0 import CompanyCountBodySearchParamsFortuneRankingsType0
-        from ..models.company_count_body_search_params_industries_v2_type_0 import CompanyCountBodySearchParamsIndustriesV2Type0
-        from ..models.company_count_body_search_params_last_funded_on_type_1 import CompanyCountBodySearchParamsLastFundedOnType1
-        from ..models.company_count_body_search_params_office_locations_v2_type_0 import CompanyCountBodySearchParamsOfficeLocationsV2Type0
-        from ..models.company_count_body_search_params_num_words_in_name_type_0 import CompanyCountBodySearchParamsNumWordsInNameType0
-        from ..models.company_count_body_search_params_founded_on_type_1 import CompanyCountBodySearchParamsFoundedOnType1
-        from ..models.company_count_body_search_params_employees_type_0 import CompanyCountBodySearchParamsEmployeesType0
-        from ..models.company_count_body_search_params_headquarters_state_name_type_0 import CompanyCountBodySearchParamsHeadquartersStateNameType0
-        from ..models.company_count_body_search_params_total_funding_usd_type_0 import CompanyCountBodySearchParamsTotalFundingUSDType0
-        from ..models.company_count_body_search_params_tags_type_0 import CompanyCountBodySearchParamsTagsType0
-        from ..models.company_count_body_search_params_crunchbase_category_groups_type_0 import CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0
-        from ..models.company_count_body_search_params_headquarters_country_code_type_0 import CompanyCountBodySearchParamsHeadquartersCountryCodeType0
-        from ..models.company_count_body_search_params_founded_on_type_0 import CompanyCountBodySearchParamsFoundedOnType0
-        from ..models.company_count_body_search_params_stage_type_0 import CompanyCountBodySearchParamsStageType0
-        from ..models.company_count_body_search_params_naics_codes_type_0 import CompanyCountBodySearchParamsNaicsCodesType0
-        from ..models.company_count_body_search_params_status_type_0 import CompanyCountBodySearchParamsStatusType0
-        from ..models.company_count_body_search_params_last_funded_on_type_0 import CompanyCountBodySearchParamsLastFundedOnType0
-        from ..models.company_count_body_search_params_last_funding_usd_type_0 import CompanyCountBodySearchParamsLastFundingUSDType0
-        from ..models.company_count_body_search_params_accelerators_v2_type_0 import CompanyCountBodySearchParamsAcceleratorsV2Type0
-        from ..models.company_count_body_search_params_revenue_usd_type_0 import CompanyCountBodySearchParamsRevenueUSDType0
-        from ..models.company_count_body_search_params_linkedin_industries_type_0 import CompanyCountBodySearchParamsLinkedinIndustriesType0
-        from ..models.company_count_body_search_params_investors_type_0 import CompanyCountBodySearchParamsInvestorsType0
+        from ..models.company_count_body_search_params_accelerators_v2_type_0 import (
+            CompanyCountBodySearchParamsAcceleratorsV2Type0,
+        )
+        from ..models.company_count_body_search_params_crunchbase_categories_type_0 import (
+            CompanyCountBodySearchParamsCrunchbaseCategoriesType0,
+        )
+        from ..models.company_count_body_search_params_crunchbase_category_groups_type_0 import (
+            CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0,
+        )
+        from ..models.company_count_body_search_params_employee_count_v2_type_0 import (
+            CompanyCountBodySearchParamsEmployeeCountV2Type0,
+        )
+        from ..models.company_count_body_search_params_employee_trends_type_0 import (
+            CompanyCountBodySearchParamsEmployeeTrendsType0,
+        )
+        from ..models.company_count_body_search_params_employees_type_0 import (
+            CompanyCountBodySearchParamsEmployeesType0,
+        )
+        from ..models.company_count_body_search_params_exact_company_type_0 import (
+            CompanyCountBodySearchParamsExactCompanyType0,
+        )
+        from ..models.company_count_body_search_params_exact_company_v2_type_0 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0,
+        )
+        from ..models.company_count_body_search_params_fortune_rankings_type_0 import (
+            CompanyCountBodySearchParamsFortuneRankingsType0,
+        )
+        from ..models.company_count_body_search_params_founded_on_type_0 import (
+            CompanyCountBodySearchParamsFoundedOnType0,
+        )
+        from ..models.company_count_body_search_params_founded_on_type_1 import (
+            CompanyCountBodySearchParamsFoundedOnType1,
+        )
+        from ..models.company_count_body_search_params_headquarters_country_code_type_0 import (
+            CompanyCountBodySearchParamsHeadquartersCountryCodeType0,
+        )
+        from ..models.company_count_body_search_params_headquarters_location_type_0 import (
+            CompanyCountBodySearchParamsHeadquartersLocationType0,
+        )
+        from ..models.company_count_body_search_params_headquarters_state_name_type_0 import (
+            CompanyCountBodySearchParamsHeadquartersStateNameType0,
+        )
+        from ..models.company_count_body_search_params_industries_v2_type_0 import (
+            CompanyCountBodySearchParamsIndustriesV2Type0,
+        )
+        from ..models.company_count_body_search_params_investors_type_0 import (
+            CompanyCountBodySearchParamsInvestorsType0,
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0,
+        )
+        from ..models.company_count_body_search_params_job_postings_v2_type_0 import (
+            CompanyCountBodySearchParamsJobPostingsV2Type0,
+        )
         from ..models.company_count_body_search_params_keywords_type_0 import CompanyCountBodySearchParamsKeywordsType0
-        from ..models.company_count_body_search_params_employee_count_v2_type_0 import CompanyCountBodySearchParamsEmployeeCountV2Type0
-        from ..models.company_count_body_search_params_technologies_type_0 import CompanyCountBodySearchParamsTechnologiesType0
+        from ..models.company_count_body_search_params_last_funded_on_type_0 import (
+            CompanyCountBodySearchParamsLastFundedOnType0,
+        )
+        from ..models.company_count_body_search_params_last_funded_on_type_1 import (
+            CompanyCountBodySearchParamsLastFundedOnType1,
+        )
+        from ..models.company_count_body_search_params_last_funding_usd_type_0 import (
+            CompanyCountBodySearchParamsLastFundingUSDType0,
+        )
+        from ..models.company_count_body_search_params_linkedin_industries_type_0 import (
+            CompanyCountBodySearchParamsLinkedinIndustriesType0,
+        )
+        from ..models.company_count_body_search_params_naics_codes_type_0 import (
+            CompanyCountBodySearchParamsNaicsCodesType0,
+        )
         from ..models.company_count_body_search_params_name_like_type_0 import CompanyCountBodySearchParamsNameLikeType0
-        from ..models.company_count_body_search_params_employee_trends_type_0 import CompanyCountBodySearchParamsEmployeeTrendsType0
-        from ..models.company_count_body_search_params_special_flags_type_0 import CompanyCountBodySearchParamsSpecialFlagsType0
-        from ..models.company_count_body_search_params_headquarters_location_type_0 import CompanyCountBodySearchParamsHeadquartersLocationType0
-        from ..models.company_count_body_search_params_crunchbase_categories_type_0 import CompanyCountBodySearchParamsCrunchbaseCategoriesType0
-        from ..models.company_count_body_search_params_job_postings_v2_type_0 import CompanyCountBodySearchParamsJobPostingsV2Type0
-        from ..models.company_count_body_search_params_exact_company_v2_type_0 import CompanyCountBodySearchParamsExactCompanyV2Type0
+        from ..models.company_count_body_search_params_num_words_in_name_type_0 import (
+            CompanyCountBodySearchParamsNumWordsInNameType0,
+        )
+        from ..models.company_count_body_search_params_office_locations_v2_type_0 import (
+            CompanyCountBodySearchParamsOfficeLocationsV2Type0,
+        )
+        from ..models.company_count_body_search_params_revenue_usd_type_0 import (
+            CompanyCountBodySearchParamsRevenueUSDType0,
+        )
+        from ..models.company_count_body_search_params_special_flags_type_0 import (
+            CompanyCountBodySearchParamsSpecialFlagsType0,
+        )
+        from ..models.company_count_body_search_params_stage_type_0 import CompanyCountBodySearchParamsStageType0
+        from ..models.company_count_body_search_params_status_type_0 import CompanyCountBodySearchParamsStatusType0
+        from ..models.company_count_body_search_params_tags_type_0 import CompanyCountBodySearchParamsTagsType0
+        from ..models.company_count_body_search_params_technologies_type_0 import (
+            CompanyCountBodySearchParamsTechnologiesType0,
+        )
+        from ..models.company_count_body_search_params_tlds_type_0 import CompanyCountBodySearchParamsTldsType0
+        from ..models.company_count_body_search_params_total_funding_usd_type_0 import (
+            CompanyCountBodySearchParamsTotalFundingUSDType0,
+        )
+
         d = dict(src_dict)
-        def _parse_exact_company_v2(data: object) -> Union['CompanyCountBodySearchParamsExactCompanyV2Type0', None, Unset]:
+
+        def _parse_exact_company_v2(data: object) -> CompanyCountBodySearchParamsExactCompanyV2Type0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -607,17 +758,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 exact_company_v2_type_0 = CompanyCountBodySearchParamsExactCompanyV2Type0.from_dict(data)
 
-
-
                 return exact_company_v2_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsExactCompanyV2Type0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsExactCompanyV2Type0 | None | Unset, data)
 
         exact_company_v2 = _parse_exact_company_v2(d.pop("exactCompanyV2", UNSET))
 
-
-        def _parse_domains(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_domains(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -628,14 +776,15 @@ class CompanyCountBodySearchParams:
                 domains_type_0 = cast(list[str], data)
 
                 return domains_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         domains = _parse_domains(d.pop("domains", UNSET))
 
-
-        def _parse_headquarters_country_code(data: object) -> Union['CompanyCountBodySearchParamsHeadquartersCountryCodeType0', None, Unset]:
+        def _parse_headquarters_country_code(
+            data: object,
+        ) -> CompanyCountBodySearchParamsHeadquartersCountryCodeType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -643,19 +792,20 @@ class CompanyCountBodySearchParams:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                headquarters_country_code_type_0 = CompanyCountBodySearchParamsHeadquartersCountryCodeType0.from_dict(data)
-
-
+                headquarters_country_code_type_0 = CompanyCountBodySearchParamsHeadquartersCountryCodeType0.from_dict(
+                    data
+                )
 
                 return headquarters_country_code_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsHeadquartersCountryCodeType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsHeadquartersCountryCodeType0 | None | Unset, data)
 
         headquarters_country_code = _parse_headquarters_country_code(d.pop("headquartersCountryCode", UNSET))
 
-
-        def _parse_headquarters_state_name(data: object) -> Union['CompanyCountBodySearchParamsHeadquartersStateNameType0', None, Unset]:
+        def _parse_headquarters_state_name(
+            data: object,
+        ) -> CompanyCountBodySearchParamsHeadquartersStateNameType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -665,17 +815,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 headquarters_state_name_type_0 = CompanyCountBodySearchParamsHeadquartersStateNameType0.from_dict(data)
 
-
-
                 return headquarters_state_name_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsHeadquartersStateNameType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsHeadquartersStateNameType0 | None | Unset, data)
 
         headquarters_state_name = _parse_headquarters_state_name(d.pop("headquartersStateName", UNSET))
 
-
-        def _parse_employee_count_v2(data: object) -> Union['CompanyCountBodySearchParamsEmployeeCountV2Type0', None, Unset]:
+        def _parse_employee_count_v2(data: object) -> CompanyCountBodySearchParamsEmployeeCountV2Type0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -685,17 +832,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 employee_count_v2_type_0 = CompanyCountBodySearchParamsEmployeeCountV2Type0.from_dict(data)
 
-
-
                 return employee_count_v2_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsEmployeeCountV2Type0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsEmployeeCountV2Type0 | None | Unset, data)
 
         employee_count_v2 = _parse_employee_count_v2(d.pop("employeeCountV2", UNSET))
 
-
-        def _parse_keywords(data: object) -> Union['CompanyCountBodySearchParamsKeywordsType0', None, Unset]:
+        def _parse_keywords(data: object) -> CompanyCountBodySearchParamsKeywordsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -705,17 +849,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 keywords_type_0 = CompanyCountBodySearchParamsKeywordsType0.from_dict(data)
 
-
-
                 return keywords_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsKeywordsType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsKeywordsType0 | None | Unset, data)
 
         keywords = _parse_keywords(d.pop("keywords", UNSET))
 
-
-        def _parse_industries_v2(data: object) -> Union['CompanyCountBodySearchParamsIndustriesV2Type0', None, Unset]:
+        def _parse_industries_v2(data: object) -> CompanyCountBodySearchParamsIndustriesV2Type0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -725,17 +866,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 industries_v2_type_0 = CompanyCountBodySearchParamsIndustriesV2Type0.from_dict(data)
 
-
-
                 return industries_v2_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsIndustriesV2Type0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsIndustriesV2Type0 | None | Unset, data)
 
         industries_v2 = _parse_industries_v2(d.pop("industriesV2", UNSET))
 
-
-        def _parse_stage(data: object) -> Union['CompanyCountBodySearchParamsStageType0', None, Unset]:
+        def _parse_stage(data: object) -> CompanyCountBodySearchParamsStageType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -745,17 +883,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 stage_type_0 = CompanyCountBodySearchParamsStageType0.from_dict(data)
 
-
-
                 return stage_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsStageType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsStageType0 | None | Unset, data)
 
         stage = _parse_stage(d.pop("stage", UNSET))
 
-
-        def _parse_total_funding_usd(data: object) -> Union['CompanyCountBodySearchParamsTotalFundingUSDType0', None, Unset]:
+        def _parse_total_funding_usd(data: object) -> CompanyCountBodySearchParamsTotalFundingUSDType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -765,17 +900,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 total_funding_usd_type_0 = CompanyCountBodySearchParamsTotalFundingUSDType0.from_dict(data)
 
-
-
                 return total_funding_usd_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsTotalFundingUSDType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsTotalFundingUSDType0 | None | Unset, data)
 
         total_funding_usd = _parse_total_funding_usd(d.pop("totalFundingUSD", UNSET))
 
-
-        def _parse_last_funding_usd(data: object) -> Union['CompanyCountBodySearchParamsLastFundingUSDType0', None, Unset]:
+        def _parse_last_funding_usd(data: object) -> CompanyCountBodySearchParamsLastFundingUSDType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -785,17 +917,18 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 last_funding_usd_type_0 = CompanyCountBodySearchParamsLastFundingUSDType0.from_dict(data)
 
-
-
                 return last_funding_usd_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsLastFundingUSDType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsLastFundingUSDType0 | None | Unset, data)
 
         last_funding_usd = _parse_last_funding_usd(d.pop("lastFundingUSD", UNSET))
 
-
-        def _parse_last_funded_on(data: object) -> Union['CompanyCountBodySearchParamsLastFundedOnType0', 'CompanyCountBodySearchParamsLastFundedOnType1', None, Unset]:
+        def _parse_last_funded_on(
+            data: object,
+        ) -> (
+            CompanyCountBodySearchParamsLastFundedOnType0 | CompanyCountBodySearchParamsLastFundedOnType1 | None | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -805,27 +938,30 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 last_funded_on_type_0 = CompanyCountBodySearchParamsLastFundedOnType0.from_dict(data)
 
-
-
                 return last_funded_on_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 last_funded_on_type_1 = CompanyCountBodySearchParamsLastFundedOnType1.from_dict(data)
 
-
-
                 return last_funded_on_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsLastFundedOnType0', 'CompanyCountBodySearchParamsLastFundedOnType1', None, Unset], data)
+            return cast(
+                CompanyCountBodySearchParamsLastFundedOnType0
+                | CompanyCountBodySearchParamsLastFundedOnType1
+                | None
+                | Unset,
+                data,
+            )
 
         last_funded_on = _parse_last_funded_on(d.pop("lastFundedOn", UNSET))
 
-
-        def _parse_founded_on(data: object) -> Union['CompanyCountBodySearchParamsFoundedOnType0', 'CompanyCountBodySearchParamsFoundedOnType1', None, Unset]:
+        def _parse_founded_on(
+            data: object,
+        ) -> CompanyCountBodySearchParamsFoundedOnType0 | CompanyCountBodySearchParamsFoundedOnType1 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -835,27 +971,25 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 founded_on_type_0 = CompanyCountBodySearchParamsFoundedOnType0.from_dict(data)
 
-
-
                 return founded_on_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 founded_on_type_1 = CompanyCountBodySearchParamsFoundedOnType1.from_dict(data)
 
-
-
                 return founded_on_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsFoundedOnType0', 'CompanyCountBodySearchParamsFoundedOnType1', None, Unset], data)
+            return cast(
+                CompanyCountBodySearchParamsFoundedOnType0 | CompanyCountBodySearchParamsFoundedOnType1 | None | Unset,
+                data,
+            )
 
         founded_on = _parse_founded_on(d.pop("foundedOn", UNSET))
 
-
-        def _parse_name_like(data: object) -> Union['CompanyCountBodySearchParamsNameLikeType0', None, Unset]:
+        def _parse_name_like(data: object) -> CompanyCountBodySearchParamsNameLikeType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -865,17 +999,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 name_like_type_0 = CompanyCountBodySearchParamsNameLikeType0.from_dict(data)
 
-
-
                 return name_like_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsNameLikeType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsNameLikeType0 | None | Unset, data)
 
         name_like = _parse_name_like(d.pop("nameLike", UNSET))
 
-
-        def _parse_exact_company(data: object) -> Union['CompanyCountBodySearchParamsExactCompanyType0', None, Unset]:
+        def _parse_exact_company(data: object) -> CompanyCountBodySearchParamsExactCompanyType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -885,17 +1016,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 exact_company_type_0 = CompanyCountBodySearchParamsExactCompanyType0.from_dict(data)
 
-
-
                 return exact_company_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsExactCompanyType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsExactCompanyType0 | None | Unset, data)
 
         exact_company = _parse_exact_company(d.pop("exactCompany", UNSET))
 
-
-        def _parse_accelerators_v2(data: object) -> Union['CompanyCountBodySearchParamsAcceleratorsV2Type0', None, Unset]:
+        def _parse_accelerators_v2(data: object) -> CompanyCountBodySearchParamsAcceleratorsV2Type0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -905,17 +1033,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 accelerators_v2_type_0 = CompanyCountBodySearchParamsAcceleratorsV2Type0.from_dict(data)
 
-
-
                 return accelerators_v2_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsAcceleratorsV2Type0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsAcceleratorsV2Type0 | None | Unset, data)
 
         accelerators_v2 = _parse_accelerators_v2(d.pop("acceleratorsV2", UNSET))
 
-
-        def _parse_employee_trends(data: object) -> Union['CompanyCountBodySearchParamsEmployeeTrendsType0', None, Unset]:
+        def _parse_employee_trends(data: object) -> CompanyCountBodySearchParamsEmployeeTrendsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -925,17 +1050,16 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 employee_trends_type_0 = CompanyCountBodySearchParamsEmployeeTrendsType0.from_dict(data)
 
-
-
                 return employee_trends_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsEmployeeTrendsType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsEmployeeTrendsType0 | None | Unset, data)
 
         employee_trends = _parse_employee_trends(d.pop("employeeTrends", UNSET))
 
-
-        def _parse_headquarters_location(data: object) -> Union['CompanyCountBodySearchParamsHeadquartersLocationType0', None, Unset]:
+        def _parse_headquarters_location(
+            data: object,
+        ) -> CompanyCountBodySearchParamsHeadquartersLocationType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -945,17 +1069,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 headquarters_location_type_0 = CompanyCountBodySearchParamsHeadquartersLocationType0.from_dict(data)
 
-
-
                 return headquarters_location_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsHeadquartersLocationType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsHeadquartersLocationType0 | None | Unset, data)
 
         headquarters_location = _parse_headquarters_location(d.pop("headquartersLocation", UNSET))
 
-
-        def _parse_linkedin_slugs(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_linkedin_slugs(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -966,14 +1087,13 @@ class CompanyCountBodySearchParams:
                 linkedin_slugs_type_0 = cast(list[str], data)
 
                 return linkedin_slugs_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         linkedin_slugs = _parse_linkedin_slugs(d.pop("linkedinSlugs", UNSET))
 
-
-        def _parse_special_flags(data: object) -> Union['CompanyCountBodySearchParamsSpecialFlagsType0', None, Unset]:
+        def _parse_special_flags(data: object) -> CompanyCountBodySearchParamsSpecialFlagsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -983,17 +1103,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 special_flags_type_0 = CompanyCountBodySearchParamsSpecialFlagsType0.from_dict(data)
 
-
-
                 return special_flags_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsSpecialFlagsType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsSpecialFlagsType0 | None | Unset, data)
 
         special_flags = _parse_special_flags(d.pop("specialFlags", UNSET))
 
-
-        def _parse_employees(data: object) -> Union['CompanyCountBodySearchParamsEmployeesType0', None, Unset]:
+        def _parse_employees(data: object) -> CompanyCountBodySearchParamsEmployeesType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1003,17 +1120,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 employees_type_0 = CompanyCountBodySearchParamsEmployeesType0.from_dict(data)
 
-
-
                 return employees_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsEmployeesType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsEmployeesType0 | None | Unset, data)
 
         employees = _parse_employees(d.pop("employees", UNSET))
 
-
-        def _parse_revenue_usd(data: object) -> Union['CompanyCountBodySearchParamsRevenueUSDType0', None, Unset]:
+        def _parse_revenue_usd(data: object) -> CompanyCountBodySearchParamsRevenueUSDType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1023,17 +1137,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 revenue_usd_type_0 = CompanyCountBodySearchParamsRevenueUSDType0.from_dict(data)
 
-
-
                 return revenue_usd_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsRevenueUSDType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsRevenueUSDType0 | None | Unset, data)
 
         revenue_usd = _parse_revenue_usd(d.pop("revenueUSD", UNSET))
 
-
-        def _parse_naics_codes(data: object) -> Union['CompanyCountBodySearchParamsNaicsCodesType0', None, Unset]:
+        def _parse_naics_codes(data: object) -> CompanyCountBodySearchParamsNaicsCodesType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1043,17 +1154,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 naics_codes_type_0 = CompanyCountBodySearchParamsNaicsCodesType0.from_dict(data)
 
-
-
                 return naics_codes_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsNaicsCodesType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsNaicsCodesType0 | None | Unset, data)
 
         naics_codes = _parse_naics_codes(d.pop("naicsCodes", UNSET))
 
-
-        def _parse_fortune_rankings(data: object) -> Union['CompanyCountBodySearchParamsFortuneRankingsType0', None, Unset]:
+        def _parse_fortune_rankings(data: object) -> CompanyCountBodySearchParamsFortuneRankingsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1063,17 +1171,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 fortune_rankings_type_0 = CompanyCountBodySearchParamsFortuneRankingsType0.from_dict(data)
 
-
-
                 return fortune_rankings_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsFortuneRankingsType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsFortuneRankingsType0 | None | Unset, data)
 
         fortune_rankings = _parse_fortune_rankings(d.pop("fortuneRankings", UNSET))
 
-
-        def _parse_job_postings_v2(data: object) -> Union['CompanyCountBodySearchParamsJobPostingsV2Type0', None, Unset]:
+        def _parse_job_postings_v2(data: object) -> CompanyCountBodySearchParamsJobPostingsV2Type0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1083,17 +1188,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 job_postings_v2_type_0 = CompanyCountBodySearchParamsJobPostingsV2Type0.from_dict(data)
 
-
-
                 return job_postings_v2_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsJobPostingsV2Type0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsJobPostingsV2Type0 | None | Unset, data)
 
         job_postings_v2 = _parse_job_postings_v2(d.pop("jobPostingsV2", UNSET))
 
-
-        def _parse_job_posting_stats(data: object) -> Union['CompanyCountBodySearchParamsJobPostingStatsType0', None, Unset]:
+        def _parse_job_posting_stats(data: object) -> CompanyCountBodySearchParamsJobPostingStatsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1103,17 +1205,16 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 job_posting_stats_type_0 = CompanyCountBodySearchParamsJobPostingStatsType0.from_dict(data)
 
-
-
                 return job_posting_stats_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsJobPostingStatsType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsJobPostingStatsType0 | None | Unset, data)
 
         job_posting_stats = _parse_job_posting_stats(d.pop("jobPostingStats", UNSET))
 
-
-        def _parse_office_locations_v2(data: object) -> Union['CompanyCountBodySearchParamsOfficeLocationsV2Type0', None, Unset]:
+        def _parse_office_locations_v2(
+            data: object,
+        ) -> CompanyCountBodySearchParamsOfficeLocationsV2Type0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1123,17 +1224,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 office_locations_v2_type_0 = CompanyCountBodySearchParamsOfficeLocationsV2Type0.from_dict(data)
 
-
-
                 return office_locations_v2_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsOfficeLocationsV2Type0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsOfficeLocationsV2Type0 | None | Unset, data)
 
         office_locations_v2 = _parse_office_locations_v2(d.pop("officeLocationsV2", UNSET))
 
-
-        def _parse_tlds(data: object) -> Union['CompanyCountBodySearchParamsTldsType0', None, Unset]:
+        def _parse_tlds(data: object) -> CompanyCountBodySearchParamsTldsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1143,17 +1241,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 tlds_type_0 = CompanyCountBodySearchParamsTldsType0.from_dict(data)
 
-
-
                 return tlds_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsTldsType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsTldsType0 | None | Unset, data)
 
         tlds = _parse_tlds(d.pop("tlds", UNSET))
 
-
-        def _parse_num_words_in_name(data: object) -> Union['CompanyCountBodySearchParamsNumWordsInNameType0', None, Unset]:
+        def _parse_num_words_in_name(data: object) -> CompanyCountBodySearchParamsNumWordsInNameType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1163,17 +1258,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 num_words_in_name_type_0 = CompanyCountBodySearchParamsNumWordsInNameType0.from_dict(data)
 
-
-
                 return num_words_in_name_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsNumWordsInNameType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsNumWordsInNameType0 | None | Unset, data)
 
         num_words_in_name = _parse_num_words_in_name(d.pop("numWordsInName", UNSET))
 
-
-        def _parse_status(data: object) -> Union['CompanyCountBodySearchParamsStatusType0', None, Unset]:
+        def _parse_status(data: object) -> CompanyCountBodySearchParamsStatusType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1183,17 +1275,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 status_type_0 = CompanyCountBodySearchParamsStatusType0.from_dict(data)
 
-
-
                 return status_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsStatusType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsStatusType0 | None | Unset, data)
 
         status = _parse_status(d.pop("status", UNSET))
 
-
-        def _parse_technologies(data: object) -> Union['CompanyCountBodySearchParamsTechnologiesType0', None, Unset]:
+        def _parse_technologies(data: object) -> CompanyCountBodySearchParamsTechnologiesType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1203,17 +1292,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 technologies_type_0 = CompanyCountBodySearchParamsTechnologiesType0.from_dict(data)
 
-
-
                 return technologies_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsTechnologiesType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsTechnologiesType0 | None | Unset, data)
 
         technologies = _parse_technologies(d.pop("technologies", UNSET))
 
-
-        def _parse_investors(data: object) -> Union['CompanyCountBodySearchParamsInvestorsType0', None, Unset]:
+        def _parse_investors(data: object) -> CompanyCountBodySearchParamsInvestorsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1223,17 +1309,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 investors_type_0 = CompanyCountBodySearchParamsInvestorsType0.from_dict(data)
 
-
-
                 return investors_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsInvestorsType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsInvestorsType0 | None | Unset, data)
 
         investors = _parse_investors(d.pop("investors", UNSET))
 
-
-        def _parse_tags(data: object) -> Union['CompanyCountBodySearchParamsTagsType0', None, Unset]:
+        def _parse_tags(data: object) -> CompanyCountBodySearchParamsTagsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1243,17 +1326,16 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 tags_type_0 = CompanyCountBodySearchParamsTagsType0.from_dict(data)
 
-
-
                 return tags_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsTagsType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsTagsType0 | None | Unset, data)
 
         tags = _parse_tags(d.pop("tags", UNSET))
 
-
-        def _parse_crunchbase_categories(data: object) -> Union['CompanyCountBodySearchParamsCrunchbaseCategoriesType0', None, Unset]:
+        def _parse_crunchbase_categories(
+            data: object,
+        ) -> CompanyCountBodySearchParamsCrunchbaseCategoriesType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1263,17 +1345,16 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 crunchbase_categories_type_0 = CompanyCountBodySearchParamsCrunchbaseCategoriesType0.from_dict(data)
 
-
-
                 return crunchbase_categories_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsCrunchbaseCategoriesType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsCrunchbaseCategoriesType0 | None | Unset, data)
 
         crunchbase_categories = _parse_crunchbase_categories(d.pop("crunchbaseCategories", UNSET))
 
-
-        def _parse_crunchbase_category_groups(data: object) -> Union['CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0', None, Unset]:
+        def _parse_crunchbase_category_groups(
+            data: object,
+        ) -> CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1281,19 +1362,20 @@ class CompanyCountBodySearchParams:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                crunchbase_category_groups_type_0 = CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0.from_dict(data)
-
-
+                crunchbase_category_groups_type_0 = CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0.from_dict(
+                    data
+                )
 
                 return crunchbase_category_groups_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0 | None | Unset, data)
 
         crunchbase_category_groups = _parse_crunchbase_category_groups(d.pop("crunchbaseCategoryGroups", UNSET))
 
-
-        def _parse_linkedin_industries(data: object) -> Union['CompanyCountBodySearchParamsLinkedinIndustriesType0', None, Unset]:
+        def _parse_linkedin_industries(
+            data: object,
+        ) -> CompanyCountBodySearchParamsLinkedinIndustriesType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1303,17 +1385,14 @@ class CompanyCountBodySearchParams:
                     raise TypeError()
                 linkedin_industries_type_0 = CompanyCountBodySearchParamsLinkedinIndustriesType0.from_dict(data)
 
-
-
                 return linkedin_industries_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsLinkedinIndustriesType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsLinkedinIndustriesType0 | None | Unset, data)
 
         linkedin_industries = _parse_linkedin_industries(d.pop("linkedinIndustries", UNSET))
 
-
-        def _parse_crunchbase_slugs(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_crunchbase_slugs(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1324,12 +1403,11 @@ class CompanyCountBodySearchParams:
                 crunchbase_slugs_type_0 = cast(list[str], data)
 
                 return crunchbase_slugs_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         crunchbase_slugs = _parse_crunchbase_slugs(d.pop("crunchbaseSlugs", UNSET))
-
 
         company_count_body_search_params = cls(
             exact_company_v2=exact_company_v2,
@@ -1369,7 +1447,6 @@ class CompanyCountBodySearchParams:
             linkedin_industries=linkedin_industries,
             crunchbase_slugs=crunchbase_slugs,
         )
-
 
         company_count_body_search_params.additional_properties = d
         return company_count_body_search_params

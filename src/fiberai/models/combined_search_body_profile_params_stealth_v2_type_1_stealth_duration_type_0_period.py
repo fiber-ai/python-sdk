@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0Period(str, Enum):
     DAY = "day"
     MONTH = "month"

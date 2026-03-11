@@ -1,80 +1,122 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_2 import KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2
-  from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_2 import KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2
-  from ..models.kitchen_sink_bulk_profile_body_profiles_item_job_title_type_0 import KitchenSinkBulkProfileBodyProfilesItemJobTitleType0
-  from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_domain_type_0 import KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0
-  from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_1 import KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1
-  from ..models.kitchen_sink_bulk_profile_body_profiles_item_person_name_type_0 import KitchenSinkBulkProfileBodyProfilesItemPersonNameType0
-  from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_1 import KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1
-  from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_0 import KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0
-  from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_name_type_0 import KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0
-  from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_0 import KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0
-
-
-
+    from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_domain_type_0 import (
+        KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0,
+    )
+    from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_0 import (
+        KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0,
+    )
+    from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_1 import (
+        KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1,
+    )
+    from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_2 import (
+        KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2,
+    )
+    from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_name_type_0 import (
+        KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0,
+    )
+    from ..models.kitchen_sink_bulk_profile_body_profiles_item_job_title_type_0 import (
+        KitchenSinkBulkProfileBodyProfilesItemJobTitleType0,
+    )
+    from ..models.kitchen_sink_bulk_profile_body_profiles_item_person_name_type_0 import (
+        KitchenSinkBulkProfileBodyProfilesItemPersonNameType0,
+    )
+    from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_0 import (
+        KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0,
+    )
+    from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_1 import (
+        KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1,
+    )
+    from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_2 import (
+        KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2,
+    )
 
 
 T = TypeVar("T", bound="KitchenSinkBulkProfileBodyProfilesItem")
 
 
-
 @_attrs_define
 class KitchenSinkBulkProfileBodyProfilesItem:
-    """ 
-        Attributes:
-            company_domain (Union['KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0', None, Unset]):
-            company_name (Union['KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0', None, Unset]):
-            job_title (Union['KitchenSinkBulkProfileBodyProfilesItemJobTitleType0', None, Unset]):
-            person_name (Union['KitchenSinkBulkProfileBodyProfilesItemPersonNameType0', None, Unset]):
-            num_profiles (Union[Unset, int]):  Default: 1.
-            profile_identifier (Union['KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0',
-                'KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1',
-                'KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2', None, Unset]):
-            company_identifier (Union['KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0',
-                'KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1',
-                'KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2', None, Unset]):
-            email_address (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        company_domain (KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0 | None | Unset):
+        company_name (KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0 | None | Unset):
+        job_title (KitchenSinkBulkProfileBodyProfilesItemJobTitleType0 | None | Unset):
+        person_name (KitchenSinkBulkProfileBodyProfilesItemPersonNameType0 | None | Unset):
+        num_profiles (int | Unset):  Default: 1.
+        profile_identifier (KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0 |
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1 |
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2 | None | Unset):
+        company_identifier (KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0 |
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1 |
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2 | None | Unset):
+        email_address (None | str | Unset):
+    """
 
-    company_domain: Union['KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0', None, Unset] = UNSET
-    company_name: Union['KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0', None, Unset] = UNSET
-    job_title: Union['KitchenSinkBulkProfileBodyProfilesItemJobTitleType0', None, Unset] = UNSET
-    person_name: Union['KitchenSinkBulkProfileBodyProfilesItemPersonNameType0', None, Unset] = UNSET
-    num_profiles: Union[Unset, int] = 1
-    profile_identifier: Union['KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0', 'KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1', 'KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2', None, Unset] = UNSET
-    company_identifier: Union['KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0', 'KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1', 'KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2', None, Unset] = UNSET
-    email_address: Union[None, Unset, str] = UNSET
+    company_domain: KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0 | None | Unset = UNSET
+    company_name: KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0 | None | Unset = UNSET
+    job_title: KitchenSinkBulkProfileBodyProfilesItemJobTitleType0 | None | Unset = UNSET
+    person_name: KitchenSinkBulkProfileBodyProfilesItemPersonNameType0 | None | Unset = UNSET
+    num_profiles: int | Unset = 1
+    profile_identifier: (
+        KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0
+        | KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1
+        | KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2
+        | None
+        | Unset
+    ) = UNSET
+    company_identifier: (
+        KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0
+        | KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1
+        | KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2
+        | None
+        | Unset
+    ) = UNSET
+    email_address: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_2 import KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_2 import KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_job_title_type_0 import KitchenSinkBulkProfileBodyProfilesItemJobTitleType0
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_domain_type_0 import KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_1 import KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_person_name_type_0 import KitchenSinkBulkProfileBodyProfilesItemPersonNameType0
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_1 import KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_0 import KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_name_type_0 import KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_0 import KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0
-        company_domain: Union[None, Unset, dict[str, Any]]
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_domain_type_0 import (
+            KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_0 import (
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_1 import (
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_2 import (
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_name_type_0 import (
+            KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_job_title_type_0 import (
+            KitchenSinkBulkProfileBodyProfilesItemJobTitleType0,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_person_name_type_0 import (
+            KitchenSinkBulkProfileBodyProfilesItemPersonNameType0,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_0 import (
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_1 import (
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_2 import (
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2,
+        )
+
+        company_domain: dict[str, Any] | None | Unset
         if isinstance(self.company_domain, Unset):
             company_domain = UNSET
         elif isinstance(self.company_domain, KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0):
@@ -82,7 +124,7 @@ class KitchenSinkBulkProfileBodyProfilesItem:
         else:
             company_domain = self.company_domain
 
-        company_name: Union[None, Unset, dict[str, Any]]
+        company_name: dict[str, Any] | None | Unset
         if isinstance(self.company_name, Unset):
             company_name = UNSET
         elif isinstance(self.company_name, KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0):
@@ -90,7 +132,7 @@ class KitchenSinkBulkProfileBodyProfilesItem:
         else:
             company_name = self.company_name
 
-        job_title: Union[None, Unset, dict[str, Any]]
+        job_title: dict[str, Any] | None | Unset
         if isinstance(self.job_title, Unset):
             job_title = UNSET
         elif isinstance(self.job_title, KitchenSinkBulkProfileBodyProfilesItemJobTitleType0):
@@ -98,7 +140,7 @@ class KitchenSinkBulkProfileBodyProfilesItem:
         else:
             job_title = self.job_title
 
-        person_name: Union[None, Unset, dict[str, Any]]
+        person_name: dict[str, Any] | None | Unset
         if isinstance(self.person_name, Unset):
             person_name = UNSET
         elif isinstance(self.person_name, KitchenSinkBulkProfileBodyProfilesItemPersonNameType0):
@@ -108,7 +150,7 @@ class KitchenSinkBulkProfileBodyProfilesItem:
 
         num_profiles = self.num_profiles
 
-        profile_identifier: Union[None, Unset, dict[str, Any]]
+        profile_identifier: dict[str, Any] | None | Unset
         if isinstance(self.profile_identifier, Unset):
             profile_identifier = UNSET
         elif isinstance(self.profile_identifier, KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0):
@@ -120,7 +162,7 @@ class KitchenSinkBulkProfileBodyProfilesItem:
         else:
             profile_identifier = self.profile_identifier
 
-        company_identifier: Union[None, Unset, dict[str, Any]]
+        company_identifier: dict[str, Any] | None | Unset
         if isinstance(self.company_identifier, Unset):
             company_identifier = UNSET
         elif isinstance(self.company_identifier, KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0):
@@ -132,17 +174,15 @@ class KitchenSinkBulkProfileBodyProfilesItem:
         else:
             company_identifier = self.company_identifier
 
-        email_address: Union[None, Unset, str]
+        email_address: None | str | Unset
         if isinstance(self.email_address, Unset):
             email_address = UNSET
         else:
             email_address = self.email_address
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if company_domain is not UNSET:
             field_dict["companyDomain"] = company_domain
         if company_name is not UNSET:
@@ -162,22 +202,44 @@ class KitchenSinkBulkProfileBodyProfilesItem:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_2 import KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_2 import KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_job_title_type_0 import KitchenSinkBulkProfileBodyProfilesItemJobTitleType0
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_domain_type_0 import KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_1 import KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_person_name_type_0 import KitchenSinkBulkProfileBodyProfilesItemPersonNameType0
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_1 import KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_0 import KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_name_type_0 import KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0
-        from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_0 import KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_domain_type_0 import (
+            KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_0 import (
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_1 import (
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_2 import (
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_name_type_0 import (
+            KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_job_title_type_0 import (
+            KitchenSinkBulkProfileBodyProfilesItemJobTitleType0,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_person_name_type_0 import (
+            KitchenSinkBulkProfileBodyProfilesItemPersonNameType0,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_0 import (
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_1 import (
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1,
+        )
+        from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_2 import (
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2,
+        )
+
         d = dict(src_dict)
-        def _parse_company_domain(data: object) -> Union['KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0', None, Unset]:
+
+        def _parse_company_domain(
+            data: object,
+        ) -> KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -187,17 +249,14 @@ class KitchenSinkBulkProfileBodyProfilesItem:
                     raise TypeError()
                 company_domain_type_0 = KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0.from_dict(data)
 
-
-
                 return company_domain_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0', None, Unset], data)
+            return cast(KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0 | None | Unset, data)
 
         company_domain = _parse_company_domain(d.pop("companyDomain", UNSET))
 
-
-        def _parse_company_name(data: object) -> Union['KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0', None, Unset]:
+        def _parse_company_name(data: object) -> KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -207,17 +266,14 @@ class KitchenSinkBulkProfileBodyProfilesItem:
                     raise TypeError()
                 company_name_type_0 = KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0.from_dict(data)
 
-
-
                 return company_name_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0', None, Unset], data)
+            return cast(KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0 | None | Unset, data)
 
         company_name = _parse_company_name(d.pop("companyName", UNSET))
 
-
-        def _parse_job_title(data: object) -> Union['KitchenSinkBulkProfileBodyProfilesItemJobTitleType0', None, Unset]:
+        def _parse_job_title(data: object) -> KitchenSinkBulkProfileBodyProfilesItemJobTitleType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -227,17 +283,14 @@ class KitchenSinkBulkProfileBodyProfilesItem:
                     raise TypeError()
                 job_title_type_0 = KitchenSinkBulkProfileBodyProfilesItemJobTitleType0.from_dict(data)
 
-
-
                 return job_title_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['KitchenSinkBulkProfileBodyProfilesItemJobTitleType0', None, Unset], data)
+            return cast(KitchenSinkBulkProfileBodyProfilesItemJobTitleType0 | None | Unset, data)
 
         job_title = _parse_job_title(d.pop("jobTitle", UNSET))
 
-
-        def _parse_person_name(data: object) -> Union['KitchenSinkBulkProfileBodyProfilesItemPersonNameType0', None, Unset]:
+        def _parse_person_name(data: object) -> KitchenSinkBulkProfileBodyProfilesItemPersonNameType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -247,19 +300,24 @@ class KitchenSinkBulkProfileBodyProfilesItem:
                     raise TypeError()
                 person_name_type_0 = KitchenSinkBulkProfileBodyProfilesItemPersonNameType0.from_dict(data)
 
-
-
                 return person_name_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['KitchenSinkBulkProfileBodyProfilesItemPersonNameType0', None, Unset], data)
+            return cast(KitchenSinkBulkProfileBodyProfilesItemPersonNameType0 | None | Unset, data)
 
         person_name = _parse_person_name(d.pop("personName", UNSET))
 
-
         num_profiles = d.pop("numProfiles", UNSET)
 
-        def _parse_profile_identifier(data: object) -> Union['KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0', 'KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1', 'KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2', None, Unset]:
+        def _parse_profile_identifier(
+            data: object,
+        ) -> (
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0
+            | KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1
+            | KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -269,37 +327,45 @@ class KitchenSinkBulkProfileBodyProfilesItem:
                     raise TypeError()
                 profile_identifier_type_0 = KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0.from_dict(data)
 
-
-
                 return profile_identifier_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 profile_identifier_type_1 = KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1.from_dict(data)
 
-
-
                 return profile_identifier_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 profile_identifier_type_2 = KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2.from_dict(data)
 
-
-
                 return profile_identifier_type_2
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0', 'KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1', 'KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2', None, Unset], data)
+            return cast(
+                KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0
+                | KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1
+                | KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2
+                | None
+                | Unset,
+                data,
+            )
 
         profile_identifier = _parse_profile_identifier(d.pop("profileIdentifier", UNSET))
 
-
-        def _parse_company_identifier(data: object) -> Union['KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0', 'KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1', 'KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2', None, Unset]:
+        def _parse_company_identifier(
+            data: object,
+        ) -> (
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0
+            | KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1
+            | KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -309,45 +375,44 @@ class KitchenSinkBulkProfileBodyProfilesItem:
                     raise TypeError()
                 company_identifier_type_0 = KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0.from_dict(data)
 
-
-
                 return company_identifier_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 company_identifier_type_1 = KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1.from_dict(data)
 
-
-
                 return company_identifier_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 company_identifier_type_2 = KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2.from_dict(data)
 
-
-
                 return company_identifier_type_2
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0', 'KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1', 'KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2', None, Unset], data)
+            return cast(
+                KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0
+                | KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1
+                | KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2
+                | None
+                | Unset,
+                data,
+            )
 
         company_identifier = _parse_company_identifier(d.pop("companyIdentifier", UNSET))
 
-
-        def _parse_email_address(data: object) -> Union[None, Unset, str]:
+        def _parse_email_address(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         email_address = _parse_email_address(d.pop("emailAddress", UNSET))
-
 
         kitchen_sink_bulk_profile_body_profiles_item = cls(
             company_domain=company_domain,
@@ -359,7 +424,6 @@ class KitchenSinkBulkProfileBodyProfilesItem:
             company_identifier=company_identifier,
             email_address=email_address,
         )
-
 
         kitchen_sink_bulk_profile_body_profiles_item.additional_properties = d
         return kitchen_sink_bulk_profile_body_profiles_item

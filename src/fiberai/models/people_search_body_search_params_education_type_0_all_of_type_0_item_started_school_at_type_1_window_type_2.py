@@ -1,41 +1,37 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_2_method import PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Method
-from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_2_period import PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Period
-from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_2_which import PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Which
-
-
-
-
-
+from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_2_method import (
+    PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Method,
+)
+from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_2_period import (
+    PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Period,
+)
+from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_2_which import (
+    PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Which,
+)
 
 T = TypeVar("T", bound="PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2")
 
 
-
 @_attrs_define
 class PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2:
-    """ 
-        Attributes:
-            method (PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Method):
-            which (PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Which):
-            period (PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Period):
-     """
+    """
+    Attributes:
+        method (PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Method):
+        which (PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Which):
+        period (PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Period):
+    """
 
     method: PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Method
     which: PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Which
     period: PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Period
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         method = self.method.value
@@ -44,46 +40,45 @@ class PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtTyp
 
         period = self.period.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "method": method,
-            "which": which,
-            "period": period,
-        })
+        field_dict.update(
+            {
+                "method": method,
+                "which": which,
+                "period": period,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        method = PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Method(d.pop("method"))
-
-
-
-
-        which = PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Which(d.pop("which"))
-
-
-
-
-        period = PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Period(d.pop("period"))
-
-
-
-
-        people_search_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_2 = cls(
-            method=method,
-            which=which,
-            period=period,
+        method = PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Method(
+            d.pop("method")
         )
 
+        which = PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Which(
+            d.pop("which")
+        )
+
+        period = PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2Period(
+            d.pop("period")
+        )
+
+        people_search_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_2 = (
+            cls(
+                method=method,
+                which=which,
+                period=period,
+            )
+        )
 
         people_search_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_2.additional_properties = d
-        return people_search_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_2
+        return (
+            people_search_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_2
+        )
 
     @property
     def additional_keys(self) -> list[str]:

@@ -1,108 +1,128 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_0 import SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0
-  from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_1 import SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1
-  from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employee_filters_type_0 import SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0
-
-
-
+    from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employee_filters_type_0 import (
+        SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0,
+    )
+    from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_0 import (
+        SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0,
+    )
+    from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_1 import (
+        SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1,
+    )
 
 
 T = TypeVar("T", bound="SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItem")
 
 
-
 @_attrs_define
 class SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
-    """ 
-        Attributes:
-            employees_to_match (Union['SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0',
-                'SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1']):
-            employee_filters (Union['SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0', None,
-                Unset]):
-     """
+    """
+    Attributes:
+        employees_to_match (SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0 |
+            SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1):
+        employee_filters (None | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0 |
+            Unset):
+    """
 
-    employees_to_match: Union['SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0', 'SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1']
-    employee_filters: Union['SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0', None, Unset] = UNSET
+    employees_to_match: (
+        SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0
+        | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1
+    )
+    employee_filters: None | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0 | Unset = (
+        UNSET
+    )
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_0 import SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0
-        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_1 import SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1
-        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employee_filters_type_0 import SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0
+        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employee_filters_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0,
+        )
+        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0,
+        )
+
         employees_to_match: dict[str, Any]
-        if isinstance(self.employees_to_match, SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0):
+        if isinstance(
+            self.employees_to_match, SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0
+        ):
             employees_to_match = self.employees_to_match.to_dict()
         else:
             employees_to_match = self.employees_to_match.to_dict()
 
-
-        employee_filters: Union[None, Unset, dict[str, Any]]
+        employee_filters: dict[str, Any] | None | Unset
         if isinstance(self.employee_filters, Unset):
             employee_filters = UNSET
-        elif isinstance(self.employee_filters, SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0):
+        elif isinstance(
+            self.employee_filters, SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0
+        ):
             employee_filters = self.employee_filters.to_dict()
         else:
             employee_filters = self.employee_filters
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "employeesToMatch": employees_to_match,
-        })
+        field_dict.update(
+            {
+                "employeesToMatch": employees_to_match,
+            }
+        )
         if employee_filters is not UNSET:
             field_dict["employeeFilters"] = employee_filters
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_0 import SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0
-        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_1 import SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1
-        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employee_filters_type_0 import SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0
+        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employee_filters_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0,
+        )
+        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0,
+        )
+        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_1 import (
+            SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1,
+        )
+
         d = dict(src_dict)
-        def _parse_employees_to_match(data: object) -> Union['SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0', 'SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1']:
+
+        def _parse_employees_to_match(
+            data: object,
+        ) -> (
+            SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0
+            | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1
+        ):
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                employees_to_match_type_0 = SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0.from_dict(data)
-
-
+                employees_to_match_type_0 = (
+                    SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0.from_dict(data)
+                )
 
                 return employees_to_match_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             if not isinstance(data, dict):
                 raise TypeError()
-            employees_to_match_type_1 = SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1.from_dict(data)
-
-
+            employees_to_match_type_1 = (
+                SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1.from_dict(data)
+            )
 
             return employees_to_match_type_1
 
         employees_to_match = _parse_employees_to_match(d.pop("employeesToMatch"))
 
-
-        def _parse_employee_filters(data: object) -> Union['SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0', None, Unset]:
+        def _parse_employee_filters(
+            data: object,
+        ) -> None | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -110,23 +130,23 @@ class SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                employee_filters_type_0 = SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0.from_dict(data)
-
-
+                employee_filters_type_0 = (
+                    SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0.from_dict(data)
+                )
 
                 return employee_filters_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0', None, Unset], data)
+            return cast(
+                None | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0 | Unset, data
+            )
 
         employee_filters = _parse_employee_filters(d.pop("employeeFilters", UNSET))
-
 
         sync_combined_search_body_company_params_employees_type_0_rules_item = cls(
             employees_to_match=employees_to_match,
             employee_filters=employee_filters,
         )
-
 
         sync_combined_search_body_company_params_employees_type_0_rules_item.additional_properties = d
         return sync_combined_search_body_company_params_employees_type_0_rules_item

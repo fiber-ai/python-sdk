@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class KitchenSinkBulkProfileResponse200OutputDataItemItemExperiencesType0ItemSeniorityType3Type1(str, Enum):
     ASSOCIATE = "Associate"
     DIRECTOR = "Director"

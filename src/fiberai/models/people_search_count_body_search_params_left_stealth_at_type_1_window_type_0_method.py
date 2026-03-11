@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PeopleSearchCountBodySearchParamsLeftStealthAtType1WindowType0Method(str, Enum):
     LASTN = "lastN"
 

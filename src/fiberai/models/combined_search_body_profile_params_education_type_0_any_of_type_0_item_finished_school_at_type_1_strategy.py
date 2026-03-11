@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemFinishedSchoolAtType1Strategy(str, Enum):
     RELATIVE = "relative"
 

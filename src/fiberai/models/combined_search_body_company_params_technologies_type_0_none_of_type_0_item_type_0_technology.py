@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyCompanyParamsTechnologiesType0NoneOfType0ItemType0Technology(str, Enum):
     AIRFLOW = "Airflow"
     ALGOLIA = "Algolia"

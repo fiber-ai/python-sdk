@@ -1,179 +1,303 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_country_or_region_code_type_0_item import (
+    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemCountryOrRegionCodeType0Item,
+)
+from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_employment_type_type_0_item import (
+    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemEmploymentTypeType0Item,
+)
+from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_industry_type_0_item import (
+    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemIndustryType0Item,
+)
+from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_job_function_type_0_item import (
+    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobFunctionType0Item,
+)
+from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_job_location_type_type_0_item import (
+    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobLocationTypeType0Item,
+)
+from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_job_posting_status_type_1 import (
+    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType1,
+)
+from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_job_posting_status_type_2_type_1 import (
+    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType2Type1,
+)
+from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_job_posting_status_type_3_type_1 import (
+    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType3Type1,
+)
+from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_seniority_type_0_item import (
+    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemSeniorityType0Item,
+)
 from ..types import UNSET, Unset
-
-from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_country_or_region_code_type_0_item import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemCountryOrRegionCodeType0Item
-from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_employment_type_type_0_item import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemEmploymentTypeType0Item
-from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_industry_type_0_item import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemIndustryType0Item
-from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_job_function_type_0_item import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobFunctionType0Item
-from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_job_location_type_type_0_item import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobLocationTypeType0Item
-from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_job_posting_status_type_1 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType1
-from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_job_posting_status_type_2_type_1 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType2Type1
-from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_job_posting_status_type_3_type_1 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType3Type1
-from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_seniority_type_0_item import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemSeniorityType0Item
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0
-  from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_1 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1
-  from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_num_applicants_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0
-  from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_years_of_experience_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0
-  from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0
-  from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_annual_pay_usd_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0
-
-
-
+    from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_annual_pay_usd_type_0 import (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0 import (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_num_applicants_type_0 import (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_0 import (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_1 import (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1,
+    )
+    from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_years_of_experience_type_0 import (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0,
+    )
 
 
 T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0Item")
 
 
-
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0Item:
-    """ 
-        Attributes:
-            job_posting_status (Union[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0
-                ItemJobPostingStatusType1, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType
-                0ItemJobPostingStatusType2Type1, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0None
-                OfType0ItemJobPostingStatusType3Type1, None, Unset]):
-            job_title (Union[None, Unset, list[str]]):
-            keywords (Union[None, Unset, list[str]]):
-            posted_at (Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPost
-                edAtType0',
-                'CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1', None,
-                Unset]):
-            num_applicants (Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0Ite
-                mNumApplicantsType0', None, Unset]):
-            annual_pay_usd (Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0Ite
-                mAnnualPayUSDType0', None, Unset]):
-            years_of_experience (Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfTyp
-                e0ItemYearsOfExperienceType0', None, Unset]):
-            geo_location (Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemG
-                eoLocationType0', None, Unset]):
-            country_or_region_code (Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPost
-                ingsV2Type0NoneOfType0ItemCountryOrRegionCodeType0Item]]):
-            seniority (Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0No
-                neOfType0ItemSeniorityType0Item]]):
-            employment_type (Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2T
-                ype0NoneOfType0ItemEmploymentTypeType0Item]]):
-            job_function (Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
-                0NoneOfType0ItemJobFunctionType0Item]]):
-            industry (Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0Non
-                eOfType0ItemIndustryType0Item]]):
-            job_location_type (Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV
-                2Type0NoneOfType0ItemJobLocationTypeType0Item]]):
-     """
+    """
+    Attributes:
+        job_posting_status
+            (CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType1
+            | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType
+            2Type1 | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingSta
+            tusType3Type1 | None | Unset):
+        job_title (list[str] | None | Unset):
+        keywords (list[str] | None | Unset):
+        posted_at
+            (CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0 |
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1 | None |
+            Unset):
+        num_applicants
+            (CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0 |
+            None | Unset):
+        annual_pay_usd
+            (CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0 |
+            None | Unset):
+        years_of_experience (CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemY
+            earsOfExperienceType0 | None | Unset):
+        geo_location
+            (CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0 |
+            None | Unset):
+        country_or_region_code (list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfTy
+            pe0ItemCountryOrRegionCodeType0Item] | None | Unset):
+        seniority (list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemSenior
+            ityType0Item] | None | Unset):
+        employment_type (list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0Item
+            EmploymentTypeType0Item] | None | Unset):
+        job_function (list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJob
+            FunctionType0Item] | None | Unset):
+        industry (list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemIndustr
+            yType0Item] | None | Unset):
+        job_location_type (list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0It
+            emJobLocationTypeType0Item] | None | Unset):
+    """
 
-    job_posting_status: Union[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType1, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType2Type1, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType3Type1, None, Unset] = UNSET
-    job_title: Union[None, Unset, list[str]] = UNSET
-    keywords: Union[None, Unset, list[str]] = UNSET
-    posted_at: Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0', 'CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1', None, Unset] = UNSET
-    num_applicants: Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0', None, Unset] = UNSET
-    annual_pay_usd: Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0', None, Unset] = UNSET
-    years_of_experience: Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0', None, Unset] = UNSET
-    geo_location: Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0', None, Unset] = UNSET
-    country_or_region_code: Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemCountryOrRegionCodeType0Item]] = UNSET
-    seniority: Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemSeniorityType0Item]] = UNSET
-    employment_type: Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemEmploymentTypeType0Item]] = UNSET
-    job_function: Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobFunctionType0Item]] = UNSET
-    industry: Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemIndustryType0Item]] = UNSET
-    job_location_type: Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobLocationTypeType0Item]] = UNSET
+    job_posting_status: (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType1
+        | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType2Type1
+        | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType3Type1
+        | None
+        | Unset
+    ) = UNSET
+    job_title: list[str] | None | Unset = UNSET
+    keywords: list[str] | None | Unset = UNSET
+    posted_at: (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0
+        | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1
+        | None
+        | Unset
+    ) = UNSET
+    num_applicants: (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0
+        | None
+        | Unset
+    ) = UNSET
+    annual_pay_usd: (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0
+        | None
+        | Unset
+    ) = UNSET
+    years_of_experience: (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0
+        | None
+        | Unset
+    ) = UNSET
+    geo_location: (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0
+        | None
+        | Unset
+    ) = UNSET
+    country_or_region_code: (
+        list[
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemCountryOrRegionCodeType0Item
+        ]
+        | None
+        | Unset
+    ) = UNSET
+    seniority: (
+        list[
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemSeniorityType0Item
+        ]
+        | None
+        | Unset
+    ) = UNSET
+    employment_type: (
+        list[
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemEmploymentTypeType0Item
+        ]
+        | None
+        | Unset
+    ) = UNSET
+    job_function: (
+        list[
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobFunctionType0Item
+        ]
+        | None
+        | Unset
+    ) = UNSET
+    industry: (
+        list[
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemIndustryType0Item
+        ]
+        | None
+        | Unset
+    ) = UNSET
+    job_location_type: (
+        list[
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobLocationTypeType0Item
+        ]
+        | None
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_1 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_num_applicants_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_years_of_experience_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_annual_pay_usd_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0
-        job_posting_status: Union[None, Unset, str]
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_annual_pay_usd_type_0 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_num_applicants_type_0 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_0 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_1 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_years_of_experience_type_0 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0,
+        )
+
+        job_posting_status: None | str | Unset
         if isinstance(self.job_posting_status, Unset):
             job_posting_status = UNSET
-        elif isinstance(self.job_posting_status, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType1):
+        elif isinstance(
+            self.job_posting_status,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType1,
+        ):
             job_posting_status = self.job_posting_status.value
-        elif isinstance(self.job_posting_status, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType2Type1):
+        elif isinstance(
+            self.job_posting_status,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType2Type1,
+        ):
             job_posting_status = self.job_posting_status.value
-        elif isinstance(self.job_posting_status, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType3Type1):
+        elif isinstance(
+            self.job_posting_status,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType3Type1,
+        ):
             job_posting_status = self.job_posting_status.value
         else:
             job_posting_status = self.job_posting_status
 
-        job_title: Union[None, Unset, list[str]]
+        job_title: list[str] | None | Unset
         if isinstance(self.job_title, Unset):
             job_title = UNSET
         elif isinstance(self.job_title, list):
             job_title = self.job_title
 
-
         else:
             job_title = self.job_title
 
-        keywords: Union[None, Unset, list[str]]
+        keywords: list[str] | None | Unset
         if isinstance(self.keywords, Unset):
             keywords = UNSET
         elif isinstance(self.keywords, list):
             keywords = self.keywords
 
-
         else:
             keywords = self.keywords
 
-        posted_at: Union[None, Unset, dict[str, Any]]
+        posted_at: dict[str, Any] | None | Unset
         if isinstance(self.posted_at, Unset):
             posted_at = UNSET
-        elif isinstance(self.posted_at, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0):
+        elif isinstance(
+            self.posted_at,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0,
+        ):
             posted_at = self.posted_at.to_dict()
-        elif isinstance(self.posted_at, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1):
+        elif isinstance(
+            self.posted_at,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1,
+        ):
             posted_at = self.posted_at.to_dict()
         else:
             posted_at = self.posted_at
 
-        num_applicants: Union[None, Unset, dict[str, Any]]
+        num_applicants: dict[str, Any] | None | Unset
         if isinstance(self.num_applicants, Unset):
             num_applicants = UNSET
-        elif isinstance(self.num_applicants, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0):
+        elif isinstance(
+            self.num_applicants,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0,
+        ):
             num_applicants = self.num_applicants.to_dict()
         else:
             num_applicants = self.num_applicants
 
-        annual_pay_usd: Union[None, Unset, dict[str, Any]]
+        annual_pay_usd: dict[str, Any] | None | Unset
         if isinstance(self.annual_pay_usd, Unset):
             annual_pay_usd = UNSET
-        elif isinstance(self.annual_pay_usd, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0):
+        elif isinstance(
+            self.annual_pay_usd,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0,
+        ):
             annual_pay_usd = self.annual_pay_usd.to_dict()
         else:
             annual_pay_usd = self.annual_pay_usd
 
-        years_of_experience: Union[None, Unset, dict[str, Any]]
+        years_of_experience: dict[str, Any] | None | Unset
         if isinstance(self.years_of_experience, Unset):
             years_of_experience = UNSET
-        elif isinstance(self.years_of_experience, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0):
+        elif isinstance(
+            self.years_of_experience,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0,
+        ):
             years_of_experience = self.years_of_experience.to_dict()
         else:
             years_of_experience = self.years_of_experience
 
-        geo_location: Union[None, Unset, dict[str, Any]]
+        geo_location: dict[str, Any] | None | Unset
         if isinstance(self.geo_location, Unset):
             geo_location = UNSET
-        elif isinstance(self.geo_location, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0):
+        elif isinstance(
+            self.geo_location,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0,
+        ):
             geo_location = self.geo_location.to_dict()
         else:
             geo_location = self.geo_location
 
-        country_or_region_code: Union[None, Unset, list[str]]
+        country_or_region_code: list[str] | None | Unset
         if isinstance(self.country_or_region_code, Unset):
             country_or_region_code = UNSET
         elif isinstance(self.country_or_region_code, list):
@@ -182,11 +306,10 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
                 country_or_region_code_type_0_item = country_or_region_code_type_0_item_data.value
                 country_or_region_code.append(country_or_region_code_type_0_item)
 
-
         else:
             country_or_region_code = self.country_or_region_code
 
-        seniority: Union[None, Unset, list[str]]
+        seniority: list[str] | None | Unset
         if isinstance(self.seniority, Unset):
             seniority = UNSET
         elif isinstance(self.seniority, list):
@@ -195,11 +318,10 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
                 seniority_type_0_item = seniority_type_0_item_data.value
                 seniority.append(seniority_type_0_item)
 
-
         else:
             seniority = self.seniority
 
-        employment_type: Union[None, Unset, list[str]]
+        employment_type: list[str] | None | Unset
         if isinstance(self.employment_type, Unset):
             employment_type = UNSET
         elif isinstance(self.employment_type, list):
@@ -208,11 +330,10 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
                 employment_type_type_0_item = employment_type_type_0_item_data.value
                 employment_type.append(employment_type_type_0_item)
 
-
         else:
             employment_type = self.employment_type
 
-        job_function: Union[None, Unset, list[str]]
+        job_function: list[str] | None | Unset
         if isinstance(self.job_function, Unset):
             job_function = UNSET
         elif isinstance(self.job_function, list):
@@ -221,11 +342,10 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
                 job_function_type_0_item = job_function_type_0_item_data.value
                 job_function.append(job_function_type_0_item)
 
-
         else:
             job_function = self.job_function
 
-        industry: Union[None, Unset, list[str]]
+        industry: list[str] | None | Unset
         if isinstance(self.industry, Unset):
             industry = UNSET
         elif isinstance(self.industry, list):
@@ -234,11 +354,10 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
                 industry_type_0_item = industry_type_0_item_data.value
                 industry.append(industry_type_0_item)
 
-
         else:
             industry = self.industry
 
-        job_location_type: Union[None, Unset, list[str]]
+        job_location_type: list[str] | None | Unset
         if isinstance(self.job_location_type, Unset):
             job_location_type = UNSET
         elif isinstance(self.job_location_type, list):
@@ -247,15 +366,12 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
                 job_location_type_type_0_item = job_location_type_type_0_item_data.value
                 job_location_type.append(job_location_type_type_0_item)
 
-
         else:
             job_location_type = self.job_location_type
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if job_posting_status is not UNSET:
             field_dict["jobPostingStatus"] = job_posting_status
         if job_title is not UNSET:
@@ -287,18 +403,38 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_1 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_num_applicants_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_years_of_experience_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0
-        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_annual_pay_usd_type_0 import CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_annual_pay_usd_type_0 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_num_applicants_type_0 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_0 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_1 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item_years_of_experience_type_0 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0,
+        )
+
         d = dict(src_dict)
-        def _parse_job_posting_status(data: object) -> Union[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType1, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType2Type1, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType3Type1, None, Unset]:
+
+        def _parse_job_posting_status(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType1
+            | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType2Type1
+            | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -306,39 +442,45 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                job_posting_status_type_1 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType1(data)
-
-
+                job_posting_status_type_1 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType1(
+                    data
+                )
 
                 return job_posting_status_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                job_posting_status_type_2_type_1 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType2Type1(data)
-
-
+                job_posting_status_type_2_type_1 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType2Type1(
+                    data
+                )
 
                 return job_posting_status_type_2_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                job_posting_status_type_3_type_1 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType3Type1(data)
-
-
+                job_posting_status_type_3_type_1 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType3Type1(
+                    data
+                )
 
                 return job_posting_status_type_3_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType1, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType2Type1, CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType3Type1, None, Unset], data)
+            return cast(
+                CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType1
+                | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType2Type1
+                | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         job_posting_status = _parse_job_posting_status(d.pop("jobPostingStatus", UNSET))
 
-
-        def _parse_job_title(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_job_title(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -349,14 +491,13 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
                 job_title_type_0 = cast(list[str], data)
 
                 return job_title_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         job_title = _parse_job_title(d.pop("jobTitle", UNSET))
 
-
-        def _parse_keywords(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_keywords(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -367,14 +508,20 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
                 keywords_type_0 = cast(list[str], data)
 
                 return keywords_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         keywords = _parse_keywords(d.pop("keywords", UNSET))
 
-
-        def _parse_posted_at(data: object) -> Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0', 'CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1', None, Unset]:
+        def _parse_posted_at(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0
+            | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -382,29 +529,40 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                posted_at_type_0 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0.from_dict(data)
-
-
+                posted_at_type_0 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0.from_dict(
+                    data
+                )
 
                 return posted_at_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                posted_at_type_1 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1.from_dict(data)
-
-
+                posted_at_type_1 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1.from_dict(
+                    data
+                )
 
                 return posted_at_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0', 'CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1', None, Unset], data)
+            return cast(
+                CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0
+                | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1
+                | None
+                | Unset,
+                data,
+            )
 
         posted_at = _parse_posted_at(d.pop("postedAt", UNSET))
 
-
-        def _parse_num_applicants(data: object) -> Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0', None, Unset]:
+        def _parse_num_applicants(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -412,19 +570,29 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                num_applicants_type_0 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0.from_dict(data)
-
-
+                num_applicants_type_0 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0.from_dict(
+                    data
+                )
 
                 return num_applicants_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0', None, Unset], data)
+            return cast(
+                CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemNumApplicantsType0
+                | None
+                | Unset,
+                data,
+            )
 
         num_applicants = _parse_num_applicants(d.pop("numApplicants", UNSET))
 
-
-        def _parse_annual_pay_usd(data: object) -> Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0', None, Unset]:
+        def _parse_annual_pay_usd(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -432,19 +600,29 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                annual_pay_usd_type_0 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0.from_dict(data)
-
-
+                annual_pay_usd_type_0 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0.from_dict(
+                    data
+                )
 
                 return annual_pay_usd_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0', None, Unset], data)
+            return cast(
+                CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemAnnualPayUSDType0
+                | None
+                | Unset,
+                data,
+            )
 
         annual_pay_usd = _parse_annual_pay_usd(d.pop("annualPayUSD", UNSET))
 
-
-        def _parse_years_of_experience(data: object) -> Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0', None, Unset]:
+        def _parse_years_of_experience(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -452,19 +630,29 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                years_of_experience_type_0 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0.from_dict(data)
-
-
+                years_of_experience_type_0 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0.from_dict(
+                    data
+                )
 
                 return years_of_experience_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0', None, Unset], data)
+            return cast(
+                CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemYearsOfExperienceType0
+                | None
+                | Unset,
+                data,
+            )
 
         years_of_experience = _parse_years_of_experience(d.pop("yearsOfExperience", UNSET))
 
-
-        def _parse_geo_location(data: object) -> Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0', None, Unset]:
+        def _parse_geo_location(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -472,19 +660,31 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                geo_location_type_0 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0.from_dict(data)
-
-
+                geo_location_type_0 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0.from_dict(
+                    data
+                )
 
                 return geo_location_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0', None, Unset], data)
+            return cast(
+                CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0
+                | None
+                | Unset,
+                data,
+            )
 
         geo_location = _parse_geo_location(d.pop("geoLocation", UNSET))
 
-
-        def _parse_country_or_region_code(data: object) -> Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemCountryOrRegionCodeType0Item]]:
+        def _parse_country_or_region_code(
+            data: object,
+        ) -> (
+            list[
+                CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemCountryOrRegionCodeType0Item
+            ]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -494,22 +694,36 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
                     raise TypeError()
                 country_or_region_code_type_0 = []
                 _country_or_region_code_type_0 = data
-                for country_or_region_code_type_0_item_data in (_country_or_region_code_type_0):
-                    country_or_region_code_type_0_item = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemCountryOrRegionCodeType0Item(country_or_region_code_type_0_item_data)
-
-
+                for country_or_region_code_type_0_item_data in _country_or_region_code_type_0:
+                    country_or_region_code_type_0_item = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemCountryOrRegionCodeType0Item(
+                        country_or_region_code_type_0_item_data
+                    )
 
                     country_or_region_code_type_0.append(country_or_region_code_type_0_item)
 
                 return country_or_region_code_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemCountryOrRegionCodeType0Item]], data)
+            return cast(
+                list[
+                    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemCountryOrRegionCodeType0Item
+                ]
+                | None
+                | Unset,
+                data,
+            )
 
         country_or_region_code = _parse_country_or_region_code(d.pop("countryOrRegionCode", UNSET))
 
-
-        def _parse_seniority(data: object) -> Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemSeniorityType0Item]]:
+        def _parse_seniority(
+            data: object,
+        ) -> (
+            list[
+                CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemSeniorityType0Item
+            ]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -519,22 +733,36 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
                     raise TypeError()
                 seniority_type_0 = []
                 _seniority_type_0 = data
-                for seniority_type_0_item_data in (_seniority_type_0):
-                    seniority_type_0_item = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemSeniorityType0Item(seniority_type_0_item_data)
-
-
+                for seniority_type_0_item_data in _seniority_type_0:
+                    seniority_type_0_item = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemSeniorityType0Item(
+                        seniority_type_0_item_data
+                    )
 
                     seniority_type_0.append(seniority_type_0_item)
 
                 return seniority_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemSeniorityType0Item]], data)
+            return cast(
+                list[
+                    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemSeniorityType0Item
+                ]
+                | None
+                | Unset,
+                data,
+            )
 
         seniority = _parse_seniority(d.pop("seniority", UNSET))
 
-
-        def _parse_employment_type(data: object) -> Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemEmploymentTypeType0Item]]:
+        def _parse_employment_type(
+            data: object,
+        ) -> (
+            list[
+                CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemEmploymentTypeType0Item
+            ]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -544,22 +772,36 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
                     raise TypeError()
                 employment_type_type_0 = []
                 _employment_type_type_0 = data
-                for employment_type_type_0_item_data in (_employment_type_type_0):
-                    employment_type_type_0_item = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemEmploymentTypeType0Item(employment_type_type_0_item_data)
-
-
+                for employment_type_type_0_item_data in _employment_type_type_0:
+                    employment_type_type_0_item = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemEmploymentTypeType0Item(
+                        employment_type_type_0_item_data
+                    )
 
                     employment_type_type_0.append(employment_type_type_0_item)
 
                 return employment_type_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemEmploymentTypeType0Item]], data)
+            return cast(
+                list[
+                    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemEmploymentTypeType0Item
+                ]
+                | None
+                | Unset,
+                data,
+            )
 
         employment_type = _parse_employment_type(d.pop("employmentType", UNSET))
 
-
-        def _parse_job_function(data: object) -> Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobFunctionType0Item]]:
+        def _parse_job_function(
+            data: object,
+        ) -> (
+            list[
+                CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobFunctionType0Item
+            ]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -569,22 +811,36 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
                     raise TypeError()
                 job_function_type_0 = []
                 _job_function_type_0 = data
-                for job_function_type_0_item_data in (_job_function_type_0):
-                    job_function_type_0_item = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobFunctionType0Item(job_function_type_0_item_data)
-
-
+                for job_function_type_0_item_data in _job_function_type_0:
+                    job_function_type_0_item = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobFunctionType0Item(
+                        job_function_type_0_item_data
+                    )
 
                     job_function_type_0.append(job_function_type_0_item)
 
                 return job_function_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobFunctionType0Item]], data)
+            return cast(
+                list[
+                    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobFunctionType0Item
+                ]
+                | None
+                | Unset,
+                data,
+            )
 
         job_function = _parse_job_function(d.pop("jobFunction", UNSET))
 
-
-        def _parse_industry(data: object) -> Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemIndustryType0Item]]:
+        def _parse_industry(
+            data: object,
+        ) -> (
+            list[
+                CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemIndustryType0Item
+            ]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -594,22 +850,36 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
                     raise TypeError()
                 industry_type_0 = []
                 _industry_type_0 = data
-                for industry_type_0_item_data in (_industry_type_0):
-                    industry_type_0_item = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemIndustryType0Item(industry_type_0_item_data)
-
-
+                for industry_type_0_item_data in _industry_type_0:
+                    industry_type_0_item = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemIndustryType0Item(
+                        industry_type_0_item_data
+                    )
 
                     industry_type_0.append(industry_type_0_item)
 
                 return industry_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemIndustryType0Item]], data)
+            return cast(
+                list[
+                    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemIndustryType0Item
+                ]
+                | None
+                | Unset,
+                data,
+            )
 
         industry = _parse_industry(d.pop("industry", UNSET))
 
-
-        def _parse_job_location_type(data: object) -> Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobLocationTypeType0Item]]:
+        def _parse_job_location_type(
+            data: object,
+        ) -> (
+            list[
+                CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobLocationTypeType0Item
+            ]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -619,20 +889,26 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
                     raise TypeError()
                 job_location_type_type_0 = []
                 _job_location_type_type_0 = data
-                for job_location_type_type_0_item_data in (_job_location_type_type_0):
-                    job_location_type_type_0_item = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobLocationTypeType0Item(job_location_type_type_0_item_data)
-
-
+                for job_location_type_type_0_item_data in _job_location_type_type_0:
+                    job_location_type_type_0_item = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobLocationTypeType0Item(
+                        job_location_type_type_0_item_data
+                    )
 
                     job_location_type_type_0.append(job_location_type_type_0_item)
 
                 return job_location_type_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobLocationTypeType0Item]], data)
+            return cast(
+                list[
+                    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemJobLocationTypeType0Item
+                ]
+                | None
+                | Unset,
+                data,
+            )
 
         job_location_type = _parse_job_location_type(d.pop("jobLocationType", UNSET))
-
 
         create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item = cls(
             job_posting_status=job_posting_status,
@@ -650,7 +926,6 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
             industry=industry,
             job_location_type=job_location_type,
         )
-
 
         create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item.additional_properties = d
         return create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_none_of_type_0_item

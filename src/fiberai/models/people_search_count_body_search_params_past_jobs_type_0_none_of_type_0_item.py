@@ -1,56 +1,49 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.people_search_count_body_search_params_past_jobs_type_0_none_of_type_0_item_company_type_0 import PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0
-
-
-
+    from ..models.people_search_count_body_search_params_past_jobs_type_0_none_of_type_0_item_company_type_0 import (
+        PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0,
+    )
 
 
 T = TypeVar("T", bound="PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0Item")
 
 
-
 @_attrs_define
 class PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0Item:
-    """ 
-        Attributes:
-            job_title (Union[None, Unset, list[str]]):
-            company (Union['PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0', None, Unset]):
-     """
+    """
+    Attributes:
+        job_title (list[str] | None | Unset):
+        company (None | PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0 | Unset):
+    """
 
-    job_title: Union[None, Unset, list[str]] = UNSET
-    company: Union['PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0', None, Unset] = UNSET
+    job_title: list[str] | None | Unset = UNSET
+    company: None | PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0 | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.people_search_count_body_search_params_past_jobs_type_0_none_of_type_0_item_company_type_0 import PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0
-        job_title: Union[None, Unset, list[str]]
+        from ..models.people_search_count_body_search_params_past_jobs_type_0_none_of_type_0_item_company_type_0 import (
+            PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0,
+        )
+
+        job_title: list[str] | None | Unset
         if isinstance(self.job_title, Unset):
             job_title = UNSET
         elif isinstance(self.job_title, list):
             job_title = self.job_title
 
-
         else:
             job_title = self.job_title
 
-        company: Union[None, Unset, dict[str, Any]]
+        company: dict[str, Any] | None | Unset
         if isinstance(self.company, Unset):
             company = UNSET
         elif isinstance(self.company, PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0):
@@ -58,11 +51,9 @@ class PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0Item:
         else:
             company = self.company
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if job_title is not UNSET:
             field_dict["jobTitle"] = job_title
         if company is not UNSET:
@@ -70,13 +61,15 @@ class PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0Item:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.people_search_count_body_search_params_past_jobs_type_0_none_of_type_0_item_company_type_0 import PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0
+        from ..models.people_search_count_body_search_params_past_jobs_type_0_none_of_type_0_item_company_type_0 import (
+            PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0,
+        )
+
         d = dict(src_dict)
-        def _parse_job_title(data: object) -> Union[None, Unset, list[str]]:
+
+        def _parse_job_title(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -87,14 +80,15 @@ class PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0Item:
                 job_title_type_0 = cast(list[str], data)
 
                 return job_title_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         job_title = _parse_job_title(d.pop("jobTitle", UNSET))
 
-
-        def _parse_company(data: object) -> Union['PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0', None, Unset]:
+        def _parse_company(
+            data: object,
+        ) -> None | PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -102,23 +96,21 @@ class PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0Item:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                company_type_0 = PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0.from_dict(data)
-
-
+                company_type_0 = PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0.from_dict(
+                    data
+                )
 
                 return company_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0 | Unset, data)
 
         company = _parse_company(d.pop("company", UNSET))
-
 
         people_search_count_body_search_params_past_jobs_type_0_none_of_type_0_item = cls(
             job_title=job_title,
             company=company,
         )
-
 
         people_search_count_body_search_params_past_jobs_type_0_none_of_type_0_item.additional_properties = d
         return people_search_count_body_search_params_past_jobs_type_0_none_of_type_0_item

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCombinedSearchResponse200OutputProfileSearchParamsType0Country3LetterCodeType0NoneOfType0Item(str, Enum):
     ABW = "ABW"
     AFG = "AFG"

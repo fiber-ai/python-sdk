@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemExperiencesType0ItemSeniorityType2Type1(str, Enum):
     ASSOCIATE = "Associate"
     DIRECTOR = "Director"

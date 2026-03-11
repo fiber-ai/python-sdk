@@ -1,62 +1,49 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.sync_combined_search_body_profile_params_job_status_type_0_status import SyncCombinedSearchBodyProfileParamsJobStatusType0Status
-
-
-
-
-
+from ..models.sync_combined_search_body_profile_params_job_status_type_0_status import (
+    SyncCombinedSearchBodyProfileParamsJobStatusType0Status,
+)
 
 T = TypeVar("T", bound="SyncCombinedSearchBodyProfileParamsJobStatusType0")
 
 
-
 @_attrs_define
 class SyncCombinedSearchBodyProfileParamsJobStatusType0:
-    """ 
-        Attributes:
-            status (SyncCombinedSearchBodyProfileParamsJobStatusType0Status):
-     """
+    """
+    Attributes:
+        status (SyncCombinedSearchBodyProfileParamsJobStatusType0Status):
+    """
 
     status: SyncCombinedSearchBodyProfileParamsJobStatusType0Status
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
         status = self.status.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "status": status,
-        })
+        field_dict.update(
+            {
+                "status": status,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         status = SyncCombinedSearchBodyProfileParamsJobStatusType0Status(d.pop("status"))
 
-
-
-
         sync_combined_search_body_profile_params_job_status_type_0 = cls(
             status=status,
         )
-
 
         sync_combined_search_body_profile_params_job_status_type_0.additional_properties = d
         return sync_combined_search_body_profile_params_job_status_type_0

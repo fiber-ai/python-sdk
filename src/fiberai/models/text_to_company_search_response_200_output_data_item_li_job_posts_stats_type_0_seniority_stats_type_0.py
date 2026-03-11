@@ -1,105 +1,112 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
-from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
-
-from ..types import UNSET, Unset
-from typing import cast
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_entry_level import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel
-  from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_mid_senior_level import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel
-  from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_internship import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Internship
-  from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_executive import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Executive
-  from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_not_applicable import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable
-  from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_director import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Director
-  from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_associate import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Associate
-
-
-
+    from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_associate import (
+        TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Associate,
+    )
+    from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_director import (
+        TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Director,
+    )
+    from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_entry_level import (
+        TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel,
+    )
+    from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_executive import (
+        TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Executive,
+    )
+    from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_internship import (
+        TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Internship,
+    )
+    from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_mid_senior_level import (
+        TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel,
+    )
+    from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_not_applicable import (
+        TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable,
+    )
 
 
 T = TypeVar("T", bound="TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0")
 
 
-
 @_attrs_define
 class TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0:
-    """ 
-        Attributes:
-            entry_level (Union[Unset,
-                TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel]):
-            director (Union[Unset,
-                TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Director]):
-            associate (Union[Unset,
-                TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Associate]):
-            mid_senior_level (Union[Unset,
-                TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel]):
-            internship (Union[Unset,
-                TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Internship]):
-            executive (Union[Unset,
-                TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Executive]):
-            not_applicable (Union[Unset,
-                TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable]):
-     """
+    """
+    Attributes:
+        entry_level (TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel |
+            Unset):
+        director (TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Director | Unset):
+        associate (TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Associate |
+            Unset):
+        mid_senior_level
+            (TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel | Unset):
+        internship (TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Internship |
+            Unset):
+        executive (TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Executive |
+            Unset):
+        not_applicable (TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable
+            | Unset):
+    """
 
-    entry_level: Union[Unset, 'TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel'] = UNSET
-    director: Union[Unset, 'TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Director'] = UNSET
-    associate: Union[Unset, 'TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Associate'] = UNSET
-    mid_senior_level: Union[Unset, 'TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel'] = UNSET
-    internship: Union[Unset, 'TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Internship'] = UNSET
-    executive: Union[Unset, 'TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Executive'] = UNSET
-    not_applicable: Union[Unset, 'TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable'] = UNSET
-
-
-
-
+    entry_level: (
+        TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel | Unset
+    ) = UNSET
+    director: TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Director | Unset = (
+        UNSET
+    )
+    associate: TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Associate | Unset = (
+        UNSET
+    )
+    mid_senior_level: (
+        TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel | Unset
+    ) = UNSET
+    internship: (
+        TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Internship | Unset
+    ) = UNSET
+    executive: TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Executive | Unset = (
+        UNSET
+    )
+    not_applicable: (
+        TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable | Unset
+    ) = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_entry_level import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel
-        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_mid_senior_level import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel
-        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_internship import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Internship
-        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_executive import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Executive
-        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_not_applicable import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable
-        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_director import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Director
-        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_associate import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Associate
-        entry_level: Union[Unset, dict[str, Any]] = UNSET
+        entry_level: dict[str, Any] | Unset = UNSET
         if not isinstance(self.entry_level, Unset):
             entry_level = self.entry_level.to_dict()
 
-        director: Union[Unset, dict[str, Any]] = UNSET
+        director: dict[str, Any] | Unset = UNSET
         if not isinstance(self.director, Unset):
             director = self.director.to_dict()
 
-        associate: Union[Unset, dict[str, Any]] = UNSET
+        associate: dict[str, Any] | Unset = UNSET
         if not isinstance(self.associate, Unset):
             associate = self.associate.to_dict()
 
-        mid_senior_level: Union[Unset, dict[str, Any]] = UNSET
+        mid_senior_level: dict[str, Any] | Unset = UNSET
         if not isinstance(self.mid_senior_level, Unset):
             mid_senior_level = self.mid_senior_level.to_dict()
 
-        internship: Union[Unset, dict[str, Any]] = UNSET
+        internship: dict[str, Any] | Unset = UNSET
         if not isinstance(self.internship, Unset):
             internship = self.internship.to_dict()
 
-        executive: Union[Unset, dict[str, Any]] = UNSET
+        executive: dict[str, Any] | Unset = UNSET
         if not isinstance(self.executive, Unset):
             executive = self.executive.to_dict()
 
-        not_applicable: Union[Unset, dict[str, Any]] = UNSET
+        not_applicable: dict[str, Any] | Unset = UNSET
         if not isinstance(self.not_applicable, Unset):
             not_applicable = self.not_applicable.to_dict()
 
-
         field_dict: dict[str, Any] = {}
 
-        field_dict.update({
-        })
+        field_dict.update({})
         if entry_level is not UNSET:
             field_dict["Entry level"] = entry_level
         if director is not UNSET:
@@ -117,87 +124,111 @@ class TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityS
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_entry_level import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel
-        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_mid_senior_level import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel
-        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_internship import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Internship
-        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_executive import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Executive
-        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_not_applicable import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable
-        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_director import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Director
-        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_associate import TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Associate
+        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_associate import (
+            TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Associate,
+        )
+        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_director import (
+            TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Director,
+        )
+        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_entry_level import (
+            TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel,
+        )
+        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_executive import (
+            TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Executive,
+        )
+        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_internship import (
+            TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Internship,
+        )
+        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_mid_senior_level import (
+            TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel,
+        )
+        from ..models.text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_not_applicable import (
+            TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable,
+        )
+
         d = dict(src_dict)
         _entry_level = d.pop("Entry level", UNSET)
-        entry_level: Union[Unset, TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel]
-        if isinstance(_entry_level,  Unset):
+        entry_level: (
+            TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel | Unset
+        )
+        if isinstance(_entry_level, Unset):
             entry_level = UNSET
         else:
-            entry_level = TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel.from_dict(_entry_level)
-
-
-
+            entry_level = (
+                TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel.from_dict(
+                    _entry_level
+                )
+            )
 
         _director = d.pop("Director", UNSET)
-        director: Union[Unset, TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Director]
-        if isinstance(_director,  Unset):
+        director: TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Director | Unset
+        if isinstance(_director, Unset):
             director = UNSET
         else:
-            director = TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Director.from_dict(_director)
-
-
-
+            director = (
+                TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Director.from_dict(
+                    _director
+                )
+            )
 
         _associate = d.pop("Associate", UNSET)
-        associate: Union[Unset, TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Associate]
-        if isinstance(_associate,  Unset):
+        associate: TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Associate | Unset
+        if isinstance(_associate, Unset):
             associate = UNSET
         else:
-            associate = TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Associate.from_dict(_associate)
-
-
-
+            associate = (
+                TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Associate.from_dict(
+                    _associate
+                )
+            )
 
         _mid_senior_level = d.pop("Mid-Senior level", UNSET)
-        mid_senior_level: Union[Unset, TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel]
-        if isinstance(_mid_senior_level,  Unset):
+        mid_senior_level: (
+            TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel | Unset
+        )
+        if isinstance(_mid_senior_level, Unset):
             mid_senior_level = UNSET
         else:
-            mid_senior_level = TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel.from_dict(_mid_senior_level)
-
-
-
+            mid_senior_level = TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel.from_dict(
+                _mid_senior_level
+            )
 
         _internship = d.pop("Internship", UNSET)
-        internship: Union[Unset, TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Internship]
-        if isinstance(_internship,  Unset):
+        internship: (
+            TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Internship | Unset
+        )
+        if isinstance(_internship, Unset):
             internship = UNSET
         else:
-            internship = TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Internship.from_dict(_internship)
-
-
-
+            internship = (
+                TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Internship.from_dict(
+                    _internship
+                )
+            )
 
         _executive = d.pop("Executive", UNSET)
-        executive: Union[Unset, TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Executive]
-        if isinstance(_executive,  Unset):
+        executive: TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Executive | Unset
+        if isinstance(_executive, Unset):
             executive = UNSET
         else:
-            executive = TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Executive.from_dict(_executive)
-
-
-
+            executive = (
+                TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Executive.from_dict(
+                    _executive
+                )
+            )
 
         _not_applicable = d.pop("Not Applicable", UNSET)
-        not_applicable: Union[Unset, TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable]
-        if isinstance(_not_applicable,  Unset):
+        not_applicable: (
+            TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable | Unset
+        )
+        if isinstance(_not_applicable, Unset):
             not_applicable = UNSET
         else:
-            not_applicable = TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable.from_dict(_not_applicable)
-
-
-
+            not_applicable = TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable.from_dict(
+                _not_applicable
+            )
 
         text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0 = cls(
             entry_level=entry_level,
@@ -210,4 +241,3 @@ class TextToCompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityS
         )
 
         return text_to_company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0
-

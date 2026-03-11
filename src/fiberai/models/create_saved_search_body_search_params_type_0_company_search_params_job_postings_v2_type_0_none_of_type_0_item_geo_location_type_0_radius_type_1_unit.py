@@ -1,6 +1,9 @@
 from enum import Enum
 
-class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType1Unit(str, Enum):
+
+class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType1Unit(
+    str, Enum
+):
     KILOMETERS = "kilometers"
 
     def __str__(self) -> str:

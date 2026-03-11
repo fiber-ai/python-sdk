@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType0Type(str, Enum):
     EXACT = "exact"
 

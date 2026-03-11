@@ -1,75 +1,63 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
+from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1_strategy import (
+    TextToCombinedSearchResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1Strategy,
+)
 
-from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1_strategy import TextToCombinedSearchResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1Strategy
-from typing import cast
-
-
-
-
-
-
-T = TypeVar("T", bound="TextToCombinedSearchResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1")
-
+T = TypeVar(
+    "T",
+    bound="TextToCombinedSearchResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1",
+)
 
 
 @_attrs_define
 class TextToCombinedSearchResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1:
-    """ 
-        Attributes:
-            strategy (TextToCombinedSearchResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSel
-                ectionType1Strategy):
-            batches (list[str]):
-     """
+    """
+    Attributes:
+        strategy (TextToCombinedSearchResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSel
+            ectionType1Strategy):
+        batches (list[str]):
+    """
 
     strategy: TextToCombinedSearchResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1Strategy
     batches: list[str]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         strategy = self.strategy.value
 
         batches = self.batches
 
-
-
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "strategy": strategy,
-            "batches": batches,
-        })
+        field_dict.update(
+            {
+                "strategy": strategy,
+                "batches": batches,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        strategy = TextToCombinedSearchResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1Strategy(d.pop("strategy"))
-
-
-
+        strategy = TextToCombinedSearchResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1Strategy(
+            d.pop("strategy")
+        )
 
         batches = cast(list[str], d.pop("batches"))
-
 
         text_to_combined_search_response_200_output_company_search_params_type_0_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1 = cls(
             strategy=strategy,
             batches=batches,
         )
-
 
         text_to_combined_search_response_200_output_company_search_params_type_0_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1.additional_properties = d
         return text_to_combined_search_response_200_output_company_search_params_type_0_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1

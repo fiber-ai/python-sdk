@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyCompanyParamsEmployeesType0Joiner(str, Enum):
     AND = "AND"
     OR = "OR"

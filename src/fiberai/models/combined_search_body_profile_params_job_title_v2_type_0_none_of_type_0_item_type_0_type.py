@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType0Type(str, Enum):
     TERM = "term"
 

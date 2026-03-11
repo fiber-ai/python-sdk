@@ -1,6 +1,9 @@
 from enum import Enum
 
-class CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0AnyOfType0ItemType3RangeType0Type(str, Enum):
+
+class CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0AnyOfType0ItemType3RangeType0Type(
+    str, Enum
+):
     COUNT_RANGE = "count-range"
 
     def __str__(self) -> str:

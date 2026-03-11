@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToProfileSearchResponse200OutputSearchParamsJobTitleV3Type0NoneOfType0ItemType0Type(str, Enum):
     PLAIN = "plain"
 

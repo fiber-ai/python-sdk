@@ -1,39 +1,31 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.job_posting_search_response_200_output_data_item_compensation_range_type_0_lte_type_0_period import JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0Period
-
-
-
-
-
+from ..models.job_posting_search_response_200_output_data_item_compensation_range_type_0_lte_type_0_period import (
+    JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0Period,
+)
 
 T = TypeVar("T", bound="JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0")
 
 
-
 @_attrs_define
 class JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0:
-    """ 
-        Attributes:
-            currency_unit (str): These are just currency symbols, like CA$ or £
-            number (float):
-            period (JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0Period):
-     """
+    """
+    Attributes:
+        currency_unit (str): These are just currency symbols, like CA$ or £
+        number (float):
+        period (JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0Period):
+    """
 
     currency_unit: str
     number: float
     period: JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0Period
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         currency_unit = self.currency_unit
@@ -42,18 +34,17 @@ class JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0:
 
         period = self.period.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "currencyUnit": currency_unit,
-            "number": number,
-            "period": period,
-        })
+        field_dict.update(
+            {
+                "currencyUnit": currency_unit,
+                "number": number,
+                "period": period,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -64,15 +55,11 @@ class JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0:
 
         period = JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0Period(d.pop("period"))
 
-
-
-
         job_posting_search_response_200_output_data_item_compensation_range_type_0_lte_type_0 = cls(
             currency_unit=currency_unit,
             number=number,
             period=period,
         )
-
 
         job_posting_search_response_200_output_data_item_compensation_range_type_0_lte_type_0.additional_properties = d
         return job_posting_search_response_200_output_data_item_compensation_range_type_0_lte_type_0

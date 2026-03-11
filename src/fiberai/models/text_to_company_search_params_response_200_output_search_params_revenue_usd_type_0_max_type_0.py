@@ -1,116 +1,132 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.text_to_company_search_params_response_200_output_search_params_revenue_usd_type_0_max_type_0_suffix_type_1 import TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType1
-from ..models.text_to_company_search_params_response_200_output_search_params_revenue_usd_type_0_max_type_0_suffix_type_2_type_1 import TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType2Type1
-from ..models.text_to_company_search_params_response_200_output_search_params_revenue_usd_type_0_max_type_0_suffix_type_3_type_1 import TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType3Type1
-from typing import cast, Union
-
-
-
-
-
+from ..models.text_to_company_search_params_response_200_output_search_params_revenue_usd_type_0_max_type_0_suffix_type_1 import (
+    TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType1,
+)
+from ..models.text_to_company_search_params_response_200_output_search_params_revenue_usd_type_0_max_type_0_suffix_type_2_type_1 import (
+    TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType2Type1,
+)
+from ..models.text_to_company_search_params_response_200_output_search_params_revenue_usd_type_0_max_type_0_suffix_type_3_type_1 import (
+    TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType3Type1,
+)
 
 T = TypeVar("T", bound="TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0")
 
 
-
 @_attrs_define
 class TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0:
-    """ 
-        Attributes:
-            quantity (float):
-            suffix (Union[None, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType1,
-                TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType2Type1,
-                TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType3Type1]):
-     """
+    """
+    Attributes:
+        quantity (float):
+        suffix (None | TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType1 |
+            TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType2Type1 |
+            TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType3Type1):
+    """
 
     quantity: float
-    suffix: Union[None, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType1, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType2Type1, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType3Type1]
+    suffix: (
+        None
+        | TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType1
+        | TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType2Type1
+        | TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType3Type1
+    )
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         quantity = self.quantity
 
-        suffix: Union[None, str]
-        if isinstance(self.suffix, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType1):
+        suffix: None | str
+        if isinstance(
+            self.suffix, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType1
+        ):
             suffix = self.suffix.value
-        elif isinstance(self.suffix, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType2Type1):
+        elif isinstance(
+            self.suffix, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType2Type1
+        ):
             suffix = self.suffix.value
-        elif isinstance(self.suffix, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType3Type1):
+        elif isinstance(
+            self.suffix, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType3Type1
+        ):
             suffix = self.suffix.value
         else:
             suffix = self.suffix
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "quantity": quantity,
-            "suffix": suffix,
-        })
+        field_dict.update(
+            {
+                "quantity": quantity,
+                "suffix": suffix,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         quantity = d.pop("quantity")
 
-        def _parse_suffix(data: object) -> Union[None, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType1, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType2Type1, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType3Type1]:
+        def _parse_suffix(
+            data: object,
+        ) -> (
+            None
+            | TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType1
+            | TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType2Type1
+            | TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType3Type1
+        ):
             if data is None:
                 return data
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                suffix_type_1 = TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType1(data)
-
-
+                suffix_type_1 = (
+                    TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType1(data)
+                )
 
                 return suffix_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                suffix_type_2_type_1 = TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType2Type1(data)
-
-
+                suffix_type_2_type_1 = (
+                    TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType2Type1(data)
+                )
 
                 return suffix_type_2_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                suffix_type_3_type_1 = TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType3Type1(data)
-
-
+                suffix_type_3_type_1 = (
+                    TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType3Type1(data)
+                )
 
                 return suffix_type_3_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType1, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType2Type1, TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType3Type1], data)
+            return cast(
+                None
+                | TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType1
+                | TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType2Type1
+                | TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType3Type1,
+                data,
+            )
 
         suffix = _parse_suffix(d.pop("suffix"))
-
 
         text_to_company_search_params_response_200_output_search_params_revenue_usd_type_0_max_type_0 = cls(
             quantity=quantity,
             suffix=suffix,
         )
-
 
         text_to_company_search_params_response_200_output_search_params_revenue_usd_type_0_max_type_0.additional_properties = d
         return text_to_company_search_params_response_200_output_search_params_revenue_usd_type_0_max_type_0

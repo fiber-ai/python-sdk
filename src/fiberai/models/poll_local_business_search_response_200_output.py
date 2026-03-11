@@ -1,62 +1,86 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from typing import cast
-
-
-
-
+if TYPE_CHECKING:
+    from ..models.poll_local_business_search_response_200_output_data import (
+        PollLocalBusinessSearchResponse200OutputData,
+    )
 
 
 T = TypeVar("T", bound="PollLocalBusinessSearchResponse200Output")
 
 
-
 @_attrs_define
 class PollLocalBusinessSearchResponse200Output:
-    """ 
-        Attributes:
-            data (list[Any]): Coming soon
-     """
+    """
+    Attributes:
+        task_id (str): Task ID of the local business search
+        data (PollLocalBusinessSearchResponse200OutputData): The Local business agent search result
+        next_cursor (None | str | Unset): The cursor to use to get the next page of results. If this is null, then there
+            are no more results to fetch
+    """
 
-    data: list[Any]
+    task_id: str
+    data: PollLocalBusinessSearchResponse200OutputData
+    next_cursor: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        data = self.data
+        task_id = self.task_id
 
+        data = self.data.to_dict()
 
-
+        next_cursor: None | str | Unset
+        if isinstance(self.next_cursor, Unset):
+            next_cursor = UNSET
+        else:
+            next_cursor = self.next_cursor
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "data": data,
-        })
+        field_dict.update(
+            {
+                "taskId": task_id,
+                "data": data,
+            }
+        )
+        if next_cursor is not UNSET:
+            field_dict["nextCursor"] = next_cursor
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        d = dict(src_dict)
-        data = cast(list[Any], d.pop("data"))
-
-
-        poll_local_business_search_response_200_output = cls(
-            data=data,
+        from ..models.poll_local_business_search_response_200_output_data import (
+            PollLocalBusinessSearchResponse200OutputData,
         )
 
+        d = dict(src_dict)
+        task_id = d.pop("taskId")
+
+        data = PollLocalBusinessSearchResponse200OutputData.from_dict(d.pop("data"))
+
+        def _parse_next_cursor(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        next_cursor = _parse_next_cursor(d.pop("nextCursor", UNSET))
+
+        poll_local_business_search_response_200_output = cls(
+            task_id=task_id,
+            data=data,
+            next_cursor=next_cursor,
+        )
 
         poll_local_business_search_response_200_output.additional_properties = d
         return poll_local_business_search_response_200_output

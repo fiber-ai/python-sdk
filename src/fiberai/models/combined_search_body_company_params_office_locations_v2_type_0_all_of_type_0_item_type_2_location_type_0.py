@@ -1,120 +1,130 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_strategy import CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Strategy
-from typing import cast
-from typing import cast, Union
+from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_strategy import (
+    CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Strategy,
+)
 
 if TYPE_CHECKING:
-  from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_center import CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Center
-  from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_radius_type_1 import CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType1
-  from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_radius_type_0 import CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0
-
-
-
+    from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_center import (
+        CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Center,
+    )
+    from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_radius_type_0 import (
+        CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0,
+    )
+    from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_radius_type_1 import (
+        CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType1,
+    )
 
 
 T = TypeVar("T", bound="CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0")
 
 
-
 @_attrs_define
 class CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0:
-    """ 
-        Attributes:
-            strategy (CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Strategy):
-            center (CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Center):
-            radius
-                (Union['CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0',
-                'CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType1']):
-     """
+    """
+    Attributes:
+        strategy (CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Strategy):
+        center (CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Center):
+        radius (CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0 |
+            CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType1):
+    """
 
     strategy: CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Strategy
-    center: 'CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Center'
-    radius: Union['CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0', 'CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType1']
+    center: CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Center
+    radius: (
+        CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0
+        | CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType1
+    )
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_center import CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Center
-        from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_radius_type_1 import CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType1
-        from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_radius_type_0 import CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0
+        from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_radius_type_0 import (
+            CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0,
+        )
+
         strategy = self.strategy.value
 
         center = self.center.to_dict()
 
         radius: dict[str, Any]
-        if isinstance(self.radius, CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0):
+        if isinstance(
+            self.radius,
+            CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0,
+        ):
             radius = self.radius.to_dict()
         else:
             radius = self.radius.to_dict()
 
-
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "strategy": strategy,
-            "center": center,
-            "radius": radius,
-        })
+        field_dict.update(
+            {
+                "strategy": strategy,
+                "center": center,
+                "radius": radius,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_center import CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Center
-        from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_radius_type_1 import CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType1
-        from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_radius_type_0 import CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0
+        from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_center import (
+            CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Center,
+        )
+        from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_radius_type_0 import (
+            CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0,
+        )
+        from ..models.combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0_radius_type_1 import (
+            CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType1,
+        )
+
         d = dict(src_dict)
-        strategy = CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Strategy(d.pop("strategy"))
+        strategy = CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Strategy(
+            d.pop("strategy")
+        )
 
+        center = CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Center.from_dict(
+            d.pop("center")
+        )
 
-
-
-        center = CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Center.from_dict(d.pop("center"))
-
-
-
-
-        def _parse_radius(data: object) -> Union['CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0', 'CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType1']:
+        def _parse_radius(
+            data: object,
+        ) -> (
+            CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0
+            | CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType1
+        ):
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                radius_type_0 = CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0.from_dict(data)
-
-
+                radius_type_0 = CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType0.from_dict(
+                    data
+                )
 
                 return radius_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             if not isinstance(data, dict):
                 raise TypeError()
-            radius_type_1 = CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType1.from_dict(data)
-
-
+            radius_type_1 = CombinedSearchBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0RadiusType1.from_dict(
+                data
+            )
 
             return radius_type_1
 
         radius = _parse_radius(d.pop("radius"))
-
 
         combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0 = cls(
             strategy=strategy,
             center=center,
             radius=radius,
         )
-
 
         combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0.additional_properties = d
         return combined_search_body_company_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0

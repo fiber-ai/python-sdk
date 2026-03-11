@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsJobPostingsV2Type0AllOfType0ItemCountryOrRegionCodeType0Item(str, Enum):
     ABW = "ABW"
     AFG = "AFG"

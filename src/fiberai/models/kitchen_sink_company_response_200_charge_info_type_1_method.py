@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class KitchenSinkCompanyResponse200ChargeInfoType1Method(str, Enum):
     CHARGING_LATER = "charging-later"
 

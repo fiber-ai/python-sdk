@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueUSDType0MinType0SuffixType3Type1(str, Enum):
     B = "B"
     K = "K"

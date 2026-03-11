@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PeopleSearchCountBodySearchParamsEducationType0AnyOfType0ItemFinishedSchoolAtType1WindowType2Period(str, Enum):
     DAY = "day"
     MONTH = "month"

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyLiveEnrichBodyType(str, Enum):
     LIURL = "liUrl"
     ORGID = "orgId"

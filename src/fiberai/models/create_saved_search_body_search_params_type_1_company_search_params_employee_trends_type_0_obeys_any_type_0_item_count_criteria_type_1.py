@@ -1,79 +1,76 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_trends_type_0_obeys_any_type_0_item_count_criteria_type_1_type import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1Type
-from typing import cast
+from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_trends_type_0_obeys_any_type_0_item_count_criteria_type_1_type import (
+    CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1Type,
+)
 
 if TYPE_CHECKING:
-  from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_trends_type_0_obeys_any_type_0_item_count_criteria_type_1_change import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1Change
+    from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_trends_type_0_obeys_any_type_0_item_count_criteria_type_1_change import (
+        CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1Change,
+    )
 
 
-
-
-
-T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1")
-
+T = TypeVar(
+    "T",
+    bound="CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1",
+)
 
 
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1:
-    """ 
-        Attributes:
-            type_ (CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteri
-                aType1Type):
-            change (CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriter
-                iaType1Change):
-            window_look_back_months (float):
-     """
+    """
+    Attributes:
+        type_ (CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteri
+            aType1Type):
+        change (CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriter
+            iaType1Change):
+        window_look_back_months (float):
+    """
 
     type_: CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1Type
-    change: 'CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1Change'
+    change: CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1Change
     window_look_back_months: float
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_trends_type_0_obeys_any_type_0_item_count_criteria_type_1_change import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1Change
         type_ = self.type_.value
 
         change = self.change.to_dict()
 
         window_look_back_months = self.window_look_back_months
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "type": type_,
-            "change": change,
-            "windowLookBackMonths": window_look_back_months,
-        })
+        field_dict.update(
+            {
+                "type": type_,
+                "change": change,
+                "windowLookBackMonths": window_look_back_months,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_trends_type_0_obeys_any_type_0_item_count_criteria_type_1_change import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1Change
+        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_trends_type_0_obeys_any_type_0_item_count_criteria_type_1_change import (
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1Change,
+        )
+
         d = dict(src_dict)
-        type_ = CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1Type(d.pop("type"))
+        type_ = CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1Type(
+            d.pop("type")
+        )
 
-
-
-
-        change = CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1Change.from_dict(d.pop("change"))
-
-
-
+        change = CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysAnyType0ItemCountCriteriaType1Change.from_dict(
+            d.pop("change")
+        )
 
         window_look_back_months = d.pop("windowLookBackMonths")
 
@@ -82,7 +79,6 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsTyp
             change=change,
             window_look_back_months=window_look_back_months,
         )
-
 
         create_saved_search_body_search_params_type_1_company_search_params_employee_trends_type_0_obeys_any_type_0_item_count_criteria_type_1.additional_properties = d
         return create_saved_search_body_search_params_type_1_company_search_params_employee_trends_type_0_obeys_any_type_0_item_count_criteria_type_1

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class InvestorSearchResponse200OutputInvestorsItemRecentInvestmentsType0ItemRoundTypeType3Type1(str, Enum):
     ANGEL = "angel"
     CONVERTIBLE_NOTE = "convertible_note"

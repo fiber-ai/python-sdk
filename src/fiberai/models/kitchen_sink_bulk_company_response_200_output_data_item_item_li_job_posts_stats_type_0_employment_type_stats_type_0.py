@@ -1,105 +1,122 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
-from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
-
-from ..types import UNSET, Unset
-from typing import cast
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_temporary import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_part_time import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_other import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Other
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_full_time import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_contract import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_internship import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship
-  from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_volunteer import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_contract import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_full_time import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_internship import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_other import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Other,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_part_time import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_temporary import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary,
+    )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_volunteer import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer,
+    )
 
 
-
-
-
-T = TypeVar("T", bound="KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0")
-
+T = TypeVar(
+    "T", bound="KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0"
+)
 
 
 @_attrs_define
 class KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0:
-    """ 
-        Attributes:
-            full_time (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime]):
-            temporary (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary]):
-            internship (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship]):
-            contract (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract]):
-            part_time (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime]):
-            volunteer (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer]):
-            other (Union[Unset,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Other]):
-     """
+    """
+    Attributes:
+        full_time
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime |
+            Unset):
+        temporary
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary |
+            Unset):
+        internship
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship |
+            Unset):
+        contract
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract |
+            Unset):
+        part_time
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime |
+            Unset):
+        volunteer
+            (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer |
+            Unset):
+        other (KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Other |
+            Unset):
+    """
 
-    full_time: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime'] = UNSET
-    temporary: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary'] = UNSET
-    internship: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship'] = UNSET
-    contract: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract'] = UNSET
-    part_time: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime'] = UNSET
-    volunteer: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer'] = UNSET
-    other: Union[Unset, 'KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Other'] = UNSET
-
-
-
-
+    full_time: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime | Unset
+    ) = UNSET
+    temporary: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary | Unset
+    ) = UNSET
+    internship: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship
+        | Unset
+    ) = UNSET
+    contract: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract | Unset
+    ) = UNSET
+    part_time: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime | Unset
+    ) = UNSET
+    volunteer: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer | Unset
+    ) = UNSET
+    other: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Other | Unset
+    ) = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_temporary import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_part_time import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_other import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Other
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_full_time import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_contract import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_internship import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_volunteer import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer
-        full_time: Union[Unset, dict[str, Any]] = UNSET
+        full_time: dict[str, Any] | Unset = UNSET
         if not isinstance(self.full_time, Unset):
             full_time = self.full_time.to_dict()
 
-        temporary: Union[Unset, dict[str, Any]] = UNSET
+        temporary: dict[str, Any] | Unset = UNSET
         if not isinstance(self.temporary, Unset):
             temporary = self.temporary.to_dict()
 
-        internship: Union[Unset, dict[str, Any]] = UNSET
+        internship: dict[str, Any] | Unset = UNSET
         if not isinstance(self.internship, Unset):
             internship = self.internship.to_dict()
 
-        contract: Union[Unset, dict[str, Any]] = UNSET
+        contract: dict[str, Any] | Unset = UNSET
         if not isinstance(self.contract, Unset):
             contract = self.contract.to_dict()
 
-        part_time: Union[Unset, dict[str, Any]] = UNSET
+        part_time: dict[str, Any] | Unset = UNSET
         if not isinstance(self.part_time, Unset):
             part_time = self.part_time.to_dict()
 
-        volunteer: Union[Unset, dict[str, Any]] = UNSET
+        volunteer: dict[str, Any] | Unset = UNSET
         if not isinstance(self.volunteer, Unset):
             volunteer = self.volunteer.to_dict()
 
-        other: Union[Unset, dict[str, Any]] = UNSET
+        other: dict[str, Any] | Unset = UNSET
         if not isinstance(self.other, Unset):
             other = self.other.to_dict()
 
-
         field_dict: dict[str, Any] = {}
 
-        field_dict.update({
-        })
+        field_dict.update({})
         if full_time is not UNSET:
             field_dict["Full-time"] = full_time
         if temporary is not UNSET:
@@ -117,87 +134,113 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0Emp
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_temporary import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_part_time import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_other import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Other
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_full_time import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_contract import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_internship import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship
-        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_volunteer import KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_contract import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_full_time import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_internship import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_other import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Other,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_part_time import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_temporary import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0_volunteer import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer,
+        )
+
         d = dict(src_dict)
         _full_time = d.pop("Full-time", UNSET)
-        full_time: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime]
-        if isinstance(_full_time,  Unset):
+        full_time: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime
+            | Unset
+        )
+        if isinstance(_full_time, Unset):
             full_time = UNSET
         else:
-            full_time = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime.from_dict(_full_time)
-
-
-
+            full_time = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime.from_dict(
+                _full_time
+            )
 
         _temporary = d.pop("Temporary", UNSET)
-        temporary: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary]
-        if isinstance(_temporary,  Unset):
+        temporary: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary
+            | Unset
+        )
+        if isinstance(_temporary, Unset):
             temporary = UNSET
         else:
-            temporary = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary.from_dict(_temporary)
-
-
-
+            temporary = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary.from_dict(
+                _temporary
+            )
 
         _internship = d.pop("Internship", UNSET)
-        internship: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship]
-        if isinstance(_internship,  Unset):
+        internship: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship
+            | Unset
+        )
+        if isinstance(_internship, Unset):
             internship = UNSET
         else:
-            internship = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship.from_dict(_internship)
-
-
-
+            internship = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship.from_dict(
+                _internship
+            )
 
         _contract = d.pop("Contract", UNSET)
-        contract: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract]
-        if isinstance(_contract,  Unset):
+        contract: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract
+            | Unset
+        )
+        if isinstance(_contract, Unset):
             contract = UNSET
         else:
-            contract = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract.from_dict(_contract)
-
-
-
+            contract = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract.from_dict(
+                _contract
+            )
 
         _part_time = d.pop("Part-time", UNSET)
-        part_time: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime]
-        if isinstance(_part_time,  Unset):
+        part_time: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime
+            | Unset
+        )
+        if isinstance(_part_time, Unset):
             part_time = UNSET
         else:
-            part_time = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime.from_dict(_part_time)
-
-
-
+            part_time = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime.from_dict(
+                _part_time
+            )
 
         _volunteer = d.pop("Volunteer", UNSET)
-        volunteer: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer]
-        if isinstance(_volunteer,  Unset):
+        volunteer: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer
+            | Unset
+        )
+        if isinstance(_volunteer, Unset):
             volunteer = UNSET
         else:
-            volunteer = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer.from_dict(_volunteer)
-
-
-
+            volunteer = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer.from_dict(
+                _volunteer
+            )
 
         _other = d.pop("Other", UNSET)
-        other: Union[Unset, KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Other]
-        if isinstance(_other,  Unset):
+        other: (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Other | Unset
+        )
+        if isinstance(_other, Unset):
             other = UNSET
         else:
-            other = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Other.from_dict(_other)
-
-
-
+            other = KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0Other.from_dict(
+                _other
+            )
 
         kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0 = cls(
             full_time=full_time,
@@ -210,4 +253,3 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0Emp
         )
 
         return kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0
-

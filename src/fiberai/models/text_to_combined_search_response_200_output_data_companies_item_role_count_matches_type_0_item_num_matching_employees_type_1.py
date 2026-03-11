@@ -1,63 +1,55 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
+from ..models.text_to_combined_search_response_200_output_data_companies_item_role_count_matches_type_0_item_num_matching_employees_type_1_type import (
+    TextToCombinedSearchResponse200OutputDataCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1Type,
+)
 
-from ..models.text_to_combined_search_response_200_output_data_companies_item_role_count_matches_type_0_item_num_matching_employees_type_1_type import TextToCombinedSearchResponse200OutputDataCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1Type
-
-
-
-
-
-
-T = TypeVar("T", bound="TextToCombinedSearchResponse200OutputDataCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1")
-
+T = TypeVar(
+    "T",
+    bound="TextToCombinedSearchResponse200OutputDataCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1",
+)
 
 
 @_attrs_define
 class TextToCombinedSearchResponse200OutputDataCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1:
-    """ 
-        Attributes:
-            type_
-                (TextToCombinedSearchResponse200OutputDataCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1Type):
-     """
+    """
+    Attributes:
+        type_
+            (TextToCombinedSearchResponse200OutputDataCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1Type):
+    """
 
     type_: TextToCombinedSearchResponse200OutputDataCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1Type
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
         type_ = self.type_.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "type": type_,
-        })
+        field_dict.update(
+            {
+                "type": type_,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        type_ = TextToCombinedSearchResponse200OutputDataCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1Type(d.pop("type"))
-
-
-
+        type_ = TextToCombinedSearchResponse200OutputDataCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1Type(
+            d.pop("type")
+        )
 
         text_to_combined_search_response_200_output_data_companies_item_role_count_matches_type_0_item_num_matching_employees_type_1 = cls(
             type_=type_,
         )
-
 
         text_to_combined_search_response_200_output_data_companies_item_role_count_matches_type_0_item_num_matching_employees_type_1.additional_properties = d
         return text_to_combined_search_response_200_output_data_companies_item_role_count_matches_type_0_item_num_matching_employees_type_1

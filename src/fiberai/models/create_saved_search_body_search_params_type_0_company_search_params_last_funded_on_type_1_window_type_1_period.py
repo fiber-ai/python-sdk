@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsLastFundedOnType1WindowType1Period(str, Enum):
     DAY = "day"
     MONTH = "month"

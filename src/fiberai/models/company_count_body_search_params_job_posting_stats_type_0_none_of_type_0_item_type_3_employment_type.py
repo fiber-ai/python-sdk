@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType3EmploymentType(str, Enum):
     CONTRACT = "Contract"
     FULL_TIME = "Full-time"

@@ -1,74 +1,63 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import Union
-
-
-
-
-
-
 T = TypeVar("T", bound="SyncCombinedSearchBodyProfileParamsKeywordSearchOptionsType0FieldsToSearchOverType0")
-
 
 
 @_attrs_define
 class SyncCombinedSearchBodyProfileParamsKeywordSearchOptionsType0FieldsToSearchOverType0:
-    """ 
-        Attributes:
-            summary (Union[Unset, bool]):  Default: True.
-            headline (Union[Unset, bool]):  Default: True.
-            past_job_titles (Union[Unset, bool]):  Default: True.
-            past_job_summaries (Union[Unset, bool]):  Default: True.
-            past_company_names (Union[Unset, bool]):  Default: True.
-            current_job_titles (Union[Unset, bool]):  Default: True.
-            current_job_summaries (Union[Unset, bool]):  Default: True.
-            current_company_names (Union[Unset, bool]):  Default: True.
-            interests (Union[Unset, bool]):  Default: True.
-            skills (Union[Unset, bool]):  Default: True.
-            industry (Union[Unset, bool]):  Default: True.
-            education (Union[Unset, bool]):  Default: True.
-            publications (Union[Unset, bool]):  Default: True.
-            certifications (Union[Unset, bool]):  Default: True.
-            articles (Union[Unset, bool]):  Default: True.
-            courses (Union[Unset, bool]):  Default: True.
-            projects (Union[Unset, bool]):  Default: True.
-            patents (Union[Unset, bool]):  Default: True.
-            volunteering (Union[Unset, bool]):  Default: False.
-            languages (Union[Unset, bool]):  Default: False.
-     """
+    """
+    Attributes:
+        summary (bool | Unset):  Default: True.
+        headline (bool | Unset):  Default: True.
+        past_job_titles (bool | Unset):  Default: True.
+        past_job_summaries (bool | Unset):  Default: True.
+        past_company_names (bool | Unset):  Default: True.
+        current_job_titles (bool | Unset):  Default: True.
+        current_job_summaries (bool | Unset):  Default: True.
+        current_company_names (bool | Unset):  Default: True.
+        interests (bool | Unset):  Default: True.
+        skills (bool | Unset):  Default: True.
+        industry (bool | Unset):  Default: True.
+        education (bool | Unset):  Default: True.
+        publications (bool | Unset):  Default: True.
+        certifications (bool | Unset):  Default: True.
+        articles (bool | Unset):  Default: True.
+        courses (bool | Unset):  Default: True.
+        projects (bool | Unset):  Default: True.
+        patents (bool | Unset):  Default: True.
+        volunteering (bool | Unset):  Default: False.
+        languages (bool | Unset):  Default: False.
+    """
 
-    summary: Union[Unset, bool] = True
-    headline: Union[Unset, bool] = True
-    past_job_titles: Union[Unset, bool] = True
-    past_job_summaries: Union[Unset, bool] = True
-    past_company_names: Union[Unset, bool] = True
-    current_job_titles: Union[Unset, bool] = True
-    current_job_summaries: Union[Unset, bool] = True
-    current_company_names: Union[Unset, bool] = True
-    interests: Union[Unset, bool] = True
-    skills: Union[Unset, bool] = True
-    industry: Union[Unset, bool] = True
-    education: Union[Unset, bool] = True
-    publications: Union[Unset, bool] = True
-    certifications: Union[Unset, bool] = True
-    articles: Union[Unset, bool] = True
-    courses: Union[Unset, bool] = True
-    projects: Union[Unset, bool] = True
-    patents: Union[Unset, bool] = True
-    volunteering: Union[Unset, bool] = False
-    languages: Union[Unset, bool] = False
+    summary: bool | Unset = True
+    headline: bool | Unset = True
+    past_job_titles: bool | Unset = True
+    past_job_summaries: bool | Unset = True
+    past_company_names: bool | Unset = True
+    current_job_titles: bool | Unset = True
+    current_job_summaries: bool | Unset = True
+    current_company_names: bool | Unset = True
+    interests: bool | Unset = True
+    skills: bool | Unset = True
+    industry: bool | Unset = True
+    education: bool | Unset = True
+    publications: bool | Unset = True
+    certifications: bool | Unset = True
+    articles: bool | Unset = True
+    courses: bool | Unset = True
+    projects: bool | Unset = True
+    patents: bool | Unset = True
+    volunteering: bool | Unset = False
+    languages: bool | Unset = False
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         summary = self.summary
@@ -111,11 +100,9 @@ class SyncCombinedSearchBodyProfileParamsKeywordSearchOptionsType0FieldsToSearch
 
         languages = self.languages
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if summary is not UNSET:
             field_dict["summary"] = summary
         if headline is not UNSET:
@@ -158,8 +145,6 @@ class SyncCombinedSearchBodyProfileParamsKeywordSearchOptionsType0FieldsToSearch
             field_dict["languages"] = languages
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -226,7 +211,6 @@ class SyncCombinedSearchBodyProfileParamsKeywordSearchOptionsType0FieldsToSearch
             volunteering=volunteering,
             languages=languages,
         )
-
 
         sync_combined_search_body_profile_params_keyword_search_options_type_0_fields_to_search_over_type_0.additional_properties = d
         return sync_combined_search_body_profile_params_keyword_search_options_type_0_fields_to_search_over_type_0

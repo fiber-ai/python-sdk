@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLanguagesType0AllOfType0Item(str, Enum):
     AFRIKAANS = "Afrikaans"
     AKAN = "Akan"

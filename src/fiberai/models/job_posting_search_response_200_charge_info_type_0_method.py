@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class JobPostingSearchResponse200ChargeInfoType0Method(str, Enum):
     CHARGED_NOW = "charged-now"
 

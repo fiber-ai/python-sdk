@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchResponse200OutputProfilesItemCurrentJobType0AcademicQualificationType0Item(str, Enum):
     ASSOCIATE_DEGREE = "Associate Degree"
     BACHELOR_DEGREE = "Bachelor Degree"

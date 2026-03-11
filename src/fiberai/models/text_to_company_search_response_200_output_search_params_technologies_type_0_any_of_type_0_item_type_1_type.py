@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCompanySearchResponse200OutputSearchParamsTechnologiesType0AnyOfType0ItemType1Type(str, Enum):
     CUSTOM = "custom"
 

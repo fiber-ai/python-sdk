@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsFoundedOnType1WindowType0Method(str, Enum):
     LASTN = "lastN"
 

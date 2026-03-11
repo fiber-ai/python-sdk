@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType3Type(str, Enum):
     NOT_MATCHED = "not-matched"
 

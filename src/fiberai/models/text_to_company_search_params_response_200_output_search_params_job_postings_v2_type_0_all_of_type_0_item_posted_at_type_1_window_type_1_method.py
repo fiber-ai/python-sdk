@@ -1,6 +1,9 @@
 from enum import Enum
 
-class TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType1Method(str, Enum):
+
+class TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType1Method(
+    str, Enum
+):
     WITHIN = "within"
 
     def __str__(self) -> str:

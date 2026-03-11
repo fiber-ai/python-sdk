@@ -1,44 +1,34 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_tags_type_0_all_of_type_0_item_slug import (
+    TextToCombinedSearchResponse200OutputCompanySearchParamsType0TagsType0AllOfType0ItemSlug,
+)
 from ..types import UNSET, Unset
-
-from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_tags_type_0_all_of_type_0_item_slug import TextToCombinedSearchResponse200OutputCompanySearchParamsType0TagsType0AllOfType0ItemSlug
-from ..types import UNSET, Unset
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
 
 T = TypeVar("T", bound="TextToCombinedSearchResponse200OutputCompanySearchParamsType0TagsType0AllOfType0Item")
 
 
-
 @_attrs_define
 class TextToCombinedSearchResponse200OutputCompanySearchParamsType0TagsType0AllOfType0Item:
-    """ 
-        Attributes:
-            slug (TextToCombinedSearchResponse200OutputCompanySearchParamsType0TagsType0AllOfType0ItemSlug):
-            name (str):
-            emoji (str):
-            description (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        slug (TextToCombinedSearchResponse200OutputCompanySearchParamsType0TagsType0AllOfType0ItemSlug):
+        name (str):
+        emoji (str):
+        description (None | str | Unset):
+    """
 
     slug: TextToCombinedSearchResponse200OutputCompanySearchParamsType0TagsType0AllOfType0ItemSlug
     name: str
     emoji: str
-    description: Union[None, Unset, str] = UNSET
+    description: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         slug = self.slug.value
@@ -47,48 +37,43 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0TagsType0AllO
 
         emoji = self.emoji
 
-        description: Union[None, Unset, str]
+        description: None | str | Unset
         if isinstance(self.description, Unset):
             description = UNSET
         else:
             description = self.description
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "slug": slug,
-            "name": name,
-            "emoji": emoji,
-        })
+        field_dict.update(
+            {
+                "slug": slug,
+                "name": name,
+                "emoji": emoji,
+            }
+        )
         if description is not UNSET:
             field_dict["description"] = description
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         slug = TextToCombinedSearchResponse200OutputCompanySearchParamsType0TagsType0AllOfType0ItemSlug(d.pop("slug"))
 
-
-
-
         name = d.pop("name")
 
         emoji = d.pop("emoji")
 
-        def _parse_description(data: object) -> Union[None, Unset, str]:
+        def _parse_description(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         description = _parse_description(d.pop("description", UNSET))
-
 
         text_to_combined_search_response_200_output_company_search_params_type_0_tags_type_0_all_of_type_0_item = cls(
             slug=slug,
@@ -96,7 +81,6 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0TagsType0AllO
             emoji=emoji,
             description=description,
         )
-
 
         text_to_combined_search_response_200_output_company_search_params_type_0_tags_type_0_all_of_type_0_item.additional_properties = d
         return text_to_combined_search_response_200_output_company_search_params_type_0_tags_type_0_all_of_type_0_item

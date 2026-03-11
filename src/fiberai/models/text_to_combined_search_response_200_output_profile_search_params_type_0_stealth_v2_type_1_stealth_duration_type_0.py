@@ -1,78 +1,73 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_stealth_v2_type_1_stealth_duration_type_0_period import TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Period
-from typing import cast
+from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_stealth_v2_type_1_stealth_duration_type_0_period import (
+    TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Period,
+)
 
 if TYPE_CHECKING:
-  from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_stealth_v2_type_1_stealth_duration_type_0_range import TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Range
+    from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_stealth_v2_type_1_stealth_duration_type_0_range import (
+        TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Range,
+    )
 
 
-
-
-
-T = TypeVar("T", bound="TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0")
-
+T = TypeVar(
+    "T", bound="TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0"
+)
 
 
 @_attrs_define
 class TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0:
-    """ 
-        Attributes:
-            range_ (TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Range):
-            period (TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Period):
-     """
+    """
+    Attributes:
+        range_ (TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Range):
+        period (TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Period):
+    """
 
-    range_: 'TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Range'
+    range_: TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Range
     period: TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Period
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_stealth_v2_type_1_stealth_duration_type_0_range import TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Range
         range_ = self.range_.to_dict()
 
         period = self.period.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "range": range_,
-            "period": period,
-        })
+        field_dict.update(
+            {
+                "range": range_,
+                "period": period,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_stealth_v2_type_1_stealth_duration_type_0_range import TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Range
+        from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_stealth_v2_type_1_stealth_duration_type_0_range import (
+            TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Range,
+        )
+
         d = dict(src_dict)
-        range_ = TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Range.from_dict(d.pop("range"))
+        range_ = TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Range.from_dict(
+            d.pop("range")
+        )
 
-
-
-
-        period = TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Period(d.pop("period"))
-
-
-
+        period = TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1StealthDurationType0Period(
+            d.pop("period")
+        )
 
         text_to_combined_search_response_200_output_profile_search_params_type_0_stealth_v2_type_1_stealth_duration_type_0 = cls(
             range_=range_,
             period=period,
         )
-
 
         text_to_combined_search_response_200_output_profile_search_params_type_0_stealth_v2_type_1_stealth_duration_type_0.additional_properties = d
         return text_to_combined_search_response_200_output_profile_search_params_type_0_stealth_v2_type_1_stealth_duration_type_0

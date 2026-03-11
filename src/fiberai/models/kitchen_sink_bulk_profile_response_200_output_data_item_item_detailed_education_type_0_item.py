@@ -1,138 +1,134 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_detailed_education_type_0_item_school_details_type_0 import KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0
-
-
-
+    from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_detailed_education_type_0_item_school_details_type_0 import (
+        KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0,
+    )
 
 
 T = TypeVar("T", bound="KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0Item")
 
 
-
 @_attrs_define
 class KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0Item:
-    """ 
-        Attributes:
-            school_details
-                (Union['KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0', None,
-                Unset]):
-            school_id (Union[None, Unset, str]):
-            school_name (Union[None, Unset, str]):
-            field_of_study_id (Union[None, Unset, str]):
-            field_of_study_name (Union[None, Unset, str]):
-            degree (Union[None, Unset, str]):
-            grade (Union[None, Unset, str]):
-            start_date (Union[None, Unset, str]):
-            end_date (Union[None, Unset, str]):
-            activities (Union[None, Unset, str]):
-            notes (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        school_details (KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0
+            | None | Unset):
+        school_id (None | str | Unset):
+        school_name (None | str | Unset):
+        field_of_study_id (None | str | Unset):
+        field_of_study_name (None | str | Unset):
+        degree (None | str | Unset):
+        grade (None | str | Unset):
+        start_date (None | str | Unset):
+        end_date (None | str | Unset):
+        activities (None | str | Unset):
+        notes (None | str | Unset):
+    """
 
-    school_details: Union['KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0', None, Unset] = UNSET
-    school_id: Union[None, Unset, str] = UNSET
-    school_name: Union[None, Unset, str] = UNSET
-    field_of_study_id: Union[None, Unset, str] = UNSET
-    field_of_study_name: Union[None, Unset, str] = UNSET
-    degree: Union[None, Unset, str] = UNSET
-    grade: Union[None, Unset, str] = UNSET
-    start_date: Union[None, Unset, str] = UNSET
-    end_date: Union[None, Unset, str] = UNSET
-    activities: Union[None, Unset, str] = UNSET
-    notes: Union[None, Unset, str] = UNSET
+    school_details: (
+        KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0 | None | Unset
+    ) = UNSET
+    school_id: None | str | Unset = UNSET
+    school_name: None | str | Unset = UNSET
+    field_of_study_id: None | str | Unset = UNSET
+    field_of_study_name: None | str | Unset = UNSET
+    degree: None | str | Unset = UNSET
+    grade: None | str | Unset = UNSET
+    start_date: None | str | Unset = UNSET
+    end_date: None | str | Unset = UNSET
+    activities: None | str | Unset = UNSET
+    notes: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_detailed_education_type_0_item_school_details_type_0 import KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0
-        school_details: Union[None, Unset, dict[str, Any]]
+        from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_detailed_education_type_0_item_school_details_type_0 import (
+            KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0,
+        )
+
+        school_details: dict[str, Any] | None | Unset
         if isinstance(self.school_details, Unset):
             school_details = UNSET
-        elif isinstance(self.school_details, KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0):
+        elif isinstance(
+            self.school_details,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0,
+        ):
             school_details = self.school_details.to_dict()
         else:
             school_details = self.school_details
 
-        school_id: Union[None, Unset, str]
+        school_id: None | str | Unset
         if isinstance(self.school_id, Unset):
             school_id = UNSET
         else:
             school_id = self.school_id
 
-        school_name: Union[None, Unset, str]
+        school_name: None | str | Unset
         if isinstance(self.school_name, Unset):
             school_name = UNSET
         else:
             school_name = self.school_name
 
-        field_of_study_id: Union[None, Unset, str]
+        field_of_study_id: None | str | Unset
         if isinstance(self.field_of_study_id, Unset):
             field_of_study_id = UNSET
         else:
             field_of_study_id = self.field_of_study_id
 
-        field_of_study_name: Union[None, Unset, str]
+        field_of_study_name: None | str | Unset
         if isinstance(self.field_of_study_name, Unset):
             field_of_study_name = UNSET
         else:
             field_of_study_name = self.field_of_study_name
 
-        degree: Union[None, Unset, str]
+        degree: None | str | Unset
         if isinstance(self.degree, Unset):
             degree = UNSET
         else:
             degree = self.degree
 
-        grade: Union[None, Unset, str]
+        grade: None | str | Unset
         if isinstance(self.grade, Unset):
             grade = UNSET
         else:
             grade = self.grade
 
-        start_date: Union[None, Unset, str]
+        start_date: None | str | Unset
         if isinstance(self.start_date, Unset):
             start_date = UNSET
         else:
             start_date = self.start_date
 
-        end_date: Union[None, Unset, str]
+        end_date: None | str | Unset
         if isinstance(self.end_date, Unset):
             end_date = UNSET
         else:
             end_date = self.end_date
 
-        activities: Union[None, Unset, str]
+        activities: None | str | Unset
         if isinstance(self.activities, Unset):
             activities = UNSET
         else:
             activities = self.activities
 
-        notes: Union[None, Unset, str]
+        notes: None | str | Unset
         if isinstance(self.notes, Unset):
             notes = UNSET
         else:
             notes = self.notes
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if school_details is not UNSET:
             field_dict["school_details"] = school_details
         if school_id is not UNSET:
@@ -158,13 +154,21 @@ class KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0I
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_detailed_education_type_0_item_school_details_type_0 import KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0
+        from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_detailed_education_type_0_item_school_details_type_0 import (
+            KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0,
+        )
+
         d = dict(src_dict)
-        def _parse_school_details(data: object) -> Union['KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0', None, Unset]:
+
+        def _parse_school_details(
+            data: object,
+        ) -> (
+            KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -172,117 +176,111 @@ class KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0I
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                school_details_type_0 = KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0.from_dict(data)
-
-
+                school_details_type_0 = KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0.from_dict(
+                    data
+                )
 
                 return school_details_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0', None, Unset], data)
+            return cast(
+                KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0
+                | None
+                | Unset,
+                data,
+            )
 
         school_details = _parse_school_details(d.pop("school_details", UNSET))
 
-
-        def _parse_school_id(data: object) -> Union[None, Unset, str]:
+        def _parse_school_id(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         school_id = _parse_school_id(d.pop("school_id", UNSET))
 
-
-        def _parse_school_name(data: object) -> Union[None, Unset, str]:
+        def _parse_school_name(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         school_name = _parse_school_name(d.pop("school_name", UNSET))
 
-
-        def _parse_field_of_study_id(data: object) -> Union[None, Unset, str]:
+        def _parse_field_of_study_id(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         field_of_study_id = _parse_field_of_study_id(d.pop("field_of_study_id", UNSET))
 
-
-        def _parse_field_of_study_name(data: object) -> Union[None, Unset, str]:
+        def _parse_field_of_study_name(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         field_of_study_name = _parse_field_of_study_name(d.pop("field_of_study_name", UNSET))
 
-
-        def _parse_degree(data: object) -> Union[None, Unset, str]:
+        def _parse_degree(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         degree = _parse_degree(d.pop("degree", UNSET))
 
-
-        def _parse_grade(data: object) -> Union[None, Unset, str]:
+        def _parse_grade(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         grade = _parse_grade(d.pop("grade", UNSET))
 
-
-        def _parse_start_date(data: object) -> Union[None, Unset, str]:
+        def _parse_start_date(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         start_date = _parse_start_date(d.pop("start_date", UNSET))
 
-
-        def _parse_end_date(data: object) -> Union[None, Unset, str]:
+        def _parse_end_date(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         end_date = _parse_end_date(d.pop("end_date", UNSET))
 
-
-        def _parse_activities(data: object) -> Union[None, Unset, str]:
+        def _parse_activities(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         activities = _parse_activities(d.pop("activities", UNSET))
 
-
-        def _parse_notes(data: object) -> Union[None, Unset, str]:
+        def _parse_notes(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         notes = _parse_notes(d.pop("notes", UNSET))
-
 
         kitchen_sink_bulk_profile_response_200_output_data_item_item_detailed_education_type_0_item = cls(
             school_details=school_details,
@@ -297,7 +295,6 @@ class KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0I
             activities=activities,
             notes=notes,
         )
-
 
         kitchen_sink_bulk_profile_response_200_output_data_item_item_detailed_education_type_0_item.additional_properties = d
         return kitchen_sink_bulk_profile_response_200_output_data_item_item_detailed_education_type_0_item

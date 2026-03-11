@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyCountBodySearchParamsLastFundedOnType1WindowType1Method(str, Enum):
     WITHIN = "within"
 

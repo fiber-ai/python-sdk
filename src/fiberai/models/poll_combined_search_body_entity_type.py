@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PollCombinedSearchBodyEntityType(str, Enum):
     COMPANY = "company"
     PROFILE = "profile"

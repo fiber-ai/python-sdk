@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCompanySearchResponse200OutputSearchParamsIndustriesV2Type0NoneOfType0Item(str, Enum):
     ADMINISTRATIVE_SERVICES = "Administrative Services"
     AEROSPACE_MILITARY = "Aerospace & Military"

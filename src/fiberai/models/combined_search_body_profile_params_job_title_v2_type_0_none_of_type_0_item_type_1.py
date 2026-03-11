@@ -1,39 +1,32 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.combined_search_body_profile_params_job_title_v2_type_0_none_of_type_0_item_type_1_groups_item import CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType1GroupsItem
-from ..models.combined_search_body_profile_params_job_title_v2_type_0_none_of_type_0_item_type_1_type import CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType1Type
-from typing import cast
-
-
-
-
-
+from ..models.combined_search_body_profile_params_job_title_v2_type_0_none_of_type_0_item_type_1_groups_item import (
+    CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType1GroupsItem,
+)
+from ..models.combined_search_body_profile_params_job_title_v2_type_0_none_of_type_0_item_type_1_type import (
+    CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType1Type,
+)
 
 T = TypeVar("T", bound="CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType1")
 
 
-
 @_attrs_define
 class CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType1:
-    """ 
-        Attributes:
-            type_ (CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType1Type):
-            groups (list[CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType1GroupsItem]):
-     """
+    """
+    Attributes:
+        type_ (CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType1Type):
+        groups (list[CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType1GroupsItem]):
+    """
 
     type_: CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType1Type
     groups: list[CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType1GroupsItem]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         type_ = self.type_.value
@@ -43,43 +36,33 @@ class CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType1:
             groups_item = groups_item_data.value
             groups.append(groups_item)
 
-
-
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "type": type_,
-            "groups": groups,
-        })
+        field_dict.update(
+            {
+                "type": type_,
+                "groups": groups,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         type_ = CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType1Type(d.pop("type"))
 
-
-
-
         groups = []
         _groups = d.pop("groups")
-        for groups_item_data in (_groups):
+        for groups_item_data in _groups:
             groups_item = CombinedSearchBodyProfileParamsJobTitleV2Type0NoneOfType0ItemType1GroupsItem(groups_item_data)
 
-
-
             groups.append(groups_item)
-
 
         combined_search_body_profile_params_job_title_v2_type_0_none_of_type_0_item_type_1 = cls(
             type_=type_,
             groups=groups,
         )
-
 
         combined_search_body_profile_params_job_title_v2_type_0_none_of_type_0_item_type_1.additional_properties = d
         return combined_search_body_profile_params_job_title_v2_type_0_none_of_type_0_item_type_1

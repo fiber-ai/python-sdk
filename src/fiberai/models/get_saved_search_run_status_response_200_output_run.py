@@ -1,59 +1,52 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.get_saved_search_run_status_response_200_output_run_status import (
+    GetSavedSearchRunStatusResponse200OutputRunStatus,
+)
 from ..types import UNSET, Unset
-
-from ..models.get_saved_search_run_status_response_200_output_run_status import GetSavedSearchRunStatusResponse200OutputRunStatus
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.get_saved_search_run_status_response_200_output_run_people_stats import GetSavedSearchRunStatusResponse200OutputRunPeopleStats
-  from ..models.get_saved_search_run_status_response_200_output_run_companies_stats import GetSavedSearchRunStatusResponse200OutputRunCompaniesStats
-
-
-
+    from ..models.get_saved_search_run_status_response_200_output_run_companies_stats import (
+        GetSavedSearchRunStatusResponse200OutputRunCompaniesStats,
+    )
+    from ..models.get_saved_search_run_status_response_200_output_run_people_stats import (
+        GetSavedSearchRunStatusResponse200OutputRunPeopleStats,
+    )
 
 
 T = TypeVar("T", bound="GetSavedSearchRunStatusResponse200OutputRun")
 
 
-
 @_attrs_define
 class GetSavedSearchRunStatusResponse200OutputRun:
-    """ The saved search run details
+    """The saved search run details
 
-        Attributes:
-            id (str): The ID of the saved search run
-            status (GetSavedSearchRunStatusResponse200OutputRunStatus): The status of the saved search run
-            companies_stats (GetSavedSearchRunStatusResponse200OutputRunCompaniesStats): The companies stats. This includes
-                the number of companies joined, departed, stayed, and returned so far.
-            people_stats (GetSavedSearchRunStatusResponse200OutputRunPeopleStats): The people stats. This includes the
-                number of people joined, departed, stayed, and returned so far.
-            started_at (Union[None, Unset, str]): The date and time the run started (if started)
-            completed_at (Union[None, Unset, str]): The date and time the run completed (if completed)
-     """
+    Attributes:
+        id (str): The ID of the saved search run
+        status (GetSavedSearchRunStatusResponse200OutputRunStatus): The status of the saved search run
+        companies_stats (GetSavedSearchRunStatusResponse200OutputRunCompaniesStats): The companies stats. This includes
+            the number of companies joined, departed, stayed, and returned so far.
+        people_stats (GetSavedSearchRunStatusResponse200OutputRunPeopleStats): The people stats. This includes the
+            number of people joined, departed, stayed, and returned so far.
+        started_at (None | str | Unset): The date and time the run started (if started)
+        completed_at (None | str | Unset): The date and time the run completed (if completed)
+    """
 
     id: str
     status: GetSavedSearchRunStatusResponse200OutputRunStatus
-    companies_stats: 'GetSavedSearchRunStatusResponse200OutputRunCompaniesStats'
-    people_stats: 'GetSavedSearchRunStatusResponse200OutputRunPeopleStats'
-    started_at: Union[None, Unset, str] = UNSET
-    completed_at: Union[None, Unset, str] = UNSET
+    companies_stats: GetSavedSearchRunStatusResponse200OutputRunCompaniesStats
+    people_stats: GetSavedSearchRunStatusResponse200OutputRunPeopleStats
+    started_at: None | str | Unset = UNSET
+    completed_at: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_saved_search_run_status_response_200_output_run_people_stats import GetSavedSearchRunStatusResponse200OutputRunPeopleStats
-        from ..models.get_saved_search_run_status_response_200_output_run_companies_stats import GetSavedSearchRunStatusResponse200OutputRunCompaniesStats
         id = self.id
 
         status = self.status.value
@@ -62,27 +55,28 @@ class GetSavedSearchRunStatusResponse200OutputRun:
 
         people_stats = self.people_stats.to_dict()
 
-        started_at: Union[None, Unset, str]
+        started_at: None | str | Unset
         if isinstance(self.started_at, Unset):
             started_at = UNSET
         else:
             started_at = self.started_at
 
-        completed_at: Union[None, Unset, str]
+        completed_at: None | str | Unset
         if isinstance(self.completed_at, Unset):
             completed_at = UNSET
         else:
             completed_at = self.completed_at
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "id": id,
-            "status": status,
-            "companiesStats": companies_stats,
-            "peopleStats": people_stats,
-        })
+        field_dict.update(
+            {
+                "id": id,
+                "status": status,
+                "companiesStats": companies_stats,
+                "peopleStats": people_stats,
+            }
+        )
         if started_at is not UNSET:
             field_dict["startedAt"] = started_at
         if completed_at is not UNSET:
@@ -90,49 +84,41 @@ class GetSavedSearchRunStatusResponse200OutputRun:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_saved_search_run_status_response_200_output_run_people_stats import GetSavedSearchRunStatusResponse200OutputRunPeopleStats
-        from ..models.get_saved_search_run_status_response_200_output_run_companies_stats import GetSavedSearchRunStatusResponse200OutputRunCompaniesStats
+        from ..models.get_saved_search_run_status_response_200_output_run_companies_stats import (
+            GetSavedSearchRunStatusResponse200OutputRunCompaniesStats,
+        )
+        from ..models.get_saved_search_run_status_response_200_output_run_people_stats import (
+            GetSavedSearchRunStatusResponse200OutputRunPeopleStats,
+        )
+
         d = dict(src_dict)
         id = d.pop("id")
 
         status = GetSavedSearchRunStatusResponse200OutputRunStatus(d.pop("status"))
 
-
-
-
         companies_stats = GetSavedSearchRunStatusResponse200OutputRunCompaniesStats.from_dict(d.pop("companiesStats"))
-
-
-
 
         people_stats = GetSavedSearchRunStatusResponse200OutputRunPeopleStats.from_dict(d.pop("peopleStats"))
 
-
-
-
-        def _parse_started_at(data: object) -> Union[None, Unset, str]:
+        def _parse_started_at(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         started_at = _parse_started_at(d.pop("startedAt", UNSET))
 
-
-        def _parse_completed_at(data: object) -> Union[None, Unset, str]:
+        def _parse_completed_at(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         completed_at = _parse_completed_at(d.pop("completedAt", UNSET))
-
 
         get_saved_search_run_status_response_200_output_run = cls(
             id=id,
@@ -142,7 +128,6 @@ class GetSavedSearchRunStatusResponse200OutputRun:
             started_at=started_at,
             completed_at=completed_at,
         )
-
 
         get_saved_search_run_status_response_200_output_run.additional_properties = d
         return get_saved_search_run_status_response_200_output_run

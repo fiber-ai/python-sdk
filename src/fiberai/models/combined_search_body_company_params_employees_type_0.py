@@ -1,88 +1,75 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.combined_search_body_company_params_employees_type_0_joiner import CombinedSearchBodyCompanyParamsEmployeesType0Joiner
-from typing import cast
+from ..models.combined_search_body_company_params_employees_type_0_joiner import (
+    CombinedSearchBodyCompanyParamsEmployeesType0Joiner,
+)
 
 if TYPE_CHECKING:
-  from ..models.combined_search_body_company_params_employees_type_0_rules_item import CombinedSearchBodyCompanyParamsEmployeesType0RulesItem
-
-
-
+    from ..models.combined_search_body_company_params_employees_type_0_rules_item import (
+        CombinedSearchBodyCompanyParamsEmployeesType0RulesItem,
+    )
 
 
 T = TypeVar("T", bound="CombinedSearchBodyCompanyParamsEmployeesType0")
 
 
-
 @_attrs_define
 class CombinedSearchBodyCompanyParamsEmployeesType0:
-    """ 
-        Attributes:
-            rules (list['CombinedSearchBodyCompanyParamsEmployeesType0RulesItem']):
-            joiner (CombinedSearchBodyCompanyParamsEmployeesType0Joiner):
-     """
+    """
+    Attributes:
+        rules (list[CombinedSearchBodyCompanyParamsEmployeesType0RulesItem]):
+        joiner (CombinedSearchBodyCompanyParamsEmployeesType0Joiner):
+    """
 
-    rules: list['CombinedSearchBodyCompanyParamsEmployeesType0RulesItem']
+    rules: list[CombinedSearchBodyCompanyParamsEmployeesType0RulesItem]
     joiner: CombinedSearchBodyCompanyParamsEmployeesType0Joiner
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.combined_search_body_company_params_employees_type_0_rules_item import CombinedSearchBodyCompanyParamsEmployeesType0RulesItem
         rules = []
         for rules_item_data in self.rules:
             rules_item = rules_item_data.to_dict()
             rules.append(rules_item)
 
-
-
         joiner = self.joiner.value
-
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "rules": rules,
-            "joiner": joiner,
-        })
+        field_dict.update(
+            {
+                "rules": rules,
+                "joiner": joiner,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.combined_search_body_company_params_employees_type_0_rules_item import CombinedSearchBodyCompanyParamsEmployeesType0RulesItem
+        from ..models.combined_search_body_company_params_employees_type_0_rules_item import (
+            CombinedSearchBodyCompanyParamsEmployeesType0RulesItem,
+        )
+
         d = dict(src_dict)
         rules = []
         _rules = d.pop("rules")
-        for rules_item_data in (_rules):
+        for rules_item_data in _rules:
             rules_item = CombinedSearchBodyCompanyParamsEmployeesType0RulesItem.from_dict(rules_item_data)
-
-
 
             rules.append(rules_item)
 
-
         joiner = CombinedSearchBodyCompanyParamsEmployeesType0Joiner(d.pop("joiner"))
-
-
-
 
         combined_search_body_company_params_employees_type_0 = cls(
             rules=rules,
             joiner=joiner,
         )
-
 
         combined_search_body_company_params_employees_type_0.additional_properties = d
         return combined_search_body_company_params_employees_type_0

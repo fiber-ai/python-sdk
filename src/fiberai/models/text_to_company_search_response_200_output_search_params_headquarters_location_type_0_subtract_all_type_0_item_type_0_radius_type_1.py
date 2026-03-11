@@ -1,63 +1,56 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
+from ..models.text_to_company_search_response_200_output_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_0_radius_type_1_unit import (
+    TextToCompanySearchResponse200OutputSearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusType1Unit,
+)
 
-from ..models.text_to_company_search_response_200_output_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_0_radius_type_1_unit import TextToCompanySearchResponse200OutputSearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusType1Unit
-
-
-
-
-
-
-T = TypeVar("T", bound="TextToCompanySearchResponse200OutputSearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusType1")
-
+T = TypeVar(
+    "T",
+    bound="TextToCompanySearchResponse200OutputSearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusType1",
+)
 
 
 @_attrs_define
 class TextToCompanySearchResponse200OutputSearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusType1:
-    """ 
-        Attributes:
-            unit (TextToCompanySearchResponse200OutputSearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusTy
-                pe1Unit):
-            quantity (float):
-     """
+    """
+    Attributes:
+        unit (TextToCompanySearchResponse200OutputSearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusTy
+            pe1Unit):
+        quantity (float):
+    """
 
     unit: TextToCompanySearchResponse200OutputSearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusType1Unit
     quantity: float
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         unit = self.unit.value
 
         quantity = self.quantity
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "unit": unit,
-            "quantity": quantity,
-        })
+        field_dict.update(
+            {
+                "unit": unit,
+                "quantity": quantity,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        unit = TextToCompanySearchResponse200OutputSearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusType1Unit(d.pop("unit"))
-
-
-
+        unit = TextToCompanySearchResponse200OutputSearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusType1Unit(
+            d.pop("unit")
+        )
 
         quantity = d.pop("quantity")
 
@@ -65,7 +58,6 @@ class TextToCompanySearchResponse200OutputSearchParamsHeadquartersLocationType0S
             unit=unit,
             quantity=quantity,
         )
-
 
         text_to_company_search_response_200_output_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_0_radius_type_1.additional_properties = d
         return text_to_company_search_response_200_output_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_0_radius_type_1

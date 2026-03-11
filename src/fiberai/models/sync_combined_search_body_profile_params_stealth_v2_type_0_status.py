@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyProfileParamsStealthV2Type0Status(str, Enum):
     CURRENTLY_IN_STEALTH = "currently-in-stealth"
 

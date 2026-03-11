@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1Type(str, Enum):
     PERCENT_RANGE = "percent-range"
 

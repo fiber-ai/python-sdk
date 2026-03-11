@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsExactCompanyV2Type0NoneOfType0ItemType0Identifier(str, Enum):
     DOMAIN = "domain"
 

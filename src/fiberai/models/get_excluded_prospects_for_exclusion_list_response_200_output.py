@@ -1,92 +1,79 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from typing import cast
-from typing import cast, Union
-
 if TYPE_CHECKING:
-  from ..models.get_excluded_prospects_for_exclusion_list_response_200_output_prospects_item import GetExcludedProspectsForExclusionListResponse200OutputProspectsItem
-
-
-
+    from ..models.get_excluded_prospects_for_exclusion_list_response_200_output_prospects_item import (
+        GetExcludedProspectsForExclusionListResponse200OutputProspectsItem,
+    )
 
 
 T = TypeVar("T", bound="GetExcludedProspectsForExclusionListResponse200Output")
 
 
-
 @_attrs_define
 class GetExcludedProspectsForExclusionListResponse200Output:
-    """ 
-        Attributes:
-            prospects (list['GetExcludedProspectsForExclusionListResponse200OutputProspectsItem']): List of excluded
-                prospects
-            next_cursor (Union[None, str]): Cursor for the next page of results
-            has_more (bool): Whether there are more results available
-     """
+    """
+    Attributes:
+        prospects (list[GetExcludedProspectsForExclusionListResponse200OutputProspectsItem]): List of excluded prospects
+        next_cursor (None | str): Cursor for the next page of results
+        has_more (bool): Whether there are more results available
+    """
 
-    prospects: list['GetExcludedProspectsForExclusionListResponse200OutputProspectsItem']
-    next_cursor: Union[None, str]
+    prospects: list[GetExcludedProspectsForExclusionListResponse200OutputProspectsItem]
+    next_cursor: None | str
     has_more: bool
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_excluded_prospects_for_exclusion_list_response_200_output_prospects_item import GetExcludedProspectsForExclusionListResponse200OutputProspectsItem
         prospects = []
         for prospects_item_data in self.prospects:
             prospects_item = prospects_item_data.to_dict()
             prospects.append(prospects_item)
 
-
-
-        next_cursor: Union[None, str]
+        next_cursor: None | str
         next_cursor = self.next_cursor
 
         has_more = self.has_more
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "prospects": prospects,
-            "nextCursor": next_cursor,
-            "hasMore": has_more,
-        })
+        field_dict.update(
+            {
+                "prospects": prospects,
+                "nextCursor": next_cursor,
+                "hasMore": has_more,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_excluded_prospects_for_exclusion_list_response_200_output_prospects_item import GetExcludedProspectsForExclusionListResponse200OutputProspectsItem
+        from ..models.get_excluded_prospects_for_exclusion_list_response_200_output_prospects_item import (
+            GetExcludedProspectsForExclusionListResponse200OutputProspectsItem,
+        )
+
         d = dict(src_dict)
         prospects = []
         _prospects = d.pop("prospects")
-        for prospects_item_data in (_prospects):
-            prospects_item = GetExcludedProspectsForExclusionListResponse200OutputProspectsItem.from_dict(prospects_item_data)
-
-
+        for prospects_item_data in _prospects:
+            prospects_item = GetExcludedProspectsForExclusionListResponse200OutputProspectsItem.from_dict(
+                prospects_item_data
+            )
 
             prospects.append(prospects_item)
 
-
-        def _parse_next_cursor(data: object) -> Union[None, str]:
+        def _parse_next_cursor(data: object) -> None | str:
             if data is None:
                 return data
-            return cast(Union[None, str], data)
+            return cast(None | str, data)
 
         next_cursor = _parse_next_cursor(d.pop("nextCursor"))
-
 
         has_more = d.pop("hasMore")
 
@@ -95,7 +82,6 @@ class GetExcludedProspectsForExclusionListResponse200Output:
             next_cursor=next_cursor,
             has_more=has_more,
         )
-
 
         get_excluded_prospects_for_exclusion_list_response_200_output.additional_properties = d
         return get_excluded_prospects_for_exclusion_list_response_200_output

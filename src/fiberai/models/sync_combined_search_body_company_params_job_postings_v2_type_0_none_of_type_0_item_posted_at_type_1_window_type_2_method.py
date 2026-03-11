@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1WindowType2Method(str, Enum):
     CALENDAR = "calendar"
 

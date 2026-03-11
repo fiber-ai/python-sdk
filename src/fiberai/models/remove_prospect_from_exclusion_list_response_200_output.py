@@ -1,63 +1,46 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from typing import cast
-
-
-
-
-
-
 T = TypeVar("T", bound="RemoveProspectFromExclusionListResponse200Output")
-
 
 
 @_attrs_define
 class RemoveProspectFromExclusionListResponse200Output:
-    """ 
-        Attributes:
-            deleted_excluded_prospect_ids (list[str]): Ids of the excluded prospects that were removed from the exclusion
-                list
-     """
+    """
+    Attributes:
+        deleted_excluded_prospect_ids (list[str]): Ids of the excluded prospects that were removed from the exclusion
+            list
+    """
 
     deleted_excluded_prospect_ids: list[str]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
         deleted_excluded_prospect_ids = self.deleted_excluded_prospect_ids
 
-
-
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "deletedExcludedProspectIds": deleted_excluded_prospect_ids,
-        })
+        field_dict.update(
+            {
+                "deletedExcludedProspectIds": deleted_excluded_prospect_ids,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         deleted_excluded_prospect_ids = cast(list[str], d.pop("deletedExcludedProspectIds"))
 
-
         remove_prospect_from_exclusion_list_response_200_output = cls(
             deleted_excluded_prospect_ids=deleted_excluded_prospect_ids,
         )
-
 
         remove_prospect_from_exclusion_list_response_200_output.additional_properties = d
         return remove_prospect_from_exclusion_list_response_200_output

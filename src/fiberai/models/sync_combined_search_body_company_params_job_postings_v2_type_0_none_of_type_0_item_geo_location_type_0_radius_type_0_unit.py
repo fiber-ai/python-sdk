@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0Unit(str, Enum):
     MILES = "miles"
 

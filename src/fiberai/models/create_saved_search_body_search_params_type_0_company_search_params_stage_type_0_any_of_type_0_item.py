@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsStageType0AnyOfType0Item(str, Enum):
     ACQUIRED = "acquired"
     CLOSED = "closed"

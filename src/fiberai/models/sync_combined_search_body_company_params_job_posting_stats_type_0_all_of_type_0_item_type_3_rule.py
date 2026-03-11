@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType3Rule(str, Enum):
     EMPLOYMENT_TYPE = "employment-type"
 

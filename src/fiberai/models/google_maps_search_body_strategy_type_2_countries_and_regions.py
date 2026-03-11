@@ -1,46 +1,36 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.google_maps_search_body_strategy_type_2_countries_and_regions_subtract_all_type_0_item import (
+    GoogleMapsSearchBodyStrategyType2CountriesAndRegionsSubtractAllType0Item,
+)
+from ..models.google_maps_search_body_strategy_type_2_countries_and_regions_union_all_type_0_item import (
+    GoogleMapsSearchBodyStrategyType2CountriesAndRegionsUnionAllType0Item,
+)
 from ..types import UNSET, Unset
-
-from ..models.google_maps_search_body_strategy_type_2_countries_and_regions_subtract_all_type_0_item import GoogleMapsSearchBodyStrategyType2CountriesAndRegionsSubtractAllType0Item
-from ..models.google_maps_search_body_strategy_type_2_countries_and_regions_union_all_type_0_item import GoogleMapsSearchBodyStrategyType2CountriesAndRegionsUnionAllType0Item
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
 
 T = TypeVar("T", bound="GoogleMapsSearchBodyStrategyType2CountriesAndRegions")
 
 
-
 @_attrs_define
 class GoogleMapsSearchBodyStrategyType2CountriesAndRegions:
-    """ 
-        Attributes:
-            union_all (Union[None, Unset, list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsUnionAllType0Item]]):
-            subtract_all (Union[None, Unset,
-                list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsSubtractAllType0Item]]):
-     """
+    """
+    Attributes:
+        union_all (list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsUnionAllType0Item] | None | Unset):
+        subtract_all (list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsSubtractAllType0Item] | None | Unset):
+    """
 
-    union_all: Union[None, Unset, list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsUnionAllType0Item]] = UNSET
-    subtract_all: Union[None, Unset, list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsSubtractAllType0Item]] = UNSET
+    union_all: list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsUnionAllType0Item] | None | Unset = UNSET
+    subtract_all: list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsSubtractAllType0Item] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        union_all: Union[None, Unset, list[str]]
+        union_all: list[str] | None | Unset
         if isinstance(self.union_all, Unset):
             union_all = UNSET
         elif isinstance(self.union_all, list):
@@ -49,11 +39,10 @@ class GoogleMapsSearchBodyStrategyType2CountriesAndRegions:
                 union_all_type_0_item = union_all_type_0_item_data.value
                 union_all.append(union_all_type_0_item)
 
-
         else:
             union_all = self.union_all
 
-        subtract_all: Union[None, Unset, list[str]]
+        subtract_all: list[str] | None | Unset
         if isinstance(self.subtract_all, Unset):
             subtract_all = UNSET
         elif isinstance(self.subtract_all, list):
@@ -62,15 +51,12 @@ class GoogleMapsSearchBodyStrategyType2CountriesAndRegions:
                 subtract_all_type_0_item = subtract_all_type_0_item_data.value
                 subtract_all.append(subtract_all_type_0_item)
 
-
         else:
             subtract_all = self.subtract_all
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if union_all is not UNSET:
             field_dict["unionAll"] = union_all
         if subtract_all is not UNSET:
@@ -78,12 +64,13 @@ class GoogleMapsSearchBodyStrategyType2CountriesAndRegions:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        def _parse_union_all(data: object) -> Union[None, Unset, list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsUnionAllType0Item]]:
+
+        def _parse_union_all(
+            data: object,
+        ) -> list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsUnionAllType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -93,22 +80,25 @@ class GoogleMapsSearchBodyStrategyType2CountriesAndRegions:
                     raise TypeError()
                 union_all_type_0 = []
                 _union_all_type_0 = data
-                for union_all_type_0_item_data in (_union_all_type_0):
-                    union_all_type_0_item = GoogleMapsSearchBodyStrategyType2CountriesAndRegionsUnionAllType0Item(union_all_type_0_item_data)
-
-
+                for union_all_type_0_item_data in _union_all_type_0:
+                    union_all_type_0_item = GoogleMapsSearchBodyStrategyType2CountriesAndRegionsUnionAllType0Item(
+                        union_all_type_0_item_data
+                    )
 
                     union_all_type_0.append(union_all_type_0_item)
 
                 return union_all_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsUnionAllType0Item]], data)
+            return cast(
+                list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsUnionAllType0Item] | None | Unset, data
+            )
 
         union_all = _parse_union_all(d.pop("unionAll", UNSET))
 
-
-        def _parse_subtract_all(data: object) -> Union[None, Unset, list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsSubtractAllType0Item]]:
+        def _parse_subtract_all(
+            data: object,
+        ) -> list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsSubtractAllType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -118,26 +108,26 @@ class GoogleMapsSearchBodyStrategyType2CountriesAndRegions:
                     raise TypeError()
                 subtract_all_type_0 = []
                 _subtract_all_type_0 = data
-                for subtract_all_type_0_item_data in (_subtract_all_type_0):
-                    subtract_all_type_0_item = GoogleMapsSearchBodyStrategyType2CountriesAndRegionsSubtractAllType0Item(subtract_all_type_0_item_data)
-
-
+                for subtract_all_type_0_item_data in _subtract_all_type_0:
+                    subtract_all_type_0_item = GoogleMapsSearchBodyStrategyType2CountriesAndRegionsSubtractAllType0Item(
+                        subtract_all_type_0_item_data
+                    )
 
                     subtract_all_type_0.append(subtract_all_type_0_item)
 
                 return subtract_all_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsSubtractAllType0Item]], data)
+            return cast(
+                list[GoogleMapsSearchBodyStrategyType2CountriesAndRegionsSubtractAllType0Item] | None | Unset, data
+            )
 
         subtract_all = _parse_subtract_all(d.pop("subtractAll", UNSET))
-
 
         google_maps_search_body_strategy_type_2_countries_and_regions = cls(
             union_all=union_all,
             subtract_all=subtract_all,
         )
-
 
         google_maps_search_body_strategy_type_2_countries_and_regions.additional_properties = d
         return google_maps_search_body_strategy_type_2_countries_and_regions

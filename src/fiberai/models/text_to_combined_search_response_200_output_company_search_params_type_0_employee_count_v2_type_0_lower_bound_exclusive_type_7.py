@@ -1,6 +1,9 @@
 from enum import IntEnum
 
-class TextToCombinedSearchResponse200OutputCompanySearchParamsType0EmployeeCountV2Type0LowerBoundExclusiveType7(IntEnum):
+
+class TextToCombinedSearchResponse200OutputCompanySearchParamsType0EmployeeCountV2Type0LowerBoundExclusiveType7(
+    IntEnum
+):
     VALUE_5000 = 5000
 
     def __str__(self) -> str:

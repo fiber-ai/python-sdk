@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType6Rule(str, Enum):
     INDUSTRY = "industry"
 

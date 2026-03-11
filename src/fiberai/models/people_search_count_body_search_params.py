@@ -1,173 +1,313 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
-from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
-
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.people_search_count_body_search_params_approx_age_type_0 import PeopleSearchCountBodySearchParamsApproxAgeType0
-  from ..models.people_search_count_body_search_params_keywords_type_0 import PeopleSearchCountBodySearchParamsKeywordsType0
-  from ..models.people_search_count_body_search_params_started_in_role_type_0 import PeopleSearchCountBodySearchParamsStartedInRoleType0
-  from ..models.people_search_count_body_search_params_stealth_v2_type_1 import PeopleSearchCountBodySearchParamsStealthV2Type1
-  from ..models.people_search_count_body_search_params_started_at_company_type_0 import PeopleSearchCountBodySearchParamsStartedAtCompanyType0
-  from ..models.people_search_count_body_search_params_past_job_text_type_0 import PeopleSearchCountBodySearchParamsPastJobTextType0
-  from ..models.people_search_count_body_search_params_years_of_experience_type_0 import PeopleSearchCountBodySearchParamsYearsOfExperienceType0
-  from ..models.people_search_count_body_search_params_education_type_0 import PeopleSearchCountBodySearchParamsEducationType0
-  from ..models.people_search_count_body_search_params_left_stealth_at_type_1 import PeopleSearchCountBodySearchParamsLeftStealthAtType1
-  from ..models.people_search_count_body_search_params_keyword_search_options_type_0 import PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0
-  from ..models.people_search_count_body_search_params_left_stealth_at_type_0 import PeopleSearchCountBodySearchParamsLeftStealthAtType0
-  from ..models.people_search_count_body_search_params_job_status_type_0 import PeopleSearchCountBodySearchParamsJobStatusType0
-  from ..models.people_search_count_body_search_params_country_3_letter_code_type_0 import PeopleSearchCountBodySearchParamsCountry3LetterCodeType0
-  from ..models.people_search_count_body_search_params_job_status_type_2 import PeopleSearchCountBodySearchParamsJobStatusType2
-  from ..models.people_search_count_body_search_params_time_zone_type_0 import PeopleSearchCountBodySearchParamsTimeZoneType0
-  from ..models.people_search_count_body_search_params_company_match_mode_type_1 import PeopleSearchCountBodySearchParamsCompanyMatchModeType1
-  from ..models.people_search_count_body_search_params_languages_type_0 import PeopleSearchCountBodySearchParamsLanguagesType0
-  from ..models.people_search_count_body_search_params_started_in_role_type_1 import PeopleSearchCountBodySearchParamsStartedInRoleType1
-  from ..models.people_search_count_body_search_params_fuzzy_name_type_0 import PeopleSearchCountBodySearchParamsFuzzyNameType0
-  from ..models.people_search_count_body_search_params_company_match_mode_type_0 import PeopleSearchCountBodySearchParamsCompanyMatchModeType0
-  from ..models.people_search_count_body_search_params_job_status_type_1 import PeopleSearchCountBodySearchParamsJobStatusType1
-  from ..models.people_search_count_body_search_params_past_jobs_type_0 import PeopleSearchCountBodySearchParamsPastJobsType0
-  from ..models.people_search_count_body_search_params_stealth_v2_type_0 import PeopleSearchCountBodySearchParamsStealthV2Type0
-  from ..models.people_search_count_body_search_params_job_title_v3_type_0 import PeopleSearchCountBodySearchParamsJobTitleV3Type0
-  from ..models.people_search_count_body_search_params_state_type_0 import PeopleSearchCountBodySearchParamsStateType0
-  from ..models.people_search_count_body_search_params_started_at_company_type_1 import PeopleSearchCountBodySearchParamsStartedAtCompanyType1
-  from ..models.people_search_count_body_search_params_tags_type_0 import PeopleSearchCountBodySearchParamsTagsType0
-  from ..models.people_search_count_body_search_params_exact_profile_type_0 import PeopleSearchCountBodySearchParamsExactProfileType0
-  from ..models.people_search_count_body_search_params_num_followers_type_0 import PeopleSearchCountBodySearchParamsNumFollowersType0
-  from ..models.people_search_count_body_search_params_num_connections_type_0 import PeopleSearchCountBodySearchParamsNumConnectionsType0
-  from ..models.people_search_count_body_search_params_location_type_0 import PeopleSearchCountBodySearchParamsLocationType0
-  from ..models.people_search_count_body_search_params_job_title_v2_type_0 import PeopleSearchCountBodySearchParamsJobTitleV2Type0
-
-
-
+    from ..models.people_search_count_body_search_params_approx_age_type_0 import (
+        PeopleSearchCountBodySearchParamsApproxAgeType0,
+    )
+    from ..models.people_search_count_body_search_params_company_match_mode_type_0 import (
+        PeopleSearchCountBodySearchParamsCompanyMatchModeType0,
+    )
+    from ..models.people_search_count_body_search_params_company_match_mode_type_1 import (
+        PeopleSearchCountBodySearchParamsCompanyMatchModeType1,
+    )
+    from ..models.people_search_count_body_search_params_country_3_letter_code_type_0 import (
+        PeopleSearchCountBodySearchParamsCountry3LetterCodeType0,
+    )
+    from ..models.people_search_count_body_search_params_education_type_0 import (
+        PeopleSearchCountBodySearchParamsEducationType0,
+    )
+    from ..models.people_search_count_body_search_params_exact_profile_type_0 import (
+        PeopleSearchCountBodySearchParamsExactProfileType0,
+    )
+    from ..models.people_search_count_body_search_params_fuzzy_name_type_0 import (
+        PeopleSearchCountBodySearchParamsFuzzyNameType0,
+    )
+    from ..models.people_search_count_body_search_params_job_status_type_0 import (
+        PeopleSearchCountBodySearchParamsJobStatusType0,
+    )
+    from ..models.people_search_count_body_search_params_job_status_type_1 import (
+        PeopleSearchCountBodySearchParamsJobStatusType1,
+    )
+    from ..models.people_search_count_body_search_params_job_status_type_2 import (
+        PeopleSearchCountBodySearchParamsJobStatusType2,
+    )
+    from ..models.people_search_count_body_search_params_job_title_v2_type_0 import (
+        PeopleSearchCountBodySearchParamsJobTitleV2Type0,
+    )
+    from ..models.people_search_count_body_search_params_job_title_v3_type_0 import (
+        PeopleSearchCountBodySearchParamsJobTitleV3Type0,
+    )
+    from ..models.people_search_count_body_search_params_keyword_search_options_type_0 import (
+        PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0,
+    )
+    from ..models.people_search_count_body_search_params_keywords_type_0 import (
+        PeopleSearchCountBodySearchParamsKeywordsType0,
+    )
+    from ..models.people_search_count_body_search_params_languages_type_0 import (
+        PeopleSearchCountBodySearchParamsLanguagesType0,
+    )
+    from ..models.people_search_count_body_search_params_left_stealth_at_type_0 import (
+        PeopleSearchCountBodySearchParamsLeftStealthAtType0,
+    )
+    from ..models.people_search_count_body_search_params_left_stealth_at_type_1 import (
+        PeopleSearchCountBodySearchParamsLeftStealthAtType1,
+    )
+    from ..models.people_search_count_body_search_params_location_type_0 import (
+        PeopleSearchCountBodySearchParamsLocationType0,
+    )
+    from ..models.people_search_count_body_search_params_num_connections_type_0 import (
+        PeopleSearchCountBodySearchParamsNumConnectionsType0,
+    )
+    from ..models.people_search_count_body_search_params_num_followers_type_0 import (
+        PeopleSearchCountBodySearchParamsNumFollowersType0,
+    )
+    from ..models.people_search_count_body_search_params_past_job_text_type_0 import (
+        PeopleSearchCountBodySearchParamsPastJobTextType0,
+    )
+    from ..models.people_search_count_body_search_params_past_jobs_type_0 import (
+        PeopleSearchCountBodySearchParamsPastJobsType0,
+    )
+    from ..models.people_search_count_body_search_params_started_at_company_type_0 import (
+        PeopleSearchCountBodySearchParamsStartedAtCompanyType0,
+    )
+    from ..models.people_search_count_body_search_params_started_at_company_type_1 import (
+        PeopleSearchCountBodySearchParamsStartedAtCompanyType1,
+    )
+    from ..models.people_search_count_body_search_params_started_in_role_type_0 import (
+        PeopleSearchCountBodySearchParamsStartedInRoleType0,
+    )
+    from ..models.people_search_count_body_search_params_started_in_role_type_1 import (
+        PeopleSearchCountBodySearchParamsStartedInRoleType1,
+    )
+    from ..models.people_search_count_body_search_params_state_type_0 import PeopleSearchCountBodySearchParamsStateType0
+    from ..models.people_search_count_body_search_params_stealth_v2_type_0 import (
+        PeopleSearchCountBodySearchParamsStealthV2Type0,
+    )
+    from ..models.people_search_count_body_search_params_stealth_v2_type_1 import (
+        PeopleSearchCountBodySearchParamsStealthV2Type1,
+    )
+    from ..models.people_search_count_body_search_params_tags_type_0 import PeopleSearchCountBodySearchParamsTagsType0
+    from ..models.people_search_count_body_search_params_time_zone_type_0 import (
+        PeopleSearchCountBodySearchParamsTimeZoneType0,
+    )
+    from ..models.people_search_count_body_search_params_years_of_experience_type_0 import (
+        PeopleSearchCountBodySearchParamsYearsOfExperienceType0,
+    )
 
 
 T = TypeVar("T", bound="PeopleSearchCountBodySearchParams")
 
 
-
 @_attrs_define
 class PeopleSearchCountBodySearchParams:
-    """ Search parameters for people search.
+    """Search parameters for people search.
 
-        Attributes:
-            country_3_letter_code (Union['PeopleSearchCountBodySearchParamsCountry3LetterCodeType0', None, Unset]):
-            num_connections (Union['PeopleSearchCountBodySearchParamsNumConnectionsType0', None, Unset]):
-            num_followers (Union['PeopleSearchCountBodySearchParamsNumFollowersType0', None, Unset]):
-            approx_age (Union['PeopleSearchCountBodySearchParamsApproxAgeType0', None, Unset]):
-            keywords (Union['PeopleSearchCountBodySearchParamsKeywordsType0', None, Unset]):
-            keyword_search_options (Union['PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0', None, Unset]):
-            job_title_v2 (Union['PeopleSearchCountBodySearchParamsJobTitleV2Type0', None, Unset]):
-            exact_profile (Union['PeopleSearchCountBodySearchParamsExactProfileType0', None, Unset]):
-            started_in_role (Union['PeopleSearchCountBodySearchParamsStartedInRoleType0',
-                'PeopleSearchCountBodySearchParamsStartedInRoleType1', None, Unset]):
-            started_at_company (Union['PeopleSearchCountBodySearchParamsStartedAtCompanyType0',
-                'PeopleSearchCountBodySearchParamsStartedAtCompanyType1', None, Unset]):
-            location (Union['PeopleSearchCountBodySearchParamsLocationType0', None, Unset]):
-            past_jobs (Union['PeopleSearchCountBodySearchParamsPastJobsType0', None, Unset]):
-            languages (Union['PeopleSearchCountBodySearchParamsLanguagesType0', None, Unset]):
-            left_stealth_at (Union['PeopleSearchCountBodySearchParamsLeftStealthAtType0',
-                'PeopleSearchCountBodySearchParamsLeftStealthAtType1', None, Unset]):
-            is_in_stealth (Union[None, Unset, bool]):
-            stealth_v2 (Union['PeopleSearchCountBodySearchParamsStealthV2Type0',
-                'PeopleSearchCountBodySearchParamsStealthV2Type1', None, Unset]):
-            job_status (Union['PeopleSearchCountBodySearchParamsJobStatusType0',
-                'PeopleSearchCountBodySearchParamsJobStatusType1', 'PeopleSearchCountBodySearchParamsJobStatusType2', None,
-                Unset]):
-            time_zone (Union['PeopleSearchCountBodySearchParamsTimeZoneType0', None, Unset]):
-            past_job_text (Union['PeopleSearchCountBodySearchParamsPastJobTextType0', None, Unset]):
-            fuzzy_name (Union['PeopleSearchCountBodySearchParamsFuzzyNameType0', None, Unset]):
-            company_match_mode (Union['PeopleSearchCountBodySearchParamsCompanyMatchModeType0',
-                'PeopleSearchCountBodySearchParamsCompanyMatchModeType1', None, Unset]):
-            years_of_experience (Union['PeopleSearchCountBodySearchParamsYearsOfExperienceType0', None, Unset]):
-            job_title_v3 (Union['PeopleSearchCountBodySearchParamsJobTitleV3Type0', None, Unset]):
-            has_profile_picture (Union[None, Unset, bool]):
-            state (Union['PeopleSearchCountBodySearchParamsStateType0', None, Unset]):
-            get_detailed_education (Union[None, Unset, bool]): Whether to include deep details about each educational item,
-                like the school's LinkedIn URL, website, location, etc. That'll be put in the detailedEducation array. This
-                slows down the API call, so only enable this if you need it. Default: False.
-            get_detailed_work_experience (Union[None, Unset, bool]): Whether to include deep details about each work
-                experience item, like the company's LinkedIn URL, website, location, etc. That'll be put in the
-                detailedWorkExperience array. This slows down the API call, so only enable this if you need it. Default: False.
-            tags (Union['PeopleSearchCountBodySearchParamsTagsType0', None, Unset]):
-            education (Union['PeopleSearchCountBodySearchParamsEducationType0', None, Unset]):
-     """
+    Attributes:
+        country_3_letter_code (None | PeopleSearchCountBodySearchParamsCountry3LetterCodeType0 | Unset):
+        num_connections (None | PeopleSearchCountBodySearchParamsNumConnectionsType0 | Unset):
+        num_followers (None | PeopleSearchCountBodySearchParamsNumFollowersType0 | Unset):
+        approx_age (None | PeopleSearchCountBodySearchParamsApproxAgeType0 | Unset):
+        keywords (None | PeopleSearchCountBodySearchParamsKeywordsType0 | Unset):
+        keyword_search_options (None | PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0 | Unset):
+        job_title_v2 (None | PeopleSearchCountBodySearchParamsJobTitleV2Type0 | Unset):
+        exact_profile (None | PeopleSearchCountBodySearchParamsExactProfileType0 | Unset):
+        started_in_role (None | PeopleSearchCountBodySearchParamsStartedInRoleType0 |
+            PeopleSearchCountBodySearchParamsStartedInRoleType1 | Unset):
+        started_at_company (None | PeopleSearchCountBodySearchParamsStartedAtCompanyType0 |
+            PeopleSearchCountBodySearchParamsStartedAtCompanyType1 | Unset):
+        location (None | PeopleSearchCountBodySearchParamsLocationType0 | Unset):
+        past_jobs (None | PeopleSearchCountBodySearchParamsPastJobsType0 | Unset):
+        languages (None | PeopleSearchCountBodySearchParamsLanguagesType0 | Unset):
+        left_stealth_at (None | PeopleSearchCountBodySearchParamsLeftStealthAtType0 |
+            PeopleSearchCountBodySearchParamsLeftStealthAtType1 | Unset):
+        is_in_stealth (bool | None | Unset):
+        stealth_v2 (None | PeopleSearchCountBodySearchParamsStealthV2Type0 |
+            PeopleSearchCountBodySearchParamsStealthV2Type1 | Unset):
+        job_status (None | PeopleSearchCountBodySearchParamsJobStatusType0 |
+            PeopleSearchCountBodySearchParamsJobStatusType1 | PeopleSearchCountBodySearchParamsJobStatusType2 | Unset):
+        time_zone (None | PeopleSearchCountBodySearchParamsTimeZoneType0 | Unset):
+        past_job_text (None | PeopleSearchCountBodySearchParamsPastJobTextType0 | Unset):
+        fuzzy_name (None | PeopleSearchCountBodySearchParamsFuzzyNameType0 | Unset):
+        company_match_mode (None | PeopleSearchCountBodySearchParamsCompanyMatchModeType0 |
+            PeopleSearchCountBodySearchParamsCompanyMatchModeType1 | Unset):
+        years_of_experience (None | PeopleSearchCountBodySearchParamsYearsOfExperienceType0 | Unset):
+        job_title_v3 (None | PeopleSearchCountBodySearchParamsJobTitleV3Type0 | Unset):
+        has_profile_picture (bool | None | Unset):
+        state (None | PeopleSearchCountBodySearchParamsStateType0 | Unset):
+        get_detailed_education (bool | None | Unset): Whether to include deep details about each educational item, like
+            the school's LinkedIn URL, website, location, etc. That'll be put in the detailedEducation array. This slows
+            down the API call, so only enable this if you need it. Default: False.
+        get_detailed_work_experience (bool | None | Unset): Whether to include deep details about each work experience
+            item, like the company's LinkedIn URL, website, location, etc. That'll be put in the detailedWorkExperience
+            array. This slows down the API call, so only enable this if you need it. Default: False.
+        tags (None | PeopleSearchCountBodySearchParamsTagsType0 | Unset):
+        education (None | PeopleSearchCountBodySearchParamsEducationType0 | Unset):
+    """
 
-    country_3_letter_code: Union['PeopleSearchCountBodySearchParamsCountry3LetterCodeType0', None, Unset] = UNSET
-    num_connections: Union['PeopleSearchCountBodySearchParamsNumConnectionsType0', None, Unset] = UNSET
-    num_followers: Union['PeopleSearchCountBodySearchParamsNumFollowersType0', None, Unset] = UNSET
-    approx_age: Union['PeopleSearchCountBodySearchParamsApproxAgeType0', None, Unset] = UNSET
-    keywords: Union['PeopleSearchCountBodySearchParamsKeywordsType0', None, Unset] = UNSET
-    keyword_search_options: Union['PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0', None, Unset] = UNSET
-    job_title_v2: Union['PeopleSearchCountBodySearchParamsJobTitleV2Type0', None, Unset] = UNSET
-    exact_profile: Union['PeopleSearchCountBodySearchParamsExactProfileType0', None, Unset] = UNSET
-    started_in_role: Union['PeopleSearchCountBodySearchParamsStartedInRoleType0', 'PeopleSearchCountBodySearchParamsStartedInRoleType1', None, Unset] = UNSET
-    started_at_company: Union['PeopleSearchCountBodySearchParamsStartedAtCompanyType0', 'PeopleSearchCountBodySearchParamsStartedAtCompanyType1', None, Unset] = UNSET
-    location: Union['PeopleSearchCountBodySearchParamsLocationType0', None, Unset] = UNSET
-    past_jobs: Union['PeopleSearchCountBodySearchParamsPastJobsType0', None, Unset] = UNSET
-    languages: Union['PeopleSearchCountBodySearchParamsLanguagesType0', None, Unset] = UNSET
-    left_stealth_at: Union['PeopleSearchCountBodySearchParamsLeftStealthAtType0', 'PeopleSearchCountBodySearchParamsLeftStealthAtType1', None, Unset] = UNSET
-    is_in_stealth: Union[None, Unset, bool] = UNSET
-    stealth_v2: Union['PeopleSearchCountBodySearchParamsStealthV2Type0', 'PeopleSearchCountBodySearchParamsStealthV2Type1', None, Unset] = UNSET
-    job_status: Union['PeopleSearchCountBodySearchParamsJobStatusType0', 'PeopleSearchCountBodySearchParamsJobStatusType1', 'PeopleSearchCountBodySearchParamsJobStatusType2', None, Unset] = UNSET
-    time_zone: Union['PeopleSearchCountBodySearchParamsTimeZoneType0', None, Unset] = UNSET
-    past_job_text: Union['PeopleSearchCountBodySearchParamsPastJobTextType0', None, Unset] = UNSET
-    fuzzy_name: Union['PeopleSearchCountBodySearchParamsFuzzyNameType0', None, Unset] = UNSET
-    company_match_mode: Union['PeopleSearchCountBodySearchParamsCompanyMatchModeType0', 'PeopleSearchCountBodySearchParamsCompanyMatchModeType1', None, Unset] = UNSET
-    years_of_experience: Union['PeopleSearchCountBodySearchParamsYearsOfExperienceType0', None, Unset] = UNSET
-    job_title_v3: Union['PeopleSearchCountBodySearchParamsJobTitleV3Type0', None, Unset] = UNSET
-    has_profile_picture: Union[None, Unset, bool] = UNSET
-    state: Union['PeopleSearchCountBodySearchParamsStateType0', None, Unset] = UNSET
-    get_detailed_education: Union[None, Unset, bool] = False
-    get_detailed_work_experience: Union[None, Unset, bool] = False
-    tags: Union['PeopleSearchCountBodySearchParamsTagsType0', None, Unset] = UNSET
-    education: Union['PeopleSearchCountBodySearchParamsEducationType0', None, Unset] = UNSET
-
-
-
-
+    country_3_letter_code: None | PeopleSearchCountBodySearchParamsCountry3LetterCodeType0 | Unset = UNSET
+    num_connections: None | PeopleSearchCountBodySearchParamsNumConnectionsType0 | Unset = UNSET
+    num_followers: None | PeopleSearchCountBodySearchParamsNumFollowersType0 | Unset = UNSET
+    approx_age: None | PeopleSearchCountBodySearchParamsApproxAgeType0 | Unset = UNSET
+    keywords: None | PeopleSearchCountBodySearchParamsKeywordsType0 | Unset = UNSET
+    keyword_search_options: None | PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0 | Unset = UNSET
+    job_title_v2: None | PeopleSearchCountBodySearchParamsJobTitleV2Type0 | Unset = UNSET
+    exact_profile: None | PeopleSearchCountBodySearchParamsExactProfileType0 | Unset = UNSET
+    started_in_role: (
+        None
+        | PeopleSearchCountBodySearchParamsStartedInRoleType0
+        | PeopleSearchCountBodySearchParamsStartedInRoleType1
+        | Unset
+    ) = UNSET
+    started_at_company: (
+        None
+        | PeopleSearchCountBodySearchParamsStartedAtCompanyType0
+        | PeopleSearchCountBodySearchParamsStartedAtCompanyType1
+        | Unset
+    ) = UNSET
+    location: None | PeopleSearchCountBodySearchParamsLocationType0 | Unset = UNSET
+    past_jobs: None | PeopleSearchCountBodySearchParamsPastJobsType0 | Unset = UNSET
+    languages: None | PeopleSearchCountBodySearchParamsLanguagesType0 | Unset = UNSET
+    left_stealth_at: (
+        None
+        | PeopleSearchCountBodySearchParamsLeftStealthAtType0
+        | PeopleSearchCountBodySearchParamsLeftStealthAtType1
+        | Unset
+    ) = UNSET
+    is_in_stealth: bool | None | Unset = UNSET
+    stealth_v2: (
+        None | PeopleSearchCountBodySearchParamsStealthV2Type0 | PeopleSearchCountBodySearchParamsStealthV2Type1 | Unset
+    ) = UNSET
+    job_status: (
+        None
+        | PeopleSearchCountBodySearchParamsJobStatusType0
+        | PeopleSearchCountBodySearchParamsJobStatusType1
+        | PeopleSearchCountBodySearchParamsJobStatusType2
+        | Unset
+    ) = UNSET
+    time_zone: None | PeopleSearchCountBodySearchParamsTimeZoneType0 | Unset = UNSET
+    past_job_text: None | PeopleSearchCountBodySearchParamsPastJobTextType0 | Unset = UNSET
+    fuzzy_name: None | PeopleSearchCountBodySearchParamsFuzzyNameType0 | Unset = UNSET
+    company_match_mode: (
+        None
+        | PeopleSearchCountBodySearchParamsCompanyMatchModeType0
+        | PeopleSearchCountBodySearchParamsCompanyMatchModeType1
+        | Unset
+    ) = UNSET
+    years_of_experience: None | PeopleSearchCountBodySearchParamsYearsOfExperienceType0 | Unset = UNSET
+    job_title_v3: None | PeopleSearchCountBodySearchParamsJobTitleV3Type0 | Unset = UNSET
+    has_profile_picture: bool | None | Unset = UNSET
+    state: None | PeopleSearchCountBodySearchParamsStateType0 | Unset = UNSET
+    get_detailed_education: bool | None | Unset = False
+    get_detailed_work_experience: bool | None | Unset = False
+    tags: None | PeopleSearchCountBodySearchParamsTagsType0 | Unset = UNSET
+    education: None | PeopleSearchCountBodySearchParamsEducationType0 | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.people_search_count_body_search_params_approx_age_type_0 import PeopleSearchCountBodySearchParamsApproxAgeType0
-        from ..models.people_search_count_body_search_params_keywords_type_0 import PeopleSearchCountBodySearchParamsKeywordsType0
-        from ..models.people_search_count_body_search_params_started_in_role_type_0 import PeopleSearchCountBodySearchParamsStartedInRoleType0
-        from ..models.people_search_count_body_search_params_stealth_v2_type_1 import PeopleSearchCountBodySearchParamsStealthV2Type1
-        from ..models.people_search_count_body_search_params_started_at_company_type_0 import PeopleSearchCountBodySearchParamsStartedAtCompanyType0
-        from ..models.people_search_count_body_search_params_past_job_text_type_0 import PeopleSearchCountBodySearchParamsPastJobTextType0
-        from ..models.people_search_count_body_search_params_years_of_experience_type_0 import PeopleSearchCountBodySearchParamsYearsOfExperienceType0
-        from ..models.people_search_count_body_search_params_education_type_0 import PeopleSearchCountBodySearchParamsEducationType0
-        from ..models.people_search_count_body_search_params_left_stealth_at_type_1 import PeopleSearchCountBodySearchParamsLeftStealthAtType1
-        from ..models.people_search_count_body_search_params_keyword_search_options_type_0 import PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0
-        from ..models.people_search_count_body_search_params_left_stealth_at_type_0 import PeopleSearchCountBodySearchParamsLeftStealthAtType0
-        from ..models.people_search_count_body_search_params_job_status_type_0 import PeopleSearchCountBodySearchParamsJobStatusType0
-        from ..models.people_search_count_body_search_params_country_3_letter_code_type_0 import PeopleSearchCountBodySearchParamsCountry3LetterCodeType0
-        from ..models.people_search_count_body_search_params_job_status_type_2 import PeopleSearchCountBodySearchParamsJobStatusType2
-        from ..models.people_search_count_body_search_params_time_zone_type_0 import PeopleSearchCountBodySearchParamsTimeZoneType0
-        from ..models.people_search_count_body_search_params_company_match_mode_type_1 import PeopleSearchCountBodySearchParamsCompanyMatchModeType1
-        from ..models.people_search_count_body_search_params_languages_type_0 import PeopleSearchCountBodySearchParamsLanguagesType0
-        from ..models.people_search_count_body_search_params_started_in_role_type_1 import PeopleSearchCountBodySearchParamsStartedInRoleType1
-        from ..models.people_search_count_body_search_params_fuzzy_name_type_0 import PeopleSearchCountBodySearchParamsFuzzyNameType0
-        from ..models.people_search_count_body_search_params_company_match_mode_type_0 import PeopleSearchCountBodySearchParamsCompanyMatchModeType0
-        from ..models.people_search_count_body_search_params_job_status_type_1 import PeopleSearchCountBodySearchParamsJobStatusType1
-        from ..models.people_search_count_body_search_params_past_jobs_type_0 import PeopleSearchCountBodySearchParamsPastJobsType0
-        from ..models.people_search_count_body_search_params_stealth_v2_type_0 import PeopleSearchCountBodySearchParamsStealthV2Type0
-        from ..models.people_search_count_body_search_params_job_title_v3_type_0 import PeopleSearchCountBodySearchParamsJobTitleV3Type0
-        from ..models.people_search_count_body_search_params_state_type_0 import PeopleSearchCountBodySearchParamsStateType0
-        from ..models.people_search_count_body_search_params_started_at_company_type_1 import PeopleSearchCountBodySearchParamsStartedAtCompanyType1
-        from ..models.people_search_count_body_search_params_tags_type_0 import PeopleSearchCountBodySearchParamsTagsType0
-        from ..models.people_search_count_body_search_params_exact_profile_type_0 import PeopleSearchCountBodySearchParamsExactProfileType0
-        from ..models.people_search_count_body_search_params_num_followers_type_0 import PeopleSearchCountBodySearchParamsNumFollowersType0
-        from ..models.people_search_count_body_search_params_num_connections_type_0 import PeopleSearchCountBodySearchParamsNumConnectionsType0
-        from ..models.people_search_count_body_search_params_location_type_0 import PeopleSearchCountBodySearchParamsLocationType0
-        from ..models.people_search_count_body_search_params_job_title_v2_type_0 import PeopleSearchCountBodySearchParamsJobTitleV2Type0
-        country_3_letter_code: Union[None, Unset, dict[str, Any]]
+        from ..models.people_search_count_body_search_params_approx_age_type_0 import (
+            PeopleSearchCountBodySearchParamsApproxAgeType0,
+        )
+        from ..models.people_search_count_body_search_params_company_match_mode_type_0 import (
+            PeopleSearchCountBodySearchParamsCompanyMatchModeType0,
+        )
+        from ..models.people_search_count_body_search_params_company_match_mode_type_1 import (
+            PeopleSearchCountBodySearchParamsCompanyMatchModeType1,
+        )
+        from ..models.people_search_count_body_search_params_country_3_letter_code_type_0 import (
+            PeopleSearchCountBodySearchParamsCountry3LetterCodeType0,
+        )
+        from ..models.people_search_count_body_search_params_education_type_0 import (
+            PeopleSearchCountBodySearchParamsEducationType0,
+        )
+        from ..models.people_search_count_body_search_params_exact_profile_type_0 import (
+            PeopleSearchCountBodySearchParamsExactProfileType0,
+        )
+        from ..models.people_search_count_body_search_params_fuzzy_name_type_0 import (
+            PeopleSearchCountBodySearchParamsFuzzyNameType0,
+        )
+        from ..models.people_search_count_body_search_params_job_status_type_0 import (
+            PeopleSearchCountBodySearchParamsJobStatusType0,
+        )
+        from ..models.people_search_count_body_search_params_job_status_type_1 import (
+            PeopleSearchCountBodySearchParamsJobStatusType1,
+        )
+        from ..models.people_search_count_body_search_params_job_status_type_2 import (
+            PeopleSearchCountBodySearchParamsJobStatusType2,
+        )
+        from ..models.people_search_count_body_search_params_job_title_v2_type_0 import (
+            PeopleSearchCountBodySearchParamsJobTitleV2Type0,
+        )
+        from ..models.people_search_count_body_search_params_job_title_v3_type_0 import (
+            PeopleSearchCountBodySearchParamsJobTitleV3Type0,
+        )
+        from ..models.people_search_count_body_search_params_keyword_search_options_type_0 import (
+            PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0,
+        )
+        from ..models.people_search_count_body_search_params_keywords_type_0 import (
+            PeopleSearchCountBodySearchParamsKeywordsType0,
+        )
+        from ..models.people_search_count_body_search_params_languages_type_0 import (
+            PeopleSearchCountBodySearchParamsLanguagesType0,
+        )
+        from ..models.people_search_count_body_search_params_left_stealth_at_type_0 import (
+            PeopleSearchCountBodySearchParamsLeftStealthAtType0,
+        )
+        from ..models.people_search_count_body_search_params_left_stealth_at_type_1 import (
+            PeopleSearchCountBodySearchParamsLeftStealthAtType1,
+        )
+        from ..models.people_search_count_body_search_params_location_type_0 import (
+            PeopleSearchCountBodySearchParamsLocationType0,
+        )
+        from ..models.people_search_count_body_search_params_num_connections_type_0 import (
+            PeopleSearchCountBodySearchParamsNumConnectionsType0,
+        )
+        from ..models.people_search_count_body_search_params_num_followers_type_0 import (
+            PeopleSearchCountBodySearchParamsNumFollowersType0,
+        )
+        from ..models.people_search_count_body_search_params_past_job_text_type_0 import (
+            PeopleSearchCountBodySearchParamsPastJobTextType0,
+        )
+        from ..models.people_search_count_body_search_params_past_jobs_type_0 import (
+            PeopleSearchCountBodySearchParamsPastJobsType0,
+        )
+        from ..models.people_search_count_body_search_params_started_at_company_type_0 import (
+            PeopleSearchCountBodySearchParamsStartedAtCompanyType0,
+        )
+        from ..models.people_search_count_body_search_params_started_at_company_type_1 import (
+            PeopleSearchCountBodySearchParamsStartedAtCompanyType1,
+        )
+        from ..models.people_search_count_body_search_params_started_in_role_type_0 import (
+            PeopleSearchCountBodySearchParamsStartedInRoleType0,
+        )
+        from ..models.people_search_count_body_search_params_started_in_role_type_1 import (
+            PeopleSearchCountBodySearchParamsStartedInRoleType1,
+        )
+        from ..models.people_search_count_body_search_params_state_type_0 import (
+            PeopleSearchCountBodySearchParamsStateType0,
+        )
+        from ..models.people_search_count_body_search_params_stealth_v2_type_0 import (
+            PeopleSearchCountBodySearchParamsStealthV2Type0,
+        )
+        from ..models.people_search_count_body_search_params_stealth_v2_type_1 import (
+            PeopleSearchCountBodySearchParamsStealthV2Type1,
+        )
+        from ..models.people_search_count_body_search_params_tags_type_0 import (
+            PeopleSearchCountBodySearchParamsTagsType0,
+        )
+        from ..models.people_search_count_body_search_params_time_zone_type_0 import (
+            PeopleSearchCountBodySearchParamsTimeZoneType0,
+        )
+        from ..models.people_search_count_body_search_params_years_of_experience_type_0 import (
+            PeopleSearchCountBodySearchParamsYearsOfExperienceType0,
+        )
+
+        country_3_letter_code: dict[str, Any] | None | Unset
         if isinstance(self.country_3_letter_code, Unset):
             country_3_letter_code = UNSET
         elif isinstance(self.country_3_letter_code, PeopleSearchCountBodySearchParamsCountry3LetterCodeType0):
@@ -175,7 +315,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             country_3_letter_code = self.country_3_letter_code
 
-        num_connections: Union[None, Unset, dict[str, Any]]
+        num_connections: dict[str, Any] | None | Unset
         if isinstance(self.num_connections, Unset):
             num_connections = UNSET
         elif isinstance(self.num_connections, PeopleSearchCountBodySearchParamsNumConnectionsType0):
@@ -183,7 +323,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             num_connections = self.num_connections
 
-        num_followers: Union[None, Unset, dict[str, Any]]
+        num_followers: dict[str, Any] | None | Unset
         if isinstance(self.num_followers, Unset):
             num_followers = UNSET
         elif isinstance(self.num_followers, PeopleSearchCountBodySearchParamsNumFollowersType0):
@@ -191,7 +331,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             num_followers = self.num_followers
 
-        approx_age: Union[None, Unset, dict[str, Any]]
+        approx_age: dict[str, Any] | None | Unset
         if isinstance(self.approx_age, Unset):
             approx_age = UNSET
         elif isinstance(self.approx_age, PeopleSearchCountBodySearchParamsApproxAgeType0):
@@ -199,7 +339,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             approx_age = self.approx_age
 
-        keywords: Union[None, Unset, dict[str, Any]]
+        keywords: dict[str, Any] | None | Unset
         if isinstance(self.keywords, Unset):
             keywords = UNSET
         elif isinstance(self.keywords, PeopleSearchCountBodySearchParamsKeywordsType0):
@@ -207,7 +347,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             keywords = self.keywords
 
-        keyword_search_options: Union[None, Unset, dict[str, Any]]
+        keyword_search_options: dict[str, Any] | None | Unset
         if isinstance(self.keyword_search_options, Unset):
             keyword_search_options = UNSET
         elif isinstance(self.keyword_search_options, PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0):
@@ -215,7 +355,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             keyword_search_options = self.keyword_search_options
 
-        job_title_v2: Union[None, Unset, dict[str, Any]]
+        job_title_v2: dict[str, Any] | None | Unset
         if isinstance(self.job_title_v2, Unset):
             job_title_v2 = UNSET
         elif isinstance(self.job_title_v2, PeopleSearchCountBodySearchParamsJobTitleV2Type0):
@@ -223,7 +363,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             job_title_v2 = self.job_title_v2
 
-        exact_profile: Union[None, Unset, dict[str, Any]]
+        exact_profile: dict[str, Any] | None | Unset
         if isinstance(self.exact_profile, Unset):
             exact_profile = UNSET
         elif isinstance(self.exact_profile, PeopleSearchCountBodySearchParamsExactProfileType0):
@@ -231,7 +371,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             exact_profile = self.exact_profile
 
-        started_in_role: Union[None, Unset, dict[str, Any]]
+        started_in_role: dict[str, Any] | None | Unset
         if isinstance(self.started_in_role, Unset):
             started_in_role = UNSET
         elif isinstance(self.started_in_role, PeopleSearchCountBodySearchParamsStartedInRoleType0):
@@ -241,7 +381,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             started_in_role = self.started_in_role
 
-        started_at_company: Union[None, Unset, dict[str, Any]]
+        started_at_company: dict[str, Any] | None | Unset
         if isinstance(self.started_at_company, Unset):
             started_at_company = UNSET
         elif isinstance(self.started_at_company, PeopleSearchCountBodySearchParamsStartedAtCompanyType0):
@@ -251,7 +391,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             started_at_company = self.started_at_company
 
-        location: Union[None, Unset, dict[str, Any]]
+        location: dict[str, Any] | None | Unset
         if isinstance(self.location, Unset):
             location = UNSET
         elif isinstance(self.location, PeopleSearchCountBodySearchParamsLocationType0):
@@ -259,7 +399,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             location = self.location
 
-        past_jobs: Union[None, Unset, dict[str, Any]]
+        past_jobs: dict[str, Any] | None | Unset
         if isinstance(self.past_jobs, Unset):
             past_jobs = UNSET
         elif isinstance(self.past_jobs, PeopleSearchCountBodySearchParamsPastJobsType0):
@@ -267,7 +407,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             past_jobs = self.past_jobs
 
-        languages: Union[None, Unset, dict[str, Any]]
+        languages: dict[str, Any] | None | Unset
         if isinstance(self.languages, Unset):
             languages = UNSET
         elif isinstance(self.languages, PeopleSearchCountBodySearchParamsLanguagesType0):
@@ -275,7 +415,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             languages = self.languages
 
-        left_stealth_at: Union[None, Unset, dict[str, Any]]
+        left_stealth_at: dict[str, Any] | None | Unset
         if isinstance(self.left_stealth_at, Unset):
             left_stealth_at = UNSET
         elif isinstance(self.left_stealth_at, PeopleSearchCountBodySearchParamsLeftStealthAtType0):
@@ -285,13 +425,13 @@ class PeopleSearchCountBodySearchParams:
         else:
             left_stealth_at = self.left_stealth_at
 
-        is_in_stealth: Union[None, Unset, bool]
+        is_in_stealth: bool | None | Unset
         if isinstance(self.is_in_stealth, Unset):
             is_in_stealth = UNSET
         else:
             is_in_stealth = self.is_in_stealth
 
-        stealth_v2: Union[None, Unset, dict[str, Any]]
+        stealth_v2: dict[str, Any] | None | Unset
         if isinstance(self.stealth_v2, Unset):
             stealth_v2 = UNSET
         elif isinstance(self.stealth_v2, PeopleSearchCountBodySearchParamsStealthV2Type0):
@@ -301,7 +441,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             stealth_v2 = self.stealth_v2
 
-        job_status: Union[None, Unset, dict[str, Any]]
+        job_status: dict[str, Any] | None | Unset
         if isinstance(self.job_status, Unset):
             job_status = UNSET
         elif isinstance(self.job_status, PeopleSearchCountBodySearchParamsJobStatusType0):
@@ -313,7 +453,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             job_status = self.job_status
 
-        time_zone: Union[None, Unset, dict[str, Any]]
+        time_zone: dict[str, Any] | None | Unset
         if isinstance(self.time_zone, Unset):
             time_zone = UNSET
         elif isinstance(self.time_zone, PeopleSearchCountBodySearchParamsTimeZoneType0):
@@ -321,7 +461,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             time_zone = self.time_zone
 
-        past_job_text: Union[None, Unset, dict[str, Any]]
+        past_job_text: dict[str, Any] | None | Unset
         if isinstance(self.past_job_text, Unset):
             past_job_text = UNSET
         elif isinstance(self.past_job_text, PeopleSearchCountBodySearchParamsPastJobTextType0):
@@ -329,7 +469,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             past_job_text = self.past_job_text
 
-        fuzzy_name: Union[None, Unset, dict[str, Any]]
+        fuzzy_name: dict[str, Any] | None | Unset
         if isinstance(self.fuzzy_name, Unset):
             fuzzy_name = UNSET
         elif isinstance(self.fuzzy_name, PeopleSearchCountBodySearchParamsFuzzyNameType0):
@@ -337,7 +477,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             fuzzy_name = self.fuzzy_name
 
-        company_match_mode: Union[None, Unset, dict[str, Any]]
+        company_match_mode: dict[str, Any] | None | Unset
         if isinstance(self.company_match_mode, Unset):
             company_match_mode = UNSET
         elif isinstance(self.company_match_mode, PeopleSearchCountBodySearchParamsCompanyMatchModeType0):
@@ -347,7 +487,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             company_match_mode = self.company_match_mode
 
-        years_of_experience: Union[None, Unset, dict[str, Any]]
+        years_of_experience: dict[str, Any] | None | Unset
         if isinstance(self.years_of_experience, Unset):
             years_of_experience = UNSET
         elif isinstance(self.years_of_experience, PeopleSearchCountBodySearchParamsYearsOfExperienceType0):
@@ -355,7 +495,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             years_of_experience = self.years_of_experience
 
-        job_title_v3: Union[None, Unset, dict[str, Any]]
+        job_title_v3: dict[str, Any] | None | Unset
         if isinstance(self.job_title_v3, Unset):
             job_title_v3 = UNSET
         elif isinstance(self.job_title_v3, PeopleSearchCountBodySearchParamsJobTitleV3Type0):
@@ -363,13 +503,13 @@ class PeopleSearchCountBodySearchParams:
         else:
             job_title_v3 = self.job_title_v3
 
-        has_profile_picture: Union[None, Unset, bool]
+        has_profile_picture: bool | None | Unset
         if isinstance(self.has_profile_picture, Unset):
             has_profile_picture = UNSET
         else:
             has_profile_picture = self.has_profile_picture
 
-        state: Union[None, Unset, dict[str, Any]]
+        state: dict[str, Any] | None | Unset
         if isinstance(self.state, Unset):
             state = UNSET
         elif isinstance(self.state, PeopleSearchCountBodySearchParamsStateType0):
@@ -377,19 +517,19 @@ class PeopleSearchCountBodySearchParams:
         else:
             state = self.state
 
-        get_detailed_education: Union[None, Unset, bool]
+        get_detailed_education: bool | None | Unset
         if isinstance(self.get_detailed_education, Unset):
             get_detailed_education = UNSET
         else:
             get_detailed_education = self.get_detailed_education
 
-        get_detailed_work_experience: Union[None, Unset, bool]
+        get_detailed_work_experience: bool | None | Unset
         if isinstance(self.get_detailed_work_experience, Unset):
             get_detailed_work_experience = UNSET
         else:
             get_detailed_work_experience = self.get_detailed_work_experience
 
-        tags: Union[None, Unset, dict[str, Any]]
+        tags: dict[str, Any] | None | Unset
         if isinstance(self.tags, Unset):
             tags = UNSET
         elif isinstance(self.tags, PeopleSearchCountBodySearchParamsTagsType0):
@@ -397,7 +537,7 @@ class PeopleSearchCountBodySearchParams:
         else:
             tags = self.tags
 
-        education: Union[None, Unset, dict[str, Any]]
+        education: dict[str, Any] | None | Unset
         if isinstance(self.education, Unset):
             education = UNSET
         elif isinstance(self.education, PeopleSearchCountBodySearchParamsEducationType0):
@@ -405,11 +545,9 @@ class PeopleSearchCountBodySearchParams:
         else:
             education = self.education
 
-
         field_dict: dict[str, Any] = {}
 
-        field_dict.update({
-        })
+        field_dict.update({})
         if country_3_letter_code is not UNSET:
             field_dict["country3LetterCode"] = country_3_letter_code
         if num_connections is not UNSET:
@@ -471,44 +609,110 @@ class PeopleSearchCountBodySearchParams:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.people_search_count_body_search_params_approx_age_type_0 import PeopleSearchCountBodySearchParamsApproxAgeType0
-        from ..models.people_search_count_body_search_params_keywords_type_0 import PeopleSearchCountBodySearchParamsKeywordsType0
-        from ..models.people_search_count_body_search_params_started_in_role_type_0 import PeopleSearchCountBodySearchParamsStartedInRoleType0
-        from ..models.people_search_count_body_search_params_stealth_v2_type_1 import PeopleSearchCountBodySearchParamsStealthV2Type1
-        from ..models.people_search_count_body_search_params_started_at_company_type_0 import PeopleSearchCountBodySearchParamsStartedAtCompanyType0
-        from ..models.people_search_count_body_search_params_past_job_text_type_0 import PeopleSearchCountBodySearchParamsPastJobTextType0
-        from ..models.people_search_count_body_search_params_years_of_experience_type_0 import PeopleSearchCountBodySearchParamsYearsOfExperienceType0
-        from ..models.people_search_count_body_search_params_education_type_0 import PeopleSearchCountBodySearchParamsEducationType0
-        from ..models.people_search_count_body_search_params_left_stealth_at_type_1 import PeopleSearchCountBodySearchParamsLeftStealthAtType1
-        from ..models.people_search_count_body_search_params_keyword_search_options_type_0 import PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0
-        from ..models.people_search_count_body_search_params_left_stealth_at_type_0 import PeopleSearchCountBodySearchParamsLeftStealthAtType0
-        from ..models.people_search_count_body_search_params_job_status_type_0 import PeopleSearchCountBodySearchParamsJobStatusType0
-        from ..models.people_search_count_body_search_params_country_3_letter_code_type_0 import PeopleSearchCountBodySearchParamsCountry3LetterCodeType0
-        from ..models.people_search_count_body_search_params_job_status_type_2 import PeopleSearchCountBodySearchParamsJobStatusType2
-        from ..models.people_search_count_body_search_params_time_zone_type_0 import PeopleSearchCountBodySearchParamsTimeZoneType0
-        from ..models.people_search_count_body_search_params_company_match_mode_type_1 import PeopleSearchCountBodySearchParamsCompanyMatchModeType1
-        from ..models.people_search_count_body_search_params_languages_type_0 import PeopleSearchCountBodySearchParamsLanguagesType0
-        from ..models.people_search_count_body_search_params_started_in_role_type_1 import PeopleSearchCountBodySearchParamsStartedInRoleType1
-        from ..models.people_search_count_body_search_params_fuzzy_name_type_0 import PeopleSearchCountBodySearchParamsFuzzyNameType0
-        from ..models.people_search_count_body_search_params_company_match_mode_type_0 import PeopleSearchCountBodySearchParamsCompanyMatchModeType0
-        from ..models.people_search_count_body_search_params_job_status_type_1 import PeopleSearchCountBodySearchParamsJobStatusType1
-        from ..models.people_search_count_body_search_params_past_jobs_type_0 import PeopleSearchCountBodySearchParamsPastJobsType0
-        from ..models.people_search_count_body_search_params_stealth_v2_type_0 import PeopleSearchCountBodySearchParamsStealthV2Type0
-        from ..models.people_search_count_body_search_params_job_title_v3_type_0 import PeopleSearchCountBodySearchParamsJobTitleV3Type0
-        from ..models.people_search_count_body_search_params_state_type_0 import PeopleSearchCountBodySearchParamsStateType0
-        from ..models.people_search_count_body_search_params_started_at_company_type_1 import PeopleSearchCountBodySearchParamsStartedAtCompanyType1
-        from ..models.people_search_count_body_search_params_tags_type_0 import PeopleSearchCountBodySearchParamsTagsType0
-        from ..models.people_search_count_body_search_params_exact_profile_type_0 import PeopleSearchCountBodySearchParamsExactProfileType0
-        from ..models.people_search_count_body_search_params_num_followers_type_0 import PeopleSearchCountBodySearchParamsNumFollowersType0
-        from ..models.people_search_count_body_search_params_num_connections_type_0 import PeopleSearchCountBodySearchParamsNumConnectionsType0
-        from ..models.people_search_count_body_search_params_location_type_0 import PeopleSearchCountBodySearchParamsLocationType0
-        from ..models.people_search_count_body_search_params_job_title_v2_type_0 import PeopleSearchCountBodySearchParamsJobTitleV2Type0
+        from ..models.people_search_count_body_search_params_approx_age_type_0 import (
+            PeopleSearchCountBodySearchParamsApproxAgeType0,
+        )
+        from ..models.people_search_count_body_search_params_company_match_mode_type_0 import (
+            PeopleSearchCountBodySearchParamsCompanyMatchModeType0,
+        )
+        from ..models.people_search_count_body_search_params_company_match_mode_type_1 import (
+            PeopleSearchCountBodySearchParamsCompanyMatchModeType1,
+        )
+        from ..models.people_search_count_body_search_params_country_3_letter_code_type_0 import (
+            PeopleSearchCountBodySearchParamsCountry3LetterCodeType0,
+        )
+        from ..models.people_search_count_body_search_params_education_type_0 import (
+            PeopleSearchCountBodySearchParamsEducationType0,
+        )
+        from ..models.people_search_count_body_search_params_exact_profile_type_0 import (
+            PeopleSearchCountBodySearchParamsExactProfileType0,
+        )
+        from ..models.people_search_count_body_search_params_fuzzy_name_type_0 import (
+            PeopleSearchCountBodySearchParamsFuzzyNameType0,
+        )
+        from ..models.people_search_count_body_search_params_job_status_type_0 import (
+            PeopleSearchCountBodySearchParamsJobStatusType0,
+        )
+        from ..models.people_search_count_body_search_params_job_status_type_1 import (
+            PeopleSearchCountBodySearchParamsJobStatusType1,
+        )
+        from ..models.people_search_count_body_search_params_job_status_type_2 import (
+            PeopleSearchCountBodySearchParamsJobStatusType2,
+        )
+        from ..models.people_search_count_body_search_params_job_title_v2_type_0 import (
+            PeopleSearchCountBodySearchParamsJobTitleV2Type0,
+        )
+        from ..models.people_search_count_body_search_params_job_title_v3_type_0 import (
+            PeopleSearchCountBodySearchParamsJobTitleV3Type0,
+        )
+        from ..models.people_search_count_body_search_params_keyword_search_options_type_0 import (
+            PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0,
+        )
+        from ..models.people_search_count_body_search_params_keywords_type_0 import (
+            PeopleSearchCountBodySearchParamsKeywordsType0,
+        )
+        from ..models.people_search_count_body_search_params_languages_type_0 import (
+            PeopleSearchCountBodySearchParamsLanguagesType0,
+        )
+        from ..models.people_search_count_body_search_params_left_stealth_at_type_0 import (
+            PeopleSearchCountBodySearchParamsLeftStealthAtType0,
+        )
+        from ..models.people_search_count_body_search_params_left_stealth_at_type_1 import (
+            PeopleSearchCountBodySearchParamsLeftStealthAtType1,
+        )
+        from ..models.people_search_count_body_search_params_location_type_0 import (
+            PeopleSearchCountBodySearchParamsLocationType0,
+        )
+        from ..models.people_search_count_body_search_params_num_connections_type_0 import (
+            PeopleSearchCountBodySearchParamsNumConnectionsType0,
+        )
+        from ..models.people_search_count_body_search_params_num_followers_type_0 import (
+            PeopleSearchCountBodySearchParamsNumFollowersType0,
+        )
+        from ..models.people_search_count_body_search_params_past_job_text_type_0 import (
+            PeopleSearchCountBodySearchParamsPastJobTextType0,
+        )
+        from ..models.people_search_count_body_search_params_past_jobs_type_0 import (
+            PeopleSearchCountBodySearchParamsPastJobsType0,
+        )
+        from ..models.people_search_count_body_search_params_started_at_company_type_0 import (
+            PeopleSearchCountBodySearchParamsStartedAtCompanyType0,
+        )
+        from ..models.people_search_count_body_search_params_started_at_company_type_1 import (
+            PeopleSearchCountBodySearchParamsStartedAtCompanyType1,
+        )
+        from ..models.people_search_count_body_search_params_started_in_role_type_0 import (
+            PeopleSearchCountBodySearchParamsStartedInRoleType0,
+        )
+        from ..models.people_search_count_body_search_params_started_in_role_type_1 import (
+            PeopleSearchCountBodySearchParamsStartedInRoleType1,
+        )
+        from ..models.people_search_count_body_search_params_state_type_0 import (
+            PeopleSearchCountBodySearchParamsStateType0,
+        )
+        from ..models.people_search_count_body_search_params_stealth_v2_type_0 import (
+            PeopleSearchCountBodySearchParamsStealthV2Type0,
+        )
+        from ..models.people_search_count_body_search_params_stealth_v2_type_1 import (
+            PeopleSearchCountBodySearchParamsStealthV2Type1,
+        )
+        from ..models.people_search_count_body_search_params_tags_type_0 import (
+            PeopleSearchCountBodySearchParamsTagsType0,
+        )
+        from ..models.people_search_count_body_search_params_time_zone_type_0 import (
+            PeopleSearchCountBodySearchParamsTimeZoneType0,
+        )
+        from ..models.people_search_count_body_search_params_years_of_experience_type_0 import (
+            PeopleSearchCountBodySearchParamsYearsOfExperienceType0,
+        )
+
         d = dict(src_dict)
-        def _parse_country_3_letter_code(data: object) -> Union['PeopleSearchCountBodySearchParamsCountry3LetterCodeType0', None, Unset]:
+
+        def _parse_country_3_letter_code(
+            data: object,
+        ) -> None | PeopleSearchCountBodySearchParamsCountry3LetterCodeType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -518,17 +722,14 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 country_3_letter_code_type_0 = PeopleSearchCountBodySearchParamsCountry3LetterCodeType0.from_dict(data)
 
-
-
                 return country_3_letter_code_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsCountry3LetterCodeType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsCountry3LetterCodeType0 | Unset, data)
 
         country_3_letter_code = _parse_country_3_letter_code(d.pop("country3LetterCode", UNSET))
 
-
-        def _parse_num_connections(data: object) -> Union['PeopleSearchCountBodySearchParamsNumConnectionsType0', None, Unset]:
+        def _parse_num_connections(data: object) -> None | PeopleSearchCountBodySearchParamsNumConnectionsType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -538,17 +739,14 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 num_connections_type_0 = PeopleSearchCountBodySearchParamsNumConnectionsType0.from_dict(data)
 
-
-
                 return num_connections_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsNumConnectionsType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsNumConnectionsType0 | Unset, data)
 
         num_connections = _parse_num_connections(d.pop("numConnections", UNSET))
 
-
-        def _parse_num_followers(data: object) -> Union['PeopleSearchCountBodySearchParamsNumFollowersType0', None, Unset]:
+        def _parse_num_followers(data: object) -> None | PeopleSearchCountBodySearchParamsNumFollowersType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -558,17 +756,14 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 num_followers_type_0 = PeopleSearchCountBodySearchParamsNumFollowersType0.from_dict(data)
 
-
-
                 return num_followers_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsNumFollowersType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsNumFollowersType0 | Unset, data)
 
         num_followers = _parse_num_followers(d.pop("numFollowers", UNSET))
 
-
-        def _parse_approx_age(data: object) -> Union['PeopleSearchCountBodySearchParamsApproxAgeType0', None, Unset]:
+        def _parse_approx_age(data: object) -> None | PeopleSearchCountBodySearchParamsApproxAgeType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -578,17 +773,14 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 approx_age_type_0 = PeopleSearchCountBodySearchParamsApproxAgeType0.from_dict(data)
 
-
-
                 return approx_age_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsApproxAgeType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsApproxAgeType0 | Unset, data)
 
         approx_age = _parse_approx_age(d.pop("approxAge", UNSET))
 
-
-        def _parse_keywords(data: object) -> Union['PeopleSearchCountBodySearchParamsKeywordsType0', None, Unset]:
+        def _parse_keywords(data: object) -> None | PeopleSearchCountBodySearchParamsKeywordsType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -598,17 +790,16 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 keywords_type_0 = PeopleSearchCountBodySearchParamsKeywordsType0.from_dict(data)
 
-
-
                 return keywords_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsKeywordsType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsKeywordsType0 | Unset, data)
 
         keywords = _parse_keywords(d.pop("keywords", UNSET))
 
-
-        def _parse_keyword_search_options(data: object) -> Union['PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0', None, Unset]:
+        def _parse_keyword_search_options(
+            data: object,
+        ) -> None | PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -616,19 +807,18 @@ class PeopleSearchCountBodySearchParams:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                keyword_search_options_type_0 = PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0.from_dict(data)
-
-
+                keyword_search_options_type_0 = PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0.from_dict(
+                    data
+                )
 
                 return keyword_search_options_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0 | Unset, data)
 
         keyword_search_options = _parse_keyword_search_options(d.pop("keywordSearchOptions", UNSET))
 
-
-        def _parse_job_title_v2(data: object) -> Union['PeopleSearchCountBodySearchParamsJobTitleV2Type0', None, Unset]:
+        def _parse_job_title_v2(data: object) -> None | PeopleSearchCountBodySearchParamsJobTitleV2Type0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -638,17 +828,14 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 job_title_v2_type_0 = PeopleSearchCountBodySearchParamsJobTitleV2Type0.from_dict(data)
 
-
-
                 return job_title_v2_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsJobTitleV2Type0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsJobTitleV2Type0 | Unset, data)
 
         job_title_v2 = _parse_job_title_v2(d.pop("jobTitleV2", UNSET))
 
-
-        def _parse_exact_profile(data: object) -> Union['PeopleSearchCountBodySearchParamsExactProfileType0', None, Unset]:
+        def _parse_exact_profile(data: object) -> None | PeopleSearchCountBodySearchParamsExactProfileType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -658,17 +845,21 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 exact_profile_type_0 = PeopleSearchCountBodySearchParamsExactProfileType0.from_dict(data)
 
-
-
                 return exact_profile_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsExactProfileType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsExactProfileType0 | Unset, data)
 
         exact_profile = _parse_exact_profile(d.pop("exactProfile", UNSET))
 
-
-        def _parse_started_in_role(data: object) -> Union['PeopleSearchCountBodySearchParamsStartedInRoleType0', 'PeopleSearchCountBodySearchParamsStartedInRoleType1', None, Unset]:
+        def _parse_started_in_role(
+            data: object,
+        ) -> (
+            None
+            | PeopleSearchCountBodySearchParamsStartedInRoleType0
+            | PeopleSearchCountBodySearchParamsStartedInRoleType1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -678,27 +869,35 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 started_in_role_type_0 = PeopleSearchCountBodySearchParamsStartedInRoleType0.from_dict(data)
 
-
-
                 return started_in_role_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 started_in_role_type_1 = PeopleSearchCountBodySearchParamsStartedInRoleType1.from_dict(data)
 
-
-
                 return started_in_role_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsStartedInRoleType0', 'PeopleSearchCountBodySearchParamsStartedInRoleType1', None, Unset], data)
+            return cast(
+                None
+                | PeopleSearchCountBodySearchParamsStartedInRoleType0
+                | PeopleSearchCountBodySearchParamsStartedInRoleType1
+                | Unset,
+                data,
+            )
 
         started_in_role = _parse_started_in_role(d.pop("startedInRole", UNSET))
 
-
-        def _parse_started_at_company(data: object) -> Union['PeopleSearchCountBodySearchParamsStartedAtCompanyType0', 'PeopleSearchCountBodySearchParamsStartedAtCompanyType1', None, Unset]:
+        def _parse_started_at_company(
+            data: object,
+        ) -> (
+            None
+            | PeopleSearchCountBodySearchParamsStartedAtCompanyType0
+            | PeopleSearchCountBodySearchParamsStartedAtCompanyType1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -708,27 +907,28 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 started_at_company_type_0 = PeopleSearchCountBodySearchParamsStartedAtCompanyType0.from_dict(data)
 
-
-
                 return started_at_company_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 started_at_company_type_1 = PeopleSearchCountBodySearchParamsStartedAtCompanyType1.from_dict(data)
 
-
-
                 return started_at_company_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsStartedAtCompanyType0', 'PeopleSearchCountBodySearchParamsStartedAtCompanyType1', None, Unset], data)
+            return cast(
+                None
+                | PeopleSearchCountBodySearchParamsStartedAtCompanyType0
+                | PeopleSearchCountBodySearchParamsStartedAtCompanyType1
+                | Unset,
+                data,
+            )
 
         started_at_company = _parse_started_at_company(d.pop("startedAtCompany", UNSET))
 
-
-        def _parse_location(data: object) -> Union['PeopleSearchCountBodySearchParamsLocationType0', None, Unset]:
+        def _parse_location(data: object) -> None | PeopleSearchCountBodySearchParamsLocationType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -738,17 +938,14 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 location_type_0 = PeopleSearchCountBodySearchParamsLocationType0.from_dict(data)
 
-
-
                 return location_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsLocationType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsLocationType0 | Unset, data)
 
         location = _parse_location(d.pop("location", UNSET))
 
-
-        def _parse_past_jobs(data: object) -> Union['PeopleSearchCountBodySearchParamsPastJobsType0', None, Unset]:
+        def _parse_past_jobs(data: object) -> None | PeopleSearchCountBodySearchParamsPastJobsType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -758,17 +955,14 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 past_jobs_type_0 = PeopleSearchCountBodySearchParamsPastJobsType0.from_dict(data)
 
-
-
                 return past_jobs_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsPastJobsType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsPastJobsType0 | Unset, data)
 
         past_jobs = _parse_past_jobs(d.pop("pastJobs", UNSET))
 
-
-        def _parse_languages(data: object) -> Union['PeopleSearchCountBodySearchParamsLanguagesType0', None, Unset]:
+        def _parse_languages(data: object) -> None | PeopleSearchCountBodySearchParamsLanguagesType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -778,17 +972,21 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 languages_type_0 = PeopleSearchCountBodySearchParamsLanguagesType0.from_dict(data)
 
-
-
                 return languages_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsLanguagesType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsLanguagesType0 | Unset, data)
 
         languages = _parse_languages(d.pop("languages", UNSET))
 
-
-        def _parse_left_stealth_at(data: object) -> Union['PeopleSearchCountBodySearchParamsLeftStealthAtType0', 'PeopleSearchCountBodySearchParamsLeftStealthAtType1', None, Unset]:
+        def _parse_left_stealth_at(
+            data: object,
+        ) -> (
+            None
+            | PeopleSearchCountBodySearchParamsLeftStealthAtType0
+            | PeopleSearchCountBodySearchParamsLeftStealthAtType1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -798,37 +996,44 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 left_stealth_at_type_0 = PeopleSearchCountBodySearchParamsLeftStealthAtType0.from_dict(data)
 
-
-
                 return left_stealth_at_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 left_stealth_at_type_1 = PeopleSearchCountBodySearchParamsLeftStealthAtType1.from_dict(data)
 
-
-
                 return left_stealth_at_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsLeftStealthAtType0', 'PeopleSearchCountBodySearchParamsLeftStealthAtType1', None, Unset], data)
+            return cast(
+                None
+                | PeopleSearchCountBodySearchParamsLeftStealthAtType0
+                | PeopleSearchCountBodySearchParamsLeftStealthAtType1
+                | Unset,
+                data,
+            )
 
         left_stealth_at = _parse_left_stealth_at(d.pop("leftStealthAt", UNSET))
 
-
-        def _parse_is_in_stealth(data: object) -> Union[None, Unset, bool]:
+        def _parse_is_in_stealth(data: object) -> bool | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, bool], data)
+            return cast(bool | None | Unset, data)
 
         is_in_stealth = _parse_is_in_stealth(d.pop("isInStealth", UNSET))
 
-
-        def _parse_stealth_v2(data: object) -> Union['PeopleSearchCountBodySearchParamsStealthV2Type0', 'PeopleSearchCountBodySearchParamsStealthV2Type1', None, Unset]:
+        def _parse_stealth_v2(
+            data: object,
+        ) -> (
+            None
+            | PeopleSearchCountBodySearchParamsStealthV2Type0
+            | PeopleSearchCountBodySearchParamsStealthV2Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -838,27 +1043,36 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 stealth_v2_type_0 = PeopleSearchCountBodySearchParamsStealthV2Type0.from_dict(data)
 
-
-
                 return stealth_v2_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 stealth_v2_type_1 = PeopleSearchCountBodySearchParamsStealthV2Type1.from_dict(data)
 
-
-
                 return stealth_v2_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsStealthV2Type0', 'PeopleSearchCountBodySearchParamsStealthV2Type1', None, Unset], data)
+            return cast(
+                None
+                | PeopleSearchCountBodySearchParamsStealthV2Type0
+                | PeopleSearchCountBodySearchParamsStealthV2Type1
+                | Unset,
+                data,
+            )
 
         stealth_v2 = _parse_stealth_v2(d.pop("stealthV2", UNSET))
 
-
-        def _parse_job_status(data: object) -> Union['PeopleSearchCountBodySearchParamsJobStatusType0', 'PeopleSearchCountBodySearchParamsJobStatusType1', 'PeopleSearchCountBodySearchParamsJobStatusType2', None, Unset]:
+        def _parse_job_status(
+            data: object,
+        ) -> (
+            None
+            | PeopleSearchCountBodySearchParamsJobStatusType0
+            | PeopleSearchCountBodySearchParamsJobStatusType1
+            | PeopleSearchCountBodySearchParamsJobStatusType2
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -868,37 +1082,37 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 job_status_type_0 = PeopleSearchCountBodySearchParamsJobStatusType0.from_dict(data)
 
-
-
                 return job_status_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 job_status_type_1 = PeopleSearchCountBodySearchParamsJobStatusType1.from_dict(data)
 
-
-
                 return job_status_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 job_status_type_2 = PeopleSearchCountBodySearchParamsJobStatusType2.from_dict(data)
 
-
-
                 return job_status_type_2
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsJobStatusType0', 'PeopleSearchCountBodySearchParamsJobStatusType1', 'PeopleSearchCountBodySearchParamsJobStatusType2', None, Unset], data)
+            return cast(
+                None
+                | PeopleSearchCountBodySearchParamsJobStatusType0
+                | PeopleSearchCountBodySearchParamsJobStatusType1
+                | PeopleSearchCountBodySearchParamsJobStatusType2
+                | Unset,
+                data,
+            )
 
         job_status = _parse_job_status(d.pop("jobStatus", UNSET))
 
-
-        def _parse_time_zone(data: object) -> Union['PeopleSearchCountBodySearchParamsTimeZoneType0', None, Unset]:
+        def _parse_time_zone(data: object) -> None | PeopleSearchCountBodySearchParamsTimeZoneType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -908,17 +1122,14 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 time_zone_type_0 = PeopleSearchCountBodySearchParamsTimeZoneType0.from_dict(data)
 
-
-
                 return time_zone_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsTimeZoneType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsTimeZoneType0 | Unset, data)
 
         time_zone = _parse_time_zone(d.pop("timeZone", UNSET))
 
-
-        def _parse_past_job_text(data: object) -> Union['PeopleSearchCountBodySearchParamsPastJobTextType0', None, Unset]:
+        def _parse_past_job_text(data: object) -> None | PeopleSearchCountBodySearchParamsPastJobTextType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -928,17 +1139,14 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 past_job_text_type_0 = PeopleSearchCountBodySearchParamsPastJobTextType0.from_dict(data)
 
-
-
                 return past_job_text_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsPastJobTextType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsPastJobTextType0 | Unset, data)
 
         past_job_text = _parse_past_job_text(d.pop("pastJobText", UNSET))
 
-
-        def _parse_fuzzy_name(data: object) -> Union['PeopleSearchCountBodySearchParamsFuzzyNameType0', None, Unset]:
+        def _parse_fuzzy_name(data: object) -> None | PeopleSearchCountBodySearchParamsFuzzyNameType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -948,17 +1156,21 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 fuzzy_name_type_0 = PeopleSearchCountBodySearchParamsFuzzyNameType0.from_dict(data)
 
-
-
                 return fuzzy_name_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsFuzzyNameType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsFuzzyNameType0 | Unset, data)
 
         fuzzy_name = _parse_fuzzy_name(d.pop("fuzzyName", UNSET))
 
-
-        def _parse_company_match_mode(data: object) -> Union['PeopleSearchCountBodySearchParamsCompanyMatchModeType0', 'PeopleSearchCountBodySearchParamsCompanyMatchModeType1', None, Unset]:
+        def _parse_company_match_mode(
+            data: object,
+        ) -> (
+            None
+            | PeopleSearchCountBodySearchParamsCompanyMatchModeType0
+            | PeopleSearchCountBodySearchParamsCompanyMatchModeType1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -968,27 +1180,30 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 company_match_mode_type_0 = PeopleSearchCountBodySearchParamsCompanyMatchModeType0.from_dict(data)
 
-
-
                 return company_match_mode_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 company_match_mode_type_1 = PeopleSearchCountBodySearchParamsCompanyMatchModeType1.from_dict(data)
 
-
-
                 return company_match_mode_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsCompanyMatchModeType0', 'PeopleSearchCountBodySearchParamsCompanyMatchModeType1', None, Unset], data)
+            return cast(
+                None
+                | PeopleSearchCountBodySearchParamsCompanyMatchModeType0
+                | PeopleSearchCountBodySearchParamsCompanyMatchModeType1
+                | Unset,
+                data,
+            )
 
         company_match_mode = _parse_company_match_mode(d.pop("companyMatchMode", UNSET))
 
-
-        def _parse_years_of_experience(data: object) -> Union['PeopleSearchCountBodySearchParamsYearsOfExperienceType0', None, Unset]:
+        def _parse_years_of_experience(
+            data: object,
+        ) -> None | PeopleSearchCountBodySearchParamsYearsOfExperienceType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -998,17 +1213,14 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 years_of_experience_type_0 = PeopleSearchCountBodySearchParamsYearsOfExperienceType0.from_dict(data)
 
-
-
                 return years_of_experience_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsYearsOfExperienceType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsYearsOfExperienceType0 | Unset, data)
 
         years_of_experience = _parse_years_of_experience(d.pop("yearsOfExperience", UNSET))
 
-
-        def _parse_job_title_v3(data: object) -> Union['PeopleSearchCountBodySearchParamsJobTitleV3Type0', None, Unset]:
+        def _parse_job_title_v3(data: object) -> None | PeopleSearchCountBodySearchParamsJobTitleV3Type0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1018,27 +1230,23 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 job_title_v3_type_0 = PeopleSearchCountBodySearchParamsJobTitleV3Type0.from_dict(data)
 
-
-
                 return job_title_v3_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsJobTitleV3Type0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsJobTitleV3Type0 | Unset, data)
 
         job_title_v3 = _parse_job_title_v3(d.pop("jobTitleV3", UNSET))
 
-
-        def _parse_has_profile_picture(data: object) -> Union[None, Unset, bool]:
+        def _parse_has_profile_picture(data: object) -> bool | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, bool], data)
+            return cast(bool | None | Unset, data)
 
         has_profile_picture = _parse_has_profile_picture(d.pop("hasProfilePicture", UNSET))
 
-
-        def _parse_state(data: object) -> Union['PeopleSearchCountBodySearchParamsStateType0', None, Unset]:
+        def _parse_state(data: object) -> None | PeopleSearchCountBodySearchParamsStateType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1048,37 +1256,32 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 state_type_0 = PeopleSearchCountBodySearchParamsStateType0.from_dict(data)
 
-
-
                 return state_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsStateType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsStateType0 | Unset, data)
 
         state = _parse_state(d.pop("state", UNSET))
 
-
-        def _parse_get_detailed_education(data: object) -> Union[None, Unset, bool]:
+        def _parse_get_detailed_education(data: object) -> bool | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, bool], data)
+            return cast(bool | None | Unset, data)
 
         get_detailed_education = _parse_get_detailed_education(d.pop("getDetailedEducation", UNSET))
 
-
-        def _parse_get_detailed_work_experience(data: object) -> Union[None, Unset, bool]:
+        def _parse_get_detailed_work_experience(data: object) -> bool | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, bool], data)
+            return cast(bool | None | Unset, data)
 
         get_detailed_work_experience = _parse_get_detailed_work_experience(d.pop("getDetailedWorkExperience", UNSET))
 
-
-        def _parse_tags(data: object) -> Union['PeopleSearchCountBodySearchParamsTagsType0', None, Unset]:
+        def _parse_tags(data: object) -> None | PeopleSearchCountBodySearchParamsTagsType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1088,17 +1291,14 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 tags_type_0 = PeopleSearchCountBodySearchParamsTagsType0.from_dict(data)
 
-
-
                 return tags_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsTagsType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsTagsType0 | Unset, data)
 
         tags = _parse_tags(d.pop("tags", UNSET))
 
-
-        def _parse_education(data: object) -> Union['PeopleSearchCountBodySearchParamsEducationType0', None, Unset]:
+        def _parse_education(data: object) -> None | PeopleSearchCountBodySearchParamsEducationType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -1108,15 +1308,12 @@ class PeopleSearchCountBodySearchParams:
                     raise TypeError()
                 education_type_0 = PeopleSearchCountBodySearchParamsEducationType0.from_dict(data)
 
-
-
                 return education_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['PeopleSearchCountBodySearchParamsEducationType0', None, Unset], data)
+            return cast(None | PeopleSearchCountBodySearchParamsEducationType0 | Unset, data)
 
         education = _parse_education(d.pop("education", UNSET))
-
 
         people_search_count_body_search_params = cls(
             country_3_letter_code=country_3_letter_code,
@@ -1151,4 +1348,3 @@ class PeopleSearchCountBodySearchParams:
         )
 
         return people_search_count_body_search_params
-

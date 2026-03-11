@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class InvestmentSearchBodySearchParamsType0CountryCodeType0NoneOfType0Item(str, Enum):
     ABW = "ABW"
     AFG = "AFG"

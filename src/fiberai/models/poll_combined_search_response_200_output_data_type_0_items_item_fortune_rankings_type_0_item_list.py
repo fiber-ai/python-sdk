@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PollCombinedSearchResponse200OutputDataType0ItemsItemFortuneRankingsType0ItemList(str, Enum):
     FORTUNE_500_USA = "fortune-500-usa"
 

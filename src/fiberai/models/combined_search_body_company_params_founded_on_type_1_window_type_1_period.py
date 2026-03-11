@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyCompanyParamsFoundedOnType1WindowType1Period(str, Enum):
     DAY = "day"
     MONTH = "month"

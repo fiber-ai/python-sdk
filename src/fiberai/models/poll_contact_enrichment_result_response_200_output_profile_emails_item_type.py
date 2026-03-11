@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PollContactEnrichmentResultResponse200OutputProfileEmailsItemType(str, Enum):
     GENERIC = "generic"
     OTHER = "other"

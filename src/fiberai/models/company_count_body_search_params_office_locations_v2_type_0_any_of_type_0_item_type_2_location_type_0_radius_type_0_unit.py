@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0RadiusType0Unit(str, Enum):
     MILES = "miles"
 

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class InvestorSearchResponse200OutputInvestorsItemCountryCodeType3Type1(str, Enum):
     ABW = "ABW"
     AFG = "AFG"

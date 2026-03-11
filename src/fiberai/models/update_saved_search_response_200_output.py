@@ -1,49 +1,37 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
-
 T = TypeVar("T", bound="UpdateSavedSearchResponse200Output")
-
 
 
 @_attrs_define
 class UpdateSavedSearchResponse200Output:
-    """ 
-        Attributes:
-            success (bool): Whether the update was successful
-            id (str): The ID of the saved search
-            name (str): The name of the saved search
-            spawn_frequency_days (int): The frequency of the saved search in days. Minimum is 7 days.
-            is_active (bool): Whether the saved search is active
-            max_companies (Union[None, Unset, int]):
-            max_profiles (Union[None, Unset, int]):
-     """
+    """
+    Attributes:
+        success (bool): Whether the update was successful
+        id (str): The ID of the saved search
+        name (str): The name of the saved search
+        spawn_frequency_days (int): The frequency of the saved search in days. Minimum is 7 days.
+        is_active (bool): Whether the saved search is active
+        max_companies (int | None | Unset):
+        max_profiles (int | None | Unset):
+    """
 
     success: bool
     id: str
     name: str
     spawn_frequency_days: int
     is_active: bool
-    max_companies: Union[None, Unset, int] = UNSET
-    max_profiles: Union[None, Unset, int] = UNSET
+    max_companies: int | None | Unset = UNSET
+    max_profiles: int | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         success = self.success
@@ -56,36 +44,35 @@ class UpdateSavedSearchResponse200Output:
 
         is_active = self.is_active
 
-        max_companies: Union[None, Unset, int]
+        max_companies: int | None | Unset
         if isinstance(self.max_companies, Unset):
             max_companies = UNSET
         else:
             max_companies = self.max_companies
 
-        max_profiles: Union[None, Unset, int]
+        max_profiles: int | None | Unset
         if isinstance(self.max_profiles, Unset):
             max_profiles = UNSET
         else:
             max_profiles = self.max_profiles
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "success": success,
-            "id": id,
-            "name": name,
-            "spawnFrequencyDays": spawn_frequency_days,
-            "isActive": is_active,
-        })
+        field_dict.update(
+            {
+                "success": success,
+                "id": id,
+                "name": name,
+                "spawnFrequencyDays": spawn_frequency_days,
+                "isActive": is_active,
+            }
+        )
         if max_companies is not UNSET:
             field_dict["maxCompanies"] = max_companies
         if max_profiles is not UNSET:
             field_dict["maxProfiles"] = max_profiles
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -100,25 +87,23 @@ class UpdateSavedSearchResponse200Output:
 
         is_active = d.pop("isActive")
 
-        def _parse_max_companies(data: object) -> Union[None, Unset, int]:
+        def _parse_max_companies(data: object) -> int | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, int], data)
+            return cast(int | None | Unset, data)
 
         max_companies = _parse_max_companies(d.pop("maxCompanies", UNSET))
 
-
-        def _parse_max_profiles(data: object) -> Union[None, Unset, int]:
+        def _parse_max_profiles(data: object) -> int | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, int], data)
+            return cast(int | None | Unset, data)
 
         max_profiles = _parse_max_profiles(d.pop("maxProfiles", UNSET))
-
 
         update_saved_search_response_200_output = cls(
             success=success,
@@ -129,7 +114,6 @@ class UpdateSavedSearchResponse200Output:
             max_companies=max_companies,
             max_profiles=max_profiles,
         )
-
 
         update_saved_search_response_200_output.additional_properties = d
         return update_saved_search_response_200_output

@@ -1,6 +1,9 @@
 from enum import Enum
 
-class CreateSavedSearchBodySearchParamsType1CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType0Type(str, Enum):
+
+class CreateSavedSearchBodySearchParamsType1CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType0Type(
+    str, Enum
+):
     WORLDWIDE = "worldwide"
 
     def __str__(self) -> str:

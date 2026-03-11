@@ -1,5 +1,6 @@
 from enum import IntEnum
 
+
 class SyncCombinedSearchBodyCompanyParamsEmployeeCountV2Type0LowerBoundExclusiveType0(IntEnum):
     VALUE_0 = 0
 

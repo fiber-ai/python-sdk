@@ -1,53 +1,43 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-
-
-
-
-
-
-T = TypeVar("T", bound="TextToCombinedSearchResponse200OutputDataCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS")
-
+T = TypeVar(
+    "T", bound="TextToCombinedSearchResponse200OutputDataCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS"
+)
 
 
 @_attrs_define
 class TextToCombinedSearchResponse200OutputDataCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS:
-    """ 
-        Attributes:
-            count (float):
-            fraction (float):
-     """
+    """
+    Attributes:
+        count (float):
+        fraction (float):
+    """
 
     count: float
     fraction: float
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         count = self.count
 
         fraction = self.fraction
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "count": count,
-            "fraction": fraction,
-        })
+        field_dict.update(
+            {
+                "count": count,
+                "fraction": fraction,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -60,7 +50,6 @@ class TextToCombinedSearchResponse200OutputDataCompaniesItemLiJobPostsStatsType0
             count=count,
             fraction=fraction,
         )
-
 
         text_to_combined_search_response_200_output_data_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mus.additional_properties = d
         return text_to_combined_search_response_200_output_data_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mus

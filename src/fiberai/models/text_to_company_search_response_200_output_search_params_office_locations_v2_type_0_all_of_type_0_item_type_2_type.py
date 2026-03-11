@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCompanySearchResponse200OutputSearchParamsOfficeLocationsV2Type0AllOfType0ItemType2Type(str, Enum):
     GEOGRAPHY = "geography"
 

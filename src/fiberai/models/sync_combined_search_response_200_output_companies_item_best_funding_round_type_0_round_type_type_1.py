@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchResponse200OutputCompaniesItemBestFundingRoundType0RoundTypeType1(str, Enum):
     ANGEL = "angel"
     CONVERTIBLE_NOTE = "convertible_note"

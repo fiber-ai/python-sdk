@@ -1,77 +1,75 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from typing import cast
-from typing import cast, Union
-
 if TYPE_CHECKING:
-  from ..models.text_to_profile_search_response_200_output_search_params_time_zone_type_0_any_of_item_strategy_type_0 import TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0
-
-
-
+    from ..models.text_to_profile_search_response_200_output_search_params_time_zone_type_0_any_of_item_strategy_type_0 import (
+        TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0,
+    )
 
 
 T = TypeVar("T", bound="TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItem")
 
 
-
 @_attrs_define
 class TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItem:
-    """ 
-        Attributes:
-            strategy ('TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0'):
-     """
+    """
+    Attributes:
+        strategy (TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0):
+    """
 
-    strategy: 'TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0'
+    strategy: TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.text_to_profile_search_response_200_output_search_params_time_zone_type_0_any_of_item_strategy_type_0 import TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0
+        from ..models.text_to_profile_search_response_200_output_search_params_time_zone_type_0_any_of_item_strategy_type_0 import (
+            TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0,
+        )
+
         strategy: dict[str, Any]
-        if isinstance(self.strategy, TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0):
+        if isinstance(
+            self.strategy, TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0
+        ):
             strategy = self.strategy.to_dict()
-
-
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "strategy": strategy,
-        })
+        field_dict.update(
+            {
+                "strategy": strategy,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.text_to_profile_search_response_200_output_search_params_time_zone_type_0_any_of_item_strategy_type_0 import TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0
+        from ..models.text_to_profile_search_response_200_output_search_params_time_zone_type_0_any_of_item_strategy_type_0 import (
+            TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0,
+        )
+
         d = dict(src_dict)
-        def _parse_strategy(data: object) -> 'TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0':
+
+        def _parse_strategy(
+            data: object,
+        ) -> TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0:
             if not isinstance(data, dict):
                 raise TypeError()
-            strategy_type_0 = TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0.from_dict(data)
-
-
+            strategy_type_0 = (
+                TextToProfileSearchResponse200OutputSearchParamsTimeZoneType0AnyOfItemStrategyType0.from_dict(data)
+            )
 
             return strategy_type_0
 
         strategy = _parse_strategy(d.pop("strategy"))
 
-
         text_to_profile_search_response_200_output_search_params_time_zone_type_0_any_of_item = cls(
             strategy=strategy,
         )
-
 
         text_to_profile_search_response_200_output_search_params_time_zone_type_0_any_of_item.additional_properties = d
         return text_to_profile_search_response_200_output_search_params_time_zone_type_0_any_of_item

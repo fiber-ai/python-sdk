@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType5LocationType(str, Enum):
     HYBRID = "Hybrid"
     ON_SITE = "On-site"

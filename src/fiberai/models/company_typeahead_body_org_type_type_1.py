@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyTypeaheadBodyOrgTypeType1(str, Enum):
     INVESTOR = "investor"
     SCHOOL = "school"

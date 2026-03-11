@@ -1,73 +1,87 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_type_type_1 import (
+    ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType1,
+)
+from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_type_type_2_type_1 import (
+    ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType2Type1,
+)
+from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_type_type_3_type_1 import (
+    ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType3Type1,
+)
 from ..types import UNSET, Unset
-
-from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_type_type_1 import ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType1
-from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_type_type_2_type_1 import ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType2Type1
-from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_type_type_3_type_1 import ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType3Type1
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_reactor_type_0 import ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0
-  from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_post_type_0 import ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0
-  from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0 import ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0
-
-
-
+    from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0 import (
+        ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0,
+    )
+    from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_post_type_0 import (
+        ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0,
+    )
+    from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_reactor_type_0 import (
+        ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0,
+    )
 
 
 T = TypeVar("T", bound="ProfileReactionsLiveFetchResponse200OutputReactionsType0Item")
 
 
-
 @_attrs_define
 class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
-    """ 
-        Attributes:
-            reaction_id (Union[None, Unset, str]):
-            type_ (Union[None, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType1,
-                ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType2Type1,
-                ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType3Type1, Unset]): One of LinkedIn's reaction
-                types. These match the tooltips on each of LinkedIn's six reaction buttons; for instance, 'Like' is the blue
-                thumbs-up.
-            target (Union[None, Unset, str]):
-            reacted_ago (Union[None, Unset, str]):
-            reactor (Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0', None, Unset]):
-            post (Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0', None, Unset]):
-            comment (Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0', None, Unset]):
-     """
+    """
+    Attributes:
+        reaction_id (None | str | Unset):
+        type_ (None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType1 |
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType2Type1 |
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType3Type1 | Unset): One of LinkedIn's reaction
+            types. These match the tooltips on each of LinkedIn's six reaction buttons; for instance, 'Like' is the blue
+            thumbs-up.
+        target (None | str | Unset):
+        reacted_ago (None | str | Unset):
+        reactor (None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0 | Unset):
+        post (None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0 | Unset):
+        comment (None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0 | Unset):
+    """
 
-    reaction_id: Union[None, Unset, str] = UNSET
-    type_: Union[None, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType1, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType2Type1, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType3Type1, Unset] = UNSET
-    target: Union[None, Unset, str] = UNSET
-    reacted_ago: Union[None, Unset, str] = UNSET
-    reactor: Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0', None, Unset] = UNSET
-    post: Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0', None, Unset] = UNSET
-    comment: Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0', None, Unset] = UNSET
+    reaction_id: None | str | Unset = UNSET
+    type_: (
+        None
+        | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType1
+        | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType2Type1
+        | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType3Type1
+        | Unset
+    ) = UNSET
+    target: None | str | Unset = UNSET
+    reacted_ago: None | str | Unset = UNSET
+    reactor: None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0 | Unset = UNSET
+    post: None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0 | Unset = UNSET
+    comment: None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0 | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_reactor_type_0 import ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0
-        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_post_type_0 import ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0
-        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0 import ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0
-        reaction_id: Union[None, Unset, str]
+        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0 import (
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0,
+        )
+        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_post_type_0 import (
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0,
+        )
+        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_reactor_type_0 import (
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0,
+        )
+
+        reaction_id: None | str | Unset
         if isinstance(self.reaction_id, Unset):
             reaction_id = UNSET
         else:
             reaction_id = self.reaction_id
 
-        type_: Union[None, Unset, str]
+        type_: None | str | Unset
         if isinstance(self.type_, Unset):
             type_ = UNSET
         elif isinstance(self.type_, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType1):
@@ -79,19 +93,19 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
         else:
             type_ = self.type_
 
-        target: Union[None, Unset, str]
+        target: None | str | Unset
         if isinstance(self.target, Unset):
             target = UNSET
         else:
             target = self.target
 
-        reacted_ago: Union[None, Unset, str]
+        reacted_ago: None | str | Unset
         if isinstance(self.reacted_ago, Unset):
             reacted_ago = UNSET
         else:
             reacted_ago = self.reacted_ago
 
-        reactor: Union[None, Unset, dict[str, Any]]
+        reactor: dict[str, Any] | None | Unset
         if isinstance(self.reactor, Unset):
             reactor = UNSET
         elif isinstance(self.reactor, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0):
@@ -99,7 +113,7 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
         else:
             reactor = self.reactor
 
-        post: Union[None, Unset, dict[str, Any]]
+        post: dict[str, Any] | None | Unset
         if isinstance(self.post, Unset):
             post = UNSET
         elif isinstance(self.post, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0):
@@ -107,7 +121,7 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
         else:
             post = self.post
 
-        comment: Union[None, Unset, dict[str, Any]]
+        comment: dict[str, Any] | None | Unset
         if isinstance(self.comment, Unset):
             comment = UNSET
         elif isinstance(self.comment, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0):
@@ -115,11 +129,9 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
         else:
             comment = self.comment
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if reaction_id is not UNSET:
             field_dict["reactionId"] = reaction_id
         if type_ is not UNSET:
@@ -137,25 +149,38 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_reactor_type_0 import ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0
-        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_post_type_0 import ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0
-        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0 import ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0
+        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0 import (
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0,
+        )
+        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_post_type_0 import (
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0,
+        )
+        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_reactor_type_0 import (
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0,
+        )
+
         d = dict(src_dict)
-        def _parse_reaction_id(data: object) -> Union[None, Unset, str]:
+
+        def _parse_reaction_id(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         reaction_id = _parse_reaction_id(d.pop("reactionId", UNSET))
 
-
-        def _parse_type_(data: object) -> Union[None, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType1, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType2Type1, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType3Type1, Unset]:
+        def _parse_type_(
+            data: object,
+        ) -> (
+            None
+            | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType1
+            | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType2Type1
+            | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType3Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -165,57 +190,57 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
                     raise TypeError()
                 type_type_1 = ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType1(data)
 
-
-
                 return type_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 type_type_2_type_1 = ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType2Type1(data)
 
-
-
                 return type_type_2_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 type_type_3_type_1 = ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType3Type1(data)
 
-
-
                 return type_type_3_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType1, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType2Type1, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType3Type1, Unset], data)
+            return cast(
+                None
+                | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType1
+                | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType2Type1
+                | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType3Type1
+                | Unset,
+                data,
+            )
 
         type_ = _parse_type_(d.pop("type", UNSET))
 
-
-        def _parse_target(data: object) -> Union[None, Unset, str]:
+        def _parse_target(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         target = _parse_target(d.pop("target", UNSET))
 
-
-        def _parse_reacted_ago(data: object) -> Union[None, Unset, str]:
+        def _parse_reacted_ago(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         reacted_ago = _parse_reacted_ago(d.pop("reactedAgo", UNSET))
 
-
-        def _parse_reactor(data: object) -> Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0', None, Unset]:
+        def _parse_reactor(
+            data: object,
+        ) -> None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -223,19 +248,20 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                reactor_type_0 = ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0.from_dict(data)
-
-
+                reactor_type_0 = ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0.from_dict(
+                    data
+                )
 
                 return reactor_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0', None, Unset], data)
+            return cast(None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0 | Unset, data)
 
         reactor = _parse_reactor(d.pop("reactor", UNSET))
 
-
-        def _parse_post(data: object) -> Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0', None, Unset]:
+        def _parse_post(
+            data: object,
+        ) -> None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -245,17 +271,16 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
                     raise TypeError()
                 post_type_0 = ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0.from_dict(data)
 
-
-
                 return post_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0', None, Unset], data)
+            return cast(None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0 | Unset, data)
 
         post = _parse_post(d.pop("post", UNSET))
 
-
-        def _parse_comment(data: object) -> Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0', None, Unset]:
+        def _parse_comment(
+            data: object,
+        ) -> None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -263,17 +288,16 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                comment_type_0 = ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0.from_dict(data)
-
-
+                comment_type_0 = ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0.from_dict(
+                    data
+                )
 
                 return comment_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0', None, Unset], data)
+            return cast(None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0 | Unset, data)
 
         comment = _parse_comment(d.pop("comment", UNSET))
-
 
         profile_reactions_live_fetch_response_200_output_reactions_type_0_item = cls(
             reaction_id=reaction_id,
@@ -284,7 +308,6 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
             post=post,
             comment=comment,
         )
-
 
         profile_reactions_live_fetch_response_200_output_reactions_type_0_item.additional_properties = d
         return profile_reactions_live_fetch_response_200_output_reactions_type_0_item

@@ -1,79 +1,74 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.combined_search_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_1_range_type_1_type import CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1Type
-from typing import cast
+from ..models.combined_search_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_1_range_type_1_type import (
+    CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1Type,
+)
 
 if TYPE_CHECKING:
-  from ..models.combined_search_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_1_range_type_1_range_in_hundredths import CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1RangeInHundredths
-
-
-
+    from ..models.combined_search_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_1_range_type_1_range_in_hundredths import (
+        CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1RangeInHundredths,
+    )
 
 
 T = TypeVar("T", bound="CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1")
 
 
-
 @_attrs_define
 class CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1:
-    """ 
-        Attributes:
-            type_ (CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1Type):
-            range_in_hundredths
-                (CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1RangeInHundredths):
-     """
+    """
+    Attributes:
+        type_ (CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1Type):
+        range_in_hundredths
+            (CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1RangeInHundredths):
+    """
 
     type_: CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1Type
-    range_in_hundredths: 'CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1RangeInHundredths'
+    range_in_hundredths: (
+        CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1RangeInHundredths
+    )
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.combined_search_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_1_range_type_1_range_in_hundredths import CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1RangeInHundredths
         type_ = self.type_.value
 
         range_in_hundredths = self.range_in_hundredths.to_dict()
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "type": type_,
-            "rangeInHundredths": range_in_hundredths,
-        })
+        field_dict.update(
+            {
+                "type": type_,
+                "rangeInHundredths": range_in_hundredths,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.combined_search_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_1_range_type_1_range_in_hundredths import CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1RangeInHundredths
+        from ..models.combined_search_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_1_range_type_1_range_in_hundredths import (
+            CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1RangeInHundredths,
+        )
+
         d = dict(src_dict)
         type_ = CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1Type(d.pop("type"))
 
-
-
-
-        range_in_hundredths = CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1RangeInHundredths.from_dict(d.pop("rangeInHundredths"))
-
-
-
+        range_in_hundredths = (
+            CombinedSearchBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType1RangeType1RangeInHundredths.from_dict(
+                d.pop("rangeInHundredths")
+            )
+        )
 
         combined_search_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_1_range_type_1 = cls(
             type_=type_,
             range_in_hundredths=range_in_hundredths,
         )
-
 
         combined_search_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_1_range_type_1.additional_properties = d
         return combined_search_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_1_range_type_1

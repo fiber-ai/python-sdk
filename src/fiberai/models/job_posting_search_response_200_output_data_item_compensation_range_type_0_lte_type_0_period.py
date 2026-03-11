@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0Period(str, Enum):
     DAILY = "daily"
     HR = "hr"

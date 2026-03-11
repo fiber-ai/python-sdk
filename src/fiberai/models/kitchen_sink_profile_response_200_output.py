@@ -1,100 +1,83 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.kitchen_sink_profile_response_200_output_data_item import KitchenSinkProfileResponse200OutputDataItem
-
-
-
+    from ..models.kitchen_sink_profile_response_200_output_data_item import KitchenSinkProfileResponse200OutputDataItem
 
 
 T = TypeVar("T", bound="KitchenSinkProfileResponse200Output")
 
 
-
 @_attrs_define
 class KitchenSinkProfileResponse200Output:
-    """ 
-        Attributes:
-            data (list['KitchenSinkProfileResponse200OutputDataItem']):
-            message (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        data (list[KitchenSinkProfileResponse200OutputDataItem]):
+        message (None | str | Unset):
+    """
 
-    data: list['KitchenSinkProfileResponse200OutputDataItem']
-    message: Union[None, Unset, str] = UNSET
+    data: list[KitchenSinkProfileResponse200OutputDataItem]
+    message: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.kitchen_sink_profile_response_200_output_data_item import KitchenSinkProfileResponse200OutputDataItem
         data = []
         for data_item_data in self.data:
             data_item = data_item_data.to_dict()
             data.append(data_item)
 
-
-
-        message: Union[None, Unset, str]
+        message: None | str | Unset
         if isinstance(self.message, Unset):
             message = UNSET
         else:
             message = self.message
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "data": data,
-        })
+        field_dict.update(
+            {
+                "data": data,
+            }
+        )
         if message is not UNSET:
             field_dict["message"] = message
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.kitchen_sink_profile_response_200_output_data_item import KitchenSinkProfileResponse200OutputDataItem
+        from ..models.kitchen_sink_profile_response_200_output_data_item import (
+            KitchenSinkProfileResponse200OutputDataItem,
+        )
+
         d = dict(src_dict)
         data = []
         _data = d.pop("data")
-        for data_item_data in (_data):
+        for data_item_data in _data:
             data_item = KitchenSinkProfileResponse200OutputDataItem.from_dict(data_item_data)
-
-
 
             data.append(data_item)
 
-
-        def _parse_message(data: object) -> Union[None, Unset, str]:
+        def _parse_message(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         message = _parse_message(d.pop("message", UNSET))
-
 
         kitchen_sink_profile_response_200_output = cls(
             data=data,
             message=message,
         )
-
 
         kitchen_sink_profile_response_200_output.additional_properties = d
         return kitchen_sink_profile_response_200_output

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsCrunchbaseCategoryGroupsType0AllOfType0ItemType(str, Enum):
     GROUP = "group"
 

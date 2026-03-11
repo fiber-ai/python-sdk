@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobTextType0CriteriaItemField(str, Enum):
     ANYWHERE = "anywhere"
     SUMMARY = "summary"

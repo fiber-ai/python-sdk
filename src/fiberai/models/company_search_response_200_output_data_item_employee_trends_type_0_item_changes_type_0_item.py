@@ -1,98 +1,84 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
-
 T = TypeVar("T", bound="CompanySearchResponse200OutputDataItemEmployeeTrendsType0ItemChangesType0Item")
-
 
 
 @_attrs_define
 class CompanySearchResponse200OutputDataItemEmployeeTrendsType0ItemChangesType0Item:
-    """ 
-        Attributes:
-            count_end (Union[None, Unset, float]):
-            count_start (Union[None, Unset, float]):
-            months_back (Union[None, Unset, float]):
-            end_of_period (Union[None, Unset, str]):
-            numeric_change (Union[None, Unset, float]):
-            percent_change (Union[None, Unset, float]):
-            start_of_period (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        count_end (float | None | Unset):
+        count_start (float | None | Unset):
+        months_back (float | None | Unset):
+        end_of_period (None | str | Unset):
+        numeric_change (float | None | Unset):
+        percent_change (float | None | Unset):
+        start_of_period (None | str | Unset):
+    """
 
-    count_end: Union[None, Unset, float] = UNSET
-    count_start: Union[None, Unset, float] = UNSET
-    months_back: Union[None, Unset, float] = UNSET
-    end_of_period: Union[None, Unset, str] = UNSET
-    numeric_change: Union[None, Unset, float] = UNSET
-    percent_change: Union[None, Unset, float] = UNSET
-    start_of_period: Union[None, Unset, str] = UNSET
+    count_end: float | None | Unset = UNSET
+    count_start: float | None | Unset = UNSET
+    months_back: float | None | Unset = UNSET
+    end_of_period: None | str | Unset = UNSET
+    numeric_change: float | None | Unset = UNSET
+    percent_change: float | None | Unset = UNSET
+    start_of_period: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        count_end: Union[None, Unset, float]
+        count_end: float | None | Unset
         if isinstance(self.count_end, Unset):
             count_end = UNSET
         else:
             count_end = self.count_end
 
-        count_start: Union[None, Unset, float]
+        count_start: float | None | Unset
         if isinstance(self.count_start, Unset):
             count_start = UNSET
         else:
             count_start = self.count_start
 
-        months_back: Union[None, Unset, float]
+        months_back: float | None | Unset
         if isinstance(self.months_back, Unset):
             months_back = UNSET
         else:
             months_back = self.months_back
 
-        end_of_period: Union[None, Unset, str]
+        end_of_period: None | str | Unset
         if isinstance(self.end_of_period, Unset):
             end_of_period = UNSET
         else:
             end_of_period = self.end_of_period
 
-        numeric_change: Union[None, Unset, float]
+        numeric_change: float | None | Unset
         if isinstance(self.numeric_change, Unset):
             numeric_change = UNSET
         else:
             numeric_change = self.numeric_change
 
-        percent_change: Union[None, Unset, float]
+        percent_change: float | None | Unset
         if isinstance(self.percent_change, Unset):
             percent_change = UNSET
         else:
             percent_change = self.percent_change
 
-        start_of_period: Union[None, Unset, str]
+        start_of_period: None | str | Unset
         if isinstance(self.start_of_period, Unset):
             start_of_period = UNSET
         else:
             start_of_period = self.start_of_period
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if count_end is not UNSET:
             field_dict["count_end"] = count_end
         if count_start is not UNSET:
@@ -110,80 +96,72 @@ class CompanySearchResponse200OutputDataItemEmployeeTrendsType0ItemChangesType0I
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        def _parse_count_end(data: object) -> Union[None, Unset, float]:
+
+        def _parse_count_end(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         count_end = _parse_count_end(d.pop("count_end", UNSET))
 
-
-        def _parse_count_start(data: object) -> Union[None, Unset, float]:
+        def _parse_count_start(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         count_start = _parse_count_start(d.pop("count_start", UNSET))
 
-
-        def _parse_months_back(data: object) -> Union[None, Unset, float]:
+        def _parse_months_back(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         months_back = _parse_months_back(d.pop("months_back", UNSET))
 
-
-        def _parse_end_of_period(data: object) -> Union[None, Unset, str]:
+        def _parse_end_of_period(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         end_of_period = _parse_end_of_period(d.pop("end_of_period", UNSET))
 
-
-        def _parse_numeric_change(data: object) -> Union[None, Unset, float]:
+        def _parse_numeric_change(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         numeric_change = _parse_numeric_change(d.pop("numeric_change", UNSET))
 
-
-        def _parse_percent_change(data: object) -> Union[None, Unset, float]:
+        def _parse_percent_change(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         percent_change = _parse_percent_change(d.pop("percent_change", UNSET))
 
-
-        def _parse_start_of_period(data: object) -> Union[None, Unset, str]:
+        def _parse_start_of_period(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         start_of_period = _parse_start_of_period(d.pop("start_of_period", UNSET))
-
 
         company_search_response_200_output_data_item_employee_trends_type_0_item_changes_type_0_item = cls(
             count_end=count_end,
@@ -194,7 +172,6 @@ class CompanySearchResponse200OutputDataItemEmployeeTrendsType0ItemChangesType0I
             percent_change=percent_change,
             start_of_period=start_of_period,
         )
-
 
         company_search_response_200_output_data_item_employee_trends_type_0_item_changes_type_0_item.additional_properties = d
         return company_search_response_200_output_data_item_employee_trends_type_0_item_changes_type_0_item

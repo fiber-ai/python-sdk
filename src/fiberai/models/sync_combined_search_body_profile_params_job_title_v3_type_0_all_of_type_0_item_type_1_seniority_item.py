@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyProfileParamsJobTitleV3Type0AllOfType0ItemType1SeniorityItem(str, Enum):
     C_SUITE = "c-suite"
     DIRECTOR = "director"

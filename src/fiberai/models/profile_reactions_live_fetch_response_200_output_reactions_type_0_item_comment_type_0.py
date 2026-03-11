@@ -1,65 +1,58 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0_author_type_0 import ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0
-
-
-
+    from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0_author_type_0 import (
+        ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0,
+    )
 
 
 T = TypeVar("T", bound="ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0")
 
 
-
 @_attrs_define
 class ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0:
-    """ 
-        Attributes:
-            content (Union[None, Unset, str]):
-            author (Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0', None,
-                Unset]):
-     """
+    """
+    Attributes:
+        content (None | str | Unset):
+        author (None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0 | Unset):
+    """
 
-    content: Union[None, Unset, str] = UNSET
-    author: Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0', None, Unset] = UNSET
+    content: None | str | Unset = UNSET
+    author: None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0 | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0_author_type_0 import ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0
-        content: Union[None, Unset, str]
+        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0_author_type_0 import (
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0,
+        )
+
+        content: None | str | Unset
         if isinstance(self.content, Unset):
             content = UNSET
         else:
             content = self.content
 
-        author: Union[None, Unset, dict[str, Any]]
+        author: dict[str, Any] | None | Unset
         if isinstance(self.author, Unset):
             author = UNSET
-        elif isinstance(self.author, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0):
+        elif isinstance(
+            self.author, ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0
+        ):
             author = self.author.to_dict()
         else:
             author = self.author
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if content is not UNSET:
             field_dict["content"] = content
         if author is not UNSET:
@@ -67,23 +60,26 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0_author_type_0 import ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0
+        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0_author_type_0 import (
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0,
+        )
+
         d = dict(src_dict)
-        def _parse_content(data: object) -> Union[None, Unset, str]:
+
+        def _parse_content(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         content = _parse_content(d.pop("content", UNSET))
 
-
-        def _parse_author(data: object) -> Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0', None, Unset]:
+        def _parse_author(
+            data: object,
+        ) -> None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -91,23 +87,23 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                author_type_0 = ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0.from_dict(data)
-
-
+                author_type_0 = (
+                    ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0.from_dict(data)
+                )
 
                 return author_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0', None, Unset], data)
+            return cast(
+                None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0AuthorType0 | Unset, data
+            )
 
         author = _parse_author(d.pop("author", UNSET))
-
 
         profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0 = cls(
             content=content,
             author=author,
         )
-
 
         profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0.additional_properties = d
         return profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0

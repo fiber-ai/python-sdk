@@ -1,53 +1,41 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-
-
-
-
-
-
 T = TypeVar("T", bound="GetProspectExclusionListsResponse200OutputItem")
-
 
 
 @_attrs_define
 class GetProspectExclusionListsResponse200OutputItem:
-    """ 
-        Attributes:
-            list_id (str): Id of the prospect exclusion list
-            name (str): Name of the prospect exclusion list
-     """
+    """
+    Attributes:
+        list_id (str): Id of the prospect exclusion list
+        name (str): Name of the prospect exclusion list
+    """
 
     list_id: str
     name: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         list_id = self.list_id
 
         name = self.name
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "listId": list_id,
-            "name": name,
-        })
+        field_dict.update(
+            {
+                "listId": list_id,
+                "name": name,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -60,7 +48,6 @@ class GetProspectExclusionListsResponse200OutputItem:
             list_id=list_id,
             name=name,
         )
-
 
         get_prospect_exclusion_lists_response_200_output_item.additional_properties = d
         return get_prospect_exclusion_lists_response_200_output_item

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsTechnologiesType0AnyOfType0ItemType0Type(str, Enum):
     PREDEFINED = "predefined"
 

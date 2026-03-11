@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCombinedSearchResponse200OutputProfileSearchParamsType0LanguagesType0AnyOfType0Item(str, Enum):
     AFRIKAANS = "Afrikaans"
     AKAN = "Akan"

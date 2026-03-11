@@ -1,74 +1,89 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_employee_trends_type_0_item_functions_type_1 import (
+    GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType1,
+)
+from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_employee_trends_type_0_item_functions_type_2_type_1 import (
+    GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType2Type1,
+)
+from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_employee_trends_type_0_item_functions_type_3_type_1 import (
+    GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1,
+)
 from ..types import UNSET, Unset
-
-from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_employee_trends_type_0_item_functions_type_1 import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType1
-from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_employee_trends_type_0_item_functions_type_2_type_1 import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType2Type1
-from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_employee_trends_type_0_item_functions_type_3_type_1 import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_employee_trends_type_0_item_changes_type_0_item import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemChangesType0Item
-
-
-
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_employee_trends_type_0_item_changes_type_0_item import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemChangesType0Item,
+    )
 
 
 T = TypeVar("T", bound="GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0Item")
 
 
-
 @_attrs_define
 class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0Item:
-    """ 
-        Attributes:
-            functions
-                (Union[GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType1,
-                GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType2Type1,
-                GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1, None,
-                Unset]):
-            current_count (Union[None, Unset, float]):
-            changes (Union[None, Unset,
-                list['GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemChangesType0Item']]):
-     """
+    """
+    Attributes:
+        functions (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType1 |
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType2Type1 |
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1 | None
+            | Unset):
+        current_count (float | None | Unset):
+        changes
+            (list[GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemChangesType0Item] |
+            None | Unset):
+    """
 
-    functions: Union[GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType1, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType2Type1, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1, None, Unset] = UNSET
-    current_count: Union[None, Unset, float] = UNSET
-    changes: Union[None, Unset, list['GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemChangesType0Item']] = UNSET
+    functions: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType1
+        | GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType2Type1
+        | GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1
+        | None
+        | Unset
+    ) = UNSET
+    current_count: float | None | Unset = UNSET
+    changes: (
+        list[GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemChangesType0Item]
+        | None
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_employee_trends_type_0_item_changes_type_0_item import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemChangesType0Item
-        functions: Union[None, Unset, str]
+        functions: None | str | Unset
         if isinstance(self.functions, Unset):
             functions = UNSET
-        elif isinstance(self.functions, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType1):
+        elif isinstance(
+            self.functions,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType1,
+        ):
             functions = self.functions.value
-        elif isinstance(self.functions, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType2Type1):
+        elif isinstance(
+            self.functions,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType2Type1,
+        ):
             functions = self.functions.value
-        elif isinstance(self.functions, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1):
+        elif isinstance(
+            self.functions,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1,
+        ):
             functions = self.functions.value
         else:
             functions = self.functions
 
-        current_count: Union[None, Unset, float]
+        current_count: float | None | Unset
         if isinstance(self.current_count, Unset):
             current_count = UNSET
         else:
             current_count = self.current_count
 
-        changes: Union[None, Unset, list[dict[str, Any]]]
+        changes: list[dict[str, Any]] | None | Unset
         if isinstance(self.changes, Unset):
             changes = UNSET
         elif isinstance(self.changes, list):
@@ -77,15 +92,12 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTren
                 changes_type_0_item = changes_type_0_item_data.to_dict()
                 changes.append(changes_type_0_item)
 
-
         else:
             changes = self.changes
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if functions is not UNSET:
             field_dict["functions"] = functions
         if current_count is not UNSET:
@@ -95,13 +107,23 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTren
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_employee_trends_type_0_item_changes_type_0_item import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemChangesType0Item
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_employee_trends_type_0_item_changes_type_0_item import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemChangesType0Item,
+        )
+
         d = dict(src_dict)
-        def _parse_functions(data: object) -> Union[GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType1, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType2Type1, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1, None, Unset]:
+
+        def _parse_functions(
+            data: object,
+        ) -> (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType1
+            | GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType2Type1
+            | GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -109,49 +131,62 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTren
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                functions_type_1 = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType1(data)
-
-
+                functions_type_1 = (
+                    GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType1(
+                        data
+                    )
+                )
 
                 return functions_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                functions_type_2_type_1 = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType2Type1(data)
-
-
+                functions_type_2_type_1 = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType2Type1(
+                    data
+                )
 
                 return functions_type_2_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                functions_type_3_type_1 = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1(data)
-
-
+                functions_type_3_type_1 = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1(
+                    data
+                )
 
                 return functions_type_3_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType1, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType2Type1, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1, None, Unset], data)
+            return cast(
+                GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType1
+                | GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType2Type1
+                | GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         functions = _parse_functions(d.pop("functions", UNSET))
 
-
-        def _parse_current_count(data: object) -> Union[None, Unset, float]:
+        def _parse_current_count(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         current_count = _parse_current_count(d.pop("current_count", UNSET))
 
-
-        def _parse_changes(data: object) -> Union[None, Unset, list['GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemChangesType0Item']]:
+        def _parse_changes(
+            data: object,
+        ) -> (
+            list[GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemChangesType0Item]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -161,27 +196,32 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTren
                     raise TypeError()
                 changes_type_0 = []
                 _changes_type_0 = data
-                for changes_type_0_item_data in (_changes_type_0):
-                    changes_type_0_item = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemChangesType0Item.from_dict(changes_type_0_item_data)
-
-
+                for changes_type_0_item_data in _changes_type_0:
+                    changes_type_0_item = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemChangesType0Item.from_dict(
+                        changes_type_0_item_data
+                    )
 
                     changes_type_0.append(changes_type_0_item)
 
                 return changes_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemChangesType0Item']], data)
+            return cast(
+                list[
+                    GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemChangesType0Item
+                ]
+                | None
+                | Unset,
+                data,
+            )
 
         changes = _parse_changes(d.pop("changes", UNSET))
-
 
         get_current_companies_in_saved_search_response_200_output_companies_item_employee_trends_type_0_item = cls(
             functions=functions,
             current_count=current_count,
             changes=changes,
         )
-
 
         get_current_companies_in_saved_search_response_200_output_companies_item_employee_trends_type_0_item.additional_properties = d
         return get_current_companies_in_saved_search_response_200_output_companies_item_employee_trends_type_0_item

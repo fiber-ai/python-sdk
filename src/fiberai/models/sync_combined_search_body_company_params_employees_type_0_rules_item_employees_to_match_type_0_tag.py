@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0Tag(str, Enum):
     ALL = "all"
 

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PollContactEnrichmentResultResponse200OutputProfilePhoneNumbersItemType(str, Enum):
     MOBILE = "mobile"
     OTHER = "other"

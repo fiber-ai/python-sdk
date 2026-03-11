@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsOfficeLocationsV2Type0AllOfType0ItemType0Type(str, Enum):
     WORLDWIDE = "worldwide"
 

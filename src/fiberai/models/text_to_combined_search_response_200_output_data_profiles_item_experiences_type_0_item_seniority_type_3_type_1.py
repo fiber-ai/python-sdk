@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCombinedSearchResponse200OutputDataProfilesItemExperiencesType0ItemSeniorityType3Type1(str, Enum):
     ASSOCIATE = "Associate"
     DIRECTOR = "Director"

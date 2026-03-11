@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCurrentJobType0JobFunctionType0Item(str, Enum):
     ACCOUNTING = "Accounting"
     ADMINISTRATIVE = "Administrative"

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class InvestorSearchBodySearchParamsInvestorTypeType3Type1(str, Enum):
     EITHER = "either"
     ORGANIZATION = "organization"

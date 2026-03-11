@@ -1,78 +1,69 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.combined_search_body_company_params_job_posting_stats_type_0_none_of_type_0_item_type_2_range_type_0_type import CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Type
-from typing import cast
+from ..models.combined_search_body_company_params_job_posting_stats_type_0_none_of_type_0_item_type_2_range_type_0_type import (
+    CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Type,
+)
 
 if TYPE_CHECKING:
-  from ..models.combined_search_body_company_params_job_posting_stats_type_0_none_of_type_0_item_type_2_range_type_0_range import CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Range
-
-
-
+    from ..models.combined_search_body_company_params_job_posting_stats_type_0_none_of_type_0_item_type_2_range_type_0_range import (
+        CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Range,
+    )
 
 
 T = TypeVar("T", bound="CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0")
 
 
-
 @_attrs_define
 class CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0:
-    """ 
-        Attributes:
-            type_ (CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Type):
-            range_ (CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Range):
-     """
+    """
+    Attributes:
+        type_ (CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Type):
+        range_ (CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Range):
+    """
 
     type_: CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Type
-    range_: 'CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Range'
+    range_: CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Range
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.combined_search_body_company_params_job_posting_stats_type_0_none_of_type_0_item_type_2_range_type_0_range import CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Range
         type_ = self.type_.value
 
         range_ = self.range_.to_dict()
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "type": type_,
-            "range": range_,
-        })
+        field_dict.update(
+            {
+                "type": type_,
+                "range": range_,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.combined_search_body_company_params_job_posting_stats_type_0_none_of_type_0_item_type_2_range_type_0_range import CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Range
+        from ..models.combined_search_body_company_params_job_posting_stats_type_0_none_of_type_0_item_type_2_range_type_0_range import (
+            CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Range,
+        )
+
         d = dict(src_dict)
         type_ = CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Type(d.pop("type"))
 
-
-
-
-        range_ = CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Range.from_dict(d.pop("range"))
-
-
-
+        range_ = CombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Range.from_dict(
+            d.pop("range")
+        )
 
         combined_search_body_company_params_job_posting_stats_type_0_none_of_type_0_item_type_2_range_type_0 = cls(
             type_=type_,
             range_=range_,
         )
-
 
         combined_search_body_company_params_job_posting_stats_type_0_none_of_type_0_item_type_2_range_type_0.additional_properties = d
         return combined_search_body_company_params_job_posting_stats_type_0_none_of_type_0_item_type_2_range_type_0

@@ -1,6 +1,9 @@
 from enum import Enum
 
-class TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2Which(str, Enum):
+
+class TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2Which(
+    str, Enum
+):
     CURRENT = "current"
     PREVIOUS = "previous"
 

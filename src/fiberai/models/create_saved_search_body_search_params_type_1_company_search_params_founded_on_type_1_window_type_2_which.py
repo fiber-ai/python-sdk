@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsFoundedOnType1WindowType2Which(str, Enum):
     CURRENT = "current"
     PREVIOUS = "previous"

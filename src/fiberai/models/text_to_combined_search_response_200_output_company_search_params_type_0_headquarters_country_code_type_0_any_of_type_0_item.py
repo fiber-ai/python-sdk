@@ -1,6 +1,9 @@
 from enum import Enum
 
-class TextToCombinedSearchResponse200OutputCompanySearchParamsType0HeadquartersCountryCodeType0AnyOfType0Item(str, Enum):
+
+class TextToCombinedSearchResponse200OutputCompanySearchParamsType0HeadquartersCountryCodeType0AnyOfType0Item(
+    str, Enum
+):
     ABW = "ABW"
     AFG = "AFG"
     AGO = "AGO"

@@ -1,6 +1,9 @@
 from enum import Enum
 
-class CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysNoneType0ItemCountCriteriaType0Type(str, Enum):
+
+class CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsType0ObeysNoneType0ItemCountCriteriaType0Type(
+    str, Enum
+):
     NUMERIC_CHANGE = "numeric_change"
 
     def __str__(self) -> str:

@@ -1,12 +1,10 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union, cast
+from typing import Any
 
 import httpx
 
-from ...client import AuthenticatedClient, Client
-from ...types import Response, UNSET
 from ... import errors
-
+from ...client import AuthenticatedClient, Client
 from ...models.email_bounce_detection_body import EmailBounceDetectionBody
 from ...models.email_bounce_detection_response_200 import EmailBounceDetectionResponse200
 from ...models.email_bounce_detection_response_400 import EmailBounceDetectionResponse400
@@ -16,21 +14,15 @@ from ...models.email_bounce_detection_response_403 import EmailBounceDetectionRe
 from ...models.email_bounce_detection_response_404 import EmailBounceDetectionResponse404
 from ...models.email_bounce_detection_response_429 import EmailBounceDetectionResponse429
 from ...models.email_bounce_detection_response_500 import EmailBounceDetectionResponse500
-from typing import cast
-
+from ...models.email_bounce_detection_response_503 import EmailBounceDetectionResponse503
+from ...types import Response
 
 
 def _get_kwargs(
     *,
     body: EmailBounceDetectionBody,
-
 ) -> dict[str, Any]:
     headers: dict[str, Any] = {}
-
-
-    
-
-    
 
     _kwargs: dict[str, Any] = {
         "method": "post",
@@ -39,70 +31,70 @@ def _get_kwargs(
 
     _kwargs["json"] = body.to_dict()
 
-
     headers["Content-Type"] = "application/json"
 
     _kwargs["headers"] = headers
     return _kwargs
 
 
-
-def _parse_response(*, client: Union[AuthenticatedClient, Client], response: httpx.Response) -> Optional[Union[EmailBounceDetectionResponse200, EmailBounceDetectionResponse400, EmailBounceDetectionResponse401, EmailBounceDetectionResponse402, EmailBounceDetectionResponse403, EmailBounceDetectionResponse404, EmailBounceDetectionResponse429, EmailBounceDetectionResponse500]]:
+def _parse_response(
+    *, client: AuthenticatedClient | Client, response: httpx.Response
+) -> (
+    EmailBounceDetectionResponse200
+    | EmailBounceDetectionResponse400
+    | EmailBounceDetectionResponse401
+    | EmailBounceDetectionResponse402
+    | EmailBounceDetectionResponse403
+    | EmailBounceDetectionResponse404
+    | EmailBounceDetectionResponse429
+    | EmailBounceDetectionResponse500
+    | EmailBounceDetectionResponse503
+    | None
+):
     if response.status_code == 200:
         response_200 = EmailBounceDetectionResponse200.from_dict(response.json())
-
-
 
         return response_200
 
     if response.status_code == 400:
         response_400 = EmailBounceDetectionResponse400.from_dict(response.json())
 
-
-
         return response_400
 
     if response.status_code == 401:
         response_401 = EmailBounceDetectionResponse401.from_dict(response.json())
-
-
 
         return response_401
 
     if response.status_code == 402:
         response_402 = EmailBounceDetectionResponse402.from_dict(response.json())
 
-
-
         return response_402
 
     if response.status_code == 403:
         response_403 = EmailBounceDetectionResponse403.from_dict(response.json())
-
-
 
         return response_403
 
     if response.status_code == 404:
         response_404 = EmailBounceDetectionResponse404.from_dict(response.json())
 
-
-
         return response_404
 
     if response.status_code == 429:
         response_429 = EmailBounceDetectionResponse429.from_dict(response.json())
-
-
 
         return response_429
 
     if response.status_code == 500:
         response_500 = EmailBounceDetectionResponse500.from_dict(response.json())
 
-
-
         return response_500
+
+    if response.status_code == 503:
+        response_503 = EmailBounceDetectionResponse503.from_dict(response.json())
+
+        return response_503
 
     if client.raise_on_unexpected_status:
         raise errors.UnexpectedStatus(response.status_code, response.content)
@@ -110,7 +102,19 @@ def _parse_response(*, client: Union[AuthenticatedClient, Client], response: htt
         return None
 
 
-def _build_response(*, client: Union[AuthenticatedClient, Client], response: httpx.Response) -> Response[Union[EmailBounceDetectionResponse200, EmailBounceDetectionResponse400, EmailBounceDetectionResponse401, EmailBounceDetectionResponse402, EmailBounceDetectionResponse403, EmailBounceDetectionResponse404, EmailBounceDetectionResponse429, EmailBounceDetectionResponse500]]:
+def _build_response(
+    *, client: AuthenticatedClient | Client, response: httpx.Response
+) -> Response[
+    EmailBounceDetectionResponse200
+    | EmailBounceDetectionResponse400
+    | EmailBounceDetectionResponse401
+    | EmailBounceDetectionResponse402
+    | EmailBounceDetectionResponse403
+    | EmailBounceDetectionResponse404
+    | EmailBounceDetectionResponse429
+    | EmailBounceDetectionResponse500
+    | EmailBounceDetectionResponse503
+]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -121,11 +125,20 @@ def _build_response(*, client: Union[AuthenticatedClient, Client], response: htt
 
 def sync_detailed(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: EmailBounceDetectionBody,
-
-) -> Response[Union[EmailBounceDetectionResponse200, EmailBounceDetectionResponse400, EmailBounceDetectionResponse401, EmailBounceDetectionResponse402, EmailBounceDetectionResponse403, EmailBounceDetectionResponse404, EmailBounceDetectionResponse429, EmailBounceDetectionResponse500]]:
-    r""" Validate a single email
+) -> Response[
+    EmailBounceDetectionResponse200
+    | EmailBounceDetectionResponse400
+    | EmailBounceDetectionResponse401
+    | EmailBounceDetectionResponse402
+    | EmailBounceDetectionResponse403
+    | EmailBounceDetectionResponse404
+    | EmailBounceDetectionResponse429
+    | EmailBounceDetectionResponse500
+    | EmailBounceDetectionResponse503
+]:
+    r"""Validate a single email
 
      Checks if a given email is likely to bounce using a waterfall of strategies. Works for catch-all
     email addresses, which are increasingly common yet hard for other APIs to validate.
@@ -143,13 +156,11 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[EmailBounceDetectionResponse200, EmailBounceDetectionResponse400, EmailBounceDetectionResponse401, EmailBounceDetectionResponse402, EmailBounceDetectionResponse403, EmailBounceDetectionResponse404, EmailBounceDetectionResponse429, EmailBounceDetectionResponse500]]
-     """
-
+        Response[EmailBounceDetectionResponse200 | EmailBounceDetectionResponse400 | EmailBounceDetectionResponse401 | EmailBounceDetectionResponse402 | EmailBounceDetectionResponse403 | EmailBounceDetectionResponse404 | EmailBounceDetectionResponse429 | EmailBounceDetectionResponse500 | EmailBounceDetectionResponse503]
+    """
 
     kwargs = _get_kwargs(
         body=body,
-
     )
 
     response = client.get_httpx_client().request(
@@ -158,13 +169,24 @@ def sync_detailed(
 
     return _build_response(client=client, response=response)
 
+
 def sync(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: EmailBounceDetectionBody,
-
-) -> Optional[Union[EmailBounceDetectionResponse200, EmailBounceDetectionResponse400, EmailBounceDetectionResponse401, EmailBounceDetectionResponse402, EmailBounceDetectionResponse403, EmailBounceDetectionResponse404, EmailBounceDetectionResponse429, EmailBounceDetectionResponse500]]:
-    r""" Validate a single email
+) -> (
+    EmailBounceDetectionResponse200
+    | EmailBounceDetectionResponse400
+    | EmailBounceDetectionResponse401
+    | EmailBounceDetectionResponse402
+    | EmailBounceDetectionResponse403
+    | EmailBounceDetectionResponse404
+    | EmailBounceDetectionResponse429
+    | EmailBounceDetectionResponse500
+    | EmailBounceDetectionResponse503
+    | None
+):
+    r"""Validate a single email
 
      Checks if a given email is likely to bounce using a waterfall of strategies. Works for catch-all
     email addresses, which are increasingly common yet hard for other APIs to validate.
@@ -182,23 +204,31 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[EmailBounceDetectionResponse200, EmailBounceDetectionResponse400, EmailBounceDetectionResponse401, EmailBounceDetectionResponse402, EmailBounceDetectionResponse403, EmailBounceDetectionResponse404, EmailBounceDetectionResponse429, EmailBounceDetectionResponse500]
-     """
-
+        EmailBounceDetectionResponse200 | EmailBounceDetectionResponse400 | EmailBounceDetectionResponse401 | EmailBounceDetectionResponse402 | EmailBounceDetectionResponse403 | EmailBounceDetectionResponse404 | EmailBounceDetectionResponse429 | EmailBounceDetectionResponse500 | EmailBounceDetectionResponse503
+    """
 
     return sync_detailed(
         client=client,
-body=body,
-
+        body=body,
     ).parsed
+
 
 async def asyncio_detailed(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: EmailBounceDetectionBody,
-
-) -> Response[Union[EmailBounceDetectionResponse200, EmailBounceDetectionResponse400, EmailBounceDetectionResponse401, EmailBounceDetectionResponse402, EmailBounceDetectionResponse403, EmailBounceDetectionResponse404, EmailBounceDetectionResponse429, EmailBounceDetectionResponse500]]:
-    r""" Validate a single email
+) -> Response[
+    EmailBounceDetectionResponse200
+    | EmailBounceDetectionResponse400
+    | EmailBounceDetectionResponse401
+    | EmailBounceDetectionResponse402
+    | EmailBounceDetectionResponse403
+    | EmailBounceDetectionResponse404
+    | EmailBounceDetectionResponse429
+    | EmailBounceDetectionResponse500
+    | EmailBounceDetectionResponse503
+]:
+    r"""Validate a single email
 
      Checks if a given email is likely to bounce using a waterfall of strategies. Works for catch-all
     email addresses, which are increasingly common yet hard for other APIs to validate.
@@ -216,28 +246,35 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[EmailBounceDetectionResponse200, EmailBounceDetectionResponse400, EmailBounceDetectionResponse401, EmailBounceDetectionResponse402, EmailBounceDetectionResponse403, EmailBounceDetectionResponse404, EmailBounceDetectionResponse429, EmailBounceDetectionResponse500]]
-     """
-
+        Response[EmailBounceDetectionResponse200 | EmailBounceDetectionResponse400 | EmailBounceDetectionResponse401 | EmailBounceDetectionResponse402 | EmailBounceDetectionResponse403 | EmailBounceDetectionResponse404 | EmailBounceDetectionResponse429 | EmailBounceDetectionResponse500 | EmailBounceDetectionResponse503]
+    """
 
     kwargs = _get_kwargs(
         body=body,
-
     )
 
-    response = await client.get_async_httpx_client().request(
-        **kwargs
-    )
+    response = await client.get_async_httpx_client().request(**kwargs)
 
     return _build_response(client=client, response=response)
 
+
 async def asyncio(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: EmailBounceDetectionBody,
-
-) -> Optional[Union[EmailBounceDetectionResponse200, EmailBounceDetectionResponse400, EmailBounceDetectionResponse401, EmailBounceDetectionResponse402, EmailBounceDetectionResponse403, EmailBounceDetectionResponse404, EmailBounceDetectionResponse429, EmailBounceDetectionResponse500]]:
-    r""" Validate a single email
+) -> (
+    EmailBounceDetectionResponse200
+    | EmailBounceDetectionResponse400
+    | EmailBounceDetectionResponse401
+    | EmailBounceDetectionResponse402
+    | EmailBounceDetectionResponse403
+    | EmailBounceDetectionResponse404
+    | EmailBounceDetectionResponse429
+    | EmailBounceDetectionResponse500
+    | EmailBounceDetectionResponse503
+    | None
+):
+    r"""Validate a single email
 
      Checks if a given email is likely to bounce using a waterfall of strategies. Works for catch-all
     email addresses, which are increasingly common yet hard for other APIs to validate.
@@ -255,12 +292,12 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[EmailBounceDetectionResponse200, EmailBounceDetectionResponse400, EmailBounceDetectionResponse401, EmailBounceDetectionResponse402, EmailBounceDetectionResponse403, EmailBounceDetectionResponse404, EmailBounceDetectionResponse429, EmailBounceDetectionResponse500]
-     """
+        EmailBounceDetectionResponse200 | EmailBounceDetectionResponse400 | EmailBounceDetectionResponse401 | EmailBounceDetectionResponse402 | EmailBounceDetectionResponse403 | EmailBounceDetectionResponse404 | EmailBounceDetectionResponse429 | EmailBounceDetectionResponse500 | EmailBounceDetectionResponse503
+    """
 
-
-    return (await asyncio_detailed(
-        client=client,
-body=body,
-
-    )).parsed
+    return (
+        await asyncio_detailed(
+            client=client,
+            body=body,
+        )
+    ).parsed

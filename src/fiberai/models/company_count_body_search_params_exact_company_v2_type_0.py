@@ -1,114 +1,156 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_3 import CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3
-  from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_2 import CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2
-  from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_1 import CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1
-  from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_3 import CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3
-  from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_2 import CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2
-  from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_0 import CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0
-  from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_1 import CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1
-  from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_0 import CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0
-
-
-
+    from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_0 import (
+        CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0,
+    )
+    from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_1 import (
+        CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1,
+    )
+    from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_2 import (
+        CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2,
+    )
+    from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_3 import (
+        CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3,
+    )
+    from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_0 import (
+        CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0,
+    )
+    from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_1 import (
+        CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1,
+    )
+    from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_2 import (
+        CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2,
+    )
+    from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_3 import (
+        CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3,
+    )
 
 
 T = TypeVar("T", bound="CompanyCountBodySearchParamsExactCompanyV2Type0")
 
 
-
 @_attrs_define
 class CompanyCountBodySearchParamsExactCompanyV2Type0:
-    """ 
-        Attributes:
-            any_of (Union[None, Unset, list[Union['CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0',
-                'CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1',
-                'CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2',
-                'CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3']]]):
-            none_of (Union[None, Unset, list[Union['CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0',
-                'CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1',
-                'CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2',
-                'CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3']]]):
-     """
+    """
+    Attributes:
+        any_of (list[CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0 |
+            CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1 |
+            CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2 |
+            CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3] | None | Unset):
+        none_of (list[CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0 |
+            CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1 |
+            CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2 |
+            CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3] | None | Unset):
+    """
 
-    any_of: Union[None, Unset, list[Union['CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0', 'CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1', 'CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2', 'CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3']]] = UNSET
-    none_of: Union[None, Unset, list[Union['CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0', 'CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1', 'CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2', 'CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3']]] = UNSET
+    any_of: (
+        list[
+            CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0
+            | CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1
+            | CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2
+            | CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3
+        ]
+        | None
+        | Unset
+    ) = UNSET
+    none_of: (
+        list[
+            CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0
+            | CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1
+            | CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2
+            | CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3
+        ]
+        | None
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_3 import CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_2 import CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_1 import CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_3 import CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_2 import CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_0 import CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_1 import CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_0 import CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0
-        any_of: Union[None, Unset, list[dict[str, Any]]]
+        from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_0 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0,
+        )
+        from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_1 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1,
+        )
+        from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_2 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2,
+        )
+        from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_0 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0,
+        )
+        from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_1 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1,
+        )
+        from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_2 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2,
+        )
+
+        any_of: list[dict[str, Any]] | None | Unset
         if isinstance(self.any_of, Unset):
             any_of = UNSET
         elif isinstance(self.any_of, list):
             any_of = []
             for any_of_type_0_item_data in self.any_of:
                 any_of_type_0_item: dict[str, Any]
-                if isinstance(any_of_type_0_item_data, CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0):
+                if isinstance(
+                    any_of_type_0_item_data, CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0
+                ):
                     any_of_type_0_item = any_of_type_0_item_data.to_dict()
-                elif isinstance(any_of_type_0_item_data, CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1):
+                elif isinstance(
+                    any_of_type_0_item_data, CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1
+                ):
                     any_of_type_0_item = any_of_type_0_item_data.to_dict()
-                elif isinstance(any_of_type_0_item_data, CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2):
+                elif isinstance(
+                    any_of_type_0_item_data, CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2
+                ):
                     any_of_type_0_item = any_of_type_0_item_data.to_dict()
                 else:
                     any_of_type_0_item = any_of_type_0_item_data.to_dict()
 
                 any_of.append(any_of_type_0_item)
 
-
         else:
             any_of = self.any_of
 
-        none_of: Union[None, Unset, list[dict[str, Any]]]
+        none_of: list[dict[str, Any]] | None | Unset
         if isinstance(self.none_of, Unset):
             none_of = UNSET
         elif isinstance(self.none_of, list):
             none_of = []
             for none_of_type_0_item_data in self.none_of:
                 none_of_type_0_item: dict[str, Any]
-                if isinstance(none_of_type_0_item_data, CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0):
+                if isinstance(
+                    none_of_type_0_item_data, CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0
+                ):
                     none_of_type_0_item = none_of_type_0_item_data.to_dict()
-                elif isinstance(none_of_type_0_item_data, CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1):
+                elif isinstance(
+                    none_of_type_0_item_data, CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1
+                ):
                     none_of_type_0_item = none_of_type_0_item_data.to_dict()
-                elif isinstance(none_of_type_0_item_data, CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2):
+                elif isinstance(
+                    none_of_type_0_item_data, CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2
+                ):
                     none_of_type_0_item = none_of_type_0_item_data.to_dict()
                 else:
                     none_of_type_0_item = none_of_type_0_item_data.to_dict()
 
                 none_of.append(none_of_type_0_item)
 
-
         else:
             none_of = self.none_of
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if any_of is not UNSET:
             field_dict["anyOf"] = any_of
         if none_of is not UNSET:
@@ -116,20 +158,47 @@ class CompanyCountBodySearchParamsExactCompanyV2Type0:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_3 import CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_2 import CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_1 import CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_3 import CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_2 import CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_0 import CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_1 import CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1
-        from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_0 import CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0
+        from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_0 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0,
+        )
+        from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_1 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1,
+        )
+        from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_2 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2,
+        )
+        from ..models.company_count_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_3 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3,
+        )
+        from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_0 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0,
+        )
+        from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_1 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1,
+        )
+        from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_2 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2,
+        )
+        from ..models.company_count_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_3 import (
+            CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3,
+        )
+
         d = dict(src_dict)
-        def _parse_any_of(data: object) -> Union[None, Unset, list[Union['CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0', 'CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1', 'CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2', 'CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3']]]:
+
+        def _parse_any_of(
+            data: object,
+        ) -> (
+            list[
+                CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0
+                | CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1
+                | CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2
+                | CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3
+            ]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -139,43 +208,51 @@ class CompanyCountBodySearchParamsExactCompanyV2Type0:
                     raise TypeError()
                 any_of_type_0 = []
                 _any_of_type_0 = data
-                for any_of_type_0_item_data in (_any_of_type_0):
-                    def _parse_any_of_type_0_item(data: object) -> Union['CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0', 'CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1', 'CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2', 'CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3']:
+                for any_of_type_0_item_data in _any_of_type_0:
+
+                    def _parse_any_of_type_0_item(
+                        data: object,
+                    ) -> (
+                        CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0
+                        | CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1
+                        | CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2
+                        | CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3
+                    ):
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            any_of_type_0_item_type_0 = CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0.from_dict(data)
-
-
+                            any_of_type_0_item_type_0 = (
+                                CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0.from_dict(data)
+                            )
 
                             return any_of_type_0_item_type_0
-                        except: # noqa: E722
+                        except (TypeError, ValueError, AttributeError, KeyError):
                             pass
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            any_of_type_0_item_type_1 = CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1.from_dict(data)
-
-
+                            any_of_type_0_item_type_1 = (
+                                CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1.from_dict(data)
+                            )
 
                             return any_of_type_0_item_type_1
-                        except: # noqa: E722
+                        except (TypeError, ValueError, AttributeError, KeyError):
                             pass
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            any_of_type_0_item_type_2 = CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2.from_dict(data)
-
-
+                            any_of_type_0_item_type_2 = (
+                                CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2.from_dict(data)
+                            )
 
                             return any_of_type_0_item_type_2
-                        except: # noqa: E722
+                        except (TypeError, ValueError, AttributeError, KeyError):
                             pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        any_of_type_0_item_type_3 = CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3.from_dict(data)
-
-
+                        any_of_type_0_item_type_3 = (
+                            CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3.from_dict(data)
+                        )
 
                         return any_of_type_0_item_type_3
 
@@ -184,14 +261,34 @@ class CompanyCountBodySearchParamsExactCompanyV2Type0:
                     any_of_type_0.append(any_of_type_0_item)
 
                 return any_of_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[Union['CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0', 'CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1', 'CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2', 'CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3']]], data)
+            return cast(
+                list[
+                    CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0
+                    | CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1
+                    | CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2
+                    | CompanyCountBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3
+                ]
+                | None
+                | Unset,
+                data,
+            )
 
         any_of = _parse_any_of(d.pop("anyOf", UNSET))
 
-
-        def _parse_none_of(data: object) -> Union[None, Unset, list[Union['CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0', 'CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1', 'CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2', 'CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3']]]:
+        def _parse_none_of(
+            data: object,
+        ) -> (
+            list[
+                CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0
+                | CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1
+                | CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2
+                | CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3
+            ]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -201,43 +298,51 @@ class CompanyCountBodySearchParamsExactCompanyV2Type0:
                     raise TypeError()
                 none_of_type_0 = []
                 _none_of_type_0 = data
-                for none_of_type_0_item_data in (_none_of_type_0):
-                    def _parse_none_of_type_0_item(data: object) -> Union['CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0', 'CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1', 'CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2', 'CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3']:
+                for none_of_type_0_item_data in _none_of_type_0:
+
+                    def _parse_none_of_type_0_item(
+                        data: object,
+                    ) -> (
+                        CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0
+                        | CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1
+                        | CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2
+                        | CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3
+                    ):
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            none_of_type_0_item_type_0 = CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0.from_dict(data)
-
-
+                            none_of_type_0_item_type_0 = (
+                                CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0.from_dict(data)
+                            )
 
                             return none_of_type_0_item_type_0
-                        except: # noqa: E722
+                        except (TypeError, ValueError, AttributeError, KeyError):
                             pass
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            none_of_type_0_item_type_1 = CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1.from_dict(data)
-
-
+                            none_of_type_0_item_type_1 = (
+                                CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1.from_dict(data)
+                            )
 
                             return none_of_type_0_item_type_1
-                        except: # noqa: E722
+                        except (TypeError, ValueError, AttributeError, KeyError):
                             pass
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            none_of_type_0_item_type_2 = CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2.from_dict(data)
-
-
+                            none_of_type_0_item_type_2 = (
+                                CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2.from_dict(data)
+                            )
 
                             return none_of_type_0_item_type_2
-                        except: # noqa: E722
+                        except (TypeError, ValueError, AttributeError, KeyError):
                             pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        none_of_type_0_item_type_3 = CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3.from_dict(data)
-
-
+                        none_of_type_0_item_type_3 = (
+                            CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3.from_dict(data)
+                        )
 
                         return none_of_type_0_item_type_3
 
@@ -246,18 +351,26 @@ class CompanyCountBodySearchParamsExactCompanyV2Type0:
                     none_of_type_0.append(none_of_type_0_item)
 
                 return none_of_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[Union['CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0', 'CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1', 'CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2', 'CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3']]], data)
+            return cast(
+                list[
+                    CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0
+                    | CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1
+                    | CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2
+                    | CompanyCountBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3
+                ]
+                | None
+                | Unset,
+                data,
+            )
 
         none_of = _parse_none_of(d.pop("noneOf", UNSET))
-
 
         company_count_body_search_params_exact_company_v2_type_0 = cls(
             any_of=any_of,
             none_of=none_of,
         )
-
 
         company_count_body_search_params_exact_company_v2_type_0.additional_properties = d
         return company_count_body_search_params_exact_company_v2_type_0

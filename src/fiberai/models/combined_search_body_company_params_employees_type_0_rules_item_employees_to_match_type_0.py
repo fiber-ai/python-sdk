@@ -1,62 +1,49 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_0_tag import CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0Tag
-
-
-
-
-
+from ..models.combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_0_tag import (
+    CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0Tag,
+)
 
 T = TypeVar("T", bound="CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0")
 
 
-
 @_attrs_define
 class CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0:
-    """ 
-        Attributes:
-            tag (CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0Tag):
-     """
+    """
+    Attributes:
+        tag (CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0Tag):
+    """
 
     tag: CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0Tag
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
         tag = self.tag.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "tag": tag,
-        })
+        field_dict.update(
+            {
+                "tag": tag,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         tag = CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0Tag(d.pop("tag"))
 
-
-
-
         combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_0 = cls(
             tag=tag,
         )
-
 
         combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_0.additional_properties = d
         return combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_0

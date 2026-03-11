@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsEmployeeTrendsType0ObeysNoneType0ItemJobFunction(str, Enum):
     ACCOUNTING = "accounting"
     ADMINISTRATIVE = "administrative"

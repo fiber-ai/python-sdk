@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType5Rule(str, Enum):
     LOCATION_TYPE = "location-type"
 

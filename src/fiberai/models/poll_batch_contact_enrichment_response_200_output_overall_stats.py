@@ -1,33 +1,26 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-
-
-
-
-
-
 T = TypeVar("T", bound="PollBatchContactEnrichmentResponse200OutputOverallStats")
-
 
 
 @_attrs_define
 class PollBatchContactEnrichmentResponse200OutputOverallStats:
-    """ Overall statistics for the batch enrichment task
+    """Overall statistics for the batch enrichment task
 
-        Attributes:
-            total_people_to_fetch (int): Total number of people in this bulk task
-            num_completed (int): Number of people for which contact reveal process has been completed.
-            num_remaining (int): Number of people remaining to be processed
-            num_rejected (int): Number of people for which contact reveal process has been rejected either due to invalid
-                input or person not found
-            num_duplicates (int): Number of duplicates found in the input
-     """
+    Attributes:
+        total_people_to_fetch (int): Total number of people in this bulk task
+        num_completed (int): Number of people for which contact reveal process has been completed.
+        num_remaining (int): Number of people remaining to be processed
+        num_rejected (int): Number of people for which contact reveal process has been rejected either due to invalid
+            input or person not found
+        num_duplicates (int): Number of duplicates found in the input
+    """
 
     total_people_to_fetch: int
     num_completed: int
@@ -35,10 +28,6 @@ class PollBatchContactEnrichmentResponse200OutputOverallStats:
     num_rejected: int
     num_duplicates: int
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         total_people_to_fetch = self.total_people_to_fetch
@@ -51,20 +40,19 @@ class PollBatchContactEnrichmentResponse200OutputOverallStats:
 
         num_duplicates = self.num_duplicates
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "totalPeopleToFetch": total_people_to_fetch,
-            "numCompleted": num_completed,
-            "numRemaining": num_remaining,
-            "numRejected": num_rejected,
-            "numDuplicates": num_duplicates,
-        })
+        field_dict.update(
+            {
+                "totalPeopleToFetch": total_people_to_fetch,
+                "numCompleted": num_completed,
+                "numRemaining": num_remaining,
+                "numRejected": num_rejected,
+                "numDuplicates": num_duplicates,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -86,7 +74,6 @@ class PollBatchContactEnrichmentResponse200OutputOverallStats:
             num_rejected=num_rejected,
             num_duplicates=num_duplicates,
         )
-
 
         poll_batch_contact_enrichment_response_200_output_overall_stats.additional_properties = d
         return poll_batch_contact_enrichment_response_200_output_overall_stats

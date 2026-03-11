@@ -1,87 +1,71 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
-
 T = TypeVar("T", bound="TextToCompanySearchResponse200OutputDataItemSimilarCompaniesType0Item")
-
 
 
 @_attrs_define
 class TextToCompanySearchResponse200OutputDataItemSimilarCompaniesType0Item:
-    """ 
-        Attributes:
-            name (Union[None, Unset, str]):
-            industries (Union[None, Unset, list[str]]):
-            employee_count (Union[None, Unset, float]):
-            revenue (Union[None, Unset, float]):
-            logo_url (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        name (None | str | Unset):
+        industries (list[str] | None | Unset):
+        employee_count (float | None | Unset):
+        revenue (float | None | Unset):
+        logo_url (None | str | Unset):
+    """
 
-    name: Union[None, Unset, str] = UNSET
-    industries: Union[None, Unset, list[str]] = UNSET
-    employee_count: Union[None, Unset, float] = UNSET
-    revenue: Union[None, Unset, float] = UNSET
-    logo_url: Union[None, Unset, str] = UNSET
+    name: None | str | Unset = UNSET
+    industries: list[str] | None | Unset = UNSET
+    employee_count: float | None | Unset = UNSET
+    revenue: float | None | Unset = UNSET
+    logo_url: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        name: Union[None, Unset, str]
+        name: None | str | Unset
         if isinstance(self.name, Unset):
             name = UNSET
         else:
             name = self.name
 
-        industries: Union[None, Unset, list[str]]
+        industries: list[str] | None | Unset
         if isinstance(self.industries, Unset):
             industries = UNSET
         elif isinstance(self.industries, list):
             industries = self.industries
 
-
         else:
             industries = self.industries
 
-        employee_count: Union[None, Unset, float]
+        employee_count: float | None | Unset
         if isinstance(self.employee_count, Unset):
             employee_count = UNSET
         else:
             employee_count = self.employee_count
 
-        revenue: Union[None, Unset, float]
+        revenue: float | None | Unset
         if isinstance(self.revenue, Unset):
             revenue = UNSET
         else:
             revenue = self.revenue
 
-        logo_url: Union[None, Unset, str]
+        logo_url: None | str | Unset
         if isinstance(self.logo_url, Unset):
             logo_url = UNSET
         else:
             logo_url = self.logo_url
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if name is not UNSET:
             field_dict["name"] = name
         if industries is not UNSET:
@@ -95,22 +79,20 @@ class TextToCompanySearchResponse200OutputDataItemSimilarCompaniesType0Item:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        def _parse_name(data: object) -> Union[None, Unset, str]:
+
+        def _parse_name(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         name = _parse_name(d.pop("name", UNSET))
 
-
-        def _parse_industries(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_industries(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -121,42 +103,38 @@ class TextToCompanySearchResponse200OutputDataItemSimilarCompaniesType0Item:
                 industries_type_0 = cast(list[str], data)
 
                 return industries_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         industries = _parse_industries(d.pop("industries", UNSET))
 
-
-        def _parse_employee_count(data: object) -> Union[None, Unset, float]:
+        def _parse_employee_count(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         employee_count = _parse_employee_count(d.pop("employee_count", UNSET))
 
-
-        def _parse_revenue(data: object) -> Union[None, Unset, float]:
+        def _parse_revenue(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         revenue = _parse_revenue(d.pop("revenue", UNSET))
 
-
-        def _parse_logo_url(data: object) -> Union[None, Unset, str]:
+        def _parse_logo_url(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         logo_url = _parse_logo_url(d.pop("logo_url", UNSET))
-
 
         text_to_company_search_response_200_output_data_item_similar_companies_type_0_item = cls(
             name=name,
@@ -165,7 +143,6 @@ class TextToCompanySearchResponse200OutputDataItemSimilarCompaniesType0Item:
             revenue=revenue,
             logo_url=logo_url,
         )
-
 
         text_to_company_search_response_200_output_data_item_similar_companies_type_0_item.additional_properties = d
         return text_to_company_search_response_200_output_data_item_similar_companies_type_0_item

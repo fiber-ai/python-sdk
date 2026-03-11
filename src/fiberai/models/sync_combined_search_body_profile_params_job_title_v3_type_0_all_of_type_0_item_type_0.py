@@ -1,62 +1,50 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.sync_combined_search_body_profile_params_job_title_v3_type_0_all_of_type_0_item_type_0_type import SyncCombinedSearchBodyProfileParamsJobTitleV3Type0AllOfType0ItemType0Type
-
-
-
-
-
+from ..models.sync_combined_search_body_profile_params_job_title_v3_type_0_all_of_type_0_item_type_0_type import (
+    SyncCombinedSearchBodyProfileParamsJobTitleV3Type0AllOfType0ItemType0Type,
+)
 
 T = TypeVar("T", bound="SyncCombinedSearchBodyProfileParamsJobTitleV3Type0AllOfType0ItemType0")
 
 
-
 @_attrs_define
 class SyncCombinedSearchBodyProfileParamsJobTitleV3Type0AllOfType0ItemType0:
-    """ 
-        Attributes:
-            type_ (SyncCombinedSearchBodyProfileParamsJobTitleV3Type0AllOfType0ItemType0Type):
-            term (str):
-     """
+    """
+    Attributes:
+        type_ (SyncCombinedSearchBodyProfileParamsJobTitleV3Type0AllOfType0ItemType0Type):
+        term (str):
+    """
 
     type_: SyncCombinedSearchBodyProfileParamsJobTitleV3Type0AllOfType0ItemType0Type
     term: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         type_ = self.type_.value
 
         term = self.term
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "type": type_,
-            "term": term,
-        })
+        field_dict.update(
+            {
+                "type": type_,
+                "term": term,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         type_ = SyncCombinedSearchBodyProfileParamsJobTitleV3Type0AllOfType0ItemType0Type(d.pop("type"))
-
-
-
 
         term = d.pop("term")
 
@@ -64,7 +52,6 @@ class SyncCombinedSearchBodyProfileParamsJobTitleV3Type0AllOfType0ItemType0:
             type_=type_,
             term=term,
         )
-
 
         sync_combined_search_body_profile_params_job_title_v3_type_0_all_of_type_0_item_type_0.additional_properties = d
         return sync_combined_search_body_profile_params_job_title_v3_type_0_all_of_type_0_item_type_0

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsExactCompanyV2Type0AnyOfType0ItemType3SourceType2Type1(str, Enum):
     CSV = "csv"
 

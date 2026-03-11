@@ -1,5 +1,6 @@
 from enum import IntEnum
 
+
 class CombinedSearchBodyCompanyParamsEmployeeCountV2Type0UpperBoundInclusiveType0(IntEnum):
     VALUE_0 = 0
 

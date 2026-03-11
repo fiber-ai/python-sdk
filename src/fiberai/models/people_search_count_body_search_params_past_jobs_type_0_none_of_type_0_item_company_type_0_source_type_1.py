@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PeopleSearchCountBodySearchParamsPastJobsType0NoneOfType0ItemCompanyType0SourceType1(str, Enum):
     CSV = "csv"
 

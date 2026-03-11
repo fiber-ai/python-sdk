@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class GetCurrentProfilesInSavedSearchBodyStatusesType0Item(str, Enum):
     DEPARTED = "departed"
     JOINED = "joined"

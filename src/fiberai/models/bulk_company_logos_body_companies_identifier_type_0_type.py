@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class BulkCompanyLogosBodyCompaniesIdentifierType0Type(str, Enum):
     DOMAINS = "domains"
 

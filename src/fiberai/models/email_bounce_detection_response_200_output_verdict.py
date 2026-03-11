@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class EmailBounceDetectionResponse200OutputVerdict(str, Enum):
     INCONCLUSIVE = "inconclusive"
     OK = "ok"

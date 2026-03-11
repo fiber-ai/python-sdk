@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyCompanyParamsTechnologiesType0AnyOfType0ItemType1Type(str, Enum):
     CUSTOM = "custom"
 

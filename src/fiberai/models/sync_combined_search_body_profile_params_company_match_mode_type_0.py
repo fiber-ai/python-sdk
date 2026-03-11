@@ -1,62 +1,49 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.sync_combined_search_body_profile_params_company_match_mode_type_0_mode import SyncCombinedSearchBodyProfileParamsCompanyMatchModeType0Mode
-
-
-
-
-
+from ..models.sync_combined_search_body_profile_params_company_match_mode_type_0_mode import (
+    SyncCombinedSearchBodyProfileParamsCompanyMatchModeType0Mode,
+)
 
 T = TypeVar("T", bound="SyncCombinedSearchBodyProfileParamsCompanyMatchModeType0")
 
 
-
 @_attrs_define
 class SyncCombinedSearchBodyProfileParamsCompanyMatchModeType0:
-    """ 
-        Attributes:
-            mode (SyncCombinedSearchBodyProfileParamsCompanyMatchModeType0Mode):
-     """
+    """
+    Attributes:
+        mode (SyncCombinedSearchBodyProfileParamsCompanyMatchModeType0Mode):
+    """
 
     mode: SyncCombinedSearchBodyProfileParamsCompanyMatchModeType0Mode
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
         mode = self.mode.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "mode": mode,
-        })
+        field_dict.update(
+            {
+                "mode": mode,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         mode = SyncCombinedSearchBodyProfileParamsCompanyMatchModeType0Mode(d.pop("mode"))
 
-
-
-
         sync_combined_search_body_profile_params_company_match_mode_type_0 = cls(
             mode=mode,
         )
-
 
         sync_combined_search_body_profile_params_company_match_mode_type_0.additional_properties = d
         return sync_combined_search_body_profile_params_company_match_mode_type_0

@@ -1,5 +1,6 @@
 from enum import IntEnum
 
+
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeCountV2Type0LowerBoundExclusiveType6(IntEnum):
     VALUE_1000 = 1000
 

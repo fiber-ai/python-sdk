@@ -1,49 +1,45 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.text_to_company_search_response_200_output_search_params_last_funded_on_type_0_strategy import (
+    TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0Strategy,
+)
 from ..types import UNSET, Unset
-
-from ..models.text_to_company_search_response_200_output_search_params_last_funded_on_type_0_strategy import TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0Strategy
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.text_to_company_search_response_200_output_search_params_last_funded_on_type_0_range_type_0 import TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0
-
-
-
+    from ..models.text_to_company_search_response_200_output_search_params_last_funded_on_type_0_range_type_0 import (
+        TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0,
+    )
 
 
 T = TypeVar("T", bound="TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0")
 
 
-
 @_attrs_define
 class TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0:
-    """ 
-        Attributes:
-            strategy (TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0Strategy):
-            range_ (Union['TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0', None, Unset]):
-     """
+    """
+    Attributes:
+        strategy (TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0Strategy):
+        range_ (None | TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0 | Unset):
+    """
 
     strategy: TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0Strategy
-    range_: Union['TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0', None, Unset] = UNSET
+    range_: None | TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0 | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.text_to_company_search_response_200_output_search_params_last_funded_on_type_0_range_type_0 import TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0
+        from ..models.text_to_company_search_response_200_output_search_params_last_funded_on_type_0_range_type_0 import (
+            TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0,
+        )
+
         strategy = self.strategy.value
 
-        range_: Union[None, Unset, dict[str, Any]]
+        range_: dict[str, Any] | None | Unset
         if isinstance(self.range_, Unset):
             range_ = UNSET
         elif isinstance(self.range_, TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0):
@@ -51,29 +47,30 @@ class TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0:
         else:
             range_ = self.range_
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "strategy": strategy,
-        })
+        field_dict.update(
+            {
+                "strategy": strategy,
+            }
+        )
         if range_ is not UNSET:
             field_dict["range"] = range_
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.text_to_company_search_response_200_output_search_params_last_funded_on_type_0_range_type_0 import TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0
+        from ..models.text_to_company_search_response_200_output_search_params_last_funded_on_type_0_range_type_0 import (
+            TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0,
+        )
+
         d = dict(src_dict)
         strategy = TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0Strategy(d.pop("strategy"))
 
-
-
-
-        def _parse_range_(data: object) -> Union['TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0', None, Unset]:
+        def _parse_range_(
+            data: object,
+        ) -> None | TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -81,23 +78,23 @@ class TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                range_type_0 = TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0.from_dict(data)
-
-
+                range_type_0 = TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0.from_dict(
+                    data
+                )
 
                 return range_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0', None, Unset], data)
+            return cast(
+                None | TextToCompanySearchResponse200OutputSearchParamsLastFundedOnType0RangeType0 | Unset, data
+            )
 
         range_ = _parse_range_(d.pop("range", UNSET))
-
 
         text_to_company_search_response_200_output_search_params_last_funded_on_type_0 = cls(
             strategy=strategy,
             range_=range_,
         )
-
 
         text_to_company_search_response_200_output_search_params_last_funded_on_type_0.additional_properties = d
         return text_to_company_search_response_200_output_search_params_last_funded_on_type_0

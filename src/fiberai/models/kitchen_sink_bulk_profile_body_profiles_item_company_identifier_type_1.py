@@ -1,62 +1,50 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_1_identifier import KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1Identifier
-
-
-
-
-
+from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_1_identifier import (
+    KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1Identifier,
+)
 
 T = TypeVar("T", bound="KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1")
 
 
-
 @_attrs_define
 class KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1:
-    """ 
-        Attributes:
-            identifier (KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1Identifier):
-            value (str):
-     """
+    """
+    Attributes:
+        identifier (KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1Identifier):
+        value (str):
+    """
 
     identifier: KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1Identifier
     value: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         identifier = self.identifier.value
 
         value = self.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "identifier": identifier,
-            "value": value,
-        })
+        field_dict.update(
+            {
+                "identifier": identifier,
+                "value": value,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         identifier = KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1Identifier(d.pop("identifier"))
-
-
-
 
         value = d.pop("value")
 
@@ -64,7 +52,6 @@ class KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1:
             identifier=identifier,
             value=value,
         )
-
 
         kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_1.additional_properties = d
         return kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_1

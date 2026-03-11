@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class GetSavedSearchRunStatusResponse200OutputRunStatus(str, Enum):
     COMPLETED = "COMPLETED"
     FAILED = "FAILED"

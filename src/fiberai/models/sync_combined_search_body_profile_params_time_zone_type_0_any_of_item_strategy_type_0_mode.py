@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyProfileParamsTimeZoneType0AnyOfItemStrategyType0Mode(str, Enum):
     MIDPOINT_WITH_BUFFER = "midpoint-with-buffer"
 

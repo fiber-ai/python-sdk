@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1WindowType2Method(str, Enum):
     CALENDAR = "calendar"
 

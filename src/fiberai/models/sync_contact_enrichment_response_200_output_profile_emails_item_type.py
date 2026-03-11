@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncContactEnrichmentResponse200OutputProfileEmailsItemType(str, Enum):
     GENERIC = "generic"
     OTHER = "other"

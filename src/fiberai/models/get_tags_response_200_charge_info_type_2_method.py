@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class GetTagsResponse200ChargeInfoType2Method(str, Enum):
     CHARGED_FOR_ASYNC_PROCESS = "charged-for-async-process"
 

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType0Strategy(str, Enum):
     ABSOLUTE = "absolute"
 

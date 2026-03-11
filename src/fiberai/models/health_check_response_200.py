@@ -1,62 +1,48 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
 from ..models.health_check_response_200_status import HealthCheckResponse200Status
-
-
-
-
-
 
 T = TypeVar("T", bound="HealthCheckResponse200")
 
 
-
 @_attrs_define
 class HealthCheckResponse200:
-    """ 
-        Attributes:
-            status (HealthCheckResponse200Status):
-            timestamp (str):
-     """
+    """
+    Attributes:
+        status (HealthCheckResponse200Status):
+        timestamp (str):
+    """
 
     status: HealthCheckResponse200Status
     timestamp: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         status = self.status.value
 
         timestamp = self.timestamp
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "status": status,
-            "timestamp": timestamp,
-        })
+        field_dict.update(
+            {
+                "status": status,
+                "timestamp": timestamp,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         status = HealthCheckResponse200Status(d.pop("status"))
-
-
-
 
         timestamp = d.pop("timestamp")
 
@@ -64,7 +50,6 @@ class HealthCheckResponse200:
             status=status,
             timestamp=timestamp,
         )
-
 
         health_check_response_200.additional_properties = d
         return health_check_response_200

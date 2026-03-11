@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class GoogleMapsSearchBodyStrategyType2Strategy(str, Enum):
     WORLD_CITIES = "world-cities"
 

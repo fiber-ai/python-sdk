@@ -1,6 +1,9 @@
 from enum import Enum
 
-class CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2Method(str, Enum):
+
+class CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2Method(
+    str, Enum
+):
     CALENDAR = "calendar"
 
     def __str__(self) -> str:

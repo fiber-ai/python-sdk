@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PeopleSearchBodySearchParamsStartedAtCompanyType1WindowType2Method(str, Enum):
     CALENDAR = "calendar"
 

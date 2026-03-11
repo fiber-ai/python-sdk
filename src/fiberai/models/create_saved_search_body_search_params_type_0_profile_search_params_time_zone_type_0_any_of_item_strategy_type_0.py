@@ -1,32 +1,28 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.create_saved_search_body_search_params_type_0_profile_search_params_time_zone_type_0_any_of_item_strategy_type_0_mode import CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyOfItemStrategyType0Mode
-
-
-
-
-
+from ..models.create_saved_search_body_search_params_type_0_profile_search_params_time_zone_type_0_any_of_item_strategy_type_0_mode import (
+    CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyOfItemStrategyType0Mode,
+)
 
 T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyOfItemStrategyType0")
 
 
-
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyOfItemStrategyType0:
-    """ 
-        Attributes:
-            mode (CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyOfItemStrategyType0Mode):
-            midpoint_time_zone_name (str):
-            max_minutes_westward (int):
-            max_minutes_eastward (float):
-            include_partial_year_matches (bool):
-     """
+    """
+    Attributes:
+        mode (CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyOfItemStrategyType0Mode):
+        midpoint_time_zone_name (str):
+        max_minutes_westward (int):
+        max_minutes_eastward (float):
+        include_partial_year_matches (bool):
+    """
 
     mode: CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyOfItemStrategyType0Mode
     midpoint_time_zone_name: str
@@ -34,10 +30,6 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyO
     max_minutes_eastward: float
     include_partial_year_matches: bool
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         mode = self.mode.value
@@ -50,28 +42,26 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyO
 
         include_partial_year_matches = self.include_partial_year_matches
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "mode": mode,
-            "midpointTimeZoneName": midpoint_time_zone_name,
-            "maxMinutesWestward": max_minutes_westward,
-            "maxMinutesEastward": max_minutes_eastward,
-            "includePartialYearMatches": include_partial_year_matches,
-        })
+        field_dict.update(
+            {
+                "mode": mode,
+                "midpointTimeZoneName": midpoint_time_zone_name,
+                "maxMinutesWestward": max_minutes_westward,
+                "maxMinutesEastward": max_minutes_eastward,
+                "includePartialYearMatches": include_partial_year_matches,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        mode = CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyOfItemStrategyType0Mode(d.pop("mode"))
-
-
-
+        mode = CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyOfItemStrategyType0Mode(
+            d.pop("mode")
+        )
 
         midpoint_time_zone_name = d.pop("midpointTimeZoneName")
 
@@ -88,7 +78,6 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyO
             max_minutes_eastward=max_minutes_eastward,
             include_partial_year_matches=include_partial_year_matches,
         )
-
 
         create_saved_search_body_search_params_type_0_profile_search_params_time_zone_type_0_any_of_item_strategy_type_0.additional_properties = d
         return create_saved_search_body_search_params_type_0_profile_search_params_time_zone_type_0_any_of_item_strategy_type_0

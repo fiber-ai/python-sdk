@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncContactEnrichmentResponse200OutputProfileEmailsItemStatus(str, Enum):
     INVALID = "invalid"
     RISKY = "risky"

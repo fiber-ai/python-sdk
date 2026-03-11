@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PollCombinedSearchResponse200OutputDataType0ItemsItemLiCategoryType1(str, Enum):
     C = "C"
     S = "S"

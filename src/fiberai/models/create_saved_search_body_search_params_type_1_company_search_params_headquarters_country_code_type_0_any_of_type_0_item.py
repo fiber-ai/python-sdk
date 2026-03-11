@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersCountryCodeType0AnyOfType0Item(str, Enum):
     ABW = "ABW"
     AFG = "AFG"

@@ -1,62 +1,52 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.company_search_body_search_params_headquarters_location_type_0_union_all_type_0_item_type_0_radius_type_0_unit import CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0RadiusType0Unit
-
-
-
-
-
+from ..models.company_search_body_search_params_headquarters_location_type_0_union_all_type_0_item_type_0_radius_type_0_unit import (
+    CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0RadiusType0Unit,
+)
 
 T = TypeVar("T", bound="CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0RadiusType0")
 
 
-
 @_attrs_define
 class CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0RadiusType0:
-    """ 
-        Attributes:
-            unit (CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0RadiusType0Unit):
-            quantity (float):
-     """
+    """
+    Attributes:
+        unit (CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0RadiusType0Unit):
+        quantity (float):
+    """
 
     unit: CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0RadiusType0Unit
     quantity: float
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         unit = self.unit.value
 
         quantity = self.quantity
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "unit": unit,
-            "quantity": quantity,
-        })
+        field_dict.update(
+            {
+                "unit": unit,
+                "quantity": quantity,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        unit = CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0RadiusType0Unit(d.pop("unit"))
-
-
-
+        unit = CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0RadiusType0Unit(
+            d.pop("unit")
+        )
 
         quantity = d.pop("quantity")
 
@@ -64,7 +54,6 @@ class CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemTyp
             unit=unit,
             quantity=quantity,
         )
-
 
         company_search_body_search_params_headquarters_location_type_0_union_all_type_0_item_type_0_radius_type_0.additional_properties = d
         return company_search_body_search_params_headquarters_location_type_0_union_all_type_0_item_type_0_radius_type_0

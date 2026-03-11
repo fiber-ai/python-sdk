@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class GetNaicsCodesResponse200ChargeInfoType3Method(str, Enum):
     FREE = "free"
 

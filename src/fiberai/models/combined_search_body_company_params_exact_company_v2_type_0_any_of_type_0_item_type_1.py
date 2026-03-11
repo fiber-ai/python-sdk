@@ -1,62 +1,52 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.combined_search_body_company_params_exact_company_v2_type_0_any_of_type_0_item_type_1_identifier import CombinedSearchBodyCompanyParamsExactCompanyV2Type0AnyOfType0ItemType1Identifier
-
-
-
-
-
+from ..models.combined_search_body_company_params_exact_company_v2_type_0_any_of_type_0_item_type_1_identifier import (
+    CombinedSearchBodyCompanyParamsExactCompanyV2Type0AnyOfType0ItemType1Identifier,
+)
 
 T = TypeVar("T", bound="CombinedSearchBodyCompanyParamsExactCompanyV2Type0AnyOfType0ItemType1")
 
 
-
 @_attrs_define
 class CombinedSearchBodyCompanyParamsExactCompanyV2Type0AnyOfType0ItemType1:
-    """ 
-        Attributes:
-            identifier (CombinedSearchBodyCompanyParamsExactCompanyV2Type0AnyOfType0ItemType1Identifier):
-            linkedin_url (str):
-     """
+    """
+    Attributes:
+        identifier (CombinedSearchBodyCompanyParamsExactCompanyV2Type0AnyOfType0ItemType1Identifier):
+        linkedin_url (str):
+    """
 
     identifier: CombinedSearchBodyCompanyParamsExactCompanyV2Type0AnyOfType0ItemType1Identifier
     linkedin_url: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         identifier = self.identifier.value
 
         linkedin_url = self.linkedin_url
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "identifier": identifier,
-            "linkedin_url": linkedin_url,
-        })
+        field_dict.update(
+            {
+                "identifier": identifier,
+                "linkedin_url": linkedin_url,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        identifier = CombinedSearchBodyCompanyParamsExactCompanyV2Type0AnyOfType0ItemType1Identifier(d.pop("identifier"))
-
-
-
+        identifier = CombinedSearchBodyCompanyParamsExactCompanyV2Type0AnyOfType0ItemType1Identifier(
+            d.pop("identifier")
+        )
 
         linkedin_url = d.pop("linkedin_url")
 
@@ -64,7 +54,6 @@ class CombinedSearchBodyCompanyParamsExactCompanyV2Type0AnyOfType0ItemType1:
             identifier=identifier,
             linkedin_url=linkedin_url,
         )
-
 
         combined_search_body_company_params_exact_company_v2_type_0_any_of_type_0_item_type_1.additional_properties = d
         return combined_search_body_company_params_exact_company_v2_type_0_any_of_type_0_item_type_1

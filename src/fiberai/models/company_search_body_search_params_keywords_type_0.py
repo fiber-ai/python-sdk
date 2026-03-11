@@ -1,79 +1,61 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
-
 T = TypeVar("T", bound="CompanySearchBodySearchParamsKeywordsType0")
-
 
 
 @_attrs_define
 class CompanySearchBodySearchParamsKeywordsType0:
-    """ 
-        Attributes:
-            contains_all (Union[None, Unset, list[str]]):
-            contains_any (Union[None, Unset, list[str]]):
-            contains_none (Union[None, Unset, list[str]]):
-     """
+    """
+    Attributes:
+        contains_all (list[str] | None | Unset):
+        contains_any (list[str] | None | Unset):
+        contains_none (list[str] | None | Unset):
+    """
 
-    contains_all: Union[None, Unset, list[str]] = UNSET
-    contains_any: Union[None, Unset, list[str]] = UNSET
-    contains_none: Union[None, Unset, list[str]] = UNSET
+    contains_all: list[str] | None | Unset = UNSET
+    contains_any: list[str] | None | Unset = UNSET
+    contains_none: list[str] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        contains_all: Union[None, Unset, list[str]]
+        contains_all: list[str] | None | Unset
         if isinstance(self.contains_all, Unset):
             contains_all = UNSET
         elif isinstance(self.contains_all, list):
             contains_all = self.contains_all
 
-
         else:
             contains_all = self.contains_all
 
-        contains_any: Union[None, Unset, list[str]]
+        contains_any: list[str] | None | Unset
         if isinstance(self.contains_any, Unset):
             contains_any = UNSET
         elif isinstance(self.contains_any, list):
             contains_any = self.contains_any
 
-
         else:
             contains_any = self.contains_any
 
-        contains_none: Union[None, Unset, list[str]]
+        contains_none: list[str] | None | Unset
         if isinstance(self.contains_none, Unset):
             contains_none = UNSET
         elif isinstance(self.contains_none, list):
             contains_none = self.contains_none
 
-
         else:
             contains_none = self.contains_none
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if contains_all is not UNSET:
             field_dict["containsAll"] = contains_all
         if contains_any is not UNSET:
@@ -83,12 +65,11 @@ class CompanySearchBodySearchParamsKeywordsType0:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        def _parse_contains_all(data: object) -> Union[None, Unset, list[str]]:
+
+        def _parse_contains_all(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -99,14 +80,13 @@ class CompanySearchBodySearchParamsKeywordsType0:
                 contains_all_type_0 = cast(list[str], data)
 
                 return contains_all_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         contains_all = _parse_contains_all(d.pop("containsAll", UNSET))
 
-
-        def _parse_contains_any(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_contains_any(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -117,14 +97,13 @@ class CompanySearchBodySearchParamsKeywordsType0:
                 contains_any_type_0 = cast(list[str], data)
 
                 return contains_any_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         contains_any = _parse_contains_any(d.pop("containsAny", UNSET))
 
-
-        def _parse_contains_none(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_contains_none(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -135,19 +114,17 @@ class CompanySearchBodySearchParamsKeywordsType0:
                 contains_none_type_0 = cast(list[str], data)
 
                 return contains_none_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         contains_none = _parse_contains_none(d.pop("containsNone", UNSET))
-
 
         company_search_body_search_params_keywords_type_0 = cls(
             contains_all=contains_all,
             contains_any=contains_any,
             contains_none=contains_none,
         )
-
 
         company_search_body_search_params_keywords_type_0.additional_properties = d
         return company_search_body_search_params_keywords_type_0

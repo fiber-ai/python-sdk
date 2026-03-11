@@ -1,12 +1,10 @@
 from http import HTTPStatus
-from typing import Any, Optional, Union, cast
+from typing import Any
 
 import httpx
 
-from ...client import AuthenticatedClient, Client
-from ...types import Response, UNSET
 from ... import errors
-
+from ...client import AuthenticatedClient, Client
 from ...models.text_to_company_search_body import TextToCompanySearchBody
 from ...models.text_to_company_search_response_200 import TextToCompanySearchResponse200
 from ...models.text_to_company_search_response_400 import TextToCompanySearchResponse400
@@ -16,21 +14,15 @@ from ...models.text_to_company_search_response_403 import TextToCompanySearchRes
 from ...models.text_to_company_search_response_404 import TextToCompanySearchResponse404
 from ...models.text_to_company_search_response_429 import TextToCompanySearchResponse429
 from ...models.text_to_company_search_response_500 import TextToCompanySearchResponse500
-from typing import cast
-
+from ...models.text_to_company_search_response_503 import TextToCompanySearchResponse503
+from ...types import Response
 
 
 def _get_kwargs(
     *,
     body: TextToCompanySearchBody,
-
 ) -> dict[str, Any]:
     headers: dict[str, Any] = {}
-
-
-    
-
-    
 
     _kwargs: dict[str, Any] = {
         "method": "post",
@@ -39,70 +31,70 @@ def _get_kwargs(
 
     _kwargs["json"] = body.to_dict()
 
-
     headers["Content-Type"] = "application/json"
 
     _kwargs["headers"] = headers
     return _kwargs
 
 
-
-def _parse_response(*, client: Union[AuthenticatedClient, Client], response: httpx.Response) -> Optional[Union[TextToCompanySearchResponse200, TextToCompanySearchResponse400, TextToCompanySearchResponse401, TextToCompanySearchResponse402, TextToCompanySearchResponse403, TextToCompanySearchResponse404, TextToCompanySearchResponse429, TextToCompanySearchResponse500]]:
+def _parse_response(
+    *, client: AuthenticatedClient | Client, response: httpx.Response
+) -> (
+    TextToCompanySearchResponse200
+    | TextToCompanySearchResponse400
+    | TextToCompanySearchResponse401
+    | TextToCompanySearchResponse402
+    | TextToCompanySearchResponse403
+    | TextToCompanySearchResponse404
+    | TextToCompanySearchResponse429
+    | TextToCompanySearchResponse500
+    | TextToCompanySearchResponse503
+    | None
+):
     if response.status_code == 200:
         response_200 = TextToCompanySearchResponse200.from_dict(response.json())
-
-
 
         return response_200
 
     if response.status_code == 400:
         response_400 = TextToCompanySearchResponse400.from_dict(response.json())
 
-
-
         return response_400
 
     if response.status_code == 401:
         response_401 = TextToCompanySearchResponse401.from_dict(response.json())
-
-
 
         return response_401
 
     if response.status_code == 402:
         response_402 = TextToCompanySearchResponse402.from_dict(response.json())
 
-
-
         return response_402
 
     if response.status_code == 403:
         response_403 = TextToCompanySearchResponse403.from_dict(response.json())
-
-
 
         return response_403
 
     if response.status_code == 404:
         response_404 = TextToCompanySearchResponse404.from_dict(response.json())
 
-
-
         return response_404
 
     if response.status_code == 429:
         response_429 = TextToCompanySearchResponse429.from_dict(response.json())
-
-
 
         return response_429
 
     if response.status_code == 500:
         response_500 = TextToCompanySearchResponse500.from_dict(response.json())
 
-
-
         return response_500
+
+    if response.status_code == 503:
+        response_503 = TextToCompanySearchResponse503.from_dict(response.json())
+
+        return response_503
 
     if client.raise_on_unexpected_status:
         raise errors.UnexpectedStatus(response.status_code, response.content)
@@ -110,7 +102,19 @@ def _parse_response(*, client: Union[AuthenticatedClient, Client], response: htt
         return None
 
 
-def _build_response(*, client: Union[AuthenticatedClient, Client], response: httpx.Response) -> Response[Union[TextToCompanySearchResponse200, TextToCompanySearchResponse400, TextToCompanySearchResponse401, TextToCompanySearchResponse402, TextToCompanySearchResponse403, TextToCompanySearchResponse404, TextToCompanySearchResponse429, TextToCompanySearchResponse500]]:
+def _build_response(
+    *, client: AuthenticatedClient | Client, response: httpx.Response
+) -> Response[
+    TextToCompanySearchResponse200
+    | TextToCompanySearchResponse400
+    | TextToCompanySearchResponse401
+    | TextToCompanySearchResponse402
+    | TextToCompanySearchResponse403
+    | TextToCompanySearchResponse404
+    | TextToCompanySearchResponse429
+    | TextToCompanySearchResponse500
+    | TextToCompanySearchResponse503
+]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -121,11 +125,20 @@ def _build_response(*, client: Union[AuthenticatedClient, Client], response: htt
 
 def sync_detailed(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: TextToCompanySearchBody,
-
-) -> Response[Union[TextToCompanySearchResponse200, TextToCompanySearchResponse400, TextToCompanySearchResponse401, TextToCompanySearchResponse402, TextToCompanySearchResponse403, TextToCompanySearchResponse404, TextToCompanySearchResponse429, TextToCompanySearchResponse500]]:
-    r""" Search companies from text
+) -> Response[
+    TextToCompanySearchResponse200
+    | TextToCompanySearchResponse400
+    | TextToCompanySearchResponse401
+    | TextToCompanySearchResponse402
+    | TextToCompanySearchResponse403
+    | TextToCompanySearchResponse404
+    | TextToCompanySearchResponse429
+    | TextToCompanySearchResponse500
+    | TextToCompanySearchResponse503
+]:
+    r"""Search companies from text
 
      Takes free-form text (e.g., 'Series A startups in USA with 50–200 employees') and returns a list of
     matching companies.           The endpoint interprets natural language queries and applies
@@ -145,13 +158,11 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[TextToCompanySearchResponse200, TextToCompanySearchResponse400, TextToCompanySearchResponse401, TextToCompanySearchResponse402, TextToCompanySearchResponse403, TextToCompanySearchResponse404, TextToCompanySearchResponse429, TextToCompanySearchResponse500]]
-     """
-
+        Response[TextToCompanySearchResponse200 | TextToCompanySearchResponse400 | TextToCompanySearchResponse401 | TextToCompanySearchResponse402 | TextToCompanySearchResponse403 | TextToCompanySearchResponse404 | TextToCompanySearchResponse429 | TextToCompanySearchResponse500 | TextToCompanySearchResponse503]
+    """
 
     kwargs = _get_kwargs(
         body=body,
-
     )
 
     response = client.get_httpx_client().request(
@@ -160,13 +171,24 @@ def sync_detailed(
 
     return _build_response(client=client, response=response)
 
+
 def sync(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: TextToCompanySearchBody,
-
-) -> Optional[Union[TextToCompanySearchResponse200, TextToCompanySearchResponse400, TextToCompanySearchResponse401, TextToCompanySearchResponse402, TextToCompanySearchResponse403, TextToCompanySearchResponse404, TextToCompanySearchResponse429, TextToCompanySearchResponse500]]:
-    r""" Search companies from text
+) -> (
+    TextToCompanySearchResponse200
+    | TextToCompanySearchResponse400
+    | TextToCompanySearchResponse401
+    | TextToCompanySearchResponse402
+    | TextToCompanySearchResponse403
+    | TextToCompanySearchResponse404
+    | TextToCompanySearchResponse429
+    | TextToCompanySearchResponse500
+    | TextToCompanySearchResponse503
+    | None
+):
+    r"""Search companies from text
 
      Takes free-form text (e.g., 'Series A startups in USA with 50–200 employees') and returns a list of
     matching companies.           The endpoint interprets natural language queries and applies
@@ -186,23 +208,31 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[TextToCompanySearchResponse200, TextToCompanySearchResponse400, TextToCompanySearchResponse401, TextToCompanySearchResponse402, TextToCompanySearchResponse403, TextToCompanySearchResponse404, TextToCompanySearchResponse429, TextToCompanySearchResponse500]
-     """
-
+        TextToCompanySearchResponse200 | TextToCompanySearchResponse400 | TextToCompanySearchResponse401 | TextToCompanySearchResponse402 | TextToCompanySearchResponse403 | TextToCompanySearchResponse404 | TextToCompanySearchResponse429 | TextToCompanySearchResponse500 | TextToCompanySearchResponse503
+    """
 
     return sync_detailed(
         client=client,
-body=body,
-
+        body=body,
     ).parsed
+
 
 async def asyncio_detailed(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: TextToCompanySearchBody,
-
-) -> Response[Union[TextToCompanySearchResponse200, TextToCompanySearchResponse400, TextToCompanySearchResponse401, TextToCompanySearchResponse402, TextToCompanySearchResponse403, TextToCompanySearchResponse404, TextToCompanySearchResponse429, TextToCompanySearchResponse500]]:
-    r""" Search companies from text
+) -> Response[
+    TextToCompanySearchResponse200
+    | TextToCompanySearchResponse400
+    | TextToCompanySearchResponse401
+    | TextToCompanySearchResponse402
+    | TextToCompanySearchResponse403
+    | TextToCompanySearchResponse404
+    | TextToCompanySearchResponse429
+    | TextToCompanySearchResponse500
+    | TextToCompanySearchResponse503
+]:
+    r"""Search companies from text
 
      Takes free-form text (e.g., 'Series A startups in USA with 50–200 employees') and returns a list of
     matching companies.           The endpoint interprets natural language queries and applies
@@ -222,28 +252,35 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Union[TextToCompanySearchResponse200, TextToCompanySearchResponse400, TextToCompanySearchResponse401, TextToCompanySearchResponse402, TextToCompanySearchResponse403, TextToCompanySearchResponse404, TextToCompanySearchResponse429, TextToCompanySearchResponse500]]
-     """
-
+        Response[TextToCompanySearchResponse200 | TextToCompanySearchResponse400 | TextToCompanySearchResponse401 | TextToCompanySearchResponse402 | TextToCompanySearchResponse403 | TextToCompanySearchResponse404 | TextToCompanySearchResponse429 | TextToCompanySearchResponse500 | TextToCompanySearchResponse503]
+    """
 
     kwargs = _get_kwargs(
         body=body,
-
     )
 
-    response = await client.get_async_httpx_client().request(
-        **kwargs
-    )
+    response = await client.get_async_httpx_client().request(**kwargs)
 
     return _build_response(client=client, response=response)
 
+
 async def asyncio(
     *,
-    client: Union[AuthenticatedClient, Client],
+    client: AuthenticatedClient | Client,
     body: TextToCompanySearchBody,
-
-) -> Optional[Union[TextToCompanySearchResponse200, TextToCompanySearchResponse400, TextToCompanySearchResponse401, TextToCompanySearchResponse402, TextToCompanySearchResponse403, TextToCompanySearchResponse404, TextToCompanySearchResponse429, TextToCompanySearchResponse500]]:
-    r""" Search companies from text
+) -> (
+    TextToCompanySearchResponse200
+    | TextToCompanySearchResponse400
+    | TextToCompanySearchResponse401
+    | TextToCompanySearchResponse402
+    | TextToCompanySearchResponse403
+    | TextToCompanySearchResponse404
+    | TextToCompanySearchResponse429
+    | TextToCompanySearchResponse500
+    | TextToCompanySearchResponse503
+    | None
+):
+    r"""Search companies from text
 
      Takes free-form text (e.g., 'Series A startups in USA with 50–200 employees') and returns a list of
     matching companies.           The endpoint interprets natural language queries and applies
@@ -263,12 +300,12 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Union[TextToCompanySearchResponse200, TextToCompanySearchResponse400, TextToCompanySearchResponse401, TextToCompanySearchResponse402, TextToCompanySearchResponse403, TextToCompanySearchResponse404, TextToCompanySearchResponse429, TextToCompanySearchResponse500]
-     """
+        TextToCompanySearchResponse200 | TextToCompanySearchResponse400 | TextToCompanySearchResponse401 | TextToCompanySearchResponse402 | TextToCompanySearchResponse403 | TextToCompanySearchResponse404 | TextToCompanySearchResponse429 | TextToCompanySearchResponse500 | TextToCompanySearchResponse503
+    """
 
-
-    return (await asyncio_detailed(
-        client=client,
-body=body,
-
-    )).parsed
+    return (
+        await asyncio_detailed(
+            client=client,
+            body=body,
+        )
+    ).parsed

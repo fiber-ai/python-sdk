@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PostReactionsLiveFetchBodyReactionTypeType1(str, Enum):
     CELEBRATE = "CELEBRATE"
     FUNNY = "FUNNY"

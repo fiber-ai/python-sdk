@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0AllOfType0ItemType(str, Enum):
     GROUP = "group"
 

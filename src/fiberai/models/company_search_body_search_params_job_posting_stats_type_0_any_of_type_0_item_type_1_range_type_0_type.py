@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanySearchBodySearchParamsJobPostingStatsType0AnyOfType0ItemType1RangeType0Type(str, Enum):
     COUNT_RANGE = "count-range"
 

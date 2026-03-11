@@ -1,58 +1,44 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
-
 T = TypeVar("T", bound="GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemStockInfoConsensusType0")
-
 
 
 @_attrs_define
 class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemStockInfoConsensusType0:
-    """ 
-        Attributes:
-            ticker (Union[None, Unset, str]):
-            exchange (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        ticker (None | str | Unset):
+        exchange (None | str | Unset):
+    """
 
-    ticker: Union[None, Unset, str] = UNSET
-    exchange: Union[None, Unset, str] = UNSET
+    ticker: None | str | Unset = UNSET
+    exchange: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        ticker: Union[None, Unset, str]
+        ticker: None | str | Unset
         if isinstance(self.ticker, Unset):
             ticker = UNSET
         else:
             ticker = self.ticker
 
-        exchange: Union[None, Unset, str]
+        exchange: None | str | Unset
         if isinstance(self.exchange, Unset):
             exchange = UNSET
         else:
             exchange = self.exchange
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if ticker is not UNSET:
             field_dict["ticker"] = ticker
         if exchange is not UNSET:
@@ -60,36 +46,32 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemStockInfoCon
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        def _parse_ticker(data: object) -> Union[None, Unset, str]:
+
+        def _parse_ticker(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         ticker = _parse_ticker(d.pop("ticker", UNSET))
 
-
-        def _parse_exchange(data: object) -> Union[None, Unset, str]:
+        def _parse_exchange(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         exchange = _parse_exchange(d.pop("exchange", UNSET))
-
 
         get_current_companies_in_saved_search_response_200_output_companies_item_stock_info_consensus_type_0 = cls(
             ticker=ticker,
             exchange=exchange,
         )
-
 
         get_current_companies_in_saved_search_response_200_output_companies_item_stock_info_consensus_type_0.additional_properties = d
         return get_current_companies_in_saved_search_response_200_output_companies_item_stock_info_consensus_type_0

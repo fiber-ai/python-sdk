@@ -1,6 +1,9 @@
 from enum import Enum
 
-class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0AllOfType0ItemType5LocationType(str, Enum):
+
+class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0AllOfType0ItemType5LocationType(
+    str, Enum
+):
     HYBRID = "Hybrid"
     ON_SITE = "On-site"
     REMOTE = "Remote"

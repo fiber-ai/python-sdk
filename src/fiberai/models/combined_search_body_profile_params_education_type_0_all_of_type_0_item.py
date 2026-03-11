@@ -1,73 +1,107 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_keywords_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0
-  from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_school_name_keywords_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0
-  from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_degree_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0
-  from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_1 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1
-  from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_finished_school_at_type_1 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1
-  from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_finished_school_at_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0
-  from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0
-  from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_school_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0
-
-
-
+    from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_degree_type_0 import (
+        CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0,
+    )
+    from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_finished_school_at_type_0 import (
+        CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0,
+    )
+    from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_finished_school_at_type_1 import (
+        CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1,
+    )
+    from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_keywords_type_0 import (
+        CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0,
+    )
+    from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_school_name_keywords_type_0 import (
+        CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0,
+    )
+    from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_school_type_0 import (
+        CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0,
+    )
+    from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_0 import (
+        CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0,
+    )
+    from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_1 import (
+        CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1,
+    )
 
 
 T = TypeVar("T", bound="CombinedSearchBodyProfileParamsEducationType0AllOfType0Item")
 
 
-
 @_attrs_define
 class CombinedSearchBodyProfileParamsEducationType0AllOfType0Item:
-    """ 
-        Attributes:
-            school (Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0', None, Unset]):
-            keywords (Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0', None, Unset]):
-            degree (Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0', None, Unset]):
-            school_name_keywords
-                (Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0', None, Unset]):
-            finished_school_at (Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0',
-                'CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1', None, Unset]):
-            started_school_at (Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0',
-                'CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1', None, Unset]):
-            is_currently_student (Union[None, Unset, bool]):
-     """
+    """
+    Attributes:
+        school (CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0 | None | Unset):
+        keywords (CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0 | None | Unset):
+        degree (CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0 | None | Unset):
+        school_name_keywords (CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0 | None
+            | Unset):
+        finished_school_at (CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0 |
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1 | None | Unset):
+        started_school_at (CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0 |
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1 | None | Unset):
+        is_currently_student (bool | None | Unset):
+    """
 
-    school: Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0', None, Unset] = UNSET
-    keywords: Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0', None, Unset] = UNSET
-    degree: Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0', None, Unset] = UNSET
-    school_name_keywords: Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0', None, Unset] = UNSET
-    finished_school_at: Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0', 'CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1', None, Unset] = UNSET
-    started_school_at: Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0', 'CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1', None, Unset] = UNSET
-    is_currently_student: Union[None, Unset, bool] = UNSET
+    school: CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0 | None | Unset = UNSET
+    keywords: CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0 | None | Unset = UNSET
+    degree: CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0 | None | Unset = UNSET
+    school_name_keywords: (
+        CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0 | None | Unset
+    ) = UNSET
+    finished_school_at: (
+        CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0
+        | CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1
+        | None
+        | Unset
+    ) = UNSET
+    started_school_at: (
+        CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0
+        | CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1
+        | None
+        | Unset
+    ) = UNSET
+    is_currently_student: bool | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_keywords_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_school_name_keywords_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_degree_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_1 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_finished_school_at_type_1 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_finished_school_at_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_school_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0
-        school: Union[None, Unset, dict[str, Any]]
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_degree_type_0 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0,
+        )
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_finished_school_at_type_0 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0,
+        )
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_finished_school_at_type_1 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1,
+        )
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_keywords_type_0 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0,
+        )
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_school_name_keywords_type_0 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0,
+        )
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_school_type_0 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0,
+        )
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_0 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0,
+        )
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_1 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1,
+        )
+
+        school: dict[str, Any] | None | Unset
         if isinstance(self.school, Unset):
             school = UNSET
         elif isinstance(self.school, CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0):
@@ -75,7 +109,7 @@ class CombinedSearchBodyProfileParamsEducationType0AllOfType0Item:
         else:
             school = self.school
 
-        keywords: Union[None, Unset, dict[str, Any]]
+        keywords: dict[str, Any] | None | Unset
         if isinstance(self.keywords, Unset):
             keywords = UNSET
         elif isinstance(self.keywords, CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0):
@@ -83,7 +117,7 @@ class CombinedSearchBodyProfileParamsEducationType0AllOfType0Item:
         else:
             keywords = self.keywords
 
-        degree: Union[None, Unset, dict[str, Any]]
+        degree: dict[str, Any] | None | Unset
         if isinstance(self.degree, Unset):
             degree = UNSET
         elif isinstance(self.degree, CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0):
@@ -91,45 +125,54 @@ class CombinedSearchBodyProfileParamsEducationType0AllOfType0Item:
         else:
             degree = self.degree
 
-        school_name_keywords: Union[None, Unset, dict[str, Any]]
+        school_name_keywords: dict[str, Any] | None | Unset
         if isinstance(self.school_name_keywords, Unset):
             school_name_keywords = UNSET
-        elif isinstance(self.school_name_keywords, CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0):
+        elif isinstance(
+            self.school_name_keywords,
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0,
+        ):
             school_name_keywords = self.school_name_keywords.to_dict()
         else:
             school_name_keywords = self.school_name_keywords
 
-        finished_school_at: Union[None, Unset, dict[str, Any]]
+        finished_school_at: dict[str, Any] | None | Unset
         if isinstance(self.finished_school_at, Unset):
             finished_school_at = UNSET
-        elif isinstance(self.finished_school_at, CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0):
+        elif isinstance(
+            self.finished_school_at, CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0
+        ):
             finished_school_at = self.finished_school_at.to_dict()
-        elif isinstance(self.finished_school_at, CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1):
+        elif isinstance(
+            self.finished_school_at, CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1
+        ):
             finished_school_at = self.finished_school_at.to_dict()
         else:
             finished_school_at = self.finished_school_at
 
-        started_school_at: Union[None, Unset, dict[str, Any]]
+        started_school_at: dict[str, Any] | None | Unset
         if isinstance(self.started_school_at, Unset):
             started_school_at = UNSET
-        elif isinstance(self.started_school_at, CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0):
+        elif isinstance(
+            self.started_school_at, CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0
+        ):
             started_school_at = self.started_school_at.to_dict()
-        elif isinstance(self.started_school_at, CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1):
+        elif isinstance(
+            self.started_school_at, CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1
+        ):
             started_school_at = self.started_school_at.to_dict()
         else:
             started_school_at = self.started_school_at
 
-        is_currently_student: Union[None, Unset, bool]
+        is_currently_student: bool | None | Unset
         if isinstance(self.is_currently_student, Unset):
             is_currently_student = UNSET
         else:
             is_currently_student = self.is_currently_student
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if school is not UNSET:
             field_dict["school"] = school
         if keywords is not UNSET:
@@ -147,20 +190,38 @@ class CombinedSearchBodyProfileParamsEducationType0AllOfType0Item:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_keywords_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_school_name_keywords_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_degree_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_1 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_finished_school_at_type_1 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_finished_school_at_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0
-        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_school_type_0 import CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_degree_type_0 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0,
+        )
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_finished_school_at_type_0 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0,
+        )
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_finished_school_at_type_1 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1,
+        )
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_keywords_type_0 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0,
+        )
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_school_name_keywords_type_0 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0,
+        )
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_school_type_0 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0,
+        )
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_0 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0,
+        )
+        from ..models.combined_search_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_1 import (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1,
+        )
+
         d = dict(src_dict)
-        def _parse_school(data: object) -> Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0', None, Unset]:
+
+        def _parse_school(
+            data: object,
+        ) -> CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -170,17 +231,16 @@ class CombinedSearchBodyProfileParamsEducationType0AllOfType0Item:
                     raise TypeError()
                 school_type_0 = CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0.from_dict(data)
 
-
-
                 return school_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0', None, Unset], data)
+            return cast(CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolType0 | None | Unset, data)
 
         school = _parse_school(d.pop("school", UNSET))
 
-
-        def _parse_keywords(data: object) -> Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0', None, Unset]:
+        def _parse_keywords(
+            data: object,
+        ) -> CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -188,19 +248,20 @@ class CombinedSearchBodyProfileParamsEducationType0AllOfType0Item:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                keywords_type_0 = CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0.from_dict(data)
-
-
+                keywords_type_0 = CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0.from_dict(
+                    data
+                )
 
                 return keywords_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0', None, Unset], data)
+            return cast(CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemKeywordsType0 | None | Unset, data)
 
         keywords = _parse_keywords(d.pop("keywords", UNSET))
 
-
-        def _parse_degree(data: object) -> Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0', None, Unset]:
+        def _parse_degree(
+            data: object,
+        ) -> CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -210,17 +271,16 @@ class CombinedSearchBodyProfileParamsEducationType0AllOfType0Item:
                     raise TypeError()
                 degree_type_0 = CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0.from_dict(data)
 
-
-
                 return degree_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0', None, Unset], data)
+            return cast(CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemDegreeType0 | None | Unset, data)
 
         degree = _parse_degree(d.pop("degree", UNSET))
 
-
-        def _parse_school_name_keywords(data: object) -> Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0', None, Unset]:
+        def _parse_school_name_keywords(
+            data: object,
+        ) -> CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -228,19 +288,27 @@ class CombinedSearchBodyProfileParamsEducationType0AllOfType0Item:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                school_name_keywords_type_0 = CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0.from_dict(data)
-
-
+                school_name_keywords_type_0 = (
+                    CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0.from_dict(data)
+                )
 
                 return school_name_keywords_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0', None, Unset], data)
+            return cast(
+                CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0 | None | Unset, data
+            )
 
         school_name_keywords = _parse_school_name_keywords(d.pop("schoolNameKeywords", UNSET))
 
-
-        def _parse_finished_school_at(data: object) -> Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0', 'CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1', None, Unset]:
+        def _parse_finished_school_at(
+            data: object,
+        ) -> (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0
+            | CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -248,29 +316,41 @@ class CombinedSearchBodyProfileParamsEducationType0AllOfType0Item:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                finished_school_at_type_0 = CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0.from_dict(data)
-
-
+                finished_school_at_type_0 = (
+                    CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0.from_dict(data)
+                )
 
                 return finished_school_at_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                finished_school_at_type_1 = CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1.from_dict(data)
-
-
+                finished_school_at_type_1 = (
+                    CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1.from_dict(data)
+                )
 
                 return finished_school_at_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0', 'CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1', None, Unset], data)
+            return cast(
+                CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType0
+                | CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemFinishedSchoolAtType1
+                | None
+                | Unset,
+                data,
+            )
 
         finished_school_at = _parse_finished_school_at(d.pop("finishedSchoolAt", UNSET))
 
-
-        def _parse_started_school_at(data: object) -> Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0', 'CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1', None, Unset]:
+        def _parse_started_school_at(
+            data: object,
+        ) -> (
+            CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0
+            | CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -278,37 +358,41 @@ class CombinedSearchBodyProfileParamsEducationType0AllOfType0Item:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                started_school_at_type_0 = CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0.from_dict(data)
-
-
+                started_school_at_type_0 = (
+                    CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0.from_dict(data)
+                )
 
                 return started_school_at_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                started_school_at_type_1 = CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1.from_dict(data)
-
-
+                started_school_at_type_1 = (
+                    CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1.from_dict(data)
+                )
 
                 return started_school_at_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0', 'CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1', None, Unset], data)
+            return cast(
+                CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType0
+                | CombinedSearchBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1
+                | None
+                | Unset,
+                data,
+            )
 
         started_school_at = _parse_started_school_at(d.pop("startedSchoolAt", UNSET))
 
-
-        def _parse_is_currently_student(data: object) -> Union[None, Unset, bool]:
+        def _parse_is_currently_student(data: object) -> bool | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, bool], data)
+            return cast(bool | None | Unset, data)
 
         is_currently_student = _parse_is_currently_student(d.pop("isCurrentlyStudent", UNSET))
-
 
         combined_search_body_profile_params_education_type_0_all_of_type_0_item = cls(
             school=school,
@@ -319,7 +403,6 @@ class CombinedSearchBodyProfileParamsEducationType0AllOfType0Item:
             started_school_at=started_school_at,
             is_currently_student=is_currently_student,
         )
-
 
         combined_search_body_profile_params_education_type_0_all_of_type_0_item.additional_properties = d
         return combined_search_body_profile_params_education_type_0_all_of_type_0_item

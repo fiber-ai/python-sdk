@@ -1,66 +1,79 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_accelerator_name import (
+    CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemAcceleratorName,
+)
 from ..types import UNSET, Unset
-
-from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_accelerator_name import CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemAcceleratorName
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0 import CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0
-  from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_years_type_0 import CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0
-  from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1 import CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1
-
-
-
+    from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0 import (
+        CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0,
+    )
+    from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1 import (
+        CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1,
+    )
+    from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_years_type_0 import (
+        CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0,
+    )
 
 
 T = TypeVar("T", bound="CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0Item")
 
 
-
 @_attrs_define
 class CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0Item:
-    """ 
-        Attributes:
-            accelerator_name (CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemAcceleratorName):
-            batch_selection (Union['CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0',
-                'CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1', None, Unset]):
-            years (Union['CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0', None, Unset]):
-     """
+    """
+    Attributes:
+        accelerator_name (CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemAcceleratorName):
+        batch_selection (CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0 |
+            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1 | None | Unset):
+        years (CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0 | None | Unset):
+    """
 
     accelerator_name: CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemAcceleratorName
-    batch_selection: Union['CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0', 'CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1', None, Unset] = UNSET
-    years: Union['CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0', None, Unset] = UNSET
+    batch_selection: (
+        CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0
+        | CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1
+        | None
+        | Unset
+    ) = UNSET
+    years: CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0 | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0 import CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0
-        from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_years_type_0 import CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0
-        from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1 import CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1
+        from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0 import (
+            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0,
+        )
+        from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1 import (
+            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1,
+        )
+        from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_years_type_0 import (
+            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0,
+        )
+
         accelerator_name = self.accelerator_name.value
 
-        batch_selection: Union[None, Unset, dict[str, Any]]
+        batch_selection: dict[str, Any] | None | Unset
         if isinstance(self.batch_selection, Unset):
             batch_selection = UNSET
-        elif isinstance(self.batch_selection, CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0):
+        elif isinstance(
+            self.batch_selection, CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0
+        ):
             batch_selection = self.batch_selection.to_dict()
-        elif isinstance(self.batch_selection, CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1):
+        elif isinstance(
+            self.batch_selection, CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1
+        ):
             batch_selection = self.batch_selection.to_dict()
         else:
             batch_selection = self.batch_selection
 
-        years: Union[None, Unset, dict[str, Any]]
+        years: dict[str, Any] | None | Unset
         if isinstance(self.years, Unset):
             years = UNSET
         elif isinstance(self.years, CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0):
@@ -68,12 +81,13 @@ class CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0Item:
         else:
             years = self.years
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "acceleratorName": accelerator_name,
-        })
+        field_dict.update(
+            {
+                "acceleratorName": accelerator_name,
+            }
+        )
         if batch_selection is not UNSET:
             field_dict["batchSelection"] = batch_selection
         if years is not UNSET:
@@ -81,20 +95,31 @@ class CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0Item:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0 import CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0
-        from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_years_type_0 import CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0
-        from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1 import CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1
+        from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0 import (
+            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0,
+        )
+        from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1 import (
+            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1,
+        )
+        from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_years_type_0 import (
+            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0,
+        )
+
         d = dict(src_dict)
-        accelerator_name = CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemAcceleratorName(d.pop("acceleratorName"))
+        accelerator_name = CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemAcceleratorName(
+            d.pop("acceleratorName")
+        )
 
-
-
-
-        def _parse_batch_selection(data: object) -> Union['CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0', 'CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1', None, Unset]:
+        def _parse_batch_selection(
+            data: object,
+        ) -> (
+            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0
+            | CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -102,29 +127,36 @@ class CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0Item:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                batch_selection_type_0 = CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0.from_dict(data)
-
-
+                batch_selection_type_0 = (
+                    CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0.from_dict(data)
+                )
 
                 return batch_selection_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                batch_selection_type_1 = CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1.from_dict(data)
-
-
+                batch_selection_type_1 = (
+                    CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1.from_dict(data)
+                )
 
                 return batch_selection_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0', 'CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1', None, Unset], data)
+            return cast(
+                CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0
+                | CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1
+                | None
+                | Unset,
+                data,
+            )
 
         batch_selection = _parse_batch_selection(d.pop("batchSelection", UNSET))
 
-
-        def _parse_years(data: object) -> Union['CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0', None, Unset]:
+        def _parse_years(
+            data: object,
+        ) -> CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -134,22 +166,18 @@ class CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0Item:
                     raise TypeError()
                 years_type_0 = CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0.from_dict(data)
 
-
-
                 return years_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0', None, Unset], data)
+            return cast(CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0 | None | Unset, data)
 
         years = _parse_years(d.pop("years", UNSET))
-
 
         company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item = cls(
             accelerator_name=accelerator_name,
             batch_selection=batch_selection,
             years=years,
         )
-
 
         company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item.additional_properties = d
         return company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item

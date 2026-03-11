@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToProfileSearchResponse200OutputSearchParamsStealthV2Type1Status(str, Enum):
     LEFT_STEALTH = "left-stealth"
 

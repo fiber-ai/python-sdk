@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType0Type(str, Enum):
     TERM = "term"
 

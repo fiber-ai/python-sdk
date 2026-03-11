@@ -1,88 +1,77 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_joiner import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0Joiner
-from typing import cast
+from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_joiner import (
+    CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0Joiner,
+)
 
 if TYPE_CHECKING:
-  from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItem
-
-
-
+    from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item import (
+        CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItem,
+    )
 
 
 T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0")
 
 
-
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0:
-    """ 
-        Attributes:
-            rules (list['CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItem']):
-            joiner (CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0Joiner):
-     """
+    """
+    Attributes:
+        rules (list[CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItem]):
+        joiner (CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0Joiner):
+    """
 
-    rules: list['CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItem']
+    rules: list[CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItem]
     joiner: CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0Joiner
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItem
         rules = []
         for rules_item_data in self.rules:
             rules_item = rules_item_data.to_dict()
             rules.append(rules_item)
 
-
-
         joiner = self.joiner.value
-
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "rules": rules,
-            "joiner": joiner,
-        })
+        field_dict.update(
+            {
+                "rules": rules,
+                "joiner": joiner,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItem
+        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item import (
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItem,
+        )
+
         d = dict(src_dict)
         rules = []
         _rules = d.pop("rules")
-        for rules_item_data in (_rules):
-            rules_item = CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItem.from_dict(rules_item_data)
-
-
+        for rules_item_data in _rules:
+            rules_item = CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItem.from_dict(
+                rules_item_data
+            )
 
             rules.append(rules_item)
 
-
         joiner = CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0Joiner(d.pop("joiner"))
-
-
-
 
         create_saved_search_body_search_params_type_1_company_search_params_employees_type_0 = cls(
             rules=rules,
             joiner=joiner,
         )
-
 
         create_saved_search_body_search_params_type_1_company_search_params_employees_type_0.additional_properties = d
         return create_saved_search_body_search_params_type_1_company_search_params_employees_type_0

@@ -1,6 +1,9 @@
 from enum import Enum
 
-class TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1WindowType2Method(str, Enum):
+
+class TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType1WindowType2Method(
+    str, Enum
+):
     CALENDAR = "calendar"
 
     def __str__(self) -> str:

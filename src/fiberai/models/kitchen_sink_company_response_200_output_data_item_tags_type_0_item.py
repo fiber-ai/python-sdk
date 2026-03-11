@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class KitchenSinkCompanyResponse200OutputDataItemTagsType0Item(str, Enum):
     IS_GOVERNMENT = "is-government"
     IS_SCHOOL = "is-school"

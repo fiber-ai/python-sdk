@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCombinedSearchResponse200OutputProfileSearchParamsType0StartedInRoleType1WindowType2Method(str, Enum):
     CALENDAR = "calendar"
 

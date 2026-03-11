@@ -1,52 +1,41 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import Union
-
-
-
-
-
-
 T = TypeVar("T", bound="TextToCompanySearchResponse200OutputDataItemAcceleratorsType0ItemFoundersType0Item")
-
 
 
 @_attrs_define
 class TextToCompanySearchResponse200OutputDataItemAcceleratorsType0ItemFoundersType0Item:
-    """ 
-        Attributes:
-            full_name (Union[Unset, str]):
-            bio (Union[Unset, str]):
-            job_title (Union[Unset, str]):
-            is_active (Union[Unset, bool]):
-            email_address (Union[Unset, str]):
-            facebook_url (Union[Unset, str]):
-            twitter_handle (Union[Unset, str]):
-            linkedin_slug (Union[Unset, str]):
-            github_username (Union[Unset, str]):
-     """
+    """
+    Attributes:
+        full_name (str | Unset):
+        bio (str | Unset):
+        job_title (str | Unset):
+        is_active (bool | Unset):
+        email_address (str | Unset):
+        facebook_url (str | Unset):
+        twitter_handle (str | Unset):
+        linkedin_slug (str | Unset):
+        github_username (str | Unset):
+    """
 
-    full_name: Union[Unset, str] = UNSET
-    bio: Union[Unset, str] = UNSET
-    job_title: Union[Unset, str] = UNSET
-    is_active: Union[Unset, bool] = UNSET
-    email_address: Union[Unset, str] = UNSET
-    facebook_url: Union[Unset, str] = UNSET
-    twitter_handle: Union[Unset, str] = UNSET
-    linkedin_slug: Union[Unset, str] = UNSET
-    github_username: Union[Unset, str] = UNSET
+    full_name: str | Unset = UNSET
+    bio: str | Unset = UNSET
+    job_title: str | Unset = UNSET
+    is_active: bool | Unset = UNSET
+    email_address: str | Unset = UNSET
+    facebook_url: str | Unset = UNSET
+    twitter_handle: str | Unset = UNSET
+    linkedin_slug: str | Unset = UNSET
+    github_username: str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         full_name = self.full_name
@@ -67,11 +56,9 @@ class TextToCompanySearchResponse200OutputDataItemAcceleratorsType0ItemFoundersT
 
         github_username = self.github_username
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if full_name is not UNSET:
             field_dict["full_name"] = full_name
         if bio is not UNSET:
@@ -92,8 +79,6 @@ class TextToCompanySearchResponse200OutputDataItemAcceleratorsType0ItemFoundersT
             field_dict["github_username"] = github_username
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -127,7 +112,6 @@ class TextToCompanySearchResponse200OutputDataItemAcceleratorsType0ItemFoundersT
             linkedin_slug=linkedin_slug,
             github_username=github_username,
         )
-
 
         text_to_company_search_response_200_output_data_item_accelerators_type_0_item_founders_type_0_item.additional_properties = d
         return text_to_company_search_response_200_output_data_item_accelerators_type_0_item_founders_type_0_item

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType0Status(str, Enum):
     CURRENTLY_EMPLOYED = "currently-employed"
 

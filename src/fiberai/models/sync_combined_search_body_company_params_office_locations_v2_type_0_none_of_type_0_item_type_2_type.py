@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2Type(str, Enum):
     GEOGRAPHY = "geography"
 

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsPastJobTextType0CriteriaItemRule(str, Enum):
     EXCLUDES = "excludes"
     INCLUDES = "includes"

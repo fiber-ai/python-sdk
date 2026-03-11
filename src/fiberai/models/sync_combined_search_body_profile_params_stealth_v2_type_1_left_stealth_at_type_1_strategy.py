@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1Strategy(str, Enum):
     RELATIVE = "relative"
 

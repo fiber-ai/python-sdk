@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanySearchBodySearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType0Strategy(str, Enum):
     RADIAL_DISTANCE = "radial-distance"
 

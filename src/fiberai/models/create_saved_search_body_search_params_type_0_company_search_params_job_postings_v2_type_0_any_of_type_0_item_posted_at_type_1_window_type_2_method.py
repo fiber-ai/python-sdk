@@ -1,6 +1,9 @@
 from enum import Enum
 
-class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2Method(str, Enum):
+
+class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2Method(
+    str, Enum
+):
     CALENDAR = "calendar"
 
     def __str__(self) -> str:

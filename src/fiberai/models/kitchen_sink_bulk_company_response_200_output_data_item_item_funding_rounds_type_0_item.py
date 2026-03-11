@@ -1,85 +1,91 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_funding_rounds_type_0_item_round_type_type_1 import (
+    KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType1,
+)
+from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_funding_rounds_type_0_item_round_type_type_2_type_1 import (
+    KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType2Type1,
+)
+from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_funding_rounds_type_0_item_round_type_type_3_type_1 import (
+    KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType3Type1,
+)
 from ..types import UNSET, Unset
-
-from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_funding_rounds_type_0_item_round_type_type_1 import KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType1
-from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_funding_rounds_type_0_item_round_type_type_2_type_1 import KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType2Type1
-from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_funding_rounds_type_0_item_round_type_type_3_type_1 import KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType3Type1
-from ..types import UNSET, Unset
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
 
 T = TypeVar("T", bound="KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0Item")
 
 
-
 @_attrs_define
 class KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0Item:
-    """ 
-        Attributes:
-            round_type (Union[KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType1,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType2Type1,
-                KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType3Type1, None, Unset]):
-            announced_on_date (Union[None, Unset, str]):
-            raised_amount_usd (Union[None, Unset, float]):
-            post_money_valuation_usd (Union[None, Unset, float]):
-     """
+    """
+    Attributes:
+        round_type (KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType1 |
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType2Type1 |
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType3Type1 | None | Unset):
+        announced_on_date (None | str | Unset):
+        raised_amount_usd (float | None | Unset):
+        post_money_valuation_usd (float | None | Unset):
+    """
 
-    round_type: Union[KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType1, KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType2Type1, KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType3Type1, None, Unset] = UNSET
-    announced_on_date: Union[None, Unset, str] = UNSET
-    raised_amount_usd: Union[None, Unset, float] = UNSET
-    post_money_valuation_usd: Union[None, Unset, float] = UNSET
+    round_type: (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType1
+        | KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType2Type1
+        | KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType3Type1
+        | None
+        | Unset
+    ) = UNSET
+    announced_on_date: None | str | Unset = UNSET
+    raised_amount_usd: float | None | Unset = UNSET
+    post_money_valuation_usd: float | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        round_type: Union[None, Unset, str]
+        round_type: None | str | Unset
         if isinstance(self.round_type, Unset):
             round_type = UNSET
-        elif isinstance(self.round_type, KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType1):
+        elif isinstance(
+            self.round_type, KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType1
+        ):
             round_type = self.round_type.value
-        elif isinstance(self.round_type, KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType2Type1):
+        elif isinstance(
+            self.round_type,
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType2Type1,
+        ):
             round_type = self.round_type.value
-        elif isinstance(self.round_type, KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType3Type1):
+        elif isinstance(
+            self.round_type,
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType3Type1,
+        ):
             round_type = self.round_type.value
         else:
             round_type = self.round_type
 
-        announced_on_date: Union[None, Unset, str]
+        announced_on_date: None | str | Unset
         if isinstance(self.announced_on_date, Unset):
             announced_on_date = UNSET
         else:
             announced_on_date = self.announced_on_date
 
-        raised_amount_usd: Union[None, Unset, float]
+        raised_amount_usd: float | None | Unset
         if isinstance(self.raised_amount_usd, Unset):
             raised_amount_usd = UNSET
         else:
             raised_amount_usd = self.raised_amount_usd
 
-        post_money_valuation_usd: Union[None, Unset, float]
+        post_money_valuation_usd: float | None | Unset
         if isinstance(self.post_money_valuation_usd, Unset):
             post_money_valuation_usd = UNSET
         else:
             post_money_valuation_usd = self.post_money_valuation_usd
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if round_type is not UNSET:
             field_dict["round_type"] = round_type
         if announced_on_date is not UNSET:
@@ -91,12 +97,19 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0Item:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        def _parse_round_type(data: object) -> Union[KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType1, KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType2Type1, KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType3Type1, None, Unset]:
+
+        def _parse_round_type(
+            data: object,
+        ) -> (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType1
+            | KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType2Type1
+            | KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -104,67 +117,70 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0Item:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                round_type_type_1 = KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType1(data)
-
-
+                round_type_type_1 = (
+                    KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType1(data)
+                )
 
                 return round_type_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                round_type_type_2_type_1 = KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType2Type1(data)
-
-
+                round_type_type_2_type_1 = (
+                    KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType2Type1(data)
+                )
 
                 return round_type_type_2_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                round_type_type_3_type_1 = KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType3Type1(data)
-
-
+                round_type_type_3_type_1 = (
+                    KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType3Type1(data)
+                )
 
                 return round_type_type_3_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType1, KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType2Type1, KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType3Type1, None, Unset], data)
+            return cast(
+                KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType1
+                | KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType2Type1
+                | KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0ItemRoundTypeType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         round_type = _parse_round_type(d.pop("round_type", UNSET))
 
-
-        def _parse_announced_on_date(data: object) -> Union[None, Unset, str]:
+        def _parse_announced_on_date(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         announced_on_date = _parse_announced_on_date(d.pop("announced_on_date", UNSET))
 
-
-        def _parse_raised_amount_usd(data: object) -> Union[None, Unset, float]:
+        def _parse_raised_amount_usd(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         raised_amount_usd = _parse_raised_amount_usd(d.pop("raised_amount_usd", UNSET))
 
-
-        def _parse_post_money_valuation_usd(data: object) -> Union[None, Unset, float]:
+        def _parse_post_money_valuation_usd(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         post_money_valuation_usd = _parse_post_money_valuation_usd(d.pop("post_money_valuation_usd", UNSET))
-
 
         kitchen_sink_bulk_company_response_200_output_data_item_item_funding_rounds_type_0_item = cls(
             round_type=round_type,
@@ -172,7 +188,6 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItemFundingRoundsType0Item:
             raised_amount_usd=raised_amount_usd,
             post_money_valuation_usd=post_money_valuation_usd,
         )
-
 
         kitchen_sink_bulk_company_response_200_output_data_item_item_funding_rounds_type_0_item.additional_properties = d
         return kitchen_sink_bulk_company_response_200_output_data_item_item_funding_rounds_type_0_item

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType2GroupsItem(str, Enum):
     ASSISTANT = "assistant"
     DIRECTOR = "director"

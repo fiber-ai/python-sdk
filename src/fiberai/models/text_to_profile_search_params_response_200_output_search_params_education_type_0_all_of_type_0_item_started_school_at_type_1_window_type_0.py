@@ -1,42 +1,39 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
+from ..models.text_to_profile_search_params_response_200_output_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_0_method import (
+    TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0Method,
+)
+from ..models.text_to_profile_search_params_response_200_output_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_0_period import (
+    TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0Period,
+)
 
-from ..models.text_to_profile_search_params_response_200_output_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_0_method import TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0Method
-from ..models.text_to_profile_search_params_response_200_output_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_0_period import TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0Period
-
-
-
-
-
-
-T = TypeVar("T", bound="TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0")
-
+T = TypeVar(
+    "T",
+    bound="TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0",
+)
 
 
 @_attrs_define
 class TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0:
-    """ 
-        Attributes:
-            method (TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1Wi
-                ndowType0Method):
-            period (TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1Wi
-                ndowType0Period):
-            quantity (float):
-     """
+    """
+    Attributes:
+        method (TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1Wi
+            ndowType0Method):
+        period (TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1Wi
+            ndowType0Period):
+        quantity (float):
+    """
 
     method: TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0Method
     period: TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0Period
     quantity: float
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         method = self.method.value
@@ -45,31 +42,28 @@ class TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfT
 
         quantity = self.quantity
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "method": method,
-            "period": period,
-            "quantity": quantity,
-        })
+        field_dict.update(
+            {
+                "method": method,
+                "period": period,
+                "quantity": quantity,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        method = TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0Method(d.pop("method"))
+        method = TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0Method(
+            d.pop("method")
+        )
 
-
-
-
-        period = TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0Period(d.pop("period"))
-
-
-
+        period = TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0Period(
+            d.pop("period")
+        )
 
         quantity = d.pop("quantity")
 
@@ -78,7 +72,6 @@ class TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0AllOfT
             period=period,
             quantity=quantity,
         )
-
 
         text_to_profile_search_params_response_200_output_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_0.additional_properties = d
         return text_to_profile_search_params_response_200_output_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_0

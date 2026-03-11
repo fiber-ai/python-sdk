@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiCategoryType3Type1(str, Enum):
     C = "C"
     S = "S"

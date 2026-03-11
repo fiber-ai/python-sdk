@@ -1,62 +1,49 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.people_search_body_search_params_company_match_mode_type_0_mode import PeopleSearchBodySearchParamsCompanyMatchModeType0Mode
-
-
-
-
-
+from ..models.people_search_body_search_params_company_match_mode_type_0_mode import (
+    PeopleSearchBodySearchParamsCompanyMatchModeType0Mode,
+)
 
 T = TypeVar("T", bound="PeopleSearchBodySearchParamsCompanyMatchModeType0")
 
 
-
 @_attrs_define
 class PeopleSearchBodySearchParamsCompanyMatchModeType0:
-    """ 
-        Attributes:
-            mode (PeopleSearchBodySearchParamsCompanyMatchModeType0Mode):
-     """
+    """
+    Attributes:
+        mode (PeopleSearchBodySearchParamsCompanyMatchModeType0Mode):
+    """
 
     mode: PeopleSearchBodySearchParamsCompanyMatchModeType0Mode
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
         mode = self.mode.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "mode": mode,
-        })
+        field_dict.update(
+            {
+                "mode": mode,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         mode = PeopleSearchBodySearchParamsCompanyMatchModeType0Mode(d.pop("mode"))
 
-
-
-
         people_search_body_search_params_company_match_mode_type_0 = cls(
             mode=mode,
         )
-
 
         people_search_body_search_params_company_match_mode_type_0.additional_properties = d
         return people_search_body_search_params_company_match_mode_type_0

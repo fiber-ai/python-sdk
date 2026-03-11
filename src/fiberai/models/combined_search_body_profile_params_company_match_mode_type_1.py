@@ -1,62 +1,49 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.combined_search_body_profile_params_company_match_mode_type_1_mode import CombinedSearchBodyProfileParamsCompanyMatchModeType1Mode
-
-
-
-
-
+from ..models.combined_search_body_profile_params_company_match_mode_type_1_mode import (
+    CombinedSearchBodyProfileParamsCompanyMatchModeType1Mode,
+)
 
 T = TypeVar("T", bound="CombinedSearchBodyProfileParamsCompanyMatchModeType1")
 
 
-
 @_attrs_define
 class CombinedSearchBodyProfileParamsCompanyMatchModeType1:
-    """ 
-        Attributes:
-            mode (CombinedSearchBodyProfileParamsCompanyMatchModeType1Mode):
-     """
+    """
+    Attributes:
+        mode (CombinedSearchBodyProfileParamsCompanyMatchModeType1Mode):
+    """
 
     mode: CombinedSearchBodyProfileParamsCompanyMatchModeType1Mode
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
         mode = self.mode.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "mode": mode,
-        })
+        field_dict.update(
+            {
+                "mode": mode,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         mode = CombinedSearchBodyProfileParamsCompanyMatchModeType1Mode(d.pop("mode"))
 
-
-
-
         combined_search_body_profile_params_company_match_mode_type_1 = cls(
             mode=mode,
         )
-
 
         combined_search_body_profile_params_company_match_mode_type_1.additional_properties = d
         return combined_search_body_profile_params_company_match_mode_type_1

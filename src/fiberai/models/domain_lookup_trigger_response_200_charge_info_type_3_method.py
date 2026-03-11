@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class DomainLookupTriggerResponse200ChargeInfoType3Method(str, Enum):
     FREE = "free"
 

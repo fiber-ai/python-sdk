@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1WindowType0Method(str, Enum):
     LASTN = "lastN"
 

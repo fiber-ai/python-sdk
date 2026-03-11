@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCompanySearchResponse200OutputSearchParamsStageType0NoneOfType0Item(str, Enum):
     ACQUIRED = "acquired"
     CLOSED = "closed"

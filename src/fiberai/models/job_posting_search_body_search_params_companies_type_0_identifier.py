@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class JobPostingSearchBodySearchParamsCompaniesType0Identifier(str, Enum):
     LINKEDINSLUG = "linkedinSlug"
 

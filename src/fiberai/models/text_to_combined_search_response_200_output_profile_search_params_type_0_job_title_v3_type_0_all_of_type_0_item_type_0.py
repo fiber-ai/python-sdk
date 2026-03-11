@@ -1,62 +1,54 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
+from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_job_title_v3_type_0_all_of_type_0_item_type_0_type import (
+    TextToCombinedSearchResponse200OutputProfileSearchParamsType0JobTitleV3Type0AllOfType0ItemType0Type,
+)
 
-from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_job_title_v3_type_0_all_of_type_0_item_type_0_type import TextToCombinedSearchResponse200OutputProfileSearchParamsType0JobTitleV3Type0AllOfType0ItemType0Type
-
-
-
-
-
-
-T = TypeVar("T", bound="TextToCombinedSearchResponse200OutputProfileSearchParamsType0JobTitleV3Type0AllOfType0ItemType0")
-
+T = TypeVar(
+    "T", bound="TextToCombinedSearchResponse200OutputProfileSearchParamsType0JobTitleV3Type0AllOfType0ItemType0"
+)
 
 
 @_attrs_define
 class TextToCombinedSearchResponse200OutputProfileSearchParamsType0JobTitleV3Type0AllOfType0ItemType0:
-    """ 
-        Attributes:
-            type_ (TextToCombinedSearchResponse200OutputProfileSearchParamsType0JobTitleV3Type0AllOfType0ItemType0Type):
-            term (str):
-     """
+    """
+    Attributes:
+        type_ (TextToCombinedSearchResponse200OutputProfileSearchParamsType0JobTitleV3Type0AllOfType0ItemType0Type):
+        term (str):
+    """
 
     type_: TextToCombinedSearchResponse200OutputProfileSearchParamsType0JobTitleV3Type0AllOfType0ItemType0Type
     term: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         type_ = self.type_.value
 
         term = self.term
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "type": type_,
-            "term": term,
-        })
+        field_dict.update(
+            {
+                "type": type_,
+                "term": term,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        type_ = TextToCombinedSearchResponse200OutputProfileSearchParamsType0JobTitleV3Type0AllOfType0ItemType0Type(d.pop("type"))
-
-
-
+        type_ = TextToCombinedSearchResponse200OutputProfileSearchParamsType0JobTitleV3Type0AllOfType0ItemType0Type(
+            d.pop("type")
+        )
 
         term = d.pop("term")
 
@@ -64,7 +56,6 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0JobTitleV3Typ
             type_=type_,
             term=term,
         )
-
 
         text_to_combined_search_response_200_output_profile_search_params_type_0_job_title_v3_type_0_all_of_type_0_item_type_0.additional_properties = d
         return text_to_combined_search_response_200_output_profile_search_params_type_0_job_title_v3_type_0_all_of_type_0_item_type_0

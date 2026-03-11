@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PeopleSearchCountBodySearchParamsPastJobTextType0CriteriaItemField(str, Enum):
     ANYWHERE = "anywhere"
     SUMMARY = "summary"

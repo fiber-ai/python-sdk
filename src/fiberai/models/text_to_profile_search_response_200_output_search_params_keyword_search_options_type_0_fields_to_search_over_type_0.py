@@ -1,46 +1,41 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-
-
-
-
-
-
-T = TypeVar("T", bound="TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0")
-
+T = TypeVar(
+    "T", bound="TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0"
+)
 
 
 @_attrs_define
 class TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0:
-    """ 
-        Attributes:
-            summary (bool):  Default: True.
-            headline (bool):  Default: True.
-            past_job_titles (bool):  Default: True.
-            past_job_summaries (bool):  Default: True.
-            past_company_names (bool):  Default: True.
-            current_job_titles (bool):  Default: True.
-            current_job_summaries (bool):  Default: True.
-            current_company_names (bool):  Default: True.
-            interests (bool):  Default: True.
-            skills (bool):  Default: True.
-            industry (bool):  Default: True.
-            education (bool):  Default: True.
-            publications (bool):  Default: True.
-            certifications (bool):  Default: True.
-            articles (bool):  Default: True.
-            courses (bool):  Default: True.
-            projects (bool):  Default: True.
-            patents (bool):  Default: True.
-            volunteering (bool):  Default: False.
-            languages (bool):  Default: False.
-     """
+    """
+    Attributes:
+        summary (bool):  Default: True.
+        headline (bool):  Default: True.
+        past_job_titles (bool):  Default: True.
+        past_job_summaries (bool):  Default: True.
+        past_company_names (bool):  Default: True.
+        current_job_titles (bool):  Default: True.
+        current_job_summaries (bool):  Default: True.
+        current_company_names (bool):  Default: True.
+        interests (bool):  Default: True.
+        skills (bool):  Default: True.
+        industry (bool):  Default: True.
+        education (bool):  Default: True.
+        publications (bool):  Default: True.
+        certifications (bool):  Default: True.
+        articles (bool):  Default: True.
+        courses (bool):  Default: True.
+        projects (bool):  Default: True.
+        patents (bool):  Default: True.
+        volunteering (bool):  Default: False.
+        languages (bool):  Default: False.
+    """
 
     summary: bool = True
     headline: bool = True
@@ -63,10 +58,6 @@ class TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0F
     volunteering: bool = False
     languages: bool = False
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         summary = self.summary
@@ -109,35 +100,34 @@ class TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0F
 
         languages = self.languages
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "summary": summary,
-            "headline": headline,
-            "pastJobTitles": past_job_titles,
-            "pastJobSummaries": past_job_summaries,
-            "pastCompanyNames": past_company_names,
-            "currentJobTitles": current_job_titles,
-            "currentJobSummaries": current_job_summaries,
-            "currentCompanyNames": current_company_names,
-            "interests": interests,
-            "skills": skills,
-            "industry": industry,
-            "education": education,
-            "publications": publications,
-            "certifications": certifications,
-            "articles": articles,
-            "courses": courses,
-            "projects": projects,
-            "patents": patents,
-            "volunteering": volunteering,
-            "languages": languages,
-        })
+        field_dict.update(
+            {
+                "summary": summary,
+                "headline": headline,
+                "pastJobTitles": past_job_titles,
+                "pastJobSummaries": past_job_summaries,
+                "pastCompanyNames": past_company_names,
+                "currentJobTitles": current_job_titles,
+                "currentJobSummaries": current_job_summaries,
+                "currentCompanyNames": current_company_names,
+                "interests": interests,
+                "skills": skills,
+                "industry": industry,
+                "education": education,
+                "publications": publications,
+                "certifications": certifications,
+                "articles": articles,
+                "courses": courses,
+                "projects": projects,
+                "patents": patents,
+                "volunteering": volunteering,
+                "languages": languages,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -204,7 +194,6 @@ class TextToProfileSearchResponse200OutputSearchParamsKeywordSearchOptionsType0F
             volunteering=volunteering,
             languages=languages,
         )
-
 
         text_to_profile_search_response_200_output_search_params_keyword_search_options_type_0_fields_to_search_over_type_0.additional_properties = d
         return text_to_profile_search_response_200_output_search_params_keyword_search_options_type_0_fields_to_search_over_type_0

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType1Method(str, Enum):
     WITHIN = "within"
 

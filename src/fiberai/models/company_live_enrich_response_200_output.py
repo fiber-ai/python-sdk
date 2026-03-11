@@ -1,67 +1,52 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from typing import cast
-
 if TYPE_CHECKING:
-  from ..models.company_live_enrich_response_200_output_company import CompanyLiveEnrichResponse200OutputCompany
-
-
-
+    from ..models.company_live_enrich_response_200_output_company import CompanyLiveEnrichResponse200OutputCompany
 
 
 T = TypeVar("T", bound="CompanyLiveEnrichResponse200Output")
 
 
-
 @_attrs_define
 class CompanyLiveEnrichResponse200Output:
-    """ 
-        Attributes:
-            company (CompanyLiveEnrichResponse200OutputCompany): The company that was found and enriched else a 404 HTTP
-                code is returned
-     """
+    """
+    Attributes:
+        company (CompanyLiveEnrichResponse200OutputCompany): The company that was found and enriched else a 404 HTTP
+            code is returned
+    """
 
-    company: 'CompanyLiveEnrichResponse200OutputCompany'
+    company: CompanyLiveEnrichResponse200OutputCompany
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.company_live_enrich_response_200_output_company import CompanyLiveEnrichResponse200OutputCompany
         company = self.company.to_dict()
-
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "company": company,
-        })
+        field_dict.update(
+            {
+                "company": company,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_live_enrich_response_200_output_company import CompanyLiveEnrichResponse200OutputCompany
+
         d = dict(src_dict)
         company = CompanyLiveEnrichResponse200OutputCompany.from_dict(d.pop("company"))
-
-
-
 
         company_live_enrich_response_200_output = cls(
             company=company,
         )
-
 
         company_live_enrich_response_200_output.additional_properties = d
         return company_live_enrich_response_200_output

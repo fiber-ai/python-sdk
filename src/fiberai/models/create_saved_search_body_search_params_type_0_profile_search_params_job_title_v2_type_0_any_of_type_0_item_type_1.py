@@ -1,40 +1,33 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v2_type_0_any_of_type_0_item_type_1_groups_item import CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1GroupsItem
-from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v2_type_0_any_of_type_0_item_type_1_type import CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1Type
-from typing import cast
-
-
-
-
-
+from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v2_type_0_any_of_type_0_item_type_1_groups_item import (
+    CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1GroupsItem,
+)
+from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v2_type_0_any_of_type_0_item_type_1_type import (
+    CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1Type,
+)
 
 T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1")
 
 
-
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1:
-    """ 
-        Attributes:
-            type_ (CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1Type):
-            groups
-                (list[CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1GroupsItem]):
-     """
+    """
+    Attributes:
+        type_ (CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1Type):
+        groups
+            (list[CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1GroupsItem]):
+    """
 
     type_: CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1Type
     groups: list[CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1GroupsItem]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         type_ = self.type_.value
@@ -44,43 +37,39 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0An
             groups_item = groups_item_data.value
             groups.append(groups_item)
 
-
-
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "type": type_,
-            "groups": groups,
-        })
+        field_dict.update(
+            {
+                "type": type_,
+                "groups": groups,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        type_ = CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1Type(d.pop("type"))
-
-
-
+        type_ = CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1Type(
+            d.pop("type")
+        )
 
         groups = []
         _groups = d.pop("groups")
-        for groups_item_data in (_groups):
-            groups_item = CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1GroupsItem(groups_item_data)
-
-
+        for groups_item_data in _groups:
+            groups_item = (
+                CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0AnyOfType0ItemType1GroupsItem(
+                    groups_item_data
+                )
+            )
 
             groups.append(groups_item)
-
 
         create_saved_search_body_search_params_type_0_profile_search_params_job_title_v2_type_0_any_of_type_0_item_type_1 = cls(
             type_=type_,
             groups=groups,
         )
-
 
         create_saved_search_body_search_params_type_0_profile_search_params_job_title_v2_type_0_any_of_type_0_item_type_1.additional_properties = d
         return create_saved_search_body_search_params_type_0_profile_search_params_job_title_v2_type_0_any_of_type_0_item_type_1

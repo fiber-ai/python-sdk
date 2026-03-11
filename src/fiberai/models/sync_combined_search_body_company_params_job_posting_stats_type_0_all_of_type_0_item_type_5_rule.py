@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType5Rule(str, Enum):
     LOCATION_TYPE = "location-type"
 

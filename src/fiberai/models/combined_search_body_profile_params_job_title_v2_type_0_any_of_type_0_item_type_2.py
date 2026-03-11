@@ -1,43 +1,35 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.combined_search_body_profile_params_job_title_v2_type_0_any_of_type_0_item_type_2_groups_item import (
+    CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType2GroupsItem,
+)
+from ..models.combined_search_body_profile_params_job_title_v2_type_0_any_of_type_0_item_type_2_type import (
+    CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType2Type,
+)
 from ..types import UNSET, Unset
-
-from ..models.combined_search_body_profile_params_job_title_v2_type_0_any_of_type_0_item_type_2_groups_item import CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType2GroupsItem
-from ..models.combined_search_body_profile_params_job_title_v2_type_0_any_of_type_0_item_type_2_type import CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType2Type
-from ..types import UNSET, Unset
-from typing import cast
-from typing import Union
-
-
-
-
-
 
 T = TypeVar("T", bound="CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType2")
 
 
-
 @_attrs_define
 class CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType2:
-    """ 
-        Attributes:
-            type_ (CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType2Type):
-            groups (list[CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType2GroupsItem]):
-            keywords (Union[Unset, list[str]]):
-     """
+    """
+    Attributes:
+        type_ (CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType2Type):
+        groups (list[CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType2GroupsItem]):
+        keywords (list[str] | Unset):
+    """
 
     type_: CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType2Type
     groups: list[CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType2GroupsItem]
-    keywords: Union[Unset, list[str]] = UNSET
+    keywords: list[str] | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         type_ = self.type_.value
@@ -47,55 +39,42 @@ class CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType2:
             groups_item = groups_item_data.value
             groups.append(groups_item)
 
-
-
-        keywords: Union[Unset, list[str]] = UNSET
+        keywords: list[str] | Unset = UNSET
         if not isinstance(self.keywords, Unset):
             keywords = self.keywords
 
-
-
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "type": type_,
-            "groups": groups,
-        })
+        field_dict.update(
+            {
+                "type": type_,
+                "groups": groups,
+            }
+        )
         if keywords is not UNSET:
             field_dict["keywords"] = keywords
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         type_ = CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType2Type(d.pop("type"))
 
-
-
-
         groups = []
         _groups = d.pop("groups")
-        for groups_item_data in (_groups):
+        for groups_item_data in _groups:
             groups_item = CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType2GroupsItem(groups_item_data)
-
-
 
             groups.append(groups_item)
 
-
         keywords = cast(list[str], d.pop("keywords", UNSET))
-
 
         combined_search_body_profile_params_job_title_v2_type_0_any_of_type_0_item_type_2 = cls(
             type_=type_,
             groups=groups,
             keywords=keywords,
         )
-
 
         combined_search_body_profile_params_job_title_v2_type_0_any_of_type_0_item_type_2.additional_properties = d
         return combined_search_body_profile_params_job_title_v2_type_0_any_of_type_0_item_type_2

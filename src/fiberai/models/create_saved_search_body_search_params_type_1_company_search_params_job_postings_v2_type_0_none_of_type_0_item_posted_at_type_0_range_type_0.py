@@ -1,58 +1,47 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
-
-T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0RangeType0")
-
+T = TypeVar(
+    "T",
+    bound="CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0RangeType0",
+)
 
 
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingsV2Type0NoneOfType0ItemPostedAtType0RangeType0:
-    """ 
-        Attributes:
-            lower_bound (Union[None, Unset, str]):
-            upper_bound (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        lower_bound (None | str | Unset):
+        upper_bound (None | str | Unset):
+    """
 
-    lower_bound: Union[None, Unset, str] = UNSET
-    upper_bound: Union[None, Unset, str] = UNSET
+    lower_bound: None | str | Unset = UNSET
+    upper_bound: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        lower_bound: Union[None, Unset, str]
+        lower_bound: None | str | Unset
         if isinstance(self.lower_bound, Unset):
             lower_bound = UNSET
         else:
             lower_bound = self.lower_bound
 
-        upper_bound: Union[None, Unset, str]
+        upper_bound: None | str | Unset
         if isinstance(self.upper_bound, Unset):
             upper_bound = UNSET
         else:
             upper_bound = self.upper_bound
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if lower_bound is not UNSET:
             field_dict["lowerBound"] = lower_bound
         if upper_bound is not UNSET:
@@ -60,36 +49,32 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingsV2Type
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        def _parse_lower_bound(data: object) -> Union[None, Unset, str]:
+
+        def _parse_lower_bound(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         lower_bound = _parse_lower_bound(d.pop("lowerBound", UNSET))
 
-
-        def _parse_upper_bound(data: object) -> Union[None, Unset, str]:
+        def _parse_upper_bound(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         upper_bound = _parse_upper_bound(d.pop("upperBound", UNSET))
-
 
         create_saved_search_body_search_params_type_1_company_search_params_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_0_range_type_0 = cls(
             lower_bound=lower_bound,
             upper_bound=upper_bound,
         )
-
 
         create_saved_search_body_search_params_type_1_company_search_params_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_0_range_type_0.additional_properties = d
         return create_saved_search_body_search_params_type_1_company_search_params_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_0_range_type_0

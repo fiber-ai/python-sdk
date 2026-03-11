@@ -1,39 +1,32 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.people_search_count_body_search_params_job_title_v2_type_0_all_of_type_0_item_type_1_groups_item import PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1GroupsItem
-from ..models.people_search_count_body_search_params_job_title_v2_type_0_all_of_type_0_item_type_1_type import PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1Type
-from typing import cast
-
-
-
-
-
+from ..models.people_search_count_body_search_params_job_title_v2_type_0_all_of_type_0_item_type_1_groups_item import (
+    PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1GroupsItem,
+)
+from ..models.people_search_count_body_search_params_job_title_v2_type_0_all_of_type_0_item_type_1_type import (
+    PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1Type,
+)
 
 T = TypeVar("T", bound="PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1")
 
 
-
 @_attrs_define
 class PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1:
-    """ 
-        Attributes:
-            type_ (PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1Type):
-            groups (list[PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1GroupsItem]):
-     """
+    """
+    Attributes:
+        type_ (PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1Type):
+        groups (list[PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1GroupsItem]):
+    """
 
     type_: PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1Type
     groups: list[PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1GroupsItem]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         type_ = self.type_.value
@@ -43,43 +36,35 @@ class PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1:
             groups_item = groups_item_data.value
             groups.append(groups_item)
 
-
-
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "type": type_,
-            "groups": groups,
-        })
+        field_dict.update(
+            {
+                "type": type_,
+                "groups": groups,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         type_ = PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1Type(d.pop("type"))
 
-
-
-
         groups = []
         _groups = d.pop("groups")
-        for groups_item_data in (_groups):
-            groups_item = PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1GroupsItem(groups_item_data)
-
-
+        for groups_item_data in _groups:
+            groups_item = PeopleSearchCountBodySearchParamsJobTitleV2Type0AllOfType0ItemType1GroupsItem(
+                groups_item_data
+            )
 
             groups.append(groups_item)
-
 
         people_search_count_body_search_params_job_title_v2_type_0_all_of_type_0_item_type_1 = cls(
             type_=type_,
             groups=groups,
         )
-
 
         people_search_count_body_search_params_job_title_v2_type_0_all_of_type_0_item_type_1.additional_properties = d
         return people_search_count_body_search_params_job_title_v2_type_0_all_of_type_0_item_type_1

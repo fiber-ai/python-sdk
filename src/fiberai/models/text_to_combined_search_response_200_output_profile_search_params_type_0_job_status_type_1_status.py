@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCombinedSearchResponse200OutputProfileSearchParamsType0JobStatusType1Status(str, Enum):
     PREVIOUSLY_EMPLOYED = "previously-employed"
 

@@ -1,65 +1,72 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
-from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
-
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.get_prospect_exclusion_lists_response_200_warnings_type_0_item import GetProspectExclusionListsResponse200WarningsType0Item
-  from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_3 import GetProspectExclusionListsResponse200ChargeInfoType3
-  from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_0 import GetProspectExclusionListsResponse200ChargeInfoType0
-  from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_2 import GetProspectExclusionListsResponse200ChargeInfoType2
-  from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_1 import GetProspectExclusionListsResponse200ChargeInfoType1
-  from ..models.get_prospect_exclusion_lists_response_200_output_item import GetProspectExclusionListsResponse200OutputItem
-
-
-
+    from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_0 import (
+        GetProspectExclusionListsResponse200ChargeInfoType0,
+    )
+    from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_1 import (
+        GetProspectExclusionListsResponse200ChargeInfoType1,
+    )
+    from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_2 import (
+        GetProspectExclusionListsResponse200ChargeInfoType2,
+    )
+    from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_3 import (
+        GetProspectExclusionListsResponse200ChargeInfoType3,
+    )
+    from ..models.get_prospect_exclusion_lists_response_200_output_item import (
+        GetProspectExclusionListsResponse200OutputItem,
+    )
+    from ..models.get_prospect_exclusion_lists_response_200_warnings_type_0_item import (
+        GetProspectExclusionListsResponse200WarningsType0Item,
+    )
 
 
 T = TypeVar("T", bound="GetProspectExclusionListsResponse200")
 
 
-
 @_attrs_define
 class GetProspectExclusionListsResponse200:
-    """ 
-        Attributes:
-            output (list['GetProspectExclusionListsResponse200OutputItem']):
-            charge_info (Union['GetProspectExclusionListsResponse200ChargeInfoType0',
-                'GetProspectExclusionListsResponse200ChargeInfoType1', 'GetProspectExclusionListsResponse200ChargeInfoType2',
-                'GetProspectExclusionListsResponse200ChargeInfoType3']):
-            warnings (Union[None, Unset, list['GetProspectExclusionListsResponse200WarningsType0Item']]): Warnings about
-                extraneous fields in request
-     """
+    """
+    Attributes:
+        output (list[GetProspectExclusionListsResponse200OutputItem]):
+        charge_info (GetProspectExclusionListsResponse200ChargeInfoType0 |
+            GetProspectExclusionListsResponse200ChargeInfoType1 | GetProspectExclusionListsResponse200ChargeInfoType2 |
+            GetProspectExclusionListsResponse200ChargeInfoType3):
+        warnings (list[GetProspectExclusionListsResponse200WarningsType0Item] | None | Unset): Warnings about extraneous
+            fields in request
+    """
 
-    output: list['GetProspectExclusionListsResponse200OutputItem']
-    charge_info: Union['GetProspectExclusionListsResponse200ChargeInfoType0', 'GetProspectExclusionListsResponse200ChargeInfoType1', 'GetProspectExclusionListsResponse200ChargeInfoType2', 'GetProspectExclusionListsResponse200ChargeInfoType3']
-    warnings: Union[None, Unset, list['GetProspectExclusionListsResponse200WarningsType0Item']] = UNSET
-
-
-
-
+    output: list[GetProspectExclusionListsResponse200OutputItem]
+    charge_info: (
+        GetProspectExclusionListsResponse200ChargeInfoType0
+        | GetProspectExclusionListsResponse200ChargeInfoType1
+        | GetProspectExclusionListsResponse200ChargeInfoType2
+        | GetProspectExclusionListsResponse200ChargeInfoType3
+    )
+    warnings: list[GetProspectExclusionListsResponse200WarningsType0Item] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_prospect_exclusion_lists_response_200_warnings_type_0_item import GetProspectExclusionListsResponse200WarningsType0Item
-        from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_3 import GetProspectExclusionListsResponse200ChargeInfoType3
-        from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_0 import GetProspectExclusionListsResponse200ChargeInfoType0
-        from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_2 import GetProspectExclusionListsResponse200ChargeInfoType2
-        from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_1 import GetProspectExclusionListsResponse200ChargeInfoType1
-        from ..models.get_prospect_exclusion_lists_response_200_output_item import GetProspectExclusionListsResponse200OutputItem
+        from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_0 import (
+            GetProspectExclusionListsResponse200ChargeInfoType0,
+        )
+        from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_1 import (
+            GetProspectExclusionListsResponse200ChargeInfoType1,
+        )
+        from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_2 import (
+            GetProspectExclusionListsResponse200ChargeInfoType2,
+        )
+
         output = []
         for output_item_data in self.output:
             output_item = output_item_data.to_dict()
             output.append(output_item)
-
-
 
         charge_info: dict[str, Any]
         if isinstance(self.charge_info, GetProspectExclusionListsResponse200ChargeInfoType0):
@@ -71,8 +78,7 @@ class GetProspectExclusionListsResponse200:
         else:
             charge_info = self.charge_info.to_dict()
 
-
-        warnings: Union[None, Unset, list[dict[str, Any]]]
+        warnings: list[dict[str, Any]] | None | Unset
         if isinstance(self.warnings, Unset):
             warnings = UNSET
         elif isinstance(self.warnings, list):
@@ -81,86 +87,92 @@ class GetProspectExclusionListsResponse200:
                 warnings_type_0_item = warnings_type_0_item_data.to_dict()
                 warnings.append(warnings_type_0_item)
 
-
         else:
             warnings = self.warnings
 
-
         field_dict: dict[str, Any] = {}
 
-        field_dict.update({
-            "output": output,
-            "chargeInfo": charge_info,
-        })
+        field_dict.update(
+            {
+                "output": output,
+                "chargeInfo": charge_info,
+            }
+        )
         if warnings is not UNSET:
             field_dict["warnings"] = warnings
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_prospect_exclusion_lists_response_200_warnings_type_0_item import GetProspectExclusionListsResponse200WarningsType0Item
-        from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_3 import GetProspectExclusionListsResponse200ChargeInfoType3
-        from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_0 import GetProspectExclusionListsResponse200ChargeInfoType0
-        from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_2 import GetProspectExclusionListsResponse200ChargeInfoType2
-        from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_1 import GetProspectExclusionListsResponse200ChargeInfoType1
-        from ..models.get_prospect_exclusion_lists_response_200_output_item import GetProspectExclusionListsResponse200OutputItem
+        from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_0 import (
+            GetProspectExclusionListsResponse200ChargeInfoType0,
+        )
+        from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_1 import (
+            GetProspectExclusionListsResponse200ChargeInfoType1,
+        )
+        from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_2 import (
+            GetProspectExclusionListsResponse200ChargeInfoType2,
+        )
+        from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_3 import (
+            GetProspectExclusionListsResponse200ChargeInfoType3,
+        )
+        from ..models.get_prospect_exclusion_lists_response_200_output_item import (
+            GetProspectExclusionListsResponse200OutputItem,
+        )
+        from ..models.get_prospect_exclusion_lists_response_200_warnings_type_0_item import (
+            GetProspectExclusionListsResponse200WarningsType0Item,
+        )
+
         d = dict(src_dict)
         output = []
         _output = d.pop("output")
-        for output_item_data in (_output):
+        for output_item_data in _output:
             output_item = GetProspectExclusionListsResponse200OutputItem.from_dict(output_item_data)
-
-
 
             output.append(output_item)
 
-
-        def _parse_charge_info(data: object) -> Union['GetProspectExclusionListsResponse200ChargeInfoType0', 'GetProspectExclusionListsResponse200ChargeInfoType1', 'GetProspectExclusionListsResponse200ChargeInfoType2', 'GetProspectExclusionListsResponse200ChargeInfoType3']:
+        def _parse_charge_info(
+            data: object,
+        ) -> (
+            GetProspectExclusionListsResponse200ChargeInfoType0
+            | GetProspectExclusionListsResponse200ChargeInfoType1
+            | GetProspectExclusionListsResponse200ChargeInfoType2
+            | GetProspectExclusionListsResponse200ChargeInfoType3
+        ):
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 charge_info_type_0 = GetProspectExclusionListsResponse200ChargeInfoType0.from_dict(data)
 
-
-
                 return charge_info_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 charge_info_type_1 = GetProspectExclusionListsResponse200ChargeInfoType1.from_dict(data)
 
-
-
                 return charge_info_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 charge_info_type_2 = GetProspectExclusionListsResponse200ChargeInfoType2.from_dict(data)
 
-
-
                 return charge_info_type_2
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             if not isinstance(data, dict):
                 raise TypeError()
             charge_info_type_3 = GetProspectExclusionListsResponse200ChargeInfoType3.from_dict(data)
 
-
-
             return charge_info_type_3
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 
-
-        def _parse_warnings(data: object) -> Union[None, Unset, list['GetProspectExclusionListsResponse200WarningsType0Item']]:
+        def _parse_warnings(data: object) -> list[GetProspectExclusionListsResponse200WarningsType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -170,20 +182,19 @@ class GetProspectExclusionListsResponse200:
                     raise TypeError()
                 warnings_type_0 = []
                 _warnings_type_0 = data
-                for warnings_type_0_item_data in (_warnings_type_0):
-                    warnings_type_0_item = GetProspectExclusionListsResponse200WarningsType0Item.from_dict(warnings_type_0_item_data)
-
-
+                for warnings_type_0_item_data in _warnings_type_0:
+                    warnings_type_0_item = GetProspectExclusionListsResponse200WarningsType0Item.from_dict(
+                        warnings_type_0_item_data
+                    )
 
                     warnings_type_0.append(warnings_type_0_item)
 
                 return warnings_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['GetProspectExclusionListsResponse200WarningsType0Item']], data)
+            return cast(list[GetProspectExclusionListsResponse200WarningsType0Item] | None | Unset, data)
 
         warnings = _parse_warnings(d.pop("warnings", UNSET))
-
 
         get_prospect_exclusion_lists_response_200 = cls(
             output=output,
@@ -192,4 +203,3 @@ class GetProspectExclusionListsResponse200:
         )
 
         return get_prospect_exclusion_lists_response_200
-

@@ -1,62 +1,50 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.kitchen_sink_profile_body_school_identifier_type_0_identifier import KitchenSinkProfileBodySchoolIdentifierType0Identifier
-
-
-
-
-
+from ..models.kitchen_sink_profile_body_school_identifier_type_0_identifier import (
+    KitchenSinkProfileBodySchoolIdentifierType0Identifier,
+)
 
 T = TypeVar("T", bound="KitchenSinkProfileBodySchoolIdentifierType0")
 
 
-
 @_attrs_define
 class KitchenSinkProfileBodySchoolIdentifierType0:
-    """ 
-        Attributes:
-            identifier (KitchenSinkProfileBodySchoolIdentifierType0Identifier):
-            value (str):
-     """
+    """
+    Attributes:
+        identifier (KitchenSinkProfileBodySchoolIdentifierType0Identifier):
+        value (str):
+    """
 
     identifier: KitchenSinkProfileBodySchoolIdentifierType0Identifier
     value: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         identifier = self.identifier.value
 
         value = self.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "identifier": identifier,
-            "value": value,
-        })
+        field_dict.update(
+            {
+                "identifier": identifier,
+                "value": value,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         identifier = KitchenSinkProfileBodySchoolIdentifierType0Identifier(d.pop("identifier"))
-
-
-
 
         value = d.pop("value")
 
@@ -64,7 +52,6 @@ class KitchenSinkProfileBodySchoolIdentifierType0:
             identifier=identifier,
             value=value,
         )
-
 
         kitchen_sink_profile_body_school_identifier_type_0.additional_properties = d
         return kitchen_sink_profile_body_school_identifier_type_0

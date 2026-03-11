@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType1GroupsItem(str, Enum):
     BOARD_MEMBER = "board-member"
     C_SUITE = "c-suite"

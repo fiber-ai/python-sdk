@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCombinedSearchResponse200OutputCompanySearchParamsType0TechnologiesType0AnyOfType0ItemType0Type(str, Enum):
     PREDEFINED = "predefined"
 

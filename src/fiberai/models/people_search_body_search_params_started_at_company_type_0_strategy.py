@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PeopleSearchBodySearchParamsStartedAtCompanyType0Strategy(str, Enum):
     ABSOLUTE = "absolute"
 

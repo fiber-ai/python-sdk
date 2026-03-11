@@ -1,74 +1,72 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0_matched_offices_item_location_type_0 import KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0
-
-
-
+    from ..models.kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0_matched_offices_item_location_type_0 import (
+        KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0,
+    )
 
 
 T = TypeVar("T", bound="KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItem")
 
 
-
 @_attrs_define
 class KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItem:
-    """ 
-        Attributes:
-            address (Union[None, Unset, str]):
-            is_primary (Union[None, Unset, bool]):
-            location
-                (Union['KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0',
-                None, Unset]):
-     """
+    """
+    Attributes:
+        address (None | str | Unset):
+        is_primary (bool | None | Unset):
+        location (KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0 |
+            None | Unset):
+    """
 
-    address: Union[None, Unset, str] = UNSET
-    is_primary: Union[None, Unset, bool] = UNSET
-    location: Union['KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0', None, Unset] = UNSET
+    address: None | str | Unset = UNSET
+    is_primary: bool | None | Unset = UNSET
+    location: (
+        KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0
+        | None
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0_matched_offices_item_location_type_0 import KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0
-        address: Union[None, Unset, str]
+        from ..models.kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0_matched_offices_item_location_type_0 import (
+            KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0,
+        )
+
+        address: None | str | Unset
         if isinstance(self.address, Unset):
             address = UNSET
         else:
             address = self.address
 
-        is_primary: Union[None, Unset, bool]
+        is_primary: bool | None | Unset
         if isinstance(self.is_primary, Unset):
             is_primary = UNSET
         else:
             is_primary = self.is_primary
 
-        location: Union[None, Unset, dict[str, Any]]
+        location: dict[str, Any] | None | Unset
         if isinstance(self.location, Unset):
             location = UNSET
-        elif isinstance(self.location, KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0):
+        elif isinstance(
+            self.location,
+            KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0,
+        ):
             location = self.location.to_dict()
         else:
             location = self.location
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if address is not UNSET:
             field_dict["address"] = address
         if is_primary is not UNSET:
@@ -78,33 +76,39 @@ class KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0Matche
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0_matched_offices_item_location_type_0 import KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0
+        from ..models.kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0_matched_offices_item_location_type_0 import (
+            KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0,
+        )
+
         d = dict(src_dict)
-        def _parse_address(data: object) -> Union[None, Unset, str]:
+
+        def _parse_address(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         address = _parse_address(d.pop("address", UNSET))
 
-
-        def _parse_is_primary(data: object) -> Union[None, Unset, bool]:
+        def _parse_is_primary(data: object) -> bool | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, bool], data)
+            return cast(bool | None | Unset, data)
 
         is_primary = _parse_is_primary(d.pop("is_primary", UNSET))
 
-
-        def _parse_location(data: object) -> Union['KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0', None, Unset]:
+        def _parse_location(
+            data: object,
+        ) -> (
+            KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -112,24 +116,27 @@ class KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0Matche
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                location_type_0 = KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0.from_dict(data)
-
-
+                location_type_0 = KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0.from_dict(
+                    data
+                )
 
                 return location_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0', None, Unset], data)
+            return cast(
+                KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0
+                | None
+                | Unset,
+                data,
+            )
 
         location = _parse_location(d.pop("location", UNSET))
-
 
         kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0_matched_offices_item = cls(
             address=address,
             is_primary=is_primary,
             location=location,
         )
-
 
         kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0_matched_offices_item.additional_properties = d
         return kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0_matched_offices_item

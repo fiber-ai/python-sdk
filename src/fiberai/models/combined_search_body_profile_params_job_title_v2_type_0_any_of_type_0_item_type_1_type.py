@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyProfileParamsJobTitleV2Type0AnyOfType0ItemType1Type(str, Enum):
     STATIC_GROUPS = "static-groups"
 

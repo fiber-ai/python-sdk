@@ -1,136 +1,247 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
-from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
-
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.text_to_profile_search_params_response_200_output_search_params_started_in_role_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_started_at_company_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_location_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_years_of_experience_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_education_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_languages_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_1 import TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType1
-  from ..models.text_to_profile_search_params_response_200_output_search_params_num_followers_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_tags_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_keyword_search_options_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_time_zone_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_started_at_company_type_1 import TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1
-  from ..models.text_to_profile_search_params_response_200_output_search_params_num_connections_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_fuzzy_name_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_1 import TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1
-  from ..models.text_to_profile_search_params_response_200_output_search_params_past_jobs_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_started_in_role_type_1 import TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1
-  from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_2 import TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType2
-  from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_job_title_v3_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_keywords_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_country_3_letter_code_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_approx_age_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0
-
-
-
+    from ..models.text_to_profile_search_params_response_200_output_search_params_approx_age_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_country_3_letter_code_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_education_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_fuzzy_name_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_1 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType1,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_2 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType2,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_job_title_v3_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_keyword_search_options_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_keywords_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_languages_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_location_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_num_connections_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_num_followers_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_past_jobs_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_started_at_company_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_started_at_company_type_1 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_started_in_role_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_started_in_role_type_1 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_1 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_tags_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_time_zone_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_years_of_experience_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0,
+    )
 
 
 T = TypeVar("T", bound="TextToProfileSearchParamsResponse200OutputSearchParams")
 
 
-
 @_attrs_define
 class TextToProfileSearchParamsResponse200OutputSearchParams:
-    """ 
-        Attributes:
-            job_title_v3 (Union['TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0', None, Unset]):
-            job_status (Union['TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0',
-                'TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType1',
-                'TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType2', None, Unset]):
-            approx_age (Union['TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0', None, Unset]):
-            started_in_role (Union['TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0',
-                'TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1', None, Unset]):
-            started_at_company (Union['TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0',
-                'TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1', None, Unset]):
-            years_of_experience (Union['TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0', None,
-                Unset]):
-            keywords (Union['TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0', None, Unset]):
-            keyword_search_options (Union['TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0',
-                None, Unset]):
-            fuzzy_name (Union['TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0', None, Unset]):
-            tags (Union['TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0', None, Unset]):
-            stealth_v2 (Union['TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0',
-                'TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1', None, Unset]):
-            country_3_letter_code (Union['TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0',
-                None, Unset]):
-            location (Union['TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0', None, Unset]):
-            time_zone (Union['TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0', None, Unset]):
-            education (Union['TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0', None, Unset]):
-            languages (Union['TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0', None, Unset]):
-            past_jobs (Union['TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0', None, Unset]):
-            num_connections (Union['TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0', None,
-                Unset]):
-            num_followers (Union['TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0', None, Unset]):
-            max_people_per_company (Union[None, Unset, float]):
-     """
+    """
+    Attributes:
+        job_title_v3 (None | TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0 | Unset):
+        job_status (None | TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0 |
+            TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType1 |
+            TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType2 | Unset):
+        approx_age (None | TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0 | Unset):
+        started_in_role (None | TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0 |
+            TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1 | Unset):
+        started_at_company (None | TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0 |
+            TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1 | Unset):
+        years_of_experience (None | TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0 |
+            Unset):
+        keywords (None | TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0 | Unset):
+        keyword_search_options (None | TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0 |
+            Unset):
+        fuzzy_name (None | TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0 | Unset):
+        tags (None | TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0 | Unset):
+        stealth_v2 (None | TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0 |
+            TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1 | Unset):
+        country_3_letter_code (None | TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0 |
+            Unset):
+        location (None | TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0 | Unset):
+        time_zone (None | TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0 | Unset):
+        education (None | TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0 | Unset):
+        languages (None | TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0 | Unset):
+        past_jobs (None | TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0 | Unset):
+        num_connections (None | TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0 | Unset):
+        num_followers (None | TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0 | Unset):
+        max_people_per_company (float | None | Unset):
+    """
 
-    job_title_v3: Union['TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0', None, Unset] = UNSET
-    job_status: Union['TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0', 'TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType1', 'TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType2', None, Unset] = UNSET
-    approx_age: Union['TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0', None, Unset] = UNSET
-    started_in_role: Union['TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0', 'TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1', None, Unset] = UNSET
-    started_at_company: Union['TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0', 'TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1', None, Unset] = UNSET
-    years_of_experience: Union['TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0', None, Unset] = UNSET
-    keywords: Union['TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0', None, Unset] = UNSET
-    keyword_search_options: Union['TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0', None, Unset] = UNSET
-    fuzzy_name: Union['TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0', None, Unset] = UNSET
-    tags: Union['TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0', None, Unset] = UNSET
-    stealth_v2: Union['TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0', 'TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1', None, Unset] = UNSET
-    country_3_letter_code: Union['TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0', None, Unset] = UNSET
-    location: Union['TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0', None, Unset] = UNSET
-    time_zone: Union['TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0', None, Unset] = UNSET
-    education: Union['TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0', None, Unset] = UNSET
-    languages: Union['TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0', None, Unset] = UNSET
-    past_jobs: Union['TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0', None, Unset] = UNSET
-    num_connections: Union['TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0', None, Unset] = UNSET
-    num_followers: Union['TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0', None, Unset] = UNSET
-    max_people_per_company: Union[None, Unset, float] = UNSET
-
-
-
-
+    job_title_v3: None | TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0 | Unset = UNSET
+    job_status: (
+        None
+        | TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0
+        | TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType1
+        | TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType2
+        | Unset
+    ) = UNSET
+    approx_age: None | TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0 | Unset = UNSET
+    started_in_role: (
+        None
+        | TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0
+        | TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1
+        | Unset
+    ) = UNSET
+    started_at_company: (
+        None
+        | TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0
+        | TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1
+        | Unset
+    ) = UNSET
+    years_of_experience: None | TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0 | Unset = (
+        UNSET
+    )
+    keywords: None | TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0 | Unset = UNSET
+    keyword_search_options: (
+        None | TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0 | Unset
+    ) = UNSET
+    fuzzy_name: None | TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0 | Unset = UNSET
+    tags: None | TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0 | Unset = UNSET
+    stealth_v2: (
+        None
+        | TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0
+        | TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1
+        | Unset
+    ) = UNSET
+    country_3_letter_code: (
+        None | TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0 | Unset
+    ) = UNSET
+    location: None | TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0 | Unset = UNSET
+    time_zone: None | TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0 | Unset = UNSET
+    education: None | TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0 | Unset = UNSET
+    languages: None | TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0 | Unset = UNSET
+    past_jobs: None | TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0 | Unset = UNSET
+    num_connections: None | TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0 | Unset = UNSET
+    num_followers: None | TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0 | Unset = UNSET
+    max_people_per_company: float | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.text_to_profile_search_params_response_200_output_search_params_started_in_role_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_started_at_company_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_location_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_years_of_experience_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_education_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_languages_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_1 import TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType1
-        from ..models.text_to_profile_search_params_response_200_output_search_params_num_followers_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_tags_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_keyword_search_options_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_time_zone_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_started_at_company_type_1 import TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1
-        from ..models.text_to_profile_search_params_response_200_output_search_params_num_connections_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_fuzzy_name_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_1 import TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1
-        from ..models.text_to_profile_search_params_response_200_output_search_params_past_jobs_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_started_in_role_type_1 import TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1
-        from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_2 import TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType2
-        from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_job_title_v3_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_keywords_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_country_3_letter_code_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_approx_age_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0
-        job_title_v3: Union[None, Unset, dict[str, Any]]
+        from ..models.text_to_profile_search_params_response_200_output_search_params_approx_age_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_country_3_letter_code_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_education_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_fuzzy_name_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_1 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType1,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_2 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType2,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_job_title_v3_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_keyword_search_options_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_keywords_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_languages_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_location_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_num_connections_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_num_followers_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_past_jobs_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_started_at_company_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_started_at_company_type_1 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_started_in_role_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_started_in_role_type_1 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_1 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_tags_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_time_zone_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_years_of_experience_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0,
+        )
+
+        job_title_v3: dict[str, Any] | None | Unset
         if isinstance(self.job_title_v3, Unset):
             job_title_v3 = UNSET
         elif isinstance(self.job_title_v3, TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0):
@@ -138,7 +249,7 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
         else:
             job_title_v3 = self.job_title_v3
 
-        job_status: Union[None, Unset, dict[str, Any]]
+        job_status: dict[str, Any] | None | Unset
         if isinstance(self.job_status, Unset):
             job_status = UNSET
         elif isinstance(self.job_status, TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0):
@@ -150,7 +261,7 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
         else:
             job_status = self.job_status
 
-        approx_age: Union[None, Unset, dict[str, Any]]
+        approx_age: dict[str, Any] | None | Unset
         if isinstance(self.approx_age, Unset):
             approx_age = UNSET
         elif isinstance(self.approx_age, TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0):
@@ -158,7 +269,7 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
         else:
             approx_age = self.approx_age
 
-        started_in_role: Union[None, Unset, dict[str, Any]]
+        started_in_role: dict[str, Any] | None | Unset
         if isinstance(self.started_in_role, Unset):
             started_in_role = UNSET
         elif isinstance(self.started_in_role, TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0):
@@ -168,25 +279,31 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
         else:
             started_in_role = self.started_in_role
 
-        started_at_company: Union[None, Unset, dict[str, Any]]
+        started_at_company: dict[str, Any] | None | Unset
         if isinstance(self.started_at_company, Unset):
             started_at_company = UNSET
-        elif isinstance(self.started_at_company, TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0):
+        elif isinstance(
+            self.started_at_company, TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0
+        ):
             started_at_company = self.started_at_company.to_dict()
-        elif isinstance(self.started_at_company, TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1):
+        elif isinstance(
+            self.started_at_company, TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1
+        ):
             started_at_company = self.started_at_company.to_dict()
         else:
             started_at_company = self.started_at_company
 
-        years_of_experience: Union[None, Unset, dict[str, Any]]
+        years_of_experience: dict[str, Any] | None | Unset
         if isinstance(self.years_of_experience, Unset):
             years_of_experience = UNSET
-        elif isinstance(self.years_of_experience, TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0):
+        elif isinstance(
+            self.years_of_experience, TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0
+        ):
             years_of_experience = self.years_of_experience.to_dict()
         else:
             years_of_experience = self.years_of_experience
 
-        keywords: Union[None, Unset, dict[str, Any]]
+        keywords: dict[str, Any] | None | Unset
         if isinstance(self.keywords, Unset):
             keywords = UNSET
         elif isinstance(self.keywords, TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0):
@@ -194,15 +311,17 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
         else:
             keywords = self.keywords
 
-        keyword_search_options: Union[None, Unset, dict[str, Any]]
+        keyword_search_options: dict[str, Any] | None | Unset
         if isinstance(self.keyword_search_options, Unset):
             keyword_search_options = UNSET
-        elif isinstance(self.keyword_search_options, TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0):
+        elif isinstance(
+            self.keyword_search_options, TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0
+        ):
             keyword_search_options = self.keyword_search_options.to_dict()
         else:
             keyword_search_options = self.keyword_search_options
 
-        fuzzy_name: Union[None, Unset, dict[str, Any]]
+        fuzzy_name: dict[str, Any] | None | Unset
         if isinstance(self.fuzzy_name, Unset):
             fuzzy_name = UNSET
         elif isinstance(self.fuzzy_name, TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0):
@@ -210,7 +329,7 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
         else:
             fuzzy_name = self.fuzzy_name
 
-        tags: Union[None, Unset, dict[str, Any]]
+        tags: dict[str, Any] | None | Unset
         if isinstance(self.tags, Unset):
             tags = UNSET
         elif isinstance(self.tags, TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0):
@@ -218,7 +337,7 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
         else:
             tags = self.tags
 
-        stealth_v2: Union[None, Unset, dict[str, Any]]
+        stealth_v2: dict[str, Any] | None | Unset
         if isinstance(self.stealth_v2, Unset):
             stealth_v2 = UNSET
         elif isinstance(self.stealth_v2, TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0):
@@ -228,15 +347,17 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
         else:
             stealth_v2 = self.stealth_v2
 
-        country_3_letter_code: Union[None, Unset, dict[str, Any]]
+        country_3_letter_code: dict[str, Any] | None | Unset
         if isinstance(self.country_3_letter_code, Unset):
             country_3_letter_code = UNSET
-        elif isinstance(self.country_3_letter_code, TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0):
+        elif isinstance(
+            self.country_3_letter_code, TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0
+        ):
             country_3_letter_code = self.country_3_letter_code.to_dict()
         else:
             country_3_letter_code = self.country_3_letter_code
 
-        location: Union[None, Unset, dict[str, Any]]
+        location: dict[str, Any] | None | Unset
         if isinstance(self.location, Unset):
             location = UNSET
         elif isinstance(self.location, TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0):
@@ -244,7 +365,7 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
         else:
             location = self.location
 
-        time_zone: Union[None, Unset, dict[str, Any]]
+        time_zone: dict[str, Any] | None | Unset
         if isinstance(self.time_zone, Unset):
             time_zone = UNSET
         elif isinstance(self.time_zone, TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0):
@@ -252,7 +373,7 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
         else:
             time_zone = self.time_zone
 
-        education: Union[None, Unset, dict[str, Any]]
+        education: dict[str, Any] | None | Unset
         if isinstance(self.education, Unset):
             education = UNSET
         elif isinstance(self.education, TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0):
@@ -260,7 +381,7 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
         else:
             education = self.education
 
-        languages: Union[None, Unset, dict[str, Any]]
+        languages: dict[str, Any] | None | Unset
         if isinstance(self.languages, Unset):
             languages = UNSET
         elif isinstance(self.languages, TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0):
@@ -268,7 +389,7 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
         else:
             languages = self.languages
 
-        past_jobs: Union[None, Unset, dict[str, Any]]
+        past_jobs: dict[str, Any] | None | Unset
         if isinstance(self.past_jobs, Unset):
             past_jobs = UNSET
         elif isinstance(self.past_jobs, TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0):
@@ -276,15 +397,17 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
         else:
             past_jobs = self.past_jobs
 
-        num_connections: Union[None, Unset, dict[str, Any]]
+        num_connections: dict[str, Any] | None | Unset
         if isinstance(self.num_connections, Unset):
             num_connections = UNSET
-        elif isinstance(self.num_connections, TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0):
+        elif isinstance(
+            self.num_connections, TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0
+        ):
             num_connections = self.num_connections.to_dict()
         else:
             num_connections = self.num_connections
 
-        num_followers: Union[None, Unset, dict[str, Any]]
+        num_followers: dict[str, Any] | None | Unset
         if isinstance(self.num_followers, Unset):
             num_followers = UNSET
         elif isinstance(self.num_followers, TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0):
@@ -292,17 +415,15 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
         else:
             num_followers = self.num_followers
 
-        max_people_per_company: Union[None, Unset, float]
+        max_people_per_company: float | None | Unset
         if isinstance(self.max_people_per_company, Unset):
             max_people_per_company = UNSET
         else:
             max_people_per_company = self.max_people_per_company
 
-
         field_dict: dict[str, Any] = {}
 
-        field_dict.update({
-        })
+        field_dict.update({})
         if job_title_v3 is not UNSET:
             field_dict["jobTitleV3"] = job_title_v3
         if job_status is not UNSET:
@@ -346,36 +467,86 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.text_to_profile_search_params_response_200_output_search_params_started_in_role_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_started_at_company_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_location_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_years_of_experience_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_education_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_languages_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_1 import TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType1
-        from ..models.text_to_profile_search_params_response_200_output_search_params_num_followers_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_tags_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_keyword_search_options_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_time_zone_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_started_at_company_type_1 import TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1
-        from ..models.text_to_profile_search_params_response_200_output_search_params_num_connections_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_fuzzy_name_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_1 import TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1
-        from ..models.text_to_profile_search_params_response_200_output_search_params_past_jobs_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_started_in_role_type_1 import TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1
-        from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_2 import TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType2
-        from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_job_title_v3_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_keywords_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_country_3_letter_code_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_approx_age_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0
+        from ..models.text_to_profile_search_params_response_200_output_search_params_approx_age_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_country_3_letter_code_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_education_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_fuzzy_name_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_1 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType1,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_job_status_type_2 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType2,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_job_title_v3_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_keyword_search_options_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_keywords_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_languages_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_location_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_num_connections_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_num_followers_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_past_jobs_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_started_at_company_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_started_at_company_type_1 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_started_in_role_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_started_in_role_type_1 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_1 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_tags_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_time_zone_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_years_of_experience_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0,
+        )
+
         d = dict(src_dict)
-        def _parse_job_title_v3(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0', None, Unset]:
+
+        def _parse_job_title_v3(
+            data: object,
+        ) -> None | TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -383,19 +554,26 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                job_title_v3_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0.from_dict(data)
-
-
+                job_title_v3_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0.from_dict(
+                    data
+                )
 
                 return job_title_v3_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0', None, Unset], data)
+            return cast(None | TextToProfileSearchParamsResponse200OutputSearchParamsJobTitleV3Type0 | Unset, data)
 
         job_title_v3 = _parse_job_title_v3(d.pop("jobTitleV3", UNSET))
 
-
-        def _parse_job_status(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0', 'TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType1', 'TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType2', None, Unset]:
+        def _parse_job_status(
+            data: object,
+        ) -> (
+            None
+            | TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0
+            | TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType1
+            | TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType2
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -405,37 +583,39 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
                     raise TypeError()
                 job_status_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0.from_dict(data)
 
-
-
                 return job_status_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 job_status_type_1 = TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType1.from_dict(data)
 
-
-
                 return job_status_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 job_status_type_2 = TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType2.from_dict(data)
 
-
-
                 return job_status_type_2
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0', 'TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType1', 'TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType2', None, Unset], data)
+            return cast(
+                None
+                | TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType0
+                | TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType1
+                | TextToProfileSearchParamsResponse200OutputSearchParamsJobStatusType2
+                | Unset,
+                data,
+            )
 
         job_status = _parse_job_status(d.pop("jobStatus", UNSET))
 
-
-        def _parse_approx_age(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0', None, Unset]:
+        def _parse_approx_age(
+            data: object,
+        ) -> None | TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -445,17 +625,21 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
                     raise TypeError()
                 approx_age_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0.from_dict(data)
 
-
-
                 return approx_age_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0', None, Unset], data)
+            return cast(None | TextToProfileSearchParamsResponse200OutputSearchParamsApproxAgeType0 | Unset, data)
 
         approx_age = _parse_approx_age(d.pop("approxAge", UNSET))
 
-
-        def _parse_started_in_role(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0', 'TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1', None, Unset]:
+        def _parse_started_in_role(
+            data: object,
+        ) -> (
+            None
+            | TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0
+            | TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -463,29 +647,41 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                started_in_role_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0.from_dict(data)
-
-
+                started_in_role_type_0 = (
+                    TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0.from_dict(data)
+                )
 
                 return started_in_role_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                started_in_role_type_1 = TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1.from_dict(data)
-
-
+                started_in_role_type_1 = (
+                    TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1.from_dict(data)
+                )
 
                 return started_in_role_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0', 'TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1', None, Unset], data)
+            return cast(
+                None
+                | TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType0
+                | TextToProfileSearchParamsResponse200OutputSearchParamsStartedInRoleType1
+                | Unset,
+                data,
+            )
 
         started_in_role = _parse_started_in_role(d.pop("startedInRole", UNSET))
 
-
-        def _parse_started_at_company(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0', 'TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1', None, Unset]:
+        def _parse_started_at_company(
+            data: object,
+        ) -> (
+            None
+            | TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0
+            | TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -493,29 +689,36 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                started_at_company_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0.from_dict(data)
-
-
+                started_at_company_type_0 = (
+                    TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0.from_dict(data)
+                )
 
                 return started_at_company_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                started_at_company_type_1 = TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1.from_dict(data)
-
-
+                started_at_company_type_1 = (
+                    TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1.from_dict(data)
+                )
 
                 return started_at_company_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0', 'TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1', None, Unset], data)
+            return cast(
+                None
+                | TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType0
+                | TextToProfileSearchParamsResponse200OutputSearchParamsStartedAtCompanyType1
+                | Unset,
+                data,
+            )
 
         started_at_company = _parse_started_at_company(d.pop("startedAtCompany", UNSET))
 
-
-        def _parse_years_of_experience(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0', None, Unset]:
+        def _parse_years_of_experience(
+            data: object,
+        ) -> None | TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -523,19 +726,22 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                years_of_experience_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0.from_dict(data)
-
-
+                years_of_experience_type_0 = (
+                    TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0.from_dict(data)
+                )
 
                 return years_of_experience_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0', None, Unset], data)
+            return cast(
+                None | TextToProfileSearchParamsResponse200OutputSearchParamsYearsOfExperienceType0 | Unset, data
+            )
 
         years_of_experience = _parse_years_of_experience(d.pop("yearsOfExperience", UNSET))
 
-
-        def _parse_keywords(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0', None, Unset]:
+        def _parse_keywords(
+            data: object,
+        ) -> None | TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -545,17 +751,16 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
                     raise TypeError()
                 keywords_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0.from_dict(data)
 
-
-
                 return keywords_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0', None, Unset], data)
+            return cast(None | TextToProfileSearchParamsResponse200OutputSearchParamsKeywordsType0 | Unset, data)
 
         keywords = _parse_keywords(d.pop("keywords", UNSET))
 
-
-        def _parse_keyword_search_options(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0', None, Unset]:
+        def _parse_keyword_search_options(
+            data: object,
+        ) -> None | TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -563,19 +768,22 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                keyword_search_options_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0.from_dict(data)
-
-
+                keyword_search_options_type_0 = (
+                    TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0.from_dict(data)
+                )
 
                 return keyword_search_options_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0', None, Unset], data)
+            return cast(
+                None | TextToProfileSearchParamsResponse200OutputSearchParamsKeywordSearchOptionsType0 | Unset, data
+            )
 
         keyword_search_options = _parse_keyword_search_options(d.pop("keywordSearchOptions", UNSET))
 
-
-        def _parse_fuzzy_name(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0', None, Unset]:
+        def _parse_fuzzy_name(
+            data: object,
+        ) -> None | TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -585,17 +793,14 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
                     raise TypeError()
                 fuzzy_name_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0.from_dict(data)
 
-
-
                 return fuzzy_name_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0', None, Unset], data)
+            return cast(None | TextToProfileSearchParamsResponse200OutputSearchParamsFuzzyNameType0 | Unset, data)
 
         fuzzy_name = _parse_fuzzy_name(d.pop("fuzzyName", UNSET))
 
-
-        def _parse_tags(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0', None, Unset]:
+        def _parse_tags(data: object) -> None | TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -605,17 +810,21 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
                     raise TypeError()
                 tags_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0.from_dict(data)
 
-
-
                 return tags_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0', None, Unset], data)
+            return cast(None | TextToProfileSearchParamsResponse200OutputSearchParamsTagsType0 | Unset, data)
 
         tags = _parse_tags(d.pop("tags", UNSET))
 
-
-        def _parse_stealth_v2(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0', 'TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1', None, Unset]:
+        def _parse_stealth_v2(
+            data: object,
+        ) -> (
+            None
+            | TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0
+            | TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -625,27 +834,30 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
                     raise TypeError()
                 stealth_v2_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0.from_dict(data)
 
-
-
                 return stealth_v2_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
                 stealth_v2_type_1 = TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1.from_dict(data)
 
-
-
                 return stealth_v2_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0', 'TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1', None, Unset], data)
+            return cast(
+                None
+                | TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0
+                | TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1
+                | Unset,
+                data,
+            )
 
         stealth_v2 = _parse_stealth_v2(d.pop("stealthV2", UNSET))
 
-
-        def _parse_country_3_letter_code(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0', None, Unset]:
+        def _parse_country_3_letter_code(
+            data: object,
+        ) -> None | TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -653,19 +865,22 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                country_3_letter_code_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0.from_dict(data)
-
-
+                country_3_letter_code_type_0 = (
+                    TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0.from_dict(data)
+                )
 
                 return country_3_letter_code_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0', None, Unset], data)
+            return cast(
+                None | TextToProfileSearchParamsResponse200OutputSearchParamsCountry3LetterCodeType0 | Unset, data
+            )
 
         country_3_letter_code = _parse_country_3_letter_code(d.pop("country3LetterCode", UNSET))
 
-
-        def _parse_location(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0', None, Unset]:
+        def _parse_location(
+            data: object,
+        ) -> None | TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -675,17 +890,16 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
                     raise TypeError()
                 location_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0.from_dict(data)
 
-
-
                 return location_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0', None, Unset], data)
+            return cast(None | TextToProfileSearchParamsResponse200OutputSearchParamsLocationType0 | Unset, data)
 
         location = _parse_location(d.pop("location", UNSET))
 
-
-        def _parse_time_zone(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0', None, Unset]:
+        def _parse_time_zone(
+            data: object,
+        ) -> None | TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -695,17 +909,16 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
                     raise TypeError()
                 time_zone_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0.from_dict(data)
 
-
-
                 return time_zone_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0', None, Unset], data)
+            return cast(None | TextToProfileSearchParamsResponse200OutputSearchParamsTimeZoneType0 | Unset, data)
 
         time_zone = _parse_time_zone(d.pop("timeZone", UNSET))
 
-
-        def _parse_education(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0', None, Unset]:
+        def _parse_education(
+            data: object,
+        ) -> None | TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -715,17 +928,16 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
                     raise TypeError()
                 education_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0.from_dict(data)
 
-
-
                 return education_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0', None, Unset], data)
+            return cast(None | TextToProfileSearchParamsResponse200OutputSearchParamsEducationType0 | Unset, data)
 
         education = _parse_education(d.pop("education", UNSET))
 
-
-        def _parse_languages(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0', None, Unset]:
+        def _parse_languages(
+            data: object,
+        ) -> None | TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -735,17 +947,16 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
                     raise TypeError()
                 languages_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0.from_dict(data)
 
-
-
                 return languages_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0', None, Unset], data)
+            return cast(None | TextToProfileSearchParamsResponse200OutputSearchParamsLanguagesType0 | Unset, data)
 
         languages = _parse_languages(d.pop("languages", UNSET))
 
-
-        def _parse_past_jobs(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0', None, Unset]:
+        def _parse_past_jobs(
+            data: object,
+        ) -> None | TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -755,17 +966,16 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
                     raise TypeError()
                 past_jobs_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0.from_dict(data)
 
-
-
                 return past_jobs_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0', None, Unset], data)
+            return cast(None | TextToProfileSearchParamsResponse200OutputSearchParamsPastJobsType0 | Unset, data)
 
         past_jobs = _parse_past_jobs(d.pop("pastJobs", UNSET))
 
-
-        def _parse_num_connections(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0', None, Unset]:
+        def _parse_num_connections(
+            data: object,
+        ) -> None | TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -773,19 +983,20 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                num_connections_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0.from_dict(data)
-
-
+                num_connections_type_0 = (
+                    TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0.from_dict(data)
+                )
 
                 return num_connections_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0', None, Unset], data)
+            return cast(None | TextToProfileSearchParamsResponse200OutputSearchParamsNumConnectionsType0 | Unset, data)
 
         num_connections = _parse_num_connections(d.pop("numConnections", UNSET))
 
-
-        def _parse_num_followers(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0', None, Unset]:
+        def _parse_num_followers(
+            data: object,
+        ) -> None | TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -793,27 +1004,25 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                num_followers_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0.from_dict(data)
-
-
+                num_followers_type_0 = (
+                    TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0.from_dict(data)
+                )
 
                 return num_followers_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0', None, Unset], data)
+            return cast(None | TextToProfileSearchParamsResponse200OutputSearchParamsNumFollowersType0 | Unset, data)
 
         num_followers = _parse_num_followers(d.pop("numFollowers", UNSET))
 
-
-        def _parse_max_people_per_company(data: object) -> Union[None, Unset, float]:
+        def _parse_max_people_per_company(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         max_people_per_company = _parse_max_people_per_company(d.pop("maxPeoplePerCompany", UNSET))
-
 
         text_to_profile_search_params_response_200_output_search_params = cls(
             job_title_v3=job_title_v3,
@@ -839,4 +1048,3 @@ class TextToProfileSearchParamsResponse200OutputSearchParams:
         )
 
         return text_to_profile_search_params_response_200_output_search_params
-

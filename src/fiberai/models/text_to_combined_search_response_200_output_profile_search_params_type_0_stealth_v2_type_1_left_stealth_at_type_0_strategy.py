@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type1LeftStealthAtType0Strategy(str, Enum):
     ABSOLUTE = "absolute"
 

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsTagsType0AllOfType0Item(str, Enum):
     IS_GOVERNMENT = "is-government"
     IS_SCHOOL = "is-school"

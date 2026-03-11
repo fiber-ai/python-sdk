@@ -1,6 +1,9 @@
 from enum import Enum
 
-class KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedWorkExperiencesType0ItemJobFunctionType0Item(str, Enum):
+
+class KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedWorkExperiencesType0ItemJobFunctionType0Item(
+    str, Enum
+):
     ACCOUNTING = "Accounting"
     ADMINISTRATIVE = "Administrative"
     ADVERTISING = "Advertising"

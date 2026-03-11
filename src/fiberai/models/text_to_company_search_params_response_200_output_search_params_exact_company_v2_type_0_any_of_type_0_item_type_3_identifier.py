@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCompanySearchParamsResponse200OutputSearchParamsExactCompanyV2Type0AnyOfType0ItemType3Identifier(str, Enum):
     ADVANCED = "advanced"
 

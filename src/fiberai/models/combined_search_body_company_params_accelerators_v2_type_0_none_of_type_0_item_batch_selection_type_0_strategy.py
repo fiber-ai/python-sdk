@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyCompanyParamsAcceleratorsV2Type0NoneOfType0ItemBatchSelectionType0Strategy(str, Enum):
     ALL_BATCHES = "all-batches"
 

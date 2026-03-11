@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class StartLocalBusinessSearchBodyDataItemType0Source(str, Enum):
     CUSTOM = "custom"
 

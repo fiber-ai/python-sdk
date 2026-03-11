@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateProspectExclusionListFromAudienceResponse200ChargeInfoType3Method(str, Enum):
     FREE = "free"
 

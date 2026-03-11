@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class BulkCompanyLogosResponse200OutputDataType2Type(str, Enum):
     LIORGIDS = "liOrgIds"
 

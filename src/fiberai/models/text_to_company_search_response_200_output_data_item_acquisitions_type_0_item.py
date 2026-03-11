@@ -1,66 +1,52 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
-
 T = TypeVar("T", bound="TextToCompanySearchResponse200OutputDataItemAcquisitionsType0Item")
-
 
 
 @_attrs_define
 class TextToCompanySearchResponse200OutputDataItemAcquisitionsType0Item:
-    """ 
-        Attributes:
-            price_usd (Union[None, Unset, float]):
-            acquiree_name (Union[None, Unset, str]):
-            acquisition_date (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        price_usd (float | None | Unset):
+        acquiree_name (None | str | Unset):
+        acquisition_date (None | str | Unset):
+    """
 
-    price_usd: Union[None, Unset, float] = UNSET
-    acquiree_name: Union[None, Unset, str] = UNSET
-    acquisition_date: Union[None, Unset, str] = UNSET
+    price_usd: float | None | Unset = UNSET
+    acquiree_name: None | str | Unset = UNSET
+    acquisition_date: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        price_usd: Union[None, Unset, float]
+        price_usd: float | None | Unset
         if isinstance(self.price_usd, Unset):
             price_usd = UNSET
         else:
             price_usd = self.price_usd
 
-        acquiree_name: Union[None, Unset, str]
+        acquiree_name: None | str | Unset
         if isinstance(self.acquiree_name, Unset):
             acquiree_name = UNSET
         else:
             acquiree_name = self.acquiree_name
 
-        acquisition_date: Union[None, Unset, str]
+        acquisition_date: None | str | Unset
         if isinstance(self.acquisition_date, Unset):
             acquisition_date = UNSET
         else:
             acquisition_date = self.acquisition_date
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if price_usd is not UNSET:
             field_dict["price_usd"] = price_usd
         if acquiree_name is not UNSET:
@@ -70,47 +56,42 @@ class TextToCompanySearchResponse200OutputDataItemAcquisitionsType0Item:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        def _parse_price_usd(data: object) -> Union[None, Unset, float]:
+
+        def _parse_price_usd(data: object) -> float | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, float], data)
+            return cast(float | None | Unset, data)
 
         price_usd = _parse_price_usd(d.pop("price_usd", UNSET))
 
-
-        def _parse_acquiree_name(data: object) -> Union[None, Unset, str]:
+        def _parse_acquiree_name(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         acquiree_name = _parse_acquiree_name(d.pop("acquiree_name", UNSET))
 
-
-        def _parse_acquisition_date(data: object) -> Union[None, Unset, str]:
+        def _parse_acquisition_date(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         acquisition_date = _parse_acquisition_date(d.pop("acquisition_date", UNSET))
-
 
         text_to_company_search_response_200_output_data_item_acquisitions_type_0_item = cls(
             price_usd=price_usd,
             acquiree_name=acquiree_name,
             acquisition_date=acquisition_date,
         )
-
 
         text_to_company_search_response_200_output_data_item_acquisitions_type_0_item.additional_properties = d
         return text_to_company_search_response_200_output_data_item_acquisitions_type_0_item

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCompanySearchParamsResponse200OutputSearchParamsOfficeLocationsV2Type0AllOfType0ItemType1Type(str, Enum):
     COUNTRY_OR_REGION = "country-or-region"
 

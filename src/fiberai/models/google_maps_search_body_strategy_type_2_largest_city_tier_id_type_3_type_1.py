@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class GoogleMapsSearchBodyStrategyType2LargestCityTierIDType3Type1(str, Enum):
     LARGE = "large"
     MAJOR = "major"

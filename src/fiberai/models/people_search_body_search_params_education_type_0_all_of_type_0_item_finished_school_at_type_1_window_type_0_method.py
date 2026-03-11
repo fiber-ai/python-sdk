@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType0Method(str, Enum):
     LASTN = "lastN"
 

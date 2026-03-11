@@ -1,40 +1,34 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.company_search_body_search_params_founded_on_type_1_window_type_0_method import CompanySearchBodySearchParamsFoundedOnType1WindowType0Method
-from ..models.company_search_body_search_params_founded_on_type_1_window_type_0_period import CompanySearchBodySearchParamsFoundedOnType1WindowType0Period
-
-
-
-
-
+from ..models.company_search_body_search_params_founded_on_type_1_window_type_0_method import (
+    CompanySearchBodySearchParamsFoundedOnType1WindowType0Method,
+)
+from ..models.company_search_body_search_params_founded_on_type_1_window_type_0_period import (
+    CompanySearchBodySearchParamsFoundedOnType1WindowType0Period,
+)
 
 T = TypeVar("T", bound="CompanySearchBodySearchParamsFoundedOnType1WindowType0")
 
 
-
 @_attrs_define
 class CompanySearchBodySearchParamsFoundedOnType1WindowType0:
-    """ 
-        Attributes:
-            method (CompanySearchBodySearchParamsFoundedOnType1WindowType0Method):
-            period (CompanySearchBodySearchParamsFoundedOnType1WindowType0Period):
-            quantity (float):
-     """
+    """
+    Attributes:
+        method (CompanySearchBodySearchParamsFoundedOnType1WindowType0Method):
+        period (CompanySearchBodySearchParamsFoundedOnType1WindowType0Period):
+        quantity (float):
+    """
 
     method: CompanySearchBodySearchParamsFoundedOnType1WindowType0Method
     period: CompanySearchBodySearchParamsFoundedOnType1WindowType0Period
     quantity: float
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         method = self.method.value
@@ -43,31 +37,24 @@ class CompanySearchBodySearchParamsFoundedOnType1WindowType0:
 
         quantity = self.quantity
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "method": method,
-            "period": period,
-            "quantity": quantity,
-        })
+        field_dict.update(
+            {
+                "method": method,
+                "period": period,
+                "quantity": quantity,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         method = CompanySearchBodySearchParamsFoundedOnType1WindowType0Method(d.pop("method"))
 
-
-
-
         period = CompanySearchBodySearchParamsFoundedOnType1WindowType0Period(d.pop("period"))
-
-
-
 
         quantity = d.pop("quantity")
 
@@ -76,7 +63,6 @@ class CompanySearchBodySearchParamsFoundedOnType1WindowType0:
             period=period,
             quantity=quantity,
         )
-
 
         company_search_body_search_params_founded_on_type_1_window_type_0.additional_properties = d
         return company_search_body_search_params_founded_on_type_1_window_type_0

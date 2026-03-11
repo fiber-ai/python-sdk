@@ -1,72 +1,70 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_post_type_0 import ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0
-  from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_commenter_type_0 import ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0
-
-
-
+    from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_commenter_type_0 import (
+        ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0,
+    )
+    from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_post_type_0 import (
+        ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0,
+    )
 
 
 T = TypeVar("T", bound="ProfileCommentsLiveFetchResponse200OutputCommentsType0Item")
 
 
-
 @_attrs_define
 class ProfileCommentsLiveFetchResponse200OutputCommentsType0Item:
-    """ 
-        Attributes:
-            comment_id (Union[None, Unset, str]):
-            content (Union[None, Unset, str]):
-            commented_ago (Union[None, Unset, str]):
-            commenter (Union['ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0', None, Unset]):
-            post (Union['ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0', None, Unset]):
-     """
+    """
+    Attributes:
+        comment_id (None | str | Unset):
+        content (None | str | Unset):
+        commented_ago (None | str | Unset):
+        commenter (None | ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0 | Unset):
+        post (None | ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0 | Unset):
+    """
 
-    comment_id: Union[None, Unset, str] = UNSET
-    content: Union[None, Unset, str] = UNSET
-    commented_ago: Union[None, Unset, str] = UNSET
-    commenter: Union['ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0', None, Unset] = UNSET
-    post: Union['ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0', None, Unset] = UNSET
+    comment_id: None | str | Unset = UNSET
+    content: None | str | Unset = UNSET
+    commented_ago: None | str | Unset = UNSET
+    commenter: None | ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0 | Unset = UNSET
+    post: None | ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0 | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_post_type_0 import ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0
-        from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_commenter_type_0 import ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0
-        comment_id: Union[None, Unset, str]
+        from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_commenter_type_0 import (
+            ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0,
+        )
+        from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_post_type_0 import (
+            ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0,
+        )
+
+        comment_id: None | str | Unset
         if isinstance(self.comment_id, Unset):
             comment_id = UNSET
         else:
             comment_id = self.comment_id
 
-        content: Union[None, Unset, str]
+        content: None | str | Unset
         if isinstance(self.content, Unset):
             content = UNSET
         else:
             content = self.content
 
-        commented_ago: Union[None, Unset, str]
+        commented_ago: None | str | Unset
         if isinstance(self.commented_ago, Unset):
             commented_ago = UNSET
         else:
             commented_ago = self.commented_ago
 
-        commenter: Union[None, Unset, dict[str, Any]]
+        commenter: dict[str, Any] | None | Unset
         if isinstance(self.commenter, Unset):
             commenter = UNSET
         elif isinstance(self.commenter, ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0):
@@ -74,7 +72,7 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0Item:
         else:
             commenter = self.commenter
 
-        post: Union[None, Unset, dict[str, Any]]
+        post: dict[str, Any] | None | Unset
         if isinstance(self.post, Unset):
             post = UNSET
         elif isinstance(self.post, ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0):
@@ -82,11 +80,9 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0Item:
         else:
             post = self.post
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if comment_id is not UNSET:
             field_dict["commentId"] = comment_id
         if content is not UNSET:
@@ -100,44 +96,47 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0Item:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_post_type_0 import ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0
-        from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_commenter_type_0 import ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0
+        from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_commenter_type_0 import (
+            ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0,
+        )
+        from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_post_type_0 import (
+            ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0,
+        )
+
         d = dict(src_dict)
-        def _parse_comment_id(data: object) -> Union[None, Unset, str]:
+
+        def _parse_comment_id(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         comment_id = _parse_comment_id(d.pop("commentId", UNSET))
 
-
-        def _parse_content(data: object) -> Union[None, Unset, str]:
+        def _parse_content(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         content = _parse_content(d.pop("content", UNSET))
 
-
-        def _parse_commented_ago(data: object) -> Union[None, Unset, str]:
+        def _parse_commented_ago(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         commented_ago = _parse_commented_ago(d.pop("commentedAgo", UNSET))
 
-
-        def _parse_commenter(data: object) -> Union['ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0', None, Unset]:
+        def _parse_commenter(
+            data: object,
+        ) -> None | ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -145,19 +144,20 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0Item:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                commenter_type_0 = ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0.from_dict(data)
-
-
+                commenter_type_0 = ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0.from_dict(
+                    data
+                )
 
                 return commenter_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0', None, Unset], data)
+            return cast(None | ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0 | Unset, data)
 
         commenter = _parse_commenter(d.pop("commenter", UNSET))
 
-
-        def _parse_post(data: object) -> Union['ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0', None, Unset]:
+        def _parse_post(
+            data: object,
+        ) -> None | ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -167,15 +167,12 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0Item:
                     raise TypeError()
                 post_type_0 = ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0.from_dict(data)
 
-
-
                 return post_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0', None, Unset], data)
+            return cast(None | ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0 | Unset, data)
 
         post = _parse_post(d.pop("post", UNSET))
-
 
         profile_comments_live_fetch_response_200_output_comments_type_0_item = cls(
             comment_id=comment_id,
@@ -184,7 +181,6 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0Item:
             commenter=commenter,
             post=post,
         )
-
 
         profile_comments_live_fetch_response_200_output_comments_type_0_item.additional_properties = d
         return profile_comments_live_fetch_response_200_output_comments_type_0_item

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyCountBodySearchParamsJobPostingsV2Type0AllOfType0ItemJobPostingStatusType3Type1(str, Enum):
     ACTIVE = "active"
     CLOSED = "closed"

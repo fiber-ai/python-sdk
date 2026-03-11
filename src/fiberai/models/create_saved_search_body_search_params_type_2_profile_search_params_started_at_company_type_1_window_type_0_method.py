@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType1WindowType0Method(str, Enum):
     LASTN = "lastN"
 

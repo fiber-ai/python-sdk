@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemAcademicQualificationType0Item(str, Enum):
     ASSOCIATE_DEGREE = "Associate Degree"
     BACHELOR_DEGREE = "Bachelor Degree"

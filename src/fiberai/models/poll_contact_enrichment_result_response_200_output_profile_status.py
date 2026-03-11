@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PollContactEnrichmentResultResponse200OutputProfileStatus(str, Enum):
     COMPLETED = "completed"
     FAILED = "failed"

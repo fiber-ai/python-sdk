@@ -1,6 +1,9 @@
 from enum import Enum
 
-class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AllOfType0ItemJobPostingStatusType1(str, Enum):
+
+class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AllOfType0ItemJobPostingStatusType1(
+    str, Enum
+):
     ACTIVE = "active"
     CLOSED = "closed"
     EITHER = "either"

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType0Strategy(str, Enum):
     RADIAL_DISTANCE = "radial-distance"
 

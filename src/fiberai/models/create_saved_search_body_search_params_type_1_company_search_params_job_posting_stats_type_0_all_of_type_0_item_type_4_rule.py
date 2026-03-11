@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0AllOfType0ItemType4Rule(str, Enum):
     JOB_FUNCTION = "job-function"
 

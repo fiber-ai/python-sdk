@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCompanySearchParamsResponse200OutputSearchParamsRevenueUSDType0MaxType0SuffixType2Type1(str, Enum):
     B = "B"
     K = "K"

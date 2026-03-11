@@ -1,63 +1,57 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
+from ..models.poll_combined_search_response_200_output_data_type_0_items_item_role_count_matches_type_0_item_num_matching_employees_type_0_type import (
+    PollCombinedSearchResponse200OutputDataType0ItemsItemRoleCountMatchesType0ItemNumMatchingEmployeesType0Type,
+)
 
-from ..models.poll_combined_search_response_200_output_data_type_0_items_item_role_count_matches_type_0_item_num_matching_employees_type_0_type import PollCombinedSearchResponse200OutputDataType0ItemsItemRoleCountMatchesType0ItemNumMatchingEmployeesType0Type
-
-
-
-
-
-
-T = TypeVar("T", bound="PollCombinedSearchResponse200OutputDataType0ItemsItemRoleCountMatchesType0ItemNumMatchingEmployeesType0")
-
+T = TypeVar(
+    "T", bound="PollCombinedSearchResponse200OutputDataType0ItemsItemRoleCountMatchesType0ItemNumMatchingEmployeesType0"
+)
 
 
 @_attrs_define
 class PollCombinedSearchResponse200OutputDataType0ItemsItemRoleCountMatchesType0ItemNumMatchingEmployeesType0:
-    """ 
-        Attributes:
-            type_
-                (PollCombinedSearchResponse200OutputDataType0ItemsItemRoleCountMatchesType0ItemNumMatchingEmployeesType0Type):
-            value (float):
-     """
+    """
+    Attributes:
+        type_
+            (PollCombinedSearchResponse200OutputDataType0ItemsItemRoleCountMatchesType0ItemNumMatchingEmployeesType0Type):
+        value (float):
+    """
 
     type_: PollCombinedSearchResponse200OutputDataType0ItemsItemRoleCountMatchesType0ItemNumMatchingEmployeesType0Type
     value: float
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         type_ = self.type_.value
 
         value = self.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "type": type_,
-            "value": value,
-        })
+        field_dict.update(
+            {
+                "type": type_,
+                "value": value,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        type_ = PollCombinedSearchResponse200OutputDataType0ItemsItemRoleCountMatchesType0ItemNumMatchingEmployeesType0Type(d.pop("type"))
-
-
-
+        type_ = (
+            PollCombinedSearchResponse200OutputDataType0ItemsItemRoleCountMatchesType0ItemNumMatchingEmployeesType0Type(
+                d.pop("type")
+            )
+        )
 
         value = d.pop("value")
 
@@ -65,7 +59,6 @@ class PollCombinedSearchResponse200OutputDataType0ItemsItemRoleCountMatchesType0
             type_=type_,
             value=value,
         )
-
 
         poll_combined_search_response_200_output_data_type_0_items_item_role_count_matches_type_0_item_num_matching_employees_type_0.additional_properties = d
         return poll_combined_search_response_200_output_data_type_0_items_item_role_count_matches_type_0_item_num_matching_employees_type_0

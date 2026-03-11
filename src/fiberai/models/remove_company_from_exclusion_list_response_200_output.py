@@ -1,48 +1,36 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-
-
-
-
-
-
 T = TypeVar("T", bound="RemoveCompanyFromExclusionListResponse200Output")
-
 
 
 @_attrs_define
 class RemoveCompanyFromExclusionListResponse200Output:
-    """ 
-        Attributes:
-            deleted_excluded_companies (float): Number of companies removed from the exclusion list
-     """
+    """
+    Attributes:
+        deleted_excluded_companies (float): Number of companies removed from the exclusion list
+    """
 
     deleted_excluded_companies: float
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
         deleted_excluded_companies = self.deleted_excluded_companies
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "deletedExcludedCompanies": deleted_excluded_companies,
-        })
+        field_dict.update(
+            {
+                "deletedExcludedCompanies": deleted_excluded_companies,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -52,7 +40,6 @@ class RemoveCompanyFromExclusionListResponse200Output:
         remove_company_from_exclusion_list_response_200_output = cls(
             deleted_excluded_companies=deleted_excluded_companies,
         )
-
 
         remove_company_from_exclusion_list_response_200_output.additional_properties = d
         return remove_company_from_exclusion_list_response_200_output

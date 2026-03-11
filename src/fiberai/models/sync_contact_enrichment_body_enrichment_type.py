@@ -1,42 +1,31 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import Union
-
-
-
-
-
-
 T = TypeVar("T", bound="SyncContactEnrichmentBodyEnrichmentType")
-
 
 
 @_attrs_define
 class SyncContactEnrichmentBodyEnrichmentType:
-    """ Enrichment types to be requested. Include the ones you want to look for, we will charge credits for the ones you
+    """Enrichment types to be requested. Include the ones you want to look for, we will charge credits for the ones you
     request. For example, { getWorkEmails: true, getPersonalEmails: true, getPhoneNumbers: true }
 
         Attributes:
-            get_work_emails (Union[Unset, bool]):  Default: True.
-            get_personal_emails (Union[Unset, bool]):  Default: True.
-            get_phone_numbers (Union[Unset, bool]):  Default: True.
-     """
+            get_work_emails (bool | Unset):  Default: True.
+            get_personal_emails (bool | Unset):  Default: True.
+            get_phone_numbers (bool | Unset):  Default: True.
+    """
 
-    get_work_emails: Union[Unset, bool] = True
-    get_personal_emails: Union[Unset, bool] = True
-    get_phone_numbers: Union[Unset, bool] = True
+    get_work_emails: bool | Unset = True
+    get_personal_emails: bool | Unset = True
+    get_phone_numbers: bool | Unset = True
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         get_work_emails = self.get_work_emails
@@ -45,11 +34,9 @@ class SyncContactEnrichmentBodyEnrichmentType:
 
         get_phone_numbers = self.get_phone_numbers
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if get_work_emails is not UNSET:
             field_dict["getWorkEmails"] = get_work_emails
         if get_personal_emails is not UNSET:
@@ -58,8 +45,6 @@ class SyncContactEnrichmentBodyEnrichmentType:
             field_dict["getPhoneNumbers"] = get_phone_numbers
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -75,7 +60,6 @@ class SyncContactEnrichmentBodyEnrichmentType:
             get_personal_emails=get_personal_emails,
             get_phone_numbers=get_phone_numbers,
         )
-
 
         sync_contact_enrichment_body_enrichment_type.additional_properties = d
         return sync_contact_enrichment_body_enrichment_type

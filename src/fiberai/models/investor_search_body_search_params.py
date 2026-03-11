@@ -1,106 +1,135 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
-from attrs import field as _attrs_field
 
+from ..models.investor_search_body_search_params_investor_type_type_1 import (
+    InvestorSearchBodySearchParamsInvestorTypeType1,
+)
+from ..models.investor_search_body_search_params_investor_type_type_2_type_1 import (
+    InvestorSearchBodySearchParamsInvestorTypeType2Type1,
+)
+from ..models.investor_search_body_search_params_investor_type_type_3_type_1 import (
+    InvestorSearchBodySearchParamsInvestorTypeType3Type1,
+)
 from ..types import UNSET, Unset
-
-from ..models.investor_search_body_search_params_investor_type_type_1 import InvestorSearchBodySearchParamsInvestorTypeType1
-from ..models.investor_search_body_search_params_investor_type_type_2_type_1 import InvestorSearchBodySearchParamsInvestorTypeType2Type1
-from ..models.investor_search_body_search_params_investor_type_type_3_type_1 import InvestorSearchBodySearchParamsInvestorTypeType3Type1
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.investor_search_body_search_params_num_investments_type_0 import InvestorSearchBodySearchParamsNumInvestmentsType0
-  from ..models.investor_search_body_search_params_founded_on_type_0 import InvestorSearchBodySearchParamsFoundedOnType0
-  from ..models.investor_search_body_search_params_lead_rate_type_0 import InvestorSearchBodySearchParamsLeadRateType0
-  from ..models.investor_search_body_search_params_state_name_type_0 import InvestorSearchBodySearchParamsStateNameType0
-  from ..models.investor_search_body_search_params_sorting_type_0 import InvestorSearchBodySearchParamsSortingType0
-  from ..models.investor_search_body_search_params_country_code_type_0 import InvestorSearchBodySearchParamsCountryCodeType0
-  from ..models.investor_search_body_search_params_num_lead_investments_type_0 import InvestorSearchBodySearchParamsNumLeadInvestmentsType0
-  from ..models.investor_search_body_search_params_types_type_0 import InvestorSearchBodySearchParamsTypesType0
-  from ..models.investor_search_body_search_params_last_investment_date_type_0 import InvestorSearchBodySearchParamsLastInvestmentDateType0
-
-
-
+    from ..models.investor_search_body_search_params_country_code_type_0 import (
+        InvestorSearchBodySearchParamsCountryCodeType0,
+    )
+    from ..models.investor_search_body_search_params_founded_on_type_0 import (
+        InvestorSearchBodySearchParamsFoundedOnType0,
+    )
+    from ..models.investor_search_body_search_params_last_investment_date_type_0 import (
+        InvestorSearchBodySearchParamsLastInvestmentDateType0,
+    )
+    from ..models.investor_search_body_search_params_lead_rate_type_0 import InvestorSearchBodySearchParamsLeadRateType0
+    from ..models.investor_search_body_search_params_num_investments_type_0 import (
+        InvestorSearchBodySearchParamsNumInvestmentsType0,
+    )
+    from ..models.investor_search_body_search_params_num_lead_investments_type_0 import (
+        InvestorSearchBodySearchParamsNumLeadInvestmentsType0,
+    )
+    from ..models.investor_search_body_search_params_sorting_type_0 import InvestorSearchBodySearchParamsSortingType0
+    from ..models.investor_search_body_search_params_state_name_type_0 import (
+        InvestorSearchBodySearchParamsStateNameType0,
+    )
+    from ..models.investor_search_body_search_params_types_type_0 import InvestorSearchBodySearchParamsTypesType0
 
 
 T = TypeVar("T", bound="InvestorSearchBodySearchParams")
 
 
-
 @_attrs_define
 class InvestorSearchBodySearchParams:
-    """ Investor search filter parameters
+    """Investor search filter parameters
 
-        Attributes:
-            country_code (Union['InvestorSearchBodySearchParamsCountryCodeType0', None, Unset]): Country or region filter
-                with include/exclude pattern. Region codes like X-ANGLOSPHERE expand to multiple countries (USA, GBR, AUS, etc.)
-            state_name (Union['InvestorSearchBodySearchParamsStateNameType0', None, Unset]): State name filter with
-                include/exclude pattern. Use full state names (e.g., 'California', 'England', 'New York'). State codes like 'CA'
-                or 'NY' are not accepted.
-            investor_type (Union[InvestorSearchBodySearchParamsInvestorTypeType1,
-                InvestorSearchBodySearchParamsInvestorTypeType2Type1, InvestorSearchBodySearchParamsInvestorTypeType3Type1,
-                None, Unset]): Filter by investor type: 'person' for individuals, 'organization' for firms, 'either' to include
-                both types. Pass null/undefined to include both types (same as 'either')
-            types (Union['InvestorSearchBodySearchParamsTypesType0', None, Unset]): Investor types filter with
-                include/exclude pattern. Examples: include: ['venture_capital', 'angel']
-            num_investments (Union['InvestorSearchBodySearchParamsNumInvestmentsType0', None, Unset]): Filter by total
-                investment count (range)
-            num_lead_investments (Union['InvestorSearchBodySearchParamsNumLeadInvestmentsType0', None, Unset]): Filter by
-                number of lead investments (range)
-            lead_rate (Union['InvestorSearchBodySearchParamsLeadRateType0', None, Unset]): Filter by lead investment rate
-                (0.0 - 1.0). Values outside [0,1] will be clamped to this range
-            last_investment_date (Union['InvestorSearchBodySearchParamsLastInvestmentDateType0', None, Unset]): Filter by
-                last investment date (date range)
-            founded_on (Union['InvestorSearchBodySearchParamsFoundedOnType0', None, Unset]): Filter by founded date (date
-                range). Note: many investors have null founded_on, so this filter may exclude many rows
-            sorting (Union['InvestorSearchBodySearchParamsSortingType0', None, Unset]): Sorting configuration. If provided,
-                field is required. Defaults to total_investment_count DESC if not provided.
-            is_top_vc (Union[None, Unset, bool]): Filter by whether investor is a top VC. Note: only a few dozen companies
-                qualify as 'top'
-            domains (Union[None, Unset, list[str]]): Array of investor domains to filter by
-            name_patterns (Union[None, Unset, list[str]]): An array of name patterns used for partial, case-insensitive
-                matching against investor names
-            crunchbase_slugs (Union[None, Unset, list[str]]): Array of Crunchbase slugs to filter by (exact match). Slugs
-                are the last part of the Crunchbase URL (for example, 'sequoia-capital' from
-                crunchbase.com/organization/sequoia-capital)
-     """
+    Attributes:
+        country_code (InvestorSearchBodySearchParamsCountryCodeType0 | None | Unset): Country or region filter with
+            include/exclude pattern. Region codes like X-ANGLOSPHERE expand to multiple countries (USA, GBR, AUS, etc.)
+        state_name (InvestorSearchBodySearchParamsStateNameType0 | None | Unset): State name filter with include/exclude
+            pattern. Use full state names (e.g., 'California', 'England', 'New York'). State codes like 'CA' or 'NY' are not
+            accepted.
+        investor_type (InvestorSearchBodySearchParamsInvestorTypeType1 |
+            InvestorSearchBodySearchParamsInvestorTypeType2Type1 | InvestorSearchBodySearchParamsInvestorTypeType3Type1 |
+            None | Unset): Filter by investor type: 'person' for individuals, 'organization' for firms, 'either' to include
+            both types. Pass null/undefined to include both types (same as 'either')
+        types (InvestorSearchBodySearchParamsTypesType0 | None | Unset): Investor types filter with include/exclude
+            pattern. Examples: include: ['venture_capital', 'angel']
+        num_investments (InvestorSearchBodySearchParamsNumInvestmentsType0 | None | Unset): Filter by total investment
+            count (range)
+        num_lead_investments (InvestorSearchBodySearchParamsNumLeadInvestmentsType0 | None | Unset): Filter by number of
+            lead investments (range)
+        lead_rate (InvestorSearchBodySearchParamsLeadRateType0 | None | Unset): Filter by lead investment rate (0.0 -
+            1.0). Values outside [0,1] will be clamped to this range
+        last_investment_date (InvestorSearchBodySearchParamsLastInvestmentDateType0 | None | Unset): Filter by last
+            investment date (date range)
+        founded_on (InvestorSearchBodySearchParamsFoundedOnType0 | None | Unset): Filter by founded date (date range).
+            Note: many investors have null founded_on, so this filter may exclude many rows
+        sorting (InvestorSearchBodySearchParamsSortingType0 | None | Unset): Sorting configuration. If provided, field
+            is required. Defaults to total_investment_count DESC if not provided.
+        is_top_vc (bool | None | Unset): Filter by whether investor is a top VC. Note: only a few dozen companies
+            qualify as 'top'
+        domains (list[str] | None | Unset): Array of investor domains to filter by
+        name_patterns (list[str] | None | Unset): An array of name patterns used for partial, case-insensitive matching
+            against investor names
+        crunchbase_slugs (list[str] | None | Unset): Array of Crunchbase slugs to filter by (exact match). Slugs are the
+            last part of the Crunchbase URL (for example, 'sequoia-capital' from crunchbase.com/organization/sequoia-
+            capital)
+    """
 
-    country_code: Union['InvestorSearchBodySearchParamsCountryCodeType0', None, Unset] = UNSET
-    state_name: Union['InvestorSearchBodySearchParamsStateNameType0', None, Unset] = UNSET
-    investor_type: Union[InvestorSearchBodySearchParamsInvestorTypeType1, InvestorSearchBodySearchParamsInvestorTypeType2Type1, InvestorSearchBodySearchParamsInvestorTypeType3Type1, None, Unset] = UNSET
-    types: Union['InvestorSearchBodySearchParamsTypesType0', None, Unset] = UNSET
-    num_investments: Union['InvestorSearchBodySearchParamsNumInvestmentsType0', None, Unset] = UNSET
-    num_lead_investments: Union['InvestorSearchBodySearchParamsNumLeadInvestmentsType0', None, Unset] = UNSET
-    lead_rate: Union['InvestorSearchBodySearchParamsLeadRateType0', None, Unset] = UNSET
-    last_investment_date: Union['InvestorSearchBodySearchParamsLastInvestmentDateType0', None, Unset] = UNSET
-    founded_on: Union['InvestorSearchBodySearchParamsFoundedOnType0', None, Unset] = UNSET
-    sorting: Union['InvestorSearchBodySearchParamsSortingType0', None, Unset] = UNSET
-    is_top_vc: Union[None, Unset, bool] = UNSET
-    domains: Union[None, Unset, list[str]] = UNSET
-    name_patterns: Union[None, Unset, list[str]] = UNSET
-    crunchbase_slugs: Union[None, Unset, list[str]] = UNSET
-
-
-
-
+    country_code: InvestorSearchBodySearchParamsCountryCodeType0 | None | Unset = UNSET
+    state_name: InvestorSearchBodySearchParamsStateNameType0 | None | Unset = UNSET
+    investor_type: (
+        InvestorSearchBodySearchParamsInvestorTypeType1
+        | InvestorSearchBodySearchParamsInvestorTypeType2Type1
+        | InvestorSearchBodySearchParamsInvestorTypeType3Type1
+        | None
+        | Unset
+    ) = UNSET
+    types: InvestorSearchBodySearchParamsTypesType0 | None | Unset = UNSET
+    num_investments: InvestorSearchBodySearchParamsNumInvestmentsType0 | None | Unset = UNSET
+    num_lead_investments: InvestorSearchBodySearchParamsNumLeadInvestmentsType0 | None | Unset = UNSET
+    lead_rate: InvestorSearchBodySearchParamsLeadRateType0 | None | Unset = UNSET
+    last_investment_date: InvestorSearchBodySearchParamsLastInvestmentDateType0 | None | Unset = UNSET
+    founded_on: InvestorSearchBodySearchParamsFoundedOnType0 | None | Unset = UNSET
+    sorting: InvestorSearchBodySearchParamsSortingType0 | None | Unset = UNSET
+    is_top_vc: bool | None | Unset = UNSET
+    domains: list[str] | None | Unset = UNSET
+    name_patterns: list[str] | None | Unset = UNSET
+    crunchbase_slugs: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.investor_search_body_search_params_num_investments_type_0 import InvestorSearchBodySearchParamsNumInvestmentsType0
-        from ..models.investor_search_body_search_params_founded_on_type_0 import InvestorSearchBodySearchParamsFoundedOnType0
-        from ..models.investor_search_body_search_params_lead_rate_type_0 import InvestorSearchBodySearchParamsLeadRateType0
-        from ..models.investor_search_body_search_params_state_name_type_0 import InvestorSearchBodySearchParamsStateNameType0
-        from ..models.investor_search_body_search_params_sorting_type_0 import InvestorSearchBodySearchParamsSortingType0
-        from ..models.investor_search_body_search_params_country_code_type_0 import InvestorSearchBodySearchParamsCountryCodeType0
-        from ..models.investor_search_body_search_params_num_lead_investments_type_0 import InvestorSearchBodySearchParamsNumLeadInvestmentsType0
+        from ..models.investor_search_body_search_params_country_code_type_0 import (
+            InvestorSearchBodySearchParamsCountryCodeType0,
+        )
+        from ..models.investor_search_body_search_params_founded_on_type_0 import (
+            InvestorSearchBodySearchParamsFoundedOnType0,
+        )
+        from ..models.investor_search_body_search_params_last_investment_date_type_0 import (
+            InvestorSearchBodySearchParamsLastInvestmentDateType0,
+        )
+        from ..models.investor_search_body_search_params_lead_rate_type_0 import (
+            InvestorSearchBodySearchParamsLeadRateType0,
+        )
+        from ..models.investor_search_body_search_params_num_investments_type_0 import (
+            InvestorSearchBodySearchParamsNumInvestmentsType0,
+        )
+        from ..models.investor_search_body_search_params_num_lead_investments_type_0 import (
+            InvestorSearchBodySearchParamsNumLeadInvestmentsType0,
+        )
+        from ..models.investor_search_body_search_params_sorting_type_0 import (
+            InvestorSearchBodySearchParamsSortingType0,
+        )
+        from ..models.investor_search_body_search_params_state_name_type_0 import (
+            InvestorSearchBodySearchParamsStateNameType0,
+        )
         from ..models.investor_search_body_search_params_types_type_0 import InvestorSearchBodySearchParamsTypesType0
-        from ..models.investor_search_body_search_params_last_investment_date_type_0 import InvestorSearchBodySearchParamsLastInvestmentDateType0
-        country_code: Union[None, Unset, dict[str, Any]]
+
+        country_code: dict[str, Any] | None | Unset
         if isinstance(self.country_code, Unset):
             country_code = UNSET
         elif isinstance(self.country_code, InvestorSearchBodySearchParamsCountryCodeType0):
@@ -108,7 +137,7 @@ class InvestorSearchBodySearchParams:
         else:
             country_code = self.country_code
 
-        state_name: Union[None, Unset, dict[str, Any]]
+        state_name: dict[str, Any] | None | Unset
         if isinstance(self.state_name, Unset):
             state_name = UNSET
         elif isinstance(self.state_name, InvestorSearchBodySearchParamsStateNameType0):
@@ -116,7 +145,7 @@ class InvestorSearchBodySearchParams:
         else:
             state_name = self.state_name
 
-        investor_type: Union[None, Unset, str]
+        investor_type: None | str | Unset
         if isinstance(self.investor_type, Unset):
             investor_type = UNSET
         elif isinstance(self.investor_type, InvestorSearchBodySearchParamsInvestorTypeType1):
@@ -128,7 +157,7 @@ class InvestorSearchBodySearchParams:
         else:
             investor_type = self.investor_type
 
-        types: Union[None, Unset, dict[str, Any]]
+        types: dict[str, Any] | None | Unset
         if isinstance(self.types, Unset):
             types = UNSET
         elif isinstance(self.types, InvestorSearchBodySearchParamsTypesType0):
@@ -136,7 +165,7 @@ class InvestorSearchBodySearchParams:
         else:
             types = self.types
 
-        num_investments: Union[None, Unset, dict[str, Any]]
+        num_investments: dict[str, Any] | None | Unset
         if isinstance(self.num_investments, Unset):
             num_investments = UNSET
         elif isinstance(self.num_investments, InvestorSearchBodySearchParamsNumInvestmentsType0):
@@ -144,7 +173,7 @@ class InvestorSearchBodySearchParams:
         else:
             num_investments = self.num_investments
 
-        num_lead_investments: Union[None, Unset, dict[str, Any]]
+        num_lead_investments: dict[str, Any] | None | Unset
         if isinstance(self.num_lead_investments, Unset):
             num_lead_investments = UNSET
         elif isinstance(self.num_lead_investments, InvestorSearchBodySearchParamsNumLeadInvestmentsType0):
@@ -152,7 +181,7 @@ class InvestorSearchBodySearchParams:
         else:
             num_lead_investments = self.num_lead_investments
 
-        lead_rate: Union[None, Unset, dict[str, Any]]
+        lead_rate: dict[str, Any] | None | Unset
         if isinstance(self.lead_rate, Unset):
             lead_rate = UNSET
         elif isinstance(self.lead_rate, InvestorSearchBodySearchParamsLeadRateType0):
@@ -160,7 +189,7 @@ class InvestorSearchBodySearchParams:
         else:
             lead_rate = self.lead_rate
 
-        last_investment_date: Union[None, Unset, dict[str, Any]]
+        last_investment_date: dict[str, Any] | None | Unset
         if isinstance(self.last_investment_date, Unset):
             last_investment_date = UNSET
         elif isinstance(self.last_investment_date, InvestorSearchBodySearchParamsLastInvestmentDateType0):
@@ -168,7 +197,7 @@ class InvestorSearchBodySearchParams:
         else:
             last_investment_date = self.last_investment_date
 
-        founded_on: Union[None, Unset, dict[str, Any]]
+        founded_on: dict[str, Any] | None | Unset
         if isinstance(self.founded_on, Unset):
             founded_on = UNSET
         elif isinstance(self.founded_on, InvestorSearchBodySearchParamsFoundedOnType0):
@@ -176,7 +205,7 @@ class InvestorSearchBodySearchParams:
         else:
             founded_on = self.founded_on
 
-        sorting: Union[None, Unset, dict[str, Any]]
+        sorting: dict[str, Any] | None | Unset
         if isinstance(self.sorting, Unset):
             sorting = UNSET
         elif isinstance(self.sorting, InvestorSearchBodySearchParamsSortingType0):
@@ -184,47 +213,42 @@ class InvestorSearchBodySearchParams:
         else:
             sorting = self.sorting
 
-        is_top_vc: Union[None, Unset, bool]
+        is_top_vc: bool | None | Unset
         if isinstance(self.is_top_vc, Unset):
             is_top_vc = UNSET
         else:
             is_top_vc = self.is_top_vc
 
-        domains: Union[None, Unset, list[str]]
+        domains: list[str] | None | Unset
         if isinstance(self.domains, Unset):
             domains = UNSET
         elif isinstance(self.domains, list):
             domains = self.domains
 
-
         else:
             domains = self.domains
 
-        name_patterns: Union[None, Unset, list[str]]
+        name_patterns: list[str] | None | Unset
         if isinstance(self.name_patterns, Unset):
             name_patterns = UNSET
         elif isinstance(self.name_patterns, list):
             name_patterns = self.name_patterns
 
-
         else:
             name_patterns = self.name_patterns
 
-        crunchbase_slugs: Union[None, Unset, list[str]]
+        crunchbase_slugs: list[str] | None | Unset
         if isinstance(self.crunchbase_slugs, Unset):
             crunchbase_slugs = UNSET
         elif isinstance(self.crunchbase_slugs, list):
             crunchbase_slugs = self.crunchbase_slugs
 
-
         else:
             crunchbase_slugs = self.crunchbase_slugs
 
-
         field_dict: dict[str, Any] = {}
 
-        field_dict.update({
-        })
+        field_dict.update({})
         if country_code is not UNSET:
             field_dict["countryCode"] = country_code
         if state_name is not UNSET:
@@ -256,21 +280,37 @@ class InvestorSearchBodySearchParams:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.investor_search_body_search_params_num_investments_type_0 import InvestorSearchBodySearchParamsNumInvestmentsType0
-        from ..models.investor_search_body_search_params_founded_on_type_0 import InvestorSearchBodySearchParamsFoundedOnType0
-        from ..models.investor_search_body_search_params_lead_rate_type_0 import InvestorSearchBodySearchParamsLeadRateType0
-        from ..models.investor_search_body_search_params_state_name_type_0 import InvestorSearchBodySearchParamsStateNameType0
-        from ..models.investor_search_body_search_params_sorting_type_0 import InvestorSearchBodySearchParamsSortingType0
-        from ..models.investor_search_body_search_params_country_code_type_0 import InvestorSearchBodySearchParamsCountryCodeType0
-        from ..models.investor_search_body_search_params_num_lead_investments_type_0 import InvestorSearchBodySearchParamsNumLeadInvestmentsType0
+        from ..models.investor_search_body_search_params_country_code_type_0 import (
+            InvestorSearchBodySearchParamsCountryCodeType0,
+        )
+        from ..models.investor_search_body_search_params_founded_on_type_0 import (
+            InvestorSearchBodySearchParamsFoundedOnType0,
+        )
+        from ..models.investor_search_body_search_params_last_investment_date_type_0 import (
+            InvestorSearchBodySearchParamsLastInvestmentDateType0,
+        )
+        from ..models.investor_search_body_search_params_lead_rate_type_0 import (
+            InvestorSearchBodySearchParamsLeadRateType0,
+        )
+        from ..models.investor_search_body_search_params_num_investments_type_0 import (
+            InvestorSearchBodySearchParamsNumInvestmentsType0,
+        )
+        from ..models.investor_search_body_search_params_num_lead_investments_type_0 import (
+            InvestorSearchBodySearchParamsNumLeadInvestmentsType0,
+        )
+        from ..models.investor_search_body_search_params_sorting_type_0 import (
+            InvestorSearchBodySearchParamsSortingType0,
+        )
+        from ..models.investor_search_body_search_params_state_name_type_0 import (
+            InvestorSearchBodySearchParamsStateNameType0,
+        )
         from ..models.investor_search_body_search_params_types_type_0 import InvestorSearchBodySearchParamsTypesType0
-        from ..models.investor_search_body_search_params_last_investment_date_type_0 import InvestorSearchBodySearchParamsLastInvestmentDateType0
+
         d = dict(src_dict)
-        def _parse_country_code(data: object) -> Union['InvestorSearchBodySearchParamsCountryCodeType0', None, Unset]:
+
+        def _parse_country_code(data: object) -> InvestorSearchBodySearchParamsCountryCodeType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -280,17 +320,14 @@ class InvestorSearchBodySearchParams:
                     raise TypeError()
                 country_code_type_0 = InvestorSearchBodySearchParamsCountryCodeType0.from_dict(data)
 
-
-
                 return country_code_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['InvestorSearchBodySearchParamsCountryCodeType0', None, Unset], data)
+            return cast(InvestorSearchBodySearchParamsCountryCodeType0 | None | Unset, data)
 
         country_code = _parse_country_code(d.pop("countryCode", UNSET))
 
-
-        def _parse_state_name(data: object) -> Union['InvestorSearchBodySearchParamsStateNameType0', None, Unset]:
+        def _parse_state_name(data: object) -> InvestorSearchBodySearchParamsStateNameType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -300,17 +337,22 @@ class InvestorSearchBodySearchParams:
                     raise TypeError()
                 state_name_type_0 = InvestorSearchBodySearchParamsStateNameType0.from_dict(data)
 
-
-
                 return state_name_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['InvestorSearchBodySearchParamsStateNameType0', None, Unset], data)
+            return cast(InvestorSearchBodySearchParamsStateNameType0 | None | Unset, data)
 
         state_name = _parse_state_name(d.pop("stateName", UNSET))
 
-
-        def _parse_investor_type(data: object) -> Union[InvestorSearchBodySearchParamsInvestorTypeType1, InvestorSearchBodySearchParamsInvestorTypeType2Type1, InvestorSearchBodySearchParamsInvestorTypeType3Type1, None, Unset]:
+        def _parse_investor_type(
+            data: object,
+        ) -> (
+            InvestorSearchBodySearchParamsInvestorTypeType1
+            | InvestorSearchBodySearchParamsInvestorTypeType2Type1
+            | InvestorSearchBodySearchParamsInvestorTypeType3Type1
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -320,37 +362,37 @@ class InvestorSearchBodySearchParams:
                     raise TypeError()
                 investor_type_type_1 = InvestorSearchBodySearchParamsInvestorTypeType1(data)
 
-
-
                 return investor_type_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 investor_type_type_2_type_1 = InvestorSearchBodySearchParamsInvestorTypeType2Type1(data)
 
-
-
                 return investor_type_type_2_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, str):
                     raise TypeError()
                 investor_type_type_3_type_1 = InvestorSearchBodySearchParamsInvestorTypeType3Type1(data)
 
-
-
                 return investor_type_type_3_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[InvestorSearchBodySearchParamsInvestorTypeType1, InvestorSearchBodySearchParamsInvestorTypeType2Type1, InvestorSearchBodySearchParamsInvestorTypeType3Type1, None, Unset], data)
+            return cast(
+                InvestorSearchBodySearchParamsInvestorTypeType1
+                | InvestorSearchBodySearchParamsInvestorTypeType2Type1
+                | InvestorSearchBodySearchParamsInvestorTypeType3Type1
+                | None
+                | Unset,
+                data,
+            )
 
         investor_type = _parse_investor_type(d.pop("investorType", UNSET))
 
-
-        def _parse_types(data: object) -> Union['InvestorSearchBodySearchParamsTypesType0', None, Unset]:
+        def _parse_types(data: object) -> InvestorSearchBodySearchParamsTypesType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -360,17 +402,14 @@ class InvestorSearchBodySearchParams:
                     raise TypeError()
                 types_type_0 = InvestorSearchBodySearchParamsTypesType0.from_dict(data)
 
-
-
                 return types_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['InvestorSearchBodySearchParamsTypesType0', None, Unset], data)
+            return cast(InvestorSearchBodySearchParamsTypesType0 | None | Unset, data)
 
         types = _parse_types(d.pop("types", UNSET))
 
-
-        def _parse_num_investments(data: object) -> Union['InvestorSearchBodySearchParamsNumInvestmentsType0', None, Unset]:
+        def _parse_num_investments(data: object) -> InvestorSearchBodySearchParamsNumInvestmentsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -380,17 +419,16 @@ class InvestorSearchBodySearchParams:
                     raise TypeError()
                 num_investments_type_0 = InvestorSearchBodySearchParamsNumInvestmentsType0.from_dict(data)
 
-
-
                 return num_investments_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['InvestorSearchBodySearchParamsNumInvestmentsType0', None, Unset], data)
+            return cast(InvestorSearchBodySearchParamsNumInvestmentsType0 | None | Unset, data)
 
         num_investments = _parse_num_investments(d.pop("numInvestments", UNSET))
 
-
-        def _parse_num_lead_investments(data: object) -> Union['InvestorSearchBodySearchParamsNumLeadInvestmentsType0', None, Unset]:
+        def _parse_num_lead_investments(
+            data: object,
+        ) -> InvestorSearchBodySearchParamsNumLeadInvestmentsType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -400,17 +438,14 @@ class InvestorSearchBodySearchParams:
                     raise TypeError()
                 num_lead_investments_type_0 = InvestorSearchBodySearchParamsNumLeadInvestmentsType0.from_dict(data)
 
-
-
                 return num_lead_investments_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['InvestorSearchBodySearchParamsNumLeadInvestmentsType0', None, Unset], data)
+            return cast(InvestorSearchBodySearchParamsNumLeadInvestmentsType0 | None | Unset, data)
 
         num_lead_investments = _parse_num_lead_investments(d.pop("numLeadInvestments", UNSET))
 
-
-        def _parse_lead_rate(data: object) -> Union['InvestorSearchBodySearchParamsLeadRateType0', None, Unset]:
+        def _parse_lead_rate(data: object) -> InvestorSearchBodySearchParamsLeadRateType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -420,17 +455,16 @@ class InvestorSearchBodySearchParams:
                     raise TypeError()
                 lead_rate_type_0 = InvestorSearchBodySearchParamsLeadRateType0.from_dict(data)
 
-
-
                 return lead_rate_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['InvestorSearchBodySearchParamsLeadRateType0', None, Unset], data)
+            return cast(InvestorSearchBodySearchParamsLeadRateType0 | None | Unset, data)
 
         lead_rate = _parse_lead_rate(d.pop("leadRate", UNSET))
 
-
-        def _parse_last_investment_date(data: object) -> Union['InvestorSearchBodySearchParamsLastInvestmentDateType0', None, Unset]:
+        def _parse_last_investment_date(
+            data: object,
+        ) -> InvestorSearchBodySearchParamsLastInvestmentDateType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -440,17 +474,14 @@ class InvestorSearchBodySearchParams:
                     raise TypeError()
                 last_investment_date_type_0 = InvestorSearchBodySearchParamsLastInvestmentDateType0.from_dict(data)
 
-
-
                 return last_investment_date_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['InvestorSearchBodySearchParamsLastInvestmentDateType0', None, Unset], data)
+            return cast(InvestorSearchBodySearchParamsLastInvestmentDateType0 | None | Unset, data)
 
         last_investment_date = _parse_last_investment_date(d.pop("lastInvestmentDate", UNSET))
 
-
-        def _parse_founded_on(data: object) -> Union['InvestorSearchBodySearchParamsFoundedOnType0', None, Unset]:
+        def _parse_founded_on(data: object) -> InvestorSearchBodySearchParamsFoundedOnType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -460,17 +491,14 @@ class InvestorSearchBodySearchParams:
                     raise TypeError()
                 founded_on_type_0 = InvestorSearchBodySearchParamsFoundedOnType0.from_dict(data)
 
-
-
                 return founded_on_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['InvestorSearchBodySearchParamsFoundedOnType0', None, Unset], data)
+            return cast(InvestorSearchBodySearchParamsFoundedOnType0 | None | Unset, data)
 
         founded_on = _parse_founded_on(d.pop("foundedOn", UNSET))
 
-
-        def _parse_sorting(data: object) -> Union['InvestorSearchBodySearchParamsSortingType0', None, Unset]:
+        def _parse_sorting(data: object) -> InvestorSearchBodySearchParamsSortingType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -480,27 +508,23 @@ class InvestorSearchBodySearchParams:
                     raise TypeError()
                 sorting_type_0 = InvestorSearchBodySearchParamsSortingType0.from_dict(data)
 
-
-
                 return sorting_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['InvestorSearchBodySearchParamsSortingType0', None, Unset], data)
+            return cast(InvestorSearchBodySearchParamsSortingType0 | None | Unset, data)
 
         sorting = _parse_sorting(d.pop("sorting", UNSET))
 
-
-        def _parse_is_top_vc(data: object) -> Union[None, Unset, bool]:
+        def _parse_is_top_vc(data: object) -> bool | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, bool], data)
+            return cast(bool | None | Unset, data)
 
         is_top_vc = _parse_is_top_vc(d.pop("isTopVc", UNSET))
 
-
-        def _parse_domains(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_domains(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -511,14 +535,13 @@ class InvestorSearchBodySearchParams:
                 domains_type_0 = cast(list[str], data)
 
                 return domains_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         domains = _parse_domains(d.pop("domains", UNSET))
 
-
-        def _parse_name_patterns(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_name_patterns(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -529,14 +552,13 @@ class InvestorSearchBodySearchParams:
                 name_patterns_type_0 = cast(list[str], data)
 
                 return name_patterns_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         name_patterns = _parse_name_patterns(d.pop("namePatterns", UNSET))
 
-
-        def _parse_crunchbase_slugs(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_crunchbase_slugs(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -547,12 +569,11 @@ class InvestorSearchBodySearchParams:
                 crunchbase_slugs_type_0 = cast(list[str], data)
 
                 return crunchbase_slugs_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         crunchbase_slugs = _parse_crunchbase_slugs(d.pop("crunchbaseSlugs", UNSET))
-
 
         investor_search_body_search_params = cls(
             country_code=country_code,
@@ -572,4 +593,3 @@ class InvestorSearchBodySearchParams:
         )
 
         return investor_search_body_search_params
-

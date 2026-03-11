@@ -1,43 +1,37 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.poll_combined_search_response_200_output_data_type_1_type import PollCombinedSearchResponse200OutputDataType1Type
-from typing import cast
+from ..models.poll_combined_search_response_200_output_data_type_1_type import (
+    PollCombinedSearchResponse200OutputDataType1Type,
+)
 
 if TYPE_CHECKING:
-  from ..models.poll_combined_search_response_200_output_data_type_1_items_item import PollCombinedSearchResponse200OutputDataType1ItemsItem
-
-
-
+    from ..models.poll_combined_search_response_200_output_data_type_1_items_item import (
+        PollCombinedSearchResponse200OutputDataType1ItemsItem,
+    )
 
 
 T = TypeVar("T", bound="PollCombinedSearchResponse200OutputDataType1")
 
 
-
 @_attrs_define
 class PollCombinedSearchResponse200OutputDataType1:
-    """ 
-        Attributes:
-            type_ (PollCombinedSearchResponse200OutputDataType1Type):
-            items (list['PollCombinedSearchResponse200OutputDataType1ItemsItem']):
-     """
+    """
+    Attributes:
+        type_ (PollCombinedSearchResponse200OutputDataType1Type):
+        items (list[PollCombinedSearchResponse200OutputDataType1ItemsItem]):
+    """
 
     type_: PollCombinedSearchResponse200OutputDataType1Type
-    items: list['PollCombinedSearchResponse200OutputDataType1ItemsItem']
+    items: list[PollCombinedSearchResponse200OutputDataType1ItemsItem]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.poll_combined_search_response_200_output_data_type_1_items_item import PollCombinedSearchResponse200OutputDataType1ItemsItem
         type_ = self.type_.value
 
         items = []
@@ -45,44 +39,37 @@ class PollCombinedSearchResponse200OutputDataType1:
             items_item = items_item_data.to_dict()
             items.append(items_item)
 
-
-
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "type": type_,
-            "items": items,
-        })
+        field_dict.update(
+            {
+                "type": type_,
+                "items": items,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.poll_combined_search_response_200_output_data_type_1_items_item import PollCombinedSearchResponse200OutputDataType1ItemsItem
+        from ..models.poll_combined_search_response_200_output_data_type_1_items_item import (
+            PollCombinedSearchResponse200OutputDataType1ItemsItem,
+        )
+
         d = dict(src_dict)
         type_ = PollCombinedSearchResponse200OutputDataType1Type(d.pop("type"))
 
-
-
-
         items = []
         _items = d.pop("items")
-        for items_item_data in (_items):
+        for items_item_data in _items:
             items_item = PollCombinedSearchResponse200OutputDataType1ItemsItem.from_dict(items_item_data)
 
-
-
             items.append(items_item)
-
 
         poll_combined_search_response_200_output_data_type_1 = cls(
             type_=type_,
             items=items,
         )
-
 
         poll_combined_search_response_200_output_data_type_1.additional_properties = d
         return poll_combined_search_response_200_output_data_type_1

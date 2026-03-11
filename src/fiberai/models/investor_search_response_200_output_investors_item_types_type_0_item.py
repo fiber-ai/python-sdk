@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class InvestorSearchResponse200OutputInvestorsItemTypesType0Item(str, Enum):
     ACCELERATOR = "accelerator"
     ANGEL = "angel"

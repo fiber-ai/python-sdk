@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PeopleSearchCountBodySearchParamsJobTitleV2Type0AnyOfType0ItemType2Type(str, Enum):
     DYNAMIC_GROUPS = "dynamic-groups"
 

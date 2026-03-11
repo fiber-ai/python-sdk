@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TriggerContactEnrichmentResponse200ChargeInfoType1Method(str, Enum):
     CHARGING_LATER = "charging-later"
 

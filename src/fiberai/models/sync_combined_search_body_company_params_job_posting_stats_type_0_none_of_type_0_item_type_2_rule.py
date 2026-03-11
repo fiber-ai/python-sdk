@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2Rule(str, Enum):
     SENIORITY = "seniority"
 

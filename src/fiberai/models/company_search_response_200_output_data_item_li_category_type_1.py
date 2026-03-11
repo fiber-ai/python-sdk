@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanySearchResponse200OutputDataItemLiCategoryType1(str, Enum):
     C = "C"
     S = "S"

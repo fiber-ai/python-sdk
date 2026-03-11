@@ -1,73 +1,62 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItem
-
-
-
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItem,
+    )
 
 
 T = TypeVar("T", bound="GetCurrentCompaniesInSavedSearchResponse200Output")
 
 
-
 @_attrs_define
 class GetCurrentCompaniesInSavedSearchResponse200Output:
-    """ 
-        Attributes:
-            companies (list['GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItem']): The companies that currently
-                match the saved search, as of the latest run.
-            next_cursor (Union[None, Unset, str]): The next cursor
-            last_run_completed_at (Union[None, Unset, str]): The date and time the last run completed
-     """
+    """
+    Attributes:
+        companies (list[GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItem]): The companies that currently
+            match the saved search, as of the latest run.
+        next_cursor (None | str | Unset): The next cursor
+        last_run_completed_at (None | str | Unset): The date and time the last run completed
+    """
 
-    companies: list['GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItem']
-    next_cursor: Union[None, Unset, str] = UNSET
-    last_run_completed_at: Union[None, Unset, str] = UNSET
+    companies: list[GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItem]
+    next_cursor: None | str | Unset = UNSET
+    last_run_completed_at: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItem
         companies = []
         for companies_item_data in self.companies:
             companies_item = companies_item_data.to_dict()
             companies.append(companies_item)
 
-
-
-        next_cursor: Union[None, Unset, str]
+        next_cursor: None | str | Unset
         if isinstance(self.next_cursor, Unset):
             next_cursor = UNSET
         else:
             next_cursor = self.next_cursor
 
-        last_run_completed_at: Union[None, Unset, str]
+        last_run_completed_at: None | str | Unset
         if isinstance(self.last_run_completed_at, Unset):
             last_run_completed_at = UNSET
         else:
             last_run_completed_at = self.last_run_completed_at
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "companies": companies,
-        })
+        field_dict.update(
+            {
+                "companies": companies,
+            }
+        )
         if next_cursor is not UNSET:
             field_dict["nextCursor"] = next_cursor
         if last_run_completed_at is not UNSET:
@@ -75,48 +64,45 @@ class GetCurrentCompaniesInSavedSearchResponse200Output:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItem
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItem,
+        )
+
         d = dict(src_dict)
         companies = []
         _companies = d.pop("companies")
-        for companies_item_data in (_companies):
-            companies_item = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItem.from_dict(companies_item_data)
-
-
+        for companies_item_data in _companies:
+            companies_item = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItem.from_dict(
+                companies_item_data
+            )
 
             companies.append(companies_item)
 
-
-        def _parse_next_cursor(data: object) -> Union[None, Unset, str]:
+        def _parse_next_cursor(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         next_cursor = _parse_next_cursor(d.pop("nextCursor", UNSET))
 
-
-        def _parse_last_run_completed_at(data: object) -> Union[None, Unset, str]:
+        def _parse_last_run_completed_at(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         last_run_completed_at = _parse_last_run_completed_at(d.pop("lastRunCompletedAt", UNSET))
-
 
         get_current_companies_in_saved_search_response_200_output = cls(
             companies=companies,
             next_cursor=next_cursor,
             last_run_completed_at=last_run_completed_at,
         )
-
 
         get_current_companies_in_saved_search_response_200_output.additional_properties = d
         return get_current_companies_in_saved_search_response_200_output

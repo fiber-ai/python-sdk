@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyCountBodySearchParamsAcceleratorsV2Type0NoneOfType0ItemBatchSelectionType1Strategy(str, Enum):
     ONLY_THESE_BATCHES = "only-these-batches"
 

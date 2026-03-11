@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class KitchenSinkProfileBodyCompanyIdentifierType2Identifier(str, Enum):
     LINKEDINORGID = "linkedinOrgID"
 

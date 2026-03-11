@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsFoundedOnType0Strategy(str, Enum):
     ABSOLUTE = "absolute"
 

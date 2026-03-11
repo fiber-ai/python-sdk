@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class JobPostingSearchResponse200OutputDataItemStatus(str, Enum):
     ACTIVE = "active"
     CLOSED = "closed"

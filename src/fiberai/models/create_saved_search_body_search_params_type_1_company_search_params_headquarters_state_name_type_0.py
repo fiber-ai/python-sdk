@@ -1,67 +1,50 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
-
 T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersStateNameType0")
-
 
 
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersStateNameType0:
-    """ 
-        Attributes:
-            any_of (Union[None, Unset, list[str]]):
-            none_of (Union[None, Unset, list[str]]):
-     """
+    """
+    Attributes:
+        any_of (list[str] | None | Unset):
+        none_of (list[str] | None | Unset):
+    """
 
-    any_of: Union[None, Unset, list[str]] = UNSET
-    none_of: Union[None, Unset, list[str]] = UNSET
+    any_of: list[str] | None | Unset = UNSET
+    none_of: list[str] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        any_of: Union[None, Unset, list[str]]
+        any_of: list[str] | None | Unset
         if isinstance(self.any_of, Unset):
             any_of = UNSET
         elif isinstance(self.any_of, list):
             any_of = self.any_of
 
-
         else:
             any_of = self.any_of
 
-        none_of: Union[None, Unset, list[str]]
+        none_of: list[str] | None | Unset
         if isinstance(self.none_of, Unset):
             none_of = UNSET
         elif isinstance(self.none_of, list):
             none_of = self.none_of
 
-
         else:
             none_of = self.none_of
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if any_of is not UNSET:
             field_dict["anyOf"] = any_of
         if none_of is not UNSET:
@@ -69,12 +52,11 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersState
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        def _parse_any_of(data: object) -> Union[None, Unset, list[str]]:
+
+        def _parse_any_of(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -85,14 +67,13 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersState
                 any_of_type_0 = cast(list[str], data)
 
                 return any_of_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         any_of = _parse_any_of(d.pop("anyOf", UNSET))
 
-
-        def _parse_none_of(data: object) -> Union[None, Unset, list[str]]:
+        def _parse_none_of(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -103,18 +84,16 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersState
                 none_of_type_0 = cast(list[str], data)
 
                 return none_of_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list[str]], data)
+            return cast(list[str] | None | Unset, data)
 
         none_of = _parse_none_of(d.pop("noneOf", UNSET))
-
 
         create_saved_search_body_search_params_type_1_company_search_params_headquarters_state_name_type_0 = cls(
             any_of=any_of,
             none_of=none_of,
         )
-
 
         create_saved_search_body_search_params_type_1_company_search_params_headquarters_state_name_type_0.additional_properties = d
         return create_saved_search_body_search_params_type_1_company_search_params_headquarters_state_name_type_0

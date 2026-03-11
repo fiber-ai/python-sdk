@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncContactEnrichmentResponse200OutputProfilePhoneNumbersItemType(str, Enum):
     MOBILE = "mobile"
     OTHER = "other"

@@ -1,63 +1,85 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_status import (
+    SyncCombinedSearchBodyProfileParamsStealthV2Type1Status,
+)
 from ..types import UNSET, Unset
-
-from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_status import SyncCombinedSearchBodyProfileParamsStealthV2Type1Status
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_left_stealth_at_type_1 import SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1
-  from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_entered_stealth_at_type_0 import SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0
-  from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_entered_stealth_at_type_1 import SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1
-  from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_stealth_duration_type_0 import SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0
-  from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_left_stealth_at_type_0 import SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0
-
-
-
+    from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_entered_stealth_at_type_0 import (
+        SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0,
+    )
+    from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_entered_stealth_at_type_1 import (
+        SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1,
+    )
+    from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_left_stealth_at_type_0 import (
+        SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0,
+    )
+    from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_left_stealth_at_type_1 import (
+        SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1,
+    )
+    from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_stealth_duration_type_0 import (
+        SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0,
+    )
 
 
 T = TypeVar("T", bound="SyncCombinedSearchBodyProfileParamsStealthV2Type1")
 
 
-
 @_attrs_define
 class SyncCombinedSearchBodyProfileParamsStealthV2Type1:
-    """ 
-        Attributes:
-            status (SyncCombinedSearchBodyProfileParamsStealthV2Type1Status):
-            left_stealth_at (Union['SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0',
-                'SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1', None, Unset]):
-            entered_stealth_at (Union['SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0',
-                'SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1', None, Unset]):
-            stealth_duration (Union['SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0', None, Unset]):
-     """
+    """
+    Attributes:
+        status (SyncCombinedSearchBodyProfileParamsStealthV2Type1Status):
+        left_stealth_at (None | SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0 |
+            SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1 | Unset):
+        entered_stealth_at (None | SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0 |
+            SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1 | Unset):
+        stealth_duration (None | SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0 | Unset):
+    """
 
     status: SyncCombinedSearchBodyProfileParamsStealthV2Type1Status
-    left_stealth_at: Union['SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0', 'SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1', None, Unset] = UNSET
-    entered_stealth_at: Union['SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0', 'SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1', None, Unset] = UNSET
-    stealth_duration: Union['SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0', None, Unset] = UNSET
+    left_stealth_at: (
+        None
+        | SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0
+        | SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1
+        | Unset
+    ) = UNSET
+    entered_stealth_at: (
+        None
+        | SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0
+        | SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1
+        | Unset
+    ) = UNSET
+    stealth_duration: None | SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0 | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_left_stealth_at_type_1 import SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1
-        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_entered_stealth_at_type_0 import SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0
-        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_entered_stealth_at_type_1 import SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1
-        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_stealth_duration_type_0 import SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0
-        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_left_stealth_at_type_0 import SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0
+        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_entered_stealth_at_type_0 import (
+            SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0,
+        )
+        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_entered_stealth_at_type_1 import (
+            SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1,
+        )
+        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_left_stealth_at_type_0 import (
+            SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0,
+        )
+        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_left_stealth_at_type_1 import (
+            SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1,
+        )
+        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_stealth_duration_type_0 import (
+            SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0,
+        )
+
         status = self.status.value
 
-        left_stealth_at: Union[None, Unset, dict[str, Any]]
+        left_stealth_at: dict[str, Any] | None | Unset
         if isinstance(self.left_stealth_at, Unset):
             left_stealth_at = UNSET
         elif isinstance(self.left_stealth_at, SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0):
@@ -67,17 +89,21 @@ class SyncCombinedSearchBodyProfileParamsStealthV2Type1:
         else:
             left_stealth_at = self.left_stealth_at
 
-        entered_stealth_at: Union[None, Unset, dict[str, Any]]
+        entered_stealth_at: dict[str, Any] | None | Unset
         if isinstance(self.entered_stealth_at, Unset):
             entered_stealth_at = UNSET
-        elif isinstance(self.entered_stealth_at, SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0):
+        elif isinstance(
+            self.entered_stealth_at, SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0
+        ):
             entered_stealth_at = self.entered_stealth_at.to_dict()
-        elif isinstance(self.entered_stealth_at, SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1):
+        elif isinstance(
+            self.entered_stealth_at, SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1
+        ):
             entered_stealth_at = self.entered_stealth_at.to_dict()
         else:
             entered_stealth_at = self.entered_stealth_at
 
-        stealth_duration: Union[None, Unset, dict[str, Any]]
+        stealth_duration: dict[str, Any] | None | Unset
         if isinstance(self.stealth_duration, Unset):
             stealth_duration = UNSET
         elif isinstance(self.stealth_duration, SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0):
@@ -85,12 +111,13 @@ class SyncCombinedSearchBodyProfileParamsStealthV2Type1:
         else:
             stealth_duration = self.stealth_duration
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "status": status,
-        })
+        field_dict.update(
+            {
+                "status": status,
+            }
+        )
         if left_stealth_at is not UNSET:
             field_dict["leftStealthAt"] = left_stealth_at
         if entered_stealth_at is not UNSET:
@@ -100,22 +127,35 @@ class SyncCombinedSearchBodyProfileParamsStealthV2Type1:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_left_stealth_at_type_1 import SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1
-        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_entered_stealth_at_type_0 import SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0
-        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_entered_stealth_at_type_1 import SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1
-        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_stealth_duration_type_0 import SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0
-        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_left_stealth_at_type_0 import SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0
+        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_entered_stealth_at_type_0 import (
+            SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0,
+        )
+        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_entered_stealth_at_type_1 import (
+            SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1,
+        )
+        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_left_stealth_at_type_0 import (
+            SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0,
+        )
+        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_left_stealth_at_type_1 import (
+            SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1,
+        )
+        from ..models.sync_combined_search_body_profile_params_stealth_v2_type_1_stealth_duration_type_0 import (
+            SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0,
+        )
+
         d = dict(src_dict)
         status = SyncCombinedSearchBodyProfileParamsStealthV2Type1Status(d.pop("status"))
 
-
-
-
-        def _parse_left_stealth_at(data: object) -> Union['SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0', 'SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1', None, Unset]:
+        def _parse_left_stealth_at(
+            data: object,
+        ) -> (
+            None
+            | SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0
+            | SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -123,29 +163,41 @@ class SyncCombinedSearchBodyProfileParamsStealthV2Type1:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                left_stealth_at_type_0 = SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0.from_dict(data)
-
-
+                left_stealth_at_type_0 = SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0.from_dict(
+                    data
+                )
 
                 return left_stealth_at_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                left_stealth_at_type_1 = SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1.from_dict(data)
-
-
+                left_stealth_at_type_1 = SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1.from_dict(
+                    data
+                )
 
                 return left_stealth_at_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0', 'SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1', None, Unset], data)
+            return cast(
+                None
+                | SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType0
+                | SyncCombinedSearchBodyProfileParamsStealthV2Type1LeftStealthAtType1
+                | Unset,
+                data,
+            )
 
         left_stealth_at = _parse_left_stealth_at(d.pop("leftStealthAt", UNSET))
 
-
-        def _parse_entered_stealth_at(data: object) -> Union['SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0', 'SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1', None, Unset]:
+        def _parse_entered_stealth_at(
+            data: object,
+        ) -> (
+            None
+            | SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0
+            | SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -153,29 +205,36 @@ class SyncCombinedSearchBodyProfileParamsStealthV2Type1:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                entered_stealth_at_type_0 = SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0.from_dict(data)
-
-
+                entered_stealth_at_type_0 = (
+                    SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0.from_dict(data)
+                )
 
                 return entered_stealth_at_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                entered_stealth_at_type_1 = SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1.from_dict(data)
-
-
+                entered_stealth_at_type_1 = (
+                    SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1.from_dict(data)
+                )
 
                 return entered_stealth_at_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0', 'SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1', None, Unset], data)
+            return cast(
+                None
+                | SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType0
+                | SyncCombinedSearchBodyProfileParamsStealthV2Type1EnteredStealthAtType1
+                | Unset,
+                data,
+            )
 
         entered_stealth_at = _parse_entered_stealth_at(d.pop("enteredStealthAt", UNSET))
 
-
-        def _parse_stealth_duration(data: object) -> Union['SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0', None, Unset]:
+        def _parse_stealth_duration(
+            data: object,
+        ) -> None | SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -183,17 +242,16 @@ class SyncCombinedSearchBodyProfileParamsStealthV2Type1:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                stealth_duration_type_0 = SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0.from_dict(data)
-
-
+                stealth_duration_type_0 = (
+                    SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0.from_dict(data)
+                )
 
                 return stealth_duration_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0', None, Unset], data)
+            return cast(None | SyncCombinedSearchBodyProfileParamsStealthV2Type1StealthDurationType0 | Unset, data)
 
         stealth_duration = _parse_stealth_duration(d.pop("stealthDuration", UNSET))
-
 
         sync_combined_search_body_profile_params_stealth_v2_type_1 = cls(
             status=status,
@@ -201,7 +259,6 @@ class SyncCombinedSearchBodyProfileParamsStealthV2Type1:
             entered_stealth_at=entered_stealth_at,
             stealth_duration=stealth_duration,
         )
-
 
         sync_combined_search_body_profile_params_stealth_v2_type_1.additional_properties = d
         return sync_combined_search_body_profile_params_stealth_v2_type_1

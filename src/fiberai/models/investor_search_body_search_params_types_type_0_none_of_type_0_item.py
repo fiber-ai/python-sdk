@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class InvestorSearchBodySearchParamsTypesType0NoneOfType0Item(str, Enum):
     ACCELERATOR = "accelerator"
     ANGEL = "angel"

@@ -1,6 +1,9 @@
 from enum import Enum
 
-class PollCombinedSearchResponse200OutputDataType1ItemsItemDetailedWorkExperiencesType0ItemJobFunctionType0Item(str, Enum):
+
+class PollCombinedSearchResponse200OutputDataType1ItemsItemDetailedWorkExperiencesType0ItemJobFunctionType0Item(
+    str, Enum
+):
     ACCOUNTING = "Accounting"
     ADMINISTRATIVE = "Administrative"
     ADVERTISING = "Advertising"

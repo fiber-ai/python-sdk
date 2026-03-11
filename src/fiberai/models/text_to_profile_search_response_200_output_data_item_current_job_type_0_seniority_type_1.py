@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToProfileSearchResponse200OutputDataItemCurrentJobType0SeniorityType1(str, Enum):
     ASSOCIATE = "Associate"
     DIRECTOR = "Director"

@@ -1,53 +1,47 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.get_org_credits_response_200_output_credits_per_operation_type_0 import GetOrgCreditsResponse200OutputCreditsPerOperationType0
-
-
-
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0 import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0,
+    )
 
 
 T = TypeVar("T", bound="GetOrgCreditsResponse200Output")
 
 
-
 @_attrs_define
 class GetOrgCreditsResponse200Output:
-    """ 
-        Attributes:
-            organization_id (str):
-            max_ (float):
-            used (float):
-            available (float):
-            usage_period_resets_on (str):
-            credits_per_operation (Union['GetOrgCreditsResponse200OutputCreditsPerOperationType0', None, Unset]):
-     """
+    """
+    Attributes:
+        organization_id (str):
+        max_ (float):
+        used (float):
+        available (float):
+        usage_period_resets_on (str):
+        credits_per_operation (GetOrgCreditsResponse200OutputCreditsPerOperationType0 | None | Unset):
+    """
 
     organization_id: str
     max_: float
     used: float
     available: float
     usage_period_resets_on: str
-    credits_per_operation: Union['GetOrgCreditsResponse200OutputCreditsPerOperationType0', None, Unset] = UNSET
+    credits_per_operation: GetOrgCreditsResponse200OutputCreditsPerOperationType0 | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0 import GetOrgCreditsResponse200OutputCreditsPerOperationType0
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0 import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0,
+        )
+
         organization_id = self.organization_id
 
         max_ = self.max_
@@ -58,7 +52,7 @@ class GetOrgCreditsResponse200Output:
 
         usage_period_resets_on = self.usage_period_resets_on
 
-        credits_per_operation: Union[None, Unset, dict[str, Any]]
+        credits_per_operation: dict[str, Any] | None | Unset
         if isinstance(self.credits_per_operation, Unset):
             credits_per_operation = UNSET
         elif isinstance(self.credits_per_operation, GetOrgCreditsResponse200OutputCreditsPerOperationType0):
@@ -66,26 +60,28 @@ class GetOrgCreditsResponse200Output:
         else:
             credits_per_operation = self.credits_per_operation
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "organizationId": organization_id,
-            "max": max_,
-            "used": used,
-            "available": available,
-            "usagePeriodResetsOn": usage_period_resets_on,
-        })
+        field_dict.update(
+            {
+                "organizationId": organization_id,
+                "max": max_,
+                "used": used,
+                "available": available,
+                "usagePeriodResetsOn": usage_period_resets_on,
+            }
+        )
         if credits_per_operation is not UNSET:
             field_dict["creditsPerOperation"] = credits_per_operation
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0 import GetOrgCreditsResponse200OutputCreditsPerOperationType0
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0 import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0,
+        )
+
         d = dict(src_dict)
         organization_id = d.pop("organizationId")
 
@@ -97,7 +93,9 @@ class GetOrgCreditsResponse200Output:
 
         usage_period_resets_on = d.pop("usagePeriodResetsOn")
 
-        def _parse_credits_per_operation(data: object) -> Union['GetOrgCreditsResponse200OutputCreditsPerOperationType0', None, Unset]:
+        def _parse_credits_per_operation(
+            data: object,
+        ) -> GetOrgCreditsResponse200OutputCreditsPerOperationType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -107,15 +105,12 @@ class GetOrgCreditsResponse200Output:
                     raise TypeError()
                 credits_per_operation_type_0 = GetOrgCreditsResponse200OutputCreditsPerOperationType0.from_dict(data)
 
-
-
                 return credits_per_operation_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['GetOrgCreditsResponse200OutputCreditsPerOperationType0', None, Unset], data)
+            return cast(GetOrgCreditsResponse200OutputCreditsPerOperationType0 | None | Unset, data)
 
         credits_per_operation = _parse_credits_per_operation(d.pop("creditsPerOperation", UNSET))
-
 
         get_org_credits_response_200_output = cls(
             organization_id=organization_id,
@@ -125,7 +120,6 @@ class GetOrgCreditsResponse200Output:
             usage_period_resets_on=usage_period_resets_on,
             credits_per_operation=credits_per_operation,
         )
-
 
         get_org_credits_response_200_output.additional_properties = d
         return get_org_credits_response_200_output

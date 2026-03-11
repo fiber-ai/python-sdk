@@ -1,86 +1,105 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0_status import (
+    TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0Status,
+)
 from ..types import UNSET, Unset
-
-from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0_status import TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0Status
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0_entered_stealth_at_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0
-  from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0_entered_stealth_at_type_1 import TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1
-
-
-
+    from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0_entered_stealth_at_type_0 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0,
+    )
+    from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0_entered_stealth_at_type_1 import (
+        TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1,
+    )
 
 
 T = TypeVar("T", bound="TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0")
 
 
-
 @_attrs_define
 class TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0:
-    """ 
-        Attributes:
-            status (TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0Status):
-            entered_stealth_at
-                (Union['TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0',
-                'TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1', None, Unset]):
-     """
+    """
+    Attributes:
+        status (TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0Status):
+        entered_stealth_at (None |
+            TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0 |
+            TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1 | Unset):
+    """
 
     status: TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0Status
-    entered_stealth_at: Union['TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0', 'TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1', None, Unset] = UNSET
+    entered_stealth_at: (
+        None
+        | TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0
+        | TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0_entered_stealth_at_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0_entered_stealth_at_type_1 import TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1
+        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0_entered_stealth_at_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0_entered_stealth_at_type_1 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1,
+        )
+
         status = self.status.value
 
-        entered_stealth_at: Union[None, Unset, dict[str, Any]]
+        entered_stealth_at: dict[str, Any] | None | Unset
         if isinstance(self.entered_stealth_at, Unset):
             entered_stealth_at = UNSET
-        elif isinstance(self.entered_stealth_at, TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0):
+        elif isinstance(
+            self.entered_stealth_at,
+            TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0,
+        ):
             entered_stealth_at = self.entered_stealth_at.to_dict()
-        elif isinstance(self.entered_stealth_at, TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1):
+        elif isinstance(
+            self.entered_stealth_at,
+            TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1,
+        ):
             entered_stealth_at = self.entered_stealth_at.to_dict()
         else:
             entered_stealth_at = self.entered_stealth_at
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "status": status,
-        })
+        field_dict.update(
+            {
+                "status": status,
+            }
+        )
         if entered_stealth_at is not UNSET:
             field_dict["enteredStealthAt"] = entered_stealth_at
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0_entered_stealth_at_type_0 import TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0
-        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0_entered_stealth_at_type_1 import TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1
+        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0_entered_stealth_at_type_0 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0,
+        )
+        from ..models.text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0_entered_stealth_at_type_1 import (
+            TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1,
+        )
+
         d = dict(src_dict)
         status = TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0Status(d.pop("status"))
 
-
-
-
-        def _parse_entered_stealth_at(data: object) -> Union['TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0', 'TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1', None, Unset]:
+        def _parse_entered_stealth_at(
+            data: object,
+        ) -> (
+            None
+            | TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0
+            | TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -88,33 +107,41 @@ class TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                entered_stealth_at_type_0 = TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0.from_dict(data)
-
-
+                entered_stealth_at_type_0 = (
+                    TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0.from_dict(
+                        data
+                    )
+                )
 
                 return entered_stealth_at_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                entered_stealth_at_type_1 = TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1.from_dict(data)
-
-
+                entered_stealth_at_type_1 = (
+                    TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1.from_dict(
+                        data
+                    )
+                )
 
                 return entered_stealth_at_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0', 'TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1', None, Unset], data)
+            return cast(
+                None
+                | TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType0
+                | TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type0EnteredStealthAtType1
+                | Unset,
+                data,
+            )
 
         entered_stealth_at = _parse_entered_stealth_at(d.pop("enteredStealthAt", UNSET))
-
 
         text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0 = cls(
             status=status,
             entered_stealth_at=entered_stealth_at,
         )
-
 
         text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0.additional_properties = d
         return text_to_profile_search_params_response_200_output_search_params_stealth_v2_type_0

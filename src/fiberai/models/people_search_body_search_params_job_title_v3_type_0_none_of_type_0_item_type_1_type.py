@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PeopleSearchBodySearchParamsJobTitleV3Type0NoneOfType0ItemType1Type(str, Enum):
     FUNCTIONAL = "functional"
 

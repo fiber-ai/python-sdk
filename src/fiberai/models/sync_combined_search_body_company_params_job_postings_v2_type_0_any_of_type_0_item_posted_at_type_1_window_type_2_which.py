@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2Which(str, Enum):
     CURRENT = "current"
     PREVIOUS = "previous"

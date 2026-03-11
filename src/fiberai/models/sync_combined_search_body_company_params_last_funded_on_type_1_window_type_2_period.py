@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsLastFundedOnType1WindowType2Period(str, Enum):
     DAY = "day"
     MONTH = "month"

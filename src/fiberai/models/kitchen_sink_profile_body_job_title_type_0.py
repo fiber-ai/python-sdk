@@ -1,74 +1,57 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
-
 T = TypeVar("T", bound="KitchenSinkProfileBodyJobTitleType0")
-
 
 
 @_attrs_define
 class KitchenSinkProfileBodyJobTitleType0:
-    """ 
-        Attributes:
-            value (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        value (None | str | Unset):
+    """
 
-    value: Union[None, Unset, str] = UNSET
+    value: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        value: Union[None, Unset, str]
+        value: None | str | Unset
         if isinstance(self.value, Unset):
             value = UNSET
         else:
             value = self.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if value is not UNSET:
             field_dict["value"] = value
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        def _parse_value(data: object) -> Union[None, Unset, str]:
+
+        def _parse_value(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         value = _parse_value(d.pop("value", UNSET))
-
 
         kitchen_sink_profile_body_job_title_type_0 = cls(
             value=value,
         )
-
 
         kitchen_sink_profile_body_job_title_type_0.additional_properties = d
         return kitchen_sink_profile_body_job_title_type_0

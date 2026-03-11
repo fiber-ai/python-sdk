@@ -1,49 +1,45 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.company_search_body_search_params_founded_on_type_0_strategy import (
+    CompanySearchBodySearchParamsFoundedOnType0Strategy,
+)
 from ..types import UNSET, Unset
-
-from ..models.company_search_body_search_params_founded_on_type_0_strategy import CompanySearchBodySearchParamsFoundedOnType0Strategy
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.company_search_body_search_params_founded_on_type_0_range_type_0 import CompanySearchBodySearchParamsFoundedOnType0RangeType0
-
-
-
+    from ..models.company_search_body_search_params_founded_on_type_0_range_type_0 import (
+        CompanySearchBodySearchParamsFoundedOnType0RangeType0,
+    )
 
 
 T = TypeVar("T", bound="CompanySearchBodySearchParamsFoundedOnType0")
 
 
-
 @_attrs_define
 class CompanySearchBodySearchParamsFoundedOnType0:
-    """ 
-        Attributes:
-            strategy (CompanySearchBodySearchParamsFoundedOnType0Strategy):
-            range_ (Union['CompanySearchBodySearchParamsFoundedOnType0RangeType0', None, Unset]):
-     """
+    """
+    Attributes:
+        strategy (CompanySearchBodySearchParamsFoundedOnType0Strategy):
+        range_ (CompanySearchBodySearchParamsFoundedOnType0RangeType0 | None | Unset):
+    """
 
     strategy: CompanySearchBodySearchParamsFoundedOnType0Strategy
-    range_: Union['CompanySearchBodySearchParamsFoundedOnType0RangeType0', None, Unset] = UNSET
+    range_: CompanySearchBodySearchParamsFoundedOnType0RangeType0 | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.company_search_body_search_params_founded_on_type_0_range_type_0 import CompanySearchBodySearchParamsFoundedOnType0RangeType0
+        from ..models.company_search_body_search_params_founded_on_type_0_range_type_0 import (
+            CompanySearchBodySearchParamsFoundedOnType0RangeType0,
+        )
+
         strategy = self.strategy.value
 
-        range_: Union[None, Unset, dict[str, Any]]
+        range_: dict[str, Any] | None | Unset
         if isinstance(self.range_, Unset):
             range_ = UNSET
         elif isinstance(self.range_, CompanySearchBodySearchParamsFoundedOnType0RangeType0):
@@ -51,29 +47,28 @@ class CompanySearchBodySearchParamsFoundedOnType0:
         else:
             range_ = self.range_
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "strategy": strategy,
-        })
+        field_dict.update(
+            {
+                "strategy": strategy,
+            }
+        )
         if range_ is not UNSET:
             field_dict["range"] = range_
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.company_search_body_search_params_founded_on_type_0_range_type_0 import CompanySearchBodySearchParamsFoundedOnType0RangeType0
+        from ..models.company_search_body_search_params_founded_on_type_0_range_type_0 import (
+            CompanySearchBodySearchParamsFoundedOnType0RangeType0,
+        )
+
         d = dict(src_dict)
         strategy = CompanySearchBodySearchParamsFoundedOnType0Strategy(d.pop("strategy"))
 
-
-
-
-        def _parse_range_(data: object) -> Union['CompanySearchBodySearchParamsFoundedOnType0RangeType0', None, Unset]:
+        def _parse_range_(data: object) -> CompanySearchBodySearchParamsFoundedOnType0RangeType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -83,21 +78,17 @@ class CompanySearchBodySearchParamsFoundedOnType0:
                     raise TypeError()
                 range_type_0 = CompanySearchBodySearchParamsFoundedOnType0RangeType0.from_dict(data)
 
-
-
                 return range_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CompanySearchBodySearchParamsFoundedOnType0RangeType0', None, Unset], data)
+            return cast(CompanySearchBodySearchParamsFoundedOnType0RangeType0 | None | Unset, data)
 
         range_ = _parse_range_(d.pop("range", UNSET))
-
 
         company_search_body_search_params_founded_on_type_0 = cls(
             strategy=strategy,
             range_=range_,
         )
-
 
         company_search_body_search_params_founded_on_type_0.additional_properties = d
         return company_search_body_search_params_founded_on_type_0

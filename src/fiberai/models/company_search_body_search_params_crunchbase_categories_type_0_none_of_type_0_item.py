@@ -1,39 +1,31 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.company_search_body_search_params_crunchbase_categories_type_0_none_of_type_0_item_type import CompanySearchBodySearchParamsCrunchbaseCategoriesType0NoneOfType0ItemType
-
-
-
-
-
+from ..models.company_search_body_search_params_crunchbase_categories_type_0_none_of_type_0_item_type import (
+    CompanySearchBodySearchParamsCrunchbaseCategoriesType0NoneOfType0ItemType,
+)
 
 T = TypeVar("T", bound="CompanySearchBodySearchParamsCrunchbaseCategoriesType0NoneOfType0Item")
 
 
-
 @_attrs_define
 class CompanySearchBodySearchParamsCrunchbaseCategoriesType0NoneOfType0Item:
-    """ 
-        Attributes:
-            group (str):
-            category (str):
-            type_ (CompanySearchBodySearchParamsCrunchbaseCategoriesType0NoneOfType0ItemType):
-     """
+    """
+    Attributes:
+        group (str):
+        category (str):
+        type_ (CompanySearchBodySearchParamsCrunchbaseCategoriesType0NoneOfType0ItemType):
+    """
 
     group: str
     category: str
     type_: CompanySearchBodySearchParamsCrunchbaseCategoriesType0NoneOfType0ItemType
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         group = self.group
@@ -42,18 +34,17 @@ class CompanySearchBodySearchParamsCrunchbaseCategoriesType0NoneOfType0Item:
 
         type_ = self.type_.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "group": group,
-            "category": category,
-            "type": type_,
-        })
+        field_dict.update(
+            {
+                "group": group,
+                "category": category,
+                "type": type_,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -64,15 +55,11 @@ class CompanySearchBodySearchParamsCrunchbaseCategoriesType0NoneOfType0Item:
 
         type_ = CompanySearchBodySearchParamsCrunchbaseCategoriesType0NoneOfType0ItemType(d.pop("type"))
 
-
-
-
         company_search_body_search_params_crunchbase_categories_type_0_none_of_type_0_item = cls(
             group=group,
             category=category,
             type_=type_,
         )
-
 
         company_search_body_search_params_crunchbase_categories_type_0_none_of_type_0_item.additional_properties = d
         return company_search_body_search_params_crunchbase_categories_type_0_none_of_type_0_item

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyCompanyParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType0Method(str, Enum):
     LASTN = "lastN"
 

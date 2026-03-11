@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyProfileParamsJobTitleV3Type0AllOfType0ItemType2Type(str, Enum):
     CARTESIAN = "cartesian"
 

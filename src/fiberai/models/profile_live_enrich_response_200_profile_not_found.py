@@ -1,54 +1,42 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-
-
-
-
-
-
 T = TypeVar("T", bound="ProfileLiveEnrichResponse200ProfileNotFound")
-
 
 
 @_attrs_define
 class ProfileLiveEnrichResponse200ProfileNotFound:
-    """ The profile was not found on LinkedIn. Check that your URL is still active!
+    """The profile was not found on LinkedIn. Check that your URL is still active!
 
-        Attributes:
-            found (bool):
-            message (str):
-     """
+    Attributes:
+        found (bool):
+        message (str):
+    """
 
     found: bool
     message: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         found = self.found
 
         message = self.message
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "found": found,
-            "message": message,
-        })
+        field_dict.update(
+            {
+                "found": found,
+                "message": message,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -61,7 +49,6 @@ class ProfileLiveEnrichResponse200ProfileNotFound:
             found=found,
             message=message,
         )
-
 
         profile_live_enrich_response_200_profile_not_found.additional_properties = d
         return profile_live_enrich_response_200_profile_not_found

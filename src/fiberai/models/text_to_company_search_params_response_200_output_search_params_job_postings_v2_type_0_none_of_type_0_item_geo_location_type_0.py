@@ -1,122 +1,139 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_strategy import TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Strategy
-from typing import cast
-from typing import cast, Union
+from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_strategy import (
+    TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Strategy,
+)
 
 if TYPE_CHECKING:
-  from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_radius_type_0 import TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0
-  from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_center import TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Center
-  from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_radius_type_1 import TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType1
+    from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_center import (
+        TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Center,
+    )
+    from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_radius_type_0 import (
+        TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0,
+    )
+    from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_radius_type_1 import (
+        TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType1,
+    )
 
 
-
-
-
-T = TypeVar("T", bound="TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0")
-
+T = TypeVar(
+    "T", bound="TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0"
+)
 
 
 @_attrs_define
 class TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0:
-    """ 
-        Attributes:
-            strategy (TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType
-                0Strategy):
-            center
-                (TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Center):
-            radius (Union['TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocatio
-                nType0RadiusType0', 'TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoL
-                ocationType0RadiusType1']):
-     """
+    """
+    Attributes:
+        strategy (TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType
+            0Strategy):
+        center
+            (TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Center):
+        radius (TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0R
+            adiusType0 | TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationT
+            ype0RadiusType1):
+    """
 
-    strategy: TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Strategy
-    center: 'TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Center'
-    radius: Union['TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0', 'TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType1']
+    strategy: (
+        TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Strategy
+    )
+    center: (
+        TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Center
+    )
+    radius: (
+        TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0
+        | TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType1
+    )
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_radius_type_0 import TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0
-        from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_center import TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Center
-        from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_radius_type_1 import TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType1
+        from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_radius_type_0 import (
+            TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0,
+        )
+
         strategy = self.strategy.value
 
         center = self.center.to_dict()
 
         radius: dict[str, Any]
-        if isinstance(self.radius, TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0):
+        if isinstance(
+            self.radius,
+            TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0,
+        ):
             radius = self.radius.to_dict()
         else:
             radius = self.radius.to_dict()
 
-
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "strategy": strategy,
-            "center": center,
-            "radius": radius,
-        })
+        field_dict.update(
+            {
+                "strategy": strategy,
+                "center": center,
+                "radius": radius,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_radius_type_0 import TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0
-        from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_center import TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Center
-        from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_radius_type_1 import TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType1
+        from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_center import (
+            TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Center,
+        )
+        from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_radius_type_0 import (
+            TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0,
+        )
+        from ..models.text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_radius_type_1 import (
+            TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType1,
+        )
+
         d = dict(src_dict)
-        strategy = TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Strategy(d.pop("strategy"))
+        strategy = TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Strategy(
+            d.pop("strategy")
+        )
 
+        center = TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Center.from_dict(
+            d.pop("center")
+        )
 
-
-
-        center = TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Center.from_dict(d.pop("center"))
-
-
-
-
-        def _parse_radius(data: object) -> Union['TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0', 'TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType1']:
+        def _parse_radius(
+            data: object,
+        ) -> (
+            TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0
+            | TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType1
+        ):
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                radius_type_0 = TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0.from_dict(data)
-
-
+                radius_type_0 = TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0.from_dict(
+                    data
+                )
 
                 return radius_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             if not isinstance(data, dict):
                 raise TypeError()
-            radius_type_1 = TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType1.from_dict(data)
-
-
+            radius_type_1 = TextToCompanySearchParamsResponse200OutputSearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType1.from_dict(
+                data
+            )
 
             return radius_type_1
 
         radius = _parse_radius(d.pop("radius"))
-
 
         text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0 = cls(
             strategy=strategy,
             center=center,
             radius=radius,
         )
-
 
         text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0.additional_properties = d
         return text_to_company_search_params_response_200_output_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0

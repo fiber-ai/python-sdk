@@ -1,44 +1,47 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
+from ..models.text_to_company_search_response_200_output_search_params_job_postings_v2_type_0_all_of_type_0_item_posted_at_type_1_window_type_2_method import (
+    TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Method,
+)
+from ..models.text_to_company_search_response_200_output_search_params_job_postings_v2_type_0_all_of_type_0_item_posted_at_type_1_window_type_2_period import (
+    TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Period,
+)
+from ..models.text_to_company_search_response_200_output_search_params_job_postings_v2_type_0_all_of_type_0_item_posted_at_type_1_window_type_2_which import (
+    TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Which,
+)
 
-from ..models.text_to_company_search_response_200_output_search_params_job_postings_v2_type_0_all_of_type_0_item_posted_at_type_1_window_type_2_method import TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Method
-from ..models.text_to_company_search_response_200_output_search_params_job_postings_v2_type_0_all_of_type_0_item_posted_at_type_1_window_type_2_period import TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Period
-from ..models.text_to_company_search_response_200_output_search_params_job_postings_v2_type_0_all_of_type_0_item_posted_at_type_1_window_type_2_which import TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Which
-
-
-
-
-
-
-T = TypeVar("T", bound="TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2")
-
+T = TypeVar(
+    "T",
+    bound="TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2",
+)
 
 
 @_attrs_define
 class TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2:
-    """ 
-        Attributes:
-            method (TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2
-                Method):
-            which
-                (TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Which):
-            period (TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2
-                Period):
-     """
+    """
+    Attributes:
+        method (TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2
+            Method):
+        which
+            (TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Which):
+        period (TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2
+            Period):
+    """
 
-    method: TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Method
+    method: (
+        TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Method
+    )
     which: TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Which
-    period: TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Period
+    period: (
+        TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Period
+    )
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         method = self.method.value
@@ -47,43 +50,38 @@ class TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfTyp
 
         period = self.period.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "method": method,
-            "which": which,
-            "period": period,
-        })
+        field_dict.update(
+            {
+                "method": method,
+                "which": which,
+                "period": period,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        method = TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Method(d.pop("method"))
+        method = TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Method(
+            d.pop("method")
+        )
 
+        which = TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Which(
+            d.pop("which")
+        )
 
-
-
-        which = TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Which(d.pop("which"))
-
-
-
-
-        period = TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Period(d.pop("period"))
-
-
-
+        period = TextToCompanySearchResponse200OutputSearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType2Period(
+            d.pop("period")
+        )
 
         text_to_company_search_response_200_output_search_params_job_postings_v2_type_0_all_of_type_0_item_posted_at_type_1_window_type_2 = cls(
             method=method,
             which=which,
             period=period,
         )
-
 
         text_to_company_search_response_200_output_search_params_job_postings_v2_type_0_all_of_type_0_item_posted_at_type_1_window_type_2.additional_properties = d
         return text_to_company_search_response_200_output_search_params_job_postings_v2_type_0_all_of_type_0_item_posted_at_type_1_window_type_2

@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyPostsLiveFetchResponse200ChargeInfoType0Method(str, Enum):
     CHARGED_NOW = "charged-now"
 

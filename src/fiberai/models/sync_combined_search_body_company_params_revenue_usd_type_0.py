@@ -1,48 +1,46 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.sync_combined_search_body_company_params_revenue_usd_type_0_max_type_0 import SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0
-  from ..models.sync_combined_search_body_company_params_revenue_usd_type_0_min_type_0 import SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0
-
-
-
+    from ..models.sync_combined_search_body_company_params_revenue_usd_type_0_max_type_0 import (
+        SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0,
+    )
+    from ..models.sync_combined_search_body_company_params_revenue_usd_type_0_min_type_0 import (
+        SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0,
+    )
 
 
 T = TypeVar("T", bound="SyncCombinedSearchBodyCompanyParamsRevenueUSDType0")
 
 
-
 @_attrs_define
 class SyncCombinedSearchBodyCompanyParamsRevenueUSDType0:
-    """ 
-        Attributes:
-            min_ (Union['SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0', None, Unset]):
-            max_ (Union['SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0', None, Unset]):
-     """
+    """
+    Attributes:
+        min_ (None | SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0 | Unset):
+        max_ (None | SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0 | Unset):
+    """
 
-    min_: Union['SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0', None, Unset] = UNSET
-    max_: Union['SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0', None, Unset] = UNSET
+    min_: None | SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0 | Unset = UNSET
+    max_: None | SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0 | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.sync_combined_search_body_company_params_revenue_usd_type_0_max_type_0 import SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0
-        from ..models.sync_combined_search_body_company_params_revenue_usd_type_0_min_type_0 import SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0
-        min_: Union[None, Unset, dict[str, Any]]
+        from ..models.sync_combined_search_body_company_params_revenue_usd_type_0_max_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0,
+        )
+        from ..models.sync_combined_search_body_company_params_revenue_usd_type_0_min_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0,
+        )
+
+        min_: dict[str, Any] | None | Unset
         if isinstance(self.min_, Unset):
             min_ = UNSET
         elif isinstance(self.min_, SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0):
@@ -50,7 +48,7 @@ class SyncCombinedSearchBodyCompanyParamsRevenueUSDType0:
         else:
             min_ = self.min_
 
-        max_: Union[None, Unset, dict[str, Any]]
+        max_: dict[str, Any] | None | Unset
         if isinstance(self.max_, Unset):
             max_ = UNSET
         elif isinstance(self.max_, SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0):
@@ -58,11 +56,9 @@ class SyncCombinedSearchBodyCompanyParamsRevenueUSDType0:
         else:
             max_ = self.max_
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if min_ is not UNSET:
             field_dict["min"] = min_
         if max_ is not UNSET:
@@ -70,14 +66,18 @@ class SyncCombinedSearchBodyCompanyParamsRevenueUSDType0:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.sync_combined_search_body_company_params_revenue_usd_type_0_max_type_0 import SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0
-        from ..models.sync_combined_search_body_company_params_revenue_usd_type_0_min_type_0 import SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0
+        from ..models.sync_combined_search_body_company_params_revenue_usd_type_0_max_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0,
+        )
+        from ..models.sync_combined_search_body_company_params_revenue_usd_type_0_min_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0,
+        )
+
         d = dict(src_dict)
-        def _parse_min_(data: object) -> Union['SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0', None, Unset]:
+
+        def _parse_min_(data: object) -> None | SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -87,17 +87,14 @@ class SyncCombinedSearchBodyCompanyParamsRevenueUSDType0:
                     raise TypeError()
                 min_type_0 = SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0.from_dict(data)
 
-
-
                 return min_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0', None, Unset], data)
+            return cast(None | SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MinType0 | Unset, data)
 
         min_ = _parse_min_(d.pop("min", UNSET))
 
-
-        def _parse_max_(data: object) -> Union['SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0', None, Unset]:
+        def _parse_max_(data: object) -> None | SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -107,21 +104,17 @@ class SyncCombinedSearchBodyCompanyParamsRevenueUSDType0:
                     raise TypeError()
                 max_type_0 = SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0.from_dict(data)
 
-
-
                 return max_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0', None, Unset], data)
+            return cast(None | SyncCombinedSearchBodyCompanyParamsRevenueUSDType0MaxType0 | Unset, data)
 
         max_ = _parse_max_(d.pop("max", UNSET))
-
 
         sync_combined_search_body_company_params_revenue_usd_type_0 = cls(
             min_=min_,
             max_=max_,
         )
-
 
         sync_combined_search_body_company_params_revenue_usd_type_0.additional_properties = d
         return sync_combined_search_body_company_params_revenue_usd_type_0

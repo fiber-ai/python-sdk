@@ -1,94 +1,129 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_strategy import (
+    CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1Strategy,
+)
 from ..types import UNSET, Unset
-
-from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_strategy import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1Strategy
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_1 import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1
-  from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_2 import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2
-  from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_0 import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0
+    from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_0 import (
+        CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_1 import (
+        CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1,
+    )
+    from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_2 import (
+        CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2,
+    )
 
 
-
-
-
-T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1")
-
+T = TypeVar(
+    "T",
+    bound="CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1",
+)
 
 
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1:
-    """ 
-        Attributes:
-            strategy (CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0Re
-                centlyHiredType0ItemHiredAtType1Strategy):
-            window (Union['CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersTy
-                pe0RecentlyHiredType0ItemHiredAtType1WindowType0', 'CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmp
-                loyeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1', 'CreateSavedSearchBodySe
-                archParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1W
-                indowType2', None, Unset]):
-     """
+    """
+    Attributes:
+        strategy (CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0Re
+            centlyHiredType0ItemHiredAtType1Strategy):
+        window (CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0Rece
+            ntlyHiredType0ItemHiredAtType1WindowType0 | CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesTy
+            pe0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1 | CreateSavedSearchBodySearchParam
+            sType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType
+            2 | None | Unset):
+    """
 
     strategy: CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1Strategy
-    window: Union['CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0', 'CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1', 'CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2', None, Unset] = UNSET
+    window: (
+        CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0
+        | CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1
+        | CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2
+        | None
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_1 import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1
-        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_2 import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2
-        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_0 import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0
+        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_0 import (
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_1 import (
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_2 import (
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2,
+        )
+
         strategy = self.strategy.value
 
-        window: Union[None, Unset, dict[str, Any]]
+        window: dict[str, Any] | None | Unset
         if isinstance(self.window, Unset):
             window = UNSET
-        elif isinstance(self.window, CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0):
+        elif isinstance(
+            self.window,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0,
+        ):
             window = self.window.to_dict()
-        elif isinstance(self.window, CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1):
+        elif isinstance(
+            self.window,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1,
+        ):
             window = self.window.to_dict()
-        elif isinstance(self.window, CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2):
+        elif isinstance(
+            self.window,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2,
+        ):
             window = self.window.to_dict()
         else:
             window = self.window
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "strategy": strategy,
-        })
+        field_dict.update(
+            {
+                "strategy": strategy,
+            }
+        )
         if window is not UNSET:
             field_dict["window"] = window
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_1 import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1
-        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_2 import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2
-        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_0 import CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0
+        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_0 import (
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_1 import (
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1_window_type_2 import (
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2,
+        )
+
         d = dict(src_dict)
-        strategy = CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1Strategy(d.pop("strategy"))
+        strategy = CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1Strategy(
+            d.pop("strategy")
+        )
 
-
-
-
-        def _parse_window(data: object) -> Union['CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0', 'CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1', 'CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2', None, Unset]:
+        def _parse_window(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0
+            | CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1
+            | CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -96,43 +131,48 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0Rul
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                window_type_0 = CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0.from_dict(data)
-
-
+                window_type_0 = CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0.from_dict(
+                    data
+                )
 
                 return window_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                window_type_1 = CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1.from_dict(data)
-
-
+                window_type_1 = CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1.from_dict(
+                    data
+                )
 
                 return window_type_1
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                window_type_2 = CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2.from_dict(data)
-
-
+                window_type_2 = CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2.from_dict(
+                    data
+                )
 
                 return window_type_2
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0', 'CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1', 'CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2', None, Unset], data)
+            return cast(
+                CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType0
+                | CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType1
+                | CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1WindowType2
+                | None
+                | Unset,
+                data,
+            )
 
         window = _parse_window(d.pop("window", UNSET))
-
 
         create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1 = cls(
             strategy=strategy,
             window=window,
         )
-
 
         create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1.additional_properties = d
         return create_saved_search_body_search_params_type_1_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1

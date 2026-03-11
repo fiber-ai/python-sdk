@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2Method(str, Enum):
     CALENDAR = "calendar"
 

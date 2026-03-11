@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SyncCombinedSearchBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType0Period(str, Enum):
     DAY = "day"
     MONTH = "month"

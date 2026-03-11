@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PeopleSearchCountBodySearchParamsStealthV2Type1EnteredStealthAtType1WindowType2Which(str, Enum):
     CURRENT = "current"
     PREVIOUS = "previous"

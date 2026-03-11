@@ -1,62 +1,51 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.combined_search_body_company_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0_strategy import CombinedSearchBodyCompanyParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0Strategy
-
-
-
-
-
+from ..models.combined_search_body_company_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0_strategy import (
+    CombinedSearchBodyCompanyParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0Strategy,
+)
 
 T = TypeVar("T", bound="CombinedSearchBodyCompanyParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0")
 
 
-
 @_attrs_define
 class CombinedSearchBodyCompanyParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0:
-    """ 
-        Attributes:
-            strategy (CombinedSearchBodyCompanyParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0Strategy):
-     """
+    """
+    Attributes:
+        strategy (CombinedSearchBodyCompanyParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0Strategy):
+    """
 
     strategy: CombinedSearchBodyCompanyParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0Strategy
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
         strategy = self.strategy.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "strategy": strategy,
-        })
+        field_dict.update(
+            {
+                "strategy": strategy,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        strategy = CombinedSearchBodyCompanyParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0Strategy(d.pop("strategy"))
-
-
-
+        strategy = CombinedSearchBodyCompanyParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0Strategy(
+            d.pop("strategy")
+        )
 
         combined_search_body_company_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0 = cls(
             strategy=strategy,
         )
-
 
         combined_search_body_company_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0.additional_properties = d
         return combined_search_body_company_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0

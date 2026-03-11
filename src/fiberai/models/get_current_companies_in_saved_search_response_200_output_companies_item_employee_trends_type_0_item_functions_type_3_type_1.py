@@ -1,6 +1,9 @@
 from enum import Enum
 
-class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1(str, Enum):
+
+class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1(
+    str, Enum
+):
     ACCOUNTING = "accounting"
     ADMINISTRATIVE = "administrative"
     ARTS_AND_DESIGN = "arts_and_design"

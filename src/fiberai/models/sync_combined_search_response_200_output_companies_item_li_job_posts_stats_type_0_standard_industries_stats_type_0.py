@@ -1,483 +1,679 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
-from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
-
-from ..types import UNSET, Unset
-from typing import cast
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_nonprofit import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_construction import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_information_technology import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_sports import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_aerospace_military import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_automotive import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_education import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Education
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_science_engineering import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_venture_capital import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_marketing_advertising import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_government import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Government
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consulting import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_administrative_services import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_life_sciences import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_logistics import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_healthcare import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_design import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Design
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_food_beverage import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_telecom import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_goods import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_artificial_intelligence import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_real_estate import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_entertainment import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_publishing import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_insurance import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_utilities import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_farming_agriculture import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_hardware import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_finance import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_cloud import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_events import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Events
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_trade import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_business_services import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_services import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_manufacturing import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_legal import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_retail import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_security import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Security
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_arts_music import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_hospitality import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_travel_tourism import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_software import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Software
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_energy import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_industrials import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_mining import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_media import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Media
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_transportation import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_environmental import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_gaming import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_administrative_services import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_aerospace_military import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_artificial_intelligence import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_arts_music import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_automotive import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_business_services import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_cloud import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_construction import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consulting import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_goods import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_services import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_design import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Design,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_education import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Education,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_energy import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_entertainment import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_environmental import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_events import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Events,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_farming_agriculture import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_finance import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_food_beverage import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_gaming import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_government import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Government,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_hardware import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_healthcare import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_hospitality import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_industrials import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_information_technology import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_insurance import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_legal import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_life_sciences import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_logistics import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_manufacturing import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_marketing_advertising import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_media import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Media,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_mining import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_nonprofit import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_publishing import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_real_estate import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_retail import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_science_engineering import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_security import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Security,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_software import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Software,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_sports import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_telecom import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_trade import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_transportation import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_travel_tourism import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_utilities import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_venture_capital import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital,
+    )
 
 
-
-
-
-T = TypeVar("T", bound="SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0")
-
+T = TypeVar(
+    "T", bound="SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0"
+)
 
 
 @_attrs_define
 class SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0:
-    """ 
-        Attributes:
-            administrative_services (Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Standa
-                rdIndustriesStatsType0AdministrativeServices]):
-            aerospace_military (Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardInd
-                ustriesStatsType0AerospaceMilitary]):
-            artificial_intelligence (Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Standa
-                rdIndustriesStatsType0ArtificialIntelligence]):
-            arts_music (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic]):
-            automotive (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive]):
-            business_services (Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndu
-                striesStatsType0BusinessServices]):
-            cloud (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud]):
-            construction (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction]):
-            consulting (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting]):
-            consumer_goods (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods]):
-            consumer_services (Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndu
-                striesStatsType0ConsumerServices]):
-            design (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Design]):
-            education (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Education]):
-            energy (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy]):
-            entertainment (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment]):
-            environmental (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental]):
-            events (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Events]):
-            farming_agriculture (Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIn
-                dustriesStatsType0FarmingAgriculture]):
-            finance (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance]):
-            food_beverage (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage]):
-            gaming (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming]):
-            government (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Government]):
-            hardware (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware]):
-            healthcare (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare]):
-            hospitality (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality]):
-            industrials (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials]):
-            information_technology (Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Standar
-                dIndustriesStatsType0InformationTechnology]):
-            insurance (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance]):
-            legal (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal]):
-            life_sciences (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences]):
-            logistics (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics]):
-            manufacturing (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing]):
-            marketing_advertising (Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Standard
-                IndustriesStatsType0MarketingAdvertising]):
-            media (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Media]):
-            mining (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining]):
-            nonprofit (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit]):
-            publishing (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing]):
-            real_estate (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate]):
-            retail (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail]):
-            science_engineering (Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIn
-                dustriesStatsType0ScienceEngineering]):
-            security (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Security]):
-            software (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Software]):
-            sports (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports]):
-            telecom (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom]):
-            trade (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade]):
-            transportation (Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustr
-                iesStatsType0Transportation]):
-            travel_tourism (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism]):
-            utilities (Union[Unset,
-                SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities]):
-            venture_capital (Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndust
-                riesStatsType0VentureCapital]):
-     """
+    """
+    Attributes:
+        administrative_services (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesS
+            tatsType0AdministrativeServices | Unset):
+        aerospace_military (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsT
+            ype0AerospaceMilitary | Unset):
+        artificial_intelligence (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesS
+            tatsType0ArtificialIntelligence | Unset):
+        arts_music
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic |
+            Unset):
+        automotive
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive |
+            Unset):
+        business_services (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsTy
+            pe0BusinessServices | Unset):
+        cloud (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud |
+            Unset):
+        construction
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction |
+            Unset):
+        consulting
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting |
+            Unset):
+        consumer_goods
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods |
+            Unset):
+        consumer_services (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsTy
+            pe0ConsumerServices | Unset):
+        design (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Design |
+            Unset):
+        education
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Education |
+            Unset):
+        energy (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy |
+            Unset):
+        entertainment
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment |
+            Unset):
+        environmental
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental |
+            Unset):
+        events (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Events |
+            Unset):
+        farming_agriculture (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStats
+            Type0FarmingAgriculture | Unset):
+        finance (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance
+            | Unset):
+        food_beverage
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage |
+            Unset):
+        gaming (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming |
+            Unset):
+        government
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Government |
+            Unset):
+        hardware
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware |
+            Unset):
+        healthcare
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare |
+            Unset):
+        hospitality
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality |
+            Unset):
+        industrials
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials |
+            Unset):
+        information_technology (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesSt
+            atsType0InformationTechnology | Unset):
+        insurance
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance |
+            Unset):
+        legal (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal |
+            Unset):
+        life_sciences
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences |
+            Unset):
+        logistics
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics |
+            Unset):
+        manufacturing
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing |
+            Unset):
+        marketing_advertising (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesSta
+            tsType0MarketingAdvertising | Unset):
+        media (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Media |
+            Unset):
+        mining (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining |
+            Unset):
+        nonprofit
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit |
+            Unset):
+        publishing
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing |
+            Unset):
+        real_estate
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate |
+            Unset):
+        retail (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail |
+            Unset):
+        science_engineering (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStats
+            Type0ScienceEngineering | Unset):
+        security
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Security |
+            Unset):
+        software
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Software |
+            Unset):
+        sports (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports |
+            Unset):
+        telecom (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom
+            | Unset):
+        trade (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade |
+            Unset):
+        transportation
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation
+            | Unset):
+        travel_tourism
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism |
+            Unset):
+        utilities
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities |
+            Unset):
+        venture_capital
+            (SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital
+            | Unset):
+    """
 
-    administrative_services: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices'] = UNSET
-    aerospace_military: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary'] = UNSET
-    artificial_intelligence: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence'] = UNSET
-    arts_music: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic'] = UNSET
-    automotive: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive'] = UNSET
-    business_services: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices'] = UNSET
-    cloud: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud'] = UNSET
-    construction: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction'] = UNSET
-    consulting: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting'] = UNSET
-    consumer_goods: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods'] = UNSET
-    consumer_services: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices'] = UNSET
-    design: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Design'] = UNSET
-    education: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Education'] = UNSET
-    energy: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy'] = UNSET
-    entertainment: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment'] = UNSET
-    environmental: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental'] = UNSET
-    events: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Events'] = UNSET
-    farming_agriculture: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture'] = UNSET
-    finance: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance'] = UNSET
-    food_beverage: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage'] = UNSET
-    gaming: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming'] = UNSET
-    government: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Government'] = UNSET
-    hardware: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware'] = UNSET
-    healthcare: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare'] = UNSET
-    hospitality: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality'] = UNSET
-    industrials: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials'] = UNSET
-    information_technology: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology'] = UNSET
-    insurance: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance'] = UNSET
-    legal: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal'] = UNSET
-    life_sciences: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences'] = UNSET
-    logistics: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics'] = UNSET
-    manufacturing: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing'] = UNSET
-    marketing_advertising: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising'] = UNSET
-    media: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Media'] = UNSET
-    mining: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining'] = UNSET
-    nonprofit: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit'] = UNSET
-    publishing: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing'] = UNSET
-    real_estate: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate'] = UNSET
-    retail: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail'] = UNSET
-    science_engineering: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering'] = UNSET
-    security: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Security'] = UNSET
-    software: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Software'] = UNSET
-    sports: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports'] = UNSET
-    telecom: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom'] = UNSET
-    trade: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade'] = UNSET
-    transportation: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation'] = UNSET
-    travel_tourism: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism'] = UNSET
-    utilities: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities'] = UNSET
-    venture_capital: Union[Unset, 'SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital'] = UNSET
-
-
-
-
+    administrative_services: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices
+        | Unset
+    ) = UNSET
+    aerospace_military: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary
+        | Unset
+    ) = UNSET
+    artificial_intelligence: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence
+        | Unset
+    ) = UNSET
+    arts_music: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic
+        | Unset
+    ) = UNSET
+    automotive: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive
+        | Unset
+    ) = UNSET
+    business_services: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices
+        | Unset
+    ) = UNSET
+    cloud: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud | Unset
+    ) = UNSET
+    construction: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction
+        | Unset
+    ) = UNSET
+    consulting: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting
+        | Unset
+    ) = UNSET
+    consumer_goods: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods
+        | Unset
+    ) = UNSET
+    consumer_services: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices
+        | Unset
+    ) = UNSET
+    design: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Design | Unset
+    ) = UNSET
+    education: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Education
+        | Unset
+    ) = UNSET
+    energy: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy | Unset
+    ) = UNSET
+    entertainment: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment
+        | Unset
+    ) = UNSET
+    environmental: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental
+        | Unset
+    ) = UNSET
+    events: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Events | Unset
+    ) = UNSET
+    farming_agriculture: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture
+        | Unset
+    ) = UNSET
+    finance: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance | Unset
+    ) = UNSET
+    food_beverage: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage
+        | Unset
+    ) = UNSET
+    gaming: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming | Unset
+    ) = UNSET
+    government: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Government
+        | Unset
+    ) = UNSET
+    hardware: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware | Unset
+    ) = UNSET
+    healthcare: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare
+        | Unset
+    ) = UNSET
+    hospitality: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality
+        | Unset
+    ) = UNSET
+    industrials: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials
+        | Unset
+    ) = UNSET
+    information_technology: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology
+        | Unset
+    ) = UNSET
+    insurance: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance
+        | Unset
+    ) = UNSET
+    legal: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal | Unset
+    ) = UNSET
+    life_sciences: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences
+        | Unset
+    ) = UNSET
+    logistics: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics
+        | Unset
+    ) = UNSET
+    manufacturing: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing
+        | Unset
+    ) = UNSET
+    marketing_advertising: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising
+        | Unset
+    ) = UNSET
+    media: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Media | Unset
+    ) = UNSET
+    mining: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining | Unset
+    ) = UNSET
+    nonprofit: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit
+        | Unset
+    ) = UNSET
+    publishing: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing
+        | Unset
+    ) = UNSET
+    real_estate: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate
+        | Unset
+    ) = UNSET
+    retail: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail | Unset
+    ) = UNSET
+    science_engineering: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering
+        | Unset
+    ) = UNSET
+    security: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Security | Unset
+    ) = UNSET
+    software: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Software | Unset
+    ) = UNSET
+    sports: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports | Unset
+    ) = UNSET
+    telecom: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom | Unset
+    ) = UNSET
+    trade: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade | Unset
+    ) = UNSET
+    transportation: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation
+        | Unset
+    ) = UNSET
+    travel_tourism: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism
+        | Unset
+    ) = UNSET
+    utilities: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities
+        | Unset
+    ) = UNSET
+    venture_capital: (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital
+        | Unset
+    ) = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_nonprofit import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_construction import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_information_technology import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_sports import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_aerospace_military import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_automotive import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_education import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Education
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_science_engineering import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_venture_capital import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_marketing_advertising import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_government import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Government
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consulting import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_administrative_services import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_life_sciences import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_logistics import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_healthcare import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_design import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Design
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_food_beverage import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_telecom import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_goods import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_artificial_intelligence import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_real_estate import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_entertainment import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_publishing import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_insurance import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_utilities import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_farming_agriculture import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_hardware import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_finance import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_cloud import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_events import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Events
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_trade import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_business_services import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_services import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_manufacturing import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_legal import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_retail import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_security import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Security
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_arts_music import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_hospitality import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_travel_tourism import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_software import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Software
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_energy import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_industrials import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_mining import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_media import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Media
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_transportation import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_environmental import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_gaming import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming
-        administrative_services: Union[Unset, dict[str, Any]] = UNSET
+        administrative_services: dict[str, Any] | Unset = UNSET
         if not isinstance(self.administrative_services, Unset):
             administrative_services = self.administrative_services.to_dict()
 
-        aerospace_military: Union[Unset, dict[str, Any]] = UNSET
+        aerospace_military: dict[str, Any] | Unset = UNSET
         if not isinstance(self.aerospace_military, Unset):
             aerospace_military = self.aerospace_military.to_dict()
 
-        artificial_intelligence: Union[Unset, dict[str, Any]] = UNSET
+        artificial_intelligence: dict[str, Any] | Unset = UNSET
         if not isinstance(self.artificial_intelligence, Unset):
             artificial_intelligence = self.artificial_intelligence.to_dict()
 
-        arts_music: Union[Unset, dict[str, Any]] = UNSET
+        arts_music: dict[str, Any] | Unset = UNSET
         if not isinstance(self.arts_music, Unset):
             arts_music = self.arts_music.to_dict()
 
-        automotive: Union[Unset, dict[str, Any]] = UNSET
+        automotive: dict[str, Any] | Unset = UNSET
         if not isinstance(self.automotive, Unset):
             automotive = self.automotive.to_dict()
 
-        business_services: Union[Unset, dict[str, Any]] = UNSET
+        business_services: dict[str, Any] | Unset = UNSET
         if not isinstance(self.business_services, Unset):
             business_services = self.business_services.to_dict()
 
-        cloud: Union[Unset, dict[str, Any]] = UNSET
+        cloud: dict[str, Any] | Unset = UNSET
         if not isinstance(self.cloud, Unset):
             cloud = self.cloud.to_dict()
 
-        construction: Union[Unset, dict[str, Any]] = UNSET
+        construction: dict[str, Any] | Unset = UNSET
         if not isinstance(self.construction, Unset):
             construction = self.construction.to_dict()
 
-        consulting: Union[Unset, dict[str, Any]] = UNSET
+        consulting: dict[str, Any] | Unset = UNSET
         if not isinstance(self.consulting, Unset):
             consulting = self.consulting.to_dict()
 
-        consumer_goods: Union[Unset, dict[str, Any]] = UNSET
+        consumer_goods: dict[str, Any] | Unset = UNSET
         if not isinstance(self.consumer_goods, Unset):
             consumer_goods = self.consumer_goods.to_dict()
 
-        consumer_services: Union[Unset, dict[str, Any]] = UNSET
+        consumer_services: dict[str, Any] | Unset = UNSET
         if not isinstance(self.consumer_services, Unset):
             consumer_services = self.consumer_services.to_dict()
 
-        design: Union[Unset, dict[str, Any]] = UNSET
+        design: dict[str, Any] | Unset = UNSET
         if not isinstance(self.design, Unset):
             design = self.design.to_dict()
 
-        education: Union[Unset, dict[str, Any]] = UNSET
+        education: dict[str, Any] | Unset = UNSET
         if not isinstance(self.education, Unset):
             education = self.education.to_dict()
 
-        energy: Union[Unset, dict[str, Any]] = UNSET
+        energy: dict[str, Any] | Unset = UNSET
         if not isinstance(self.energy, Unset):
             energy = self.energy.to_dict()
 
-        entertainment: Union[Unset, dict[str, Any]] = UNSET
+        entertainment: dict[str, Any] | Unset = UNSET
         if not isinstance(self.entertainment, Unset):
             entertainment = self.entertainment.to_dict()
 
-        environmental: Union[Unset, dict[str, Any]] = UNSET
+        environmental: dict[str, Any] | Unset = UNSET
         if not isinstance(self.environmental, Unset):
             environmental = self.environmental.to_dict()
 
-        events: Union[Unset, dict[str, Any]] = UNSET
+        events: dict[str, Any] | Unset = UNSET
         if not isinstance(self.events, Unset):
             events = self.events.to_dict()
 
-        farming_agriculture: Union[Unset, dict[str, Any]] = UNSET
+        farming_agriculture: dict[str, Any] | Unset = UNSET
         if not isinstance(self.farming_agriculture, Unset):
             farming_agriculture = self.farming_agriculture.to_dict()
 
-        finance: Union[Unset, dict[str, Any]] = UNSET
+        finance: dict[str, Any] | Unset = UNSET
         if not isinstance(self.finance, Unset):
             finance = self.finance.to_dict()
 
-        food_beverage: Union[Unset, dict[str, Any]] = UNSET
+        food_beverage: dict[str, Any] | Unset = UNSET
         if not isinstance(self.food_beverage, Unset):
             food_beverage = self.food_beverage.to_dict()
 
-        gaming: Union[Unset, dict[str, Any]] = UNSET
+        gaming: dict[str, Any] | Unset = UNSET
         if not isinstance(self.gaming, Unset):
             gaming = self.gaming.to_dict()
 
-        government: Union[Unset, dict[str, Any]] = UNSET
+        government: dict[str, Any] | Unset = UNSET
         if not isinstance(self.government, Unset):
             government = self.government.to_dict()
 
-        hardware: Union[Unset, dict[str, Any]] = UNSET
+        hardware: dict[str, Any] | Unset = UNSET
         if not isinstance(self.hardware, Unset):
             hardware = self.hardware.to_dict()
 
-        healthcare: Union[Unset, dict[str, Any]] = UNSET
+        healthcare: dict[str, Any] | Unset = UNSET
         if not isinstance(self.healthcare, Unset):
             healthcare = self.healthcare.to_dict()
 
-        hospitality: Union[Unset, dict[str, Any]] = UNSET
+        hospitality: dict[str, Any] | Unset = UNSET
         if not isinstance(self.hospitality, Unset):
             hospitality = self.hospitality.to_dict()
 
-        industrials: Union[Unset, dict[str, Any]] = UNSET
+        industrials: dict[str, Any] | Unset = UNSET
         if not isinstance(self.industrials, Unset):
             industrials = self.industrials.to_dict()
 
-        information_technology: Union[Unset, dict[str, Any]] = UNSET
+        information_technology: dict[str, Any] | Unset = UNSET
         if not isinstance(self.information_technology, Unset):
             information_technology = self.information_technology.to_dict()
 
-        insurance: Union[Unset, dict[str, Any]] = UNSET
+        insurance: dict[str, Any] | Unset = UNSET
         if not isinstance(self.insurance, Unset):
             insurance = self.insurance.to_dict()
 
-        legal: Union[Unset, dict[str, Any]] = UNSET
+        legal: dict[str, Any] | Unset = UNSET
         if not isinstance(self.legal, Unset):
             legal = self.legal.to_dict()
 
-        life_sciences: Union[Unset, dict[str, Any]] = UNSET
+        life_sciences: dict[str, Any] | Unset = UNSET
         if not isinstance(self.life_sciences, Unset):
             life_sciences = self.life_sciences.to_dict()
 
-        logistics: Union[Unset, dict[str, Any]] = UNSET
+        logistics: dict[str, Any] | Unset = UNSET
         if not isinstance(self.logistics, Unset):
             logistics = self.logistics.to_dict()
 
-        manufacturing: Union[Unset, dict[str, Any]] = UNSET
+        manufacturing: dict[str, Any] | Unset = UNSET
         if not isinstance(self.manufacturing, Unset):
             manufacturing = self.manufacturing.to_dict()
 
-        marketing_advertising: Union[Unset, dict[str, Any]] = UNSET
+        marketing_advertising: dict[str, Any] | Unset = UNSET
         if not isinstance(self.marketing_advertising, Unset):
             marketing_advertising = self.marketing_advertising.to_dict()
 
-        media: Union[Unset, dict[str, Any]] = UNSET
+        media: dict[str, Any] | Unset = UNSET
         if not isinstance(self.media, Unset):
             media = self.media.to_dict()
 
-        mining: Union[Unset, dict[str, Any]] = UNSET
+        mining: dict[str, Any] | Unset = UNSET
         if not isinstance(self.mining, Unset):
             mining = self.mining.to_dict()
 
-        nonprofit: Union[Unset, dict[str, Any]] = UNSET
+        nonprofit: dict[str, Any] | Unset = UNSET
         if not isinstance(self.nonprofit, Unset):
             nonprofit = self.nonprofit.to_dict()
 
-        publishing: Union[Unset, dict[str, Any]] = UNSET
+        publishing: dict[str, Any] | Unset = UNSET
         if not isinstance(self.publishing, Unset):
             publishing = self.publishing.to_dict()
 
-        real_estate: Union[Unset, dict[str, Any]] = UNSET
+        real_estate: dict[str, Any] | Unset = UNSET
         if not isinstance(self.real_estate, Unset):
             real_estate = self.real_estate.to_dict()
 
-        retail: Union[Unset, dict[str, Any]] = UNSET
+        retail: dict[str, Any] | Unset = UNSET
         if not isinstance(self.retail, Unset):
             retail = self.retail.to_dict()
 
-        science_engineering: Union[Unset, dict[str, Any]] = UNSET
+        science_engineering: dict[str, Any] | Unset = UNSET
         if not isinstance(self.science_engineering, Unset):
             science_engineering = self.science_engineering.to_dict()
 
-        security: Union[Unset, dict[str, Any]] = UNSET
+        security: dict[str, Any] | Unset = UNSET
         if not isinstance(self.security, Unset):
             security = self.security.to_dict()
 
-        software: Union[Unset, dict[str, Any]] = UNSET
+        software: dict[str, Any] | Unset = UNSET
         if not isinstance(self.software, Unset):
             software = self.software.to_dict()
 
-        sports: Union[Unset, dict[str, Any]] = UNSET
+        sports: dict[str, Any] | Unset = UNSET
         if not isinstance(self.sports, Unset):
             sports = self.sports.to_dict()
 
-        telecom: Union[Unset, dict[str, Any]] = UNSET
+        telecom: dict[str, Any] | Unset = UNSET
         if not isinstance(self.telecom, Unset):
             telecom = self.telecom.to_dict()
 
-        trade: Union[Unset, dict[str, Any]] = UNSET
+        trade: dict[str, Any] | Unset = UNSET
         if not isinstance(self.trade, Unset):
             trade = self.trade.to_dict()
 
-        transportation: Union[Unset, dict[str, Any]] = UNSET
+        transportation: dict[str, Any] | Unset = UNSET
         if not isinstance(self.transportation, Unset):
             transportation = self.transportation.to_dict()
 
-        travel_tourism: Union[Unset, dict[str, Any]] = UNSET
+        travel_tourism: dict[str, Any] | Unset = UNSET
         if not isinstance(self.travel_tourism, Unset):
             travel_tourism = self.travel_tourism.to_dict()
 
-        utilities: Union[Unset, dict[str, Any]] = UNSET
+        utilities: dict[str, Any] | Unset = UNSET
         if not isinstance(self.utilities, Unset):
             utilities = self.utilities.to_dict()
 
-        venture_capital: Union[Unset, dict[str, Any]] = UNSET
+        venture_capital: dict[str, Any] | Unset = UNSET
         if not isinstance(self.venture_capital, Unset):
             venture_capital = self.venture_capital.to_dict()
 
-
         field_dict: dict[str, Any] = {}
 
-        field_dict.update({
-        })
+        field_dict.update({})
         if administrative_services is not UNSET:
             field_dict["Administrative Services"] = administrative_services
         if aerospace_military is not UNSET:
@@ -579,549 +775,744 @@ class SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Standa
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_nonprofit import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_construction import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_information_technology import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_sports import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_aerospace_military import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_automotive import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_education import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Education
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_science_engineering import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_venture_capital import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_marketing_advertising import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_government import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Government
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consulting import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_administrative_services import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_life_sciences import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_logistics import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_healthcare import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_design import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Design
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_food_beverage import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_telecom import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_goods import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_artificial_intelligence import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_real_estate import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_entertainment import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_publishing import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_insurance import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_utilities import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_farming_agriculture import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_hardware import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_finance import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_cloud import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_events import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Events
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_trade import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_business_services import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_services import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_manufacturing import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_legal import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_retail import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_security import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Security
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_arts_music import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_hospitality import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_travel_tourism import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_software import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Software
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_energy import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_industrials import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_mining import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_media import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Media
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_transportation import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_environmental import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_gaming import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_administrative_services import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_aerospace_military import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_artificial_intelligence import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_arts_music import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_automotive import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_business_services import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_cloud import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_construction import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consulting import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_goods import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_services import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_design import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Design,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_education import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Education,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_energy import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_entertainment import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_environmental import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_events import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Events,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_farming_agriculture import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_finance import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_food_beverage import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_gaming import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_government import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Government,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_hardware import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_healthcare import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_hospitality import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_industrials import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_information_technology import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_insurance import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_legal import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_life_sciences import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_logistics import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_manufacturing import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_marketing_advertising import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_media import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Media,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_mining import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_nonprofit import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_publishing import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_real_estate import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_retail import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_science_engineering import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_security import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Security,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_software import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Software,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_sports import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_telecom import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_trade import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_transportation import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_travel_tourism import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_utilities import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_venture_capital import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital,
+        )
+
         d = dict(src_dict)
         _administrative_services = d.pop("Administrative Services", UNSET)
-        administrative_services: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices]
-        if isinstance(_administrative_services,  Unset):
+        administrative_services: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices
+            | Unset
+        )
+        if isinstance(_administrative_services, Unset):
             administrative_services = UNSET
         else:
-            administrative_services = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices.from_dict(_administrative_services)
-
-
-
+            administrative_services = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices.from_dict(
+                _administrative_services
+            )
 
         _aerospace_military = d.pop("Aerospace & Military", UNSET)
-        aerospace_military: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary]
-        if isinstance(_aerospace_military,  Unset):
+        aerospace_military: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary
+            | Unset
+        )
+        if isinstance(_aerospace_military, Unset):
             aerospace_military = UNSET
         else:
-            aerospace_military = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary.from_dict(_aerospace_military)
-
-
-
+            aerospace_military = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary.from_dict(
+                _aerospace_military
+            )
 
         _artificial_intelligence = d.pop("Artificial Intelligence", UNSET)
-        artificial_intelligence: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence]
-        if isinstance(_artificial_intelligence,  Unset):
+        artificial_intelligence: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence
+            | Unset
+        )
+        if isinstance(_artificial_intelligence, Unset):
             artificial_intelligence = UNSET
         else:
-            artificial_intelligence = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence.from_dict(_artificial_intelligence)
-
-
-
+            artificial_intelligence = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence.from_dict(
+                _artificial_intelligence
+            )
 
         _arts_music = d.pop("Arts & Music", UNSET)
-        arts_music: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic]
-        if isinstance(_arts_music,  Unset):
+        arts_music: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic
+            | Unset
+        )
+        if isinstance(_arts_music, Unset):
             arts_music = UNSET
         else:
-            arts_music = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic.from_dict(_arts_music)
-
-
-
+            arts_music = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic.from_dict(
+                _arts_music
+            )
 
         _automotive = d.pop("Automotive", UNSET)
-        automotive: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive]
-        if isinstance(_automotive,  Unset):
+        automotive: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive
+            | Unset
+        )
+        if isinstance(_automotive, Unset):
             automotive = UNSET
         else:
-            automotive = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive.from_dict(_automotive)
-
-
-
+            automotive = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive.from_dict(
+                _automotive
+            )
 
         _business_services = d.pop("Business Services", UNSET)
-        business_services: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices]
-        if isinstance(_business_services,  Unset):
+        business_services: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices
+            | Unset
+        )
+        if isinstance(_business_services, Unset):
             business_services = UNSET
         else:
-            business_services = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices.from_dict(_business_services)
-
-
-
+            business_services = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices.from_dict(
+                _business_services
+            )
 
         _cloud = d.pop("Cloud", UNSET)
-        cloud: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud]
-        if isinstance(_cloud,  Unset):
+        cloud: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud
+            | Unset
+        )
+        if isinstance(_cloud, Unset):
             cloud = UNSET
         else:
-            cloud = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud.from_dict(_cloud)
-
-
-
+            cloud = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud.from_dict(
+                _cloud
+            )
 
         _construction = d.pop("Construction", UNSET)
-        construction: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction]
-        if isinstance(_construction,  Unset):
+        construction: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction
+            | Unset
+        )
+        if isinstance(_construction, Unset):
             construction = UNSET
         else:
-            construction = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction.from_dict(_construction)
-
-
-
+            construction = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction.from_dict(
+                _construction
+            )
 
         _consulting = d.pop("Consulting", UNSET)
-        consulting: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting]
-        if isinstance(_consulting,  Unset):
+        consulting: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting
+            | Unset
+        )
+        if isinstance(_consulting, Unset):
             consulting = UNSET
         else:
-            consulting = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting.from_dict(_consulting)
-
-
-
+            consulting = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting.from_dict(
+                _consulting
+            )
 
         _consumer_goods = d.pop("Consumer Goods", UNSET)
-        consumer_goods: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods]
-        if isinstance(_consumer_goods,  Unset):
+        consumer_goods: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods
+            | Unset
+        )
+        if isinstance(_consumer_goods, Unset):
             consumer_goods = UNSET
         else:
-            consumer_goods = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods.from_dict(_consumer_goods)
-
-
-
+            consumer_goods = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods.from_dict(
+                _consumer_goods
+            )
 
         _consumer_services = d.pop("Consumer Services", UNSET)
-        consumer_services: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices]
-        if isinstance(_consumer_services,  Unset):
+        consumer_services: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices
+            | Unset
+        )
+        if isinstance(_consumer_services, Unset):
             consumer_services = UNSET
         else:
-            consumer_services = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices.from_dict(_consumer_services)
-
-
-
+            consumer_services = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices.from_dict(
+                _consumer_services
+            )
 
         _design = d.pop("Design", UNSET)
-        design: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Design]
-        if isinstance(_design,  Unset):
+        design: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Design
+            | Unset
+        )
+        if isinstance(_design, Unset):
             design = UNSET
         else:
-            design = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Design.from_dict(_design)
-
-
-
+            design = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Design.from_dict(
+                _design
+            )
 
         _education = d.pop("Education", UNSET)
-        education: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Education]
-        if isinstance(_education,  Unset):
+        education: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Education
+            | Unset
+        )
+        if isinstance(_education, Unset):
             education = UNSET
         else:
-            education = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Education.from_dict(_education)
-
-
-
+            education = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Education.from_dict(
+                _education
+            )
 
         _energy = d.pop("Energy", UNSET)
-        energy: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy]
-        if isinstance(_energy,  Unset):
+        energy: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy
+            | Unset
+        )
+        if isinstance(_energy, Unset):
             energy = UNSET
         else:
-            energy = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy.from_dict(_energy)
-
-
-
+            energy = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy.from_dict(
+                _energy
+            )
 
         _entertainment = d.pop("Entertainment", UNSET)
-        entertainment: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment]
-        if isinstance(_entertainment,  Unset):
+        entertainment: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment
+            | Unset
+        )
+        if isinstance(_entertainment, Unset):
             entertainment = UNSET
         else:
-            entertainment = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment.from_dict(_entertainment)
-
-
-
+            entertainment = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment.from_dict(
+                _entertainment
+            )
 
         _environmental = d.pop("Environmental", UNSET)
-        environmental: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental]
-        if isinstance(_environmental,  Unset):
+        environmental: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental
+            | Unset
+        )
+        if isinstance(_environmental, Unset):
             environmental = UNSET
         else:
-            environmental = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental.from_dict(_environmental)
-
-
-
+            environmental = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental.from_dict(
+                _environmental
+            )
 
         _events = d.pop("Events", UNSET)
-        events: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Events]
-        if isinstance(_events,  Unset):
+        events: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Events
+            | Unset
+        )
+        if isinstance(_events, Unset):
             events = UNSET
         else:
-            events = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Events.from_dict(_events)
-
-
-
+            events = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Events.from_dict(
+                _events
+            )
 
         _farming_agriculture = d.pop("Farming & Agriculture", UNSET)
-        farming_agriculture: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture]
-        if isinstance(_farming_agriculture,  Unset):
+        farming_agriculture: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture
+            | Unset
+        )
+        if isinstance(_farming_agriculture, Unset):
             farming_agriculture = UNSET
         else:
-            farming_agriculture = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture.from_dict(_farming_agriculture)
-
-
-
+            farming_agriculture = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture.from_dict(
+                _farming_agriculture
+            )
 
         _finance = d.pop("Finance", UNSET)
-        finance: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance]
-        if isinstance(_finance,  Unset):
+        finance: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance
+            | Unset
+        )
+        if isinstance(_finance, Unset):
             finance = UNSET
         else:
-            finance = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance.from_dict(_finance)
-
-
-
+            finance = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance.from_dict(
+                _finance
+            )
 
         _food_beverage = d.pop("Food & Beverage", UNSET)
-        food_beverage: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage]
-        if isinstance(_food_beverage,  Unset):
+        food_beverage: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage
+            | Unset
+        )
+        if isinstance(_food_beverage, Unset):
             food_beverage = UNSET
         else:
-            food_beverage = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage.from_dict(_food_beverage)
-
-
-
+            food_beverage = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage.from_dict(
+                _food_beverage
+            )
 
         _gaming = d.pop("Gaming", UNSET)
-        gaming: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming]
-        if isinstance(_gaming,  Unset):
+        gaming: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming
+            | Unset
+        )
+        if isinstance(_gaming, Unset):
             gaming = UNSET
         else:
-            gaming = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming.from_dict(_gaming)
-
-
-
+            gaming = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming.from_dict(
+                _gaming
+            )
 
         _government = d.pop("Government", UNSET)
-        government: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Government]
-        if isinstance(_government,  Unset):
+        government: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Government
+            | Unset
+        )
+        if isinstance(_government, Unset):
             government = UNSET
         else:
-            government = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Government.from_dict(_government)
-
-
-
+            government = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Government.from_dict(
+                _government
+            )
 
         _hardware = d.pop("Hardware", UNSET)
-        hardware: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware]
-        if isinstance(_hardware,  Unset):
+        hardware: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware
+            | Unset
+        )
+        if isinstance(_hardware, Unset):
             hardware = UNSET
         else:
-            hardware = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware.from_dict(_hardware)
-
-
-
+            hardware = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware.from_dict(
+                _hardware
+            )
 
         _healthcare = d.pop("Healthcare", UNSET)
-        healthcare: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare]
-        if isinstance(_healthcare,  Unset):
+        healthcare: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare
+            | Unset
+        )
+        if isinstance(_healthcare, Unset):
             healthcare = UNSET
         else:
-            healthcare = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare.from_dict(_healthcare)
-
-
-
+            healthcare = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare.from_dict(
+                _healthcare
+            )
 
         _hospitality = d.pop("Hospitality", UNSET)
-        hospitality: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality]
-        if isinstance(_hospitality,  Unset):
+        hospitality: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality
+            | Unset
+        )
+        if isinstance(_hospitality, Unset):
             hospitality = UNSET
         else:
-            hospitality = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality.from_dict(_hospitality)
-
-
-
+            hospitality = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality.from_dict(
+                _hospitality
+            )
 
         _industrials = d.pop("Industrials", UNSET)
-        industrials: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials]
-        if isinstance(_industrials,  Unset):
+        industrials: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials
+            | Unset
+        )
+        if isinstance(_industrials, Unset):
             industrials = UNSET
         else:
-            industrials = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials.from_dict(_industrials)
-
-
-
+            industrials = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials.from_dict(
+                _industrials
+            )
 
         _information_technology = d.pop("Information Technology", UNSET)
-        information_technology: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology]
-        if isinstance(_information_technology,  Unset):
+        information_technology: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology
+            | Unset
+        )
+        if isinstance(_information_technology, Unset):
             information_technology = UNSET
         else:
-            information_technology = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology.from_dict(_information_technology)
-
-
-
+            information_technology = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology.from_dict(
+                _information_technology
+            )
 
         _insurance = d.pop("Insurance", UNSET)
-        insurance: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance]
-        if isinstance(_insurance,  Unset):
+        insurance: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance
+            | Unset
+        )
+        if isinstance(_insurance, Unset):
             insurance = UNSET
         else:
-            insurance = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance.from_dict(_insurance)
-
-
-
+            insurance = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance.from_dict(
+                _insurance
+            )
 
         _legal = d.pop("Legal", UNSET)
-        legal: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal]
-        if isinstance(_legal,  Unset):
+        legal: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal
+            | Unset
+        )
+        if isinstance(_legal, Unset):
             legal = UNSET
         else:
-            legal = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal.from_dict(_legal)
-
-
-
+            legal = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal.from_dict(
+                _legal
+            )
 
         _life_sciences = d.pop("Life Sciences", UNSET)
-        life_sciences: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences]
-        if isinstance(_life_sciences,  Unset):
+        life_sciences: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences
+            | Unset
+        )
+        if isinstance(_life_sciences, Unset):
             life_sciences = UNSET
         else:
-            life_sciences = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences.from_dict(_life_sciences)
-
-
-
+            life_sciences = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences.from_dict(
+                _life_sciences
+            )
 
         _logistics = d.pop("Logistics", UNSET)
-        logistics: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics]
-        if isinstance(_logistics,  Unset):
+        logistics: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics
+            | Unset
+        )
+        if isinstance(_logistics, Unset):
             logistics = UNSET
         else:
-            logistics = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics.from_dict(_logistics)
-
-
-
+            logistics = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics.from_dict(
+                _logistics
+            )
 
         _manufacturing = d.pop("Manufacturing", UNSET)
-        manufacturing: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing]
-        if isinstance(_manufacturing,  Unset):
+        manufacturing: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing
+            | Unset
+        )
+        if isinstance(_manufacturing, Unset):
             manufacturing = UNSET
         else:
-            manufacturing = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing.from_dict(_manufacturing)
-
-
-
+            manufacturing = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing.from_dict(
+                _manufacturing
+            )
 
         _marketing_advertising = d.pop("Marketing & Advertising", UNSET)
-        marketing_advertising: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising]
-        if isinstance(_marketing_advertising,  Unset):
+        marketing_advertising: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising
+            | Unset
+        )
+        if isinstance(_marketing_advertising, Unset):
             marketing_advertising = UNSET
         else:
-            marketing_advertising = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising.from_dict(_marketing_advertising)
-
-
-
+            marketing_advertising = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising.from_dict(
+                _marketing_advertising
+            )
 
         _media = d.pop("Media", UNSET)
-        media: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Media]
-        if isinstance(_media,  Unset):
+        media: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Media
+            | Unset
+        )
+        if isinstance(_media, Unset):
             media = UNSET
         else:
-            media = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Media.from_dict(_media)
-
-
-
+            media = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Media.from_dict(
+                _media
+            )
 
         _mining = d.pop("Mining", UNSET)
-        mining: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining]
-        if isinstance(_mining,  Unset):
+        mining: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining
+            | Unset
+        )
+        if isinstance(_mining, Unset):
             mining = UNSET
         else:
-            mining = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining.from_dict(_mining)
-
-
-
+            mining = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining.from_dict(
+                _mining
+            )
 
         _nonprofit = d.pop("Nonprofit", UNSET)
-        nonprofit: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit]
-        if isinstance(_nonprofit,  Unset):
+        nonprofit: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit
+            | Unset
+        )
+        if isinstance(_nonprofit, Unset):
             nonprofit = UNSET
         else:
-            nonprofit = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit.from_dict(_nonprofit)
-
-
-
+            nonprofit = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit.from_dict(
+                _nonprofit
+            )
 
         _publishing = d.pop("Publishing", UNSET)
-        publishing: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing]
-        if isinstance(_publishing,  Unset):
+        publishing: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing
+            | Unset
+        )
+        if isinstance(_publishing, Unset):
             publishing = UNSET
         else:
-            publishing = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing.from_dict(_publishing)
-
-
-
+            publishing = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing.from_dict(
+                _publishing
+            )
 
         _real_estate = d.pop("Real Estate", UNSET)
-        real_estate: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate]
-        if isinstance(_real_estate,  Unset):
+        real_estate: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate
+            | Unset
+        )
+        if isinstance(_real_estate, Unset):
             real_estate = UNSET
         else:
-            real_estate = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate.from_dict(_real_estate)
-
-
-
+            real_estate = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate.from_dict(
+                _real_estate
+            )
 
         _retail = d.pop("Retail", UNSET)
-        retail: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail]
-        if isinstance(_retail,  Unset):
+        retail: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail
+            | Unset
+        )
+        if isinstance(_retail, Unset):
             retail = UNSET
         else:
-            retail = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail.from_dict(_retail)
-
-
-
+            retail = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail.from_dict(
+                _retail
+            )
 
         _science_engineering = d.pop("Science & Engineering", UNSET)
-        science_engineering: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering]
-        if isinstance(_science_engineering,  Unset):
+        science_engineering: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering
+            | Unset
+        )
+        if isinstance(_science_engineering, Unset):
             science_engineering = UNSET
         else:
-            science_engineering = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering.from_dict(_science_engineering)
-
-
-
+            science_engineering = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering.from_dict(
+                _science_engineering
+            )
 
         _security = d.pop("Security", UNSET)
-        security: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Security]
-        if isinstance(_security,  Unset):
+        security: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Security
+            | Unset
+        )
+        if isinstance(_security, Unset):
             security = UNSET
         else:
-            security = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Security.from_dict(_security)
-
-
-
+            security = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Security.from_dict(
+                _security
+            )
 
         _software = d.pop("Software", UNSET)
-        software: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Software]
-        if isinstance(_software,  Unset):
+        software: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Software
+            | Unset
+        )
+        if isinstance(_software, Unset):
             software = UNSET
         else:
-            software = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Software.from_dict(_software)
-
-
-
+            software = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Software.from_dict(
+                _software
+            )
 
         _sports = d.pop("Sports", UNSET)
-        sports: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports]
-        if isinstance(_sports,  Unset):
+        sports: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports
+            | Unset
+        )
+        if isinstance(_sports, Unset):
             sports = UNSET
         else:
-            sports = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports.from_dict(_sports)
-
-
-
+            sports = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports.from_dict(
+                _sports
+            )
 
         _telecom = d.pop("Telecom", UNSET)
-        telecom: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom]
-        if isinstance(_telecom,  Unset):
+        telecom: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom
+            | Unset
+        )
+        if isinstance(_telecom, Unset):
             telecom = UNSET
         else:
-            telecom = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom.from_dict(_telecom)
-
-
-
+            telecom = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom.from_dict(
+                _telecom
+            )
 
         _trade = d.pop("Trade", UNSET)
-        trade: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade]
-        if isinstance(_trade,  Unset):
+        trade: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade
+            | Unset
+        )
+        if isinstance(_trade, Unset):
             trade = UNSET
         else:
-            trade = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade.from_dict(_trade)
-
-
-
+            trade = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade.from_dict(
+                _trade
+            )
 
         _transportation = d.pop("Transportation", UNSET)
-        transportation: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation]
-        if isinstance(_transportation,  Unset):
+        transportation: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation
+            | Unset
+        )
+        if isinstance(_transportation, Unset):
             transportation = UNSET
         else:
-            transportation = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation.from_dict(_transportation)
-
-
-
+            transportation = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation.from_dict(
+                _transportation
+            )
 
         _travel_tourism = d.pop("Travel & Tourism", UNSET)
-        travel_tourism: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism]
-        if isinstance(_travel_tourism,  Unset):
+        travel_tourism: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism
+            | Unset
+        )
+        if isinstance(_travel_tourism, Unset):
             travel_tourism = UNSET
         else:
-            travel_tourism = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism.from_dict(_travel_tourism)
-
-
-
+            travel_tourism = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism.from_dict(
+                _travel_tourism
+            )
 
         _utilities = d.pop("Utilities", UNSET)
-        utilities: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities]
-        if isinstance(_utilities,  Unset):
+        utilities: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities
+            | Unset
+        )
+        if isinstance(_utilities, Unset):
             utilities = UNSET
         else:
-            utilities = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities.from_dict(_utilities)
-
-
-
+            utilities = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities.from_dict(
+                _utilities
+            )
 
         _venture_capital = d.pop("Venture Capital", UNSET)
-        venture_capital: Union[Unset, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital]
-        if isinstance(_venture_capital,  Unset):
+        venture_capital: (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital
+            | Unset
+        )
+        if isinstance(_venture_capital, Unset):
             venture_capital = UNSET
         else:
-            venture_capital = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital.from_dict(_venture_capital)
-
-
-
+            venture_capital = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital.from_dict(
+                _venture_capital
+            )
 
         sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0 = cls(
             administrative_services=administrative_services,
@@ -1176,4 +1567,3 @@ class SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Standa
         )
 
         return sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0
-

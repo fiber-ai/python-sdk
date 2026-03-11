@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyProfileParamsCompanyMatchModeType1Mode(str, Enum):
     LOOSE = "loose"
 

@@ -1,50 +1,38 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
-
 T = TypeVar("T", bound="ReverseEmailLookupResponse200OutputDataItemCoursesType0Item")
-
 
 
 @_attrs_define
 class ReverseEmailLookupResponse200OutputDataItemCoursesType0Item:
-    """ 
-        Attributes:
-            title (Union[None, Unset, str]):
-            course_number (Union[None, Unset, str]):
-            association (Union[Unset, None]):
-     """
+    """
+    Attributes:
+        title (None | str | Unset):
+        course_number (None | str | Unset):
+        association (None | Unset):
+    """
 
-    title: Union[None, Unset, str] = UNSET
-    course_number: Union[None, Unset, str] = UNSET
-    association: Union[Unset, None] = UNSET
+    title: None | str | Unset = UNSET
+    course_number: None | str | Unset = UNSET
+    association: None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        title: Union[None, Unset, str]
+        title: None | str | Unset
         if isinstance(self.title, Unset):
             title = UNSET
         else:
             title = self.title
 
-        course_number: Union[None, Unset, str]
+        course_number: None | str | Unset
         if isinstance(self.course_number, Unset):
             course_number = UNSET
         else:
@@ -52,11 +40,9 @@ class ReverseEmailLookupResponse200OutputDataItemCoursesType0Item:
 
         association = self.association
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if title is not UNSET:
             field_dict["title"] = title
         if course_number is not UNSET:
@@ -66,30 +52,27 @@ class ReverseEmailLookupResponse200OutputDataItemCoursesType0Item:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        def _parse_title(data: object) -> Union[None, Unset, str]:
+
+        def _parse_title(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         title = _parse_title(d.pop("title", UNSET))
 
-
-        def _parse_course_number(data: object) -> Union[None, Unset, str]:
+        def _parse_course_number(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         course_number = _parse_course_number(d.pop("course_number", UNSET))
-
 
         association = d.pop("association", UNSET)
 
@@ -98,7 +81,6 @@ class ReverseEmailLookupResponse200OutputDataItemCoursesType0Item:
             course_number=course_number,
             association=association,
         )
-
 
         reverse_email_lookup_response_200_output_data_item_courses_type_0_item.additional_properties = d
         return reverse_email_lookup_response_200_output_data_item_courses_type_0_item

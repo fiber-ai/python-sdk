@@ -1,54 +1,45 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.sync_contact_enrichment_response_200_output_profile_phone_numbers_item_type import SyncContactEnrichmentResponse200OutputProfilePhoneNumbersItemType
-
-
-
-
-
+from ..models.sync_contact_enrichment_response_200_output_profile_phone_numbers_item_type import (
+    SyncContactEnrichmentResponse200OutputProfilePhoneNumbersItemType,
+)
 
 T = TypeVar("T", bound="SyncContactEnrichmentResponse200OutputProfilePhoneNumbersItem")
 
 
-
 @_attrs_define
 class SyncContactEnrichmentResponse200OutputProfilePhoneNumbersItem:
-    """ 
-        Attributes:
-            number (str):
-            type_ (SyncContactEnrichmentResponse200OutputProfilePhoneNumbersItemType):
-     """
+    """
+    Attributes:
+        number (str):
+        type_ (SyncContactEnrichmentResponse200OutputProfilePhoneNumbersItemType):
+    """
 
     number: str
     type_: SyncContactEnrichmentResponse200OutputProfilePhoneNumbersItemType
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         number = self.number
 
         type_ = self.type_.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "number": number,
-            "type": type_,
-        })
+        field_dict.update(
+            {
+                "number": number,
+                "type": type_,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -57,14 +48,10 @@ class SyncContactEnrichmentResponse200OutputProfilePhoneNumbersItem:
 
         type_ = SyncContactEnrichmentResponse200OutputProfilePhoneNumbersItemType(d.pop("type"))
 
-
-
-
         sync_contact_enrichment_response_200_output_profile_phone_numbers_item = cls(
             number=number,
             type_=type_,
         )
-
 
         sync_contact_enrichment_response_200_output_profile_phone_numbers_item.additional_properties = d
         return sync_contact_enrichment_response_200_output_profile_phone_numbers_item

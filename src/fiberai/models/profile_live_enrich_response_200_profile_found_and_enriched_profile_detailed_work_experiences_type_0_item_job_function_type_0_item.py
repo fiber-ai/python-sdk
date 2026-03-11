@@ -1,6 +1,9 @@
 from enum import Enum
 
-class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileDetailedWorkExperiencesType0ItemJobFunctionType0Item(str, Enum):
+
+class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileDetailedWorkExperiencesType0ItemJobFunctionType0Item(
+    str, Enum
+):
     ACCOUNTING = "Accounting"
     ADMINISTRATIVE = "Administrative"
     ADVERTISING = "Advertising"

@@ -1,6 +1,9 @@
 from enum import Enum
 
-class TextToCombinedSearchResponse200OutputCompanySearchParamsType0JobPostingsV2Type0AllOfType0ItemEmploymentTypeType0Item(str, Enum):
+
+class TextToCombinedSearchResponse200OutputCompanySearchParamsType0JobPostingsV2Type0AllOfType0ItemEmploymentTypeType0Item(
+    str, Enum
+):
     CONTRACT = "Contract"
     FULL_TIME = "Full-time"
     INTERNSHIP = "Internship"

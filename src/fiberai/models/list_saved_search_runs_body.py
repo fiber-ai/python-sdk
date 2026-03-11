@@ -1,50 +1,38 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast, Union
-from typing import Union
-
-
-
-
-
-
 T = TypeVar("T", bound="ListSavedSearchRunsBody")
-
 
 
 @_attrs_define
 class ListSavedSearchRunsBody:
-    """ 
-        Attributes:
-            api_key (str): Your Fiber API key
-            saved_search_id (str): The ID of the saved search. Use /saved-search/list to get the ID of a saved search.
-            cursor (Union[None, Unset, str]): The cursor to start from. You can pass null to get the first page of results.
-            page_size (Union[Unset, int]): The number of runs to return Default: 100.
-     """
+    """
+    Attributes:
+        api_key (str): Your Fiber API key
+        saved_search_id (str): The ID of the saved search. Use /saved-search/list to get the ID of a saved search.
+        cursor (None | str | Unset): The cursor to start from. You can pass null to get the first page of results.
+        page_size (int | Unset): The number of runs to return Default: 100.
+    """
 
     api_key: str
     saved_search_id: str
-    cursor: Union[None, Unset, str] = UNSET
-    page_size: Union[Unset, int] = 100
+    cursor: None | str | Unset = UNSET
+    page_size: int | Unset = 100
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         api_key = self.api_key
 
         saved_search_id = self.saved_search_id
 
-        cursor: Union[None, Unset, str]
+        cursor: None | str | Unset
         if isinstance(self.cursor, Unset):
             cursor = UNSET
         else:
@@ -52,21 +40,20 @@ class ListSavedSearchRunsBody:
 
         page_size = self.page_size
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "apiKey": api_key,
-            "savedSearchId": saved_search_id,
-        })
+        field_dict.update(
+            {
+                "apiKey": api_key,
+                "savedSearchId": saved_search_id,
+            }
+        )
         if cursor is not UNSET:
             field_dict["cursor"] = cursor
         if page_size is not UNSET:
             field_dict["pageSize"] = page_size
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -75,15 +62,14 @@ class ListSavedSearchRunsBody:
 
         saved_search_id = d.pop("savedSearchId")
 
-        def _parse_cursor(data: object) -> Union[None, Unset, str]:
+        def _parse_cursor(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         cursor = _parse_cursor(d.pop("cursor", UNSET))
-
 
         page_size = d.pop("pageSize", UNSET)
 
@@ -93,7 +79,6 @@ class ListSavedSearchRunsBody:
             cursor=cursor,
             page_size=page_size,
         )
-
 
         list_saved_search_runs_body.additional_properties = d
         return list_saved_search_runs_body

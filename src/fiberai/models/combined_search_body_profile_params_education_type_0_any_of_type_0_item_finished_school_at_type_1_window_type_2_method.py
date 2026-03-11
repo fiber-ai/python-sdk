@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemFinishedSchoolAtType1WindowType2Method(str, Enum):
     CALENDAR = "calendar"
 

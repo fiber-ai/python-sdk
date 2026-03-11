@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class GoogleMapsSearchBodyStrategyType1UnionAllItemType0RegionType(str, Enum):
     CIRCLE = "circle"
 

@@ -1,38 +1,29 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.people_search_count_body_search_params_job_title_v3_type_0_any_of_type_0_item_type_2_type import PeopleSearchCountBodySearchParamsJobTitleV3Type0AnyOfType0ItemType2Type
-from typing import cast
-
-
-
-
-
+from ..models.people_search_count_body_search_params_job_title_v3_type_0_any_of_type_0_item_type_2_type import (
+    PeopleSearchCountBodySearchParamsJobTitleV3Type0AnyOfType0ItemType2Type,
+)
 
 T = TypeVar("T", bound="PeopleSearchCountBodySearchParamsJobTitleV3Type0AnyOfType0ItemType2")
 
 
-
 @_attrs_define
 class PeopleSearchCountBodySearchParamsJobTitleV3Type0AnyOfType0ItemType2:
-    """ 
-        Attributes:
-            type_ (PeopleSearchCountBodySearchParamsJobTitleV3Type0AnyOfType0ItemType2Type):
-            keyword_arrays (list[list[str]]):
-     """
+    """
+    Attributes:
+        type_ (PeopleSearchCountBodySearchParamsJobTitleV3Type0AnyOfType0ItemType2Type):
+        keyword_arrays (list[list[str]]):
+    """
 
     type_: PeopleSearchCountBodySearchParamsJobTitleV3Type0AnyOfType0ItemType2Type
     keyword_arrays: list[list[str]]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         type_ = self.type_.value
@@ -41,44 +32,35 @@ class PeopleSearchCountBodySearchParamsJobTitleV3Type0AnyOfType0ItemType2:
         for keyword_arrays_item_data in self.keyword_arrays:
             keyword_arrays_item = keyword_arrays_item_data
 
-
             keyword_arrays.append(keyword_arrays_item)
-
-
-
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "type": type_,
-            "keywordArrays": keyword_arrays,
-        })
+        field_dict.update(
+            {
+                "type": type_,
+                "keywordArrays": keyword_arrays,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         type_ = PeopleSearchCountBodySearchParamsJobTitleV3Type0AnyOfType0ItemType2Type(d.pop("type"))
 
-
-
-
         keyword_arrays = []
         _keyword_arrays = d.pop("keywordArrays")
-        for keyword_arrays_item_data in (_keyword_arrays):
+        for keyword_arrays_item_data in _keyword_arrays:
             keyword_arrays_item = cast(list[str], keyword_arrays_item_data)
 
             keyword_arrays.append(keyword_arrays_item)
-
 
         people_search_count_body_search_params_job_title_v3_type_0_any_of_type_0_item_type_2 = cls(
             type_=type_,
             keyword_arrays=keyword_arrays,
         )
-
 
         people_search_count_body_search_params_job_title_v3_type_0_any_of_type_0_item_type_2.additional_properties = d
         return people_search_count_body_search_params_job_title_v3_type_0_any_of_type_0_item_type_2

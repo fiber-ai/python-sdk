@@ -1,94 +1,89 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.sync_contact_enrichment_body_enrichment_type import SyncContactEnrichmentBodyEnrichmentType
-
-
-
+    from ..models.sync_contact_enrichment_body_enrichment_type import SyncContactEnrichmentBodyEnrichmentType
 
 
 T = TypeVar("T", bound="SyncContactEnrichmentBody")
 
 
-
 @_attrs_define
 class SyncContactEnrichmentBody:
-    """ 
-        Attributes:
-            api_key (str): Your Fiber API key
-            linkedin_url (str): Person's LinkedIn URL, like 'https://www.linkedin.com/in/william-h-gates'
-            enrichment_type (Union[Unset, SyncContactEnrichmentBodyEnrichmentType]): Enrichment types to be requested.
-                Include the ones you want to look for, we will charge credits for the ones you request. For example, {
-                getWorkEmails: true, getPersonalEmails: true, getPhoneNumbers: true }
-     """
+    """
+    Attributes:
+        api_key (str): Your Fiber API key
+        linkedin_url (str): Person's LinkedIn URL, like 'https://www.linkedin.com/in/william-h-gates'
+        enrichment_type (SyncContactEnrichmentBodyEnrichmentType | Unset): Enrichment types to be requested. Include the
+            ones you want to look for, we will charge credits for the ones you request. For example, { getWorkEmails: true,
+            getPersonalEmails: true, getPhoneNumbers: true }
+        exhaustive (bool | Unset): If true, we exhaustively fetch all emails and phones for the person. This can be
+            slower and charge more credits. Default: False.
+    """
 
     api_key: str
     linkedin_url: str
-    enrichment_type: Union[Unset, 'SyncContactEnrichmentBodyEnrichmentType'] = UNSET
+    enrichment_type: SyncContactEnrichmentBodyEnrichmentType | Unset = UNSET
+    exhaustive: bool | Unset = False
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.sync_contact_enrichment_body_enrichment_type import SyncContactEnrichmentBodyEnrichmentType
         api_key = self.api_key
 
         linkedin_url = self.linkedin_url
 
-        enrichment_type: Union[Unset, dict[str, Any]] = UNSET
+        enrichment_type: dict[str, Any] | Unset = UNSET
         if not isinstance(self.enrichment_type, Unset):
             enrichment_type = self.enrichment_type.to_dict()
 
+        exhaustive = self.exhaustive
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "apiKey": api_key,
-            "linkedinUrl": linkedin_url,
-        })
+        field_dict.update(
+            {
+                "apiKey": api_key,
+                "linkedinUrl": linkedin_url,
+            }
+        )
         if enrichment_type is not UNSET:
             field_dict["enrichmentType"] = enrichment_type
+        if exhaustive is not UNSET:
+            field_dict["exhaustive"] = exhaustive
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.sync_contact_enrichment_body_enrichment_type import SyncContactEnrichmentBodyEnrichmentType
+
         d = dict(src_dict)
         api_key = d.pop("apiKey")
 
         linkedin_url = d.pop("linkedinUrl")
 
         _enrichment_type = d.pop("enrichmentType", UNSET)
-        enrichment_type: Union[Unset, SyncContactEnrichmentBodyEnrichmentType]
-        if isinstance(_enrichment_type,  Unset):
+        enrichment_type: SyncContactEnrichmentBodyEnrichmentType | Unset
+        if isinstance(_enrichment_type, Unset):
             enrichment_type = UNSET
         else:
             enrichment_type = SyncContactEnrichmentBodyEnrichmentType.from_dict(_enrichment_type)
 
-
-
+        exhaustive = d.pop("exhaustive", UNSET)
 
         sync_contact_enrichment_body = cls(
             api_key=api_key,
             linkedin_url=linkedin_url,
             enrichment_type=enrichment_type,
+            exhaustive=exhaustive,
         )
-
 
         sync_contact_enrichment_body.additional_properties = d
         return sync_contact_enrichment_body

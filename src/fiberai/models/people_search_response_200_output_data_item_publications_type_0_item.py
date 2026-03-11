@@ -1,57 +1,49 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.people_search_response_200_output_data_item_publications_type_0_item_collaborators_type_0_item import PeopleSearchResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item
-
-
-
+    from ..models.people_search_response_200_output_data_item_publications_type_0_item_collaborators_type_0_item import (
+        PeopleSearchResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item,
+    )
 
 
 T = TypeVar("T", bound="PeopleSearchResponse200OutputDataItemPublicationsType0Item")
 
 
-
 @_attrs_define
 class PeopleSearchResponse200OutputDataItemPublicationsType0Item:
-    """ 
-        Attributes:
-            collaborators (Union[None, Unset,
-                list['PeopleSearchResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item']]):
-            date (Union[None, Unset, str]):
-            id (Union[None, Unset, str]):
-            publisher (Union[None, Unset, str]):
-            summary (Union[None, Unset, str]):
-            title (Union[None, Unset, str]):
-            url (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        collaborators (list[PeopleSearchResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item] | None |
+            Unset):
+        date (None | str | Unset):
+        id (None | str | Unset):
+        publisher (None | str | Unset):
+        summary (None | str | Unset):
+        title (None | str | Unset):
+        url (None | str | Unset):
+    """
 
-    collaborators: Union[None, Unset, list['PeopleSearchResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item']] = UNSET
-    date: Union[None, Unset, str] = UNSET
-    id: Union[None, Unset, str] = UNSET
-    publisher: Union[None, Unset, str] = UNSET
-    summary: Union[None, Unset, str] = UNSET
-    title: Union[None, Unset, str] = UNSET
-    url: Union[None, Unset, str] = UNSET
+    collaborators: (
+        list[PeopleSearchResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item] | None | Unset
+    ) = UNSET
+    date: None | str | Unset = UNSET
+    id: None | str | Unset = UNSET
+    publisher: None | str | Unset = UNSET
+    summary: None | str | Unset = UNSET
+    title: None | str | Unset = UNSET
+    url: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.people_search_response_200_output_data_item_publications_type_0_item_collaborators_type_0_item import PeopleSearchResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item
-        collaborators: Union[None, Unset, list[dict[str, Any]]]
+        collaborators: list[dict[str, Any]] | None | Unset
         if isinstance(self.collaborators, Unset):
             collaborators = UNSET
         elif isinstance(self.collaborators, list):
@@ -60,51 +52,48 @@ class PeopleSearchResponse200OutputDataItemPublicationsType0Item:
                 collaborators_type_0_item = collaborators_type_0_item_data.to_dict()
                 collaborators.append(collaborators_type_0_item)
 
-
         else:
             collaborators = self.collaborators
 
-        date: Union[None, Unset, str]
+        date: None | str | Unset
         if isinstance(self.date, Unset):
             date = UNSET
         else:
             date = self.date
 
-        id: Union[None, Unset, str]
+        id: None | str | Unset
         if isinstance(self.id, Unset):
             id = UNSET
         else:
             id = self.id
 
-        publisher: Union[None, Unset, str]
+        publisher: None | str | Unset
         if isinstance(self.publisher, Unset):
             publisher = UNSET
         else:
             publisher = self.publisher
 
-        summary: Union[None, Unset, str]
+        summary: None | str | Unset
         if isinstance(self.summary, Unset):
             summary = UNSET
         else:
             summary = self.summary
 
-        title: Union[None, Unset, str]
+        title: None | str | Unset
         if isinstance(self.title, Unset):
             title = UNSET
         else:
             title = self.title
 
-        url: Union[None, Unset, str]
+        url: None | str | Unset
         if isinstance(self.url, Unset):
             url = UNSET
         else:
             url = self.url
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if collaborators is not UNSET:
             field_dict["collaborators"] = collaborators
         if date is not UNSET:
@@ -122,13 +111,17 @@ class PeopleSearchResponse200OutputDataItemPublicationsType0Item:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.people_search_response_200_output_data_item_publications_type_0_item_collaborators_type_0_item import PeopleSearchResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item
+        from ..models.people_search_response_200_output_data_item_publications_type_0_item_collaborators_type_0_item import (
+            PeopleSearchResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item,
+        )
+
         d = dict(src_dict)
-        def _parse_collaborators(data: object) -> Union[None, Unset, list['PeopleSearchResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item']]:
+
+        def _parse_collaborators(
+            data: object,
+        ) -> list[PeopleSearchResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -138,80 +131,78 @@ class PeopleSearchResponse200OutputDataItemPublicationsType0Item:
                     raise TypeError()
                 collaborators_type_0 = []
                 _collaborators_type_0 = data
-                for collaborators_type_0_item_data in (_collaborators_type_0):
-                    collaborators_type_0_item = PeopleSearchResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item.from_dict(collaborators_type_0_item_data)
-
-
+                for collaborators_type_0_item_data in _collaborators_type_0:
+                    collaborators_type_0_item = (
+                        PeopleSearchResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item.from_dict(
+                            collaborators_type_0_item_data
+                        )
+                    )
 
                     collaborators_type_0.append(collaborators_type_0_item)
 
                 return collaborators_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['PeopleSearchResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item']], data)
+            return cast(
+                list[PeopleSearchResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item] | None | Unset,
+                data,
+            )
 
         collaborators = _parse_collaborators(d.pop("collaborators", UNSET))
 
-
-        def _parse_date(data: object) -> Union[None, Unset, str]:
+        def _parse_date(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         date = _parse_date(d.pop("date", UNSET))
 
-
-        def _parse_id(data: object) -> Union[None, Unset, str]:
+        def _parse_id(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         id = _parse_id(d.pop("id", UNSET))
 
-
-        def _parse_publisher(data: object) -> Union[None, Unset, str]:
+        def _parse_publisher(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         publisher = _parse_publisher(d.pop("publisher", UNSET))
 
-
-        def _parse_summary(data: object) -> Union[None, Unset, str]:
+        def _parse_summary(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         summary = _parse_summary(d.pop("summary", UNSET))
 
-
-        def _parse_title(data: object) -> Union[None, Unset, str]:
+        def _parse_title(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         title = _parse_title(d.pop("title", UNSET))
 
-
-        def _parse_url(data: object) -> Union[None, Unset, str]:
+        def _parse_url(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         url = _parse_url(d.pop("url", UNSET))
-
 
         people_search_response_200_output_data_item_publications_type_0_item = cls(
             collaborators=collaborators,
@@ -222,7 +213,6 @@ class PeopleSearchResponse200OutputDataItemPublicationsType0Item:
             title=title,
             url=url,
         )
-
 
         people_search_response_200_output_data_item_publications_type_0_item.additional_properties = d
         return people_search_response_200_output_data_item_publications_type_0_item

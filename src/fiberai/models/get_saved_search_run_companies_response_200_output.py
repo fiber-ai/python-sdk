@@ -1,101 +1,86 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.get_saved_search_run_companies_response_200_output_companies_item import GetSavedSearchRunCompaniesResponse200OutputCompaniesItem
-
-
-
+    from ..models.get_saved_search_run_companies_response_200_output_companies_item import (
+        GetSavedSearchRunCompaniesResponse200OutputCompaniesItem,
+    )
 
 
 T = TypeVar("T", bound="GetSavedSearchRunCompaniesResponse200Output")
 
 
-
 @_attrs_define
 class GetSavedSearchRunCompaniesResponse200Output:
-    """ 
-        Attributes:
-            companies (list['GetSavedSearchRunCompaniesResponse200OutputCompaniesItem']): The companies found for the saved
-                search run
-            next_cursor (Union[None, Unset, str]): The next cursor
-     """
+    """
+    Attributes:
+        companies (list[GetSavedSearchRunCompaniesResponse200OutputCompaniesItem]): The companies found for the saved
+            search run
+        next_cursor (None | str | Unset): The next cursor
+    """
 
-    companies: list['GetSavedSearchRunCompaniesResponse200OutputCompaniesItem']
-    next_cursor: Union[None, Unset, str] = UNSET
+    companies: list[GetSavedSearchRunCompaniesResponse200OutputCompaniesItem]
+    next_cursor: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_saved_search_run_companies_response_200_output_companies_item import GetSavedSearchRunCompaniesResponse200OutputCompaniesItem
         companies = []
         for companies_item_data in self.companies:
             companies_item = companies_item_data.to_dict()
             companies.append(companies_item)
 
-
-
-        next_cursor: Union[None, Unset, str]
+        next_cursor: None | str | Unset
         if isinstance(self.next_cursor, Unset):
             next_cursor = UNSET
         else:
             next_cursor = self.next_cursor
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "companies": companies,
-        })
+        field_dict.update(
+            {
+                "companies": companies,
+            }
+        )
         if next_cursor is not UNSET:
             field_dict["nextCursor"] = next_cursor
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_saved_search_run_companies_response_200_output_companies_item import GetSavedSearchRunCompaniesResponse200OutputCompaniesItem
+        from ..models.get_saved_search_run_companies_response_200_output_companies_item import (
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItem,
+        )
+
         d = dict(src_dict)
         companies = []
         _companies = d.pop("companies")
-        for companies_item_data in (_companies):
+        for companies_item_data in _companies:
             companies_item = GetSavedSearchRunCompaniesResponse200OutputCompaniesItem.from_dict(companies_item_data)
-
-
 
             companies.append(companies_item)
 
-
-        def _parse_next_cursor(data: object) -> Union[None, Unset, str]:
+        def _parse_next_cursor(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         next_cursor = _parse_next_cursor(d.pop("nextCursor", UNSET))
-
 
         get_saved_search_run_companies_response_200_output = cls(
             companies=companies,
             next_cursor=next_cursor,
         )
-
 
         get_saved_search_run_companies_response_200_output.additional_properties = d
         return get_saved_search_run_companies_response_200_output

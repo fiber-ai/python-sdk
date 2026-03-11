@@ -1,46 +1,36 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item import ProfileReactionsLiveFetchResponse200OutputReactionsType0Item
-
-
-
+    from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item import (
+        ProfileReactionsLiveFetchResponse200OutputReactionsType0Item,
+    )
 
 
 T = TypeVar("T", bound="ProfileReactionsLiveFetchResponse200Output")
 
 
-
 @_attrs_define
 class ProfileReactionsLiveFetchResponse200Output:
-    """ 
-        Attributes:
-            reactions (Union[None, Unset, list['ProfileReactionsLiveFetchResponse200OutputReactionsType0Item']]):
-            cursor (Union[None, Unset, str]):
-     """
+    """
+    Attributes:
+        reactions (list[ProfileReactionsLiveFetchResponse200OutputReactionsType0Item] | None | Unset):
+        cursor (None | str | Unset):
+    """
 
-    reactions: Union[None, Unset, list['ProfileReactionsLiveFetchResponse200OutputReactionsType0Item']] = UNSET
-    cursor: Union[None, Unset, str] = UNSET
+    reactions: list[ProfileReactionsLiveFetchResponse200OutputReactionsType0Item] | None | Unset = UNSET
+    cursor: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item import ProfileReactionsLiveFetchResponse200OutputReactionsType0Item
-        reactions: Union[None, Unset, list[dict[str, Any]]]
+        reactions: list[dict[str, Any]] | None | Unset
         if isinstance(self.reactions, Unset):
             reactions = UNSET
         elif isinstance(self.reactions, list):
@@ -49,21 +39,18 @@ class ProfileReactionsLiveFetchResponse200Output:
                 reactions_type_0_item = reactions_type_0_item_data.to_dict()
                 reactions.append(reactions_type_0_item)
 
-
         else:
             reactions = self.reactions
 
-        cursor: Union[None, Unset, str]
+        cursor: None | str | Unset
         if isinstance(self.cursor, Unset):
             cursor = UNSET
         else:
             cursor = self.cursor
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-        })
+        field_dict.update({})
         if reactions is not UNSET:
             field_dict["reactions"] = reactions
         if cursor is not UNSET:
@@ -71,13 +58,17 @@ class ProfileReactionsLiveFetchResponse200Output:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item import ProfileReactionsLiveFetchResponse200OutputReactionsType0Item
+        from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item import (
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0Item,
+        )
+
         d = dict(src_dict)
-        def _parse_reactions(data: object) -> Union[None, Unset, list['ProfileReactionsLiveFetchResponse200OutputReactionsType0Item']]:
+
+        def _parse_reactions(
+            data: object,
+        ) -> list[ProfileReactionsLiveFetchResponse200OutputReactionsType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -87,36 +78,33 @@ class ProfileReactionsLiveFetchResponse200Output:
                     raise TypeError()
                 reactions_type_0 = []
                 _reactions_type_0 = data
-                for reactions_type_0_item_data in (_reactions_type_0):
-                    reactions_type_0_item = ProfileReactionsLiveFetchResponse200OutputReactionsType0Item.from_dict(reactions_type_0_item_data)
-
-
+                for reactions_type_0_item_data in _reactions_type_0:
+                    reactions_type_0_item = ProfileReactionsLiveFetchResponse200OutputReactionsType0Item.from_dict(
+                        reactions_type_0_item_data
+                    )
 
                     reactions_type_0.append(reactions_type_0_item)
 
                 return reactions_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union[None, Unset, list['ProfileReactionsLiveFetchResponse200OutputReactionsType0Item']], data)
+            return cast(list[ProfileReactionsLiveFetchResponse200OutputReactionsType0Item] | None | Unset, data)
 
         reactions = _parse_reactions(d.pop("reactions", UNSET))
 
-
-        def _parse_cursor(data: object) -> Union[None, Unset, str]:
+        def _parse_cursor(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         cursor = _parse_cursor(d.pop("cursor", UNSET))
-
 
         profile_reactions_live_fetch_response_200_output = cls(
             reactions=reactions,
             cursor=cursor,
         )
-
 
         profile_reactions_live_fetch_response_200_output.additional_properties = d
         return profile_reactions_live_fetch_response_200_output

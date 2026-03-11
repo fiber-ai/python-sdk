@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class GoogleMapsSearchBodyStrategyType2CountriesAndRegionsUnionAllType0Item(str, Enum):
     ABW = "ABW"
     AFG = "AFG"

@@ -1,6 +1,9 @@
 from enum import Enum
 
-class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileExperiencesType0ItemEmploymentTypeType0Item(str, Enum):
+
+class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileExperiencesType0ItemEmploymentTypeType0Item(
+    str, Enum
+):
     CONTRACT = "Contract"
     FULL_TIME = "Full-time"
     INTERNSHIP = "Internship"

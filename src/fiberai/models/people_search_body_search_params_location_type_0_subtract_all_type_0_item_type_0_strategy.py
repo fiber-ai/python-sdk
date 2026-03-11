@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0Strategy(str, Enum):
     RADIAL_DISTANCE = "radial-distance"
 

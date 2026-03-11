@@ -1,6 +1,9 @@
 from enum import Enum
 
-class TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV3Type0NoneOfType0ItemSourceType3Type1(str, Enum):
+
+class TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV3Type0NoneOfType0ItemSourceType3Type1(
+    str, Enum
+):
     CSV = "csv"
 
     def __str__(self) -> str:

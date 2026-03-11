@@ -1,102 +1,84 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.investor_search_response_200_output_investors_item import InvestorSearchResponse200OutputInvestorsItem
-
-
-
+    from ..models.investor_search_response_200_output_investors_item import InvestorSearchResponse200OutputInvestorsItem
 
 
 T = TypeVar("T", bound="InvestorSearchResponse200Output")
 
 
-
 @_attrs_define
 class InvestorSearchResponse200Output:
-    """ 
-        Attributes:
-            investors (list['InvestorSearchResponse200OutputInvestorsItem']): Array of investors matching the search
-                criteria
-            next_cursor (Union[None, Unset, str]): Cursor for fetching the next page of results. Null if no more results
-                available
-     """
+    """
+    Attributes:
+        investors (list[InvestorSearchResponse200OutputInvestorsItem]): Array of investors matching the search criteria
+        next_cursor (None | str | Unset): Cursor for fetching the next page of results. Null if no more results
+            available
+    """
 
-    investors: list['InvestorSearchResponse200OutputInvestorsItem']
-    next_cursor: Union[None, Unset, str] = UNSET
+    investors: list[InvestorSearchResponse200OutputInvestorsItem]
+    next_cursor: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.investor_search_response_200_output_investors_item import InvestorSearchResponse200OutputInvestorsItem
         investors = []
         for investors_item_data in self.investors:
             investors_item = investors_item_data.to_dict()
             investors.append(investors_item)
 
-
-
-        next_cursor: Union[None, Unset, str]
+        next_cursor: None | str | Unset
         if isinstance(self.next_cursor, Unset):
             next_cursor = UNSET
         else:
             next_cursor = self.next_cursor
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "investors": investors,
-        })
+        field_dict.update(
+            {
+                "investors": investors,
+            }
+        )
         if next_cursor is not UNSET:
             field_dict["nextCursor"] = next_cursor
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.investor_search_response_200_output_investors_item import InvestorSearchResponse200OutputInvestorsItem
+        from ..models.investor_search_response_200_output_investors_item import (
+            InvestorSearchResponse200OutputInvestorsItem,
+        )
+
         d = dict(src_dict)
         investors = []
         _investors = d.pop("investors")
-        for investors_item_data in (_investors):
+        for investors_item_data in _investors:
             investors_item = InvestorSearchResponse200OutputInvestorsItem.from_dict(investors_item_data)
-
-
 
             investors.append(investors_item)
 
-
-        def _parse_next_cursor(data: object) -> Union[None, Unset, str]:
+        def _parse_next_cursor(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(Union[None, Unset, str], data)
+            return cast(None | str | Unset, data)
 
         next_cursor = _parse_next_cursor(d.pop("nextCursor", UNSET))
-
 
         investor_search_response_200_output = cls(
             investors=investors,
             next_cursor=next_cursor,
         )
-
 
         investor_search_response_200_output.additional_properties = d
         return investor_search_response_200_output

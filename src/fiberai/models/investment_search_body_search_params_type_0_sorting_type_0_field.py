@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class InvestmentSearchBodySearchParamsType0SortingType0Field(str, Enum):
     COMPANY_NAME = "company_name"
     INVESTOR_NAME = "investor_name"

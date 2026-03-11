@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CheckGoogleMapsResultsResponse200OutputStatus(str, Enum):
     COMPLETED = "COMPLETED"
     FAILED = "FAILED"

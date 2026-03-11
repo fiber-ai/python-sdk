@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType1Type(str, Enum):
     ALL = "all"
 

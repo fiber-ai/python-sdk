@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class CompanySearchBodySearchParamsJobPostingStatsType0NoneOfType0ItemType2Seniority(str, Enum):
     ASSOCIATE = "Associate"
     DIRECTOR = "Director"

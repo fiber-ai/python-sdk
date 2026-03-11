@@ -1,48 +1,36 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-
-
-
-
-
-
 T = TypeVar("T", bound="TriggerContactEnrichmentBodyLinkedinUrl")
-
 
 
 @_attrs_define
 class TriggerContactEnrichmentBodyLinkedinUrl:
-    """ 
-        Attributes:
-            value (str): Person's LinkedIn URL, like 'https://www.linkedin.com/in/william-h-gates'
-     """
+    """
+    Attributes:
+        value (str): Person's LinkedIn URL, like 'https://www.linkedin.com/in/william-h-gates'
+    """
 
     value: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
         value = self.value
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "value": value,
-        })
+        field_dict.update(
+            {
+                "value": value,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -52,7 +40,6 @@ class TriggerContactEnrichmentBodyLinkedinUrl:
         trigger_contact_enrichment_body_linkedin_url = cls(
             value=value,
         )
-
 
         trigger_contact_enrichment_body_linkedin_url.additional_properties = d
         return trigger_contact_enrichment_body_linkedin_url

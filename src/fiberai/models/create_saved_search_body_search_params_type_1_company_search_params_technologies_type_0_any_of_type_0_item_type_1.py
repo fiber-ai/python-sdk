@@ -1,62 +1,52 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from ..models.create_saved_search_body_search_params_type_1_company_search_params_technologies_type_0_any_of_type_0_item_type_1_type import CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesType0AnyOfType0ItemType1Type
-
-
-
-
-
+from ..models.create_saved_search_body_search_params_type_1_company_search_params_technologies_type_0_any_of_type_0_item_type_1_type import (
+    CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesType0AnyOfType0ItemType1Type,
+)
 
 T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesType0AnyOfType0ItemType1")
 
 
-
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesType0AnyOfType0ItemType1:
-    """ 
-        Attributes:
-            type_ (CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesType0AnyOfType0ItemType1Type):
-            name (str):
-     """
+    """
+    Attributes:
+        type_ (CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesType0AnyOfType0ItemType1Type):
+        name (str):
+    """
 
     type_: CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesType0AnyOfType0ItemType1Type
     name: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         type_ = self.type_.value
 
         name = self.name
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "type": type_,
-            "name": name,
-        })
+        field_dict.update(
+            {
+                "type": type_,
+                "name": name,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        type_ = CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesType0AnyOfType0ItemType1Type(d.pop("type"))
-
-
-
+        type_ = CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesType0AnyOfType0ItemType1Type(
+            d.pop("type")
+        )
 
         name = d.pop("name")
 
@@ -64,7 +54,6 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesType0
             type_=type_,
             name=name,
         )
-
 
         create_saved_search_body_search_params_type_1_company_search_params_technologies_type_0_any_of_type_0_item_type_1.additional_properties = d
         return create_saved_search_body_search_params_type_1_company_search_params_technologies_type_0_any_of_type_0_item_type_1

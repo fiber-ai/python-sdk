@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class GetLanguagesResponse200ChargeInfoType3Method(str, Enum):
     FREE = "free"
 

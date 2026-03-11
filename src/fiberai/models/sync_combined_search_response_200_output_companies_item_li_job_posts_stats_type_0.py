@@ -1,132 +1,172 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-from ..types import UNSET, Unset
-from typing import cast
-from typing import cast, Union
-from typing import Union
-
 if TYPE_CHECKING:
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_job_location_type_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_seniority_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0
-  from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0
-
-
-
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0 import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0 import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_job_location_type_stats_type_0 import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0 import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_seniority_stats_type_0 import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0,
+    )
+    from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0 import (
+        SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0,
+    )
 
 
 T = TypeVar("T", bound="SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0")
 
 
-
 @_attrs_define
 class SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0:
-    """ 
-        Attributes:
-            total_count (float):
-            seniority_stats
-                (Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0', None, Unset]):
-            employment_type_stats
-                (Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0', None,
-                Unset]):
-            country_location_stats
-                (Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0', None,
-                Unset]):
-            puree_job_functions_stats
-                (Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0', None,
-                Unset]):
-            standard_industries_stats
-                (Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0', None,
-                Unset]):
-            job_location_type_stats
-                (Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0', None,
-                Unset]):
-     """
+    """
+    Attributes:
+        total_count (float):
+        seniority_stats (None | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0
+            | Unset):
+        employment_type_stats (None |
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0 | Unset):
+        country_location_stats (None |
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0 | Unset):
+        puree_job_functions_stats (None |
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0 | Unset):
+        standard_industries_stats (None |
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0 | Unset):
+        job_location_type_stats (None |
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0 | Unset):
+    """
 
     total_count: float
-    seniority_stats: Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0', None, Unset] = UNSET
-    employment_type_stats: Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0', None, Unset] = UNSET
-    country_location_stats: Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0', None, Unset] = UNSET
-    puree_job_functions_stats: Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0', None, Unset] = UNSET
-    standard_industries_stats: Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0', None, Unset] = UNSET
-    job_location_type_stats: Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0', None, Unset] = UNSET
+    seniority_stats: (
+        None | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0 | Unset
+    ) = UNSET
+    employment_type_stats: (
+        None | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0 | Unset
+    ) = UNSET
+    country_location_stats: (
+        None | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0 | Unset
+    ) = UNSET
+    puree_job_functions_stats: (
+        None | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0 | Unset
+    ) = UNSET
+    standard_industries_stats: (
+        None | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0 | Unset
+    ) = UNSET
+    job_location_type_stats: (
+        None | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0 | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_job_location_type_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_seniority_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0 import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0 import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_job_location_type_stats_type_0 import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0 import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_seniority_stats_type_0 import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0 import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0,
+        )
+
         total_count = self.total_count
 
-        seniority_stats: Union[None, Unset, dict[str, Any]]
+        seniority_stats: dict[str, Any] | None | Unset
         if isinstance(self.seniority_stats, Unset):
             seniority_stats = UNSET
-        elif isinstance(self.seniority_stats, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0):
+        elif isinstance(
+            self.seniority_stats,
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0,
+        ):
             seniority_stats = self.seniority_stats.to_dict()
         else:
             seniority_stats = self.seniority_stats
 
-        employment_type_stats: Union[None, Unset, dict[str, Any]]
+        employment_type_stats: dict[str, Any] | None | Unset
         if isinstance(self.employment_type_stats, Unset):
             employment_type_stats = UNSET
-        elif isinstance(self.employment_type_stats, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0):
+        elif isinstance(
+            self.employment_type_stats,
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0,
+        ):
             employment_type_stats = self.employment_type_stats.to_dict()
         else:
             employment_type_stats = self.employment_type_stats
 
-        country_location_stats: Union[None, Unset, dict[str, Any]]
+        country_location_stats: dict[str, Any] | None | Unset
         if isinstance(self.country_location_stats, Unset):
             country_location_stats = UNSET
-        elif isinstance(self.country_location_stats, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0):
+        elif isinstance(
+            self.country_location_stats,
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0,
+        ):
             country_location_stats = self.country_location_stats.to_dict()
         else:
             country_location_stats = self.country_location_stats
 
-        puree_job_functions_stats: Union[None, Unset, dict[str, Any]]
+        puree_job_functions_stats: dict[str, Any] | None | Unset
         if isinstance(self.puree_job_functions_stats, Unset):
             puree_job_functions_stats = UNSET
-        elif isinstance(self.puree_job_functions_stats, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0):
+        elif isinstance(
+            self.puree_job_functions_stats,
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0,
+        ):
             puree_job_functions_stats = self.puree_job_functions_stats.to_dict()
         else:
             puree_job_functions_stats = self.puree_job_functions_stats
 
-        standard_industries_stats: Union[None, Unset, dict[str, Any]]
+        standard_industries_stats: dict[str, Any] | None | Unset
         if isinstance(self.standard_industries_stats, Unset):
             standard_industries_stats = UNSET
-        elif isinstance(self.standard_industries_stats, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0):
+        elif isinstance(
+            self.standard_industries_stats,
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0,
+        ):
             standard_industries_stats = self.standard_industries_stats.to_dict()
         else:
             standard_industries_stats = self.standard_industries_stats
 
-        job_location_type_stats: Union[None, Unset, dict[str, Any]]
+        job_location_type_stats: dict[str, Any] | None | Unset
         if isinstance(self.job_location_type_stats, Unset):
             job_location_type_stats = UNSET
-        elif isinstance(self.job_location_type_stats, SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0):
+        elif isinstance(
+            self.job_location_type_stats,
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0,
+        ):
             job_location_type_stats = self.job_location_type_stats.to_dict()
         else:
             job_location_type_stats = self.job_location_type_stats
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "total_count": total_count,
-        })
+        field_dict.update(
+            {
+                "total_count": total_count,
+            }
+        )
         if seniority_stats is not UNSET:
             field_dict["seniority_stats"] = seniority_stats
         if employment_type_stats is not UNSET:
@@ -142,20 +182,33 @@ class SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0:
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_job_location_type_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_seniority_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0
-        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0 import SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0 import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0 import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_job_location_type_stats_type_0 import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0 import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_seniority_stats_type_0 import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0,
+        )
+        from ..models.sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0 import (
+            SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0,
+        )
+
         d = dict(src_dict)
         total_count = d.pop("total_count")
 
-        def _parse_seniority_stats(data: object) -> Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0', None, Unset]:
+        def _parse_seniority_stats(
+            data: object,
+        ) -> None | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0 | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -163,19 +216,27 @@ class SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                seniority_stats_type_0 = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0.from_dict(data)
-
-
+                seniority_stats_type_0 = (
+                    SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0.from_dict(
+                        data
+                    )
+                )
 
                 return seniority_stats_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0', None, Unset], data)
+            return cast(
+                None | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0 | Unset,
+                data,
+            )
 
         seniority_stats = _parse_seniority_stats(d.pop("seniority_stats", UNSET))
 
-
-        def _parse_employment_type_stats(data: object) -> Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0', None, Unset]:
+        def _parse_employment_type_stats(
+            data: object,
+        ) -> (
+            None | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0 | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -183,19 +244,27 @@ class SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                employment_type_stats_type_0 = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0.from_dict(data)
-
-
+                employment_type_stats_type_0 = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0.from_dict(
+                    data
+                )
 
                 return employment_type_stats_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0', None, Unset], data)
+            return cast(
+                None
+                | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0
+                | Unset,
+                data,
+            )
 
         employment_type_stats = _parse_employment_type_stats(d.pop("employment_type_stats", UNSET))
 
-
-        def _parse_country_location_stats(data: object) -> Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0', None, Unset]:
+        def _parse_country_location_stats(
+            data: object,
+        ) -> (
+            None | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0 | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -203,19 +272,29 @@ class SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                country_location_stats_type_0 = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0.from_dict(data)
-
-
+                country_location_stats_type_0 = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0.from_dict(
+                    data
+                )
 
                 return country_location_stats_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0', None, Unset], data)
+            return cast(
+                None
+                | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0
+                | Unset,
+                data,
+            )
 
         country_location_stats = _parse_country_location_stats(d.pop("country_location_stats", UNSET))
 
-
-        def _parse_puree_job_functions_stats(data: object) -> Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0', None, Unset]:
+        def _parse_puree_job_functions_stats(
+            data: object,
+        ) -> (
+            None
+            | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -223,19 +302,29 @@ class SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                puree_job_functions_stats_type_0 = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0.from_dict(data)
-
-
+                puree_job_functions_stats_type_0 = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0.from_dict(
+                    data
+                )
 
                 return puree_job_functions_stats_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0', None, Unset], data)
+            return cast(
+                None
+                | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0
+                | Unset,
+                data,
+            )
 
         puree_job_functions_stats = _parse_puree_job_functions_stats(d.pop("puree_job_functions_stats", UNSET))
 
-
-        def _parse_standard_industries_stats(data: object) -> Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0', None, Unset]:
+        def _parse_standard_industries_stats(
+            data: object,
+        ) -> (
+            None
+            | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -243,19 +332,27 @@ class SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                standard_industries_stats_type_0 = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0.from_dict(data)
-
-
+                standard_industries_stats_type_0 = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0.from_dict(
+                    data
+                )
 
                 return standard_industries_stats_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0', None, Unset], data)
+            return cast(
+                None
+                | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0
+                | Unset,
+                data,
+            )
 
         standard_industries_stats = _parse_standard_industries_stats(d.pop("standard_industries_stats", UNSET))
 
-
-        def _parse_job_location_type_stats(data: object) -> Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0', None, Unset]:
+        def _parse_job_location_type_stats(
+            data: object,
+        ) -> (
+            None | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0 | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -263,17 +360,21 @@ class SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                job_location_type_stats_type_0 = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0.from_dict(data)
-
-
+                job_location_type_stats_type_0 = SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0.from_dict(
+                    data
+                )
 
                 return job_location_type_stats_type_0
-            except: # noqa: E722
+            except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(Union['SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0', None, Unset], data)
+            return cast(
+                None
+                | SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0
+                | Unset,
+                data,
+            )
 
         job_location_type_stats = _parse_job_location_type_stats(d.pop("job_location_type_stats", UNSET))
-
 
         sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0 = cls(
             total_count=total_count,
@@ -284,7 +385,6 @@ class SyncCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0:
             standard_industries_stats=standard_industries_stats,
             job_location_type_stats=job_location_type_stats,
         )
-
 
         sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0.additional_properties = d
         return sync_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0

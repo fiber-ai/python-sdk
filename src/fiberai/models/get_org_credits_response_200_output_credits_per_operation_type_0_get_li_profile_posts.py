@@ -1,76 +1,65 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-from typing import cast
-
 if TYPE_CHECKING:
-  from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_posts_levels_item import GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePostsLevelsItem
-
-
-
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_posts_levels_item import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePostsLevelsItem,
+    )
 
 
 T = TypeVar("T", bound="GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePosts")
 
 
-
 @_attrs_define
 class GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePosts:
-    """ 
-        Attributes:
-            levels (list['GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePostsLevelsItem']):
-     """
+    """
+    Attributes:
+        levels (list[GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePostsLevelsItem]):
+    """
 
-    levels: list['GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePostsLevelsItem']
+    levels: list[GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePostsLevelsItem]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
-
-
-
-
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_posts_levels_item import GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePostsLevelsItem
         levels = []
         for levels_item_data in self.levels:
             levels_item = levels_item_data.to_dict()
             levels.append(levels_item)
 
-
-
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "levels": levels,
-        })
+        field_dict.update(
+            {
+                "levels": levels,
+            }
+        )
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_posts_levels_item import GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePostsLevelsItem
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_posts_levels_item import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePostsLevelsItem,
+        )
+
         d = dict(src_dict)
         levels = []
         _levels = d.pop("levels")
-        for levels_item_data in (_levels):
-            levels_item = GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePostsLevelsItem.from_dict(levels_item_data)
-
-
+        for levels_item_data in _levels:
+            levels_item = GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePostsLevelsItem.from_dict(
+                levels_item_data
+            )
 
             levels.append(levels_item)
-
 
         get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_posts = cls(
             levels=levels,
         )
-
 
         get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_posts.additional_properties = d
         return get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_posts

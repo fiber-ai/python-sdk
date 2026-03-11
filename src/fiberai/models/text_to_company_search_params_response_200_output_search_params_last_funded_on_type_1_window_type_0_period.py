@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCompanySearchParamsResponse200OutputSearchParamsLastFundedOnType1WindowType0Period(str, Enum):
     DAY = "day"
     MONTH = "month"

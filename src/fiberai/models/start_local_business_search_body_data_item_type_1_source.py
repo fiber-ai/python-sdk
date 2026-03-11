@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class StartLocalBusinessSearchBodyDataItemType1Source(str, Enum):
     GOOGLE_MAPS = "google-maps"
 

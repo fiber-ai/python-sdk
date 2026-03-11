@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class TextToCompanySearchResponse200OutputSearchParamsTagsType0NoneOfType0ItemSlug(str, Enum):
     IS_GOVERNMENT = "is-government"
     IS_SCHOOL = "is-school"

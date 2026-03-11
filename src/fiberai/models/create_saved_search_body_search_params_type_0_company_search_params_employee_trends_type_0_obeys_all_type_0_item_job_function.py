@@ -1,6 +1,9 @@
 from enum import Enum
 
-class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsType0ObeysAllType0ItemJobFunction(str, Enum):
+
+class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsType0ObeysAllType0ItemJobFunction(
+    str, Enum
+):
     ACCOUNTING = "accounting"
     ADMINISTRATIVE = "administrative"
     ARTS_AND_DESIGN = "arts_and_design"

@@ -1,53 +1,41 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..types import UNSET, Unset
-
-
-
-
-
-
-
 T = TypeVar("T", bound="BulkCompanyLogosResponse200OutputDataType2DataItem")
-
 
 
 @_attrs_define
 class BulkCompanyLogosResponse200OutputDataType2DataItem:
-    """ 
-        Attributes:
-            li_org_id (str): The linkedin org ID of the company
-            logo_url (str): The logo URL
-     """
+    """
+    Attributes:
+        li_org_id (str): The linkedin org ID of the company
+        logo_url (str): The logo URL
+    """
 
     li_org_id: str
     logo_url: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
-
-
-
-
 
     def to_dict(self) -> dict[str, Any]:
         li_org_id = self.li_org_id
 
         logo_url = self.logo_url
 
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update({
-            "liOrgId": li_org_id,
-            "logoUrl": logo_url,
-        })
+        field_dict.update(
+            {
+                "liOrgId": li_org_id,
+                "logoUrl": logo_url,
+            }
+        )
 
         return field_dict
-
-
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
@@ -60,7 +48,6 @@ class BulkCompanyLogosResponse200OutputDataType2DataItem:
             li_org_id=li_org_id,
             logo_url=logo_url,
         )
-
 
         bulk_company_logos_response_200_output_data_type_2_data_item.additional_properties = d
         return bulk_company_logos_response_200_output_data_type_2_data_item

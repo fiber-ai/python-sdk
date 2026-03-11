@@ -1,6 +1,9 @@
 from enum import Enum
 
-class TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1EnteredStealthAtType1WindowType0Period(str, Enum):
+
+class TextToProfileSearchParamsResponse200OutputSearchParamsStealthV2Type1EnteredStealthAtType1WindowType0Period(
+    str, Enum
+):
     DAY = "day"
     MONTH = "month"
     QUARTER = "quarter"

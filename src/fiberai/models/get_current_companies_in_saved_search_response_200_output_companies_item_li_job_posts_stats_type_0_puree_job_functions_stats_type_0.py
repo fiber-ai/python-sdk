@@ -1,438 +1,604 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, TypeVar, Optional, BinaryIO, TextIO, TYPE_CHECKING, Generator
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
-from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
-
-from ..types import UNSET, Unset
-from typing import cast
-from typing import Union
 
 if TYPE_CHECKING:
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_healthcare_services import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_analyst import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_training import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_other import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_arts_and_design import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_management import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_information_technology import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_community_social_services import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_production import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_accounting import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_business_development import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_health_care_provider import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_entrepreneurship import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_quality_assurance import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_legal import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_finance import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_project_management import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_manufacturing import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_advertising import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_science import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_research import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_design import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_purchasing import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_engineering import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_operations import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_writing_editing import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_support import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_program_product_management import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_real_estate import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_product_management import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_human_resources import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_public_relations import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_military_protective_services import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_administrative import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_sales import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_consulting import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_strategy_planning import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_customer_service import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_distribution import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_art_creative import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_general_business import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_marketing import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_supply_chain import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain
-  from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_education import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_accounting import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_administrative import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_advertising import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_analyst import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_art_creative import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_arts_and_design import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_business_development import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_community_social_services import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_consulting import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_customer_service import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_design import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_distribution import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_education import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_engineering import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_entrepreneurship import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_finance import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_general_business import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_health_care_provider import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_healthcare_services import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_human_resources import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_information_technology import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_legal import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_management import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_manufacturing import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_marketing import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_military_protective_services import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_operations import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_other import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_product_management import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_production import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_program_product_management import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_project_management import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_public_relations import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_purchasing import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_quality_assurance import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_real_estate import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_research import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_sales import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_science import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_strategy_planning import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_supply_chain import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_support import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_training import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_writing_editing import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing,
+    )
 
 
-
-
-
-T = TypeVar("T", bound="GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0")
-
+T = TypeVar(
+    "T",
+    bound="GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0",
+)
 
 
 @_attrs_define
 class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0:
-    """ 
-        Attributes:
-            arts_and_design (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0
-                PureeJobFunctionsStatsType0ArtsAndDesign]):
-            business_development (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStats
-                Type0PureeJobFunctionsStatsType0BusinessDevelopment]):
-            community_social_services (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPosts
-                StatsType0PureeJobFunctionsStatsType0CommunitySocialServices]):
-            consulting (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Puree
-                JobFunctionsStatsType0Consulting]):
-            education (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJ
-                obFunctionsStatsType0Education]):
-            engineering (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Pure
-                eJobFunctionsStatsType0Engineering]):
-            entrepreneurship (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType
-                0PureeJobFunctionsStatsType0Entrepreneurship]):
-            healthcare_services (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsT
-                ype0PureeJobFunctionsStatsType0HealthcareServices]):
-            human_resources (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0
-                PureeJobFunctionsStatsType0HumanResources]):
-            information_technology (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsSta
-                tsType0PureeJobFunctionsStatsType0InformationTechnology]):
-            legal (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFu
-                nctionsStatsType0Legal]):
-            military_protective_services (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPo
-                stsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices]):
-            operations (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Puree
-                JobFunctionsStatsType0Operations]):
-            program_product_management (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPost
-                sStatsType0PureeJobFunctionsStatsType0ProgramProductManagement]):
-            real_estate (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Pure
-                eJobFunctionsStatsType0RealEstate]):
-            sales (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFu
-                nctionsStatsType0Sales]):
-            support (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJob
-                FunctionsStatsType0Support]):
-            administrative (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0P
-                ureeJobFunctionsStatsType0Administrative]):
-            finance (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJob
-                FunctionsStatsType0Finance]):
-            marketing (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJ
-                obFunctionsStatsType0Marketing]):
-            purchasing (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Puree
-                JobFunctionsStatsType0Purchasing]):
-            product_management (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsTy
-                pe0PureeJobFunctionsStatsType0ProductManagement]):
-            advertising (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Pure
-                eJobFunctionsStatsType0Advertising]):
-            analyst (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJob
-                FunctionsStatsType0Analyst]):
-            customer_service (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType
-                0PureeJobFunctionsStatsType0CustomerService]):
-            distribution (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Pur
-                eeJobFunctionsStatsType0Distribution]):
-            design (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobF
-                unctionsStatsType0Design]):
-            general_business (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType
-                0PureeJobFunctionsStatsType0GeneralBusiness]):
-            management (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Puree
-                JobFunctionsStatsType0Management]):
-            manufacturing (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Pu
-                reeJobFunctionsStatsType0Manufacturing]):
-            other (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFu
-                nctionsStatsType0Other]):
-            public_relations (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType
-                0PureeJobFunctionsStatsType0PublicRelations]):
-            project_management (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsTy
-                pe0PureeJobFunctionsStatsType0ProjectManagement]):
-            production (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Puree
-                JobFunctionsStatsType0Production]):
-            quality_assurance (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsTyp
-                e0PureeJobFunctionsStatsType0QualityAssurance]):
-            research (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJo
-                bFunctionsStatsType0Research]):
-            science (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJob
-                FunctionsStatsType0Science]):
-            supply_chain (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Pur
-                eeJobFunctionsStatsType0SupplyChain]):
-            training (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJo
-                bFunctionsStatsType0Training]):
-            health_care_provider (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStats
-                Type0PureeJobFunctionsStatsType0HealthCareProvider]):
-            accounting (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Puree
-                JobFunctionsStatsType0Accounting]):
-            art_creative (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Pur
-                eeJobFunctionsStatsType0ArtCreative]):
-            strategy_planning (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsTyp
-                e0PureeJobFunctionsStatsType0StrategyPlanning]):
-            writing_editing (Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0
-                PureeJobFunctionsStatsType0WritingEditing]):
-     """
+    """
+    Attributes:
+        arts_and_design (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunct
+            ionsStatsType0ArtsAndDesign | Unset):
+        business_development (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJob
+            FunctionsStatsType0BusinessDevelopment | Unset):
+        community_social_services (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Pur
+            eeJobFunctionsStatsType0CommunitySocialServices | Unset):
+        consulting (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsS
+            tatsType0Consulting | Unset):
+        education (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsSt
+            atsType0Education | Unset):
+        engineering (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctions
+            StatsType0Engineering | Unset):
+        entrepreneurship (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunc
+            tionsStatsType0Entrepreneurship | Unset):
+        healthcare_services (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobF
+            unctionsStatsType0HealthcareServices | Unset):
+        human_resources (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunct
+            ionsStatsType0HumanResources | Unset):
+        information_technology (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJ
+            obFunctionsStatsType0InformationTechnology | Unset):
+        legal (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsT
+            ype0Legal | Unset):
+        military_protective_services (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0
+            PureeJobFunctionsStatsType0MilitaryProtectiveServices | Unset):
+        operations (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsS
+            tatsType0Operations | Unset):
+        program_product_management (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0Pu
+            reeJobFunctionsStatsType0ProgramProductManagement | Unset):
+        real_estate (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctions
+            StatsType0RealEstate | Unset):
+        sales (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsT
+            ype0Sales | Unset):
+        support (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStat
+            sType0Support | Unset):
+        administrative (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFuncti
+            onsStatsType0Administrative | Unset):
+        finance (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStat
+            sType0Finance | Unset):
+        marketing (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsSt
+            atsType0Marketing | Unset):
+        purchasing (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsS
+            tatsType0Purchasing | Unset):
+        product_management (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFu
+            nctionsStatsType0ProductManagement | Unset):
+        advertising (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctions
+            StatsType0Advertising | Unset):
+        analyst (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStat
+            sType0Analyst | Unset):
+        customer_service (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunc
+            tionsStatsType0CustomerService | Unset):
+        distribution (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunction
+            sStatsType0Distribution | Unset):
+        design (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStats
+            Type0Design | Unset):
+        general_business (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunc
+            tionsStatsType0GeneralBusiness | Unset):
+        management (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsS
+            tatsType0Management | Unset):
+        manufacturing (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctio
+            nsStatsType0Manufacturing | Unset):
+        other (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsT
+            ype0Other | Unset):
+        public_relations (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunc
+            tionsStatsType0PublicRelations | Unset):
+        project_management (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFu
+            nctionsStatsType0ProjectManagement | Unset):
+        production (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsS
+            tatsType0Production | Unset):
+        quality_assurance (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFun
+            ctionsStatsType0QualityAssurance | Unset):
+        research (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsSta
+            tsType0Research | Unset):
+        science (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStat
+            sType0Science | Unset):
+        supply_chain (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunction
+            sStatsType0SupplyChain | Unset):
+        training (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsSta
+            tsType0Training | Unset):
+        health_care_provider (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJob
+            FunctionsStatsType0HealthCareProvider | Unset):
+        accounting (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsS
+            tatsType0Accounting | Unset):
+        art_creative (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunction
+            sStatsType0ArtCreative | Unset):
+        strategy_planning (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFun
+            ctionsStatsType0StrategyPlanning | Unset):
+        writing_editing (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunct
+            ionsStatsType0WritingEditing | Unset):
+    """
 
-    arts_and_design: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign'] = UNSET
-    business_development: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment'] = UNSET
-    community_social_services: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices'] = UNSET
-    consulting: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting'] = UNSET
-    education: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education'] = UNSET
-    engineering: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering'] = UNSET
-    entrepreneurship: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship'] = UNSET
-    healthcare_services: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices'] = UNSET
-    human_resources: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources'] = UNSET
-    information_technology: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology'] = UNSET
-    legal: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal'] = UNSET
-    military_protective_services: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices'] = UNSET
-    operations: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations'] = UNSET
-    program_product_management: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement'] = UNSET
-    real_estate: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate'] = UNSET
-    sales: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales'] = UNSET
-    support: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support'] = UNSET
-    administrative: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative'] = UNSET
-    finance: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance'] = UNSET
-    marketing: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing'] = UNSET
-    purchasing: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing'] = UNSET
-    product_management: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement'] = UNSET
-    advertising: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising'] = UNSET
-    analyst: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst'] = UNSET
-    customer_service: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService'] = UNSET
-    distribution: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution'] = UNSET
-    design: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design'] = UNSET
-    general_business: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness'] = UNSET
-    management: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management'] = UNSET
-    manufacturing: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing'] = UNSET
-    other: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other'] = UNSET
-    public_relations: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations'] = UNSET
-    project_management: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement'] = UNSET
-    production: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production'] = UNSET
-    quality_assurance: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance'] = UNSET
-    research: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research'] = UNSET
-    science: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science'] = UNSET
-    supply_chain: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain'] = UNSET
-    training: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training'] = UNSET
-    health_care_provider: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider'] = UNSET
-    accounting: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting'] = UNSET
-    art_creative: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative'] = UNSET
-    strategy_planning: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning'] = UNSET
-    writing_editing: Union[Unset, 'GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing'] = UNSET
-
-
-
-
+    arts_and_design: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign
+        | Unset
+    ) = UNSET
+    business_development: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment
+        | Unset
+    ) = UNSET
+    community_social_services: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices
+        | Unset
+    ) = UNSET
+    consulting: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting
+        | Unset
+    ) = UNSET
+    education: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education
+        | Unset
+    ) = UNSET
+    engineering: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering
+        | Unset
+    ) = UNSET
+    entrepreneurship: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship
+        | Unset
+    ) = UNSET
+    healthcare_services: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices
+        | Unset
+    ) = UNSET
+    human_resources: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources
+        | Unset
+    ) = UNSET
+    information_technology: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology
+        | Unset
+    ) = UNSET
+    legal: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal
+        | Unset
+    ) = UNSET
+    military_protective_services: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices
+        | Unset
+    ) = UNSET
+    operations: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations
+        | Unset
+    ) = UNSET
+    program_product_management: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement
+        | Unset
+    ) = UNSET
+    real_estate: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate
+        | Unset
+    ) = UNSET
+    sales: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales
+        | Unset
+    ) = UNSET
+    support: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support
+        | Unset
+    ) = UNSET
+    administrative: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative
+        | Unset
+    ) = UNSET
+    finance: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance
+        | Unset
+    ) = UNSET
+    marketing: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing
+        | Unset
+    ) = UNSET
+    purchasing: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing
+        | Unset
+    ) = UNSET
+    product_management: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement
+        | Unset
+    ) = UNSET
+    advertising: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising
+        | Unset
+    ) = UNSET
+    analyst: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst
+        | Unset
+    ) = UNSET
+    customer_service: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService
+        | Unset
+    ) = UNSET
+    distribution: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution
+        | Unset
+    ) = UNSET
+    design: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design
+        | Unset
+    ) = UNSET
+    general_business: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness
+        | Unset
+    ) = UNSET
+    management: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management
+        | Unset
+    ) = UNSET
+    manufacturing: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing
+        | Unset
+    ) = UNSET
+    other: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other
+        | Unset
+    ) = UNSET
+    public_relations: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations
+        | Unset
+    ) = UNSET
+    project_management: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement
+        | Unset
+    ) = UNSET
+    production: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production
+        | Unset
+    ) = UNSET
+    quality_assurance: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance
+        | Unset
+    ) = UNSET
+    research: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research
+        | Unset
+    ) = UNSET
+    science: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science
+        | Unset
+    ) = UNSET
+    supply_chain: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain
+        | Unset
+    ) = UNSET
+    training: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training
+        | Unset
+    ) = UNSET
+    health_care_provider: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider
+        | Unset
+    ) = UNSET
+    accounting: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting
+        | Unset
+    ) = UNSET
+    art_creative: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative
+        | Unset
+    ) = UNSET
+    strategy_planning: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning
+        | Unset
+    ) = UNSET
+    writing_editing: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing
+        | Unset
+    ) = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_healthcare_services import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_analyst import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_training import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_other import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_arts_and_design import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_management import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_information_technology import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_community_social_services import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_production import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_accounting import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_business_development import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_health_care_provider import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_entrepreneurship import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_quality_assurance import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_legal import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_finance import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_project_management import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_manufacturing import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_advertising import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_science import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_research import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_design import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_purchasing import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_engineering import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_operations import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_writing_editing import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_support import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_program_product_management import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_real_estate import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_product_management import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_human_resources import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_public_relations import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_military_protective_services import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_administrative import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_sales import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_consulting import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_strategy_planning import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_customer_service import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_distribution import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_art_creative import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_general_business import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_marketing import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_supply_chain import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_education import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education
-        arts_and_design: Union[Unset, dict[str, Any]] = UNSET
+        arts_and_design: dict[str, Any] | Unset = UNSET
         if not isinstance(self.arts_and_design, Unset):
             arts_and_design = self.arts_and_design.to_dict()
 
-        business_development: Union[Unset, dict[str, Any]] = UNSET
+        business_development: dict[str, Any] | Unset = UNSET
         if not isinstance(self.business_development, Unset):
             business_development = self.business_development.to_dict()
 
-        community_social_services: Union[Unset, dict[str, Any]] = UNSET
+        community_social_services: dict[str, Any] | Unset = UNSET
         if not isinstance(self.community_social_services, Unset):
             community_social_services = self.community_social_services.to_dict()
 
-        consulting: Union[Unset, dict[str, Any]] = UNSET
+        consulting: dict[str, Any] | Unset = UNSET
         if not isinstance(self.consulting, Unset):
             consulting = self.consulting.to_dict()
 
-        education: Union[Unset, dict[str, Any]] = UNSET
+        education: dict[str, Any] | Unset = UNSET
         if not isinstance(self.education, Unset):
             education = self.education.to_dict()
 
-        engineering: Union[Unset, dict[str, Any]] = UNSET
+        engineering: dict[str, Any] | Unset = UNSET
         if not isinstance(self.engineering, Unset):
             engineering = self.engineering.to_dict()
 
-        entrepreneurship: Union[Unset, dict[str, Any]] = UNSET
+        entrepreneurship: dict[str, Any] | Unset = UNSET
         if not isinstance(self.entrepreneurship, Unset):
             entrepreneurship = self.entrepreneurship.to_dict()
 
-        healthcare_services: Union[Unset, dict[str, Any]] = UNSET
+        healthcare_services: dict[str, Any] | Unset = UNSET
         if not isinstance(self.healthcare_services, Unset):
             healthcare_services = self.healthcare_services.to_dict()
 
-        human_resources: Union[Unset, dict[str, Any]] = UNSET
+        human_resources: dict[str, Any] | Unset = UNSET
         if not isinstance(self.human_resources, Unset):
             human_resources = self.human_resources.to_dict()
 
-        information_technology: Union[Unset, dict[str, Any]] = UNSET
+        information_technology: dict[str, Any] | Unset = UNSET
         if not isinstance(self.information_technology, Unset):
             information_technology = self.information_technology.to_dict()
 
-        legal: Union[Unset, dict[str, Any]] = UNSET
+        legal: dict[str, Any] | Unset = UNSET
         if not isinstance(self.legal, Unset):
             legal = self.legal.to_dict()
 
-        military_protective_services: Union[Unset, dict[str, Any]] = UNSET
+        military_protective_services: dict[str, Any] | Unset = UNSET
         if not isinstance(self.military_protective_services, Unset):
             military_protective_services = self.military_protective_services.to_dict()
 
-        operations: Union[Unset, dict[str, Any]] = UNSET
+        operations: dict[str, Any] | Unset = UNSET
         if not isinstance(self.operations, Unset):
             operations = self.operations.to_dict()
 
-        program_product_management: Union[Unset, dict[str, Any]] = UNSET
+        program_product_management: dict[str, Any] | Unset = UNSET
         if not isinstance(self.program_product_management, Unset):
             program_product_management = self.program_product_management.to_dict()
 
-        real_estate: Union[Unset, dict[str, Any]] = UNSET
+        real_estate: dict[str, Any] | Unset = UNSET
         if not isinstance(self.real_estate, Unset):
             real_estate = self.real_estate.to_dict()
 
-        sales: Union[Unset, dict[str, Any]] = UNSET
+        sales: dict[str, Any] | Unset = UNSET
         if not isinstance(self.sales, Unset):
             sales = self.sales.to_dict()
 
-        support: Union[Unset, dict[str, Any]] = UNSET
+        support: dict[str, Any] | Unset = UNSET
         if not isinstance(self.support, Unset):
             support = self.support.to_dict()
 
-        administrative: Union[Unset, dict[str, Any]] = UNSET
+        administrative: dict[str, Any] | Unset = UNSET
         if not isinstance(self.administrative, Unset):
             administrative = self.administrative.to_dict()
 
-        finance: Union[Unset, dict[str, Any]] = UNSET
+        finance: dict[str, Any] | Unset = UNSET
         if not isinstance(self.finance, Unset):
             finance = self.finance.to_dict()
 
-        marketing: Union[Unset, dict[str, Any]] = UNSET
+        marketing: dict[str, Any] | Unset = UNSET
         if not isinstance(self.marketing, Unset):
             marketing = self.marketing.to_dict()
 
-        purchasing: Union[Unset, dict[str, Any]] = UNSET
+        purchasing: dict[str, Any] | Unset = UNSET
         if not isinstance(self.purchasing, Unset):
             purchasing = self.purchasing.to_dict()
 
-        product_management: Union[Unset, dict[str, Any]] = UNSET
+        product_management: dict[str, Any] | Unset = UNSET
         if not isinstance(self.product_management, Unset):
             product_management = self.product_management.to_dict()
 
-        advertising: Union[Unset, dict[str, Any]] = UNSET
+        advertising: dict[str, Any] | Unset = UNSET
         if not isinstance(self.advertising, Unset):
             advertising = self.advertising.to_dict()
 
-        analyst: Union[Unset, dict[str, Any]] = UNSET
+        analyst: dict[str, Any] | Unset = UNSET
         if not isinstance(self.analyst, Unset):
             analyst = self.analyst.to_dict()
 
-        customer_service: Union[Unset, dict[str, Any]] = UNSET
+        customer_service: dict[str, Any] | Unset = UNSET
         if not isinstance(self.customer_service, Unset):
             customer_service = self.customer_service.to_dict()
 
-        distribution: Union[Unset, dict[str, Any]] = UNSET
+        distribution: dict[str, Any] | Unset = UNSET
         if not isinstance(self.distribution, Unset):
             distribution = self.distribution.to_dict()
 
-        design: Union[Unset, dict[str, Any]] = UNSET
+        design: dict[str, Any] | Unset = UNSET
         if not isinstance(self.design, Unset):
             design = self.design.to_dict()
 
-        general_business: Union[Unset, dict[str, Any]] = UNSET
+        general_business: dict[str, Any] | Unset = UNSET
         if not isinstance(self.general_business, Unset):
             general_business = self.general_business.to_dict()
 
-        management: Union[Unset, dict[str, Any]] = UNSET
+        management: dict[str, Any] | Unset = UNSET
         if not isinstance(self.management, Unset):
             management = self.management.to_dict()
 
-        manufacturing: Union[Unset, dict[str, Any]] = UNSET
+        manufacturing: dict[str, Any] | Unset = UNSET
         if not isinstance(self.manufacturing, Unset):
             manufacturing = self.manufacturing.to_dict()
 
-        other: Union[Unset, dict[str, Any]] = UNSET
+        other: dict[str, Any] | Unset = UNSET
         if not isinstance(self.other, Unset):
             other = self.other.to_dict()
 
-        public_relations: Union[Unset, dict[str, Any]] = UNSET
+        public_relations: dict[str, Any] | Unset = UNSET
         if not isinstance(self.public_relations, Unset):
             public_relations = self.public_relations.to_dict()
 
-        project_management: Union[Unset, dict[str, Any]] = UNSET
+        project_management: dict[str, Any] | Unset = UNSET
         if not isinstance(self.project_management, Unset):
             project_management = self.project_management.to_dict()
 
-        production: Union[Unset, dict[str, Any]] = UNSET
+        production: dict[str, Any] | Unset = UNSET
         if not isinstance(self.production, Unset):
             production = self.production.to_dict()
 
-        quality_assurance: Union[Unset, dict[str, Any]] = UNSET
+        quality_assurance: dict[str, Any] | Unset = UNSET
         if not isinstance(self.quality_assurance, Unset):
             quality_assurance = self.quality_assurance.to_dict()
 
-        research: Union[Unset, dict[str, Any]] = UNSET
+        research: dict[str, Any] | Unset = UNSET
         if not isinstance(self.research, Unset):
             research = self.research.to_dict()
 
-        science: Union[Unset, dict[str, Any]] = UNSET
+        science: dict[str, Any] | Unset = UNSET
         if not isinstance(self.science, Unset):
             science = self.science.to_dict()
 
-        supply_chain: Union[Unset, dict[str, Any]] = UNSET
+        supply_chain: dict[str, Any] | Unset = UNSET
         if not isinstance(self.supply_chain, Unset):
             supply_chain = self.supply_chain.to_dict()
 
-        training: Union[Unset, dict[str, Any]] = UNSET
+        training: dict[str, Any] | Unset = UNSET
         if not isinstance(self.training, Unset):
             training = self.training.to_dict()
 
-        health_care_provider: Union[Unset, dict[str, Any]] = UNSET
+        health_care_provider: dict[str, Any] | Unset = UNSET
         if not isinstance(self.health_care_provider, Unset):
             health_care_provider = self.health_care_provider.to_dict()
 
-        accounting: Union[Unset, dict[str, Any]] = UNSET
+        accounting: dict[str, Any] | Unset = UNSET
         if not isinstance(self.accounting, Unset):
             accounting = self.accounting.to_dict()
 
-        art_creative: Union[Unset, dict[str, Any]] = UNSET
+        art_creative: dict[str, Any] | Unset = UNSET
         if not isinstance(self.art_creative, Unset):
             art_creative = self.art_creative.to_dict()
 
-        strategy_planning: Union[Unset, dict[str, Any]] = UNSET
+        strategy_planning: dict[str, Any] | Unset = UNSET
         if not isinstance(self.strategy_planning, Unset):
             strategy_planning = self.strategy_planning.to_dict()
 
-        writing_editing: Union[Unset, dict[str, Any]] = UNSET
+        writing_editing: dict[str, Any] | Unset = UNSET
         if not isinstance(self.writing_editing, Unset):
             writing_editing = self.writing_editing.to_dict()
 
-
         field_dict: dict[str, Any] = {}
 
-        field_dict.update({
-        })
+        field_dict.update({})
         if arts_and_design is not UNSET:
             field_dict["Arts and Design"] = arts_and_design
         if business_development is not UNSET:
@@ -524,494 +690,669 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsSt
 
         return field_dict
 
-
-
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_healthcare_services import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_analyst import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_training import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_other import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_arts_and_design import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_management import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_information_technology import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_community_social_services import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_production import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_accounting import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_business_development import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_health_care_provider import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_entrepreneurship import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_quality_assurance import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_legal import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_finance import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_project_management import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_manufacturing import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_advertising import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_science import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_research import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_design import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_purchasing import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_engineering import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_operations import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_writing_editing import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_support import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_program_product_management import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_real_estate import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_product_management import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_human_resources import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_public_relations import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_military_protective_services import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_administrative import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_sales import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_consulting import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_strategy_planning import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_customer_service import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_distribution import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_art_creative import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_general_business import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_marketing import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_supply_chain import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain
-        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_education import GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_accounting import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_administrative import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_advertising import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_analyst import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_art_creative import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_arts_and_design import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_business_development import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_community_social_services import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_consulting import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_customer_service import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_design import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_distribution import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_education import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_engineering import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_entrepreneurship import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_finance import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_general_business import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_health_care_provider import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_healthcare_services import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_human_resources import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_information_technology import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_legal import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_management import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_manufacturing import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_marketing import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_military_protective_services import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_operations import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_other import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_product_management import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_production import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_program_product_management import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_project_management import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_public_relations import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_purchasing import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_quality_assurance import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_real_estate import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_research import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_sales import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_science import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_strategy_planning import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_supply_chain import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_support import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_training import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_writing_editing import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing,
+        )
+
         d = dict(src_dict)
         _arts_and_design = d.pop("Arts and Design", UNSET)
-        arts_and_design: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign]
-        if isinstance(_arts_and_design,  Unset):
+        arts_and_design: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign
+            | Unset
+        )
+        if isinstance(_arts_and_design, Unset):
             arts_and_design = UNSET
         else:
-            arts_and_design = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign.from_dict(_arts_and_design)
-
-
-
+            arts_and_design = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign.from_dict(
+                _arts_and_design
+            )
 
         _business_development = d.pop("Business Development", UNSET)
-        business_development: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment]
-        if isinstance(_business_development,  Unset):
+        business_development: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment
+            | Unset
+        )
+        if isinstance(_business_development, Unset):
             business_development = UNSET
         else:
-            business_development = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment.from_dict(_business_development)
-
-
-
+            business_development = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment.from_dict(
+                _business_development
+            )
 
         _community_social_services = d.pop("Community & Social Services", UNSET)
-        community_social_services: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices]
-        if isinstance(_community_social_services,  Unset):
+        community_social_services: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices
+            | Unset
+        )
+        if isinstance(_community_social_services, Unset):
             community_social_services = UNSET
         else:
-            community_social_services = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices.from_dict(_community_social_services)
-
-
-
+            community_social_services = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices.from_dict(
+                _community_social_services
+            )
 
         _consulting = d.pop("Consulting", UNSET)
-        consulting: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting]
-        if isinstance(_consulting,  Unset):
+        consulting: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting
+            | Unset
+        )
+        if isinstance(_consulting, Unset):
             consulting = UNSET
         else:
-            consulting = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting.from_dict(_consulting)
-
-
-
+            consulting = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting.from_dict(
+                _consulting
+            )
 
         _education = d.pop("Education", UNSET)
-        education: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education]
-        if isinstance(_education,  Unset):
+        education: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education
+            | Unset
+        )
+        if isinstance(_education, Unset):
             education = UNSET
         else:
-            education = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education.from_dict(_education)
-
-
-
+            education = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education.from_dict(
+                _education
+            )
 
         _engineering = d.pop("Engineering", UNSET)
-        engineering: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering]
-        if isinstance(_engineering,  Unset):
+        engineering: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering
+            | Unset
+        )
+        if isinstance(_engineering, Unset):
             engineering = UNSET
         else:
-            engineering = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering.from_dict(_engineering)
-
-
-
+            engineering = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering.from_dict(
+                _engineering
+            )
 
         _entrepreneurship = d.pop("Entrepreneurship", UNSET)
-        entrepreneurship: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship]
-        if isinstance(_entrepreneurship,  Unset):
+        entrepreneurship: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship
+            | Unset
+        )
+        if isinstance(_entrepreneurship, Unset):
             entrepreneurship = UNSET
         else:
-            entrepreneurship = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship.from_dict(_entrepreneurship)
-
-
-
+            entrepreneurship = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship.from_dict(
+                _entrepreneurship
+            )
 
         _healthcare_services = d.pop("Healthcare Services", UNSET)
-        healthcare_services: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices]
-        if isinstance(_healthcare_services,  Unset):
+        healthcare_services: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices
+            | Unset
+        )
+        if isinstance(_healthcare_services, Unset):
             healthcare_services = UNSET
         else:
-            healthcare_services = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices.from_dict(_healthcare_services)
-
-
-
+            healthcare_services = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices.from_dict(
+                _healthcare_services
+            )
 
         _human_resources = d.pop("Human Resources", UNSET)
-        human_resources: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources]
-        if isinstance(_human_resources,  Unset):
+        human_resources: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources
+            | Unset
+        )
+        if isinstance(_human_resources, Unset):
             human_resources = UNSET
         else:
-            human_resources = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources.from_dict(_human_resources)
-
-
-
+            human_resources = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources.from_dict(
+                _human_resources
+            )
 
         _information_technology = d.pop("Information Technology", UNSET)
-        information_technology: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology]
-        if isinstance(_information_technology,  Unset):
+        information_technology: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology
+            | Unset
+        )
+        if isinstance(_information_technology, Unset):
             information_technology = UNSET
         else:
-            information_technology = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology.from_dict(_information_technology)
-
-
-
+            information_technology = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology.from_dict(
+                _information_technology
+            )
 
         _legal = d.pop("Legal", UNSET)
-        legal: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal]
-        if isinstance(_legal,  Unset):
+        legal: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal
+            | Unset
+        )
+        if isinstance(_legal, Unset):
             legal = UNSET
         else:
-            legal = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal.from_dict(_legal)
-
-
-
+            legal = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal.from_dict(
+                _legal
+            )
 
         _military_protective_services = d.pop("Military & Protective Services", UNSET)
-        military_protective_services: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices]
-        if isinstance(_military_protective_services,  Unset):
+        military_protective_services: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices
+            | Unset
+        )
+        if isinstance(_military_protective_services, Unset):
             military_protective_services = UNSET
         else:
-            military_protective_services = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices.from_dict(_military_protective_services)
-
-
-
+            military_protective_services = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices.from_dict(
+                _military_protective_services
+            )
 
         _operations = d.pop("Operations", UNSET)
-        operations: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations]
-        if isinstance(_operations,  Unset):
+        operations: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations
+            | Unset
+        )
+        if isinstance(_operations, Unset):
             operations = UNSET
         else:
-            operations = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations.from_dict(_operations)
-
-
-
+            operations = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations.from_dict(
+                _operations
+            )
 
         _program_product_management = d.pop("Program & Product Management", UNSET)
-        program_product_management: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement]
-        if isinstance(_program_product_management,  Unset):
+        program_product_management: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement
+            | Unset
+        )
+        if isinstance(_program_product_management, Unset):
             program_product_management = UNSET
         else:
-            program_product_management = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement.from_dict(_program_product_management)
-
-
-
+            program_product_management = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement.from_dict(
+                _program_product_management
+            )
 
         _real_estate = d.pop("Real Estate", UNSET)
-        real_estate: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate]
-        if isinstance(_real_estate,  Unset):
+        real_estate: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate
+            | Unset
+        )
+        if isinstance(_real_estate, Unset):
             real_estate = UNSET
         else:
-            real_estate = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate.from_dict(_real_estate)
-
-
-
+            real_estate = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate.from_dict(
+                _real_estate
+            )
 
         _sales = d.pop("Sales", UNSET)
-        sales: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales]
-        if isinstance(_sales,  Unset):
+        sales: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales
+            | Unset
+        )
+        if isinstance(_sales, Unset):
             sales = UNSET
         else:
-            sales = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales.from_dict(_sales)
-
-
-
+            sales = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales.from_dict(
+                _sales
+            )
 
         _support = d.pop("Support", UNSET)
-        support: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support]
-        if isinstance(_support,  Unset):
+        support: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support
+            | Unset
+        )
+        if isinstance(_support, Unset):
             support = UNSET
         else:
-            support = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support.from_dict(_support)
-
-
-
+            support = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support.from_dict(
+                _support
+            )
 
         _administrative = d.pop("Administrative", UNSET)
-        administrative: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative]
-        if isinstance(_administrative,  Unset):
+        administrative: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative
+            | Unset
+        )
+        if isinstance(_administrative, Unset):
             administrative = UNSET
         else:
-            administrative = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative.from_dict(_administrative)
-
-
-
+            administrative = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative.from_dict(
+                _administrative
+            )
 
         _finance = d.pop("Finance", UNSET)
-        finance: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance]
-        if isinstance(_finance,  Unset):
+        finance: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance
+            | Unset
+        )
+        if isinstance(_finance, Unset):
             finance = UNSET
         else:
-            finance = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance.from_dict(_finance)
-
-
-
+            finance = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance.from_dict(
+                _finance
+            )
 
         _marketing = d.pop("Marketing", UNSET)
-        marketing: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing]
-        if isinstance(_marketing,  Unset):
+        marketing: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing
+            | Unset
+        )
+        if isinstance(_marketing, Unset):
             marketing = UNSET
         else:
-            marketing = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing.from_dict(_marketing)
-
-
-
+            marketing = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing.from_dict(
+                _marketing
+            )
 
         _purchasing = d.pop("Purchasing", UNSET)
-        purchasing: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing]
-        if isinstance(_purchasing,  Unset):
+        purchasing: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing
+            | Unset
+        )
+        if isinstance(_purchasing, Unset):
             purchasing = UNSET
         else:
-            purchasing = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing.from_dict(_purchasing)
-
-
-
+            purchasing = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing.from_dict(
+                _purchasing
+            )
 
         _product_management = d.pop("Product Management", UNSET)
-        product_management: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement]
-        if isinstance(_product_management,  Unset):
+        product_management: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement
+            | Unset
+        )
+        if isinstance(_product_management, Unset):
             product_management = UNSET
         else:
-            product_management = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement.from_dict(_product_management)
-
-
-
+            product_management = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement.from_dict(
+                _product_management
+            )
 
         _advertising = d.pop("Advertising", UNSET)
-        advertising: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising]
-        if isinstance(_advertising,  Unset):
+        advertising: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising
+            | Unset
+        )
+        if isinstance(_advertising, Unset):
             advertising = UNSET
         else:
-            advertising = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising.from_dict(_advertising)
-
-
-
+            advertising = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising.from_dict(
+                _advertising
+            )
 
         _analyst = d.pop("Analyst", UNSET)
-        analyst: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst]
-        if isinstance(_analyst,  Unset):
+        analyst: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst
+            | Unset
+        )
+        if isinstance(_analyst, Unset):
             analyst = UNSET
         else:
-            analyst = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst.from_dict(_analyst)
-
-
-
+            analyst = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst.from_dict(
+                _analyst
+            )
 
         _customer_service = d.pop("Customer Service", UNSET)
-        customer_service: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService]
-        if isinstance(_customer_service,  Unset):
+        customer_service: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService
+            | Unset
+        )
+        if isinstance(_customer_service, Unset):
             customer_service = UNSET
         else:
-            customer_service = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService.from_dict(_customer_service)
-
-
-
+            customer_service = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService.from_dict(
+                _customer_service
+            )
 
         _distribution = d.pop("Distribution", UNSET)
-        distribution: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution]
-        if isinstance(_distribution,  Unset):
+        distribution: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution
+            | Unset
+        )
+        if isinstance(_distribution, Unset):
             distribution = UNSET
         else:
-            distribution = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution.from_dict(_distribution)
-
-
-
+            distribution = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution.from_dict(
+                _distribution
+            )
 
         _design = d.pop("Design", UNSET)
-        design: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design]
-        if isinstance(_design,  Unset):
+        design: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design
+            | Unset
+        )
+        if isinstance(_design, Unset):
             design = UNSET
         else:
-            design = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design.from_dict(_design)
-
-
-
+            design = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design.from_dict(
+                _design
+            )
 
         _general_business = d.pop("General Business", UNSET)
-        general_business: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness]
-        if isinstance(_general_business,  Unset):
+        general_business: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness
+            | Unset
+        )
+        if isinstance(_general_business, Unset):
             general_business = UNSET
         else:
-            general_business = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness.from_dict(_general_business)
-
-
-
+            general_business = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness.from_dict(
+                _general_business
+            )
 
         _management = d.pop("Management", UNSET)
-        management: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management]
-        if isinstance(_management,  Unset):
+        management: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management
+            | Unset
+        )
+        if isinstance(_management, Unset):
             management = UNSET
         else:
-            management = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management.from_dict(_management)
-
-
-
+            management = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management.from_dict(
+                _management
+            )
 
         _manufacturing = d.pop("Manufacturing", UNSET)
-        manufacturing: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing]
-        if isinstance(_manufacturing,  Unset):
+        manufacturing: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing
+            | Unset
+        )
+        if isinstance(_manufacturing, Unset):
             manufacturing = UNSET
         else:
-            manufacturing = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing.from_dict(_manufacturing)
-
-
-
+            manufacturing = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing.from_dict(
+                _manufacturing
+            )
 
         _other = d.pop("Other", UNSET)
-        other: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other]
-        if isinstance(_other,  Unset):
+        other: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other
+            | Unset
+        )
+        if isinstance(_other, Unset):
             other = UNSET
         else:
-            other = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other.from_dict(_other)
-
-
-
+            other = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other.from_dict(
+                _other
+            )
 
         _public_relations = d.pop("Public Relations", UNSET)
-        public_relations: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations]
-        if isinstance(_public_relations,  Unset):
+        public_relations: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations
+            | Unset
+        )
+        if isinstance(_public_relations, Unset):
             public_relations = UNSET
         else:
-            public_relations = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations.from_dict(_public_relations)
-
-
-
+            public_relations = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations.from_dict(
+                _public_relations
+            )
 
         _project_management = d.pop("Project Management", UNSET)
-        project_management: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement]
-        if isinstance(_project_management,  Unset):
+        project_management: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement
+            | Unset
+        )
+        if isinstance(_project_management, Unset):
             project_management = UNSET
         else:
-            project_management = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement.from_dict(_project_management)
-
-
-
+            project_management = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement.from_dict(
+                _project_management
+            )
 
         _production = d.pop("Production", UNSET)
-        production: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production]
-        if isinstance(_production,  Unset):
+        production: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production
+            | Unset
+        )
+        if isinstance(_production, Unset):
             production = UNSET
         else:
-            production = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production.from_dict(_production)
-
-
-
+            production = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production.from_dict(
+                _production
+            )
 
         _quality_assurance = d.pop("Quality Assurance", UNSET)
-        quality_assurance: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance]
-        if isinstance(_quality_assurance,  Unset):
+        quality_assurance: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance
+            | Unset
+        )
+        if isinstance(_quality_assurance, Unset):
             quality_assurance = UNSET
         else:
-            quality_assurance = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance.from_dict(_quality_assurance)
-
-
-
+            quality_assurance = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance.from_dict(
+                _quality_assurance
+            )
 
         _research = d.pop("Research", UNSET)
-        research: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research]
-        if isinstance(_research,  Unset):
+        research: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research
+            | Unset
+        )
+        if isinstance(_research, Unset):
             research = UNSET
         else:
-            research = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research.from_dict(_research)
-
-
-
+            research = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research.from_dict(
+                _research
+            )
 
         _science = d.pop("Science", UNSET)
-        science: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science]
-        if isinstance(_science,  Unset):
+        science: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science
+            | Unset
+        )
+        if isinstance(_science, Unset):
             science = UNSET
         else:
-            science = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science.from_dict(_science)
-
-
-
+            science = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science.from_dict(
+                _science
+            )
 
         _supply_chain = d.pop("Supply Chain", UNSET)
-        supply_chain: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain]
-        if isinstance(_supply_chain,  Unset):
+        supply_chain: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain
+            | Unset
+        )
+        if isinstance(_supply_chain, Unset):
             supply_chain = UNSET
         else:
-            supply_chain = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain.from_dict(_supply_chain)
-
-
-
+            supply_chain = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain.from_dict(
+                _supply_chain
+            )
 
         _training = d.pop("Training", UNSET)
-        training: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training]
-        if isinstance(_training,  Unset):
+        training: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training
+            | Unset
+        )
+        if isinstance(_training, Unset):
             training = UNSET
         else:
-            training = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training.from_dict(_training)
-
-
-
+            training = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training.from_dict(
+                _training
+            )
 
         _health_care_provider = d.pop("Health Care Provider", UNSET)
-        health_care_provider: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider]
-        if isinstance(_health_care_provider,  Unset):
+        health_care_provider: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider
+            | Unset
+        )
+        if isinstance(_health_care_provider, Unset):
             health_care_provider = UNSET
         else:
-            health_care_provider = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider.from_dict(_health_care_provider)
-
-
-
+            health_care_provider = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider.from_dict(
+                _health_care_provider
+            )
 
         _accounting = d.pop("Accounting", UNSET)
-        accounting: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting]
-        if isinstance(_accounting,  Unset):
+        accounting: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting
+            | Unset
+        )
+        if isinstance(_accounting, Unset):
             accounting = UNSET
         else:
-            accounting = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting.from_dict(_accounting)
-
-
-
+            accounting = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting.from_dict(
+                _accounting
+            )
 
         _art_creative = d.pop("Art / Creative", UNSET)
-        art_creative: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative]
-        if isinstance(_art_creative,  Unset):
+        art_creative: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative
+            | Unset
+        )
+        if isinstance(_art_creative, Unset):
             art_creative = UNSET
         else:
-            art_creative = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative.from_dict(_art_creative)
-
-
-
+            art_creative = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative.from_dict(
+                _art_creative
+            )
 
         _strategy_planning = d.pop("Strategy / Planning", UNSET)
-        strategy_planning: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning]
-        if isinstance(_strategy_planning,  Unset):
+        strategy_planning: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning
+            | Unset
+        )
+        if isinstance(_strategy_planning, Unset):
             strategy_planning = UNSET
         else:
-            strategy_planning = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning.from_dict(_strategy_planning)
-
-
-
+            strategy_planning = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning.from_dict(
+                _strategy_planning
+            )
 
         _writing_editing = d.pop("Writing / Editing", UNSET)
-        writing_editing: Union[Unset, GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing]
-        if isinstance(_writing_editing,  Unset):
+        writing_editing: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing
+            | Unset
+        )
+        if isinstance(_writing_editing, Unset):
             writing_editing = UNSET
         else:
-            writing_editing = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing.from_dict(_writing_editing)
-
-
-
+            writing_editing = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing.from_dict(
+                _writing_editing
+            )
 
         get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0 = cls(
             arts_and_design=arts_and_design,
@@ -1061,4 +1402,3 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsSt
         )
 
         return get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0
-
