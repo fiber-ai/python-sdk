@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          persist-credentials: false
+          token: ${{ secrets.SDK_DEPLOY_PAT }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -61,7 +61,6 @@ jobs:
 
       - name: Bump patch version
         if: steps.diff.outputs.changed == 'true'
-        id: bump
         run: |
           VERSION=$(python3 << 'PYEOF'
           import re
@@ -87,7 +86,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}@github.com/fiber-ai/python-sdk.git
           git add -A
           BACKEND_SHA="${{ github.event.client_payload.sha }}"
           git commit -m "chore: auto-generate SDK v${VERSION}${BACKEND_SHA:+ (backend ${BACKEND_SHA:0:7})}"
