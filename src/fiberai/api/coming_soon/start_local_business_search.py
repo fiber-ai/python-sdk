@@ -144,7 +144,7 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title=\"Pricing shown is default
+    <span>💰 <strong>Cost:</strong> 4 credits per company&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
@@ -191,7 +191,7 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title=\"Pricing shown is default
+    <span>💰 <strong>Cost:</strong> 4 credits per company&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
@@ -232,7 +232,7 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title=\"Pricing shown is default
+    <span>💰 <strong>Cost:</strong> 4 credits per company&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
@@ -277,7 +277,7 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title=\"Pricing shown is default
+    <span>💰 <strong>Cost:</strong> 4 credits per company&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:

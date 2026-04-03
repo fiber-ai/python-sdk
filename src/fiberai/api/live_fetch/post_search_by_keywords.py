@@ -140,8 +140,29 @@ def sync_detailed(
 ]:
     r"""Search LinkedIn posts by keywords
 
-     Searches LinkedIn posts by keywords. Returns a paginated list of posts matching the search criteria
-    upto 50.
+     Search LinkedIn posts using keyword-based queries. Returns a paginated list of posts matching the
+    search criteria, up to 50 per page.
+
+    **Keyword Search Syntax:**
+    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. \"head of sales\" matches the
+    exact phrase, not the individual words.
+    - **AND:** Use **AND** between keywords to require both terms. sales **AND** engineering matches
+    posts containing both words.
+    - **OR:** Use **OR** between keywords to match posts containing any of the terms. sales **OR**
+    marketing matches posts with either word.
+    - **NOT:** Use **NOT** before a keyword to exclude posts containing that term. sales **NOT**
+    recruiter matches posts with \"sales\" but without \"recruiter\".
+    - **Parentheses:** Group terms to control operator precedence. (sales **OR** marketing) **AND**
+    \"series A\" finds posts about either sales or marketing that also mention \"series A\".
+
+    **Order of precedence:**
+    1. **Quotes (\" \"):** Exact phrase match. Phrase matching occurs before any Boolean logic is
+    applied.
+    2. **Parentheses (()):** Used to explicitly group Boolean logic. Grouped expressions are evaluated
+    before ungrouped logic.
+    3. **NOT:** Applied after any parentheses or quoted phrases are resolved.
+    4. **AND:** Evaluated after **NOT** but before **OR**.
+    5. **OR:** Lowest precedence among Boolean operators.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
@@ -188,8 +209,29 @@ def sync(
 ):
     r"""Search LinkedIn posts by keywords
 
-     Searches LinkedIn posts by keywords. Returns a paginated list of posts matching the search criteria
-    upto 50.
+     Search LinkedIn posts using keyword-based queries. Returns a paginated list of posts matching the
+    search criteria, up to 50 per page.
+
+    **Keyword Search Syntax:**
+    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. \"head of sales\" matches the
+    exact phrase, not the individual words.
+    - **AND:** Use **AND** between keywords to require both terms. sales **AND** engineering matches
+    posts containing both words.
+    - **OR:** Use **OR** between keywords to match posts containing any of the terms. sales **OR**
+    marketing matches posts with either word.
+    - **NOT:** Use **NOT** before a keyword to exclude posts containing that term. sales **NOT**
+    recruiter matches posts with \"sales\" but without \"recruiter\".
+    - **Parentheses:** Group terms to control operator precedence. (sales **OR** marketing) **AND**
+    \"series A\" finds posts about either sales or marketing that also mention \"series A\".
+
+    **Order of precedence:**
+    1. **Quotes (\" \"):** Exact phrase match. Phrase matching occurs before any Boolean logic is
+    applied.
+    2. **Parentheses (()):** Used to explicitly group Boolean logic. Grouped expressions are evaluated
+    before ungrouped logic.
+    3. **NOT:** Applied after any parentheses or quoted phrases are resolved.
+    4. **AND:** Evaluated after **NOT** but before **OR**.
+    5. **OR:** Lowest precedence among Boolean operators.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
@@ -230,8 +272,29 @@ async def asyncio_detailed(
 ]:
     r"""Search LinkedIn posts by keywords
 
-     Searches LinkedIn posts by keywords. Returns a paginated list of posts matching the search criteria
-    upto 50.
+     Search LinkedIn posts using keyword-based queries. Returns a paginated list of posts matching the
+    search criteria, up to 50 per page.
+
+    **Keyword Search Syntax:**
+    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. \"head of sales\" matches the
+    exact phrase, not the individual words.
+    - **AND:** Use **AND** between keywords to require both terms. sales **AND** engineering matches
+    posts containing both words.
+    - **OR:** Use **OR** between keywords to match posts containing any of the terms. sales **OR**
+    marketing matches posts with either word.
+    - **NOT:** Use **NOT** before a keyword to exclude posts containing that term. sales **NOT**
+    recruiter matches posts with \"sales\" but without \"recruiter\".
+    - **Parentheses:** Group terms to control operator precedence. (sales **OR** marketing) **AND**
+    \"series A\" finds posts about either sales or marketing that also mention \"series A\".
+
+    **Order of precedence:**
+    1. **Quotes (\" \"):** Exact phrase match. Phrase matching occurs before any Boolean logic is
+    applied.
+    2. **Parentheses (()):** Used to explicitly group Boolean logic. Grouped expressions are evaluated
+    before ungrouped logic.
+    3. **NOT:** Applied after any parentheses or quoted phrases are resolved.
+    4. **AND:** Evaluated after **NOT** but before **OR**.
+    5. **OR:** Lowest precedence among Boolean operators.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
@@ -276,8 +339,29 @@ async def asyncio(
 ):
     r"""Search LinkedIn posts by keywords
 
-     Searches LinkedIn posts by keywords. Returns a paginated list of posts matching the search criteria
-    upto 50.
+     Search LinkedIn posts using keyword-based queries. Returns a paginated list of posts matching the
+    search criteria, up to 50 per page.
+
+    **Keyword Search Syntax:**
+    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. \"head of sales\" matches the
+    exact phrase, not the individual words.
+    - **AND:** Use **AND** between keywords to require both terms. sales **AND** engineering matches
+    posts containing both words.
+    - **OR:** Use **OR** between keywords to match posts containing any of the terms. sales **OR**
+    marketing matches posts with either word.
+    - **NOT:** Use **NOT** before a keyword to exclude posts containing that term. sales **NOT**
+    recruiter matches posts with \"sales\" but without \"recruiter\".
+    - **Parentheses:** Group terms to control operator precedence. (sales **OR** marketing) **AND**
+    \"series A\" finds posts about either sales or marketing that also mention \"series A\".
+
+    **Order of precedence:**
+    1. **Quotes (\" \"):** Exact phrase match. Phrase matching occurs before any Boolean logic is
+    applied.
+    2. **Parentheses (()):** Used to explicitly group Boolean logic. Grouped expressions are evaluated
+    before ungrouped logic.
+    3. **NOT:** Applied after any parentheses or quoted phrases are resolved.
+    4. **AND:** Evaluated after **NOT** but before **OR**.
+    5. **OR:** Lowest precedence among Boolean operators.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 

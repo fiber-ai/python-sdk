@@ -143,11 +143,10 @@ def sync_detailed(
      Given an email address, find the person's LinkedIn profile and personal details.
     If you also have the person's name, company, or other identifiers, use the Kitchen Sink endpoint
     instead — it accepts all available signals and produces better matches.
-    **Rate limit**: 50 requests per second. To avoid 429 errors, space requests evenly (~20ms apart)
-    rather than bursting them all at once. Bursting can trigger the fixed-window rate limiter even below
-    the stated limit.
+    To avoid 429 errors, space requests evenly (such as 1/60th the rate limit per second) rather than
+    bursting them all at once.
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 second</span>
+    <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -195,11 +194,10 @@ def sync(
      Given an email address, find the person's LinkedIn profile and personal details.
     If you also have the person's name, company, or other identifiers, use the Kitchen Sink endpoint
     instead — it accepts all available signals and produces better matches.
-    **Rate limit**: 50 requests per second. To avoid 429 errors, space requests evenly (~20ms apart)
-    rather than bursting them all at once. Bursting can trigger the fixed-window rate limiter even below
-    the stated limit.
+    To avoid 429 errors, space requests evenly (such as 1/60th the rate limit per second) rather than
+    bursting them all at once.
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 second</span>
+    <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -241,11 +239,10 @@ async def asyncio_detailed(
      Given an email address, find the person's LinkedIn profile and personal details.
     If you also have the person's name, company, or other identifiers, use the Kitchen Sink endpoint
     instead — it accepts all available signals and produces better matches.
-    **Rate limit**: 50 requests per second. To avoid 429 errors, space requests evenly (~20ms apart)
-    rather than bursting them all at once. Bursting can trigger the fixed-window rate limiter even below
-    the stated limit.
+    To avoid 429 errors, space requests evenly (such as 1/60th the rate limit per second) rather than
+    bursting them all at once.
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 second</span>
+    <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -291,11 +288,10 @@ async def asyncio(
      Given an email address, find the person's LinkedIn profile and personal details.
     If you also have the person's name, company, or other identifiers, use the Kitchen Sink endpoint
     instead — it accepts all available signals and produces better matches.
-    **Rate limit**: 50 requests per second. To avoid 429 errors, space requests evenly (~20ms apart)
-    rather than bursting them all at once. Bursting can trigger the fixed-window rate limiter even below
-    the stated limit.
+    To avoid 429 errors, space requests evenly (such as 1/60th the rate limit per second) rather than
+    bursting them all at once.
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 second</span>
+    <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>

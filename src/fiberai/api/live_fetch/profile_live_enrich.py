@@ -142,7 +142,7 @@ def sync_detailed(
 
      Returns an enriched profile with details for a given LinkedIn profile identifier
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 second</span>
+    <span>⚡ <strong>Rate limit:</strong> 4000 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -189,7 +189,7 @@ def sync(
 
      Returns an enriched profile with details for a given LinkedIn profile identifier
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 second</span>
+    <span>⚡ <strong>Rate limit:</strong> 4000 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -230,7 +230,7 @@ async def asyncio_detailed(
 
      Returns an enriched profile with details for a given LinkedIn profile identifier
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 second</span>
+    <span>⚡ <strong>Rate limit:</strong> 4000 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -275,7 +275,7 @@ async def asyncio(
 
      Returns an enriched profile with details for a given LinkedIn profile identifier
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 second</span>
+    <span>⚡ <strong>Rate limit:</strong> 4000 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>

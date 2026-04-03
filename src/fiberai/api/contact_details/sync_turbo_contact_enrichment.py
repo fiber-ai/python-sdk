@@ -147,8 +147,9 @@ def sync_detailed(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 7 credits for all phone
     numbers AND all emails<br />• 3 credits for work email only<br />• 3 credits for personal email
-    only<br />• 5 credits for phone only&nbsp;<span title=\"Pricing shown is default pricing. Actual
-    pricing may vary. Partial reveals only bill for delivered data.\">ⓘ</span></span>
+    only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title=\"Pricing
+    shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
+    data.\">ⓘ</span></span>
 
     Args:
         body (SyncTurboContactEnrichmentBody):
@@ -197,8 +198,9 @@ def sync(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 7 credits for all phone
     numbers AND all emails<br />• 3 credits for work email only<br />• 3 credits for personal email
-    only<br />• 5 credits for phone only&nbsp;<span title=\"Pricing shown is default pricing. Actual
-    pricing may vary. Partial reveals only bill for delivered data.\">ⓘ</span></span>
+    only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title=\"Pricing
+    shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
+    data.\">ⓘ</span></span>
 
     Args:
         body (SyncTurboContactEnrichmentBody):
@@ -241,8 +243,9 @@ async def asyncio_detailed(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 7 credits for all phone
     numbers AND all emails<br />• 3 credits for work email only<br />• 3 credits for personal email
-    only<br />• 5 credits for phone only&nbsp;<span title=\"Pricing shown is default pricing. Actual
-    pricing may vary. Partial reveals only bill for delivered data.\">ⓘ</span></span>
+    only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title=\"Pricing
+    shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
+    data.\">ⓘ</span></span>
 
     Args:
         body (SyncTurboContactEnrichmentBody):
@@ -289,8 +292,9 @@ async def asyncio(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 7 credits for all phone
     numbers AND all emails<br />• 3 credits for work email only<br />• 3 credits for personal email
-    only<br />• 5 credits for phone only&nbsp;<span title=\"Pricing shown is default pricing. Actual
-    pricing may vary. Partial reveals only bill for delivered data.\">ⓘ</span></span>
+    only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title=\"Pricing
+    shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
+    data.\">ⓘ</span></span>
 
     Args:
         body (SyncTurboContactEnrichmentBody):

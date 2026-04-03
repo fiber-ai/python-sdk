@@ -141,15 +141,15 @@ def sync_detailed(
     r"""Synchronously fetch contact details
 
      Fetches a single person's work email, personal email, and/or phone number synchronously, meaning
-    that you don't need to poll separately. This endpoint is slow, though, since it waits for the task
-    to finish before returning.
+    that you don't need to poll separately. This endpoint can be slow, though — we suggest using the
+    'new, synchronous' version instead.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails (12 credits if exhaustive)<br />• 2 credits for work email only (5 credits if
     exhaustive)<br />• 2 credits for personal email only (5 credits if exhaustive)<br />• 3 credits for
-    phone only (4 credits if exhaustive)<br />• 0 credits for all emails (9 credits if
+    phone only (4 credits if exhaustive)<br />• 3 credits for all emails (9 credits if
     exhaustive)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Partial
     reveals only bill for delivered data.\">ⓘ</span></span>
 
@@ -194,15 +194,15 @@ def sync(
     r"""Synchronously fetch contact details
 
      Fetches a single person's work email, personal email, and/or phone number synchronously, meaning
-    that you don't need to poll separately. This endpoint is slow, though, since it waits for the task
-    to finish before returning.
+    that you don't need to poll separately. This endpoint can be slow, though — we suggest using the
+    'new, synchronous' version instead.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails (12 credits if exhaustive)<br />• 2 credits for work email only (5 credits if
     exhaustive)<br />• 2 credits for personal email only (5 credits if exhaustive)<br />• 3 credits for
-    phone only (4 credits if exhaustive)<br />• 0 credits for all emails (9 credits if
+    phone only (4 credits if exhaustive)<br />• 3 credits for all emails (9 credits if
     exhaustive)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Partial
     reveals only bill for delivered data.\">ⓘ</span></span>
 
@@ -241,15 +241,15 @@ async def asyncio_detailed(
     r"""Synchronously fetch contact details
 
      Fetches a single person's work email, personal email, and/or phone number synchronously, meaning
-    that you don't need to poll separately. This endpoint is slow, though, since it waits for the task
-    to finish before returning.
+    that you don't need to poll separately. This endpoint can be slow, though — we suggest using the
+    'new, synchronous' version instead.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails (12 credits if exhaustive)<br />• 2 credits for work email only (5 credits if
     exhaustive)<br />• 2 credits for personal email only (5 credits if exhaustive)<br />• 3 credits for
-    phone only (4 credits if exhaustive)<br />• 0 credits for all emails (9 credits if
+    phone only (4 credits if exhaustive)<br />• 3 credits for all emails (9 credits if
     exhaustive)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Partial
     reveals only bill for delivered data.\">ⓘ</span></span>
 
@@ -292,15 +292,15 @@ async def asyncio(
     r"""Synchronously fetch contact details
 
      Fetches a single person's work email, personal email, and/or phone number synchronously, meaning
-    that you don't need to poll separately. This endpoint is slow, though, since it waits for the task
-    to finish before returning.
+    that you don't need to poll separately. This endpoint can be slow, though — we suggest using the
+    'new, synchronous' version instead.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails (12 credits if exhaustive)<br />• 2 credits for work email only (5 credits if
     exhaustive)<br />• 2 credits for personal email only (5 credits if exhaustive)<br />• 3 credits for
-    phone only (4 credits if exhaustive)<br />• 0 credits for all emails (9 credits if
+    phone only (4 credits if exhaustive)<br />• 3 credits for all emails (9 credits if
     exhaustive)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Partial
     reveals only bill for delivered data.\">ⓘ</span></span>
 

@@ -18,6 +18,15 @@ if TYPE_CHECKING:
     from ..models.combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_1 import (
         CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1,
     )
+    from ..models.combined_search_body_company_params_employees_type_0_rules_item_job_status_type_0 import (
+        CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0,
+    )
+    from ..models.combined_search_body_company_params_employees_type_0_rules_item_job_status_type_1 import (
+        CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1,
+    )
+    from ..models.combined_search_body_company_params_employees_type_0_rules_item_job_status_type_2 import (
+        CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2,
+    )
 
 
 T = TypeVar("T", bound="CombinedSearchBodyCompanyParamsEmployeesType0RulesItem")
@@ -30,6 +39,9 @@ class CombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
         employees_to_match (CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0 |
             CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1):
         employee_filters (CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0 | None | Unset):
+        job_status (CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0 |
+            CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1 |
+            CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2 | None | Unset):
     """
 
     employees_to_match: (
@@ -37,6 +49,13 @@ class CombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
         | CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1
     )
     employee_filters: CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0 | None | Unset = UNSET
+    job_status: (
+        CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0
+        | CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1
+        | CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2
+        | None
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -45,6 +64,15 @@ class CombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
         )
         from ..models.combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_0 import (
             CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0,
+        )
+        from ..models.combined_search_body_company_params_employees_type_0_rules_item_job_status_type_0 import (
+            CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0,
+        )
+        from ..models.combined_search_body_company_params_employees_type_0_rules_item_job_status_type_1 import (
+            CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1,
+        )
+        from ..models.combined_search_body_company_params_employees_type_0_rules_item_job_status_type_2 import (
+            CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2,
         )
 
         employees_to_match: dict[str, Any]
@@ -65,6 +93,18 @@ class CombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
         else:
             employee_filters = self.employee_filters
 
+        job_status: dict[str, Any] | None | Unset
+        if isinstance(self.job_status, Unset):
+            job_status = UNSET
+        elif isinstance(self.job_status, CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0):
+            job_status = self.job_status.to_dict()
+        elif isinstance(self.job_status, CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1):
+            job_status = self.job_status.to_dict()
+        elif isinstance(self.job_status, CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2):
+            job_status = self.job_status.to_dict()
+        else:
+            job_status = self.job_status
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -74,6 +114,8 @@ class CombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
         )
         if employee_filters is not UNSET:
             field_dict["employeeFilters"] = employee_filters
+        if job_status is not UNSET:
+            field_dict["jobStatus"] = job_status
 
         return field_dict
 
@@ -87,6 +129,15 @@ class CombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
         )
         from ..models.combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_1 import (
             CombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1,
+        )
+        from ..models.combined_search_body_company_params_employees_type_0_rules_item_job_status_type_0 import (
+            CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0,
+        )
+        from ..models.combined_search_body_company_params_employees_type_0_rules_item_job_status_type_1 import (
+            CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1,
+        )
+        from ..models.combined_search_body_company_params_employees_type_0_rules_item_job_status_type_2 import (
+            CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2,
         )
 
         d = dict(src_dict)
@@ -138,9 +189,58 @@ class CombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
 
         employee_filters = _parse_employee_filters(d.pop("employeeFilters", UNSET))
 
+        def _parse_job_status(
+            data: object,
+        ) -> (
+            CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0
+            | CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1
+            | CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_status_type_0 = CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0.from_dict(data)
+
+                return job_status_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_status_type_1 = CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1.from_dict(data)
+
+                return job_status_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_status_type_2 = CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2.from_dict(data)
+
+                return job_status_type_2
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0
+                | CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1
+                | CombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2
+                | None
+                | Unset,
+                data,
+            )
+
+        job_status = _parse_job_status(d.pop("jobStatus", UNSET))
+
         combined_search_body_company_params_employees_type_0_rules_item = cls(
             employees_to_match=employees_to_match,
             employee_filters=employee_filters,
+            job_status=job_status,
         )
 
         combined_search_body_company_params_employees_type_0_rules_item.additional_properties = d

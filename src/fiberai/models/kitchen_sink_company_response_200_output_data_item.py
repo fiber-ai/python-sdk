@@ -54,6 +54,9 @@ if TYPE_CHECKING:
     from ..models.kitchen_sink_company_response_200_output_data_item_funding_rounds_type_0_item import (
         KitchenSinkCompanyResponse200OutputDataItemFundingRoundsType0Item,
     )
+    from ..models.kitchen_sink_company_response_200_output_data_item_historical_headcount_type_0 import (
+        KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0,
+    )
     from ..models.kitchen_sink_company_response_200_output_data_item_investment_stats_type_0 import (
         KitchenSinkCompanyResponse200OutputDataItemInvestmentStatsType0,
     )
@@ -72,8 +75,14 @@ if TYPE_CHECKING:
     from ..models.kitchen_sink_company_response_200_output_data_item_location_consensus_type_0 import (
         KitchenSinkCompanyResponse200OutputDataItemLocationConsensusType0,
     )
+    from ..models.kitchen_sink_company_response_200_output_data_item_locations_stats_type_0 import (
+        KitchenSinkCompanyResponse200OutputDataItemLocationsStatsType0,
+    )
     from ..models.kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0 import (
         KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0,
+    )
+    from ..models.kitchen_sink_company_response_200_output_data_item_platforms_type_0 import (
+        KitchenSinkCompanyResponse200OutputDataItemPlatformsType0,
     )
     from ..models.kitchen_sink_company_response_200_output_data_item_role_count_matches_type_0_item import (
         KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0Item,
@@ -83,6 +92,9 @@ if TYPE_CHECKING:
     )
     from ..models.kitchen_sink_company_response_200_output_data_item_stock_info_consensus_type_0 import (
         KitchenSinkCompanyResponse200OutputDataItemStockInfoConsensusType0,
+    )
+    from ..models.kitchen_sink_company_response_200_output_data_item_technologies_used_type_0_item import (
+        KitchenSinkCompanyResponse200OutputDataItemTechnologiesUsedType0Item,
     )
 
 
@@ -123,10 +135,12 @@ class KitchenSinkCompanyResponse200OutputDataItem:
         li_locations (list[KitchenSinkCompanyResponse200OutputDataItemLiLocationsType0Item] | None | Unset):
         li_specialties (list[str] | None | Unset):
         location_consensus (KitchenSinkCompanyResponse200OutputDataItemLocationConsensusType0 | None | Unset):
+        locations_stats (KitchenSinkCompanyResponse200OutputDataItemLocationsStatsType0 | None | Unset):
         market_cap_usd (float | None | Unset):
         naics_codes (list[str] | None | Unset):
         names (list[str] | None | Unset):
         preferred_name (None | str | Unset):
+        preferred_name_word_count (int | None | Unset):
         revenue_usd (float | None | Unset):
         standard_industries (list[KitchenSinkCompanyResponse200OutputDataItemStandardIndustriesType0Item] | None |
             Unset):
@@ -143,6 +157,11 @@ class KitchenSinkCompanyResponse200OutputDataItem:
         linkedin_ids (list[str] | None | Unset):
         last_sort_key (None | str | Unset):
         relevance_score (float | None | Unset):
+        technology_spend_usd (float | None | Unset):
+        historical_headcount (KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0 | None | Unset):
+        cik_numbers (list[str] | None | Unset):
+        cage_codes (list[str] | None | Unset):
+        duns_numbers (list[str] | None | Unset):
         num_li_locations (float | None | Unset):
         location_name (None | str | Unset):
         crunchbase_slug (None | str | Unset):
@@ -175,6 +194,8 @@ class KitchenSinkCompanyResponse200OutputDataItem:
         is_investor (bool | None | Unset):
         investor_type (None | str | Unset):
         investor_categories (list[str] | None | Unset):
+        technologies_used (list[KitchenSinkCompanyResponse200OutputDataItemTechnologiesUsedType0Item] | None | Unset):
+        platforms (KitchenSinkCompanyResponse200OutputDataItemPlatformsType0 | None | Unset):
     """
 
     linkedin_id: None | str | Unset = UNSET
@@ -212,10 +233,12 @@ class KitchenSinkCompanyResponse200OutputDataItem:
     li_locations: list[KitchenSinkCompanyResponse200OutputDataItemLiLocationsType0Item] | None | Unset = UNSET
     li_specialties: list[str] | None | Unset = UNSET
     location_consensus: KitchenSinkCompanyResponse200OutputDataItemLocationConsensusType0 | None | Unset = UNSET
+    locations_stats: KitchenSinkCompanyResponse200OutputDataItemLocationsStatsType0 | None | Unset = UNSET
     market_cap_usd: float | None | Unset = UNSET
     naics_codes: list[str] | None | Unset = UNSET
     names: list[str] | None | Unset = UNSET
     preferred_name: None | str | Unset = UNSET
+    preferred_name_word_count: int | None | Unset = UNSET
     revenue_usd: float | None | Unset = UNSET
     standard_industries: list[KitchenSinkCompanyResponse200OutputDataItemStandardIndustriesType0Item] | None | Unset = (
         UNSET
@@ -235,6 +258,11 @@ class KitchenSinkCompanyResponse200OutputDataItem:
     linkedin_ids: list[str] | None | Unset = UNSET
     last_sort_key: None | str | Unset = UNSET
     relevance_score: float | None | Unset = UNSET
+    technology_spend_usd: float | None | Unset = UNSET
+    historical_headcount: KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0 | None | Unset = UNSET
+    cik_numbers: list[str] | None | Unset = UNSET
+    cage_codes: list[str] | None | Unset = UNSET
+    duns_numbers: list[str] | None | Unset = UNSET
     num_li_locations: float | None | Unset = UNSET
     location_name: None | str | Unset = UNSET
     crunchbase_slug: None | str | Unset = UNSET
@@ -268,6 +296,8 @@ class KitchenSinkCompanyResponse200OutputDataItem:
     is_investor: bool | None | Unset = UNSET
     investor_type: None | str | Unset = UNSET
     investor_categories: list[str] | None | Unset = UNSET
+    technologies_used: list[KitchenSinkCompanyResponse200OutputDataItemTechnologiesUsedType0Item] | None | Unset = UNSET
+    platforms: KitchenSinkCompanyResponse200OutputDataItemPlatformsType0 | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -283,6 +313,9 @@ class KitchenSinkCompanyResponse200OutputDataItem:
         from ..models.kitchen_sink_company_response_200_output_data_item_funding_round_stats_type_0 import (
             KitchenSinkCompanyResponse200OutputDataItemFundingRoundStatsType0,
         )
+        from ..models.kitchen_sink_company_response_200_output_data_item_historical_headcount_type_0 import (
+            KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0,
+        )
         from ..models.kitchen_sink_company_response_200_output_data_item_investment_stats_type_0 import (
             KitchenSinkCompanyResponse200OutputDataItemInvestmentStatsType0,
         )
@@ -292,8 +325,14 @@ class KitchenSinkCompanyResponse200OutputDataItem:
         from ..models.kitchen_sink_company_response_200_output_data_item_location_consensus_type_0 import (
             KitchenSinkCompanyResponse200OutputDataItemLocationConsensusType0,
         )
+        from ..models.kitchen_sink_company_response_200_output_data_item_locations_stats_type_0 import (
+            KitchenSinkCompanyResponse200OutputDataItemLocationsStatsType0,
+        )
         from ..models.kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0 import (
             KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0,
+        )
+        from ..models.kitchen_sink_company_response_200_output_data_item_platforms_type_0 import (
+            KitchenSinkCompanyResponse200OutputDataItemPlatformsType0,
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_stock_info_consensus_type_0 import (
             KitchenSinkCompanyResponse200OutputDataItemStockInfoConsensusType0,
@@ -531,6 +570,14 @@ class KitchenSinkCompanyResponse200OutputDataItem:
         else:
             location_consensus = self.location_consensus
 
+        locations_stats: dict[str, Any] | None | Unset
+        if isinstance(self.locations_stats, Unset):
+            locations_stats = UNSET
+        elif isinstance(self.locations_stats, KitchenSinkCompanyResponse200OutputDataItemLocationsStatsType0):
+            locations_stats = self.locations_stats.to_dict()
+        else:
+            locations_stats = self.locations_stats
+
         market_cap_usd: float | None | Unset
         if isinstance(self.market_cap_usd, Unset):
             market_cap_usd = UNSET
@@ -560,6 +607,12 @@ class KitchenSinkCompanyResponse200OutputDataItem:
             preferred_name = UNSET
         else:
             preferred_name = self.preferred_name
+
+        preferred_name_word_count: int | None | Unset
+        if isinstance(self.preferred_name_word_count, Unset):
+            preferred_name_word_count = UNSET
+        else:
+            preferred_name_word_count = self.preferred_name_word_count
 
         revenue_usd: float | None | Unset
         if isinstance(self.revenue_usd, Unset):
@@ -689,6 +742,47 @@ class KitchenSinkCompanyResponse200OutputDataItem:
             relevance_score = UNSET
         else:
             relevance_score = self.relevance_score
+
+        technology_spend_usd: float | None | Unset
+        if isinstance(self.technology_spend_usd, Unset):
+            technology_spend_usd = UNSET
+        else:
+            technology_spend_usd = self.technology_spend_usd
+
+        historical_headcount: dict[str, Any] | None | Unset
+        if isinstance(self.historical_headcount, Unset):
+            historical_headcount = UNSET
+        elif isinstance(self.historical_headcount, KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0):
+            historical_headcount = self.historical_headcount.to_dict()
+        else:
+            historical_headcount = self.historical_headcount
+
+        cik_numbers: list[str] | None | Unset
+        if isinstance(self.cik_numbers, Unset):
+            cik_numbers = UNSET
+        elif isinstance(self.cik_numbers, list):
+            cik_numbers = self.cik_numbers
+
+        else:
+            cik_numbers = self.cik_numbers
+
+        cage_codes: list[str] | None | Unset
+        if isinstance(self.cage_codes, Unset):
+            cage_codes = UNSET
+        elif isinstance(self.cage_codes, list):
+            cage_codes = self.cage_codes
+
+        else:
+            cage_codes = self.cage_codes
+
+        duns_numbers: list[str] | None | Unset
+        if isinstance(self.duns_numbers, Unset):
+            duns_numbers = UNSET
+        elif isinstance(self.duns_numbers, list):
+            duns_numbers = self.duns_numbers
+
+        else:
+            duns_numbers = self.duns_numbers
 
         num_li_locations: float | None | Unset
         if isinstance(self.num_li_locations, Unset):
@@ -936,6 +1030,26 @@ class KitchenSinkCompanyResponse200OutputDataItem:
         else:
             investor_categories = self.investor_categories
 
+        technologies_used: list[dict[str, Any]] | None | Unset
+        if isinstance(self.technologies_used, Unset):
+            technologies_used = UNSET
+        elif isinstance(self.technologies_used, list):
+            technologies_used = []
+            for technologies_used_type_0_item_data in self.technologies_used:
+                technologies_used_type_0_item = technologies_used_type_0_item_data.to_dict()
+                technologies_used.append(technologies_used_type_0_item)
+
+        else:
+            technologies_used = self.technologies_used
+
+        platforms: dict[str, Any] | None | Unset
+        if isinstance(self.platforms, Unset):
+            platforms = UNSET
+        elif isinstance(self.platforms, KitchenSinkCompanyResponse200OutputDataItemPlatformsType0):
+            platforms = self.platforms.to_dict()
+        else:
+            platforms = self.platforms
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -993,6 +1107,8 @@ class KitchenSinkCompanyResponse200OutputDataItem:
             field_dict["li_specialties"] = li_specialties
         if location_consensus is not UNSET:
             field_dict["location_consensus"] = location_consensus
+        if locations_stats is not UNSET:
+            field_dict["locations_stats"] = locations_stats
         if market_cap_usd is not UNSET:
             field_dict["market_cap_usd"] = market_cap_usd
         if naics_codes is not UNSET:
@@ -1001,6 +1117,8 @@ class KitchenSinkCompanyResponse200OutputDataItem:
             field_dict["names"] = names
         if preferred_name is not UNSET:
             field_dict["preferred_name"] = preferred_name
+        if preferred_name_word_count is not UNSET:
+            field_dict["preferred_name_word_count"] = preferred_name_word_count
         if revenue_usd is not UNSET:
             field_dict["revenue_usd"] = revenue_usd
         if standard_industries is not UNSET:
@@ -1031,6 +1149,16 @@ class KitchenSinkCompanyResponse200OutputDataItem:
             field_dict["last_sort_key"] = last_sort_key
         if relevance_score is not UNSET:
             field_dict["relevance_score"] = relevance_score
+        if technology_spend_usd is not UNSET:
+            field_dict["technology_spend_usd"] = technology_spend_usd
+        if historical_headcount is not UNSET:
+            field_dict["historical_headcount"] = historical_headcount
+        if cik_numbers is not UNSET:
+            field_dict["cik_numbers"] = cik_numbers
+        if cage_codes is not UNSET:
+            field_dict["cage_codes"] = cage_codes
+        if duns_numbers is not UNSET:
+            field_dict["duns_numbers"] = duns_numbers
         if num_li_locations is not UNSET:
             field_dict["num_li_locations"] = num_li_locations
         if location_name is not UNSET:
@@ -1093,6 +1221,10 @@ class KitchenSinkCompanyResponse200OutputDataItem:
             field_dict["investor_type"] = investor_type
         if investor_categories is not UNSET:
             field_dict["investor_categories"] = investor_categories
+        if technologies_used is not UNSET:
+            field_dict["technologies_used"] = technologies_used
+        if platforms is not UNSET:
+            field_dict["platforms"] = platforms
 
         return field_dict
 
@@ -1128,6 +1260,9 @@ class KitchenSinkCompanyResponse200OutputDataItem:
         from ..models.kitchen_sink_company_response_200_output_data_item_funding_rounds_type_0_item import (
             KitchenSinkCompanyResponse200OutputDataItemFundingRoundsType0Item,
         )
+        from ..models.kitchen_sink_company_response_200_output_data_item_historical_headcount_type_0 import (
+            KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0,
+        )
         from ..models.kitchen_sink_company_response_200_output_data_item_investment_stats_type_0 import (
             KitchenSinkCompanyResponse200OutputDataItemInvestmentStatsType0,
         )
@@ -1146,8 +1281,14 @@ class KitchenSinkCompanyResponse200OutputDataItem:
         from ..models.kitchen_sink_company_response_200_output_data_item_location_consensus_type_0 import (
             KitchenSinkCompanyResponse200OutputDataItemLocationConsensusType0,
         )
+        from ..models.kitchen_sink_company_response_200_output_data_item_locations_stats_type_0 import (
+            KitchenSinkCompanyResponse200OutputDataItemLocationsStatsType0,
+        )
         from ..models.kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0 import (
             KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0,
+        )
+        from ..models.kitchen_sink_company_response_200_output_data_item_platforms_type_0 import (
+            KitchenSinkCompanyResponse200OutputDataItemPlatformsType0,
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_role_count_matches_type_0_item import (
             KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0Item,
@@ -1157,6 +1298,9 @@ class KitchenSinkCompanyResponse200OutputDataItem:
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_stock_info_consensus_type_0 import (
             KitchenSinkCompanyResponse200OutputDataItemStockInfoConsensusType0,
+        )
+        from ..models.kitchen_sink_company_response_200_output_data_item_technologies_used_type_0_item import (
+            KitchenSinkCompanyResponse200OutputDataItemTechnologiesUsedType0Item,
         )
 
         d = dict(src_dict)
@@ -1645,6 +1789,25 @@ class KitchenSinkCompanyResponse200OutputDataItem:
 
         location_consensus = _parse_location_consensus(d.pop("location_consensus", UNSET))
 
+        def _parse_locations_stats(
+            data: object,
+        ) -> KitchenSinkCompanyResponse200OutputDataItemLocationsStatsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                locations_stats_type_0 = KitchenSinkCompanyResponse200OutputDataItemLocationsStatsType0.from_dict(data)
+
+                return locations_stats_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(KitchenSinkCompanyResponse200OutputDataItemLocationsStatsType0 | None | Unset, data)
+
+        locations_stats = _parse_locations_stats(d.pop("locations_stats", UNSET))
+
         def _parse_market_cap_usd(data: object) -> float | None | Unset:
             if data is None:
                 return data
@@ -1696,6 +1859,15 @@ class KitchenSinkCompanyResponse200OutputDataItem:
             return cast(None | str | Unset, data)
 
         preferred_name = _parse_preferred_name(d.pop("preferred_name", UNSET))
+
+        def _parse_preferred_name_word_count(data: object) -> int | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(int | None | Unset, data)
+
+        preferred_name_word_count = _parse_preferred_name_word_count(d.pop("preferred_name_word_count", UNSET))
 
         def _parse_revenue_usd(data: object) -> float | None | Unset:
             if data is None:
@@ -1948,6 +2120,87 @@ class KitchenSinkCompanyResponse200OutputDataItem:
             return cast(float | None | Unset, data)
 
         relevance_score = _parse_relevance_score(d.pop("relevance_score", UNSET))
+
+        def _parse_technology_spend_usd(data: object) -> float | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(float | None | Unset, data)
+
+        technology_spend_usd = _parse_technology_spend_usd(d.pop("technology_spend_usd", UNSET))
+
+        def _parse_historical_headcount(
+            data: object,
+        ) -> KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                historical_headcount_type_0 = (
+                    KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0.from_dict(data)
+                )
+
+                return historical_headcount_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0 | None | Unset, data)
+
+        historical_headcount = _parse_historical_headcount(d.pop("historical_headcount", UNSET))
+
+        def _parse_cik_numbers(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                cik_numbers_type_0 = cast(list[str], data)
+
+                return cik_numbers_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        cik_numbers = _parse_cik_numbers(d.pop("cik_numbers", UNSET))
+
+        def _parse_cage_codes(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                cage_codes_type_0 = cast(list[str], data)
+
+                return cage_codes_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        cage_codes = _parse_cage_codes(d.pop("cage_codes", UNSET))
+
+        def _parse_duns_numbers(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                duns_numbers_type_0 = cast(list[str], data)
+
+                return duns_numbers_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        duns_numbers = _parse_duns_numbers(d.pop("duns_numbers", UNSET))
 
         def _parse_num_li_locations(data: object) -> float | None | Unset:
             if data is None:
@@ -2426,6 +2679,51 @@ class KitchenSinkCompanyResponse200OutputDataItem:
 
         investor_categories = _parse_investor_categories(d.pop("investor_categories", UNSET))
 
+        def _parse_technologies_used(
+            data: object,
+        ) -> list[KitchenSinkCompanyResponse200OutputDataItemTechnologiesUsedType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                technologies_used_type_0 = []
+                _technologies_used_type_0 = data
+                for technologies_used_type_0_item_data in _technologies_used_type_0:
+                    technologies_used_type_0_item = (
+                        KitchenSinkCompanyResponse200OutputDataItemTechnologiesUsedType0Item.from_dict(
+                            technologies_used_type_0_item_data
+                        )
+                    )
+
+                    technologies_used_type_0.append(technologies_used_type_0_item)
+
+                return technologies_used_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[KitchenSinkCompanyResponse200OutputDataItemTechnologiesUsedType0Item] | None | Unset, data)
+
+        technologies_used = _parse_technologies_used(d.pop("technologies_used", UNSET))
+
+        def _parse_platforms(data: object) -> KitchenSinkCompanyResponse200OutputDataItemPlatformsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                platforms_type_0 = KitchenSinkCompanyResponse200OutputDataItemPlatformsType0.from_dict(data)
+
+                return platforms_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(KitchenSinkCompanyResponse200OutputDataItemPlatformsType0 | None | Unset, data)
+
+        platforms = _parse_platforms(d.pop("platforms", UNSET))
+
         kitchen_sink_company_response_200_output_data_item = cls(
             linkedin_id=linkedin_id,
             accelerator_statuses=accelerator_statuses,
@@ -2454,10 +2752,12 @@ class KitchenSinkCompanyResponse200OutputDataItem:
             li_locations=li_locations,
             li_specialties=li_specialties,
             location_consensus=location_consensus,
+            locations_stats=locations_stats,
             market_cap_usd=market_cap_usd,
             naics_codes=naics_codes,
             names=names,
             preferred_name=preferred_name,
+            preferred_name_word_count=preferred_name_word_count,
             revenue_usd=revenue_usd,
             standard_industries=standard_industries,
             status_consensus=status_consensus,
@@ -2473,6 +2773,11 @@ class KitchenSinkCompanyResponse200OutputDataItem:
             linkedin_ids=linkedin_ids,
             last_sort_key=last_sort_key,
             relevance_score=relevance_score,
+            technology_spend_usd=technology_spend_usd,
+            historical_headcount=historical_headcount,
+            cik_numbers=cik_numbers,
+            cage_codes=cage_codes,
+            duns_numbers=duns_numbers,
             num_li_locations=num_li_locations,
             location_name=location_name,
             crunchbase_slug=crunchbase_slug,
@@ -2504,6 +2809,8 @@ class KitchenSinkCompanyResponse200OutputDataItem:
             is_investor=is_investor,
             investor_type=investor_type,
             investor_categories=investor_categories,
+            technologies_used=technologies_used,
+            platforms=platforms,
         )
 
         kitchen_sink_company_response_200_output_data_item.additional_properties = d

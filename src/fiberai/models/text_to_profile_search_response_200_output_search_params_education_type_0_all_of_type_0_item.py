@@ -12,6 +12,12 @@ if TYPE_CHECKING:
     from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_degree_v2_type_0 import (
         TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV2Type0,
     )
+    from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_degree_v3_type_0 import (
+        TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type0,
+    )
+    from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_degree_v3_type_1 import (
+        TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type1,
+    )
     from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_finished_school_at_type_0 import (
         TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType0,
     )
@@ -29,6 +35,9 @@ if TYPE_CHECKING:
     )
     from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_school_v3_type_0 import (
         TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV3Type0,
+    )
+    from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_school_v4_type_0 import (
+        TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV4Type0,
     )
     from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_started_school_at_type_0 import (
         TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType0,
@@ -55,8 +64,12 @@ class TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0It
             TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolNameV2Type0 | Unset):
         school_v3 (None | TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV3Type0 |
             Unset):
+        school_v4 (None | TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV4Type0 |
+            Unset):
         school_name_keywords (None |
             TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0 | Unset):
+        degree_v3 (None | TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type0 |
+            TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type1 | Unset):
         finished_school_at (None |
             TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType0 |
             TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1 | Unset):
@@ -80,9 +93,18 @@ class TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0It
     school_v3: (
         None | TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV3Type0 | Unset
     ) = UNSET
+    school_v4: (
+        None | TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV4Type0 | Unset
+    ) = UNSET
     school_name_keywords: (
         None
         | TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0
+        | Unset
+    ) = UNSET
+    degree_v3: (
+        None
+        | TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type0
+        | TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type1
         | Unset
     ) = UNSET
     finished_school_at: (
@@ -104,6 +126,12 @@ class TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0It
         from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_degree_v2_type_0 import (
             TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV2Type0,
         )
+        from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_degree_v3_type_0 import (
+            TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type0,
+        )
+        from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_degree_v3_type_1 import (
+            TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type1,
+        )
         from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_finished_school_at_type_0 import (
             TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType0,
         )
@@ -121,6 +149,9 @@ class TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0It
         )
         from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_school_v3_type_0 import (
             TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV3Type0,
+        )
+        from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_school_v4_type_0 import (
+            TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV4Type0,
         )
         from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_started_school_at_type_0 import (
             TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType0,
@@ -188,6 +219,16 @@ class TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0It
         else:
             school_v3 = self.school_v3
 
+        school_v4: dict[str, Any] | None | Unset
+        if isinstance(self.school_v4, Unset):
+            school_v4 = UNSET
+        elif isinstance(
+            self.school_v4, TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV4Type0
+        ):
+            school_v4 = self.school_v4.to_dict()
+        else:
+            school_v4 = self.school_v4
+
         school_name_keywords: dict[str, Any] | None | Unset
         if isinstance(self.school_name_keywords, Unset):
             school_name_keywords = UNSET
@@ -198,6 +239,20 @@ class TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0It
             school_name_keywords = self.school_name_keywords.to_dict()
         else:
             school_name_keywords = self.school_name_keywords
+
+        degree_v3: dict[str, Any] | None | Unset
+        if isinstance(self.degree_v3, Unset):
+            degree_v3 = UNSET
+        elif isinstance(
+            self.degree_v3, TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type0
+        ):
+            degree_v3 = self.degree_v3.to_dict()
+        elif isinstance(
+            self.degree_v3, TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type1
+        ):
+            degree_v3 = self.degree_v3.to_dict()
+        else:
+            degree_v3 = self.degree_v3
 
         finished_school_at: dict[str, Any] | None | Unset
         if isinstance(self.finished_school_at, Unset):
@@ -252,8 +307,12 @@ class TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0It
             field_dict["schoolNameV2"] = school_name_v2
         if school_v3 is not UNSET:
             field_dict["schoolV3"] = school_v3
+        if school_v4 is not UNSET:
+            field_dict["schoolV4"] = school_v4
         if school_name_keywords is not UNSET:
             field_dict["schoolNameKeywords"] = school_name_keywords
+        if degree_v3 is not UNSET:
+            field_dict["degreeV3"] = degree_v3
         if finished_school_at is not UNSET:
             field_dict["finishedSchoolAt"] = finished_school_at
         if started_school_at is not UNSET:
@@ -267,6 +326,12 @@ class TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0It
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_degree_v2_type_0 import (
             TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV2Type0,
+        )
+        from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_degree_v3_type_0 import (
+            TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type0,
+        )
+        from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_degree_v3_type_1 import (
+            TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type1,
         )
         from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_finished_school_at_type_0 import (
             TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType0,
@@ -285,6 +350,9 @@ class TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0It
         )
         from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_school_v3_type_0 import (
             TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV3Type0,
+        )
+        from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_school_v4_type_0 import (
+            TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV4Type0,
         )
         from ..models.text_to_profile_search_response_200_output_search_params_education_type_0_all_of_type_0_item_started_school_at_type_0 import (
             TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemStartedSchoolAtType0,
@@ -441,6 +509,34 @@ class TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0It
 
         school_v3 = _parse_school_v3(d.pop("schoolV3", UNSET))
 
+        def _parse_school_v4(
+            data: object,
+        ) -> None | TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV4Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                school_v4_type_0 = (
+                    TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV4Type0.from_dict(
+                        data
+                    )
+                )
+
+                return school_v4_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemSchoolV4Type0
+                | Unset,
+                data,
+            )
+
+        school_v4 = _parse_school_v4(d.pop("schoolV4", UNSET))
+
         def _parse_school_name_keywords(
             data: object,
         ) -> (
@@ -470,6 +566,52 @@ class TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0It
             )
 
         school_name_keywords = _parse_school_name_keywords(d.pop("schoolNameKeywords", UNSET))
+
+        def _parse_degree_v3(
+            data: object,
+        ) -> (
+            None
+            | TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type0
+            | TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type1
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                degree_v3_type_0 = (
+                    TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type0.from_dict(
+                        data
+                    )
+                )
+
+                return degree_v3_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                degree_v3_type_1 = (
+                    TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type1.from_dict(
+                        data
+                    )
+                )
+
+                return degree_v3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type0
+                | TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0ItemDegreeV3Type1
+                | Unset,
+                data,
+            )
+
+        degree_v3 = _parse_degree_v3(d.pop("degreeV3", UNSET))
 
         def _parse_finished_school_at(
             data: object,
@@ -571,7 +713,9 @@ class TextToProfileSearchResponse200OutputSearchParamsEducationType0AllOfType0It
             school_name=school_name,
             school_name_v2=school_name_v2,
             school_v3=school_v3,
+            school_v4=school_v4,
             school_name_keywords=school_name_keywords,
+            degree_v3=degree_v3,
             finished_school_at=finished_school_at,
             started_school_at=started_school_at,
             is_currently_student=is_currently_student,

@@ -9,6 +9,9 @@ from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.people_search_body_search_params_approx_age_type_0 import PeopleSearchBodySearchParamsApproxAgeType0
+    from ..models.people_search_body_search_params_certifications_type_0 import (
+        PeopleSearchBodySearchParamsCertificationsType0,
+    )
     from ..models.people_search_body_search_params_company_match_mode_type_0 import (
         PeopleSearchBodySearchParamsCompanyMatchModeType0,
     )
@@ -36,6 +39,7 @@ if TYPE_CHECKING:
         PeopleSearchBodySearchParamsKeywordSearchOptionsType0,
     )
     from ..models.people_search_body_search_params_keywords_type_0 import PeopleSearchBodySearchParamsKeywordsType0
+    from ..models.people_search_body_search_params_keywords_v2_type_0 import PeopleSearchBodySearchParamsKeywordsV2Type0
     from ..models.people_search_body_search_params_languages_type_0 import PeopleSearchBodySearchParamsLanguagesType0
     from ..models.people_search_body_search_params_left_stealth_at_type_0 import (
         PeopleSearchBodySearchParamsLeftStealthAtType0,
@@ -54,6 +58,9 @@ if TYPE_CHECKING:
         PeopleSearchBodySearchParamsPastJobTextType0,
     )
     from ..models.people_search_body_search_params_past_jobs_type_0 import PeopleSearchBodySearchParamsPastJobsType0
+    from ..models.people_search_body_search_params_publications_type_0 import (
+        PeopleSearchBodySearchParamsPublicationsType0,
+    )
     from ..models.people_search_body_search_params_started_at_company_type_0 import (
         PeopleSearchBodySearchParamsStartedAtCompanyType0,
     )
@@ -89,6 +96,7 @@ class PeopleSearchBodySearchParams:
         num_followers (None | PeopleSearchBodySearchParamsNumFollowersType0 | Unset):
         approx_age (None | PeopleSearchBodySearchParamsApproxAgeType0 | Unset):
         keywords (None | PeopleSearchBodySearchParamsKeywordsType0 | Unset):
+        keywords_v2 (None | PeopleSearchBodySearchParamsKeywordsV2Type0 | Unset):
         keyword_search_options (None | PeopleSearchBodySearchParamsKeywordSearchOptionsType0 | Unset):
         job_title_v2 (None | PeopleSearchBodySearchParamsJobTitleV2Type0 | Unset):
         exact_profile (None | PeopleSearchBodySearchParamsExactProfileType0 | Unset):
@@ -115,6 +123,9 @@ class PeopleSearchBodySearchParams:
         job_title_v3 (None | PeopleSearchBodySearchParamsJobTitleV3Type0 | Unset):
         has_profile_picture (bool | None | Unset):
         state (None | PeopleSearchBodySearchParamsStateType0 | Unset):
+        certifications (None | PeopleSearchBodySearchParamsCertificationsType0 | Unset):
+        publications (None | PeopleSearchBodySearchParamsPublicationsType0 | Unset):
+        has_no_education (bool | None | Unset):
         get_detailed_education (bool | None | Unset): Whether to include deep details about each educational item, like
             the school's LinkedIn URL, website, location, etc. That'll be put in the detailedEducation array. This slows
             down the API call, so only enable this if you need it. Default: False.
@@ -130,6 +141,7 @@ class PeopleSearchBodySearchParams:
     num_followers: None | PeopleSearchBodySearchParamsNumFollowersType0 | Unset = UNSET
     approx_age: None | PeopleSearchBodySearchParamsApproxAgeType0 | Unset = UNSET
     keywords: None | PeopleSearchBodySearchParamsKeywordsType0 | Unset = UNSET
+    keywords_v2: None | PeopleSearchBodySearchParamsKeywordsV2Type0 | Unset = UNSET
     keyword_search_options: None | PeopleSearchBodySearchParamsKeywordSearchOptionsType0 | Unset = UNSET
     job_title_v2: None | PeopleSearchBodySearchParamsJobTitleV2Type0 | Unset = UNSET
     exact_profile: None | PeopleSearchBodySearchParamsExactProfileType0 | Unset = UNSET
@@ -172,6 +184,9 @@ class PeopleSearchBodySearchParams:
     job_title_v3: None | PeopleSearchBodySearchParamsJobTitleV3Type0 | Unset = UNSET
     has_profile_picture: bool | None | Unset = UNSET
     state: None | PeopleSearchBodySearchParamsStateType0 | Unset = UNSET
+    certifications: None | PeopleSearchBodySearchParamsCertificationsType0 | Unset = UNSET
+    publications: None | PeopleSearchBodySearchParamsPublicationsType0 | Unset = UNSET
+    has_no_education: bool | None | Unset = UNSET
     get_detailed_education: bool | None | Unset = False
     get_detailed_work_experience: bool | None | Unset = False
     tags: None | PeopleSearchBodySearchParamsTagsType0 | Unset = UNSET
@@ -180,6 +195,9 @@ class PeopleSearchBodySearchParams:
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_body_search_params_approx_age_type_0 import (
             PeopleSearchBodySearchParamsApproxAgeType0,
+        )
+        from ..models.people_search_body_search_params_certifications_type_0 import (
+            PeopleSearchBodySearchParamsCertificationsType0,
         )
         from ..models.people_search_body_search_params_company_match_mode_type_0 import (
             PeopleSearchBodySearchParamsCompanyMatchModeType0,
@@ -218,6 +236,9 @@ class PeopleSearchBodySearchParams:
             PeopleSearchBodySearchParamsKeywordSearchOptionsType0,
         )
         from ..models.people_search_body_search_params_keywords_type_0 import PeopleSearchBodySearchParamsKeywordsType0
+        from ..models.people_search_body_search_params_keywords_v2_type_0 import (
+            PeopleSearchBodySearchParamsKeywordsV2Type0,
+        )
         from ..models.people_search_body_search_params_languages_type_0 import (
             PeopleSearchBodySearchParamsLanguagesType0,
         )
@@ -238,6 +259,9 @@ class PeopleSearchBodySearchParams:
             PeopleSearchBodySearchParamsPastJobTextType0,
         )
         from ..models.people_search_body_search_params_past_jobs_type_0 import PeopleSearchBodySearchParamsPastJobsType0
+        from ..models.people_search_body_search_params_publications_type_0 import (
+            PeopleSearchBodySearchParamsPublicationsType0,
+        )
         from ..models.people_search_body_search_params_started_at_company_type_0 import (
             PeopleSearchBodySearchParamsStartedAtCompanyType0,
         )
@@ -302,6 +326,14 @@ class PeopleSearchBodySearchParams:
             keywords = self.keywords.to_dict()
         else:
             keywords = self.keywords
+
+        keywords_v2: dict[str, Any] | None | Unset
+        if isinstance(self.keywords_v2, Unset):
+            keywords_v2 = UNSET
+        elif isinstance(self.keywords_v2, PeopleSearchBodySearchParamsKeywordsV2Type0):
+            keywords_v2 = self.keywords_v2.to_dict()
+        else:
+            keywords_v2 = self.keywords_v2
 
         keyword_search_options: dict[str, Any] | None | Unset
         if isinstance(self.keyword_search_options, Unset):
@@ -473,6 +505,28 @@ class PeopleSearchBodySearchParams:
         else:
             state = self.state
 
+        certifications: dict[str, Any] | None | Unset
+        if isinstance(self.certifications, Unset):
+            certifications = UNSET
+        elif isinstance(self.certifications, PeopleSearchBodySearchParamsCertificationsType0):
+            certifications = self.certifications.to_dict()
+        else:
+            certifications = self.certifications
+
+        publications: dict[str, Any] | None | Unset
+        if isinstance(self.publications, Unset):
+            publications = UNSET
+        elif isinstance(self.publications, PeopleSearchBodySearchParamsPublicationsType0):
+            publications = self.publications.to_dict()
+        else:
+            publications = self.publications
+
+        has_no_education: bool | None | Unset
+        if isinstance(self.has_no_education, Unset):
+            has_no_education = UNSET
+        else:
+            has_no_education = self.has_no_education
+
         get_detailed_education: bool | None | Unset
         if isinstance(self.get_detailed_education, Unset):
             get_detailed_education = UNSET
@@ -514,6 +568,8 @@ class PeopleSearchBodySearchParams:
             field_dict["approxAge"] = approx_age
         if keywords is not UNSET:
             field_dict["keywords"] = keywords
+        if keywords_v2 is not UNSET:
+            field_dict["keywordsV2"] = keywords_v2
         if keyword_search_options is not UNSET:
             field_dict["keywordSearchOptions"] = keyword_search_options
         if job_title_v2 is not UNSET:
@@ -554,6 +610,12 @@ class PeopleSearchBodySearchParams:
             field_dict["hasProfilePicture"] = has_profile_picture
         if state is not UNSET:
             field_dict["state"] = state
+        if certifications is not UNSET:
+            field_dict["certifications"] = certifications
+        if publications is not UNSET:
+            field_dict["publications"] = publications
+        if has_no_education is not UNSET:
+            field_dict["hasNoEducation"] = has_no_education
         if get_detailed_education is not UNSET:
             field_dict["getDetailedEducation"] = get_detailed_education
         if get_detailed_work_experience is not UNSET:
@@ -569,6 +631,9 @@ class PeopleSearchBodySearchParams:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_approx_age_type_0 import (
             PeopleSearchBodySearchParamsApproxAgeType0,
+        )
+        from ..models.people_search_body_search_params_certifications_type_0 import (
+            PeopleSearchBodySearchParamsCertificationsType0,
         )
         from ..models.people_search_body_search_params_company_match_mode_type_0 import (
             PeopleSearchBodySearchParamsCompanyMatchModeType0,
@@ -607,6 +672,9 @@ class PeopleSearchBodySearchParams:
             PeopleSearchBodySearchParamsKeywordSearchOptionsType0,
         )
         from ..models.people_search_body_search_params_keywords_type_0 import PeopleSearchBodySearchParamsKeywordsType0
+        from ..models.people_search_body_search_params_keywords_v2_type_0 import (
+            PeopleSearchBodySearchParamsKeywordsV2Type0,
+        )
         from ..models.people_search_body_search_params_languages_type_0 import (
             PeopleSearchBodySearchParamsLanguagesType0,
         )
@@ -627,6 +695,9 @@ class PeopleSearchBodySearchParams:
             PeopleSearchBodySearchParamsPastJobTextType0,
         )
         from ..models.people_search_body_search_params_past_jobs_type_0 import PeopleSearchBodySearchParamsPastJobsType0
+        from ..models.people_search_body_search_params_publications_type_0 import (
+            PeopleSearchBodySearchParamsPublicationsType0,
+        )
         from ..models.people_search_body_search_params_started_at_company_type_0 import (
             PeopleSearchBodySearchParamsStartedAtCompanyType0,
         )
@@ -740,6 +811,23 @@ class PeopleSearchBodySearchParams:
             return cast(None | PeopleSearchBodySearchParamsKeywordsType0 | Unset, data)
 
         keywords = _parse_keywords(d.pop("keywords", UNSET))
+
+        def _parse_keywords_v2(data: object) -> None | PeopleSearchBodySearchParamsKeywordsV2Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                keywords_v2_type_0 = PeopleSearchBodySearchParamsKeywordsV2Type0.from_dict(data)
+
+                return keywords_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | PeopleSearchBodySearchParamsKeywordsV2Type0 | Unset, data)
+
+        keywords_v2 = _parse_keywords_v2(d.pop("keywordsV2", UNSET))
 
         def _parse_keyword_search_options(
             data: object,
@@ -1197,6 +1285,49 @@ class PeopleSearchBodySearchParams:
 
         state = _parse_state(d.pop("state", UNSET))
 
+        def _parse_certifications(data: object) -> None | PeopleSearchBodySearchParamsCertificationsType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                certifications_type_0 = PeopleSearchBodySearchParamsCertificationsType0.from_dict(data)
+
+                return certifications_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | PeopleSearchBodySearchParamsCertificationsType0 | Unset, data)
+
+        certifications = _parse_certifications(d.pop("certifications", UNSET))
+
+        def _parse_publications(data: object) -> None | PeopleSearchBodySearchParamsPublicationsType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                publications_type_0 = PeopleSearchBodySearchParamsPublicationsType0.from_dict(data)
+
+                return publications_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | PeopleSearchBodySearchParamsPublicationsType0 | Unset, data)
+
+        publications = _parse_publications(d.pop("publications", UNSET))
+
+        def _parse_has_no_education(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        has_no_education = _parse_has_no_education(d.pop("hasNoEducation", UNSET))
+
         def _parse_get_detailed_education(data: object) -> bool | None | Unset:
             if data is None:
                 return data
@@ -1255,6 +1386,7 @@ class PeopleSearchBodySearchParams:
             num_followers=num_followers,
             approx_age=approx_age,
             keywords=keywords,
+            keywords_v2=keywords_v2,
             keyword_search_options=keyword_search_options,
             job_title_v2=job_title_v2,
             exact_profile=exact_profile,
@@ -1275,6 +1407,9 @@ class PeopleSearchBodySearchParams:
             job_title_v3=job_title_v3,
             has_profile_picture=has_profile_picture,
             state=state,
+            certifications=certifications,
+            publications=publications,
+            has_no_education=has_no_education,
             get_detailed_education=get_detailed_education,
             get_detailed_work_experience=get_detailed_work_experience,
             tags=tags,

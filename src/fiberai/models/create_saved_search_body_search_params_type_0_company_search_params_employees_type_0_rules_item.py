@@ -18,6 +18,15 @@ if TYPE_CHECKING:
     from ..models.create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item_employees_to_match_type_1 import (
         CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemEmployeesToMatchType1,
     )
+    from ..models.create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item_job_status_type_0 import (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item_job_status_type_1 import (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType1,
+    )
+    from ..models.create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item_job_status_type_2 import (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType2,
+    )
 
 
 T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItem")
@@ -33,6 +42,9 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0Rul
         employee_filters
             (CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0 | None |
             Unset):
+        job_status (CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType0 |
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType1 |
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType2 | None | Unset):
     """
 
     employees_to_match: (
@@ -44,6 +56,13 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0Rul
         | None
         | Unset
     ) = UNSET
+    job_status: (
+        CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType0
+        | CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType1
+        | CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType2
+        | None
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -52,6 +71,15 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0Rul
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item_employees_to_match_type_0 import (
             CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemEmployeesToMatchType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item_job_status_type_0 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item_job_status_type_1 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item_job_status_type_2 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType2,
         )
 
         employees_to_match: dict[str, Any]
@@ -74,6 +102,27 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0Rul
         else:
             employee_filters = self.employee_filters
 
+        job_status: dict[str, Any] | None | Unset
+        if isinstance(self.job_status, Unset):
+            job_status = UNSET
+        elif isinstance(
+            self.job_status,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType0,
+        ):
+            job_status = self.job_status.to_dict()
+        elif isinstance(
+            self.job_status,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType1,
+        ):
+            job_status = self.job_status.to_dict()
+        elif isinstance(
+            self.job_status,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType2,
+        ):
+            job_status = self.job_status.to_dict()
+        else:
+            job_status = self.job_status
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -83,6 +132,8 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0Rul
         )
         if employee_filters is not UNSET:
             field_dict["employeeFilters"] = employee_filters
+        if job_status is not UNSET:
+            field_dict["jobStatus"] = job_status
 
         return field_dict
 
@@ -96,6 +147,15 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0Rul
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item_employees_to_match_type_1 import (
             CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemEmployeesToMatchType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item_job_status_type_0 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item_job_status_type_1 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item_job_status_type_2 import (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType2,
         )
 
         d = dict(src_dict)
@@ -156,9 +216,64 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0Rul
 
         employee_filters = _parse_employee_filters(d.pop("employeeFilters", UNSET))
 
+        def _parse_job_status(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType0
+            | CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType1
+            | CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType2
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_status_type_0 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType0.from_dict(
+                    data
+                )
+
+                return job_status_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_status_type_1 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType1.from_dict(
+                    data
+                )
+
+                return job_status_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_status_type_2 = CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType2.from_dict(
+                    data
+                )
+
+                return job_status_type_2
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType0
+                | CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType1
+                | CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType2
+                | None
+                | Unset,
+                data,
+            )
+
+        job_status = _parse_job_status(d.pop("jobStatus", UNSET))
+
         create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item = cls(
             employees_to_match=employees_to_match,
             employee_filters=employee_filters,
+            job_status=job_status,
         )
 
         create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item.additional_properties = d

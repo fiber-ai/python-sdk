@@ -148,7 +148,7 @@ def sync_detailed(
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails (12 credits if exhaustive)<br />• 2 credits for work email only (5 credits if
     exhaustive)<br />• 2 credits for personal email only (5 credits if exhaustive)<br />• 3 credits for
-    phone only (4 credits if exhaustive)<br />• 0 credits for all emails (9 credits if
+    phone only (4 credits if exhaustive)<br />• 3 credits for all emails (9 credits if
     exhaustive)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Credits
     are charged after the reveal completes so partial reveals only bill for delivered
     data.\">ⓘ</span></span>
@@ -201,7 +201,7 @@ def sync(
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails (12 credits if exhaustive)<br />• 2 credits for work email only (5 credits if
     exhaustive)<br />• 2 credits for personal email only (5 credits if exhaustive)<br />• 3 credits for
-    phone only (4 credits if exhaustive)<br />• 0 credits for all emails (9 credits if
+    phone only (4 credits if exhaustive)<br />• 3 credits for all emails (9 credits if
     exhaustive)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Credits
     are charged after the reveal completes so partial reveals only bill for delivered
     data.\">ⓘ</span></span>
@@ -248,7 +248,7 @@ async def asyncio_detailed(
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails (12 credits if exhaustive)<br />• 2 credits for work email only (5 credits if
     exhaustive)<br />• 2 credits for personal email only (5 credits if exhaustive)<br />• 3 credits for
-    phone only (4 credits if exhaustive)<br />• 0 credits for all emails (9 credits if
+    phone only (4 credits if exhaustive)<br />• 3 credits for all emails (9 credits if
     exhaustive)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Credits
     are charged after the reveal completes so partial reveals only bill for delivered
     data.\">ⓘ</span></span>
@@ -299,7 +299,7 @@ async def asyncio(
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails (12 credits if exhaustive)<br />• 2 credits for work email only (5 credits if
     exhaustive)<br />• 2 credits for personal email only (5 credits if exhaustive)<br />• 3 credits for
-    phone only (4 credits if exhaustive)<br />• 0 credits for all emails (9 credits if
+    phone only (4 credits if exhaustive)<br />• 3 credits for all emails (9 credits if
     exhaustive)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Credits
     are charged after the reveal completes so partial reveals only bill for delivered
     data.\">ⓘ</span></span>

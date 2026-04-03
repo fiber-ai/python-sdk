@@ -18,6 +18,15 @@ if TYPE_CHECKING:
     from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_1 import (
         SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1,
     )
+    from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_job_status_type_0 import (
+        SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0,
+    )
+    from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_job_status_type_1 import (
+        SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1,
+    )
+    from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_job_status_type_2 import (
+        SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2,
+    )
 
 
 T = TypeVar("T", bound="SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItem")
@@ -31,6 +40,9 @@ class SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
             SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1):
         employee_filters (None | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0 |
             Unset):
+        job_status (None | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0 |
+            SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1 |
+            SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2 | Unset):
     """
 
     employees_to_match: (
@@ -40,6 +52,13 @@ class SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
     employee_filters: None | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0 | Unset = (
         UNSET
     )
+    job_status: (
+        None
+        | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0
+        | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1
+        | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -48,6 +67,15 @@ class SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
         )
         from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_0 import (
             SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0,
+        )
+        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_job_status_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0,
+        )
+        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_job_status_type_1 import (
+            SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1,
+        )
+        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_job_status_type_2 import (
+            SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2,
         )
 
         employees_to_match: dict[str, Any]
@@ -68,6 +96,18 @@ class SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
         else:
             employee_filters = self.employee_filters
 
+        job_status: dict[str, Any] | None | Unset
+        if isinstance(self.job_status, Unset):
+            job_status = UNSET
+        elif isinstance(self.job_status, SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0):
+            job_status = self.job_status.to_dict()
+        elif isinstance(self.job_status, SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1):
+            job_status = self.job_status.to_dict()
+        elif isinstance(self.job_status, SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2):
+            job_status = self.job_status.to_dict()
+        else:
+            job_status = self.job_status
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -77,6 +117,8 @@ class SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
         )
         if employee_filters is not UNSET:
             field_dict["employeeFilters"] = employee_filters
+        if job_status is not UNSET:
+            field_dict["jobStatus"] = job_status
 
         return field_dict
 
@@ -90,6 +132,15 @@ class SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
         )
         from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_employees_to_match_type_1 import (
             SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1,
+        )
+        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_job_status_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0,
+        )
+        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_job_status_type_1 import (
+            SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1,
+        )
+        from ..models.sync_combined_search_body_company_params_employees_type_0_rules_item_job_status_type_2 import (
+            SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2,
         )
 
         d = dict(src_dict)
@@ -143,9 +194,64 @@ class SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItem:
 
         employee_filters = _parse_employee_filters(d.pop("employeeFilters", UNSET))
 
+        def _parse_job_status(
+            data: object,
+        ) -> (
+            None
+            | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0
+            | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1
+            | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_status_type_0 = SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0.from_dict(
+                    data
+                )
+
+                return job_status_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_status_type_1 = SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1.from_dict(
+                    data
+                )
+
+                return job_status_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_status_type_2 = SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2.from_dict(
+                    data
+                )
+
+                return job_status_type_2
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType0
+                | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType1
+                | SyncCombinedSearchBodyCompanyParamsEmployeesType0RulesItemJobStatusType2
+                | Unset,
+                data,
+            )
+
+        job_status = _parse_job_status(d.pop("jobStatus", UNSET))
+
         sync_combined_search_body_company_params_employees_type_0_rules_item = cls(
             employees_to_match=employees_to_match,
             employee_filters=employee_filters,
+            job_status=job_status,
         )
 
         sync_combined_search_body_company_params_employees_type_0_rules_item.additional_properties = d

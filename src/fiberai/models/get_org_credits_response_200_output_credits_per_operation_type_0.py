@@ -175,6 +175,45 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_scouting_report_person import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0ScoutingReportPerson,
     )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_media_finder_agent import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialMediaFinderAgent,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_post_details import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostDetails,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_post_quotes import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostQuotes,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_post_reactions import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostReactions,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_post_replies import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostReplies,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_post_reposts import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostReposts,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_post_search import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostSearch,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_user_details import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserDetails,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_user_followers import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserFollowers,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_user_following import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserFollowing,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_user_mentions import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserMentions,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_user_posts import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserPosts,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_user_search import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserSearch,
+    )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_standardize_company_slug import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0StandardizeCompanySlug,
     )
@@ -187,6 +226,9 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_text_to_person_search_params import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0TextToPersonSearchParams,
     )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_persons_job_changes import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackPersonsJobChanges,
+    )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_validate_email import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0ValidateEmail,
     )
@@ -195,6 +237,21 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_work_email_reveal import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0WorkEmailReveal,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_channel_details import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeChannelDetails,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_search import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeSearch,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_video_comments import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoComments,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_video_details import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoDetails,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_video_transcript import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoTranscript,
     )
 
 
@@ -246,6 +303,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileFromGithubUsername):
         get_email_from_github_username
             (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetEmailFromGithubUsername):
+        social_media_finder_agent (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialMediaFinderAgent):
         bulk_company_logo_lookup (GetOrgCreditsResponse200OutputCreditsPerOperationType0BulkCompanyLogoLookup):
         bulk_profile_pic_lookup (GetOrgCreditsResponse200OutputCreditsPerOperationType0BulkProfilePicLookup):
         get_li_profile_posts (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePosts):
@@ -275,6 +333,24 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         multi_source_person_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0MultiSourcePersonSearch):
         scouting_report_company (GetOrgCreditsResponse200OutputCreditsPerOperationType0ScoutingReportCompany):
         scouting_report_person (GetOrgCreditsResponse200OutputCreditsPerOperationType0ScoutingReportPerson):
+        track_persons_job_changes (GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackPersonsJobChanges):
+        youtube_video_transcript (GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoTranscript):
+        youtube_video_details (GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoDetails):
+        youtube_video_comments (GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoComments):
+        youtube_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeSearch):
+        youtube_channel_details (GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeChannelDetails):
+        social_user_details (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserDetails):
+        social_user_posts (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserPosts):
+        social_user_followers (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserFollowers):
+        social_user_following (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserFollowing):
+        social_post_details (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostDetails):
+        social_post_replies (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostReplies):
+        social_post_quotes (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostQuotes):
+        social_post_reposts (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostReposts):
+        social_post_reactions (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostReactions):
+        social_user_mentions (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserMentions):
+        social_user_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserSearch):
+        social_post_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostSearch):
     """
 
     get_company_from_db: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyFromDb
@@ -319,6 +395,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileFromGithubUsername
     )
     get_email_from_github_username: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetEmailFromGithubUsername
+    social_media_finder_agent: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialMediaFinderAgent
     bulk_company_logo_lookup: GetOrgCreditsResponse200OutputCreditsPerOperationType0BulkCompanyLogoLookup
     bulk_profile_pic_lookup: GetOrgCreditsResponse200OutputCreditsPerOperationType0BulkProfilePicLookup
     get_li_profile_posts: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePosts
@@ -348,6 +425,24 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
     multi_source_person_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0MultiSourcePersonSearch
     scouting_report_company: GetOrgCreditsResponse200OutputCreditsPerOperationType0ScoutingReportCompany
     scouting_report_person: GetOrgCreditsResponse200OutputCreditsPerOperationType0ScoutingReportPerson
+    track_persons_job_changes: GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackPersonsJobChanges
+    youtube_video_transcript: GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoTranscript
+    youtube_video_details: GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoDetails
+    youtube_video_comments: GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoComments
+    youtube_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeSearch
+    youtube_channel_details: GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeChannelDetails
+    social_user_details: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserDetails
+    social_user_posts: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserPosts
+    social_user_followers: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserFollowers
+    social_user_following: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserFollowing
+    social_post_details: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostDetails
+    social_post_replies: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostReplies
+    social_post_quotes: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostQuotes
+    social_post_reposts: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostReposts
+    social_post_reactions: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostReactions
+    social_user_mentions: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserMentions
+    social_user_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserSearch
+    social_post_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostSearch
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -423,6 +518,8 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
 
         get_email_from_github_username = self.get_email_from_github_username.to_dict()
 
+        social_media_finder_agent = self.social_media_finder_agent.to_dict()
+
         bulk_company_logo_lookup = self.bulk_company_logo_lookup.to_dict()
 
         bulk_profile_pic_lookup = self.bulk_profile_pic_lookup.to_dict()
@@ -477,6 +574,42 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
 
         scouting_report_person = self.scouting_report_person.to_dict()
 
+        track_persons_job_changes = self.track_persons_job_changes.to_dict()
+
+        youtube_video_transcript = self.youtube_video_transcript.to_dict()
+
+        youtube_video_details = self.youtube_video_details.to_dict()
+
+        youtube_video_comments = self.youtube_video_comments.to_dict()
+
+        youtube_search = self.youtube_search.to_dict()
+
+        youtube_channel_details = self.youtube_channel_details.to_dict()
+
+        social_user_details = self.social_user_details.to_dict()
+
+        social_user_posts = self.social_user_posts.to_dict()
+
+        social_user_followers = self.social_user_followers.to_dict()
+
+        social_user_following = self.social_user_following.to_dict()
+
+        social_post_details = self.social_post_details.to_dict()
+
+        social_post_replies = self.social_post_replies.to_dict()
+
+        social_post_quotes = self.social_post_quotes.to_dict()
+
+        social_post_reposts = self.social_post_reposts.to_dict()
+
+        social_post_reactions = self.social_post_reactions.to_dict()
+
+        social_user_mentions = self.social_user_mentions.to_dict()
+
+        social_user_search = self.social_user_search.to_dict()
+
+        social_post_search = self.social_post_search.to_dict()
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -517,6 +650,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
                 "githubLookupAgent": github_lookup_agent,
                 "getLiProfileFromGithubUsername": get_li_profile_from_github_username,
                 "getEmailFromGithubUsername": get_email_from_github_username,
+                "socialMediaFinderAgent": social_media_finder_agent,
                 "bulkCompanyLogoLookup": bulk_company_logo_lookup,
                 "bulkProfilePicLookup": bulk_profile_pic_lookup,
                 "getLiProfilePosts": get_li_profile_posts,
@@ -544,6 +678,24 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
                 "multiSourcePersonSearch": multi_source_person_search,
                 "scoutingReportCompany": scouting_report_company,
                 "scoutingReportPerson": scouting_report_person,
+                "trackPersonsJobChanges": track_persons_job_changes,
+                "youtubeVideoTranscript": youtube_video_transcript,
+                "youtubeVideoDetails": youtube_video_details,
+                "youtubeVideoComments": youtube_video_comments,
+                "youtubeSearch": youtube_search,
+                "youtubeChannelDetails": youtube_channel_details,
+                "socialUserDetails": social_user_details,
+                "socialUserPosts": social_user_posts,
+                "socialUserFollowers": social_user_followers,
+                "socialUserFollowing": social_user_following,
+                "socialPostDetails": social_post_details,
+                "socialPostReplies": social_post_replies,
+                "socialPostQuotes": social_post_quotes,
+                "socialPostReposts": social_post_reposts,
+                "socialPostReactions": social_post_reactions,
+                "socialUserMentions": social_user_mentions,
+                "socialUserSearch": social_user_search,
+                "socialPostSearch": social_post_search,
             }
         )
 
@@ -719,6 +871,45 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_scouting_report_person import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0ScoutingReportPerson,
         )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_media_finder_agent import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialMediaFinderAgent,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_post_details import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostDetails,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_post_quotes import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostQuotes,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_post_reactions import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostReactions,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_post_replies import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostReplies,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_post_reposts import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostReposts,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_post_search import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostSearch,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_user_details import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserDetails,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_user_followers import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserFollowers,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_user_following import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserFollowing,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_user_mentions import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserMentions,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_user_posts import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserPosts,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_social_user_search import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserSearch,
+        )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_standardize_company_slug import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0StandardizeCompanySlug,
         )
@@ -731,6 +922,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_text_to_person_search_params import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0TextToPersonSearchParams,
         )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_persons_job_changes import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackPersonsJobChanges,
+        )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_validate_email import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0ValidateEmail,
         )
@@ -739,6 +933,21 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_work_email_reveal import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0WorkEmailReveal,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_channel_details import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeChannelDetails,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_search import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeSearch,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_video_comments import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoComments,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_video_details import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoDetails,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_video_transcript import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoTranscript,
         )
 
         d = dict(src_dict)
@@ -904,6 +1113,12 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             )
         )
 
+        social_media_finder_agent = (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialMediaFinderAgent.from_dict(
+                d.pop("socialMediaFinderAgent")
+            )
+        )
+
         bulk_company_logo_lookup = (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0BulkCompanyLogoLookup.from_dict(
                 d.pop("bulkCompanyLogoLookup")
@@ -1038,6 +1253,82 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             d.pop("scoutingReportPerson")
         )
 
+        track_persons_job_changes = (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackPersonsJobChanges.from_dict(
+                d.pop("trackPersonsJobChanges")
+            )
+        )
+
+        youtube_video_transcript = (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoTranscript.from_dict(
+                d.pop("youtubeVideoTranscript")
+            )
+        )
+
+        youtube_video_details = GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoDetails.from_dict(
+            d.pop("youtubeVideoDetails")
+        )
+
+        youtube_video_comments = GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoComments.from_dict(
+            d.pop("youtubeVideoComments")
+        )
+
+        youtube_search = GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeSearch.from_dict(
+            d.pop("youtubeSearch")
+        )
+
+        youtube_channel_details = GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeChannelDetails.from_dict(
+            d.pop("youtubeChannelDetails")
+        )
+
+        social_user_details = GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserDetails.from_dict(
+            d.pop("socialUserDetails")
+        )
+
+        social_user_posts = GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserPosts.from_dict(
+            d.pop("socialUserPosts")
+        )
+
+        social_user_followers = GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserFollowers.from_dict(
+            d.pop("socialUserFollowers")
+        )
+
+        social_user_following = GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserFollowing.from_dict(
+            d.pop("socialUserFollowing")
+        )
+
+        social_post_details = GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostDetails.from_dict(
+            d.pop("socialPostDetails")
+        )
+
+        social_post_replies = GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostReplies.from_dict(
+            d.pop("socialPostReplies")
+        )
+
+        social_post_quotes = GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostQuotes.from_dict(
+            d.pop("socialPostQuotes")
+        )
+
+        social_post_reposts = GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostReposts.from_dict(
+            d.pop("socialPostReposts")
+        )
+
+        social_post_reactions = GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostReactions.from_dict(
+            d.pop("socialPostReactions")
+        )
+
+        social_user_mentions = GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserMentions.from_dict(
+            d.pop("socialUserMentions")
+        )
+
+        social_user_search = GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserSearch.from_dict(
+            d.pop("socialUserSearch")
+        )
+
+        social_post_search = GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostSearch.from_dict(
+            d.pop("socialPostSearch")
+        )
+
         get_org_credits_response_200_output_credits_per_operation_type_0 = cls(
             get_company_from_db=get_company_from_db,
             get_person_from_db=get_person_from_db,
@@ -1075,6 +1366,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             github_lookup_agent=github_lookup_agent,
             get_li_profile_from_github_username=get_li_profile_from_github_username,
             get_email_from_github_username=get_email_from_github_username,
+            social_media_finder_agent=social_media_finder_agent,
             bulk_company_logo_lookup=bulk_company_logo_lookup,
             bulk_profile_pic_lookup=bulk_profile_pic_lookup,
             get_li_profile_posts=get_li_profile_posts,
@@ -1102,6 +1394,24 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             multi_source_person_search=multi_source_person_search,
             scouting_report_company=scouting_report_company,
             scouting_report_person=scouting_report_person,
+            track_persons_job_changes=track_persons_job_changes,
+            youtube_video_transcript=youtube_video_transcript,
+            youtube_video_details=youtube_video_details,
+            youtube_video_comments=youtube_video_comments,
+            youtube_search=youtube_search,
+            youtube_channel_details=youtube_channel_details,
+            social_user_details=social_user_details,
+            social_user_posts=social_user_posts,
+            social_user_followers=social_user_followers,
+            social_user_following=social_user_following,
+            social_post_details=social_post_details,
+            social_post_replies=social_post_replies,
+            social_post_quotes=social_post_quotes,
+            social_post_reposts=social_post_reposts,
+            social_post_reactions=social_post_reactions,
+            social_user_mentions=social_user_mentions,
+            social_user_search=social_user_search,
+            social_post_search=social_post_search,
         )
 
         get_org_credits_response_200_output_credits_per_operation_type_0.additional_properties = d
