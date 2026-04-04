@@ -13,13 +13,12 @@ T = TypeVar("T", bound="SyncTurboContactEnrichmentBodyEnrichmentType")
 
 @_attrs_define
 class SyncTurboContactEnrichmentBodyEnrichmentType:
-    """Enrichment types to be requested. Include the ones you want to look for, we will charge credits for the ones you
-    request. For example, { getWorkEmails: true, getPersonalEmails: true, getPhoneNumbers: true }
+    """The enrichment types to request. Credits are charged per selected type.
 
-        Attributes:
-            get_work_emails (bool | Unset):  Default: True.
-            get_personal_emails (bool | Unset):  Default: True.
-            get_phone_numbers (bool | Unset):  Default: True.
+    Attributes:
+        get_work_emails (bool | Unset):  Default: True.
+        get_personal_emails (bool | Unset):  Default: True.
+        get_phone_numbers (bool | Unset):  Default: True.
     """
 
     get_work_emails: bool | Unset = True

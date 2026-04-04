@@ -20,7 +20,7 @@ class GithubLookupTriggerBodyPeopleItemType2:
     Attributes:
         input_type (GithubLookupTriggerBodyPeopleItemType2InputType):
         full_name (str): The full name of the person whose GitHub profile you want to find.
-        external_id (None | str | Unset): Your own ID to join results back
+        external_id (None | str | Unset): An external ID for joining results back to the original dataset.
         company (None | str | Unset):
         job_title (None | str | Unset):
         school_name (None | str | Unset): School or university name

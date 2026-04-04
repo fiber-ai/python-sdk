@@ -19,7 +19,7 @@ class CreateAudienceBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        name (str): Name for the audience (e.g., 'Fintech VPs in NYC')
+        name (str): The name of the audience (e.g. 'Fintech VPs in NYC').
         creation_method (CreateAudienceBodyCreationMethodType1 | CreateAudienceBodyCreationMethodType2Type1 |
             CreateAudienceBodyCreationMethodType3Type1 | None | Unset): How the audience will be created. NORMAL: search
             companies then prospects. START_FROM_PROSPECTS: search prospects only. Default:

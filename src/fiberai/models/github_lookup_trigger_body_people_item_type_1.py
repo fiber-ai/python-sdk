@@ -20,7 +20,7 @@ class GithubLookupTriggerBodyPeopleItemType1:
     Attributes:
         input_type (GithubLookupTriggerBodyPeopleItemType1InputType):
         linkedin_user_id (str): LinkedIn numeric user ID
-        external_id (None | str | Unset): Your own ID to join results back
+        external_id (None | str | Unset): An external ID for joining results back to the original dataset.
     """
 
     input_type: GithubLookupTriggerBodyPeopleItemType1InputType

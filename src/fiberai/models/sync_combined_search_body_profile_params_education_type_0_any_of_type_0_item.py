@@ -12,6 +12,12 @@ if TYPE_CHECKING:
     from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_degree_type_0 import (
         SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeType0,
     )
+    from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_degree_v2_type_0 import (
+        SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type0,
+    )
+    from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_degree_v2_type_1 import (
+        SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type1,
+    )
     from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_finished_school_at_type_0 import (
         SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemFinishedSchoolAtType0,
     )
@@ -26,6 +32,9 @@ if TYPE_CHECKING:
     )
     from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_school_type_0 import (
         SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolType0,
+    )
+    from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_school_v2_type_0 import (
+        SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolV2Type0,
     )
     from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_started_school_at_type_0 import (
         SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemStartedSchoolAtType0,
@@ -43,8 +52,11 @@ class SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0Item:
     """
     Attributes:
         school (None | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolType0 | Unset):
+        school_v2 (None | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolV2Type0 | Unset):
         keywords (None | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemKeywordsType0 | Unset):
         degree (None | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeType0 | Unset):
+        degree_v2 (None | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type0 |
+            SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type1 | Unset):
         school_name_keywords (None |
             SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolNameKeywordsType0 | Unset):
         finished_school_at (None | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemFinishedSchoolAtType0
@@ -55,8 +67,15 @@ class SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0Item:
     """
 
     school: None | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolType0 | Unset = UNSET
+    school_v2: None | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolV2Type0 | Unset = UNSET
     keywords: None | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemKeywordsType0 | Unset = UNSET
     degree: None | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeType0 | Unset = UNSET
+    degree_v2: (
+        None
+        | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type0
+        | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type1
+        | Unset
+    ) = UNSET
     school_name_keywords: (
         None | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolNameKeywordsType0 | Unset
     ) = UNSET
@@ -79,6 +98,12 @@ class SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0Item:
         from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_degree_type_0 import (
             SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeType0,
         )
+        from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_degree_v2_type_0 import (
+            SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type0,
+        )
+        from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_degree_v2_type_1 import (
+            SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type1,
+        )
         from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_finished_school_at_type_0 import (
             SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemFinishedSchoolAtType0,
         )
@@ -93,6 +118,9 @@ class SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0Item:
         )
         from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_school_type_0 import (
             SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolType0,
+        )
+        from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_school_v2_type_0 import (
+            SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolV2Type0,
         )
         from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_started_school_at_type_0 import (
             SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemStartedSchoolAtType0,
@@ -109,6 +137,14 @@ class SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0Item:
         else:
             school = self.school
 
+        school_v2: dict[str, Any] | None | Unset
+        if isinstance(self.school_v2, Unset):
+            school_v2 = UNSET
+        elif isinstance(self.school_v2, SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolV2Type0):
+            school_v2 = self.school_v2.to_dict()
+        else:
+            school_v2 = self.school_v2
+
         keywords: dict[str, Any] | None | Unset
         if isinstance(self.keywords, Unset):
             keywords = UNSET
@@ -124,6 +160,16 @@ class SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0Item:
             degree = self.degree.to_dict()
         else:
             degree = self.degree
+
+        degree_v2: dict[str, Any] | None | Unset
+        if isinstance(self.degree_v2, Unset):
+            degree_v2 = UNSET
+        elif isinstance(self.degree_v2, SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type0):
+            degree_v2 = self.degree_v2.to_dict()
+        elif isinstance(self.degree_v2, SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type1):
+            degree_v2 = self.degree_v2.to_dict()
+        else:
+            degree_v2 = self.degree_v2
 
         school_name_keywords: dict[str, Any] | None | Unset
         if isinstance(self.school_name_keywords, Unset):
@@ -177,10 +223,14 @@ class SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0Item:
         field_dict.update({})
         if school is not UNSET:
             field_dict["school"] = school
+        if school_v2 is not UNSET:
+            field_dict["schoolV2"] = school_v2
         if keywords is not UNSET:
             field_dict["keywords"] = keywords
         if degree is not UNSET:
             field_dict["degree"] = degree
+        if degree_v2 is not UNSET:
+            field_dict["degreeV2"] = degree_v2
         if school_name_keywords is not UNSET:
             field_dict["schoolNameKeywords"] = school_name_keywords
         if finished_school_at is not UNSET:
@@ -197,6 +247,12 @@ class SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0Item:
         from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_degree_type_0 import (
             SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeType0,
         )
+        from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_degree_v2_type_0 import (
+            SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type0,
+        )
+        from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_degree_v2_type_1 import (
+            SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type1,
+        )
         from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_finished_school_at_type_0 import (
             SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemFinishedSchoolAtType0,
         )
@@ -211,6 +267,9 @@ class SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0Item:
         )
         from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_school_type_0 import (
             SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolType0,
+        )
+        from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_school_v2_type_0 import (
+            SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolV2Type0,
         )
         from ..models.sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item_started_school_at_type_0 import (
             SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemStartedSchoolAtType0,
@@ -241,6 +300,29 @@ class SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0Item:
             return cast(None | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolType0 | Unset, data)
 
         school = _parse_school(d.pop("school", UNSET))
+
+        def _parse_school_v2(
+            data: object,
+        ) -> None | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolV2Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                school_v2_type_0 = (
+                    SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolV2Type0.from_dict(data)
+                )
+
+                return school_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemSchoolV2Type0 | Unset, data
+            )
+
+        school_v2 = _parse_school_v2(d.pop("schoolV2", UNSET))
 
         def _parse_keywords(
             data: object,
@@ -285,6 +367,48 @@ class SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0Item:
             return cast(None | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeType0 | Unset, data)
 
         degree = _parse_degree(d.pop("degree", UNSET))
+
+        def _parse_degree_v2(
+            data: object,
+        ) -> (
+            None
+            | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type0
+            | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type1
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                degree_v2_type_0 = (
+                    SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type0.from_dict(data)
+                )
+
+                return degree_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                degree_v2_type_1 = (
+                    SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type1.from_dict(data)
+                )
+
+                return degree_v2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type0
+                | SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0ItemDegreeV2Type1
+                | Unset,
+                data,
+            )
+
+        degree_v2 = _parse_degree_v2(d.pop("degreeV2", UNSET))
 
         def _parse_school_name_keywords(
             data: object,
@@ -407,8 +531,10 @@ class SyncCombinedSearchBodyProfileParamsEducationType0AnyOfType0Item:
 
         sync_combined_search_body_profile_params_education_type_0_any_of_type_0_item = cls(
             school=school,
+            school_v2=school_v2,
             keywords=keywords,
             degree=degree,
+            degree_v2=degree_v2,
             school_name_keywords=school_name_keywords,
             finished_school_at=finished_school_at,
             started_school_at=started_school_at,

@@ -13,11 +13,11 @@ T = TypeVar("T", bound="GetRegionsResponse200OutputRegionsItemCountriesItem")
 class GetRegionsResponse200OutputRegionsItemCountriesItem:
     """
     Attributes:
-        name (str): The common name of the country
-        api_code (str): The code you need to use to filter by this country in our API
-        iso_code_alpha_3 (str): ISO 3166-1 alpha-3 country code, like 'USA' or 'CAN'
-        iso_code_alpha_2 (str): ISO 3166-1 alpha-2 country code, like 'US' or 'CA'
-        flag (str): Unicode flag emoji for the country
+        name (str): The common name of the country.
+        api_code (str): The code to use when filtering by this country in the API.
+        iso_code_alpha_3 (str): The ISO 3166-1 alpha-3 country code (e.g. 'USA', 'CAN').
+        iso_code_alpha_2 (str): The ISO 3166-1 alpha-2 country code (e.g. 'US', 'CA').
+        flag (str): The Unicode flag emoji for the country.
     """
 
     name: str

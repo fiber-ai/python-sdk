@@ -141,7 +141,7 @@ def sync_detailed(
     r"""List NAICS codes
 
      Get all NAICS (North American Industry Classification System) codes from the 2017 version. Returns
-    both the code and its corresponding title/description. You can use this in our company search APIs.
+    each code and its corresponding title.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
@@ -189,7 +189,7 @@ def sync(
     r"""List NAICS codes
 
      Get all NAICS (North American Industry Classification System) codes from the 2017 version. Returns
-    both the code and its corresponding title/description. You can use this in our company search APIs.
+    each code and its corresponding title.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
@@ -231,7 +231,7 @@ async def asyncio_detailed(
     r"""List NAICS codes
 
      Get all NAICS (North American Industry Classification System) codes from the 2017 version. Returns
-    both the code and its corresponding title/description. You can use this in our company search APIs.
+    each code and its corresponding title.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
@@ -277,7 +277,7 @@ async def asyncio(
     r"""List NAICS codes
 
      Get all NAICS (North American Industry Classification System) codes from the 2017 version. Returns
-    both the code and its corresponding title/description. You can use this in our company search APIs.
+    each code and its corresponding title.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 

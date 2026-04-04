@@ -18,7 +18,7 @@ class KitchenSinkProfileBodySchoolIdentifierType2:
     """
     Attributes:
         identifier (KitchenSinkProfileBodySchoolIdentifierType2Identifier):
-        value (str):
+        value (str): The LinkedIn slug of the school
     """
 
     identifier: KitchenSinkProfileBodySchoolIdentifierType2Identifier

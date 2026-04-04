@@ -31,10 +31,13 @@ class KitchenSinkCompanyBody:
     Attributes:
         api_key (str): Your Fiber API key
         company_identifier (KitchenSinkCompanyBodyCompanyIdentifierType0 | KitchenSinkCompanyBodyCompanyIdentifierType1
-            | KitchenSinkCompanyBodyCompanyIdentifierType2 | None | Unset):
+            | KitchenSinkCompanyBodyCompanyIdentifierType2 | None | Unset): A unique identifier for the company. Accepts one
+            of: linkedinSlug, linkedinUrl, or linkedinOrgID. Providing this increases the accuracy and speed of the lookup.
+            If this is provided, you do not need to supply companyName or companyDomain.
         company_name (KitchenSinkCompanyBodyCompanyNameType0 | None | Unset):
         company_domain (KitchenSinkCompanyBodyCompanyDomainType0 | None | Unset):
-        num_companies (int | Unset):  Default: 1.
+        num_companies (int | Unset): Maximum number of company results to return. Sorted by best match. Defaults to 1.
+            Default: 1.
     """
 
     api_key: str

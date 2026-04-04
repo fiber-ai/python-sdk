@@ -21,8 +21,8 @@ class CompanyCountBody:
     Attributes:
         api_key (str): Your Fiber API key
         search_params (CompanyCountBodySearchParams): Search parameters for company search API.
-        company_exclusion_list_i_ds (list[str] | Unset): Filter out companies which belong to the given company
-            exclusion lists. You can create company exclusion lists via /v1/exclusions/companies/create-list
+        company_exclusion_list_i_ds (list[str] | Unset): The IDs of company exclusion lists to filter out matching
+            companies.
     """
 
     api_key: str

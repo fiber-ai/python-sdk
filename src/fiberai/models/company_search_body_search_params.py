@@ -49,6 +49,9 @@ if TYPE_CHECKING:
         CompanySearchBodySearchParamsIndustriesV2Type0,
     )
     from ..models.company_search_body_search_params_investors_type_0 import CompanySearchBodySearchParamsInvestorsType0
+    from ..models.company_search_body_search_params_investors_v2_type_0 import (
+        CompanySearchBodySearchParamsInvestorsV2Type0,
+    )
     from ..models.company_search_body_search_params_job_posting_stats_type_0 import (
         CompanySearchBodySearchParamsJobPostingStatsType0,
     )
@@ -78,8 +81,8 @@ if TYPE_CHECKING:
     from ..models.company_search_body_search_params_office_locations_v2_type_0 import (
         CompanySearchBodySearchParamsOfficeLocationsV2Type0,
     )
-    from ..models.company_search_body_search_params_revenue_usd_type_0 import (
-        CompanySearchBodySearchParamsRevenueUSDType0,
+    from ..models.company_search_body_search_params_revenue_range_usd_type_0 import (
+        CompanySearchBodySearchParamsRevenueRangeUSDType0,
     )
     from ..models.company_search_body_search_params_special_flags_type_0 import (
         CompanySearchBodySearchParamsSpecialFlagsType0,
@@ -89,6 +92,9 @@ if TYPE_CHECKING:
     from ..models.company_search_body_search_params_tags_type_0 import CompanySearchBodySearchParamsTagsType0
     from ..models.company_search_body_search_params_technologies_type_0 import (
         CompanySearchBodySearchParamsTechnologiesType0,
+    )
+    from ..models.company_search_body_search_params_technologies_v2_type_0 import (
+        CompanySearchBodySearchParamsTechnologiesV2Type0,
     )
     from ..models.company_search_body_search_params_tlds_type_0 import CompanySearchBodySearchParamsTldsType0
     from ..models.company_search_body_search_params_total_funding_usd_type_0 import (
@@ -126,7 +132,6 @@ class CompanySearchBodySearchParams:
         linkedin_slugs (list[str] | None | Unset):
         special_flags (CompanySearchBodySearchParamsSpecialFlagsType0 | None | Unset):
         employees (CompanySearchBodySearchParamsEmployeesType0 | None | Unset):
-        revenue_usd (CompanySearchBodySearchParamsRevenueUSDType0 | None | Unset):
         naics_codes (CompanySearchBodySearchParamsNaicsCodesType0 | None | Unset):
         fortune_rankings (CompanySearchBodySearchParamsFortuneRankingsType0 | None | Unset):
         job_postings_v2 (CompanySearchBodySearchParamsJobPostingsV2Type0 | None | Unset):
@@ -136,6 +141,9 @@ class CompanySearchBodySearchParams:
         num_words_in_name (CompanySearchBodySearchParamsNumWordsInNameType0 | None | Unset):
         status (CompanySearchBodySearchParamsStatusType0 | None | Unset):
         technologies (CompanySearchBodySearchParamsTechnologiesType0 | None | Unset):
+        investors_v2 (CompanySearchBodySearchParamsInvestorsV2Type0 | None | Unset):
+        technologies_v2 (CompanySearchBodySearchParamsTechnologiesV2Type0 | None | Unset):
+        revenue_range_usd (CompanySearchBodySearchParamsRevenueRangeUSDType0 | None | Unset):
         investors (CompanySearchBodySearchParamsInvestorsType0 | None | Unset):
         tags (CompanySearchBodySearchParamsTagsType0 | None | Unset):
         crunchbase_categories (CompanySearchBodySearchParamsCrunchbaseCategoriesType0 | None | Unset):
@@ -168,7 +176,6 @@ class CompanySearchBodySearchParams:
     linkedin_slugs: list[str] | None | Unset = UNSET
     special_flags: CompanySearchBodySearchParamsSpecialFlagsType0 | None | Unset = UNSET
     employees: CompanySearchBodySearchParamsEmployeesType0 | None | Unset = UNSET
-    revenue_usd: CompanySearchBodySearchParamsRevenueUSDType0 | None | Unset = UNSET
     naics_codes: CompanySearchBodySearchParamsNaicsCodesType0 | None | Unset = UNSET
     fortune_rankings: CompanySearchBodySearchParamsFortuneRankingsType0 | None | Unset = UNSET
     job_postings_v2: CompanySearchBodySearchParamsJobPostingsV2Type0 | None | Unset = UNSET
@@ -178,6 +185,9 @@ class CompanySearchBodySearchParams:
     num_words_in_name: CompanySearchBodySearchParamsNumWordsInNameType0 | None | Unset = UNSET
     status: CompanySearchBodySearchParamsStatusType0 | None | Unset = UNSET
     technologies: CompanySearchBodySearchParamsTechnologiesType0 | None | Unset = UNSET
+    investors_v2: CompanySearchBodySearchParamsInvestorsV2Type0 | None | Unset = UNSET
+    technologies_v2: CompanySearchBodySearchParamsTechnologiesV2Type0 | None | Unset = UNSET
+    revenue_range_usd: CompanySearchBodySearchParamsRevenueRangeUSDType0 | None | Unset = UNSET
     investors: CompanySearchBodySearchParamsInvestorsType0 | None | Unset = UNSET
     tags: CompanySearchBodySearchParamsTagsType0 | None | Unset = UNSET
     crunchbase_categories: CompanySearchBodySearchParamsCrunchbaseCategoriesType0 | None | Unset = UNSET
@@ -235,6 +245,9 @@ class CompanySearchBodySearchParams:
         from ..models.company_search_body_search_params_investors_type_0 import (
             CompanySearchBodySearchParamsInvestorsType0,
         )
+        from ..models.company_search_body_search_params_investors_v2_type_0 import (
+            CompanySearchBodySearchParamsInvestorsV2Type0,
+        )
         from ..models.company_search_body_search_params_job_posting_stats_type_0 import (
             CompanySearchBodySearchParamsJobPostingStatsType0,
         )
@@ -268,8 +281,8 @@ class CompanySearchBodySearchParams:
         from ..models.company_search_body_search_params_office_locations_v2_type_0 import (
             CompanySearchBodySearchParamsOfficeLocationsV2Type0,
         )
-        from ..models.company_search_body_search_params_revenue_usd_type_0 import (
-            CompanySearchBodySearchParamsRevenueUSDType0,
+        from ..models.company_search_body_search_params_revenue_range_usd_type_0 import (
+            CompanySearchBodySearchParamsRevenueRangeUSDType0,
         )
         from ..models.company_search_body_search_params_special_flags_type_0 import (
             CompanySearchBodySearchParamsSpecialFlagsType0,
@@ -279,6 +292,9 @@ class CompanySearchBodySearchParams:
         from ..models.company_search_body_search_params_tags_type_0 import CompanySearchBodySearchParamsTagsType0
         from ..models.company_search_body_search_params_technologies_type_0 import (
             CompanySearchBodySearchParamsTechnologiesType0,
+        )
+        from ..models.company_search_body_search_params_technologies_v2_type_0 import (
+            CompanySearchBodySearchParamsTechnologiesV2Type0,
         )
         from ..models.company_search_body_search_params_tlds_type_0 import CompanySearchBodySearchParamsTldsType0
         from ..models.company_search_body_search_params_total_funding_usd_type_0 import (
@@ -451,14 +467,6 @@ class CompanySearchBodySearchParams:
         else:
             employees = self.employees
 
-        revenue_usd: dict[str, Any] | None | Unset
-        if isinstance(self.revenue_usd, Unset):
-            revenue_usd = UNSET
-        elif isinstance(self.revenue_usd, CompanySearchBodySearchParamsRevenueUSDType0):
-            revenue_usd = self.revenue_usd.to_dict()
-        else:
-            revenue_usd = self.revenue_usd
-
         naics_codes: dict[str, Any] | None | Unset
         if isinstance(self.naics_codes, Unset):
             naics_codes = UNSET
@@ -530,6 +538,30 @@ class CompanySearchBodySearchParams:
             technologies = self.technologies.to_dict()
         else:
             technologies = self.technologies
+
+        investors_v2: dict[str, Any] | None | Unset
+        if isinstance(self.investors_v2, Unset):
+            investors_v2 = UNSET
+        elif isinstance(self.investors_v2, CompanySearchBodySearchParamsInvestorsV2Type0):
+            investors_v2 = self.investors_v2.to_dict()
+        else:
+            investors_v2 = self.investors_v2
+
+        technologies_v2: dict[str, Any] | None | Unset
+        if isinstance(self.technologies_v2, Unset):
+            technologies_v2 = UNSET
+        elif isinstance(self.technologies_v2, CompanySearchBodySearchParamsTechnologiesV2Type0):
+            technologies_v2 = self.technologies_v2.to_dict()
+        else:
+            technologies_v2 = self.technologies_v2
+
+        revenue_range_usd: dict[str, Any] | None | Unset
+        if isinstance(self.revenue_range_usd, Unset):
+            revenue_range_usd = UNSET
+        elif isinstance(self.revenue_range_usd, CompanySearchBodySearchParamsRevenueRangeUSDType0):
+            revenue_range_usd = self.revenue_range_usd.to_dict()
+        else:
+            revenue_range_usd = self.revenue_range_usd
 
         investors: dict[str, Any] | None | Unset
         if isinstance(self.investors, Unset):
@@ -623,8 +655,6 @@ class CompanySearchBodySearchParams:
             field_dict["specialFlags"] = special_flags
         if employees is not UNSET:
             field_dict["employees"] = employees
-        if revenue_usd is not UNSET:
-            field_dict["revenueUSD"] = revenue_usd
         if naics_codes is not UNSET:
             field_dict["naicsCodes"] = naics_codes
         if fortune_rankings is not UNSET:
@@ -643,6 +673,12 @@ class CompanySearchBodySearchParams:
             field_dict["status"] = status
         if technologies is not UNSET:
             field_dict["technologies"] = technologies
+        if investors_v2 is not UNSET:
+            field_dict["investorsV2"] = investors_v2
+        if technologies_v2 is not UNSET:
+            field_dict["technologiesV2"] = technologies_v2
+        if revenue_range_usd is not UNSET:
+            field_dict["revenueRangeUSD"] = revenue_range_usd
         if investors is not UNSET:
             field_dict["investors"] = investors
         if tags is not UNSET:
@@ -708,6 +744,9 @@ class CompanySearchBodySearchParams:
         from ..models.company_search_body_search_params_investors_type_0 import (
             CompanySearchBodySearchParamsInvestorsType0,
         )
+        from ..models.company_search_body_search_params_investors_v2_type_0 import (
+            CompanySearchBodySearchParamsInvestorsV2Type0,
+        )
         from ..models.company_search_body_search_params_job_posting_stats_type_0 import (
             CompanySearchBodySearchParamsJobPostingStatsType0,
         )
@@ -741,8 +780,8 @@ class CompanySearchBodySearchParams:
         from ..models.company_search_body_search_params_office_locations_v2_type_0 import (
             CompanySearchBodySearchParamsOfficeLocationsV2Type0,
         )
-        from ..models.company_search_body_search_params_revenue_usd_type_0 import (
-            CompanySearchBodySearchParamsRevenueUSDType0,
+        from ..models.company_search_body_search_params_revenue_range_usd_type_0 import (
+            CompanySearchBodySearchParamsRevenueRangeUSDType0,
         )
         from ..models.company_search_body_search_params_special_flags_type_0 import (
             CompanySearchBodySearchParamsSpecialFlagsType0,
@@ -752,6 +791,9 @@ class CompanySearchBodySearchParams:
         from ..models.company_search_body_search_params_tags_type_0 import CompanySearchBodySearchParamsTagsType0
         from ..models.company_search_body_search_params_technologies_type_0 import (
             CompanySearchBodySearchParamsTechnologiesType0,
+        )
+        from ..models.company_search_body_search_params_technologies_v2_type_0 import (
+            CompanySearchBodySearchParamsTechnologiesV2Type0,
         )
         from ..models.company_search_body_search_params_tlds_type_0 import CompanySearchBodySearchParamsTldsType0
         from ..models.company_search_body_search_params_total_funding_usd_type_0 import (
@@ -1145,23 +1187,6 @@ class CompanySearchBodySearchParams:
 
         employees = _parse_employees(d.pop("employees", UNSET))
 
-        def _parse_revenue_usd(data: object) -> CompanySearchBodySearchParamsRevenueUSDType0 | None | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                revenue_usd_type_0 = CompanySearchBodySearchParamsRevenueUSDType0.from_dict(data)
-
-                return revenue_usd_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(CompanySearchBodySearchParamsRevenueUSDType0 | None | Unset, data)
-
-        revenue_usd = _parse_revenue_usd(d.pop("revenueUSD", UNSET))
-
         def _parse_naics_codes(data: object) -> CompanySearchBodySearchParamsNaicsCodesType0 | None | Unset:
             if data is None:
                 return data
@@ -1317,6 +1342,57 @@ class CompanySearchBodySearchParams:
 
         technologies = _parse_technologies(d.pop("technologies", UNSET))
 
+        def _parse_investors_v2(data: object) -> CompanySearchBodySearchParamsInvestorsV2Type0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                investors_v2_type_0 = CompanySearchBodySearchParamsInvestorsV2Type0.from_dict(data)
+
+                return investors_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CompanySearchBodySearchParamsInvestorsV2Type0 | None | Unset, data)
+
+        investors_v2 = _parse_investors_v2(d.pop("investorsV2", UNSET))
+
+        def _parse_technologies_v2(data: object) -> CompanySearchBodySearchParamsTechnologiesV2Type0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                technologies_v2_type_0 = CompanySearchBodySearchParamsTechnologiesV2Type0.from_dict(data)
+
+                return technologies_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CompanySearchBodySearchParamsTechnologiesV2Type0 | None | Unset, data)
+
+        technologies_v2 = _parse_technologies_v2(d.pop("technologiesV2", UNSET))
+
+        def _parse_revenue_range_usd(data: object) -> CompanySearchBodySearchParamsRevenueRangeUSDType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                revenue_range_usd_type_0 = CompanySearchBodySearchParamsRevenueRangeUSDType0.from_dict(data)
+
+                return revenue_range_usd_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CompanySearchBodySearchParamsRevenueRangeUSDType0 | None | Unset, data)
+
+        revenue_range_usd = _parse_revenue_range_usd(d.pop("revenueRangeUSD", UNSET))
+
         def _parse_investors(data: object) -> CompanySearchBodySearchParamsInvestorsType0 | None | Unset:
             if data is None:
                 return data
@@ -1448,7 +1524,6 @@ class CompanySearchBodySearchParams:
             linkedin_slugs=linkedin_slugs,
             special_flags=special_flags,
             employees=employees,
-            revenue_usd=revenue_usd,
             naics_codes=naics_codes,
             fortune_rankings=fortune_rankings,
             job_postings_v2=job_postings_v2,
@@ -1458,6 +1533,9 @@ class CompanySearchBodySearchParams:
             num_words_in_name=num_words_in_name,
             status=status,
             technologies=technologies,
+            investors_v2=investors_v2,
+            technologies_v2=technologies_v2,
+            revenue_range_usd=revenue_range_usd,
             investors=investors,
             tags=tags,
             crunchbase_categories=crunchbase_categories,

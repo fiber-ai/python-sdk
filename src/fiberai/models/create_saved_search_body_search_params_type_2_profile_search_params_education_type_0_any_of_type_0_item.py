@@ -12,6 +12,12 @@ if TYPE_CHECKING:
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_degree_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeType0,
     )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_degree_v2_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_degree_v2_type_1 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type1,
+    )
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_finished_school_at_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemFinishedSchoolAtType0,
     )
@@ -26,6 +32,9 @@ if TYPE_CHECKING:
     )
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_school_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_school_v2_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolV2Type0,
     )
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_started_school_at_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemStartedSchoolAtType0,
@@ -44,10 +53,15 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0Any
     Attributes:
         school (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolType0 | None
             | Unset):
+        school_v2 (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolV2Type0 |
+            None | Unset):
         keywords (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemKeywordsType0 |
             None | Unset):
         degree (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeType0 | None
             | Unset):
+        degree_v2 (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type0 |
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type1 | None |
+            Unset):
         school_name_keywords
             (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolNameKeywordsType0 |
             None | Unset):
@@ -65,6 +79,11 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0Any
     school: (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolType0 | None | Unset
     ) = UNSET
+    school_v2: (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolV2Type0
+        | None
+        | Unset
+    ) = UNSET
     keywords: (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemKeywordsType0
         | None
@@ -72,6 +91,12 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0Any
     ) = UNSET
     degree: (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeType0 | None | Unset
+    ) = UNSET
+    degree_v2: (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type0
+        | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type1
+        | None
+        | Unset
     ) = UNSET
     school_name_keywords: (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolNameKeywordsType0
@@ -97,6 +122,12 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0Any
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_degree_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeType0,
         )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_degree_v2_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_degree_v2_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type1,
+        )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_finished_school_at_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemFinishedSchoolAtType0,
         )
@@ -111,6 +142,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0Any
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_school_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_school_v2_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolV2Type0,
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_started_school_at_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemStartedSchoolAtType0,
@@ -129,6 +163,17 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0Any
             school = self.school.to_dict()
         else:
             school = self.school
+
+        school_v2: dict[str, Any] | None | Unset
+        if isinstance(self.school_v2, Unset):
+            school_v2 = UNSET
+        elif isinstance(
+            self.school_v2,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolV2Type0,
+        ):
+            school_v2 = self.school_v2.to_dict()
+        else:
+            school_v2 = self.school_v2
 
         keywords: dict[str, Any] | None | Unset
         if isinstance(self.keywords, Unset):
@@ -151,6 +196,22 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0Any
             degree = self.degree.to_dict()
         else:
             degree = self.degree
+
+        degree_v2: dict[str, Any] | None | Unset
+        if isinstance(self.degree_v2, Unset):
+            degree_v2 = UNSET
+        elif isinstance(
+            self.degree_v2,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type0,
+        ):
+            degree_v2 = self.degree_v2.to_dict()
+        elif isinstance(
+            self.degree_v2,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type1,
+        ):
+            degree_v2 = self.degree_v2.to_dict()
+        else:
+            degree_v2 = self.degree_v2
 
         school_name_keywords: dict[str, Any] | None | Unset
         if isinstance(self.school_name_keywords, Unset):
@@ -206,10 +267,14 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0Any
         field_dict.update({})
         if school is not UNSET:
             field_dict["school"] = school
+        if school_v2 is not UNSET:
+            field_dict["schoolV2"] = school_v2
         if keywords is not UNSET:
             field_dict["keywords"] = keywords
         if degree is not UNSET:
             field_dict["degree"] = degree
+        if degree_v2 is not UNSET:
+            field_dict["degreeV2"] = degree_v2
         if school_name_keywords is not UNSET:
             field_dict["schoolNameKeywords"] = school_name_keywords
         if finished_school_at is not UNSET:
@@ -226,6 +291,12 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0Any
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_degree_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeType0,
         )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_degree_v2_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_degree_v2_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type1,
+        )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_finished_school_at_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemFinishedSchoolAtType0,
         )
@@ -240,6 +311,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0Any
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_school_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_school_v2_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolV2Type0,
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item_started_school_at_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemStartedSchoolAtType0,
@@ -279,6 +353,36 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0Any
             )
 
         school = _parse_school(d.pop("school", UNSET))
+
+        def _parse_school_v2(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolV2Type0
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                school_v2_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolV2Type0.from_dict(
+                    data
+                )
+
+                return school_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemSchoolV2Type0
+                | None
+                | Unset,
+                data,
+            )
+
+        school_v2 = _parse_school_v2(d.pop("schoolV2", UNSET))
 
         def _parse_keywords(
             data: object,
@@ -339,6 +443,48 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0Any
             )
 
         degree = _parse_degree(d.pop("degree", UNSET))
+
+        def _parse_degree_v2(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type0
+            | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                degree_v2_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type0.from_dict(
+                    data
+                )
+
+                return degree_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                degree_v2_type_1 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type1.from_dict(
+                    data
+                )
+
+                return degree_v2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type0
+                | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0AnyOfType0ItemDegreeV2Type1
+                | None
+                | Unset,
+                data,
+            )
+
+        degree_v2 = _parse_degree_v2(d.pop("degreeV2", UNSET))
 
         def _parse_school_name_keywords(
             data: object,
@@ -465,8 +611,10 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0Any
 
         create_saved_search_body_search_params_type_2_profile_search_params_education_type_0_any_of_type_0_item = cls(
             school=school,
+            school_v2=school_v2,
             keywords=keywords,
             degree=degree,
+            degree_v2=degree_v2,
             school_name_keywords=school_name_keywords,
             finished_school_at=finished_school_at,
             started_school_at=started_school_at,

@@ -20,7 +20,7 @@ class CreateSavedSearchBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        name (str): The name of the saved search
+        name (str): The name of the saved search.
         search_params (CreateSavedSearchBodySearchParamsType0 | CreateSavedSearchBodySearchParamsType1 |
             CreateSavedSearchBodySearchParamsType2):
         spawn_frequency_days (int): The frequency of the saved search in days.

@@ -13,8 +13,8 @@ T = TypeVar("T", bound="CreateProspectExclusionListResponse200Output")
 class CreateProspectExclusionListResponse200Output:
     """
     Attributes:
-        list_id (str): Id of the prospect exclusion list
-        name (str): Name of the prospect exclusion list
+        list_id (str): The ID of the prospect exclusion list.
+        name (str): The name of the prospect exclusion list.
     """
 
     list_id: str

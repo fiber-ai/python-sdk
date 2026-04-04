@@ -26,9 +26,8 @@ class StartBatchContactEnrichmentBody:
     Attributes:
         api_key (str): Your Fiber API key
         person_details (list[StartBatchContactEnrichmentBodyPersonDetailsItem]):
-        enrichment_types (StartBatchContactEnrichmentBodyEnrichmentTypes | Unset): Types of contact info to be requested
-            for each person. Include the ones you want to look for. For example, { getWorkEmails: true, getPersonalEmails:
-            true, getPhoneNumbers: true }
+        enrichment_types (StartBatchContactEnrichmentBodyEnrichmentTypes | Unset): The types of contact information to
+            request for each person. Credits are charged per selected type.
     """
 
     api_key: str

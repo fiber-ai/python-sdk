@@ -13,8 +13,8 @@ T = TypeVar("T", bound="GetNaicsCodesResponse200OutputNaicsCodesItem")
 class GetNaicsCodesResponse200OutputNaicsCodesItem:
     """
     Attributes:
-        code (str): The NAICS code identifier (2017 version)
-        title (str): The title/description of the NAICS code
+        code (str): The NAICS code identifier.
+        title (str): The title of the NAICS code.
     """
 
     code: str

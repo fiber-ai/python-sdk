@@ -15,9 +15,9 @@ T = TypeVar("T", bound="TriggerEnrichmentResponse200Output")
 class TriggerEnrichmentResponse200Output:
     """
     Attributes:
-        enrichment_id (str): Unique ID of the enrichment run
-        status (TriggerEnrichmentResponse200OutputStatus): Initial status of the enrichment run
-        estimated_credits (float): Estimated credits that will be charged for this enrichment
+        enrichment_id (str): The unique ID of the enrichment run.
+        status (TriggerEnrichmentResponse200OutputStatus): The initial status of the enrichment run.
+        estimated_credits (float): The estimated credits that will be charged for this enrichment.
     """
 
     enrichment_id: str

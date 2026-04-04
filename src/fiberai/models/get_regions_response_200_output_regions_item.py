@@ -22,12 +22,11 @@ class GetRegionsResponse200OutputRegionsItem:
     """A multi-country region, as defined by Fiber AI.
 
     Attributes:
-        name (str): The common name of the region
-        api_code (str): The code you need to use to filter by this region in our API
-        countries (list[GetRegionsResponse200OutputRegionsItemCountriesItem]): List of countries that we say belong in
-            the region
-        acronym (None | str | Unset): Short form, if applicable
-        flag (str | Unset): Unicode flag emoji for the region; mostly for cosmetic purposes
+        name (str): The common name of the region.
+        api_code (str): The code to use when filtering by this region in the API.
+        countries (list[GetRegionsResponse200OutputRegionsItemCountriesItem]): The countries included in this region.
+        acronym (None | str | Unset): The short form of the region name, if applicable.
+        flag (str | Unset): The Unicode flag emoji for the region.
     """
 
     name: str

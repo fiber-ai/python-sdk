@@ -18,7 +18,7 @@ class KitchenSinkProfileBodySchoolIdentifierType0:
     """
     Attributes:
         identifier (KitchenSinkProfileBodySchoolIdentifierType0Identifier):
-        value (str):
+        value (str): The LinkedIn organization ID of the school
     """
 
     identifier: KitchenSinkProfileBodySchoolIdentifierType0Identifier

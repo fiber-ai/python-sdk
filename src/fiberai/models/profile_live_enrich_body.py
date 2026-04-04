@@ -16,9 +16,8 @@ class ProfileLiveEnrichBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        identifier (str): Identifier can be a profile's LinkedIn slug (e.g. 'williamhgates' from
-            <linkedin.com/in/williamhgates>), a Sales Navigator URN (e.g. 'ACwAAA.....'), a full LinkedIn URL (e.g.
-            'https://www.linkedin.com/in/williamhgates/'), or a LinkedIn user ID (e.g. '443105112')
+        identifier (str): The profile's LinkedIn slug (e.g. 'williamhgates'), full LinkedIn URL (e.g.
+            'https://www.linkedin.com/in/williamhgates/'), Sales Navigator URN, or LinkedIn user ID (e.g. '443105112').
         get_detailed_education (bool | None | Unset): Whether to include deep details about each educational item, like
             the school's LinkedIn URL, website, location, etc. That'll be put in the detailedEducation array. This slows
             down the API call, so only enable this if you need it. Default: False.

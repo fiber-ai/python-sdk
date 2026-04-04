@@ -14,8 +14,8 @@ class GoogleMapsSearchBodyStrategyType1UnionAllItemType1NorthwestCorner:
     """The coordinates of the north west corner of the rectangle
 
     Attributes:
-        latitude (float): The latitude of the point
-        longitude (float): The longitude of the point
+        latitude (float): The latitude of the point.
+        longitude (float): The longitude of the point.
     """
 
     latitude: float

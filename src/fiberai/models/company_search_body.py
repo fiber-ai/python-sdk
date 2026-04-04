@@ -21,12 +21,11 @@ class CompanySearchBody:
     Attributes:
         api_key (str): Your Fiber API key
         search_params (CompanySearchBodySearchParams): Search parameters for company search API.
-        page_size (int | Unset): The number of companies to return, if you need to get more results, you can paginate.
-            Default: 25.
+        page_size (int | Unset): The number of companies to return per page. Default: 25.
         cursor (None | str | Unset): A pagination cursor returned from a previous search response. Use this to fetch the
             next page of results.
-        company_exclusion_list_i_ds (list[str] | Unset): Filter out companies which belong to the given company
-            exclusion lists. You can create company exclusion lists via /v1/exclusions/companies/create-list
+        company_exclusion_list_i_ds (list[str] | Unset): The IDs of company exclusion lists to filter out matching
+            companies.
     """
 
     api_key: str

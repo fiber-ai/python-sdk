@@ -13,13 +13,12 @@ T = TypeVar("T", bound="StartBatchContactEnrichmentBodyEnrichmentTypes")
 
 @_attrs_define
 class StartBatchContactEnrichmentBodyEnrichmentTypes:
-    """Types of contact info to be requested for each person. Include the ones you want to look for. For example, {
-    getWorkEmails: true, getPersonalEmails: true, getPhoneNumbers: true }
+    """The types of contact information to request for each person. Credits are charged per selected type.
 
-        Attributes:
-            get_work_emails (bool | Unset):  Default: True.
-            get_personal_emails (bool | Unset):  Default: True.
-            get_phone_numbers (bool | Unset):  Default: True.
+    Attributes:
+        get_work_emails (bool | Unset):  Default: True.
+        get_personal_emails (bool | Unset):  Default: True.
+        get_phone_numbers (bool | Unset):  Default: True.
     """
 
     get_work_emails: bool | Unset = True

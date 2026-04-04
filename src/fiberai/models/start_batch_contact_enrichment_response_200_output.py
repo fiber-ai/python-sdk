@@ -15,11 +15,10 @@ T = TypeVar("T", bound="StartBatchContactEnrichmentResponse200Output")
 class StartBatchContactEnrichmentResponse200Output:
     """
     Attributes:
-        task_id (str): Task ID. Use this to poll for results using the poll endpoint.
-        num_people_enqueued (int): Total number of people queued for enrichment
-        num_duplicates_skipped (int | None | Unset): Total number of duplicate people found in your input list. These
-            people are skipped, and you aren't charged for them. The number of duplicates and the number of people queued
-            should sum up to the length of your original input.
+        task_id (str): The task ID. Use this to poll for results.
+        num_people_enqueued (int): The total number of people queued for enrichment.
+        num_duplicates_skipped (int | None | Unset): The number of duplicate people found in the input list. Duplicates
+            are skipped and not charged.
     """
 
     task_id: str

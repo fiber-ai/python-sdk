@@ -16,8 +16,8 @@ class CreateProspectExclusionListBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        name (str): Name of the prospect exclusion list
-        is_organization_wide (bool | Unset): Is the prospect exclusion list organization wide Default: False.
+        name (str): The name of the prospect exclusion list.
+        is_organization_wide (bool | Unset): Whether the prospect exclusion list is organization-wide. Default: False.
     """
 
     api_key: str

@@ -147,6 +147,9 @@ def sync_detailed(
     <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+
     Args:
         body (ProfileLiveEnrichBody):
 
@@ -194,6 +197,9 @@ def sync(
     <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+
     Args:
         body (ProfileLiveEnrichBody):
 
@@ -234,6 +240,9 @@ async def asyncio_detailed(
 
     <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ProfileLiveEnrichBody):
@@ -279,6 +288,9 @@ async def asyncio(
 
     <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ProfileLiveEnrichBody):

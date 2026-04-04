@@ -23,16 +23,16 @@ T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType0")
 
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType0:
-    """combined
+    """A combined company and profile search.
 
     Attributes:
-        type_ (CreateSavedSearchBodySearchParamsType0Type): combined
-        company_search_params (CreateSavedSearchBodySearchParamsType0CompanySearchParams): The company search params.
-            This is same as our normal company search api.
-        max_companies (int | None | Unset): Max companies to find. Defaults to 10000 if not provided. Default: 10000.
+        type_ (CreateSavedSearchBodySearchParamsType0Type): The search type: combined companies and profiles.
+        company_search_params (CreateSavedSearchBodySearchParamsType0CompanySearchParams): The company search
+            parameters. Uses the same schema as the company search endpoint.
+        max_companies (int | None | Unset): The maximum number of companies to find. Defaults to 10000. Default: 10000.
         profile_search_params (CreateSavedSearchBodySearchParamsType0ProfileSearchParams | Unset): The profile search
-            params. This is same as our normal profile search api.
-        max_profiles (int | None | Unset): Max profiles to find. Defaults to 10000 if not provided. Default: 10000.
+            parameters. Uses the same schema as the profile search endpoint.
+        max_profiles (int | None | Unset): The maximum number of profiles to find. Defaults to 10000. Default: 10000.
     """
 
     type_: CreateSavedSearchBodySearchParamsType0Type

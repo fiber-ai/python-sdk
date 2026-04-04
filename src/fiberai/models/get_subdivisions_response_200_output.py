@@ -19,7 +19,7 @@ T = TypeVar("T", bound="GetSubdivisionsResponse200Output")
 class GetSubdivisionsResponse200Output:
     """
     Attributes:
-        country_code (str): The alpha-3 country code queried
+        country_code (str): The alpha-3 country code that was queried.
         subdivisions (list[GetSubdivisionsResponse200OutputSubdivisionsItem]):
     """
 

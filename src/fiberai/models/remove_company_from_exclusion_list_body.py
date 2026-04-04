@@ -20,7 +20,7 @@ class RemoveCompanyFromExclusionListBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        list_id (str): Id of the company exclusion lists to remove the company from
+        list_id (str): The ID of the company exclusion list to remove the company from.
         excluded_company_details (RemoveCompanyFromExclusionListBodyExcludedCompanyDetails): Details of the companies to
             remove from the exclusion list
     """

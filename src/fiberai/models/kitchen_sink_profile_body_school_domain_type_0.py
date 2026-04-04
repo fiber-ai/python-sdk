@@ -15,7 +15,8 @@ T = TypeVar("T", bound="KitchenSinkProfileBodySchoolDomainType0")
 class KitchenSinkProfileBodySchoolDomainType0:
     """
     Attributes:
-        value (None | str | Unset):
+        value (None | str | Unset): The domain of the school the person is currently attending or has attended. If
+            provided, we will lookup the person by school domain.
     """
 
     value: None | str | Unset = UNSET

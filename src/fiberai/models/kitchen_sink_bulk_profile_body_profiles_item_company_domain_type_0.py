@@ -13,9 +13,10 @@ T = TypeVar("T", bound="KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0
 
 @_attrs_define
 class KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0:
-    """
+    """Domain of the person's current company (e.g. 'fiber.ai'). Used with personName for matching.
+
     Attributes:
-        value (None | str | Unset):
+        value (None | str | Unset): The domain of the company the person is currently working at
     """
 
     value: None | str | Unset = UNSET

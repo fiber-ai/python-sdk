@@ -11,15 +11,14 @@ T = TypeVar("T", bound="PollBatchContactEnrichmentResponse200OutputOverallStats"
 
 @_attrs_define
 class PollBatchContactEnrichmentResponse200OutputOverallStats:
-    """Overall statistics for the batch enrichment task
+    """The overall statistics for the batch enrichment task.
 
     Attributes:
-        total_people_to_fetch (int): Total number of people in this bulk task
-        num_completed (int): Number of people for which contact reveal process has been completed.
-        num_remaining (int): Number of people remaining to be processed
-        num_rejected (int): Number of people for which contact reveal process has been rejected either due to invalid
-            input or person not found
-        num_duplicates (int): Number of duplicates found in the input
+        total_people_to_fetch (int): The total number of people in this batch task.
+        num_completed (int): The number of people for which contact reveal has completed.
+        num_remaining (int): The number of people remaining to be processed.
+        num_rejected (int): The number of people rejected due to invalid input or person not found.
+        num_duplicates (int): The number of duplicates found in the input.
     """
 
     total_people_to_fetch: int

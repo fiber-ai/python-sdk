@@ -21,11 +21,17 @@ class KitchenSinkBulkProfileBody:
     Attributes:
         api_key (str): Your Fiber API key
         profiles (list[KitchenSinkBulkProfileBodyProfilesItem]):
-        live_fetch (bool | None | Unset):  Default: False.
-        force_company_match (bool | None | Unset):  Default: False.
-        fuzzy_search (bool | None | Unset):  Default: False.
-        get_detailed_education (bool | None | Unset):  Default: False.
-        get_detailed_work_experience (bool | None | Unset):  Default: False.
+        live_fetch (bool | None | Unset): When true, triggers a real-time LinkedIn profile fetch. Costs additional
+            credits. Useful for profiles not yet in the database or to get the freshest data. Default: False.
+        force_company_match (bool | None | Unset): When true, requires that the matched profile works at the specified
+            company. Without this, the API may return profiles that match by name but work elsewhere. Default: False.
+        fuzzy_search (bool | None | Unset): When true, enables fuzzy name matching. Useful when exact name spelling is
+            uncertain. Default: False.
+        get_detailed_education (bool | None | Unset): When true, returns detailed_education[] with school_details for
+            each education entry. Default: False.
+        get_detailed_work_experience (bool | None | Unset): When true, returns detailed_work_experiences[] with
+            company_details (domains, preferred_name, linkedin_primary_slug, li_org_id, crunchbase_slug) for each work
+            experience. Use this to get company domains for a person. Default: False.
     """
 
     api_key: str

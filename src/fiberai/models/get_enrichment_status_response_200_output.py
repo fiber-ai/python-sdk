@@ -18,14 +18,14 @@ T = TypeVar("T", bound="GetEnrichmentStatusResponse200Output")
 class GetEnrichmentStatusResponse200Output:
     """
     Attributes:
-        enrichment_id (str): Unique ID of the enrichment run
-        current_stage (GetEnrichmentStatusResponse200OutputCurrentStage): Current stage of the enrichment process
-        progress_percent (float): Progress percentage (0-100)
-        steps_completed (list[str]): List of completed step names
-        steps_remaining (list[str]): List of remaining step names
-        created_at (str): When the enrichment was created
-        current_step (None | str | Unset): Name of the current step being executed
-        completed_at (None | str | Unset): When the enrichment completed
+        enrichment_id (str): The unique ID of the enrichment run.
+        current_stage (GetEnrichmentStatusResponse200OutputCurrentStage): The current stage of the enrichment process.
+        progress_percent (float): The progress percentage (0-100).
+        steps_completed (list[str]): The list of completed step names.
+        steps_remaining (list[str]): The list of remaining step names.
+        created_at (str): The timestamp when the enrichment was created.
+        current_step (None | str | Unset): The name of the current step being executed.
+        completed_at (None | str | Unset): The timestamp when the enrichment completed.
     """
 
     enrichment_id: str

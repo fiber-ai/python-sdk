@@ -15,7 +15,7 @@ T = TypeVar("T", bound="KitchenSinkCompanyBodyCompanyNameType0")
 class KitchenSinkCompanyBodyCompanyNameType0:
     """
     Attributes:
-        value (None | str | Unset):
+        value (None | str | Unset): The name of the company. All input words must match.
     """
 
     value: None | str | Unset = UNSET

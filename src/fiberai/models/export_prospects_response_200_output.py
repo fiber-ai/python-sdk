@@ -13,9 +13,9 @@ T = TypeVar("T", bound="ExportProspectsResponse200Output")
 class ExportProspectsResponse200Output:
     """
     Attributes:
-        message (str): Human-readable message about the export status
-        estimated_rows (float): Estimated number of rows that will be exported
-        max_rows_allowed (float): Maximum rows allowed based on export quota
+        message (str): A human-readable message about the export status.
+        estimated_rows (float): The estimated number of rows that will be exported.
+        max_rows_allowed (float): The maximum rows allowed based on the export quota.
     """
 
     message: str

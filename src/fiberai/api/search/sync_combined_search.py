@@ -149,6 +149,9 @@ def sync_detailed(
     default pricing. Actual pricing may vary. Your total charge will vary based on the number of
     companies and profiles returned in your results.\">ⓘ</span></span>
 
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+
     Args:
         body (SyncCombinedSearchBody):
 
@@ -198,6 +201,9 @@ def sync(
     default pricing. Actual pricing may vary. Your total charge will vary based on the number of
     companies and profiles returned in your results.\">ⓘ</span></span>
 
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+
     Args:
         body (SyncCombinedSearchBody):
 
@@ -240,6 +246,9 @@ async def asyncio_detailed(
     credits per company found and 1 credits per profile found.&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary. Your total charge will vary based on the number of
     companies and profiles returned in your results.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (SyncCombinedSearchBody):
@@ -287,6 +296,9 @@ async def asyncio(
     credits per company found and 1 credits per profile found.&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary. Your total charge will vary based on the number of
     companies and profiles returned in your results.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (SyncCombinedSearchBody):

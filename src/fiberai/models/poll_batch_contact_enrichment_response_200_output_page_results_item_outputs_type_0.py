@@ -22,7 +22,7 @@ T = TypeVar("T", bound="PollBatchContactEnrichmentResponse200OutputPageResultsIt
 
 @_attrs_define
 class PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0:
-    """The reveal result for this person
+    """The reveal result for this person.
 
     Attributes:
         emails (list[PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0EmailsItem]):

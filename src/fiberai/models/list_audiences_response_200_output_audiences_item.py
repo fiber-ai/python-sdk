@@ -20,13 +20,14 @@ T = TypeVar("T", bound="ListAudiencesResponse200OutputAudiencesItem")
 class ListAudiencesResponse200OutputAudiencesItem:
     """
     Attributes:
-        audience_id (str): Unique ID of the audience
-        name (str): Name of the audience
-        status (ListAudiencesResponse200OutputAudiencesItemStatus): Current status of the audience
-        creation_method (ListAudiencesResponse200OutputAudiencesItemCreationMethod): How the audience was created
-        created_at (str): When the audience was created
-        companies_count (float): Number of companies
-        prospects_count (float): Number of prospects
+        audience_id (str): The unique ID of the audience.
+        name (str): The name of the audience.
+        status (ListAudiencesResponse200OutputAudiencesItemStatus): The current status of the audience.
+        creation_method (ListAudiencesResponse200OutputAudiencesItemCreationMethod): The method used to create the
+            audience.
+        created_at (str): The timestamp when the audience was created.
+        companies_count (float): The number of companies in the audience.
+        prospects_count (float): The number of prospects in the audience.
     """
 
     audience_id: str

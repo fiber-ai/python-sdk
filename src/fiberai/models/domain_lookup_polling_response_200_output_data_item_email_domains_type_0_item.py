@@ -15,9 +15,10 @@ T = TypeVar("T", bound="DomainLookupPollingResponse200OutputDataItemEmailDomains
 class DomainLookupPollingResponse200OutputDataItemEmailDomainsType0Item:
     """
     Attributes:
-        email_domain (None | str | Unset): The email domain found for the company, non personal email domains only
-        confidence (float | None | Unset): The confidence of the email domain found, 1-10, 10 is most confident
-        rationale (None | str | Unset): The rationale for the email domain found
+        email_domain (None | str | Unset): The email domain found for the company. Personal email domains are excluded.
+        confidence (float | None | Unset): The confidence score for the email domain found (1-10, where 10 is most
+            confident).
+        rationale (None | str | Unset): The rationale for the email domain selection.
     """
 
     email_domain: None | str | Unset = UNSET

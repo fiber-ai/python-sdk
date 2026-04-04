@@ -23,7 +23,8 @@ T = TypeVar("T", bound="GetTimeZonesResponse200")
 class GetTimeZonesResponse200:
     """
     Attributes:
-        output (list[GetTimeZonesResponse200OutputItem]): List of all available timezones with comprehensive information
+        output (list[GetTimeZonesResponse200OutputItem]): The list of all available time zones with comprehensive
+            information.
         charge_info (GetTimeZonesResponse200ChargeInfoType0 | GetTimeZonesResponse200ChargeInfoType1 |
             GetTimeZonesResponse200ChargeInfoType2 | GetTimeZonesResponse200ChargeInfoType3):
         warnings (list[GetTimeZonesResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields in

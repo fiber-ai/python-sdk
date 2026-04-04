@@ -65,6 +65,9 @@ if TYPE_CHECKING:
     from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_started_in_role_type_1 import (
         TextToCombinedSearchResponse200OutputProfileSearchParamsType0StartedInRoleType1,
     )
+    from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_state_type_0 import (
+        TextToCombinedSearchResponse200OutputProfileSearchParamsType0StateType0,
+    )
     from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_stealth_v2_type_0 import (
         TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type0,
     )
@@ -118,6 +121,7 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
             Unset):
         num_followers (None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0NumFollowersType0 | Unset):
         max_people_per_company (float | None | Unset):
+        state (None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0StateType0 | Unset):
     """
 
     job_title_v3: None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0JobTitleV3Type0 | Unset = UNSET
@@ -169,6 +173,7 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
     )
     num_followers: None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0NumFollowersType0 | Unset = UNSET
     max_people_per_company: float | None | Unset = UNSET
+    state: None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0StateType0 | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_approx_age_type_0 import (
@@ -227,6 +232,9 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
         )
         from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_started_in_role_type_1 import (
             TextToCombinedSearchResponse200OutputProfileSearchParamsType0StartedInRoleType1,
+        )
+        from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_state_type_0 import (
+            TextToCombinedSearchResponse200OutputProfileSearchParamsType0StateType0,
         )
         from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_stealth_v2_type_0 import (
             TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type0,
@@ -435,6 +443,14 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
         else:
             max_people_per_company = self.max_people_per_company
 
+        state: dict[str, Any] | None | Unset
+        if isinstance(self.state, Unset):
+            state = UNSET
+        elif isinstance(self.state, TextToCombinedSearchResponse200OutputProfileSearchParamsType0StateType0):
+            state = self.state.to_dict()
+        else:
+            state = self.state
+
         field_dict: dict[str, Any] = {}
 
         field_dict.update({})
@@ -478,6 +494,8 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
             field_dict["numFollowers"] = num_followers
         if max_people_per_company is not UNSET:
             field_dict["maxPeoplePerCompany"] = max_people_per_company
+        if state is not UNSET:
+            field_dict["state"] = state
 
         return field_dict
 
@@ -539,6 +557,9 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
         )
         from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_started_in_role_type_1 import (
             TextToCombinedSearchResponse200OutputProfileSearchParamsType0StartedInRoleType1,
+        )
+        from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_state_type_0 import (
+            TextToCombinedSearchResponse200OutputProfileSearchParamsType0StateType0,
         )
         from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_stealth_v2_type_0 import (
             TextToCombinedSearchResponse200OutputProfileSearchParamsType0StealthV2Type0,
@@ -1084,6 +1105,25 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
 
         max_people_per_company = _parse_max_people_per_company(d.pop("maxPeoplePerCompany", UNSET))
 
+        def _parse_state(
+            data: object,
+        ) -> None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0StateType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                state_type_0 = TextToCombinedSearchResponse200OutputProfileSearchParamsType0StateType0.from_dict(data)
+
+                return state_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0StateType0 | Unset, data)
+
+        state = _parse_state(d.pop("state", UNSET))
+
         text_to_combined_search_response_200_output_profile_search_params_type_0 = cls(
             job_title_v3=job_title_v3,
             job_status=job_status,
@@ -1105,6 +1145,7 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
             num_connections=num_connections,
             num_followers=num_followers,
             max_people_per_company=max_people_per_company,
+            state=state,
         )
 
         return text_to_combined_search_response_200_output_profile_search_params_type_0

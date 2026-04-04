@@ -24,11 +24,11 @@ T = TypeVar("T", bound="UpdateAudienceSearchParamsResponse200Output")
 class UpdateAudienceSearchParamsResponse200Output:
     """
     Attributes:
-        audience_id (str): Unique ID of the audience
+        audience_id (str): The unique ID of the audience.
         company_search_params (None | Unset | UpdateAudienceSearchParamsResponse200OutputCompanySearchParamsType0): The
-            updated company search parameters
+            updated company search parameters.
         prospect_search_params (None | Unset | UpdateAudienceSearchParamsResponse200OutputProspectSearchParamsType0):
-            The updated prospect search parameters
+            The updated prospect search parameters.
     """
 
     audience_id: str

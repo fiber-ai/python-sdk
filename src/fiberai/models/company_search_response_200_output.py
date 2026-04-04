@@ -20,8 +20,8 @@ class CompanySearchResponse200Output:
     """
     Attributes:
         data (list[CompanySearchResponse200OutputDataItem]):
-        next_cursor (None | str | Unset): The cursor for paginating to next page. Provide this in next search call and
-            we will paginate from that point onward.
+        next_cursor (None | str | Unset): The pagination cursor for the next page. Provide this in the next request to
+            continue paginating.
     """
 
     data: list[CompanySearchResponse200OutputDataItem]

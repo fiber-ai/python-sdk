@@ -18,7 +18,7 @@ class KitchenSinkProfileBodyProfileIdentifierType0:
     """
     Attributes:
         identifier (KitchenSinkProfileBodyProfileIdentifierType0Identifier):
-        value (str):
+        value (str): The LinkedIn slug of the person (e.g. 'williamhgates' from linkedin.com/in/williamhgates).
     """
 
     identifier: KitchenSinkProfileBodyProfileIdentifierType0Identifier

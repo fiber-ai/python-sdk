@@ -13,7 +13,7 @@ T = TypeVar("T", bound="AddProspectsToExclusionListResponse200Output")
 class AddProspectsToExclusionListResponse200Output:
     """
     Attributes:
-        list_id (str): Id of the prospect exclusion list
+        list_id (str): The ID of the prospect exclusion list.
         prospects_added (float): Number of prospects added to the exclusion list
     """
 

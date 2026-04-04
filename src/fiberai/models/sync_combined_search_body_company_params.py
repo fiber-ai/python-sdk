@@ -57,6 +57,9 @@ if TYPE_CHECKING:
     from ..models.sync_combined_search_body_company_params_investors_type_0 import (
         SyncCombinedSearchBodyCompanyParamsInvestorsType0,
     )
+    from ..models.sync_combined_search_body_company_params_investors_v2_type_0 import (
+        SyncCombinedSearchBodyCompanyParamsInvestorsV2Type0,
+    )
     from ..models.sync_combined_search_body_company_params_job_posting_stats_type_0 import (
         SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0,
     )
@@ -90,8 +93,8 @@ if TYPE_CHECKING:
     from ..models.sync_combined_search_body_company_params_office_locations_v2_type_0 import (
         SyncCombinedSearchBodyCompanyParamsOfficeLocationsV2Type0,
     )
-    from ..models.sync_combined_search_body_company_params_revenue_usd_type_0 import (
-        SyncCombinedSearchBodyCompanyParamsRevenueUSDType0,
+    from ..models.sync_combined_search_body_company_params_revenue_range_usd_type_0 import (
+        SyncCombinedSearchBodyCompanyParamsRevenueRangeUSDType0,
     )
     from ..models.sync_combined_search_body_company_params_special_flags_type_0 import (
         SyncCombinedSearchBodyCompanyParamsSpecialFlagsType0,
@@ -108,6 +111,9 @@ if TYPE_CHECKING:
     from ..models.sync_combined_search_body_company_params_technologies_type_0 import (
         SyncCombinedSearchBodyCompanyParamsTechnologiesType0,
     )
+    from ..models.sync_combined_search_body_company_params_technologies_v2_type_0 import (
+        SyncCombinedSearchBodyCompanyParamsTechnologiesV2Type0,
+    )
     from ..models.sync_combined_search_body_company_params_tlds_type_0 import (
         SyncCombinedSearchBodyCompanyParamsTldsType0,
     )
@@ -121,8 +127,8 @@ T = TypeVar("T", bound="SyncCombinedSearchBodyCompanyParams")
 
 @_attrs_define
 class SyncCombinedSearchBodyCompanyParams:
-    """Company search params. We would find prospects who are currently working in the companies that satisfy these search
-    params. Make sure that the search scope of companies is small, else we truncate it to the top 1000 companies.
+    """The company search parameters. Prospects are found from companies matching these filters. Results are truncated to
+    the top 1000 companies.
 
         Attributes:
             exact_company_v2 (None | SyncCombinedSearchBodyCompanyParamsExactCompanyV2Type0 | Unset):
@@ -147,7 +153,6 @@ class SyncCombinedSearchBodyCompanyParams:
             linkedin_slugs (list[str] | None | Unset):
             special_flags (None | SyncCombinedSearchBodyCompanyParamsSpecialFlagsType0 | Unset):
             employees (None | SyncCombinedSearchBodyCompanyParamsEmployeesType0 | Unset):
-            revenue_usd (None | SyncCombinedSearchBodyCompanyParamsRevenueUSDType0 | Unset):
             naics_codes (None | SyncCombinedSearchBodyCompanyParamsNaicsCodesType0 | Unset):
             fortune_rankings (None | SyncCombinedSearchBodyCompanyParamsFortuneRankingsType0 | Unset):
             job_postings_v2 (None | SyncCombinedSearchBodyCompanyParamsJobPostingsV2Type0 | Unset):
@@ -157,6 +162,9 @@ class SyncCombinedSearchBodyCompanyParams:
             num_words_in_name (None | SyncCombinedSearchBodyCompanyParamsNumWordsInNameType0 | Unset):
             status (None | SyncCombinedSearchBodyCompanyParamsStatusType0 | Unset):
             technologies (None | SyncCombinedSearchBodyCompanyParamsTechnologiesType0 | Unset):
+            investors_v2 (None | SyncCombinedSearchBodyCompanyParamsInvestorsV2Type0 | Unset):
+            technologies_v2 (None | SyncCombinedSearchBodyCompanyParamsTechnologiesV2Type0 | Unset):
+            revenue_range_usd (None | SyncCombinedSearchBodyCompanyParamsRevenueRangeUSDType0 | Unset):
             investors (None | SyncCombinedSearchBodyCompanyParamsInvestorsType0 | Unset):
             tags (None | SyncCombinedSearchBodyCompanyParamsTagsType0 | Unset):
             crunchbase_categories (None | SyncCombinedSearchBodyCompanyParamsCrunchbaseCategoriesType0 | Unset):
@@ -195,7 +203,6 @@ class SyncCombinedSearchBodyCompanyParams:
     linkedin_slugs: list[str] | None | Unset = UNSET
     special_flags: None | SyncCombinedSearchBodyCompanyParamsSpecialFlagsType0 | Unset = UNSET
     employees: None | SyncCombinedSearchBodyCompanyParamsEmployeesType0 | Unset = UNSET
-    revenue_usd: None | SyncCombinedSearchBodyCompanyParamsRevenueUSDType0 | Unset = UNSET
     naics_codes: None | SyncCombinedSearchBodyCompanyParamsNaicsCodesType0 | Unset = UNSET
     fortune_rankings: None | SyncCombinedSearchBodyCompanyParamsFortuneRankingsType0 | Unset = UNSET
     job_postings_v2: None | SyncCombinedSearchBodyCompanyParamsJobPostingsV2Type0 | Unset = UNSET
@@ -205,6 +212,9 @@ class SyncCombinedSearchBodyCompanyParams:
     num_words_in_name: None | SyncCombinedSearchBodyCompanyParamsNumWordsInNameType0 | Unset = UNSET
     status: None | SyncCombinedSearchBodyCompanyParamsStatusType0 | Unset = UNSET
     technologies: None | SyncCombinedSearchBodyCompanyParamsTechnologiesType0 | Unset = UNSET
+    investors_v2: None | SyncCombinedSearchBodyCompanyParamsInvestorsV2Type0 | Unset = UNSET
+    technologies_v2: None | SyncCombinedSearchBodyCompanyParamsTechnologiesV2Type0 | Unset = UNSET
+    revenue_range_usd: None | SyncCombinedSearchBodyCompanyParamsRevenueRangeUSDType0 | Unset = UNSET
     investors: None | SyncCombinedSearchBodyCompanyParamsInvestorsType0 | Unset = UNSET
     tags: None | SyncCombinedSearchBodyCompanyParamsTagsType0 | Unset = UNSET
     crunchbase_categories: None | SyncCombinedSearchBodyCompanyParamsCrunchbaseCategoriesType0 | Unset = UNSET
@@ -262,6 +272,9 @@ class SyncCombinedSearchBodyCompanyParams:
         from ..models.sync_combined_search_body_company_params_investors_type_0 import (
             SyncCombinedSearchBodyCompanyParamsInvestorsType0,
         )
+        from ..models.sync_combined_search_body_company_params_investors_v2_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsInvestorsV2Type0,
+        )
         from ..models.sync_combined_search_body_company_params_job_posting_stats_type_0 import (
             SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0,
         )
@@ -295,8 +308,8 @@ class SyncCombinedSearchBodyCompanyParams:
         from ..models.sync_combined_search_body_company_params_office_locations_v2_type_0 import (
             SyncCombinedSearchBodyCompanyParamsOfficeLocationsV2Type0,
         )
-        from ..models.sync_combined_search_body_company_params_revenue_usd_type_0 import (
-            SyncCombinedSearchBodyCompanyParamsRevenueUSDType0,
+        from ..models.sync_combined_search_body_company_params_revenue_range_usd_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsRevenueRangeUSDType0,
         )
         from ..models.sync_combined_search_body_company_params_special_flags_type_0 import (
             SyncCombinedSearchBodyCompanyParamsSpecialFlagsType0,
@@ -312,6 +325,9 @@ class SyncCombinedSearchBodyCompanyParams:
         )
         from ..models.sync_combined_search_body_company_params_technologies_type_0 import (
             SyncCombinedSearchBodyCompanyParamsTechnologiesType0,
+        )
+        from ..models.sync_combined_search_body_company_params_technologies_v2_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsTechnologiesV2Type0,
         )
         from ..models.sync_combined_search_body_company_params_tlds_type_0 import (
             SyncCombinedSearchBodyCompanyParamsTldsType0,
@@ -488,14 +504,6 @@ class SyncCombinedSearchBodyCompanyParams:
         else:
             employees = self.employees
 
-        revenue_usd: dict[str, Any] | None | Unset
-        if isinstance(self.revenue_usd, Unset):
-            revenue_usd = UNSET
-        elif isinstance(self.revenue_usd, SyncCombinedSearchBodyCompanyParamsRevenueUSDType0):
-            revenue_usd = self.revenue_usd.to_dict()
-        else:
-            revenue_usd = self.revenue_usd
-
         naics_codes: dict[str, Any] | None | Unset
         if isinstance(self.naics_codes, Unset):
             naics_codes = UNSET
@@ -567,6 +575,30 @@ class SyncCombinedSearchBodyCompanyParams:
             technologies = self.technologies.to_dict()
         else:
             technologies = self.technologies
+
+        investors_v2: dict[str, Any] | None | Unset
+        if isinstance(self.investors_v2, Unset):
+            investors_v2 = UNSET
+        elif isinstance(self.investors_v2, SyncCombinedSearchBodyCompanyParamsInvestorsV2Type0):
+            investors_v2 = self.investors_v2.to_dict()
+        else:
+            investors_v2 = self.investors_v2
+
+        technologies_v2: dict[str, Any] | None | Unset
+        if isinstance(self.technologies_v2, Unset):
+            technologies_v2 = UNSET
+        elif isinstance(self.technologies_v2, SyncCombinedSearchBodyCompanyParamsTechnologiesV2Type0):
+            technologies_v2 = self.technologies_v2.to_dict()
+        else:
+            technologies_v2 = self.technologies_v2
+
+        revenue_range_usd: dict[str, Any] | None | Unset
+        if isinstance(self.revenue_range_usd, Unset):
+            revenue_range_usd = UNSET
+        elif isinstance(self.revenue_range_usd, SyncCombinedSearchBodyCompanyParamsRevenueRangeUSDType0):
+            revenue_range_usd = self.revenue_range_usd.to_dict()
+        else:
+            revenue_range_usd = self.revenue_range_usd
 
         investors: dict[str, Any] | None | Unset
         if isinstance(self.investors, Unset):
@@ -662,8 +694,6 @@ class SyncCombinedSearchBodyCompanyParams:
             field_dict["specialFlags"] = special_flags
         if employees is not UNSET:
             field_dict["employees"] = employees
-        if revenue_usd is not UNSET:
-            field_dict["revenueUSD"] = revenue_usd
         if naics_codes is not UNSET:
             field_dict["naicsCodes"] = naics_codes
         if fortune_rankings is not UNSET:
@@ -682,6 +712,12 @@ class SyncCombinedSearchBodyCompanyParams:
             field_dict["status"] = status
         if technologies is not UNSET:
             field_dict["technologies"] = technologies
+        if investors_v2 is not UNSET:
+            field_dict["investorsV2"] = investors_v2
+        if technologies_v2 is not UNSET:
+            field_dict["technologiesV2"] = technologies_v2
+        if revenue_range_usd is not UNSET:
+            field_dict["revenueRangeUSD"] = revenue_range_usd
         if investors is not UNSET:
             field_dict["investors"] = investors
         if tags is not UNSET:
@@ -747,6 +783,9 @@ class SyncCombinedSearchBodyCompanyParams:
         from ..models.sync_combined_search_body_company_params_investors_type_0 import (
             SyncCombinedSearchBodyCompanyParamsInvestorsType0,
         )
+        from ..models.sync_combined_search_body_company_params_investors_v2_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsInvestorsV2Type0,
+        )
         from ..models.sync_combined_search_body_company_params_job_posting_stats_type_0 import (
             SyncCombinedSearchBodyCompanyParamsJobPostingStatsType0,
         )
@@ -780,8 +819,8 @@ class SyncCombinedSearchBodyCompanyParams:
         from ..models.sync_combined_search_body_company_params_office_locations_v2_type_0 import (
             SyncCombinedSearchBodyCompanyParamsOfficeLocationsV2Type0,
         )
-        from ..models.sync_combined_search_body_company_params_revenue_usd_type_0 import (
-            SyncCombinedSearchBodyCompanyParamsRevenueUSDType0,
+        from ..models.sync_combined_search_body_company_params_revenue_range_usd_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsRevenueRangeUSDType0,
         )
         from ..models.sync_combined_search_body_company_params_special_flags_type_0 import (
             SyncCombinedSearchBodyCompanyParamsSpecialFlagsType0,
@@ -797,6 +836,9 @@ class SyncCombinedSearchBodyCompanyParams:
         )
         from ..models.sync_combined_search_body_company_params_technologies_type_0 import (
             SyncCombinedSearchBodyCompanyParamsTechnologiesType0,
+        )
+        from ..models.sync_combined_search_body_company_params_technologies_v2_type_0 import (
+            SyncCombinedSearchBodyCompanyParamsTechnologiesV2Type0,
         )
         from ..models.sync_combined_search_body_company_params_tlds_type_0 import (
             SyncCombinedSearchBodyCompanyParamsTldsType0,
@@ -1213,23 +1255,6 @@ class SyncCombinedSearchBodyCompanyParams:
 
         employees = _parse_employees(d.pop("employees", UNSET))
 
-        def _parse_revenue_usd(data: object) -> None | SyncCombinedSearchBodyCompanyParamsRevenueUSDType0 | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                revenue_usd_type_0 = SyncCombinedSearchBodyCompanyParamsRevenueUSDType0.from_dict(data)
-
-                return revenue_usd_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(None | SyncCombinedSearchBodyCompanyParamsRevenueUSDType0 | Unset, data)
-
-        revenue_usd = _parse_revenue_usd(d.pop("revenueUSD", UNSET))
-
         def _parse_naics_codes(data: object) -> None | SyncCombinedSearchBodyCompanyParamsNaicsCodesType0 | Unset:
             if data is None:
                 return data
@@ -1393,6 +1418,61 @@ class SyncCombinedSearchBodyCompanyParams:
 
         technologies = _parse_technologies(d.pop("technologies", UNSET))
 
+        def _parse_investors_v2(data: object) -> None | SyncCombinedSearchBodyCompanyParamsInvestorsV2Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                investors_v2_type_0 = SyncCombinedSearchBodyCompanyParamsInvestorsV2Type0.from_dict(data)
+
+                return investors_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | SyncCombinedSearchBodyCompanyParamsInvestorsV2Type0 | Unset, data)
+
+        investors_v2 = _parse_investors_v2(d.pop("investorsV2", UNSET))
+
+        def _parse_technologies_v2(
+            data: object,
+        ) -> None | SyncCombinedSearchBodyCompanyParamsTechnologiesV2Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                technologies_v2_type_0 = SyncCombinedSearchBodyCompanyParamsTechnologiesV2Type0.from_dict(data)
+
+                return technologies_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | SyncCombinedSearchBodyCompanyParamsTechnologiesV2Type0 | Unset, data)
+
+        technologies_v2 = _parse_technologies_v2(d.pop("technologiesV2", UNSET))
+
+        def _parse_revenue_range_usd(
+            data: object,
+        ) -> None | SyncCombinedSearchBodyCompanyParamsRevenueRangeUSDType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                revenue_range_usd_type_0 = SyncCombinedSearchBodyCompanyParamsRevenueRangeUSDType0.from_dict(data)
+
+                return revenue_range_usd_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | SyncCombinedSearchBodyCompanyParamsRevenueRangeUSDType0 | Unset, data)
+
+        revenue_range_usd = _parse_revenue_range_usd(d.pop("revenueRangeUSD", UNSET))
+
         def _parse_investors(data: object) -> None | SyncCombinedSearchBodyCompanyParamsInvestorsType0 | Unset:
             if data is None:
                 return data
@@ -1526,7 +1606,6 @@ class SyncCombinedSearchBodyCompanyParams:
             linkedin_slugs=linkedin_slugs,
             special_flags=special_flags,
             employees=employees,
-            revenue_usd=revenue_usd,
             naics_codes=naics_codes,
             fortune_rankings=fortune_rankings,
             job_postings_v2=job_postings_v2,
@@ -1536,6 +1615,9 @@ class SyncCombinedSearchBodyCompanyParams:
             num_words_in_name=num_words_in_name,
             status=status,
             technologies=technologies,
+            investors_v2=investors_v2,
+            technologies_v2=technologies_v2,
+            revenue_range_usd=revenue_range_usd,
             investors=investors,
             tags=tags,
             crunchbase_categories=crunchbase_categories,

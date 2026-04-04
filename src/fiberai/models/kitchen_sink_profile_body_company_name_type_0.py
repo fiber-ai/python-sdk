@@ -15,7 +15,7 @@ T = TypeVar("T", bound="KitchenSinkProfileBodyCompanyNameType0")
 class KitchenSinkProfileBodyCompanyNameType0:
     """
     Attributes:
-        value (None | str | Unset):
+        value (None | str | Unset): The name of the company the person is currently working at
     """
 
     value: None | str | Unset = UNSET

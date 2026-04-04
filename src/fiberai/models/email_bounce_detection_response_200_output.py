@@ -15,16 +15,17 @@ T = TypeVar("T", bound="EmailBounceDetectionResponse200Output")
 class EmailBounceDetectionResponse200Output:
     """
     Attributes:
-        email (str): The email to validate
-        is_catch_all (bool): If true, is a catch-all email address
-        is_role_based (bool): If true, is like 'sales@' or 'hello@' instead of an actual person's email
-        is_disposable (bool): If true, uses a disposable email provider like temp-mail.org
-        is_consumer (bool): If true, uses a public email service like Gmail, Outlook, or Protonmail, rather than a
-            commercial service like Google Workspace
-        email_provider (str): The email provider
-        verdict (EmailBounceDetectionResponse200OutputVerdict): Our AI's final estimate of whether the email is likely
-            to be correct and deliverable
-        deliverability_score (int): The deliverability score out of 100; higher scores are better
+        email (str): The email address that was validated.
+        is_catch_all (bool): Whether the address is a catch-all email.
+        is_role_based (bool): Whether the address is role-based (e.g. 'sales@' or 'hello@') rather than a personal
+            email.
+        is_disposable (bool): Whether the address uses a disposable email provider.
+        is_consumer (bool): Whether the address uses a consumer email service (e.g. Gmail, Outlook) rather than a
+            commercial service.
+        email_provider (str): The email provider.
+        verdict (EmailBounceDetectionResponse200OutputVerdict): The final estimate of whether the email is likely to be
+            correct and deliverable.
+        deliverability_score (int): The deliverability score out of 100. Higher scores are better.
     """
 
     email: str

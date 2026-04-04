@@ -20,13 +20,13 @@ T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType2")
 
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType2:
-    """profiles
+    """A profile-only search.
 
     Attributes:
-        type_ (CreateSavedSearchBodySearchParamsType2Type): profiles
+        type_ (CreateSavedSearchBodySearchParamsType2Type): The search type: profiles only.
         profile_search_params (CreateSavedSearchBodySearchParamsType2ProfileSearchParams | Unset): The profile search
-            params. This is same as our normal profile search api.
-        max_profiles (int | None | Unset): Max profiles to find. Defaults to 10000 if not provided. Default: 10000.
+            parameters. Uses the same schema as the profile search endpoint.
+        max_profiles (int | None | Unset): The maximum number of profiles to find. Defaults to 10000. Default: 10000.
     """
 
     type_: CreateSavedSearchBodySearchParamsType2Type

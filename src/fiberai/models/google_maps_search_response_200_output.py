@@ -13,8 +13,7 @@ T = TypeVar("T", bound="GoogleMapsSearchResponse200Output")
 class GoogleMapsSearchResponse200Output:
     """
     Attributes:
-        search_id (str): The ID of the Google Maps search. Pass this to the check and poll endpoints to monitor progress
-            and retrieve results.
+        search_id (str): The ID of the Google Maps search. Use this to poll for the search results.
     """
 
     search_id: str

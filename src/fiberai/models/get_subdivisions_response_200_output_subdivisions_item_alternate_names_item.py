@@ -13,9 +13,8 @@ T = TypeVar("T", bound="GetSubdivisionsResponse200OutputSubdivisionsItemAlternat
 class GetSubdivisionsResponse200OutputSubdivisionsItemAlternateNamesItem:
     """
     Attributes:
-        name (str): The alternate name
-        language_code (str): ISO 639 language code (e.g. 'eng', 'hin', 'deu'). See
-            https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes to map codes to full language names.
+        name (str): The alternate name.
+        language_code (str): The ISO 639 language code (e.g. 'eng', 'hin', 'deu').
     """
 
     name: str

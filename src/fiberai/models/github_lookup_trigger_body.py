@@ -20,8 +20,8 @@ class GithubLookupTriggerBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        overall_context (str): Descriptor of what your people have in common and who they are. For example: "Engineers
-            at Fiber AI" or "YC founders 2021 batch." Helps our agent disambiguate people with similar names.
+        overall_context (str): A descriptor of what the people have in common (e.g. "Engineers at Fiber AI" or "YC
+            founders 2021 batch"). Helps disambiguate people with similar names.
         people (list[GithubLookupTriggerBodyPeopleItemType0 | GithubLookupTriggerBodyPeopleItemType1 |
             GithubLookupTriggerBodyPeopleItemType2]): List of people to look up. Maximum 2000 people can be provided at a
             time.

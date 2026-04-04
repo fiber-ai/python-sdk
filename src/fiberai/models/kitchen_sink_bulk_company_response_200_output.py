@@ -21,8 +21,9 @@ T = TypeVar("T", bound="KitchenSinkBulkCompanyResponse200Output")
 class KitchenSinkBulkCompanyResponse200Output:
     """
     Attributes:
-        data (list[list[KitchenSinkBulkCompanyResponse200OutputDataItemItem]]):
-        message (None | str | Unset):
+        data (list[list[KitchenSinkBulkCompanyResponse200OutputDataItemItem]]): Companies found for each lookup. A 2D
+            array because each lookup may yield multiple companies.
+        message (None | str | Unset): Additional context if no matching company was found.
     """
 
     data: list[list[KitchenSinkBulkCompanyResponse200OutputDataItemItem]]

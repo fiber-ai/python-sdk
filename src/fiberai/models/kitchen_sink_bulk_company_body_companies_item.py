@@ -31,14 +31,18 @@ T = TypeVar("T", bound="KitchenSinkBulkCompanyBodyCompaniesItem")
 
 @_attrs_define
 class KitchenSinkBulkCompanyBodyCompaniesItem:
-    """
+    """Parameters for searching for a company. Provide at least one parameter. More parameters improve match accuracy.
+
     Attributes:
         company_identifier (KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType0 |
             KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType1 |
-            KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType2 | None | Unset):
+            KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType2 | None | Unset): A unique identifier for the
+            company. Accepts one of: linkedinSlug, linkedinUrl, or linkedinOrgID. Providing this increases the accuracy and
+            speed of the lookup. If this is provided, you do not need to supply companyName or companyDomain.
         company_name (KitchenSinkBulkCompanyBodyCompaniesItemCompanyNameType0 | None | Unset):
         company_domain (KitchenSinkBulkCompanyBodyCompaniesItemCompanyDomainType0 | None | Unset):
-        num_companies (int | Unset):  Default: 1.
+        num_companies (int | Unset): Maximum number of company results to return. Sorted by best match. Defaults to 1.
+            Default: 1.
     """
 
     company_identifier: (

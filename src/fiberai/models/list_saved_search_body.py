@@ -16,8 +16,8 @@ class ListSavedSearchBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        cursor (None | str | Unset): The cursor to start from
-        page_size (int | Unset): The number of saved searches to return Default: 100.
+        cursor (None | str | Unset): The pagination cursor to continue from a previous response.
+        page_size (int | Unset): The number of saved searches to return per page. Default: 100.
     """
 
     api_key: str

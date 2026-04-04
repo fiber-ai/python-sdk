@@ -21,8 +21,8 @@ class CompanyTypeaheadBody:
         api_key (str): Your Fiber API key
         starts_with (str):
         org_type (CompanyTypeaheadBodyOrgTypeType1 | CompanyTypeaheadBodyOrgTypeType2Type1 |
-            CompanyTypeaheadBodyOrgTypeType3Type1 | None | Unset): The input schema for the typeahead. Keep orgType as
-            investor, school or null if not sure
+            CompanyTypeaheadBodyOrgTypeType3Type1 | None | Unset): The organization type filter. Use 'investor', 'school',
+            or omit for all types.
     """
 
     api_key: str

@@ -19,8 +19,8 @@ T = TypeVar("T", bound="KitchenSinkCompanyResponse200Output")
 class KitchenSinkCompanyResponse200Output:
     """
     Attributes:
-        data (list[KitchenSinkCompanyResponse200OutputDataItem]):
-        message (None | str | Unset):
+        data (list[KitchenSinkCompanyResponse200OutputDataItem]): The list of companies found for the given query
+        message (None | str | Unset): Additional context if no matching company was found.
     """
 
     data: list[KitchenSinkCompanyResponse200OutputDataItem]

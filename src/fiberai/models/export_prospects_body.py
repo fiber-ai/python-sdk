@@ -18,9 +18,9 @@ class ExportProspectsBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        format_ (ExportProspectsBodyFormat): Format of the exported CSV
+        format_ (ExportProspectsBodyFormat): The format of the exported file.
         max_rows_to_export (int | None | Unset): Maximum number of rows to export. Defaults to remaining export quota.
-        exclude_fields (list[ExportProspectsBodyExcludeFieldsItem] | Unset): Fields to exclude from the export
+        exclude_fields (list[ExportProspectsBodyExcludeFieldsItem] | Unset): The fields to exclude from the export.
         only_with_contacts (bool | Unset): If true, only export prospects with verified emails or phones Default: False.
         user_email (None | str | Unset): Optional email address to receive CSV export links. If not provided, no email
             will be sent.

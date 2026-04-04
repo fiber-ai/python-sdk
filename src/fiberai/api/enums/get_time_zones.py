@@ -140,8 +140,8 @@ def sync_detailed(
 ]:
     r"""List time zones
 
-     Get a comprehensive list of all available timezones with geographic information, current time data,
-    and UTC offset ranges. This is useful for passing time zones into our search filters.
+     Get a comprehensive list of all available time zones with geographic information, current time data,
+    and UTC offset ranges. Useful for populating time zone filters in search requests.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
@@ -188,8 +188,8 @@ def sync(
 ):
     r"""List time zones
 
-     Get a comprehensive list of all available timezones with geographic information, current time data,
-    and UTC offset ranges. This is useful for passing time zones into our search filters.
+     Get a comprehensive list of all available time zones with geographic information, current time data,
+    and UTC offset ranges. Useful for populating time zone filters in search requests.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
@@ -230,8 +230,8 @@ async def asyncio_detailed(
 ]:
     r"""List time zones
 
-     Get a comprehensive list of all available timezones with geographic information, current time data,
-    and UTC offset ranges. This is useful for passing time zones into our search filters.
+     Get a comprehensive list of all available time zones with geographic information, current time data,
+    and UTC offset ranges. Useful for populating time zone filters in search requests.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
@@ -276,8 +276,8 @@ async def asyncio(
 ):
     r"""List time zones
 
-     Get a comprehensive list of all available timezones with geographic information, current time data,
-    and UTC offset ranges. This is useful for passing time zones into our search filters.
+     Get a comprehensive list of all available time zones with geographic information, current time data,
+    and UTC offset ranges. Useful for populating time zone filters in search requests.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 

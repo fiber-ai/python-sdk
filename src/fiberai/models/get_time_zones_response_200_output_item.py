@@ -17,9 +17,9 @@ class GetTimeZonesResponse200OutputItem:
     Attributes:
         time_zone_name (str): The IANA timezone identifier (e.g., 'America/New_York')
         min_utc_offset_minutes (int): The minimum (most negative) offset from UTC at any point in the year, in minutes.
-            Time zones that observe Daylight Savings will always have a max offset that's 60 greater than their min offset.
+            Time zones that observe daylight saving time will have a max offset 60 minutes greater than their min offset.
         max_utc_offset_minutes (int): The maximum (most positive) offset from UTC at any point in the year, in minutes.
-            Time zones that observe Daylight Savings will always have a max offset that's 60 greater than their min offset.
+            Time zones that observe daylight saving time will have a max offset 60 minutes greater than their min offset.
         main_cities (list[str]): Major cities in this timezone
         alternative_name (str): Alternative/common name for the timezone
         sub_zones (list[str]): Related timezone variants that share geographic proximity or similar time offset
@@ -29,11 +29,11 @@ class GetTimeZonesResponse200OutputItem:
         current_local_time (str): Current time in this timezone, formatted as an ISO 8601 string.
         abbreviation (str): Current timezone abbreviation (e.g., 'EST', 'PDT')
         display_name (str): Human-friendly display name
-        is_daylight_saving (bool): Whether the time zone is currently in Daylight Savings time.
+        is_daylight_saving (bool): Whether the time zone is currently observing daylight saving time.
         continent_code (None | str | Unset): Continent code (e.g., 'NA' for North America)
         continent_name (None | str | Unset): Continent name (e.g., 'North America')
         country_name (None | str | Unset): Country name (e.g., 'United States')
-        country_code_alpha_2 (None | str | Unset): ISO country code (e.g., 'US'). This is a 2 letter code.
+        country_code_alpha_2 (None | str | Unset): The ISO 3166-1 alpha-2 country code (e.g. 'US').
     """
 
     time_zone_name: str

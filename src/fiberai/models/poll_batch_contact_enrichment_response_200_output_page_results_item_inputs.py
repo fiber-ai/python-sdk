@@ -17,7 +17,7 @@ T = TypeVar("T", bound="PollBatchContactEnrichmentResponse200OutputPageResultsIt
 
 @_attrs_define
 class PollBatchContactEnrichmentResponse200OutputPageResultsItemInputs:
-    """The input details provided for this person
+    """The input details provided for this person.
 
     Attributes:
         linkedin_url (PollBatchContactEnrichmentResponse200OutputPageResultsItemInputsLinkedinUrl):

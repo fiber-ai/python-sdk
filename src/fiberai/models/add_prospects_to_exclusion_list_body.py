@@ -20,9 +20,9 @@ class AddProspectsToExclusionListBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        list_id (str): Id of the prospect exclusion list to add prospects to
-        prospects (list[AddProspectsToExclusionListBodyProspectsItem]): Prospects to add to the exclusion list. Max 5000
-            prospects can be added at a time.
+        list_id (str): The ID of the prospect exclusion list to add prospects to.
+        prospects (list[AddProspectsToExclusionListBodyProspectsItem]): The prospects to add to the exclusion list. A
+            maximum of 5000 prospects can be added at a time.
     """
 
     api_key: str

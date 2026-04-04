@@ -29,7 +29,7 @@ T = TypeVar("T", bound="EstimateEnrichmentCostResponse200OutputBreakdown")
 
 @_attrs_define
 class EstimateEnrichmentCostResponse200OutputBreakdown:
-    """Detailed cost breakdown by operation type
+    """The detailed cost breakdown by operation type.
 
     Attributes:
         sales_nav (EstimateEnrichmentCostResponse200OutputBreakdownSalesNav): Sales Navigator enrichment cost

@@ -20,12 +20,11 @@ class TextToCombinedSearchBody:
             FinTech startups located in New York.
         profile_item_limit (float): The number of profiles to return.
         company_item_limit (float | None | Unset): The number of companies to return. If not provided, no companies will
-            be returned. But, regardless of the value you give here, we'll find all prospects (based on the query) who work
-            at companies that satisfy the companyParams.
-        company_exclusion_list_i_ds (list[str] | None | Unset): Filter out companies which belong to the given company
-            exclusion lists. You can create company exclusion lists via our API
-        prospect_exclusion_list_i_ds (list[str] | None | Unset): Filter out people which belong to the given prospect
-            exclusion lists. You can create prospect exclusion lists via our API
+            be returned. Prospects are found based on the query regardless of this value.
+        company_exclusion_list_i_ds (list[str] | None | Unset): The IDs of company exclusion lists to filter out
+            matching companies.
+        prospect_exclusion_list_i_ds (list[str] | None | Unset): The IDs of prospect exclusion lists to filter out
+            matching prospects.
         get_detailed_education (bool | None | Unset): Whether to include deep details about each educational item, like
             the school's LinkedIn URL, website, location, etc. That'll be put in the detailedEducation array. This slows
             down the API call, so only enable this if you need it. Default: False.

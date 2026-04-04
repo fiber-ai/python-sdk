@@ -15,12 +15,12 @@ T = TypeVar("T", bound="GetAudienceCompaniesResponse200OutputCompaniesItem")
 class GetAudienceCompaniesResponse200OutputCompaniesItem:
     """
     Attributes:
-        company_id (str): Unique ID of the company
-        name (None | str | Unset): Company name
-        linkedin_url (None | str | Unset): LinkedIn URL
-        domain (None | str | Unset): Company domain
-        industry (None | str | Unset): Industry
-        headcount (float | None | Unset): Employee count
+        company_id (str): The unique ID of the company.
+        name (None | str | Unset): The company name.
+        linkedin_url (None | str | Unset): The company LinkedIn URL.
+        domain (None | str | Unset): The company domain.
+        industry (None | str | Unset): The company industry.
+        headcount (float | None | Unset): The employee count.
     """
 
     company_id: str

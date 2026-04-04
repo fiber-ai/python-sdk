@@ -84,6 +84,9 @@ if TYPE_CHECKING:
     from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_platforms_type_0 import (
         KitchenSinkBulkCompanyResponse200OutputDataItemItemPlatformsType0,
     )
+    from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_revenue_estimate_type_0 import (
+        KitchenSinkBulkCompanyResponse200OutputDataItemItemRevenueEstimateType0,
+    )
     from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_role_count_matches_type_0_item import (
         KitchenSinkBulkCompanyResponse200OutputDataItemItemRoleCountMatchesType0Item,
     )
@@ -142,7 +145,7 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
         names (list[str] | None | Unset):
         preferred_name (None | str | Unset):
         preferred_name_word_count (int | None | Unset):
-        revenue_usd (float | None | Unset):
+        revenue_estimate (KitchenSinkBulkCompanyResponse200OutputDataItemItemRevenueEstimateType0 | None | Unset):
         standard_industries (list[KitchenSinkBulkCompanyResponse200OutputDataItemItemStandardIndustriesType0Item] | None
             | Unset):
         status_consensus (None | str | Unset):
@@ -249,7 +252,7 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
     names: list[str] | None | Unset = UNSET
     preferred_name: None | str | Unset = UNSET
     preferred_name_word_count: int | None | Unset = UNSET
-    revenue_usd: float | None | Unset = UNSET
+    revenue_estimate: KitchenSinkBulkCompanyResponse200OutputDataItemItemRevenueEstimateType0 | None | Unset = UNSET
     standard_industries: (
         list[KitchenSinkBulkCompanyResponse200OutputDataItemItemStandardIndustriesType0Item] | None | Unset
     ) = UNSET
@@ -359,6 +362,9 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
         )
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_platforms_type_0 import (
             KitchenSinkBulkCompanyResponse200OutputDataItemItemPlatformsType0,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_revenue_estimate_type_0 import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemRevenueEstimateType0,
         )
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_stock_info_consensus_type_0 import (
             KitchenSinkBulkCompanyResponse200OutputDataItemItemStockInfoConsensusType0,
@@ -645,11 +651,13 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
         else:
             preferred_name_word_count = self.preferred_name_word_count
 
-        revenue_usd: float | None | Unset
-        if isinstance(self.revenue_usd, Unset):
-            revenue_usd = UNSET
+        revenue_estimate: dict[str, Any] | None | Unset
+        if isinstance(self.revenue_estimate, Unset):
+            revenue_estimate = UNSET
+        elif isinstance(self.revenue_estimate, KitchenSinkBulkCompanyResponse200OutputDataItemItemRevenueEstimateType0):
+            revenue_estimate = self.revenue_estimate.to_dict()
         else:
-            revenue_usd = self.revenue_usd
+            revenue_estimate = self.revenue_estimate
 
         standard_industries: list[str] | None | Unset
         if isinstance(self.standard_industries, Unset):
@@ -1158,8 +1166,8 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
             field_dict["preferred_name"] = preferred_name
         if preferred_name_word_count is not UNSET:
             field_dict["preferred_name_word_count"] = preferred_name_word_count
-        if revenue_usd is not UNSET:
-            field_dict["revenue_usd"] = revenue_usd
+        if revenue_estimate is not UNSET:
+            field_dict["revenue_estimate"] = revenue_estimate
         if standard_industries is not UNSET:
             field_dict["standard_industries"] = standard_industries
         if status_consensus is not UNSET:
@@ -1328,6 +1336,9 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
         )
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_platforms_type_0 import (
             KitchenSinkBulkCompanyResponse200OutputDataItemItemPlatformsType0,
+        )
+        from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_revenue_estimate_type_0 import (
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemRevenueEstimateType0,
         )
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_role_count_matches_type_0_item import (
             KitchenSinkBulkCompanyResponse200OutputDataItemItemRoleCountMatchesType0Item,
@@ -1924,14 +1935,26 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
 
         preferred_name_word_count = _parse_preferred_name_word_count(d.pop("preferred_name_word_count", UNSET))
 
-        def _parse_revenue_usd(data: object) -> float | None | Unset:
+        def _parse_revenue_estimate(
+            data: object,
+        ) -> KitchenSinkBulkCompanyResponse200OutputDataItemItemRevenueEstimateType0 | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(float | None | Unset, data)
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                revenue_estimate_type_0 = (
+                    KitchenSinkBulkCompanyResponse200OutputDataItemItemRevenueEstimateType0.from_dict(data)
+                )
 
-        revenue_usd = _parse_revenue_usd(d.pop("revenue_usd", UNSET))
+                return revenue_estimate_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(KitchenSinkBulkCompanyResponse200OutputDataItemItemRevenueEstimateType0 | None | Unset, data)
+
+        revenue_estimate = _parse_revenue_estimate(d.pop("revenue_estimate", UNSET))
 
         def _parse_standard_industries(
             data: object,
@@ -2840,7 +2863,7 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
             names=names,
             preferred_name=preferred_name,
             preferred_name_word_count=preferred_name_word_count,
-            revenue_usd=revenue_usd,
+            revenue_estimate=revenue_estimate,
             standard_industries=standard_industries,
             status_consensus=status_consensus,
             stock_info_consensus=stock_info_consensus,

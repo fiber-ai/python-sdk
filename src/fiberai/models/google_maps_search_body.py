@@ -25,8 +25,8 @@ class GoogleMapsSearchBody:
         query (str): The search query to run on Google Maps. Do not include a location info here. Examples: 'dominos
             pizza', 'real estate agent'.
         strategy (GoogleMapsSearchBodyStrategyType0 | GoogleMapsSearchBodyStrategyType1 |
-            GoogleMapsSearchBodyStrategyType2): The strategy by which to search for places.
-        name (None | str | Unset): An Optional name for the project for user reference. Not used for anything else.
+            GoogleMapsSearchBodyStrategyType2): The strategy for searching places.
+        name (None | str | Unset): An optional name for the project for reference purposes.
         max_results (int | Unset): The maximum number of Google Maps results to return. Default: 100.
     """
 

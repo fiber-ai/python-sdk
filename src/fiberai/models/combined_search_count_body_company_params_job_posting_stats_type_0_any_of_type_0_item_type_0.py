@@ -1,0 +1,85 @@
+from __future__ import annotations
+
+from collections.abc import Mapping
+from typing import TYPE_CHECKING, Any, TypeVar
+
+from attrs import define as _attrs_define
+from attrs import field as _attrs_field
+
+from ..models.combined_search_count_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_0_rule import (
+    CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType0Rule,
+)
+
+if TYPE_CHECKING:
+    from ..models.combined_search_count_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_0_count import (
+        CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType0Count,
+    )
+
+
+T = TypeVar("T", bound="CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType0")
+
+
+@_attrs_define
+class CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType0:
+    """
+    Attributes:
+        rule (CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType0Rule):
+        count (CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType0Count):
+    """
+
+    rule: CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType0Rule
+    count: CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType0Count
+    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        rule = self.rule.value
+
+        count = self.count.to_dict()
+
+        field_dict: dict[str, Any] = {}
+        field_dict.update(self.additional_properties)
+        field_dict.update(
+            {
+                "rule": rule,
+                "count": count,
+            }
+        )
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.combined_search_count_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_0_count import (
+            CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType0Count,
+        )
+
+        d = dict(src_dict)
+        rule = CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType0Rule(d.pop("rule"))
+
+        count = CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType0Count.from_dict(
+            d.pop("count")
+        )
+
+        combined_search_count_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_0 = cls(
+            rule=rule,
+            count=count,
+        )
+
+        combined_search_count_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_0.additional_properties = d
+        return combined_search_count_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_0
+
+    @property
+    def additional_keys(self) -> list[str]:
+        return list(self.additional_properties.keys())
+
+    def __getitem__(self, key: str) -> Any:
+        return self.additional_properties[key]
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        self.additional_properties[key] = value
+
+    def __delitem__(self, key: str) -> None:
+        del self.additional_properties[key]
+
+    def __contains__(self, key: str) -> bool:
+        return key in self.additional_properties

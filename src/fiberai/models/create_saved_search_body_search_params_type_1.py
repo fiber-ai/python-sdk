@@ -20,13 +20,13 @@ T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType1")
 
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType1:
-    """companies
+    """A company-only search.
 
     Attributes:
-        type_ (CreateSavedSearchBodySearchParamsType1Type): companies
-        company_search_params (CreateSavedSearchBodySearchParamsType1CompanySearchParams): The company search params.
-            This is same as our normal company search api.
-        max_companies (int | None | Unset): Max companies to find. Defaults to 10000 if not provided. Default: 10000.
+        type_ (CreateSavedSearchBodySearchParamsType1Type): The search type: companies only.
+        company_search_params (CreateSavedSearchBodySearchParamsType1CompanySearchParams): The company search
+            parameters. Uses the same schema as the company search endpoint.
+        max_companies (int | None | Unset): The maximum number of companies to find. Defaults to 10000. Default: 10000.
     """
 
     type_: CreateSavedSearchBodySearchParamsType1Type

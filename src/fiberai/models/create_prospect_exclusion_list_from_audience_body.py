@@ -16,10 +16,10 @@ class CreateProspectExclusionListFromAudienceBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        audience_id (str): Id of the audience to create exclusion list from
-        name (None | str | Unset): Name of the prospect exclusion list. If not provided, defaults to 'Exclusion list
-            from {audienceName}'
-        is_organization_wide (bool | Unset): Is the prospect exclusion list organization wide Default: False.
+        audience_id (str): The ID of the audience to create the exclusion list from.
+        name (None | str | Unset): The name of the prospect exclusion list. Defaults to 'Exclusion list from
+            {audienceName}' if not provided.
+        is_organization_wide (bool | Unset): Whether the prospect exclusion list is organization-wide. Default: False.
     """
 
     api_key: str

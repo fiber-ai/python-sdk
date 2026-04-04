@@ -15,7 +15,7 @@ T = TypeVar("T", bound="KitchenSinkProfileBodyJobTitleType0")
 class KitchenSinkProfileBodyJobTitleType0:
     """
     Attributes:
-        value (None | str | Unset):
+        value (None | str | Unset): The job title of the person to search for
     """
 
     value: None | str | Unset = UNSET

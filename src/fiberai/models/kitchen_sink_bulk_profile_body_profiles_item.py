@@ -46,20 +46,25 @@ T = TypeVar("T", bound="KitchenSinkBulkProfileBodyProfilesItem")
 
 @_attrs_define
 class KitchenSinkBulkProfileBodyProfilesItem:
-    """
+    """Parameters for searching for a person. Provide at least one parameter. More parameters improve match accuracy.
+
     Attributes:
-        company_domain (KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0 | None | Unset):
+        company_domain (KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0 | None | Unset): Domain of the person's
+            current company (e.g. 'fiber.ai'). Used with personName for matching.
         company_name (KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0 | None | Unset):
         job_title (KitchenSinkBulkProfileBodyProfilesItemJobTitleType0 | None | Unset):
-        person_name (KitchenSinkBulkProfileBodyProfilesItemPersonNameType0 | None | Unset):
-        num_profiles (int | Unset):  Default: 1.
+        person_name (KitchenSinkBulkProfileBodyProfilesItemPersonNameType0 | None | Unset): Person's name for matching.
+            Best used with companyDomain or companyIdentifier.
+        num_profiles (int | Unset): Maximum number of profile results to return per lookup. Defaults to 1. Default: 1.
         profile_identifier (KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0 |
             KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1 |
-            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2 | None | Unset):
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2 | None | Unset): LinkedIn profile identifier (slug
+            or URL). Provides the best match accuracy.
         company_identifier (KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0 |
             KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1 |
-            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2 | None | Unset):
-        email_address (None | str | Unset):
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2 | None | Unset): LinkedIn identifier for the
+            person's current company. Used with personName for matching.
+        email_address (None | str | Unset): Email address to look up. Second-best accuracy after profileIdentifier.
     """
 
     company_domain: KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0 | None | Unset = UNSET

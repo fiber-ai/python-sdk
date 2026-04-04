@@ -18,7 +18,7 @@ class ListAudiencesResponse200Output:
     """
     Attributes:
         audiences (list[ListAudiencesResponse200OutputAudiencesItem]):
-        total_count (float): Total number of audiences
+        total_count (float): The total number of audiences.
     """
 
     audiences: list[ListAudiencesResponse200OutputAudiencesItem]

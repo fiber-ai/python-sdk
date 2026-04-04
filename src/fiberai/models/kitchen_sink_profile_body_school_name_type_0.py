@@ -15,7 +15,8 @@ T = TypeVar("T", bound="KitchenSinkProfileBodySchoolNameType0")
 class KitchenSinkProfileBodySchoolNameType0:
     """
     Attributes:
-        value (None | str | Unset):
+        value (None | str | Unset): The name of the school the person is currently attending or has attended. If
+            provided, we will lookup the person by school name.
     """
 
     value: None | str | Unset = UNSET

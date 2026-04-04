@@ -141,8 +141,8 @@ def sync_detailed(
     r"""Find person by email (single)
 
      Given an email address, find the person's LinkedIn profile and personal details.
-    If you also have the person's name, company, or other identifiers, use the Kitchen Sink endpoint
-    instead — it accepts all available signals and produces better matches.
+    If the person's name, company, or other identifiers are also available, use the Kitchen Sink
+    endpoint instead — it accepts all available signals and produces better matches.
     To avoid 429 errors, space requests evenly (such as 1/60th the rate limit per second) rather than
     bursting them all at once.
 
@@ -150,6 +150,9 @@ def sync_detailed(
 
     <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ReverseEmailLookupBody):
@@ -192,8 +195,8 @@ def sync(
     r"""Find person by email (single)
 
      Given an email address, find the person's LinkedIn profile and personal details.
-    If you also have the person's name, company, or other identifiers, use the Kitchen Sink endpoint
-    instead — it accepts all available signals and produces better matches.
+    If the person's name, company, or other identifiers are also available, use the Kitchen Sink
+    endpoint instead — it accepts all available signals and produces better matches.
     To avoid 429 errors, space requests evenly (such as 1/60th the rate limit per second) rather than
     bursting them all at once.
 
@@ -201,6 +204,9 @@ def sync(
 
     <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ReverseEmailLookupBody):
@@ -237,8 +243,8 @@ async def asyncio_detailed(
     r"""Find person by email (single)
 
      Given an email address, find the person's LinkedIn profile and personal details.
-    If you also have the person's name, company, or other identifiers, use the Kitchen Sink endpoint
-    instead — it accepts all available signals and produces better matches.
+    If the person's name, company, or other identifiers are also available, use the Kitchen Sink
+    endpoint instead — it accepts all available signals and produces better matches.
     To avoid 429 errors, space requests evenly (such as 1/60th the rate limit per second) rather than
     bursting them all at once.
 
@@ -246,6 +252,9 @@ async def asyncio_detailed(
 
     <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ReverseEmailLookupBody):
@@ -286,8 +295,8 @@ async def asyncio(
     r"""Find person by email (single)
 
      Given an email address, find the person's LinkedIn profile and personal details.
-    If you also have the person's name, company, or other identifiers, use the Kitchen Sink endpoint
-    instead — it accepts all available signals and produces better matches.
+    If the person's name, company, or other identifiers are also available, use the Kitchen Sink
+    endpoint instead — it accepts all available signals and produces better matches.
     To avoid 429 errors, space requests evenly (such as 1/60th the rate limit per second) rather than
     bursting them all at once.
 
@@ -295,6 +304,9 @@ async def asyncio(
 
     <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ReverseEmailLookupBody):

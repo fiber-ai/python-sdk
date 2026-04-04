@@ -15,13 +15,13 @@ T = TypeVar("T", bound="GetAudienceProspectsResponse200OutputProspectsItem")
 class GetAudienceProspectsResponse200OutputProspectsItem:
     """
     Attributes:
-        prospect_id (str): Unique ID of the prospect
-        first_name (None | str | Unset): First name
-        last_name (None | str | Unset): Last name
-        linkedin_url (None | str | Unset): LinkedIn URL
-        job_title (None | str | Unset): Job title
-        company_name (None | str | Unset): Current company name
-        location (None | str | Unset): Location
+        prospect_id (str): The unique ID of the prospect.
+        first_name (None | str | Unset): The prospect's first name.
+        last_name (None | str | Unset): The prospect's last name.
+        linkedin_url (None | str | Unset): The prospect's LinkedIn URL.
+        job_title (None | str | Unset): The prospect's job title.
+        company_name (None | str | Unset): The prospect's current company name.
+        location (None | str | Unset): The prospect's location.
     """
 
     prospect_id: str

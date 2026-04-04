@@ -18,6 +18,9 @@ if TYPE_CHECKING:
     from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_exact_company_v2_type_0 import (
         TextToCombinedSearchResponse200OutputCompanySearchParamsType0ExactCompanyV2Type0,
     )
+    from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_fortune_rankings_type_0 import (
+        TextToCombinedSearchResponse200OutputCompanySearchParamsType0FortuneRankingsType0,
+    )
     from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_founded_on_type_0 import (
         TextToCombinedSearchResponse200OutputCompanySearchParamsType0FoundedOnType0,
     )
@@ -36,8 +39,8 @@ if TYPE_CHECKING:
     from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_industries_v2_type_0 import (
         TextToCombinedSearchResponse200OutputCompanySearchParamsType0IndustriesV2Type0,
     )
-    from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_investors_type_0 import (
-        TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsType0,
+    from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_investors_v2_type_0 import (
+        TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsV2Type0,
     )
     from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_job_postings_v2_type_0 import (
         TextToCombinedSearchResponse200OutputCompanySearchParamsType0JobPostingsV2Type0,
@@ -53,6 +56,9 @@ if TYPE_CHECKING:
     )
     from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_last_funding_usd_type_0 import (
         TextToCombinedSearchResponse200OutputCompanySearchParamsType0LastFundingUSDType0,
+    )
+    from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_li_industries_type_0 import (
+        TextToCombinedSearchResponse200OutputCompanySearchParamsType0LiIndustriesType0,
     )
     from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_naics_codes_type_0 import (
         TextToCombinedSearchResponse200OutputCompanySearchParamsType0NaicsCodesType0,
@@ -104,7 +110,6 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
             TextToCombinedSearchResponse200OutputCompanySearchParamsType0LastFundedOnType1 | Unset):
         founded_on (None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0FoundedOnType0 |
             TextToCombinedSearchResponse200OutputCompanySearchParamsType0FoundedOnType1 | Unset):
-        investors (None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsType0 | Unset):
         name_like (None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0NameLikeType0 | Unset):
         accelerators_v2 (None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0 |
             Unset):
@@ -119,6 +124,10 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
         naics_codes (None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0NaicsCodesType0 | Unset):
         technologies (None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0TechnologiesType0 | Unset):
         exact_company_v2 (None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0ExactCompanyV2Type0 |
+            Unset):
+        li_industries (None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0LiIndustriesType0 | Unset):
+        investors_v2 (None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsV2Type0 | Unset):
+        fortune_rankings (None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0FortuneRankingsType0 |
             Unset):
     """
 
@@ -152,7 +161,6 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
         | TextToCombinedSearchResponse200OutputCompanySearchParamsType0FoundedOnType1
         | Unset
     ) = UNSET
-    investors: None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsType0 | Unset = UNSET
     name_like: None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0NameLikeType0 | Unset = UNSET
     accelerators_v2: None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0 | Unset = (
         UNSET
@@ -173,6 +181,11 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
     exact_company_v2: (
         None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0ExactCompanyV2Type0 | Unset
     ) = UNSET
+    li_industries: None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0LiIndustriesType0 | Unset = UNSET
+    investors_v2: None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsV2Type0 | Unset = UNSET
+    fortune_rankings: (
+        None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0FortuneRankingsType0 | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -184,6 +197,9 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
         )
         from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_exact_company_v2_type_0 import (
             TextToCombinedSearchResponse200OutputCompanySearchParamsType0ExactCompanyV2Type0,
+        )
+        from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_fortune_rankings_type_0 import (
+            TextToCombinedSearchResponse200OutputCompanySearchParamsType0FortuneRankingsType0,
         )
         from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_founded_on_type_0 import (
             TextToCombinedSearchResponse200OutputCompanySearchParamsType0FoundedOnType0,
@@ -203,8 +219,8 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
         from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_industries_v2_type_0 import (
             TextToCombinedSearchResponse200OutputCompanySearchParamsType0IndustriesV2Type0,
         )
-        from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_investors_type_0 import (
-            TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsType0,
+        from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_investors_v2_type_0 import (
+            TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsV2Type0,
         )
         from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_job_postings_v2_type_0 import (
             TextToCombinedSearchResponse200OutputCompanySearchParamsType0JobPostingsV2Type0,
@@ -220,6 +236,9 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
         )
         from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_last_funding_usd_type_0 import (
             TextToCombinedSearchResponse200OutputCompanySearchParamsType0LastFundingUSDType0,
+        )
+        from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_li_industries_type_0 import (
+            TextToCombinedSearchResponse200OutputCompanySearchParamsType0LiIndustriesType0,
         )
         from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_naics_codes_type_0 import (
             TextToCombinedSearchResponse200OutputCompanySearchParamsType0NaicsCodesType0,
@@ -348,14 +367,6 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
         else:
             founded_on = self.founded_on
 
-        investors: dict[str, Any] | None | Unset
-        if isinstance(self.investors, Unset):
-            investors = UNSET
-        elif isinstance(self.investors, TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsType0):
-            investors = self.investors.to_dict()
-        else:
-            investors = self.investors
-
         name_like: dict[str, Any] | None | Unset
         if isinstance(self.name_like, Unset):
             name_like = UNSET
@@ -450,6 +461,36 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
         else:
             exact_company_v2 = self.exact_company_v2
 
+        li_industries: dict[str, Any] | None | Unset
+        if isinstance(self.li_industries, Unset):
+            li_industries = UNSET
+        elif isinstance(
+            self.li_industries, TextToCombinedSearchResponse200OutputCompanySearchParamsType0LiIndustriesType0
+        ):
+            li_industries = self.li_industries.to_dict()
+        else:
+            li_industries = self.li_industries
+
+        investors_v2: dict[str, Any] | None | Unset
+        if isinstance(self.investors_v2, Unset):
+            investors_v2 = UNSET
+        elif isinstance(
+            self.investors_v2, TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsV2Type0
+        ):
+            investors_v2 = self.investors_v2.to_dict()
+        else:
+            investors_v2 = self.investors_v2
+
+        fortune_rankings: dict[str, Any] | None | Unset
+        if isinstance(self.fortune_rankings, Unset):
+            fortune_rankings = UNSET
+        elif isinstance(
+            self.fortune_rankings, TextToCombinedSearchResponse200OutputCompanySearchParamsType0FortuneRankingsType0
+        ):
+            fortune_rankings = self.fortune_rankings.to_dict()
+        else:
+            fortune_rankings = self.fortune_rankings
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -473,8 +514,6 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
             field_dict["lastFundedOn"] = last_funded_on
         if founded_on is not UNSET:
             field_dict["foundedOn"] = founded_on
-        if investors is not UNSET:
-            field_dict["investors"] = investors
         if name_like is not UNSET:
             field_dict["nameLike"] = name_like
         if accelerators_v2 is not UNSET:
@@ -495,6 +534,12 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
             field_dict["technologies"] = technologies
         if exact_company_v2 is not UNSET:
             field_dict["exactCompanyV2"] = exact_company_v2
+        if li_industries is not UNSET:
+            field_dict["liIndustries"] = li_industries
+        if investors_v2 is not UNSET:
+            field_dict["investorsV2"] = investors_v2
+        if fortune_rankings is not UNSET:
+            field_dict["fortuneRankings"] = fortune_rankings
 
         return field_dict
 
@@ -508,6 +553,9 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
         )
         from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_exact_company_v2_type_0 import (
             TextToCombinedSearchResponse200OutputCompanySearchParamsType0ExactCompanyV2Type0,
+        )
+        from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_fortune_rankings_type_0 import (
+            TextToCombinedSearchResponse200OutputCompanySearchParamsType0FortuneRankingsType0,
         )
         from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_founded_on_type_0 import (
             TextToCombinedSearchResponse200OutputCompanySearchParamsType0FoundedOnType0,
@@ -527,8 +575,8 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
         from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_industries_v2_type_0 import (
             TextToCombinedSearchResponse200OutputCompanySearchParamsType0IndustriesV2Type0,
         )
-        from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_investors_type_0 import (
-            TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsType0,
+        from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_investors_v2_type_0 import (
+            TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsV2Type0,
         )
         from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_job_postings_v2_type_0 import (
             TextToCombinedSearchResponse200OutputCompanySearchParamsType0JobPostingsV2Type0,
@@ -544,6 +592,9 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
         )
         from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_last_funding_usd_type_0 import (
             TextToCombinedSearchResponse200OutputCompanySearchParamsType0LastFundingUSDType0,
+        )
+        from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_li_industries_type_0 import (
+            TextToCombinedSearchResponse200OutputCompanySearchParamsType0LiIndustriesType0,
         )
         from ..models.text_to_combined_search_response_200_output_company_search_params_type_0_naics_codes_type_0 import (
             TextToCombinedSearchResponse200OutputCompanySearchParamsType0NaicsCodesType0,
@@ -842,29 +893,6 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
 
         founded_on = _parse_founded_on(d.pop("foundedOn", UNSET))
 
-        def _parse_investors(
-            data: object,
-        ) -> None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsType0 | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                investors_type_0 = (
-                    TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsType0.from_dict(data)
-                )
-
-                return investors_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(
-                None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsType0 | Unset, data
-            )
-
-        investors = _parse_investors(d.pop("investors", UNSET))
-
         def _parse_name_like(
             data: object,
         ) -> None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0NameLikeType0 | Unset:
@@ -1092,6 +1120,75 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
 
         exact_company_v2 = _parse_exact_company_v2(d.pop("exactCompanyV2", UNSET))
 
+        def _parse_li_industries(
+            data: object,
+        ) -> None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0LiIndustriesType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                li_industries_type_0 = (
+                    TextToCombinedSearchResponse200OutputCompanySearchParamsType0LiIndustriesType0.from_dict(data)
+                )
+
+                return li_industries_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0LiIndustriesType0 | Unset, data
+            )
+
+        li_industries = _parse_li_industries(d.pop("liIndustries", UNSET))
+
+        def _parse_investors_v2(
+            data: object,
+        ) -> None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsV2Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                investors_v2_type_0 = (
+                    TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsV2Type0.from_dict(data)
+                )
+
+                return investors_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0InvestorsV2Type0 | Unset, data
+            )
+
+        investors_v2 = _parse_investors_v2(d.pop("investorsV2", UNSET))
+
+        def _parse_fortune_rankings(
+            data: object,
+        ) -> None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0FortuneRankingsType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                fortune_rankings_type_0 = (
+                    TextToCombinedSearchResponse200OutputCompanySearchParamsType0FortuneRankingsType0.from_dict(data)
+                )
+
+                return fortune_rankings_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0FortuneRankingsType0 | Unset, data
+            )
+
+        fortune_rankings = _parse_fortune_rankings(d.pop("fortuneRankings", UNSET))
+
         text_to_combined_search_response_200_output_company_search_params_type_0 = cls(
             headquarters_country_code=headquarters_country_code,
             headquarters_state_name=headquarters_state_name,
@@ -1103,7 +1200,6 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
             last_funding_usd=last_funding_usd,
             last_funded_on=last_funded_on,
             founded_on=founded_on,
-            investors=investors,
             name_like=name_like,
             accelerators_v2=accelerators_v2,
             headquarters_location=headquarters_location,
@@ -1114,6 +1210,9 @@ class TextToCombinedSearchResponse200OutputCompanySearchParamsType0:
             naics_codes=naics_codes,
             technologies=technologies,
             exact_company_v2=exact_company_v2,
+            li_industries=li_industries,
+            investors_v2=investors_v2,
+            fortune_rankings=fortune_rankings,
         )
 
         text_to_combined_search_response_200_output_company_search_params_type_0.additional_properties = d

@@ -140,8 +140,8 @@ def sync_detailed(
 ]:
     r"""List countries and regions
 
-     Get a list of all countries and regions that you can pass to our API, along with their names, codes,
-    and additional metadata.
+     Get a list of all countries and regions supported by the API, along with their names, codes, and
+    additional metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
@@ -188,8 +188,8 @@ def sync(
 ):
     r"""List countries and regions
 
-     Get a list of all countries and regions that you can pass to our API, along with their names, codes,
-    and additional metadata.
+     Get a list of all countries and regions supported by the API, along with their names, codes, and
+    additional metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
@@ -230,8 +230,8 @@ async def asyncio_detailed(
 ]:
     r"""List countries and regions
 
-     Get a list of all countries and regions that you can pass to our API, along with their names, codes,
-    and additional metadata.
+     Get a list of all countries and regions supported by the API, along with their names, codes, and
+    additional metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
@@ -276,8 +276,8 @@ async def asyncio(
 ):
     r"""List countries and regions
 
-     Get a list of all countries and regions that you can pass to our API, along with their names, codes,
-    and additional metadata.
+     Get a list of all countries and regions supported by the API, along with their names, codes, and
+    additional metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 

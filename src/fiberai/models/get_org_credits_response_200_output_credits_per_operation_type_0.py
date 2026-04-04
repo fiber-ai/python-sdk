@@ -235,6 +235,12 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_validate_phone import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0ValidatePhone,
     )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_webpage_scrape import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScrape,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_webpage_screenshot import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScreenshot,
+    )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_work_email_reveal import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0WorkEmailReveal,
     )
@@ -351,6 +357,8 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         social_user_mentions (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserMentions):
         social_user_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserSearch):
         social_post_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostSearch):
+        webpage_screenshot (GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScreenshot):
+        webpage_scrape (GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScrape):
     """
 
     get_company_from_db: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyFromDb
@@ -443,6 +451,8 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
     social_user_mentions: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserMentions
     social_user_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialUserSearch
     social_post_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostSearch
+    webpage_screenshot: GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScreenshot
+    webpage_scrape: GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScrape
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -610,6 +620,10 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
 
         social_post_search = self.social_post_search.to_dict()
 
+        webpage_screenshot = self.webpage_screenshot.to_dict()
+
+        webpage_scrape = self.webpage_scrape.to_dict()
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -696,6 +710,8 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
                 "socialUserMentions": social_user_mentions,
                 "socialUserSearch": social_user_search,
                 "socialPostSearch": social_post_search,
+                "webpageScreenshot": webpage_screenshot,
+                "webpageScrape": webpage_scrape,
             }
         )
 
@@ -930,6 +946,12 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_validate_phone import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0ValidatePhone,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_webpage_scrape import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScrape,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_webpage_screenshot import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScreenshot,
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_work_email_reveal import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0WorkEmailReveal,
@@ -1329,6 +1351,14 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             d.pop("socialPostSearch")
         )
 
+        webpage_screenshot = GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScreenshot.from_dict(
+            d.pop("webpageScreenshot")
+        )
+
+        webpage_scrape = GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScrape.from_dict(
+            d.pop("webpageScrape")
+        )
+
         get_org_credits_response_200_output_credits_per_operation_type_0 = cls(
             get_company_from_db=get_company_from_db,
             get_person_from_db=get_person_from_db,
@@ -1412,6 +1442,8 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             social_user_mentions=social_user_mentions,
             social_user_search=social_user_search,
             social_post_search=social_post_search,
+            webpage_screenshot=webpage_screenshot,
+            webpage_scrape=webpage_scrape,
         )
 
         get_org_credits_response_200_output_credits_per_operation_type_0.additional_properties = d

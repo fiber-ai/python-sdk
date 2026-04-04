@@ -24,10 +24,10 @@ class DomainLookupPollingResponse200Output:
     Attributes:
         status (DomainLookupPollingResponse200OutputStatus):
         data (list[DomainLookupPollingResponse200OutputDataItem]): The list of companies found along with their
-            rationale and confidence scores
-        has_more (bool): Whether there are more results to fetch
-        next_cursor (None | str | Unset): The cursor to the next page of results. Provide this to the polling endpoint
-            to get the next page of results - null if there are no more results.
+            rationale and confidence scores.
+        has_more (bool): Whether there are more results to fetch.
+        next_cursor (None | str | Unset): The pagination cursor for the next page of results. Null if there are no more
+            results.
     """
 
     status: DomainLookupPollingResponse200OutputStatus

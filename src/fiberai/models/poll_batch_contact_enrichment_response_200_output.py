@@ -24,12 +24,12 @@ T = TypeVar("T", bound="PollBatchContactEnrichmentResponse200Output")
 class PollBatchContactEnrichmentResponse200Output:
     """
     Attributes:
-        overall_stats (PollBatchContactEnrichmentResponse200OutputOverallStats): Overall statistics for the batch
-            enrichment task
-        done (bool): True when ALL people have been processed (completed or failed)
-        page_results (list[PollBatchContactEnrichmentResponse200OutputPageResultsItem]): Array of results for each
-            person in the current page. You need to keep paginating using the cursor to get more results.
-        next_cursor (None | str | Unset): Next cursor to use for pagination. Use this to get the next page of results.
+        overall_stats (PollBatchContactEnrichmentResponse200OutputOverallStats): The overall statistics for the batch
+            enrichment task.
+        done (bool): Whether all people have been processed (completed or failed).
+        page_results (list[PollBatchContactEnrichmentResponse200OutputPageResultsItem]): The array of results for each
+            person in the current page.
+        next_cursor (None | str | Unset): The pagination cursor for the next page of results.
     """
 
     overall_stats: PollBatchContactEnrichmentResponse200OutputOverallStats

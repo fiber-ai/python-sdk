@@ -14,7 +14,7 @@ class DeleteCompanyExclusionListBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        list_i_ds (list[str]): Ids of the company exclusion lists to delete
+        list_i_ds (list[str]): The IDs of the company exclusion lists to delete.
     """
 
     api_key: str

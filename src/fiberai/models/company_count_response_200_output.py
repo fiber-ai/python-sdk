@@ -13,7 +13,7 @@ T = TypeVar("T", bound="CompanyCountResponse200Output")
 class CompanyCountResponse200Output:
     """
     Attributes:
-        count (float): The number of companies matching the search filters
+        count (float): The number of companies matching the search filters.
     """
 
     count: float

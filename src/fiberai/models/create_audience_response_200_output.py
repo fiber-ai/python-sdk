@@ -15,10 +15,10 @@ T = TypeVar("T", bound="CreateAudienceResponse200Output")
 class CreateAudienceResponse200Output:
     """
     Attributes:
-        audience_id (str): Unique ID of the created audience
-        name (str): Name of the audience
-        status (CreateAudienceResponse200OutputStatus): Current status of the audience
-        created_at (str): When the audience was created
+        audience_id (str): The unique ID of the created audience.
+        name (str): The name of the audience.
+        status (CreateAudienceResponse200OutputStatus): The current status of the audience.
+        created_at (str): The timestamp when the audience was created.
     """
 
     audience_id: str

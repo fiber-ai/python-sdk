@@ -143,7 +143,10 @@ def sync_detailed(
      Takes free-form text (e.g., 'Senior Product Managers from Series A to C FinTech startups in New
     York') and produces standardized filters (industries, funding stages, headcount ranges, locations,
     titles, seniorities, etc.). When limits are provided, executes the search and returns matching
-    companies and people in a single synchronous call.
+    companies and people in a single synchronous call. When referencing specific companies, provide the
+    identifier in one of these forms: plain name (e.g. 'Apple'), domain (e.g. 'apple.com'), or LinkedIn
+    slug (e.g. 'company/banco-santander').Note: This is not optimized for job descriptions. If you have
+    a JD, use the Search profiles from a job description endpoint instead.
 
     <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
 
@@ -152,6 +155,9 @@ def sync_detailed(
     on prompt, if required<br /><br />Additional credits are charged for each company and profile
     returned, based on the search results.&nbsp;<span title=\"Pricing shown is default pricing. Actual
     pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (TextToCombinedSearchBody):
@@ -196,7 +202,10 @@ def sync(
      Takes free-form text (e.g., 'Senior Product Managers from Series A to C FinTech startups in New
     York') and produces standardized filters (industries, funding stages, headcount ranges, locations,
     titles, seniorities, etc.). When limits are provided, executes the search and returns matching
-    companies and people in a single synchronous call.
+    companies and people in a single synchronous call. When referencing specific companies, provide the
+    identifier in one of these forms: plain name (e.g. 'Apple'), domain (e.g. 'apple.com'), or LinkedIn
+    slug (e.g. 'company/banco-santander').Note: This is not optimized for job descriptions. If you have
+    a JD, use the Search profiles from a job description endpoint instead.
 
     <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
 
@@ -205,6 +214,9 @@ def sync(
     on prompt, if required<br /><br />Additional credits are charged for each company and profile
     returned, based on the search results.&nbsp;<span title=\"Pricing shown is default pricing. Actual
     pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (TextToCombinedSearchBody):
@@ -243,7 +255,10 @@ async def asyncio_detailed(
      Takes free-form text (e.g., 'Senior Product Managers from Series A to C FinTech startups in New
     York') and produces standardized filters (industries, funding stages, headcount ranges, locations,
     titles, seniorities, etc.). When limits are provided, executes the search and returns matching
-    companies and people in a single synchronous call.
+    companies and people in a single synchronous call. When referencing specific companies, provide the
+    identifier in one of these forms: plain name (e.g. 'Apple'), domain (e.g. 'apple.com'), or LinkedIn
+    slug (e.g. 'company/banco-santander').Note: This is not optimized for job descriptions. If you have
+    a JD, use the Search profiles from a job description endpoint instead.
 
     <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
 
@@ -252,6 +267,9 @@ async def asyncio_detailed(
     on prompt, if required<br /><br />Additional credits are charged for each company and profile
     returned, based on the search results.&nbsp;<span title=\"Pricing shown is default pricing. Actual
     pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (TextToCombinedSearchBody):
@@ -294,7 +312,10 @@ async def asyncio(
      Takes free-form text (e.g., 'Senior Product Managers from Series A to C FinTech startups in New
     York') and produces standardized filters (industries, funding stages, headcount ranges, locations,
     titles, seniorities, etc.). When limits are provided, executes the search and returns matching
-    companies and people in a single synchronous call.
+    companies and people in a single synchronous call. When referencing specific companies, provide the
+    identifier in one of these forms: plain name (e.g. 'Apple'), domain (e.g. 'apple.com'), or LinkedIn
+    slug (e.g. 'company/banco-santander').Note: This is not optimized for job descriptions. If you have
+    a JD, use the Search profiles from a job description endpoint instead.
 
     <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
 
@@ -303,6 +324,9 @@ async def asyncio(
     on prompt, if required<br /><br />Additional credits are charged for each company and profile
     returned, based on the search results.&nbsp;<span title=\"Pricing shown is default pricing. Actual
     pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (TextToCombinedSearchBody):

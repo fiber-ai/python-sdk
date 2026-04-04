@@ -26,6 +26,9 @@ if TYPE_CHECKING:
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0,
     )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_employment_type_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0,
+    )
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_exact_profile_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0,
     )
@@ -120,7 +123,7 @@ T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType2ProfileSearchParam
 
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
-    """The profile search params. This is same as our normal profile search api.
+    """The profile search parameters. Uses the same schema as the profile search endpoint.
 
     Attributes:
         country_3_letter_code (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCountry3LetterCodeType0 | None |
@@ -162,6 +165,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         certifications (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCertificationsType0 | None | Unset):
         publications (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPublicationsType0 | None | Unset):
         has_no_education (bool | None | Unset):
+        employment_type (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0 | None | Unset):
         get_detailed_education (bool | None | Unset): Whether to include deep details about each educational item, like
             the school's LinkedIn URL, website, location, etc. That'll be put in the detailedEducation array. This slows
             down the API call, so only enable this if you need it. Default: False.
@@ -238,6 +242,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
     certifications: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCertificationsType0 | None | Unset = UNSET
     publications: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPublicationsType0 | None | Unset = UNSET
     has_no_education: bool | None | Unset = UNSET
+    employment_type: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0 | None | Unset = UNSET
     get_detailed_education: bool | None | Unset = False
     get_detailed_work_experience: bool | None | Unset = False
     tags: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTagsType0 | None | Unset = UNSET
@@ -261,6 +266,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_employment_type_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0,
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_exact_profile_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0,
@@ -617,6 +625,16 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         else:
             has_no_education = self.has_no_education
 
+        employment_type: dict[str, Any] | None | Unset
+        if isinstance(self.employment_type, Unset):
+            employment_type = UNSET
+        elif isinstance(
+            self.employment_type, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0
+        ):
+            employment_type = self.employment_type.to_dict()
+        else:
+            employment_type = self.employment_type
+
         get_detailed_education: bool | None | Unset
         if isinstance(self.get_detailed_education, Unset):
             get_detailed_education = UNSET
@@ -706,6 +724,8 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             field_dict["publications"] = publications
         if has_no_education is not UNSET:
             field_dict["hasNoEducation"] = has_no_education
+        if employment_type is not UNSET:
+            field_dict["employmentType"] = employment_type
         if get_detailed_education is not UNSET:
             field_dict["getDetailedEducation"] = get_detailed_education
         if get_detailed_work_experience is not UNSET:
@@ -736,6 +756,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_employment_type_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0,
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_exact_profile_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0,
@@ -1542,6 +1565,29 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
 
         has_no_education = _parse_has_no_education(d.pop("hasNoEducation", UNSET))
 
+        def _parse_employment_type(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                employment_type_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0.from_dict(data)
+                )
+
+                return employment_type_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0 | None | Unset, data
+            )
+
+        employment_type = _parse_employment_type(d.pop("employmentType", UNSET))
+
         def _parse_get_detailed_education(data: object) -> bool | None | Unset:
             if data is None:
                 return data
@@ -1630,6 +1676,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             certifications=certifications,
             publications=publications,
             has_no_education=has_no_education,
+            employment_type=employment_type,
             get_detailed_education=get_detailed_education,
             get_detailed_work_experience=get_detailed_work_experience,
             tags=tags,

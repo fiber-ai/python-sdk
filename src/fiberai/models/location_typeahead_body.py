@@ -14,9 +14,8 @@ class LocationTypeaheadBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        query (str): Search query for location. It can be a city name or ZIP/postal code. Can be the complete name ('New
-            York') or a prefix ('san fr'). Intentionally doesn't support neighborhoods, street addresses, states, or
-            countries.
+        query (str): The search query for a location. Accepts a city name or ZIP/postal code, either complete (e.g. 'New
+            York') or partial (e.g. 'san fr'). Neighborhoods, street addresses, states, and countries are not supported.
     """
 
     api_key: str

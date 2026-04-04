@@ -13,8 +13,8 @@ T = TypeVar("T", bound="CreateCompanyExclusionListResponse200Output")
 class CreateCompanyExclusionListResponse200Output:
     """
     Attributes:
-        list_id (str): Id of the company exclusion list
-        name (str): Name of the company exclusion list
+        list_id (str): The ID of the company exclusion list.
+        name (str): The name of the company exclusion list.
     """
 
     list_id: str

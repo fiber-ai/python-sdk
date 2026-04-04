@@ -16,14 +16,14 @@ class PollLocalBusinessSearchBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        task_id (str): Task ID of the local business search
+        research_run_id (str): Research run ID of the local business search
         page_size (int | Unset): The number of results to return per page Default: 25.
         cursor (None | str | Unset): A pagination cursor returned from a previous search response. Use this to fetch the
             next page of results. If this is null, then the first page of results will be returned.
     """
 
     api_key: str
-    task_id: str
+    research_run_id: str
     page_size: int | Unset = 25
     cursor: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -31,7 +31,7 @@ class PollLocalBusinessSearchBody:
     def to_dict(self) -> dict[str, Any]:
         api_key = self.api_key
 
-        task_id = self.task_id
+        research_run_id = self.research_run_id
 
         page_size = self.page_size
 
@@ -46,7 +46,7 @@ class PollLocalBusinessSearchBody:
         field_dict.update(
             {
                 "apiKey": api_key,
-                "taskId": task_id,
+                "researchRunId": research_run_id,
             }
         )
         if page_size is not UNSET:
@@ -61,7 +61,7 @@ class PollLocalBusinessSearchBody:
         d = dict(src_dict)
         api_key = d.pop("apiKey")
 
-        task_id = d.pop("taskId")
+        research_run_id = d.pop("researchRunId")
 
         page_size = d.pop("pageSize", UNSET)
 
@@ -76,7 +76,7 @@ class PollLocalBusinessSearchBody:
 
         poll_local_business_search_body = cls(
             api_key=api_key,
-            task_id=task_id,
+            research_run_id=research_run_id,
             page_size=page_size,
             cursor=cursor,
         )

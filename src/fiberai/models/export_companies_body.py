@@ -18,9 +18,9 @@ class ExportCompaniesBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        format_ (ExportCompaniesBodyFormat): Format of the exported CSV
+        format_ (ExportCompaniesBodyFormat): The format of the exported file.
         max_rows_to_export (int | None | Unset): Maximum number of rows to export. Defaults to remaining export quota.
-        exclude_fields (list[ExportCompaniesBodyExcludeFieldsItem] | Unset): Fields to exclude from the export
+        exclude_fields (list[ExportCompaniesBodyExcludeFieldsItem] | Unset): The fields to exclude from the export.
         user_email (None | str | Unset): Optional email address to receive CSV export links. If not provided, no email
             will be sent.
     """

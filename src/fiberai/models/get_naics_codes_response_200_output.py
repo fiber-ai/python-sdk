@@ -19,8 +19,8 @@ T = TypeVar("T", bound="GetNaicsCodesResponse200Output")
 class GetNaicsCodesResponse200Output:
     """
     Attributes:
-        naics_codes (list[GetNaicsCodesResponse200OutputNaicsCodesItem]): List of all NAICS codes with their titles.
-            This is the 2017 version of the NAICS codes.
+        naics_codes (list[GetNaicsCodesResponse200OutputNaicsCodesItem]): The list of all NAICS 2017 codes with their
+            titles.
     """
 
     naics_codes: list[GetNaicsCodesResponse200OutputNaicsCodesItem]

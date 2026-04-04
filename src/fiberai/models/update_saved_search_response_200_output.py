@@ -15,11 +15,11 @@ T = TypeVar("T", bound="UpdateSavedSearchResponse200Output")
 class UpdateSavedSearchResponse200Output:
     """
     Attributes:
-        success (bool): Whether the update was successful
-        id (str): The ID of the saved search
-        name (str): The name of the saved search
+        success (bool): Whether the update was successful.
+        id (str): The ID of the saved search.
+        name (str): The name of the saved search.
         spawn_frequency_days (int): The frequency of the saved search in days. Minimum is 7 days.
-        is_active (bool): Whether the saved search is active
+        is_active (bool): Whether the saved search is active.
         max_companies (int | None | Unset):
         max_profiles (int | None | Unset):
     """

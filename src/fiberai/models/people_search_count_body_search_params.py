@@ -26,6 +26,9 @@ if TYPE_CHECKING:
     from ..models.people_search_count_body_search_params_education_type_0 import (
         PeopleSearchCountBodySearchParamsEducationType0,
     )
+    from ..models.people_search_count_body_search_params_employment_type_type_0 import (
+        PeopleSearchCountBodySearchParamsEmploymentTypeType0,
+    )
     from ..models.people_search_count_body_search_params_exact_profile_type_0 import (
         PeopleSearchCountBodySearchParamsExactProfileType0,
     )
@@ -154,6 +157,7 @@ class PeopleSearchCountBodySearchParams:
         certifications (None | PeopleSearchCountBodySearchParamsCertificationsType0 | Unset):
         publications (None | PeopleSearchCountBodySearchParamsPublicationsType0 | Unset):
         has_no_education (bool | None | Unset):
+        employment_type (None | PeopleSearchCountBodySearchParamsEmploymentTypeType0 | Unset):
         get_detailed_education (bool | None | Unset): Whether to include deep details about each educational item, like
             the school's LinkedIn URL, website, location, etc. That'll be put in the detailedEducation array. This slows
             down the API call, so only enable this if you need it. Default: False.
@@ -221,6 +225,7 @@ class PeopleSearchCountBodySearchParams:
     certifications: None | PeopleSearchCountBodySearchParamsCertificationsType0 | Unset = UNSET
     publications: None | PeopleSearchCountBodySearchParamsPublicationsType0 | Unset = UNSET
     has_no_education: bool | None | Unset = UNSET
+    employment_type: None | PeopleSearchCountBodySearchParamsEmploymentTypeType0 | Unset = UNSET
     get_detailed_education: bool | None | Unset = False
     get_detailed_work_experience: bool | None | Unset = False
     tags: None | PeopleSearchCountBodySearchParamsTagsType0 | Unset = UNSET
@@ -244,6 +249,9 @@ class PeopleSearchCountBodySearchParams:
         )
         from ..models.people_search_count_body_search_params_education_type_0 import (
             PeopleSearchCountBodySearchParamsEducationType0,
+        )
+        from ..models.people_search_count_body_search_params_employment_type_type_0 import (
+            PeopleSearchCountBodySearchParamsEmploymentTypeType0,
         )
         from ..models.people_search_count_body_search_params_exact_profile_type_0 import (
             PeopleSearchCountBodySearchParamsExactProfileType0,
@@ -573,6 +581,14 @@ class PeopleSearchCountBodySearchParams:
         else:
             has_no_education = self.has_no_education
 
+        employment_type: dict[str, Any] | None | Unset
+        if isinstance(self.employment_type, Unset):
+            employment_type = UNSET
+        elif isinstance(self.employment_type, PeopleSearchCountBodySearchParamsEmploymentTypeType0):
+            employment_type = self.employment_type.to_dict()
+        else:
+            employment_type = self.employment_type
+
         get_detailed_education: bool | None | Unset
         if isinstance(self.get_detailed_education, Unset):
             get_detailed_education = UNSET
@@ -662,6 +678,8 @@ class PeopleSearchCountBodySearchParams:
             field_dict["publications"] = publications
         if has_no_education is not UNSET:
             field_dict["hasNoEducation"] = has_no_education
+        if employment_type is not UNSET:
+            field_dict["employmentType"] = employment_type
         if get_detailed_education is not UNSET:
             field_dict["getDetailedEducation"] = get_detailed_education
         if get_detailed_work_experience is not UNSET:
@@ -692,6 +710,9 @@ class PeopleSearchCountBodySearchParams:
         )
         from ..models.people_search_count_body_search_params_education_type_0 import (
             PeopleSearchCountBodySearchParamsEducationType0,
+        )
+        from ..models.people_search_count_body_search_params_employment_type_type_0 import (
+            PeopleSearchCountBodySearchParamsEmploymentTypeType0,
         )
         from ..models.people_search_count_body_search_params_exact_profile_type_0 import (
             PeopleSearchCountBodySearchParamsExactProfileType0,
@@ -1396,6 +1417,23 @@ class PeopleSearchCountBodySearchParams:
 
         has_no_education = _parse_has_no_education(d.pop("hasNoEducation", UNSET))
 
+        def _parse_employment_type(data: object) -> None | PeopleSearchCountBodySearchParamsEmploymentTypeType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                employment_type_type_0 = PeopleSearchCountBodySearchParamsEmploymentTypeType0.from_dict(data)
+
+                return employment_type_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | PeopleSearchCountBodySearchParamsEmploymentTypeType0 | Unset, data)
+
+        employment_type = _parse_employment_type(d.pop("employmentType", UNSET))
+
         def _parse_get_detailed_education(data: object) -> bool | None | Unset:
             if data is None:
                 return data
@@ -1478,6 +1516,7 @@ class PeopleSearchCountBodySearchParams:
             certifications=certifications,
             publications=publications,
             has_no_education=has_no_education,
+            employment_type=employment_type,
             get_detailed_education=get_detailed_education,
             get_detailed_work_experience=get_detailed_work_experience,
             tags=tags,

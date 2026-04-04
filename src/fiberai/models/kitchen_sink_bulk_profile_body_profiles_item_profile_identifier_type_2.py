@@ -18,7 +18,7 @@ class KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2:
     """
     Attributes:
         identifier (KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2Identifier):
-        value (str):
+        value (str): The LinkedIn user ID of the person.
     """
 
     identifier: KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2Identifier

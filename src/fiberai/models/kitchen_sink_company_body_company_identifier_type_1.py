@@ -18,7 +18,7 @@ class KitchenSinkCompanyBodyCompanyIdentifierType1:
     """
     Attributes:
         identifier (KitchenSinkCompanyBodyCompanyIdentifierType1Identifier):
-        value (str):
+        value (str): The LinkedIn URL of the person's current company.
     """
 
     identifier: KitchenSinkCompanyBodyCompanyIdentifierType1Identifier

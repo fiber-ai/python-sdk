@@ -11,7 +11,7 @@ T = TypeVar("T", bound="EstimateEnrichmentCostResponse200OutputTimeEstimate")
 
 @_attrs_define
 class EstimateEnrichmentCostResponse200OutputTimeEstimate:
-    """Estimated time to complete enrichment
+    """The estimated time to complete enrichment.
 
     Attributes:
         total_seconds (float):

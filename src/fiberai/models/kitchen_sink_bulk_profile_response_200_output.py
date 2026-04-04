@@ -21,8 +21,9 @@ T = TypeVar("T", bound="KitchenSinkBulkProfileResponse200Output")
 class KitchenSinkBulkProfileResponse200Output:
     """
     Attributes:
-        data (list[list[KitchenSinkBulkProfileResponse200OutputDataItemItem]]):
-        message (None | str | Unset):
+        data (list[list[KitchenSinkBulkProfileResponse200OutputDataItemItem]]): Profiles found for each lookup. A 2D
+            array because each lookup may yield multiple profiles.
+        message (None | str | Unset): Additional context if no matching profile was found.
     """
 
     data: list[list[KitchenSinkBulkProfileResponse200OutputDataItemItem]]

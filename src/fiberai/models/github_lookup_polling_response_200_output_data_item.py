@@ -41,8 +41,8 @@ class GithubLookupPollingResponse200OutputDataItem:
         rationale (None | str | Unset): The reasoning for why the agent chose (or did not choose) the given GitHub
             profile.
         error_message (None | str | Unset): Error message if the lookup failed for this person.
-        customer_provided_id (None | str | Unset): The customerProvidedId echoed back from the input so you can easily
-            join results to your original dataset.
+        customer_provided_id (None | str | Unset): The external ID echoed back from the input for joining results to the
+            original dataset.
         outcome (GithubLookupPollingResponse200OutputDataItemOutcomeType1 |
             GithubLookupPollingResponse200OutputDataItemOutcomeType2Type1 |
             GithubLookupPollingResponse200OutputDataItemOutcomeType3Type1 | None | Unset):

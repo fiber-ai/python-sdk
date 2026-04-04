@@ -27,7 +27,7 @@ class GoogleMapsSearchBodyStrategyType1UnionAllItemType0:
         region_type (GoogleMapsSearchBodyStrategyType1UnionAllItemType0RegionType): Use 'circle' to search for places in
             a circle
         center (GoogleMapsSearchBodyStrategyType1UnionAllItemType0Center):
-        radius_miles (float | Unset): The radius of the circle in miles Default: 25.0.
+        radius_miles (float | Unset): The radius of the circle in miles. Default: 25.0.
     """
 
     region_type: GoogleMapsSearchBodyStrategyType1UnionAllItemType0RegionType

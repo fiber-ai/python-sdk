@@ -138,11 +138,12 @@ def sync_detailed(
     | SyncQuickContactRevealResponse500
     | SyncQuickContactRevealResponse503
 ]:
-    r"""Reveal contact details (new, synchronous)
+    r"""Reveal contact details (standard)
 
-     Streamlined synchronous contact reveal. Only requires a LinkedIn URL — profile details are resolved
-    automatically. Uses a faster enrichment stack. For hyper-speed requirements, consider using the
-    turbo endpoint instead.
+     Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Only requires a
+    LinkedIn URL; profile details are resolved automatically. For faster results at a higher credit
+    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage across all vendors (async,
+    slower, higher cost), use the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 200 requests per 1 minute</span>
 
@@ -151,6 +152,9 @@ def sync_detailed(
     only<br />• 3 credits for phone only<br />• 3 credits for all emails&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
     data.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (SyncQuickContactRevealBody):
@@ -190,11 +194,12 @@ def sync(
     | SyncQuickContactRevealResponse503
     | None
 ):
-    r"""Reveal contact details (new, synchronous)
+    r"""Reveal contact details (standard)
 
-     Streamlined synchronous contact reveal. Only requires a LinkedIn URL — profile details are resolved
-    automatically. Uses a faster enrichment stack. For hyper-speed requirements, consider using the
-    turbo endpoint instead.
+     Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Only requires a
+    LinkedIn URL; profile details are resolved automatically. For faster results at a higher credit
+    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage across all vendors (async,
+    slower, higher cost), use the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 200 requests per 1 minute</span>
 
@@ -203,6 +208,9 @@ def sync(
     only<br />• 3 credits for phone only<br />• 3 credits for all emails&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
     data.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (SyncQuickContactRevealBody):
@@ -236,11 +244,12 @@ async def asyncio_detailed(
     | SyncQuickContactRevealResponse500
     | SyncQuickContactRevealResponse503
 ]:
-    r"""Reveal contact details (new, synchronous)
+    r"""Reveal contact details (standard)
 
-     Streamlined synchronous contact reveal. Only requires a LinkedIn URL — profile details are resolved
-    automatically. Uses a faster enrichment stack. For hyper-speed requirements, consider using the
-    turbo endpoint instead.
+     Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Only requires a
+    LinkedIn URL; profile details are resolved automatically. For faster results at a higher credit
+    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage across all vendors (async,
+    slower, higher cost), use the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 200 requests per 1 minute</span>
 
@@ -249,6 +258,9 @@ async def asyncio_detailed(
     only<br />• 3 credits for phone only<br />• 3 credits for all emails&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
     data.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (SyncQuickContactRevealBody):
@@ -286,11 +298,12 @@ async def asyncio(
     | SyncQuickContactRevealResponse503
     | None
 ):
-    r"""Reveal contact details (new, synchronous)
+    r"""Reveal contact details (standard)
 
-     Streamlined synchronous contact reveal. Only requires a LinkedIn URL — profile details are resolved
-    automatically. Uses a faster enrichment stack. For hyper-speed requirements, consider using the
-    turbo endpoint instead.
+     Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Only requires a
+    LinkedIn URL; profile details are resolved automatically. For faster results at a higher credit
+    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage across all vendors (async,
+    slower, higher cost), use the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 200 requests per 1 minute</span>
 
@@ -299,6 +312,9 @@ async def asyncio(
     only<br />• 3 credits for phone only<br />• 3 credits for all emails&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
     data.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (SyncQuickContactRevealBody):

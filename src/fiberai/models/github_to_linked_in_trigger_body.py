@@ -23,9 +23,8 @@ class GithubToLinkedInTriggerBody:
         api_key (str): Your Fiber API key
         people (list[GithubToLinkedInTriggerBodyPeopleItem]): List of GitHub usernames to look up. Maximum 1000 people
             can be provided at a time.
-        overall_context (None | str | Unset): Descriptor of what your people have in common and who they are. For
-            example: "Engineers at Fiber AI" or "YC founders 2021 batch." Helps our agent disambiguate people with similar
-            names.
+        overall_context (None | str | Unset): A descriptor of what the people have in common (e.g. "Engineers at Fiber
+            AI" or "YC founders 2021 batch"). Helps disambiguate people with similar names.
         output_type (GithubToLinkedInTriggerBodyOutputType | Unset): What to extract from GitHub profile. 'linkedin'
             finds LinkedIn profile, 'email' extracts work emails from commits, 'both' returns both. Default:
             GithubToLinkedInTriggerBodyOutputType.LINKEDIN.

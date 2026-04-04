@@ -15,8 +15,11 @@ T = TypeVar("T", bound="KitchenSinkProfileBodyLinkedinHeadlineType0")
 class KitchenSinkProfileBodyLinkedinHeadlineType0:
     """
     Attributes:
-        value (None | str | Unset):
-        loose_match (bool | Unset):  Default: False.
+        value (None | str | Unset): The headline of the person's LinkedIn profile. This is the first line of their
+            profile.
+        loose_match (bool | Unset): Whether to allow a loose match on the headline. If true, we allow for additional
+            words between the terms in the headline (e.g. 'Software Engineer' would match 'Software Development Engineer').
+            If false, we require a strict phrase match. Default: False.
     """
 
     value: None | str | Unset = UNSET

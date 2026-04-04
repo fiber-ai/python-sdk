@@ -21,20 +21,18 @@ class SyncCombinedSearchBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        company_params (SyncCombinedSearchBodyCompanyParams): Company search params. We would find prospects who are
-            currently working in the companies that satisfy these search params. Make sure that the search scope of
-            companies is small, else we truncate it to the top 1000 companies.
-        profile_params (SyncCombinedSearchBodyProfileParams | Unset): The People search params. We would return the
-            profiles that satisfy these params and work in the companies satisfying `companyParams`. The number of these
-            profiles are truncated to top 1000.
-        company_item_limit (float | None | Unset): The number of companies to return. Defaults to 20 if not provided. If
-            you want to get 0 companies, you can pass `null`. However, profiles would still be found working in the
-            companies that satisfy the `companyParams`. Default: 20.0.
+        company_params (SyncCombinedSearchBodyCompanyParams): The company search parameters. Prospects are found from
+            companies matching these filters. Results are truncated to the top 1000 companies.
+        profile_params (SyncCombinedSearchBodyProfileParams | Unset): The profile search parameters. Returns profiles
+            matching these filters who work at companies satisfying companyParams. Results are truncated to the top 1000
+            profiles.
+        company_item_limit (float | None | Unset): The number of companies to return. Defaults to 20. Pass null to omit
+            companies while still searching for profiles within matching companies. Default: 20.0.
         profile_item_limit (float | Unset): The number of profiles to return. Default: 20.0.
-        company_exclusion_list_i_ds (list[str] | None | Unset): Filter out companies which belong to the given company
-            exclusion lists. You can create company exclusion lists via /v1/exclusions/companies/create-list
-        prospect_exclusion_list_i_ds (list[str] | None | Unset): Filter out people which belong to the given prospect
-            exclusion lists. You can create prospect exclusion lists via /v1/exclusions/prospects/create-list
+        company_exclusion_list_i_ds (list[str] | None | Unset): The IDs of company exclusion lists to filter out
+            matching companies.
+        prospect_exclusion_list_i_ds (list[str] | None | Unset): The IDs of prospect exclusion lists to filter out
+            matching people.
     """
 
     api_key: str

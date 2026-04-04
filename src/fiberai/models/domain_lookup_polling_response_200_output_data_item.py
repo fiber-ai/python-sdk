@@ -21,12 +21,12 @@ T = TypeVar("T", bound="DomainLookupPollingResponse200OutputDataItem")
 class DomainLookupPollingResponse200OutputDataItem:
     """
     Attributes:
-        company_name (str): The name of the company
-        rationale (str): The reasoning why the agent chose the given company
-        best_domain (None | str | Unset): The best matching domain of the company. Null if we couldn't find the domain
+        company_name (str): The name of the company.
+        rationale (str): The reasoning for why the agent chose the given company.
+        best_domain (None | str | Unset): The best matching domain for the company. Null if no domain was found.
         email_domains (list[DomainLookupPollingResponse200OutputDataItemEmailDomainsType0Item] | None | Unset): The
-            email domains of the company
-        all_domains (list[str] | None | Unset): All the found domains of the company
+            email domains of the company.
+        all_domains (list[str] | None | Unset): All found domains for the company.
         confidence (int | None | Unset): The confidence score between 0 and 10 denoting the match quality. Higher
             confidence score means the company has more matching parameters.
     """

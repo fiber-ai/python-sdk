@@ -23,14 +23,14 @@ T = TypeVar("T", bound="TextToCombinedSearchResponse200Output")
 class TextToCombinedSearchResponse200Output:
     """
     Attributes:
-        data (TextToCombinedSearchResponse200OutputData):
         company_search_params (None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0):
         profile_search_params (None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0):
+        data (TextToCombinedSearchResponse200OutputData):
     """
 
-    data: TextToCombinedSearchResponse200OutputData
     company_search_params: None | TextToCombinedSearchResponse200OutputCompanySearchParamsType0
     profile_search_params: None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0
+    data: TextToCombinedSearchResponse200OutputData
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -40,8 +40,6 @@ class TextToCombinedSearchResponse200Output:
         from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0 import (
             TextToCombinedSearchResponse200OutputProfileSearchParamsType0,
         )
-
-        data = self.data.to_dict()
 
         company_search_params: dict[str, Any] | None
         if isinstance(self.company_search_params, TextToCombinedSearchResponse200OutputCompanySearchParamsType0):
@@ -55,13 +53,15 @@ class TextToCombinedSearchResponse200Output:
         else:
             profile_search_params = self.profile_search_params
 
+        data = self.data.to_dict()
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
-                "data": data,
                 "companySearchParams": company_search_params,
                 "profileSearchParams": profile_search_params,
+                "data": data,
             }
         )
 
@@ -78,7 +78,6 @@ class TextToCombinedSearchResponse200Output:
         )
 
         d = dict(src_dict)
-        data = TextToCombinedSearchResponse200OutputData.from_dict(d.pop("data"))
 
         def _parse_company_search_params(
             data: object,
@@ -118,10 +117,12 @@ class TextToCombinedSearchResponse200Output:
 
         profile_search_params = _parse_profile_search_params(d.pop("profileSearchParams"))
 
+        data = TextToCombinedSearchResponse200OutputData.from_dict(d.pop("data"))
+
         text_to_combined_search_response_200_output = cls(
-            data=data,
             company_search_params=company_search_params,
             profile_search_params=profile_search_params,
+            data=data,
         )
 
         text_to_combined_search_response_200_output.additional_properties = d

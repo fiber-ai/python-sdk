@@ -20,13 +20,12 @@ class SyncQuickContactRevealBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        linkedin_url (str): Person's LinkedIn URL, like 'https://www.linkedin.com/in/william-h-gates' or a bare slug
-            like 'william-h-gates'
-        enrichment_type (SyncQuickContactRevealBodyEnrichmentType | Unset): Enrichment types to be requested. Include
-            the ones you want to look for, we will charge credits for the ones you request. For example, { getWorkEmails:
-            true, getPersonalEmails: true, getPhoneNumbers: true }
-        validate_emails (bool | Unset): When true (default), emails are bounce-validated before being returned. Set to
-            false to skip validation and get faster responses. No extra cost either way. Default: True.
+        linkedin_url (str): The person's LinkedIn URL (e.g. 'https://www.linkedin.com/in/william-h-gates') or a bare
+            slug (e.g. 'william-h-gates').
+        enrichment_type (SyncQuickContactRevealBodyEnrichmentType | Unset): The enrichment types to request. Credits are
+            charged per selected type.
+        validate_emails (bool | Unset): Whether to bounce-validate emails before returning them. Disabling this speeds
+            up responses. No additional cost either way. Default: True.
     """
 
     api_key: str

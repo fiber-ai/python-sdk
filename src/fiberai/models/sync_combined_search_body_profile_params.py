@@ -26,6 +26,9 @@ if TYPE_CHECKING:
     from ..models.sync_combined_search_body_profile_params_education_type_0 import (
         SyncCombinedSearchBodyProfileParamsEducationType0,
     )
+    from ..models.sync_combined_search_body_profile_params_employment_type_type_0 import (
+        SyncCombinedSearchBodyProfileParamsEmploymentTypeType0,
+    )
     from ..models.sync_combined_search_body_profile_params_exact_profile_type_0 import (
         SyncCombinedSearchBodyProfileParamsExactProfileType0,
     )
@@ -120,8 +123,8 @@ T = TypeVar("T", bound="SyncCombinedSearchBodyProfileParams")
 
 @_attrs_define
 class SyncCombinedSearchBodyProfileParams:
-    """The People search params. We would return the profiles that satisfy these params and work in the companies
-    satisfying `companyParams`. The number of these profiles are truncated to top 1000.
+    """The profile search parameters. Returns profiles matching these filters who work at companies satisfying
+    companyParams. Results are truncated to the top 1000 profiles.
 
         Attributes:
             country_3_letter_code (None | SyncCombinedSearchBodyProfileParamsCountry3LetterCodeType0 | Unset):
@@ -159,6 +162,7 @@ class SyncCombinedSearchBodyProfileParams:
             certifications (None | SyncCombinedSearchBodyProfileParamsCertificationsType0 | Unset):
             publications (None | SyncCombinedSearchBodyProfileParamsPublicationsType0 | Unset):
             has_no_education (bool | None | Unset):
+            employment_type (None | SyncCombinedSearchBodyProfileParamsEmploymentTypeType0 | Unset):
             get_detailed_education (bool | None | Unset): Whether to include deep details about each educational item, like
                 the school's LinkedIn URL, website, location, etc. That'll be put in the detailedEducation array. This slows
                 down the API call, so only enable this if you need it. Default: False.
@@ -229,6 +233,7 @@ class SyncCombinedSearchBodyProfileParams:
     certifications: None | SyncCombinedSearchBodyProfileParamsCertificationsType0 | Unset = UNSET
     publications: None | SyncCombinedSearchBodyProfileParamsPublicationsType0 | Unset = UNSET
     has_no_education: bool | None | Unset = UNSET
+    employment_type: None | SyncCombinedSearchBodyProfileParamsEmploymentTypeType0 | Unset = UNSET
     get_detailed_education: bool | None | Unset = False
     get_detailed_work_experience: bool | None | Unset = False
     tags: None | SyncCombinedSearchBodyProfileParamsTagsType0 | Unset = UNSET
@@ -252,6 +257,9 @@ class SyncCombinedSearchBodyProfileParams:
         )
         from ..models.sync_combined_search_body_profile_params_education_type_0 import (
             SyncCombinedSearchBodyProfileParamsEducationType0,
+        )
+        from ..models.sync_combined_search_body_profile_params_employment_type_type_0 import (
+            SyncCombinedSearchBodyProfileParamsEmploymentTypeType0,
         )
         from ..models.sync_combined_search_body_profile_params_exact_profile_type_0 import (
             SyncCombinedSearchBodyProfileParamsExactProfileType0,
@@ -581,6 +589,14 @@ class SyncCombinedSearchBodyProfileParams:
         else:
             has_no_education = self.has_no_education
 
+        employment_type: dict[str, Any] | None | Unset
+        if isinstance(self.employment_type, Unset):
+            employment_type = UNSET
+        elif isinstance(self.employment_type, SyncCombinedSearchBodyProfileParamsEmploymentTypeType0):
+            employment_type = self.employment_type.to_dict()
+        else:
+            employment_type = self.employment_type
+
         get_detailed_education: bool | None | Unset
         if isinstance(self.get_detailed_education, Unset):
             get_detailed_education = UNSET
@@ -670,6 +686,8 @@ class SyncCombinedSearchBodyProfileParams:
             field_dict["publications"] = publications
         if has_no_education is not UNSET:
             field_dict["hasNoEducation"] = has_no_education
+        if employment_type is not UNSET:
+            field_dict["employmentType"] = employment_type
         if get_detailed_education is not UNSET:
             field_dict["getDetailedEducation"] = get_detailed_education
         if get_detailed_work_experience is not UNSET:
@@ -700,6 +718,9 @@ class SyncCombinedSearchBodyProfileParams:
         )
         from ..models.sync_combined_search_body_profile_params_education_type_0 import (
             SyncCombinedSearchBodyProfileParamsEducationType0,
+        )
+        from ..models.sync_combined_search_body_profile_params_employment_type_type_0 import (
+            SyncCombinedSearchBodyProfileParamsEmploymentTypeType0,
         )
         from ..models.sync_combined_search_body_profile_params_exact_profile_type_0 import (
             SyncCombinedSearchBodyProfileParamsExactProfileType0,
@@ -1410,6 +1431,25 @@ class SyncCombinedSearchBodyProfileParams:
 
         has_no_education = _parse_has_no_education(d.pop("hasNoEducation", UNSET))
 
+        def _parse_employment_type(
+            data: object,
+        ) -> None | SyncCombinedSearchBodyProfileParamsEmploymentTypeType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                employment_type_type_0 = SyncCombinedSearchBodyProfileParamsEmploymentTypeType0.from_dict(data)
+
+                return employment_type_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | SyncCombinedSearchBodyProfileParamsEmploymentTypeType0 | Unset, data)
+
+        employment_type = _parse_employment_type(d.pop("employmentType", UNSET))
+
         def _parse_get_detailed_education(data: object) -> bool | None | Unset:
             if data is None:
                 return data
@@ -1492,6 +1532,7 @@ class SyncCombinedSearchBodyProfileParams:
             certifications=certifications,
             publications=publications,
             has_no_education=has_no_education,
+            employment_type=employment_type,
             get_detailed_education=get_detailed_education,
             get_detailed_work_experience=get_detailed_work_experience,
             tags=tags,

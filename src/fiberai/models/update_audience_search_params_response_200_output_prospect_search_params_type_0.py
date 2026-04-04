@@ -11,7 +11,7 @@ T = TypeVar("T", bound="UpdateAudienceSearchParamsResponse200OutputProspectSearc
 
 @_attrs_define
 class UpdateAudienceSearchParamsResponse200OutputProspectSearchParamsType0:
-    """The updated prospect search parameters"""
+    """The updated prospect search parameters."""
 
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 

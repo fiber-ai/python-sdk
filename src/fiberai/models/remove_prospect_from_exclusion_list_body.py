@@ -20,7 +20,7 @@ class RemoveProspectFromExclusionListBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        list_id (str): Id of the prospect exclusion lists to remove the prospect from
+        list_id (str): The ID of the prospect exclusion list to remove the prospect from.
         excluded_prospect_details (RemoveProspectFromExclusionListBodyExcludedProspectDetails): Details of the prospects
             to remove from the exclusion list
     """

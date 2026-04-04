@@ -20,10 +20,10 @@ class SyncTurboContactEnrichmentBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        linkedin_url (str): Person's LinkedIn URL, like 'https://www.linkedin.com/in/william-h-gates' or entity urn
-        enrichment_type (SyncTurboContactEnrichmentBodyEnrichmentType | Unset): Enrichment types to be requested.
-            Include the ones you want to look for, we will charge credits for the ones you request. For example, {
-            getWorkEmails: true, getPersonalEmails: true, getPhoneNumbers: true }
+        linkedin_url (str): The person's LinkedIn URL (e.g. 'https://www.linkedin.com/in/william-h-gates') or entity
+            URN.
+        enrichment_type (SyncTurboContactEnrichmentBodyEnrichmentType | Unset): The enrichment types to request. Credits
+            are charged per selected type.
     """
 
     api_key: str

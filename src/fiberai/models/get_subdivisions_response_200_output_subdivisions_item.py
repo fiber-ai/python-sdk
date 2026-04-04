@@ -19,11 +19,11 @@ T = TypeVar("T", bound="GetSubdivisionsResponse200OutputSubdivisionsItem")
 class GetSubdivisionsResponse200OutputSubdivisionsItem:
     """
     Attributes:
-        code (str): Subdivision code without the country prefix, e.g. 'CA' for California, 'MH' for Maharashtra
-        name (str): Official name of the subdivision
-        type_ (str): Type of subdivision, e.g. 'State', 'Province', 'Land'
-        alternate_names (list[GetSubdivisionsResponse200OutputSubdivisionsItemAlternateNamesItem]): Alternate/local
-            names for the subdivision
+        code (str): The subdivision code without the country prefix (e.g. 'CA' for California, 'MH' for Maharashtra).
+        name (str): The official name of the subdivision.
+        type_ (str): The type of subdivision (e.g. 'State', 'Province', 'Land').
+        alternate_names (list[GetSubdivisionsResponse200OutputSubdivisionsItemAlternateNamesItem]): The alternate or
+            local names for the subdivision.
     """
 
     code: str

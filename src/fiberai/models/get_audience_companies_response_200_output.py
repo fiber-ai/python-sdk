@@ -21,11 +21,11 @@ T = TypeVar("T", bound="GetAudienceCompaniesResponse200Output")
 class GetAudienceCompaniesResponse200Output:
     """
     Attributes:
-        audience_id (str): ID of the audience
-        companies (list[GetAudienceCompaniesResponse200OutputCompaniesItem]): List of companies
-        total_count (float): Total number of companies in the audience
-        has_more (bool): Whether there are more results
-        next_cursor (None | str | Unset): Cursor for pagination
+        audience_id (str): The ID of the audience.
+        companies (list[GetAudienceCompaniesResponse200OutputCompaniesItem]): The list of companies.
+        total_count (float): The total number of companies in the audience.
+        has_more (bool): Whether there are more results available.
+        next_cursor (None | str | Unset): The pagination cursor for the next page.
     """
 
     audience_id: str

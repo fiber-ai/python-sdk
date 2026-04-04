@@ -13,8 +13,8 @@ T = TypeVar("T", bound="DeleteAudienceResponse200Output")
 class DeleteAudienceResponse200Output:
     """
     Attributes:
-        audience_id (str): ID of the archived audience
-        archived (bool): Confirmation that the audience was archived
+        audience_id (str): The ID of the archived audience.
+        archived (bool): Whether the audience was successfully archived.
     """
 
     audience_id: str

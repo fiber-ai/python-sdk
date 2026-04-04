@@ -14,7 +14,7 @@ class EmailBounceDetectionBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        email (str): The email to validate
+        email (str): The email address to validate.
     """
 
     api_key: str

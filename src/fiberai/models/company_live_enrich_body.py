@@ -18,11 +18,11 @@ class CompanyLiveEnrichBody:
     Attributes:
         api_key (str): Your Fiber API key
         type_ (CompanyLiveEnrichBodyType):
-        value (str): The company's LinkedIn slug (e.g., 'microsoft'), LinkedIn URL (e.g.,
-            'https://www.linkedin.com/company/microsoft' or 'https://www.linkedin.com/company/1441'), LinkedIn organization
-            ID (e.g., '1441' for Google), or Fiber company ID (e.g., 'comp_1441')
-        get_historical_headcount (bool | Unset): If true, we will attempt to compute the company's historical employee
-            count and recent growth trends. No extra cost, but may take longer. Default: False.
+        value (str): The company's LinkedIn slug (e.g. 'microsoft'), LinkedIn URL (e.g.
+            'https://www.linkedin.com/company/microsoft'), LinkedIn organization ID (e.g. '1441'), or Fiber company ID (e.g.
+            'comp_1441').
+        get_historical_headcount (bool | Unset): Whether to compute the company's historical employee count and recent
+            growth trends. No additional cost, but may take longer. Default: False.
     """
 
     api_key: str

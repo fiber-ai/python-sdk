@@ -13,7 +13,7 @@ T = TypeVar("T", bound="CreateSavedSearchResponse200Output")
 class CreateSavedSearchResponse200Output:
     """
     Attributes:
-        id (str): The ID of the saved search
+        id (str): The ID of the saved search.
     """
 
     id: str

@@ -13,8 +13,8 @@ T = TypeVar("T", bound="RemoveProspectFromExclusionListResponse200Output")
 class RemoveProspectFromExclusionListResponse200Output:
     """
     Attributes:
-        deleted_excluded_prospect_ids (list[str]): Ids of the excluded prospects that were removed from the exclusion
-            list
+        deleted_excluded_prospect_ids (list[str]): The IDs of the excluded prospects that were removed from the
+            exclusion list.
     """
 
     deleted_excluded_prospect_ids: list[str]

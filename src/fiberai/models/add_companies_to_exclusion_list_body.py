@@ -20,9 +20,9 @@ class AddCompaniesToExclusionListBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        list_id (str): Id of the company exclusion list to add companies to
-        companies (list[AddCompaniesToExclusionListBodyCompaniesItem]): Companies to add to the exclusion list. Max 5000
-            companies can be added at a time.
+        list_id (str): The ID of the company exclusion list to add companies to.
+        companies (list[AddCompaniesToExclusionListBodyCompaniesItem]): The companies to add to the exclusion list. A
+            maximum of 5000 companies can be added at a time.
     """
 
     api_key: str

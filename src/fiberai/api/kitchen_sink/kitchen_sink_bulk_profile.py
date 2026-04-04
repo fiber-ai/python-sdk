@@ -140,8 +140,9 @@ def sync_detailed(
 ]:
     r"""Kitchen sink bulk profile lookup
 
-     Search for many people using a variety of parameters such as LinkedIn slug, LinkedIn URL, or their
-    current company information. Returns profile data for the person if found.
+     Search for many people using a variety of parameters such as LinkedIn slug, LinkedIn URL, or current
+    company information. Returns profile data for each person if found. Providing more information per
+    person (e.g. name + company + LinkedIn) improves match accuracy.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
@@ -189,8 +190,9 @@ def sync(
 ):
     r"""Kitchen sink bulk profile lookup
 
-     Search for many people using a variety of parameters such as LinkedIn slug, LinkedIn URL, or their
-    current company information. Returns profile data for the person if found.
+     Search for many people using a variety of parameters such as LinkedIn slug, LinkedIn URL, or current
+    company information. Returns profile data for each person if found. Providing more information per
+    person (e.g. name + company + LinkedIn) improves match accuracy.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
@@ -232,8 +234,9 @@ async def asyncio_detailed(
 ]:
     r"""Kitchen sink bulk profile lookup
 
-     Search for many people using a variety of parameters such as LinkedIn slug, LinkedIn URL, or their
-    current company information. Returns profile data for the person if found.
+     Search for many people using a variety of parameters such as LinkedIn slug, LinkedIn URL, or current
+    company information. Returns profile data for each person if found. Providing more information per
+    person (e.g. name + company + LinkedIn) improves match accuracy.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
@@ -279,8 +282,9 @@ async def asyncio(
 ):
     r"""Kitchen sink bulk profile lookup
 
-     Search for many people using a variety of parameters such as LinkedIn slug, LinkedIn URL, or their
-    current company information. Returns profile data for the person if found.
+     Search for many people using a variety of parameters such as LinkedIn slug, LinkedIn URL, or current
+    company information. Returns profile data for each person if found. Providing more information per
+    person (e.g. name + company + LinkedIn) improves match accuracy.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 

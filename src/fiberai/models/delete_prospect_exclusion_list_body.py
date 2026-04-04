@@ -14,7 +14,7 @@ class DeleteProspectExclusionListBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        list_ids (list[str]): Ids of the prospect exclusion lists to delete
+        list_ids (list[str]): The IDs of the prospect exclusion lists to delete.
     """
 
     api_key: str

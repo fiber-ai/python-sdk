@@ -19,15 +19,15 @@ T = TypeVar("T", bound="GetAudienceStatusResponse200Output")
 class GetAudienceStatusResponse200Output:
     """
     Attributes:
-        audience_id (str): Unique ID of the audience
-        name (str): Name of the audience
-        status (GetAudienceStatusResponse200OutputStatus): Current status of the audience
-        creation_method (GetAudienceStatusResponse200OutputCreationMethod): How the audience was created
-        created_at (str): When the audience was created
-        building_started_at (None | str | Unset): When the audience build started
-        building_finished_at (None | str | Unset): When the audience build finished
-        companies_count (float | None | Unset): Number of companies in the audience
-        prospects_count (float | None | Unset): Number of prospects in the audience
+        audience_id (str): The unique ID of the audience.
+        name (str): The name of the audience.
+        status (GetAudienceStatusResponse200OutputStatus): The current status of the audience.
+        creation_method (GetAudienceStatusResponse200OutputCreationMethod): The method used to create the audience.
+        created_at (str): The timestamp when the audience was created.
+        building_started_at (None | str | Unset): The timestamp when the audience build started.
+        building_finished_at (None | str | Unset): The timestamp when the audience build finished.
+        companies_count (float | None | Unset): The number of companies in the audience.
+        prospects_count (float | None | Unset): The number of prospects in the audience.
     """
 
     audience_id: str

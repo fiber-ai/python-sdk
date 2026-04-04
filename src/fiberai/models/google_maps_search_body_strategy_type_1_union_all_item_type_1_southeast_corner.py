@@ -14,8 +14,8 @@ class GoogleMapsSearchBodyStrategyType1UnionAllItemType1SoutheastCorner:
     """The coordinates of the south east corner of the rectangle
 
     Attributes:
-        latitude (float): The latitude of the point
-        longitude (float): The longitude of the point
+        latitude (float): The latitude of the point.
+        longitude (float): The longitude of the point.
     """
 
     latitude: float

@@ -22,9 +22,9 @@ T = TypeVar("T", bound="EstimateEnrichmentCostResponse200Output")
 class EstimateEnrichmentCostResponse200Output:
     """
     Attributes:
-        total_credits (float): Total estimated credits required
-        breakdown (EstimateEnrichmentCostResponse200OutputBreakdown): Detailed cost breakdown by operation type
-        time_estimate (EstimateEnrichmentCostResponse200OutputTimeEstimate): Estimated time to complete enrichment
+        total_credits (float): The total estimated credits required.
+        breakdown (EstimateEnrichmentCostResponse200OutputBreakdown): The detailed cost breakdown by operation type.
+        time_estimate (EstimateEnrichmentCostResponse200OutputTimeEstimate): The estimated time to complete enrichment.
     """
 
     total_credits: float

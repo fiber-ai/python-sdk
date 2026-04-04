@@ -13,11 +13,13 @@ T = TypeVar("T", bound="KitchenSinkProfileBodyProfileLocationType0")
 
 @_attrs_define
 class KitchenSinkProfileBodyProfileLocationType0:
-    """
+    """Location of the person. Accepts country code, state name, and/or a free-text locality string.
+
     Attributes:
-        country_code (None | str | Unset):
-        state_name (None | str | Unset):
-        locality (None | str | Unset):
+        country_code (None | str | Unset): ISO 3166-1 alpha-3 country code (e.g. 'USA', 'GBR').
+        state_name (None | str | Unset): State or region name in plain text (e.g. 'California', 'New York').
+        locality (None | str | Unset): Free-text location string. Use this when the location data does not clearly
+            separate into country, state, or city.
     """
 
     country_code: None | str | Unset = UNSET

@@ -25,9 +25,9 @@ class PollBatchContactEnrichmentResponse200OutputPageResultsItem:
     """
     Attributes:
         inputs (PollBatchContactEnrichmentResponse200OutputPageResultsItemInputs): The input details provided for this
-            person
+            person.
         outputs (None | PollBatchContactEnrichmentResponse200OutputPageResultsItemOutputsType0 | Unset): The reveal
-            result for this person
+            result for this person.
     """
 
     inputs: PollBatchContactEnrichmentResponse200OutputPageResultsItemInputs

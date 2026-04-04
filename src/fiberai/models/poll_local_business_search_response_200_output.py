@@ -6,11 +6,17 @@ from typing import TYPE_CHECKING, Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.poll_local_business_search_response_200_output_status import (
+    PollLocalBusinessSearchResponse200OutputStatus,
+)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.poll_local_business_search_response_200_output_data import (
         PollLocalBusinessSearchResponse200OutputData,
+    )
+    from ..models.poll_local_business_search_response_200_output_progress import (
+        PollLocalBusinessSearchResponse200OutputProgress,
     )
 
 
@@ -21,19 +27,27 @@ T = TypeVar("T", bound="PollLocalBusinessSearchResponse200Output")
 class PollLocalBusinessSearchResponse200Output:
     """
     Attributes:
-        task_id (str): Task ID of the local business search
+        research_run_id (str): Research run ID of the local business search
+        status (PollLocalBusinessSearchResponse200OutputStatus): Current status of the research run
+        progress (PollLocalBusinessSearchResponse200OutputProgress): Progress of the research run
         data (PollLocalBusinessSearchResponse200OutputData): The Local business agent search result
         next_cursor (None | str | Unset): The cursor to use to get the next page of results. If this is null, then there
             are no more results to fetch
     """
 
-    task_id: str
+    research_run_id: str
+    status: PollLocalBusinessSearchResponse200OutputStatus
+    progress: PollLocalBusinessSearchResponse200OutputProgress
     data: PollLocalBusinessSearchResponse200OutputData
     next_cursor: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        task_id = self.task_id
+        research_run_id = self.research_run_id
+
+        status = self.status.value
+
+        progress = self.progress.to_dict()
 
         data = self.data.to_dict()
 
@@ -47,7 +61,9 @@ class PollLocalBusinessSearchResponse200Output:
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
-                "taskId": task_id,
+                "researchRunId": research_run_id,
+                "status": status,
+                "progress": progress,
                 "data": data,
             }
         )
@@ -61,9 +77,16 @@ class PollLocalBusinessSearchResponse200Output:
         from ..models.poll_local_business_search_response_200_output_data import (
             PollLocalBusinessSearchResponse200OutputData,
         )
+        from ..models.poll_local_business_search_response_200_output_progress import (
+            PollLocalBusinessSearchResponse200OutputProgress,
+        )
 
         d = dict(src_dict)
-        task_id = d.pop("taskId")
+        research_run_id = d.pop("researchRunId")
+
+        status = PollLocalBusinessSearchResponse200OutputStatus(d.pop("status"))
+
+        progress = PollLocalBusinessSearchResponse200OutputProgress.from_dict(d.pop("progress"))
 
         data = PollLocalBusinessSearchResponse200OutputData.from_dict(d.pop("data"))
 
@@ -77,7 +100,9 @@ class PollLocalBusinessSearchResponse200Output:
         next_cursor = _parse_next_cursor(d.pop("nextCursor", UNSET))
 
         poll_local_business_search_response_200_output = cls(
-            task_id=task_id,
+            research_run_id=research_run_id,
+            status=status,
+            progress=progress,
             data=data,
             next_cursor=next_cursor,
         )

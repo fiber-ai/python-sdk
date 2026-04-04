@@ -16,10 +16,9 @@ class PollBatchContactEnrichmentBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        task_id (str): The task ID from the start endpoint response
-        cursor (None | str | Unset): The cursor from the previous poll response. Omit this if you are polling for the
-            first time.
-        take (int | Unset): Number of people to take per batch. Default is 100 Default: 100.
+        task_id (str): The task ID from the start endpoint response.
+        cursor (None | str | Unset): The pagination cursor from the previous poll response. Omit for the first request.
+        take (int | Unset): The number of people to return per page. Defaults to 100. Default: 100.
     """
 
     api_key: str

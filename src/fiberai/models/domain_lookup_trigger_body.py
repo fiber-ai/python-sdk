@@ -18,8 +18,8 @@ class DomainLookupTriggerBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        over_all_context (str): Descriptor of what your companies have in common and what they are. Like "British
-            freight brokers" or "YC startups." Helps our agent disambiguate companies with similar names.
+        over_all_context (str): A descriptor of what the companies have in common (e.g. "British freight brokers" or "YC
+            startups"). Helps disambiguate companies with similar names.
         company_info (list[DomainLookupTriggerBodyCompanyInfoItem]): List of companies to look up. Max 400 companies can
             be provided at a time.
     """

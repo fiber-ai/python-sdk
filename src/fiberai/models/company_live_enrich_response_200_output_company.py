@@ -31,7 +31,7 @@ T = TypeVar("T", bound="CompanyLiveEnrichResponse200OutputCompany")
 
 @_attrs_define
 class CompanyLiveEnrichResponse200OutputCompany:
-    """The company that was found and enriched else a 404 HTTP code is returned
+    """The enriched company data. A 404 status is returned if the company was not found.
 
     Attributes:
         slug (str):

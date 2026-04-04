@@ -13,10 +13,13 @@ T = TypeVar("T", bound="KitchenSinkProfileBodyPersonNameType0")
 
 @_attrs_define
 class KitchenSinkProfileBodyPersonNameType0:
-    """
+    """Person's name for matching. Best used with companyDomain or companyIdentifier.
+
     Attributes:
-        value (None | str | Unset):
-        loose_match (bool | Unset):  Default: False.
+        value (None | str | Unset): The name of the person to search for. It can have first name and/or last name. Try
+            to pass in names as present on LinkedIn.
+        loose_match (bool | Unset): If true, allows partial and out-of-order matches. If false, only exact full name
+            matches are returned. Default: False.
     """
 
     value: None | str | Unset = UNSET

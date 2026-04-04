@@ -16,10 +16,10 @@ class DomainLookupPollingBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        domain_agent_run_id (str): The ID of the domain agent run which you got back from the trigger endpoint
+        domain_agent_run_id (str): The ID of the domain agent run returned by the trigger endpoint.
         cursor (None | str | Unset): The cursor from where to start fetching the next page of results. Provide the
             `nextCursor` from the previous response to continue from there.
-        page_size (float | Unset): The number of results to fetch per page Default: 10.0.
+        page_size (float | Unset): The number of results to fetch per page. Default: 10.0.
     """
 
     api_key: str

@@ -15,7 +15,9 @@ T = TypeVar("T", bound="KitchenSinkBulkCompanyBodyCompaniesItemCompanyDomainType
 class KitchenSinkBulkCompanyBodyCompaniesItemCompanyDomainType0:
     """
     Attributes:
-        value (None | str | Unset):
+        value (None | str | Unset): The domain of the company. URL prefixes (https, www) are automatically stripped.
+            Subdomains and path segments are preserved to support domains like 'instagram.com/company' or
+            'my_company.netlify.app'.
     """
 
     value: None | str | Unset = UNSET

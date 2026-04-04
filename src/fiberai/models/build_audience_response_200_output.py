@@ -15,9 +15,9 @@ T = TypeVar("T", bound="BuildAudienceResponse200Output")
 class BuildAudienceResponse200Output:
     """
     Attributes:
-        audience_id (str): Unique ID of the audience
-        status (BuildAudienceResponse200OutputStatus): Status indicating the build has started
-        message (str): Details about the build status
+        audience_id (str): The unique ID of the audience.
+        status (BuildAudienceResponse200OutputStatus): The status indicating the build has started.
+        message (str): A human-readable message about the build status.
     """
 
     audience_id: str

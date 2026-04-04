@@ -18,7 +18,7 @@ class KitchenSinkCompanyBodyCompanyIdentifierType0:
     """
     Attributes:
         identifier (KitchenSinkCompanyBodyCompanyIdentifierType0Identifier):
-        value (str):
+        value (str): The LinkedIn slug of the person's current company.
     """
 
     identifier: KitchenSinkCompanyBodyCompanyIdentifierType0Identifier

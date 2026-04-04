@@ -138,10 +138,12 @@ def sync_detailed(
     | SyncTurboContactEnrichmentResponse500
     | SyncTurboContactEnrichmentResponse503
 ]:
-    r"""Synchronously fetch contact details (turbo mode)
+    r"""Reveal contact details (turbo)
 
-     Turbo mode: fetch contact details quickly. This endpoint uses a special faster enrichment stack and
-    is optimized for speed and synchronous calls.
+     Fastest synchronous contact reveal — optimized for speed at a higher credit cost. Uses a premium
+    enrichment stack for the lowest possible latency. For a cheaper option with slightly longer response
+    times, use the standard /contact-details/single endpoint. For maximum coverage across all vendors
+    (async, slower), use the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
@@ -150,6 +152,9 @@ def sync_detailed(
     only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
     data.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 90 seconds for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (SyncTurboContactEnrichmentBody):
@@ -189,10 +194,12 @@ def sync(
     | SyncTurboContactEnrichmentResponse503
     | None
 ):
-    r"""Synchronously fetch contact details (turbo mode)
+    r"""Reveal contact details (turbo)
 
-     Turbo mode: fetch contact details quickly. This endpoint uses a special faster enrichment stack and
-    is optimized for speed and synchronous calls.
+     Fastest synchronous contact reveal — optimized for speed at a higher credit cost. Uses a premium
+    enrichment stack for the lowest possible latency. For a cheaper option with slightly longer response
+    times, use the standard /contact-details/single endpoint. For maximum coverage across all vendors
+    (async, slower), use the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
@@ -201,6 +208,9 @@ def sync(
     only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
     data.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 90 seconds for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (SyncTurboContactEnrichmentBody):
@@ -234,10 +244,12 @@ async def asyncio_detailed(
     | SyncTurboContactEnrichmentResponse500
     | SyncTurboContactEnrichmentResponse503
 ]:
-    r"""Synchronously fetch contact details (turbo mode)
+    r"""Reveal contact details (turbo)
 
-     Turbo mode: fetch contact details quickly. This endpoint uses a special faster enrichment stack and
-    is optimized for speed and synchronous calls.
+     Fastest synchronous contact reveal — optimized for speed at a higher credit cost. Uses a premium
+    enrichment stack for the lowest possible latency. For a cheaper option with slightly longer response
+    times, use the standard /contact-details/single endpoint. For maximum coverage across all vendors
+    (async, slower), use the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
@@ -246,6 +258,9 @@ async def asyncio_detailed(
     only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
     data.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 90 seconds for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (SyncTurboContactEnrichmentBody):
@@ -283,10 +298,12 @@ async def asyncio(
     | SyncTurboContactEnrichmentResponse503
     | None
 ):
-    r"""Synchronously fetch contact details (turbo mode)
+    r"""Reveal contact details (turbo)
 
-     Turbo mode: fetch contact details quickly. This endpoint uses a special faster enrichment stack and
-    is optimized for speed and synchronous calls.
+     Fastest synchronous contact reveal — optimized for speed at a higher credit cost. Uses a premium
+    enrichment stack for the lowest possible latency. For a cheaper option with slightly longer response
+    times, use the standard /contact-details/single endpoint. For maximum coverage across all vendors
+    (async, slower), use the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
@@ -295,6 +312,9 @@ async def asyncio(
     only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
     data.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 90 seconds for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (SyncTurboContactEnrichmentBody):

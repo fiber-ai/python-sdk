@@ -21,9 +21,8 @@ T = TypeVar("T", bound="ListSavedSearchResponse200Output")
 class ListSavedSearchResponse200Output:
     """
     Attributes:
-        saved_searches (list[ListSavedSearchResponse200OutputSavedSearchesItem]): The saved searches
-        next_cursor (None | str | Unset): The next cursor. You can call this endpoint again with this cursor to get the
-            next page of results. If null, there are no more results.
+        saved_searches (list[ListSavedSearchResponse200OutputSavedSearchesItem]): The list of saved searches.
+        next_cursor (None | str | Unset): The pagination cursor for the next page. Null if there are no more results.
     """
 
     saved_searches: list[ListSavedSearchResponse200OutputSavedSearchesItem]

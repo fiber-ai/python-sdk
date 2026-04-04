@@ -17,8 +17,8 @@ T = TypeVar("T", bound="CompanyLiveEnrichResponse200Output")
 class CompanyLiveEnrichResponse200Output:
     """
     Attributes:
-        company (CompanyLiveEnrichResponse200OutputCompany): The company that was found and enriched else a 404 HTTP
-            code is returned
+        company (CompanyLiveEnrichResponse200OutputCompany): The enriched company data. A 404 status is returned if the
+            company was not found.
     """
 
     company: CompanyLiveEnrichResponse200OutputCompany

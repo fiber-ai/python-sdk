@@ -49,26 +49,38 @@ class KitchenSinkProfileBody:
     Attributes:
         api_key (str): Your Fiber API key
         profile_identifier (KitchenSinkProfileBodyProfileIdentifierType0 | KitchenSinkProfileBodyProfileIdentifierType1
-            | KitchenSinkProfileBodyProfileIdentifierType2 | None | Unset):
-        email_address (None | str | Unset):
-        person_name (KitchenSinkProfileBodyPersonNameType0 | None | Unset):
+            | KitchenSinkProfileBodyProfileIdentifierType2 | None | Unset): LinkedIn profile identifier (slug or URL).
+            Provides the best match accuracy.
+        email_address (None | str | Unset): Email address to look up. Second-best accuracy after profileIdentifier.
+        person_name (KitchenSinkProfileBodyPersonNameType0 | None | Unset): Person's name for matching. Best used with
+            companyDomain or companyIdentifier.
         job_title (KitchenSinkProfileBodyJobTitleType0 | None | Unset):
         company_identifier (KitchenSinkProfileBodyCompanyIdentifierType0 | KitchenSinkProfileBodyCompanyIdentifierType1
-            | KitchenSinkProfileBodyCompanyIdentifierType2 | None | Unset):
+            | KitchenSinkProfileBodyCompanyIdentifierType2 | None | Unset): LinkedIn identifier for the person's current
+            company. Used with personName for matching.
         linkedin_headline (KitchenSinkProfileBodyLinkedinHeadlineType0 | None | Unset):
         company_name (KitchenSinkProfileBodyCompanyNameType0 | None | Unset):
-        company_domain (KitchenSinkProfileBodyCompanyDomainType0 | None | Unset):
-        profile_location (KitchenSinkProfileBodyProfileLocationType0 | None | Unset):
-        num_profiles (int | Unset):  Default: 1.
-        live_fetch (bool | None | Unset):  Default: False.
-        force_company_match (bool | None | Unset):  Default: False.
+        company_domain (KitchenSinkProfileBodyCompanyDomainType0 | None | Unset): Domain of the person's current company
+            (e.g. 'fiber.ai'). Used with personName for matching.
+        profile_location (KitchenSinkProfileBodyProfileLocationType0 | None | Unset): Location of the person. Accepts
+            country code, state name, and/or a free-text locality string.
+        num_profiles (int | Unset): Maximum number of profile results to return per lookup. Defaults to 1. Default: 1.
+        live_fetch (bool | None | Unset): When true, triggers a real-time LinkedIn profile fetch. Costs additional
+            credits. Useful for profiles not yet in the database or to get the freshest data. Default: False.
+        force_company_match (bool | None | Unset): When true, requires that the matched profile works at the specified
+            company. Without this, the API may return profiles that match by name but work elsewhere. Default: False.
         school_name (KitchenSinkProfileBodySchoolNameType0 | None | Unset):
         school_identifier (KitchenSinkProfileBodySchoolIdentifierType0 | KitchenSinkProfileBodySchoolIdentifierType1 |
-            KitchenSinkProfileBodySchoolIdentifierType2 | None | Unset):
+            KitchenSinkProfileBodySchoolIdentifierType2 | None | Unset): The identifier of the school the person is
+            currently attending or has attended. If provided, we will lookup the person by school identifier.
         school_domain (KitchenSinkProfileBodySchoolDomainType0 | None | Unset):
-        fuzzy_search (bool | None | Unset):  Default: False.
-        get_detailed_education (bool | None | Unset):  Default: False.
-        get_detailed_work_experience (bool | None | Unset):  Default: False.
+        fuzzy_search (bool | None | Unset): When true, enables fuzzy name matching. Useful when exact name spelling is
+            uncertain. Default: False.
+        get_detailed_education (bool | None | Unset): When true, returns detailed_education[] with school_details for
+            each education entry. Default: False.
+        get_detailed_work_experience (bool | None | Unset): When true, returns detailed_work_experiences[] with
+            company_details (domains, preferred_name, linkedin_primary_slug, li_org_id, crunchbase_slug) for each work
+            experience. Use this to get company domains for a person. Default: False.
     """
 
     api_key: str

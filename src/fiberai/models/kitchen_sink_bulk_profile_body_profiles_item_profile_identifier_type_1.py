@@ -18,7 +18,8 @@ class KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1:
     """
     Attributes:
         identifier (KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1Identifier):
-        value (str):
+        value (str): The LinkedIn URL of the person (e.g. 'https://www.linkedin.com/in/williamhgates'). The https:// and
+            www prefixes are optional.
     """
 
     identifier: KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1Identifier

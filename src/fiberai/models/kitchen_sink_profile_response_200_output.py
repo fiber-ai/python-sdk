@@ -19,8 +19,8 @@ T = TypeVar("T", bound="KitchenSinkProfileResponse200Output")
 class KitchenSinkProfileResponse200Output:
     """
     Attributes:
-        data (list[KitchenSinkProfileResponse200OutputDataItem]):
-        message (None | str | Unset):
+        data (list[KitchenSinkProfileResponse200OutputDataItem]): The list of profiles found for the given query
+        message (None | str | Unset): Additional context if no matching profile was found.
     """
 
     data: list[KitchenSinkProfileResponse200OutputDataItem]

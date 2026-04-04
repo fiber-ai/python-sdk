@@ -18,7 +18,7 @@ class KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2:
     """
     Attributes:
         identifier (KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2Identifier):
-        value (str):
+        value (str): The LinkedIn organization ID of the person's current company.
     """
 
     identifier: KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2Identifier

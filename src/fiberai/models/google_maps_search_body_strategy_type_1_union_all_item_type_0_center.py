@@ -13,8 +13,8 @@ T = TypeVar("T", bound="GoogleMapsSearchBodyStrategyType1UnionAllItemType0Center
 class GoogleMapsSearchBodyStrategyType1UnionAllItemType0Center:
     """
     Attributes:
-        latitude (float): The latitude of the point
-        longitude (float): The longitude of the point
+        latitude (float): The latitude of the point.
+        longitude (float): The longitude of the point.
     """
 
     latitude: float
