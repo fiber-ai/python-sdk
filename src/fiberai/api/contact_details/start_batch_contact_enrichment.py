@@ -143,7 +143,7 @@ def sync_detailed(
      Starts fetching contact details for multiple people (up to 10000) in batch. This is an asynchronous
     task; use the polling endpoint to check progress and get results.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 1 request per 10 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails<br />• 2 credits for work email only<br />• 2 credits for personal email
@@ -194,7 +194,7 @@ def sync(
      Starts fetching contact details for multiple people (up to 10000) in batch. This is an asynchronous
     task; use the polling endpoint to check progress and get results.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 1 request per 10 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails<br />• 2 credits for work email only<br />• 2 credits for personal email
@@ -239,7 +239,7 @@ async def asyncio_detailed(
      Starts fetching contact details for multiple people (up to 10000) in batch. This is an asynchronous
     task; use the polling endpoint to check progress and get results.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 1 request per 10 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails<br />• 2 credits for work email only<br />• 2 credits for personal email
@@ -288,7 +288,7 @@ async def asyncio(
      Starts fetching contact details for multiple people (up to 10000) in batch. This is an asynchronous
     task; use the polling endpoint to check progress and get results.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 1 request per 10 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails<br />• 2 credits for work email only<br />• 2 credits for personal email
