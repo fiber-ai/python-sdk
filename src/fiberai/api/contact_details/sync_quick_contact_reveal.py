@@ -142,8 +142,8 @@ def sync_detailed(
 
      Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Only requires a
     LinkedIn URL; profile details are resolved automatically. For faster results at a higher credit
-    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage across all vendors (async,
-    slower, higher cost), use the /contact-details/exhaustive/start endpoint.
+    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage (async, slower, higher
+    cost), use the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 200 requests per 1 minute</span>
 
@@ -198,8 +198,8 @@ def sync(
 
      Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Only requires a
     LinkedIn URL; profile details are resolved automatically. For faster results at a higher credit
-    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage across all vendors (async,
-    slower, higher cost), use the /contact-details/exhaustive/start endpoint.
+    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage (async, slower, higher
+    cost), use the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 200 requests per 1 minute</span>
 
@@ -248,8 +248,8 @@ async def asyncio_detailed(
 
      Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Only requires a
     LinkedIn URL; profile details are resolved automatically. For faster results at a higher credit
-    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage across all vendors (async,
-    slower, higher cost), use the /contact-details/exhaustive/start endpoint.
+    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage (async, slower, higher
+    cost), use the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 200 requests per 1 minute</span>
 
@@ -302,8 +302,8 @@ async def asyncio(
 
      Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Only requires a
     LinkedIn URL; profile details are resolved automatically. For faster results at a higher credit
-    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage across all vendors (async,
-    slower, higher cost), use the /contact-details/exhaustive/start endpoint.
+    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage (async, slower, higher
+    cost), use the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 200 requests per 1 minute</span>
 

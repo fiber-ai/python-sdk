@@ -142,8 +142,8 @@ def sync_detailed(
 
      Fastest synchronous contact reveal — optimized for speed at a higher credit cost. Uses a premium
     enrichment stack for the lowest possible latency. For a cheaper option with slightly longer response
-    times, use the standard /contact-details/single endpoint. For maximum coverage across all vendors
-    (async, slower), use the /contact-details/exhaustive/start endpoint.
+    times, use the standard /contact-details/single endpoint. For maximum coverage (async, slower), use
+    the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
@@ -198,8 +198,8 @@ def sync(
 
      Fastest synchronous contact reveal — optimized for speed at a higher credit cost. Uses a premium
     enrichment stack for the lowest possible latency. For a cheaper option with slightly longer response
-    times, use the standard /contact-details/single endpoint. For maximum coverage across all vendors
-    (async, slower), use the /contact-details/exhaustive/start endpoint.
+    times, use the standard /contact-details/single endpoint. For maximum coverage (async, slower), use
+    the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
@@ -248,8 +248,8 @@ async def asyncio_detailed(
 
      Fastest synchronous contact reveal — optimized for speed at a higher credit cost. Uses a premium
     enrichment stack for the lowest possible latency. For a cheaper option with slightly longer response
-    times, use the standard /contact-details/single endpoint. For maximum coverage across all vendors
-    (async, slower), use the /contact-details/exhaustive/start endpoint.
+    times, use the standard /contact-details/single endpoint. For maximum coverage (async, slower), use
+    the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
@@ -302,8 +302,8 @@ async def asyncio(
 
      Fastest synchronous contact reveal — optimized for speed at a higher credit cost. Uses a premium
     enrichment stack for the lowest possible latency. For a cheaper option with slightly longer response
-    times, use the standard /contact-details/single endpoint. For maximum coverage across all vendors
-    (async, slower), use the /contact-details/exhaustive/start endpoint.
+    times, use the standard /contact-details/single endpoint. For maximum coverage (async, slower), use
+    the /contact-details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 

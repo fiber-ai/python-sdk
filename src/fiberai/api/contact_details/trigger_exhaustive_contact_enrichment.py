@@ -140,7 +140,7 @@ def sync_detailed(
 ]:
     r"""Start exhaustive contact details reveal
 
-     Maximum-coverage contact reveal — runs all available vendors in parallel for the most comprehensive
+     Maximum-coverage contact reveal — runs all waterfall steps in parallel to get the most comprehensive
     results. This is asynchronous: call this endpoint to start the task, then poll /contact-
     details/exhaustive/poll with the returned task ID. Slower and more expensive than the synchronous
     endpoints, but returns more emails and phone numbers on average. For faster synchronous results, use
@@ -194,7 +194,7 @@ def sync(
 ):
     r"""Start exhaustive contact details reveal
 
-     Maximum-coverage contact reveal — runs all available vendors in parallel for the most comprehensive
+     Maximum-coverage contact reveal — runs all waterfall steps in parallel to get the most comprehensive
     results. This is asynchronous: call this endpoint to start the task, then poll /contact-
     details/exhaustive/poll with the returned task ID. Slower and more expensive than the synchronous
     endpoints, but returns more emails and phone numbers on average. For faster synchronous results, use
@@ -242,7 +242,7 @@ async def asyncio_detailed(
 ]:
     r"""Start exhaustive contact details reveal
 
-     Maximum-coverage contact reveal — runs all available vendors in parallel for the most comprehensive
+     Maximum-coverage contact reveal — runs all waterfall steps in parallel to get the most comprehensive
     results. This is asynchronous: call this endpoint to start the task, then poll /contact-
     details/exhaustive/poll with the returned task ID. Slower and more expensive than the synchronous
     endpoints, but returns more emails and phone numbers on average. For faster synchronous results, use
@@ -294,7 +294,7 @@ async def asyncio(
 ):
     r"""Start exhaustive contact details reveal
 
-     Maximum-coverage contact reveal — runs all available vendors in parallel for the most comprehensive
+     Maximum-coverage contact reveal — runs all waterfall steps in parallel to get the most comprehensive
     results. This is asynchronous: call this endpoint to start the task, then poll /contact-
     details/exhaustive/poll with the returned task ID. Slower and more expensive than the synchronous
     endpoints, but returns more emails and phone numbers on average. For faster synchronous results, use

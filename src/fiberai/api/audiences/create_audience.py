@@ -141,8 +141,7 @@ def sync_detailed(
     r"""Create a new audience
 
      Creates a new audience in DRAFT status. After creation, use the update-search-params endpoint to set
-    filters, then use the build endpoint to populate the audience with companies and prospects from
-    Elasticsearch.
+    filters, then use the build endpoint to populate the audience with companies and prospects.
 
     <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
 
@@ -190,8 +189,7 @@ def sync(
     r"""Create a new audience
 
      Creates a new audience in DRAFT status. After creation, use the update-search-params endpoint to set
-    filters, then use the build endpoint to populate the audience with companies and prospects from
-    Elasticsearch.
+    filters, then use the build endpoint to populate the audience with companies and prospects.
 
     <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
 
@@ -233,8 +231,7 @@ async def asyncio_detailed(
     r"""Create a new audience
 
      Creates a new audience in DRAFT status. After creation, use the update-search-params endpoint to set
-    filters, then use the build endpoint to populate the audience with companies and prospects from
-    Elasticsearch.
+    filters, then use the build endpoint to populate the audience with companies and prospects.
 
     <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
 
@@ -280,8 +277,7 @@ async def asyncio(
     r"""Create a new audience
 
      Creates a new audience in DRAFT status. After creation, use the update-search-params endpoint to set
-    filters, then use the build endpoint to populate the audience with companies and prospects from
-    Elasticsearch.
+    filters, then use the build endpoint to populate the audience with companies and prospects.
 
     <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
 
