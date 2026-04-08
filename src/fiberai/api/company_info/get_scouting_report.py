@@ -144,7 +144,7 @@ def sync_detailed(
     links, and historical headcount. This endpoint may take 1-2 minutes to respond as it gathers data
     from multiple sources — please set a generous client timeout (at least 120 seconds).
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 6 credits per scouting report&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -193,7 +193,7 @@ def sync(
     links, and historical headcount. This endpoint may take 1-2 minutes to respond as it gathers data
     from multiple sources — please set a generous client timeout (at least 120 seconds).
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 6 credits per scouting report&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -236,7 +236,7 @@ async def asyncio_detailed(
     links, and historical headcount. This endpoint may take 1-2 minutes to respond as it gathers data
     from multiple sources — please set a generous client timeout (at least 120 seconds).
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 6 credits per scouting report&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -283,7 +283,7 @@ async def asyncio(
     links, and historical headcount. This endpoint may take 1-2 minutes to respond as it gathers data
     from multiple sources — please set a generous client timeout (at least 120 seconds).
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 6 credits per scouting report&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
