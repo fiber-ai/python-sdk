@@ -148,7 +148,7 @@ def sync_detailed(
     slug (e.g. 'company/banco-santander').Note: This is not optimized for job descriptions. If you have
     a JD, use the Search profiles from a job description endpoint instead.
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Fixed costs per request:<br />• 2 credits for company search params
     generation based on prompt, if required<br />• 2 credits for profile search params generation based
@@ -207,7 +207,7 @@ def sync(
     slug (e.g. 'company/banco-santander').Note: This is not optimized for job descriptions. If you have
     a JD, use the Search profiles from a job description endpoint instead.
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Fixed costs per request:<br />• 2 credits for company search params
     generation based on prompt, if required<br />• 2 credits for profile search params generation based
@@ -260,7 +260,7 @@ async def asyncio_detailed(
     slug (e.g. 'company/banco-santander').Note: This is not optimized for job descriptions. If you have
     a JD, use the Search profiles from a job description endpoint instead.
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Fixed costs per request:<br />• 2 credits for company search params
     generation based on prompt, if required<br />• 2 credits for profile search params generation based
@@ -317,7 +317,7 @@ async def asyncio(
     slug (e.g. 'company/banco-santander').Note: This is not optimized for job descriptions. If you have
     a JD, use the Search profiles from a job description endpoint instead.
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Fixed costs per request:<br />• 2 credits for company search params
     generation based on prompt, if required<br />• 2 credits for profile search params generation based

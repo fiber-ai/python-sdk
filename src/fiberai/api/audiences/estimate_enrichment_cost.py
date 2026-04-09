@@ -149,7 +149,7 @@ def sync_detailed(
     breakdown by operation type (Sales Navigator, live enrichment, contact enrichment, validation) and
     estimated completion time. This endpoint is free and does not charge any credits.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -201,7 +201,7 @@ def sync(
     breakdown by operation type (Sales Navigator, live enrichment, contact enrichment, validation) and
     estimated completion time. This endpoint is free and does not charge any credits.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -247,7 +247,7 @@ async def asyncio_detailed(
     breakdown by operation type (Sales Navigator, live enrichment, contact enrichment, validation) and
     estimated completion time. This endpoint is free and does not charge any credits.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -297,7 +297,7 @@ async def asyncio(
     breakdown by operation type (Sales Navigator, live enrichment, contact enrichment, validation) and
     estimated completion time. This endpoint is free and does not charge any credits.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>

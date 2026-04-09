@@ -142,7 +142,7 @@ def sync_detailed(
 
      Update a job changes list. Track people when they change their jobs.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -189,7 +189,7 @@ def sync(
 
      Update a job changes list. Track people when they change their jobs.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -230,7 +230,7 @@ async def asyncio_detailed(
 
      Update a job changes list. Track people when they change their jobs.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -275,7 +275,7 @@ async def asyncio(
 
      Update a job changes list. Track people when they change their jobs.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>

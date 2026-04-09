@@ -144,7 +144,7 @@ def sync_detailed(
     remove the 404 profiles to the list automatically.Once the upload is start, you can use /job-
     changes/get-list to track the uploading process of the people to the list.
 
-    <span>⚡ <strong>Rate limit:</strong> 1 request per 15 second</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per Number of prospect tracking&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -193,7 +193,7 @@ def sync(
     remove the 404 profiles to the list automatically.Once the upload is start, you can use /job-
     changes/get-list to track the uploading process of the people to the list.
 
-    <span>⚡ <strong>Rate limit:</strong> 1 request per 15 second</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per Number of prospect tracking&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -236,7 +236,7 @@ async def asyncio_detailed(
     remove the 404 profiles to the list automatically.Once the upload is start, you can use /job-
     changes/get-list to track the uploading process of the people to the list.
 
-    <span>⚡ <strong>Rate limit:</strong> 1 request per 15 second</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per Number of prospect tracking&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -283,7 +283,7 @@ async def asyncio(
     remove the 404 profiles to the list automatically.Once the upload is start, you can use /job-
     changes/get-list to track the uploading process of the people to the list.
 
-    <span>⚡ <strong>Rate limit:</strong> 1 request per 15 second</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per Number of prospect tracking&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>

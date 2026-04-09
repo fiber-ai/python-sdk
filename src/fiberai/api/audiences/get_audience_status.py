@@ -149,7 +149,7 @@ def sync_detailed(
     triggering a build. Status values: DRAFT (waiting for configuration), BUILDING (search in progress),
     NORMAL (ready to use), FAILED (build failed). Pass your apiKey in the query string.
 
-    <span>⚡ <strong>Rate limit:</strong> 100 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -201,7 +201,7 @@ def sync(
     triggering a build. Status values: DRAFT (waiting for configuration), BUILDING (search in progress),
     NORMAL (ready to use), FAILED (build failed). Pass your apiKey in the query string.
 
-    <span>⚡ <strong>Rate limit:</strong> 100 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -247,7 +247,7 @@ async def asyncio_detailed(
     triggering a build. Status values: DRAFT (waiting for configuration), BUILDING (search in progress),
     NORMAL (ready to use), FAILED (build failed). Pass your apiKey in the query string.
 
-    <span>⚡ <strong>Rate limit:</strong> 100 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -297,7 +297,7 @@ async def asyncio(
     triggering a build. Status values: DRAFT (waiting for configuration), BUILDING (search in progress),
     NORMAL (ready to use), FAILED (build failed). Pass your apiKey in the query string.
 
-    <span>⚡ <strong>Rate limit:</strong> 100 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>

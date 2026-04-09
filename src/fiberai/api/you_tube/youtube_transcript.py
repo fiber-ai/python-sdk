@@ -143,7 +143,7 @@ def sync_detailed(
      Fetches the timestamped transcript for a YouTube video. Returns all transcript segments and the list
     of languages available. Provide a full YouTube URL or a bare 11-character video ID.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -191,7 +191,7 @@ def sync(
      Fetches the timestamped transcript for a YouTube video. Returns all transcript segments and the list
     of languages available. Provide a full YouTube URL or a bare 11-character video ID.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -233,7 +233,7 @@ async def asyncio_detailed(
      Fetches the timestamped transcript for a YouTube video. Returns all transcript segments and the list
     of languages available. Provide a full YouTube URL or a bare 11-character video ID.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -279,7 +279,7 @@ async def asyncio(
      Fetches the timestamped transcript for a YouTube video. Returns all transcript segments and the list
     of languages available. Provide a full YouTube URL or a bare 11-character video ID.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>

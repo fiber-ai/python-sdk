@@ -142,7 +142,7 @@ def sync_detailed(
 
      A synchronous endpoint that lets you search for companies and then prospects in these companies.
 
-    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the search completes based on results: 1
     credits per company found and 1 credits per profile found.&nbsp;<span title=\"Pricing shown is
@@ -194,7 +194,7 @@ def sync(
 
      A synchronous endpoint that lets you search for companies and then prospects in these companies.
 
-    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the search completes based on results: 1
     credits per company found and 1 credits per profile found.&nbsp;<span title=\"Pricing shown is
@@ -240,7 +240,7 @@ async def asyncio_detailed(
 
      A synchronous endpoint that lets you search for companies and then prospects in these companies.
 
-    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the search completes based on results: 1
     credits per company found and 1 credits per profile found.&nbsp;<span title=\"Pricing shown is
@@ -290,7 +290,7 @@ async def asyncio(
 
      A synchronous endpoint that lets you search for companies and then prospects in these companies.
 
-    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the search completes based on results: 1
     credits per company found and 1 credits per profile found.&nbsp;<span title=\"Pricing shown is

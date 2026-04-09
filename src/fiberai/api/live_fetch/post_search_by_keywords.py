@@ -164,7 +164,7 @@ def sync_detailed(
     4. **AND:** Evaluated after **NOT** but before **OR**.
     5. **OR:** Lowest precedence among Boolean operators.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -233,7 +233,7 @@ def sync(
     4. **AND:** Evaluated after **NOT** but before **OR**.
     5. **OR:** Lowest precedence among Boolean operators.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -296,7 +296,7 @@ async def asyncio_detailed(
     4. **AND:** Evaluated after **NOT** but before **OR**.
     5. **OR:** Lowest precedence among Boolean operators.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -363,7 +363,7 @@ async def asyncio(
     4. **AND:** Evaluated after **NOT** but before **OR**.
     5. **OR:** Lowest precedence among Boolean operators.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>

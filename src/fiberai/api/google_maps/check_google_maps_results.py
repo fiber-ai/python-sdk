@@ -142,7 +142,7 @@ def sync_detailed(
 
      Check progress for Google Maps results
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (CheckGoogleMapsResultsBody):
@@ -186,7 +186,7 @@ def sync(
 
      Check progress for Google Maps results
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (CheckGoogleMapsResultsBody):
@@ -224,7 +224,7 @@ async def asyncio_detailed(
 
      Check progress for Google Maps results
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (CheckGoogleMapsResultsBody):
@@ -266,7 +266,7 @@ async def asyncio(
 
      Check progress for Google Maps results
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (CheckGoogleMapsResultsBody):

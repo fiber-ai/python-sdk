@@ -150,7 +150,7 @@ def sync_detailed(
     the get-audience-status endpoint to poll for completion. Status transitions: DRAFT → BUILDING →
     NORMAL (success) or FAILED (error).
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the build completes based on results: 1
     credits per company and 1 credits per profile found.&nbsp;<span title=\"Pricing shown is default
@@ -205,7 +205,7 @@ def sync(
     the get-audience-status endpoint to poll for completion. Status transitions: DRAFT → BUILDING →
     NORMAL (success) or FAILED (error).
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the build completes based on results: 1
     credits per company and 1 credits per profile found.&nbsp;<span title=\"Pricing shown is default
@@ -254,7 +254,7 @@ async def asyncio_detailed(
     the get-audience-status endpoint to poll for completion. Status transitions: DRAFT → BUILDING →
     NORMAL (success) or FAILED (error).
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the build completes based on results: 1
     credits per company and 1 credits per profile found.&nbsp;<span title=\"Pricing shown is default
@@ -307,7 +307,7 @@ async def asyncio(
     the get-audience-status endpoint to poll for completion. Status transitions: DRAFT → BUILDING →
     NORMAL (success) or FAILED (error).
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the build completes based on results: 1
     credits per company and 1 credits per profile found.&nbsp;<span title=\"Pricing shown is default

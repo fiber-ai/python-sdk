@@ -161,7 +161,7 @@ def sync_detailed(
      This endpoint creates a new company exclusion list by extracting all companies from a specified
     audience.
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -209,7 +209,7 @@ def sync(
      This endpoint creates a new company exclusion list by extracting all companies from a specified
     audience.
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -251,7 +251,7 @@ async def asyncio_detailed(
      This endpoint creates a new company exclusion list by extracting all companies from a specified
     audience.
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -297,7 +297,7 @@ async def asyncio(
      This endpoint creates a new company exclusion list by extracting all companies from a specified
     audience.
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>

@@ -143,7 +143,7 @@ def sync_detailed(
      Creates a new audience in DRAFT status. After creation, use the update-search-params endpoint to set
     filters, then use the build endpoint to populate the audience with companies and prospects.
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -191,7 +191,7 @@ def sync(
      Creates a new audience in DRAFT status. After creation, use the update-search-params endpoint to set
     filters, then use the build endpoint to populate the audience with companies and prospects.
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -233,7 +233,7 @@ async def asyncio_detailed(
      Creates a new audience in DRAFT status. After creation, use the update-search-params endpoint to set
     filters, then use the build endpoint to populate the audience with companies and prospects.
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -279,7 +279,7 @@ async def asyncio(
      Creates a new audience in DRAFT status. After creation, use the update-search-params endpoint to set
     filters, then use the build endpoint to populate the audience with companies and prospects.
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>

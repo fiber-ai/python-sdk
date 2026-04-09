@@ -142,7 +142,7 @@ def sync_detailed(
 
      Remove a company from a company exclusion list
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -189,7 +189,7 @@ def sync(
 
      Remove a company from a company exclusion list
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -230,7 +230,7 @@ async def asyncio_detailed(
 
      Remove a company from a company exclusion list
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -275,7 +275,7 @@ async def asyncio(
 
      Remove a company from a company exclusion list
 
-    <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>

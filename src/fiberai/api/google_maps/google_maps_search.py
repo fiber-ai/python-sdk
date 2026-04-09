@@ -142,7 +142,7 @@ def sync_detailed(
 
      Start a search for local businesses or other places of interest on Google Maps
 
-    <span>⚡ <strong>Rate limit:</strong> 5 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per business found&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -189,7 +189,7 @@ def sync(
 
      Start a search for local businesses or other places of interest on Google Maps
 
-    <span>⚡ <strong>Rate limit:</strong> 5 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per business found&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -230,7 +230,7 @@ async def asyncio_detailed(
 
      Start a search for local businesses or other places of interest on Google Maps
 
-    <span>⚡ <strong>Rate limit:</strong> 5 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per business found&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -275,7 +275,7 @@ async def asyncio(
 
      Start a search for local businesses or other places of interest on Google Maps
 
-    <span>⚡ <strong>Rate limit:</strong> 5 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per business found&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>

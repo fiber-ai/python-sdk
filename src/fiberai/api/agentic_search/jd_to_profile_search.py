@@ -144,7 +144,7 @@ def sync_detailed(
     detailed work experience and education history. Results are paginated via cursor. Credits are
     charged per request and per profile returned.
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request + 1 credit per profile found&nbsp;<span
     title=\"Pricing shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -193,7 +193,7 @@ def sync(
     detailed work experience and education history. Results are paginated via cursor. Credits are
     charged per request and per profile returned.
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request + 1 credit per profile found&nbsp;<span
     title=\"Pricing shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -236,7 +236,7 @@ async def asyncio_detailed(
     detailed work experience and education history. Results are paginated via cursor. Credits are
     charged per request and per profile returned.
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request + 1 credit per profile found&nbsp;<span
     title=\"Pricing shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -283,7 +283,7 @@ async def asyncio(
     detailed work experience and education history. Results are paginated via cursor. Credits are
     charged per request and per profile returned.
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request + 1 credit per profile found&nbsp;<span
     title=\"Pricing shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>

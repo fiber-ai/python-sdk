@@ -142,7 +142,7 @@ def sync_detailed(
 
      Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title=\"Pricing shown
     is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -189,7 +189,7 @@ def sync(
 
      Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title=\"Pricing shown
     is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -230,7 +230,7 @@ async def asyncio_detailed(
 
      Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title=\"Pricing shown
     is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -275,7 +275,7 @@ async def asyncio(
 
      Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title=\"Pricing shown
     is default pricing. Actual pricing may vary.\">ⓘ</span></span>

@@ -143,7 +143,7 @@ def sync_detailed(
      Resolves a company LinkedIn identifier (slug, organization ID, or URL) to a standardized LinkedIn
     company URL with metadata. Useful for normalizing company identifiers from different sources.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per company standardization&nbsp;<span title=\"Pricing shown
     is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -191,7 +191,7 @@ def sync(
      Resolves a company LinkedIn identifier (slug, organization ID, or URL) to a standardized LinkedIn
     company URL with metadata. Useful for normalizing company identifiers from different sources.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per company standardization&nbsp;<span title=\"Pricing shown
     is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -233,7 +233,7 @@ async def asyncio_detailed(
      Resolves a company LinkedIn identifier (slug, organization ID, or URL) to a standardized LinkedIn
     company URL with metadata. Useful for normalizing company identifiers from different sources.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per company standardization&nbsp;<span title=\"Pricing shown
     is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -279,7 +279,7 @@ async def asyncio(
      Resolves a company LinkedIn identifier (slug, organization ID, or URL) to a standardized LinkedIn
     company URL with metadata. Useful for normalizing company identifiers from different sources.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per company standardization&nbsp;<span title=\"Pricing shown
     is default pricing. Actual pricing may vary.\">ⓘ</span></span>

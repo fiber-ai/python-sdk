@@ -144,7 +144,7 @@ def sync_detailed(
     scoped to those currently or previously working (based on the job status filter) at companies that
     satisfy the company search filters.
 
-    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Flat charge for the company count (1 credit) and profile count (1
     credit)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Flat
@@ -194,7 +194,7 @@ def sync(
     scoped to those currently or previously working (based on the job status filter) at companies that
     satisfy the company search filters.
 
-    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Flat charge for the company count (1 credit) and profile count (1
     credit)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Flat
@@ -238,7 +238,7 @@ async def asyncio_detailed(
     scoped to those currently or previously working (based on the job status filter) at companies that
     satisfy the company search filters.
 
-    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Flat charge for the company count (1 credit) and profile count (1
     credit)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Flat
@@ -286,7 +286,7 @@ async def asyncio(
     scoped to those currently or previously working (based on the job status filter) at companies that
     satisfy the company search filters.
 
-    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Flat charge for the company count (1 credit) and profile count (1
     credit)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Flat

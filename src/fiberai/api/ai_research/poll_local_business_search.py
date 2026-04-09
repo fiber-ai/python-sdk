@@ -142,7 +142,7 @@ def sync_detailed(
 
      Poll Local Business Agent search results for a given researchRunId
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (PollLocalBusinessSearchBody):
@@ -186,7 +186,7 @@ def sync(
 
      Poll Local Business Agent search results for a given researchRunId
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (PollLocalBusinessSearchBody):
@@ -224,7 +224,7 @@ async def asyncio_detailed(
 
      Poll Local Business Agent search results for a given researchRunId
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (PollLocalBusinessSearchBody):
@@ -266,7 +266,7 @@ async def asyncio(
 
      Poll Local Business Agent search results for a given researchRunId
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (PollLocalBusinessSearchBody):

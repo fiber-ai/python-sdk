@@ -143,7 +143,7 @@ def sync_detailed(
      Fetches the latest tweets for a Twitter/X user. Returns a paginated list of tweets with engagement
     metrics. Use the `cursor` field from the response to retrieve subsequent pages.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -191,7 +191,7 @@ def sync(
      Fetches the latest tweets for a Twitter/X user. Returns a paginated list of tweets with engagement
     metrics. Use the `cursor` field from the response to retrieve subsequent pages.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -233,7 +233,7 @@ async def asyncio_detailed(
      Fetches the latest tweets for a Twitter/X user. Returns a paginated list of tweets with engagement
     metrics. Use the `cursor` field from the response to retrieve subsequent pages.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -279,7 +279,7 @@ async def asyncio(
      Fetches the latest tweets for a Twitter/X user. Returns a paginated list of tweets with engagement
     metrics. Use the `cursor` field from the response to retrieve subsequent pages.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>

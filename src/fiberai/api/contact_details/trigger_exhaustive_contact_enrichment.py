@@ -146,7 +146,7 @@ def sync_detailed(
     endpoints, but returns more emails and phone numbers on average. For faster synchronous results, use
     /contact-details/single (standard) or /contact-details/turbo/sync (fastest).
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request (exhaustive mode):<br />• 12
     credits for all phone numbers AND all emails<br />• 5 credits for work email only<br />• 5 credits
@@ -200,7 +200,7 @@ def sync(
     endpoints, but returns more emails and phone numbers on average. For faster synchronous results, use
     /contact-details/single (standard) or /contact-details/turbo/sync (fastest).
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request (exhaustive mode):<br />• 12
     credits for all phone numbers AND all emails<br />• 5 credits for work email only<br />• 5 credits
@@ -248,7 +248,7 @@ async def asyncio_detailed(
     endpoints, but returns more emails and phone numbers on average. For faster synchronous results, use
     /contact-details/single (standard) or /contact-details/turbo/sync (fastest).
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request (exhaustive mode):<br />• 12
     credits for all phone numbers AND all emails<br />• 5 credits for work email only<br />• 5 credits
@@ -300,7 +300,7 @@ async def asyncio(
     endpoints, but returns more emails and phone numbers on average. For faster synchronous results, use
     /contact-details/single (standard) or /contact-details/turbo/sync (fastest).
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request (exhaustive mode):<br />• 12
     credits for all phone numbers AND all emails<br />• 5 credits for work email only<br />• 5 credits

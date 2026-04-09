@@ -144,7 +144,7 @@ def sync_detailed(
     company information. Returns profile data for each person if found. Providing more information per
     person (e.g. name + company + LinkedIn) improves match accuracy.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay per person: 2 credits per lookup, plus 2 additional credits when
     the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
@@ -194,7 +194,7 @@ def sync(
     company information. Returns profile data for each person if found. Providing more information per
     person (e.g. name + company + LinkedIn) improves match accuracy.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay per person: 2 credits per lookup, plus 2 additional credits when
     the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
@@ -238,7 +238,7 @@ async def asyncio_detailed(
     company information. Returns profile data for each person if found. Providing more information per
     person (e.g. name + company + LinkedIn) improves match accuracy.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay per person: 2 credits per lookup, plus 2 additional credits when
     the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
@@ -286,7 +286,7 @@ async def asyncio(
     company information. Returns profile data for each person if found. Providing more information per
     person (e.g. name + company + LinkedIn) improves match accuracy.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay per person: 2 credits per lookup, plus 2 additional credits when
     the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may

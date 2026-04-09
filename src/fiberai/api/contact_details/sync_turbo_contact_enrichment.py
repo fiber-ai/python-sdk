@@ -145,7 +145,7 @@ def sync_detailed(
     times, use the standard /contact-details/single endpoint. For maximum coverage (async, slower), use
     the /contact-details/exhaustive/start endpoint.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 7 credits for all phone
     numbers AND all emails<br />• 3 credits for work email only<br />• 3 credits for personal email
@@ -201,7 +201,7 @@ def sync(
     times, use the standard /contact-details/single endpoint. For maximum coverage (async, slower), use
     the /contact-details/exhaustive/start endpoint.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 7 credits for all phone
     numbers AND all emails<br />• 3 credits for work email only<br />• 3 credits for personal email
@@ -251,7 +251,7 @@ async def asyncio_detailed(
     times, use the standard /contact-details/single endpoint. For maximum coverage (async, slower), use
     the /contact-details/exhaustive/start endpoint.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 7 credits for all phone
     numbers AND all emails<br />• 3 credits for work email only<br />• 3 credits for personal email
@@ -305,7 +305,7 @@ async def asyncio(
     times, use the standard /contact-details/single endpoint. For maximum coverage (async, slower), use
     the /contact-details/exhaustive/start endpoint.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 7 credits for all phone
     numbers AND all emails<br />• 3 credits for work email only<br />• 3 credits for personal email

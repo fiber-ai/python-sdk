@@ -142,7 +142,7 @@ def sync_detailed(
 
      Poll for Google Maps results
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (PollGoogleMapsResultsBody):
@@ -186,7 +186,7 @@ def sync(
 
      Poll for Google Maps results
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (PollGoogleMapsResultsBody):
@@ -224,7 +224,7 @@ async def asyncio_detailed(
 
      Poll for Google Maps results
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (PollGoogleMapsResultsBody):
@@ -266,7 +266,7 @@ async def asyncio(
 
      Poll for Google Maps results
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (PollGoogleMapsResultsBody):

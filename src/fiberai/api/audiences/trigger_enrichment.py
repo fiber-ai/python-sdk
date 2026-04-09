@@ -150,7 +150,7 @@ def sync_detailed(
     asynchronously - use the get-enrichment-status endpoint to poll for completion. Credits are charged
     immediately based on the estimated cost.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged immediately: 2 per work email, 2 per personal
     email, 3 per phone number, 1 per prospect live enrichment.&nbsp;<span title=\"Pricing shown is
@@ -205,7 +205,7 @@ def sync(
     asynchronously - use the get-enrichment-status endpoint to poll for completion. Credits are charged
     immediately based on the estimated cost.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged immediately: 2 per work email, 2 per personal
     email, 3 per phone number, 1 per prospect live enrichment.&nbsp;<span title=\"Pricing shown is
@@ -254,7 +254,7 @@ async def asyncio_detailed(
     asynchronously - use the get-enrichment-status endpoint to poll for completion. Credits are charged
     immediately based on the estimated cost.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged immediately: 2 per work email, 2 per personal
     email, 3 per phone number, 1 per prospect live enrichment.&nbsp;<span title=\"Pricing shown is
@@ -307,7 +307,7 @@ async def asyncio(
     asynchronously - use the get-enrichment-status endpoint to poll for completion. Credits are charged
     immediately based on the estimated cost.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged immediately: 2 per work email, 2 per personal
     email, 3 per phone number, 1 per prospect live enrichment.&nbsp;<span title=\"Pricing shown is

@@ -143,7 +143,7 @@ def sync_detailed(
      Search for investments with flexible filtering capabilities. Supports filtering by investor,
     company, round type, location, and financial metrics.
 
-    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per investment found&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -191,7 +191,7 @@ def sync(
      Search for investments with flexible filtering capabilities. Supports filtering by investor,
     company, round type, location, and financial metrics.
 
-    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per investment found&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -233,7 +233,7 @@ async def asyncio_detailed(
      Search for investments with flexible filtering capabilities. Supports filtering by investor,
     company, round type, location, and financial metrics.
 
-    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per investment found&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -279,7 +279,7 @@ async def asyncio(
      Search for investments with flexible filtering capabilities. Supports filtering by investor,
     company, round type, location, and financial metrics.
 
-    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per investment found&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>

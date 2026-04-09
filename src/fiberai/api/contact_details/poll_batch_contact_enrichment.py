@@ -144,7 +144,7 @@ def sync_detailed(
     repeatedly until the 'done' field is true. Use the task ID returned from the 'Start batch contact
     enrichment' endpoint.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (PollBatchContactEnrichmentBody):
@@ -190,7 +190,7 @@ def sync(
     repeatedly until the 'done' field is true. Use the task ID returned from the 'Start batch contact
     enrichment' endpoint.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (PollBatchContactEnrichmentBody):
@@ -230,7 +230,7 @@ async def asyncio_detailed(
     repeatedly until the 'done' field is true. Use the task ID returned from the 'Start batch contact
     enrichment' endpoint.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (PollBatchContactEnrichmentBody):
@@ -274,7 +274,7 @@ async def asyncio(
     repeatedly until the 'done' field is true. Use the task ID returned from the 'Start batch contact
     enrichment' endpoint.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     Args:
         body (PollBatchContactEnrichmentBody):

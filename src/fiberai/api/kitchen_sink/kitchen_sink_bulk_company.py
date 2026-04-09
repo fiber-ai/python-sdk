@@ -143,7 +143,7 @@ def sync_detailed(
      Search for many companies using a variety of parameters such as LinkedIn slug, LinkedIn URL, name,
     etc. Returns complete company data if found.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -191,7 +191,7 @@ def sync(
      Search for many companies using a variety of parameters such as LinkedIn slug, LinkedIn URL, name,
     etc. Returns complete company data if found.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -233,7 +233,7 @@ async def asyncio_detailed(
      Search for many companies using a variety of parameters such as LinkedIn slug, LinkedIn URL, name,
     etc. Returns complete company data if found.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -279,7 +279,7 @@ async def asyncio(
      Search for many companies using a variety of parameters such as LinkedIn slug, LinkedIn URL, name,
     etc. Returns complete company data if found.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>

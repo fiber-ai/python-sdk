@@ -150,7 +150,7 @@ def sync_detailed(
     2. **Subsequent pages** — send `{ search: { request: \"subsequent\", cursor: \"<nextCursor>\" } }`.
     3. When `nextCursor` is `null` in the response, there are no more results.
 
-    <span>⚡ <strong>Rate limit:</strong> 100 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pricing is coming soon. Credits will be charged once this feature is
     fully released.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
@@ -206,7 +206,7 @@ def sync(
     2. **Subsequent pages** — send `{ search: { request: \"subsequent\", cursor: \"<nextCursor>\" } }`.
     3. When `nextCursor` is `null` in the response, there are no more results.
 
-    <span>⚡ <strong>Rate limit:</strong> 100 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pricing is coming soon. Credits will be charged once this feature is
     fully released.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
@@ -256,7 +256,7 @@ async def asyncio_detailed(
     2. **Subsequent pages** — send `{ search: { request: \"subsequent\", cursor: \"<nextCursor>\" } }`.
     3. When `nextCursor` is `null` in the response, there are no more results.
 
-    <span>⚡ <strong>Rate limit:</strong> 100 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pricing is coming soon. Credits will be charged once this feature is
     fully released.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
@@ -310,7 +310,7 @@ async def asyncio(
     2. **Subsequent pages** — send `{ search: { request: \"subsequent\", cursor: \"<nextCursor>\" } }`.
     3. When `nextCursor` is `null` in the response, there are no more results.
 
-    <span>⚡ <strong>Rate limit:</strong> 100 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pricing is coming soon. Credits will be charged once this feature is
     fully released.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
