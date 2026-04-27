@@ -1,0 +1,142 @@
+# fiberai — llms.txt
+
+> Official Python SDK for Fiber AI. Search companies and people,
+> enrich contacts, reveal work emails and phones, build audiences, and
+> run AI-powered research — auto-generated from the OpenAPI spec.
+
+**Canonical agent-facing docs live on the API, not in this repo:**
+
+- Routing index + critical rules: https://api.fiber.ai/llms.txt
+- Per-operation markdown (100+ operations):
+  https://api.fiber.ai/ai-docs/index.md
+- Any operation: `https://api.fiber.ai/ai-docs/<operationId>.md`
+  e.g. https://api.fiber.ai/ai-docs/companySearch.md
+- Raw OpenAPI spec: https://api.fiber.ai/openapi.json
+  (supports `Accept: text/markdown` for the agent-friendly variant)
+- Full corpus (concatenated, ~270 KB): https://api.fiber.ai/llms-full.txt
+
+This SDK is a typed surface for the exact same operations documented at
+those URLs. If you are an agent and you need to pick between operations
+(e.g. sync vs turbo vs exhaustive contact enrichment), read
+`/llms.txt` and the relevant per-operation page first — they contain
+the routing policy, prerequisites, pitfalls, and quality checks that
+are NOT in this README.
+
+## Install
+
+```bash
+pip install fiberai
+```
+
+Requires Python 3.9+.
+
+## Minimum viable snippet
+
+```python
+import os
+from fiberai import Client
+from fiberai.api.search import company_search
+from fiberai.models import CompanySearchBody
+
+client = Client(base_url="https://api.fiber.ai")
+
+companies = company_search.sync(
+    client=client,
+    body=CompanySearchBody.from_dict({
+        "apiKey": os.environ["FIBER_API_KEY"],
+        "searchParams": {"industriesV2": {"anyOf": ["Software"]}},
+        "pageSize": 10,
+    }),
+)
+```
+
+### Contact reveal (email + phone from a LinkedIn URL)
+
+The Python SDK has not yet been regenerated against the current
+public `syncQuickContactReveal` / `syncTurboContactEnrichment`
+operations. Two options until the next release:
+
+1. Call the endpoint directly with `httpx`:
+
+   ```python
+   import os
+   import httpx
+
+   with httpx.Client(base_url="https://api.fiber.ai", timeout=60.0) as client:
+       response = client.post(
+           "/v1/contact-details/single",
+           json={
+               "apiKey": os.environ["FIBER_API_KEY"],
+               "linkedinUrl": "https://www.linkedin.com/in/example",
+           },
+       )
+       response.raise_for_status()
+       print(response.json())
+   ```
+
+2. Use the MCP server (`https://mcp.fiber.ai/mcp/v2` or
+   `https://mcp.fiber.ai/mcp/v3`) so the operation is exposed as a typed
+   tool to your agent.
+
+See `https://api.fiber.ai/ai-docs/syncQuickContactReveal.md` and
+`https://api.fiber.ai/ai-docs/syncTurboContactEnrichment.md` for the
+schema.
+
+## Most-used operations (link to full per-op docs)
+
+### Search
+- [`companySearch`](https://api.fiber.ai/ai-docs/companySearch.md) — companies by industry / location / funding / headcount
+- [`peopleSearch`](https://api.fiber.ai/ai-docs/peopleSearch.md) — people by title / seniority / department
+
+### Live enrichment (single LinkedIn URL → real-time LinkedIn data)
+- [`profileLiveEnrich`](https://api.fiber.ai/ai-docs/profileLiveEnrich.md)
+- [`companyLiveEnrich`](https://api.fiber.ai/ai-docs/companyLiveEnrich.md)
+
+### Contact enrichment (LinkedIn URL → email + phone). Pick by cost / speed / coverage:
+- [`syncQuickContactReveal`](https://api.fiber.ai/ai-docs/syncQuickContactReveal.md) — standard sync, balanced
+- [`syncTurboContactEnrichment`](https://api.fiber.ai/ai-docs/syncTurboContactEnrichment.md) — premium sync, fastest
+- [`triggerExhaustiveContactEnrichment`](https://api.fiber.ai/ai-docs/triggerExhaustiveContactEnrichment.md) + [`pollExhaustiveContactEnrichmentResult`](https://api.fiber.ai/ai-docs/pollExhaustiveContactEnrichmentResult.md) — async waterfall, maximum coverage
+- [`startBatchContactDetails`](https://api.fiber.ai/ai-docs/startBatchContactDetails.md) + [`pollBatchContactDetails`](https://api.fiber.ai/ai-docs/pollBatchContactDetails.md) — 10–2,000 identifiers
+
+### Audiences (durable filterable list lifecycle)
+- [`createAudience`](https://api.fiber.ai/ai-docs/createAudience.md) →
+  [`updateAudienceSearchParams`](https://api.fiber.ai/ai-docs/updateAudienceSearchParams.md) →
+  [`buildAudience`](https://api.fiber.ai/ai-docs/buildAudience.md) →
+  [`estimateEnrichmentCost`](https://api.fiber.ai/ai-docs/estimateEnrichmentCost.md) →
+  [`triggerEnrichment`](https://api.fiber.ai/ai-docs/triggerEnrichment.md) →
+  [`exportProspects`](https://api.fiber.ai/ai-docs/exportProspects.md)
+
+### Utility
+- [`getOrgCredits`](https://api.fiber.ai/ai-docs/getOrgCredits.md) — check balance before spending
+- [`getRateLimits`](https://api.fiber.ai/ai-docs/getRateLimits.md) — current per-operation caps
+
+## Authentication
+
+Pass `apiKey` in the request body of every call. Get one at
+https://fiber.ai/app/api. Keys start with `sk_live_` (production) or
+`sk_test_` (sandbox).
+
+## Rate limits, credits, cost notes
+
+- Credit cost and rate limit are stamped on every operation's per-op
+  markdown page at https://api.fiber.ai/ai-docs/<operationId>.md.
+- Call `get_org_credits.sync(...)` before kicking off any batch larger
+  than ~50.
+- Respect `Retry-After` on 429 — back off exponentially from 5s.
+
+## MCP
+
+If you want your agent to call Fiber operations as tools instead of
+via this SDK, use the MCP server:
+
+- V2 (auto-generated direct tools, API key): `https://mcp.fiber.ai/mcp/v2`
+- V3 (direct tools over every public operation, OAuth / SSO): `https://mcp.fiber.ai/mcp/v3`
+- Core (5 meta-tools over every public operation): `https://mcp.fiber.ai/mcp`
+
+Setup: https://github.com/fiber-ai/mcp and
+https://docs.fiber.ai/article/using-mcp-in-llms
+
+## Support
+
+- Email: support@fiber.ai
+- GitHub issues: https://github.com/fiber-ai/python-sdk/issues
