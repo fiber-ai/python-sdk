@@ -32,7 +32,8 @@ class GithubToLinkedInPollingResponse200OutputDataItem:
         linked_in_url (None | str):
         linked_in_slug (None | str):
         confidence_out_of_10 (int):
-        match_source (GithubToLinkedInPollingResponse200OutputDataItemMatchSource):
+        match_source (GithubToLinkedInPollingResponse200OutputDataItemMatchSource): Method used to resolve the LinkedIn
+            profile. See the enum values on the PublicMatchSource schema for the full list.
         rationale (None | str):
         extracted_emails (list[str]):
         github_profile (GithubToLinkedInPollingResponse200OutputDataItemGithubProfileType0 | None):

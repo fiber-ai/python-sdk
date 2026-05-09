@@ -144,7 +144,7 @@ def sync_detailed(
     company name, country, state, city, address, other context, and description. NOTE: Maximum 400
     companies can be provided at a time. Estimated time to complete 150 companies is an hour.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -193,7 +193,7 @@ def sync(
     company name, country, state, city, address, other context, and description. NOTE: Maximum 400
     companies can be provided at a time. Estimated time to complete 150 companies is an hour.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -236,7 +236,7 @@ async def asyncio_detailed(
     company name, country, state, city, address, other context, and description. NOTE: Maximum 400
     companies can be provided at a time. Estimated time to complete 150 companies is an hour.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -283,7 +283,7 @@ async def asyncio(
     company name, country, state, city, address, other context, and description. NOTE: Maximum 400
     companies can be provided at a time. Estimated time to complete 150 companies is an hour.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>

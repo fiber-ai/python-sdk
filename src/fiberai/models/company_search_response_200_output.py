@@ -20,11 +20,14 @@ class CompanySearchResponse200Output:
     """
     Attributes:
         data (list[CompanySearchResponse200OutputDataItem]):
+        estimated_count (float | None | Unset): The estimated total number of companies who match your search
+            parameters. Note that this does not account for exclusion lists.
         next_cursor (None | str | Unset): The pagination cursor for the next page. Provide this in the next request to
             continue paginating.
     """
 
     data: list[CompanySearchResponse200OutputDataItem]
+    estimated_count: float | None | Unset = UNSET
     next_cursor: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -33,6 +36,12 @@ class CompanySearchResponse200Output:
         for data_item_data in self.data:
             data_item = data_item_data.to_dict()
             data.append(data_item)
+
+        estimated_count: float | None | Unset
+        if isinstance(self.estimated_count, Unset):
+            estimated_count = UNSET
+        else:
+            estimated_count = self.estimated_count
 
         next_cursor: None | str | Unset
         if isinstance(self.next_cursor, Unset):
@@ -47,6 +56,8 @@ class CompanySearchResponse200Output:
                 "data": data,
             }
         )
+        if estimated_count is not UNSET:
+            field_dict["estimatedCount"] = estimated_count
         if next_cursor is not UNSET:
             field_dict["nextCursor"] = next_cursor
 
@@ -64,6 +75,15 @@ class CompanySearchResponse200Output:
 
             data.append(data_item)
 
+        def _parse_estimated_count(data: object) -> float | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(float | None | Unset, data)
+
+        estimated_count = _parse_estimated_count(d.pop("estimatedCount", UNSET))
+
         def _parse_next_cursor(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -75,6 +95,7 @@ class CompanySearchResponse200Output:
 
         company_search_response_200_output = cls(
             data=data,
+            estimated_count=estimated_count,
             next_cursor=next_cursor,
         )
 

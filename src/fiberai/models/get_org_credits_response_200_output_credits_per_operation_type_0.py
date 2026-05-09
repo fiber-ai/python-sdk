@@ -43,6 +43,12 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_exhaustive_work_email_reveal import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0ExhaustiveWorkEmailReveal,
     )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_flight_search import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearch,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_generate_depth_chart import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0GenerateDepthChart,
+    )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_geolocation import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0Geolocation,
     )
@@ -109,11 +115,17 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_google_maps_scrape import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0GoogleMapsScrape,
     )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_job_title_rewrite import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0JobTitleRewrite,
+    )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_kitchen_sink_company import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0KitchenSinkCompany,
     )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_kitchen_sink_person import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0KitchenSinkPerson,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_lite_email_reveal import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0LiteEmailReveal,
     )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_live_enrich_company import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0LiveEnrichCompany,
@@ -153,6 +165,9 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_premium_work_email_reveal import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0PremiumWorkEmailReveal,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_real_estate_search import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0RealEstateSearch,
     )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_sales_nav_company_scrape import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrape,
@@ -286,6 +301,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         standardize_person_slug (GetOrgCreditsResponse200OutputCreditsPerOperationType0StandardizePersonSlug):
         work_email_reveal (GetOrgCreditsResponse200OutputCreditsPerOperationType0WorkEmailReveal):
         personal_email_reveal (GetOrgCreditsResponse200OutputCreditsPerOperationType0PersonalEmailReveal):
+        lite_email_reveal (GetOrgCreditsResponse200OutputCreditsPerOperationType0LiteEmailReveal):
         all_email_reveal (GetOrgCreditsResponse200OutputCreditsPerOperationType0AllEmailReveal):
         phone_reveal (GetOrgCreditsResponse200OutputCreditsPerOperationType0PhoneReveal):
         combined_reveal (GetOrgCreditsResponse200OutputCreditsPerOperationType0CombinedReveal):
@@ -300,6 +316,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             (GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavPersonScrapeWithoutLiveFetch):
         google_maps_scrape (GetOrgCreditsResponse200OutputCreditsPerOperationType0GoogleMapsScrape):
         geolocation (GetOrgCreditsResponse200OutputCreditsPerOperationType0Geolocation):
+        job_title_rewrite (GetOrgCreditsResponse200OutputCreditsPerOperationType0JobTitleRewrite):
         combined_enrichment (GetOrgCreditsResponse200OutputCreditsPerOperationType0CombinedEnrichment):
         domain_lookup_agent (GetOrgCreditsResponse200OutputCreditsPerOperationType0DomainLookupAgent):
         local_business_research_agent
@@ -359,6 +376,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         social_post_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostSearch):
         webpage_screenshot (GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScreenshot):
         webpage_scrape (GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScrape):
+        generate_depth_chart (GetOrgCreditsResponse200OutputCreditsPerOperationType0GenerateDepthChart):
+        real_estate_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0RealEstateSearch):
+        flight_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearch):
     """
 
     get_company_from_db: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyFromDb
@@ -380,6 +400,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
     standardize_person_slug: GetOrgCreditsResponse200OutputCreditsPerOperationType0StandardizePersonSlug
     work_email_reveal: GetOrgCreditsResponse200OutputCreditsPerOperationType0WorkEmailReveal
     personal_email_reveal: GetOrgCreditsResponse200OutputCreditsPerOperationType0PersonalEmailReveal
+    lite_email_reveal: GetOrgCreditsResponse200OutputCreditsPerOperationType0LiteEmailReveal
     all_email_reveal: GetOrgCreditsResponse200OutputCreditsPerOperationType0AllEmailReveal
     phone_reveal: GetOrgCreditsResponse200OutputCreditsPerOperationType0PhoneReveal
     combined_reveal: GetOrgCreditsResponse200OutputCreditsPerOperationType0CombinedReveal
@@ -395,6 +416,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
     )
     google_maps_scrape: GetOrgCreditsResponse200OutputCreditsPerOperationType0GoogleMapsScrape
     geolocation: GetOrgCreditsResponse200OutputCreditsPerOperationType0Geolocation
+    job_title_rewrite: GetOrgCreditsResponse200OutputCreditsPerOperationType0JobTitleRewrite
     combined_enrichment: GetOrgCreditsResponse200OutputCreditsPerOperationType0CombinedEnrichment
     domain_lookup_agent: GetOrgCreditsResponse200OutputCreditsPerOperationType0DomainLookupAgent
     local_business_research_agent: GetOrgCreditsResponse200OutputCreditsPerOperationType0LocalBusinessResearchAgent
@@ -453,6 +475,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
     social_post_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0SocialPostSearch
     webpage_screenshot: GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScreenshot
     webpage_scrape: GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScrape
+    generate_depth_chart: GetOrgCreditsResponse200OutputCreditsPerOperationType0GenerateDepthChart
+    real_estate_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0RealEstateSearch
+    flight_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearch
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -490,6 +515,8 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
 
         personal_email_reveal = self.personal_email_reveal.to_dict()
 
+        lite_email_reveal = self.lite_email_reveal.to_dict()
+
         all_email_reveal = self.all_email_reveal.to_dict()
 
         phone_reveal = self.phone_reveal.to_dict()
@@ -515,6 +542,8 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         google_maps_scrape = self.google_maps_scrape.to_dict()
 
         geolocation = self.geolocation.to_dict()
+
+        job_title_rewrite = self.job_title_rewrite.to_dict()
 
         combined_enrichment = self.combined_enrichment.to_dict()
 
@@ -624,6 +653,12 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
 
         webpage_scrape = self.webpage_scrape.to_dict()
 
+        generate_depth_chart = self.generate_depth_chart.to_dict()
+
+        real_estate_search = self.real_estate_search.to_dict()
+
+        flight_search = self.flight_search.to_dict()
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -645,6 +680,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
                 "standardizePersonSlug": standardize_person_slug,
                 "workEmailReveal": work_email_reveal,
                 "personalEmailReveal": personal_email_reveal,
+                "liteEmailReveal": lite_email_reveal,
                 "allEmailReveal": all_email_reveal,
                 "phoneReveal": phone_reveal,
                 "combinedReveal": combined_reveal,
@@ -658,6 +694,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
                 "salesNavPersonScrapeWithoutLiveFetch": sales_nav_person_scrape_without_live_fetch,
                 "googleMapsScrape": google_maps_scrape,
                 "geolocation": geolocation,
+                "jobTitleRewrite": job_title_rewrite,
                 "combinedEnrichment": combined_enrichment,
                 "domainLookupAgent": domain_lookup_agent,
                 "localBusinessResearchAgent": local_business_research_agent,
@@ -712,6 +749,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
                 "socialPostSearch": social_post_search,
                 "webpageScreenshot": webpage_screenshot,
                 "webpageScrape": webpage_scrape,
+                "generateDepthChart": generate_depth_chart,
+                "realEstateSearch": real_estate_search,
+                "flightSearch": flight_search,
             }
         )
 
@@ -754,6 +794,12 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_exhaustive_work_email_reveal import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0ExhaustiveWorkEmailReveal,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_flight_search import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearch,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_generate_depth_chart import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0GenerateDepthChart,
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_geolocation import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0Geolocation,
@@ -821,11 +867,17 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_google_maps_scrape import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0GoogleMapsScrape,
         )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_job_title_rewrite import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0JobTitleRewrite,
+        )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_kitchen_sink_company import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0KitchenSinkCompany,
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_kitchen_sink_person import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0KitchenSinkPerson,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_lite_email_reveal import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0LiteEmailReveal,
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_live_enrich_company import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0LiveEnrichCompany,
@@ -865,6 +917,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_premium_work_email_reveal import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0PremiumWorkEmailReveal,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_real_estate_search import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0RealEstateSearch,
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_sales_nav_company_scrape import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrape,
@@ -1053,6 +1108,10 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             d.pop("personalEmailReveal")
         )
 
+        lite_email_reveal = GetOrgCreditsResponse200OutputCreditsPerOperationType0LiteEmailReveal.from_dict(
+            d.pop("liteEmailReveal")
+        )
+
         all_email_reveal = GetOrgCreditsResponse200OutputCreditsPerOperationType0AllEmailReveal.from_dict(
             d.pop("allEmailReveal")
         )
@@ -1104,6 +1163,10 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         )
 
         geolocation = GetOrgCreditsResponse200OutputCreditsPerOperationType0Geolocation.from_dict(d.pop("geolocation"))
+
+        job_title_rewrite = GetOrgCreditsResponse200OutputCreditsPerOperationType0JobTitleRewrite.from_dict(
+            d.pop("jobTitleRewrite")
+        )
 
         combined_enrichment = GetOrgCreditsResponse200OutputCreditsPerOperationType0CombinedEnrichment.from_dict(
             d.pop("combinedEnrichment")
@@ -1359,6 +1422,18 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             d.pop("webpageScrape")
         )
 
+        generate_depth_chart = GetOrgCreditsResponse200OutputCreditsPerOperationType0GenerateDepthChart.from_dict(
+            d.pop("generateDepthChart")
+        )
+
+        real_estate_search = GetOrgCreditsResponse200OutputCreditsPerOperationType0RealEstateSearch.from_dict(
+            d.pop("realEstateSearch")
+        )
+
+        flight_search = GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearch.from_dict(
+            d.pop("flightSearch")
+        )
+
         get_org_credits_response_200_output_credits_per_operation_type_0 = cls(
             get_company_from_db=get_company_from_db,
             get_person_from_db=get_person_from_db,
@@ -1377,6 +1452,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             standardize_person_slug=standardize_person_slug,
             work_email_reveal=work_email_reveal,
             personal_email_reveal=personal_email_reveal,
+            lite_email_reveal=lite_email_reveal,
             all_email_reveal=all_email_reveal,
             phone_reveal=phone_reveal,
             combined_reveal=combined_reveal,
@@ -1390,6 +1466,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             sales_nav_person_scrape_without_live_fetch=sales_nav_person_scrape_without_live_fetch,
             google_maps_scrape=google_maps_scrape,
             geolocation=geolocation,
+            job_title_rewrite=job_title_rewrite,
             combined_enrichment=combined_enrichment,
             domain_lookup_agent=domain_lookup_agent,
             local_business_research_agent=local_business_research_agent,
@@ -1444,6 +1521,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             social_post_search=social_post_search,
             webpage_screenshot=webpage_screenshot,
             webpage_scrape=webpage_scrape,
+            generate_depth_chart=generate_depth_chart,
+            real_estate_search=real_estate_search,
+            flight_search=flight_search,
         )
 
         get_org_credits_response_200_output_credits_per_operation_type_0.additional_properties = d

@@ -1,0 +1,303 @@
+from http import HTTPStatus
+from typing import Any
+
+import httpx
+
+from ... import errors
+from ...client import AuthenticatedClient, Client
+from ...models.tiktok_search_hashtag_body import TiktokSearchHashtagBody
+from ...models.tiktok_search_hashtag_response_200 import TiktokSearchHashtagResponse200
+from ...models.tiktok_search_hashtag_response_400 import TiktokSearchHashtagResponse400
+from ...models.tiktok_search_hashtag_response_401 import TiktokSearchHashtagResponse401
+from ...models.tiktok_search_hashtag_response_402 import TiktokSearchHashtagResponse402
+from ...models.tiktok_search_hashtag_response_403 import TiktokSearchHashtagResponse403
+from ...models.tiktok_search_hashtag_response_404 import TiktokSearchHashtagResponse404
+from ...models.tiktok_search_hashtag_response_429 import TiktokSearchHashtagResponse429
+from ...models.tiktok_search_hashtag_response_500 import TiktokSearchHashtagResponse500
+from ...models.tiktok_search_hashtag_response_503 import TiktokSearchHashtagResponse503
+from ...types import Response
+
+
+def _get_kwargs(
+    *,
+    body: TiktokSearchHashtagBody,
+) -> dict[str, Any]:
+    headers: dict[str, Any] = {}
+
+    _kwargs: dict[str, Any] = {
+        "method": "post",
+        "url": "/v1/tiktok/search-hashtag",
+    }
+
+    _kwargs["json"] = body.to_dict()
+
+    headers["Content-Type"] = "application/json"
+
+    _kwargs["headers"] = headers
+    return _kwargs
+
+
+def _parse_response(
+    *, client: AuthenticatedClient | Client, response: httpx.Response
+) -> (
+    TiktokSearchHashtagResponse200
+    | TiktokSearchHashtagResponse400
+    | TiktokSearchHashtagResponse401
+    | TiktokSearchHashtagResponse402
+    | TiktokSearchHashtagResponse403
+    | TiktokSearchHashtagResponse404
+    | TiktokSearchHashtagResponse429
+    | TiktokSearchHashtagResponse500
+    | TiktokSearchHashtagResponse503
+    | None
+):
+    if response.status_code == 200:
+        response_200 = TiktokSearchHashtagResponse200.from_dict(response.json())
+
+        return response_200
+
+    if response.status_code == 400:
+        response_400 = TiktokSearchHashtagResponse400.from_dict(response.json())
+
+        return response_400
+
+    if response.status_code == 401:
+        response_401 = TiktokSearchHashtagResponse401.from_dict(response.json())
+
+        return response_401
+
+    if response.status_code == 402:
+        response_402 = TiktokSearchHashtagResponse402.from_dict(response.json())
+
+        return response_402
+
+    if response.status_code == 403:
+        response_403 = TiktokSearchHashtagResponse403.from_dict(response.json())
+
+        return response_403
+
+    if response.status_code == 404:
+        response_404 = TiktokSearchHashtagResponse404.from_dict(response.json())
+
+        return response_404
+
+    if response.status_code == 429:
+        response_429 = TiktokSearchHashtagResponse429.from_dict(response.json())
+
+        return response_429
+
+    if response.status_code == 500:
+        response_500 = TiktokSearchHashtagResponse500.from_dict(response.json())
+
+        return response_500
+
+    if response.status_code == 503:
+        response_503 = TiktokSearchHashtagResponse503.from_dict(response.json())
+
+        return response_503
+
+    if client.raise_on_unexpected_status:
+        raise errors.UnexpectedStatus(response.status_code, response.content)
+    else:
+        return None
+
+
+def _build_response(
+    *, client: AuthenticatedClient | Client, response: httpx.Response
+) -> Response[
+    TiktokSearchHashtagResponse200
+    | TiktokSearchHashtagResponse400
+    | TiktokSearchHashtagResponse401
+    | TiktokSearchHashtagResponse402
+    | TiktokSearchHashtagResponse403
+    | TiktokSearchHashtagResponse404
+    | TiktokSearchHashtagResponse429
+    | TiktokSearchHashtagResponse500
+    | TiktokSearchHashtagResponse503
+]:
+    return Response(
+        status_code=HTTPStatus(response.status_code),
+        content=response.content,
+        headers=response.headers,
+        parsed=_parse_response(client=client, response=response),
+    )
+
+
+def sync_detailed(
+    *,
+    client: AuthenticatedClient | Client,
+    body: TiktokSearchHashtagBody,
+) -> Response[
+    TiktokSearchHashtagResponse200
+    | TiktokSearchHashtagResponse400
+    | TiktokSearchHashtagResponse401
+    | TiktokSearchHashtagResponse402
+    | TiktokSearchHashtagResponse403
+    | TiktokSearchHashtagResponse404
+    | TiktokSearchHashtagResponse429
+    | TiktokSearchHashtagResponse500
+    | TiktokSearchHashtagResponse503
+]:
+    r"""Search TikTok hashtag videos
+
+     Fetches videos for a TikTok hashtag along with hashtag metadata. Returns a paginated list of videos.
+    Use the `nextPageToken` field from the response to retrieve subsequent pages.
+
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    Args:
+        body (TiktokSearchHashtagBody):
+
+    Raises:
+        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        httpx.TimeoutException: If the request takes longer than Client.timeout.
+
+    Returns:
+        Response[TiktokSearchHashtagResponse200 | TiktokSearchHashtagResponse400 | TiktokSearchHashtagResponse401 | TiktokSearchHashtagResponse402 | TiktokSearchHashtagResponse403 | TiktokSearchHashtagResponse404 | TiktokSearchHashtagResponse429 | TiktokSearchHashtagResponse500 | TiktokSearchHashtagResponse503]
+    """
+
+    kwargs = _get_kwargs(
+        body=body,
+    )
+
+    response = client.get_httpx_client().request(
+        **kwargs,
+    )
+
+    return _build_response(client=client, response=response)
+
+
+def sync(
+    *,
+    client: AuthenticatedClient | Client,
+    body: TiktokSearchHashtagBody,
+) -> (
+    TiktokSearchHashtagResponse200
+    | TiktokSearchHashtagResponse400
+    | TiktokSearchHashtagResponse401
+    | TiktokSearchHashtagResponse402
+    | TiktokSearchHashtagResponse403
+    | TiktokSearchHashtagResponse404
+    | TiktokSearchHashtagResponse429
+    | TiktokSearchHashtagResponse500
+    | TiktokSearchHashtagResponse503
+    | None
+):
+    r"""Search TikTok hashtag videos
+
+     Fetches videos for a TikTok hashtag along with hashtag metadata. Returns a paginated list of videos.
+    Use the `nextPageToken` field from the response to retrieve subsequent pages.
+
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    Args:
+        body (TiktokSearchHashtagBody):
+
+    Raises:
+        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        httpx.TimeoutException: If the request takes longer than Client.timeout.
+
+    Returns:
+        TiktokSearchHashtagResponse200 | TiktokSearchHashtagResponse400 | TiktokSearchHashtagResponse401 | TiktokSearchHashtagResponse402 | TiktokSearchHashtagResponse403 | TiktokSearchHashtagResponse404 | TiktokSearchHashtagResponse429 | TiktokSearchHashtagResponse500 | TiktokSearchHashtagResponse503
+    """
+
+    return sync_detailed(
+        client=client,
+        body=body,
+    ).parsed
+
+
+async def asyncio_detailed(
+    *,
+    client: AuthenticatedClient | Client,
+    body: TiktokSearchHashtagBody,
+) -> Response[
+    TiktokSearchHashtagResponse200
+    | TiktokSearchHashtagResponse400
+    | TiktokSearchHashtagResponse401
+    | TiktokSearchHashtagResponse402
+    | TiktokSearchHashtagResponse403
+    | TiktokSearchHashtagResponse404
+    | TiktokSearchHashtagResponse429
+    | TiktokSearchHashtagResponse500
+    | TiktokSearchHashtagResponse503
+]:
+    r"""Search TikTok hashtag videos
+
+     Fetches videos for a TikTok hashtag along with hashtag metadata. Returns a paginated list of videos.
+    Use the `nextPageToken` field from the response to retrieve subsequent pages.
+
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    Args:
+        body (TiktokSearchHashtagBody):
+
+    Raises:
+        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        httpx.TimeoutException: If the request takes longer than Client.timeout.
+
+    Returns:
+        Response[TiktokSearchHashtagResponse200 | TiktokSearchHashtagResponse400 | TiktokSearchHashtagResponse401 | TiktokSearchHashtagResponse402 | TiktokSearchHashtagResponse403 | TiktokSearchHashtagResponse404 | TiktokSearchHashtagResponse429 | TiktokSearchHashtagResponse500 | TiktokSearchHashtagResponse503]
+    """
+
+    kwargs = _get_kwargs(
+        body=body,
+    )
+
+    response = await client.get_async_httpx_client().request(**kwargs)
+
+    return _build_response(client=client, response=response)
+
+
+async def asyncio(
+    *,
+    client: AuthenticatedClient | Client,
+    body: TiktokSearchHashtagBody,
+) -> (
+    TiktokSearchHashtagResponse200
+    | TiktokSearchHashtagResponse400
+    | TiktokSearchHashtagResponse401
+    | TiktokSearchHashtagResponse402
+    | TiktokSearchHashtagResponse403
+    | TiktokSearchHashtagResponse404
+    | TiktokSearchHashtagResponse429
+    | TiktokSearchHashtagResponse500
+    | TiktokSearchHashtagResponse503
+    | None
+):
+    r"""Search TikTok hashtag videos
+
+     Fetches videos for a TikTok hashtag along with hashtag metadata. Returns a paginated list of videos.
+    Use the `nextPageToken` field from the response to retrieve subsequent pages.
+
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    Args:
+        body (TiktokSearchHashtagBody):
+
+    Raises:
+        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        httpx.TimeoutException: If the request takes longer than Client.timeout.
+
+    Returns:
+        TiktokSearchHashtagResponse200 | TiktokSearchHashtagResponse400 | TiktokSearchHashtagResponse401 | TiktokSearchHashtagResponse402 | TiktokSearchHashtagResponse403 | TiktokSearchHashtagResponse404 | TiktokSearchHashtagResponse429 | TiktokSearchHashtagResponse500 | TiktokSearchHashtagResponse503
+    """
+
+    return (
+        await asyncio_detailed(
+            client=client,
+            body=body,
+        )
+    ).parsed

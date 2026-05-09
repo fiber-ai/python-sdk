@@ -8,6 +8,7 @@ class ReverseEmailLookupResponse200OutputRejectionType0Reason(str, Enum):
     DISPOSABLE_OR_ANONYMOUS_EMAIL = "disposable_or_anonymous_email"
     INVALID_TLD = "invalid_tld"
     JUNK_USERNAME = "junk_username"
+    MAILING_LIST = "mailing_list"
     ROLE_BASED_MAILBOX = "role_based_mailbox"
     SPAM_DOMAIN = "spam_domain"
 

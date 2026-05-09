@@ -143,7 +143,7 @@ def sync_detailed(
      Search for companies, schools/universities, and investors by name. Supports partial inputs, which
     can enable typeaheads in your UI.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -191,7 +191,7 @@ def sync(
      Search for companies, schools/universities, and investors by name. Supports partial inputs, which
     can enable typeaheads in your UI.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -233,7 +233,7 @@ async def asyncio_detailed(
      Search for companies, schools/universities, and investors by name. Supports partial inputs, which
     can enable typeaheads in your UI.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -279,7 +279,7 @@ async def asyncio(
      Search for companies, schools/universities, and investors by name. Supports partial inputs, which
     can enable typeaheads in your UI.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>

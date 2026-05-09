@@ -109,6 +109,7 @@ class PeopleSearchResponse200OutputDataItem:
         organizations (list[PeopleSearchResponse200OutputDataItemOrganizationsType0Item] | None | Unset):
         entity_urns (list[str] | None | Unset):
         is_hiring (bool | None | Unset):
+        websites (list[str] | None | Unset):
         current_job (None | PeopleSearchResponse200OutputDataItemCurrentJobType0 | Unset):
         custom_data (None | PeopleSearchResponse200OutputDataItemCustomDataType0 | Unset):
         relevance_score (float | None | Unset):
@@ -156,6 +157,7 @@ class PeopleSearchResponse200OutputDataItem:
     organizations: list[PeopleSearchResponse200OutputDataItemOrganizationsType0Item] | None | Unset = UNSET
     entity_urns: list[str] | None | Unset = UNSET
     is_hiring: bool | None | Unset = UNSET
+    websites: list[str] | None | Unset = UNSET
     current_job: None | PeopleSearchResponse200OutputDataItemCurrentJobType0 | Unset = UNSET
     custom_data: None | PeopleSearchResponse200OutputDataItemCustomDataType0 | Unset = UNSET
     relevance_score: float | None | Unset = UNSET
@@ -482,6 +484,15 @@ class PeopleSearchResponse200OutputDataItem:
         else:
             is_hiring = self.is_hiring
 
+        websites: list[str] | None | Unset
+        if isinstance(self.websites, Unset):
+            websites = UNSET
+        elif isinstance(self.websites, list):
+            websites = self.websites
+
+        else:
+            websites = self.websites
+
         current_job: dict[str, Any] | None | Unset
         if isinstance(self.current_job, Unset):
             current_job = UNSET
@@ -625,6 +636,8 @@ class PeopleSearchResponse200OutputDataItem:
             field_dict["entity_urns"] = entity_urns
         if is_hiring is not UNSET:
             field_dict["is_hiring"] = is_hiring
+        if websites is not UNSET:
+            field_dict["websites"] = websites
         if current_job is not UNSET:
             field_dict["current_job"] = current_job
         if custom_data is not UNSET:
@@ -1259,6 +1272,23 @@ class PeopleSearchResponse200OutputDataItem:
 
         is_hiring = _parse_is_hiring(d.pop("is_hiring", UNSET))
 
+        def _parse_websites(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                websites_type_0 = cast(list[str], data)
+
+                return websites_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        websites = _parse_websites(d.pop("websites", UNSET))
+
         def _parse_current_job(data: object) -> None | PeopleSearchResponse200OutputDataItemCurrentJobType0 | Unset:
             if data is None:
                 return data
@@ -1433,6 +1463,7 @@ class PeopleSearchResponse200OutputDataItem:
             organizations=organizations,
             entity_urns=entity_urns,
             is_hiring=is_hiring,
+            websites=websites,
             current_job=current_job,
             custom_data=custom_data,
             relevance_score=relevance_score,

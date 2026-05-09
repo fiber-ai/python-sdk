@@ -26,6 +26,8 @@ class CompanySearchBody:
             next page of results.
         company_exclusion_list_i_ds (list[str] | Unset): The IDs of company exclusion lists to filter out matching
             companies.
+        include_count (bool | None | Unset): When true, returns an estimated total count of matching companies in the
+            response. The count does not account for exclusion lists.
     """
 
     api_key: str
@@ -33,6 +35,7 @@ class CompanySearchBody:
     page_size: int | Unset = 25
     cursor: None | str | Unset = UNSET
     company_exclusion_list_i_ds: list[str] | Unset = UNSET
+    include_count: bool | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -52,6 +55,12 @@ class CompanySearchBody:
         if not isinstance(self.company_exclusion_list_i_ds, Unset):
             company_exclusion_list_i_ds = self.company_exclusion_list_i_ds
 
+        include_count: bool | None | Unset
+        if isinstance(self.include_count, Unset):
+            include_count = UNSET
+        else:
+            include_count = self.include_count
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -66,6 +75,8 @@ class CompanySearchBody:
             field_dict["cursor"] = cursor
         if company_exclusion_list_i_ds is not UNSET:
             field_dict["companyExclusionListIDs"] = company_exclusion_list_i_ds
+        if include_count is not UNSET:
+            field_dict["includeCount"] = include_count
 
         return field_dict
 
@@ -91,12 +102,22 @@ class CompanySearchBody:
 
         company_exclusion_list_i_ds = cast(list[str], d.pop("companyExclusionListIDs", UNSET))
 
+        def _parse_include_count(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        include_count = _parse_include_count(d.pop("includeCount", UNSET))
+
         company_search_body = cls(
             api_key=api_key,
             search_params=search_params,
             page_size=page_size,
             cursor=cursor,
             company_exclusion_list_i_ds=company_exclusion_list_i_ds,
+            include_count=include_count,
         )
 
         company_search_body.additional_properties = d

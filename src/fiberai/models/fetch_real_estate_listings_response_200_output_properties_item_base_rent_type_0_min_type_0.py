@@ -1,0 +1,90 @@
+from __future__ import annotations
+
+from collections.abc import Mapping
+from typing import TYPE_CHECKING, Any, TypeVar
+
+from attrs import define as _attrs_define
+from attrs import field as _attrs_field
+
+if TYPE_CHECKING:
+    from ..models.fetch_real_estate_listings_response_200_output_properties_item_base_rent_type_0_min_type_0_local import (
+        FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0Local,
+    )
+    from ..models.fetch_real_estate_listings_response_200_output_properties_item_base_rent_type_0_min_type_0_usd import (
+        FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0Usd,
+    )
+
+
+T = TypeVar("T", bound="FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0")
+
+
+@_attrs_define
+class FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0:
+    """Minimum base rent in USD and local currency.
+
+    Attributes:
+        usd (FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0Usd): Listing price converted to
+            USD when conversion data is available.
+        local (FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0Local): Listing price in the
+            local market currency.
+    """
+
+    usd: FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0Usd
+    local: FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0Local
+    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        usd = self.usd.to_dict()
+
+        local = self.local.to_dict()
+
+        field_dict: dict[str, Any] = {}
+        field_dict.update(self.additional_properties)
+        field_dict.update(
+            {
+                "usd": usd,
+                "local": local,
+            }
+        )
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.fetch_real_estate_listings_response_200_output_properties_item_base_rent_type_0_min_type_0_local import (
+            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0Local,
+        )
+        from ..models.fetch_real_estate_listings_response_200_output_properties_item_base_rent_type_0_min_type_0_usd import (
+            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0Usd,
+        )
+
+        d = dict(src_dict)
+        usd = FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0Usd.from_dict(d.pop("usd"))
+
+        local = FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0Local.from_dict(
+            d.pop("local")
+        )
+
+        fetch_real_estate_listings_response_200_output_properties_item_base_rent_type_0_min_type_0 = cls(
+            usd=usd,
+            local=local,
+        )
+
+        fetch_real_estate_listings_response_200_output_properties_item_base_rent_type_0_min_type_0.additional_properties = d
+        return fetch_real_estate_listings_response_200_output_properties_item_base_rent_type_0_min_type_0
+
+    @property
+    def additional_keys(self) -> list[str]:
+        return list(self.additional_properties.keys())
+
+    def __getitem__(self, key: str) -> Any:
+        return self.additional_properties[key]
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        self.additional_properties[key] = value
+
+    def __delitem__(self, key: str) -> None:
+        del self.additional_properties[key]
+
+    def __contains__(self, key: str) -> bool:
+        return key in self.additional_properties

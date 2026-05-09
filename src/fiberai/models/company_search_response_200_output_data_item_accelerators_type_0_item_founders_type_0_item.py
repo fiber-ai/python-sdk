@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -15,46 +15,82 @@ T = TypeVar("T", bound="CompanySearchResponse200OutputDataItemAcceleratorsType0I
 class CompanySearchResponse200OutputDataItemAcceleratorsType0ItemFoundersType0Item:
     """
     Attributes:
-        full_name (str | Unset):
-        bio (str | Unset):
-        job_title (str | Unset):
-        is_active (bool | Unset):
-        email_address (str | Unset):
-        facebook_url (str | Unset):
-        twitter_handle (str | Unset):
-        linkedin_slug (str | Unset):
-        github_username (str | Unset):
+        full_name (None | str | Unset):
+        bio (None | str | Unset):
+        job_title (None | str | Unset):
+        is_active (bool | None | Unset):
+        email_address (None | str | Unset):
+        facebook_url (None | str | Unset):
+        twitter_handle (None | str | Unset):
+        linkedin_slug (None | str | Unset):
+        github_username (None | str | Unset):
     """
 
-    full_name: str | Unset = UNSET
-    bio: str | Unset = UNSET
-    job_title: str | Unset = UNSET
-    is_active: bool | Unset = UNSET
-    email_address: str | Unset = UNSET
-    facebook_url: str | Unset = UNSET
-    twitter_handle: str | Unset = UNSET
-    linkedin_slug: str | Unset = UNSET
-    github_username: str | Unset = UNSET
+    full_name: None | str | Unset = UNSET
+    bio: None | str | Unset = UNSET
+    job_title: None | str | Unset = UNSET
+    is_active: bool | None | Unset = UNSET
+    email_address: None | str | Unset = UNSET
+    facebook_url: None | str | Unset = UNSET
+    twitter_handle: None | str | Unset = UNSET
+    linkedin_slug: None | str | Unset = UNSET
+    github_username: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        full_name = self.full_name
+        full_name: None | str | Unset
+        if isinstance(self.full_name, Unset):
+            full_name = UNSET
+        else:
+            full_name = self.full_name
 
-        bio = self.bio
+        bio: None | str | Unset
+        if isinstance(self.bio, Unset):
+            bio = UNSET
+        else:
+            bio = self.bio
 
-        job_title = self.job_title
+        job_title: None | str | Unset
+        if isinstance(self.job_title, Unset):
+            job_title = UNSET
+        else:
+            job_title = self.job_title
 
-        is_active = self.is_active
+        is_active: bool | None | Unset
+        if isinstance(self.is_active, Unset):
+            is_active = UNSET
+        else:
+            is_active = self.is_active
 
-        email_address = self.email_address
+        email_address: None | str | Unset
+        if isinstance(self.email_address, Unset):
+            email_address = UNSET
+        else:
+            email_address = self.email_address
 
-        facebook_url = self.facebook_url
+        facebook_url: None | str | Unset
+        if isinstance(self.facebook_url, Unset):
+            facebook_url = UNSET
+        else:
+            facebook_url = self.facebook_url
 
-        twitter_handle = self.twitter_handle
+        twitter_handle: None | str | Unset
+        if isinstance(self.twitter_handle, Unset):
+            twitter_handle = UNSET
+        else:
+            twitter_handle = self.twitter_handle
 
-        linkedin_slug = self.linkedin_slug
+        linkedin_slug: None | str | Unset
+        if isinstance(self.linkedin_slug, Unset):
+            linkedin_slug = UNSET
+        else:
+            linkedin_slug = self.linkedin_slug
 
-        github_username = self.github_username
+        github_username: None | str | Unset
+        if isinstance(self.github_username, Unset):
+            github_username = UNSET
+        else:
+            github_username = self.github_username
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -83,23 +119,87 @@ class CompanySearchResponse200OutputDataItemAcceleratorsType0ItemFoundersType0It
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        full_name = d.pop("full_name", UNSET)
 
-        bio = d.pop("bio", UNSET)
+        def _parse_full_name(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        job_title = d.pop("job_title", UNSET)
+        full_name = _parse_full_name(d.pop("full_name", UNSET))
 
-        is_active = d.pop("is_active", UNSET)
+        def _parse_bio(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        email_address = d.pop("email_address", UNSET)
+        bio = _parse_bio(d.pop("bio", UNSET))
 
-        facebook_url = d.pop("facebook_url", UNSET)
+        def _parse_job_title(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        twitter_handle = d.pop("twitter_handle", UNSET)
+        job_title = _parse_job_title(d.pop("job_title", UNSET))
 
-        linkedin_slug = d.pop("linkedin_slug", UNSET)
+        def _parse_is_active(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
 
-        github_username = d.pop("github_username", UNSET)
+        is_active = _parse_is_active(d.pop("is_active", UNSET))
+
+        def _parse_email_address(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        email_address = _parse_email_address(d.pop("email_address", UNSET))
+
+        def _parse_facebook_url(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        facebook_url = _parse_facebook_url(d.pop("facebook_url", UNSET))
+
+        def _parse_twitter_handle(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        twitter_handle = _parse_twitter_handle(d.pop("twitter_handle", UNSET))
+
+        def _parse_linkedin_slug(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        linkedin_slug = _parse_linkedin_slug(d.pop("linkedin_slug", UNSET))
+
+        def _parse_github_username(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        github_username = _parse_github_username(d.pop("github_username", UNSET))
 
         company_search_response_200_output_data_item_accelerators_type_0_item_founders_type_0_item = cls(
             full_name=full_name,

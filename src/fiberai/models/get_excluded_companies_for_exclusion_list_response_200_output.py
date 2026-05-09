@@ -19,17 +19,21 @@ T = TypeVar("T", bound="GetExcludedCompaniesForExclusionListResponse200Output")
 class GetExcludedCompaniesForExclusionListResponse200Output:
     """
     Attributes:
+        size (float): Total number of excluded companies in the list
         companies (list[GetExcludedCompaniesForExclusionListResponse200OutputCompaniesItem]): List of excluded companies
         next_cursor (None | str): Cursor for the next page of results
         has_more (bool): Whether there are more results available
     """
 
+    size: float
     companies: list[GetExcludedCompaniesForExclusionListResponse200OutputCompaniesItem]
     next_cursor: None | str
     has_more: bool
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        size = self.size
+
         companies = []
         for companies_item_data in self.companies:
             companies_item = companies_item_data.to_dict()
@@ -44,6 +48,7 @@ class GetExcludedCompaniesForExclusionListResponse200Output:
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
+                "size": size,
                 "companies": companies,
                 "nextCursor": next_cursor,
                 "hasMore": has_more,
@@ -59,6 +64,8 @@ class GetExcludedCompaniesForExclusionListResponse200Output:
         )
 
         d = dict(src_dict)
+        size = d.pop("size")
+
         companies = []
         _companies = d.pop("companies")
         for companies_item_data in _companies:
@@ -78,6 +85,7 @@ class GetExcludedCompaniesForExclusionListResponse200Output:
         has_more = d.pop("hasMore")
 
         get_excluded_companies_for_exclusion_list_response_200_output = cls(
+            size=size,
             companies=companies,
             next_cursor=next_cursor,
             has_more=has_more,

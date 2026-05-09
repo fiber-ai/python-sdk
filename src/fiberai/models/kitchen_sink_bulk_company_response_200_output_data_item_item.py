@@ -173,13 +173,10 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
         num_li_locations (float | None | Unset):
         location_name (None | str | Unset):
         crunchbase_slug (None | str | Unset):
-        crunchbase_rank (float | None | Unset):
         primary_role (None | str | Unset):
         roles (list[str] | None | Unset):
         short_description (None | str | Unset):
         long_description (None | str | Unset):
-        crunchbase_category_groups (list[str] | None | Unset):
-        crunchbase_categories (list[str] | None | Unset):
         is_subsidiary (bool | None | Unset):
         parent (None | str | Unset):
         num_funding_rounds (float | None | Unset):
@@ -285,13 +282,10 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
     num_li_locations: float | None | Unset = UNSET
     location_name: None | str | Unset = UNSET
     crunchbase_slug: None | str | Unset = UNSET
-    crunchbase_rank: float | None | Unset = UNSET
     primary_role: None | str | Unset = UNSET
     roles: list[str] | None | Unset = UNSET
     short_description: None | str | Unset = UNSET
     long_description: None | str | Unset = UNSET
-    crunchbase_category_groups: list[str] | None | Unset = UNSET
-    crunchbase_categories: list[str] | None | Unset = UNSET
     is_subsidiary: bool | None | Unset = UNSET
     parent: None | str | Unset = UNSET
     num_funding_rounds: float | None | Unset = UNSET
@@ -845,12 +839,6 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
         else:
             crunchbase_slug = self.crunchbase_slug
 
-        crunchbase_rank: float | None | Unset
-        if isinstance(self.crunchbase_rank, Unset):
-            crunchbase_rank = UNSET
-        else:
-            crunchbase_rank = self.crunchbase_rank
-
         primary_role: None | str | Unset
         if isinstance(self.primary_role, Unset):
             primary_role = UNSET
@@ -877,24 +865,6 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
             long_description = UNSET
         else:
             long_description = self.long_description
-
-        crunchbase_category_groups: list[str] | None | Unset
-        if isinstance(self.crunchbase_category_groups, Unset):
-            crunchbase_category_groups = UNSET
-        elif isinstance(self.crunchbase_category_groups, list):
-            crunchbase_category_groups = self.crunchbase_category_groups
-
-        else:
-            crunchbase_category_groups = self.crunchbase_category_groups
-
-        crunchbase_categories: list[str] | None | Unset
-        if isinstance(self.crunchbase_categories, Unset):
-            crunchbase_categories = UNSET
-        elif isinstance(self.crunchbase_categories, list):
-            crunchbase_categories = self.crunchbase_categories
-
-        else:
-            crunchbase_categories = self.crunchbase_categories
 
         is_subsidiary: bool | None | Unset
         if isinstance(self.is_subsidiary, Unset):
@@ -1212,8 +1182,6 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
             field_dict["location_name"] = location_name
         if crunchbase_slug is not UNSET:
             field_dict["crunchbase_slug"] = crunchbase_slug
-        if crunchbase_rank is not UNSET:
-            field_dict["crunchbase_rank"] = crunchbase_rank
         if primary_role is not UNSET:
             field_dict["primary_role"] = primary_role
         if roles is not UNSET:
@@ -1222,10 +1190,6 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
             field_dict["short_description"] = short_description
         if long_description is not UNSET:
             field_dict["long_description"] = long_description
-        if crunchbase_category_groups is not UNSET:
-            field_dict["crunchbase_category_groups"] = crunchbase_category_groups
-        if crunchbase_categories is not UNSET:
-            field_dict["crunchbase_categories"] = crunchbase_categories
         if is_subsidiary is not UNSET:
             field_dict["is_subsidiary"] = is_subsidiary
         if parent is not UNSET:
@@ -2318,15 +2282,6 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
 
         crunchbase_slug = _parse_crunchbase_slug(d.pop("crunchbase_slug", UNSET))
 
-        def _parse_crunchbase_rank(data: object) -> float | None | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(float | None | Unset, data)
-
-        crunchbase_rank = _parse_crunchbase_rank(d.pop("crunchbase_rank", UNSET))
-
         def _parse_primary_role(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -2370,40 +2325,6 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
             return cast(None | str | Unset, data)
 
         long_description = _parse_long_description(d.pop("long_description", UNSET))
-
-        def _parse_crunchbase_category_groups(data: object) -> list[str] | None | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, list):
-                    raise TypeError()
-                crunchbase_category_groups_type_0 = cast(list[str], data)
-
-                return crunchbase_category_groups_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(list[str] | None | Unset, data)
-
-        crunchbase_category_groups = _parse_crunchbase_category_groups(d.pop("crunchbase_category_groups", UNSET))
-
-        def _parse_crunchbase_categories(data: object) -> list[str] | None | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, list):
-                    raise TypeError()
-                crunchbase_categories_type_0 = cast(list[str], data)
-
-                return crunchbase_categories_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(list[str] | None | Unset, data)
-
-        crunchbase_categories = _parse_crunchbase_categories(d.pop("crunchbase_categories", UNSET))
 
         def _parse_is_subsidiary(data: object) -> bool | None | Unset:
             if data is None:
@@ -2886,13 +2807,10 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItem:
             num_li_locations=num_li_locations,
             location_name=location_name,
             crunchbase_slug=crunchbase_slug,
-            crunchbase_rank=crunchbase_rank,
             primary_role=primary_role,
             roles=roles,
             short_description=short_description,
             long_description=long_description,
-            crunchbase_category_groups=crunchbase_category_groups,
-            crunchbase_categories=crunchbase_categories,
             is_subsidiary=is_subsidiary,
             parent=parent,
             num_funding_rounds=num_funding_rounds,

@@ -12,17 +12,8 @@ if TYPE_CHECKING:
     from ..models.combined_search_count_body_company_params_accelerators_v2_type_0 import (
         CombinedSearchCountBodyCompanyParamsAcceleratorsV2Type0,
     )
-    from ..models.combined_search_count_body_company_params_crunchbase_categories_type_0 import (
-        CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0,
-    )
-    from ..models.combined_search_count_body_company_params_crunchbase_category_groups_type_0 import (
-        CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0,
-    )
     from ..models.combined_search_count_body_company_params_employee_count_v2_type_0 import (
         CombinedSearchCountBodyCompanyParamsEmployeeCountV2Type0,
-    )
-    from ..models.combined_search_count_body_company_params_employee_trends_type_0 import (
-        CombinedSearchCountBodyCompanyParamsEmployeeTrendsType0,
     )
     from ..models.combined_search_count_body_company_params_employees_type_0 import (
         CombinedSearchCountBodyCompanyParamsEmployeesType0,
@@ -53,9 +44,6 @@ if TYPE_CHECKING:
     )
     from ..models.combined_search_count_body_company_params_industries_v2_type_0 import (
         CombinedSearchCountBodyCompanyParamsIndustriesV2Type0,
-    )
-    from ..models.combined_search_count_body_company_params_investors_type_0 import (
-        CombinedSearchCountBodyCompanyParamsInvestorsType0,
     )
     from ..models.combined_search_count_body_company_params_investors_v2_type_0 import (
         CombinedSearchCountBodyCompanyParamsInvestorsV2Type0,
@@ -147,7 +135,6 @@ class CombinedSearchCountBodyCompanyParams:
         name_like (CombinedSearchCountBodyCompanyParamsNameLikeType0 | None | Unset):
         exact_company (CombinedSearchCountBodyCompanyParamsExactCompanyType0 | None | Unset):
         accelerators_v2 (CombinedSearchCountBodyCompanyParamsAcceleratorsV2Type0 | None | Unset):
-        employee_trends (CombinedSearchCountBodyCompanyParamsEmployeeTrendsType0 | None | Unset):
         headquarters_location (CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0 | None | Unset):
         linkedin_slugs (list[str] | None | Unset):
         special_flags (CombinedSearchCountBodyCompanyParamsSpecialFlagsType0 | None | Unset):
@@ -164,12 +151,8 @@ class CombinedSearchCountBodyCompanyParams:
         investors_v2 (CombinedSearchCountBodyCompanyParamsInvestorsV2Type0 | None | Unset):
         technologies_v2 (CombinedSearchCountBodyCompanyParamsTechnologiesV2Type0 | None | Unset):
         revenue_range_usd (CombinedSearchCountBodyCompanyParamsRevenueRangeUSDType0 | None | Unset):
-        investors (CombinedSearchCountBodyCompanyParamsInvestorsType0 | None | Unset):
         tags (CombinedSearchCountBodyCompanyParamsTagsType0 | None | Unset):
-        crunchbase_categories (CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0 | None | Unset):
-        crunchbase_category_groups (CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0 | None | Unset):
         linkedin_industries (CombinedSearchCountBodyCompanyParamsLinkedinIndustriesType0 | None | Unset):
-        crunchbase_slugs (list[str] | None | Unset):
     """
 
     exact_company_v2: CombinedSearchCountBodyCompanyParamsExactCompanyV2Type0 | None | Unset = UNSET
@@ -197,7 +180,6 @@ class CombinedSearchCountBodyCompanyParams:
     name_like: CombinedSearchCountBodyCompanyParamsNameLikeType0 | None | Unset = UNSET
     exact_company: CombinedSearchCountBodyCompanyParamsExactCompanyType0 | None | Unset = UNSET
     accelerators_v2: CombinedSearchCountBodyCompanyParamsAcceleratorsV2Type0 | None | Unset = UNSET
-    employee_trends: CombinedSearchCountBodyCompanyParamsEmployeeTrendsType0 | None | Unset = UNSET
     headquarters_location: CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0 | None | Unset = UNSET
     linkedin_slugs: list[str] | None | Unset = UNSET
     special_flags: CombinedSearchCountBodyCompanyParamsSpecialFlagsType0 | None | Unset = UNSET
@@ -214,29 +196,16 @@ class CombinedSearchCountBodyCompanyParams:
     investors_v2: CombinedSearchCountBodyCompanyParamsInvestorsV2Type0 | None | Unset = UNSET
     technologies_v2: CombinedSearchCountBodyCompanyParamsTechnologiesV2Type0 | None | Unset = UNSET
     revenue_range_usd: CombinedSearchCountBodyCompanyParamsRevenueRangeUSDType0 | None | Unset = UNSET
-    investors: CombinedSearchCountBodyCompanyParamsInvestorsType0 | None | Unset = UNSET
     tags: CombinedSearchCountBodyCompanyParamsTagsType0 | None | Unset = UNSET
-    crunchbase_categories: CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0 | None | Unset = UNSET
-    crunchbase_category_groups: CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0 | None | Unset = UNSET
     linkedin_industries: CombinedSearchCountBodyCompanyParamsLinkedinIndustriesType0 | None | Unset = UNSET
-    crunchbase_slugs: list[str] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_company_params_accelerators_v2_type_0 import (
             CombinedSearchCountBodyCompanyParamsAcceleratorsV2Type0,
         )
-        from ..models.combined_search_count_body_company_params_crunchbase_categories_type_0 import (
-            CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0,
-        )
-        from ..models.combined_search_count_body_company_params_crunchbase_category_groups_type_0 import (
-            CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0,
-        )
         from ..models.combined_search_count_body_company_params_employee_count_v2_type_0 import (
             CombinedSearchCountBodyCompanyParamsEmployeeCountV2Type0,
-        )
-        from ..models.combined_search_count_body_company_params_employee_trends_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeeTrendsType0,
         )
         from ..models.combined_search_count_body_company_params_employees_type_0 import (
             CombinedSearchCountBodyCompanyParamsEmployeesType0,
@@ -267,9 +236,6 @@ class CombinedSearchCountBodyCompanyParams:
         )
         from ..models.combined_search_count_body_company_params_industries_v2_type_0 import (
             CombinedSearchCountBodyCompanyParamsIndustriesV2Type0,
-        )
-        from ..models.combined_search_count_body_company_params_investors_type_0 import (
-            CombinedSearchCountBodyCompanyParamsInvestorsType0,
         )
         from ..models.combined_search_count_body_company_params_investors_v2_type_0 import (
             CombinedSearchCountBodyCompanyParamsInvestorsV2Type0,
@@ -462,14 +428,6 @@ class CombinedSearchCountBodyCompanyParams:
         else:
             accelerators_v2 = self.accelerators_v2
 
-        employee_trends: dict[str, Any] | None | Unset
-        if isinstance(self.employee_trends, Unset):
-            employee_trends = UNSET
-        elif isinstance(self.employee_trends, CombinedSearchCountBodyCompanyParamsEmployeeTrendsType0):
-            employee_trends = self.employee_trends.to_dict()
-        else:
-            employee_trends = self.employee_trends
-
         headquarters_location: dict[str, Any] | None | Unset
         if isinstance(self.headquarters_location, Unset):
             headquarters_location = UNSET
@@ -599,14 +557,6 @@ class CombinedSearchCountBodyCompanyParams:
         else:
             revenue_range_usd = self.revenue_range_usd
 
-        investors: dict[str, Any] | None | Unset
-        if isinstance(self.investors, Unset):
-            investors = UNSET
-        elif isinstance(self.investors, CombinedSearchCountBodyCompanyParamsInvestorsType0):
-            investors = self.investors.to_dict()
-        else:
-            investors = self.investors
-
         tags: dict[str, Any] | None | Unset
         if isinstance(self.tags, Unset):
             tags = UNSET
@@ -615,24 +565,6 @@ class CombinedSearchCountBodyCompanyParams:
         else:
             tags = self.tags
 
-        crunchbase_categories: dict[str, Any] | None | Unset
-        if isinstance(self.crunchbase_categories, Unset):
-            crunchbase_categories = UNSET
-        elif isinstance(self.crunchbase_categories, CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0):
-            crunchbase_categories = self.crunchbase_categories.to_dict()
-        else:
-            crunchbase_categories = self.crunchbase_categories
-
-        crunchbase_category_groups: dict[str, Any] | None | Unset
-        if isinstance(self.crunchbase_category_groups, Unset):
-            crunchbase_category_groups = UNSET
-        elif isinstance(
-            self.crunchbase_category_groups, CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0
-        ):
-            crunchbase_category_groups = self.crunchbase_category_groups.to_dict()
-        else:
-            crunchbase_category_groups = self.crunchbase_category_groups
-
         linkedin_industries: dict[str, Any] | None | Unset
         if isinstance(self.linkedin_industries, Unset):
             linkedin_industries = UNSET
@@ -640,15 +572,6 @@ class CombinedSearchCountBodyCompanyParams:
             linkedin_industries = self.linkedin_industries.to_dict()
         else:
             linkedin_industries = self.linkedin_industries
-
-        crunchbase_slugs: list[str] | None | Unset
-        if isinstance(self.crunchbase_slugs, Unset):
-            crunchbase_slugs = UNSET
-        elif isinstance(self.crunchbase_slugs, list):
-            crunchbase_slugs = self.crunchbase_slugs
-
-        else:
-            crunchbase_slugs = self.crunchbase_slugs
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -683,8 +606,6 @@ class CombinedSearchCountBodyCompanyParams:
             field_dict["exactCompany"] = exact_company
         if accelerators_v2 is not UNSET:
             field_dict["acceleratorsV2"] = accelerators_v2
-        if employee_trends is not UNSET:
-            field_dict["employeeTrends"] = employee_trends
         if headquarters_location is not UNSET:
             field_dict["headquartersLocation"] = headquarters_location
         if linkedin_slugs is not UNSET:
@@ -717,18 +638,10 @@ class CombinedSearchCountBodyCompanyParams:
             field_dict["technologiesV2"] = technologies_v2
         if revenue_range_usd is not UNSET:
             field_dict["revenueRangeUSD"] = revenue_range_usd
-        if investors is not UNSET:
-            field_dict["investors"] = investors
         if tags is not UNSET:
             field_dict["tags"] = tags
-        if crunchbase_categories is not UNSET:
-            field_dict["crunchbaseCategories"] = crunchbase_categories
-        if crunchbase_category_groups is not UNSET:
-            field_dict["crunchbaseCategoryGroups"] = crunchbase_category_groups
         if linkedin_industries is not UNSET:
             field_dict["linkedinIndustries"] = linkedin_industries
-        if crunchbase_slugs is not UNSET:
-            field_dict["crunchbaseSlugs"] = crunchbase_slugs
 
         return field_dict
 
@@ -737,17 +650,8 @@ class CombinedSearchCountBodyCompanyParams:
         from ..models.combined_search_count_body_company_params_accelerators_v2_type_0 import (
             CombinedSearchCountBodyCompanyParamsAcceleratorsV2Type0,
         )
-        from ..models.combined_search_count_body_company_params_crunchbase_categories_type_0 import (
-            CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0,
-        )
-        from ..models.combined_search_count_body_company_params_crunchbase_category_groups_type_0 import (
-            CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0,
-        )
         from ..models.combined_search_count_body_company_params_employee_count_v2_type_0 import (
             CombinedSearchCountBodyCompanyParamsEmployeeCountV2Type0,
-        )
-        from ..models.combined_search_count_body_company_params_employee_trends_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeeTrendsType0,
         )
         from ..models.combined_search_count_body_company_params_employees_type_0 import (
             CombinedSearchCountBodyCompanyParamsEmployeesType0,
@@ -778,9 +682,6 @@ class CombinedSearchCountBodyCompanyParams:
         )
         from ..models.combined_search_count_body_company_params_industries_v2_type_0 import (
             CombinedSearchCountBodyCompanyParamsIndustriesV2Type0,
-        )
-        from ..models.combined_search_count_body_company_params_investors_type_0 import (
-            CombinedSearchCountBodyCompanyParamsInvestorsType0,
         )
         from ..models.combined_search_count_body_company_params_investors_v2_type_0 import (
             CombinedSearchCountBodyCompanyParamsInvestorsV2Type0,
@@ -1163,25 +1064,6 @@ class CombinedSearchCountBodyCompanyParams:
 
         accelerators_v2 = _parse_accelerators_v2(d.pop("acceleratorsV2", UNSET))
 
-        def _parse_employee_trends(
-            data: object,
-        ) -> CombinedSearchCountBodyCompanyParamsEmployeeTrendsType0 | None | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                employee_trends_type_0 = CombinedSearchCountBodyCompanyParamsEmployeeTrendsType0.from_dict(data)
-
-                return employee_trends_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(CombinedSearchCountBodyCompanyParamsEmployeeTrendsType0 | None | Unset, data)
-
-        employee_trends = _parse_employee_trends(d.pop("employeeTrends", UNSET))
-
         def _parse_headquarters_location(
             data: object,
         ) -> CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0 | None | Unset:
@@ -1472,23 +1354,6 @@ class CombinedSearchCountBodyCompanyParams:
 
         revenue_range_usd = _parse_revenue_range_usd(d.pop("revenueRangeUSD", UNSET))
 
-        def _parse_investors(data: object) -> CombinedSearchCountBodyCompanyParamsInvestorsType0 | None | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                investors_type_0 = CombinedSearchCountBodyCompanyParamsInvestorsType0.from_dict(data)
-
-                return investors_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(CombinedSearchCountBodyCompanyParamsInvestorsType0 | None | Unset, data)
-
-        investors = _parse_investors(d.pop("investors", UNSET))
-
         def _parse_tags(data: object) -> CombinedSearchCountBodyCompanyParamsTagsType0 | None | Unset:
             if data is None:
                 return data
@@ -1505,48 +1370,6 @@ class CombinedSearchCountBodyCompanyParams:
             return cast(CombinedSearchCountBodyCompanyParamsTagsType0 | None | Unset, data)
 
         tags = _parse_tags(d.pop("tags", UNSET))
-
-        def _parse_crunchbase_categories(
-            data: object,
-        ) -> CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0 | None | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                crunchbase_categories_type_0 = CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0.from_dict(
-                    data
-                )
-
-                return crunchbase_categories_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0 | None | Unset, data)
-
-        crunchbase_categories = _parse_crunchbase_categories(d.pop("crunchbaseCategories", UNSET))
-
-        def _parse_crunchbase_category_groups(
-            data: object,
-        ) -> CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0 | None | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                crunchbase_category_groups_type_0 = (
-                    CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0.from_dict(data)
-                )
-
-                return crunchbase_category_groups_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0 | None | Unset, data)
-
-        crunchbase_category_groups = _parse_crunchbase_category_groups(d.pop("crunchbaseCategoryGroups", UNSET))
 
         def _parse_linkedin_industries(
             data: object,
@@ -1567,23 +1390,6 @@ class CombinedSearchCountBodyCompanyParams:
 
         linkedin_industries = _parse_linkedin_industries(d.pop("linkedinIndustries", UNSET))
 
-        def _parse_crunchbase_slugs(data: object) -> list[str] | None | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, list):
-                    raise TypeError()
-                crunchbase_slugs_type_0 = cast(list[str], data)
-
-                return crunchbase_slugs_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(list[str] | None | Unset, data)
-
-        crunchbase_slugs = _parse_crunchbase_slugs(d.pop("crunchbaseSlugs", UNSET))
-
         combined_search_count_body_company_params = cls(
             exact_company_v2=exact_company_v2,
             domains=domains,
@@ -1600,7 +1406,6 @@ class CombinedSearchCountBodyCompanyParams:
             name_like=name_like,
             exact_company=exact_company,
             accelerators_v2=accelerators_v2,
-            employee_trends=employee_trends,
             headquarters_location=headquarters_location,
             linkedin_slugs=linkedin_slugs,
             special_flags=special_flags,
@@ -1617,12 +1422,8 @@ class CombinedSearchCountBodyCompanyParams:
             investors_v2=investors_v2,
             technologies_v2=technologies_v2,
             revenue_range_usd=revenue_range_usd,
-            investors=investors,
             tags=tags,
-            crunchbase_categories=crunchbase_categories,
-            crunchbase_category_groups=crunchbase_category_groups,
             linkedin_industries=linkedin_industries,
-            crunchbase_slugs=crunchbase_slugs,
         )
 
         combined_search_count_body_company_params.additional_properties = d

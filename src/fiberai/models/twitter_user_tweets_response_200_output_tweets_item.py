@@ -17,6 +17,9 @@ class TwitterUserTweetsResponse200OutputTweetsItem:
     Attributes:
         id (None | str | Unset): Numeric tweet ID.
         text (None | str | Unset): Full tweet text.
+        author_id (None | str | Unset): Numeric user ID of the tweet author.
+        handle (None | str | Unset): Twitter/X handle of the tweet author (without '@').
+        display_name (None | str | Unset): Display name of the tweet author.
         created_at (None | str | Unset): When the tweet was created.
         like_count (float | None | Unset): Number of likes.
         reply_count (float | None | Unset): Number of replies.
@@ -32,6 +35,9 @@ class TwitterUserTweetsResponse200OutputTweetsItem:
 
     id: None | str | Unset = UNSET
     text: None | str | Unset = UNSET
+    author_id: None | str | Unset = UNSET
+    handle: None | str | Unset = UNSET
+    display_name: None | str | Unset = UNSET
     created_at: None | str | Unset = UNSET
     like_count: float | None | Unset = UNSET
     reply_count: float | None | Unset = UNSET
@@ -56,6 +62,24 @@ class TwitterUserTweetsResponse200OutputTweetsItem:
             text = UNSET
         else:
             text = self.text
+
+        author_id: None | str | Unset
+        if isinstance(self.author_id, Unset):
+            author_id = UNSET
+        else:
+            author_id = self.author_id
+
+        handle: None | str | Unset
+        if isinstance(self.handle, Unset):
+            handle = UNSET
+        else:
+            handle = self.handle
+
+        display_name: None | str | Unset
+        if isinstance(self.display_name, Unset):
+            display_name = UNSET
+        else:
+            display_name = self.display_name
 
         created_at: None | str | Unset
         if isinstance(self.created_at, Unset):
@@ -124,6 +148,12 @@ class TwitterUserTweetsResponse200OutputTweetsItem:
             field_dict["id"] = id
         if text is not UNSET:
             field_dict["text"] = text
+        if author_id is not UNSET:
+            field_dict["authorId"] = author_id
+        if handle is not UNSET:
+            field_dict["handle"] = handle
+        if display_name is not UNSET:
+            field_dict["displayName"] = display_name
         if created_at is not UNSET:
             field_dict["createdAt"] = created_at
         if like_count is not UNSET:
@@ -168,6 +198,33 @@ class TwitterUserTweetsResponse200OutputTweetsItem:
             return cast(None | str | Unset, data)
 
         text = _parse_text(d.pop("text", UNSET))
+
+        def _parse_author_id(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        author_id = _parse_author_id(d.pop("authorId", UNSET))
+
+        def _parse_handle(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        handle = _parse_handle(d.pop("handle", UNSET))
+
+        def _parse_display_name(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        display_name = _parse_display_name(d.pop("displayName", UNSET))
 
         def _parse_created_at(data: object) -> None | str | Unset:
             if data is None:
@@ -262,6 +319,9 @@ class TwitterUserTweetsResponse200OutputTweetsItem:
         twitter_user_tweets_response_200_output_tweets_item = cls(
             id=id,
             text=text,
+            author_id=author_id,
+            handle=handle,
+            display_name=display_name,
             created_at=created_at,
             like_count=like_count,
             reply_count=reply_count,

@@ -143,7 +143,7 @@ def sync_detailed(
      Convert GitHub usernames to LinkedIn profiles or get emailIds. Use outputType flag to specify what
     to retrieve.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per person for LinkedIn lookup OR email extraction. 2
     credits per person if outputType='both'.&nbsp;<span title=\"Pricing shown is default pricing. Actual
@@ -192,7 +192,7 @@ def sync(
      Convert GitHub usernames to LinkedIn profiles or get emailIds. Use outputType flag to specify what
     to retrieve.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per person for LinkedIn lookup OR email extraction. 2
     credits per person if outputType='both'.&nbsp;<span title=\"Pricing shown is default pricing. Actual
@@ -235,7 +235,7 @@ async def asyncio_detailed(
      Convert GitHub usernames to LinkedIn profiles or get emailIds. Use outputType flag to specify what
     to retrieve.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per person for LinkedIn lookup OR email extraction. 2
     credits per person if outputType='both'.&nbsp;<span title=\"Pricing shown is default pricing. Actual
@@ -282,7 +282,7 @@ async def asyncio(
      Convert GitHub usernames to LinkedIn profiles or get emailIds. Use outputType flag to specify what
     to retrieve.
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per person for LinkedIn lookup OR email extraction. 2
     credits per person if outputType='both'.&nbsp;<span title=\"Pricing shown is default pricing. Actual

@@ -33,6 +33,8 @@ class PeopleSearchBody:
             exclusion lists
         company_exclusion_list_i_ds (list[str] | None | Unset): Filter out people who work at companies which belong to
             the given company exclusion lists
+        include_count (bool | None | Unset): When true, returns an estimated total count of matching prospects in the
+            response. The count does not account for exclusion lists.
     """
 
     api_key: str
@@ -42,6 +44,7 @@ class PeopleSearchBody:
     current_companies: list[PeopleSearchBodyCurrentCompaniesType0Item] | None | Unset = UNSET
     prospect_exclusion_list_i_ds: list[str] | None | Unset = UNSET
     company_exclusion_list_i_ds: list[str] | None | Unset = UNSET
+    include_count: bool | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -89,6 +92,12 @@ class PeopleSearchBody:
         else:
             company_exclusion_list_i_ds = self.company_exclusion_list_i_ds
 
+        include_count: bool | None | Unset
+        if isinstance(self.include_count, Unset):
+            include_count = UNSET
+        else:
+            include_count = self.include_count
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -108,6 +117,8 @@ class PeopleSearchBody:
             field_dict["prospectExclusionListIDs"] = prospect_exclusion_list_i_ds
         if company_exclusion_list_i_ds is not UNSET:
             field_dict["companyExclusionListIDs"] = company_exclusion_list_i_ds
+        if include_count is not UNSET:
+            field_dict["includeCount"] = include_count
 
         return field_dict
 
@@ -195,6 +206,15 @@ class PeopleSearchBody:
 
         company_exclusion_list_i_ds = _parse_company_exclusion_list_i_ds(d.pop("companyExclusionListIDs", UNSET))
 
+        def _parse_include_count(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        include_count = _parse_include_count(d.pop("includeCount", UNSET))
+
         people_search_body = cls(
             api_key=api_key,
             search_params=search_params,
@@ -203,6 +223,7 @@ class PeopleSearchBody:
             current_companies=current_companies,
             prospect_exclusion_list_i_ds=prospect_exclusion_list_i_ds,
             company_exclusion_list_i_ds=company_exclusion_list_i_ds,
+            include_count=include_count,
         )
 
         people_search_body.additional_properties = d

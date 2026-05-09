@@ -69,8 +69,8 @@ if TYPE_CHECKING:
     from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_office_locations_v2_type_0 import (
         TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0OfficeLocationsV2Type0,
     )
-    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_revenue_usd_type_0 import (
-        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueUSDType0,
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_revenue_range_usd_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0,
     )
     from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_stage_type_0 import (
         TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0StageType0,
@@ -119,7 +119,6 @@ class TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0:
         job_postings_v2 (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0JobPostingsV2Type0 |
             Unset):
         tags (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TagsType0 | Unset):
-        revenue_usd (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueUSDType0 | Unset):
         office_locations_v2 (None |
             TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0OfficeLocationsV2Type0 | Unset):
         naics_codes (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NaicsCodesType0 | Unset):
@@ -132,6 +131,8 @@ class TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0:
         investors_v2 (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0InvestorsV2Type0 |
             Unset):
         fortune_rankings (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FortuneRankingsType0
+            | Unset):
+        revenue_range_usd (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0
             | Unset):
     """
 
@@ -178,9 +179,6 @@ class TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0:
         None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0JobPostingsV2Type0 | Unset
     ) = UNSET
     tags: None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TagsType0 | Unset = UNSET
-    revenue_usd: None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueUSDType0 | Unset = (
-        UNSET
-    )
     office_locations_v2: (
         None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0OfficeLocationsV2Type0 | Unset
     ) = UNSET
@@ -201,6 +199,9 @@ class TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0:
     )
     fortune_rankings: (
         None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FortuneRankingsType0 | Unset
+    ) = UNSET
+    revenue_range_usd: (
+        None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0 | Unset
     ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -265,8 +266,8 @@ class TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0:
         from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_office_locations_v2_type_0 import (
             TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0OfficeLocationsV2Type0,
         )
-        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_revenue_usd_type_0 import (
-            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueUSDType0,
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_revenue_range_usd_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0,
         )
         from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_stage_type_0 import (
             TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0StageType0,
@@ -438,16 +439,6 @@ class TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0:
         else:
             tags = self.tags
 
-        revenue_usd: dict[str, Any] | None | Unset
-        if isinstance(self.revenue_usd, Unset):
-            revenue_usd = UNSET
-        elif isinstance(
-            self.revenue_usd, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueUSDType0
-        ):
-            revenue_usd = self.revenue_usd.to_dict()
-        else:
-            revenue_usd = self.revenue_usd
-
         office_locations_v2: dict[str, Any] | None | Unset
         if isinstance(self.office_locations_v2, Unset):
             office_locations_v2 = UNSET
@@ -520,6 +511,17 @@ class TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0:
         else:
             fortune_rankings = self.fortune_rankings
 
+        revenue_range_usd: dict[str, Any] | None | Unset
+        if isinstance(self.revenue_range_usd, Unset):
+            revenue_range_usd = UNSET
+        elif isinstance(
+            self.revenue_range_usd,
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0,
+        ):
+            revenue_range_usd = self.revenue_range_usd.to_dict()
+        else:
+            revenue_range_usd = self.revenue_range_usd
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -553,8 +555,6 @@ class TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0:
             field_dict["jobPostingsV2"] = job_postings_v2
         if tags is not UNSET:
             field_dict["tags"] = tags
-        if revenue_usd is not UNSET:
-            field_dict["revenueUSD"] = revenue_usd
         if office_locations_v2 is not UNSET:
             field_dict["officeLocationsV2"] = office_locations_v2
         if naics_codes is not UNSET:
@@ -569,6 +569,8 @@ class TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0:
             field_dict["investorsV2"] = investors_v2
         if fortune_rankings is not UNSET:
             field_dict["fortuneRankings"] = fortune_rankings
+        if revenue_range_usd is not UNSET:
+            field_dict["revenueRangeUSD"] = revenue_range_usd
 
         return field_dict
 
@@ -634,8 +636,8 @@ class TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0:
         from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_office_locations_v2_type_0 import (
             TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0OfficeLocationsV2Type0,
         )
-        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_revenue_usd_type_0 import (
-            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueUSDType0,
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_revenue_range_usd_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0,
         )
         from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_stage_type_0 import (
             TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0StageType0,
@@ -1063,29 +1065,6 @@ class TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0:
 
         tags = _parse_tags(d.pop("tags", UNSET))
 
-        def _parse_revenue_usd(
-            data: object,
-        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueUSDType0 | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                revenue_usd_type_0 = (
-                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueUSDType0.from_dict(data)
-                )
-
-                return revenue_usd_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(
-                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueUSDType0 | Unset, data
-            )
-
-        revenue_usd = _parse_revenue_usd(d.pop("revenueUSD", UNSET))
-
         def _parse_office_locations_v2(
             data: object,
         ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0OfficeLocationsV2Type0 | Unset:
@@ -1256,6 +1235,32 @@ class TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0:
 
         fortune_rankings = _parse_fortune_rankings(d.pop("fortuneRankings", UNSET))
 
+        def _parse_revenue_range_usd(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                revenue_range_usd_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0.from_dict(
+                        data
+                    )
+                )
+
+                return revenue_range_usd_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0 | Unset,
+                data,
+            )
+
+        revenue_range_usd = _parse_revenue_range_usd(d.pop("revenueRangeUSD", UNSET))
+
         text_to_combined_search_param_response_200_output_company_search_params_type_0 = cls(
             headquarters_country_code=headquarters_country_code,
             headquarters_state_name=headquarters_state_name,
@@ -1272,7 +1277,6 @@ class TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0:
             headquarters_location=headquarters_location,
             job_postings_v2=job_postings_v2,
             tags=tags,
-            revenue_usd=revenue_usd,
             office_locations_v2=office_locations_v2,
             naics_codes=naics_codes,
             technologies=technologies,
@@ -1280,6 +1284,7 @@ class TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0:
             li_industries=li_industries,
             investors_v2=investors_v2,
             fortune_rankings=fortune_rankings,
+            revenue_range_usd=revenue_range_usd,
         )
 
         text_to_combined_search_param_response_200_output_company_search_params_type_0.additional_properties = d

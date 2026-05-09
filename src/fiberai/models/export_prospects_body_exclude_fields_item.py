@@ -10,8 +10,6 @@ class ExportProspectsBodyExcludeFieldsItem(str, Enum):
     CITY = "city"
     COMPANY = "company"
     COMPANY_ACCELERATORS = "company_accelerators"
-    COMPANY_CRUNCHBASE_CATEGORIES = "company_crunchbase_categories"
-    COMPANY_CRUNCHBASE_CATEGORY_GROUPS = "company_crunchbase_category_groups"
     COMPANY_DESCRIPTION = "company_description"
     COMPANY_DOMAIN = "company_domain"
     COMPANY_EMPLOYEE_COUNT_LOWER = "company_employee_count_lower"

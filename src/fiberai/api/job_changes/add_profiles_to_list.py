@@ -140,11 +140,11 @@ def sync_detailed(
 ]:
     r"""Add profiles to the job change list
 
-     Add profiles to the job change list who you want track when they change their jobs. Note: we tend to
-    remove the 404 profiles to the list automatically.Once the upload is start, you can use /job-
-    changes/get-list to track the uploading process of the people to the list.
+     Add profiles to the job change list whose job changes you want to track. Note: we automatically
+    remove 404 profiles from the list. Once the upload starts, you can use /job-changes/get-list to
+    track the upload progress.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per Number of prospect tracking&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -189,11 +189,11 @@ def sync(
 ):
     r"""Add profiles to the job change list
 
-     Add profiles to the job change list who you want track when they change their jobs. Note: we tend to
-    remove the 404 profiles to the list automatically.Once the upload is start, you can use /job-
-    changes/get-list to track the uploading process of the people to the list.
+     Add profiles to the job change list whose job changes you want to track. Note: we automatically
+    remove 404 profiles from the list. Once the upload starts, you can use /job-changes/get-list to
+    track the upload progress.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per Number of prospect tracking&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -232,11 +232,11 @@ async def asyncio_detailed(
 ]:
     r"""Add profiles to the job change list
 
-     Add profiles to the job change list who you want track when they change their jobs. Note: we tend to
-    remove the 404 profiles to the list automatically.Once the upload is start, you can use /job-
-    changes/get-list to track the uploading process of the people to the list.
+     Add profiles to the job change list whose job changes you want to track. Note: we automatically
+    remove 404 profiles from the list. Once the upload starts, you can use /job-changes/get-list to
+    track the upload progress.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per Number of prospect tracking&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -279,11 +279,11 @@ async def asyncio(
 ):
     r"""Add profiles to the job change list
 
-     Add profiles to the job change list who you want track when they change their jobs. Note: we tend to
-    remove the 404 profiles to the list automatically.Once the upload is start, you can use /job-
-    changes/get-list to track the uploading process of the people to the list.
+     Add profiles to the job change list whose job changes you want to track. Note: we automatically
+    remove 404 profiles from the list. Once the upload starts, you can use /job-changes/get-list to
+    track the upload progress.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per Number of prospect tracking&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>

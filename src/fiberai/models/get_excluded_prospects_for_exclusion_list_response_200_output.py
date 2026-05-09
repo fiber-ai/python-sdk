@@ -19,17 +19,21 @@ T = TypeVar("T", bound="GetExcludedProspectsForExclusionListResponse200Output")
 class GetExcludedProspectsForExclusionListResponse200Output:
     """
     Attributes:
+        size (float): Total number of excluded profiles in the list
         prospects (list[GetExcludedProspectsForExclusionListResponse200OutputProspectsItem]): List of excluded prospects
         next_cursor (None | str): Cursor for the next page of results
         has_more (bool): Whether there are more results available
     """
 
+    size: float
     prospects: list[GetExcludedProspectsForExclusionListResponse200OutputProspectsItem]
     next_cursor: None | str
     has_more: bool
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        size = self.size
+
         prospects = []
         for prospects_item_data in self.prospects:
             prospects_item = prospects_item_data.to_dict()
@@ -44,6 +48,7 @@ class GetExcludedProspectsForExclusionListResponse200Output:
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
+                "size": size,
                 "prospects": prospects,
                 "nextCursor": next_cursor,
                 "hasMore": has_more,
@@ -59,6 +64,8 @@ class GetExcludedProspectsForExclusionListResponse200Output:
         )
 
         d = dict(src_dict)
+        size = d.pop("size")
+
         prospects = []
         _prospects = d.pop("prospects")
         for prospects_item_data in _prospects:
@@ -78,6 +85,7 @@ class GetExcludedProspectsForExclusionListResponse200Output:
         has_more = d.pop("hasMore")
 
         get_excluded_prospects_for_exclusion_list_response_200_output = cls(
+            size=size,
             prospects=prospects,
             next_cursor=next_cursor,
             has_more=has_more,

@@ -1,0 +1,8 @@
+from enum import IntEnum
+
+
+class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0LowerBoundExclusiveType0(IntEnum):
+    VALUE_0 = 0
+
+    def __str__(self) -> str:
+        return str(self.value)

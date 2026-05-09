@@ -38,6 +38,9 @@ if TYPE_CHECKING:
     from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_keywords_type_0 import (
         TextToCombinedSearchResponse200OutputProfileSearchParamsType0KeywordsType0,
     )
+    from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_keywords_v2_type_0 import (
+        TextToCombinedSearchResponse200OutputProfileSearchParamsType0KeywordsV2Type0,
+    )
     from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_languages_type_0 import (
         TextToCombinedSearchResponse200OutputProfileSearchParamsType0LanguagesType0,
     )
@@ -122,6 +125,7 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
         num_followers (None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0NumFollowersType0 | Unset):
         max_people_per_company (float | None | Unset):
         state (None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0StateType0 | Unset):
+        keywords_v2 (None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0KeywordsV2Type0 | Unset):
     """
 
     job_title_v3: None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0JobTitleV3Type0 | Unset = UNSET
@@ -174,6 +178,7 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
     num_followers: None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0NumFollowersType0 | Unset = UNSET
     max_people_per_company: float | None | Unset = UNSET
     state: None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0StateType0 | Unset = UNSET
+    keywords_v2: None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0KeywordsV2Type0 | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_approx_age_type_0 import (
@@ -205,6 +210,9 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
         )
         from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_keywords_type_0 import (
             TextToCombinedSearchResponse200OutputProfileSearchParamsType0KeywordsType0,
+        )
+        from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_keywords_v2_type_0 import (
+            TextToCombinedSearchResponse200OutputProfileSearchParamsType0KeywordsV2Type0,
         )
         from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_languages_type_0 import (
             TextToCombinedSearchResponse200OutputProfileSearchParamsType0LanguagesType0,
@@ -451,6 +459,14 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
         else:
             state = self.state
 
+        keywords_v2: dict[str, Any] | None | Unset
+        if isinstance(self.keywords_v2, Unset):
+            keywords_v2 = UNSET
+        elif isinstance(self.keywords_v2, TextToCombinedSearchResponse200OutputProfileSearchParamsType0KeywordsV2Type0):
+            keywords_v2 = self.keywords_v2.to_dict()
+        else:
+            keywords_v2 = self.keywords_v2
+
         field_dict: dict[str, Any] = {}
 
         field_dict.update({})
@@ -496,6 +512,8 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
             field_dict["maxPeoplePerCompany"] = max_people_per_company
         if state is not UNSET:
             field_dict["state"] = state
+        if keywords_v2 is not UNSET:
+            field_dict["keywordsV2"] = keywords_v2
 
         return field_dict
 
@@ -530,6 +548,9 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
         )
         from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_keywords_type_0 import (
             TextToCombinedSearchResponse200OutputProfileSearchParamsType0KeywordsType0,
+        )
+        from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_keywords_v2_type_0 import (
+            TextToCombinedSearchResponse200OutputProfileSearchParamsType0KeywordsV2Type0,
         )
         from ..models.text_to_combined_search_response_200_output_profile_search_params_type_0_languages_type_0 import (
             TextToCombinedSearchResponse200OutputProfileSearchParamsType0LanguagesType0,
@@ -1124,6 +1145,29 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
 
         state = _parse_state(d.pop("state", UNSET))
 
+        def _parse_keywords_v2(
+            data: object,
+        ) -> None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0KeywordsV2Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                keywords_v2_type_0 = (
+                    TextToCombinedSearchResponse200OutputProfileSearchParamsType0KeywordsV2Type0.from_dict(data)
+                )
+
+                return keywords_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchResponse200OutputProfileSearchParamsType0KeywordsV2Type0 | Unset, data
+            )
+
+        keywords_v2 = _parse_keywords_v2(d.pop("keywordsV2", UNSET))
+
         text_to_combined_search_response_200_output_profile_search_params_type_0 = cls(
             job_title_v3=job_title_v3,
             job_status=job_status,
@@ -1146,6 +1190,7 @@ class TextToCombinedSearchResponse200OutputProfileSearchParamsType0:
             num_followers=num_followers,
             max_people_per_company=max_people_per_company,
             state=state,
+            keywords_v2=keywords_v2,
         )
 
         return text_to_combined_search_response_200_output_profile_search_params_type_0

@@ -1,0 +1,10 @@
+from enum import Enum
+
+
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobTitleV2Type0NoneOfType0ItemType1GroupsItem(str, Enum):
+    BOARD_MEMBER = "board-member"
+    C_SUITE = "c-suite"
+    FOUNDER = "founder"
+
+    def __str__(self) -> str:
+        return str(self.value)

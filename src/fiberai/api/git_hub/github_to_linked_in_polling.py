@@ -142,7 +142,7 @@ def sync_detailed(
 
      Poll for the results of a GitHub to LinkedIn lookup task.
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     Args:
         body (GithubToLinkedInPollingBody):
@@ -186,7 +186,7 @@ def sync(
 
      Poll for the results of a GitHub to LinkedIn lookup task.
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     Args:
         body (GithubToLinkedInPollingBody):
@@ -224,7 +224,7 @@ async def asyncio_detailed(
 
      Poll for the results of a GitHub to LinkedIn lookup task.
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     Args:
         body (GithubToLinkedInPollingBody):
@@ -266,7 +266,7 @@ async def asyncio(
 
      Poll for the results of a GitHub to LinkedIn lookup task.
 
-    <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     Args:
         body (GithubToLinkedInPollingBody):
