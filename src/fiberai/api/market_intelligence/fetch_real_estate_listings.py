@@ -142,7 +142,8 @@ def sync_detailed(
 
      Fetches real estate listings by location and optional filters such as listing status, price ranges,
     home types, and property features. Data is available for all 50 US states, D.C., Puerto Rico, and
-    all 13 Canadian provinces and territories.
+    the Canadian provinces of British Columbia, Alberta, Saskatchewan, Ontario, New Brunswick, Nova
+    Scotia, PEI, and Newfoundland and Labrador.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -194,7 +195,8 @@ def sync(
 
      Fetches real estate listings by location and optional filters such as listing status, price ranges,
     home types, and property features. Data is available for all 50 US states, D.C., Puerto Rico, and
-    all 13 Canadian provinces and territories.
+    the Canadian provinces of British Columbia, Alberta, Saskatchewan, Ontario, New Brunswick, Nova
+    Scotia, PEI, and Newfoundland and Labrador.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -240,7 +242,8 @@ async def asyncio_detailed(
 
      Fetches real estate listings by location and optional filters such as listing status, price ranges,
     home types, and property features. Data is available for all 50 US states, D.C., Puerto Rico, and
-    all 13 Canadian provinces and territories.
+    the Canadian provinces of British Columbia, Alberta, Saskatchewan, Ontario, New Brunswick, Nova
+    Scotia, PEI, and Newfoundland and Labrador.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -290,7 +293,8 @@ async def asyncio(
 
      Fetches real estate listings by location and optional filters such as listing status, price ranges,
     home types, and property features. Data is available for all 50 US states, D.C., Puerto Rico, and
-    all 13 Canadian provinces and territories.
+    the Canadian provinces of British Columbia, Alberta, Saskatchewan, Ontario, New Brunswick, Nova
+    Scotia, PEI, and Newfoundland and Labrador.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 

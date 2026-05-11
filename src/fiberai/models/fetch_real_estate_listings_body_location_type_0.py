@@ -16,9 +16,7 @@ class FetchRealEstateListingsBodyLocationType0:
     """
     Attributes:
         type_ (FetchRealEstateListingsBodyLocationType0Type):
-        raw_query (str): Free-form location text. Accepts city, city + state/province, ZIP/postal code, or full address
-            (e.g., 'Toronto, ON', 'Brooklyn NY', '10001', 'Trois-Rivières, QC'). Resolved via geocoding to a city +
-            state/province before searching.
+        raw_query (str):
     """
 
     type_: FetchRealEstateListingsBodyLocationType0Type

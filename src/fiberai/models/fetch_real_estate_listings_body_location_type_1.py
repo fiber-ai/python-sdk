@@ -16,8 +16,8 @@ class FetchRealEstateListingsBodyLocationType1:
     """
     Attributes:
         type_ (FetchRealEstateListingsBodyLocationType1Type):
-        city (str): City name (e.g., 'Toronto', 'Trois-Rivières').
-        state_code (str): Two-letter US state code or Canadian province code (e.g., 'NY', 'CA', 'QC', 'ON').
+        city (str):
+        state_code (str):
     """
 
     type_: FetchRealEstateListingsBodyLocationType1Type

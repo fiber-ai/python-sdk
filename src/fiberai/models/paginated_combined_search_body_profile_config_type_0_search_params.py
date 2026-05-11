@@ -32,9 +32,6 @@ if TYPE_CHECKING:
     from ..models.paginated_combined_search_body_profile_config_type_0_search_params_exact_profile_type_0 import (
         PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileType0,
     )
-    from ..models.paginated_combined_search_body_profile_config_type_0_search_params_exact_profile_v2_type_0 import (
-        PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileV2Type0,
-    )
     from ..models.paginated_combined_search_body_profile_config_type_0_search_params_fuzzy_name_type_0 import (
         PaginatedCombinedSearchBodyProfileConfigType0SearchParamsFuzzyNameType0,
     )
@@ -141,7 +138,6 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
                 PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordSearchOptionsType0 | Unset):
             job_title_v2 (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobTitleV2Type0 | Unset):
             exact_profile (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileType0 | Unset):
-            exact_profile_v2 (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileV2Type0 | Unset):
             started_in_role (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStartedInRoleType0 |
                 PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStartedInRoleType1 | Unset):
             started_at_company (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStartedAtCompanyType0 |
@@ -194,9 +190,6 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
     ) = UNSET
     job_title_v2: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobTitleV2Type0 | Unset = UNSET
     exact_profile: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileType0 | Unset = UNSET
-    exact_profile_v2: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileV2Type0 | Unset = (
-        UNSET
-    )
     started_in_role: (
         None
         | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStartedInRoleType0
@@ -280,9 +273,6 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_exact_profile_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileType0,
-        )
-        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_exact_profile_v2_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileV2Type0,
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_fuzzy_name_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsFuzzyNameType0,
@@ -447,16 +437,6 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             exact_profile = self.exact_profile.to_dict()
         else:
             exact_profile = self.exact_profile
-
-        exact_profile_v2: dict[str, Any] | None | Unset
-        if isinstance(self.exact_profile_v2, Unset):
-            exact_profile_v2 = UNSET
-        elif isinstance(
-            self.exact_profile_v2, PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileV2Type0
-        ):
-            exact_profile_v2 = self.exact_profile_v2.to_dict()
-        else:
-            exact_profile_v2 = self.exact_profile_v2
 
         started_in_role: dict[str, Any] | None | Unset
         if isinstance(self.started_in_role, Unset):
@@ -705,8 +685,6 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             field_dict["jobTitleV2"] = job_title_v2
         if exact_profile is not UNSET:
             field_dict["exactProfile"] = exact_profile
-        if exact_profile_v2 is not UNSET:
-            field_dict["exactProfileV2"] = exact_profile_v2
         if started_in_role is not UNSET:
             field_dict["startedInRole"] = started_in_role
         if started_at_company is not UNSET:
@@ -785,9 +763,6 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_exact_profile_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileType0,
-        )
-        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_exact_profile_v2_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileV2Type0,
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_fuzzy_name_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsFuzzyNameType0,
@@ -1068,29 +1043,6 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             return cast(None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileType0 | Unset, data)
 
         exact_profile = _parse_exact_profile(d.pop("exactProfile", UNSET))
-
-        def _parse_exact_profile_v2(
-            data: object,
-        ) -> None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileV2Type0 | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                exact_profile_v2_type_0 = (
-                    PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileV2Type0.from_dict(data)
-                )
-
-                return exact_profile_v2_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(
-                None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileV2Type0 | Unset, data
-            )
-
-        exact_profile_v2 = _parse_exact_profile_v2(d.pop("exactProfileV2", UNSET))
 
         def _parse_started_in_role(
             data: object,
@@ -1705,7 +1657,6 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             keyword_search_options=keyword_search_options,
             job_title_v2=job_title_v2,
             exact_profile=exact_profile,
-            exact_profile_v2=exact_profile_v2,
             started_in_role=started_in_role,
             started_at_company=started_at_company,
             location=location,

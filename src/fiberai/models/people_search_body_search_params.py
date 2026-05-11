@@ -28,9 +28,6 @@ if TYPE_CHECKING:
     from ..models.people_search_body_search_params_exact_profile_type_0 import (
         PeopleSearchBodySearchParamsExactProfileType0,
     )
-    from ..models.people_search_body_search_params_exact_profile_v2_type_0 import (
-        PeopleSearchBodySearchParamsExactProfileV2Type0,
-    )
     from ..models.people_search_body_search_params_fuzzy_name_type_0 import PeopleSearchBodySearchParamsFuzzyNameType0
     from ..models.people_search_body_search_params_job_status_type_0 import PeopleSearchBodySearchParamsJobStatusType0
     from ..models.people_search_body_search_params_job_status_type_1 import PeopleSearchBodySearchParamsJobStatusType1
@@ -106,7 +103,6 @@ class PeopleSearchBodySearchParams:
         keyword_search_options (None | PeopleSearchBodySearchParamsKeywordSearchOptionsType0 | Unset):
         job_title_v2 (None | PeopleSearchBodySearchParamsJobTitleV2Type0 | Unset):
         exact_profile (None | PeopleSearchBodySearchParamsExactProfileType0 | Unset):
-        exact_profile_v2 (None | PeopleSearchBodySearchParamsExactProfileV2Type0 | Unset):
         started_in_role (None | PeopleSearchBodySearchParamsStartedInRoleType0 |
             PeopleSearchBodySearchParamsStartedInRoleType1 | Unset):
         started_at_company (None | PeopleSearchBodySearchParamsStartedAtCompanyType0 |
@@ -153,7 +149,6 @@ class PeopleSearchBodySearchParams:
     keyword_search_options: None | PeopleSearchBodySearchParamsKeywordSearchOptionsType0 | Unset = UNSET
     job_title_v2: None | PeopleSearchBodySearchParamsJobTitleV2Type0 | Unset = UNSET
     exact_profile: None | PeopleSearchBodySearchParamsExactProfileType0 | Unset = UNSET
-    exact_profile_v2: None | PeopleSearchBodySearchParamsExactProfileV2Type0 | Unset = UNSET
     started_in_role: (
         None | PeopleSearchBodySearchParamsStartedInRoleType0 | PeopleSearchBodySearchParamsStartedInRoleType1 | Unset
     ) = UNSET
@@ -226,9 +221,6 @@ class PeopleSearchBodySearchParams:
         )
         from ..models.people_search_body_search_params_exact_profile_type_0 import (
             PeopleSearchBodySearchParamsExactProfileType0,
-        )
-        from ..models.people_search_body_search_params_exact_profile_v2_type_0 import (
-            PeopleSearchBodySearchParamsExactProfileV2Type0,
         )
         from ..models.people_search_body_search_params_fuzzy_name_type_0 import (
             PeopleSearchBodySearchParamsFuzzyNameType0,
@@ -374,14 +366,6 @@ class PeopleSearchBodySearchParams:
             exact_profile = self.exact_profile.to_dict()
         else:
             exact_profile = self.exact_profile
-
-        exact_profile_v2: dict[str, Any] | None | Unset
-        if isinstance(self.exact_profile_v2, Unset):
-            exact_profile_v2 = UNSET
-        elif isinstance(self.exact_profile_v2, PeopleSearchBodySearchParamsExactProfileV2Type0):
-            exact_profile_v2 = self.exact_profile_v2.to_dict()
-        else:
-            exact_profile_v2 = self.exact_profile_v2
 
         started_in_role: dict[str, Any] | None | Unset
         if isinstance(self.started_in_role, Unset):
@@ -608,8 +592,6 @@ class PeopleSearchBodySearchParams:
             field_dict["jobTitleV2"] = job_title_v2
         if exact_profile is not UNSET:
             field_dict["exactProfile"] = exact_profile
-        if exact_profile_v2 is not UNSET:
-            field_dict["exactProfileV2"] = exact_profile_v2
         if started_in_role is not UNSET:
             field_dict["startedInRole"] = started_in_role
         if started_at_company is not UNSET:
@@ -688,9 +670,6 @@ class PeopleSearchBodySearchParams:
         )
         from ..models.people_search_body_search_params_exact_profile_type_0 import (
             PeopleSearchBodySearchParamsExactProfileType0,
-        )
-        from ..models.people_search_body_search_params_exact_profile_v2_type_0 import (
-            PeopleSearchBodySearchParamsExactProfileV2Type0,
         )
         from ..models.people_search_body_search_params_fuzzy_name_type_0 import (
             PeopleSearchBodySearchParamsFuzzyNameType0,
@@ -923,23 +902,6 @@ class PeopleSearchBodySearchParams:
             return cast(None | PeopleSearchBodySearchParamsExactProfileType0 | Unset, data)
 
         exact_profile = _parse_exact_profile(d.pop("exactProfile", UNSET))
-
-        def _parse_exact_profile_v2(data: object) -> None | PeopleSearchBodySearchParamsExactProfileV2Type0 | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                exact_profile_v2_type_0 = PeopleSearchBodySearchParamsExactProfileV2Type0.from_dict(data)
-
-                return exact_profile_v2_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(None | PeopleSearchBodySearchParamsExactProfileV2Type0 | Unset, data)
-
-        exact_profile_v2 = _parse_exact_profile_v2(d.pop("exactProfileV2", UNSET))
 
         def _parse_started_in_role(
             data: object,
@@ -1466,7 +1428,6 @@ class PeopleSearchBodySearchParams:
             keyword_search_options=keyword_search_options,
             job_title_v2=job_title_v2,
             exact_profile=exact_profile,
-            exact_profile_v2=exact_profile_v2,
             started_in_role=started_in_role,
             started_at_company=started_at_company,
             location=location,

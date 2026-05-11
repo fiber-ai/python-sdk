@@ -145,8 +145,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per platform searched&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per person&nbsp;<span title=\"Pricing shown is default
+    pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (SocialMediaLookupTriggerBody):
@@ -193,8 +193,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per platform searched&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per person&nbsp;<span title=\"Pricing shown is default
+    pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (SocialMediaLookupTriggerBody):
@@ -235,8 +235,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per platform searched&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per person&nbsp;<span title=\"Pricing shown is default
+    pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (SocialMediaLookupTriggerBody):
@@ -281,8 +281,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per platform searched&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per person&nbsp;<span title=\"Pricing shown is default
+    pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (SocialMediaLookupTriggerBody):

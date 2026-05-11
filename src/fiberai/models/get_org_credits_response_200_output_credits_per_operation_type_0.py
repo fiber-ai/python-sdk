@@ -94,12 +94,6 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_from_github_username import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileFromGithubUsername,
     )
-    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_last_active_date import (
-        GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileLastActiveDate,
-    )
-    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_latest_activities import (
-        GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileLatestActivities,
-    )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_posts import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePosts,
     )
@@ -144,9 +138,6 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_local_business_research_agent import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0LocalBusinessResearchAgent,
-    )
-    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_mosaic_row import (
-        GetOrgCreditsResponse200OutputCreditsPerOperationType0MosaicRow,
     )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_multi_source_company_search import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0MultiSourceCompanySearch,
@@ -344,10 +335,6 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         get_li_post_reactions (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiPostReactions):
         get_li_profile_comments (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileComments):
         get_li_profile_reactions (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileReactions):
-        get_li_profile_latest_activities
-            (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileLatestActivities):
-        get_li_profile_last_active_date
-            (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileLastActiveDate):
         get_profile_latest_li_post (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetProfileLatestLiPost):
         get_company_latest_li_post (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyLatestLiPost):
         saved_search_company (GetOrgCreditsResponse200OutputCreditsPerOperationType0SavedSearchCompany):
@@ -392,7 +379,6 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         generate_depth_chart (GetOrgCreditsResponse200OutputCreditsPerOperationType0GenerateDepthChart):
         real_estate_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0RealEstateSearch):
         flight_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearch):
-        mosaic_row (GetOrgCreditsResponse200OutputCreditsPerOperationType0MosaicRow):
     """
 
     get_company_from_db: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyFromDb
@@ -448,8 +434,6 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
     get_li_post_reactions: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiPostReactions
     get_li_profile_comments: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileComments
     get_li_profile_reactions: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileReactions
-    get_li_profile_latest_activities: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileLatestActivities
-    get_li_profile_last_active_date: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileLastActiveDate
     get_profile_latest_li_post: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetProfileLatestLiPost
     get_company_latest_li_post: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyLatestLiPost
     saved_search_company: GetOrgCreditsResponse200OutputCreditsPerOperationType0SavedSearchCompany
@@ -494,7 +478,6 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
     generate_depth_chart: GetOrgCreditsResponse200OutputCreditsPerOperationType0GenerateDepthChart
     real_estate_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0RealEstateSearch
     flight_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearch
-    mosaic_row: GetOrgCreditsResponse200OutputCreditsPerOperationType0MosaicRow
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -592,10 +575,6 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
 
         get_li_profile_reactions = self.get_li_profile_reactions.to_dict()
 
-        get_li_profile_latest_activities = self.get_li_profile_latest_activities.to_dict()
-
-        get_li_profile_last_active_date = self.get_li_profile_last_active_date.to_dict()
-
         get_profile_latest_li_post = self.get_profile_latest_li_post.to_dict()
 
         get_company_latest_li_post = self.get_company_latest_li_post.to_dict()
@@ -680,8 +659,6 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
 
         flight_search = self.flight_search.to_dict()
 
-        mosaic_row = self.mosaic_row.to_dict()
-
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -733,8 +710,6 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
                 "getLiPostReactions": get_li_post_reactions,
                 "getLiProfileComments": get_li_profile_comments,
                 "getLiProfileReactions": get_li_profile_reactions,
-                "getLiProfileLatestActivities": get_li_profile_latest_activities,
-                "getLiProfileLastActiveDate": get_li_profile_last_active_date,
                 "getProfileLatestLiPost": get_profile_latest_li_post,
                 "getCompanyLatestLiPost": get_company_latest_li_post,
                 "savedSearchCompany": saved_search_company,
@@ -777,7 +752,6 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
                 "generateDepthChart": generate_depth_chart,
                 "realEstateSearch": real_estate_search,
                 "flightSearch": flight_search,
-                "mosaicRow": mosaic_row,
             }
         )
 
@@ -872,12 +846,6 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_from_github_username import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileFromGithubUsername,
         )
-        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_last_active_date import (
-            GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileLastActiveDate,
-        )
-        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_latest_activities import (
-            GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileLatestActivities,
-        )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_li_profile_posts import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfilePosts,
         )
@@ -922,9 +890,6 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_local_business_research_agent import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0LocalBusinessResearchAgent,
-        )
-        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_mosaic_row import (
-            GetOrgCreditsResponse200OutputCreditsPerOperationType0MosaicRow,
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_multi_source_company_search import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0MultiSourceCompanySearch,
@@ -1275,18 +1240,6 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             )
         )
 
-        get_li_profile_latest_activities = (
-            GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileLatestActivities.from_dict(
-                d.pop("getLiProfileLatestActivities")
-            )
-        )
-
-        get_li_profile_last_active_date = (
-            GetOrgCreditsResponse200OutputCreditsPerOperationType0GetLiProfileLastActiveDate.from_dict(
-                d.pop("getLiProfileLastActiveDate")
-            )
-        )
-
         get_profile_latest_li_post = (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0GetProfileLatestLiPost.from_dict(
                 d.pop("getProfileLatestLiPost")
@@ -1481,8 +1434,6 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             d.pop("flightSearch")
         )
 
-        mosaic_row = GetOrgCreditsResponse200OutputCreditsPerOperationType0MosaicRow.from_dict(d.pop("mosaicRow"))
-
         get_org_credits_response_200_output_credits_per_operation_type_0 = cls(
             get_company_from_db=get_company_from_db,
             get_person_from_db=get_person_from_db,
@@ -1531,8 +1482,6 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             get_li_post_reactions=get_li_post_reactions,
             get_li_profile_comments=get_li_profile_comments,
             get_li_profile_reactions=get_li_profile_reactions,
-            get_li_profile_latest_activities=get_li_profile_latest_activities,
-            get_li_profile_last_active_date=get_li_profile_last_active_date,
             get_profile_latest_li_post=get_profile_latest_li_post,
             get_company_latest_li_post=get_company_latest_li_post,
             saved_search_company=saved_search_company,
@@ -1575,7 +1524,6 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             generate_depth_chart=generate_depth_chart,
             real_estate_search=real_estate_search,
             flight_search=flight_search,
-            mosaic_row=mosaic_row,
         )
 
         get_org_credits_response_200_output_credits_per_operation_type_0.additional_properties = d

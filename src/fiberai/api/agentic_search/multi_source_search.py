@@ -152,11 +152,9 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> Credits are charged after the search completes based on results: 2
-    credits per company found and 2 credits per prospect found. Each query resolves to either companies
-    or prospects, so only one rate applies per page.&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary. Your total charge depends on the number of results returned and
-    which entity type the query resolves to.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> Pricing is coming soon. Credits will be charged once this feature is
+    fully released.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
+    vary.\">ⓘ</span></span>
 
     Args:
         body (MultiSourceSearchBody):
@@ -210,11 +208,9 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> Credits are charged after the search completes based on results: 2
-    credits per company found and 2 credits per prospect found. Each query resolves to either companies
-    or prospects, so only one rate applies per page.&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary. Your total charge depends on the number of results returned and
-    which entity type the query resolves to.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> Pricing is coming soon. Credits will be charged once this feature is
+    fully released.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
+    vary.\">ⓘ</span></span>
 
     Args:
         body (MultiSourceSearchBody):
@@ -262,11 +258,9 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> Credits are charged after the search completes based on results: 2
-    credits per company found and 2 credits per prospect found. Each query resolves to either companies
-    or prospects, so only one rate applies per page.&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary. Your total charge depends on the number of results returned and
-    which entity type the query resolves to.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> Pricing is coming soon. Credits will be charged once this feature is
+    fully released.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
+    vary.\">ⓘ</span></span>
 
     Args:
         body (MultiSourceSearchBody):
@@ -318,11 +312,9 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> Credits are charged after the search completes based on results: 2
-    credits per company found and 2 credits per prospect found. Each query resolves to either companies
-    or prospects, so only one rate applies per page.&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary. Your total charge depends on the number of results returned and
-    which entity type the query resolves to.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> Pricing is coming soon. Credits will be charged once this feature is
+    fully released.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
+    vary.\">ⓘ</span></span>
 
     Args:
         body (MultiSourceSearchBody):

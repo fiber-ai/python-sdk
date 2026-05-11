@@ -18,31 +18,25 @@ class GithubToLinkedinSingleBody:
     Attributes:
         api_key (str): Your Fiber API key
         github_username (str): The GitHub username to look up.
-        context (None | str | Unset): Optional descriptor of who this person is (e.g. "Engineer at Fiber AI" or "YC
-            founder 2021 batch"). Improves disambiguation on common names. Max 1000 characters.
         output_type (GithubToLinkedinSingleBodyOutputType | Unset): What to extract from GitHub profile. 'linkedin'
             finds LinkedIn profile, 'email' extracts work emails from commits, 'both' returns both. Default:
             GithubToLinkedinSingleBodyOutputType.BOTH.
         customer_provided_id (None | str | Unset): Optional customer-provided ID to tie results back to original input.
+        include_debug_timings (bool | Unset): When true, include resolver timing details in the response for
+            diagnostics. Default: False.
     """
 
     api_key: str
     github_username: str
-    context: None | str | Unset = UNSET
     output_type: GithubToLinkedinSingleBodyOutputType | Unset = GithubToLinkedinSingleBodyOutputType.BOTH
     customer_provided_id: None | str | Unset = UNSET
+    include_debug_timings: bool | Unset = False
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         api_key = self.api_key
 
         github_username = self.github_username
-
-        context: None | str | Unset
-        if isinstance(self.context, Unset):
-            context = UNSET
-        else:
-            context = self.context
 
         output_type: str | Unset = UNSET
         if not isinstance(self.output_type, Unset):
@@ -54,6 +48,8 @@ class GithubToLinkedinSingleBody:
         else:
             customer_provided_id = self.customer_provided_id
 
+        include_debug_timings = self.include_debug_timings
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -62,12 +58,12 @@ class GithubToLinkedinSingleBody:
                 "githubUsername": github_username,
             }
         )
-        if context is not UNSET:
-            field_dict["context"] = context
         if output_type is not UNSET:
             field_dict["outputType"] = output_type
         if customer_provided_id is not UNSET:
             field_dict["customerProvidedId"] = customer_provided_id
+        if include_debug_timings is not UNSET:
+            field_dict["includeDebugTimings"] = include_debug_timings
 
         return field_dict
 
@@ -77,15 +73,6 @@ class GithubToLinkedinSingleBody:
         api_key = d.pop("apiKey")
 
         github_username = d.pop("githubUsername")
-
-        def _parse_context(data: object) -> None | str | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(None | str | Unset, data)
-
-        context = _parse_context(d.pop("context", UNSET))
 
         _output_type = d.pop("outputType", UNSET)
         output_type: GithubToLinkedinSingleBodyOutputType | Unset
@@ -103,12 +90,14 @@ class GithubToLinkedinSingleBody:
 
         customer_provided_id = _parse_customer_provided_id(d.pop("customerProvidedId", UNSET))
 
+        include_debug_timings = d.pop("includeDebugTimings", UNSET)
+
         github_to_linkedin_single_body = cls(
             api_key=api_key,
             github_username=github_username,
-            context=context,
             output_type=output_type,
             customer_provided_id=customer_provided_id,
+            include_debug_timings=include_debug_timings,
         )
 
         github_to_linkedin_single_body.additional_properties = d
