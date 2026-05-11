@@ -28,7 +28,8 @@ class GithubLookupPollResponse200OutputPeopleItemGithubProfileType0:
         location (None | str | Unset): Location as displayed on the GitHub profile.
         num_repositories (int | None | Unset): Number of public repositories.
         num_followers (int | None | Unset): Number of followers on GitHub.
-        rationale (None | str | Unset): The reasoning for why the agent chose the given GitHub profile.
+        rationale (None | str | Unset): Short explanation of why this GitHub profile was matched to the person,
+            referencing details like name, company, or location.
     """
 
     outcome: GithubLookupPollResponse200OutputPeopleItemGithubProfileType0Outcome

@@ -32,6 +32,9 @@ if TYPE_CHECKING:
     from ..models.combined_search_count_body_profile_params_exact_profile_type_0 import (
         CombinedSearchCountBodyProfileParamsExactProfileType0,
     )
+    from ..models.combined_search_count_body_profile_params_exact_profile_v2_type_0 import (
+        CombinedSearchCountBodyProfileParamsExactProfileV2Type0,
+    )
     from ..models.combined_search_count_body_profile_params_fuzzy_name_type_0 import (
         CombinedSearchCountBodyProfileParamsFuzzyNameType0,
     )
@@ -136,6 +139,7 @@ class CombinedSearchCountBodyProfileParams:
             keyword_search_options (CombinedSearchCountBodyProfileParamsKeywordSearchOptionsType0 | None | Unset):
             job_title_v2 (CombinedSearchCountBodyProfileParamsJobTitleV2Type0 | None | Unset):
             exact_profile (CombinedSearchCountBodyProfileParamsExactProfileType0 | None | Unset):
+            exact_profile_v2 (CombinedSearchCountBodyProfileParamsExactProfileV2Type0 | None | Unset):
             started_in_role (CombinedSearchCountBodyProfileParamsStartedInRoleType0 |
                 CombinedSearchCountBodyProfileParamsStartedInRoleType1 | None | Unset):
             started_at_company (CombinedSearchCountBodyProfileParamsStartedAtCompanyType0 |
@@ -183,6 +187,7 @@ class CombinedSearchCountBodyProfileParams:
     keyword_search_options: CombinedSearchCountBodyProfileParamsKeywordSearchOptionsType0 | None | Unset = UNSET
     job_title_v2: CombinedSearchCountBodyProfileParamsJobTitleV2Type0 | None | Unset = UNSET
     exact_profile: CombinedSearchCountBodyProfileParamsExactProfileType0 | None | Unset = UNSET
+    exact_profile_v2: CombinedSearchCountBodyProfileParamsExactProfileV2Type0 | None | Unset = UNSET
     started_in_role: (
         CombinedSearchCountBodyProfileParamsStartedInRoleType0
         | CombinedSearchCountBodyProfileParamsStartedInRoleType1
@@ -264,6 +269,9 @@ class CombinedSearchCountBodyProfileParams:
         )
         from ..models.combined_search_count_body_profile_params_exact_profile_type_0 import (
             CombinedSearchCountBodyProfileParamsExactProfileType0,
+        )
+        from ..models.combined_search_count_body_profile_params_exact_profile_v2_type_0 import (
+            CombinedSearchCountBodyProfileParamsExactProfileV2Type0,
         )
         from ..models.combined_search_count_body_profile_params_fuzzy_name_type_0 import (
             CombinedSearchCountBodyProfileParamsFuzzyNameType0,
@@ -421,6 +429,14 @@ class CombinedSearchCountBodyProfileParams:
             exact_profile = self.exact_profile.to_dict()
         else:
             exact_profile = self.exact_profile
+
+        exact_profile_v2: dict[str, Any] | None | Unset
+        if isinstance(self.exact_profile_v2, Unset):
+            exact_profile_v2 = UNSET
+        elif isinstance(self.exact_profile_v2, CombinedSearchCountBodyProfileParamsExactProfileV2Type0):
+            exact_profile_v2 = self.exact_profile_v2.to_dict()
+        else:
+            exact_profile_v2 = self.exact_profile_v2
 
         started_in_role: dict[str, Any] | None | Unset
         if isinstance(self.started_in_role, Unset):
@@ -647,6 +663,8 @@ class CombinedSearchCountBodyProfileParams:
             field_dict["jobTitleV2"] = job_title_v2
         if exact_profile is not UNSET:
             field_dict["exactProfile"] = exact_profile
+        if exact_profile_v2 is not UNSET:
+            field_dict["exactProfileV2"] = exact_profile_v2
         if started_in_role is not UNSET:
             field_dict["startedInRole"] = started_in_role
         if started_at_company is not UNSET:
@@ -725,6 +743,9 @@ class CombinedSearchCountBodyProfileParams:
         )
         from ..models.combined_search_count_body_profile_params_exact_profile_type_0 import (
             CombinedSearchCountBodyProfileParamsExactProfileType0,
+        )
+        from ..models.combined_search_count_body_profile_params_exact_profile_v2_type_0 import (
+            CombinedSearchCountBodyProfileParamsExactProfileV2Type0,
         )
         from ..models.combined_search_count_body_profile_params_fuzzy_name_type_0 import (
             CombinedSearchCountBodyProfileParamsFuzzyNameType0,
@@ -975,6 +996,25 @@ class CombinedSearchCountBodyProfileParams:
             return cast(CombinedSearchCountBodyProfileParamsExactProfileType0 | None | Unset, data)
 
         exact_profile = _parse_exact_profile(d.pop("exactProfile", UNSET))
+
+        def _parse_exact_profile_v2(
+            data: object,
+        ) -> CombinedSearchCountBodyProfileParamsExactProfileV2Type0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                exact_profile_v2_type_0 = CombinedSearchCountBodyProfileParamsExactProfileV2Type0.from_dict(data)
+
+                return exact_profile_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CombinedSearchCountBodyProfileParamsExactProfileV2Type0 | None | Unset, data)
+
+        exact_profile_v2 = _parse_exact_profile_v2(d.pop("exactProfileV2", UNSET))
 
         def _parse_started_in_role(
             data: object,
@@ -1513,6 +1553,7 @@ class CombinedSearchCountBodyProfileParams:
             keyword_search_options=keyword_search_options,
             job_title_v2=job_title_v2,
             exact_profile=exact_profile,
+            exact_profile_v2=exact_profile_v2,
             started_in_role=started_in_role,
             started_at_company=started_at_company,
             location=location,

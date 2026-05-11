@@ -44,8 +44,9 @@ def sync_detailed(
     """Get OpenAPI schema
 
      Get the comprehensive, auto-generated OpenAPI spec for all Fiber APIs. **Note**: This file is very
-    large, so we don't recommend feeding it into LLMs. If you'd like to work with Fiber from Claude,
-    ChatGPT, or another LLM, please use our MCP server, explained at
+    large, so we don't recommend feeding it into LLMs directly. Agents should instead fetch `/llms.txt`
+    for routing instructions and `/ai-docs/<operationId>.md` for per-operation context. If you'd like to
+    work with Fiber from Claude, ChatGPT, or another LLM, you can also use our MCP server, explained at
     <https://docs.fiber.ai/article/using-mcp-in-llms>.
 
     Raises:
@@ -72,8 +73,9 @@ async def asyncio_detailed(
     """Get OpenAPI schema
 
      Get the comprehensive, auto-generated OpenAPI spec for all Fiber APIs. **Note**: This file is very
-    large, so we don't recommend feeding it into LLMs. If you'd like to work with Fiber from Claude,
-    ChatGPT, or another LLM, please use our MCP server, explained at
+    large, so we don't recommend feeding it into LLMs directly. Agents should instead fetch `/llms.txt`
+    for routing instructions and `/ai-docs/<operationId>.md` for per-operation context. If you'd like to
+    work with Fiber from Claude, ChatGPT, or another LLM, you can also use our MCP server, explained at
     <https://docs.fiber.ai/article/using-mcp-in-llms>.
 
     Raises:
