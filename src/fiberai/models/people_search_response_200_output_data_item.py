@@ -110,6 +110,7 @@ class PeopleSearchResponse200OutputDataItem:
         entity_urns (list[str] | None | Unset):
         is_hiring (bool | None | Unset):
         websites (list[str] | None | Unset):
+        is_verified (bool | None | Unset):
         current_job (None | PeopleSearchResponse200OutputDataItemCurrentJobType0 | Unset):
         custom_data (None | PeopleSearchResponse200OutputDataItemCustomDataType0 | Unset):
         relevance_score (float | None | Unset):
@@ -158,6 +159,7 @@ class PeopleSearchResponse200OutputDataItem:
     entity_urns: list[str] | None | Unset = UNSET
     is_hiring: bool | None | Unset = UNSET
     websites: list[str] | None | Unset = UNSET
+    is_verified: bool | None | Unset = UNSET
     current_job: None | PeopleSearchResponse200OutputDataItemCurrentJobType0 | Unset = UNSET
     custom_data: None | PeopleSearchResponse200OutputDataItemCustomDataType0 | Unset = UNSET
     relevance_score: float | None | Unset = UNSET
@@ -493,6 +495,12 @@ class PeopleSearchResponse200OutputDataItem:
         else:
             websites = self.websites
 
+        is_verified: bool | None | Unset
+        if isinstance(self.is_verified, Unset):
+            is_verified = UNSET
+        else:
+            is_verified = self.is_verified
+
         current_job: dict[str, Any] | None | Unset
         if isinstance(self.current_job, Unset):
             current_job = UNSET
@@ -638,6 +646,8 @@ class PeopleSearchResponse200OutputDataItem:
             field_dict["is_hiring"] = is_hiring
         if websites is not UNSET:
             field_dict["websites"] = websites
+        if is_verified is not UNSET:
+            field_dict["is_verified"] = is_verified
         if current_job is not UNSET:
             field_dict["current_job"] = current_job
         if custom_data is not UNSET:
@@ -1289,6 +1299,15 @@ class PeopleSearchResponse200OutputDataItem:
 
         websites = _parse_websites(d.pop("websites", UNSET))
 
+        def _parse_is_verified(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        is_verified = _parse_is_verified(d.pop("is_verified", UNSET))
+
         def _parse_current_job(data: object) -> None | PeopleSearchResponse200OutputDataItemCurrentJobType0 | Unset:
             if data is None:
                 return data
@@ -1464,6 +1483,7 @@ class PeopleSearchResponse200OutputDataItem:
             entity_urns=entity_urns,
             is_hiring=is_hiring,
             websites=websites,
+            is_verified=is_verified,
             current_job=current_job,
             custom_data=custom_data,
             relevance_score=relevance_score,
