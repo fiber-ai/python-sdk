@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.profile_reactions_live_fetch_response_200_charge_info_type_3 import (
         ProfileReactionsLiveFetchResponse200ChargeInfoType3,
     )
+    from ..models.profile_reactions_live_fetch_response_200_charge_info_type_4 import (
+        ProfileReactionsLiveFetchResponse200ChargeInfoType4,
+    )
     from ..models.profile_reactions_live_fetch_response_200_output import ProfileReactionsLiveFetchResponse200Output
     from ..models.profile_reactions_live_fetch_response_200_warnings_type_0_item import (
         ProfileReactionsLiveFetchResponse200WarningsType0Item,
@@ -36,7 +39,7 @@ class ProfileReactionsLiveFetchResponse200:
         output (ProfileReactionsLiveFetchResponse200Output):
         charge_info (ProfileReactionsLiveFetchResponse200ChargeInfoType0 |
             ProfileReactionsLiveFetchResponse200ChargeInfoType1 | ProfileReactionsLiveFetchResponse200ChargeInfoType2 |
-            ProfileReactionsLiveFetchResponse200ChargeInfoType3):
+            ProfileReactionsLiveFetchResponse200ChargeInfoType3 | ProfileReactionsLiveFetchResponse200ChargeInfoType4):
         warnings (list[ProfileReactionsLiveFetchResponse200WarningsType0Item] | None | Unset): Warnings about extraneous
             fields in request
     """
@@ -47,6 +50,7 @@ class ProfileReactionsLiveFetchResponse200:
         | ProfileReactionsLiveFetchResponse200ChargeInfoType1
         | ProfileReactionsLiveFetchResponse200ChargeInfoType2
         | ProfileReactionsLiveFetchResponse200ChargeInfoType3
+        | ProfileReactionsLiveFetchResponse200ChargeInfoType4
     )
     warnings: list[ProfileReactionsLiveFetchResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -60,6 +64,9 @@ class ProfileReactionsLiveFetchResponse200:
         from ..models.profile_reactions_live_fetch_response_200_charge_info_type_2 import (
             ProfileReactionsLiveFetchResponse200ChargeInfoType2,
         )
+        from ..models.profile_reactions_live_fetch_response_200_charge_info_type_3 import (
+            ProfileReactionsLiveFetchResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -69,6 +76,8 @@ class ProfileReactionsLiveFetchResponse200:
         elif isinstance(self.charge_info, ProfileReactionsLiveFetchResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, ProfileReactionsLiveFetchResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, ProfileReactionsLiveFetchResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -112,6 +121,9 @@ class ProfileReactionsLiveFetchResponse200:
         from ..models.profile_reactions_live_fetch_response_200_charge_info_type_3 import (
             ProfileReactionsLiveFetchResponse200ChargeInfoType3,
         )
+        from ..models.profile_reactions_live_fetch_response_200_charge_info_type_4 import (
+            ProfileReactionsLiveFetchResponse200ChargeInfoType4,
+        )
         from ..models.profile_reactions_live_fetch_response_200_output import ProfileReactionsLiveFetchResponse200Output
         from ..models.profile_reactions_live_fetch_response_200_warnings_type_0_item import (
             ProfileReactionsLiveFetchResponse200WarningsType0Item,
@@ -127,6 +139,7 @@ class ProfileReactionsLiveFetchResponse200:
             | ProfileReactionsLiveFetchResponse200ChargeInfoType1
             | ProfileReactionsLiveFetchResponse200ChargeInfoType2
             | ProfileReactionsLiveFetchResponse200ChargeInfoType3
+            | ProfileReactionsLiveFetchResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -152,11 +165,19 @@ class ProfileReactionsLiveFetchResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = ProfileReactionsLiveFetchResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = ProfileReactionsLiveFetchResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = ProfileReactionsLiveFetchResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

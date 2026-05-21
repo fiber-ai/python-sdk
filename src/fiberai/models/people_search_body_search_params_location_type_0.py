@@ -12,8 +12,20 @@ if TYPE_CHECKING:
     from ..models.people_search_body_search_params_location_type_0_subtract_all_type_0_item_type_0 import (
         PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0,
     )
+    from ..models.people_search_body_search_params_location_type_0_subtract_all_type_0_item_type_1 import (
+        PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType1,
+    )
+    from ..models.people_search_body_search_params_location_type_0_subtract_all_type_0_item_type_2 import (
+        PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType2,
+    )
     from ..models.people_search_body_search_params_location_type_0_union_all_type_0_item_type_0 import (
         PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0,
+    )
+    from ..models.people_search_body_search_params_location_type_0_union_all_type_0_item_type_1 import (
+        PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType1,
+    )
+    from ..models.people_search_body_search_params_location_type_0_union_all_type_0_item_type_2 import (
+        PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType2,
     )
 
 
@@ -24,20 +36,46 @@ T = TypeVar("T", bound="PeopleSearchBodySearchParamsLocationType0")
 class PeopleSearchBodySearchParamsLocationType0:
     """
     Attributes:
-        union_all (list[PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0] | None | Unset):
-        subtract_all (list[PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0] | None | Unset):
+        union_all (list[PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0 |
+            PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType1 |
+            PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType2] | None | Unset):
+        subtract_all (list[PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0 |
+            PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType1 |
+            PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType2] | None | Unset):
     """
 
-    union_all: list[PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0] | None | Unset = UNSET
-    subtract_all: list[PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0] | None | Unset = UNSET
+    union_all: (
+        list[
+            PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0
+            | PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType1
+            | PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType2
+        ]
+        | None
+        | Unset
+    ) = UNSET
+    subtract_all: (
+        list[
+            PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0
+            | PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType1
+            | PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType2
+        ]
+        | None
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_body_search_params_location_type_0_subtract_all_type_0_item_type_0 import (
             PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0,
         )
+        from ..models.people_search_body_search_params_location_type_0_subtract_all_type_0_item_type_1 import (
+            PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType1,
+        )
         from ..models.people_search_body_search_params_location_type_0_union_all_type_0_item_type_0 import (
             PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0,
+        )
+        from ..models.people_search_body_search_params_location_type_0_union_all_type_0_item_type_1 import (
+            PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType1,
         )
 
         union_all: list[dict[str, Any]] | None | Unset
@@ -50,6 +88,12 @@ class PeopleSearchBodySearchParamsLocationType0:
                 if isinstance(
                     union_all_type_0_item_data, PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0
                 ):
+                    union_all_type_0_item = union_all_type_0_item_data.to_dict()
+                elif isinstance(
+                    union_all_type_0_item_data, PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType1
+                ):
+                    union_all_type_0_item = union_all_type_0_item_data.to_dict()
+                else:
                     union_all_type_0_item = union_all_type_0_item_data.to_dict()
 
                 union_all.append(union_all_type_0_item)
@@ -67,6 +111,12 @@ class PeopleSearchBodySearchParamsLocationType0:
                 if isinstance(
                     subtract_all_type_0_item_data, PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0
                 ):
+                    subtract_all_type_0_item = subtract_all_type_0_item_data.to_dict()
+                elif isinstance(
+                    subtract_all_type_0_item_data, PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType1
+                ):
+                    subtract_all_type_0_item = subtract_all_type_0_item_data.to_dict()
+                else:
                     subtract_all_type_0_item = subtract_all_type_0_item_data.to_dict()
 
                 subtract_all.append(subtract_all_type_0_item)
@@ -89,15 +139,35 @@ class PeopleSearchBodySearchParamsLocationType0:
         from ..models.people_search_body_search_params_location_type_0_subtract_all_type_0_item_type_0 import (
             PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0,
         )
+        from ..models.people_search_body_search_params_location_type_0_subtract_all_type_0_item_type_1 import (
+            PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType1,
+        )
+        from ..models.people_search_body_search_params_location_type_0_subtract_all_type_0_item_type_2 import (
+            PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType2,
+        )
         from ..models.people_search_body_search_params_location_type_0_union_all_type_0_item_type_0 import (
             PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0,
+        )
+        from ..models.people_search_body_search_params_location_type_0_union_all_type_0_item_type_1 import (
+            PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType1,
+        )
+        from ..models.people_search_body_search_params_location_type_0_union_all_type_0_item_type_2 import (
+            PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType2,
         )
 
         d = dict(src_dict)
 
         def _parse_union_all(
             data: object,
-        ) -> list[PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0] | None | Unset:
+        ) -> (
+            list[
+                PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0
+                | PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType1
+                | PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType2
+            ]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -111,14 +181,38 @@ class PeopleSearchBodySearchParamsLocationType0:
 
                     def _parse_union_all_type_0_item(
                         data: object,
-                    ) -> PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0:
+                    ) -> (
+                        PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0
+                        | PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType1
+                        | PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType2
+                    ):
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            union_all_type_0_item_type_0 = (
+                                PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0.from_dict(data)
+                            )
+
+                            return union_all_type_0_item_type_0
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            union_all_type_0_item_type_1 = (
+                                PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType1.from_dict(data)
+                            )
+
+                            return union_all_type_0_item_type_1
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        union_all_type_0_item_type_0 = (
-                            PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0.from_dict(data)
+                        union_all_type_0_item_type_2 = (
+                            PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType2.from_dict(data)
                         )
 
-                        return union_all_type_0_item_type_0
+                        return union_all_type_0_item_type_2
 
                     union_all_type_0_item = _parse_union_all_type_0_item(union_all_type_0_item_data)
 
@@ -127,13 +221,30 @@ class PeopleSearchBodySearchParamsLocationType0:
                 return union_all_type_0
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(list[PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0] | None | Unset, data)
+            return cast(
+                list[
+                    PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType0
+                    | PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType1
+                    | PeopleSearchBodySearchParamsLocationType0UnionAllType0ItemType2
+                ]
+                | None
+                | Unset,
+                data,
+            )
 
         union_all = _parse_union_all(d.pop("unionAll", UNSET))
 
         def _parse_subtract_all(
             data: object,
-        ) -> list[PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0] | None | Unset:
+        ) -> (
+            list[
+                PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0
+                | PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType1
+                | PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType2
+            ]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -147,14 +258,38 @@ class PeopleSearchBodySearchParamsLocationType0:
 
                     def _parse_subtract_all_type_0_item(
                         data: object,
-                    ) -> PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0:
+                    ) -> (
+                        PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0
+                        | PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType1
+                        | PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType2
+                    ):
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            subtract_all_type_0_item_type_0 = (
+                                PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0.from_dict(data)
+                            )
+
+                            return subtract_all_type_0_item_type_0
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            subtract_all_type_0_item_type_1 = (
+                                PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType1.from_dict(data)
+                            )
+
+                            return subtract_all_type_0_item_type_1
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        subtract_all_type_0_item_type_0 = (
-                            PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0.from_dict(data)
+                        subtract_all_type_0_item_type_2 = (
+                            PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType2.from_dict(data)
                         )
 
-                        return subtract_all_type_0_item_type_0
+                        return subtract_all_type_0_item_type_2
 
                     subtract_all_type_0_item = _parse_subtract_all_type_0_item(subtract_all_type_0_item_data)
 
@@ -163,7 +298,16 @@ class PeopleSearchBodySearchParamsLocationType0:
                 return subtract_all_type_0
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(list[PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0] | None | Unset, data)
+            return cast(
+                list[
+                    PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType0
+                    | PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType1
+                    | PeopleSearchBodySearchParamsLocationType0SubtractAllType0ItemType2
+                ]
+                | None
+                | Unset,
+                data,
+            )
 
         subtract_all = _parse_subtract_all(d.pop("subtractAll", UNSET))
 

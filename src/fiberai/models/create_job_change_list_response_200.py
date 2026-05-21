@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.create_job_change_list_response_200_charge_info_type_3 import (
         CreateJobChangeListResponse200ChargeInfoType3,
     )
+    from ..models.create_job_change_list_response_200_charge_info_type_4 import (
+        CreateJobChangeListResponse200ChargeInfoType4,
+    )
     from ..models.create_job_change_list_response_200_output import CreateJobChangeListResponse200Output
     from ..models.create_job_change_list_response_200_warnings_type_0_item import (
         CreateJobChangeListResponse200WarningsType0Item,
@@ -35,7 +38,8 @@ class CreateJobChangeListResponse200:
     Attributes:
         output (CreateJobChangeListResponse200Output):
         charge_info (CreateJobChangeListResponse200ChargeInfoType0 | CreateJobChangeListResponse200ChargeInfoType1 |
-            CreateJobChangeListResponse200ChargeInfoType2 | CreateJobChangeListResponse200ChargeInfoType3):
+            CreateJobChangeListResponse200ChargeInfoType2 | CreateJobChangeListResponse200ChargeInfoType3 |
+            CreateJobChangeListResponse200ChargeInfoType4):
         warnings (list[CreateJobChangeListResponse200WarningsType0Item] | None | Unset): Warnings about extraneous
             fields in request
     """
@@ -46,6 +50,7 @@ class CreateJobChangeListResponse200:
         | CreateJobChangeListResponse200ChargeInfoType1
         | CreateJobChangeListResponse200ChargeInfoType2
         | CreateJobChangeListResponse200ChargeInfoType3
+        | CreateJobChangeListResponse200ChargeInfoType4
     )
     warnings: list[CreateJobChangeListResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -59,6 +64,9 @@ class CreateJobChangeListResponse200:
         from ..models.create_job_change_list_response_200_charge_info_type_2 import (
             CreateJobChangeListResponse200ChargeInfoType2,
         )
+        from ..models.create_job_change_list_response_200_charge_info_type_3 import (
+            CreateJobChangeListResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -68,6 +76,8 @@ class CreateJobChangeListResponse200:
         elif isinstance(self.charge_info, CreateJobChangeListResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, CreateJobChangeListResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, CreateJobChangeListResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -111,6 +121,9 @@ class CreateJobChangeListResponse200:
         from ..models.create_job_change_list_response_200_charge_info_type_3 import (
             CreateJobChangeListResponse200ChargeInfoType3,
         )
+        from ..models.create_job_change_list_response_200_charge_info_type_4 import (
+            CreateJobChangeListResponse200ChargeInfoType4,
+        )
         from ..models.create_job_change_list_response_200_output import CreateJobChangeListResponse200Output
         from ..models.create_job_change_list_response_200_warnings_type_0_item import (
             CreateJobChangeListResponse200WarningsType0Item,
@@ -126,6 +139,7 @@ class CreateJobChangeListResponse200:
             | CreateJobChangeListResponse200ChargeInfoType1
             | CreateJobChangeListResponse200ChargeInfoType2
             | CreateJobChangeListResponse200ChargeInfoType3
+            | CreateJobChangeListResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -151,11 +165,19 @@ class CreateJobChangeListResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = CreateJobChangeListResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = CreateJobChangeListResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = CreateJobChangeListResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

@@ -42,6 +42,12 @@ if TYPE_CHECKING:
     from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_0 import (
         CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0,
     )
+    from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_1 import (
+        CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1,
+    )
+    from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_2 import (
+        CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2,
+    )
     from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_any_of_type_0_item_num_applicants_type_0 import (
         CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemNumApplicantsType0,
     )
@@ -76,8 +82,9 @@ class CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0Item:
             Unset):
         years_of_experience (CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemYearsOfExperienceType0
             | None | Unset):
-        geo_location (CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0 | None |
-            Unset):
+        geo_location (CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0 |
+            CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1 |
+            CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2 | None | Unset):
         country_or_region_code
             (list[CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemCountryOrRegionCodeType0Item] | None |
             Unset):
@@ -120,7 +127,11 @@ class CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0Item:
         CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemYearsOfExperienceType0 | None | Unset
     ) = UNSET
     geo_location: (
-        CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0 | None | Unset
+        CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0
+        | CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1
+        | CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2
+        | None
+        | Unset
     ) = UNSET
     country_or_region_code: (
         list[CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemCountryOrRegionCodeType0Item]
@@ -152,6 +163,12 @@ class CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0Item:
         )
         from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_0 import (
             CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0,
+        )
+        from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_1 import (
+            CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1,
+        )
+        from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_2 import (
+            CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2,
         )
         from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_any_of_type_0_item_num_applicants_type_0 import (
             CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemNumApplicantsType0,
@@ -255,6 +272,14 @@ class CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0Item:
             geo_location = UNSET
         elif isinstance(
             self.geo_location, CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0
+        ):
+            geo_location = self.geo_location.to_dict()
+        elif isinstance(
+            self.geo_location, CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1
+        ):
+            geo_location = self.geo_location.to_dict()
+        elif isinstance(
+            self.geo_location, CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2
         ):
             geo_location = self.geo_location.to_dict()
         else:
@@ -373,6 +398,12 @@ class CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0Item:
         )
         from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_0 import (
             CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0,
+        )
+        from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_1 import (
+            CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1,
+        )
+        from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_2 import (
+            CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2,
         )
         from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_any_of_type_0_item_num_applicants_type_0 import (
             CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemNumApplicantsType0,
@@ -599,7 +630,13 @@ class CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0Item:
 
         def _parse_geo_location(
             data: object,
-        ) -> CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0 | None | Unset:
+        ) -> (
+            CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0
+            | CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1
+            | CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -614,8 +651,32 @@ class CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0Item:
                 return geo_location_type_0
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                geo_location_type_1 = (
+                    CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1.from_dict(data)
+                )
+
+                return geo_location_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                geo_location_type_2 = (
+                    CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2.from_dict(data)
+                )
+
+                return geo_location_type_2
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             return cast(
-                CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0 | None | Unset,
+                CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0
+                | CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1
+                | CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2
+                | None
+                | Unset,
                 data,
             )
 

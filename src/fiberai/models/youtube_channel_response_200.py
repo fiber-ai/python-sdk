@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from ..models.youtube_channel_response_200_charge_info_type_1 import YoutubeChannelResponse200ChargeInfoType1
     from ..models.youtube_channel_response_200_charge_info_type_2 import YoutubeChannelResponse200ChargeInfoType2
     from ..models.youtube_channel_response_200_charge_info_type_3 import YoutubeChannelResponse200ChargeInfoType3
+    from ..models.youtube_channel_response_200_charge_info_type_4 import YoutubeChannelResponse200ChargeInfoType4
     from ..models.youtube_channel_response_200_output import YoutubeChannelResponse200Output
     from ..models.youtube_channel_response_200_warnings_type_0_item import YoutubeChannelResponse200WarningsType0Item
 
@@ -25,7 +26,8 @@ class YoutubeChannelResponse200:
     Attributes:
         output (YoutubeChannelResponse200Output):
         charge_info (YoutubeChannelResponse200ChargeInfoType0 | YoutubeChannelResponse200ChargeInfoType1 |
-            YoutubeChannelResponse200ChargeInfoType2 | YoutubeChannelResponse200ChargeInfoType3):
+            YoutubeChannelResponse200ChargeInfoType2 | YoutubeChannelResponse200ChargeInfoType3 |
+            YoutubeChannelResponse200ChargeInfoType4):
         warnings (list[YoutubeChannelResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields in
             request
     """
@@ -36,6 +38,7 @@ class YoutubeChannelResponse200:
         | YoutubeChannelResponse200ChargeInfoType1
         | YoutubeChannelResponse200ChargeInfoType2
         | YoutubeChannelResponse200ChargeInfoType3
+        | YoutubeChannelResponse200ChargeInfoType4
     )
     warnings: list[YoutubeChannelResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -43,6 +46,7 @@ class YoutubeChannelResponse200:
         from ..models.youtube_channel_response_200_charge_info_type_0 import YoutubeChannelResponse200ChargeInfoType0
         from ..models.youtube_channel_response_200_charge_info_type_1 import YoutubeChannelResponse200ChargeInfoType1
         from ..models.youtube_channel_response_200_charge_info_type_2 import YoutubeChannelResponse200ChargeInfoType2
+        from ..models.youtube_channel_response_200_charge_info_type_3 import YoutubeChannelResponse200ChargeInfoType3
 
         output = self.output.to_dict()
 
@@ -52,6 +56,8 @@ class YoutubeChannelResponse200:
         elif isinstance(self.charge_info, YoutubeChannelResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, YoutubeChannelResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, YoutubeChannelResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -87,6 +93,7 @@ class YoutubeChannelResponse200:
         from ..models.youtube_channel_response_200_charge_info_type_1 import YoutubeChannelResponse200ChargeInfoType1
         from ..models.youtube_channel_response_200_charge_info_type_2 import YoutubeChannelResponse200ChargeInfoType2
         from ..models.youtube_channel_response_200_charge_info_type_3 import YoutubeChannelResponse200ChargeInfoType3
+        from ..models.youtube_channel_response_200_charge_info_type_4 import YoutubeChannelResponse200ChargeInfoType4
         from ..models.youtube_channel_response_200_output import YoutubeChannelResponse200Output
         from ..models.youtube_channel_response_200_warnings_type_0_item import (
             YoutubeChannelResponse200WarningsType0Item,
@@ -102,6 +109,7 @@ class YoutubeChannelResponse200:
             | YoutubeChannelResponse200ChargeInfoType1
             | YoutubeChannelResponse200ChargeInfoType2
             | YoutubeChannelResponse200ChargeInfoType3
+            | YoutubeChannelResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -127,11 +135,19 @@ class YoutubeChannelResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = YoutubeChannelResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = YoutubeChannelResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = YoutubeChannelResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

@@ -12,6 +12,12 @@ if TYPE_CHECKING:
     from ..models.combined_search_count_body_company_params_accelerators_v2_type_0 import (
         CombinedSearchCountBodyCompanyParamsAcceleratorsV2Type0,
     )
+    from ..models.combined_search_count_body_company_params_crunchbase_categories_type_0 import (
+        CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0,
+    )
+    from ..models.combined_search_count_body_company_params_crunchbase_category_groups_type_0 import (
+        CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0,
+    )
     from ..models.combined_search_count_body_company_params_employee_count_v2_type_0 import (
         CombinedSearchCountBodyCompanyParamsEmployeeCountV2Type0,
     )
@@ -148,6 +154,9 @@ class CombinedSearchCountBodyCompanyParams:
         num_words_in_name (CombinedSearchCountBodyCompanyParamsNumWordsInNameType0 | None | Unset):
         status (CombinedSearchCountBodyCompanyParamsStatusType0 | None | Unset):
         technologies (CombinedSearchCountBodyCompanyParamsTechnologiesType0 | None | Unset):
+        crunchbase_categories (CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0 | None | Unset):
+        crunchbase_category_groups (CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0 | None | Unset):
+        crunchbase_slugs (list[str] | None | Unset):
         investors_v2 (CombinedSearchCountBodyCompanyParamsInvestorsV2Type0 | None | Unset):
         technologies_v2 (CombinedSearchCountBodyCompanyParamsTechnologiesV2Type0 | None | Unset):
         revenue_range_usd (CombinedSearchCountBodyCompanyParamsRevenueRangeUSDType0 | None | Unset):
@@ -193,6 +202,9 @@ class CombinedSearchCountBodyCompanyParams:
     num_words_in_name: CombinedSearchCountBodyCompanyParamsNumWordsInNameType0 | None | Unset = UNSET
     status: CombinedSearchCountBodyCompanyParamsStatusType0 | None | Unset = UNSET
     technologies: CombinedSearchCountBodyCompanyParamsTechnologiesType0 | None | Unset = UNSET
+    crunchbase_categories: CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0 | None | Unset = UNSET
+    crunchbase_category_groups: CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0 | None | Unset = UNSET
+    crunchbase_slugs: list[str] | None | Unset = UNSET
     investors_v2: CombinedSearchCountBodyCompanyParamsInvestorsV2Type0 | None | Unset = UNSET
     technologies_v2: CombinedSearchCountBodyCompanyParamsTechnologiesV2Type0 | None | Unset = UNSET
     revenue_range_usd: CombinedSearchCountBodyCompanyParamsRevenueRangeUSDType0 | None | Unset = UNSET
@@ -203,6 +215,12 @@ class CombinedSearchCountBodyCompanyParams:
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_company_params_accelerators_v2_type_0 import (
             CombinedSearchCountBodyCompanyParamsAcceleratorsV2Type0,
+        )
+        from ..models.combined_search_count_body_company_params_crunchbase_categories_type_0 import (
+            CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0,
+        )
+        from ..models.combined_search_count_body_company_params_crunchbase_category_groups_type_0 import (
+            CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0,
         )
         from ..models.combined_search_count_body_company_params_employee_count_v2_type_0 import (
             CombinedSearchCountBodyCompanyParamsEmployeeCountV2Type0,
@@ -533,6 +551,33 @@ class CombinedSearchCountBodyCompanyParams:
         else:
             technologies = self.technologies
 
+        crunchbase_categories: dict[str, Any] | None | Unset
+        if isinstance(self.crunchbase_categories, Unset):
+            crunchbase_categories = UNSET
+        elif isinstance(self.crunchbase_categories, CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0):
+            crunchbase_categories = self.crunchbase_categories.to_dict()
+        else:
+            crunchbase_categories = self.crunchbase_categories
+
+        crunchbase_category_groups: dict[str, Any] | None | Unset
+        if isinstance(self.crunchbase_category_groups, Unset):
+            crunchbase_category_groups = UNSET
+        elif isinstance(
+            self.crunchbase_category_groups, CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0
+        ):
+            crunchbase_category_groups = self.crunchbase_category_groups.to_dict()
+        else:
+            crunchbase_category_groups = self.crunchbase_category_groups
+
+        crunchbase_slugs: list[str] | None | Unset
+        if isinstance(self.crunchbase_slugs, Unset):
+            crunchbase_slugs = UNSET
+        elif isinstance(self.crunchbase_slugs, list):
+            crunchbase_slugs = self.crunchbase_slugs
+
+        else:
+            crunchbase_slugs = self.crunchbase_slugs
+
         investors_v2: dict[str, Any] | None | Unset
         if isinstance(self.investors_v2, Unset):
             investors_v2 = UNSET
@@ -632,6 +677,12 @@ class CombinedSearchCountBodyCompanyParams:
             field_dict["status"] = status
         if technologies is not UNSET:
             field_dict["technologies"] = technologies
+        if crunchbase_categories is not UNSET:
+            field_dict["crunchbaseCategories"] = crunchbase_categories
+        if crunchbase_category_groups is not UNSET:
+            field_dict["crunchbaseCategoryGroups"] = crunchbase_category_groups
+        if crunchbase_slugs is not UNSET:
+            field_dict["crunchbaseSlugs"] = crunchbase_slugs
         if investors_v2 is not UNSET:
             field_dict["investorsV2"] = investors_v2
         if technologies_v2 is not UNSET:
@@ -649,6 +700,12 @@ class CombinedSearchCountBodyCompanyParams:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_company_params_accelerators_v2_type_0 import (
             CombinedSearchCountBodyCompanyParamsAcceleratorsV2Type0,
+        )
+        from ..models.combined_search_count_body_company_params_crunchbase_categories_type_0 import (
+            CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0,
+        )
+        from ..models.combined_search_count_body_company_params_crunchbase_category_groups_type_0 import (
+            CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0,
         )
         from ..models.combined_search_count_body_company_params_employee_count_v2_type_0 import (
             CombinedSearchCountBodyCompanyParamsEmployeeCountV2Type0,
@@ -1299,6 +1356,65 @@ class CombinedSearchCountBodyCompanyParams:
 
         technologies = _parse_technologies(d.pop("technologies", UNSET))
 
+        def _parse_crunchbase_categories(
+            data: object,
+        ) -> CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                crunchbase_categories_type_0 = CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0.from_dict(
+                    data
+                )
+
+                return crunchbase_categories_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0 | None | Unset, data)
+
+        crunchbase_categories = _parse_crunchbase_categories(d.pop("crunchbaseCategories", UNSET))
+
+        def _parse_crunchbase_category_groups(
+            data: object,
+        ) -> CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                crunchbase_category_groups_type_0 = (
+                    CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0.from_dict(data)
+                )
+
+                return crunchbase_category_groups_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CombinedSearchCountBodyCompanyParamsCrunchbaseCategoryGroupsType0 | None | Unset, data)
+
+        crunchbase_category_groups = _parse_crunchbase_category_groups(d.pop("crunchbaseCategoryGroups", UNSET))
+
+        def _parse_crunchbase_slugs(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                crunchbase_slugs_type_0 = cast(list[str], data)
+
+                return crunchbase_slugs_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        crunchbase_slugs = _parse_crunchbase_slugs(d.pop("crunchbaseSlugs", UNSET))
+
         def _parse_investors_v2(data: object) -> CombinedSearchCountBodyCompanyParamsInvestorsV2Type0 | None | Unset:
             if data is None:
                 return data
@@ -1419,6 +1535,9 @@ class CombinedSearchCountBodyCompanyParams:
             num_words_in_name=num_words_in_name,
             status=status,
             technologies=technologies,
+            crunchbase_categories=crunchbase_categories,
+            crunchbase_category_groups=crunchbase_category_groups,
+            crunchbase_slugs=crunchbase_slugs,
             investors_v2=investors_v2,
             technologies_v2=technologies_v2,
             revenue_range_usd=revenue_range_usd,

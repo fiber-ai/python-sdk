@@ -60,6 +60,9 @@ if TYPE_CHECKING:
     from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_tenures_type_0_item import (
         PollBatchLiveEnrichResponse200OutputResultsItemProfileType0TenuresType0Item,
     )
+    from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_verifications_type_0 import (
+        PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsType0,
+    )
     from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_volunteering_type_0_item import (
         PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VolunteeringType0Item,
     )
@@ -118,6 +121,7 @@ class PollBatchLiveEnrichResponse200OutputResultsItemProfileType0:
         is_hiring (bool | None | Unset):
         websites (list[str] | None | Unset):
         is_verified (bool | None | Unset):
+        verifications (None | PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsType0 | Unset):
         current_job (None | PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CurrentJobType0 | Unset):
         custom_data (None | PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CustomDataType0 | Unset):
         relevance_score (float | None | Unset):
@@ -183,6 +187,7 @@ class PollBatchLiveEnrichResponse200OutputResultsItemProfileType0:
     is_hiring: bool | None | Unset = UNSET
     websites: list[str] | None | Unset = UNSET
     is_verified: bool | None | Unset = UNSET
+    verifications: None | PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsType0 | Unset = UNSET
     current_job: None | PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CurrentJobType0 | Unset = UNSET
     custom_data: None | PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CustomDataType0 | Unset = UNSET
     relevance_score: float | None | Unset = UNSET
@@ -207,6 +212,9 @@ class PollBatchLiveEnrichResponse200OutputResultsItemProfileType0:
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_inferred_location_type_0 import (
             PollBatchLiveEnrichResponse200OutputResultsItemProfileType0InferredLocationType0,
+        )
+        from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_verifications_type_0 import (
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsType0,
         )
 
         primary_slug = self.primary_slug
@@ -530,6 +538,16 @@ class PollBatchLiveEnrichResponse200OutputResultsItemProfileType0:
         else:
             is_verified = self.is_verified
 
+        verifications: dict[str, Any] | None | Unset
+        if isinstance(self.verifications, Unset):
+            verifications = UNSET
+        elif isinstance(
+            self.verifications, PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsType0
+        ):
+            verifications = self.verifications.to_dict()
+        else:
+            verifications = self.verifications
+
         current_job: dict[str, Any] | None | Unset
         if isinstance(self.current_job, Unset):
             current_job = UNSET
@@ -677,6 +695,8 @@ class PollBatchLiveEnrichResponse200OutputResultsItemProfileType0:
             field_dict["websites"] = websites
         if is_verified is not UNSET:
             field_dict["is_verified"] = is_verified
+        if verifications is not UNSET:
+            field_dict["verifications"] = verifications
         if current_job is not UNSET:
             field_dict["current_job"] = current_job
         if custom_data is not UNSET:
@@ -743,6 +763,9 @@ class PollBatchLiveEnrichResponse200OutputResultsItemProfileType0:
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_tenures_type_0_item import (
             PollBatchLiveEnrichResponse200OutputResultsItemProfileType0TenuresType0Item,
+        )
+        from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_verifications_type_0 import (
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsType0,
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_volunteering_type_0_item import (
             PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VolunteeringType0Item,
@@ -1402,6 +1425,29 @@ class PollBatchLiveEnrichResponse200OutputResultsItemProfileType0:
 
         is_verified = _parse_is_verified(d.pop("is_verified", UNSET))
 
+        def _parse_verifications(
+            data: object,
+        ) -> None | PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                verifications_type_0 = (
+                    PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsType0.from_dict(data)
+                )
+
+                return verifications_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsType0 | Unset, data
+            )
+
+        verifications = _parse_verifications(d.pop("verifications", UNSET))
+
         def _parse_current_job(
             data: object,
         ) -> None | PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CurrentJobType0 | Unset:
@@ -1600,6 +1646,7 @@ class PollBatchLiveEnrichResponse200OutputResultsItemProfileType0:
             is_hiring=is_hiring,
             websites=websites,
             is_verified=is_verified,
+            verifications=verifications,
             current_job=current_job,
             custom_data=custom_data,
             relevance_score=relevance_score,

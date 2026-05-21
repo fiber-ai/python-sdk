@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.poll_google_maps_results_response_200_charge_info_type_3 import (
         PollGoogleMapsResultsResponse200ChargeInfoType3,
     )
+    from ..models.poll_google_maps_results_response_200_charge_info_type_4 import (
+        PollGoogleMapsResultsResponse200ChargeInfoType4,
+    )
     from ..models.poll_google_maps_results_response_200_output import PollGoogleMapsResultsResponse200Output
     from ..models.poll_google_maps_results_response_200_warnings_type_0_item import (
         PollGoogleMapsResultsResponse200WarningsType0Item,
@@ -35,7 +38,8 @@ class PollGoogleMapsResultsResponse200:
     Attributes:
         output (PollGoogleMapsResultsResponse200Output):
         charge_info (PollGoogleMapsResultsResponse200ChargeInfoType0 | PollGoogleMapsResultsResponse200ChargeInfoType1 |
-            PollGoogleMapsResultsResponse200ChargeInfoType2 | PollGoogleMapsResultsResponse200ChargeInfoType3):
+            PollGoogleMapsResultsResponse200ChargeInfoType2 | PollGoogleMapsResultsResponse200ChargeInfoType3 |
+            PollGoogleMapsResultsResponse200ChargeInfoType4):
         warnings (list[PollGoogleMapsResultsResponse200WarningsType0Item] | None | Unset): Warnings about extraneous
             fields in request
     """
@@ -46,6 +50,7 @@ class PollGoogleMapsResultsResponse200:
         | PollGoogleMapsResultsResponse200ChargeInfoType1
         | PollGoogleMapsResultsResponse200ChargeInfoType2
         | PollGoogleMapsResultsResponse200ChargeInfoType3
+        | PollGoogleMapsResultsResponse200ChargeInfoType4
     )
     warnings: list[PollGoogleMapsResultsResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -59,6 +64,9 @@ class PollGoogleMapsResultsResponse200:
         from ..models.poll_google_maps_results_response_200_charge_info_type_2 import (
             PollGoogleMapsResultsResponse200ChargeInfoType2,
         )
+        from ..models.poll_google_maps_results_response_200_charge_info_type_3 import (
+            PollGoogleMapsResultsResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -68,6 +76,8 @@ class PollGoogleMapsResultsResponse200:
         elif isinstance(self.charge_info, PollGoogleMapsResultsResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, PollGoogleMapsResultsResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, PollGoogleMapsResultsResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -111,6 +121,9 @@ class PollGoogleMapsResultsResponse200:
         from ..models.poll_google_maps_results_response_200_charge_info_type_3 import (
             PollGoogleMapsResultsResponse200ChargeInfoType3,
         )
+        from ..models.poll_google_maps_results_response_200_charge_info_type_4 import (
+            PollGoogleMapsResultsResponse200ChargeInfoType4,
+        )
         from ..models.poll_google_maps_results_response_200_output import PollGoogleMapsResultsResponse200Output
         from ..models.poll_google_maps_results_response_200_warnings_type_0_item import (
             PollGoogleMapsResultsResponse200WarningsType0Item,
@@ -126,6 +139,7 @@ class PollGoogleMapsResultsResponse200:
             | PollGoogleMapsResultsResponse200ChargeInfoType1
             | PollGoogleMapsResultsResponse200ChargeInfoType2
             | PollGoogleMapsResultsResponse200ChargeInfoType3
+            | PollGoogleMapsResultsResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -151,11 +165,19 @@ class PollGoogleMapsResultsResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = PollGoogleMapsResultsResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = PollGoogleMapsResultsResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = PollGoogleMapsResultsResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

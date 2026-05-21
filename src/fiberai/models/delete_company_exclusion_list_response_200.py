@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.delete_company_exclusion_list_response_200_charge_info_type_3 import (
         DeleteCompanyExclusionListResponse200ChargeInfoType3,
     )
+    from ..models.delete_company_exclusion_list_response_200_charge_info_type_4 import (
+        DeleteCompanyExclusionListResponse200ChargeInfoType4,
+    )
     from ..models.delete_company_exclusion_list_response_200_output import DeleteCompanyExclusionListResponse200Output
     from ..models.delete_company_exclusion_list_response_200_warnings_type_0_item import (
         DeleteCompanyExclusionListResponse200WarningsType0Item,
@@ -36,7 +39,7 @@ class DeleteCompanyExclusionListResponse200:
         output (DeleteCompanyExclusionListResponse200Output):
         charge_info (DeleteCompanyExclusionListResponse200ChargeInfoType0 |
             DeleteCompanyExclusionListResponse200ChargeInfoType1 | DeleteCompanyExclusionListResponse200ChargeInfoType2 |
-            DeleteCompanyExclusionListResponse200ChargeInfoType3):
+            DeleteCompanyExclusionListResponse200ChargeInfoType3 | DeleteCompanyExclusionListResponse200ChargeInfoType4):
         warnings (list[DeleteCompanyExclusionListResponse200WarningsType0Item] | None | Unset): Warnings about
             extraneous fields in request
     """
@@ -47,6 +50,7 @@ class DeleteCompanyExclusionListResponse200:
         | DeleteCompanyExclusionListResponse200ChargeInfoType1
         | DeleteCompanyExclusionListResponse200ChargeInfoType2
         | DeleteCompanyExclusionListResponse200ChargeInfoType3
+        | DeleteCompanyExclusionListResponse200ChargeInfoType4
     )
     warnings: list[DeleteCompanyExclusionListResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -60,6 +64,9 @@ class DeleteCompanyExclusionListResponse200:
         from ..models.delete_company_exclusion_list_response_200_charge_info_type_2 import (
             DeleteCompanyExclusionListResponse200ChargeInfoType2,
         )
+        from ..models.delete_company_exclusion_list_response_200_charge_info_type_3 import (
+            DeleteCompanyExclusionListResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -69,6 +76,8 @@ class DeleteCompanyExclusionListResponse200:
         elif isinstance(self.charge_info, DeleteCompanyExclusionListResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, DeleteCompanyExclusionListResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, DeleteCompanyExclusionListResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -112,6 +121,9 @@ class DeleteCompanyExclusionListResponse200:
         from ..models.delete_company_exclusion_list_response_200_charge_info_type_3 import (
             DeleteCompanyExclusionListResponse200ChargeInfoType3,
         )
+        from ..models.delete_company_exclusion_list_response_200_charge_info_type_4 import (
+            DeleteCompanyExclusionListResponse200ChargeInfoType4,
+        )
         from ..models.delete_company_exclusion_list_response_200_output import (
             DeleteCompanyExclusionListResponse200Output,
         )
@@ -129,6 +141,7 @@ class DeleteCompanyExclusionListResponse200:
             | DeleteCompanyExclusionListResponse200ChargeInfoType1
             | DeleteCompanyExclusionListResponse200ChargeInfoType2
             | DeleteCompanyExclusionListResponse200ChargeInfoType3
+            | DeleteCompanyExclusionListResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -154,11 +167,19 @@ class DeleteCompanyExclusionListResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = DeleteCompanyExclusionListResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = DeleteCompanyExclusionListResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = DeleteCompanyExclusionListResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

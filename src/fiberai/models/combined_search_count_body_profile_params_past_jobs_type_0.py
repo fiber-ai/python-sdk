@@ -9,6 +9,9 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
+    from ..models.combined_search_count_body_profile_params_past_jobs_type_0_all_of_type_0_item import (
+        CombinedSearchCountBodyProfileParamsPastJobsType0AllOfType0Item,
+    )
     from ..models.combined_search_count_body_profile_params_past_jobs_type_0_any_of_type_0_item import (
         CombinedSearchCountBodyProfileParamsPastJobsType0AnyOfType0Item,
     )
@@ -25,10 +28,12 @@ class CombinedSearchCountBodyProfileParamsPastJobsType0:
     """
     Attributes:
         any_of (list[CombinedSearchCountBodyProfileParamsPastJobsType0AnyOfType0Item] | None | Unset):
+        all_of (list[CombinedSearchCountBodyProfileParamsPastJobsType0AllOfType0Item] | None | Unset):
         none_of (list[CombinedSearchCountBodyProfileParamsPastJobsType0NoneOfType0Item] | None | Unset):
     """
 
     any_of: list[CombinedSearchCountBodyProfileParamsPastJobsType0AnyOfType0Item] | None | Unset = UNSET
+    all_of: list[CombinedSearchCountBodyProfileParamsPastJobsType0AllOfType0Item] | None | Unset = UNSET
     none_of: list[CombinedSearchCountBodyProfileParamsPastJobsType0NoneOfType0Item] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -44,6 +49,18 @@ class CombinedSearchCountBodyProfileParamsPastJobsType0:
 
         else:
             any_of = self.any_of
+
+        all_of: list[dict[str, Any]] | None | Unset
+        if isinstance(self.all_of, Unset):
+            all_of = UNSET
+        elif isinstance(self.all_of, list):
+            all_of = []
+            for all_of_type_0_item_data in self.all_of:
+                all_of_type_0_item = all_of_type_0_item_data.to_dict()
+                all_of.append(all_of_type_0_item)
+
+        else:
+            all_of = self.all_of
 
         none_of: list[dict[str, Any]] | None | Unset
         if isinstance(self.none_of, Unset):
@@ -62,6 +79,8 @@ class CombinedSearchCountBodyProfileParamsPastJobsType0:
         field_dict.update({})
         if any_of is not UNSET:
             field_dict["anyOf"] = any_of
+        if all_of is not UNSET:
+            field_dict["allOf"] = all_of
         if none_of is not UNSET:
             field_dict["noneOf"] = none_of
 
@@ -69,6 +88,9 @@ class CombinedSearchCountBodyProfileParamsPastJobsType0:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.combined_search_count_body_profile_params_past_jobs_type_0_all_of_type_0_item import (
+            CombinedSearchCountBodyProfileParamsPastJobsType0AllOfType0Item,
+        )
         from ..models.combined_search_count_body_profile_params_past_jobs_type_0_any_of_type_0_item import (
             CombinedSearchCountBodyProfileParamsPastJobsType0AnyOfType0Item,
         )
@@ -104,6 +126,32 @@ class CombinedSearchCountBodyProfileParamsPastJobsType0:
 
         any_of = _parse_any_of(d.pop("anyOf", UNSET))
 
+        def _parse_all_of(
+            data: object,
+        ) -> list[CombinedSearchCountBodyProfileParamsPastJobsType0AllOfType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                all_of_type_0 = []
+                _all_of_type_0 = data
+                for all_of_type_0_item_data in _all_of_type_0:
+                    all_of_type_0_item = CombinedSearchCountBodyProfileParamsPastJobsType0AllOfType0Item.from_dict(
+                        all_of_type_0_item_data
+                    )
+
+                    all_of_type_0.append(all_of_type_0_item)
+
+                return all_of_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[CombinedSearchCountBodyProfileParamsPastJobsType0AllOfType0Item] | None | Unset, data)
+
+        all_of = _parse_all_of(d.pop("allOf", UNSET))
+
         def _parse_none_of(
             data: object,
         ) -> list[CombinedSearchCountBodyProfileParamsPastJobsType0NoneOfType0Item] | None | Unset:
@@ -132,6 +180,7 @@ class CombinedSearchCountBodyProfileParamsPastJobsType0:
 
         combined_search_count_body_profile_params_past_jobs_type_0 = cls(
             any_of=any_of,
+            all_of=all_of,
             none_of=none_of,
         )
 

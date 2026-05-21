@@ -12,6 +12,12 @@ if TYPE_CHECKING:
     from ..models.paginated_combined_search_body_company_config_type_0_search_params_accelerators_v2_type_0 import (
         PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0,
     )
+    from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_categories_type_0 import (
+        PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoriesType0,
+    )
+    from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_category_groups_type_0 import (
+        PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0,
+    )
     from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_count_v2_type_0 import (
         PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0,
     )
@@ -155,6 +161,11 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
         num_words_in_name (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsNumWordsInNameType0 | Unset):
         status (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStatusType0 | Unset):
         technologies (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesType0 | Unset):
+        crunchbase_categories (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoriesType0
+            | Unset):
+        crunchbase_category_groups (None |
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0 | Unset):
+        crunchbase_slugs (list[str] | None | Unset):
         investors_v2 (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0 | Unset):
         technologies_v2 (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesV2Type0 | Unset):
         revenue_range_usd (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangeUSDType0 |
@@ -224,6 +235,13 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
     )
     status: None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStatusType0 | Unset = UNSET
     technologies: None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesType0 | Unset = UNSET
+    crunchbase_categories: (
+        None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoriesType0 | Unset
+    ) = UNSET
+    crunchbase_category_groups: (
+        None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0 | Unset
+    ) = UNSET
+    crunchbase_slugs: list[str] | None | Unset = UNSET
     investors_v2: None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0 | Unset = UNSET
     technologies_v2: None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesV2Type0 | Unset = UNSET
     revenue_range_usd: None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangeUSDType0 | Unset = (
@@ -238,6 +256,12 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_accelerators_v2_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0,
+        )
+        from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_categories_type_0 import (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoriesType0,
+        )
+        from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_category_groups_type_0 import (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0,
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_count_v2_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0,
@@ -599,6 +623,37 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
         else:
             technologies = self.technologies
 
+        crunchbase_categories: dict[str, Any] | None | Unset
+        if isinstance(self.crunchbase_categories, Unset):
+            crunchbase_categories = UNSET
+        elif isinstance(
+            self.crunchbase_categories,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoriesType0,
+        ):
+            crunchbase_categories = self.crunchbase_categories.to_dict()
+        else:
+            crunchbase_categories = self.crunchbase_categories
+
+        crunchbase_category_groups: dict[str, Any] | None | Unset
+        if isinstance(self.crunchbase_category_groups, Unset):
+            crunchbase_category_groups = UNSET
+        elif isinstance(
+            self.crunchbase_category_groups,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0,
+        ):
+            crunchbase_category_groups = self.crunchbase_category_groups.to_dict()
+        else:
+            crunchbase_category_groups = self.crunchbase_category_groups
+
+        crunchbase_slugs: list[str] | None | Unset
+        if isinstance(self.crunchbase_slugs, Unset):
+            crunchbase_slugs = UNSET
+        elif isinstance(self.crunchbase_slugs, list):
+            crunchbase_slugs = self.crunchbase_slugs
+
+        else:
+            crunchbase_slugs = self.crunchbase_slugs
+
         investors_v2: dict[str, Any] | None | Unset
         if isinstance(self.investors_v2, Unset):
             investors_v2 = UNSET
@@ -704,6 +759,12 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
             field_dict["status"] = status
         if technologies is not UNSET:
             field_dict["technologies"] = technologies
+        if crunchbase_categories is not UNSET:
+            field_dict["crunchbaseCategories"] = crunchbase_categories
+        if crunchbase_category_groups is not UNSET:
+            field_dict["crunchbaseCategoryGroups"] = crunchbase_category_groups
+        if crunchbase_slugs is not UNSET:
+            field_dict["crunchbaseSlugs"] = crunchbase_slugs
         if investors_v2 is not UNSET:
             field_dict["investorsV2"] = investors_v2
         if technologies_v2 is not UNSET:
@@ -721,6 +782,12 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_accelerators_v2_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0,
+        )
+        from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_categories_type_0 import (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoriesType0,
+        )
+        from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_category_groups_type_0 import (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0,
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_count_v2_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0,
@@ -1464,6 +1531,72 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
 
         technologies = _parse_technologies(d.pop("technologies", UNSET))
 
+        def _parse_crunchbase_categories(
+            data: object,
+        ) -> None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoriesType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                crunchbase_categories_type_0 = (
+                    PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoriesType0.from_dict(data)
+                )
+
+                return crunchbase_categories_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoriesType0 | Unset, data
+            )
+
+        crunchbase_categories = _parse_crunchbase_categories(d.pop("crunchbaseCategories", UNSET))
+
+        def _parse_crunchbase_category_groups(
+            data: object,
+        ) -> None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                crunchbase_category_groups_type_0 = (
+                    PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0.from_dict(
+                        data
+                    )
+                )
+
+                return crunchbase_category_groups_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0 | Unset,
+                data,
+            )
+
+        crunchbase_category_groups = _parse_crunchbase_category_groups(d.pop("crunchbaseCategoryGroups", UNSET))
+
+        def _parse_crunchbase_slugs(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                crunchbase_slugs_type_0 = cast(list[str], data)
+
+                return crunchbase_slugs_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        crunchbase_slugs = _parse_crunchbase_slugs(d.pop("crunchbaseSlugs", UNSET))
+
         def _parse_investors_v2(
             data: object,
         ) -> None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0 | Unset:
@@ -1602,6 +1735,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
             num_words_in_name=num_words_in_name,
             status=status,
             technologies=technologies,
+            crunchbase_categories=crunchbase_categories,
+            crunchbase_category_groups=crunchbase_category_groups,
+            crunchbase_slugs=crunchbase_slugs,
             investors_v2=investors_v2,
             technologies_v2=technologies_v2,
             revenue_range_usd=revenue_range_usd,

@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.update_audience_search_params_response_200_charge_info_type_3 import (
         UpdateAudienceSearchParamsResponse200ChargeInfoType3,
     )
+    from ..models.update_audience_search_params_response_200_charge_info_type_4 import (
+        UpdateAudienceSearchParamsResponse200ChargeInfoType4,
+    )
     from ..models.update_audience_search_params_response_200_output import UpdateAudienceSearchParamsResponse200Output
     from ..models.update_audience_search_params_response_200_warnings_type_0_item import (
         UpdateAudienceSearchParamsResponse200WarningsType0Item,
@@ -36,7 +39,7 @@ class UpdateAudienceSearchParamsResponse200:
         output (UpdateAudienceSearchParamsResponse200Output):
         charge_info (UpdateAudienceSearchParamsResponse200ChargeInfoType0 |
             UpdateAudienceSearchParamsResponse200ChargeInfoType1 | UpdateAudienceSearchParamsResponse200ChargeInfoType2 |
-            UpdateAudienceSearchParamsResponse200ChargeInfoType3):
+            UpdateAudienceSearchParamsResponse200ChargeInfoType3 | UpdateAudienceSearchParamsResponse200ChargeInfoType4):
         warnings (list[UpdateAudienceSearchParamsResponse200WarningsType0Item] | None | Unset): Warnings about
             extraneous fields in request
     """
@@ -47,6 +50,7 @@ class UpdateAudienceSearchParamsResponse200:
         | UpdateAudienceSearchParamsResponse200ChargeInfoType1
         | UpdateAudienceSearchParamsResponse200ChargeInfoType2
         | UpdateAudienceSearchParamsResponse200ChargeInfoType3
+        | UpdateAudienceSearchParamsResponse200ChargeInfoType4
     )
     warnings: list[UpdateAudienceSearchParamsResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -60,6 +64,9 @@ class UpdateAudienceSearchParamsResponse200:
         from ..models.update_audience_search_params_response_200_charge_info_type_2 import (
             UpdateAudienceSearchParamsResponse200ChargeInfoType2,
         )
+        from ..models.update_audience_search_params_response_200_charge_info_type_3 import (
+            UpdateAudienceSearchParamsResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -69,6 +76,8 @@ class UpdateAudienceSearchParamsResponse200:
         elif isinstance(self.charge_info, UpdateAudienceSearchParamsResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, UpdateAudienceSearchParamsResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, UpdateAudienceSearchParamsResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -112,6 +121,9 @@ class UpdateAudienceSearchParamsResponse200:
         from ..models.update_audience_search_params_response_200_charge_info_type_3 import (
             UpdateAudienceSearchParamsResponse200ChargeInfoType3,
         )
+        from ..models.update_audience_search_params_response_200_charge_info_type_4 import (
+            UpdateAudienceSearchParamsResponse200ChargeInfoType4,
+        )
         from ..models.update_audience_search_params_response_200_output import (
             UpdateAudienceSearchParamsResponse200Output,
         )
@@ -129,6 +141,7 @@ class UpdateAudienceSearchParamsResponse200:
             | UpdateAudienceSearchParamsResponse200ChargeInfoType1
             | UpdateAudienceSearchParamsResponse200ChargeInfoType2
             | UpdateAudienceSearchParamsResponse200ChargeInfoType3
+            | UpdateAudienceSearchParamsResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -154,11 +167,19 @@ class UpdateAudienceSearchParamsResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = UpdateAudienceSearchParamsResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = UpdateAudienceSearchParamsResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = UpdateAudienceSearchParamsResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

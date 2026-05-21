@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.create_prospect_exclusion_list_from_audience_response_200_charge_info_type_3 import (
         CreateProspectExclusionListFromAudienceResponse200ChargeInfoType3,
     )
+    from ..models.create_prospect_exclusion_list_from_audience_response_200_charge_info_type_4 import (
+        CreateProspectExclusionListFromAudienceResponse200ChargeInfoType4,
+    )
     from ..models.create_prospect_exclusion_list_from_audience_response_200_output import (
         CreateProspectExclusionListFromAudienceResponse200Output,
     )
@@ -39,7 +42,8 @@ class CreateProspectExclusionListFromAudienceResponse200:
         charge_info (CreateProspectExclusionListFromAudienceResponse200ChargeInfoType0 |
             CreateProspectExclusionListFromAudienceResponse200ChargeInfoType1 |
             CreateProspectExclusionListFromAudienceResponse200ChargeInfoType2 |
-            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType3):
+            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType3 |
+            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType4):
         warnings (list[CreateProspectExclusionListFromAudienceResponse200WarningsType0Item] | None | Unset): Warnings
             about extraneous fields in request
     """
@@ -50,6 +54,7 @@ class CreateProspectExclusionListFromAudienceResponse200:
         | CreateProspectExclusionListFromAudienceResponse200ChargeInfoType1
         | CreateProspectExclusionListFromAudienceResponse200ChargeInfoType2
         | CreateProspectExclusionListFromAudienceResponse200ChargeInfoType3
+        | CreateProspectExclusionListFromAudienceResponse200ChargeInfoType4
     )
     warnings: list[CreateProspectExclusionListFromAudienceResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -63,6 +68,9 @@ class CreateProspectExclusionListFromAudienceResponse200:
         from ..models.create_prospect_exclusion_list_from_audience_response_200_charge_info_type_2 import (
             CreateProspectExclusionListFromAudienceResponse200ChargeInfoType2,
         )
+        from ..models.create_prospect_exclusion_list_from_audience_response_200_charge_info_type_3 import (
+            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -72,6 +80,8 @@ class CreateProspectExclusionListFromAudienceResponse200:
         elif isinstance(self.charge_info, CreateProspectExclusionListFromAudienceResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, CreateProspectExclusionListFromAudienceResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, CreateProspectExclusionListFromAudienceResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -115,6 +125,9 @@ class CreateProspectExclusionListFromAudienceResponse200:
         from ..models.create_prospect_exclusion_list_from_audience_response_200_charge_info_type_3 import (
             CreateProspectExclusionListFromAudienceResponse200ChargeInfoType3,
         )
+        from ..models.create_prospect_exclusion_list_from_audience_response_200_charge_info_type_4 import (
+            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType4,
+        )
         from ..models.create_prospect_exclusion_list_from_audience_response_200_output import (
             CreateProspectExclusionListFromAudienceResponse200Output,
         )
@@ -132,6 +145,7 @@ class CreateProspectExclusionListFromAudienceResponse200:
             | CreateProspectExclusionListFromAudienceResponse200ChargeInfoType1
             | CreateProspectExclusionListFromAudienceResponse200ChargeInfoType2
             | CreateProspectExclusionListFromAudienceResponse200ChargeInfoType3
+            | CreateProspectExclusionListFromAudienceResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -157,11 +171,19 @@ class CreateProspectExclusionListFromAudienceResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = CreateProspectExclusionListFromAudienceResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = CreateProspectExclusionListFromAudienceResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = CreateProspectExclusionListFromAudienceResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from ..models.get_audience_status_response_200_charge_info_type_1 import GetAudienceStatusResponse200ChargeInfoType1
     from ..models.get_audience_status_response_200_charge_info_type_2 import GetAudienceStatusResponse200ChargeInfoType2
     from ..models.get_audience_status_response_200_charge_info_type_3 import GetAudienceStatusResponse200ChargeInfoType3
+    from ..models.get_audience_status_response_200_charge_info_type_4 import GetAudienceStatusResponse200ChargeInfoType4
     from ..models.get_audience_status_response_200_output import GetAudienceStatusResponse200Output
     from ..models.get_audience_status_response_200_warnings_type_0_item import (
         GetAudienceStatusResponse200WarningsType0Item,
@@ -27,7 +28,8 @@ class GetAudienceStatusResponse200:
     Attributes:
         output (GetAudienceStatusResponse200Output):
         charge_info (GetAudienceStatusResponse200ChargeInfoType0 | GetAudienceStatusResponse200ChargeInfoType1 |
-            GetAudienceStatusResponse200ChargeInfoType2 | GetAudienceStatusResponse200ChargeInfoType3):
+            GetAudienceStatusResponse200ChargeInfoType2 | GetAudienceStatusResponse200ChargeInfoType3 |
+            GetAudienceStatusResponse200ChargeInfoType4):
         warnings (list[GetAudienceStatusResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields
             in request
     """
@@ -38,6 +40,7 @@ class GetAudienceStatusResponse200:
         | GetAudienceStatusResponse200ChargeInfoType1
         | GetAudienceStatusResponse200ChargeInfoType2
         | GetAudienceStatusResponse200ChargeInfoType3
+        | GetAudienceStatusResponse200ChargeInfoType4
     )
     warnings: list[GetAudienceStatusResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -51,6 +54,9 @@ class GetAudienceStatusResponse200:
         from ..models.get_audience_status_response_200_charge_info_type_2 import (
             GetAudienceStatusResponse200ChargeInfoType2,
         )
+        from ..models.get_audience_status_response_200_charge_info_type_3 import (
+            GetAudienceStatusResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -60,6 +66,8 @@ class GetAudienceStatusResponse200:
         elif isinstance(self.charge_info, GetAudienceStatusResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, GetAudienceStatusResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, GetAudienceStatusResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -103,6 +111,9 @@ class GetAudienceStatusResponse200:
         from ..models.get_audience_status_response_200_charge_info_type_3 import (
             GetAudienceStatusResponse200ChargeInfoType3,
         )
+        from ..models.get_audience_status_response_200_charge_info_type_4 import (
+            GetAudienceStatusResponse200ChargeInfoType4,
+        )
         from ..models.get_audience_status_response_200_output import GetAudienceStatusResponse200Output
         from ..models.get_audience_status_response_200_warnings_type_0_item import (
             GetAudienceStatusResponse200WarningsType0Item,
@@ -118,6 +129,7 @@ class GetAudienceStatusResponse200:
             | GetAudienceStatusResponse200ChargeInfoType1
             | GetAudienceStatusResponse200ChargeInfoType2
             | GetAudienceStatusResponse200ChargeInfoType3
+            | GetAudienceStatusResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -143,11 +155,19 @@ class GetAudienceStatusResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = GetAudienceStatusResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = GetAudienceStatusResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = GetAudienceStatusResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

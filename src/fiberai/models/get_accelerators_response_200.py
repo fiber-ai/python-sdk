@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from ..models.get_accelerators_response_200_charge_info_type_1 import GetAcceleratorsResponse200ChargeInfoType1
     from ..models.get_accelerators_response_200_charge_info_type_2 import GetAcceleratorsResponse200ChargeInfoType2
     from ..models.get_accelerators_response_200_charge_info_type_3 import GetAcceleratorsResponse200ChargeInfoType3
+    from ..models.get_accelerators_response_200_charge_info_type_4 import GetAcceleratorsResponse200ChargeInfoType4
     from ..models.get_accelerators_response_200_output_item import GetAcceleratorsResponse200OutputItem
     from ..models.get_accelerators_response_200_warnings_type_0_item import GetAcceleratorsResponse200WarningsType0Item
 
@@ -26,7 +27,8 @@ class GetAcceleratorsResponse200:
         output (list[GetAcceleratorsResponse200OutputItem]): List of all accelerators with their metadata and company
             statistics
         charge_info (GetAcceleratorsResponse200ChargeInfoType0 | GetAcceleratorsResponse200ChargeInfoType1 |
-            GetAcceleratorsResponse200ChargeInfoType2 | GetAcceleratorsResponse200ChargeInfoType3):
+            GetAcceleratorsResponse200ChargeInfoType2 | GetAcceleratorsResponse200ChargeInfoType3 |
+            GetAcceleratorsResponse200ChargeInfoType4):
         warnings (list[GetAcceleratorsResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields in
             request
     """
@@ -37,6 +39,7 @@ class GetAcceleratorsResponse200:
         | GetAcceleratorsResponse200ChargeInfoType1
         | GetAcceleratorsResponse200ChargeInfoType2
         | GetAcceleratorsResponse200ChargeInfoType3
+        | GetAcceleratorsResponse200ChargeInfoType4
     )
     warnings: list[GetAcceleratorsResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -44,6 +47,7 @@ class GetAcceleratorsResponse200:
         from ..models.get_accelerators_response_200_charge_info_type_0 import GetAcceleratorsResponse200ChargeInfoType0
         from ..models.get_accelerators_response_200_charge_info_type_1 import GetAcceleratorsResponse200ChargeInfoType1
         from ..models.get_accelerators_response_200_charge_info_type_2 import GetAcceleratorsResponse200ChargeInfoType2
+        from ..models.get_accelerators_response_200_charge_info_type_3 import GetAcceleratorsResponse200ChargeInfoType3
 
         output = []
         for output_item_data in self.output:
@@ -56,6 +60,8 @@ class GetAcceleratorsResponse200:
         elif isinstance(self.charge_info, GetAcceleratorsResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, GetAcceleratorsResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, GetAcceleratorsResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -91,6 +97,7 @@ class GetAcceleratorsResponse200:
         from ..models.get_accelerators_response_200_charge_info_type_1 import GetAcceleratorsResponse200ChargeInfoType1
         from ..models.get_accelerators_response_200_charge_info_type_2 import GetAcceleratorsResponse200ChargeInfoType2
         from ..models.get_accelerators_response_200_charge_info_type_3 import GetAcceleratorsResponse200ChargeInfoType3
+        from ..models.get_accelerators_response_200_charge_info_type_4 import GetAcceleratorsResponse200ChargeInfoType4
         from ..models.get_accelerators_response_200_output_item import GetAcceleratorsResponse200OutputItem
         from ..models.get_accelerators_response_200_warnings_type_0_item import (
             GetAcceleratorsResponse200WarningsType0Item,
@@ -111,6 +118,7 @@ class GetAcceleratorsResponse200:
             | GetAcceleratorsResponse200ChargeInfoType1
             | GetAcceleratorsResponse200ChargeInfoType2
             | GetAcceleratorsResponse200ChargeInfoType3
+            | GetAcceleratorsResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -136,11 +144,19 @@ class GetAcceleratorsResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = GetAcceleratorsResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = GetAcceleratorsResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = GetAcceleratorsResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from ..models.bulk_profile_pic_response_200_charge_info_type_1 import BulkProfilePicResponse200ChargeInfoType1
     from ..models.bulk_profile_pic_response_200_charge_info_type_2 import BulkProfilePicResponse200ChargeInfoType2
     from ..models.bulk_profile_pic_response_200_charge_info_type_3 import BulkProfilePicResponse200ChargeInfoType3
+    from ..models.bulk_profile_pic_response_200_charge_info_type_4 import BulkProfilePicResponse200ChargeInfoType4
     from ..models.bulk_profile_pic_response_200_output import BulkProfilePicResponse200Output
     from ..models.bulk_profile_pic_response_200_warnings_type_0_item import BulkProfilePicResponse200WarningsType0Item
 
@@ -25,7 +26,8 @@ class BulkProfilePicResponse200:
     Attributes:
         output (BulkProfilePicResponse200Output):
         charge_info (BulkProfilePicResponse200ChargeInfoType0 | BulkProfilePicResponse200ChargeInfoType1 |
-            BulkProfilePicResponse200ChargeInfoType2 | BulkProfilePicResponse200ChargeInfoType3):
+            BulkProfilePicResponse200ChargeInfoType2 | BulkProfilePicResponse200ChargeInfoType3 |
+            BulkProfilePicResponse200ChargeInfoType4):
         warnings (list[BulkProfilePicResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields in
             request
     """
@@ -36,6 +38,7 @@ class BulkProfilePicResponse200:
         | BulkProfilePicResponse200ChargeInfoType1
         | BulkProfilePicResponse200ChargeInfoType2
         | BulkProfilePicResponse200ChargeInfoType3
+        | BulkProfilePicResponse200ChargeInfoType4
     )
     warnings: list[BulkProfilePicResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -43,6 +46,7 @@ class BulkProfilePicResponse200:
         from ..models.bulk_profile_pic_response_200_charge_info_type_0 import BulkProfilePicResponse200ChargeInfoType0
         from ..models.bulk_profile_pic_response_200_charge_info_type_1 import BulkProfilePicResponse200ChargeInfoType1
         from ..models.bulk_profile_pic_response_200_charge_info_type_2 import BulkProfilePicResponse200ChargeInfoType2
+        from ..models.bulk_profile_pic_response_200_charge_info_type_3 import BulkProfilePicResponse200ChargeInfoType3
 
         output = self.output.to_dict()
 
@@ -52,6 +56,8 @@ class BulkProfilePicResponse200:
         elif isinstance(self.charge_info, BulkProfilePicResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, BulkProfilePicResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, BulkProfilePicResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -87,6 +93,7 @@ class BulkProfilePicResponse200:
         from ..models.bulk_profile_pic_response_200_charge_info_type_1 import BulkProfilePicResponse200ChargeInfoType1
         from ..models.bulk_profile_pic_response_200_charge_info_type_2 import BulkProfilePicResponse200ChargeInfoType2
         from ..models.bulk_profile_pic_response_200_charge_info_type_3 import BulkProfilePicResponse200ChargeInfoType3
+        from ..models.bulk_profile_pic_response_200_charge_info_type_4 import BulkProfilePicResponse200ChargeInfoType4
         from ..models.bulk_profile_pic_response_200_output import BulkProfilePicResponse200Output
         from ..models.bulk_profile_pic_response_200_warnings_type_0_item import (
             BulkProfilePicResponse200WarningsType0Item,
@@ -102,6 +109,7 @@ class BulkProfilePicResponse200:
             | BulkProfilePicResponse200ChargeInfoType1
             | BulkProfilePicResponse200ChargeInfoType2
             | BulkProfilePicResponse200ChargeInfoType3
+            | BulkProfilePicResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -127,11 +135,19 @@ class BulkProfilePicResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = BulkProfilePicResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = BulkProfilePicResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = BulkProfilePicResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

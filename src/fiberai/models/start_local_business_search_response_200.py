@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.start_local_business_search_response_200_charge_info_type_3 import (
         StartLocalBusinessSearchResponse200ChargeInfoType3,
     )
+    from ..models.start_local_business_search_response_200_charge_info_type_4 import (
+        StartLocalBusinessSearchResponse200ChargeInfoType4,
+    )
     from ..models.start_local_business_search_response_200_output import StartLocalBusinessSearchResponse200Output
     from ..models.start_local_business_search_response_200_warnings_type_0_item import (
         StartLocalBusinessSearchResponse200WarningsType0Item,
@@ -36,7 +39,7 @@ class StartLocalBusinessSearchResponse200:
         output (StartLocalBusinessSearchResponse200Output):
         charge_info (StartLocalBusinessSearchResponse200ChargeInfoType0 |
             StartLocalBusinessSearchResponse200ChargeInfoType1 | StartLocalBusinessSearchResponse200ChargeInfoType2 |
-            StartLocalBusinessSearchResponse200ChargeInfoType3):
+            StartLocalBusinessSearchResponse200ChargeInfoType3 | StartLocalBusinessSearchResponse200ChargeInfoType4):
         warnings (list[StartLocalBusinessSearchResponse200WarningsType0Item] | None | Unset): Warnings about extraneous
             fields in request
     """
@@ -47,6 +50,7 @@ class StartLocalBusinessSearchResponse200:
         | StartLocalBusinessSearchResponse200ChargeInfoType1
         | StartLocalBusinessSearchResponse200ChargeInfoType2
         | StartLocalBusinessSearchResponse200ChargeInfoType3
+        | StartLocalBusinessSearchResponse200ChargeInfoType4
     )
     warnings: list[StartLocalBusinessSearchResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -60,6 +64,9 @@ class StartLocalBusinessSearchResponse200:
         from ..models.start_local_business_search_response_200_charge_info_type_2 import (
             StartLocalBusinessSearchResponse200ChargeInfoType2,
         )
+        from ..models.start_local_business_search_response_200_charge_info_type_3 import (
+            StartLocalBusinessSearchResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -69,6 +76,8 @@ class StartLocalBusinessSearchResponse200:
         elif isinstance(self.charge_info, StartLocalBusinessSearchResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, StartLocalBusinessSearchResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, StartLocalBusinessSearchResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -112,6 +121,9 @@ class StartLocalBusinessSearchResponse200:
         from ..models.start_local_business_search_response_200_charge_info_type_3 import (
             StartLocalBusinessSearchResponse200ChargeInfoType3,
         )
+        from ..models.start_local_business_search_response_200_charge_info_type_4 import (
+            StartLocalBusinessSearchResponse200ChargeInfoType4,
+        )
         from ..models.start_local_business_search_response_200_output import StartLocalBusinessSearchResponse200Output
         from ..models.start_local_business_search_response_200_warnings_type_0_item import (
             StartLocalBusinessSearchResponse200WarningsType0Item,
@@ -127,6 +139,7 @@ class StartLocalBusinessSearchResponse200:
             | StartLocalBusinessSearchResponse200ChargeInfoType1
             | StartLocalBusinessSearchResponse200ChargeInfoType2
             | StartLocalBusinessSearchResponse200ChargeInfoType3
+            | StartLocalBusinessSearchResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -152,11 +165,19 @@ class StartLocalBusinessSearchResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = StartLocalBusinessSearchResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = StartLocalBusinessSearchResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = StartLocalBusinessSearchResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

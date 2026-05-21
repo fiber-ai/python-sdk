@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from ..models.trigger_enrichment_response_200_charge_info_type_1 import TriggerEnrichmentResponse200ChargeInfoType1
     from ..models.trigger_enrichment_response_200_charge_info_type_2 import TriggerEnrichmentResponse200ChargeInfoType2
     from ..models.trigger_enrichment_response_200_charge_info_type_3 import TriggerEnrichmentResponse200ChargeInfoType3
+    from ..models.trigger_enrichment_response_200_charge_info_type_4 import TriggerEnrichmentResponse200ChargeInfoType4
     from ..models.trigger_enrichment_response_200_output import TriggerEnrichmentResponse200Output
     from ..models.trigger_enrichment_response_200_warnings_type_0_item import (
         TriggerEnrichmentResponse200WarningsType0Item,
@@ -27,7 +28,8 @@ class TriggerEnrichmentResponse200:
     Attributes:
         output (TriggerEnrichmentResponse200Output):
         charge_info (TriggerEnrichmentResponse200ChargeInfoType0 | TriggerEnrichmentResponse200ChargeInfoType1 |
-            TriggerEnrichmentResponse200ChargeInfoType2 | TriggerEnrichmentResponse200ChargeInfoType3):
+            TriggerEnrichmentResponse200ChargeInfoType2 | TriggerEnrichmentResponse200ChargeInfoType3 |
+            TriggerEnrichmentResponse200ChargeInfoType4):
         warnings (list[TriggerEnrichmentResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields
             in request
     """
@@ -38,6 +40,7 @@ class TriggerEnrichmentResponse200:
         | TriggerEnrichmentResponse200ChargeInfoType1
         | TriggerEnrichmentResponse200ChargeInfoType2
         | TriggerEnrichmentResponse200ChargeInfoType3
+        | TriggerEnrichmentResponse200ChargeInfoType4
     )
     warnings: list[TriggerEnrichmentResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -51,6 +54,9 @@ class TriggerEnrichmentResponse200:
         from ..models.trigger_enrichment_response_200_charge_info_type_2 import (
             TriggerEnrichmentResponse200ChargeInfoType2,
         )
+        from ..models.trigger_enrichment_response_200_charge_info_type_3 import (
+            TriggerEnrichmentResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -60,6 +66,8 @@ class TriggerEnrichmentResponse200:
         elif isinstance(self.charge_info, TriggerEnrichmentResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, TriggerEnrichmentResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, TriggerEnrichmentResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -103,6 +111,9 @@ class TriggerEnrichmentResponse200:
         from ..models.trigger_enrichment_response_200_charge_info_type_3 import (
             TriggerEnrichmentResponse200ChargeInfoType3,
         )
+        from ..models.trigger_enrichment_response_200_charge_info_type_4 import (
+            TriggerEnrichmentResponse200ChargeInfoType4,
+        )
         from ..models.trigger_enrichment_response_200_output import TriggerEnrichmentResponse200Output
         from ..models.trigger_enrichment_response_200_warnings_type_0_item import (
             TriggerEnrichmentResponse200WarningsType0Item,
@@ -118,6 +129,7 @@ class TriggerEnrichmentResponse200:
             | TriggerEnrichmentResponse200ChargeInfoType1
             | TriggerEnrichmentResponse200ChargeInfoType2
             | TriggerEnrichmentResponse200ChargeInfoType3
+            | TriggerEnrichmentResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -143,11 +155,19 @@ class TriggerEnrichmentResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = TriggerEnrichmentResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = TriggerEnrichmentResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = TriggerEnrichmentResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

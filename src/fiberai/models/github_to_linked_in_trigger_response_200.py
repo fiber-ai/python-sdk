@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.github_to_linked_in_trigger_response_200_charge_info_type_3 import (
         GithubToLinkedInTriggerResponse200ChargeInfoType3,
     )
+    from ..models.github_to_linked_in_trigger_response_200_charge_info_type_4 import (
+        GithubToLinkedInTriggerResponse200ChargeInfoType4,
+    )
     from ..models.github_to_linked_in_trigger_response_200_output import GithubToLinkedInTriggerResponse200Output
     from ..models.github_to_linked_in_trigger_response_200_warnings_type_0_item import (
         GithubToLinkedInTriggerResponse200WarningsType0Item,
@@ -36,7 +39,7 @@ class GithubToLinkedInTriggerResponse200:
         output (GithubToLinkedInTriggerResponse200Output):
         charge_info (GithubToLinkedInTriggerResponse200ChargeInfoType0 |
             GithubToLinkedInTriggerResponse200ChargeInfoType1 | GithubToLinkedInTriggerResponse200ChargeInfoType2 |
-            GithubToLinkedInTriggerResponse200ChargeInfoType3):
+            GithubToLinkedInTriggerResponse200ChargeInfoType3 | GithubToLinkedInTriggerResponse200ChargeInfoType4):
         warnings (list[GithubToLinkedInTriggerResponse200WarningsType0Item] | None | Unset): Warnings about extraneous
             fields in request
     """
@@ -47,6 +50,7 @@ class GithubToLinkedInTriggerResponse200:
         | GithubToLinkedInTriggerResponse200ChargeInfoType1
         | GithubToLinkedInTriggerResponse200ChargeInfoType2
         | GithubToLinkedInTriggerResponse200ChargeInfoType3
+        | GithubToLinkedInTriggerResponse200ChargeInfoType4
     )
     warnings: list[GithubToLinkedInTriggerResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -60,6 +64,9 @@ class GithubToLinkedInTriggerResponse200:
         from ..models.github_to_linked_in_trigger_response_200_charge_info_type_2 import (
             GithubToLinkedInTriggerResponse200ChargeInfoType2,
         )
+        from ..models.github_to_linked_in_trigger_response_200_charge_info_type_3 import (
+            GithubToLinkedInTriggerResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -69,6 +76,8 @@ class GithubToLinkedInTriggerResponse200:
         elif isinstance(self.charge_info, GithubToLinkedInTriggerResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, GithubToLinkedInTriggerResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, GithubToLinkedInTriggerResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -112,6 +121,9 @@ class GithubToLinkedInTriggerResponse200:
         from ..models.github_to_linked_in_trigger_response_200_charge_info_type_3 import (
             GithubToLinkedInTriggerResponse200ChargeInfoType3,
         )
+        from ..models.github_to_linked_in_trigger_response_200_charge_info_type_4 import (
+            GithubToLinkedInTriggerResponse200ChargeInfoType4,
+        )
         from ..models.github_to_linked_in_trigger_response_200_output import GithubToLinkedInTriggerResponse200Output
         from ..models.github_to_linked_in_trigger_response_200_warnings_type_0_item import (
             GithubToLinkedInTriggerResponse200WarningsType0Item,
@@ -127,6 +139,7 @@ class GithubToLinkedInTriggerResponse200:
             | GithubToLinkedInTriggerResponse200ChargeInfoType1
             | GithubToLinkedInTriggerResponse200ChargeInfoType2
             | GithubToLinkedInTriggerResponse200ChargeInfoType3
+            | GithubToLinkedInTriggerResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -152,11 +165,19 @@ class GithubToLinkedInTriggerResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = GithubToLinkedInTriggerResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = GithubToLinkedInTriggerResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = GithubToLinkedInTriggerResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

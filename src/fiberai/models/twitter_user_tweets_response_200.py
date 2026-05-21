@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from ..models.twitter_user_tweets_response_200_charge_info_type_1 import TwitterUserTweetsResponse200ChargeInfoType1
     from ..models.twitter_user_tweets_response_200_charge_info_type_2 import TwitterUserTweetsResponse200ChargeInfoType2
     from ..models.twitter_user_tweets_response_200_charge_info_type_3 import TwitterUserTweetsResponse200ChargeInfoType3
+    from ..models.twitter_user_tweets_response_200_charge_info_type_4 import TwitterUserTweetsResponse200ChargeInfoType4
     from ..models.twitter_user_tweets_response_200_output import TwitterUserTweetsResponse200Output
     from ..models.twitter_user_tweets_response_200_warnings_type_0_item import (
         TwitterUserTweetsResponse200WarningsType0Item,
@@ -27,7 +28,8 @@ class TwitterUserTweetsResponse200:
     Attributes:
         output (TwitterUserTweetsResponse200Output):
         charge_info (TwitterUserTweetsResponse200ChargeInfoType0 | TwitterUserTweetsResponse200ChargeInfoType1 |
-            TwitterUserTweetsResponse200ChargeInfoType2 | TwitterUserTweetsResponse200ChargeInfoType3):
+            TwitterUserTweetsResponse200ChargeInfoType2 | TwitterUserTweetsResponse200ChargeInfoType3 |
+            TwitterUserTweetsResponse200ChargeInfoType4):
         warnings (list[TwitterUserTweetsResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields
             in request
     """
@@ -38,6 +40,7 @@ class TwitterUserTweetsResponse200:
         | TwitterUserTweetsResponse200ChargeInfoType1
         | TwitterUserTweetsResponse200ChargeInfoType2
         | TwitterUserTweetsResponse200ChargeInfoType3
+        | TwitterUserTweetsResponse200ChargeInfoType4
     )
     warnings: list[TwitterUserTweetsResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -51,6 +54,9 @@ class TwitterUserTweetsResponse200:
         from ..models.twitter_user_tweets_response_200_charge_info_type_2 import (
             TwitterUserTweetsResponse200ChargeInfoType2,
         )
+        from ..models.twitter_user_tweets_response_200_charge_info_type_3 import (
+            TwitterUserTweetsResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -60,6 +66,8 @@ class TwitterUserTweetsResponse200:
         elif isinstance(self.charge_info, TwitterUserTweetsResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, TwitterUserTweetsResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, TwitterUserTweetsResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -103,6 +111,9 @@ class TwitterUserTweetsResponse200:
         from ..models.twitter_user_tweets_response_200_charge_info_type_3 import (
             TwitterUserTweetsResponse200ChargeInfoType3,
         )
+        from ..models.twitter_user_tweets_response_200_charge_info_type_4 import (
+            TwitterUserTweetsResponse200ChargeInfoType4,
+        )
         from ..models.twitter_user_tweets_response_200_output import TwitterUserTweetsResponse200Output
         from ..models.twitter_user_tweets_response_200_warnings_type_0_item import (
             TwitterUserTweetsResponse200WarningsType0Item,
@@ -118,6 +129,7 @@ class TwitterUserTweetsResponse200:
             | TwitterUserTweetsResponse200ChargeInfoType1
             | TwitterUserTweetsResponse200ChargeInfoType2
             | TwitterUserTweetsResponse200ChargeInfoType3
+            | TwitterUserTweetsResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -143,11 +155,19 @@ class TwitterUserTweetsResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = TwitterUserTweetsResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = TwitterUserTweetsResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = TwitterUserTweetsResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from ..models.github_lookup_poll_response_200_charge_info_type_1 import GithubLookupPollResponse200ChargeInfoType1
     from ..models.github_lookup_poll_response_200_charge_info_type_2 import GithubLookupPollResponse200ChargeInfoType2
     from ..models.github_lookup_poll_response_200_charge_info_type_3 import GithubLookupPollResponse200ChargeInfoType3
+    from ..models.github_lookup_poll_response_200_charge_info_type_4 import GithubLookupPollResponse200ChargeInfoType4
     from ..models.github_lookup_poll_response_200_output import GithubLookupPollResponse200Output
     from ..models.github_lookup_poll_response_200_warnings_type_0_item import (
         GithubLookupPollResponse200WarningsType0Item,
@@ -27,7 +28,8 @@ class GithubLookupPollResponse200:
     Attributes:
         output (GithubLookupPollResponse200Output):
         charge_info (GithubLookupPollResponse200ChargeInfoType0 | GithubLookupPollResponse200ChargeInfoType1 |
-            GithubLookupPollResponse200ChargeInfoType2 | GithubLookupPollResponse200ChargeInfoType3):
+            GithubLookupPollResponse200ChargeInfoType2 | GithubLookupPollResponse200ChargeInfoType3 |
+            GithubLookupPollResponse200ChargeInfoType4):
         warnings (list[GithubLookupPollResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields
             in request
     """
@@ -38,6 +40,7 @@ class GithubLookupPollResponse200:
         | GithubLookupPollResponse200ChargeInfoType1
         | GithubLookupPollResponse200ChargeInfoType2
         | GithubLookupPollResponse200ChargeInfoType3
+        | GithubLookupPollResponse200ChargeInfoType4
     )
     warnings: list[GithubLookupPollResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -51,6 +54,9 @@ class GithubLookupPollResponse200:
         from ..models.github_lookup_poll_response_200_charge_info_type_2 import (
             GithubLookupPollResponse200ChargeInfoType2,
         )
+        from ..models.github_lookup_poll_response_200_charge_info_type_3 import (
+            GithubLookupPollResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -60,6 +66,8 @@ class GithubLookupPollResponse200:
         elif isinstance(self.charge_info, GithubLookupPollResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, GithubLookupPollResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, GithubLookupPollResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -103,6 +111,9 @@ class GithubLookupPollResponse200:
         from ..models.github_lookup_poll_response_200_charge_info_type_3 import (
             GithubLookupPollResponse200ChargeInfoType3,
         )
+        from ..models.github_lookup_poll_response_200_charge_info_type_4 import (
+            GithubLookupPollResponse200ChargeInfoType4,
+        )
         from ..models.github_lookup_poll_response_200_output import GithubLookupPollResponse200Output
         from ..models.github_lookup_poll_response_200_warnings_type_0_item import (
             GithubLookupPollResponse200WarningsType0Item,
@@ -118,6 +129,7 @@ class GithubLookupPollResponse200:
             | GithubLookupPollResponse200ChargeInfoType1
             | GithubLookupPollResponse200ChargeInfoType2
             | GithubLookupPollResponse200ChargeInfoType3
+            | GithubLookupPollResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -143,11 +155,19 @@ class GithubLookupPollResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = GithubLookupPollResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = GithubLookupPollResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = GithubLookupPollResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

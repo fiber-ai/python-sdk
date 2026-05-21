@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from ..models.instagram_profile_response_200_charge_info_type_1 import InstagramProfileResponse200ChargeInfoType1
     from ..models.instagram_profile_response_200_charge_info_type_2 import InstagramProfileResponse200ChargeInfoType2
     from ..models.instagram_profile_response_200_charge_info_type_3 import InstagramProfileResponse200ChargeInfoType3
+    from ..models.instagram_profile_response_200_charge_info_type_4 import InstagramProfileResponse200ChargeInfoType4
     from ..models.instagram_profile_response_200_output import InstagramProfileResponse200Output
     from ..models.instagram_profile_response_200_warnings_type_0_item import (
         InstagramProfileResponse200WarningsType0Item,
@@ -27,7 +28,8 @@ class InstagramProfileResponse200:
     Attributes:
         output (InstagramProfileResponse200Output):
         charge_info (InstagramProfileResponse200ChargeInfoType0 | InstagramProfileResponse200ChargeInfoType1 |
-            InstagramProfileResponse200ChargeInfoType2 | InstagramProfileResponse200ChargeInfoType3):
+            InstagramProfileResponse200ChargeInfoType2 | InstagramProfileResponse200ChargeInfoType3 |
+            InstagramProfileResponse200ChargeInfoType4):
         warnings (list[InstagramProfileResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields
             in request
     """
@@ -38,6 +40,7 @@ class InstagramProfileResponse200:
         | InstagramProfileResponse200ChargeInfoType1
         | InstagramProfileResponse200ChargeInfoType2
         | InstagramProfileResponse200ChargeInfoType3
+        | InstagramProfileResponse200ChargeInfoType4
     )
     warnings: list[InstagramProfileResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -51,6 +54,9 @@ class InstagramProfileResponse200:
         from ..models.instagram_profile_response_200_charge_info_type_2 import (
             InstagramProfileResponse200ChargeInfoType2,
         )
+        from ..models.instagram_profile_response_200_charge_info_type_3 import (
+            InstagramProfileResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -60,6 +66,8 @@ class InstagramProfileResponse200:
         elif isinstance(self.charge_info, InstagramProfileResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, InstagramProfileResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, InstagramProfileResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -103,6 +111,9 @@ class InstagramProfileResponse200:
         from ..models.instagram_profile_response_200_charge_info_type_3 import (
             InstagramProfileResponse200ChargeInfoType3,
         )
+        from ..models.instagram_profile_response_200_charge_info_type_4 import (
+            InstagramProfileResponse200ChargeInfoType4,
+        )
         from ..models.instagram_profile_response_200_output import InstagramProfileResponse200Output
         from ..models.instagram_profile_response_200_warnings_type_0_item import (
             InstagramProfileResponse200WarningsType0Item,
@@ -118,6 +129,7 @@ class InstagramProfileResponse200:
             | InstagramProfileResponse200ChargeInfoType1
             | InstagramProfileResponse200ChargeInfoType2
             | InstagramProfileResponse200ChargeInfoType3
+            | InstagramProfileResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -143,11 +155,19 @@ class InstagramProfileResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = InstagramProfileResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = InstagramProfileResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = InstagramProfileResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

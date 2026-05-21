@@ -19,7 +19,7 @@ T = TypeVar("T", bound="FetchRealEstateListingsResponse200Output")
 
 @_attrs_define
 class FetchRealEstateListingsResponse200Output:
-    """
+    r"""
     Attributes:
         run_id (str): Unique identifier for this search request.
         properties (list[FetchRealEstateListingsResponse200OutputPropertiesItem]): Properties returned for this page.
@@ -27,6 +27,9 @@ class FetchRealEstateListingsResponse200Output:
         region_name (None | str | Unset): Region name interpreted for this search query.
         next_page_token (None | str | Unset): Token for retrieving the next page. Pass this exact value as
             `nextPageToken` in the next request. Null if no more pages.
+        warnings (list[str] | None | Unset): Non-fatal advisories about how this page was served. For example, 'Sort
+            \'priceAscending\' is applied from page 2 onwards.' when the requested sort cannot be honored on page 1. Omitted
+            or null when there's nothing to flag.
     """
 
     run_id: str
@@ -34,6 +37,7 @@ class FetchRealEstateListingsResponse200Output:
     total_result_count: int | None | Unset = UNSET
     region_name: None | str | Unset = UNSET
     next_page_token: None | str | Unset = UNSET
+    warnings: list[str] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -62,6 +66,15 @@ class FetchRealEstateListingsResponse200Output:
         else:
             next_page_token = self.next_page_token
 
+        warnings: list[str] | None | Unset
+        if isinstance(self.warnings, Unset):
+            warnings = UNSET
+        elif isinstance(self.warnings, list):
+            warnings = self.warnings
+
+        else:
+            warnings = self.warnings
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -76,6 +89,8 @@ class FetchRealEstateListingsResponse200Output:
             field_dict["regionName"] = region_name
         if next_page_token is not UNSET:
             field_dict["nextPageToken"] = next_page_token
+        if warnings is not UNSET:
+            field_dict["warnings"] = warnings
 
         return field_dict
 
@@ -122,12 +137,30 @@ class FetchRealEstateListingsResponse200Output:
 
         next_page_token = _parse_next_page_token(d.pop("nextPageToken", UNSET))
 
+        def _parse_warnings(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                warnings_type_0 = cast(list[str], data)
+
+                return warnings_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        warnings = _parse_warnings(d.pop("warnings", UNSET))
+
         fetch_real_estate_listings_response_200_output = cls(
             run_id=run_id,
             properties=properties,
             total_result_count=total_result_count,
             region_name=region_name,
             next_page_token=next_page_token,
+            warnings=warnings,
         )
 
         fetch_real_estate_listings_response_200_output.additional_properties = d

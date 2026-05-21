@@ -10,6 +10,9 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_all_email_reveal import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0AllEmailReveal,
     )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_blue_collar_job_search import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0BlueCollarJobSearch,
+    )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_bulk_company_logo_lookup import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0BulkCompanyLogoLookup,
     )
@@ -66,6 +69,9 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_email_from_github_username import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0GetEmailFromGithubUsername,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_entity_from_db import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0GetEntityFromDb,
     )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_investment_from_db import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0GetInvestmentFromDb,
@@ -250,6 +256,12 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_text_to_person_search_params import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0TextToPersonSearchParams,
     )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_text_to_search_params import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0TextToSearchParams,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_entity import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntity,
+    )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_persons_job_changes import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackPersonsJobChanges,
     )
@@ -302,6 +314,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         get_job_posting_from_db (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetJobPostingFromDb):
         text_to_company_search_params (GetOrgCreditsResponse200OutputCreditsPerOperationType0TextToCompanySearchParams):
         text_to_person_search_params (GetOrgCreditsResponse200OutputCreditsPerOperationType0TextToPersonSearchParams):
+        text_to_search_params (GetOrgCreditsResponse200OutputCreditsPerOperationType0TextToSearchParams):
         live_enrich_company (GetOrgCreditsResponse200OutputCreditsPerOperationType0LiveEnrichCompany):
         live_enrich_person (GetOrgCreditsResponse200OutputCreditsPerOperationType0LiveEnrichPerson):
         live_enrich_person_for_contact_reveal
@@ -393,6 +406,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         real_estate_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0RealEstateSearch):
         flight_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearch):
         mosaic_row (GetOrgCreditsResponse200OutputCreditsPerOperationType0MosaicRow):
+        get_entity_from_db (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetEntityFromDb):
+        track_entity (GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntity):
+        blue_collar_job_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0BlueCollarJobSearch):
     """
 
     get_company_from_db: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyFromDb
@@ -405,6 +421,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
     get_job_posting_from_db: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetJobPostingFromDb
     text_to_company_search_params: GetOrgCreditsResponse200OutputCreditsPerOperationType0TextToCompanySearchParams
     text_to_person_search_params: GetOrgCreditsResponse200OutputCreditsPerOperationType0TextToPersonSearchParams
+    text_to_search_params: GetOrgCreditsResponse200OutputCreditsPerOperationType0TextToSearchParams
     live_enrich_company: GetOrgCreditsResponse200OutputCreditsPerOperationType0LiveEnrichCompany
     live_enrich_person: GetOrgCreditsResponse200OutputCreditsPerOperationType0LiveEnrichPerson
     live_enrich_person_for_contact_reveal: (
@@ -495,6 +512,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
     real_estate_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0RealEstateSearch
     flight_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearch
     mosaic_row: GetOrgCreditsResponse200OutputCreditsPerOperationType0MosaicRow
+    get_entity_from_db: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetEntityFromDb
+    track_entity: GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntity
+    blue_collar_job_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0BlueCollarJobSearch
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -517,6 +537,8 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         text_to_company_search_params = self.text_to_company_search_params.to_dict()
 
         text_to_person_search_params = self.text_to_person_search_params.to_dict()
+
+        text_to_search_params = self.text_to_search_params.to_dict()
 
         live_enrich_company = self.live_enrich_company.to_dict()
 
@@ -682,6 +704,12 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
 
         mosaic_row = self.mosaic_row.to_dict()
 
+        get_entity_from_db = self.get_entity_from_db.to_dict()
+
+        track_entity = self.track_entity.to_dict()
+
+        blue_collar_job_search = self.blue_collar_job_search.to_dict()
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -696,6 +724,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
                 "getJobPostingFromDb": get_job_posting_from_db,
                 "textToCompanySearchParams": text_to_company_search_params,
                 "textToPersonSearchParams": text_to_person_search_params,
+                "textToSearchParams": text_to_search_params,
                 "liveEnrichCompany": live_enrich_company,
                 "liveEnrichPerson": live_enrich_person,
                 "liveEnrichPersonForContactReveal": live_enrich_person_for_contact_reveal,
@@ -778,6 +807,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
                 "realEstateSearch": real_estate_search,
                 "flightSearch": flight_search,
                 "mosaicRow": mosaic_row,
+                "getEntityFromDb": get_entity_from_db,
+                "trackEntity": track_entity,
+                "blueCollarJobSearch": blue_collar_job_search,
             }
         )
 
@@ -787,6 +819,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_all_email_reveal import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0AllEmailReveal,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_blue_collar_job_search import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0BlueCollarJobSearch,
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_bulk_company_logo_lookup import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0BulkCompanyLogoLookup,
@@ -844,6 +879,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_email_from_github_username import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0GetEmailFromGithubUsername,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_entity_from_db import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0GetEntityFromDb,
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_investment_from_db import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0GetInvestmentFromDb,
@@ -1028,6 +1066,12 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_text_to_person_search_params import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0TextToPersonSearchParams,
         )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_text_to_search_params import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0TextToSearchParams,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_entity import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntity,
+        )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_persons_job_changes import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackPersonsJobChanges,
         )
@@ -1109,6 +1153,10 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             GetOrgCreditsResponse200OutputCreditsPerOperationType0TextToPersonSearchParams.from_dict(
                 d.pop("textToPersonSearchParams")
             )
+        )
+
+        text_to_search_params = GetOrgCreditsResponse200OutputCreditsPerOperationType0TextToSearchParams.from_dict(
+            d.pop("textToSearchParams")
         )
 
         live_enrich_company = GetOrgCreditsResponse200OutputCreditsPerOperationType0LiveEnrichCompany.from_dict(
@@ -1483,6 +1531,16 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
 
         mosaic_row = GetOrgCreditsResponse200OutputCreditsPerOperationType0MosaicRow.from_dict(d.pop("mosaicRow"))
 
+        get_entity_from_db = GetOrgCreditsResponse200OutputCreditsPerOperationType0GetEntityFromDb.from_dict(
+            d.pop("getEntityFromDb")
+        )
+
+        track_entity = GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntity.from_dict(d.pop("trackEntity"))
+
+        blue_collar_job_search = GetOrgCreditsResponse200OutputCreditsPerOperationType0BlueCollarJobSearch.from_dict(
+            d.pop("blueCollarJobSearch")
+        )
+
         get_org_credits_response_200_output_credits_per_operation_type_0 = cls(
             get_company_from_db=get_company_from_db,
             get_person_from_db=get_person_from_db,
@@ -1494,6 +1552,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             get_job_posting_from_db=get_job_posting_from_db,
             text_to_company_search_params=text_to_company_search_params,
             text_to_person_search_params=text_to_person_search_params,
+            text_to_search_params=text_to_search_params,
             live_enrich_company=live_enrich_company,
             live_enrich_person=live_enrich_person,
             live_enrich_person_for_contact_reveal=live_enrich_person_for_contact_reveal,
@@ -1576,6 +1635,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             real_estate_search=real_estate_search,
             flight_search=flight_search,
             mosaic_row=mosaic_row,
+            get_entity_from_db=get_entity_from_db,
+            track_entity=track_entity,
+            blue_collar_job_search=blue_collar_job_search,
         )
 
         get_org_credits_response_200_output_credits_per_operation_type_0.additional_properties = d

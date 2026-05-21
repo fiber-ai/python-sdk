@@ -1,0 +1,130 @@
+from __future__ import annotations
+
+from collections.abc import Mapping
+from typing import TYPE_CHECKING, Any, TypeVar, cast
+
+from attrs import define as _attrs_define
+from attrs import field as _attrs_field
+
+from ..models.company_typeahead_response_200_charge_info_type_4_method import (
+    CompanyTypeaheadResponse200ChargeInfoType4Method,
+)
+from ..types import UNSET, Unset
+
+if TYPE_CHECKING:
+    from ..models.company_typeahead_response_200_charge_info_type_4_low_credit_alert_type_0 import (
+        CompanyTypeaheadResponse200ChargeInfoType4LowCreditAlertType0,
+    )
+
+
+T = TypeVar("T", bound="CompanyTypeaheadResponse200ChargeInfoType4")
+
+
+@_attrs_define
+class CompanyTypeaheadResponse200ChargeInfoType4:
+    """Credits were refunded for this operation
+
+    Attributes:
+        method (CompanyTypeaheadResponse200ChargeInfoType4Method):
+        credits_refunded (float):
+        message (str):
+        low_credit_alert (CompanyTypeaheadResponse200ChargeInfoType4LowCreditAlertType0 | None | Unset): Contains a link
+            to get more credits, a warning message, and the remaining credit count.
+    """
+
+    method: CompanyTypeaheadResponse200ChargeInfoType4Method
+    credits_refunded: float
+    message: str
+    low_credit_alert: CompanyTypeaheadResponse200ChargeInfoType4LowCreditAlertType0 | None | Unset = UNSET
+    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        from ..models.company_typeahead_response_200_charge_info_type_4_low_credit_alert_type_0 import (
+            CompanyTypeaheadResponse200ChargeInfoType4LowCreditAlertType0,
+        )
+
+        method = self.method.value
+
+        credits_refunded = self.credits_refunded
+
+        message = self.message
+
+        low_credit_alert: dict[str, Any] | None | Unset
+        if isinstance(self.low_credit_alert, Unset):
+            low_credit_alert = UNSET
+        elif isinstance(self.low_credit_alert, CompanyTypeaheadResponse200ChargeInfoType4LowCreditAlertType0):
+            low_credit_alert = self.low_credit_alert.to_dict()
+        else:
+            low_credit_alert = self.low_credit_alert
+
+        field_dict: dict[str, Any] = {}
+        field_dict.update(self.additional_properties)
+        field_dict.update(
+            {
+                "method": method,
+                "creditsRefunded": credits_refunded,
+                "message": message,
+            }
+        )
+        if low_credit_alert is not UNSET:
+            field_dict["lowCreditAlert"] = low_credit_alert
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.company_typeahead_response_200_charge_info_type_4_low_credit_alert_type_0 import (
+            CompanyTypeaheadResponse200ChargeInfoType4LowCreditAlertType0,
+        )
+
+        d = dict(src_dict)
+        method = CompanyTypeaheadResponse200ChargeInfoType4Method(d.pop("method"))
+
+        credits_refunded = d.pop("creditsRefunded")
+
+        message = d.pop("message")
+
+        def _parse_low_credit_alert(
+            data: object,
+        ) -> CompanyTypeaheadResponse200ChargeInfoType4LowCreditAlertType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                low_credit_alert_type_0 = CompanyTypeaheadResponse200ChargeInfoType4LowCreditAlertType0.from_dict(data)
+
+                return low_credit_alert_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CompanyTypeaheadResponse200ChargeInfoType4LowCreditAlertType0 | None | Unset, data)
+
+        low_credit_alert = _parse_low_credit_alert(d.pop("lowCreditAlert", UNSET))
+
+        company_typeahead_response_200_charge_info_type_4 = cls(
+            method=method,
+            credits_refunded=credits_refunded,
+            message=message,
+            low_credit_alert=low_credit_alert,
+        )
+
+        company_typeahead_response_200_charge_info_type_4.additional_properties = d
+        return company_typeahead_response_200_charge_info_type_4
+
+    @property
+    def additional_keys(self) -> list[str]:
+        return list(self.additional_properties.keys())
+
+    def __getitem__(self, key: str) -> Any:
+        return self.additional_properties[key]
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        self.additional_properties[key] = value
+
+    def __delitem__(self, key: str) -> None:
+        del self.additional_properties[key]
+
+    def __contains__(self, key: str) -> bool:
+        return key in self.additional_properties

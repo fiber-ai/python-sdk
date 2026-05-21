@@ -29,8 +29,10 @@ class PollBatchContactDetailsResponse200Output:
         done (bool): Whether the batch task has finished. When true, check the 'failed' field to determine if it
             completed successfully or failed.
         failed (bool): Whether the batch task failed. If true, the task encountered an error and won't be retried. If
-            false and done=true, the task completed successfully. If done=false, this field indicates current processing
-            state.
+            false and done=true, the task completed successfully or was cancelled (check the 'canceled' field). If
+            done=false, this field indicates current processing state.
+        canceled (bool): Whether the batch task was cancelled. When true, unclaimed profiles were not processed and
+            credits were refunded.
         page_results (list[PollBatchContactDetailsResponse200OutputPageResultsItem]): The array of results for each
             person in the current page.
         next_cursor (None | str | Unset): The pagination cursor for the next page of results.
@@ -39,6 +41,7 @@ class PollBatchContactDetailsResponse200Output:
     overall_stats: PollBatchContactDetailsResponse200OutputOverallStats
     done: bool
     failed: bool
+    canceled: bool
     page_results: list[PollBatchContactDetailsResponse200OutputPageResultsItem]
     next_cursor: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -49,6 +52,8 @@ class PollBatchContactDetailsResponse200Output:
         done = self.done
 
         failed = self.failed
+
+        canceled = self.canceled
 
         page_results = []
         for page_results_item_data in self.page_results:
@@ -68,6 +73,7 @@ class PollBatchContactDetailsResponse200Output:
                 "overallStats": overall_stats,
                 "done": done,
                 "failed": failed,
+                "canceled": canceled,
                 "pageResults": page_results,
             }
         )
@@ -92,6 +98,8 @@ class PollBatchContactDetailsResponse200Output:
 
         failed = d.pop("failed")
 
+        canceled = d.pop("canceled")
+
         page_results = []
         _page_results = d.pop("pageResults")
         for page_results_item_data in _page_results:
@@ -114,6 +122,7 @@ class PollBatchContactDetailsResponse200Output:
             overall_stats=overall_stats,
             done=done,
             failed=failed,
+            canceled=canceled,
             page_results=page_results,
             next_cursor=next_cursor,
         )

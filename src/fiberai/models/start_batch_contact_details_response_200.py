@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.start_batch_contact_details_response_200_charge_info_type_3 import (
         StartBatchContactDetailsResponse200ChargeInfoType3,
     )
+    from ..models.start_batch_contact_details_response_200_charge_info_type_4 import (
+        StartBatchContactDetailsResponse200ChargeInfoType4,
+    )
     from ..models.start_batch_contact_details_response_200_output import StartBatchContactDetailsResponse200Output
     from ..models.start_batch_contact_details_response_200_warnings_type_0_item import (
         StartBatchContactDetailsResponse200WarningsType0Item,
@@ -36,7 +39,7 @@ class StartBatchContactDetailsResponse200:
         output (StartBatchContactDetailsResponse200Output):
         charge_info (StartBatchContactDetailsResponse200ChargeInfoType0 |
             StartBatchContactDetailsResponse200ChargeInfoType1 | StartBatchContactDetailsResponse200ChargeInfoType2 |
-            StartBatchContactDetailsResponse200ChargeInfoType3):
+            StartBatchContactDetailsResponse200ChargeInfoType3 | StartBatchContactDetailsResponse200ChargeInfoType4):
         warnings (list[StartBatchContactDetailsResponse200WarningsType0Item] | None | Unset): Warnings about extraneous
             fields in request
     """
@@ -47,6 +50,7 @@ class StartBatchContactDetailsResponse200:
         | StartBatchContactDetailsResponse200ChargeInfoType1
         | StartBatchContactDetailsResponse200ChargeInfoType2
         | StartBatchContactDetailsResponse200ChargeInfoType3
+        | StartBatchContactDetailsResponse200ChargeInfoType4
     )
     warnings: list[StartBatchContactDetailsResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -60,6 +64,9 @@ class StartBatchContactDetailsResponse200:
         from ..models.start_batch_contact_details_response_200_charge_info_type_2 import (
             StartBatchContactDetailsResponse200ChargeInfoType2,
         )
+        from ..models.start_batch_contact_details_response_200_charge_info_type_3 import (
+            StartBatchContactDetailsResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -69,6 +76,8 @@ class StartBatchContactDetailsResponse200:
         elif isinstance(self.charge_info, StartBatchContactDetailsResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, StartBatchContactDetailsResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, StartBatchContactDetailsResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -112,6 +121,9 @@ class StartBatchContactDetailsResponse200:
         from ..models.start_batch_contact_details_response_200_charge_info_type_3 import (
             StartBatchContactDetailsResponse200ChargeInfoType3,
         )
+        from ..models.start_batch_contact_details_response_200_charge_info_type_4 import (
+            StartBatchContactDetailsResponse200ChargeInfoType4,
+        )
         from ..models.start_batch_contact_details_response_200_output import StartBatchContactDetailsResponse200Output
         from ..models.start_batch_contact_details_response_200_warnings_type_0_item import (
             StartBatchContactDetailsResponse200WarningsType0Item,
@@ -127,6 +139,7 @@ class StartBatchContactDetailsResponse200:
             | StartBatchContactDetailsResponse200ChargeInfoType1
             | StartBatchContactDetailsResponse200ChargeInfoType2
             | StartBatchContactDetailsResponse200ChargeInfoType3
+            | StartBatchContactDetailsResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -152,11 +165,19 @@ class StartBatchContactDetailsResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = StartBatchContactDetailsResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = StartBatchContactDetailsResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = StartBatchContactDetailsResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

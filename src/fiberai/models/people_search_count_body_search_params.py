@@ -23,6 +23,9 @@ if TYPE_CHECKING:
     from ..models.people_search_count_body_search_params_country_3_letter_code_type_0 import (
         PeopleSearchCountBodySearchParamsCountry3LetterCodeType0,
     )
+    from ..models.people_search_count_body_search_params_current_jobs_type_0 import (
+        PeopleSearchCountBodySearchParamsCurrentJobsType0,
+    )
     from ..models.people_search_count_body_search_params_education_type_0 import (
         PeopleSearchCountBodySearchParamsEducationType0,
     )
@@ -141,6 +144,7 @@ class PeopleSearchCountBodySearchParams:
             PeopleSearchCountBodySearchParamsStartedAtCompanyType1 | Unset):
         location (None | PeopleSearchCountBodySearchParamsLocationType0 | Unset):
         past_jobs (None | PeopleSearchCountBodySearchParamsPastJobsType0 | Unset):
+        current_jobs (None | PeopleSearchCountBodySearchParamsCurrentJobsType0 | Unset):
         languages (None | PeopleSearchCountBodySearchParamsLanguagesType0 | Unset):
         left_stealth_at (None | PeopleSearchCountBodySearchParamsLeftStealthAtType0 |
             PeopleSearchCountBodySearchParamsLeftStealthAtType1 | Unset):
@@ -156,6 +160,7 @@ class PeopleSearchCountBodySearchParams:
             PeopleSearchCountBodySearchParamsCompanyMatchModeType1 | Unset):
         years_of_experience (None | PeopleSearchCountBodySearchParamsYearsOfExperienceType0 | Unset):
         job_title_v3 (None | PeopleSearchCountBodySearchParamsJobTitleV3Type0 | Unset):
+        open_to_work (bool | None | Unset):
         has_profile_picture (bool | None | Unset):
         state (None | PeopleSearchCountBodySearchParamsStateType0 | Unset):
         certifications (None | PeopleSearchCountBodySearchParamsCertificationsType0 | Unset):
@@ -196,6 +201,7 @@ class PeopleSearchCountBodySearchParams:
     ) = UNSET
     location: None | PeopleSearchCountBodySearchParamsLocationType0 | Unset = UNSET
     past_jobs: None | PeopleSearchCountBodySearchParamsPastJobsType0 | Unset = UNSET
+    current_jobs: None | PeopleSearchCountBodySearchParamsCurrentJobsType0 | Unset = UNSET
     languages: None | PeopleSearchCountBodySearchParamsLanguagesType0 | Unset = UNSET
     left_stealth_at: (
         None
@@ -225,6 +231,7 @@ class PeopleSearchCountBodySearchParams:
     ) = UNSET
     years_of_experience: None | PeopleSearchCountBodySearchParamsYearsOfExperienceType0 | Unset = UNSET
     job_title_v3: None | PeopleSearchCountBodySearchParamsJobTitleV3Type0 | Unset = UNSET
+    open_to_work: bool | None | Unset = UNSET
     has_profile_picture: bool | None | Unset = UNSET
     state: None | PeopleSearchCountBodySearchParamsStateType0 | Unset = UNSET
     certifications: None | PeopleSearchCountBodySearchParamsCertificationsType0 | Unset = UNSET
@@ -251,6 +258,9 @@ class PeopleSearchCountBodySearchParams:
         )
         from ..models.people_search_count_body_search_params_country_3_letter_code_type_0 import (
             PeopleSearchCountBodySearchParamsCountry3LetterCodeType0,
+        )
+        from ..models.people_search_count_body_search_params_current_jobs_type_0 import (
+            PeopleSearchCountBodySearchParamsCurrentJobsType0,
         )
         from ..models.people_search_count_body_search_params_education_type_0 import (
             PeopleSearchCountBodySearchParamsEducationType0,
@@ -465,6 +475,14 @@ class PeopleSearchCountBodySearchParams:
         else:
             past_jobs = self.past_jobs
 
+        current_jobs: dict[str, Any] | None | Unset
+        if isinstance(self.current_jobs, Unset):
+            current_jobs = UNSET
+        elif isinstance(self.current_jobs, PeopleSearchCountBodySearchParamsCurrentJobsType0):
+            current_jobs = self.current_jobs.to_dict()
+        else:
+            current_jobs = self.current_jobs
+
         languages: dict[str, Any] | None | Unset
         if isinstance(self.languages, Unset):
             languages = UNSET
@@ -560,6 +578,12 @@ class PeopleSearchCountBodySearchParams:
             job_title_v3 = self.job_title_v3.to_dict()
         else:
             job_title_v3 = self.job_title_v3
+
+        open_to_work: bool | None | Unset
+        if isinstance(self.open_to_work, Unset):
+            open_to_work = UNSET
+        else:
+            open_to_work = self.open_to_work
 
         has_profile_picture: bool | None | Unset
         if isinstance(self.has_profile_picture, Unset):
@@ -664,6 +688,8 @@ class PeopleSearchCountBodySearchParams:
             field_dict["location"] = location
         if past_jobs is not UNSET:
             field_dict["pastJobs"] = past_jobs
+        if current_jobs is not UNSET:
+            field_dict["currentJobs"] = current_jobs
         if languages is not UNSET:
             field_dict["languages"] = languages
         if left_stealth_at is not UNSET:
@@ -686,6 +712,8 @@ class PeopleSearchCountBodySearchParams:
             field_dict["yearsOfExperience"] = years_of_experience
         if job_title_v3 is not UNSET:
             field_dict["jobTitleV3"] = job_title_v3
+        if open_to_work is not UNSET:
+            field_dict["openToWork"] = open_to_work
         if has_profile_picture is not UNSET:
             field_dict["hasProfilePicture"] = has_profile_picture
         if state is not UNSET:
@@ -725,6 +753,9 @@ class PeopleSearchCountBodySearchParams:
         )
         from ..models.people_search_count_body_search_params_country_3_letter_code_type_0 import (
             PeopleSearchCountBodySearchParamsCountry3LetterCodeType0,
+        )
+        from ..models.people_search_count_body_search_params_current_jobs_type_0 import (
+            PeopleSearchCountBodySearchParamsCurrentJobsType0,
         )
         from ..models.people_search_count_body_search_params_education_type_0 import (
             PeopleSearchCountBodySearchParamsEducationType0,
@@ -1113,6 +1144,23 @@ class PeopleSearchCountBodySearchParams:
 
         past_jobs = _parse_past_jobs(d.pop("pastJobs", UNSET))
 
+        def _parse_current_jobs(data: object) -> None | PeopleSearchCountBodySearchParamsCurrentJobsType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                current_jobs_type_0 = PeopleSearchCountBodySearchParamsCurrentJobsType0.from_dict(data)
+
+                return current_jobs_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | PeopleSearchCountBodySearchParamsCurrentJobsType0 | Unset, data)
+
+        current_jobs = _parse_current_jobs(d.pop("currentJobs", UNSET))
+
         def _parse_languages(data: object) -> None | PeopleSearchCountBodySearchParamsLanguagesType0 | Unset:
             if data is None:
                 return data
@@ -1388,6 +1436,15 @@ class PeopleSearchCountBodySearchParams:
 
         job_title_v3 = _parse_job_title_v3(d.pop("jobTitleV3", UNSET))
 
+        def _parse_open_to_work(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        open_to_work = _parse_open_to_work(d.pop("openToWork", UNSET))
+
         def _parse_has_profile_picture(data: object) -> bool | None | Unset:
             if data is None:
                 return data
@@ -1541,6 +1598,7 @@ class PeopleSearchCountBodySearchParams:
             started_at_company=started_at_company,
             location=location,
             past_jobs=past_jobs,
+            current_jobs=current_jobs,
             languages=languages,
             left_stealth_at=left_stealth_at,
             is_in_stealth=is_in_stealth,
@@ -1552,6 +1610,7 @@ class PeopleSearchCountBodySearchParams:
             company_match_mode=company_match_mode,
             years_of_experience=years_of_experience,
             job_title_v3=job_title_v3,
+            open_to_work=open_to_work,
             has_profile_picture=has_profile_picture,
             state=state,
             certifications=certifications,

@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from ..models.google_maps_search_response_200_charge_info_type_1 import GoogleMapsSearchResponse200ChargeInfoType1
     from ..models.google_maps_search_response_200_charge_info_type_2 import GoogleMapsSearchResponse200ChargeInfoType2
     from ..models.google_maps_search_response_200_charge_info_type_3 import GoogleMapsSearchResponse200ChargeInfoType3
+    from ..models.google_maps_search_response_200_charge_info_type_4 import GoogleMapsSearchResponse200ChargeInfoType4
     from ..models.google_maps_search_response_200_output import GoogleMapsSearchResponse200Output
     from ..models.google_maps_search_response_200_warnings_type_0_item import (
         GoogleMapsSearchResponse200WarningsType0Item,
@@ -27,7 +28,8 @@ class GoogleMapsSearchResponse200:
     Attributes:
         output (GoogleMapsSearchResponse200Output):
         charge_info (GoogleMapsSearchResponse200ChargeInfoType0 | GoogleMapsSearchResponse200ChargeInfoType1 |
-            GoogleMapsSearchResponse200ChargeInfoType2 | GoogleMapsSearchResponse200ChargeInfoType3):
+            GoogleMapsSearchResponse200ChargeInfoType2 | GoogleMapsSearchResponse200ChargeInfoType3 |
+            GoogleMapsSearchResponse200ChargeInfoType4):
         warnings (list[GoogleMapsSearchResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields
             in request
     """
@@ -38,6 +40,7 @@ class GoogleMapsSearchResponse200:
         | GoogleMapsSearchResponse200ChargeInfoType1
         | GoogleMapsSearchResponse200ChargeInfoType2
         | GoogleMapsSearchResponse200ChargeInfoType3
+        | GoogleMapsSearchResponse200ChargeInfoType4
     )
     warnings: list[GoogleMapsSearchResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -51,6 +54,9 @@ class GoogleMapsSearchResponse200:
         from ..models.google_maps_search_response_200_charge_info_type_2 import (
             GoogleMapsSearchResponse200ChargeInfoType2,
         )
+        from ..models.google_maps_search_response_200_charge_info_type_3 import (
+            GoogleMapsSearchResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -60,6 +66,8 @@ class GoogleMapsSearchResponse200:
         elif isinstance(self.charge_info, GoogleMapsSearchResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, GoogleMapsSearchResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, GoogleMapsSearchResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -103,6 +111,9 @@ class GoogleMapsSearchResponse200:
         from ..models.google_maps_search_response_200_charge_info_type_3 import (
             GoogleMapsSearchResponse200ChargeInfoType3,
         )
+        from ..models.google_maps_search_response_200_charge_info_type_4 import (
+            GoogleMapsSearchResponse200ChargeInfoType4,
+        )
         from ..models.google_maps_search_response_200_output import GoogleMapsSearchResponse200Output
         from ..models.google_maps_search_response_200_warnings_type_0_item import (
             GoogleMapsSearchResponse200WarningsType0Item,
@@ -118,6 +129,7 @@ class GoogleMapsSearchResponse200:
             | GoogleMapsSearchResponse200ChargeInfoType1
             | GoogleMapsSearchResponse200ChargeInfoType2
             | GoogleMapsSearchResponse200ChargeInfoType3
+            | GoogleMapsSearchResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -143,11 +155,19 @@ class GoogleMapsSearchResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = GoogleMapsSearchResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = GoogleMapsSearchResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = GoogleMapsSearchResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

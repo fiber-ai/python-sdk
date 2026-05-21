@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.tiktok_popular_songs_response_200_charge_info_type_3 import (
         TiktokPopularSongsResponse200ChargeInfoType3,
     )
+    from ..models.tiktok_popular_songs_response_200_charge_info_type_4 import (
+        TiktokPopularSongsResponse200ChargeInfoType4,
+    )
     from ..models.tiktok_popular_songs_response_200_output import TiktokPopularSongsResponse200Output
     from ..models.tiktok_popular_songs_response_200_warnings_type_0_item import (
         TiktokPopularSongsResponse200WarningsType0Item,
@@ -35,7 +38,8 @@ class TiktokPopularSongsResponse200:
     Attributes:
         output (TiktokPopularSongsResponse200Output):
         charge_info (TiktokPopularSongsResponse200ChargeInfoType0 | TiktokPopularSongsResponse200ChargeInfoType1 |
-            TiktokPopularSongsResponse200ChargeInfoType2 | TiktokPopularSongsResponse200ChargeInfoType3):
+            TiktokPopularSongsResponse200ChargeInfoType2 | TiktokPopularSongsResponse200ChargeInfoType3 |
+            TiktokPopularSongsResponse200ChargeInfoType4):
         warnings (list[TiktokPopularSongsResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields
             in request
     """
@@ -46,6 +50,7 @@ class TiktokPopularSongsResponse200:
         | TiktokPopularSongsResponse200ChargeInfoType1
         | TiktokPopularSongsResponse200ChargeInfoType2
         | TiktokPopularSongsResponse200ChargeInfoType3
+        | TiktokPopularSongsResponse200ChargeInfoType4
     )
     warnings: list[TiktokPopularSongsResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -59,6 +64,9 @@ class TiktokPopularSongsResponse200:
         from ..models.tiktok_popular_songs_response_200_charge_info_type_2 import (
             TiktokPopularSongsResponse200ChargeInfoType2,
         )
+        from ..models.tiktok_popular_songs_response_200_charge_info_type_3 import (
+            TiktokPopularSongsResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -68,6 +76,8 @@ class TiktokPopularSongsResponse200:
         elif isinstance(self.charge_info, TiktokPopularSongsResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, TiktokPopularSongsResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, TiktokPopularSongsResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -111,6 +121,9 @@ class TiktokPopularSongsResponse200:
         from ..models.tiktok_popular_songs_response_200_charge_info_type_3 import (
             TiktokPopularSongsResponse200ChargeInfoType3,
         )
+        from ..models.tiktok_popular_songs_response_200_charge_info_type_4 import (
+            TiktokPopularSongsResponse200ChargeInfoType4,
+        )
         from ..models.tiktok_popular_songs_response_200_output import TiktokPopularSongsResponse200Output
         from ..models.tiktok_popular_songs_response_200_warnings_type_0_item import (
             TiktokPopularSongsResponse200WarningsType0Item,
@@ -126,6 +139,7 @@ class TiktokPopularSongsResponse200:
             | TiktokPopularSongsResponse200ChargeInfoType1
             | TiktokPopularSongsResponse200ChargeInfoType2
             | TiktokPopularSongsResponse200ChargeInfoType3
+            | TiktokPopularSongsResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -151,11 +165,19 @@ class TiktokPopularSongsResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = TiktokPopularSongsResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = TiktokPopularSongsResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = TiktokPopularSongsResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

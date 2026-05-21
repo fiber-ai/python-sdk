@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.validate_phone_number_response_200_charge_info_type_3 import (
         ValidatePhoneNumberResponse200ChargeInfoType3,
     )
+    from ..models.validate_phone_number_response_200_charge_info_type_4 import (
+        ValidatePhoneNumberResponse200ChargeInfoType4,
+    )
     from ..models.validate_phone_number_response_200_output import ValidatePhoneNumberResponse200Output
     from ..models.validate_phone_number_response_200_warnings_type_0_item import (
         ValidatePhoneNumberResponse200WarningsType0Item,
@@ -35,7 +38,8 @@ class ValidatePhoneNumberResponse200:
     Attributes:
         output (ValidatePhoneNumberResponse200Output):
         charge_info (ValidatePhoneNumberResponse200ChargeInfoType0 | ValidatePhoneNumberResponse200ChargeInfoType1 |
-            ValidatePhoneNumberResponse200ChargeInfoType2 | ValidatePhoneNumberResponse200ChargeInfoType3):
+            ValidatePhoneNumberResponse200ChargeInfoType2 | ValidatePhoneNumberResponse200ChargeInfoType3 |
+            ValidatePhoneNumberResponse200ChargeInfoType4):
         warnings (list[ValidatePhoneNumberResponse200WarningsType0Item] | None | Unset): Warnings about extraneous
             fields in request
     """
@@ -46,6 +50,7 @@ class ValidatePhoneNumberResponse200:
         | ValidatePhoneNumberResponse200ChargeInfoType1
         | ValidatePhoneNumberResponse200ChargeInfoType2
         | ValidatePhoneNumberResponse200ChargeInfoType3
+        | ValidatePhoneNumberResponse200ChargeInfoType4
     )
     warnings: list[ValidatePhoneNumberResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -59,6 +64,9 @@ class ValidatePhoneNumberResponse200:
         from ..models.validate_phone_number_response_200_charge_info_type_2 import (
             ValidatePhoneNumberResponse200ChargeInfoType2,
         )
+        from ..models.validate_phone_number_response_200_charge_info_type_3 import (
+            ValidatePhoneNumberResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -68,6 +76,8 @@ class ValidatePhoneNumberResponse200:
         elif isinstance(self.charge_info, ValidatePhoneNumberResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, ValidatePhoneNumberResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, ValidatePhoneNumberResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -111,6 +121,9 @@ class ValidatePhoneNumberResponse200:
         from ..models.validate_phone_number_response_200_charge_info_type_3 import (
             ValidatePhoneNumberResponse200ChargeInfoType3,
         )
+        from ..models.validate_phone_number_response_200_charge_info_type_4 import (
+            ValidatePhoneNumberResponse200ChargeInfoType4,
+        )
         from ..models.validate_phone_number_response_200_output import ValidatePhoneNumberResponse200Output
         from ..models.validate_phone_number_response_200_warnings_type_0_item import (
             ValidatePhoneNumberResponse200WarningsType0Item,
@@ -126,6 +139,7 @@ class ValidatePhoneNumberResponse200:
             | ValidatePhoneNumberResponse200ChargeInfoType1
             | ValidatePhoneNumberResponse200ChargeInfoType2
             | ValidatePhoneNumberResponse200ChargeInfoType3
+            | ValidatePhoneNumberResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -151,11 +165,19 @@ class ValidatePhoneNumberResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = ValidatePhoneNumberResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = ValidatePhoneNumberResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = ValidatePhoneNumberResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

@@ -12,8 +12,20 @@ if TYPE_CHECKING:
     from ..models.company_search_body_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_0 import (
         CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0,
     )
+    from ..models.company_search_body_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_1 import (
+        CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1,
+    )
+    from ..models.company_search_body_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_2 import (
+        CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType2,
+    )
     from ..models.company_search_body_search_params_headquarters_location_type_0_union_all_type_0_item_type_0 import (
         CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0,
+    )
+    from ..models.company_search_body_search_params_headquarters_location_type_0_union_all_type_0_item_type_1 import (
+        CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType1,
+    )
+    from ..models.company_search_body_search_params_headquarters_location_type_0_union_all_type_0_item_type_2 import (
+        CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType2,
     )
 
 
@@ -24,14 +36,31 @@ T = TypeVar("T", bound="CompanySearchBodySearchParamsHeadquartersLocationType0")
 class CompanySearchBodySearchParamsHeadquartersLocationType0:
     """
     Attributes:
-        union_all (list[CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0] | None | Unset):
-        subtract_all (list[CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0] | None |
-            Unset):
+        union_all (list[CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0 |
+            CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType1 |
+            CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType2] | None | Unset):
+        subtract_all (list[CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0 |
+            CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1 |
+            CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType2] | None | Unset):
     """
 
-    union_all: list[CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0] | None | Unset = UNSET
+    union_all: (
+        list[
+            CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0
+            | CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType1
+            | CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType2
+        ]
+        | None
+        | Unset
+    ) = UNSET
     subtract_all: (
-        list[CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0] | None | Unset
+        list[
+            CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0
+            | CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1
+            | CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType2
+        ]
+        | None
+        | Unset
     ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -39,8 +68,14 @@ class CompanySearchBodySearchParamsHeadquartersLocationType0:
         from ..models.company_search_body_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_0 import (
             CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0,
         )
+        from ..models.company_search_body_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_1 import (
+            CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1,
+        )
         from ..models.company_search_body_search_params_headquarters_location_type_0_union_all_type_0_item_type_0 import (
             CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0,
+        )
+        from ..models.company_search_body_search_params_headquarters_location_type_0_union_all_type_0_item_type_1 import (
+            CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType1,
         )
 
         union_all: list[dict[str, Any]] | None | Unset
@@ -54,6 +89,13 @@ class CompanySearchBodySearchParamsHeadquartersLocationType0:
                     union_all_type_0_item_data,
                     CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0,
                 ):
+                    union_all_type_0_item = union_all_type_0_item_data.to_dict()
+                elif isinstance(
+                    union_all_type_0_item_data,
+                    CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType1,
+                ):
+                    union_all_type_0_item = union_all_type_0_item_data.to_dict()
+                else:
                     union_all_type_0_item = union_all_type_0_item_data.to_dict()
 
                 union_all.append(union_all_type_0_item)
@@ -72,6 +114,13 @@ class CompanySearchBodySearchParamsHeadquartersLocationType0:
                     subtract_all_type_0_item_data,
                     CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0,
                 ):
+                    subtract_all_type_0_item = subtract_all_type_0_item_data.to_dict()
+                elif isinstance(
+                    subtract_all_type_0_item_data,
+                    CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1,
+                ):
+                    subtract_all_type_0_item = subtract_all_type_0_item_data.to_dict()
+                else:
                     subtract_all_type_0_item = subtract_all_type_0_item_data.to_dict()
 
                 subtract_all.append(subtract_all_type_0_item)
@@ -94,15 +143,35 @@ class CompanySearchBodySearchParamsHeadquartersLocationType0:
         from ..models.company_search_body_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_0 import (
             CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0,
         )
+        from ..models.company_search_body_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_1 import (
+            CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1,
+        )
+        from ..models.company_search_body_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_2 import (
+            CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType2,
+        )
         from ..models.company_search_body_search_params_headquarters_location_type_0_union_all_type_0_item_type_0 import (
             CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0,
+        )
+        from ..models.company_search_body_search_params_headquarters_location_type_0_union_all_type_0_item_type_1 import (
+            CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType1,
+        )
+        from ..models.company_search_body_search_params_headquarters_location_type_0_union_all_type_0_item_type_2 import (
+            CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType2,
         )
 
         d = dict(src_dict)
 
         def _parse_union_all(
             data: object,
-        ) -> list[CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0] | None | Unset:
+        ) -> (
+            list[
+                CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0
+                | CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType1
+                | CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType2
+            ]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -116,14 +185,42 @@ class CompanySearchBodySearchParamsHeadquartersLocationType0:
 
                     def _parse_union_all_type_0_item(
                         data: object,
-                    ) -> CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0:
+                    ) -> (
+                        CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0
+                        | CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType1
+                        | CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType2
+                    ):
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            union_all_type_0_item_type_0 = (
+                                CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0.from_dict(
+                                    data
+                                )
+                            )
+
+                            return union_all_type_0_item_type_0
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            union_all_type_0_item_type_1 = (
+                                CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType1.from_dict(
+                                    data
+                                )
+                            )
+
+                            return union_all_type_0_item_type_1
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        union_all_type_0_item_type_0 = (
-                            CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0.from_dict(data)
+                        union_all_type_0_item_type_2 = (
+                            CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType2.from_dict(data)
                         )
 
-                        return union_all_type_0_item_type_0
+                        return union_all_type_0_item_type_2
 
                     union_all_type_0_item = _parse_union_all_type_0_item(union_all_type_0_item_data)
 
@@ -133,14 +230,29 @@ class CompanySearchBodySearchParamsHeadquartersLocationType0:
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             return cast(
-                list[CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0] | None | Unset, data
+                list[
+                    CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType0
+                    | CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType1
+                    | CompanySearchBodySearchParamsHeadquartersLocationType0UnionAllType0ItemType2
+                ]
+                | None
+                | Unset,
+                data,
             )
 
         union_all = _parse_union_all(d.pop("unionAll", UNSET))
 
         def _parse_subtract_all(
             data: object,
-        ) -> list[CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0] | None | Unset:
+        ) -> (
+            list[
+                CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0
+                | CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1
+                | CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType2
+            ]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -154,16 +266,40 @@ class CompanySearchBodySearchParamsHeadquartersLocationType0:
 
                     def _parse_subtract_all_type_0_item(
                         data: object,
-                    ) -> CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0:
+                    ) -> (
+                        CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0
+                        | CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1
+                        | CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType2
+                    ):
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            subtract_all_type_0_item_type_0 = CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0.from_dict(
+                                data
+                            )
+
+                            return subtract_all_type_0_item_type_0
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            subtract_all_type_0_item_type_1 = CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1.from_dict(
+                                data
+                            )
+
+                            return subtract_all_type_0_item_type_1
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        subtract_all_type_0_item_type_0 = (
-                            CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0.from_dict(
+                        subtract_all_type_0_item_type_2 = (
+                            CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType2.from_dict(
                                 data
                             )
                         )
 
-                        return subtract_all_type_0_item_type_0
+                        return subtract_all_type_0_item_type_2
 
                     subtract_all_type_0_item = _parse_subtract_all_type_0_item(subtract_all_type_0_item_data)
 
@@ -173,7 +309,13 @@ class CompanySearchBodySearchParamsHeadquartersLocationType0:
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             return cast(
-                list[CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0] | None | Unset,
+                list[
+                    CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0
+                    | CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1
+                    | CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType2
+                ]
+                | None
+                | Unset,
                 data,
             )
 

@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from ..models.profile_live_enrich_response_200_charge_info_type_1 import ProfileLiveEnrichResponse200ChargeInfoType1
     from ..models.profile_live_enrich_response_200_charge_info_type_2 import ProfileLiveEnrichResponse200ChargeInfoType2
     from ..models.profile_live_enrich_response_200_charge_info_type_3 import ProfileLiveEnrichResponse200ChargeInfoType3
+    from ..models.profile_live_enrich_response_200_charge_info_type_4 import ProfileLiveEnrichResponse200ChargeInfoType4
     from ..models.profile_live_enrich_response_200_profile_found_and_enriched import (
         ProfileLiveEnrichResponse200ProfileFoundAndEnriched,
     )
@@ -30,7 +31,8 @@ class ProfileLiveEnrichResponse200:
     Attributes:
         output (ProfileLiveEnrichResponse200ProfileFoundAndEnriched | ProfileLiveEnrichResponse200ProfileNotFound):
         charge_info (ProfileLiveEnrichResponse200ChargeInfoType0 | ProfileLiveEnrichResponse200ChargeInfoType1 |
-            ProfileLiveEnrichResponse200ChargeInfoType2 | ProfileLiveEnrichResponse200ChargeInfoType3):
+            ProfileLiveEnrichResponse200ChargeInfoType2 | ProfileLiveEnrichResponse200ChargeInfoType3 |
+            ProfileLiveEnrichResponse200ChargeInfoType4):
         warnings (list[ProfileLiveEnrichResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields
             in request
     """
@@ -41,6 +43,7 @@ class ProfileLiveEnrichResponse200:
         | ProfileLiveEnrichResponse200ChargeInfoType1
         | ProfileLiveEnrichResponse200ChargeInfoType2
         | ProfileLiveEnrichResponse200ChargeInfoType3
+        | ProfileLiveEnrichResponse200ChargeInfoType4
     )
     warnings: list[ProfileLiveEnrichResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -53,6 +56,9 @@ class ProfileLiveEnrichResponse200:
         )
         from ..models.profile_live_enrich_response_200_charge_info_type_2 import (
             ProfileLiveEnrichResponse200ChargeInfoType2,
+        )
+        from ..models.profile_live_enrich_response_200_charge_info_type_3 import (
+            ProfileLiveEnrichResponse200ChargeInfoType3,
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched import (
             ProfileLiveEnrichResponse200ProfileFoundAndEnriched,
@@ -70,6 +76,8 @@ class ProfileLiveEnrichResponse200:
         elif isinstance(self.charge_info, ProfileLiveEnrichResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, ProfileLiveEnrichResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, ProfileLiveEnrichResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -113,6 +121,9 @@ class ProfileLiveEnrichResponse200:
         from ..models.profile_live_enrich_response_200_charge_info_type_3 import (
             ProfileLiveEnrichResponse200ChargeInfoType3,
         )
+        from ..models.profile_live_enrich_response_200_charge_info_type_4 import (
+            ProfileLiveEnrichResponse200ChargeInfoType4,
+        )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched import (
             ProfileLiveEnrichResponse200ProfileFoundAndEnriched,
         )
@@ -151,6 +162,7 @@ class ProfileLiveEnrichResponse200:
             | ProfileLiveEnrichResponse200ChargeInfoType1
             | ProfileLiveEnrichResponse200ChargeInfoType2
             | ProfileLiveEnrichResponse200ChargeInfoType3
+            | ProfileLiveEnrichResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -176,11 +188,19 @@ class ProfileLiveEnrichResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = ProfileLiveEnrichResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = ProfileLiveEnrichResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = ProfileLiveEnrichResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

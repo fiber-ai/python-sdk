@@ -12,8 +12,20 @@ if TYPE_CHECKING:
     from ..models.combined_search_count_body_profile_params_location_type_0_subtract_all_type_0_item_type_0 import (
         CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0,
     )
+    from ..models.combined_search_count_body_profile_params_location_type_0_subtract_all_type_0_item_type_1 import (
+        CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType1,
+    )
+    from ..models.combined_search_count_body_profile_params_location_type_0_subtract_all_type_0_item_type_2 import (
+        CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2,
+    )
     from ..models.combined_search_count_body_profile_params_location_type_0_union_all_type_0_item_type_0 import (
         CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0,
+    )
+    from ..models.combined_search_count_body_profile_params_location_type_0_union_all_type_0_item_type_1 import (
+        CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType1,
+    )
+    from ..models.combined_search_count_body_profile_params_location_type_0_union_all_type_0_item_type_2 import (
+        CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType2,
     )
 
 
@@ -24,22 +36,46 @@ T = TypeVar("T", bound="CombinedSearchCountBodyProfileParamsLocationType0")
 class CombinedSearchCountBodyProfileParamsLocationType0:
     """
     Attributes:
-        union_all (list[CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0] | None | Unset):
-        subtract_all (list[CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0] | None | Unset):
+        union_all (list[CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0 |
+            CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType1 |
+            CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType2] | None | Unset):
+        subtract_all (list[CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0 |
+            CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType1 |
+            CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2] | None | Unset):
     """
 
-    union_all: list[CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0] | None | Unset = UNSET
-    subtract_all: list[CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0] | None | Unset = (
-        UNSET
-    )
+    union_all: (
+        list[
+            CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0
+            | CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType1
+            | CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType2
+        ]
+        | None
+        | Unset
+    ) = UNSET
+    subtract_all: (
+        list[
+            CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0
+            | CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType1
+            | CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2
+        ]
+        | None
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_location_type_0_subtract_all_type_0_item_type_0 import (
             CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0,
         )
+        from ..models.combined_search_count_body_profile_params_location_type_0_subtract_all_type_0_item_type_1 import (
+            CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType1,
+        )
         from ..models.combined_search_count_body_profile_params_location_type_0_union_all_type_0_item_type_0 import (
             CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0,
+        )
+        from ..models.combined_search_count_body_profile_params_location_type_0_union_all_type_0_item_type_1 import (
+            CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType1,
         )
 
         union_all: list[dict[str, Any]] | None | Unset
@@ -52,6 +88,12 @@ class CombinedSearchCountBodyProfileParamsLocationType0:
                 if isinstance(
                     union_all_type_0_item_data, CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0
                 ):
+                    union_all_type_0_item = union_all_type_0_item_data.to_dict()
+                elif isinstance(
+                    union_all_type_0_item_data, CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType1
+                ):
+                    union_all_type_0_item = union_all_type_0_item_data.to_dict()
+                else:
                     union_all_type_0_item = union_all_type_0_item_data.to_dict()
 
                 union_all.append(union_all_type_0_item)
@@ -70,6 +112,13 @@ class CombinedSearchCountBodyProfileParamsLocationType0:
                     subtract_all_type_0_item_data,
                     CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0,
                 ):
+                    subtract_all_type_0_item = subtract_all_type_0_item_data.to_dict()
+                elif isinstance(
+                    subtract_all_type_0_item_data,
+                    CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType1,
+                ):
+                    subtract_all_type_0_item = subtract_all_type_0_item_data.to_dict()
+                else:
                     subtract_all_type_0_item = subtract_all_type_0_item_data.to_dict()
 
                 subtract_all.append(subtract_all_type_0_item)
@@ -92,15 +141,35 @@ class CombinedSearchCountBodyProfileParamsLocationType0:
         from ..models.combined_search_count_body_profile_params_location_type_0_subtract_all_type_0_item_type_0 import (
             CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0,
         )
+        from ..models.combined_search_count_body_profile_params_location_type_0_subtract_all_type_0_item_type_1 import (
+            CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType1,
+        )
+        from ..models.combined_search_count_body_profile_params_location_type_0_subtract_all_type_0_item_type_2 import (
+            CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2,
+        )
         from ..models.combined_search_count_body_profile_params_location_type_0_union_all_type_0_item_type_0 import (
             CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0,
+        )
+        from ..models.combined_search_count_body_profile_params_location_type_0_union_all_type_0_item_type_1 import (
+            CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType1,
+        )
+        from ..models.combined_search_count_body_profile_params_location_type_0_union_all_type_0_item_type_2 import (
+            CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType2,
         )
 
         d = dict(src_dict)
 
         def _parse_union_all(
             data: object,
-        ) -> list[CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0] | None | Unset:
+        ) -> (
+            list[
+                CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0
+                | CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType1
+                | CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType2
+            ]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -114,14 +183,38 @@ class CombinedSearchCountBodyProfileParamsLocationType0:
 
                     def _parse_union_all_type_0_item(
                         data: object,
-                    ) -> CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0:
+                    ) -> (
+                        CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0
+                        | CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType1
+                        | CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType2
+                    ):
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            union_all_type_0_item_type_0 = (
+                                CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0.from_dict(data)
+                            )
+
+                            return union_all_type_0_item_type_0
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            union_all_type_0_item_type_1 = (
+                                CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType1.from_dict(data)
+                            )
+
+                            return union_all_type_0_item_type_1
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        union_all_type_0_item_type_0 = (
-                            CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0.from_dict(data)
+                        union_all_type_0_item_type_2 = (
+                            CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType2.from_dict(data)
                         )
 
-                        return union_all_type_0_item_type_0
+                        return union_all_type_0_item_type_2
 
                     union_all_type_0_item = _parse_union_all_type_0_item(union_all_type_0_item_data)
 
@@ -131,14 +224,29 @@ class CombinedSearchCountBodyProfileParamsLocationType0:
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             return cast(
-                list[CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0] | None | Unset, data
+                list[
+                    CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType0
+                    | CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType1
+                    | CombinedSearchCountBodyProfileParamsLocationType0UnionAllType0ItemType2
+                ]
+                | None
+                | Unset,
+                data,
             )
 
         union_all = _parse_union_all(d.pop("unionAll", UNSET))
 
         def _parse_subtract_all(
             data: object,
-        ) -> list[CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0] | None | Unset:
+        ) -> (
+            list[
+                CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0
+                | CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType1
+                | CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2
+            ]
+            | None
+            | Unset
+        ):
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -152,14 +260,42 @@ class CombinedSearchCountBodyProfileParamsLocationType0:
 
                     def _parse_subtract_all_type_0_item(
                         data: object,
-                    ) -> CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0:
+                    ) -> (
+                        CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0
+                        | CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType1
+                        | CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2
+                    ):
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            subtract_all_type_0_item_type_0 = (
+                                CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0.from_dict(
+                                    data
+                                )
+                            )
+
+                            return subtract_all_type_0_item_type_0
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            subtract_all_type_0_item_type_1 = (
+                                CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType1.from_dict(
+                                    data
+                                )
+                            )
+
+                            return subtract_all_type_0_item_type_1
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        subtract_all_type_0_item_type_0 = (
-                            CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0.from_dict(data)
+                        subtract_all_type_0_item_type_2 = (
+                            CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2.from_dict(data)
                         )
 
-                        return subtract_all_type_0_item_type_0
+                        return subtract_all_type_0_item_type_2
 
                     subtract_all_type_0_item = _parse_subtract_all_type_0_item(subtract_all_type_0_item_data)
 
@@ -169,7 +305,14 @@ class CombinedSearchCountBodyProfileParamsLocationType0:
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             return cast(
-                list[CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0] | None | Unset, data
+                list[
+                    CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType0
+                    | CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType1
+                    | CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2
+                ]
+                | None
+                | Unset,
+                data,
             )
 
         subtract_all = _parse_subtract_all(d.pop("subtractAll", UNSET))

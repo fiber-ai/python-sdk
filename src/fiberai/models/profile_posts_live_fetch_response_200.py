@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.profile_posts_live_fetch_response_200_charge_info_type_3 import (
         ProfilePostsLiveFetchResponse200ChargeInfoType3,
     )
+    from ..models.profile_posts_live_fetch_response_200_charge_info_type_4 import (
+        ProfilePostsLiveFetchResponse200ChargeInfoType4,
+    )
     from ..models.profile_posts_live_fetch_response_200_output import ProfilePostsLiveFetchResponse200Output
     from ..models.profile_posts_live_fetch_response_200_warnings_type_0_item import (
         ProfilePostsLiveFetchResponse200WarningsType0Item,
@@ -35,7 +38,8 @@ class ProfilePostsLiveFetchResponse200:
     Attributes:
         output (ProfilePostsLiveFetchResponse200Output):
         charge_info (ProfilePostsLiveFetchResponse200ChargeInfoType0 | ProfilePostsLiveFetchResponse200ChargeInfoType1 |
-            ProfilePostsLiveFetchResponse200ChargeInfoType2 | ProfilePostsLiveFetchResponse200ChargeInfoType3):
+            ProfilePostsLiveFetchResponse200ChargeInfoType2 | ProfilePostsLiveFetchResponse200ChargeInfoType3 |
+            ProfilePostsLiveFetchResponse200ChargeInfoType4):
         warnings (list[ProfilePostsLiveFetchResponse200WarningsType0Item] | None | Unset): Warnings about extraneous
             fields in request
     """
@@ -46,6 +50,7 @@ class ProfilePostsLiveFetchResponse200:
         | ProfilePostsLiveFetchResponse200ChargeInfoType1
         | ProfilePostsLiveFetchResponse200ChargeInfoType2
         | ProfilePostsLiveFetchResponse200ChargeInfoType3
+        | ProfilePostsLiveFetchResponse200ChargeInfoType4
     )
     warnings: list[ProfilePostsLiveFetchResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -59,6 +64,9 @@ class ProfilePostsLiveFetchResponse200:
         from ..models.profile_posts_live_fetch_response_200_charge_info_type_2 import (
             ProfilePostsLiveFetchResponse200ChargeInfoType2,
         )
+        from ..models.profile_posts_live_fetch_response_200_charge_info_type_3 import (
+            ProfilePostsLiveFetchResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -68,6 +76,8 @@ class ProfilePostsLiveFetchResponse200:
         elif isinstance(self.charge_info, ProfilePostsLiveFetchResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, ProfilePostsLiveFetchResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, ProfilePostsLiveFetchResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -111,6 +121,9 @@ class ProfilePostsLiveFetchResponse200:
         from ..models.profile_posts_live_fetch_response_200_charge_info_type_3 import (
             ProfilePostsLiveFetchResponse200ChargeInfoType3,
         )
+        from ..models.profile_posts_live_fetch_response_200_charge_info_type_4 import (
+            ProfilePostsLiveFetchResponse200ChargeInfoType4,
+        )
         from ..models.profile_posts_live_fetch_response_200_output import ProfilePostsLiveFetchResponse200Output
         from ..models.profile_posts_live_fetch_response_200_warnings_type_0_item import (
             ProfilePostsLiveFetchResponse200WarningsType0Item,
@@ -126,6 +139,7 @@ class ProfilePostsLiveFetchResponse200:
             | ProfilePostsLiveFetchResponse200ChargeInfoType1
             | ProfilePostsLiveFetchResponse200ChargeInfoType2
             | ProfilePostsLiveFetchResponse200ChargeInfoType3
+            | ProfilePostsLiveFetchResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -151,11 +165,19 @@ class ProfilePostsLiveFetchResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = ProfilePostsLiveFetchResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = ProfilePostsLiveFetchResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = ProfilePostsLiveFetchResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

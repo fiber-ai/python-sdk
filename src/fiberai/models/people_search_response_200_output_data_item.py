@@ -60,6 +60,9 @@ if TYPE_CHECKING:
     from ..models.people_search_response_200_output_data_item_tenures_type_0_item import (
         PeopleSearchResponse200OutputDataItemTenuresType0Item,
     )
+    from ..models.people_search_response_200_output_data_item_verifications_type_0 import (
+        PeopleSearchResponse200OutputDataItemVerificationsType0,
+    )
     from ..models.people_search_response_200_output_data_item_volunteering_type_0_item import (
         PeopleSearchResponse200OutputDataItemVolunteeringType0Item,
     )
@@ -111,6 +114,7 @@ class PeopleSearchResponse200OutputDataItem:
         is_hiring (bool | None | Unset):
         websites (list[str] | None | Unset):
         is_verified (bool | None | Unset):
+        verifications (None | PeopleSearchResponse200OutputDataItemVerificationsType0 | Unset):
         current_job (None | PeopleSearchResponse200OutputDataItemCurrentJobType0 | Unset):
         custom_data (None | PeopleSearchResponse200OutputDataItemCustomDataType0 | Unset):
         relevance_score (float | None | Unset):
@@ -160,6 +164,7 @@ class PeopleSearchResponse200OutputDataItem:
     is_hiring: bool | None | Unset = UNSET
     websites: list[str] | None | Unset = UNSET
     is_verified: bool | None | Unset = UNSET
+    verifications: None | PeopleSearchResponse200OutputDataItemVerificationsType0 | Unset = UNSET
     current_job: None | PeopleSearchResponse200OutputDataItemCurrentJobType0 | Unset = UNSET
     custom_data: None | PeopleSearchResponse200OutputDataItemCustomDataType0 | Unset = UNSET
     relevance_score: float | None | Unset = UNSET
@@ -180,6 +185,9 @@ class PeopleSearchResponse200OutputDataItem:
         )
         from ..models.people_search_response_200_output_data_item_inferred_location_type_0 import (
             PeopleSearchResponse200OutputDataItemInferredLocationType0,
+        )
+        from ..models.people_search_response_200_output_data_item_verifications_type_0 import (
+            PeopleSearchResponse200OutputDataItemVerificationsType0,
         )
 
         primary_slug = self.primary_slug
@@ -501,6 +509,14 @@ class PeopleSearchResponse200OutputDataItem:
         else:
             is_verified = self.is_verified
 
+        verifications: dict[str, Any] | None | Unset
+        if isinstance(self.verifications, Unset):
+            verifications = UNSET
+        elif isinstance(self.verifications, PeopleSearchResponse200OutputDataItemVerificationsType0):
+            verifications = self.verifications.to_dict()
+        else:
+            verifications = self.verifications
+
         current_job: dict[str, Any] | None | Unset
         if isinstance(self.current_job, Unset):
             current_job = UNSET
@@ -648,6 +664,8 @@ class PeopleSearchResponse200OutputDataItem:
             field_dict["websites"] = websites
         if is_verified is not UNSET:
             field_dict["is_verified"] = is_verified
+        if verifications is not UNSET:
+            field_dict["verifications"] = verifications
         if current_job is not UNSET:
             field_dict["current_job"] = current_job
         if custom_data is not UNSET:
@@ -714,6 +732,9 @@ class PeopleSearchResponse200OutputDataItem:
         )
         from ..models.people_search_response_200_output_data_item_tenures_type_0_item import (
             PeopleSearchResponse200OutputDataItemTenuresType0Item,
+        )
+        from ..models.people_search_response_200_output_data_item_verifications_type_0 import (
+            PeopleSearchResponse200OutputDataItemVerificationsType0,
         )
         from ..models.people_search_response_200_output_data_item_volunteering_type_0_item import (
             PeopleSearchResponse200OutputDataItemVolunteeringType0Item,
@@ -1308,6 +1329,25 @@ class PeopleSearchResponse200OutputDataItem:
 
         is_verified = _parse_is_verified(d.pop("is_verified", UNSET))
 
+        def _parse_verifications(
+            data: object,
+        ) -> None | PeopleSearchResponse200OutputDataItemVerificationsType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                verifications_type_0 = PeopleSearchResponse200OutputDataItemVerificationsType0.from_dict(data)
+
+                return verifications_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | PeopleSearchResponse200OutputDataItemVerificationsType0 | Unset, data)
+
+        verifications = _parse_verifications(d.pop("verifications", UNSET))
+
         def _parse_current_job(data: object) -> None | PeopleSearchResponse200OutputDataItemCurrentJobType0 | Unset:
             if data is None:
                 return data
@@ -1484,6 +1524,7 @@ class PeopleSearchResponse200OutputDataItem:
             is_hiring=is_hiring,
             websites=websites,
             is_verified=is_verified,
+            verifications=verifications,
             current_job=current_job,
             custom_data=custom_data,
             relevance_score=relevance_score,

@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from ..models.job_title_rewrite_response_200_charge_info_type_1 import JobTitleRewriteResponse200ChargeInfoType1
     from ..models.job_title_rewrite_response_200_charge_info_type_2 import JobTitleRewriteResponse200ChargeInfoType2
     from ..models.job_title_rewrite_response_200_charge_info_type_3 import JobTitleRewriteResponse200ChargeInfoType3
+    from ..models.job_title_rewrite_response_200_charge_info_type_4 import JobTitleRewriteResponse200ChargeInfoType4
     from ..models.job_title_rewrite_response_200_output import JobTitleRewriteResponse200Output
     from ..models.job_title_rewrite_response_200_warnings_type_0_item import JobTitleRewriteResponse200WarningsType0Item
 
@@ -25,7 +26,8 @@ class JobTitleRewriteResponse200:
     Attributes:
         output (JobTitleRewriteResponse200Output):
         charge_info (JobTitleRewriteResponse200ChargeInfoType0 | JobTitleRewriteResponse200ChargeInfoType1 |
-            JobTitleRewriteResponse200ChargeInfoType2 | JobTitleRewriteResponse200ChargeInfoType3):
+            JobTitleRewriteResponse200ChargeInfoType2 | JobTitleRewriteResponse200ChargeInfoType3 |
+            JobTitleRewriteResponse200ChargeInfoType4):
         warnings (list[JobTitleRewriteResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields in
             request
     """
@@ -36,6 +38,7 @@ class JobTitleRewriteResponse200:
         | JobTitleRewriteResponse200ChargeInfoType1
         | JobTitleRewriteResponse200ChargeInfoType2
         | JobTitleRewriteResponse200ChargeInfoType3
+        | JobTitleRewriteResponse200ChargeInfoType4
     )
     warnings: list[JobTitleRewriteResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -43,6 +46,7 @@ class JobTitleRewriteResponse200:
         from ..models.job_title_rewrite_response_200_charge_info_type_0 import JobTitleRewriteResponse200ChargeInfoType0
         from ..models.job_title_rewrite_response_200_charge_info_type_1 import JobTitleRewriteResponse200ChargeInfoType1
         from ..models.job_title_rewrite_response_200_charge_info_type_2 import JobTitleRewriteResponse200ChargeInfoType2
+        from ..models.job_title_rewrite_response_200_charge_info_type_3 import JobTitleRewriteResponse200ChargeInfoType3
 
         output = self.output.to_dict()
 
@@ -52,6 +56,8 @@ class JobTitleRewriteResponse200:
         elif isinstance(self.charge_info, JobTitleRewriteResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, JobTitleRewriteResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, JobTitleRewriteResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -87,6 +93,7 @@ class JobTitleRewriteResponse200:
         from ..models.job_title_rewrite_response_200_charge_info_type_1 import JobTitleRewriteResponse200ChargeInfoType1
         from ..models.job_title_rewrite_response_200_charge_info_type_2 import JobTitleRewriteResponse200ChargeInfoType2
         from ..models.job_title_rewrite_response_200_charge_info_type_3 import JobTitleRewriteResponse200ChargeInfoType3
+        from ..models.job_title_rewrite_response_200_charge_info_type_4 import JobTitleRewriteResponse200ChargeInfoType4
         from ..models.job_title_rewrite_response_200_output import JobTitleRewriteResponse200Output
         from ..models.job_title_rewrite_response_200_warnings_type_0_item import (
             JobTitleRewriteResponse200WarningsType0Item,
@@ -102,6 +109,7 @@ class JobTitleRewriteResponse200:
             | JobTitleRewriteResponse200ChargeInfoType1
             | JobTitleRewriteResponse200ChargeInfoType2
             | JobTitleRewriteResponse200ChargeInfoType3
+            | JobTitleRewriteResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -127,11 +135,19 @@ class JobTitleRewriteResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = JobTitleRewriteResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = JobTitleRewriteResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = JobTitleRewriteResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

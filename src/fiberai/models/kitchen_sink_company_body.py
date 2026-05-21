@@ -19,6 +19,7 @@ if TYPE_CHECKING:
     from ..models.kitchen_sink_company_body_company_identifier_type_2 import (
         KitchenSinkCompanyBodyCompanyIdentifierType2,
     )
+    from ..models.kitchen_sink_company_body_company_location_type_0 import KitchenSinkCompanyBodyCompanyLocationType0
     from ..models.kitchen_sink_company_body_company_name_type_0 import KitchenSinkCompanyBodyCompanyNameType0
 
 
@@ -36,6 +37,8 @@ class KitchenSinkCompanyBody:
             If this is provided, you do not need to supply companyName or companyDomain.
         company_name (KitchenSinkCompanyBodyCompanyNameType0 | None | Unset):
         company_domain (KitchenSinkCompanyBodyCompanyDomainType0 | None | Unset):
+        company_location (KitchenSinkCompanyBodyCompanyLocationType0 | None | Unset): Company headquarters location.
+            Helps disambiguate companies with similar names or domains by boosting matches in the specified location.
         num_companies (int | Unset): Maximum number of company results to return. Sorted by best match. Defaults to 1.
             Default: 1.
     """
@@ -50,6 +53,7 @@ class KitchenSinkCompanyBody:
     ) = UNSET
     company_name: KitchenSinkCompanyBodyCompanyNameType0 | None | Unset = UNSET
     company_domain: KitchenSinkCompanyBodyCompanyDomainType0 | None | Unset = UNSET
+    company_location: KitchenSinkCompanyBodyCompanyLocationType0 | None | Unset = UNSET
     num_companies: int | Unset = 1
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -63,6 +67,9 @@ class KitchenSinkCompanyBody:
         )
         from ..models.kitchen_sink_company_body_company_identifier_type_2 import (
             KitchenSinkCompanyBodyCompanyIdentifierType2,
+        )
+        from ..models.kitchen_sink_company_body_company_location_type_0 import (
+            KitchenSinkCompanyBodyCompanyLocationType0,
         )
         from ..models.kitchen_sink_company_body_company_name_type_0 import KitchenSinkCompanyBodyCompanyNameType0
 
@@ -96,6 +103,14 @@ class KitchenSinkCompanyBody:
         else:
             company_domain = self.company_domain
 
+        company_location: dict[str, Any] | None | Unset
+        if isinstance(self.company_location, Unset):
+            company_location = UNSET
+        elif isinstance(self.company_location, KitchenSinkCompanyBodyCompanyLocationType0):
+            company_location = self.company_location.to_dict()
+        else:
+            company_location = self.company_location
+
         num_companies = self.num_companies
 
         field_dict: dict[str, Any] = {}
@@ -111,6 +126,8 @@ class KitchenSinkCompanyBody:
             field_dict["companyName"] = company_name
         if company_domain is not UNSET:
             field_dict["companyDomain"] = company_domain
+        if company_location is not UNSET:
+            field_dict["companyLocation"] = company_location
         if num_companies is not UNSET:
             field_dict["numCompanies"] = num_companies
 
@@ -127,6 +144,9 @@ class KitchenSinkCompanyBody:
         )
         from ..models.kitchen_sink_company_body_company_identifier_type_2 import (
             KitchenSinkCompanyBodyCompanyIdentifierType2,
+        )
+        from ..models.kitchen_sink_company_body_company_location_type_0 import (
+            KitchenSinkCompanyBodyCompanyLocationType0,
         )
         from ..models.kitchen_sink_company_body_company_name_type_0 import KitchenSinkCompanyBodyCompanyNameType0
 
@@ -215,6 +235,23 @@ class KitchenSinkCompanyBody:
 
         company_domain = _parse_company_domain(d.pop("companyDomain", UNSET))
 
+        def _parse_company_location(data: object) -> KitchenSinkCompanyBodyCompanyLocationType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                company_location_type_0 = KitchenSinkCompanyBodyCompanyLocationType0.from_dict(data)
+
+                return company_location_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(KitchenSinkCompanyBodyCompanyLocationType0 | None | Unset, data)
+
+        company_location = _parse_company_location(d.pop("companyLocation", UNSET))
+
         num_companies = d.pop("numCompanies", UNSET)
 
         kitchen_sink_company_body = cls(
@@ -222,6 +259,7 @@ class KitchenSinkCompanyBody:
             company_identifier=company_identifier,
             company_name=company_name,
             company_domain=company_domain,
+            company_location=company_location,
             num_companies=num_companies,
         )
 

@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.update_auto_topup_settings_response_200_charge_info_type_3 import (
         UpdateAutoTopupSettingsResponse200ChargeInfoType3,
     )
+    from ..models.update_auto_topup_settings_response_200_charge_info_type_4 import (
+        UpdateAutoTopupSettingsResponse200ChargeInfoType4,
+    )
     from ..models.update_auto_topup_settings_response_200_output_type_0 import (
         UpdateAutoTopupSettingsResponse200OutputType0,
     )
@@ -41,7 +44,7 @@ class UpdateAutoTopupSettingsResponse200:
         output (UpdateAutoTopupSettingsResponse200OutputType0 | UpdateAutoTopupSettingsResponse200OutputType1):
         charge_info (UpdateAutoTopupSettingsResponse200ChargeInfoType0 |
             UpdateAutoTopupSettingsResponse200ChargeInfoType1 | UpdateAutoTopupSettingsResponse200ChargeInfoType2 |
-            UpdateAutoTopupSettingsResponse200ChargeInfoType3):
+            UpdateAutoTopupSettingsResponse200ChargeInfoType3 | UpdateAutoTopupSettingsResponse200ChargeInfoType4):
         warnings (list[UpdateAutoTopupSettingsResponse200WarningsType0Item] | None | Unset): Warnings about extraneous
             fields in request
     """
@@ -52,6 +55,7 @@ class UpdateAutoTopupSettingsResponse200:
         | UpdateAutoTopupSettingsResponse200ChargeInfoType1
         | UpdateAutoTopupSettingsResponse200ChargeInfoType2
         | UpdateAutoTopupSettingsResponse200ChargeInfoType3
+        | UpdateAutoTopupSettingsResponse200ChargeInfoType4
     )
     warnings: list[UpdateAutoTopupSettingsResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -64,6 +68,9 @@ class UpdateAutoTopupSettingsResponse200:
         )
         from ..models.update_auto_topup_settings_response_200_charge_info_type_2 import (
             UpdateAutoTopupSettingsResponse200ChargeInfoType2,
+        )
+        from ..models.update_auto_topup_settings_response_200_charge_info_type_3 import (
+            UpdateAutoTopupSettingsResponse200ChargeInfoType3,
         )
         from ..models.update_auto_topup_settings_response_200_output_type_0 import (
             UpdateAutoTopupSettingsResponse200OutputType0,
@@ -81,6 +88,8 @@ class UpdateAutoTopupSettingsResponse200:
         elif isinstance(self.charge_info, UpdateAutoTopupSettingsResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, UpdateAutoTopupSettingsResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, UpdateAutoTopupSettingsResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -124,6 +133,9 @@ class UpdateAutoTopupSettingsResponse200:
         from ..models.update_auto_topup_settings_response_200_charge_info_type_3 import (
             UpdateAutoTopupSettingsResponse200ChargeInfoType3,
         )
+        from ..models.update_auto_topup_settings_response_200_charge_info_type_4 import (
+            UpdateAutoTopupSettingsResponse200ChargeInfoType4,
+        )
         from ..models.update_auto_topup_settings_response_200_output_type_0 import (
             UpdateAutoTopupSettingsResponse200OutputType0,
         )
@@ -162,6 +174,7 @@ class UpdateAutoTopupSettingsResponse200:
             | UpdateAutoTopupSettingsResponse200ChargeInfoType1
             | UpdateAutoTopupSettingsResponse200ChargeInfoType2
             | UpdateAutoTopupSettingsResponse200ChargeInfoType3
+            | UpdateAutoTopupSettingsResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -187,11 +200,19 @@ class UpdateAutoTopupSettingsResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = UpdateAutoTopupSettingsResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = UpdateAutoTopupSettingsResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = UpdateAutoTopupSettingsResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

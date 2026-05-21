@@ -60,6 +60,9 @@ if TYPE_CHECKING:
     from ..models.reverse_email_lookup_response_200_output_data_item_tenures_type_0_item import (
         ReverseEmailLookupResponse200OutputDataItemTenuresType0Item,
     )
+    from ..models.reverse_email_lookup_response_200_output_data_item_verifications_type_0 import (
+        ReverseEmailLookupResponse200OutputDataItemVerificationsType0,
+    )
     from ..models.reverse_email_lookup_response_200_output_data_item_volunteering_type_0_item import (
         ReverseEmailLookupResponse200OutputDataItemVolunteeringType0Item,
     )
@@ -111,6 +114,7 @@ class ReverseEmailLookupResponse200OutputDataItem:
         is_hiring (bool | None | Unset):
         websites (list[str] | None | Unset):
         is_verified (bool | None | Unset):
+        verifications (None | ReverseEmailLookupResponse200OutputDataItemVerificationsType0 | Unset):
         current_job (None | ReverseEmailLookupResponse200OutputDataItemCurrentJobType0 | Unset):
         custom_data (None | ReverseEmailLookupResponse200OutputDataItemCustomDataType0 | Unset):
         relevance_score (float | None | Unset):
@@ -160,6 +164,7 @@ class ReverseEmailLookupResponse200OutputDataItem:
     is_hiring: bool | None | Unset = UNSET
     websites: list[str] | None | Unset = UNSET
     is_verified: bool | None | Unset = UNSET
+    verifications: None | ReverseEmailLookupResponse200OutputDataItemVerificationsType0 | Unset = UNSET
     current_job: None | ReverseEmailLookupResponse200OutputDataItemCurrentJobType0 | Unset = UNSET
     custom_data: None | ReverseEmailLookupResponse200OutputDataItemCustomDataType0 | Unset = UNSET
     relevance_score: float | None | Unset = UNSET
@@ -182,6 +187,9 @@ class ReverseEmailLookupResponse200OutputDataItem:
         )
         from ..models.reverse_email_lookup_response_200_output_data_item_inferred_location_type_0 import (
             ReverseEmailLookupResponse200OutputDataItemInferredLocationType0,
+        )
+        from ..models.reverse_email_lookup_response_200_output_data_item_verifications_type_0 import (
+            ReverseEmailLookupResponse200OutputDataItemVerificationsType0,
         )
 
         primary_slug = self.primary_slug
@@ -503,6 +511,14 @@ class ReverseEmailLookupResponse200OutputDataItem:
         else:
             is_verified = self.is_verified
 
+        verifications: dict[str, Any] | None | Unset
+        if isinstance(self.verifications, Unset):
+            verifications = UNSET
+        elif isinstance(self.verifications, ReverseEmailLookupResponse200OutputDataItemVerificationsType0):
+            verifications = self.verifications.to_dict()
+        else:
+            verifications = self.verifications
+
         current_job: dict[str, Any] | None | Unset
         if isinstance(self.current_job, Unset):
             current_job = UNSET
@@ -650,6 +666,8 @@ class ReverseEmailLookupResponse200OutputDataItem:
             field_dict["websites"] = websites
         if is_verified is not UNSET:
             field_dict["is_verified"] = is_verified
+        if verifications is not UNSET:
+            field_dict["verifications"] = verifications
         if current_job is not UNSET:
             field_dict["current_job"] = current_job
         if custom_data is not UNSET:
@@ -716,6 +734,9 @@ class ReverseEmailLookupResponse200OutputDataItem:
         )
         from ..models.reverse_email_lookup_response_200_output_data_item_tenures_type_0_item import (
             ReverseEmailLookupResponse200OutputDataItemTenuresType0Item,
+        )
+        from ..models.reverse_email_lookup_response_200_output_data_item_verifications_type_0 import (
+            ReverseEmailLookupResponse200OutputDataItemVerificationsType0,
         )
         from ..models.reverse_email_lookup_response_200_output_data_item_volunteering_type_0_item import (
             ReverseEmailLookupResponse200OutputDataItemVolunteeringType0Item,
@@ -1326,6 +1347,25 @@ class ReverseEmailLookupResponse200OutputDataItem:
 
         is_verified = _parse_is_verified(d.pop("is_verified", UNSET))
 
+        def _parse_verifications(
+            data: object,
+        ) -> None | ReverseEmailLookupResponse200OutputDataItemVerificationsType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                verifications_type_0 = ReverseEmailLookupResponse200OutputDataItemVerificationsType0.from_dict(data)
+
+                return verifications_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | ReverseEmailLookupResponse200OutputDataItemVerificationsType0 | Unset, data)
+
+        verifications = _parse_verifications(d.pop("verifications", UNSET))
+
         def _parse_current_job(
             data: object,
         ) -> None | ReverseEmailLookupResponse200OutputDataItemCurrentJobType0 | Unset:
@@ -1508,6 +1548,7 @@ class ReverseEmailLookupResponse200OutputDataItem:
             is_hiring=is_hiring,
             websites=websites,
             is_verified=is_verified,
+            verifications=verifications,
             current_job=current_job,
             custom_data=custom_data,
             relevance_score=relevance_score,

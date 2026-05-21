@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from ..models.get_time_zones_response_200_charge_info_type_1 import GetTimeZonesResponse200ChargeInfoType1
     from ..models.get_time_zones_response_200_charge_info_type_2 import GetTimeZonesResponse200ChargeInfoType2
     from ..models.get_time_zones_response_200_charge_info_type_3 import GetTimeZonesResponse200ChargeInfoType3
+    from ..models.get_time_zones_response_200_charge_info_type_4 import GetTimeZonesResponse200ChargeInfoType4
     from ..models.get_time_zones_response_200_output_item import GetTimeZonesResponse200OutputItem
     from ..models.get_time_zones_response_200_warnings_type_0_item import GetTimeZonesResponse200WarningsType0Item
 
@@ -26,7 +27,8 @@ class GetTimeZonesResponse200:
         output (list[GetTimeZonesResponse200OutputItem]): The list of all available time zones with comprehensive
             information.
         charge_info (GetTimeZonesResponse200ChargeInfoType0 | GetTimeZonesResponse200ChargeInfoType1 |
-            GetTimeZonesResponse200ChargeInfoType2 | GetTimeZonesResponse200ChargeInfoType3):
+            GetTimeZonesResponse200ChargeInfoType2 | GetTimeZonesResponse200ChargeInfoType3 |
+            GetTimeZonesResponse200ChargeInfoType4):
         warnings (list[GetTimeZonesResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields in
             request
     """
@@ -37,6 +39,7 @@ class GetTimeZonesResponse200:
         | GetTimeZonesResponse200ChargeInfoType1
         | GetTimeZonesResponse200ChargeInfoType2
         | GetTimeZonesResponse200ChargeInfoType3
+        | GetTimeZonesResponse200ChargeInfoType4
     )
     warnings: list[GetTimeZonesResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -44,6 +47,7 @@ class GetTimeZonesResponse200:
         from ..models.get_time_zones_response_200_charge_info_type_0 import GetTimeZonesResponse200ChargeInfoType0
         from ..models.get_time_zones_response_200_charge_info_type_1 import GetTimeZonesResponse200ChargeInfoType1
         from ..models.get_time_zones_response_200_charge_info_type_2 import GetTimeZonesResponse200ChargeInfoType2
+        from ..models.get_time_zones_response_200_charge_info_type_3 import GetTimeZonesResponse200ChargeInfoType3
 
         output = []
         for output_item_data in self.output:
@@ -56,6 +60,8 @@ class GetTimeZonesResponse200:
         elif isinstance(self.charge_info, GetTimeZonesResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, GetTimeZonesResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, GetTimeZonesResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -91,6 +97,7 @@ class GetTimeZonesResponse200:
         from ..models.get_time_zones_response_200_charge_info_type_1 import GetTimeZonesResponse200ChargeInfoType1
         from ..models.get_time_zones_response_200_charge_info_type_2 import GetTimeZonesResponse200ChargeInfoType2
         from ..models.get_time_zones_response_200_charge_info_type_3 import GetTimeZonesResponse200ChargeInfoType3
+        from ..models.get_time_zones_response_200_charge_info_type_4 import GetTimeZonesResponse200ChargeInfoType4
         from ..models.get_time_zones_response_200_output_item import GetTimeZonesResponse200OutputItem
         from ..models.get_time_zones_response_200_warnings_type_0_item import GetTimeZonesResponse200WarningsType0Item
 
@@ -109,6 +116,7 @@ class GetTimeZonesResponse200:
             | GetTimeZonesResponse200ChargeInfoType1
             | GetTimeZonesResponse200ChargeInfoType2
             | GetTimeZonesResponse200ChargeInfoType3
+            | GetTimeZonesResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -134,11 +142,19 @@ class GetTimeZonesResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = GetTimeZonesResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = GetTimeZonesResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = GetTimeZonesResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

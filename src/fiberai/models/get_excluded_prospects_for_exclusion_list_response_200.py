@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.get_excluded_prospects_for_exclusion_list_response_200_charge_info_type_3 import (
         GetExcludedProspectsForExclusionListResponse200ChargeInfoType3,
     )
+    from ..models.get_excluded_prospects_for_exclusion_list_response_200_charge_info_type_4 import (
+        GetExcludedProspectsForExclusionListResponse200ChargeInfoType4,
+    )
     from ..models.get_excluded_prospects_for_exclusion_list_response_200_output import (
         GetExcludedProspectsForExclusionListResponse200Output,
     )
@@ -39,7 +42,8 @@ class GetExcludedProspectsForExclusionListResponse200:
         charge_info (GetExcludedProspectsForExclusionListResponse200ChargeInfoType0 |
             GetExcludedProspectsForExclusionListResponse200ChargeInfoType1 |
             GetExcludedProspectsForExclusionListResponse200ChargeInfoType2 |
-            GetExcludedProspectsForExclusionListResponse200ChargeInfoType3):
+            GetExcludedProspectsForExclusionListResponse200ChargeInfoType3 |
+            GetExcludedProspectsForExclusionListResponse200ChargeInfoType4):
         warnings (list[GetExcludedProspectsForExclusionListResponse200WarningsType0Item] | None | Unset): Warnings about
             extraneous fields in request
     """
@@ -50,6 +54,7 @@ class GetExcludedProspectsForExclusionListResponse200:
         | GetExcludedProspectsForExclusionListResponse200ChargeInfoType1
         | GetExcludedProspectsForExclusionListResponse200ChargeInfoType2
         | GetExcludedProspectsForExclusionListResponse200ChargeInfoType3
+        | GetExcludedProspectsForExclusionListResponse200ChargeInfoType4
     )
     warnings: list[GetExcludedProspectsForExclusionListResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -63,6 +68,9 @@ class GetExcludedProspectsForExclusionListResponse200:
         from ..models.get_excluded_prospects_for_exclusion_list_response_200_charge_info_type_2 import (
             GetExcludedProspectsForExclusionListResponse200ChargeInfoType2,
         )
+        from ..models.get_excluded_prospects_for_exclusion_list_response_200_charge_info_type_3 import (
+            GetExcludedProspectsForExclusionListResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -72,6 +80,8 @@ class GetExcludedProspectsForExclusionListResponse200:
         elif isinstance(self.charge_info, GetExcludedProspectsForExclusionListResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, GetExcludedProspectsForExclusionListResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, GetExcludedProspectsForExclusionListResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -115,6 +125,9 @@ class GetExcludedProspectsForExclusionListResponse200:
         from ..models.get_excluded_prospects_for_exclusion_list_response_200_charge_info_type_3 import (
             GetExcludedProspectsForExclusionListResponse200ChargeInfoType3,
         )
+        from ..models.get_excluded_prospects_for_exclusion_list_response_200_charge_info_type_4 import (
+            GetExcludedProspectsForExclusionListResponse200ChargeInfoType4,
+        )
         from ..models.get_excluded_prospects_for_exclusion_list_response_200_output import (
             GetExcludedProspectsForExclusionListResponse200Output,
         )
@@ -132,6 +145,7 @@ class GetExcludedProspectsForExclusionListResponse200:
             | GetExcludedProspectsForExclusionListResponse200ChargeInfoType1
             | GetExcludedProspectsForExclusionListResponse200ChargeInfoType2
             | GetExcludedProspectsForExclusionListResponse200ChargeInfoType3
+            | GetExcludedProspectsForExclusionListResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -157,11 +171,19 @@ class GetExcludedProspectsForExclusionListResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = GetExcludedProspectsForExclusionListResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = GetExcludedProspectsForExclusionListResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = GetExcludedProspectsForExclusionListResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

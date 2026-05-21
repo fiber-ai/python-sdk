@@ -23,6 +23,9 @@ if TYPE_CHECKING:
     from ..models.paginated_combined_search_body_profile_config_type_0_search_params_country_3_letter_code_type_0 import (
         PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCountry3LetterCodeType0,
     )
+    from ..models.paginated_combined_search_body_profile_config_type_0_search_params_current_jobs_type_0 import (
+        PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCurrentJobsType0,
+    )
     from ..models.paginated_combined_search_body_profile_config_type_0_search_params_education_type_0 import (
         PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationType0,
     )
@@ -148,6 +151,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
                 PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStartedAtCompanyType1 | Unset):
             location (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0 | Unset):
             past_jobs (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPastJobsType0 | Unset):
+            current_jobs (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCurrentJobsType0 | Unset):
             languages (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLanguagesType0 | Unset):
             left_stealth_at (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLeftStealthAtType0 |
                 PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLeftStealthAtType1 | Unset):
@@ -165,6 +169,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             years_of_experience (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsYearsOfExperienceType0 |
                 Unset):
             job_title_v3 (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobTitleV3Type0 | Unset):
+            open_to_work (bool | None | Unset):
             has_profile_picture (bool | None | Unset):
             state (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStateType0 | Unset):
             certifications (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCertificationsType0 | Unset):
@@ -211,6 +216,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
     ) = UNSET
     location: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0 | Unset = UNSET
     past_jobs: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPastJobsType0 | Unset = UNSET
+    current_jobs: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCurrentJobsType0 | Unset = UNSET
     languages: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLanguagesType0 | Unset = UNSET
     left_stealth_at: (
         None
@@ -245,6 +251,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
         None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsYearsOfExperienceType0 | Unset
     ) = UNSET
     job_title_v3: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobTitleV3Type0 | Unset = UNSET
+    open_to_work: bool | None | Unset = UNSET
     has_profile_picture: bool | None | Unset = UNSET
     state: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStateType0 | Unset = UNSET
     certifications: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCertificationsType0 | Unset = UNSET
@@ -271,6 +278,9 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_country_3_letter_code_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCountry3LetterCodeType0,
+        )
+        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_current_jobs_type_0 import (
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCurrentJobsType0,
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_education_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationType0,
@@ -502,6 +512,14 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
         else:
             past_jobs = self.past_jobs
 
+        current_jobs: dict[str, Any] | None | Unset
+        if isinstance(self.current_jobs, Unset):
+            current_jobs = UNSET
+        elif isinstance(self.current_jobs, PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCurrentJobsType0):
+            current_jobs = self.current_jobs.to_dict()
+        else:
+            current_jobs = self.current_jobs
+
         languages: dict[str, Any] | None | Unset
         if isinstance(self.languages, Unset):
             languages = UNSET
@@ -607,6 +625,12 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             job_title_v3 = self.job_title_v3.to_dict()
         else:
             job_title_v3 = self.job_title_v3
+
+        open_to_work: bool | None | Unset
+        if isinstance(self.open_to_work, Unset):
+            open_to_work = UNSET
+        else:
+            open_to_work = self.open_to_work
 
         has_profile_picture: bool | None | Unset
         if isinstance(self.has_profile_picture, Unset):
@@ -715,6 +739,8 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             field_dict["location"] = location
         if past_jobs is not UNSET:
             field_dict["pastJobs"] = past_jobs
+        if current_jobs is not UNSET:
+            field_dict["currentJobs"] = current_jobs
         if languages is not UNSET:
             field_dict["languages"] = languages
         if left_stealth_at is not UNSET:
@@ -737,6 +763,8 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             field_dict["yearsOfExperience"] = years_of_experience
         if job_title_v3 is not UNSET:
             field_dict["jobTitleV3"] = job_title_v3
+        if open_to_work is not UNSET:
+            field_dict["openToWork"] = open_to_work
         if has_profile_picture is not UNSET:
             field_dict["hasProfilePicture"] = has_profile_picture
         if state is not UNSET:
@@ -776,6 +804,9 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_country_3_letter_code_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCountry3LetterCodeType0,
+        )
+        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_current_jobs_type_0 import (
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCurrentJobsType0,
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_education_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationType0,
@@ -1216,6 +1247,27 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
 
         past_jobs = _parse_past_jobs(d.pop("pastJobs", UNSET))
 
+        def _parse_current_jobs(
+            data: object,
+        ) -> None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCurrentJobsType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                current_jobs_type_0 = (
+                    PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCurrentJobsType0.from_dict(data)
+                )
+
+                return current_jobs_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCurrentJobsType0 | Unset, data)
+
+        current_jobs = _parse_current_jobs(d.pop("currentJobs", UNSET))
+
         def _parse_languages(
             data: object,
         ) -> None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLanguagesType0 | Unset:
@@ -1533,6 +1585,15 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
 
         job_title_v3 = _parse_job_title_v3(d.pop("jobTitleV3", UNSET))
 
+        def _parse_open_to_work(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        open_to_work = _parse_open_to_work(d.pop("openToWork", UNSET))
+
         def _parse_has_profile_picture(data: object) -> bool | None | Unset:
             if data is None:
                 return data
@@ -1710,6 +1771,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             started_at_company=started_at_company,
             location=location,
             past_jobs=past_jobs,
+            current_jobs=current_jobs,
             languages=languages,
             left_stealth_at=left_stealth_at,
             is_in_stealth=is_in_stealth,
@@ -1721,6 +1783,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             company_match_mode=company_match_mode,
             years_of_experience=years_of_experience,
             job_title_v3=job_title_v3,
+            open_to_work=open_to_work,
             has_profile_picture=has_profile_picture,
             state=state,
             certifications=certifications,

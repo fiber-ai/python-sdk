@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from ..models.job_posting_search_response_200_charge_info_type_1 import JobPostingSearchResponse200ChargeInfoType1
     from ..models.job_posting_search_response_200_charge_info_type_2 import JobPostingSearchResponse200ChargeInfoType2
     from ..models.job_posting_search_response_200_charge_info_type_3 import JobPostingSearchResponse200ChargeInfoType3
+    from ..models.job_posting_search_response_200_charge_info_type_4 import JobPostingSearchResponse200ChargeInfoType4
     from ..models.job_posting_search_response_200_output import JobPostingSearchResponse200Output
     from ..models.job_posting_search_response_200_warnings_type_0_item import (
         JobPostingSearchResponse200WarningsType0Item,
@@ -27,7 +28,8 @@ class JobPostingSearchResponse200:
     Attributes:
         output (JobPostingSearchResponse200Output):
         charge_info (JobPostingSearchResponse200ChargeInfoType0 | JobPostingSearchResponse200ChargeInfoType1 |
-            JobPostingSearchResponse200ChargeInfoType2 | JobPostingSearchResponse200ChargeInfoType3):
+            JobPostingSearchResponse200ChargeInfoType2 | JobPostingSearchResponse200ChargeInfoType3 |
+            JobPostingSearchResponse200ChargeInfoType4):
         warnings (list[JobPostingSearchResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields
             in request
     """
@@ -38,6 +40,7 @@ class JobPostingSearchResponse200:
         | JobPostingSearchResponse200ChargeInfoType1
         | JobPostingSearchResponse200ChargeInfoType2
         | JobPostingSearchResponse200ChargeInfoType3
+        | JobPostingSearchResponse200ChargeInfoType4
     )
     warnings: list[JobPostingSearchResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -51,6 +54,9 @@ class JobPostingSearchResponse200:
         from ..models.job_posting_search_response_200_charge_info_type_2 import (
             JobPostingSearchResponse200ChargeInfoType2,
         )
+        from ..models.job_posting_search_response_200_charge_info_type_3 import (
+            JobPostingSearchResponse200ChargeInfoType3,
+        )
 
         output = self.output.to_dict()
 
@@ -60,6 +66,8 @@ class JobPostingSearchResponse200:
         elif isinstance(self.charge_info, JobPostingSearchResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, JobPostingSearchResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, JobPostingSearchResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -103,6 +111,9 @@ class JobPostingSearchResponse200:
         from ..models.job_posting_search_response_200_charge_info_type_3 import (
             JobPostingSearchResponse200ChargeInfoType3,
         )
+        from ..models.job_posting_search_response_200_charge_info_type_4 import (
+            JobPostingSearchResponse200ChargeInfoType4,
+        )
         from ..models.job_posting_search_response_200_output import JobPostingSearchResponse200Output
         from ..models.job_posting_search_response_200_warnings_type_0_item import (
             JobPostingSearchResponse200WarningsType0Item,
@@ -118,6 +129,7 @@ class JobPostingSearchResponse200:
             | JobPostingSearchResponse200ChargeInfoType1
             | JobPostingSearchResponse200ChargeInfoType2
             | JobPostingSearchResponse200ChargeInfoType3
+            | JobPostingSearchResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -143,11 +155,19 @@ class JobPostingSearchResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = JobPostingSearchResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = JobPostingSearchResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = JobPostingSearchResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

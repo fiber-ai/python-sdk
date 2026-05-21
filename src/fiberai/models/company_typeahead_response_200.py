@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from ..models.company_typeahead_response_200_charge_info_type_1 import CompanyTypeaheadResponse200ChargeInfoType1
     from ..models.company_typeahead_response_200_charge_info_type_2 import CompanyTypeaheadResponse200ChargeInfoType2
     from ..models.company_typeahead_response_200_charge_info_type_3 import CompanyTypeaheadResponse200ChargeInfoType3
+    from ..models.company_typeahead_response_200_charge_info_type_4 import CompanyTypeaheadResponse200ChargeInfoType4
     from ..models.company_typeahead_response_200_output_item import CompanyTypeaheadResponse200OutputItem
     from ..models.company_typeahead_response_200_warnings_type_0_item import (
         CompanyTypeaheadResponse200WarningsType0Item,
@@ -27,7 +28,8 @@ class CompanyTypeaheadResponse200:
     Attributes:
         output (list[CompanyTypeaheadResponse200OutputItem]):
         charge_info (CompanyTypeaheadResponse200ChargeInfoType0 | CompanyTypeaheadResponse200ChargeInfoType1 |
-            CompanyTypeaheadResponse200ChargeInfoType2 | CompanyTypeaheadResponse200ChargeInfoType3):
+            CompanyTypeaheadResponse200ChargeInfoType2 | CompanyTypeaheadResponse200ChargeInfoType3 |
+            CompanyTypeaheadResponse200ChargeInfoType4):
         warnings (list[CompanyTypeaheadResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields
             in request
     """
@@ -38,6 +40,7 @@ class CompanyTypeaheadResponse200:
         | CompanyTypeaheadResponse200ChargeInfoType1
         | CompanyTypeaheadResponse200ChargeInfoType2
         | CompanyTypeaheadResponse200ChargeInfoType3
+        | CompanyTypeaheadResponse200ChargeInfoType4
     )
     warnings: list[CompanyTypeaheadResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -51,6 +54,9 @@ class CompanyTypeaheadResponse200:
         from ..models.company_typeahead_response_200_charge_info_type_2 import (
             CompanyTypeaheadResponse200ChargeInfoType2,
         )
+        from ..models.company_typeahead_response_200_charge_info_type_3 import (
+            CompanyTypeaheadResponse200ChargeInfoType3,
+        )
 
         output = []
         for output_item_data in self.output:
@@ -63,6 +69,8 @@ class CompanyTypeaheadResponse200:
         elif isinstance(self.charge_info, CompanyTypeaheadResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, CompanyTypeaheadResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, CompanyTypeaheadResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -106,6 +114,9 @@ class CompanyTypeaheadResponse200:
         from ..models.company_typeahead_response_200_charge_info_type_3 import (
             CompanyTypeaheadResponse200ChargeInfoType3,
         )
+        from ..models.company_typeahead_response_200_charge_info_type_4 import (
+            CompanyTypeaheadResponse200ChargeInfoType4,
+        )
         from ..models.company_typeahead_response_200_output_item import CompanyTypeaheadResponse200OutputItem
         from ..models.company_typeahead_response_200_warnings_type_0_item import (
             CompanyTypeaheadResponse200WarningsType0Item,
@@ -126,6 +137,7 @@ class CompanyTypeaheadResponse200:
             | CompanyTypeaheadResponse200ChargeInfoType1
             | CompanyTypeaheadResponse200ChargeInfoType2
             | CompanyTypeaheadResponse200ChargeInfoType3
+            | CompanyTypeaheadResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -151,11 +163,19 @@ class CompanyTypeaheadResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = CompanyTypeaheadResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = CompanyTypeaheadResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = CompanyTypeaheadResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 

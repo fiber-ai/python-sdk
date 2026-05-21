@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from ..models.get_technologies_response_200_charge_info_type_1 import GetTechnologiesResponse200ChargeInfoType1
     from ..models.get_technologies_response_200_charge_info_type_2 import GetTechnologiesResponse200ChargeInfoType2
     from ..models.get_technologies_response_200_charge_info_type_3 import GetTechnologiesResponse200ChargeInfoType3
+    from ..models.get_technologies_response_200_charge_info_type_4 import GetTechnologiesResponse200ChargeInfoType4
     from ..models.get_technologies_response_200_output_item import GetTechnologiesResponse200OutputItem
     from ..models.get_technologies_response_200_warnings_type_0_item import GetTechnologiesResponse200WarningsType0Item
 
@@ -25,7 +26,8 @@ class GetTechnologiesResponse200:
     Attributes:
         output (list[GetTechnologiesResponse200OutputItem]):
         charge_info (GetTechnologiesResponse200ChargeInfoType0 | GetTechnologiesResponse200ChargeInfoType1 |
-            GetTechnologiesResponse200ChargeInfoType2 | GetTechnologiesResponse200ChargeInfoType3):
+            GetTechnologiesResponse200ChargeInfoType2 | GetTechnologiesResponse200ChargeInfoType3 |
+            GetTechnologiesResponse200ChargeInfoType4):
         warnings (list[GetTechnologiesResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields in
             request
     """
@@ -36,6 +38,7 @@ class GetTechnologiesResponse200:
         | GetTechnologiesResponse200ChargeInfoType1
         | GetTechnologiesResponse200ChargeInfoType2
         | GetTechnologiesResponse200ChargeInfoType3
+        | GetTechnologiesResponse200ChargeInfoType4
     )
     warnings: list[GetTechnologiesResponse200WarningsType0Item] | None | Unset = UNSET
 
@@ -43,6 +46,7 @@ class GetTechnologiesResponse200:
         from ..models.get_technologies_response_200_charge_info_type_0 import GetTechnologiesResponse200ChargeInfoType0
         from ..models.get_technologies_response_200_charge_info_type_1 import GetTechnologiesResponse200ChargeInfoType1
         from ..models.get_technologies_response_200_charge_info_type_2 import GetTechnologiesResponse200ChargeInfoType2
+        from ..models.get_technologies_response_200_charge_info_type_3 import GetTechnologiesResponse200ChargeInfoType3
 
         output = []
         for output_item_data in self.output:
@@ -55,6 +59,8 @@ class GetTechnologiesResponse200:
         elif isinstance(self.charge_info, GetTechnologiesResponse200ChargeInfoType1):
             charge_info = self.charge_info.to_dict()
         elif isinstance(self.charge_info, GetTechnologiesResponse200ChargeInfoType2):
+            charge_info = self.charge_info.to_dict()
+        elif isinstance(self.charge_info, GetTechnologiesResponse200ChargeInfoType3):
             charge_info = self.charge_info.to_dict()
         else:
             charge_info = self.charge_info.to_dict()
@@ -90,6 +96,7 @@ class GetTechnologiesResponse200:
         from ..models.get_technologies_response_200_charge_info_type_1 import GetTechnologiesResponse200ChargeInfoType1
         from ..models.get_technologies_response_200_charge_info_type_2 import GetTechnologiesResponse200ChargeInfoType2
         from ..models.get_technologies_response_200_charge_info_type_3 import GetTechnologiesResponse200ChargeInfoType3
+        from ..models.get_technologies_response_200_charge_info_type_4 import GetTechnologiesResponse200ChargeInfoType4
         from ..models.get_technologies_response_200_output_item import GetTechnologiesResponse200OutputItem
         from ..models.get_technologies_response_200_warnings_type_0_item import (
             GetTechnologiesResponse200WarningsType0Item,
@@ -110,6 +117,7 @@ class GetTechnologiesResponse200:
             | GetTechnologiesResponse200ChargeInfoType1
             | GetTechnologiesResponse200ChargeInfoType2
             | GetTechnologiesResponse200ChargeInfoType3
+            | GetTechnologiesResponse200ChargeInfoType4
         ):
             try:
                 if not isinstance(data, dict):
@@ -135,11 +143,19 @@ class GetTechnologiesResponse200:
                 return charge_info_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                charge_info_type_3 = GetTechnologiesResponse200ChargeInfoType3.from_dict(data)
+
+                return charge_info_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            charge_info_type_3 = GetTechnologiesResponse200ChargeInfoType3.from_dict(data)
+            charge_info_type_4 = GetTechnologiesResponse200ChargeInfoType4.from_dict(data)
 
-            return charge_info_type_3
+            return charge_info_type_4
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 
