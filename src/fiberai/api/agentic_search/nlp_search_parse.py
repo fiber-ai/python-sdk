@@ -145,7 +145,7 @@ def sync_detailed(
     call per company)
     - `none`: query could not be interpreted
 
-    Alternatively, use POST /v1/nlp-search/execute to parse and execute in a single call.
+    Alternatively, use POST /v1/nlp-search/run to parse and execute in a single call.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -205,7 +205,7 @@ def sync(
     call per company)
     - `none`: query could not be interpreted
 
-    Alternatively, use POST /v1/nlp-search/execute to parse and execute in a single call.
+    Alternatively, use POST /v1/nlp-search/run to parse and execute in a single call.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -259,7 +259,7 @@ async def asyncio_detailed(
     call per company)
     - `none`: query could not be interpreted
 
-    Alternatively, use POST /v1/nlp-search/execute to parse and execute in a single call.
+    Alternatively, use POST /v1/nlp-search/run to parse and execute in a single call.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -317,7 +317,7 @@ async def asyncio(
     call per company)
     - `none`: query could not be interpreted
 
-    Alternatively, use POST /v1/nlp-search/execute to parse and execute in a single call.
+    Alternatively, use POST /v1/nlp-search/run to parse and execute in a single call.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
