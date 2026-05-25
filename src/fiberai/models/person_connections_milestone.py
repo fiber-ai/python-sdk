@@ -1,0 +1,113 @@
+from __future__ import annotations
+
+from collections.abc import Mapping
+from typing import Any, Literal, TypeVar, cast
+
+from attrs import define as _attrs_define
+from attrs import field as _attrs_field
+
+from ..models.person_connections_milestone_direction import PersonConnectionsMilestoneDirection
+from ..types import UNSET, Unset
+
+T = TypeVar("T", bound="PersonConnectionsMilestone")
+
+
+@_attrs_define
+class PersonConnectionsMilestone:
+    """
+    Attributes:
+        type_ (Literal['person_connections_milestone']):
+        entity_type (Literal['person']):
+        threshold (int): Connection count to watch for crossing
+        direction (PersonConnectionsMilestoneDirection): Whether to alert when crossing above or below the threshold
+        lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
+            recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+    """
+
+    type_: Literal["person_connections_milestone"]
+    entity_type: Literal["person"]
+    threshold: int
+    direction: PersonConnectionsMilestoneDirection
+    lookback_days: int | None | Unset = UNSET
+    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        type_ = self.type_
+
+        entity_type = self.entity_type
+
+        threshold = self.threshold
+
+        direction = self.direction.value
+
+        lookback_days: int | None | Unset
+        if isinstance(self.lookback_days, Unset):
+            lookback_days = UNSET
+        else:
+            lookback_days = self.lookback_days
+
+        field_dict: dict[str, Any] = {}
+        field_dict.update(self.additional_properties)
+        field_dict.update(
+            {
+                "type": type_,
+                "entityType": entity_type,
+                "threshold": threshold,
+                "direction": direction,
+            }
+        )
+        if lookback_days is not UNSET:
+            field_dict["lookbackDays"] = lookback_days
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        d = dict(src_dict)
+        type_ = cast(Literal["person_connections_milestone"], d.pop("type"))
+        if type_ != "person_connections_milestone":
+            raise ValueError(f"type must match const 'person_connections_milestone', got '{type_}'")
+
+        entity_type = cast(Literal["person"], d.pop("entityType"))
+        if entity_type != "person":
+            raise ValueError(f"entityType must match const 'person', got '{entity_type}'")
+
+        threshold = d.pop("threshold")
+
+        direction = PersonConnectionsMilestoneDirection(d.pop("direction"))
+
+        def _parse_lookback_days(data: object) -> int | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(int | None | Unset, data)
+
+        lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
+
+        person_connections_milestone = cls(
+            type_=type_,
+            entity_type=entity_type,
+            threshold=threshold,
+            direction=direction,
+            lookback_days=lookback_days,
+        )
+
+        person_connections_milestone.additional_properties = d
+        return person_connections_milestone
+
+    @property
+    def additional_keys(self) -> list[str]:
+        return list(self.additional_properties.keys())
+
+    def __getitem__(self, key: str) -> Any:
+        return self.additional_properties[key]
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        self.additional_properties[key] = value
+
+    def __delitem__(self, key: str) -> None:
+        del self.additional_properties[key]
+
+    def __contains__(self, key: str) -> bool:
+        return key in self.additional_properties

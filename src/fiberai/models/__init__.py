@@ -1,5 +1,6 @@
 """Contains all the data models used in inputs/outputs"""
 
+from .acquired_company import AcquiredCompany
 from .add_companies_to_exclusion_list_body import AddCompaniesToExclusionListBody
 from .add_companies_to_exclusion_list_body_companies_item import AddCompaniesToExclusionListBodyCompaniesItem
 from .add_companies_to_exclusion_list_response_200 import AddCompaniesToExclusionListResponse200
@@ -5814,6 +5815,7 @@ from .company_count_response_404 import CompanyCountResponse404
 from .company_count_response_429 import CompanyCountResponse429
 from .company_count_response_500 import CompanyCountResponse500
 from .company_count_response_503 import CompanyCountResponse503
+from .company_description_changed import CompanyDescriptionChanged
 from .company_live_enrich_body import CompanyLiveEnrichBody
 from .company_live_enrich_body_type import CompanyLiveEnrichBodyType
 from .company_live_enrich_response_200 import CompanyLiveEnrichResponse200
@@ -5920,6 +5922,11 @@ from .company_live_enrich_response_404 import CompanyLiveEnrichResponse404
 from .company_live_enrich_response_429 import CompanyLiveEnrichResponse429
 from .company_live_enrich_response_500 import CompanyLiveEnrichResponse500
 from .company_live_enrich_response_503 import CompanyLiveEnrichResponse503
+from .company_logo_changed import CompanyLogoChanged
+from .company_name_changed import CompanyNameChanged
+from .company_news import CompanyNews
+from .company_posted import CompanyPosted
+from .company_posted_with_keyword import CompanyPostedWithKeyword
 from .company_posts_live_fetch_body import CompanyPostsLiveFetchBody
 from .company_posts_live_fetch_response_200 import CompanyPostsLiveFetchResponse200
 from .company_posts_live_fetch_response_200_charge_info_type_0 import CompanyPostsLiveFetchResponse200ChargeInfoType0
@@ -9353,6 +9360,8 @@ from .company_search_response_404 import CompanySearchResponse404
 from .company_search_response_429 import CompanySearchResponse429
 from .company_search_response_500 import CompanySearchResponse500
 from .company_search_response_503 import CompanySearchResponse503
+from .company_status_changed import CompanyStatusChanged
+from .company_status_changed_to_statuses_type_0_item import CompanyStatusChangedToStatusesType0Item
 from .company_typeahead_body import CompanyTypeaheadBody
 from .company_typeahead_body_org_type_type_1 import CompanyTypeaheadBodyOrgTypeType1
 from .company_typeahead_body_org_type_type_2_type_1 import CompanyTypeaheadBodyOrgTypeType2Type1
@@ -9396,6 +9405,7 @@ from .company_typeahead_response_404 import CompanyTypeaheadResponse404
 from .company_typeahead_response_429 import CompanyTypeaheadResponse429
 from .company_typeahead_response_500 import CompanyTypeaheadResponse500
 from .company_typeahead_response_503 import CompanyTypeaheadResponse503
+from .company_went_inactive import CompanyWentInactive
 from .create_audience_body import CreateAudienceBody
 from .create_audience_body_creation_method_type_1 import CreateAudienceBodyCreationMethodType1
 from .create_audience_body_creation_method_type_2_type_1 import CreateAudienceBodyCreationMethodType2Type1
@@ -9759,6 +9769,7 @@ from .create_prospect_exclusion_list_response_404 import CreateProspectExclusion
 from .create_prospect_exclusion_list_response_429 import CreateProspectExclusionListResponse429
 from .create_prospect_exclusion_list_response_500 import CreateProspectExclusionListResponse500
 from .create_prospect_exclusion_list_response_503 import CreateProspectExclusionListResponse503
+from .create_tracker_company_list_body import CreateTrackerCompanyListBody
 from .create_tracker_company_list_response_200 import CreateTrackerCompanyListResponse200
 from .create_tracker_company_list_response_200_charge_info_type_0 import (
     CreateTrackerCompanyListResponse200ChargeInfoType0,
@@ -9826,6 +9837,7 @@ from .create_tracker_company_list_response_404 import CreateTrackerCompanyListRe
 from .create_tracker_company_list_response_429 import CreateTrackerCompanyListResponse429
 from .create_tracker_company_list_response_500 import CreateTrackerCompanyListResponse500
 from .create_tracker_company_list_response_503 import CreateTrackerCompanyListResponse503
+from .create_tracker_person_list_body import CreateTrackerPersonListBody
 from .create_tracker_person_list_response_200 import CreateTrackerPersonListResponse200
 from .create_tracker_person_list_response_200_charge_info_type_0 import (
     CreateTrackerPersonListResponse200ChargeInfoType0,
@@ -10288,6 +10300,8 @@ from .delete_tracker_person_list_response_404 import DeleteTrackerPersonListResp
 from .delete_tracker_person_list_response_429 import DeleteTrackerPersonListResponse429
 from .delete_tracker_person_list_response_500 import DeleteTrackerPersonListResponse500
 from .delete_tracker_person_list_response_503 import DeleteTrackerPersonListResponse503
+from .department_size_threshold import DepartmentSizeThreshold
+from .department_size_threshold_direction import DepartmentSizeThresholdDirection
 from .domain_lookup_polling_body import DomainLookupPollingBody
 from .domain_lookup_polling_response_200 import DomainLookupPollingResponse200
 from .domain_lookup_polling_response_200_charge_info_type_0 import DomainLookupPollingResponse200ChargeInfoType0
@@ -10445,6 +10459,8 @@ from .email_bounce_detection_response_404 import EmailBounceDetectionResponse404
 from .email_bounce_detection_response_429 import EmailBounceDetectionResponse429
 from .email_bounce_detection_response_500 import EmailBounceDetectionResponse500
 from .email_bounce_detection_response_503 import EmailBounceDetectionResponse503
+from .employee_count_milestone import EmployeeCountMilestone
+from .employee_count_milestone_direction import EmployeeCountMilestoneDirection
 from .estimate_enrichment_cost_body import EstimateEnrichmentCostBody
 from .estimate_enrichment_cost_body_enrichment_type import EstimateEnrichmentCostBodyEnrichmentType
 from .estimate_enrichment_cost_response_200 import EstimateEnrichmentCostResponse200
@@ -10920,6 +10936,9 @@ from .flight_search_response_404 import FlightSearchResponse404
 from .flight_search_response_429 import FlightSearchResponse429
 from .flight_search_response_500 import FlightSearchResponse500
 from .flight_search_response_503 import FlightSearchResponse503
+from .follower_count_growth import FollowerCountGrowth
+from .funding_stage_changed import FundingStageChanged
+from .funding_stage_changed_to_stages_type_0_item import FundingStageChangedToStagesType0Item
 from .get_accelerators_response_200 import GetAcceleratorsResponse200
 from .get_accelerators_response_200_charge_info_type_0 import GetAcceleratorsResponse200ChargeInfoType0
 from .get_accelerators_response_200_charge_info_type_0_low_credit_alert_type_0 import (
@@ -13343,8 +13362,13 @@ from .google_maps_search_response_404 import GoogleMapsSearchResponse404
 from .google_maps_search_response_429 import GoogleMapsSearchResponse429
 from .google_maps_search_response_500 import GoogleMapsSearchResponse500
 from .google_maps_search_response_503 import GoogleMapsSearchResponse503
+from .headcount_crossed_threshold import HeadcountCrossedThreshold
+from .headcount_crossed_threshold_direction import HeadcountCrossedThresholdDirection
+from .headcount_growth_percent import HeadcountGrowthPercent
+from .headcount_growth_percent_direction import HeadcountGrowthPercentDirection
 from .health_check_response_200 import HealthCheckResponse200
 from .health_check_response_200_status import HealthCheckResponse200Status
+from .hq_location_changed import HQLocationChanged
 from .instagram_post_comments_body import InstagramPostCommentsBody
 from .instagram_post_comments_response_200 import InstagramPostCommentsResponse200
 from .instagram_post_comments_response_200_charge_info_type_0 import InstagramPostCommentsResponse200ChargeInfoType0
@@ -13593,6 +13617,7 @@ from .instagram_user_reels_response_404 import InstagramUserReelsResponse404
 from .instagram_user_reels_response_429 import InstagramUserReelsResponse429
 from .instagram_user_reels_response_500 import InstagramUserReelsResponse500
 from .instagram_user_reels_response_503 import InstagramUserReelsResponse503
+from .job_posting_in_function import JobPostingInFunction
 from .job_posting_search_body import JobPostingSearchBody
 from .job_posting_search_body_search_params import JobPostingSearchBodySearchParams
 from .job_posting_search_body_search_params_annual_salary_usd_type_0 import (
@@ -13930,6 +13955,8 @@ from .job_posting_search_response_404 import JobPostingSearchResponse404
 from .job_posting_search_response_429 import JobPostingSearchResponse429
 from .job_posting_search_response_500 import JobPostingSearchResponse500
 from .job_posting_search_response_503 import JobPostingSearchResponse503
+from .job_posting_with_keyword import JobPostingWithKeyword
+from .job_posting_with_keyword_location_types_type_0_item import JobPostingWithKeywordLocationTypesType0Item
 from .job_title_rewrite_body import JobTitleRewriteBody
 from .job_title_rewrite_response_200 import JobTitleRewriteResponse200
 from .job_title_rewrite_response_200_charge_info_type_0 import JobTitleRewriteResponse200ChargeInfoType0
@@ -17372,6 +17399,44 @@ from .list_audiences_response_404 import ListAudiencesResponse404
 from .list_audiences_response_429 import ListAudiencesResponse429
 from .list_audiences_response_500 import ListAudiencesResponse500
 from .list_audiences_response_503 import ListAudiencesResponse503
+from .list_tracker_changes_response_200 import ListTrackerChangesResponse200
+from .list_tracker_changes_response_200_charge_info_type_0 import ListTrackerChangesResponse200ChargeInfoType0
+from .list_tracker_changes_response_200_charge_info_type_0_low_credit_alert_type_0 import (
+    ListTrackerChangesResponse200ChargeInfoType0LowCreditAlertType0,
+)
+from .list_tracker_changes_response_200_charge_info_type_0_method import (
+    ListTrackerChangesResponse200ChargeInfoType0Method,
+)
+from .list_tracker_changes_response_200_charge_info_type_1 import ListTrackerChangesResponse200ChargeInfoType1
+from .list_tracker_changes_response_200_charge_info_type_1_low_credit_alert_type_0 import (
+    ListTrackerChangesResponse200ChargeInfoType1LowCreditAlertType0,
+)
+from .list_tracker_changes_response_200_charge_info_type_1_method import (
+    ListTrackerChangesResponse200ChargeInfoType1Method,
+)
+from .list_tracker_changes_response_200_charge_info_type_2 import ListTrackerChangesResponse200ChargeInfoType2
+from .list_tracker_changes_response_200_charge_info_type_2_low_credit_alert_type_0 import (
+    ListTrackerChangesResponse200ChargeInfoType2LowCreditAlertType0,
+)
+from .list_tracker_changes_response_200_charge_info_type_2_method import (
+    ListTrackerChangesResponse200ChargeInfoType2Method,
+)
+from .list_tracker_changes_response_200_charge_info_type_3 import ListTrackerChangesResponse200ChargeInfoType3
+from .list_tracker_changes_response_200_charge_info_type_3_low_credit_alert_type_0 import (
+    ListTrackerChangesResponse200ChargeInfoType3LowCreditAlertType0,
+)
+from .list_tracker_changes_response_200_charge_info_type_3_method import (
+    ListTrackerChangesResponse200ChargeInfoType3Method,
+)
+from .list_tracker_changes_response_200_charge_info_type_4 import ListTrackerChangesResponse200ChargeInfoType4
+from .list_tracker_changes_response_200_charge_info_type_4_low_credit_alert_type_0 import (
+    ListTrackerChangesResponse200ChargeInfoType4LowCreditAlertType0,
+)
+from .list_tracker_changes_response_200_charge_info_type_4_method import (
+    ListTrackerChangesResponse200ChargeInfoType4Method,
+)
+from .list_tracker_changes_response_200_output import ListTrackerChangesResponse200Output
+from .list_tracker_changes_response_200_warnings_type_0_item import ListTrackerChangesResponse200WarningsType0Item
 from .list_tracker_changes_response_400 import ListTrackerChangesResponse400
 from .list_tracker_changes_response_401 import ListTrackerChangesResponse401
 from .list_tracker_changes_response_402 import ListTrackerChangesResponse402
@@ -17721,6 +17786,11 @@ from .multi_source_search_response_404 import MultiSourceSearchResponse404
 from .multi_source_search_response_429 import MultiSourceSearchResponse429
 from .multi_source_search_response_500 import MultiSourceSearchResponse500
 from .multi_source_search_response_503 import MultiSourceSearchResponse503
+from .new_funding_round import NewFundingRound
+from .new_funding_round_round_types_type_0_item import NewFundingRoundRoundTypesType0Item
+from .new_investor import NewInvestor
+from .new_office_location import NewOfficeLocation
+from .news_with_keyword import NewsWithKeyword
 from .nlp_search_parse_body import NlpSearchParseBody
 from .nlp_search_parse_response_400 import NlpSearchParseResponse400
 from .nlp_search_parse_response_401 import NlpSearchParseResponse401
@@ -24907,6 +24977,30 @@ from .people_search_response_404 import PeopleSearchResponse404
 from .people_search_response_429 import PeopleSearchResponse429
 from .people_search_response_500 import PeopleSearchResponse500
 from .people_search_response_503 import PeopleSearchResponse503
+from .person_became_verified import PersonBecameVerified
+from .person_changed_company import PersonChangedCompany
+from .person_connections_milestone import PersonConnectionsMilestone
+from .person_connections_milestone_direction import PersonConnectionsMilestoneDirection
+from .person_employment_type_changed import PersonEmploymentTypeChanged
+from .person_follower_milestone import PersonFollowerMilestone
+from .person_follower_milestone_direction import PersonFollowerMilestoneDirection
+from .person_got_promoted import PersonGotPromoted
+from .person_headline_changed import PersonHeadlineChanged
+from .person_is_hiring import PersonIsHiring
+from .person_is_hiring_direction import PersonIsHiringDirection
+from .person_location_changed import PersonLocationChanged
+from .person_new_certification import PersonNewCertification
+from .person_open_to_work import PersonOpenToWork
+from .person_open_to_work_direction import PersonOpenToWorkDirection
+from .person_posted import PersonPosted
+from .person_posted_with_keyword import PersonPostedWithKeyword
+from .person_skills_added import PersonSkillsAdded
+from .person_started_company import PersonStartedCompany
+from .person_stealth_changed import PersonStealthChanged
+from .person_stealth_changed_direction import PersonStealthChangedDirection
+from .person_summary_changed import PersonSummaryChanged
+from .person_tag_gained import PersonTagGained
+from .person_title_changed import PersonTitleChanged
 from .poll_batch_contact_details_body import PollBatchContactDetailsBody
 from .poll_batch_contact_details_response_200 import PollBatchContactDetailsResponse200
 from .poll_batch_contact_details_response_200_charge_info_type_0 import (
@@ -26351,6 +26445,7 @@ from .profile_reactions_live_fetch_response_404 import ProfileReactionsLiveFetch
 from .profile_reactions_live_fetch_response_429 import ProfileReactionsLiveFetchResponse429
 from .profile_reactions_live_fetch_response_500 import ProfileReactionsLiveFetchResponse500
 from .profile_reactions_live_fetch_response_503 import ProfileReactionsLiveFetchResponse503
+from .recently_hired_with_title import RecentlyHiredWithTitle
 from .reddit_post_comments_body import RedditPostCommentsBody
 from .reddit_post_comments_response_200 import RedditPostCommentsResponse200
 from .reddit_post_comments_response_200_charge_info_type_0 import RedditPostCommentsResponse200ChargeInfoType0
@@ -27874,6 +27969,7 @@ from .sync_turbo_contact_enrichment_response_404 import SyncTurboContactEnrichme
 from .sync_turbo_contact_enrichment_response_429 import SyncTurboContactEnrichmentResponse429
 from .sync_turbo_contact_enrichment_response_500 import SyncTurboContactEnrichmentResponse500
 from .sync_turbo_contact_enrichment_response_503 import SyncTurboContactEnrichmentResponse503
+from .technology_added import TechnologyAdded
 from .tiktok_comment_replies_body import TiktokCommentRepliesBody
 from .tiktok_comment_replies_response_200 import TiktokCommentRepliesResponse200
 from .tiktok_comment_replies_response_200_charge_info_type_0 import TiktokCommentRepliesResponse200ChargeInfoType0
@@ -28727,6 +28823,10 @@ from .tiktok_video_transcript_response_404 import TiktokVideoTranscriptResponse4
 from .tiktok_video_transcript_response_429 import TiktokVideoTranscriptResponse429
 from .tiktok_video_transcript_response_500 import TiktokVideoTranscriptResponse500
 from .tiktok_video_transcript_response_503 import TiktokVideoTranscriptResponse503
+from .tracker_signal import TrackerSignal
+from .tracker_signal_change_data_item import TrackerSignalChangeDataItem
+from .tracker_signal_delivery_status import TrackerSignalDeliveryStatus
+from .tracker_signal_entity_type import TrackerSignalEntityType
 from .trigger_enrichment_body import TriggerEnrichmentBody
 from .trigger_enrichment_body_enrichment_type import TriggerEnrichmentBodyEnrichmentType
 from .trigger_enrichment_response_200 import TriggerEnrichmentResponse200
@@ -29568,6 +29668,7 @@ from .update_job_change_list_response_404 import UpdateJobChangeListResponse404
 from .update_job_change_list_response_429 import UpdateJobChangeListResponse429
 from .update_job_change_list_response_500 import UpdateJobChangeListResponse500
 from .update_job_change_list_response_503 import UpdateJobChangeListResponse503
+from .update_tracker_company_list_body import UpdateTrackerCompanyListBody
 from .update_tracker_company_list_response_200 import UpdateTrackerCompanyListResponse200
 from .update_tracker_company_list_response_200_charge_info_type_0 import (
     UpdateTrackerCompanyListResponse200ChargeInfoType0,
@@ -29635,6 +29736,7 @@ from .update_tracker_company_list_response_404 import UpdateTrackerCompanyListRe
 from .update_tracker_company_list_response_429 import UpdateTrackerCompanyListResponse429
 from .update_tracker_company_list_response_500 import UpdateTrackerCompanyListResponse500
 from .update_tracker_company_list_response_503 import UpdateTrackerCompanyListResponse503
+from .update_tracker_person_list_body import UpdateTrackerPersonListBody
 from .update_tracker_person_list_response_200 import UpdateTrackerPersonListResponse200
 from .update_tracker_person_list_response_200_charge_info_type_0 import (
     UpdateTrackerPersonListResponse200ChargeInfoType0,
@@ -30057,6 +30159,7 @@ from .youtube_video_details_response_500 import YoutubeVideoDetailsResponse500
 from .youtube_video_details_response_503 import YoutubeVideoDetailsResponse503
 
 __all__ = (
+    "AcquiredCompany",
     "AddCompaniesToExclusionListBody",
     "AddCompaniesToExclusionListBodyCompaniesItem",
     "AddCompaniesToExclusionListResponse200",
@@ -32193,6 +32296,7 @@ __all__ = (
     "CompanyCountResponse429",
     "CompanyCountResponse500",
     "CompanyCountResponse503",
+    "CompanyDescriptionChanged",
     "CompanyLiveEnrichBody",
     "CompanyLiveEnrichBodyType",
     "CompanyLiveEnrichResponse200",
@@ -32241,6 +32345,11 @@ __all__ = (
     "CompanyLiveEnrichResponse429",
     "CompanyLiveEnrichResponse500",
     "CompanyLiveEnrichResponse503",
+    "CompanyLogoChanged",
+    "CompanyNameChanged",
+    "CompanyNews",
+    "CompanyPosted",
+    "CompanyPostedWithKeyword",
     "CompanyPostsLiveFetchBody",
     "CompanyPostsLiveFetchResponse200",
     "CompanyPostsLiveFetchResponse200ChargeInfoType0",
@@ -33430,6 +33539,8 @@ __all__ = (
     "CompanySearchResponse429",
     "CompanySearchResponse500",
     "CompanySearchResponse503",
+    "CompanyStatusChanged",
+    "CompanyStatusChangedToStatusesType0Item",
     "CompanyTypeaheadBody",
     "CompanyTypeaheadBodyOrgTypeType1",
     "CompanyTypeaheadBodyOrgTypeType2Type1",
@@ -33461,6 +33572,7 @@ __all__ = (
     "CompanyTypeaheadResponse429",
     "CompanyTypeaheadResponse500",
     "CompanyTypeaheadResponse503",
+    "CompanyWentInactive",
     "CreateAudienceBody",
     "CreateAudienceBodyCreationMethodType1",
     "CreateAudienceBodyCreationMethodType2Type1",
@@ -33634,6 +33746,7 @@ __all__ = (
     "CreateProspectExclusionListResponse429",
     "CreateProspectExclusionListResponse500",
     "CreateProspectExclusionListResponse503",
+    "CreateTrackerCompanyListBody",
     "CreateTrackerCompanyListResponse200",
     "CreateTrackerCompanyListResponse200ChargeInfoType0",
     "CreateTrackerCompanyListResponse200ChargeInfoType0LowCreditAlertType0",
@@ -33663,6 +33776,7 @@ __all__ = (
     "CreateTrackerCompanyListResponse429",
     "CreateTrackerCompanyListResponse500",
     "CreateTrackerCompanyListResponse503",
+    "CreateTrackerPersonListBody",
     "CreateTrackerPersonListResponse200",
     "CreateTrackerPersonListResponse200ChargeInfoType0",
     "CreateTrackerPersonListResponse200ChargeInfoType0LowCreditAlertType0",
@@ -33885,6 +33999,8 @@ __all__ = (
     "DeleteTrackerPersonListResponse429",
     "DeleteTrackerPersonListResponse500",
     "DeleteTrackerPersonListResponse503",
+    "DepartmentSizeThreshold",
+    "DepartmentSizeThresholdDirection",
     "DomainLookupPollingBody",
     "DomainLookupPollingResponse200",
     "DomainLookupPollingResponse200ChargeInfoType0",
@@ -33974,6 +34090,8 @@ __all__ = (
     "EmailBounceDetectionResponse429",
     "EmailBounceDetectionResponse500",
     "EmailBounceDetectionResponse503",
+    "EmployeeCountMilestone",
+    "EmployeeCountMilestoneDirection",
     "EstimateEnrichmentCostBody",
     "EstimateEnrichmentCostBodyEnrichmentType",
     "EstimateEnrichmentCostResponse200",
@@ -34227,6 +34345,9 @@ __all__ = (
     "FlightSearchResponse429",
     "FlightSearchResponse500",
     "FlightSearchResponse503",
+    "FollowerCountGrowth",
+    "FundingStageChanged",
+    "FundingStageChangedToStagesType0Item",
     "GetAcceleratorsResponse200",
     "GetAcceleratorsResponse200ChargeInfoType0",
     "GetAcceleratorsResponse200ChargeInfoType0LowCreditAlertType0",
@@ -35470,8 +35591,13 @@ __all__ = (
     "GoogleMapsSearchResponse429",
     "GoogleMapsSearchResponse500",
     "GoogleMapsSearchResponse503",
+    "HeadcountCrossedThreshold",
+    "HeadcountCrossedThresholdDirection",
+    "HeadcountGrowthPercent",
+    "HeadcountGrowthPercentDirection",
     "HealthCheckResponse200",
     "HealthCheckResponse200Status",
+    "HQLocationChanged",
     "InstagramPostCommentsBody",
     "InstagramPostCommentsResponse200",
     "InstagramPostCommentsResponse200ChargeInfoType0",
@@ -35616,6 +35742,7 @@ __all__ = (
     "InstagramUserReelsResponse429",
     "InstagramUserReelsResponse500",
     "InstagramUserReelsResponse503",
+    "JobPostingInFunction",
     "JobPostingSearchBody",
     "JobPostingSearchBodySearchParams",
     "JobPostingSearchBodySearchParamsAnnualSalaryUsdType0",
@@ -35761,6 +35888,8 @@ __all__ = (
     "JobPostingSearchResponse429",
     "JobPostingSearchResponse500",
     "JobPostingSearchResponse503",
+    "JobPostingWithKeyword",
+    "JobPostingWithKeywordLocationTypesType0Item",
     "JobTitleRewriteBody",
     "JobTitleRewriteResponse200",
     "JobTitleRewriteResponse200ChargeInfoType0",
@@ -37019,6 +37148,24 @@ __all__ = (
     "ListAudiencesResponse429",
     "ListAudiencesResponse500",
     "ListAudiencesResponse503",
+    "ListTrackerChangesResponse200",
+    "ListTrackerChangesResponse200ChargeInfoType0",
+    "ListTrackerChangesResponse200ChargeInfoType0LowCreditAlertType0",
+    "ListTrackerChangesResponse200ChargeInfoType0Method",
+    "ListTrackerChangesResponse200ChargeInfoType1",
+    "ListTrackerChangesResponse200ChargeInfoType1LowCreditAlertType0",
+    "ListTrackerChangesResponse200ChargeInfoType1Method",
+    "ListTrackerChangesResponse200ChargeInfoType2",
+    "ListTrackerChangesResponse200ChargeInfoType2LowCreditAlertType0",
+    "ListTrackerChangesResponse200ChargeInfoType2Method",
+    "ListTrackerChangesResponse200ChargeInfoType3",
+    "ListTrackerChangesResponse200ChargeInfoType3LowCreditAlertType0",
+    "ListTrackerChangesResponse200ChargeInfoType3Method",
+    "ListTrackerChangesResponse200ChargeInfoType4",
+    "ListTrackerChangesResponse200ChargeInfoType4LowCreditAlertType0",
+    "ListTrackerChangesResponse200ChargeInfoType4Method",
+    "ListTrackerChangesResponse200Output",
+    "ListTrackerChangesResponse200WarningsType0Item",
     "ListTrackerChangesResponse400",
     "ListTrackerChangesResponse401",
     "ListTrackerChangesResponse402",
@@ -37206,6 +37353,11 @@ __all__ = (
     "MultiSourceSearchResponse429",
     "MultiSourceSearchResponse500",
     "MultiSourceSearchResponse503",
+    "NewFundingRound",
+    "NewFundingRoundRoundTypesType0Item",
+    "NewInvestor",
+    "NewOfficeLocation",
+    "NewsWithKeyword",
     "NlpSearchParseBody",
     "NlpSearchParseResponse400",
     "NlpSearchParseResponse401",
@@ -39686,6 +39838,30 @@ __all__ = (
     "PeopleSearchResponse429",
     "PeopleSearchResponse500",
     "PeopleSearchResponse503",
+    "PersonBecameVerified",
+    "PersonChangedCompany",
+    "PersonConnectionsMilestone",
+    "PersonConnectionsMilestoneDirection",
+    "PersonEmploymentTypeChanged",
+    "PersonFollowerMilestone",
+    "PersonFollowerMilestoneDirection",
+    "PersonGotPromoted",
+    "PersonHeadlineChanged",
+    "PersonIsHiring",
+    "PersonIsHiringDirection",
+    "PersonLocationChanged",
+    "PersonNewCertification",
+    "PersonOpenToWork",
+    "PersonOpenToWorkDirection",
+    "PersonPosted",
+    "PersonPostedWithKeyword",
+    "PersonSkillsAdded",
+    "PersonStartedCompany",
+    "PersonStealthChanged",
+    "PersonStealthChangedDirection",
+    "PersonSummaryChanged",
+    "PersonTagGained",
+    "PersonTitleChanged",
     "PollBatchContactDetailsBody",
     "PollBatchContactDetailsResponse200",
     "PollBatchContactDetailsResponse200ChargeInfoType0",
@@ -40326,6 +40502,7 @@ __all__ = (
     "ProfileReactionsLiveFetchResponse429",
     "ProfileReactionsLiveFetchResponse500",
     "ProfileReactionsLiveFetchResponse503",
+    "RecentlyHiredWithTitle",
     "RedditPostCommentsBody",
     "RedditPostCommentsResponse200",
     "RedditPostCommentsResponse200ChargeInfoType0",
@@ -41111,6 +41288,7 @@ __all__ = (
     "SyncTurboContactEnrichmentResponse429",
     "SyncTurboContactEnrichmentResponse500",
     "SyncTurboContactEnrichmentResponse503",
+    "TechnologyAdded",
     "TiktokCommentRepliesBody",
     "TiktokCommentRepliesResponse200",
     "TiktokCommentRepliesResponse200ChargeInfoType0",
@@ -41612,6 +41790,10 @@ __all__ = (
     "TiktokVideoTranscriptResponse429",
     "TiktokVideoTranscriptResponse500",
     "TiktokVideoTranscriptResponse503",
+    "TrackerSignal",
+    "TrackerSignalChangeDataItem",
+    "TrackerSignalDeliveryStatus",
+    "TrackerSignalEntityType",
     "TriggerEnrichmentBody",
     "TriggerEnrichmentBodyEnrichmentType",
     "TriggerEnrichmentResponse200",
@@ -42075,6 +42257,7 @@ __all__ = (
     "UpdateJobChangeListResponse429",
     "UpdateJobChangeListResponse500",
     "UpdateJobChangeListResponse503",
+    "UpdateTrackerCompanyListBody",
     "UpdateTrackerCompanyListResponse200",
     "UpdateTrackerCompanyListResponse200ChargeInfoType0",
     "UpdateTrackerCompanyListResponse200ChargeInfoType0LowCreditAlertType0",
@@ -42104,6 +42287,7 @@ __all__ = (
     "UpdateTrackerCompanyListResponse429",
     "UpdateTrackerCompanyListResponse500",
     "UpdateTrackerCompanyListResponse503",
+    "UpdateTrackerPersonListBody",
     "UpdateTrackerPersonListResponse200",
     "UpdateTrackerPersonListResponse200ChargeInfoType0",
     "UpdateTrackerPersonListResponse200ChargeInfoType0LowCreditAlertType0",
