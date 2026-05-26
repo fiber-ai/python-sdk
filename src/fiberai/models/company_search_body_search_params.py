@@ -80,6 +80,7 @@ if TYPE_CHECKING:
     from ..models.company_search_body_search_params_revenue_range_usd_type_0 import (
         CompanySearchBodySearchParamsRevenueRangeUSDType0,
     )
+    from ..models.company_search_body_search_params_sort_type_0_item import CompanySearchBodySearchParamsSortType0Item
     from ..models.company_search_body_search_params_special_flags_type_0 import (
         CompanySearchBodySearchParamsSpecialFlagsType0,
     )
@@ -144,6 +145,9 @@ class CompanySearchBodySearchParams:
         revenue_range_usd (CompanySearchBodySearchParamsRevenueRangeUSDType0 | None | Unset):
         tags (CompanySearchBodySearchParamsTagsType0 | None | Unset):
         linkedin_industries (CompanySearchBodySearchParamsLinkedinIndustriesType0 | None | Unset):
+        sort (list[CompanySearchBodySearchParamsSortType0Item] | None | Unset): Sort order for company results. Clauses
+            are applied in order. Omit to use the default ranking. Note: changing the sort invalidates any existing cursor —
+            start a new pagination run when the sort changes.
     """
 
     exact_company_v2: CompanySearchBodySearchParamsExactCompanyV2Type0 | None | Unset = UNSET
@@ -186,6 +190,7 @@ class CompanySearchBodySearchParams:
     revenue_range_usd: CompanySearchBodySearchParamsRevenueRangeUSDType0 | None | Unset = UNSET
     tags: CompanySearchBodySearchParamsTagsType0 | None | Unset = UNSET
     linkedin_industries: CompanySearchBodySearchParamsLinkedinIndustriesType0 | None | Unset = UNSET
+    sort: list[CompanySearchBodySearchParamsSortType0Item] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -582,6 +587,18 @@ class CompanySearchBodySearchParams:
         else:
             linkedin_industries = self.linkedin_industries
 
+        sort: list[dict[str, Any]] | None | Unset
+        if isinstance(self.sort, Unset):
+            sort = UNSET
+        elif isinstance(self.sort, list):
+            sort = []
+            for sort_type_0_item_data in self.sort:
+                sort_type_0_item = sort_type_0_item_data.to_dict()
+                sort.append(sort_type_0_item)
+
+        else:
+            sort = self.sort
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -657,6 +674,8 @@ class CompanySearchBodySearchParams:
             field_dict["tags"] = tags
         if linkedin_industries is not UNSET:
             field_dict["linkedinIndustries"] = linkedin_industries
+        if sort is not UNSET:
+            field_dict["sort"] = sort
 
         return field_dict
 
@@ -742,6 +761,9 @@ class CompanySearchBodySearchParams:
         )
         from ..models.company_search_body_search_params_revenue_range_usd_type_0 import (
             CompanySearchBodySearchParamsRevenueRangeUSDType0,
+        )
+        from ..models.company_search_body_search_params_sort_type_0_item import (
+            CompanySearchBodySearchParamsSortType0Item,
         )
         from ..models.company_search_body_search_params_special_flags_type_0 import (
             CompanySearchBodySearchParamsSpecialFlagsType0,
@@ -1429,6 +1451,28 @@ class CompanySearchBodySearchParams:
 
         linkedin_industries = _parse_linkedin_industries(d.pop("linkedinIndustries", UNSET))
 
+        def _parse_sort(data: object) -> list[CompanySearchBodySearchParamsSortType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                sort_type_0 = []
+                _sort_type_0 = data
+                for sort_type_0_item_data in _sort_type_0:
+                    sort_type_0_item = CompanySearchBodySearchParamsSortType0Item.from_dict(sort_type_0_item_data)
+
+                    sort_type_0.append(sort_type_0_item)
+
+                return sort_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[CompanySearchBodySearchParamsSortType0Item] | None | Unset, data)
+
+        sort = _parse_sort(d.pop("sort", UNSET))
+
         company_search_body_search_params = cls(
             exact_company_v2=exact_company_v2,
             domains=domains,
@@ -1466,6 +1510,7 @@ class CompanySearchBodySearchParams:
             revenue_range_usd=revenue_range_usd,
             tags=tags,
             linkedin_industries=linkedin_industries,
+            sort=sort,
         )
 
         company_search_body_search_params.additional_properties = d

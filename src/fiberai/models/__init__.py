@@ -2506,6 +2506,15 @@ from .combined_search_count_body_company_params_office_locations_v2_type_0_none_
 from .combined_search_count_body_company_params_revenue_range_usd_type_0 import (
     CombinedSearchCountBodyCompanyParamsRevenueRangeUSDType0,
 )
+from .combined_search_count_body_company_params_sort_type_0_item import (
+    CombinedSearchCountBodyCompanyParamsSortType0Item,
+)
+from .combined_search_count_body_company_params_sort_type_0_item_direction import (
+    CombinedSearchCountBodyCompanyParamsSortType0ItemDirection,
+)
+from .combined_search_count_body_company_params_sort_type_0_item_field import (
+    CombinedSearchCountBodyCompanyParamsSortType0ItemField,
+)
 from .combined_search_count_body_company_params_special_flags_type_0 import (
     CombinedSearchCountBodyCompanyParamsSpecialFlagsType0,
 )
@@ -3478,6 +3487,15 @@ from .combined_search_count_body_profile_params_publications_type_0_any_of_type_
 )
 from .combined_search_count_body_profile_params_publications_type_0_any_of_type_0_item_keywords_type_0 import (
     CombinedSearchCountBodyProfileParamsPublicationsType0AnyOfType0ItemKeywordsType0,
+)
+from .combined_search_count_body_profile_params_sort_type_0_item import (
+    CombinedSearchCountBodyProfileParamsSortType0Item,
+)
+from .combined_search_count_body_profile_params_sort_type_0_item_direction import (
+    CombinedSearchCountBodyProfileParamsSortType0ItemDirection,
+)
+from .combined_search_count_body_profile_params_sort_type_0_item_field import (
+    CombinedSearchCountBodyProfileParamsSortType0ItemField,
 )
 from .combined_search_count_body_profile_params_started_at_company_type_0 import (
     CombinedSearchCountBodyProfileParamsStartedAtCompanyType0,
@@ -5704,6 +5722,11 @@ from .company_count_body_search_params_office_locations_v2_type_0_none_of_type_0
     CompanyCountBodySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2Type,
 )
 from .company_count_body_search_params_revenue_range_usd_type_0 import CompanyCountBodySearchParamsRevenueRangeUSDType0
+from .company_count_body_search_params_sort_type_0_item import CompanyCountBodySearchParamsSortType0Item
+from .company_count_body_search_params_sort_type_0_item_direction import (
+    CompanyCountBodySearchParamsSortType0ItemDirection,
+)
+from .company_count_body_search_params_sort_type_0_item_field import CompanyCountBodySearchParamsSortType0ItemField
 from .company_count_body_search_params_special_flags_type_0 import CompanyCountBodySearchParamsSpecialFlagsType0
 from .company_count_body_search_params_stage_type_0 import CompanyCountBodySearchParamsStageType0
 from .company_count_body_search_params_stage_type_0_any_of_type_0_item import (
@@ -7935,6 +7958,11 @@ from .company_search_body_search_params_office_locations_v2_type_0_none_of_type_
 from .company_search_body_search_params_revenue_range_usd_type_0 import (
     CompanySearchBodySearchParamsRevenueRangeUSDType0,
 )
+from .company_search_body_search_params_sort_type_0_item import CompanySearchBodySearchParamsSortType0Item
+from .company_search_body_search_params_sort_type_0_item_direction import (
+    CompanySearchBodySearchParamsSortType0ItemDirection,
+)
+from .company_search_body_search_params_sort_type_0_item_field import CompanySearchBodySearchParamsSortType0ItemField
 from .company_search_body_search_params_special_flags_type_0 import CompanySearchBodySearchParamsSpecialFlagsType0
 from .company_search_body_search_params_stage_type_0 import CompanySearchBodySearchParamsStageType0
 from .company_search_body_search_params_stage_type_0_any_of_type_0_item import (
@@ -19744,6 +19772,15 @@ from .paginated_combined_search_body_company_config_type_0_search_params_office_
 from .paginated_combined_search_body_company_config_type_0_search_params_revenue_range_usd_type_0 import (
     PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangeUSDType0,
 )
+from .paginated_combined_search_body_company_config_type_0_search_params_sort_type_0_item import (
+    PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSortType0Item,
+)
+from .paginated_combined_search_body_company_config_type_0_search_params_sort_type_0_item_direction import (
+    PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSortType0ItemDirection,
+)
+from .paginated_combined_search_body_company_config_type_0_search_params_sort_type_0_item_field import (
+    PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSortType0ItemField,
+)
 from .paginated_combined_search_body_company_config_type_0_search_params_special_flags_type_0 import (
     PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSpecialFlagsType0,
 )
@@ -20731,6 +20768,15 @@ from .paginated_combined_search_body_profile_config_type_0_search_params_publica
 )
 from .paginated_combined_search_body_profile_config_type_0_search_params_publications_type_0_any_of_type_0_item_keywords_type_0 import (
     PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPublicationsType0AnyOfType0ItemKeywordsType0,
+)
+from .paginated_combined_search_body_profile_config_type_0_search_params_sort_type_0_item import (
+    PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSortType0Item,
+)
+from .paginated_combined_search_body_profile_config_type_0_search_params_sort_type_0_item_direction import (
+    PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSortType0ItemDirection,
+)
+from .paginated_combined_search_body_profile_config_type_0_search_params_sort_type_0_item_field import (
+    PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSortType0ItemField,
 )
 from .paginated_combined_search_body_profile_config_type_0_search_params_started_at_company_type_0 import (
     PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStartedAtCompanyType0,
@@ -23354,6 +23400,11 @@ from .people_search_body_search_params_publications_type_0_any_of_type_0_item im
 from .people_search_body_search_params_publications_type_0_any_of_type_0_item_keywords_type_0 import (
     PeopleSearchBodySearchParamsPublicationsType0AnyOfType0ItemKeywordsType0,
 )
+from .people_search_body_search_params_sort_type_0_item import PeopleSearchBodySearchParamsSortType0Item
+from .people_search_body_search_params_sort_type_0_item_direction import (
+    PeopleSearchBodySearchParamsSortType0ItemDirection,
+)
+from .people_search_body_search_params_sort_type_0_item_field import PeopleSearchBodySearchParamsSortType0ItemField
 from .people_search_body_search_params_started_at_company_type_0 import (
     PeopleSearchBodySearchParamsStartedAtCompanyType0,
 )
@@ -24488,6 +24539,13 @@ from .people_search_count_body_search_params_publications_type_0_any_of_type_0_i
 )
 from .people_search_count_body_search_params_publications_type_0_any_of_type_0_item_keywords_type_0 import (
     PeopleSearchCountBodySearchParamsPublicationsType0AnyOfType0ItemKeywordsType0,
+)
+from .people_search_count_body_search_params_sort_type_0_item import PeopleSearchCountBodySearchParamsSortType0Item
+from .people_search_count_body_search_params_sort_type_0_item_direction import (
+    PeopleSearchCountBodySearchParamsSortType0ItemDirection,
+)
+from .people_search_count_body_search_params_sort_type_0_item_field import (
+    PeopleSearchCountBodySearchParamsSortType0ItemField,
 )
 from .people_search_count_body_search_params_started_at_company_type_0 import (
     PeopleSearchCountBodySearchParamsStartedAtCompanyType0,
@@ -31141,6 +31199,9 @@ __all__ = (
     "CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2Strategy",
     "CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2Type",
     "CombinedSearchCountBodyCompanyParamsRevenueRangeUSDType0",
+    "CombinedSearchCountBodyCompanyParamsSortType0Item",
+    "CombinedSearchCountBodyCompanyParamsSortType0ItemDirection",
+    "CombinedSearchCountBodyCompanyParamsSortType0ItemField",
     "CombinedSearchCountBodyCompanyParamsSpecialFlagsType0",
     "CombinedSearchCountBodyCompanyParamsStageType0",
     "CombinedSearchCountBodyCompanyParamsStageType0AnyOfType0Item",
@@ -31470,6 +31531,9 @@ __all__ = (
     "CombinedSearchCountBodyProfileParamsPublicationsType0AllOfType0ItemKeywordsType0",
     "CombinedSearchCountBodyProfileParamsPublicationsType0AnyOfType0Item",
     "CombinedSearchCountBodyProfileParamsPublicationsType0AnyOfType0ItemKeywordsType0",
+    "CombinedSearchCountBodyProfileParamsSortType0Item",
+    "CombinedSearchCountBodyProfileParamsSortType0ItemDirection",
+    "CombinedSearchCountBodyProfileParamsSortType0ItemField",
     "CombinedSearchCountBodyProfileParamsStartedAtCompanyType0",
     "CombinedSearchCountBodyProfileParamsStartedAtCompanyType0RangeType0",
     "CombinedSearchCountBodyProfileParamsStartedAtCompanyType0Strategy",
@@ -32239,6 +32303,9 @@ __all__ = (
     "CompanyCountBodySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2Strategy",
     "CompanyCountBodySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2Type",
     "CompanyCountBodySearchParamsRevenueRangeUSDType0",
+    "CompanyCountBodySearchParamsSortType0Item",
+    "CompanyCountBodySearchParamsSortType0ItemDirection",
+    "CompanyCountBodySearchParamsSortType0ItemField",
     "CompanyCountBodySearchParamsSpecialFlagsType0",
     "CompanyCountBodySearchParamsStageType0",
     "CompanyCountBodySearchParamsStageType0AnyOfType0Item",
@@ -33044,6 +33111,9 @@ __all__ = (
     "CompanySearchBodySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2Strategy",
     "CompanySearchBodySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2Type",
     "CompanySearchBodySearchParamsRevenueRangeUSDType0",
+    "CompanySearchBodySearchParamsSortType0Item",
+    "CompanySearchBodySearchParamsSortType0ItemDirection",
+    "CompanySearchBodySearchParamsSortType0ItemField",
     "CompanySearchBodySearchParamsSpecialFlagsType0",
     "CompanySearchBodySearchParamsStageType0",
     "CompanySearchBodySearchParamsStageType0AnyOfType0Item",
@@ -38017,6 +38087,9 @@ __all__ = (
     "PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2Strategy",
     "PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2Type",
     "PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangeUSDType0",
+    "PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSortType0Item",
+    "PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSortType0ItemDirection",
+    "PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSortType0ItemField",
     "PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSpecialFlagsType0",
     "PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStageType0",
     "PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStageType0AnyOfType0Item",
@@ -38347,6 +38420,9 @@ __all__ = (
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPublicationsType0AllOfType0ItemKeywordsType0",
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPublicationsType0AnyOfType0Item",
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPublicationsType0AnyOfType0ItemKeywordsType0",
+    "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSortType0Item",
+    "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSortType0ItemDirection",
+    "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSortType0ItemField",
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStartedAtCompanyType0",
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStartedAtCompanyType0RangeType0",
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStartedAtCompanyType0Strategy",
@@ -39251,6 +39327,9 @@ __all__ = (
     "PeopleSearchBodySearchParamsPublicationsType0AllOfType0ItemKeywordsType0",
     "PeopleSearchBodySearchParamsPublicationsType0AnyOfType0Item",
     "PeopleSearchBodySearchParamsPublicationsType0AnyOfType0ItemKeywordsType0",
+    "PeopleSearchBodySearchParamsSortType0Item",
+    "PeopleSearchBodySearchParamsSortType0ItemDirection",
+    "PeopleSearchBodySearchParamsSortType0ItemField",
     "PeopleSearchBodySearchParamsStartedAtCompanyType0",
     "PeopleSearchBodySearchParamsStartedAtCompanyType0RangeType0",
     "PeopleSearchBodySearchParamsStartedAtCompanyType0Strategy",
@@ -39646,6 +39725,9 @@ __all__ = (
     "PeopleSearchCountBodySearchParamsPublicationsType0AllOfType0ItemKeywordsType0",
     "PeopleSearchCountBodySearchParamsPublicationsType0AnyOfType0Item",
     "PeopleSearchCountBodySearchParamsPublicationsType0AnyOfType0ItemKeywordsType0",
+    "PeopleSearchCountBodySearchParamsSortType0Item",
+    "PeopleSearchCountBodySearchParamsSortType0ItemDirection",
+    "PeopleSearchCountBodySearchParamsSortType0ItemField",
     "PeopleSearchCountBodySearchParamsStartedAtCompanyType0",
     "PeopleSearchCountBodySearchParamsStartedAtCompanyType0RangeType0",
     "PeopleSearchCountBodySearchParamsStartedAtCompanyType0Strategy",

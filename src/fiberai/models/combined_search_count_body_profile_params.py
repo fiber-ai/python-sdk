@@ -92,6 +92,9 @@ if TYPE_CHECKING:
     from ..models.combined_search_count_body_profile_params_publications_type_0 import (
         CombinedSearchCountBodyProfileParamsPublicationsType0,
     )
+    from ..models.combined_search_count_body_profile_params_sort_type_0_item import (
+        CombinedSearchCountBodyProfileParamsSortType0Item,
+    )
     from ..models.combined_search_count_body_profile_params_started_at_company_type_0 import (
         CombinedSearchCountBodyProfileParamsStartedAtCompanyType0,
     )
@@ -181,6 +184,9 @@ class CombinedSearchCountBodyProfileParams:
                 array. This slows down the API call, so only enable this if you need it. Default: False.
             tags (CombinedSearchCountBodyProfileParamsTagsType0 | None | Unset):
             education (CombinedSearchCountBodyProfileParamsEducationType0 | None | Unset):
+            sort (list[CombinedSearchCountBodyProfileParamsSortType0Item] | None | Unset): Sort order for people results.
+                Clauses are applied in order. Omit to use the default ranking. Note: changing the sort invalidates any existing
+                cursor — start a new pagination run when the sort changes.
     """
 
     country_3_letter_code: CombinedSearchCountBodyProfileParamsCountry3LetterCodeType0 | None | Unset = UNSET
@@ -251,6 +257,7 @@ class CombinedSearchCountBodyProfileParams:
     get_detailed_work_experience: bool | None | Unset = False
     tags: CombinedSearchCountBodyProfileParamsTagsType0 | None | Unset = UNSET
     education: CombinedSearchCountBodyProfileParamsEducationType0 | None | Unset = UNSET
+    sort: list[CombinedSearchCountBodyProfileParamsSortType0Item] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_approx_age_type_0 import (
@@ -666,6 +673,18 @@ class CombinedSearchCountBodyProfileParams:
         else:
             education = self.education
 
+        sort: list[dict[str, Any]] | None | Unset
+        if isinstance(self.sort, Unset):
+            sort = UNSET
+        elif isinstance(self.sort, list):
+            sort = []
+            for sort_type_0_item_data in self.sort:
+                sort_type_0_item = sort_type_0_item_data.to_dict()
+                sort.append(sort_type_0_item)
+
+        else:
+            sort = self.sort
+
         field_dict: dict[str, Any] = {}
 
         field_dict.update({})
@@ -743,6 +762,8 @@ class CombinedSearchCountBodyProfileParams:
             field_dict["tags"] = tags
         if education is not UNSET:
             field_dict["education"] = education
+        if sort is not UNSET:
+            field_dict["sort"] = sort
 
         return field_dict
 
@@ -831,6 +852,9 @@ class CombinedSearchCountBodyProfileParams:
         )
         from ..models.combined_search_count_body_profile_params_publications_type_0 import (
             CombinedSearchCountBodyProfileParamsPublicationsType0,
+        )
+        from ..models.combined_search_count_body_profile_params_sort_type_0_item import (
+            CombinedSearchCountBodyProfileParamsSortType0Item,
         )
         from ..models.combined_search_count_body_profile_params_started_at_company_type_0 import (
             CombinedSearchCountBodyProfileParamsStartedAtCompanyType0,
@@ -1600,6 +1624,30 @@ class CombinedSearchCountBodyProfileParams:
 
         education = _parse_education(d.pop("education", UNSET))
 
+        def _parse_sort(data: object) -> list[CombinedSearchCountBodyProfileParamsSortType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                sort_type_0 = []
+                _sort_type_0 = data
+                for sort_type_0_item_data in _sort_type_0:
+                    sort_type_0_item = CombinedSearchCountBodyProfileParamsSortType0Item.from_dict(
+                        sort_type_0_item_data
+                    )
+
+                    sort_type_0.append(sort_type_0_item)
+
+                return sort_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[CombinedSearchCountBodyProfileParamsSortType0Item] | None | Unset, data)
+
+        sort = _parse_sort(d.pop("sort", UNSET))
+
         combined_search_count_body_profile_params = cls(
             country_3_letter_code=country_3_letter_code,
             num_connections=num_connections,
@@ -1638,6 +1686,7 @@ class CombinedSearchCountBodyProfileParams:
             get_detailed_work_experience=get_detailed_work_experience,
             tags=tags,
             education=education,
+            sort=sort,
         )
 
         return combined_search_count_body_profile_params

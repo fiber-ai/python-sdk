@@ -92,6 +92,9 @@ if TYPE_CHECKING:
     from ..models.paginated_combined_search_body_profile_config_type_0_search_params_publications_type_0 import (
         PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPublicationsType0,
     )
+    from ..models.paginated_combined_search_body_profile_config_type_0_search_params_sort_type_0_item import (
+        PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSortType0Item,
+    )
     from ..models.paginated_combined_search_body_profile_config_type_0_search_params_started_at_company_type_0 import (
         PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStartedAtCompanyType0,
     )
@@ -184,6 +187,9 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
                 array. This slows down the API call, so only enable this if you need it. Default: False.
             tags (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsTagsType0 | Unset):
             education (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationType0 | Unset):
+            sort (list[PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSortType0Item] | None | Unset): Sort order
+                for people results. Clauses are applied in order. Omit to use the default ranking. Note: changing the sort
+                invalidates any existing cursor — start a new pagination run when the sort changes.
     """
 
     country_3_letter_code: (
@@ -262,6 +268,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
     get_detailed_work_experience: bool | None | Unset = False
     tags: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsTagsType0 | Unset = UNSET
     education: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationType0 | Unset = UNSET
+    sort: list[PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSortType0Item] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_approx_age_type_0 import (
@@ -708,6 +715,18 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
         else:
             education = self.education
 
+        sort: list[dict[str, Any]] | None | Unset
+        if isinstance(self.sort, Unset):
+            sort = UNSET
+        elif isinstance(self.sort, list):
+            sort = []
+            for sort_type_0_item_data in self.sort:
+                sort_type_0_item = sort_type_0_item_data.to_dict()
+                sort.append(sort_type_0_item)
+
+        else:
+            sort = self.sort
+
         field_dict: dict[str, Any] = {}
 
         field_dict.update({})
@@ -785,6 +804,8 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             field_dict["tags"] = tags
         if education is not UNSET:
             field_dict["education"] = education
+        if sort is not UNSET:
+            field_dict["sort"] = sort
 
         return field_dict
 
@@ -873,6 +894,9 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_publications_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPublicationsType0,
+        )
+        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_sort_type_0_item import (
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSortType0Item,
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_started_at_company_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStartedAtCompanyType0,
@@ -1756,6 +1780,34 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
 
         education = _parse_education(d.pop("education", UNSET))
 
+        def _parse_sort(
+            data: object,
+        ) -> list[PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSortType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                sort_type_0 = []
+                _sort_type_0 = data
+                for sort_type_0_item_data in _sort_type_0:
+                    sort_type_0_item = PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSortType0Item.from_dict(
+                        sort_type_0_item_data
+                    )
+
+                    sort_type_0.append(sort_type_0_item)
+
+                return sort_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                list[PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSortType0Item] | None | Unset, data
+            )
+
+        sort = _parse_sort(d.pop("sort", UNSET))
+
         paginated_combined_search_body_profile_config_type_0_search_params = cls(
             country_3_letter_code=country_3_letter_code,
             num_connections=num_connections,
@@ -1794,6 +1846,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             get_detailed_work_experience=get_detailed_work_experience,
             tags=tags,
             education=education,
+            sort=sort,
         )
 
         return paginated_combined_search_body_profile_config_type_0_search_params
