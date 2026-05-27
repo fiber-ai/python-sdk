@@ -48,6 +48,9 @@ if TYPE_CHECKING:
     from ..models.company_count_body_search_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_2 import (
         CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2,
     )
+    from ..models.company_count_body_search_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_3 import (
+        CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType3,
+    )
     from ..models.company_count_body_search_params_job_postings_v2_type_0_any_of_type_0_item_num_applicants_type_0 import (
         CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemNumApplicantsType0,
     )
@@ -82,7 +85,8 @@ class CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0Item:
             Unset):
         geo_location (CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0 |
             CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1 |
-            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2 | None | Unset):
+            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2 |
+            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType3 | None | Unset):
         country_or_region_code
             (list[CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemCountryOrRegionCodeType0Item] | None | Unset):
         seniority (list[CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemSeniorityType0Item] | None | Unset):
@@ -121,6 +125,7 @@ class CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0Item:
         CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0
         | CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1
         | CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2
+        | CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType3
         | None
         | Unset
     ) = UNSET
@@ -154,6 +159,9 @@ class CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0Item:
         )
         from ..models.company_count_body_search_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_2 import (
             CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2,
+        )
+        from ..models.company_count_body_search_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_3 import (
+            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType3,
         )
         from ..models.company_count_body_search_params_job_postings_v2_type_0_any_of_type_0_item_num_applicants_type_0 import (
             CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemNumApplicantsType0,
@@ -259,6 +267,10 @@ class CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0Item:
             geo_location = self.geo_location.to_dict()
         elif isinstance(
             self.geo_location, CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2
+        ):
+            geo_location = self.geo_location.to_dict()
+        elif isinstance(
+            self.geo_location, CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType3
         ):
             geo_location = self.geo_location.to_dict()
         else:
@@ -383,6 +395,9 @@ class CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0Item:
         )
         from ..models.company_count_body_search_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_2 import (
             CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2,
+        )
+        from ..models.company_count_body_search_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_3 import (
+            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType3,
         )
         from ..models.company_count_body_search_params_job_postings_v2_type_0_any_of_type_0_item_num_applicants_type_0 import (
             CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemNumApplicantsType0,
@@ -604,6 +619,7 @@ class CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0Item:
             CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0
             | CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1
             | CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2
+            | CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType3
             | None
             | Unset
         ):
@@ -641,10 +657,21 @@ class CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0Item:
                 return geo_location_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                geo_location_type_3 = (
+                    CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType3.from_dict(data)
+                )
+
+                return geo_location_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             return cast(
                 CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType0
                 | CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1
                 | CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2
+                | CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType3
                 | None
                 | Unset,
                 data,

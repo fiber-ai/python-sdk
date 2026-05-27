@@ -2,7 +2,7 @@ from enum import Enum
 
 
 class CompanyCountBodySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1Strategy(str, Enum):
-    POLYGON = "polygon"
+    FREE_FORM_CITY = "free-form-city"
 
     def __str__(self) -> str:
         return str(self.value)

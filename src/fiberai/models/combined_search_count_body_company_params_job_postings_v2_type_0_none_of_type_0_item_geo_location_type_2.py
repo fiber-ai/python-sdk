@@ -1,17 +1,20 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_2_region import (
-    CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType2Region,
-)
 from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_2_strategy import (
     CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType2Strategy,
 )
+
+if TYPE_CHECKING:
+    from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_2_vertices_item import (
+        CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType2VerticesItem,
+    )
+
 
 T = TypeVar("T", bound="CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType2")
 
@@ -21,24 +24,28 @@ class CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLo
     """
     Attributes:
         strategy (CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType2Strategy):
-        region (CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType2Region):
+        vertices
+            (list[CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType2VerticesItem]):
     """
 
     strategy: CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType2Strategy
-    region: CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType2Region
+    vertices: list[CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType2VerticesItem]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         strategy = self.strategy.value
 
-        region = self.region.value
+        vertices = []
+        for vertices_item_data in self.vertices:
+            vertices_item = vertices_item_data.to_dict()
+            vertices.append(vertices_item)
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
                 "strategy": strategy,
-                "region": region,
+                "vertices": vertices,
             }
         )
 
@@ -46,18 +53,27 @@ class CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLo
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.combined_search_count_body_company_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_2_vertices_item import (
+            CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType2VerticesItem,
+        )
+
         d = dict(src_dict)
         strategy = CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType2Strategy(
             d.pop("strategy")
         )
 
-        region = CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType2Region(
-            d.pop("region")
-        )
+        vertices = []
+        _vertices = d.pop("vertices")
+        for vertices_item_data in _vertices:
+            vertices_item = CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType2VerticesItem.from_dict(
+                vertices_item_data
+            )
+
+            vertices.append(vertices_item)
 
         combined_search_count_body_company_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_2 = cls(
             strategy=strategy,
-            region=region,
+            vertices=vertices,
         )
 
         combined_search_count_body_company_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_2.additional_properties = d

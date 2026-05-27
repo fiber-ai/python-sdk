@@ -2,7 +2,7 @@ from enum import Enum
 
 
 class CompanySearchBodySearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType2Strategy(str, Enum):
-    PRESET_REGION = "preset-region"
+    POLYGON = "polygon"
 
     def __str__(self) -> str:
         return str(self.value)

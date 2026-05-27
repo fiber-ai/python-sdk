@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.combined_search_count_body_company_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_2 import (
         CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2,
     )
+    from ..models.combined_search_count_body_company_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_3 import (
+        CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType3,
+    )
 
 
 T = TypeVar("T", bound="CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2")
@@ -32,7 +35,8 @@ class CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemT
         type_ (CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2Type):
         location (CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0 |
             CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1 |
-            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2):
+            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2 |
+            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType3):
     """
 
     type_: CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2Type
@@ -40,6 +44,7 @@ class CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemT
         CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0
         | CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1
         | CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2
+        | CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType3
     )
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -49,6 +54,9 @@ class CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemT
         )
         from ..models.combined_search_count_body_company_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_1 import (
             CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1,
+        )
+        from ..models.combined_search_count_body_company_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_2 import (
+            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2,
         )
 
         type_ = self.type_.value
@@ -60,6 +68,10 @@ class CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemT
             location = self.location.to_dict()
         elif isinstance(
             self.location, CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1
+        ):
+            location = self.location.to_dict()
+        elif isinstance(
+            self.location, CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2
         ):
             location = self.location.to_dict()
         else:
@@ -87,6 +99,9 @@ class CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemT
         from ..models.combined_search_count_body_company_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_2 import (
             CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2,
         )
+        from ..models.combined_search_count_body_company_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_3 import (
+            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType3,
+        )
 
         d = dict(src_dict)
         type_ = CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2Type(d.pop("type"))
@@ -97,6 +112,7 @@ class CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemT
             CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0
             | CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1
             | CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2
+            | CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType3
         ):
             try:
                 if not isinstance(data, dict):
@@ -118,15 +134,25 @@ class CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemT
                 return location_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                location_type_2 = CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2.from_dict(
+                    data
+                )
+
+                return location_type_2
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            location_type_2 = (
-                CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2.from_dict(
+            location_type_3 = (
+                CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType3.from_dict(
                     data
                 )
             )
 
-            return location_type_2
+            return location_type_3
 
         location = _parse_location(d.pop("location"))
 

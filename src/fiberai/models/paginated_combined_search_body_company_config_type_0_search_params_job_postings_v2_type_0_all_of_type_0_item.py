@@ -48,6 +48,9 @@ if TYPE_CHECKING:
     from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_all_of_type_0_item_geo_location_type_2 import (
         PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType2,
     )
+    from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_all_of_type_0_item_geo_location_type_3 import (
+        PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType3,
+    )
     from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_all_of_type_0_item_num_applicants_type_0 import (
         PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemNumApplicantsType0,
     )
@@ -92,6 +95,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType0 |
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType1 |
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType2 |
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType3 |
             Unset):
         country_or_region_code (list[PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfTyp
             e0ItemCountryOrRegionCodeType0Item] | None | Unset):
@@ -142,6 +146,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
         | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType0
         | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType1
         | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType2
+        | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType3
         | Unset
     ) = UNSET
     country_or_region_code: (
@@ -198,6 +203,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_all_of_type_0_item_geo_location_type_2 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType2,
+        )
+        from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_all_of_type_0_item_geo_location_type_3 import (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType3,
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_all_of_type_0_item_num_applicants_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemNumApplicantsType0,
@@ -316,6 +324,11 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
         elif isinstance(
             self.geo_location,
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType2,
+        ):
+            geo_location = self.geo_location.to_dict()
+        elif isinstance(
+            self.geo_location,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType3,
         ):
             geo_location = self.geo_location.to_dict()
         else:
@@ -440,6 +453,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_all_of_type_0_item_geo_location_type_2 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType2,
+        )
+        from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_all_of_type_0_item_geo_location_type_3 import (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType3,
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_all_of_type_0_item_num_applicants_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemNumApplicantsType0,
@@ -683,6 +699,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
             | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType0
             | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType1
             | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType2
+            | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType3
             | Unset
         ):
             if data is None:
@@ -719,11 +736,22 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
                 return geo_location_type_2
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                geo_location_type_3 = PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType3.from_dict(
+                    data
+                )
+
+                return geo_location_type_3
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             return cast(
                 None
                 | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType0
                 | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType1
                 | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType2
+                | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType3
                 | Unset,
                 data,
             )

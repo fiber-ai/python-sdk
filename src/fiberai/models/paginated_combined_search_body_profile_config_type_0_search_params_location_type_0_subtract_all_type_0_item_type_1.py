@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -9,10 +9,14 @@ from attrs import field as _attrs_field
 from ..models.paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_subtract_all_type_0_item_type_1_strategy import (
     PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1Strategy,
 )
+from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_subtract_all_type_0_item_type_1_vertices_item import (
-        PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1VerticesItem,
+    from ..models.paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_subtract_all_type_0_item_type_1_radius_type_0 import (
+        PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1RadiusType0,
+    )
+    from ..models.paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_subtract_all_type_0_item_type_1_radius_type_1 import (
+        PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1RadiusType1,
     )
 
 
@@ -27,39 +31,67 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0Subt
     Attributes:
         strategy
             (PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1Strategy):
-        vertices (list[PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1Ve
-            rticesItem]):
+        city (str):
+        radius
+            (PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1RadiusType0 |
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1RadiusType1):
+        country_code (None | str | Unset):
     """
 
     strategy: PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1Strategy
-    vertices: list[
-        PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1VerticesItem
-    ]
+    city: str
+    radius: (
+        PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1RadiusType0
+        | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1RadiusType1
+    )
+    country_code: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_subtract_all_type_0_item_type_1_radius_type_0 import (
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1RadiusType0,
+        )
+
         strategy = self.strategy.value
 
-        vertices = []
-        for vertices_item_data in self.vertices:
-            vertices_item = vertices_item_data.to_dict()
-            vertices.append(vertices_item)
+        city = self.city
+
+        radius: dict[str, Any]
+        if isinstance(
+            self.radius,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1RadiusType0,
+        ):
+            radius = self.radius.to_dict()
+        else:
+            radius = self.radius.to_dict()
+
+        country_code: None | str | Unset
+        if isinstance(self.country_code, Unset):
+            country_code = UNSET
+        else:
+            country_code = self.country_code
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
                 "strategy": strategy,
-                "vertices": vertices,
+                "city": city,
+                "radius": radius,
             }
         )
+        if country_code is not UNSET:
+            field_dict["countryCode"] = country_code
 
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_subtract_all_type_0_item_type_1_vertices_item import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1VerticesItem,
+        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_subtract_all_type_0_item_type_1_radius_type_0 import (
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1RadiusType0,
+        )
+        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_subtract_all_type_0_item_type_1_radius_type_1 import (
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1RadiusType1,
         )
 
         d = dict(src_dict)
@@ -69,18 +101,48 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0Subt
             )
         )
 
-        vertices = []
-        _vertices = d.pop("vertices")
-        for vertices_item_data in _vertices:
-            vertices_item = PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1VerticesItem.from_dict(
-                vertices_item_data
+        city = d.pop("city")
+
+        def _parse_radius(
+            data: object,
+        ) -> (
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1RadiusType0
+            | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1RadiusType1
+        ):
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                radius_type_0 = PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1RadiusType0.from_dict(
+                    data
+                )
+
+                return radius_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            if not isinstance(data, dict):
+                raise TypeError()
+            radius_type_1 = PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0SubtractAllType0ItemType1RadiusType1.from_dict(
+                data
             )
 
-            vertices.append(vertices_item)
+            return radius_type_1
+
+        radius = _parse_radius(d.pop("radius"))
+
+        def _parse_country_code(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        country_code = _parse_country_code(d.pop("countryCode", UNSET))
 
         paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_subtract_all_type_0_item_type_1 = cls(
             strategy=strategy,
-            vertices=vertices,
+            city=city,
+            radius=radius,
+            country_code=country_code,
         )
 
         paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_subtract_all_type_0_item_type_1.additional_properties = d

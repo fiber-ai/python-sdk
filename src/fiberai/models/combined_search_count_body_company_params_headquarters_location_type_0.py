@@ -18,6 +18,9 @@ if TYPE_CHECKING:
     from ..models.combined_search_count_body_company_params_headquarters_location_type_0_subtract_all_type_0_item_type_2 import (
         CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType2,
     )
+    from ..models.combined_search_count_body_company_params_headquarters_location_type_0_subtract_all_type_0_item_type_3 import (
+        CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType3,
+    )
     from ..models.combined_search_count_body_company_params_headquarters_location_type_0_union_all_type_0_item_type_0 import (
         CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0,
     )
@@ -26,6 +29,9 @@ if TYPE_CHECKING:
     )
     from ..models.combined_search_count_body_company_params_headquarters_location_type_0_union_all_type_0_item_type_2 import (
         CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType2,
+    )
+    from ..models.combined_search_count_body_company_params_headquarters_location_type_0_union_all_type_0_item_type_3 import (
+        CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType3,
     )
 
 
@@ -38,10 +44,12 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
     Attributes:
         union_all (list[CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0 |
             CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType1 |
-            CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType2] | None | Unset):
+            CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType2 |
+            CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType3] | None | Unset):
         subtract_all (list[CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0 |
             CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType1 |
-            CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType2] | None | Unset):
+            CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType2 |
+            CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType3] | None | Unset):
     """
 
     union_all: (
@@ -49,6 +57,7 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
             CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0
             | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType1
             | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType2
+            | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType3
         ]
         | None
         | Unset
@@ -58,6 +67,7 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
             CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0
             | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType1
             | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType2
+            | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType3
         ]
         | None
         | Unset
@@ -71,11 +81,17 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
         from ..models.combined_search_count_body_company_params_headquarters_location_type_0_subtract_all_type_0_item_type_1 import (
             CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType1,
         )
+        from ..models.combined_search_count_body_company_params_headquarters_location_type_0_subtract_all_type_0_item_type_2 import (
+            CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType2,
+        )
         from ..models.combined_search_count_body_company_params_headquarters_location_type_0_union_all_type_0_item_type_0 import (
             CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0,
         )
         from ..models.combined_search_count_body_company_params_headquarters_location_type_0_union_all_type_0_item_type_1 import (
             CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType1,
+        )
+        from ..models.combined_search_count_body_company_params_headquarters_location_type_0_union_all_type_0_item_type_2 import (
+            CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType2,
         )
 
         union_all: list[dict[str, Any]] | None | Unset
@@ -93,6 +109,11 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
                 elif isinstance(
                     union_all_type_0_item_data,
                     CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType1,
+                ):
+                    union_all_type_0_item = union_all_type_0_item_data.to_dict()
+                elif isinstance(
+                    union_all_type_0_item_data,
+                    CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType2,
                 ):
                     union_all_type_0_item = union_all_type_0_item_data.to_dict()
                 else:
@@ -118,6 +139,11 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
                 elif isinstance(
                     subtract_all_type_0_item_data,
                     CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType1,
+                ):
+                    subtract_all_type_0_item = subtract_all_type_0_item_data.to_dict()
+                elif isinstance(
+                    subtract_all_type_0_item_data,
+                    CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType2,
                 ):
                     subtract_all_type_0_item = subtract_all_type_0_item_data.to_dict()
                 else:
@@ -149,6 +175,9 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
         from ..models.combined_search_count_body_company_params_headquarters_location_type_0_subtract_all_type_0_item_type_2 import (
             CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType2,
         )
+        from ..models.combined_search_count_body_company_params_headquarters_location_type_0_subtract_all_type_0_item_type_3 import (
+            CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType3,
+        )
         from ..models.combined_search_count_body_company_params_headquarters_location_type_0_union_all_type_0_item_type_0 import (
             CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0,
         )
@@ -157,6 +186,9 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
         )
         from ..models.combined_search_count_body_company_params_headquarters_location_type_0_union_all_type_0_item_type_2 import (
             CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType2,
+        )
+        from ..models.combined_search_count_body_company_params_headquarters_location_type_0_union_all_type_0_item_type_3 import (
+            CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType3,
         )
 
         d = dict(src_dict)
@@ -168,6 +200,7 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
                 CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0
                 | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType1
                 | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType2
+                | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType3
             ]
             | None
             | Unset
@@ -189,6 +222,7 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
                         CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0
                         | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType1
                         | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType2
+                        | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType3
                     ):
                         try:
                             if not isinstance(data, dict):
@@ -210,13 +244,23 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
                             return union_all_type_0_item_type_1
                         except (TypeError, ValueError, AttributeError, KeyError):
                             pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            union_all_type_0_item_type_2 = CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType2.from_dict(
+                                data
+                            )
+
+                            return union_all_type_0_item_type_2
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        union_all_type_0_item_type_2 = CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType2.from_dict(
+                        union_all_type_0_item_type_3 = CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType3.from_dict(
                             data
                         )
 
-                        return union_all_type_0_item_type_2
+                        return union_all_type_0_item_type_3
 
                     union_all_type_0_item = _parse_union_all_type_0_item(union_all_type_0_item_data)
 
@@ -230,6 +274,7 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
                     CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType0
                     | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType1
                     | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType2
+                    | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0UnionAllType0ItemType3
                 ]
                 | None
                 | Unset,
@@ -245,6 +290,7 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
                 CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0
                 | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType1
                 | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType2
+                | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType3
             ]
             | None
             | Unset
@@ -266,6 +312,7 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
                         CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0
                         | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType1
                         | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType2
+                        | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType3
                     ):
                         try:
                             if not isinstance(data, dict):
@@ -287,13 +334,23 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
                             return subtract_all_type_0_item_type_1
                         except (TypeError, ValueError, AttributeError, KeyError):
                             pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            subtract_all_type_0_item_type_2 = CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType2.from_dict(
+                                data
+                            )
+
+                            return subtract_all_type_0_item_type_2
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        subtract_all_type_0_item_type_2 = CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType2.from_dict(
+                        subtract_all_type_0_item_type_3 = CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType3.from_dict(
                             data
                         )
 
-                        return subtract_all_type_0_item_type_2
+                        return subtract_all_type_0_item_type_3
 
                     subtract_all_type_0_item = _parse_subtract_all_type_0_item(subtract_all_type_0_item_data)
 
@@ -307,6 +364,7 @@ class CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0:
                     CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType0
                     | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType1
                     | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType2
+                    | CombinedSearchCountBodyCompanyParamsHeadquartersLocationType0SubtractAllType0ItemType3
                 ]
                 | None
                 | Unset,

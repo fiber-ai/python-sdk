@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.company_search_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_2 import (
         CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2,
     )
+    from ..models.company_search_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_3 import (
+        CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType3,
+    )
 
 
 T = TypeVar("T", bound="CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2")
@@ -32,7 +35,8 @@ class CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2:
         type_ (CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2Type):
         location (CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0 |
             CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1 |
-            CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2):
+            CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2 |
+            CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType3):
     """
 
     type_: CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2Type
@@ -40,6 +44,7 @@ class CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2:
         CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0
         | CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1
         | CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2
+        | CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType3
     )
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -49,6 +54,9 @@ class CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2:
         )
         from ..models.company_search_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_1 import (
             CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1,
+        )
+        from ..models.company_search_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_2 import (
+            CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2,
         )
 
         type_ = self.type_.value
@@ -60,6 +68,10 @@ class CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2:
             location = self.location.to_dict()
         elif isinstance(
             self.location, CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1
+        ):
+            location = self.location.to_dict()
+        elif isinstance(
+            self.location, CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2
         ):
             location = self.location.to_dict()
         else:
@@ -87,6 +99,9 @@ class CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2:
         from ..models.company_search_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_2 import (
             CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2,
         )
+        from ..models.company_search_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_3 import (
+            CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType3,
+        )
 
         d = dict(src_dict)
         type_ = CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2Type(d.pop("type"))
@@ -97,6 +112,7 @@ class CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2:
             CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0
             | CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1
             | CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2
+            | CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType3
         ):
             try:
                 if not isinstance(data, dict):
@@ -118,13 +134,23 @@ class CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2:
                 return location_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                location_type_2 = (
+                    CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2.from_dict(data)
+                )
+
+                return location_type_2
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            location_type_2 = (
-                CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2.from_dict(data)
+            location_type_3 = (
+                CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType3.from_dict(data)
             )
 
-            return location_type_2
+            return location_type_3
 
         location = _parse_location(d.pop("location"))
 

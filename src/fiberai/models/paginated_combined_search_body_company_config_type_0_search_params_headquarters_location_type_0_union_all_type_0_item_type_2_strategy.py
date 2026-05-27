@@ -4,7 +4,7 @@ from enum import Enum
 class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType2Strategy(
     str, Enum
 ):
-    PRESET_REGION = "preset-region"
+    POLYGON = "polygon"
 
     def __str__(self) -> str:
         return str(self.value)

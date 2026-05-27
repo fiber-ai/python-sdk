@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_2 import (
         PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType2,
     )
+    from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_3 import (
+        PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType3,
+    )
 
 
 T = TypeVar(
@@ -36,8 +39,10 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2
             (PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0
             |
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType1
+            |
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType2
             | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType
-            2):
+            3):
     """
 
     type_: PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2Type
@@ -45,6 +50,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2
         PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0
         | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType1
         | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType2
+        | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType3
     )
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -54,6 +60,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_1 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType1,
+        )
+        from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_2 import (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType2,
         )
 
         type_ = self.type_.value
@@ -67,6 +76,11 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2
         elif isinstance(
             self.location,
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType1,
+        ):
+            location = self.location.to_dict()
+        elif isinstance(
+            self.location,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType2,
         ):
             location = self.location.to_dict()
         else:
@@ -94,6 +108,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_2 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType2,
         )
+        from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_3 import (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType3,
+        )
 
         d = dict(src_dict)
         type_ = PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2Type(
@@ -106,6 +123,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0
             | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType1
             | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType2
+            | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType3
         ):
             try:
                 if not isinstance(data, dict):
@@ -127,13 +145,23 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2
                 return location_type_1
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                location_type_2 = PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType2.from_dict(
+                    data
+                )
+
+                return location_type_2
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            location_type_2 = PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType2.from_dict(
+            location_type_3 = PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType3.from_dict(
                 data
             )
 
-            return location_type_2
+            return location_type_3
 
         location = _parse_location(d.pop("location"))
 

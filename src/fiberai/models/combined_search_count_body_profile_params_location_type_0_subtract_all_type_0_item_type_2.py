@@ -1,17 +1,20 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.combined_search_count_body_profile_params_location_type_0_subtract_all_type_0_item_type_2_region import (
-    CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2Region,
-)
 from ..models.combined_search_count_body_profile_params_location_type_0_subtract_all_type_0_item_type_2_strategy import (
     CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2Strategy,
 )
+
+if TYPE_CHECKING:
+    from ..models.combined_search_count_body_profile_params_location_type_0_subtract_all_type_0_item_type_2_vertices_item import (
+        CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2VerticesItem,
+    )
+
 
 T = TypeVar("T", bound="CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2")
 
@@ -21,24 +24,27 @@ class CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2
     """
     Attributes:
         strategy (CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2Strategy):
-        region (CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2Region):
+        vertices (list[CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2VerticesItem]):
     """
 
     strategy: CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2Strategy
-    region: CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2Region
+    vertices: list[CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2VerticesItem]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         strategy = self.strategy.value
 
-        region = self.region.value
+        vertices = []
+        for vertices_item_data in self.vertices:
+            vertices_item = vertices_item_data.to_dict()
+            vertices.append(vertices_item)
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
                 "strategy": strategy,
-                "region": region,
+                "vertices": vertices,
             }
         )
 
@@ -46,14 +52,27 @@ class CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.combined_search_count_body_profile_params_location_type_0_subtract_all_type_0_item_type_2_vertices_item import (
+            CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2VerticesItem,
+        )
+
         d = dict(src_dict)
         strategy = CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2Strategy(d.pop("strategy"))
 
-        region = CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2Region(d.pop("region"))
+        vertices = []
+        _vertices = d.pop("vertices")
+        for vertices_item_data in _vertices:
+            vertices_item = (
+                CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2VerticesItem.from_dict(
+                    vertices_item_data
+                )
+            )
+
+            vertices.append(vertices_item)
 
         combined_search_count_body_profile_params_location_type_0_subtract_all_type_0_item_type_2 = cls(
             strategy=strategy,
-            region=region,
+            vertices=vertices,
         )
 
         combined_search_count_body_profile_params_location_type_0_subtract_all_type_0_item_type_2.additional_properties = d

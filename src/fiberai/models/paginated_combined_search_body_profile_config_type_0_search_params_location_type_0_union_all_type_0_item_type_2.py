@@ -1,17 +1,20 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_union_all_type_0_item_type_2_region import (
-    PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType2Region,
-)
 from ..models.paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_union_all_type_0_item_type_2_strategy import (
     PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType2Strategy,
 )
+
+if TYPE_CHECKING:
+    from ..models.paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_union_all_type_0_item_type_2_vertices_item import (
+        PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType2VerticesItem,
+    )
+
 
 T = TypeVar("T", bound="PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType2")
 
@@ -21,24 +24,30 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0Unio
     """
     Attributes:
         strategy (PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType2Strategy):
-        region (PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType2Region):
+        vertices (list[PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType2Verti
+            cesItem]):
     """
 
     strategy: PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType2Strategy
-    region: PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType2Region
+    vertices: list[
+        PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType2VerticesItem
+    ]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         strategy = self.strategy.value
 
-        region = self.region.value
+        vertices = []
+        for vertices_item_data in self.vertices:
+            vertices_item = vertices_item_data.to_dict()
+            vertices.append(vertices_item)
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
                 "strategy": strategy,
-                "region": region,
+                "vertices": vertices,
             }
         )
 
@@ -46,18 +55,27 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0Unio
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_union_all_type_0_item_type_2_vertices_item import (
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType2VerticesItem,
+        )
+
         d = dict(src_dict)
         strategy = PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType2Strategy(
             d.pop("strategy")
         )
 
-        region = PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType2Region(
-            d.pop("region")
-        )
+        vertices = []
+        _vertices = d.pop("vertices")
+        for vertices_item_data in _vertices:
+            vertices_item = PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType2VerticesItem.from_dict(
+                vertices_item_data
+            )
+
+            vertices.append(vertices_item)
 
         paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_union_all_type_0_item_type_2 = cls(
             strategy=strategy,
-            region=region,
+            vertices=vertices,
         )
 
         paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_union_all_type_0_item_type_2.additional_properties = d
