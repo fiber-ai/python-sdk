@@ -6,7 +6,6 @@ from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-from dateutil.parser import isoparse
 
 if TYPE_CHECKING:
     from ..models.get_scouting_report_response_200_output_report_historical_headcount_type_0_growth import (
@@ -66,7 +65,7 @@ class GetScoutingReportResponse200OutputReportHistoricalHeadcountType0:
         )
 
         d = dict(src_dict)
-        latest_snapshot_date = isoparse(d.pop("latest_snapshot_date")).date()
+        latest_snapshot_date = datetime.date.fromisoformat(d.pop("latest_snapshot_date"))
 
         snapshots = []
         _snapshots = d.pop("snapshots")

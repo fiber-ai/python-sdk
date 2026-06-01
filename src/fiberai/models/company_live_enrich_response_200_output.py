@@ -21,8 +21,8 @@ class CompanyLiveEnrichResponse200Output:
     Attributes:
         company (CompanyLiveEnrichResponse200OutputCompany): The enriched company data. A 404 status is returned if the
             company was not found.
-        is_cached_404 (bool | None | Unset): True when the company is not found but we have the cached data in our
-            database. In this case, you won't be charged.
+        is_cached_404 (bool | None | Unset): True when the company is not found on LinkedIn but we have cached data in
+            our database.
     """
 
     company: CompanyLiveEnrichResponse200OutputCompany

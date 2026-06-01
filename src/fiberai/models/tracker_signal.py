@@ -6,7 +6,6 @@ from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-from dateutil.parser import isoparse
 
 from ..models.tracker_signal_delivery_status import TrackerSignalDeliveryStatus
 from ..models.tracker_signal_entity_type import TrackerSignalEntityType
@@ -131,7 +130,7 @@ class TrackerSignal:
 
             change_data.append(change_data_item)
 
-        observed_at = isoparse(d.pop("observedAt"))
+        observed_at = datetime.datetime.fromisoformat(d.pop("observedAt"))
 
         delivery_status = TrackerSignalDeliveryStatus(d.pop("deliveryStatus"))
 
@@ -141,7 +140,7 @@ class TrackerSignal:
             try:
                 if not isinstance(data, str):
                     raise TypeError()
-                delivered_at_type_0 = isoparse(data)
+                delivered_at_type_0 = datetime.datetime.fromisoformat(data)
 
                 return delivered_at_type_0
             except (TypeError, ValueError, AttributeError, KeyError):

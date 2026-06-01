@@ -6,7 +6,6 @@ from typing import Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
-from dateutil.parser import isoparse
 
 T = TypeVar(
     "T", bound="PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0HistoricalHeadcountType0SnapshotsItem"
@@ -44,7 +43,7 @@ class PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0HistoricalHeadc
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        date = isoparse(d.pop("date")).date()
+        date = datetime.date.fromisoformat(d.pop("date"))
 
         employees = d.pop("employees")
 

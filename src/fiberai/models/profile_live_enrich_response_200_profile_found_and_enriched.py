@@ -24,8 +24,8 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnriched:
     Attributes:
         found (bool):
         profile (ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile):
-        is_cached_404 (bool | None | Unset): True when the profile is not found but we have the cached data in our
-            database. In this case, you won't be charged.
+        is_cached_404 (bool | None | Unset): True when the profile is not found on LinkedIn but we have cached data in
+            our database.
     """
 
     found: bool
