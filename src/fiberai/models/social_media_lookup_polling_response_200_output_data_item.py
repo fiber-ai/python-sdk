@@ -40,7 +40,7 @@ class SocialMediaLookupPollingResponse200OutputDataItem:
             SocialMediaLookupPollingResponse200OutputDataItemOutcomeType3Type1 | Unset): Overall outcome: FOUND_CANDIDATES
             if at least one profile was found, NO_CANDIDATES_FOUND if the search returned nothing, INSUFFICIENT_INFORMATION
             if there was not enough input to search.
-        error_message (None | str | Unset): Error message if the lookup failed for this person.
+        error_message (None | str | Unset): Error message if the lookup failed for this person. Null on success.
     """
 
     full_name: str
