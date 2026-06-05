@@ -50,6 +50,12 @@ from .add_companies_to_exclusion_list_response_200_charge_info_type_4_method imp
     AddCompaniesToExclusionListResponse200ChargeInfoType4Method,
 )
 from .add_companies_to_exclusion_list_response_200_output import AddCompaniesToExclusionListResponse200Output
+from .add_companies_to_exclusion_list_response_200_output_invalid_identifiers_item import (
+    AddCompaniesToExclusionListResponse200OutputInvalidIdentifiersItem,
+)
+from .add_companies_to_exclusion_list_response_200_output_invalid_identifiers_item_input import (
+    AddCompaniesToExclusionListResponse200OutputInvalidIdentifiersItemInput,
+)
 from .add_companies_to_exclusion_list_response_200_warnings_type_0_item import (
     AddCompaniesToExclusionListResponse200WarningsType0Item,
 )
@@ -30904,6 +30910,8 @@ __all__ = (
     "AddCompaniesToExclusionListResponse200ChargeInfoType4LowCreditAlertType0",
     "AddCompaniesToExclusionListResponse200ChargeInfoType4Method",
     "AddCompaniesToExclusionListResponse200Output",
+    "AddCompaniesToExclusionListResponse200OutputInvalidIdentifiersItem",
+    "AddCompaniesToExclusionListResponse200OutputInvalidIdentifiersItemInput",
     "AddCompaniesToExclusionListResponse200WarningsType0Item",
     "AddCompaniesToExclusionListResponse400",
     "AddCompaniesToExclusionListResponse401",

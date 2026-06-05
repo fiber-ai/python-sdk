@@ -8,15 +8,16 @@ from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
 
-T = TypeVar("T", bound="AddCompaniesToExclusionListBodyCompaniesItem")
+T = TypeVar("T", bound="AddCompaniesToExclusionListResponse200OutputInvalidIdentifiersItemInput")
 
 
 @_attrs_define
-class AddCompaniesToExclusionListBodyCompaniesItem:
-    """
+class AddCompaniesToExclusionListResponse200OutputInvalidIdentifiersItemInput:
+    """The original entry as submitted.
+
     Attributes:
-        domain (None | str | Unset): A company domain, like 'example.com'.
-        linkedin_url (None | str | Unset): A LinkedIn company URL, like 'https://www.linkedin.com/company/google'.
+        domain (None | str | Unset):
+        linkedin_url (None | str | Unset):
     """
 
     domain: None | str | Unset = UNSET
@@ -68,13 +69,13 @@ class AddCompaniesToExclusionListBodyCompaniesItem:
 
         linkedin_url = _parse_linkedin_url(d.pop("linkedinUrl", UNSET))
 
-        add_companies_to_exclusion_list_body_companies_item = cls(
+        add_companies_to_exclusion_list_response_200_output_invalid_identifiers_item_input = cls(
             domain=domain,
             linkedin_url=linkedin_url,
         )
 
-        add_companies_to_exclusion_list_body_companies_item.additional_properties = d
-        return add_companies_to_exclusion_list_body_companies_item
+        add_companies_to_exclusion_list_response_200_output_invalid_identifiers_item_input.additional_properties = d
+        return add_companies_to_exclusion_list_response_200_output_invalid_identifiers_item_input
 
     @property
     def additional_keys(self) -> list[str]:

@@ -22,7 +22,8 @@ class AddCompaniesToExclusionListBody:
         api_key (str): Your Fiber API key
         list_id (str): The ID of the company exclusion list to add companies to.
         companies (list[AddCompaniesToExclusionListBodyCompaniesItem]): The companies to add to the exclusion list. A
-            maximum of 5000 companies can be added at a time.
+            maximum of 5000 companies can be added at a time. Each entry needs a domain or a LinkedIn company URL; invalid
+            entries are skipped and reported in the response without failing the request.
     """
 
     api_key: str
