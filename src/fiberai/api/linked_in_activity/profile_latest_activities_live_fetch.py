@@ -144,10 +144,13 @@ def sync_detailed(
     and reposts) in newest-first order. If you only need to know when a person was last active, use the
     lighter profile-last-activity-date endpoint instead.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ProfileLatestActivitiesLiveFetchBody):
@@ -193,10 +196,13 @@ def sync(
     and reposts) in newest-first order. If you only need to know when a person was last active, use the
     lighter profile-last-activity-date endpoint instead.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ProfileLatestActivitiesLiveFetchBody):
@@ -236,10 +242,13 @@ async def asyncio_detailed(
     and reposts) in newest-first order. If you only need to know when a person was last active, use the
     lighter profile-last-activity-date endpoint instead.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ProfileLatestActivitiesLiveFetchBody):
@@ -283,10 +292,13 @@ async def asyncio(
     and reposts) in newest-first order. If you only need to know when a person was last active, use the
     lighter profile-last-activity-date endpoint instead.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ProfileLatestActivitiesLiveFetchBody):

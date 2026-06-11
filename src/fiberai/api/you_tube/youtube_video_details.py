@@ -143,7 +143,7 @@ def sync_detailed(
      Fetches detailed metadata for a YouTube video including title, view count, like count, channel
     information, chapters, key moments, and available transcript languages.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -191,7 +191,7 @@ def sync(
      Fetches detailed metadata for a YouTube video including title, view count, like count, channel
     information, chapters, key moments, and available transcript languages.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -233,7 +233,7 @@ async def asyncio_detailed(
      Fetches detailed metadata for a YouTube video including title, view count, like count, channel
     information, chapters, key moments, and available transcript languages.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -279,7 +279,7 @@ async def asyncio(
      Fetches detailed metadata for a YouTube video including title, view count, like count, channel
     information, chapters, key moments, and available transcript languages.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>

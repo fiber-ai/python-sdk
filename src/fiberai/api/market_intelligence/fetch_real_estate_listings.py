@@ -144,7 +144,7 @@ def sync_detailed(
     home types, and property features. Data is available for all 50 US states, D.C., Puerto Rico, and
     all 13 Canadian provinces and territories.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -196,7 +196,7 @@ def sync(
     home types, and property features. Data is available for all 50 US states, D.C., Puerto Rico, and
     all 13 Canadian provinces and territories.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -242,7 +242,7 @@ async def asyncio_detailed(
     home types, and property features. Data is available for all 50 US states, D.C., Puerto Rico, and
     all 13 Canadian provinces and territories.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -292,7 +292,7 @@ async def asyncio(
     home types, and property features. Data is available for all 50 US states, D.C., Puerto Rico, and
     all 13 Canadian provinces and territories.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>

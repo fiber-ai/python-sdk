@@ -144,7 +144,7 @@ def sync_detailed(
     full post URL (e.g. 'https://www.instagram.com/p/DVoDVg5DkXM/') or a bare shortcode (e.g.
     'DVoDVg5DkXM').
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -193,7 +193,7 @@ def sync(
     full post URL (e.g. 'https://www.instagram.com/p/DVoDVg5DkXM/') or a bare shortcode (e.g.
     'DVoDVg5DkXM').
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -236,7 +236,7 @@ async def asyncio_detailed(
     full post URL (e.g. 'https://www.instagram.com/p/DVoDVg5DkXM/') or a bare shortcode (e.g.
     'DVoDVg5DkXM').
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -283,7 +283,7 @@ async def asyncio(
     full post URL (e.g. 'https://www.instagram.com/p/DVoDVg5DkXM/') or a bare shortcode (e.g.
     'DVoDVg5DkXM').
 
-    <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>

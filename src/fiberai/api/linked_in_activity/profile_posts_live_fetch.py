@@ -143,10 +143,13 @@ def sync_detailed(
      Fetches recent posts from a LinkedIn profile. Returns a paginated feed of posts with optional cursor
     for pagination. Each page returns up to 50 posts.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ProfilePostsLiveFetchBody):
@@ -191,10 +194,13 @@ def sync(
      Fetches recent posts from a LinkedIn profile. Returns a paginated feed of posts with optional cursor
     for pagination. Each page returns up to 50 posts.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ProfilePostsLiveFetchBody):
@@ -233,10 +239,13 @@ async def asyncio_detailed(
      Fetches recent posts from a LinkedIn profile. Returns a paginated feed of posts with optional cursor
     for pagination. Each page returns up to 50 posts.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ProfilePostsLiveFetchBody):
@@ -279,10 +288,13 @@ async def asyncio(
      Fetches recent posts from a LinkedIn profile. Returns a paginated feed of posts with optional cursor
     for pagination. Each page returns up to 50 posts.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ProfilePostsLiveFetchBody):

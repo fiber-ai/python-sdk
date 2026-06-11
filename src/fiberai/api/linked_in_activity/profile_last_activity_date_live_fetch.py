@@ -143,10 +143,13 @@ def sync_detailed(
      Fetches the last date where the person made a publicly visible action on LinkedIn, such as a post,
     comment, reaction, or repost. This does not include logging in or other private actions.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ProfileLastActivityDateLiveFetchBody):
@@ -191,10 +194,13 @@ def sync(
      Fetches the last date where the person made a publicly visible action on LinkedIn, such as a post,
     comment, reaction, or repost. This does not include logging in or other private actions.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ProfileLastActivityDateLiveFetchBody):
@@ -233,10 +239,13 @@ async def asyncio_detailed(
      Fetches the last date where the person made a publicly visible action on LinkedIn, such as a post,
     comment, reaction, or repost. This does not include logging in or other private actions.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ProfileLastActivityDateLiveFetchBody):
@@ -279,10 +288,13 @@ async def asyncio(
      Fetches the last date where the person made a publicly visible action on LinkedIn, such as a post,
     comment, reaction, or repost. This does not include logging in or other private actions.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
     pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (ProfileLastActivityDateLiveFetchBody):

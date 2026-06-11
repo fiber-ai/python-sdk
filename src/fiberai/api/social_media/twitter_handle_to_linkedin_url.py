@@ -143,7 +143,7 @@ def sync_detailed(
      Given an X (Twitter) handle, find the person's LinkedIn profile URL. Accepts bare handles (with or
     without '@') and full X / Twitter profile URLs.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per X→LinkedIn lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -194,7 +194,7 @@ def sync(
      Given an X (Twitter) handle, find the person's LinkedIn profile URL. Accepts bare handles (with or
     without '@') and full X / Twitter profile URLs.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per X→LinkedIn lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -239,7 +239,7 @@ async def asyncio_detailed(
      Given an X (Twitter) handle, find the person's LinkedIn profile URL. Accepts bare handles (with or
     without '@') and full X / Twitter profile URLs.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per X→LinkedIn lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -288,7 +288,7 @@ async def asyncio(
      Given an X (Twitter) handle, find the person's LinkedIn profile URL. Accepts bare handles (with or
     without '@') and full X / Twitter profile URLs.
 
-    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 3 credits per X→LinkedIn lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
