@@ -16,8 +16,10 @@ class RemoveTrackerPeopleBodyPeopleItem:
     """
     Attributes:
         linkedin_url (None | str | Unset): Full LinkedIn profile URL
-        linkedin_user_id (None | str | Unset): LinkedIn user ID
-        linkedin_slug (None | str | Unset): LinkedIn profile slug
+        linkedin_user_id (None | str | Unset): A person's stable numeric identifier. This is NOT derived from their
+            profile URL — retrieve it from a live enrichment lookup. Digits only.
+        linkedin_slug (None | str | Unset): The handle in a profile URL — e.g. `williamhgates` in
+            https://www.linkedin.com/in/williamhgates/.
     """
 
     linkedin_url: None | str | Unset = UNSET
