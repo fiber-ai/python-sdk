@@ -16,8 +16,10 @@ class AddTrackerCompaniesBodyCompaniesItem:
     """
     Attributes:
         linkedin_url (None | str | Unset): Full LinkedIn company URL
-        linkedin_org_id (None | str | Unset): LinkedIn organization ID
-        linkedin_slug (None | str | Unset): LinkedIn company slug
+        linkedin_org_id (None | str | Unset): A company's stable numeric identifier. This is NOT derived from their
+            company page URL — retrieve it from a live enrichment lookup. Digits only.
+        linkedin_slug (None | str | Unset): The handle in a company page URL — e.g. `microsoft` in
+            https://www.linkedin.com/company/microsoft/.
     """
 
     linkedin_url: None | str | Unset = UNSET
