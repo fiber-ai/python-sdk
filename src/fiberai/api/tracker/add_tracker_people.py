@@ -13,6 +13,7 @@ from ...models.add_tracker_people_response_401 import AddTrackerPeopleResponse40
 from ...models.add_tracker_people_response_402 import AddTrackerPeopleResponse402
 from ...models.add_tracker_people_response_403 import AddTrackerPeopleResponse403
 from ...models.add_tracker_people_response_404 import AddTrackerPeopleResponse404
+from ...models.add_tracker_people_response_422 import AddTrackerPeopleResponse422
 from ...models.add_tracker_people_response_429 import AddTrackerPeopleResponse429
 from ...models.add_tracker_people_response_500 import AddTrackerPeopleResponse500
 from ...models.add_tracker_people_response_503 import AddTrackerPeopleResponse503
@@ -50,6 +51,7 @@ def _parse_response(
     | AddTrackerPeopleResponse402
     | AddTrackerPeopleResponse403
     | AddTrackerPeopleResponse404
+    | AddTrackerPeopleResponse422
     | AddTrackerPeopleResponse429
     | AddTrackerPeopleResponse500
     | AddTrackerPeopleResponse503
@@ -85,6 +87,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = AddTrackerPeopleResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = AddTrackerPeopleResponse429.from_dict(response.json())
 
@@ -115,6 +122,7 @@ def _build_response(
     | AddTrackerPeopleResponse402
     | AddTrackerPeopleResponse403
     | AddTrackerPeopleResponse404
+    | AddTrackerPeopleResponse422
     | AddTrackerPeopleResponse429
     | AddTrackerPeopleResponse500
     | AddTrackerPeopleResponse503
@@ -139,6 +147,7 @@ def sync_detailed(
     | AddTrackerPeopleResponse402
     | AddTrackerPeopleResponse403
     | AddTrackerPeopleResponse404
+    | AddTrackerPeopleResponse422
     | AddTrackerPeopleResponse429
     | AddTrackerPeopleResponse500
     | AddTrackerPeopleResponse503
@@ -148,7 +157,7 @@ def sync_detailed(
      Add people to a person tracker list. Identify people by LinkedIn URL, user ID, or slug. At least one
     identifier is required per person.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -162,7 +171,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[AddTrackerPeopleResponse200 | AddTrackerPeopleResponse400 | AddTrackerPeopleResponse401 | AddTrackerPeopleResponse402 | AddTrackerPeopleResponse403 | AddTrackerPeopleResponse404 | AddTrackerPeopleResponse429 | AddTrackerPeopleResponse500 | AddTrackerPeopleResponse503]
+        Response[AddTrackerPeopleResponse200 | AddTrackerPeopleResponse400 | AddTrackerPeopleResponse401 | AddTrackerPeopleResponse402 | AddTrackerPeopleResponse403 | AddTrackerPeopleResponse404 | AddTrackerPeopleResponse422 | AddTrackerPeopleResponse429 | AddTrackerPeopleResponse500 | AddTrackerPeopleResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -189,6 +198,7 @@ def sync(
     | AddTrackerPeopleResponse402
     | AddTrackerPeopleResponse403
     | AddTrackerPeopleResponse404
+    | AddTrackerPeopleResponse422
     | AddTrackerPeopleResponse429
     | AddTrackerPeopleResponse500
     | AddTrackerPeopleResponse503
@@ -199,7 +209,7 @@ def sync(
      Add people to a person tracker list. Identify people by LinkedIn URL, user ID, or slug. At least one
     identifier is required per person.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -213,7 +223,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        AddTrackerPeopleResponse200 | AddTrackerPeopleResponse400 | AddTrackerPeopleResponse401 | AddTrackerPeopleResponse402 | AddTrackerPeopleResponse403 | AddTrackerPeopleResponse404 | AddTrackerPeopleResponse429 | AddTrackerPeopleResponse500 | AddTrackerPeopleResponse503
+        AddTrackerPeopleResponse200 | AddTrackerPeopleResponse400 | AddTrackerPeopleResponse401 | AddTrackerPeopleResponse402 | AddTrackerPeopleResponse403 | AddTrackerPeopleResponse404 | AddTrackerPeopleResponse422 | AddTrackerPeopleResponse429 | AddTrackerPeopleResponse500 | AddTrackerPeopleResponse503
     """
 
     return sync_detailed(
@@ -235,6 +245,7 @@ async def asyncio_detailed(
     | AddTrackerPeopleResponse402
     | AddTrackerPeopleResponse403
     | AddTrackerPeopleResponse404
+    | AddTrackerPeopleResponse422
     | AddTrackerPeopleResponse429
     | AddTrackerPeopleResponse500
     | AddTrackerPeopleResponse503
@@ -244,7 +255,7 @@ async def asyncio_detailed(
      Add people to a person tracker list. Identify people by LinkedIn URL, user ID, or slug. At least one
     identifier is required per person.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -258,7 +269,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[AddTrackerPeopleResponse200 | AddTrackerPeopleResponse400 | AddTrackerPeopleResponse401 | AddTrackerPeopleResponse402 | AddTrackerPeopleResponse403 | AddTrackerPeopleResponse404 | AddTrackerPeopleResponse429 | AddTrackerPeopleResponse500 | AddTrackerPeopleResponse503]
+        Response[AddTrackerPeopleResponse200 | AddTrackerPeopleResponse400 | AddTrackerPeopleResponse401 | AddTrackerPeopleResponse402 | AddTrackerPeopleResponse403 | AddTrackerPeopleResponse404 | AddTrackerPeopleResponse422 | AddTrackerPeopleResponse429 | AddTrackerPeopleResponse500 | AddTrackerPeopleResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -283,6 +294,7 @@ async def asyncio(
     | AddTrackerPeopleResponse402
     | AddTrackerPeopleResponse403
     | AddTrackerPeopleResponse404
+    | AddTrackerPeopleResponse422
     | AddTrackerPeopleResponse429
     | AddTrackerPeopleResponse500
     | AddTrackerPeopleResponse503
@@ -293,7 +305,7 @@ async def asyncio(
      Add people to a person tracker list. Identify people by LinkedIn URL, user ID, or slug. At least one
     identifier is required per person.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -307,7 +319,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        AddTrackerPeopleResponse200 | AddTrackerPeopleResponse400 | AddTrackerPeopleResponse401 | AddTrackerPeopleResponse402 | AddTrackerPeopleResponse403 | AddTrackerPeopleResponse404 | AddTrackerPeopleResponse429 | AddTrackerPeopleResponse500 | AddTrackerPeopleResponse503
+        AddTrackerPeopleResponse200 | AddTrackerPeopleResponse400 | AddTrackerPeopleResponse401 | AddTrackerPeopleResponse402 | AddTrackerPeopleResponse403 | AddTrackerPeopleResponse404 | AddTrackerPeopleResponse422 | AddTrackerPeopleResponse429 | AddTrackerPeopleResponse500 | AddTrackerPeopleResponse503
     """
 
     return (

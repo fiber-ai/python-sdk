@@ -12,6 +12,7 @@ from ...models.get_enrichment_status_response_401 import GetEnrichmentStatusResp
 from ...models.get_enrichment_status_response_402 import GetEnrichmentStatusResponse402
 from ...models.get_enrichment_status_response_403 import GetEnrichmentStatusResponse403
 from ...models.get_enrichment_status_response_404 import GetEnrichmentStatusResponse404
+from ...models.get_enrichment_status_response_422 import GetEnrichmentStatusResponse422
 from ...models.get_enrichment_status_response_429 import GetEnrichmentStatusResponse429
 from ...models.get_enrichment_status_response_500 import GetEnrichmentStatusResponse500
 from ...models.get_enrichment_status_response_503 import GetEnrichmentStatusResponse503
@@ -50,6 +51,7 @@ def _parse_response(
     | GetEnrichmentStatusResponse402
     | GetEnrichmentStatusResponse403
     | GetEnrichmentStatusResponse404
+    | GetEnrichmentStatusResponse422
     | GetEnrichmentStatusResponse429
     | GetEnrichmentStatusResponse500
     | GetEnrichmentStatusResponse503
@@ -85,6 +87,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetEnrichmentStatusResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetEnrichmentStatusResponse429.from_dict(response.json())
 
@@ -115,6 +122,7 @@ def _build_response(
     | GetEnrichmentStatusResponse402
     | GetEnrichmentStatusResponse403
     | GetEnrichmentStatusResponse404
+    | GetEnrichmentStatusResponse422
     | GetEnrichmentStatusResponse429
     | GetEnrichmentStatusResponse500
     | GetEnrichmentStatusResponse503
@@ -139,6 +147,7 @@ def sync_detailed(
     | GetEnrichmentStatusResponse402
     | GetEnrichmentStatusResponse403
     | GetEnrichmentStatusResponse404
+    | GetEnrichmentStatusResponse422
     | GetEnrichmentStatusResponse429
     | GetEnrichmentStatusResponse500
     | GetEnrichmentStatusResponse503
@@ -163,7 +172,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetEnrichmentStatusResponse200 | GetEnrichmentStatusResponse400 | GetEnrichmentStatusResponse401 | GetEnrichmentStatusResponse402 | GetEnrichmentStatusResponse403 | GetEnrichmentStatusResponse404 | GetEnrichmentStatusResponse429 | GetEnrichmentStatusResponse500 | GetEnrichmentStatusResponse503]
+        Response[GetEnrichmentStatusResponse200 | GetEnrichmentStatusResponse400 | GetEnrichmentStatusResponse401 | GetEnrichmentStatusResponse402 | GetEnrichmentStatusResponse403 | GetEnrichmentStatusResponse404 | GetEnrichmentStatusResponse422 | GetEnrichmentStatusResponse429 | GetEnrichmentStatusResponse500 | GetEnrichmentStatusResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -190,6 +199,7 @@ def sync(
     | GetEnrichmentStatusResponse402
     | GetEnrichmentStatusResponse403
     | GetEnrichmentStatusResponse404
+    | GetEnrichmentStatusResponse422
     | GetEnrichmentStatusResponse429
     | GetEnrichmentStatusResponse500
     | GetEnrichmentStatusResponse503
@@ -215,7 +225,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetEnrichmentStatusResponse200 | GetEnrichmentStatusResponse400 | GetEnrichmentStatusResponse401 | GetEnrichmentStatusResponse402 | GetEnrichmentStatusResponse403 | GetEnrichmentStatusResponse404 | GetEnrichmentStatusResponse429 | GetEnrichmentStatusResponse500 | GetEnrichmentStatusResponse503
+        GetEnrichmentStatusResponse200 | GetEnrichmentStatusResponse400 | GetEnrichmentStatusResponse401 | GetEnrichmentStatusResponse402 | GetEnrichmentStatusResponse403 | GetEnrichmentStatusResponse404 | GetEnrichmentStatusResponse422 | GetEnrichmentStatusResponse429 | GetEnrichmentStatusResponse500 | GetEnrichmentStatusResponse503
     """
 
     return sync_detailed(
@@ -237,6 +247,7 @@ async def asyncio_detailed(
     | GetEnrichmentStatusResponse402
     | GetEnrichmentStatusResponse403
     | GetEnrichmentStatusResponse404
+    | GetEnrichmentStatusResponse422
     | GetEnrichmentStatusResponse429
     | GetEnrichmentStatusResponse500
     | GetEnrichmentStatusResponse503
@@ -261,7 +272,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetEnrichmentStatusResponse200 | GetEnrichmentStatusResponse400 | GetEnrichmentStatusResponse401 | GetEnrichmentStatusResponse402 | GetEnrichmentStatusResponse403 | GetEnrichmentStatusResponse404 | GetEnrichmentStatusResponse429 | GetEnrichmentStatusResponse500 | GetEnrichmentStatusResponse503]
+        Response[GetEnrichmentStatusResponse200 | GetEnrichmentStatusResponse400 | GetEnrichmentStatusResponse401 | GetEnrichmentStatusResponse402 | GetEnrichmentStatusResponse403 | GetEnrichmentStatusResponse404 | GetEnrichmentStatusResponse422 | GetEnrichmentStatusResponse429 | GetEnrichmentStatusResponse500 | GetEnrichmentStatusResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -286,6 +297,7 @@ async def asyncio(
     | GetEnrichmentStatusResponse402
     | GetEnrichmentStatusResponse403
     | GetEnrichmentStatusResponse404
+    | GetEnrichmentStatusResponse422
     | GetEnrichmentStatusResponse429
     | GetEnrichmentStatusResponse500
     | GetEnrichmentStatusResponse503
@@ -311,7 +323,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetEnrichmentStatusResponse200 | GetEnrichmentStatusResponse400 | GetEnrichmentStatusResponse401 | GetEnrichmentStatusResponse402 | GetEnrichmentStatusResponse403 | GetEnrichmentStatusResponse404 | GetEnrichmentStatusResponse429 | GetEnrichmentStatusResponse500 | GetEnrichmentStatusResponse503
+        GetEnrichmentStatusResponse200 | GetEnrichmentStatusResponse400 | GetEnrichmentStatusResponse401 | GetEnrichmentStatusResponse402 | GetEnrichmentStatusResponse403 | GetEnrichmentStatusResponse404 | GetEnrichmentStatusResponse422 | GetEnrichmentStatusResponse429 | GetEnrichmentStatusResponse500 | GetEnrichmentStatusResponse503
     """
 
     return (

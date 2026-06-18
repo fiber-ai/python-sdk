@@ -21,12 +21,15 @@ class PersonOpenToWork:
         direction (PersonOpenToWorkDirection): Whether to alert when they start or stop signaling open-to-work
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
     """
 
     type_: Literal["person_open_to_work"]
     entity_type: Literal["person"]
     direction: PersonOpenToWorkDirection
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -42,6 +45,8 @@ class PersonOpenToWork:
         else:
             lookback_days = self.lookback_days
 
+        is_dummy = self.is_dummy
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -53,6 +58,8 @@ class PersonOpenToWork:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
 
         return field_dict
 
@@ -78,11 +85,14 @@ class PersonOpenToWork:
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
+        is_dummy = d.pop("isDummy", UNSET)
+
         person_open_to_work = cls(
             type_=type_,
             entity_type=entity_type,
             direction=direction,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
         )
 
         person_open_to_work.additional_properties = d

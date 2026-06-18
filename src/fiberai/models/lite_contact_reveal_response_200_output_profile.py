@@ -10,6 +10,9 @@ if TYPE_CHECKING:
     from ..models.lite_contact_reveal_response_200_output_profile_emails_item import (
         LiteContactRevealResponse200OutputProfileEmailsItem,
     )
+    from ..models.lite_contact_reveal_response_200_output_profile_phone_numbers_item import (
+        LiteContactRevealResponse200OutputProfilePhoneNumbersItem,
+    )
 
 
 T = TypeVar("T", bound="LiteContactRevealResponse200OutputProfile")
@@ -21,9 +24,12 @@ class LiteContactRevealResponse200OutputProfile:
     Attributes:
         emails (list[LiteContactRevealResponse200OutputProfileEmailsItem]): All emails found for this profile, ordered
             by priority.
+        phone_numbers (list[LiteContactRevealResponse200OutputProfilePhoneNumbersItem]): All phone numbers found for
+            this profile.
     """
 
     emails: list[LiteContactRevealResponse200OutputProfileEmailsItem]
+    phone_numbers: list[LiteContactRevealResponse200OutputProfilePhoneNumbersItem]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -32,11 +38,17 @@ class LiteContactRevealResponse200OutputProfile:
             emails_item = emails_item_data.to_dict()
             emails.append(emails_item)
 
+        phone_numbers = []
+        for phone_numbers_item_data in self.phone_numbers:
+            phone_numbers_item = phone_numbers_item_data.to_dict()
+            phone_numbers.append(phone_numbers_item)
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
                 "emails": emails,
+                "phoneNumbers": phone_numbers,
             }
         )
 
@@ -47,6 +59,9 @@ class LiteContactRevealResponse200OutputProfile:
         from ..models.lite_contact_reveal_response_200_output_profile_emails_item import (
             LiteContactRevealResponse200OutputProfileEmailsItem,
         )
+        from ..models.lite_contact_reveal_response_200_output_profile_phone_numbers_item import (
+            LiteContactRevealResponse200OutputProfilePhoneNumbersItem,
+        )
 
         d = dict(src_dict)
         emails = []
@@ -56,8 +71,18 @@ class LiteContactRevealResponse200OutputProfile:
 
             emails.append(emails_item)
 
+        phone_numbers = []
+        _phone_numbers = d.pop("phoneNumbers")
+        for phone_numbers_item_data in _phone_numbers:
+            phone_numbers_item = LiteContactRevealResponse200OutputProfilePhoneNumbersItem.from_dict(
+                phone_numbers_item_data
+            )
+
+            phone_numbers.append(phone_numbers_item)
+
         lite_contact_reveal_response_200_output_profile = cls(
             emails=emails,
+            phone_numbers=phone_numbers,
         )
 
         lite_contact_reveal_response_200_output_profile.additional_properties = d

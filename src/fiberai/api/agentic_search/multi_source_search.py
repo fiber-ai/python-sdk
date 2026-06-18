@@ -12,6 +12,7 @@ from ...models.multi_source_search_response_401 import MultiSourceSearchResponse
 from ...models.multi_source_search_response_402 import MultiSourceSearchResponse402
 from ...models.multi_source_search_response_403 import MultiSourceSearchResponse403
 from ...models.multi_source_search_response_404 import MultiSourceSearchResponse404
+from ...models.multi_source_search_response_422 import MultiSourceSearchResponse422
 from ...models.multi_source_search_response_429 import MultiSourceSearchResponse429
 from ...models.multi_source_search_response_500 import MultiSourceSearchResponse500
 from ...models.multi_source_search_response_503 import MultiSourceSearchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | MultiSourceSearchResponse402
     | MultiSourceSearchResponse403
     | MultiSourceSearchResponse404
+    | MultiSourceSearchResponse422
     | MultiSourceSearchResponse429
     | MultiSourceSearchResponse500
     | MultiSourceSearchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = MultiSourceSearchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = MultiSourceSearchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | MultiSourceSearchResponse402
     | MultiSourceSearchResponse403
     | MultiSourceSearchResponse404
+    | MultiSourceSearchResponse422
     | MultiSourceSearchResponse429
     | MultiSourceSearchResponse500
     | MultiSourceSearchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | MultiSourceSearchResponse402
     | MultiSourceSearchResponse403
     | MultiSourceSearchResponse404
+    | MultiSourceSearchResponse422
     | MultiSourceSearchResponse429
     | MultiSourceSearchResponse500
     | MultiSourceSearchResponse503
@@ -166,7 +175,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[MultiSourceSearchResponse200 | MultiSourceSearchResponse400 | MultiSourceSearchResponse401 | MultiSourceSearchResponse402 | MultiSourceSearchResponse403 | MultiSourceSearchResponse404 | MultiSourceSearchResponse429 | MultiSourceSearchResponse500 | MultiSourceSearchResponse503]
+        Response[MultiSourceSearchResponse200 | MultiSourceSearchResponse400 | MultiSourceSearchResponse401 | MultiSourceSearchResponse402 | MultiSourceSearchResponse403 | MultiSourceSearchResponse404 | MultiSourceSearchResponse422 | MultiSourceSearchResponse429 | MultiSourceSearchResponse500 | MultiSourceSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -191,6 +200,7 @@ def sync(
     | MultiSourceSearchResponse402
     | MultiSourceSearchResponse403
     | MultiSourceSearchResponse404
+    | MultiSourceSearchResponse422
     | MultiSourceSearchResponse429
     | MultiSourceSearchResponse500
     | MultiSourceSearchResponse503
@@ -224,7 +234,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        MultiSourceSearchResponse200 | MultiSourceSearchResponse400 | MultiSourceSearchResponse401 | MultiSourceSearchResponse402 | MultiSourceSearchResponse403 | MultiSourceSearchResponse404 | MultiSourceSearchResponse429 | MultiSourceSearchResponse500 | MultiSourceSearchResponse503
+        MultiSourceSearchResponse200 | MultiSourceSearchResponse400 | MultiSourceSearchResponse401 | MultiSourceSearchResponse402 | MultiSourceSearchResponse403 | MultiSourceSearchResponse404 | MultiSourceSearchResponse422 | MultiSourceSearchResponse429 | MultiSourceSearchResponse500 | MultiSourceSearchResponse503
     """
 
     return sync_detailed(
@@ -244,6 +254,7 @@ async def asyncio_detailed(
     | MultiSourceSearchResponse402
     | MultiSourceSearchResponse403
     | MultiSourceSearchResponse404
+    | MultiSourceSearchResponse422
     | MultiSourceSearchResponse429
     | MultiSourceSearchResponse500
     | MultiSourceSearchResponse503
@@ -276,7 +287,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[MultiSourceSearchResponse200 | MultiSourceSearchResponse400 | MultiSourceSearchResponse401 | MultiSourceSearchResponse402 | MultiSourceSearchResponse403 | MultiSourceSearchResponse404 | MultiSourceSearchResponse429 | MultiSourceSearchResponse500 | MultiSourceSearchResponse503]
+        Response[MultiSourceSearchResponse200 | MultiSourceSearchResponse400 | MultiSourceSearchResponse401 | MultiSourceSearchResponse402 | MultiSourceSearchResponse403 | MultiSourceSearchResponse404 | MultiSourceSearchResponse422 | MultiSourceSearchResponse429 | MultiSourceSearchResponse500 | MultiSourceSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -299,6 +310,7 @@ async def asyncio(
     | MultiSourceSearchResponse402
     | MultiSourceSearchResponse403
     | MultiSourceSearchResponse404
+    | MultiSourceSearchResponse422
     | MultiSourceSearchResponse429
     | MultiSourceSearchResponse500
     | MultiSourceSearchResponse503
@@ -332,7 +344,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        MultiSourceSearchResponse200 | MultiSourceSearchResponse400 | MultiSourceSearchResponse401 | MultiSourceSearchResponse402 | MultiSourceSearchResponse403 | MultiSourceSearchResponse404 | MultiSourceSearchResponse429 | MultiSourceSearchResponse500 | MultiSourceSearchResponse503
+        MultiSourceSearchResponse200 | MultiSourceSearchResponse400 | MultiSourceSearchResponse401 | MultiSourceSearchResponse402 | MultiSourceSearchResponse403 | MultiSourceSearchResponse404 | MultiSourceSearchResponse422 | MultiSourceSearchResponse429 | MultiSourceSearchResponse500 | MultiSourceSearchResponse503
     """
 
     return (

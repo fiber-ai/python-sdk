@@ -6,12 +6,12 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.create_tracker_company_list_body import CreateTrackerCompanyListBody
-from ...models.create_tracker_company_list_response_200 import CreateTrackerCompanyListResponse200
 from ...models.create_tracker_company_list_response_400 import CreateTrackerCompanyListResponse400
 from ...models.create_tracker_company_list_response_401 import CreateTrackerCompanyListResponse401
 from ...models.create_tracker_company_list_response_402 import CreateTrackerCompanyListResponse402
 from ...models.create_tracker_company_list_response_403 import CreateTrackerCompanyListResponse403
 from ...models.create_tracker_company_list_response_404 import CreateTrackerCompanyListResponse404
+from ...models.create_tracker_company_list_response_422 import CreateTrackerCompanyListResponse422
 from ...models.create_tracker_company_list_response_429 import CreateTrackerCompanyListResponse429
 from ...models.create_tracker_company_list_response_500 import CreateTrackerCompanyListResponse500
 from ...models.create_tracker_company_list_response_503 import CreateTrackerCompanyListResponse503
@@ -40,22 +40,17 @@ def _get_kwargs(
 def _parse_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
 ) -> (
-    CreateTrackerCompanyListResponse200
-    | CreateTrackerCompanyListResponse400
+    CreateTrackerCompanyListResponse400
     | CreateTrackerCompanyListResponse401
     | CreateTrackerCompanyListResponse402
     | CreateTrackerCompanyListResponse403
     | CreateTrackerCompanyListResponse404
+    | CreateTrackerCompanyListResponse422
     | CreateTrackerCompanyListResponse429
     | CreateTrackerCompanyListResponse500
     | CreateTrackerCompanyListResponse503
     | None
 ):
-    if response.status_code == 200:
-        response_200 = CreateTrackerCompanyListResponse200.from_dict(response.json())
-
-        return response_200
-
     if response.status_code == 400:
         response_400 = CreateTrackerCompanyListResponse400.from_dict(response.json())
 
@@ -81,6 +76,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = CreateTrackerCompanyListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = CreateTrackerCompanyListResponse429.from_dict(response.json())
 
@@ -105,12 +105,12 @@ def _parse_response(
 def _build_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
 ) -> Response[
-    CreateTrackerCompanyListResponse200
-    | CreateTrackerCompanyListResponse400
+    CreateTrackerCompanyListResponse400
     | CreateTrackerCompanyListResponse401
     | CreateTrackerCompanyListResponse402
     | CreateTrackerCompanyListResponse403
     | CreateTrackerCompanyListResponse404
+    | CreateTrackerCompanyListResponse422
     | CreateTrackerCompanyListResponse429
     | CreateTrackerCompanyListResponse500
     | CreateTrackerCompanyListResponse503
@@ -128,12 +128,12 @@ def sync_detailed(
     client: AuthenticatedClient | Client,
     body: CreateTrackerCompanyListBody,
 ) -> Response[
-    CreateTrackerCompanyListResponse200
-    | CreateTrackerCompanyListResponse400
+    CreateTrackerCompanyListResponse400
     | CreateTrackerCompanyListResponse401
     | CreateTrackerCompanyListResponse402
     | CreateTrackerCompanyListResponse403
     | CreateTrackerCompanyListResponse404
+    | CreateTrackerCompanyListResponse422
     | CreateTrackerCompanyListResponse429
     | CreateTrackerCompanyListResponse500
     | CreateTrackerCompanyListResponse503
@@ -141,11 +141,10 @@ def sync_detailed(
     r"""Create company tracker list
 
      Create a new company tracker list. Add companies to the list, and we will periodically check them
-    for changes matching your tracking rule. Pricing: 2 credits per entity per refresh cycle. Volume
-    discounts (50%+) are available for high-volume tracking (10,000+ entities). Contact sales for
-    details.
+    for changes matching your tracking rules. Credits are charged per entity per refresh cycle (see your
+    plan's pricing for exact rates). Creating the list itself is free.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -158,7 +157,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CreateTrackerCompanyListResponse200 | CreateTrackerCompanyListResponse400 | CreateTrackerCompanyListResponse401 | CreateTrackerCompanyListResponse402 | CreateTrackerCompanyListResponse403 | CreateTrackerCompanyListResponse404 | CreateTrackerCompanyListResponse429 | CreateTrackerCompanyListResponse500 | CreateTrackerCompanyListResponse503]
+        Response[CreateTrackerCompanyListResponse400 | CreateTrackerCompanyListResponse401 | CreateTrackerCompanyListResponse402 | CreateTrackerCompanyListResponse403 | CreateTrackerCompanyListResponse404 | CreateTrackerCompanyListResponse422 | CreateTrackerCompanyListResponse429 | CreateTrackerCompanyListResponse500 | CreateTrackerCompanyListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -177,12 +176,12 @@ def sync(
     client: AuthenticatedClient | Client,
     body: CreateTrackerCompanyListBody,
 ) -> (
-    CreateTrackerCompanyListResponse200
-    | CreateTrackerCompanyListResponse400
+    CreateTrackerCompanyListResponse400
     | CreateTrackerCompanyListResponse401
     | CreateTrackerCompanyListResponse402
     | CreateTrackerCompanyListResponse403
     | CreateTrackerCompanyListResponse404
+    | CreateTrackerCompanyListResponse422
     | CreateTrackerCompanyListResponse429
     | CreateTrackerCompanyListResponse500
     | CreateTrackerCompanyListResponse503
@@ -191,11 +190,10 @@ def sync(
     r"""Create company tracker list
 
      Create a new company tracker list. Add companies to the list, and we will periodically check them
-    for changes matching your tracking rule. Pricing: 2 credits per entity per refresh cycle. Volume
-    discounts (50%+) are available for high-volume tracking (10,000+ entities). Contact sales for
-    details.
+    for changes matching your tracking rules. Credits are charged per entity per refresh cycle (see your
+    plan's pricing for exact rates). Creating the list itself is free.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -208,7 +206,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CreateTrackerCompanyListResponse200 | CreateTrackerCompanyListResponse400 | CreateTrackerCompanyListResponse401 | CreateTrackerCompanyListResponse402 | CreateTrackerCompanyListResponse403 | CreateTrackerCompanyListResponse404 | CreateTrackerCompanyListResponse429 | CreateTrackerCompanyListResponse500 | CreateTrackerCompanyListResponse503
+        CreateTrackerCompanyListResponse400 | CreateTrackerCompanyListResponse401 | CreateTrackerCompanyListResponse402 | CreateTrackerCompanyListResponse403 | CreateTrackerCompanyListResponse404 | CreateTrackerCompanyListResponse422 | CreateTrackerCompanyListResponse429 | CreateTrackerCompanyListResponse500 | CreateTrackerCompanyListResponse503
     """
 
     return sync_detailed(
@@ -222,12 +220,12 @@ async def asyncio_detailed(
     client: AuthenticatedClient | Client,
     body: CreateTrackerCompanyListBody,
 ) -> Response[
-    CreateTrackerCompanyListResponse200
-    | CreateTrackerCompanyListResponse400
+    CreateTrackerCompanyListResponse400
     | CreateTrackerCompanyListResponse401
     | CreateTrackerCompanyListResponse402
     | CreateTrackerCompanyListResponse403
     | CreateTrackerCompanyListResponse404
+    | CreateTrackerCompanyListResponse422
     | CreateTrackerCompanyListResponse429
     | CreateTrackerCompanyListResponse500
     | CreateTrackerCompanyListResponse503
@@ -235,11 +233,10 @@ async def asyncio_detailed(
     r"""Create company tracker list
 
      Create a new company tracker list. Add companies to the list, and we will periodically check them
-    for changes matching your tracking rule. Pricing: 2 credits per entity per refresh cycle. Volume
-    discounts (50%+) are available for high-volume tracking (10,000+ entities). Contact sales for
-    details.
+    for changes matching your tracking rules. Credits are charged per entity per refresh cycle (see your
+    plan's pricing for exact rates). Creating the list itself is free.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -252,7 +249,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CreateTrackerCompanyListResponse200 | CreateTrackerCompanyListResponse400 | CreateTrackerCompanyListResponse401 | CreateTrackerCompanyListResponse402 | CreateTrackerCompanyListResponse403 | CreateTrackerCompanyListResponse404 | CreateTrackerCompanyListResponse429 | CreateTrackerCompanyListResponse500 | CreateTrackerCompanyListResponse503]
+        Response[CreateTrackerCompanyListResponse400 | CreateTrackerCompanyListResponse401 | CreateTrackerCompanyListResponse402 | CreateTrackerCompanyListResponse403 | CreateTrackerCompanyListResponse404 | CreateTrackerCompanyListResponse422 | CreateTrackerCompanyListResponse429 | CreateTrackerCompanyListResponse500 | CreateTrackerCompanyListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,12 +266,12 @@ async def asyncio(
     client: AuthenticatedClient | Client,
     body: CreateTrackerCompanyListBody,
 ) -> (
-    CreateTrackerCompanyListResponse200
-    | CreateTrackerCompanyListResponse400
+    CreateTrackerCompanyListResponse400
     | CreateTrackerCompanyListResponse401
     | CreateTrackerCompanyListResponse402
     | CreateTrackerCompanyListResponse403
     | CreateTrackerCompanyListResponse404
+    | CreateTrackerCompanyListResponse422
     | CreateTrackerCompanyListResponse429
     | CreateTrackerCompanyListResponse500
     | CreateTrackerCompanyListResponse503
@@ -283,11 +280,10 @@ async def asyncio(
     r"""Create company tracker list
 
      Create a new company tracker list. Add companies to the list, and we will periodically check them
-    for changes matching your tracking rule. Pricing: 2 credits per entity per refresh cycle. Volume
-    discounts (50%+) are available for high-volume tracking (10,000+ entities). Contact sales for
-    details.
+    for changes matching your tracking rules. Credits are charged per entity per refresh cycle (see your
+    plan's pricing for exact rates). Creating the list itself is free.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -300,7 +296,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CreateTrackerCompanyListResponse200 | CreateTrackerCompanyListResponse400 | CreateTrackerCompanyListResponse401 | CreateTrackerCompanyListResponse402 | CreateTrackerCompanyListResponse403 | CreateTrackerCompanyListResponse404 | CreateTrackerCompanyListResponse429 | CreateTrackerCompanyListResponse500 | CreateTrackerCompanyListResponse503
+        CreateTrackerCompanyListResponse400 | CreateTrackerCompanyListResponse401 | CreateTrackerCompanyListResponse402 | CreateTrackerCompanyListResponse403 | CreateTrackerCompanyListResponse404 | CreateTrackerCompanyListResponse422 | CreateTrackerCompanyListResponse429 | CreateTrackerCompanyListResponse500 | CreateTrackerCompanyListResponse503
     """
 
     return (

@@ -11,6 +11,7 @@ from ...models.get_rate_limits_response_401 import GetRateLimitsResponse401
 from ...models.get_rate_limits_response_402 import GetRateLimitsResponse402
 from ...models.get_rate_limits_response_403 import GetRateLimitsResponse403
 from ...models.get_rate_limits_response_404 import GetRateLimitsResponse404
+from ...models.get_rate_limits_response_422 import GetRateLimitsResponse422
 from ...models.get_rate_limits_response_429 import GetRateLimitsResponse429
 from ...models.get_rate_limits_response_500 import GetRateLimitsResponse500
 from ...models.get_rate_limits_response_503 import GetRateLimitsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GetRateLimitsResponse402
     | GetRateLimitsResponse403
     | GetRateLimitsResponse404
+    | GetRateLimitsResponse422
     | GetRateLimitsResponse429
     | GetRateLimitsResponse500
     | GetRateLimitsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetRateLimitsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetRateLimitsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GetRateLimitsResponse402
     | GetRateLimitsResponse403
     | GetRateLimitsResponse404
+    | GetRateLimitsResponse422
     | GetRateLimitsResponse429
     | GetRateLimitsResponse500
     | GetRateLimitsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GetRateLimitsResponse402
     | GetRateLimitsResponse403
     | GetRateLimitsResponse404
+    | GetRateLimitsResponse422
     | GetRateLimitsResponse429
     | GetRateLimitsResponse500
     | GetRateLimitsResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetRateLimitsResponse200 | GetRateLimitsResponse400 | GetRateLimitsResponse401 | GetRateLimitsResponse402 | GetRateLimitsResponse403 | GetRateLimitsResponse404 | GetRateLimitsResponse429 | GetRateLimitsResponse500 | GetRateLimitsResponse503]
+        Response[GetRateLimitsResponse200 | GetRateLimitsResponse400 | GetRateLimitsResponse401 | GetRateLimitsResponse402 | GetRateLimitsResponse403 | GetRateLimitsResponse404 | GetRateLimitsResponse422 | GetRateLimitsResponse429 | GetRateLimitsResponse500 | GetRateLimitsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | GetRateLimitsResponse402
     | GetRateLimitsResponse403
     | GetRateLimitsResponse404
+    | GetRateLimitsResponse422
     | GetRateLimitsResponse429
     | GetRateLimitsResponse500
     | GetRateLimitsResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetRateLimitsResponse200 | GetRateLimitsResponse400 | GetRateLimitsResponse401 | GetRateLimitsResponse402 | GetRateLimitsResponse403 | GetRateLimitsResponse404 | GetRateLimitsResponse429 | GetRateLimitsResponse500 | GetRateLimitsResponse503
+        GetRateLimitsResponse200 | GetRateLimitsResponse400 | GetRateLimitsResponse401 | GetRateLimitsResponse402 | GetRateLimitsResponse403 | GetRateLimitsResponse404 | GetRateLimitsResponse422 | GetRateLimitsResponse429 | GetRateLimitsResponse500 | GetRateLimitsResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | GetRateLimitsResponse402
     | GetRateLimitsResponse403
     | GetRateLimitsResponse404
+    | GetRateLimitsResponse422
     | GetRateLimitsResponse429
     | GetRateLimitsResponse500
     | GetRateLimitsResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetRateLimitsResponse200 | GetRateLimitsResponse400 | GetRateLimitsResponse401 | GetRateLimitsResponse402 | GetRateLimitsResponse403 | GetRateLimitsResponse404 | GetRateLimitsResponse429 | GetRateLimitsResponse500 | GetRateLimitsResponse503]
+        Response[GetRateLimitsResponse200 | GetRateLimitsResponse400 | GetRateLimitsResponse401 | GetRateLimitsResponse402 | GetRateLimitsResponse403 | GetRateLimitsResponse404 | GetRateLimitsResponse422 | GetRateLimitsResponse429 | GetRateLimitsResponse500 | GetRateLimitsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | GetRateLimitsResponse402
     | GetRateLimitsResponse403
     | GetRateLimitsResponse404
+    | GetRateLimitsResponse422
     | GetRateLimitsResponse429
     | GetRateLimitsResponse500
     | GetRateLimitsResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetRateLimitsResponse200 | GetRateLimitsResponse400 | GetRateLimitsResponse401 | GetRateLimitsResponse402 | GetRateLimitsResponse403 | GetRateLimitsResponse404 | GetRateLimitsResponse429 | GetRateLimitsResponse500 | GetRateLimitsResponse503
+        GetRateLimitsResponse200 | GetRateLimitsResponse400 | GetRateLimitsResponse401 | GetRateLimitsResponse402 | GetRateLimitsResponse403 | GetRateLimitsResponse404 | GetRateLimitsResponse422 | GetRateLimitsResponse429 | GetRateLimitsResponse500 | GetRateLimitsResponse503
     """
 
     return (

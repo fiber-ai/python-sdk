@@ -20,6 +20,8 @@ class CompanyStatusChanged:
         entity_type (Literal['company']):
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
         to_statuses (list[CompanyStatusChangedToStatusesType0Item] | None | Unset): Only alert if new status is one of
             these. Omit for any status change.
     """
@@ -27,6 +29,7 @@ class CompanyStatusChanged:
     type_: Literal["company_status_changed"]
     entity_type: Literal["company"]
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
     to_statuses: list[CompanyStatusChangedToStatusesType0Item] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -40,6 +43,8 @@ class CompanyStatusChanged:
             lookback_days = UNSET
         else:
             lookback_days = self.lookback_days
+
+        is_dummy = self.is_dummy
 
         to_statuses: list[str] | None | Unset
         if isinstance(self.to_statuses, Unset):
@@ -63,6 +68,8 @@ class CompanyStatusChanged:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
         if to_statuses is not UNSET:
             field_dict["toStatuses"] = to_statuses
 
@@ -87,6 +94,8 @@ class CompanyStatusChanged:
             return cast(int | None | Unset, data)
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
+
+        is_dummy = d.pop("isDummy", UNSET)
 
         def _parse_to_statuses(data: object) -> list[CompanyStatusChangedToStatusesType0Item] | None | Unset:
             if data is None:
@@ -114,6 +123,7 @@ class CompanyStatusChanged:
             type_=type_,
             entity_type=entity_type,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
             to_statuses=to_statuses,
         )
 

@@ -6,12 +6,12 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.create_tracker_person_list_body import CreateTrackerPersonListBody
-from ...models.create_tracker_person_list_response_200 import CreateTrackerPersonListResponse200
 from ...models.create_tracker_person_list_response_400 import CreateTrackerPersonListResponse400
 from ...models.create_tracker_person_list_response_401 import CreateTrackerPersonListResponse401
 from ...models.create_tracker_person_list_response_402 import CreateTrackerPersonListResponse402
 from ...models.create_tracker_person_list_response_403 import CreateTrackerPersonListResponse403
 from ...models.create_tracker_person_list_response_404 import CreateTrackerPersonListResponse404
+from ...models.create_tracker_person_list_response_422 import CreateTrackerPersonListResponse422
 from ...models.create_tracker_person_list_response_429 import CreateTrackerPersonListResponse429
 from ...models.create_tracker_person_list_response_500 import CreateTrackerPersonListResponse500
 from ...models.create_tracker_person_list_response_503 import CreateTrackerPersonListResponse503
@@ -40,22 +40,17 @@ def _get_kwargs(
 def _parse_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
 ) -> (
-    CreateTrackerPersonListResponse200
-    | CreateTrackerPersonListResponse400
+    CreateTrackerPersonListResponse400
     | CreateTrackerPersonListResponse401
     | CreateTrackerPersonListResponse402
     | CreateTrackerPersonListResponse403
     | CreateTrackerPersonListResponse404
+    | CreateTrackerPersonListResponse422
     | CreateTrackerPersonListResponse429
     | CreateTrackerPersonListResponse500
     | CreateTrackerPersonListResponse503
     | None
 ):
-    if response.status_code == 200:
-        response_200 = CreateTrackerPersonListResponse200.from_dict(response.json())
-
-        return response_200
-
     if response.status_code == 400:
         response_400 = CreateTrackerPersonListResponse400.from_dict(response.json())
 
@@ -81,6 +76,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = CreateTrackerPersonListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = CreateTrackerPersonListResponse429.from_dict(response.json())
 
@@ -105,12 +105,12 @@ def _parse_response(
 def _build_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
 ) -> Response[
-    CreateTrackerPersonListResponse200
-    | CreateTrackerPersonListResponse400
+    CreateTrackerPersonListResponse400
     | CreateTrackerPersonListResponse401
     | CreateTrackerPersonListResponse402
     | CreateTrackerPersonListResponse403
     | CreateTrackerPersonListResponse404
+    | CreateTrackerPersonListResponse422
     | CreateTrackerPersonListResponse429
     | CreateTrackerPersonListResponse500
     | CreateTrackerPersonListResponse503
@@ -128,12 +128,12 @@ def sync_detailed(
     client: AuthenticatedClient | Client,
     body: CreateTrackerPersonListBody,
 ) -> Response[
-    CreateTrackerPersonListResponse200
-    | CreateTrackerPersonListResponse400
+    CreateTrackerPersonListResponse400
     | CreateTrackerPersonListResponse401
     | CreateTrackerPersonListResponse402
     | CreateTrackerPersonListResponse403
     | CreateTrackerPersonListResponse404
+    | CreateTrackerPersonListResponse422
     | CreateTrackerPersonListResponse429
     | CreateTrackerPersonListResponse500
     | CreateTrackerPersonListResponse503
@@ -141,11 +141,10 @@ def sync_detailed(
     r"""Create person tracker list
 
      Create a new person tracker list. Add people to the list, and we will periodically check them for
-    changes matching your tracking rule. Pricing: 2 credits per entity per refresh cycle. Volume
-    discounts (50%+) are available for high-volume tracking (10,000+ entities). Contact sales for
-    details.
+    changes matching your tracking rules. Credits are charged per entity per refresh cycle (see your
+    plan's pricing for exact rates). Creating the list itself is free.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -158,7 +157,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CreateTrackerPersonListResponse200 | CreateTrackerPersonListResponse400 | CreateTrackerPersonListResponse401 | CreateTrackerPersonListResponse402 | CreateTrackerPersonListResponse403 | CreateTrackerPersonListResponse404 | CreateTrackerPersonListResponse429 | CreateTrackerPersonListResponse500 | CreateTrackerPersonListResponse503]
+        Response[CreateTrackerPersonListResponse400 | CreateTrackerPersonListResponse401 | CreateTrackerPersonListResponse402 | CreateTrackerPersonListResponse403 | CreateTrackerPersonListResponse404 | CreateTrackerPersonListResponse422 | CreateTrackerPersonListResponse429 | CreateTrackerPersonListResponse500 | CreateTrackerPersonListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -177,12 +176,12 @@ def sync(
     client: AuthenticatedClient | Client,
     body: CreateTrackerPersonListBody,
 ) -> (
-    CreateTrackerPersonListResponse200
-    | CreateTrackerPersonListResponse400
+    CreateTrackerPersonListResponse400
     | CreateTrackerPersonListResponse401
     | CreateTrackerPersonListResponse402
     | CreateTrackerPersonListResponse403
     | CreateTrackerPersonListResponse404
+    | CreateTrackerPersonListResponse422
     | CreateTrackerPersonListResponse429
     | CreateTrackerPersonListResponse500
     | CreateTrackerPersonListResponse503
@@ -191,11 +190,10 @@ def sync(
     r"""Create person tracker list
 
      Create a new person tracker list. Add people to the list, and we will periodically check them for
-    changes matching your tracking rule. Pricing: 2 credits per entity per refresh cycle. Volume
-    discounts (50%+) are available for high-volume tracking (10,000+ entities). Contact sales for
-    details.
+    changes matching your tracking rules. Credits are charged per entity per refresh cycle (see your
+    plan's pricing for exact rates). Creating the list itself is free.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -208,7 +206,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CreateTrackerPersonListResponse200 | CreateTrackerPersonListResponse400 | CreateTrackerPersonListResponse401 | CreateTrackerPersonListResponse402 | CreateTrackerPersonListResponse403 | CreateTrackerPersonListResponse404 | CreateTrackerPersonListResponse429 | CreateTrackerPersonListResponse500 | CreateTrackerPersonListResponse503
+        CreateTrackerPersonListResponse400 | CreateTrackerPersonListResponse401 | CreateTrackerPersonListResponse402 | CreateTrackerPersonListResponse403 | CreateTrackerPersonListResponse404 | CreateTrackerPersonListResponse422 | CreateTrackerPersonListResponse429 | CreateTrackerPersonListResponse500 | CreateTrackerPersonListResponse503
     """
 
     return sync_detailed(
@@ -222,12 +220,12 @@ async def asyncio_detailed(
     client: AuthenticatedClient | Client,
     body: CreateTrackerPersonListBody,
 ) -> Response[
-    CreateTrackerPersonListResponse200
-    | CreateTrackerPersonListResponse400
+    CreateTrackerPersonListResponse400
     | CreateTrackerPersonListResponse401
     | CreateTrackerPersonListResponse402
     | CreateTrackerPersonListResponse403
     | CreateTrackerPersonListResponse404
+    | CreateTrackerPersonListResponse422
     | CreateTrackerPersonListResponse429
     | CreateTrackerPersonListResponse500
     | CreateTrackerPersonListResponse503
@@ -235,11 +233,10 @@ async def asyncio_detailed(
     r"""Create person tracker list
 
      Create a new person tracker list. Add people to the list, and we will periodically check them for
-    changes matching your tracking rule. Pricing: 2 credits per entity per refresh cycle. Volume
-    discounts (50%+) are available for high-volume tracking (10,000+ entities). Contact sales for
-    details.
+    changes matching your tracking rules. Credits are charged per entity per refresh cycle (see your
+    plan's pricing for exact rates). Creating the list itself is free.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -252,7 +249,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CreateTrackerPersonListResponse200 | CreateTrackerPersonListResponse400 | CreateTrackerPersonListResponse401 | CreateTrackerPersonListResponse402 | CreateTrackerPersonListResponse403 | CreateTrackerPersonListResponse404 | CreateTrackerPersonListResponse429 | CreateTrackerPersonListResponse500 | CreateTrackerPersonListResponse503]
+        Response[CreateTrackerPersonListResponse400 | CreateTrackerPersonListResponse401 | CreateTrackerPersonListResponse402 | CreateTrackerPersonListResponse403 | CreateTrackerPersonListResponse404 | CreateTrackerPersonListResponse422 | CreateTrackerPersonListResponse429 | CreateTrackerPersonListResponse500 | CreateTrackerPersonListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,12 +266,12 @@ async def asyncio(
     client: AuthenticatedClient | Client,
     body: CreateTrackerPersonListBody,
 ) -> (
-    CreateTrackerPersonListResponse200
-    | CreateTrackerPersonListResponse400
+    CreateTrackerPersonListResponse400
     | CreateTrackerPersonListResponse401
     | CreateTrackerPersonListResponse402
     | CreateTrackerPersonListResponse403
     | CreateTrackerPersonListResponse404
+    | CreateTrackerPersonListResponse422
     | CreateTrackerPersonListResponse429
     | CreateTrackerPersonListResponse500
     | CreateTrackerPersonListResponse503
@@ -283,11 +280,10 @@ async def asyncio(
     r"""Create person tracker list
 
      Create a new person tracker list. Add people to the list, and we will periodically check them for
-    changes matching your tracking rule. Pricing: 2 credits per entity per refresh cycle. Volume
-    discounts (50%+) are available for high-volume tracking (10,000+ entities). Contact sales for
-    details.
+    changes matching your tracking rules. Credits are charged per entity per refresh cycle (see your
+    plan's pricing for exact rates). Creating the list itself is free.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -300,7 +296,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CreateTrackerPersonListResponse200 | CreateTrackerPersonListResponse400 | CreateTrackerPersonListResponse401 | CreateTrackerPersonListResponse402 | CreateTrackerPersonListResponse403 | CreateTrackerPersonListResponse404 | CreateTrackerPersonListResponse429 | CreateTrackerPersonListResponse500 | CreateTrackerPersonListResponse503
+        CreateTrackerPersonListResponse400 | CreateTrackerPersonListResponse401 | CreateTrackerPersonListResponse402 | CreateTrackerPersonListResponse403 | CreateTrackerPersonListResponse404 | CreateTrackerPersonListResponse422 | CreateTrackerPersonListResponse429 | CreateTrackerPersonListResponse500 | CreateTrackerPersonListResponse503
     """
 
     return (

@@ -40,6 +40,7 @@ class EmailBounceDetectionResponse200:
         charge_info (EmailBounceDetectionResponse200ChargeInfoType0 | EmailBounceDetectionResponse200ChargeInfoType1 |
             EmailBounceDetectionResponse200ChargeInfoType2 | EmailBounceDetectionResponse200ChargeInfoType3 |
             EmailBounceDetectionResponse200ChargeInfoType4):
+        advice (list[str]): Tips, recommendations, and suggestions for using this API effectively.
         warnings (list[EmailBounceDetectionResponse200WarningsType0Item] | None | Unset): Warnings about extraneous
             fields in request
     """
@@ -52,6 +53,7 @@ class EmailBounceDetectionResponse200:
         | EmailBounceDetectionResponse200ChargeInfoType3
         | EmailBounceDetectionResponse200ChargeInfoType4
     )
+    advice: list[str]
     warnings: list[EmailBounceDetectionResponse200WarningsType0Item] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
@@ -82,6 +84,8 @@ class EmailBounceDetectionResponse200:
         else:
             charge_info = self.charge_info.to_dict()
 
+        advice = self.advice
+
         warnings: list[dict[str, Any]] | None | Unset
         if isinstance(self.warnings, Unset):
             warnings = UNSET
@@ -100,6 +104,7 @@ class EmailBounceDetectionResponse200:
             {
                 "output": output,
                 "chargeInfo": charge_info,
+                "advice": advice,
             }
         )
         if warnings is not UNSET:
@@ -181,6 +186,8 @@ class EmailBounceDetectionResponse200:
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 
+        advice = cast(list[str], d.pop("advice"))
+
         def _parse_warnings(data: object) -> list[EmailBounceDetectionResponse200WarningsType0Item] | None | Unset:
             if data is None:
                 return data
@@ -208,6 +215,7 @@ class EmailBounceDetectionResponse200:
         email_bounce_detection_response_200 = cls(
             output=output,
             charge_info=charge_info,
+            advice=advice,
             warnings=warnings,
         )
 

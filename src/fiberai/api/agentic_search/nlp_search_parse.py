@@ -11,6 +11,7 @@ from ...models.nlp_search_parse_response_401 import NlpSearchParseResponse401
 from ...models.nlp_search_parse_response_402 import NlpSearchParseResponse402
 from ...models.nlp_search_parse_response_403 import NlpSearchParseResponse403
 from ...models.nlp_search_parse_response_404 import NlpSearchParseResponse404
+from ...models.nlp_search_parse_response_422 import NlpSearchParseResponse422
 from ...models.nlp_search_parse_response_429 import NlpSearchParseResponse429
 from ...models.nlp_search_parse_response_500 import NlpSearchParseResponse500
 from ...models.nlp_search_parse_response_503 import NlpSearchParseResponse503
@@ -44,6 +45,7 @@ def _parse_response(
     | NlpSearchParseResponse402
     | NlpSearchParseResponse403
     | NlpSearchParseResponse404
+    | NlpSearchParseResponse422
     | NlpSearchParseResponse429
     | NlpSearchParseResponse500
     | NlpSearchParseResponse503
@@ -74,6 +76,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = NlpSearchParseResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = NlpSearchParseResponse429.from_dict(response.json())
 
@@ -103,6 +110,7 @@ def _build_response(
     | NlpSearchParseResponse402
     | NlpSearchParseResponse403
     | NlpSearchParseResponse404
+    | NlpSearchParseResponse422
     | NlpSearchParseResponse429
     | NlpSearchParseResponse500
     | NlpSearchParseResponse503
@@ -125,6 +133,7 @@ def sync_detailed(
     | NlpSearchParseResponse402
     | NlpSearchParseResponse403
     | NlpSearchParseResponse404
+    | NlpSearchParseResponse422
     | NlpSearchParseResponse429
     | NlpSearchParseResponse500
     | NlpSearchParseResponse503
@@ -160,7 +169,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[NlpSearchParseResponse400 | NlpSearchParseResponse401 | NlpSearchParseResponse402 | NlpSearchParseResponse403 | NlpSearchParseResponse404 | NlpSearchParseResponse429 | NlpSearchParseResponse500 | NlpSearchParseResponse503]
+        Response[NlpSearchParseResponse400 | NlpSearchParseResponse401 | NlpSearchParseResponse402 | NlpSearchParseResponse403 | NlpSearchParseResponse404 | NlpSearchParseResponse422 | NlpSearchParseResponse429 | NlpSearchParseResponse500 | NlpSearchParseResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -184,6 +193,7 @@ def sync(
     | NlpSearchParseResponse402
     | NlpSearchParseResponse403
     | NlpSearchParseResponse404
+    | NlpSearchParseResponse422
     | NlpSearchParseResponse429
     | NlpSearchParseResponse500
     | NlpSearchParseResponse503
@@ -220,7 +230,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        NlpSearchParseResponse400 | NlpSearchParseResponse401 | NlpSearchParseResponse402 | NlpSearchParseResponse403 | NlpSearchParseResponse404 | NlpSearchParseResponse429 | NlpSearchParseResponse500 | NlpSearchParseResponse503
+        NlpSearchParseResponse400 | NlpSearchParseResponse401 | NlpSearchParseResponse402 | NlpSearchParseResponse403 | NlpSearchParseResponse404 | NlpSearchParseResponse422 | NlpSearchParseResponse429 | NlpSearchParseResponse500 | NlpSearchParseResponse503
     """
 
     return sync_detailed(
@@ -239,6 +249,7 @@ async def asyncio_detailed(
     | NlpSearchParseResponse402
     | NlpSearchParseResponse403
     | NlpSearchParseResponse404
+    | NlpSearchParseResponse422
     | NlpSearchParseResponse429
     | NlpSearchParseResponse500
     | NlpSearchParseResponse503
@@ -274,7 +285,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[NlpSearchParseResponse400 | NlpSearchParseResponse401 | NlpSearchParseResponse402 | NlpSearchParseResponse403 | NlpSearchParseResponse404 | NlpSearchParseResponse429 | NlpSearchParseResponse500 | NlpSearchParseResponse503]
+        Response[NlpSearchParseResponse400 | NlpSearchParseResponse401 | NlpSearchParseResponse402 | NlpSearchParseResponse403 | NlpSearchParseResponse404 | NlpSearchParseResponse422 | NlpSearchParseResponse429 | NlpSearchParseResponse500 | NlpSearchParseResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -296,6 +307,7 @@ async def asyncio(
     | NlpSearchParseResponse402
     | NlpSearchParseResponse403
     | NlpSearchParseResponse404
+    | NlpSearchParseResponse422
     | NlpSearchParseResponse429
     | NlpSearchParseResponse500
     | NlpSearchParseResponse503
@@ -332,7 +344,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        NlpSearchParseResponse400 | NlpSearchParseResponse401 | NlpSearchParseResponse402 | NlpSearchParseResponse403 | NlpSearchParseResponse404 | NlpSearchParseResponse429 | NlpSearchParseResponse500 | NlpSearchParseResponse503
+        NlpSearchParseResponse400 | NlpSearchParseResponse401 | NlpSearchParseResponse402 | NlpSearchParseResponse403 | NlpSearchParseResponse404 | NlpSearchParseResponse422 | NlpSearchParseResponse429 | NlpSearchParseResponse500 | NlpSearchParseResponse503
     """
 
     return (

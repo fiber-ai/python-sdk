@@ -12,6 +12,7 @@ from ...models.profile_reactions_live_fetch_response_401 import ProfileReactions
 from ...models.profile_reactions_live_fetch_response_402 import ProfileReactionsLiveFetchResponse402
 from ...models.profile_reactions_live_fetch_response_403 import ProfileReactionsLiveFetchResponse403
 from ...models.profile_reactions_live_fetch_response_404 import ProfileReactionsLiveFetchResponse404
+from ...models.profile_reactions_live_fetch_response_422 import ProfileReactionsLiveFetchResponse422
 from ...models.profile_reactions_live_fetch_response_429 import ProfileReactionsLiveFetchResponse429
 from ...models.profile_reactions_live_fetch_response_500 import ProfileReactionsLiveFetchResponse500
 from ...models.profile_reactions_live_fetch_response_503 import ProfileReactionsLiveFetchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | ProfileReactionsLiveFetchResponse402
     | ProfileReactionsLiveFetchResponse403
     | ProfileReactionsLiveFetchResponse404
+    | ProfileReactionsLiveFetchResponse422
     | ProfileReactionsLiveFetchResponse429
     | ProfileReactionsLiveFetchResponse500
     | ProfileReactionsLiveFetchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = ProfileReactionsLiveFetchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = ProfileReactionsLiveFetchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | ProfileReactionsLiveFetchResponse402
     | ProfileReactionsLiveFetchResponse403
     | ProfileReactionsLiveFetchResponse404
+    | ProfileReactionsLiveFetchResponse422
     | ProfileReactionsLiveFetchResponse429
     | ProfileReactionsLiveFetchResponse500
     | ProfileReactionsLiveFetchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | ProfileReactionsLiveFetchResponse402
     | ProfileReactionsLiveFetchResponse403
     | ProfileReactionsLiveFetchResponse404
+    | ProfileReactionsLiveFetchResponse422
     | ProfileReactionsLiveFetchResponse429
     | ProfileReactionsLiveFetchResponse500
     | ProfileReactionsLiveFetchResponse503
@@ -159,7 +168,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ProfileReactionsLiveFetchResponse200 | ProfileReactionsLiveFetchResponse400 | ProfileReactionsLiveFetchResponse401 | ProfileReactionsLiveFetchResponse402 | ProfileReactionsLiveFetchResponse403 | ProfileReactionsLiveFetchResponse404 | ProfileReactionsLiveFetchResponse429 | ProfileReactionsLiveFetchResponse500 | ProfileReactionsLiveFetchResponse503]
+        Response[ProfileReactionsLiveFetchResponse200 | ProfileReactionsLiveFetchResponse400 | ProfileReactionsLiveFetchResponse401 | ProfileReactionsLiveFetchResponse402 | ProfileReactionsLiveFetchResponse403 | ProfileReactionsLiveFetchResponse404 | ProfileReactionsLiveFetchResponse422 | ProfileReactionsLiveFetchResponse429 | ProfileReactionsLiveFetchResponse500 | ProfileReactionsLiveFetchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -184,6 +193,7 @@ def sync(
     | ProfileReactionsLiveFetchResponse402
     | ProfileReactionsLiveFetchResponse403
     | ProfileReactionsLiveFetchResponse404
+    | ProfileReactionsLiveFetchResponse422
     | ProfileReactionsLiveFetchResponse429
     | ProfileReactionsLiveFetchResponse500
     | ProfileReactionsLiveFetchResponse503
@@ -210,7 +220,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ProfileReactionsLiveFetchResponse200 | ProfileReactionsLiveFetchResponse400 | ProfileReactionsLiveFetchResponse401 | ProfileReactionsLiveFetchResponse402 | ProfileReactionsLiveFetchResponse403 | ProfileReactionsLiveFetchResponse404 | ProfileReactionsLiveFetchResponse429 | ProfileReactionsLiveFetchResponse500 | ProfileReactionsLiveFetchResponse503
+        ProfileReactionsLiveFetchResponse200 | ProfileReactionsLiveFetchResponse400 | ProfileReactionsLiveFetchResponse401 | ProfileReactionsLiveFetchResponse402 | ProfileReactionsLiveFetchResponse403 | ProfileReactionsLiveFetchResponse404 | ProfileReactionsLiveFetchResponse422 | ProfileReactionsLiveFetchResponse429 | ProfileReactionsLiveFetchResponse500 | ProfileReactionsLiveFetchResponse503
     """
 
     return sync_detailed(
@@ -230,6 +240,7 @@ async def asyncio_detailed(
     | ProfileReactionsLiveFetchResponse402
     | ProfileReactionsLiveFetchResponse403
     | ProfileReactionsLiveFetchResponse404
+    | ProfileReactionsLiveFetchResponse422
     | ProfileReactionsLiveFetchResponse429
     | ProfileReactionsLiveFetchResponse500
     | ProfileReactionsLiveFetchResponse503
@@ -255,7 +266,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ProfileReactionsLiveFetchResponse200 | ProfileReactionsLiveFetchResponse400 | ProfileReactionsLiveFetchResponse401 | ProfileReactionsLiveFetchResponse402 | ProfileReactionsLiveFetchResponse403 | ProfileReactionsLiveFetchResponse404 | ProfileReactionsLiveFetchResponse429 | ProfileReactionsLiveFetchResponse500 | ProfileReactionsLiveFetchResponse503]
+        Response[ProfileReactionsLiveFetchResponse200 | ProfileReactionsLiveFetchResponse400 | ProfileReactionsLiveFetchResponse401 | ProfileReactionsLiveFetchResponse402 | ProfileReactionsLiveFetchResponse403 | ProfileReactionsLiveFetchResponse404 | ProfileReactionsLiveFetchResponse422 | ProfileReactionsLiveFetchResponse429 | ProfileReactionsLiveFetchResponse500 | ProfileReactionsLiveFetchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -278,6 +289,7 @@ async def asyncio(
     | ProfileReactionsLiveFetchResponse402
     | ProfileReactionsLiveFetchResponse403
     | ProfileReactionsLiveFetchResponse404
+    | ProfileReactionsLiveFetchResponse422
     | ProfileReactionsLiveFetchResponse429
     | ProfileReactionsLiveFetchResponse500
     | ProfileReactionsLiveFetchResponse503
@@ -304,7 +316,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ProfileReactionsLiveFetchResponse200 | ProfileReactionsLiveFetchResponse400 | ProfileReactionsLiveFetchResponse401 | ProfileReactionsLiveFetchResponse402 | ProfileReactionsLiveFetchResponse403 | ProfileReactionsLiveFetchResponse404 | ProfileReactionsLiveFetchResponse429 | ProfileReactionsLiveFetchResponse500 | ProfileReactionsLiveFetchResponse503
+        ProfileReactionsLiveFetchResponse200 | ProfileReactionsLiveFetchResponse400 | ProfileReactionsLiveFetchResponse401 | ProfileReactionsLiveFetchResponse402 | ProfileReactionsLiveFetchResponse403 | ProfileReactionsLiveFetchResponse404 | ProfileReactionsLiveFetchResponse422 | ProfileReactionsLiveFetchResponse429 | ProfileReactionsLiveFetchResponse500 | ProfileReactionsLiveFetchResponse503
     """
 
     return (

@@ -12,6 +12,7 @@ from ...models.start_batch_contact_details_response_401 import StartBatchContact
 from ...models.start_batch_contact_details_response_402 import StartBatchContactDetailsResponse402
 from ...models.start_batch_contact_details_response_403 import StartBatchContactDetailsResponse403
 from ...models.start_batch_contact_details_response_404 import StartBatchContactDetailsResponse404
+from ...models.start_batch_contact_details_response_422 import StartBatchContactDetailsResponse422
 from ...models.start_batch_contact_details_response_429 import StartBatchContactDetailsResponse429
 from ...models.start_batch_contact_details_response_500 import StartBatchContactDetailsResponse500
 from ...models.start_batch_contact_details_response_503 import StartBatchContactDetailsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | StartBatchContactDetailsResponse402
     | StartBatchContactDetailsResponse403
     | StartBatchContactDetailsResponse404
+    | StartBatchContactDetailsResponse422
     | StartBatchContactDetailsResponse429
     | StartBatchContactDetailsResponse500
     | StartBatchContactDetailsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = StartBatchContactDetailsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = StartBatchContactDetailsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | StartBatchContactDetailsResponse402
     | StartBatchContactDetailsResponse403
     | StartBatchContactDetailsResponse404
+    | StartBatchContactDetailsResponse422
     | StartBatchContactDetailsResponse429
     | StartBatchContactDetailsResponse500
     | StartBatchContactDetailsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | StartBatchContactDetailsResponse402
     | StartBatchContactDetailsResponse403
     | StartBatchContactDetailsResponse404
+    | StartBatchContactDetailsResponse422
     | StartBatchContactDetailsResponse429
     | StartBatchContactDetailsResponse500
     | StartBatchContactDetailsResponse503
@@ -159,7 +168,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[StartBatchContactDetailsResponse200 | StartBatchContactDetailsResponse400 | StartBatchContactDetailsResponse401 | StartBatchContactDetailsResponse402 | StartBatchContactDetailsResponse403 | StartBatchContactDetailsResponse404 | StartBatchContactDetailsResponse429 | StartBatchContactDetailsResponse500 | StartBatchContactDetailsResponse503]
+        Response[StartBatchContactDetailsResponse200 | StartBatchContactDetailsResponse400 | StartBatchContactDetailsResponse401 | StartBatchContactDetailsResponse402 | StartBatchContactDetailsResponse403 | StartBatchContactDetailsResponse404 | StartBatchContactDetailsResponse422 | StartBatchContactDetailsResponse429 | StartBatchContactDetailsResponse500 | StartBatchContactDetailsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -184,6 +193,7 @@ def sync(
     | StartBatchContactDetailsResponse402
     | StartBatchContactDetailsResponse403
     | StartBatchContactDetailsResponse404
+    | StartBatchContactDetailsResponse422
     | StartBatchContactDetailsResponse429
     | StartBatchContactDetailsResponse500
     | StartBatchContactDetailsResponse503
@@ -210,7 +220,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        StartBatchContactDetailsResponse200 | StartBatchContactDetailsResponse400 | StartBatchContactDetailsResponse401 | StartBatchContactDetailsResponse402 | StartBatchContactDetailsResponse403 | StartBatchContactDetailsResponse404 | StartBatchContactDetailsResponse429 | StartBatchContactDetailsResponse500 | StartBatchContactDetailsResponse503
+        StartBatchContactDetailsResponse200 | StartBatchContactDetailsResponse400 | StartBatchContactDetailsResponse401 | StartBatchContactDetailsResponse402 | StartBatchContactDetailsResponse403 | StartBatchContactDetailsResponse404 | StartBatchContactDetailsResponse422 | StartBatchContactDetailsResponse429 | StartBatchContactDetailsResponse500 | StartBatchContactDetailsResponse503
     """
 
     return sync_detailed(
@@ -230,6 +240,7 @@ async def asyncio_detailed(
     | StartBatchContactDetailsResponse402
     | StartBatchContactDetailsResponse403
     | StartBatchContactDetailsResponse404
+    | StartBatchContactDetailsResponse422
     | StartBatchContactDetailsResponse429
     | StartBatchContactDetailsResponse500
     | StartBatchContactDetailsResponse503
@@ -255,7 +266,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[StartBatchContactDetailsResponse200 | StartBatchContactDetailsResponse400 | StartBatchContactDetailsResponse401 | StartBatchContactDetailsResponse402 | StartBatchContactDetailsResponse403 | StartBatchContactDetailsResponse404 | StartBatchContactDetailsResponse429 | StartBatchContactDetailsResponse500 | StartBatchContactDetailsResponse503]
+        Response[StartBatchContactDetailsResponse200 | StartBatchContactDetailsResponse400 | StartBatchContactDetailsResponse401 | StartBatchContactDetailsResponse402 | StartBatchContactDetailsResponse403 | StartBatchContactDetailsResponse404 | StartBatchContactDetailsResponse422 | StartBatchContactDetailsResponse429 | StartBatchContactDetailsResponse500 | StartBatchContactDetailsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -278,6 +289,7 @@ async def asyncio(
     | StartBatchContactDetailsResponse402
     | StartBatchContactDetailsResponse403
     | StartBatchContactDetailsResponse404
+    | StartBatchContactDetailsResponse422
     | StartBatchContactDetailsResponse429
     | StartBatchContactDetailsResponse500
     | StartBatchContactDetailsResponse503
@@ -304,7 +316,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        StartBatchContactDetailsResponse200 | StartBatchContactDetailsResponse400 | StartBatchContactDetailsResponse401 | StartBatchContactDetailsResponse402 | StartBatchContactDetailsResponse403 | StartBatchContactDetailsResponse404 | StartBatchContactDetailsResponse429 | StartBatchContactDetailsResponse500 | StartBatchContactDetailsResponse503
+        StartBatchContactDetailsResponse200 | StartBatchContactDetailsResponse400 | StartBatchContactDetailsResponse401 | StartBatchContactDetailsResponse402 | StartBatchContactDetailsResponse403 | StartBatchContactDetailsResponse404 | StartBatchContactDetailsResponse422 | StartBatchContactDetailsResponse429 | StartBatchContactDetailsResponse500 | StartBatchContactDetailsResponse503
     """
 
     return (

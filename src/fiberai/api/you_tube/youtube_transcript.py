@@ -12,6 +12,7 @@ from ...models.youtube_transcript_response_401 import YoutubeTranscriptResponse4
 from ...models.youtube_transcript_response_402 import YoutubeTranscriptResponse402
 from ...models.youtube_transcript_response_403 import YoutubeTranscriptResponse403
 from ...models.youtube_transcript_response_404 import YoutubeTranscriptResponse404
+from ...models.youtube_transcript_response_422 import YoutubeTranscriptResponse422
 from ...models.youtube_transcript_response_429 import YoutubeTranscriptResponse429
 from ...models.youtube_transcript_response_500 import YoutubeTranscriptResponse500
 from ...models.youtube_transcript_response_503 import YoutubeTranscriptResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | YoutubeTranscriptResponse402
     | YoutubeTranscriptResponse403
     | YoutubeTranscriptResponse404
+    | YoutubeTranscriptResponse422
     | YoutubeTranscriptResponse429
     | YoutubeTranscriptResponse500
     | YoutubeTranscriptResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = YoutubeTranscriptResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = YoutubeTranscriptResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | YoutubeTranscriptResponse402
     | YoutubeTranscriptResponse403
     | YoutubeTranscriptResponse404
+    | YoutubeTranscriptResponse422
     | YoutubeTranscriptResponse429
     | YoutubeTranscriptResponse500
     | YoutubeTranscriptResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | YoutubeTranscriptResponse402
     | YoutubeTranscriptResponse403
     | YoutubeTranscriptResponse404
+    | YoutubeTranscriptResponse422
     | YoutubeTranscriptResponse429
     | YoutubeTranscriptResponse500
     | YoutubeTranscriptResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[YoutubeTranscriptResponse200 | YoutubeTranscriptResponse400 | YoutubeTranscriptResponse401 | YoutubeTranscriptResponse402 | YoutubeTranscriptResponse403 | YoutubeTranscriptResponse404 | YoutubeTranscriptResponse429 | YoutubeTranscriptResponse500 | YoutubeTranscriptResponse503]
+        Response[YoutubeTranscriptResponse200 | YoutubeTranscriptResponse400 | YoutubeTranscriptResponse401 | YoutubeTranscriptResponse402 | YoutubeTranscriptResponse403 | YoutubeTranscriptResponse404 | YoutubeTranscriptResponse422 | YoutubeTranscriptResponse429 | YoutubeTranscriptResponse500 | YoutubeTranscriptResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | YoutubeTranscriptResponse402
     | YoutubeTranscriptResponse403
     | YoutubeTranscriptResponse404
+    | YoutubeTranscriptResponse422
     | YoutubeTranscriptResponse429
     | YoutubeTranscriptResponse500
     | YoutubeTranscriptResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        YoutubeTranscriptResponse200 | YoutubeTranscriptResponse400 | YoutubeTranscriptResponse401 | YoutubeTranscriptResponse402 | YoutubeTranscriptResponse403 | YoutubeTranscriptResponse404 | YoutubeTranscriptResponse429 | YoutubeTranscriptResponse500 | YoutubeTranscriptResponse503
+        YoutubeTranscriptResponse200 | YoutubeTranscriptResponse400 | YoutubeTranscriptResponse401 | YoutubeTranscriptResponse402 | YoutubeTranscriptResponse403 | YoutubeTranscriptResponse404 | YoutubeTranscriptResponse422 | YoutubeTranscriptResponse429 | YoutubeTranscriptResponse500 | YoutubeTranscriptResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | YoutubeTranscriptResponse402
     | YoutubeTranscriptResponse403
     | YoutubeTranscriptResponse404
+    | YoutubeTranscriptResponse422
     | YoutubeTranscriptResponse429
     | YoutubeTranscriptResponse500
     | YoutubeTranscriptResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[YoutubeTranscriptResponse200 | YoutubeTranscriptResponse400 | YoutubeTranscriptResponse401 | YoutubeTranscriptResponse402 | YoutubeTranscriptResponse403 | YoutubeTranscriptResponse404 | YoutubeTranscriptResponse429 | YoutubeTranscriptResponse500 | YoutubeTranscriptResponse503]
+        Response[YoutubeTranscriptResponse200 | YoutubeTranscriptResponse400 | YoutubeTranscriptResponse401 | YoutubeTranscriptResponse402 | YoutubeTranscriptResponse403 | YoutubeTranscriptResponse404 | YoutubeTranscriptResponse422 | YoutubeTranscriptResponse429 | YoutubeTranscriptResponse500 | YoutubeTranscriptResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | YoutubeTranscriptResponse402
     | YoutubeTranscriptResponse403
     | YoutubeTranscriptResponse404
+    | YoutubeTranscriptResponse422
     | YoutubeTranscriptResponse429
     | YoutubeTranscriptResponse500
     | YoutubeTranscriptResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        YoutubeTranscriptResponse200 | YoutubeTranscriptResponse400 | YoutubeTranscriptResponse401 | YoutubeTranscriptResponse402 | YoutubeTranscriptResponse403 | YoutubeTranscriptResponse404 | YoutubeTranscriptResponse429 | YoutubeTranscriptResponse500 | YoutubeTranscriptResponse503
+        YoutubeTranscriptResponse200 | YoutubeTranscriptResponse400 | YoutubeTranscriptResponse401 | YoutubeTranscriptResponse402 | YoutubeTranscriptResponse403 | YoutubeTranscriptResponse404 | YoutubeTranscriptResponse422 | YoutubeTranscriptResponse429 | YoutubeTranscriptResponse500 | YoutubeTranscriptResponse503
     """
 
     return (

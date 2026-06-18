@@ -11,6 +11,7 @@ from ...models.get_industries_response_401 import GetIndustriesResponse401
 from ...models.get_industries_response_402 import GetIndustriesResponse402
 from ...models.get_industries_response_403 import GetIndustriesResponse403
 from ...models.get_industries_response_404 import GetIndustriesResponse404
+from ...models.get_industries_response_422 import GetIndustriesResponse422
 from ...models.get_industries_response_429 import GetIndustriesResponse429
 from ...models.get_industries_response_500 import GetIndustriesResponse500
 from ...models.get_industries_response_503 import GetIndustriesResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GetIndustriesResponse402
     | GetIndustriesResponse403
     | GetIndustriesResponse404
+    | GetIndustriesResponse422
     | GetIndustriesResponse429
     | GetIndustriesResponse500
     | GetIndustriesResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetIndustriesResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetIndustriesResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GetIndustriesResponse402
     | GetIndustriesResponse403
     | GetIndustriesResponse404
+    | GetIndustriesResponse422
     | GetIndustriesResponse429
     | GetIndustriesResponse500
     | GetIndustriesResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GetIndustriesResponse402
     | GetIndustriesResponse403
     | GetIndustriesResponse404
+    | GetIndustriesResponse422
     | GetIndustriesResponse429
     | GetIndustriesResponse500
     | GetIndustriesResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetIndustriesResponse200 | GetIndustriesResponse400 | GetIndustriesResponse401 | GetIndustriesResponse402 | GetIndustriesResponse403 | GetIndustriesResponse404 | GetIndustriesResponse429 | GetIndustriesResponse500 | GetIndustriesResponse503]
+        Response[GetIndustriesResponse200 | GetIndustriesResponse400 | GetIndustriesResponse401 | GetIndustriesResponse402 | GetIndustriesResponse403 | GetIndustriesResponse404 | GetIndustriesResponse422 | GetIndustriesResponse429 | GetIndustriesResponse500 | GetIndustriesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | GetIndustriesResponse402
     | GetIndustriesResponse403
     | GetIndustriesResponse404
+    | GetIndustriesResponse422
     | GetIndustriesResponse429
     | GetIndustriesResponse500
     | GetIndustriesResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetIndustriesResponse200 | GetIndustriesResponse400 | GetIndustriesResponse401 | GetIndustriesResponse402 | GetIndustriesResponse403 | GetIndustriesResponse404 | GetIndustriesResponse429 | GetIndustriesResponse500 | GetIndustriesResponse503
+        GetIndustriesResponse200 | GetIndustriesResponse400 | GetIndustriesResponse401 | GetIndustriesResponse402 | GetIndustriesResponse403 | GetIndustriesResponse404 | GetIndustriesResponse422 | GetIndustriesResponse429 | GetIndustriesResponse500 | GetIndustriesResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | GetIndustriesResponse402
     | GetIndustriesResponse403
     | GetIndustriesResponse404
+    | GetIndustriesResponse422
     | GetIndustriesResponse429
     | GetIndustriesResponse500
     | GetIndustriesResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetIndustriesResponse200 | GetIndustriesResponse400 | GetIndustriesResponse401 | GetIndustriesResponse402 | GetIndustriesResponse403 | GetIndustriesResponse404 | GetIndustriesResponse429 | GetIndustriesResponse500 | GetIndustriesResponse503]
+        Response[GetIndustriesResponse200 | GetIndustriesResponse400 | GetIndustriesResponse401 | GetIndustriesResponse402 | GetIndustriesResponse403 | GetIndustriesResponse404 | GetIndustriesResponse422 | GetIndustriesResponse429 | GetIndustriesResponse500 | GetIndustriesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | GetIndustriesResponse402
     | GetIndustriesResponse403
     | GetIndustriesResponse404
+    | GetIndustriesResponse422
     | GetIndustriesResponse429
     | GetIndustriesResponse500
     | GetIndustriesResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetIndustriesResponse200 | GetIndustriesResponse400 | GetIndustriesResponse401 | GetIndustriesResponse402 | GetIndustriesResponse403 | GetIndustriesResponse404 | GetIndustriesResponse429 | GetIndustriesResponse500 | GetIndustriesResponse503
+        GetIndustriesResponse200 | GetIndustriesResponse400 | GetIndustriesResponse401 | GetIndustriesResponse402 | GetIndustriesResponse403 | GetIndustriesResponse404 | GetIndustriesResponse422 | GetIndustriesResponse429 | GetIndustriesResponse500 | GetIndustriesResponse503
     """
 
     return (

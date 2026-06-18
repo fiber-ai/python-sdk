@@ -13,21 +13,25 @@ T = TypeVar("T", bound="LiteContactRevealBodyEnrichmentType")
 
 @_attrs_define
 class LiteContactRevealBodyEnrichmentType:
-    """Which email types to look for.
+    """Which email and phone types to look for.
 
     Attributes:
         get_work_emails (bool | Unset):  Default: True.
         get_personal_emails (bool | Unset):  Default: False.
+        get_phone_numbers (bool | Unset):  Default: False.
     """
 
     get_work_emails: bool | Unset = True
     get_personal_emails: bool | Unset = False
+    get_phone_numbers: bool | Unset = False
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         get_work_emails = self.get_work_emails
 
         get_personal_emails = self.get_personal_emails
+
+        get_phone_numbers = self.get_phone_numbers
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -36,6 +40,8 @@ class LiteContactRevealBodyEnrichmentType:
             field_dict["getWorkEmails"] = get_work_emails
         if get_personal_emails is not UNSET:
             field_dict["getPersonalEmails"] = get_personal_emails
+        if get_phone_numbers is not UNSET:
+            field_dict["getPhoneNumbers"] = get_phone_numbers
 
         return field_dict
 
@@ -46,9 +52,12 @@ class LiteContactRevealBodyEnrichmentType:
 
         get_personal_emails = d.pop("getPersonalEmails", UNSET)
 
+        get_phone_numbers = d.pop("getPhoneNumbers", UNSET)
+
         lite_contact_reveal_body_enrichment_type = cls(
             get_work_emails=get_work_emails,
             get_personal_emails=get_personal_emails,
+            get_phone_numbers=get_phone_numbers,
         )
 
         lite_contact_reveal_body_enrichment_type.additional_properties = d

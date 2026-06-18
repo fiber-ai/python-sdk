@@ -18,10 +18,10 @@ T = TypeVar("T", bound="GetTrackerOverviewResponse200OutputUpcomingRefreshesItem
 class GetTrackerOverviewResponse200OutputUpcomingRefreshesItem:
     """
     Attributes:
-        list_id (str): Tracker list ID
-        list_name (str): List name
+        list_id (str): Tracker list ID.
+        list_name (str): List name.
         entity_type (GetTrackerOverviewResponse200OutputUpcomingRefreshesItemEntityType): Entity type tracked by this
-            list
+            list.
         refresh_at (datetime.datetime): ISO timestamp when the next refresh of this list will run.
         entity_count (int): Number of entities in the list that will be refreshed.
         estimated_credits (float): Credits that will be charged for this refresh.

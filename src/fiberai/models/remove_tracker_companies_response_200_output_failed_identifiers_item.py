@@ -13,8 +13,8 @@ T = TypeVar("T", bound="RemoveTrackerCompaniesResponse200OutputFailedIdentifiers
 class RemoveTrackerCompaniesResponse200OutputFailedIdentifiersItem:
     """
     Attributes:
-        index (int): Index in the input array
-        reason (str): Why this company could not be removed
+        index (int): Index in the input array.
+        reason (str): Why this company could not be removed.
     """
 
     index: int

@@ -12,6 +12,7 @@ from ...models.company_posts_live_fetch_response_401 import CompanyPostsLiveFetc
 from ...models.company_posts_live_fetch_response_402 import CompanyPostsLiveFetchResponse402
 from ...models.company_posts_live_fetch_response_403 import CompanyPostsLiveFetchResponse403
 from ...models.company_posts_live_fetch_response_404 import CompanyPostsLiveFetchResponse404
+from ...models.company_posts_live_fetch_response_422 import CompanyPostsLiveFetchResponse422
 from ...models.company_posts_live_fetch_response_429 import CompanyPostsLiveFetchResponse429
 from ...models.company_posts_live_fetch_response_500 import CompanyPostsLiveFetchResponse500
 from ...models.company_posts_live_fetch_response_503 import CompanyPostsLiveFetchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | CompanyPostsLiveFetchResponse402
     | CompanyPostsLiveFetchResponse403
     | CompanyPostsLiveFetchResponse404
+    | CompanyPostsLiveFetchResponse422
     | CompanyPostsLiveFetchResponse429
     | CompanyPostsLiveFetchResponse500
     | CompanyPostsLiveFetchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = CompanyPostsLiveFetchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = CompanyPostsLiveFetchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | CompanyPostsLiveFetchResponse402
     | CompanyPostsLiveFetchResponse403
     | CompanyPostsLiveFetchResponse404
+    | CompanyPostsLiveFetchResponse422
     | CompanyPostsLiveFetchResponse429
     | CompanyPostsLiveFetchResponse500
     | CompanyPostsLiveFetchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | CompanyPostsLiveFetchResponse402
     | CompanyPostsLiveFetchResponse403
     | CompanyPostsLiveFetchResponse404
+    | CompanyPostsLiveFetchResponse422
     | CompanyPostsLiveFetchResponse429
     | CompanyPostsLiveFetchResponse500
     | CompanyPostsLiveFetchResponse503
@@ -159,7 +168,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CompanyPostsLiveFetchResponse200 | CompanyPostsLiveFetchResponse400 | CompanyPostsLiveFetchResponse401 | CompanyPostsLiveFetchResponse402 | CompanyPostsLiveFetchResponse403 | CompanyPostsLiveFetchResponse404 | CompanyPostsLiveFetchResponse429 | CompanyPostsLiveFetchResponse500 | CompanyPostsLiveFetchResponse503]
+        Response[CompanyPostsLiveFetchResponse200 | CompanyPostsLiveFetchResponse400 | CompanyPostsLiveFetchResponse401 | CompanyPostsLiveFetchResponse402 | CompanyPostsLiveFetchResponse403 | CompanyPostsLiveFetchResponse404 | CompanyPostsLiveFetchResponse422 | CompanyPostsLiveFetchResponse429 | CompanyPostsLiveFetchResponse500 | CompanyPostsLiveFetchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -184,6 +193,7 @@ def sync(
     | CompanyPostsLiveFetchResponse402
     | CompanyPostsLiveFetchResponse403
     | CompanyPostsLiveFetchResponse404
+    | CompanyPostsLiveFetchResponse422
     | CompanyPostsLiveFetchResponse429
     | CompanyPostsLiveFetchResponse500
     | CompanyPostsLiveFetchResponse503
@@ -210,7 +220,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CompanyPostsLiveFetchResponse200 | CompanyPostsLiveFetchResponse400 | CompanyPostsLiveFetchResponse401 | CompanyPostsLiveFetchResponse402 | CompanyPostsLiveFetchResponse403 | CompanyPostsLiveFetchResponse404 | CompanyPostsLiveFetchResponse429 | CompanyPostsLiveFetchResponse500 | CompanyPostsLiveFetchResponse503
+        CompanyPostsLiveFetchResponse200 | CompanyPostsLiveFetchResponse400 | CompanyPostsLiveFetchResponse401 | CompanyPostsLiveFetchResponse402 | CompanyPostsLiveFetchResponse403 | CompanyPostsLiveFetchResponse404 | CompanyPostsLiveFetchResponse422 | CompanyPostsLiveFetchResponse429 | CompanyPostsLiveFetchResponse500 | CompanyPostsLiveFetchResponse503
     """
 
     return sync_detailed(
@@ -230,6 +240,7 @@ async def asyncio_detailed(
     | CompanyPostsLiveFetchResponse402
     | CompanyPostsLiveFetchResponse403
     | CompanyPostsLiveFetchResponse404
+    | CompanyPostsLiveFetchResponse422
     | CompanyPostsLiveFetchResponse429
     | CompanyPostsLiveFetchResponse500
     | CompanyPostsLiveFetchResponse503
@@ -255,7 +266,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CompanyPostsLiveFetchResponse200 | CompanyPostsLiveFetchResponse400 | CompanyPostsLiveFetchResponse401 | CompanyPostsLiveFetchResponse402 | CompanyPostsLiveFetchResponse403 | CompanyPostsLiveFetchResponse404 | CompanyPostsLiveFetchResponse429 | CompanyPostsLiveFetchResponse500 | CompanyPostsLiveFetchResponse503]
+        Response[CompanyPostsLiveFetchResponse200 | CompanyPostsLiveFetchResponse400 | CompanyPostsLiveFetchResponse401 | CompanyPostsLiveFetchResponse402 | CompanyPostsLiveFetchResponse403 | CompanyPostsLiveFetchResponse404 | CompanyPostsLiveFetchResponse422 | CompanyPostsLiveFetchResponse429 | CompanyPostsLiveFetchResponse500 | CompanyPostsLiveFetchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -278,6 +289,7 @@ async def asyncio(
     | CompanyPostsLiveFetchResponse402
     | CompanyPostsLiveFetchResponse403
     | CompanyPostsLiveFetchResponse404
+    | CompanyPostsLiveFetchResponse422
     | CompanyPostsLiveFetchResponse429
     | CompanyPostsLiveFetchResponse500
     | CompanyPostsLiveFetchResponse503
@@ -304,7 +316,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CompanyPostsLiveFetchResponse200 | CompanyPostsLiveFetchResponse400 | CompanyPostsLiveFetchResponse401 | CompanyPostsLiveFetchResponse402 | CompanyPostsLiveFetchResponse403 | CompanyPostsLiveFetchResponse404 | CompanyPostsLiveFetchResponse429 | CompanyPostsLiveFetchResponse500 | CompanyPostsLiveFetchResponse503
+        CompanyPostsLiveFetchResponse200 | CompanyPostsLiveFetchResponse400 | CompanyPostsLiveFetchResponse401 | CompanyPostsLiveFetchResponse402 | CompanyPostsLiveFetchResponse403 | CompanyPostsLiveFetchResponse404 | CompanyPostsLiveFetchResponse422 | CompanyPostsLiveFetchResponse429 | CompanyPostsLiveFetchResponse500 | CompanyPostsLiveFetchResponse503
     """
 
     return (

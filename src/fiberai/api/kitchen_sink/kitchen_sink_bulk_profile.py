@@ -12,6 +12,7 @@ from ...models.kitchen_sink_bulk_profile_response_401 import KitchenSinkBulkProf
 from ...models.kitchen_sink_bulk_profile_response_402 import KitchenSinkBulkProfileResponse402
 from ...models.kitchen_sink_bulk_profile_response_403 import KitchenSinkBulkProfileResponse403
 from ...models.kitchen_sink_bulk_profile_response_404 import KitchenSinkBulkProfileResponse404
+from ...models.kitchen_sink_bulk_profile_response_422 import KitchenSinkBulkProfileResponse422
 from ...models.kitchen_sink_bulk_profile_response_429 import KitchenSinkBulkProfileResponse429
 from ...models.kitchen_sink_bulk_profile_response_500 import KitchenSinkBulkProfileResponse500
 from ...models.kitchen_sink_bulk_profile_response_503 import KitchenSinkBulkProfileResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | KitchenSinkBulkProfileResponse402
     | KitchenSinkBulkProfileResponse403
     | KitchenSinkBulkProfileResponse404
+    | KitchenSinkBulkProfileResponse422
     | KitchenSinkBulkProfileResponse429
     | KitchenSinkBulkProfileResponse500
     | KitchenSinkBulkProfileResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = KitchenSinkBulkProfileResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = KitchenSinkBulkProfileResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | KitchenSinkBulkProfileResponse402
     | KitchenSinkBulkProfileResponse403
     | KitchenSinkBulkProfileResponse404
+    | KitchenSinkBulkProfileResponse422
     | KitchenSinkBulkProfileResponse429
     | KitchenSinkBulkProfileResponse500
     | KitchenSinkBulkProfileResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | KitchenSinkBulkProfileResponse402
     | KitchenSinkBulkProfileResponse403
     | KitchenSinkBulkProfileResponse404
+    | KitchenSinkBulkProfileResponse422
     | KitchenSinkBulkProfileResponse429
     | KitchenSinkBulkProfileResponse500
     | KitchenSinkBulkProfileResponse503
@@ -158,7 +167,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[KitchenSinkBulkProfileResponse200 | KitchenSinkBulkProfileResponse400 | KitchenSinkBulkProfileResponse401 | KitchenSinkBulkProfileResponse402 | KitchenSinkBulkProfileResponse403 | KitchenSinkBulkProfileResponse404 | KitchenSinkBulkProfileResponse429 | KitchenSinkBulkProfileResponse500 | KitchenSinkBulkProfileResponse503]
+        Response[KitchenSinkBulkProfileResponse200 | KitchenSinkBulkProfileResponse400 | KitchenSinkBulkProfileResponse401 | KitchenSinkBulkProfileResponse402 | KitchenSinkBulkProfileResponse403 | KitchenSinkBulkProfileResponse404 | KitchenSinkBulkProfileResponse422 | KitchenSinkBulkProfileResponse429 | KitchenSinkBulkProfileResponse500 | KitchenSinkBulkProfileResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -183,6 +192,7 @@ def sync(
     | KitchenSinkBulkProfileResponse402
     | KitchenSinkBulkProfileResponse403
     | KitchenSinkBulkProfileResponse404
+    | KitchenSinkBulkProfileResponse422
     | KitchenSinkBulkProfileResponse429
     | KitchenSinkBulkProfileResponse500
     | KitchenSinkBulkProfileResponse503
@@ -208,7 +218,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        KitchenSinkBulkProfileResponse200 | KitchenSinkBulkProfileResponse400 | KitchenSinkBulkProfileResponse401 | KitchenSinkBulkProfileResponse402 | KitchenSinkBulkProfileResponse403 | KitchenSinkBulkProfileResponse404 | KitchenSinkBulkProfileResponse429 | KitchenSinkBulkProfileResponse500 | KitchenSinkBulkProfileResponse503
+        KitchenSinkBulkProfileResponse200 | KitchenSinkBulkProfileResponse400 | KitchenSinkBulkProfileResponse401 | KitchenSinkBulkProfileResponse402 | KitchenSinkBulkProfileResponse403 | KitchenSinkBulkProfileResponse404 | KitchenSinkBulkProfileResponse422 | KitchenSinkBulkProfileResponse429 | KitchenSinkBulkProfileResponse500 | KitchenSinkBulkProfileResponse503
     """
 
     return sync_detailed(
@@ -228,6 +238,7 @@ async def asyncio_detailed(
     | KitchenSinkBulkProfileResponse402
     | KitchenSinkBulkProfileResponse403
     | KitchenSinkBulkProfileResponse404
+    | KitchenSinkBulkProfileResponse422
     | KitchenSinkBulkProfileResponse429
     | KitchenSinkBulkProfileResponse500
     | KitchenSinkBulkProfileResponse503
@@ -252,7 +263,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[KitchenSinkBulkProfileResponse200 | KitchenSinkBulkProfileResponse400 | KitchenSinkBulkProfileResponse401 | KitchenSinkBulkProfileResponse402 | KitchenSinkBulkProfileResponse403 | KitchenSinkBulkProfileResponse404 | KitchenSinkBulkProfileResponse429 | KitchenSinkBulkProfileResponse500 | KitchenSinkBulkProfileResponse503]
+        Response[KitchenSinkBulkProfileResponse200 | KitchenSinkBulkProfileResponse400 | KitchenSinkBulkProfileResponse401 | KitchenSinkBulkProfileResponse402 | KitchenSinkBulkProfileResponse403 | KitchenSinkBulkProfileResponse404 | KitchenSinkBulkProfileResponse422 | KitchenSinkBulkProfileResponse429 | KitchenSinkBulkProfileResponse500 | KitchenSinkBulkProfileResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -275,6 +286,7 @@ async def asyncio(
     | KitchenSinkBulkProfileResponse402
     | KitchenSinkBulkProfileResponse403
     | KitchenSinkBulkProfileResponse404
+    | KitchenSinkBulkProfileResponse422
     | KitchenSinkBulkProfileResponse429
     | KitchenSinkBulkProfileResponse500
     | KitchenSinkBulkProfileResponse503
@@ -300,7 +312,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        KitchenSinkBulkProfileResponse200 | KitchenSinkBulkProfileResponse400 | KitchenSinkBulkProfileResponse401 | KitchenSinkBulkProfileResponse402 | KitchenSinkBulkProfileResponse403 | KitchenSinkBulkProfileResponse404 | KitchenSinkBulkProfileResponse429 | KitchenSinkBulkProfileResponse500 | KitchenSinkBulkProfileResponse503
+        KitchenSinkBulkProfileResponse200 | KitchenSinkBulkProfileResponse400 | KitchenSinkBulkProfileResponse401 | KitchenSinkBulkProfileResponse402 | KitchenSinkBulkProfileResponse403 | KitchenSinkBulkProfileResponse404 | KitchenSinkBulkProfileResponse422 | KitchenSinkBulkProfileResponse429 | KitchenSinkBulkProfileResponse500 | KitchenSinkBulkProfileResponse503
     """
 
     return (

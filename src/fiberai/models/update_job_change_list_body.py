@@ -17,8 +17,8 @@ class UpdateJobChangeListBody:
     Attributes:
         api_key (str): Your Fiber API key
         job_change_list_id (str): The ID of the job change list.
-        new_name (None | str | Unset): The name of the job change list.
-        is_active (bool | None | Unset): Make the list active or in-active.
+        new_name (None | str | Unset): The new name for the job change list.
+        is_active (bool | None | Unset): Set the list to active or inactive.
     """
 
     api_key: str

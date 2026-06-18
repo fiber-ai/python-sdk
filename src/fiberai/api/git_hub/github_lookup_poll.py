@@ -12,6 +12,7 @@ from ...models.github_lookup_poll_response_401 import GithubLookupPollResponse40
 from ...models.github_lookup_poll_response_402 import GithubLookupPollResponse402
 from ...models.github_lookup_poll_response_403 import GithubLookupPollResponse403
 from ...models.github_lookup_poll_response_404 import GithubLookupPollResponse404
+from ...models.github_lookup_poll_response_422 import GithubLookupPollResponse422
 from ...models.github_lookup_poll_response_429 import GithubLookupPollResponse429
 from ...models.github_lookup_poll_response_500 import GithubLookupPollResponse500
 from ...models.github_lookup_poll_response_503 import GithubLookupPollResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GithubLookupPollResponse402
     | GithubLookupPollResponse403
     | GithubLookupPollResponse404
+    | GithubLookupPollResponse422
     | GithubLookupPollResponse429
     | GithubLookupPollResponse500
     | GithubLookupPollResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GithubLookupPollResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GithubLookupPollResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GithubLookupPollResponse402
     | GithubLookupPollResponse403
     | GithubLookupPollResponse404
+    | GithubLookupPollResponse422
     | GithubLookupPollResponse429
     | GithubLookupPollResponse500
     | GithubLookupPollResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GithubLookupPollResponse402
     | GithubLookupPollResponse403
     | GithubLookupPollResponse404
+    | GithubLookupPollResponse422
     | GithubLookupPollResponse429
     | GithubLookupPollResponse500
     | GithubLookupPollResponse503
@@ -153,7 +162,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GithubLookupPollResponse200 | GithubLookupPollResponse400 | GithubLookupPollResponse401 | GithubLookupPollResponse402 | GithubLookupPollResponse403 | GithubLookupPollResponse404 | GithubLookupPollResponse429 | GithubLookupPollResponse500 | GithubLookupPollResponse503]
+        Response[GithubLookupPollResponse200 | GithubLookupPollResponse400 | GithubLookupPollResponse401 | GithubLookupPollResponse402 | GithubLookupPollResponse403 | GithubLookupPollResponse404 | GithubLookupPollResponse422 | GithubLookupPollResponse429 | GithubLookupPollResponse500 | GithubLookupPollResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -178,6 +187,7 @@ def sync(
     | GithubLookupPollResponse402
     | GithubLookupPollResponse403
     | GithubLookupPollResponse404
+    | GithubLookupPollResponse422
     | GithubLookupPollResponse429
     | GithubLookupPollResponse500
     | GithubLookupPollResponse503
@@ -198,7 +208,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GithubLookupPollResponse200 | GithubLookupPollResponse400 | GithubLookupPollResponse401 | GithubLookupPollResponse402 | GithubLookupPollResponse403 | GithubLookupPollResponse404 | GithubLookupPollResponse429 | GithubLookupPollResponse500 | GithubLookupPollResponse503
+        GithubLookupPollResponse200 | GithubLookupPollResponse400 | GithubLookupPollResponse401 | GithubLookupPollResponse402 | GithubLookupPollResponse403 | GithubLookupPollResponse404 | GithubLookupPollResponse422 | GithubLookupPollResponse429 | GithubLookupPollResponse500 | GithubLookupPollResponse503
     """
 
     return sync_detailed(
@@ -218,6 +228,7 @@ async def asyncio_detailed(
     | GithubLookupPollResponse402
     | GithubLookupPollResponse403
     | GithubLookupPollResponse404
+    | GithubLookupPollResponse422
     | GithubLookupPollResponse429
     | GithubLookupPollResponse500
     | GithubLookupPollResponse503
@@ -237,7 +248,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GithubLookupPollResponse200 | GithubLookupPollResponse400 | GithubLookupPollResponse401 | GithubLookupPollResponse402 | GithubLookupPollResponse403 | GithubLookupPollResponse404 | GithubLookupPollResponse429 | GithubLookupPollResponse500 | GithubLookupPollResponse503]
+        Response[GithubLookupPollResponse200 | GithubLookupPollResponse400 | GithubLookupPollResponse401 | GithubLookupPollResponse402 | GithubLookupPollResponse403 | GithubLookupPollResponse404 | GithubLookupPollResponse422 | GithubLookupPollResponse429 | GithubLookupPollResponse500 | GithubLookupPollResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -260,6 +271,7 @@ async def asyncio(
     | GithubLookupPollResponse402
     | GithubLookupPollResponse403
     | GithubLookupPollResponse404
+    | GithubLookupPollResponse422
     | GithubLookupPollResponse429
     | GithubLookupPollResponse500
     | GithubLookupPollResponse503
@@ -280,7 +292,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GithubLookupPollResponse200 | GithubLookupPollResponse400 | GithubLookupPollResponse401 | GithubLookupPollResponse402 | GithubLookupPollResponse403 | GithubLookupPollResponse404 | GithubLookupPollResponse429 | GithubLookupPollResponse500 | GithubLookupPollResponse503
+        GithubLookupPollResponse200 | GithubLookupPollResponse400 | GithubLookupPollResponse401 | GithubLookupPollResponse402 | GithubLookupPollResponse403 | GithubLookupPollResponse404 | GithubLookupPollResponse422 | GithubLookupPollResponse429 | GithubLookupPollResponse500 | GithubLookupPollResponse503
     """
 
     return (

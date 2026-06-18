@@ -12,6 +12,7 @@ from ...models.remove_prospect_from_exclusion_list_response_401 import RemovePro
 from ...models.remove_prospect_from_exclusion_list_response_402 import RemoveProspectFromExclusionListResponse402
 from ...models.remove_prospect_from_exclusion_list_response_403 import RemoveProspectFromExclusionListResponse403
 from ...models.remove_prospect_from_exclusion_list_response_404 import RemoveProspectFromExclusionListResponse404
+from ...models.remove_prospect_from_exclusion_list_response_422 import RemoveProspectFromExclusionListResponse422
 from ...models.remove_prospect_from_exclusion_list_response_429 import RemoveProspectFromExclusionListResponse429
 from ...models.remove_prospect_from_exclusion_list_response_500 import RemoveProspectFromExclusionListResponse500
 from ...models.remove_prospect_from_exclusion_list_response_503 import RemoveProspectFromExclusionListResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | RemoveProspectFromExclusionListResponse402
     | RemoveProspectFromExclusionListResponse403
     | RemoveProspectFromExclusionListResponse404
+    | RemoveProspectFromExclusionListResponse422
     | RemoveProspectFromExclusionListResponse429
     | RemoveProspectFromExclusionListResponse500
     | RemoveProspectFromExclusionListResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = RemoveProspectFromExclusionListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = RemoveProspectFromExclusionListResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | RemoveProspectFromExclusionListResponse402
     | RemoveProspectFromExclusionListResponse403
     | RemoveProspectFromExclusionListResponse404
+    | RemoveProspectFromExclusionListResponse422
     | RemoveProspectFromExclusionListResponse429
     | RemoveProspectFromExclusionListResponse500
     | RemoveProspectFromExclusionListResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | RemoveProspectFromExclusionListResponse402
     | RemoveProspectFromExclusionListResponse403
     | RemoveProspectFromExclusionListResponse404
+    | RemoveProspectFromExclusionListResponse422
     | RemoveProspectFromExclusionListResponse429
     | RemoveProspectFromExclusionListResponse500
     | RemoveProspectFromExclusionListResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[RemoveProspectFromExclusionListResponse200 | RemoveProspectFromExclusionListResponse400 | RemoveProspectFromExclusionListResponse401 | RemoveProspectFromExclusionListResponse402 | RemoveProspectFromExclusionListResponse403 | RemoveProspectFromExclusionListResponse404 | RemoveProspectFromExclusionListResponse429 | RemoveProspectFromExclusionListResponse500 | RemoveProspectFromExclusionListResponse503]
+        Response[RemoveProspectFromExclusionListResponse200 | RemoveProspectFromExclusionListResponse400 | RemoveProspectFromExclusionListResponse401 | RemoveProspectFromExclusionListResponse402 | RemoveProspectFromExclusionListResponse403 | RemoveProspectFromExclusionListResponse404 | RemoveProspectFromExclusionListResponse422 | RemoveProspectFromExclusionListResponse429 | RemoveProspectFromExclusionListResponse500 | RemoveProspectFromExclusionListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | RemoveProspectFromExclusionListResponse402
     | RemoveProspectFromExclusionListResponse403
     | RemoveProspectFromExclusionListResponse404
+    | RemoveProspectFromExclusionListResponse422
     | RemoveProspectFromExclusionListResponse429
     | RemoveProspectFromExclusionListResponse500
     | RemoveProspectFromExclusionListResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        RemoveProspectFromExclusionListResponse200 | RemoveProspectFromExclusionListResponse400 | RemoveProspectFromExclusionListResponse401 | RemoveProspectFromExclusionListResponse402 | RemoveProspectFromExclusionListResponse403 | RemoveProspectFromExclusionListResponse404 | RemoveProspectFromExclusionListResponse429 | RemoveProspectFromExclusionListResponse500 | RemoveProspectFromExclusionListResponse503
+        RemoveProspectFromExclusionListResponse200 | RemoveProspectFromExclusionListResponse400 | RemoveProspectFromExclusionListResponse401 | RemoveProspectFromExclusionListResponse402 | RemoveProspectFromExclusionListResponse403 | RemoveProspectFromExclusionListResponse404 | RemoveProspectFromExclusionListResponse422 | RemoveProspectFromExclusionListResponse429 | RemoveProspectFromExclusionListResponse500 | RemoveProspectFromExclusionListResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | RemoveProspectFromExclusionListResponse402
     | RemoveProspectFromExclusionListResponse403
     | RemoveProspectFromExclusionListResponse404
+    | RemoveProspectFromExclusionListResponse422
     | RemoveProspectFromExclusionListResponse429
     | RemoveProspectFromExclusionListResponse500
     | RemoveProspectFromExclusionListResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[RemoveProspectFromExclusionListResponse200 | RemoveProspectFromExclusionListResponse400 | RemoveProspectFromExclusionListResponse401 | RemoveProspectFromExclusionListResponse402 | RemoveProspectFromExclusionListResponse403 | RemoveProspectFromExclusionListResponse404 | RemoveProspectFromExclusionListResponse429 | RemoveProspectFromExclusionListResponse500 | RemoveProspectFromExclusionListResponse503]
+        Response[RemoveProspectFromExclusionListResponse200 | RemoveProspectFromExclusionListResponse400 | RemoveProspectFromExclusionListResponse401 | RemoveProspectFromExclusionListResponse402 | RemoveProspectFromExclusionListResponse403 | RemoveProspectFromExclusionListResponse404 | RemoveProspectFromExclusionListResponse422 | RemoveProspectFromExclusionListResponse429 | RemoveProspectFromExclusionListResponse500 | RemoveProspectFromExclusionListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | RemoveProspectFromExclusionListResponse402
     | RemoveProspectFromExclusionListResponse403
     | RemoveProspectFromExclusionListResponse404
+    | RemoveProspectFromExclusionListResponse422
     | RemoveProspectFromExclusionListResponse429
     | RemoveProspectFromExclusionListResponse500
     | RemoveProspectFromExclusionListResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        RemoveProspectFromExclusionListResponse200 | RemoveProspectFromExclusionListResponse400 | RemoveProspectFromExclusionListResponse401 | RemoveProspectFromExclusionListResponse402 | RemoveProspectFromExclusionListResponse403 | RemoveProspectFromExclusionListResponse404 | RemoveProspectFromExclusionListResponse429 | RemoveProspectFromExclusionListResponse500 | RemoveProspectFromExclusionListResponse503
+        RemoveProspectFromExclusionListResponse200 | RemoveProspectFromExclusionListResponse400 | RemoveProspectFromExclusionListResponse401 | RemoveProspectFromExclusionListResponse402 | RemoveProspectFromExclusionListResponse403 | RemoveProspectFromExclusionListResponse404 | RemoveProspectFromExclusionListResponse422 | RemoveProspectFromExclusionListResponse429 | RemoveProspectFromExclusionListResponse500 | RemoveProspectFromExclusionListResponse503
     """
 
     return (

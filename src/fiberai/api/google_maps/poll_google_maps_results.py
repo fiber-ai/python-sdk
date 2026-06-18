@@ -12,6 +12,7 @@ from ...models.poll_google_maps_results_response_401 import PollGoogleMapsResult
 from ...models.poll_google_maps_results_response_402 import PollGoogleMapsResultsResponse402
 from ...models.poll_google_maps_results_response_403 import PollGoogleMapsResultsResponse403
 from ...models.poll_google_maps_results_response_404 import PollGoogleMapsResultsResponse404
+from ...models.poll_google_maps_results_response_422 import PollGoogleMapsResultsResponse422
 from ...models.poll_google_maps_results_response_429 import PollGoogleMapsResultsResponse429
 from ...models.poll_google_maps_results_response_500 import PollGoogleMapsResultsResponse500
 from ...models.poll_google_maps_results_response_503 import PollGoogleMapsResultsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | PollGoogleMapsResultsResponse402
     | PollGoogleMapsResultsResponse403
     | PollGoogleMapsResultsResponse404
+    | PollGoogleMapsResultsResponse422
     | PollGoogleMapsResultsResponse429
     | PollGoogleMapsResultsResponse500
     | PollGoogleMapsResultsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = PollGoogleMapsResultsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = PollGoogleMapsResultsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | PollGoogleMapsResultsResponse402
     | PollGoogleMapsResultsResponse403
     | PollGoogleMapsResultsResponse404
+    | PollGoogleMapsResultsResponse422
     | PollGoogleMapsResultsResponse429
     | PollGoogleMapsResultsResponse500
     | PollGoogleMapsResultsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | PollGoogleMapsResultsResponse402
     | PollGoogleMapsResultsResponse403
     | PollGoogleMapsResultsResponse404
+    | PollGoogleMapsResultsResponse422
     | PollGoogleMapsResultsResponse429
     | PollGoogleMapsResultsResponse500
     | PollGoogleMapsResultsResponse503
@@ -152,7 +161,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PollGoogleMapsResultsResponse200 | PollGoogleMapsResultsResponse400 | PollGoogleMapsResultsResponse401 | PollGoogleMapsResultsResponse402 | PollGoogleMapsResultsResponse403 | PollGoogleMapsResultsResponse404 | PollGoogleMapsResultsResponse429 | PollGoogleMapsResultsResponse500 | PollGoogleMapsResultsResponse503]
+        Response[PollGoogleMapsResultsResponse200 | PollGoogleMapsResultsResponse400 | PollGoogleMapsResultsResponse401 | PollGoogleMapsResultsResponse402 | PollGoogleMapsResultsResponse403 | PollGoogleMapsResultsResponse404 | PollGoogleMapsResultsResponse422 | PollGoogleMapsResultsResponse429 | PollGoogleMapsResultsResponse500 | PollGoogleMapsResultsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -177,6 +186,7 @@ def sync(
     | PollGoogleMapsResultsResponse402
     | PollGoogleMapsResultsResponse403
     | PollGoogleMapsResultsResponse404
+    | PollGoogleMapsResultsResponse422
     | PollGoogleMapsResultsResponse429
     | PollGoogleMapsResultsResponse500
     | PollGoogleMapsResultsResponse503
@@ -196,7 +206,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PollGoogleMapsResultsResponse200 | PollGoogleMapsResultsResponse400 | PollGoogleMapsResultsResponse401 | PollGoogleMapsResultsResponse402 | PollGoogleMapsResultsResponse403 | PollGoogleMapsResultsResponse404 | PollGoogleMapsResultsResponse429 | PollGoogleMapsResultsResponse500 | PollGoogleMapsResultsResponse503
+        PollGoogleMapsResultsResponse200 | PollGoogleMapsResultsResponse400 | PollGoogleMapsResultsResponse401 | PollGoogleMapsResultsResponse402 | PollGoogleMapsResultsResponse403 | PollGoogleMapsResultsResponse404 | PollGoogleMapsResultsResponse422 | PollGoogleMapsResultsResponse429 | PollGoogleMapsResultsResponse500 | PollGoogleMapsResultsResponse503
     """
 
     return sync_detailed(
@@ -216,6 +226,7 @@ async def asyncio_detailed(
     | PollGoogleMapsResultsResponse402
     | PollGoogleMapsResultsResponse403
     | PollGoogleMapsResultsResponse404
+    | PollGoogleMapsResultsResponse422
     | PollGoogleMapsResultsResponse429
     | PollGoogleMapsResultsResponse500
     | PollGoogleMapsResultsResponse503
@@ -234,7 +245,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PollGoogleMapsResultsResponse200 | PollGoogleMapsResultsResponse400 | PollGoogleMapsResultsResponse401 | PollGoogleMapsResultsResponse402 | PollGoogleMapsResultsResponse403 | PollGoogleMapsResultsResponse404 | PollGoogleMapsResultsResponse429 | PollGoogleMapsResultsResponse500 | PollGoogleMapsResultsResponse503]
+        Response[PollGoogleMapsResultsResponse200 | PollGoogleMapsResultsResponse400 | PollGoogleMapsResultsResponse401 | PollGoogleMapsResultsResponse402 | PollGoogleMapsResultsResponse403 | PollGoogleMapsResultsResponse404 | PollGoogleMapsResultsResponse422 | PollGoogleMapsResultsResponse429 | PollGoogleMapsResultsResponse500 | PollGoogleMapsResultsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -257,6 +268,7 @@ async def asyncio(
     | PollGoogleMapsResultsResponse402
     | PollGoogleMapsResultsResponse403
     | PollGoogleMapsResultsResponse404
+    | PollGoogleMapsResultsResponse422
     | PollGoogleMapsResultsResponse429
     | PollGoogleMapsResultsResponse500
     | PollGoogleMapsResultsResponse503
@@ -276,7 +288,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PollGoogleMapsResultsResponse200 | PollGoogleMapsResultsResponse400 | PollGoogleMapsResultsResponse401 | PollGoogleMapsResultsResponse402 | PollGoogleMapsResultsResponse403 | PollGoogleMapsResultsResponse404 | PollGoogleMapsResultsResponse429 | PollGoogleMapsResultsResponse500 | PollGoogleMapsResultsResponse503
+        PollGoogleMapsResultsResponse200 | PollGoogleMapsResultsResponse400 | PollGoogleMapsResultsResponse401 | PollGoogleMapsResultsResponse402 | PollGoogleMapsResultsResponse403 | PollGoogleMapsResultsResponse404 | PollGoogleMapsResultsResponse422 | PollGoogleMapsResultsResponse429 | PollGoogleMapsResultsResponse500 | PollGoogleMapsResultsResponse503
     """
 
     return (

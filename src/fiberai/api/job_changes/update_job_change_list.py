@@ -12,6 +12,7 @@ from ...models.update_job_change_list_response_401 import UpdateJobChangeListRes
 from ...models.update_job_change_list_response_402 import UpdateJobChangeListResponse402
 from ...models.update_job_change_list_response_403 import UpdateJobChangeListResponse403
 from ...models.update_job_change_list_response_404 import UpdateJobChangeListResponse404
+from ...models.update_job_change_list_response_422 import UpdateJobChangeListResponse422
 from ...models.update_job_change_list_response_429 import UpdateJobChangeListResponse429
 from ...models.update_job_change_list_response_500 import UpdateJobChangeListResponse500
 from ...models.update_job_change_list_response_503 import UpdateJobChangeListResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | UpdateJobChangeListResponse402
     | UpdateJobChangeListResponse403
     | UpdateJobChangeListResponse404
+    | UpdateJobChangeListResponse422
     | UpdateJobChangeListResponse429
     | UpdateJobChangeListResponse500
     | UpdateJobChangeListResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = UpdateJobChangeListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = UpdateJobChangeListResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | UpdateJobChangeListResponse402
     | UpdateJobChangeListResponse403
     | UpdateJobChangeListResponse404
+    | UpdateJobChangeListResponse422
     | UpdateJobChangeListResponse429
     | UpdateJobChangeListResponse500
     | UpdateJobChangeListResponse503
@@ -134,13 +142,14 @@ def sync_detailed(
     | UpdateJobChangeListResponse402
     | UpdateJobChangeListResponse403
     | UpdateJobChangeListResponse404
+    | UpdateJobChangeListResponse422
     | UpdateJobChangeListResponse429
     | UpdateJobChangeListResponse500
     | UpdateJobChangeListResponse503
 ]:
     r"""Update job change list
 
-     Update a job changes list. Track people when they change their jobs.
+     Update the name or active status of a job changes list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[UpdateJobChangeListResponse200 | UpdateJobChangeListResponse400 | UpdateJobChangeListResponse401 | UpdateJobChangeListResponse402 | UpdateJobChangeListResponse403 | UpdateJobChangeListResponse404 | UpdateJobChangeListResponse429 | UpdateJobChangeListResponse500 | UpdateJobChangeListResponse503]
+        Response[UpdateJobChangeListResponse200 | UpdateJobChangeListResponse400 | UpdateJobChangeListResponse401 | UpdateJobChangeListResponse402 | UpdateJobChangeListResponse403 | UpdateJobChangeListResponse404 | UpdateJobChangeListResponse422 | UpdateJobChangeListResponse429 | UpdateJobChangeListResponse500 | UpdateJobChangeListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | UpdateJobChangeListResponse402
     | UpdateJobChangeListResponse403
     | UpdateJobChangeListResponse404
+    | UpdateJobChangeListResponse422
     | UpdateJobChangeListResponse429
     | UpdateJobChangeListResponse500
     | UpdateJobChangeListResponse503
@@ -187,7 +197,7 @@ def sync(
 ):
     r"""Update job change list
 
-     Update a job changes list. Track people when they change their jobs.
+     Update the name or active status of a job changes list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        UpdateJobChangeListResponse200 | UpdateJobChangeListResponse400 | UpdateJobChangeListResponse401 | UpdateJobChangeListResponse402 | UpdateJobChangeListResponse403 | UpdateJobChangeListResponse404 | UpdateJobChangeListResponse429 | UpdateJobChangeListResponse500 | UpdateJobChangeListResponse503
+        UpdateJobChangeListResponse200 | UpdateJobChangeListResponse400 | UpdateJobChangeListResponse401 | UpdateJobChangeListResponse402 | UpdateJobChangeListResponse403 | UpdateJobChangeListResponse404 | UpdateJobChangeListResponse422 | UpdateJobChangeListResponse429 | UpdateJobChangeListResponse500 | UpdateJobChangeListResponse503
     """
 
     return sync_detailed(
@@ -222,13 +232,14 @@ async def asyncio_detailed(
     | UpdateJobChangeListResponse402
     | UpdateJobChangeListResponse403
     | UpdateJobChangeListResponse404
+    | UpdateJobChangeListResponse422
     | UpdateJobChangeListResponse429
     | UpdateJobChangeListResponse500
     | UpdateJobChangeListResponse503
 ]:
     r"""Update job change list
 
-     Update a job changes list. Track people when they change their jobs.
+     Update the name or active status of a job changes list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[UpdateJobChangeListResponse200 | UpdateJobChangeListResponse400 | UpdateJobChangeListResponse401 | UpdateJobChangeListResponse402 | UpdateJobChangeListResponse403 | UpdateJobChangeListResponse404 | UpdateJobChangeListResponse429 | UpdateJobChangeListResponse500 | UpdateJobChangeListResponse503]
+        Response[UpdateJobChangeListResponse200 | UpdateJobChangeListResponse400 | UpdateJobChangeListResponse401 | UpdateJobChangeListResponse402 | UpdateJobChangeListResponse403 | UpdateJobChangeListResponse404 | UpdateJobChangeListResponse422 | UpdateJobChangeListResponse429 | UpdateJobChangeListResponse500 | UpdateJobChangeListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | UpdateJobChangeListResponse402
     | UpdateJobChangeListResponse403
     | UpdateJobChangeListResponse404
+    | UpdateJobChangeListResponse422
     | UpdateJobChangeListResponse429
     | UpdateJobChangeListResponse500
     | UpdateJobChangeListResponse503
@@ -273,7 +285,7 @@ async def asyncio(
 ):
     r"""Update job change list
 
-     Update a job changes list. Track people when they change their jobs.
+     Update the name or active status of a job changes list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        UpdateJobChangeListResponse200 | UpdateJobChangeListResponse400 | UpdateJobChangeListResponse401 | UpdateJobChangeListResponse402 | UpdateJobChangeListResponse403 | UpdateJobChangeListResponse404 | UpdateJobChangeListResponse429 | UpdateJobChangeListResponse500 | UpdateJobChangeListResponse503
+        UpdateJobChangeListResponse200 | UpdateJobChangeListResponse400 | UpdateJobChangeListResponse401 | UpdateJobChangeListResponse402 | UpdateJobChangeListResponse403 | UpdateJobChangeListResponse404 | UpdateJobChangeListResponse422 | UpdateJobChangeListResponse429 | UpdateJobChangeListResponse500 | UpdateJobChangeListResponse503
     """
 
     return (

@@ -11,6 +11,7 @@ from ...models.get_time_zones_response_401 import GetTimeZonesResponse401
 from ...models.get_time_zones_response_402 import GetTimeZonesResponse402
 from ...models.get_time_zones_response_403 import GetTimeZonesResponse403
 from ...models.get_time_zones_response_404 import GetTimeZonesResponse404
+from ...models.get_time_zones_response_422 import GetTimeZonesResponse422
 from ...models.get_time_zones_response_429 import GetTimeZonesResponse429
 from ...models.get_time_zones_response_500 import GetTimeZonesResponse500
 from ...models.get_time_zones_response_503 import GetTimeZonesResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GetTimeZonesResponse402
     | GetTimeZonesResponse403
     | GetTimeZonesResponse404
+    | GetTimeZonesResponse422
     | GetTimeZonesResponse429
     | GetTimeZonesResponse500
     | GetTimeZonesResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetTimeZonesResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetTimeZonesResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GetTimeZonesResponse402
     | GetTimeZonesResponse403
     | GetTimeZonesResponse404
+    | GetTimeZonesResponse422
     | GetTimeZonesResponse429
     | GetTimeZonesResponse500
     | GetTimeZonesResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GetTimeZonesResponse402
     | GetTimeZonesResponse403
     | GetTimeZonesResponse404
+    | GetTimeZonesResponse422
     | GetTimeZonesResponse429
     | GetTimeZonesResponse500
     | GetTimeZonesResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetTimeZonesResponse200 | GetTimeZonesResponse400 | GetTimeZonesResponse401 | GetTimeZonesResponse402 | GetTimeZonesResponse403 | GetTimeZonesResponse404 | GetTimeZonesResponse429 | GetTimeZonesResponse500 | GetTimeZonesResponse503]
+        Response[GetTimeZonesResponse200 | GetTimeZonesResponse400 | GetTimeZonesResponse401 | GetTimeZonesResponse402 | GetTimeZonesResponse403 | GetTimeZonesResponse404 | GetTimeZonesResponse422 | GetTimeZonesResponse429 | GetTimeZonesResponse500 | GetTimeZonesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | GetTimeZonesResponse402
     | GetTimeZonesResponse403
     | GetTimeZonesResponse404
+    | GetTimeZonesResponse422
     | GetTimeZonesResponse429
     | GetTimeZonesResponse500
     | GetTimeZonesResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetTimeZonesResponse200 | GetTimeZonesResponse400 | GetTimeZonesResponse401 | GetTimeZonesResponse402 | GetTimeZonesResponse403 | GetTimeZonesResponse404 | GetTimeZonesResponse429 | GetTimeZonesResponse500 | GetTimeZonesResponse503
+        GetTimeZonesResponse200 | GetTimeZonesResponse400 | GetTimeZonesResponse401 | GetTimeZonesResponse402 | GetTimeZonesResponse403 | GetTimeZonesResponse404 | GetTimeZonesResponse422 | GetTimeZonesResponse429 | GetTimeZonesResponse500 | GetTimeZonesResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | GetTimeZonesResponse402
     | GetTimeZonesResponse403
     | GetTimeZonesResponse404
+    | GetTimeZonesResponse422
     | GetTimeZonesResponse429
     | GetTimeZonesResponse500
     | GetTimeZonesResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetTimeZonesResponse200 | GetTimeZonesResponse400 | GetTimeZonesResponse401 | GetTimeZonesResponse402 | GetTimeZonesResponse403 | GetTimeZonesResponse404 | GetTimeZonesResponse429 | GetTimeZonesResponse500 | GetTimeZonesResponse503]
+        Response[GetTimeZonesResponse200 | GetTimeZonesResponse400 | GetTimeZonesResponse401 | GetTimeZonesResponse402 | GetTimeZonesResponse403 | GetTimeZonesResponse404 | GetTimeZonesResponse422 | GetTimeZonesResponse429 | GetTimeZonesResponse500 | GetTimeZonesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | GetTimeZonesResponse402
     | GetTimeZonesResponse403
     | GetTimeZonesResponse404
+    | GetTimeZonesResponse422
     | GetTimeZonesResponse429
     | GetTimeZonesResponse500
     | GetTimeZonesResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetTimeZonesResponse200 | GetTimeZonesResponse400 | GetTimeZonesResponse401 | GetTimeZonesResponse402 | GetTimeZonesResponse403 | GetTimeZonesResponse404 | GetTimeZonesResponse429 | GetTimeZonesResponse500 | GetTimeZonesResponse503
+        GetTimeZonesResponse200 | GetTimeZonesResponse400 | GetTimeZonesResponse401 | GetTimeZonesResponse402 | GetTimeZonesResponse403 | GetTimeZonesResponse404 | GetTimeZonesResponse422 | GetTimeZonesResponse429 | GetTimeZonesResponse500 | GetTimeZonesResponse503
     """
 
     return (

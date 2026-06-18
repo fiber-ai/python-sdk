@@ -22,6 +22,10 @@ class HeadcountGrowthPercent:
         direction (HeadcountGrowthPercentDirection): Whether to alert on growth, shrinkage, or either
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
+        min_starting_headcount (int | None | Unset): Only alert if the company had at least this many employees before
+            the change. Omit for any starting size.
     """
 
     type_: Literal["headcount_growth_percent"]
@@ -29,6 +33,8 @@ class HeadcountGrowthPercent:
     min_percent_change: float
     direction: HeadcountGrowthPercentDirection
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
+    min_starting_headcount: int | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -46,6 +52,14 @@ class HeadcountGrowthPercent:
         else:
             lookback_days = self.lookback_days
 
+        is_dummy = self.is_dummy
+
+        min_starting_headcount: int | None | Unset
+        if isinstance(self.min_starting_headcount, Unset):
+            min_starting_headcount = UNSET
+        else:
+            min_starting_headcount = self.min_starting_headcount
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -58,6 +72,10 @@ class HeadcountGrowthPercent:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
+        if min_starting_headcount is not UNSET:
+            field_dict["minStartingHeadcount"] = min_starting_headcount
 
         return field_dict
 
@@ -85,12 +103,25 @@ class HeadcountGrowthPercent:
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
+        is_dummy = d.pop("isDummy", UNSET)
+
+        def _parse_min_starting_headcount(data: object) -> int | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(int | None | Unset, data)
+
+        min_starting_headcount = _parse_min_starting_headcount(d.pop("minStartingHeadcount", UNSET))
+
         headcount_growth_percent = cls(
             type_=type_,
             entity_type=entity_type,
             min_percent_change=min_percent_change,
             direction=direction,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
+            min_starting_headcount=min_starting_headcount,
         )
 
         headcount_growth_percent.additional_properties = d

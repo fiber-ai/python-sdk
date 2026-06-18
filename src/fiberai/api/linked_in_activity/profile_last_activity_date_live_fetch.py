@@ -12,6 +12,7 @@ from ...models.profile_last_activity_date_live_fetch_response_401 import Profile
 from ...models.profile_last_activity_date_live_fetch_response_402 import ProfileLastActivityDateLiveFetchResponse402
 from ...models.profile_last_activity_date_live_fetch_response_403 import ProfileLastActivityDateLiveFetchResponse403
 from ...models.profile_last_activity_date_live_fetch_response_404 import ProfileLastActivityDateLiveFetchResponse404
+from ...models.profile_last_activity_date_live_fetch_response_422 import ProfileLastActivityDateLiveFetchResponse422
 from ...models.profile_last_activity_date_live_fetch_response_429 import ProfileLastActivityDateLiveFetchResponse429
 from ...models.profile_last_activity_date_live_fetch_response_500 import ProfileLastActivityDateLiveFetchResponse500
 from ...models.profile_last_activity_date_live_fetch_response_503 import ProfileLastActivityDateLiveFetchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | ProfileLastActivityDateLiveFetchResponse402
     | ProfileLastActivityDateLiveFetchResponse403
     | ProfileLastActivityDateLiveFetchResponse404
+    | ProfileLastActivityDateLiveFetchResponse422
     | ProfileLastActivityDateLiveFetchResponse429
     | ProfileLastActivityDateLiveFetchResponse500
     | ProfileLastActivityDateLiveFetchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = ProfileLastActivityDateLiveFetchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = ProfileLastActivityDateLiveFetchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | ProfileLastActivityDateLiveFetchResponse402
     | ProfileLastActivityDateLiveFetchResponse403
     | ProfileLastActivityDateLiveFetchResponse404
+    | ProfileLastActivityDateLiveFetchResponse422
     | ProfileLastActivityDateLiveFetchResponse429
     | ProfileLastActivityDateLiveFetchResponse500
     | ProfileLastActivityDateLiveFetchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | ProfileLastActivityDateLiveFetchResponse402
     | ProfileLastActivityDateLiveFetchResponse403
     | ProfileLastActivityDateLiveFetchResponse404
+    | ProfileLastActivityDateLiveFetchResponse422
     | ProfileLastActivityDateLiveFetchResponse429
     | ProfileLastActivityDateLiveFetchResponse500
     | ProfileLastActivityDateLiveFetchResponse503
@@ -159,7 +168,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ProfileLastActivityDateLiveFetchResponse200 | ProfileLastActivityDateLiveFetchResponse400 | ProfileLastActivityDateLiveFetchResponse401 | ProfileLastActivityDateLiveFetchResponse402 | ProfileLastActivityDateLiveFetchResponse403 | ProfileLastActivityDateLiveFetchResponse404 | ProfileLastActivityDateLiveFetchResponse429 | ProfileLastActivityDateLiveFetchResponse500 | ProfileLastActivityDateLiveFetchResponse503]
+        Response[ProfileLastActivityDateLiveFetchResponse200 | ProfileLastActivityDateLiveFetchResponse400 | ProfileLastActivityDateLiveFetchResponse401 | ProfileLastActivityDateLiveFetchResponse402 | ProfileLastActivityDateLiveFetchResponse403 | ProfileLastActivityDateLiveFetchResponse404 | ProfileLastActivityDateLiveFetchResponse422 | ProfileLastActivityDateLiveFetchResponse429 | ProfileLastActivityDateLiveFetchResponse500 | ProfileLastActivityDateLiveFetchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -184,6 +193,7 @@ def sync(
     | ProfileLastActivityDateLiveFetchResponse402
     | ProfileLastActivityDateLiveFetchResponse403
     | ProfileLastActivityDateLiveFetchResponse404
+    | ProfileLastActivityDateLiveFetchResponse422
     | ProfileLastActivityDateLiveFetchResponse429
     | ProfileLastActivityDateLiveFetchResponse500
     | ProfileLastActivityDateLiveFetchResponse503
@@ -210,7 +220,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ProfileLastActivityDateLiveFetchResponse200 | ProfileLastActivityDateLiveFetchResponse400 | ProfileLastActivityDateLiveFetchResponse401 | ProfileLastActivityDateLiveFetchResponse402 | ProfileLastActivityDateLiveFetchResponse403 | ProfileLastActivityDateLiveFetchResponse404 | ProfileLastActivityDateLiveFetchResponse429 | ProfileLastActivityDateLiveFetchResponse500 | ProfileLastActivityDateLiveFetchResponse503
+        ProfileLastActivityDateLiveFetchResponse200 | ProfileLastActivityDateLiveFetchResponse400 | ProfileLastActivityDateLiveFetchResponse401 | ProfileLastActivityDateLiveFetchResponse402 | ProfileLastActivityDateLiveFetchResponse403 | ProfileLastActivityDateLiveFetchResponse404 | ProfileLastActivityDateLiveFetchResponse422 | ProfileLastActivityDateLiveFetchResponse429 | ProfileLastActivityDateLiveFetchResponse500 | ProfileLastActivityDateLiveFetchResponse503
     """
 
     return sync_detailed(
@@ -230,6 +240,7 @@ async def asyncio_detailed(
     | ProfileLastActivityDateLiveFetchResponse402
     | ProfileLastActivityDateLiveFetchResponse403
     | ProfileLastActivityDateLiveFetchResponse404
+    | ProfileLastActivityDateLiveFetchResponse422
     | ProfileLastActivityDateLiveFetchResponse429
     | ProfileLastActivityDateLiveFetchResponse500
     | ProfileLastActivityDateLiveFetchResponse503
@@ -255,7 +266,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ProfileLastActivityDateLiveFetchResponse200 | ProfileLastActivityDateLiveFetchResponse400 | ProfileLastActivityDateLiveFetchResponse401 | ProfileLastActivityDateLiveFetchResponse402 | ProfileLastActivityDateLiveFetchResponse403 | ProfileLastActivityDateLiveFetchResponse404 | ProfileLastActivityDateLiveFetchResponse429 | ProfileLastActivityDateLiveFetchResponse500 | ProfileLastActivityDateLiveFetchResponse503]
+        Response[ProfileLastActivityDateLiveFetchResponse200 | ProfileLastActivityDateLiveFetchResponse400 | ProfileLastActivityDateLiveFetchResponse401 | ProfileLastActivityDateLiveFetchResponse402 | ProfileLastActivityDateLiveFetchResponse403 | ProfileLastActivityDateLiveFetchResponse404 | ProfileLastActivityDateLiveFetchResponse422 | ProfileLastActivityDateLiveFetchResponse429 | ProfileLastActivityDateLiveFetchResponse500 | ProfileLastActivityDateLiveFetchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -278,6 +289,7 @@ async def asyncio(
     | ProfileLastActivityDateLiveFetchResponse402
     | ProfileLastActivityDateLiveFetchResponse403
     | ProfileLastActivityDateLiveFetchResponse404
+    | ProfileLastActivityDateLiveFetchResponse422
     | ProfileLastActivityDateLiveFetchResponse429
     | ProfileLastActivityDateLiveFetchResponse500
     | ProfileLastActivityDateLiveFetchResponse503
@@ -304,7 +316,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ProfileLastActivityDateLiveFetchResponse200 | ProfileLastActivityDateLiveFetchResponse400 | ProfileLastActivityDateLiveFetchResponse401 | ProfileLastActivityDateLiveFetchResponse402 | ProfileLastActivityDateLiveFetchResponse403 | ProfileLastActivityDateLiveFetchResponse404 | ProfileLastActivityDateLiveFetchResponse429 | ProfileLastActivityDateLiveFetchResponse500 | ProfileLastActivityDateLiveFetchResponse503
+        ProfileLastActivityDateLiveFetchResponse200 | ProfileLastActivityDateLiveFetchResponse400 | ProfileLastActivityDateLiveFetchResponse401 | ProfileLastActivityDateLiveFetchResponse402 | ProfileLastActivityDateLiveFetchResponse403 | ProfileLastActivityDateLiveFetchResponse404 | ProfileLastActivityDateLiveFetchResponse422 | ProfileLastActivityDateLiveFetchResponse429 | ProfileLastActivityDateLiveFetchResponse500 | ProfileLastActivityDateLiveFetchResponse503
     """
 
     return (

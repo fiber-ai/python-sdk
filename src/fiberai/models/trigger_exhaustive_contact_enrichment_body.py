@@ -22,8 +22,9 @@ class TriggerExhaustiveContactEnrichmentBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        linkedin_url (str): Person's LinkedIn URL or slug, like 'https://www.linkedin.com/in/william-h-gates' or
-            'william-h-gates'
+        linkedin_url (str): The person's LinkedIn identifier. Accepts a full LinkedIn profile URL (e.g.
+            'https://www.linkedin.com/in/williamhgates/'), a bare slug (e.g. 'williamhgates'), a Sales Navigator URN (e.g.
+            'ACwAAA-001MBbIvJon'), or a numeric LinkedIn user ID (e.g. '443105112').
         enrichment_type (TriggerExhaustiveContactEnrichmentBodyEnrichmentType | Unset): Enrichment types to be
             requested. Include the ones you want to look for. For example, { getWorkEmails: true, getPersonalEmails: true,
             getPhoneNumbers: true }

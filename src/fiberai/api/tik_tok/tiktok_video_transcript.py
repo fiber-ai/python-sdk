@@ -12,6 +12,7 @@ from ...models.tiktok_video_transcript_response_401 import TiktokVideoTranscript
 from ...models.tiktok_video_transcript_response_402 import TiktokVideoTranscriptResponse402
 from ...models.tiktok_video_transcript_response_403 import TiktokVideoTranscriptResponse403
 from ...models.tiktok_video_transcript_response_404 import TiktokVideoTranscriptResponse404
+from ...models.tiktok_video_transcript_response_422 import TiktokVideoTranscriptResponse422
 from ...models.tiktok_video_transcript_response_429 import TiktokVideoTranscriptResponse429
 from ...models.tiktok_video_transcript_response_500 import TiktokVideoTranscriptResponse500
 from ...models.tiktok_video_transcript_response_503 import TiktokVideoTranscriptResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | TiktokVideoTranscriptResponse402
     | TiktokVideoTranscriptResponse403
     | TiktokVideoTranscriptResponse404
+    | TiktokVideoTranscriptResponse422
     | TiktokVideoTranscriptResponse429
     | TiktokVideoTranscriptResponse500
     | TiktokVideoTranscriptResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = TiktokVideoTranscriptResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = TiktokVideoTranscriptResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | TiktokVideoTranscriptResponse402
     | TiktokVideoTranscriptResponse403
     | TiktokVideoTranscriptResponse404
+    | TiktokVideoTranscriptResponse422
     | TiktokVideoTranscriptResponse429
     | TiktokVideoTranscriptResponse500
     | TiktokVideoTranscriptResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | TiktokVideoTranscriptResponse402
     | TiktokVideoTranscriptResponse403
     | TiktokVideoTranscriptResponse404
+    | TiktokVideoTranscriptResponse422
     | TiktokVideoTranscriptResponse429
     | TiktokVideoTranscriptResponse500
     | TiktokVideoTranscriptResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokVideoTranscriptResponse200 | TiktokVideoTranscriptResponse400 | TiktokVideoTranscriptResponse401 | TiktokVideoTranscriptResponse402 | TiktokVideoTranscriptResponse403 | TiktokVideoTranscriptResponse404 | TiktokVideoTranscriptResponse429 | TiktokVideoTranscriptResponse500 | TiktokVideoTranscriptResponse503]
+        Response[TiktokVideoTranscriptResponse200 | TiktokVideoTranscriptResponse400 | TiktokVideoTranscriptResponse401 | TiktokVideoTranscriptResponse402 | TiktokVideoTranscriptResponse403 | TiktokVideoTranscriptResponse404 | TiktokVideoTranscriptResponse422 | TiktokVideoTranscriptResponse429 | TiktokVideoTranscriptResponse500 | TiktokVideoTranscriptResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | TiktokVideoTranscriptResponse402
     | TiktokVideoTranscriptResponse403
     | TiktokVideoTranscriptResponse404
+    | TiktokVideoTranscriptResponse422
     | TiktokVideoTranscriptResponse429
     | TiktokVideoTranscriptResponse500
     | TiktokVideoTranscriptResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokVideoTranscriptResponse200 | TiktokVideoTranscriptResponse400 | TiktokVideoTranscriptResponse401 | TiktokVideoTranscriptResponse402 | TiktokVideoTranscriptResponse403 | TiktokVideoTranscriptResponse404 | TiktokVideoTranscriptResponse429 | TiktokVideoTranscriptResponse500 | TiktokVideoTranscriptResponse503
+        TiktokVideoTranscriptResponse200 | TiktokVideoTranscriptResponse400 | TiktokVideoTranscriptResponse401 | TiktokVideoTranscriptResponse402 | TiktokVideoTranscriptResponse403 | TiktokVideoTranscriptResponse404 | TiktokVideoTranscriptResponse422 | TiktokVideoTranscriptResponse429 | TiktokVideoTranscriptResponse500 | TiktokVideoTranscriptResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | TiktokVideoTranscriptResponse402
     | TiktokVideoTranscriptResponse403
     | TiktokVideoTranscriptResponse404
+    | TiktokVideoTranscriptResponse422
     | TiktokVideoTranscriptResponse429
     | TiktokVideoTranscriptResponse500
     | TiktokVideoTranscriptResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokVideoTranscriptResponse200 | TiktokVideoTranscriptResponse400 | TiktokVideoTranscriptResponse401 | TiktokVideoTranscriptResponse402 | TiktokVideoTranscriptResponse403 | TiktokVideoTranscriptResponse404 | TiktokVideoTranscriptResponse429 | TiktokVideoTranscriptResponse500 | TiktokVideoTranscriptResponse503]
+        Response[TiktokVideoTranscriptResponse200 | TiktokVideoTranscriptResponse400 | TiktokVideoTranscriptResponse401 | TiktokVideoTranscriptResponse402 | TiktokVideoTranscriptResponse403 | TiktokVideoTranscriptResponse404 | TiktokVideoTranscriptResponse422 | TiktokVideoTranscriptResponse429 | TiktokVideoTranscriptResponse500 | TiktokVideoTranscriptResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | TiktokVideoTranscriptResponse402
     | TiktokVideoTranscriptResponse403
     | TiktokVideoTranscriptResponse404
+    | TiktokVideoTranscriptResponse422
     | TiktokVideoTranscriptResponse429
     | TiktokVideoTranscriptResponse500
     | TiktokVideoTranscriptResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokVideoTranscriptResponse200 | TiktokVideoTranscriptResponse400 | TiktokVideoTranscriptResponse401 | TiktokVideoTranscriptResponse402 | TiktokVideoTranscriptResponse403 | TiktokVideoTranscriptResponse404 | TiktokVideoTranscriptResponse429 | TiktokVideoTranscriptResponse500 | TiktokVideoTranscriptResponse503
+        TiktokVideoTranscriptResponse200 | TiktokVideoTranscriptResponse400 | TiktokVideoTranscriptResponse401 | TiktokVideoTranscriptResponse402 | TiktokVideoTranscriptResponse403 | TiktokVideoTranscriptResponse404 | TiktokVideoTranscriptResponse422 | TiktokVideoTranscriptResponse429 | TiktokVideoTranscriptResponse500 | TiktokVideoTranscriptResponse503
     """
 
     return (

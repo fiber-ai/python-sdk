@@ -12,6 +12,7 @@ from ...models.delete_audience_response_401 import DeleteAudienceResponse401
 from ...models.delete_audience_response_402 import DeleteAudienceResponse402
 from ...models.delete_audience_response_403 import DeleteAudienceResponse403
 from ...models.delete_audience_response_404 import DeleteAudienceResponse404
+from ...models.delete_audience_response_422 import DeleteAudienceResponse422
 from ...models.delete_audience_response_429 import DeleteAudienceResponse429
 from ...models.delete_audience_response_500 import DeleteAudienceResponse500
 from ...models.delete_audience_response_503 import DeleteAudienceResponse503
@@ -50,6 +51,7 @@ def _parse_response(
     | DeleteAudienceResponse402
     | DeleteAudienceResponse403
     | DeleteAudienceResponse404
+    | DeleteAudienceResponse422
     | DeleteAudienceResponse429
     | DeleteAudienceResponse500
     | DeleteAudienceResponse503
@@ -85,6 +87,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = DeleteAudienceResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = DeleteAudienceResponse429.from_dict(response.json())
 
@@ -115,6 +122,7 @@ def _build_response(
     | DeleteAudienceResponse402
     | DeleteAudienceResponse403
     | DeleteAudienceResponse404
+    | DeleteAudienceResponse422
     | DeleteAudienceResponse429
     | DeleteAudienceResponse500
     | DeleteAudienceResponse503
@@ -139,6 +147,7 @@ def sync_detailed(
     | DeleteAudienceResponse402
     | DeleteAudienceResponse403
     | DeleteAudienceResponse404
+    | DeleteAudienceResponse422
     | DeleteAudienceResponse429
     | DeleteAudienceResponse500
     | DeleteAudienceResponse503
@@ -163,7 +172,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DeleteAudienceResponse200 | DeleteAudienceResponse400 | DeleteAudienceResponse401 | DeleteAudienceResponse402 | DeleteAudienceResponse403 | DeleteAudienceResponse404 | DeleteAudienceResponse429 | DeleteAudienceResponse500 | DeleteAudienceResponse503]
+        Response[DeleteAudienceResponse200 | DeleteAudienceResponse400 | DeleteAudienceResponse401 | DeleteAudienceResponse402 | DeleteAudienceResponse403 | DeleteAudienceResponse404 | DeleteAudienceResponse422 | DeleteAudienceResponse429 | DeleteAudienceResponse500 | DeleteAudienceResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -190,6 +199,7 @@ def sync(
     | DeleteAudienceResponse402
     | DeleteAudienceResponse403
     | DeleteAudienceResponse404
+    | DeleteAudienceResponse422
     | DeleteAudienceResponse429
     | DeleteAudienceResponse500
     | DeleteAudienceResponse503
@@ -215,7 +225,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DeleteAudienceResponse200 | DeleteAudienceResponse400 | DeleteAudienceResponse401 | DeleteAudienceResponse402 | DeleteAudienceResponse403 | DeleteAudienceResponse404 | DeleteAudienceResponse429 | DeleteAudienceResponse500 | DeleteAudienceResponse503
+        DeleteAudienceResponse200 | DeleteAudienceResponse400 | DeleteAudienceResponse401 | DeleteAudienceResponse402 | DeleteAudienceResponse403 | DeleteAudienceResponse404 | DeleteAudienceResponse422 | DeleteAudienceResponse429 | DeleteAudienceResponse500 | DeleteAudienceResponse503
     """
 
     return sync_detailed(
@@ -237,6 +247,7 @@ async def asyncio_detailed(
     | DeleteAudienceResponse402
     | DeleteAudienceResponse403
     | DeleteAudienceResponse404
+    | DeleteAudienceResponse422
     | DeleteAudienceResponse429
     | DeleteAudienceResponse500
     | DeleteAudienceResponse503
@@ -261,7 +272,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DeleteAudienceResponse200 | DeleteAudienceResponse400 | DeleteAudienceResponse401 | DeleteAudienceResponse402 | DeleteAudienceResponse403 | DeleteAudienceResponse404 | DeleteAudienceResponse429 | DeleteAudienceResponse500 | DeleteAudienceResponse503]
+        Response[DeleteAudienceResponse200 | DeleteAudienceResponse400 | DeleteAudienceResponse401 | DeleteAudienceResponse402 | DeleteAudienceResponse403 | DeleteAudienceResponse404 | DeleteAudienceResponse422 | DeleteAudienceResponse429 | DeleteAudienceResponse500 | DeleteAudienceResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -286,6 +297,7 @@ async def asyncio(
     | DeleteAudienceResponse402
     | DeleteAudienceResponse403
     | DeleteAudienceResponse404
+    | DeleteAudienceResponse422
     | DeleteAudienceResponse429
     | DeleteAudienceResponse500
     | DeleteAudienceResponse503
@@ -311,7 +323,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DeleteAudienceResponse200 | DeleteAudienceResponse400 | DeleteAudienceResponse401 | DeleteAudienceResponse402 | DeleteAudienceResponse403 | DeleteAudienceResponse404 | DeleteAudienceResponse429 | DeleteAudienceResponse500 | DeleteAudienceResponse503
+        DeleteAudienceResponse200 | DeleteAudienceResponse400 | DeleteAudienceResponse401 | DeleteAudienceResponse402 | DeleteAudienceResponse403 | DeleteAudienceResponse404 | DeleteAudienceResponse422 | DeleteAudienceResponse429 | DeleteAudienceResponse500 | DeleteAudienceResponse503
     """
 
     return (

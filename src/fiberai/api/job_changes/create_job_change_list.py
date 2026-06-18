@@ -12,6 +12,7 @@ from ...models.create_job_change_list_response_401 import CreateJobChangeListRes
 from ...models.create_job_change_list_response_402 import CreateJobChangeListResponse402
 from ...models.create_job_change_list_response_403 import CreateJobChangeListResponse403
 from ...models.create_job_change_list_response_404 import CreateJobChangeListResponse404
+from ...models.create_job_change_list_response_422 import CreateJobChangeListResponse422
 from ...models.create_job_change_list_response_429 import CreateJobChangeListResponse429
 from ...models.create_job_change_list_response_500 import CreateJobChangeListResponse500
 from ...models.create_job_change_list_response_503 import CreateJobChangeListResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | CreateJobChangeListResponse402
     | CreateJobChangeListResponse403
     | CreateJobChangeListResponse404
+    | CreateJobChangeListResponse422
     | CreateJobChangeListResponse429
     | CreateJobChangeListResponse500
     | CreateJobChangeListResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = CreateJobChangeListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = CreateJobChangeListResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | CreateJobChangeListResponse402
     | CreateJobChangeListResponse403
     | CreateJobChangeListResponse404
+    | CreateJobChangeListResponse422
     | CreateJobChangeListResponse429
     | CreateJobChangeListResponse500
     | CreateJobChangeListResponse503
@@ -134,13 +142,14 @@ def sync_detailed(
     | CreateJobChangeListResponse402
     | CreateJobChangeListResponse403
     | CreateJobChangeListResponse404
+    | CreateJobChangeListResponse422
     | CreateJobChangeListResponse429
     | CreateJobChangeListResponse500
     | CreateJobChangeListResponse503
 ]:
     r"""Create job change list
 
-     Create a new job changes list. Track people when they change their jobs.
+     Create a new job changes list to monitor when tracked prospects change jobs.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CreateJobChangeListResponse200 | CreateJobChangeListResponse400 | CreateJobChangeListResponse401 | CreateJobChangeListResponse402 | CreateJobChangeListResponse403 | CreateJobChangeListResponse404 | CreateJobChangeListResponse429 | CreateJobChangeListResponse500 | CreateJobChangeListResponse503]
+        Response[CreateJobChangeListResponse200 | CreateJobChangeListResponse400 | CreateJobChangeListResponse401 | CreateJobChangeListResponse402 | CreateJobChangeListResponse403 | CreateJobChangeListResponse404 | CreateJobChangeListResponse422 | CreateJobChangeListResponse429 | CreateJobChangeListResponse500 | CreateJobChangeListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | CreateJobChangeListResponse402
     | CreateJobChangeListResponse403
     | CreateJobChangeListResponse404
+    | CreateJobChangeListResponse422
     | CreateJobChangeListResponse429
     | CreateJobChangeListResponse500
     | CreateJobChangeListResponse503
@@ -187,7 +197,7 @@ def sync(
 ):
     r"""Create job change list
 
-     Create a new job changes list. Track people when they change their jobs.
+     Create a new job changes list to monitor when tracked prospects change jobs.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CreateJobChangeListResponse200 | CreateJobChangeListResponse400 | CreateJobChangeListResponse401 | CreateJobChangeListResponse402 | CreateJobChangeListResponse403 | CreateJobChangeListResponse404 | CreateJobChangeListResponse429 | CreateJobChangeListResponse500 | CreateJobChangeListResponse503
+        CreateJobChangeListResponse200 | CreateJobChangeListResponse400 | CreateJobChangeListResponse401 | CreateJobChangeListResponse402 | CreateJobChangeListResponse403 | CreateJobChangeListResponse404 | CreateJobChangeListResponse422 | CreateJobChangeListResponse429 | CreateJobChangeListResponse500 | CreateJobChangeListResponse503
     """
 
     return sync_detailed(
@@ -222,13 +232,14 @@ async def asyncio_detailed(
     | CreateJobChangeListResponse402
     | CreateJobChangeListResponse403
     | CreateJobChangeListResponse404
+    | CreateJobChangeListResponse422
     | CreateJobChangeListResponse429
     | CreateJobChangeListResponse500
     | CreateJobChangeListResponse503
 ]:
     r"""Create job change list
 
-     Create a new job changes list. Track people when they change their jobs.
+     Create a new job changes list to monitor when tracked prospects change jobs.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CreateJobChangeListResponse200 | CreateJobChangeListResponse400 | CreateJobChangeListResponse401 | CreateJobChangeListResponse402 | CreateJobChangeListResponse403 | CreateJobChangeListResponse404 | CreateJobChangeListResponse429 | CreateJobChangeListResponse500 | CreateJobChangeListResponse503]
+        Response[CreateJobChangeListResponse200 | CreateJobChangeListResponse400 | CreateJobChangeListResponse401 | CreateJobChangeListResponse402 | CreateJobChangeListResponse403 | CreateJobChangeListResponse404 | CreateJobChangeListResponse422 | CreateJobChangeListResponse429 | CreateJobChangeListResponse500 | CreateJobChangeListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | CreateJobChangeListResponse402
     | CreateJobChangeListResponse403
     | CreateJobChangeListResponse404
+    | CreateJobChangeListResponse422
     | CreateJobChangeListResponse429
     | CreateJobChangeListResponse500
     | CreateJobChangeListResponse503
@@ -273,7 +285,7 @@ async def asyncio(
 ):
     r"""Create job change list
 
-     Create a new job changes list. Track people when they change their jobs.
+     Create a new job changes list to monitor when tracked prospects change jobs.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CreateJobChangeListResponse200 | CreateJobChangeListResponse400 | CreateJobChangeListResponse401 | CreateJobChangeListResponse402 | CreateJobChangeListResponse403 | CreateJobChangeListResponse404 | CreateJobChangeListResponse429 | CreateJobChangeListResponse500 | CreateJobChangeListResponse503
+        CreateJobChangeListResponse200 | CreateJobChangeListResponse400 | CreateJobChangeListResponse401 | CreateJobChangeListResponse402 | CreateJobChangeListResponse403 | CreateJobChangeListResponse404 | CreateJobChangeListResponse422 | CreateJobChangeListResponse429 | CreateJobChangeListResponse500 | CreateJobChangeListResponse503
     """
 
     return (

@@ -12,6 +12,7 @@ from ...models.profile_posts_live_fetch_response_401 import ProfilePostsLiveFetc
 from ...models.profile_posts_live_fetch_response_402 import ProfilePostsLiveFetchResponse402
 from ...models.profile_posts_live_fetch_response_403 import ProfilePostsLiveFetchResponse403
 from ...models.profile_posts_live_fetch_response_404 import ProfilePostsLiveFetchResponse404
+from ...models.profile_posts_live_fetch_response_422 import ProfilePostsLiveFetchResponse422
 from ...models.profile_posts_live_fetch_response_429 import ProfilePostsLiveFetchResponse429
 from ...models.profile_posts_live_fetch_response_500 import ProfilePostsLiveFetchResponse500
 from ...models.profile_posts_live_fetch_response_503 import ProfilePostsLiveFetchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | ProfilePostsLiveFetchResponse402
     | ProfilePostsLiveFetchResponse403
     | ProfilePostsLiveFetchResponse404
+    | ProfilePostsLiveFetchResponse422
     | ProfilePostsLiveFetchResponse429
     | ProfilePostsLiveFetchResponse500
     | ProfilePostsLiveFetchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = ProfilePostsLiveFetchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = ProfilePostsLiveFetchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | ProfilePostsLiveFetchResponse402
     | ProfilePostsLiveFetchResponse403
     | ProfilePostsLiveFetchResponse404
+    | ProfilePostsLiveFetchResponse422
     | ProfilePostsLiveFetchResponse429
     | ProfilePostsLiveFetchResponse500
     | ProfilePostsLiveFetchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | ProfilePostsLiveFetchResponse402
     | ProfilePostsLiveFetchResponse403
     | ProfilePostsLiveFetchResponse404
+    | ProfilePostsLiveFetchResponse422
     | ProfilePostsLiveFetchResponse429
     | ProfilePostsLiveFetchResponse500
     | ProfilePostsLiveFetchResponse503
@@ -159,7 +168,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ProfilePostsLiveFetchResponse200 | ProfilePostsLiveFetchResponse400 | ProfilePostsLiveFetchResponse401 | ProfilePostsLiveFetchResponse402 | ProfilePostsLiveFetchResponse403 | ProfilePostsLiveFetchResponse404 | ProfilePostsLiveFetchResponse429 | ProfilePostsLiveFetchResponse500 | ProfilePostsLiveFetchResponse503]
+        Response[ProfilePostsLiveFetchResponse200 | ProfilePostsLiveFetchResponse400 | ProfilePostsLiveFetchResponse401 | ProfilePostsLiveFetchResponse402 | ProfilePostsLiveFetchResponse403 | ProfilePostsLiveFetchResponse404 | ProfilePostsLiveFetchResponse422 | ProfilePostsLiveFetchResponse429 | ProfilePostsLiveFetchResponse500 | ProfilePostsLiveFetchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -184,6 +193,7 @@ def sync(
     | ProfilePostsLiveFetchResponse402
     | ProfilePostsLiveFetchResponse403
     | ProfilePostsLiveFetchResponse404
+    | ProfilePostsLiveFetchResponse422
     | ProfilePostsLiveFetchResponse429
     | ProfilePostsLiveFetchResponse500
     | ProfilePostsLiveFetchResponse503
@@ -210,7 +220,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ProfilePostsLiveFetchResponse200 | ProfilePostsLiveFetchResponse400 | ProfilePostsLiveFetchResponse401 | ProfilePostsLiveFetchResponse402 | ProfilePostsLiveFetchResponse403 | ProfilePostsLiveFetchResponse404 | ProfilePostsLiveFetchResponse429 | ProfilePostsLiveFetchResponse500 | ProfilePostsLiveFetchResponse503
+        ProfilePostsLiveFetchResponse200 | ProfilePostsLiveFetchResponse400 | ProfilePostsLiveFetchResponse401 | ProfilePostsLiveFetchResponse402 | ProfilePostsLiveFetchResponse403 | ProfilePostsLiveFetchResponse404 | ProfilePostsLiveFetchResponse422 | ProfilePostsLiveFetchResponse429 | ProfilePostsLiveFetchResponse500 | ProfilePostsLiveFetchResponse503
     """
 
     return sync_detailed(
@@ -230,6 +240,7 @@ async def asyncio_detailed(
     | ProfilePostsLiveFetchResponse402
     | ProfilePostsLiveFetchResponse403
     | ProfilePostsLiveFetchResponse404
+    | ProfilePostsLiveFetchResponse422
     | ProfilePostsLiveFetchResponse429
     | ProfilePostsLiveFetchResponse500
     | ProfilePostsLiveFetchResponse503
@@ -255,7 +266,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ProfilePostsLiveFetchResponse200 | ProfilePostsLiveFetchResponse400 | ProfilePostsLiveFetchResponse401 | ProfilePostsLiveFetchResponse402 | ProfilePostsLiveFetchResponse403 | ProfilePostsLiveFetchResponse404 | ProfilePostsLiveFetchResponse429 | ProfilePostsLiveFetchResponse500 | ProfilePostsLiveFetchResponse503]
+        Response[ProfilePostsLiveFetchResponse200 | ProfilePostsLiveFetchResponse400 | ProfilePostsLiveFetchResponse401 | ProfilePostsLiveFetchResponse402 | ProfilePostsLiveFetchResponse403 | ProfilePostsLiveFetchResponse404 | ProfilePostsLiveFetchResponse422 | ProfilePostsLiveFetchResponse429 | ProfilePostsLiveFetchResponse500 | ProfilePostsLiveFetchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -278,6 +289,7 @@ async def asyncio(
     | ProfilePostsLiveFetchResponse402
     | ProfilePostsLiveFetchResponse403
     | ProfilePostsLiveFetchResponse404
+    | ProfilePostsLiveFetchResponse422
     | ProfilePostsLiveFetchResponse429
     | ProfilePostsLiveFetchResponse500
     | ProfilePostsLiveFetchResponse503
@@ -304,7 +316,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ProfilePostsLiveFetchResponse200 | ProfilePostsLiveFetchResponse400 | ProfilePostsLiveFetchResponse401 | ProfilePostsLiveFetchResponse402 | ProfilePostsLiveFetchResponse403 | ProfilePostsLiveFetchResponse404 | ProfilePostsLiveFetchResponse429 | ProfilePostsLiveFetchResponse500 | ProfilePostsLiveFetchResponse503
+        ProfilePostsLiveFetchResponse200 | ProfilePostsLiveFetchResponse400 | ProfilePostsLiveFetchResponse401 | ProfilePostsLiveFetchResponse402 | ProfilePostsLiveFetchResponse403 | ProfilePostsLiveFetchResponse404 | ProfilePostsLiveFetchResponse422 | ProfilePostsLiveFetchResponse429 | ProfilePostsLiveFetchResponse500 | ProfilePostsLiveFetchResponse503
     """
 
     return (

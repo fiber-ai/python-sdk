@@ -11,6 +11,7 @@ from ...models.get_languages_response_401 import GetLanguagesResponse401
 from ...models.get_languages_response_402 import GetLanguagesResponse402
 from ...models.get_languages_response_403 import GetLanguagesResponse403
 from ...models.get_languages_response_404 import GetLanguagesResponse404
+from ...models.get_languages_response_422 import GetLanguagesResponse422
 from ...models.get_languages_response_429 import GetLanguagesResponse429
 from ...models.get_languages_response_500 import GetLanguagesResponse500
 from ...models.get_languages_response_503 import GetLanguagesResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GetLanguagesResponse402
     | GetLanguagesResponse403
     | GetLanguagesResponse404
+    | GetLanguagesResponse422
     | GetLanguagesResponse429
     | GetLanguagesResponse500
     | GetLanguagesResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetLanguagesResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetLanguagesResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GetLanguagesResponse402
     | GetLanguagesResponse403
     | GetLanguagesResponse404
+    | GetLanguagesResponse422
     | GetLanguagesResponse429
     | GetLanguagesResponse500
     | GetLanguagesResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GetLanguagesResponse402
     | GetLanguagesResponse403
     | GetLanguagesResponse404
+    | GetLanguagesResponse422
     | GetLanguagesResponse429
     | GetLanguagesResponse500
     | GetLanguagesResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetLanguagesResponse200 | GetLanguagesResponse400 | GetLanguagesResponse401 | GetLanguagesResponse402 | GetLanguagesResponse403 | GetLanguagesResponse404 | GetLanguagesResponse429 | GetLanguagesResponse500 | GetLanguagesResponse503]
+        Response[GetLanguagesResponse200 | GetLanguagesResponse400 | GetLanguagesResponse401 | GetLanguagesResponse402 | GetLanguagesResponse403 | GetLanguagesResponse404 | GetLanguagesResponse422 | GetLanguagesResponse429 | GetLanguagesResponse500 | GetLanguagesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | GetLanguagesResponse402
     | GetLanguagesResponse403
     | GetLanguagesResponse404
+    | GetLanguagesResponse422
     | GetLanguagesResponse429
     | GetLanguagesResponse500
     | GetLanguagesResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetLanguagesResponse200 | GetLanguagesResponse400 | GetLanguagesResponse401 | GetLanguagesResponse402 | GetLanguagesResponse403 | GetLanguagesResponse404 | GetLanguagesResponse429 | GetLanguagesResponse500 | GetLanguagesResponse503
+        GetLanguagesResponse200 | GetLanguagesResponse400 | GetLanguagesResponse401 | GetLanguagesResponse402 | GetLanguagesResponse403 | GetLanguagesResponse404 | GetLanguagesResponse422 | GetLanguagesResponse429 | GetLanguagesResponse500 | GetLanguagesResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | GetLanguagesResponse402
     | GetLanguagesResponse403
     | GetLanguagesResponse404
+    | GetLanguagesResponse422
     | GetLanguagesResponse429
     | GetLanguagesResponse500
     | GetLanguagesResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetLanguagesResponse200 | GetLanguagesResponse400 | GetLanguagesResponse401 | GetLanguagesResponse402 | GetLanguagesResponse403 | GetLanguagesResponse404 | GetLanguagesResponse429 | GetLanguagesResponse500 | GetLanguagesResponse503]
+        Response[GetLanguagesResponse200 | GetLanguagesResponse400 | GetLanguagesResponse401 | GetLanguagesResponse402 | GetLanguagesResponse403 | GetLanguagesResponse404 | GetLanguagesResponse422 | GetLanguagesResponse429 | GetLanguagesResponse500 | GetLanguagesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | GetLanguagesResponse402
     | GetLanguagesResponse403
     | GetLanguagesResponse404
+    | GetLanguagesResponse422
     | GetLanguagesResponse429
     | GetLanguagesResponse500
     | GetLanguagesResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetLanguagesResponse200 | GetLanguagesResponse400 | GetLanguagesResponse401 | GetLanguagesResponse402 | GetLanguagesResponse403 | GetLanguagesResponse404 | GetLanguagesResponse429 | GetLanguagesResponse500 | GetLanguagesResponse503
+        GetLanguagesResponse200 | GetLanguagesResponse400 | GetLanguagesResponse401 | GetLanguagesResponse402 | GetLanguagesResponse403 | GetLanguagesResponse404 | GetLanguagesResponse422 | GetLanguagesResponse429 | GetLanguagesResponse500 | GetLanguagesResponse503
     """
 
     return (

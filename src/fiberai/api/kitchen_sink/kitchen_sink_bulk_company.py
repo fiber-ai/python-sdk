@@ -12,6 +12,7 @@ from ...models.kitchen_sink_bulk_company_response_401 import KitchenSinkBulkComp
 from ...models.kitchen_sink_bulk_company_response_402 import KitchenSinkBulkCompanyResponse402
 from ...models.kitchen_sink_bulk_company_response_403 import KitchenSinkBulkCompanyResponse403
 from ...models.kitchen_sink_bulk_company_response_404 import KitchenSinkBulkCompanyResponse404
+from ...models.kitchen_sink_bulk_company_response_422 import KitchenSinkBulkCompanyResponse422
 from ...models.kitchen_sink_bulk_company_response_429 import KitchenSinkBulkCompanyResponse429
 from ...models.kitchen_sink_bulk_company_response_500 import KitchenSinkBulkCompanyResponse500
 from ...models.kitchen_sink_bulk_company_response_503 import KitchenSinkBulkCompanyResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | KitchenSinkBulkCompanyResponse402
     | KitchenSinkBulkCompanyResponse403
     | KitchenSinkBulkCompanyResponse404
+    | KitchenSinkBulkCompanyResponse422
     | KitchenSinkBulkCompanyResponse429
     | KitchenSinkBulkCompanyResponse500
     | KitchenSinkBulkCompanyResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = KitchenSinkBulkCompanyResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = KitchenSinkBulkCompanyResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | KitchenSinkBulkCompanyResponse402
     | KitchenSinkBulkCompanyResponse403
     | KitchenSinkBulkCompanyResponse404
+    | KitchenSinkBulkCompanyResponse422
     | KitchenSinkBulkCompanyResponse429
     | KitchenSinkBulkCompanyResponse500
     | KitchenSinkBulkCompanyResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | KitchenSinkBulkCompanyResponse402
     | KitchenSinkBulkCompanyResponse403
     | KitchenSinkBulkCompanyResponse404
+    | KitchenSinkBulkCompanyResponse422
     | KitchenSinkBulkCompanyResponse429
     | KitchenSinkBulkCompanyResponse500
     | KitchenSinkBulkCompanyResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[KitchenSinkBulkCompanyResponse200 | KitchenSinkBulkCompanyResponse400 | KitchenSinkBulkCompanyResponse401 | KitchenSinkBulkCompanyResponse402 | KitchenSinkBulkCompanyResponse403 | KitchenSinkBulkCompanyResponse404 | KitchenSinkBulkCompanyResponse429 | KitchenSinkBulkCompanyResponse500 | KitchenSinkBulkCompanyResponse503]
+        Response[KitchenSinkBulkCompanyResponse200 | KitchenSinkBulkCompanyResponse400 | KitchenSinkBulkCompanyResponse401 | KitchenSinkBulkCompanyResponse402 | KitchenSinkBulkCompanyResponse403 | KitchenSinkBulkCompanyResponse404 | KitchenSinkBulkCompanyResponse422 | KitchenSinkBulkCompanyResponse429 | KitchenSinkBulkCompanyResponse500 | KitchenSinkBulkCompanyResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | KitchenSinkBulkCompanyResponse402
     | KitchenSinkBulkCompanyResponse403
     | KitchenSinkBulkCompanyResponse404
+    | KitchenSinkBulkCompanyResponse422
     | KitchenSinkBulkCompanyResponse429
     | KitchenSinkBulkCompanyResponse500
     | KitchenSinkBulkCompanyResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        KitchenSinkBulkCompanyResponse200 | KitchenSinkBulkCompanyResponse400 | KitchenSinkBulkCompanyResponse401 | KitchenSinkBulkCompanyResponse402 | KitchenSinkBulkCompanyResponse403 | KitchenSinkBulkCompanyResponse404 | KitchenSinkBulkCompanyResponse429 | KitchenSinkBulkCompanyResponse500 | KitchenSinkBulkCompanyResponse503
+        KitchenSinkBulkCompanyResponse200 | KitchenSinkBulkCompanyResponse400 | KitchenSinkBulkCompanyResponse401 | KitchenSinkBulkCompanyResponse402 | KitchenSinkBulkCompanyResponse403 | KitchenSinkBulkCompanyResponse404 | KitchenSinkBulkCompanyResponse422 | KitchenSinkBulkCompanyResponse429 | KitchenSinkBulkCompanyResponse500 | KitchenSinkBulkCompanyResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | KitchenSinkBulkCompanyResponse402
     | KitchenSinkBulkCompanyResponse403
     | KitchenSinkBulkCompanyResponse404
+    | KitchenSinkBulkCompanyResponse422
     | KitchenSinkBulkCompanyResponse429
     | KitchenSinkBulkCompanyResponse500
     | KitchenSinkBulkCompanyResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[KitchenSinkBulkCompanyResponse200 | KitchenSinkBulkCompanyResponse400 | KitchenSinkBulkCompanyResponse401 | KitchenSinkBulkCompanyResponse402 | KitchenSinkBulkCompanyResponse403 | KitchenSinkBulkCompanyResponse404 | KitchenSinkBulkCompanyResponse429 | KitchenSinkBulkCompanyResponse500 | KitchenSinkBulkCompanyResponse503]
+        Response[KitchenSinkBulkCompanyResponse200 | KitchenSinkBulkCompanyResponse400 | KitchenSinkBulkCompanyResponse401 | KitchenSinkBulkCompanyResponse402 | KitchenSinkBulkCompanyResponse403 | KitchenSinkBulkCompanyResponse404 | KitchenSinkBulkCompanyResponse422 | KitchenSinkBulkCompanyResponse429 | KitchenSinkBulkCompanyResponse500 | KitchenSinkBulkCompanyResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | KitchenSinkBulkCompanyResponse402
     | KitchenSinkBulkCompanyResponse403
     | KitchenSinkBulkCompanyResponse404
+    | KitchenSinkBulkCompanyResponse422
     | KitchenSinkBulkCompanyResponse429
     | KitchenSinkBulkCompanyResponse500
     | KitchenSinkBulkCompanyResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        KitchenSinkBulkCompanyResponse200 | KitchenSinkBulkCompanyResponse400 | KitchenSinkBulkCompanyResponse401 | KitchenSinkBulkCompanyResponse402 | KitchenSinkBulkCompanyResponse403 | KitchenSinkBulkCompanyResponse404 | KitchenSinkBulkCompanyResponse429 | KitchenSinkBulkCompanyResponse500 | KitchenSinkBulkCompanyResponse503
+        KitchenSinkBulkCompanyResponse200 | KitchenSinkBulkCompanyResponse400 | KitchenSinkBulkCompanyResponse401 | KitchenSinkBulkCompanyResponse402 | KitchenSinkBulkCompanyResponse403 | KitchenSinkBulkCompanyResponse404 | KitchenSinkBulkCompanyResponse422 | KitchenSinkBulkCompanyResponse429 | KitchenSinkBulkCompanyResponse500 | KitchenSinkBulkCompanyResponse503
     """
 
     return (

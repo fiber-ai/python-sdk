@@ -13,6 +13,7 @@ from ...models.estimate_enrichment_cost_response_401 import EstimateEnrichmentCo
 from ...models.estimate_enrichment_cost_response_402 import EstimateEnrichmentCostResponse402
 from ...models.estimate_enrichment_cost_response_403 import EstimateEnrichmentCostResponse403
 from ...models.estimate_enrichment_cost_response_404 import EstimateEnrichmentCostResponse404
+from ...models.estimate_enrichment_cost_response_422 import EstimateEnrichmentCostResponse422
 from ...models.estimate_enrichment_cost_response_429 import EstimateEnrichmentCostResponse429
 from ...models.estimate_enrichment_cost_response_500 import EstimateEnrichmentCostResponse500
 from ...models.estimate_enrichment_cost_response_503 import EstimateEnrichmentCostResponse503
@@ -50,6 +51,7 @@ def _parse_response(
     | EstimateEnrichmentCostResponse402
     | EstimateEnrichmentCostResponse403
     | EstimateEnrichmentCostResponse404
+    | EstimateEnrichmentCostResponse422
     | EstimateEnrichmentCostResponse429
     | EstimateEnrichmentCostResponse500
     | EstimateEnrichmentCostResponse503
@@ -85,6 +87,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = EstimateEnrichmentCostResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = EstimateEnrichmentCostResponse429.from_dict(response.json())
 
@@ -115,6 +122,7 @@ def _build_response(
     | EstimateEnrichmentCostResponse402
     | EstimateEnrichmentCostResponse403
     | EstimateEnrichmentCostResponse404
+    | EstimateEnrichmentCostResponse422
     | EstimateEnrichmentCostResponse429
     | EstimateEnrichmentCostResponse500
     | EstimateEnrichmentCostResponse503
@@ -139,6 +147,7 @@ def sync_detailed(
     | EstimateEnrichmentCostResponse402
     | EstimateEnrichmentCostResponse403
     | EstimateEnrichmentCostResponse404
+    | EstimateEnrichmentCostResponse422
     | EstimateEnrichmentCostResponse429
     | EstimateEnrichmentCostResponse500
     | EstimateEnrichmentCostResponse503
@@ -163,7 +172,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[EstimateEnrichmentCostResponse200 | EstimateEnrichmentCostResponse400 | EstimateEnrichmentCostResponse401 | EstimateEnrichmentCostResponse402 | EstimateEnrichmentCostResponse403 | EstimateEnrichmentCostResponse404 | EstimateEnrichmentCostResponse429 | EstimateEnrichmentCostResponse500 | EstimateEnrichmentCostResponse503]
+        Response[EstimateEnrichmentCostResponse200 | EstimateEnrichmentCostResponse400 | EstimateEnrichmentCostResponse401 | EstimateEnrichmentCostResponse402 | EstimateEnrichmentCostResponse403 | EstimateEnrichmentCostResponse404 | EstimateEnrichmentCostResponse422 | EstimateEnrichmentCostResponse429 | EstimateEnrichmentCostResponse500 | EstimateEnrichmentCostResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -190,6 +199,7 @@ def sync(
     | EstimateEnrichmentCostResponse402
     | EstimateEnrichmentCostResponse403
     | EstimateEnrichmentCostResponse404
+    | EstimateEnrichmentCostResponse422
     | EstimateEnrichmentCostResponse429
     | EstimateEnrichmentCostResponse500
     | EstimateEnrichmentCostResponse503
@@ -215,7 +225,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        EstimateEnrichmentCostResponse200 | EstimateEnrichmentCostResponse400 | EstimateEnrichmentCostResponse401 | EstimateEnrichmentCostResponse402 | EstimateEnrichmentCostResponse403 | EstimateEnrichmentCostResponse404 | EstimateEnrichmentCostResponse429 | EstimateEnrichmentCostResponse500 | EstimateEnrichmentCostResponse503
+        EstimateEnrichmentCostResponse200 | EstimateEnrichmentCostResponse400 | EstimateEnrichmentCostResponse401 | EstimateEnrichmentCostResponse402 | EstimateEnrichmentCostResponse403 | EstimateEnrichmentCostResponse404 | EstimateEnrichmentCostResponse422 | EstimateEnrichmentCostResponse429 | EstimateEnrichmentCostResponse500 | EstimateEnrichmentCostResponse503
     """
 
     return sync_detailed(
@@ -237,6 +247,7 @@ async def asyncio_detailed(
     | EstimateEnrichmentCostResponse402
     | EstimateEnrichmentCostResponse403
     | EstimateEnrichmentCostResponse404
+    | EstimateEnrichmentCostResponse422
     | EstimateEnrichmentCostResponse429
     | EstimateEnrichmentCostResponse500
     | EstimateEnrichmentCostResponse503
@@ -261,7 +272,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[EstimateEnrichmentCostResponse200 | EstimateEnrichmentCostResponse400 | EstimateEnrichmentCostResponse401 | EstimateEnrichmentCostResponse402 | EstimateEnrichmentCostResponse403 | EstimateEnrichmentCostResponse404 | EstimateEnrichmentCostResponse429 | EstimateEnrichmentCostResponse500 | EstimateEnrichmentCostResponse503]
+        Response[EstimateEnrichmentCostResponse200 | EstimateEnrichmentCostResponse400 | EstimateEnrichmentCostResponse401 | EstimateEnrichmentCostResponse402 | EstimateEnrichmentCostResponse403 | EstimateEnrichmentCostResponse404 | EstimateEnrichmentCostResponse422 | EstimateEnrichmentCostResponse429 | EstimateEnrichmentCostResponse500 | EstimateEnrichmentCostResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -286,6 +297,7 @@ async def asyncio(
     | EstimateEnrichmentCostResponse402
     | EstimateEnrichmentCostResponse403
     | EstimateEnrichmentCostResponse404
+    | EstimateEnrichmentCostResponse422
     | EstimateEnrichmentCostResponse429
     | EstimateEnrichmentCostResponse500
     | EstimateEnrichmentCostResponse503
@@ -311,7 +323,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        EstimateEnrichmentCostResponse200 | EstimateEnrichmentCostResponse400 | EstimateEnrichmentCostResponse401 | EstimateEnrichmentCostResponse402 | EstimateEnrichmentCostResponse403 | EstimateEnrichmentCostResponse404 | EstimateEnrichmentCostResponse429 | EstimateEnrichmentCostResponse500 | EstimateEnrichmentCostResponse503
+        EstimateEnrichmentCostResponse200 | EstimateEnrichmentCostResponse400 | EstimateEnrichmentCostResponse401 | EstimateEnrichmentCostResponse402 | EstimateEnrichmentCostResponse403 | EstimateEnrichmentCostResponse404 | EstimateEnrichmentCostResponse422 | EstimateEnrichmentCostResponse429 | EstimateEnrichmentCostResponse500 | EstimateEnrichmentCostResponse503
     """
 
     return (

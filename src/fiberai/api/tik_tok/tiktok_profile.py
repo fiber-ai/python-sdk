@@ -12,6 +12,7 @@ from ...models.tiktok_profile_response_401 import TiktokProfileResponse401
 from ...models.tiktok_profile_response_402 import TiktokProfileResponse402
 from ...models.tiktok_profile_response_403 import TiktokProfileResponse403
 from ...models.tiktok_profile_response_404 import TiktokProfileResponse404
+from ...models.tiktok_profile_response_422 import TiktokProfileResponse422
 from ...models.tiktok_profile_response_429 import TiktokProfileResponse429
 from ...models.tiktok_profile_response_500 import TiktokProfileResponse500
 from ...models.tiktok_profile_response_503 import TiktokProfileResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | TiktokProfileResponse402
     | TiktokProfileResponse403
     | TiktokProfileResponse404
+    | TiktokProfileResponse422
     | TiktokProfileResponse429
     | TiktokProfileResponse500
     | TiktokProfileResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = TiktokProfileResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = TiktokProfileResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | TiktokProfileResponse402
     | TiktokProfileResponse403
     | TiktokProfileResponse404
+    | TiktokProfileResponse422
     | TiktokProfileResponse429
     | TiktokProfileResponse500
     | TiktokProfileResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | TiktokProfileResponse402
     | TiktokProfileResponse403
     | TiktokProfileResponse404
+    | TiktokProfileResponse422
     | TiktokProfileResponse429
     | TiktokProfileResponse500
     | TiktokProfileResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokProfileResponse200 | TiktokProfileResponse400 | TiktokProfileResponse401 | TiktokProfileResponse402 | TiktokProfileResponse403 | TiktokProfileResponse404 | TiktokProfileResponse429 | TiktokProfileResponse500 | TiktokProfileResponse503]
+        Response[TiktokProfileResponse200 | TiktokProfileResponse400 | TiktokProfileResponse401 | TiktokProfileResponse402 | TiktokProfileResponse403 | TiktokProfileResponse404 | TiktokProfileResponse422 | TiktokProfileResponse429 | TiktokProfileResponse500 | TiktokProfileResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | TiktokProfileResponse402
     | TiktokProfileResponse403
     | TiktokProfileResponse404
+    | TiktokProfileResponse422
     | TiktokProfileResponse429
     | TiktokProfileResponse500
     | TiktokProfileResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokProfileResponse200 | TiktokProfileResponse400 | TiktokProfileResponse401 | TiktokProfileResponse402 | TiktokProfileResponse403 | TiktokProfileResponse404 | TiktokProfileResponse429 | TiktokProfileResponse500 | TiktokProfileResponse503
+        TiktokProfileResponse200 | TiktokProfileResponse400 | TiktokProfileResponse401 | TiktokProfileResponse402 | TiktokProfileResponse403 | TiktokProfileResponse404 | TiktokProfileResponse422 | TiktokProfileResponse429 | TiktokProfileResponse500 | TiktokProfileResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | TiktokProfileResponse402
     | TiktokProfileResponse403
     | TiktokProfileResponse404
+    | TiktokProfileResponse422
     | TiktokProfileResponse429
     | TiktokProfileResponse500
     | TiktokProfileResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokProfileResponse200 | TiktokProfileResponse400 | TiktokProfileResponse401 | TiktokProfileResponse402 | TiktokProfileResponse403 | TiktokProfileResponse404 | TiktokProfileResponse429 | TiktokProfileResponse500 | TiktokProfileResponse503]
+        Response[TiktokProfileResponse200 | TiktokProfileResponse400 | TiktokProfileResponse401 | TiktokProfileResponse402 | TiktokProfileResponse403 | TiktokProfileResponse404 | TiktokProfileResponse422 | TiktokProfileResponse429 | TiktokProfileResponse500 | TiktokProfileResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | TiktokProfileResponse402
     | TiktokProfileResponse403
     | TiktokProfileResponse404
+    | TiktokProfileResponse422
     | TiktokProfileResponse429
     | TiktokProfileResponse500
     | TiktokProfileResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokProfileResponse200 | TiktokProfileResponse400 | TiktokProfileResponse401 | TiktokProfileResponse402 | TiktokProfileResponse403 | TiktokProfileResponse404 | TiktokProfileResponse429 | TiktokProfileResponse500 | TiktokProfileResponse503
+        TiktokProfileResponse200 | TiktokProfileResponse400 | TiktokProfileResponse401 | TiktokProfileResponse402 | TiktokProfileResponse403 | TiktokProfileResponse404 | TiktokProfileResponse422 | TiktokProfileResponse429 | TiktokProfileResponse500 | TiktokProfileResponse503
     """
 
     return (

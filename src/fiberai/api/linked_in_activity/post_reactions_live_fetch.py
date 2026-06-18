@@ -12,6 +12,7 @@ from ...models.post_reactions_live_fetch_response_401 import PostReactionsLiveFe
 from ...models.post_reactions_live_fetch_response_402 import PostReactionsLiveFetchResponse402
 from ...models.post_reactions_live_fetch_response_403 import PostReactionsLiveFetchResponse403
 from ...models.post_reactions_live_fetch_response_404 import PostReactionsLiveFetchResponse404
+from ...models.post_reactions_live_fetch_response_422 import PostReactionsLiveFetchResponse422
 from ...models.post_reactions_live_fetch_response_429 import PostReactionsLiveFetchResponse429
 from ...models.post_reactions_live_fetch_response_500 import PostReactionsLiveFetchResponse500
 from ...models.post_reactions_live_fetch_response_503 import PostReactionsLiveFetchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | PostReactionsLiveFetchResponse402
     | PostReactionsLiveFetchResponse403
     | PostReactionsLiveFetchResponse404
+    | PostReactionsLiveFetchResponse422
     | PostReactionsLiveFetchResponse429
     | PostReactionsLiveFetchResponse500
     | PostReactionsLiveFetchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = PostReactionsLiveFetchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = PostReactionsLiveFetchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | PostReactionsLiveFetchResponse402
     | PostReactionsLiveFetchResponse403
     | PostReactionsLiveFetchResponse404
+    | PostReactionsLiveFetchResponse422
     | PostReactionsLiveFetchResponse429
     | PostReactionsLiveFetchResponse500
     | PostReactionsLiveFetchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | PostReactionsLiveFetchResponse402
     | PostReactionsLiveFetchResponse403
     | PostReactionsLiveFetchResponse404
+    | PostReactionsLiveFetchResponse422
     | PostReactionsLiveFetchResponse429
     | PostReactionsLiveFetchResponse500
     | PostReactionsLiveFetchResponse503
@@ -159,7 +168,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PostReactionsLiveFetchResponse200 | PostReactionsLiveFetchResponse400 | PostReactionsLiveFetchResponse401 | PostReactionsLiveFetchResponse402 | PostReactionsLiveFetchResponse403 | PostReactionsLiveFetchResponse404 | PostReactionsLiveFetchResponse429 | PostReactionsLiveFetchResponse500 | PostReactionsLiveFetchResponse503]
+        Response[PostReactionsLiveFetchResponse200 | PostReactionsLiveFetchResponse400 | PostReactionsLiveFetchResponse401 | PostReactionsLiveFetchResponse402 | PostReactionsLiveFetchResponse403 | PostReactionsLiveFetchResponse404 | PostReactionsLiveFetchResponse422 | PostReactionsLiveFetchResponse429 | PostReactionsLiveFetchResponse500 | PostReactionsLiveFetchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -184,6 +193,7 @@ def sync(
     | PostReactionsLiveFetchResponse402
     | PostReactionsLiveFetchResponse403
     | PostReactionsLiveFetchResponse404
+    | PostReactionsLiveFetchResponse422
     | PostReactionsLiveFetchResponse429
     | PostReactionsLiveFetchResponse500
     | PostReactionsLiveFetchResponse503
@@ -210,7 +220,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PostReactionsLiveFetchResponse200 | PostReactionsLiveFetchResponse400 | PostReactionsLiveFetchResponse401 | PostReactionsLiveFetchResponse402 | PostReactionsLiveFetchResponse403 | PostReactionsLiveFetchResponse404 | PostReactionsLiveFetchResponse429 | PostReactionsLiveFetchResponse500 | PostReactionsLiveFetchResponse503
+        PostReactionsLiveFetchResponse200 | PostReactionsLiveFetchResponse400 | PostReactionsLiveFetchResponse401 | PostReactionsLiveFetchResponse402 | PostReactionsLiveFetchResponse403 | PostReactionsLiveFetchResponse404 | PostReactionsLiveFetchResponse422 | PostReactionsLiveFetchResponse429 | PostReactionsLiveFetchResponse500 | PostReactionsLiveFetchResponse503
     """
 
     return sync_detailed(
@@ -230,6 +240,7 @@ async def asyncio_detailed(
     | PostReactionsLiveFetchResponse402
     | PostReactionsLiveFetchResponse403
     | PostReactionsLiveFetchResponse404
+    | PostReactionsLiveFetchResponse422
     | PostReactionsLiveFetchResponse429
     | PostReactionsLiveFetchResponse500
     | PostReactionsLiveFetchResponse503
@@ -255,7 +266,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PostReactionsLiveFetchResponse200 | PostReactionsLiveFetchResponse400 | PostReactionsLiveFetchResponse401 | PostReactionsLiveFetchResponse402 | PostReactionsLiveFetchResponse403 | PostReactionsLiveFetchResponse404 | PostReactionsLiveFetchResponse429 | PostReactionsLiveFetchResponse500 | PostReactionsLiveFetchResponse503]
+        Response[PostReactionsLiveFetchResponse200 | PostReactionsLiveFetchResponse400 | PostReactionsLiveFetchResponse401 | PostReactionsLiveFetchResponse402 | PostReactionsLiveFetchResponse403 | PostReactionsLiveFetchResponse404 | PostReactionsLiveFetchResponse422 | PostReactionsLiveFetchResponse429 | PostReactionsLiveFetchResponse500 | PostReactionsLiveFetchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -278,6 +289,7 @@ async def asyncio(
     | PostReactionsLiveFetchResponse402
     | PostReactionsLiveFetchResponse403
     | PostReactionsLiveFetchResponse404
+    | PostReactionsLiveFetchResponse422
     | PostReactionsLiveFetchResponse429
     | PostReactionsLiveFetchResponse500
     | PostReactionsLiveFetchResponse503
@@ -304,7 +316,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PostReactionsLiveFetchResponse200 | PostReactionsLiveFetchResponse400 | PostReactionsLiveFetchResponse401 | PostReactionsLiveFetchResponse402 | PostReactionsLiveFetchResponse403 | PostReactionsLiveFetchResponse404 | PostReactionsLiveFetchResponse429 | PostReactionsLiveFetchResponse500 | PostReactionsLiveFetchResponse503
+        PostReactionsLiveFetchResponse200 | PostReactionsLiveFetchResponse400 | PostReactionsLiveFetchResponse401 | PostReactionsLiveFetchResponse402 | PostReactionsLiveFetchResponse403 | PostReactionsLiveFetchResponse404 | PostReactionsLiveFetchResponse422 | PostReactionsLiveFetchResponse429 | PostReactionsLiveFetchResponse500 | PostReactionsLiveFetchResponse503
     """
 
     return (

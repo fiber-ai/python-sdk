@@ -20,9 +20,11 @@ class HeadcountCrossedThreshold:
         entity_type (Literal['company']):
         direction (HeadcountCrossedThresholdDirection): Whether to alert when headcount crosses the threshold going up
             or down
-        threshold (int): The headcount number to watch for crossing
+        threshold (int): The employee count threshold to watch for crossing. Any positive integer is accepted.
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
     """
 
     type_: Literal["headcount_crossed_threshold"]
@@ -30,6 +32,7 @@ class HeadcountCrossedThreshold:
     direction: HeadcountCrossedThresholdDirection
     threshold: int
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -47,6 +50,8 @@ class HeadcountCrossedThreshold:
         else:
             lookback_days = self.lookback_days
 
+        is_dummy = self.is_dummy
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -59,6 +64,8 @@ class HeadcountCrossedThreshold:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
 
         return field_dict
 
@@ -86,12 +93,15 @@ class HeadcountCrossedThreshold:
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
+        is_dummy = d.pop("isDummy", UNSET)
+
         headcount_crossed_threshold = cls(
             type_=type_,
             entity_type=entity_type,
             direction=direction,
             threshold=threshold,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
         )
 
         headcount_crossed_threshold.additional_properties = d

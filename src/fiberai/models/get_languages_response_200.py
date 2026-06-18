@@ -27,6 +27,7 @@ class GetLanguagesResponse200:
         charge_info (GetLanguagesResponse200ChargeInfoType0 | GetLanguagesResponse200ChargeInfoType1 |
             GetLanguagesResponse200ChargeInfoType2 | GetLanguagesResponse200ChargeInfoType3 |
             GetLanguagesResponse200ChargeInfoType4):
+        advice (list[str]): Tips, recommendations, and suggestions for using this API effectively.
         warnings (list[GetLanguagesResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields in
             request
     """
@@ -39,6 +40,7 @@ class GetLanguagesResponse200:
         | GetLanguagesResponse200ChargeInfoType3
         | GetLanguagesResponse200ChargeInfoType4
     )
+    advice: list[str]
     warnings: list[GetLanguagesResponse200WarningsType0Item] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
@@ -61,6 +63,8 @@ class GetLanguagesResponse200:
         else:
             charge_info = self.charge_info.to_dict()
 
+        advice = self.advice
+
         warnings: list[dict[str, Any]] | None | Unset
         if isinstance(self.warnings, Unset):
             warnings = UNSET
@@ -79,6 +83,7 @@ class GetLanguagesResponse200:
             {
                 "output": output,
                 "chargeInfo": charge_info,
+                "advice": advice,
             }
         )
         if warnings is not UNSET:
@@ -147,6 +152,8 @@ class GetLanguagesResponse200:
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 
+        advice = cast(list[str], d.pop("advice"))
+
         def _parse_warnings(data: object) -> list[GetLanguagesResponse200WarningsType0Item] | None | Unset:
             if data is None:
                 return data
@@ -172,6 +179,7 @@ class GetLanguagesResponse200:
         get_languages_response_200 = cls(
             output=output,
             charge_info=charge_info,
+            advice=advice,
             warnings=warnings,
         )
 

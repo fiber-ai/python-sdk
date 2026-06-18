@@ -12,6 +12,7 @@ from ...models.webpage_screenshot_response_401 import WebpageScreenshotResponse4
 from ...models.webpage_screenshot_response_402 import WebpageScreenshotResponse402
 from ...models.webpage_screenshot_response_403 import WebpageScreenshotResponse403
 from ...models.webpage_screenshot_response_404 import WebpageScreenshotResponse404
+from ...models.webpage_screenshot_response_422 import WebpageScreenshotResponse422
 from ...models.webpage_screenshot_response_429 import WebpageScreenshotResponse429
 from ...models.webpage_screenshot_response_500 import WebpageScreenshotResponse500
 from ...models.webpage_screenshot_response_503 import WebpageScreenshotResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | WebpageScreenshotResponse402
     | WebpageScreenshotResponse403
     | WebpageScreenshotResponse404
+    | WebpageScreenshotResponse422
     | WebpageScreenshotResponse429
     | WebpageScreenshotResponse500
     | WebpageScreenshotResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = WebpageScreenshotResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = WebpageScreenshotResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | WebpageScreenshotResponse402
     | WebpageScreenshotResponse403
     | WebpageScreenshotResponse404
+    | WebpageScreenshotResponse422
     | WebpageScreenshotResponse429
     | WebpageScreenshotResponse500
     | WebpageScreenshotResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | WebpageScreenshotResponse402
     | WebpageScreenshotResponse403
     | WebpageScreenshotResponse404
+    | WebpageScreenshotResponse422
     | WebpageScreenshotResponse429
     | WebpageScreenshotResponse500
     | WebpageScreenshotResponse503
@@ -159,7 +168,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[WebpageScreenshotResponse200 | WebpageScreenshotResponse400 | WebpageScreenshotResponse401 | WebpageScreenshotResponse402 | WebpageScreenshotResponse403 | WebpageScreenshotResponse404 | WebpageScreenshotResponse429 | WebpageScreenshotResponse500 | WebpageScreenshotResponse503]
+        Response[WebpageScreenshotResponse200 | WebpageScreenshotResponse400 | WebpageScreenshotResponse401 | WebpageScreenshotResponse402 | WebpageScreenshotResponse403 | WebpageScreenshotResponse404 | WebpageScreenshotResponse422 | WebpageScreenshotResponse429 | WebpageScreenshotResponse500 | WebpageScreenshotResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -184,6 +193,7 @@ def sync(
     | WebpageScreenshotResponse402
     | WebpageScreenshotResponse403
     | WebpageScreenshotResponse404
+    | WebpageScreenshotResponse422
     | WebpageScreenshotResponse429
     | WebpageScreenshotResponse500
     | WebpageScreenshotResponse503
@@ -210,7 +220,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        WebpageScreenshotResponse200 | WebpageScreenshotResponse400 | WebpageScreenshotResponse401 | WebpageScreenshotResponse402 | WebpageScreenshotResponse403 | WebpageScreenshotResponse404 | WebpageScreenshotResponse429 | WebpageScreenshotResponse500 | WebpageScreenshotResponse503
+        WebpageScreenshotResponse200 | WebpageScreenshotResponse400 | WebpageScreenshotResponse401 | WebpageScreenshotResponse402 | WebpageScreenshotResponse403 | WebpageScreenshotResponse404 | WebpageScreenshotResponse422 | WebpageScreenshotResponse429 | WebpageScreenshotResponse500 | WebpageScreenshotResponse503
     """
 
     return sync_detailed(
@@ -230,6 +240,7 @@ async def asyncio_detailed(
     | WebpageScreenshotResponse402
     | WebpageScreenshotResponse403
     | WebpageScreenshotResponse404
+    | WebpageScreenshotResponse422
     | WebpageScreenshotResponse429
     | WebpageScreenshotResponse500
     | WebpageScreenshotResponse503
@@ -255,7 +266,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[WebpageScreenshotResponse200 | WebpageScreenshotResponse400 | WebpageScreenshotResponse401 | WebpageScreenshotResponse402 | WebpageScreenshotResponse403 | WebpageScreenshotResponse404 | WebpageScreenshotResponse429 | WebpageScreenshotResponse500 | WebpageScreenshotResponse503]
+        Response[WebpageScreenshotResponse200 | WebpageScreenshotResponse400 | WebpageScreenshotResponse401 | WebpageScreenshotResponse402 | WebpageScreenshotResponse403 | WebpageScreenshotResponse404 | WebpageScreenshotResponse422 | WebpageScreenshotResponse429 | WebpageScreenshotResponse500 | WebpageScreenshotResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -278,6 +289,7 @@ async def asyncio(
     | WebpageScreenshotResponse402
     | WebpageScreenshotResponse403
     | WebpageScreenshotResponse404
+    | WebpageScreenshotResponse422
     | WebpageScreenshotResponse429
     | WebpageScreenshotResponse500
     | WebpageScreenshotResponse503
@@ -304,7 +316,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        WebpageScreenshotResponse200 | WebpageScreenshotResponse400 | WebpageScreenshotResponse401 | WebpageScreenshotResponse402 | WebpageScreenshotResponse403 | WebpageScreenshotResponse404 | WebpageScreenshotResponse429 | WebpageScreenshotResponse500 | WebpageScreenshotResponse503
+        WebpageScreenshotResponse200 | WebpageScreenshotResponse400 | WebpageScreenshotResponse401 | WebpageScreenshotResponse402 | WebpageScreenshotResponse403 | WebpageScreenshotResponse404 | WebpageScreenshotResponse422 | WebpageScreenshotResponse429 | WebpageScreenshotResponse500 | WebpageScreenshotResponse503
     """
 
     return (

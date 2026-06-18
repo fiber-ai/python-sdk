@@ -13,6 +13,7 @@ from ...models.export_prospects_response_401 import ExportProspectsResponse401
 from ...models.export_prospects_response_402 import ExportProspectsResponse402
 from ...models.export_prospects_response_403 import ExportProspectsResponse403
 from ...models.export_prospects_response_404 import ExportProspectsResponse404
+from ...models.export_prospects_response_422 import ExportProspectsResponse422
 from ...models.export_prospects_response_429 import ExportProspectsResponse429
 from ...models.export_prospects_response_500 import ExportProspectsResponse500
 from ...models.export_prospects_response_503 import ExportProspectsResponse503
@@ -50,6 +51,7 @@ def _parse_response(
     | ExportProspectsResponse402
     | ExportProspectsResponse403
     | ExportProspectsResponse404
+    | ExportProspectsResponse422
     | ExportProspectsResponse429
     | ExportProspectsResponse500
     | ExportProspectsResponse503
@@ -85,6 +87,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = ExportProspectsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = ExportProspectsResponse429.from_dict(response.json())
 
@@ -115,6 +122,7 @@ def _build_response(
     | ExportProspectsResponse402
     | ExportProspectsResponse403
     | ExportProspectsResponse404
+    | ExportProspectsResponse422
     | ExportProspectsResponse429
     | ExportProspectsResponse500
     | ExportProspectsResponse503
@@ -139,6 +147,7 @@ def sync_detailed(
     | ExportProspectsResponse402
     | ExportProspectsResponse403
     | ExportProspectsResponse404
+    | ExportProspectsResponse422
     | ExportProspectsResponse429
     | ExportProspectsResponse500
     | ExportProspectsResponse503
@@ -164,7 +173,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ExportProspectsResponse200 | ExportProspectsResponse400 | ExportProspectsResponse401 | ExportProspectsResponse402 | ExportProspectsResponse403 | ExportProspectsResponse404 | ExportProspectsResponse429 | ExportProspectsResponse500 | ExportProspectsResponse503]
+        Response[ExportProspectsResponse200 | ExportProspectsResponse400 | ExportProspectsResponse401 | ExportProspectsResponse402 | ExportProspectsResponse403 | ExportProspectsResponse404 | ExportProspectsResponse422 | ExportProspectsResponse429 | ExportProspectsResponse500 | ExportProspectsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -191,6 +200,7 @@ def sync(
     | ExportProspectsResponse402
     | ExportProspectsResponse403
     | ExportProspectsResponse404
+    | ExportProspectsResponse422
     | ExportProspectsResponse429
     | ExportProspectsResponse500
     | ExportProspectsResponse503
@@ -217,7 +227,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ExportProspectsResponse200 | ExportProspectsResponse400 | ExportProspectsResponse401 | ExportProspectsResponse402 | ExportProspectsResponse403 | ExportProspectsResponse404 | ExportProspectsResponse429 | ExportProspectsResponse500 | ExportProspectsResponse503
+        ExportProspectsResponse200 | ExportProspectsResponse400 | ExportProspectsResponse401 | ExportProspectsResponse402 | ExportProspectsResponse403 | ExportProspectsResponse404 | ExportProspectsResponse422 | ExportProspectsResponse429 | ExportProspectsResponse500 | ExportProspectsResponse503
     """
 
     return sync_detailed(
@@ -239,6 +249,7 @@ async def asyncio_detailed(
     | ExportProspectsResponse402
     | ExportProspectsResponse403
     | ExportProspectsResponse404
+    | ExportProspectsResponse422
     | ExportProspectsResponse429
     | ExportProspectsResponse500
     | ExportProspectsResponse503
@@ -264,7 +275,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ExportProspectsResponse200 | ExportProspectsResponse400 | ExportProspectsResponse401 | ExportProspectsResponse402 | ExportProspectsResponse403 | ExportProspectsResponse404 | ExportProspectsResponse429 | ExportProspectsResponse500 | ExportProspectsResponse503]
+        Response[ExportProspectsResponse200 | ExportProspectsResponse400 | ExportProspectsResponse401 | ExportProspectsResponse402 | ExportProspectsResponse403 | ExportProspectsResponse404 | ExportProspectsResponse422 | ExportProspectsResponse429 | ExportProspectsResponse500 | ExportProspectsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -289,6 +300,7 @@ async def asyncio(
     | ExportProspectsResponse402
     | ExportProspectsResponse403
     | ExportProspectsResponse404
+    | ExportProspectsResponse422
     | ExportProspectsResponse429
     | ExportProspectsResponse500
     | ExportProspectsResponse503
@@ -315,7 +327,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ExportProspectsResponse200 | ExportProspectsResponse400 | ExportProspectsResponse401 | ExportProspectsResponse402 | ExportProspectsResponse403 | ExportProspectsResponse404 | ExportProspectsResponse429 | ExportProspectsResponse500 | ExportProspectsResponse503
+        ExportProspectsResponse200 | ExportProspectsResponse400 | ExportProspectsResponse401 | ExportProspectsResponse402 | ExportProspectsResponse403 | ExportProspectsResponse404 | ExportProspectsResponse422 | ExportProspectsResponse429 | ExportProspectsResponse500 | ExportProspectsResponse503
     """
 
     return (

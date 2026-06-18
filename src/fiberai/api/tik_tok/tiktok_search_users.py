@@ -12,6 +12,7 @@ from ...models.tiktok_search_users_response_401 import TiktokSearchUsersResponse
 from ...models.tiktok_search_users_response_402 import TiktokSearchUsersResponse402
 from ...models.tiktok_search_users_response_403 import TiktokSearchUsersResponse403
 from ...models.tiktok_search_users_response_404 import TiktokSearchUsersResponse404
+from ...models.tiktok_search_users_response_422 import TiktokSearchUsersResponse422
 from ...models.tiktok_search_users_response_429 import TiktokSearchUsersResponse429
 from ...models.tiktok_search_users_response_500 import TiktokSearchUsersResponse500
 from ...models.tiktok_search_users_response_503 import TiktokSearchUsersResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | TiktokSearchUsersResponse402
     | TiktokSearchUsersResponse403
     | TiktokSearchUsersResponse404
+    | TiktokSearchUsersResponse422
     | TiktokSearchUsersResponse429
     | TiktokSearchUsersResponse500
     | TiktokSearchUsersResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = TiktokSearchUsersResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = TiktokSearchUsersResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | TiktokSearchUsersResponse402
     | TiktokSearchUsersResponse403
     | TiktokSearchUsersResponse404
+    | TiktokSearchUsersResponse422
     | TiktokSearchUsersResponse429
     | TiktokSearchUsersResponse500
     | TiktokSearchUsersResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | TiktokSearchUsersResponse402
     | TiktokSearchUsersResponse403
     | TiktokSearchUsersResponse404
+    | TiktokSearchUsersResponse422
     | TiktokSearchUsersResponse429
     | TiktokSearchUsersResponse500
     | TiktokSearchUsersResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokSearchUsersResponse200 | TiktokSearchUsersResponse400 | TiktokSearchUsersResponse401 | TiktokSearchUsersResponse402 | TiktokSearchUsersResponse403 | TiktokSearchUsersResponse404 | TiktokSearchUsersResponse429 | TiktokSearchUsersResponse500 | TiktokSearchUsersResponse503]
+        Response[TiktokSearchUsersResponse200 | TiktokSearchUsersResponse400 | TiktokSearchUsersResponse401 | TiktokSearchUsersResponse402 | TiktokSearchUsersResponse403 | TiktokSearchUsersResponse404 | TiktokSearchUsersResponse422 | TiktokSearchUsersResponse429 | TiktokSearchUsersResponse500 | TiktokSearchUsersResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | TiktokSearchUsersResponse402
     | TiktokSearchUsersResponse403
     | TiktokSearchUsersResponse404
+    | TiktokSearchUsersResponse422
     | TiktokSearchUsersResponse429
     | TiktokSearchUsersResponse500
     | TiktokSearchUsersResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokSearchUsersResponse200 | TiktokSearchUsersResponse400 | TiktokSearchUsersResponse401 | TiktokSearchUsersResponse402 | TiktokSearchUsersResponse403 | TiktokSearchUsersResponse404 | TiktokSearchUsersResponse429 | TiktokSearchUsersResponse500 | TiktokSearchUsersResponse503
+        TiktokSearchUsersResponse200 | TiktokSearchUsersResponse400 | TiktokSearchUsersResponse401 | TiktokSearchUsersResponse402 | TiktokSearchUsersResponse403 | TiktokSearchUsersResponse404 | TiktokSearchUsersResponse422 | TiktokSearchUsersResponse429 | TiktokSearchUsersResponse500 | TiktokSearchUsersResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | TiktokSearchUsersResponse402
     | TiktokSearchUsersResponse403
     | TiktokSearchUsersResponse404
+    | TiktokSearchUsersResponse422
     | TiktokSearchUsersResponse429
     | TiktokSearchUsersResponse500
     | TiktokSearchUsersResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokSearchUsersResponse200 | TiktokSearchUsersResponse400 | TiktokSearchUsersResponse401 | TiktokSearchUsersResponse402 | TiktokSearchUsersResponse403 | TiktokSearchUsersResponse404 | TiktokSearchUsersResponse429 | TiktokSearchUsersResponse500 | TiktokSearchUsersResponse503]
+        Response[TiktokSearchUsersResponse200 | TiktokSearchUsersResponse400 | TiktokSearchUsersResponse401 | TiktokSearchUsersResponse402 | TiktokSearchUsersResponse403 | TiktokSearchUsersResponse404 | TiktokSearchUsersResponse422 | TiktokSearchUsersResponse429 | TiktokSearchUsersResponse500 | TiktokSearchUsersResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | TiktokSearchUsersResponse402
     | TiktokSearchUsersResponse403
     | TiktokSearchUsersResponse404
+    | TiktokSearchUsersResponse422
     | TiktokSearchUsersResponse429
     | TiktokSearchUsersResponse500
     | TiktokSearchUsersResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokSearchUsersResponse200 | TiktokSearchUsersResponse400 | TiktokSearchUsersResponse401 | TiktokSearchUsersResponse402 | TiktokSearchUsersResponse403 | TiktokSearchUsersResponse404 | TiktokSearchUsersResponse429 | TiktokSearchUsersResponse500 | TiktokSearchUsersResponse503
+        TiktokSearchUsersResponse200 | TiktokSearchUsersResponse400 | TiktokSearchUsersResponse401 | TiktokSearchUsersResponse402 | TiktokSearchUsersResponse403 | TiktokSearchUsersResponse404 | TiktokSearchUsersResponse422 | TiktokSearchUsersResponse429 | TiktokSearchUsersResponse500 | TiktokSearchUsersResponse503
     """
 
     return (

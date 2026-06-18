@@ -11,6 +11,7 @@ from ...models.get_skills_response_401 import GetSkillsResponse401
 from ...models.get_skills_response_402 import GetSkillsResponse402
 from ...models.get_skills_response_403 import GetSkillsResponse403
 from ...models.get_skills_response_404 import GetSkillsResponse404
+from ...models.get_skills_response_422 import GetSkillsResponse422
 from ...models.get_skills_response_429 import GetSkillsResponse429
 from ...models.get_skills_response_500 import GetSkillsResponse500
 from ...models.get_skills_response_503 import GetSkillsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GetSkillsResponse402
     | GetSkillsResponse403
     | GetSkillsResponse404
+    | GetSkillsResponse422
     | GetSkillsResponse429
     | GetSkillsResponse500
     | GetSkillsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetSkillsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetSkillsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GetSkillsResponse402
     | GetSkillsResponse403
     | GetSkillsResponse404
+    | GetSkillsResponse422
     | GetSkillsResponse429
     | GetSkillsResponse500
     | GetSkillsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GetSkillsResponse402
     | GetSkillsResponse403
     | GetSkillsResponse404
+    | GetSkillsResponse422
     | GetSkillsResponse429
     | GetSkillsResponse500
     | GetSkillsResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetSkillsResponse200 | GetSkillsResponse400 | GetSkillsResponse401 | GetSkillsResponse402 | GetSkillsResponse403 | GetSkillsResponse404 | GetSkillsResponse429 | GetSkillsResponse500 | GetSkillsResponse503]
+        Response[GetSkillsResponse200 | GetSkillsResponse400 | GetSkillsResponse401 | GetSkillsResponse402 | GetSkillsResponse403 | GetSkillsResponse404 | GetSkillsResponse422 | GetSkillsResponse429 | GetSkillsResponse500 | GetSkillsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | GetSkillsResponse402
     | GetSkillsResponse403
     | GetSkillsResponse404
+    | GetSkillsResponse422
     | GetSkillsResponse429
     | GetSkillsResponse500
     | GetSkillsResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetSkillsResponse200 | GetSkillsResponse400 | GetSkillsResponse401 | GetSkillsResponse402 | GetSkillsResponse403 | GetSkillsResponse404 | GetSkillsResponse429 | GetSkillsResponse500 | GetSkillsResponse503
+        GetSkillsResponse200 | GetSkillsResponse400 | GetSkillsResponse401 | GetSkillsResponse402 | GetSkillsResponse403 | GetSkillsResponse404 | GetSkillsResponse422 | GetSkillsResponse429 | GetSkillsResponse500 | GetSkillsResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | GetSkillsResponse402
     | GetSkillsResponse403
     | GetSkillsResponse404
+    | GetSkillsResponse422
     | GetSkillsResponse429
     | GetSkillsResponse500
     | GetSkillsResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetSkillsResponse200 | GetSkillsResponse400 | GetSkillsResponse401 | GetSkillsResponse402 | GetSkillsResponse403 | GetSkillsResponse404 | GetSkillsResponse429 | GetSkillsResponse500 | GetSkillsResponse503]
+        Response[GetSkillsResponse200 | GetSkillsResponse400 | GetSkillsResponse401 | GetSkillsResponse402 | GetSkillsResponse403 | GetSkillsResponse404 | GetSkillsResponse422 | GetSkillsResponse429 | GetSkillsResponse500 | GetSkillsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | GetSkillsResponse402
     | GetSkillsResponse403
     | GetSkillsResponse404
+    | GetSkillsResponse422
     | GetSkillsResponse429
     | GetSkillsResponse500
     | GetSkillsResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetSkillsResponse200 | GetSkillsResponse400 | GetSkillsResponse401 | GetSkillsResponse402 | GetSkillsResponse403 | GetSkillsResponse404 | GetSkillsResponse429 | GetSkillsResponse500 | GetSkillsResponse503
+        GetSkillsResponse200 | GetSkillsResponse400 | GetSkillsResponse401 | GetSkillsResponse402 | GetSkillsResponse403 | GetSkillsResponse404 | GetSkillsResponse422 | GetSkillsResponse429 | GetSkillsResponse500 | GetSkillsResponse503
     """
 
     return (

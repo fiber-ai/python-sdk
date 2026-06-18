@@ -12,6 +12,7 @@ from ...models.github_to_linked_in_trigger_response_401 import GithubToLinkedInT
 from ...models.github_to_linked_in_trigger_response_402 import GithubToLinkedInTriggerResponse402
 from ...models.github_to_linked_in_trigger_response_403 import GithubToLinkedInTriggerResponse403
 from ...models.github_to_linked_in_trigger_response_404 import GithubToLinkedInTriggerResponse404
+from ...models.github_to_linked_in_trigger_response_422 import GithubToLinkedInTriggerResponse422
 from ...models.github_to_linked_in_trigger_response_429 import GithubToLinkedInTriggerResponse429
 from ...models.github_to_linked_in_trigger_response_500 import GithubToLinkedInTriggerResponse500
 from ...models.github_to_linked_in_trigger_response_503 import GithubToLinkedInTriggerResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GithubToLinkedInTriggerResponse402
     | GithubToLinkedInTriggerResponse403
     | GithubToLinkedInTriggerResponse404
+    | GithubToLinkedInTriggerResponse422
     | GithubToLinkedInTriggerResponse429
     | GithubToLinkedInTriggerResponse500
     | GithubToLinkedInTriggerResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GithubToLinkedInTriggerResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GithubToLinkedInTriggerResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GithubToLinkedInTriggerResponse402
     | GithubToLinkedInTriggerResponse403
     | GithubToLinkedInTriggerResponse404
+    | GithubToLinkedInTriggerResponse422
     | GithubToLinkedInTriggerResponse429
     | GithubToLinkedInTriggerResponse500
     | GithubToLinkedInTriggerResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GithubToLinkedInTriggerResponse402
     | GithubToLinkedInTriggerResponse403
     | GithubToLinkedInTriggerResponse404
+    | GithubToLinkedInTriggerResponse422
     | GithubToLinkedInTriggerResponse429
     | GithubToLinkedInTriggerResponse500
     | GithubToLinkedInTriggerResponse503
@@ -157,7 +166,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GithubToLinkedInTriggerResponse200 | GithubToLinkedInTriggerResponse400 | GithubToLinkedInTriggerResponse401 | GithubToLinkedInTriggerResponse402 | GithubToLinkedInTriggerResponse403 | GithubToLinkedInTriggerResponse404 | GithubToLinkedInTriggerResponse429 | GithubToLinkedInTriggerResponse500 | GithubToLinkedInTriggerResponse503]
+        Response[GithubToLinkedInTriggerResponse200 | GithubToLinkedInTriggerResponse400 | GithubToLinkedInTriggerResponse401 | GithubToLinkedInTriggerResponse402 | GithubToLinkedInTriggerResponse403 | GithubToLinkedInTriggerResponse404 | GithubToLinkedInTriggerResponse422 | GithubToLinkedInTriggerResponse429 | GithubToLinkedInTriggerResponse500 | GithubToLinkedInTriggerResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -182,6 +191,7 @@ def sync(
     | GithubToLinkedInTriggerResponse402
     | GithubToLinkedInTriggerResponse403
     | GithubToLinkedInTriggerResponse404
+    | GithubToLinkedInTriggerResponse422
     | GithubToLinkedInTriggerResponse429
     | GithubToLinkedInTriggerResponse500
     | GithubToLinkedInTriggerResponse503
@@ -206,7 +216,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GithubToLinkedInTriggerResponse200 | GithubToLinkedInTriggerResponse400 | GithubToLinkedInTriggerResponse401 | GithubToLinkedInTriggerResponse402 | GithubToLinkedInTriggerResponse403 | GithubToLinkedInTriggerResponse404 | GithubToLinkedInTriggerResponse429 | GithubToLinkedInTriggerResponse500 | GithubToLinkedInTriggerResponse503
+        GithubToLinkedInTriggerResponse200 | GithubToLinkedInTriggerResponse400 | GithubToLinkedInTriggerResponse401 | GithubToLinkedInTriggerResponse402 | GithubToLinkedInTriggerResponse403 | GithubToLinkedInTriggerResponse404 | GithubToLinkedInTriggerResponse422 | GithubToLinkedInTriggerResponse429 | GithubToLinkedInTriggerResponse500 | GithubToLinkedInTriggerResponse503
     """
 
     return sync_detailed(
@@ -226,6 +236,7 @@ async def asyncio_detailed(
     | GithubToLinkedInTriggerResponse402
     | GithubToLinkedInTriggerResponse403
     | GithubToLinkedInTriggerResponse404
+    | GithubToLinkedInTriggerResponse422
     | GithubToLinkedInTriggerResponse429
     | GithubToLinkedInTriggerResponse500
     | GithubToLinkedInTriggerResponse503
@@ -249,7 +260,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GithubToLinkedInTriggerResponse200 | GithubToLinkedInTriggerResponse400 | GithubToLinkedInTriggerResponse401 | GithubToLinkedInTriggerResponse402 | GithubToLinkedInTriggerResponse403 | GithubToLinkedInTriggerResponse404 | GithubToLinkedInTriggerResponse429 | GithubToLinkedInTriggerResponse500 | GithubToLinkedInTriggerResponse503]
+        Response[GithubToLinkedInTriggerResponse200 | GithubToLinkedInTriggerResponse400 | GithubToLinkedInTriggerResponse401 | GithubToLinkedInTriggerResponse402 | GithubToLinkedInTriggerResponse403 | GithubToLinkedInTriggerResponse404 | GithubToLinkedInTriggerResponse422 | GithubToLinkedInTriggerResponse429 | GithubToLinkedInTriggerResponse500 | GithubToLinkedInTriggerResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -272,6 +283,7 @@ async def asyncio(
     | GithubToLinkedInTriggerResponse402
     | GithubToLinkedInTriggerResponse403
     | GithubToLinkedInTriggerResponse404
+    | GithubToLinkedInTriggerResponse422
     | GithubToLinkedInTriggerResponse429
     | GithubToLinkedInTriggerResponse500
     | GithubToLinkedInTriggerResponse503
@@ -296,7 +308,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GithubToLinkedInTriggerResponse200 | GithubToLinkedInTriggerResponse400 | GithubToLinkedInTriggerResponse401 | GithubToLinkedInTriggerResponse402 | GithubToLinkedInTriggerResponse403 | GithubToLinkedInTriggerResponse404 | GithubToLinkedInTriggerResponse429 | GithubToLinkedInTriggerResponse500 | GithubToLinkedInTriggerResponse503
+        GithubToLinkedInTriggerResponse200 | GithubToLinkedInTriggerResponse400 | GithubToLinkedInTriggerResponse401 | GithubToLinkedInTriggerResponse402 | GithubToLinkedInTriggerResponse403 | GithubToLinkedInTriggerResponse404 | GithubToLinkedInTriggerResponse422 | GithubToLinkedInTriggerResponse429 | GithubToLinkedInTriggerResponse500 | GithubToLinkedInTriggerResponse503
     """
 
     return (

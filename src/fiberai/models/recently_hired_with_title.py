@@ -21,13 +21,17 @@ class RecentlyHiredWithTitle:
             matches any keyword.
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
-        min_new_hires (int | None | Unset): Minimum number of new hires to trigger the alert. Omit for 1.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
+        min_new_hires (int | None | Unset): Minimum number of NEW hires detected in a single check cycle to trigger the
+            alert. Only counts employees who appeared since the last check. Omit for 1.
     """
 
     type_: Literal["recently_hired_with_title"]
     entity_type: Literal["company"]
     title_keywords: list[str]
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
     min_new_hires: int | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -43,6 +47,8 @@ class RecentlyHiredWithTitle:
             lookback_days = UNSET
         else:
             lookback_days = self.lookback_days
+
+        is_dummy = self.is_dummy
 
         min_new_hires: int | None | Unset
         if isinstance(self.min_new_hires, Unset):
@@ -61,6 +67,8 @@ class RecentlyHiredWithTitle:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
         if min_new_hires is not UNSET:
             field_dict["minNewHires"] = min_new_hires
 
@@ -88,6 +96,8 @@ class RecentlyHiredWithTitle:
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
+        is_dummy = d.pop("isDummy", UNSET)
+
         def _parse_min_new_hires(data: object) -> int | None | Unset:
             if data is None:
                 return data
@@ -102,6 +112,7 @@ class RecentlyHiredWithTitle:
             entity_type=entity_type,
             title_keywords=title_keywords,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
             min_new_hires=min_new_hires,
         )
 

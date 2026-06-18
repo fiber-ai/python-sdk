@@ -12,6 +12,7 @@ from ...models.github_lookup_trigger_response_401 import GithubLookupTriggerResp
 from ...models.github_lookup_trigger_response_402 import GithubLookupTriggerResponse402
 from ...models.github_lookup_trigger_response_403 import GithubLookupTriggerResponse403
 from ...models.github_lookup_trigger_response_404 import GithubLookupTriggerResponse404
+from ...models.github_lookup_trigger_response_422 import GithubLookupTriggerResponse422
 from ...models.github_lookup_trigger_response_429 import GithubLookupTriggerResponse429
 from ...models.github_lookup_trigger_response_500 import GithubLookupTriggerResponse500
 from ...models.github_lookup_trigger_response_503 import GithubLookupTriggerResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GithubLookupTriggerResponse402
     | GithubLookupTriggerResponse403
     | GithubLookupTriggerResponse404
+    | GithubLookupTriggerResponse422
     | GithubLookupTriggerResponse429
     | GithubLookupTriggerResponse500
     | GithubLookupTriggerResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GithubLookupTriggerResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GithubLookupTriggerResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GithubLookupTriggerResponse402
     | GithubLookupTriggerResponse403
     | GithubLookupTriggerResponse404
+    | GithubLookupTriggerResponse422
     | GithubLookupTriggerResponse429
     | GithubLookupTriggerResponse500
     | GithubLookupTriggerResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GithubLookupTriggerResponse402
     | GithubLookupTriggerResponse403
     | GithubLookupTriggerResponse404
+    | GithubLookupTriggerResponse422
     | GithubLookupTriggerResponse429
     | GithubLookupTriggerResponse500
     | GithubLookupTriggerResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GithubLookupTriggerResponse200 | GithubLookupTriggerResponse400 | GithubLookupTriggerResponse401 | GithubLookupTriggerResponse402 | GithubLookupTriggerResponse403 | GithubLookupTriggerResponse404 | GithubLookupTriggerResponse429 | GithubLookupTriggerResponse500 | GithubLookupTriggerResponse503]
+        Response[GithubLookupTriggerResponse200 | GithubLookupTriggerResponse400 | GithubLookupTriggerResponse401 | GithubLookupTriggerResponse402 | GithubLookupTriggerResponse403 | GithubLookupTriggerResponse404 | GithubLookupTriggerResponse422 | GithubLookupTriggerResponse429 | GithubLookupTriggerResponse500 | GithubLookupTriggerResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | GithubLookupTriggerResponse402
     | GithubLookupTriggerResponse403
     | GithubLookupTriggerResponse404
+    | GithubLookupTriggerResponse422
     | GithubLookupTriggerResponse429
     | GithubLookupTriggerResponse500
     | GithubLookupTriggerResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GithubLookupTriggerResponse200 | GithubLookupTriggerResponse400 | GithubLookupTriggerResponse401 | GithubLookupTriggerResponse402 | GithubLookupTriggerResponse403 | GithubLookupTriggerResponse404 | GithubLookupTriggerResponse429 | GithubLookupTriggerResponse500 | GithubLookupTriggerResponse503
+        GithubLookupTriggerResponse200 | GithubLookupTriggerResponse400 | GithubLookupTriggerResponse401 | GithubLookupTriggerResponse402 | GithubLookupTriggerResponse403 | GithubLookupTriggerResponse404 | GithubLookupTriggerResponse422 | GithubLookupTriggerResponse429 | GithubLookupTriggerResponse500 | GithubLookupTriggerResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | GithubLookupTriggerResponse402
     | GithubLookupTriggerResponse403
     | GithubLookupTriggerResponse404
+    | GithubLookupTriggerResponse422
     | GithubLookupTriggerResponse429
     | GithubLookupTriggerResponse500
     | GithubLookupTriggerResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GithubLookupTriggerResponse200 | GithubLookupTriggerResponse400 | GithubLookupTriggerResponse401 | GithubLookupTriggerResponse402 | GithubLookupTriggerResponse403 | GithubLookupTriggerResponse404 | GithubLookupTriggerResponse429 | GithubLookupTriggerResponse500 | GithubLookupTriggerResponse503]
+        Response[GithubLookupTriggerResponse200 | GithubLookupTriggerResponse400 | GithubLookupTriggerResponse401 | GithubLookupTriggerResponse402 | GithubLookupTriggerResponse403 | GithubLookupTriggerResponse404 | GithubLookupTriggerResponse422 | GithubLookupTriggerResponse429 | GithubLookupTriggerResponse500 | GithubLookupTriggerResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | GithubLookupTriggerResponse402
     | GithubLookupTriggerResponse403
     | GithubLookupTriggerResponse404
+    | GithubLookupTriggerResponse422
     | GithubLookupTriggerResponse429
     | GithubLookupTriggerResponse500
     | GithubLookupTriggerResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GithubLookupTriggerResponse200 | GithubLookupTriggerResponse400 | GithubLookupTriggerResponse401 | GithubLookupTriggerResponse402 | GithubLookupTriggerResponse403 | GithubLookupTriggerResponse404 | GithubLookupTriggerResponse429 | GithubLookupTriggerResponse500 | GithubLookupTriggerResponse503
+        GithubLookupTriggerResponse200 | GithubLookupTriggerResponse400 | GithubLookupTriggerResponse401 | GithubLookupTriggerResponse402 | GithubLookupTriggerResponse403 | GithubLookupTriggerResponse404 | GithubLookupTriggerResponse422 | GithubLookupTriggerResponse429 | GithubLookupTriggerResponse500 | GithubLookupTriggerResponse503
     """
 
     return (

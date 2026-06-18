@@ -19,11 +19,14 @@ class HQLocationChanged:
         entity_type (Literal['company']):
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
     """
 
     type_: Literal["hq_location_changed"]
     entity_type: Literal["company"]
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -37,6 +40,8 @@ class HQLocationChanged:
         else:
             lookback_days = self.lookback_days
 
+        is_dummy = self.is_dummy
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -47,6 +52,8 @@ class HQLocationChanged:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
 
         return field_dict
 
@@ -70,10 +77,13 @@ class HQLocationChanged:
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
+        is_dummy = d.pop("isDummy", UNSET)
+
         hq_location_changed = cls(
             type_=type_,
             entity_type=entity_type,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
         )
 
         hq_location_changed.additional_properties = d

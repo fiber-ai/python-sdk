@@ -12,6 +12,7 @@ from ...models.post_comments_live_fetch_response_401 import PostCommentsLiveFetc
 from ...models.post_comments_live_fetch_response_402 import PostCommentsLiveFetchResponse402
 from ...models.post_comments_live_fetch_response_403 import PostCommentsLiveFetchResponse403
 from ...models.post_comments_live_fetch_response_404 import PostCommentsLiveFetchResponse404
+from ...models.post_comments_live_fetch_response_422 import PostCommentsLiveFetchResponse422
 from ...models.post_comments_live_fetch_response_429 import PostCommentsLiveFetchResponse429
 from ...models.post_comments_live_fetch_response_500 import PostCommentsLiveFetchResponse500
 from ...models.post_comments_live_fetch_response_503 import PostCommentsLiveFetchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | PostCommentsLiveFetchResponse402
     | PostCommentsLiveFetchResponse403
     | PostCommentsLiveFetchResponse404
+    | PostCommentsLiveFetchResponse422
     | PostCommentsLiveFetchResponse429
     | PostCommentsLiveFetchResponse500
     | PostCommentsLiveFetchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = PostCommentsLiveFetchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = PostCommentsLiveFetchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | PostCommentsLiveFetchResponse402
     | PostCommentsLiveFetchResponse403
     | PostCommentsLiveFetchResponse404
+    | PostCommentsLiveFetchResponse422
     | PostCommentsLiveFetchResponse429
     | PostCommentsLiveFetchResponse500
     | PostCommentsLiveFetchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | PostCommentsLiveFetchResponse402
     | PostCommentsLiveFetchResponse403
     | PostCommentsLiveFetchResponse404
+    | PostCommentsLiveFetchResponse422
     | PostCommentsLiveFetchResponse429
     | PostCommentsLiveFetchResponse500
     | PostCommentsLiveFetchResponse503
@@ -158,7 +167,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PostCommentsLiveFetchResponse200 | PostCommentsLiveFetchResponse400 | PostCommentsLiveFetchResponse401 | PostCommentsLiveFetchResponse402 | PostCommentsLiveFetchResponse403 | PostCommentsLiveFetchResponse404 | PostCommentsLiveFetchResponse429 | PostCommentsLiveFetchResponse500 | PostCommentsLiveFetchResponse503]
+        Response[PostCommentsLiveFetchResponse200 | PostCommentsLiveFetchResponse400 | PostCommentsLiveFetchResponse401 | PostCommentsLiveFetchResponse402 | PostCommentsLiveFetchResponse403 | PostCommentsLiveFetchResponse404 | PostCommentsLiveFetchResponse422 | PostCommentsLiveFetchResponse429 | PostCommentsLiveFetchResponse500 | PostCommentsLiveFetchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -183,6 +192,7 @@ def sync(
     | PostCommentsLiveFetchResponse402
     | PostCommentsLiveFetchResponse403
     | PostCommentsLiveFetchResponse404
+    | PostCommentsLiveFetchResponse422
     | PostCommentsLiveFetchResponse429
     | PostCommentsLiveFetchResponse500
     | PostCommentsLiveFetchResponse503
@@ -208,7 +218,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PostCommentsLiveFetchResponse200 | PostCommentsLiveFetchResponse400 | PostCommentsLiveFetchResponse401 | PostCommentsLiveFetchResponse402 | PostCommentsLiveFetchResponse403 | PostCommentsLiveFetchResponse404 | PostCommentsLiveFetchResponse429 | PostCommentsLiveFetchResponse500 | PostCommentsLiveFetchResponse503
+        PostCommentsLiveFetchResponse200 | PostCommentsLiveFetchResponse400 | PostCommentsLiveFetchResponse401 | PostCommentsLiveFetchResponse402 | PostCommentsLiveFetchResponse403 | PostCommentsLiveFetchResponse404 | PostCommentsLiveFetchResponse422 | PostCommentsLiveFetchResponse429 | PostCommentsLiveFetchResponse500 | PostCommentsLiveFetchResponse503
     """
 
     return sync_detailed(
@@ -228,6 +238,7 @@ async def asyncio_detailed(
     | PostCommentsLiveFetchResponse402
     | PostCommentsLiveFetchResponse403
     | PostCommentsLiveFetchResponse404
+    | PostCommentsLiveFetchResponse422
     | PostCommentsLiveFetchResponse429
     | PostCommentsLiveFetchResponse500
     | PostCommentsLiveFetchResponse503
@@ -252,7 +263,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PostCommentsLiveFetchResponse200 | PostCommentsLiveFetchResponse400 | PostCommentsLiveFetchResponse401 | PostCommentsLiveFetchResponse402 | PostCommentsLiveFetchResponse403 | PostCommentsLiveFetchResponse404 | PostCommentsLiveFetchResponse429 | PostCommentsLiveFetchResponse500 | PostCommentsLiveFetchResponse503]
+        Response[PostCommentsLiveFetchResponse200 | PostCommentsLiveFetchResponse400 | PostCommentsLiveFetchResponse401 | PostCommentsLiveFetchResponse402 | PostCommentsLiveFetchResponse403 | PostCommentsLiveFetchResponse404 | PostCommentsLiveFetchResponse422 | PostCommentsLiveFetchResponse429 | PostCommentsLiveFetchResponse500 | PostCommentsLiveFetchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -275,6 +286,7 @@ async def asyncio(
     | PostCommentsLiveFetchResponse402
     | PostCommentsLiveFetchResponse403
     | PostCommentsLiveFetchResponse404
+    | PostCommentsLiveFetchResponse422
     | PostCommentsLiveFetchResponse429
     | PostCommentsLiveFetchResponse500
     | PostCommentsLiveFetchResponse503
@@ -300,7 +312,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PostCommentsLiveFetchResponse200 | PostCommentsLiveFetchResponse400 | PostCommentsLiveFetchResponse401 | PostCommentsLiveFetchResponse402 | PostCommentsLiveFetchResponse403 | PostCommentsLiveFetchResponse404 | PostCommentsLiveFetchResponse429 | PostCommentsLiveFetchResponse500 | PostCommentsLiveFetchResponse503
+        PostCommentsLiveFetchResponse200 | PostCommentsLiveFetchResponse400 | PostCommentsLiveFetchResponse401 | PostCommentsLiveFetchResponse402 | PostCommentsLiveFetchResponse403 | PostCommentsLiveFetchResponse404 | PostCommentsLiveFetchResponse422 | PostCommentsLiveFetchResponse429 | PostCommentsLiveFetchResponse500 | PostCommentsLiveFetchResponse503
     """
 
     return (

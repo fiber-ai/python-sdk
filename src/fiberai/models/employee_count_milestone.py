@@ -14,14 +14,19 @@ T = TypeVar("T", bound="EmployeeCountMilestone")
 
 @_attrs_define
 class EmployeeCountMilestone:
-    """
-    Attributes:
-        type_ (Literal['employee_count_milestone']):
-        entity_type (Literal['company']):
-        milestone (int): Employee count milestone to watch (e.g. 100, 500, 1000)
-        direction (EmployeeCountMilestoneDirection): Whether to alert when crossing above or below the milestone
-        lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
-            recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+    """Fires when the employee count crosses the specified value. Supports any positive integer, not just round milestones.
+    Functionally equivalent to headcount_crossed_threshold.
+
+        Attributes:
+            type_ (Literal['employee_count_milestone']):
+            entity_type (Literal['company']):
+            milestone (int): The employee count threshold to watch for crossing. Any positive integer is accepted.
+                Equivalent to 'threshold' in headcount_crossed_threshold.
+            direction (EmployeeCountMilestoneDirection): Whether to alert when crossing above or below the milestone
+            lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
+                recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+            is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+                normal pipeline runs.
     """
 
     type_: Literal["employee_count_milestone"]
@@ -29,6 +34,7 @@ class EmployeeCountMilestone:
     milestone: int
     direction: EmployeeCountMilestoneDirection
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -46,6 +52,8 @@ class EmployeeCountMilestone:
         else:
             lookback_days = self.lookback_days
 
+        is_dummy = self.is_dummy
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -58,6 +66,8 @@ class EmployeeCountMilestone:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
 
         return field_dict
 
@@ -85,12 +95,15 @@ class EmployeeCountMilestone:
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
+        is_dummy = d.pop("isDummy", UNSET)
+
         employee_count_milestone = cls(
             type_=type_,
             entity_type=entity_type,
             milestone=milestone,
             direction=direction,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
         )
 
         employee_count_milestone.additional_properties = d

@@ -28,6 +28,7 @@ class YoutubeChannelResponse200:
         charge_info (YoutubeChannelResponse200ChargeInfoType0 | YoutubeChannelResponse200ChargeInfoType1 |
             YoutubeChannelResponse200ChargeInfoType2 | YoutubeChannelResponse200ChargeInfoType3 |
             YoutubeChannelResponse200ChargeInfoType4):
+        advice (list[str]): Tips, recommendations, and suggestions for using this API effectively.
         warnings (list[YoutubeChannelResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields in
             request
     """
@@ -40,6 +41,7 @@ class YoutubeChannelResponse200:
         | YoutubeChannelResponse200ChargeInfoType3
         | YoutubeChannelResponse200ChargeInfoType4
     )
+    advice: list[str]
     warnings: list[YoutubeChannelResponse200WarningsType0Item] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
@@ -62,6 +64,8 @@ class YoutubeChannelResponse200:
         else:
             charge_info = self.charge_info.to_dict()
 
+        advice = self.advice
+
         warnings: list[dict[str, Any]] | None | Unset
         if isinstance(self.warnings, Unset):
             warnings = UNSET
@@ -80,6 +84,7 @@ class YoutubeChannelResponse200:
             {
                 "output": output,
                 "chargeInfo": charge_info,
+                "advice": advice,
             }
         )
         if warnings is not UNSET:
@@ -151,6 +156,8 @@ class YoutubeChannelResponse200:
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 
+        advice = cast(list[str], d.pop("advice"))
+
         def _parse_warnings(data: object) -> list[YoutubeChannelResponse200WarningsType0Item] | None | Unset:
             if data is None:
                 return data
@@ -178,6 +185,7 @@ class YoutubeChannelResponse200:
         youtube_channel_response_200 = cls(
             output=output,
             charge_info=charge_info,
+            advice=advice,
             warnings=warnings,
         )
 

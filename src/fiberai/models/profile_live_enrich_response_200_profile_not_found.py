@@ -11,7 +11,7 @@ T = TypeVar("T", bound="ProfileLiveEnrichResponse200ProfileNotFound")
 
 @_attrs_define
 class ProfileLiveEnrichResponse200ProfileNotFound:
-    """The profile was not found on LinkedIn. Check that your URL is still active!
+    """The profile was not found on LinkedIn. Check that the URL or identifier is still active.
 
     Attributes:
         found (bool):

@@ -12,6 +12,7 @@ from ...models.start_local_business_search_response_401 import StartLocalBusines
 from ...models.start_local_business_search_response_402 import StartLocalBusinessSearchResponse402
 from ...models.start_local_business_search_response_403 import StartLocalBusinessSearchResponse403
 from ...models.start_local_business_search_response_404 import StartLocalBusinessSearchResponse404
+from ...models.start_local_business_search_response_422 import StartLocalBusinessSearchResponse422
 from ...models.start_local_business_search_response_429 import StartLocalBusinessSearchResponse429
 from ...models.start_local_business_search_response_500 import StartLocalBusinessSearchResponse500
 from ...models.start_local_business_search_response_503 import StartLocalBusinessSearchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | StartLocalBusinessSearchResponse402
     | StartLocalBusinessSearchResponse403
     | StartLocalBusinessSearchResponse404
+    | StartLocalBusinessSearchResponse422
     | StartLocalBusinessSearchResponse429
     | StartLocalBusinessSearchResponse500
     | StartLocalBusinessSearchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = StartLocalBusinessSearchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = StartLocalBusinessSearchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | StartLocalBusinessSearchResponse402
     | StartLocalBusinessSearchResponse403
     | StartLocalBusinessSearchResponse404
+    | StartLocalBusinessSearchResponse422
     | StartLocalBusinessSearchResponse429
     | StartLocalBusinessSearchResponse500
     | StartLocalBusinessSearchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | StartLocalBusinessSearchResponse402
     | StartLocalBusinessSearchResponse403
     | StartLocalBusinessSearchResponse404
+    | StartLocalBusinessSearchResponse422
     | StartLocalBusinessSearchResponse429
     | StartLocalBusinessSearchResponse500
     | StartLocalBusinessSearchResponse503
@@ -157,7 +166,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[StartLocalBusinessSearchResponse200 | StartLocalBusinessSearchResponse400 | StartLocalBusinessSearchResponse401 | StartLocalBusinessSearchResponse402 | StartLocalBusinessSearchResponse403 | StartLocalBusinessSearchResponse404 | StartLocalBusinessSearchResponse429 | StartLocalBusinessSearchResponse500 | StartLocalBusinessSearchResponse503]
+        Response[StartLocalBusinessSearchResponse200 | StartLocalBusinessSearchResponse400 | StartLocalBusinessSearchResponse401 | StartLocalBusinessSearchResponse402 | StartLocalBusinessSearchResponse403 | StartLocalBusinessSearchResponse404 | StartLocalBusinessSearchResponse422 | StartLocalBusinessSearchResponse429 | StartLocalBusinessSearchResponse500 | StartLocalBusinessSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -182,6 +191,7 @@ def sync(
     | StartLocalBusinessSearchResponse402
     | StartLocalBusinessSearchResponse403
     | StartLocalBusinessSearchResponse404
+    | StartLocalBusinessSearchResponse422
     | StartLocalBusinessSearchResponse429
     | StartLocalBusinessSearchResponse500
     | StartLocalBusinessSearchResponse503
@@ -206,7 +216,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        StartLocalBusinessSearchResponse200 | StartLocalBusinessSearchResponse400 | StartLocalBusinessSearchResponse401 | StartLocalBusinessSearchResponse402 | StartLocalBusinessSearchResponse403 | StartLocalBusinessSearchResponse404 | StartLocalBusinessSearchResponse429 | StartLocalBusinessSearchResponse500 | StartLocalBusinessSearchResponse503
+        StartLocalBusinessSearchResponse200 | StartLocalBusinessSearchResponse400 | StartLocalBusinessSearchResponse401 | StartLocalBusinessSearchResponse402 | StartLocalBusinessSearchResponse403 | StartLocalBusinessSearchResponse404 | StartLocalBusinessSearchResponse422 | StartLocalBusinessSearchResponse429 | StartLocalBusinessSearchResponse500 | StartLocalBusinessSearchResponse503
     """
 
     return sync_detailed(
@@ -226,6 +236,7 @@ async def asyncio_detailed(
     | StartLocalBusinessSearchResponse402
     | StartLocalBusinessSearchResponse403
     | StartLocalBusinessSearchResponse404
+    | StartLocalBusinessSearchResponse422
     | StartLocalBusinessSearchResponse429
     | StartLocalBusinessSearchResponse500
     | StartLocalBusinessSearchResponse503
@@ -249,7 +260,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[StartLocalBusinessSearchResponse200 | StartLocalBusinessSearchResponse400 | StartLocalBusinessSearchResponse401 | StartLocalBusinessSearchResponse402 | StartLocalBusinessSearchResponse403 | StartLocalBusinessSearchResponse404 | StartLocalBusinessSearchResponse429 | StartLocalBusinessSearchResponse500 | StartLocalBusinessSearchResponse503]
+        Response[StartLocalBusinessSearchResponse200 | StartLocalBusinessSearchResponse400 | StartLocalBusinessSearchResponse401 | StartLocalBusinessSearchResponse402 | StartLocalBusinessSearchResponse403 | StartLocalBusinessSearchResponse404 | StartLocalBusinessSearchResponse422 | StartLocalBusinessSearchResponse429 | StartLocalBusinessSearchResponse500 | StartLocalBusinessSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -272,6 +283,7 @@ async def asyncio(
     | StartLocalBusinessSearchResponse402
     | StartLocalBusinessSearchResponse403
     | StartLocalBusinessSearchResponse404
+    | StartLocalBusinessSearchResponse422
     | StartLocalBusinessSearchResponse429
     | StartLocalBusinessSearchResponse500
     | StartLocalBusinessSearchResponse503
@@ -296,7 +308,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        StartLocalBusinessSearchResponse200 | StartLocalBusinessSearchResponse400 | StartLocalBusinessSearchResponse401 | StartLocalBusinessSearchResponse402 | StartLocalBusinessSearchResponse403 | StartLocalBusinessSearchResponse404 | StartLocalBusinessSearchResponse429 | StartLocalBusinessSearchResponse500 | StartLocalBusinessSearchResponse503
+        StartLocalBusinessSearchResponse200 | StartLocalBusinessSearchResponse400 | StartLocalBusinessSearchResponse401 | StartLocalBusinessSearchResponse402 | StartLocalBusinessSearchResponse403 | StartLocalBusinessSearchResponse404 | StartLocalBusinessSearchResponse422 | StartLocalBusinessSearchResponse429 | StartLocalBusinessSearchResponse500 | StartLocalBusinessSearchResponse503
     """
 
     return (

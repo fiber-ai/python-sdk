@@ -12,6 +12,7 @@ from ...models.tiktok_trending_feed_response_401 import TiktokTrendingFeedRespon
 from ...models.tiktok_trending_feed_response_402 import TiktokTrendingFeedResponse402
 from ...models.tiktok_trending_feed_response_403 import TiktokTrendingFeedResponse403
 from ...models.tiktok_trending_feed_response_404 import TiktokTrendingFeedResponse404
+from ...models.tiktok_trending_feed_response_422 import TiktokTrendingFeedResponse422
 from ...models.tiktok_trending_feed_response_429 import TiktokTrendingFeedResponse429
 from ...models.tiktok_trending_feed_response_500 import TiktokTrendingFeedResponse500
 from ...models.tiktok_trending_feed_response_503 import TiktokTrendingFeedResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | TiktokTrendingFeedResponse402
     | TiktokTrendingFeedResponse403
     | TiktokTrendingFeedResponse404
+    | TiktokTrendingFeedResponse422
     | TiktokTrendingFeedResponse429
     | TiktokTrendingFeedResponse500
     | TiktokTrendingFeedResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = TiktokTrendingFeedResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = TiktokTrendingFeedResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | TiktokTrendingFeedResponse402
     | TiktokTrendingFeedResponse403
     | TiktokTrendingFeedResponse404
+    | TiktokTrendingFeedResponse422
     | TiktokTrendingFeedResponse429
     | TiktokTrendingFeedResponse500
     | TiktokTrendingFeedResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | TiktokTrendingFeedResponse402
     | TiktokTrendingFeedResponse403
     | TiktokTrendingFeedResponse404
+    | TiktokTrendingFeedResponse422
     | TiktokTrendingFeedResponse429
     | TiktokTrendingFeedResponse500
     | TiktokTrendingFeedResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokTrendingFeedResponse200 | TiktokTrendingFeedResponse400 | TiktokTrendingFeedResponse401 | TiktokTrendingFeedResponse402 | TiktokTrendingFeedResponse403 | TiktokTrendingFeedResponse404 | TiktokTrendingFeedResponse429 | TiktokTrendingFeedResponse500 | TiktokTrendingFeedResponse503]
+        Response[TiktokTrendingFeedResponse200 | TiktokTrendingFeedResponse400 | TiktokTrendingFeedResponse401 | TiktokTrendingFeedResponse402 | TiktokTrendingFeedResponse403 | TiktokTrendingFeedResponse404 | TiktokTrendingFeedResponse422 | TiktokTrendingFeedResponse429 | TiktokTrendingFeedResponse500 | TiktokTrendingFeedResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | TiktokTrendingFeedResponse402
     | TiktokTrendingFeedResponse403
     | TiktokTrendingFeedResponse404
+    | TiktokTrendingFeedResponse422
     | TiktokTrendingFeedResponse429
     | TiktokTrendingFeedResponse500
     | TiktokTrendingFeedResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokTrendingFeedResponse200 | TiktokTrendingFeedResponse400 | TiktokTrendingFeedResponse401 | TiktokTrendingFeedResponse402 | TiktokTrendingFeedResponse403 | TiktokTrendingFeedResponse404 | TiktokTrendingFeedResponse429 | TiktokTrendingFeedResponse500 | TiktokTrendingFeedResponse503
+        TiktokTrendingFeedResponse200 | TiktokTrendingFeedResponse400 | TiktokTrendingFeedResponse401 | TiktokTrendingFeedResponse402 | TiktokTrendingFeedResponse403 | TiktokTrendingFeedResponse404 | TiktokTrendingFeedResponse422 | TiktokTrendingFeedResponse429 | TiktokTrendingFeedResponse500 | TiktokTrendingFeedResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | TiktokTrendingFeedResponse402
     | TiktokTrendingFeedResponse403
     | TiktokTrendingFeedResponse404
+    | TiktokTrendingFeedResponse422
     | TiktokTrendingFeedResponse429
     | TiktokTrendingFeedResponse500
     | TiktokTrendingFeedResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokTrendingFeedResponse200 | TiktokTrendingFeedResponse400 | TiktokTrendingFeedResponse401 | TiktokTrendingFeedResponse402 | TiktokTrendingFeedResponse403 | TiktokTrendingFeedResponse404 | TiktokTrendingFeedResponse429 | TiktokTrendingFeedResponse500 | TiktokTrendingFeedResponse503]
+        Response[TiktokTrendingFeedResponse200 | TiktokTrendingFeedResponse400 | TiktokTrendingFeedResponse401 | TiktokTrendingFeedResponse402 | TiktokTrendingFeedResponse403 | TiktokTrendingFeedResponse404 | TiktokTrendingFeedResponse422 | TiktokTrendingFeedResponse429 | TiktokTrendingFeedResponse500 | TiktokTrendingFeedResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | TiktokTrendingFeedResponse402
     | TiktokTrendingFeedResponse403
     | TiktokTrendingFeedResponse404
+    | TiktokTrendingFeedResponse422
     | TiktokTrendingFeedResponse429
     | TiktokTrendingFeedResponse500
     | TiktokTrendingFeedResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokTrendingFeedResponse200 | TiktokTrendingFeedResponse400 | TiktokTrendingFeedResponse401 | TiktokTrendingFeedResponse402 | TiktokTrendingFeedResponse403 | TiktokTrendingFeedResponse404 | TiktokTrendingFeedResponse429 | TiktokTrendingFeedResponse500 | TiktokTrendingFeedResponse503
+        TiktokTrendingFeedResponse200 | TiktokTrendingFeedResponse400 | TiktokTrendingFeedResponse401 | TiktokTrendingFeedResponse402 | TiktokTrendingFeedResponse403 | TiktokTrendingFeedResponse404 | TiktokTrendingFeedResponse422 | TiktokTrendingFeedResponse429 | TiktokTrendingFeedResponse500 | TiktokTrendingFeedResponse503
     """
 
     return (

@@ -19,15 +19,25 @@ class NewOfficeLocation:
         entity_type (Literal['company']):
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
-        countries (list[str] | None | Unset): Only alert for offices in these countries. Omit for any new office.
-        cities (list[str] | None | Unset): Only alert for offices in these cities. Omit for any new office.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
+        countries (list[str] | None | Unset): ISO 3166-1 alpha-3 country codes (e.g. 'USA', 'GBR', 'DEU'). Only alert
+            for offices in these countries. Omit for any new office.
+        cities (list[str] | None | Unset): City names (e.g. 'San Francisco', 'London', 'Berlin'). Only alert for offices
+            in these cities. Omit for any new office.
+        regions (list[str] | None | Unset): Region codes (e.g. 'X-EMEA', 'X-APAC', 'X-EUROPE'). Expands to constituent
+            country codes. Omit for any.
+        states (list[str] | None | Unset): State or province names (e.g. 'California', 'Ontario'). Omit for any.
     """
 
     type_: Literal["new_office_location"]
     entity_type: Literal["company"]
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
     countries: list[str] | None | Unset = UNSET
     cities: list[str] | None | Unset = UNSET
+    regions: list[str] | None | Unset = UNSET
+    states: list[str] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -40,6 +50,8 @@ class NewOfficeLocation:
             lookback_days = UNSET
         else:
             lookback_days = self.lookback_days
+
+        is_dummy = self.is_dummy
 
         countries: list[str] | None | Unset
         if isinstance(self.countries, Unset):
@@ -59,6 +71,24 @@ class NewOfficeLocation:
         else:
             cities = self.cities
 
+        regions: list[str] | None | Unset
+        if isinstance(self.regions, Unset):
+            regions = UNSET
+        elif isinstance(self.regions, list):
+            regions = self.regions
+
+        else:
+            regions = self.regions
+
+        states: list[str] | None | Unset
+        if isinstance(self.states, Unset):
+            states = UNSET
+        elif isinstance(self.states, list):
+            states = self.states
+
+        else:
+            states = self.states
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -69,10 +99,16 @@ class NewOfficeLocation:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
         if countries is not UNSET:
             field_dict["countries"] = countries
         if cities is not UNSET:
             field_dict["cities"] = cities
+        if regions is not UNSET:
+            field_dict["regions"] = regions
+        if states is not UNSET:
+            field_dict["states"] = states
 
         return field_dict
 
@@ -95,6 +131,8 @@ class NewOfficeLocation:
             return cast(int | None | Unset, data)
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
+
+        is_dummy = d.pop("isDummy", UNSET)
 
         def _parse_countries(data: object) -> list[str] | None | Unset:
             if data is None:
@@ -130,12 +168,49 @@ class NewOfficeLocation:
 
         cities = _parse_cities(d.pop("cities", UNSET))
 
+        def _parse_regions(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                regions_type_0 = cast(list[str], data)
+
+                return regions_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        regions = _parse_regions(d.pop("regions", UNSET))
+
+        def _parse_states(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                states_type_0 = cast(list[str], data)
+
+                return states_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        states = _parse_states(d.pop("states", UNSET))
+
         new_office_location = cls(
             type_=type_,
             entity_type=entity_type,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
             countries=countries,
             cities=cities,
+            regions=regions,
+            states=states,
         )
 
         new_office_location.additional_properties = d

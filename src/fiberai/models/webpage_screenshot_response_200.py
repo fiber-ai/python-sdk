@@ -30,6 +30,7 @@ class WebpageScreenshotResponse200:
         charge_info (WebpageScreenshotResponse200ChargeInfoType0 | WebpageScreenshotResponse200ChargeInfoType1 |
             WebpageScreenshotResponse200ChargeInfoType2 | WebpageScreenshotResponse200ChargeInfoType3 |
             WebpageScreenshotResponse200ChargeInfoType4):
+        advice (list[str]): Tips, recommendations, and suggestions for using this API effectively.
         warnings (list[WebpageScreenshotResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields
             in request
     """
@@ -42,6 +43,7 @@ class WebpageScreenshotResponse200:
         | WebpageScreenshotResponse200ChargeInfoType3
         | WebpageScreenshotResponse200ChargeInfoType4
     )
+    advice: list[str]
     warnings: list[WebpageScreenshotResponse200WarningsType0Item] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
@@ -72,6 +74,8 @@ class WebpageScreenshotResponse200:
         else:
             charge_info = self.charge_info.to_dict()
 
+        advice = self.advice
+
         warnings: list[dict[str, Any]] | None | Unset
         if isinstance(self.warnings, Unset):
             warnings = UNSET
@@ -90,6 +94,7 @@ class WebpageScreenshotResponse200:
             {
                 "output": output,
                 "chargeInfo": charge_info,
+                "advice": advice,
             }
         )
         if warnings is not UNSET:
@@ -171,6 +176,8 @@ class WebpageScreenshotResponse200:
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 
+        advice = cast(list[str], d.pop("advice"))
+
         def _parse_warnings(data: object) -> list[WebpageScreenshotResponse200WarningsType0Item] | None | Unset:
             if data is None:
                 return data
@@ -198,6 +205,7 @@ class WebpageScreenshotResponse200:
         webpage_screenshot_response_200 = cls(
             output=output,
             charge_info=charge_info,
+            advice=advice,
             warnings=warnings,
         )
 

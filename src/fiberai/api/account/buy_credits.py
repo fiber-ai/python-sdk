@@ -12,6 +12,7 @@ from ...models.buy_credits_response_401 import BuyCreditsResponse401
 from ...models.buy_credits_response_402 import BuyCreditsResponse402
 from ...models.buy_credits_response_403 import BuyCreditsResponse403
 from ...models.buy_credits_response_404 import BuyCreditsResponse404
+from ...models.buy_credits_response_422 import BuyCreditsResponse422
 from ...models.buy_credits_response_429 import BuyCreditsResponse429
 from ...models.buy_credits_response_500 import BuyCreditsResponse500
 from ...models.buy_credits_response_503 import BuyCreditsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | BuyCreditsResponse402
     | BuyCreditsResponse403
     | BuyCreditsResponse404
+    | BuyCreditsResponse422
     | BuyCreditsResponse429
     | BuyCreditsResponse500
     | BuyCreditsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = BuyCreditsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = BuyCreditsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | BuyCreditsResponse402
     | BuyCreditsResponse403
     | BuyCreditsResponse404
+    | BuyCreditsResponse422
     | BuyCreditsResponse429
     | BuyCreditsResponse500
     | BuyCreditsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | BuyCreditsResponse402
     | BuyCreditsResponse403
     | BuyCreditsResponse404
+    | BuyCreditsResponse422
     | BuyCreditsResponse429
     | BuyCreditsResponse500
     | BuyCreditsResponse503
@@ -157,7 +166,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[BuyCreditsResponse200 | BuyCreditsResponse400 | BuyCreditsResponse401 | BuyCreditsResponse402 | BuyCreditsResponse403 | BuyCreditsResponse404 | BuyCreditsResponse429 | BuyCreditsResponse500 | BuyCreditsResponse503]
+        Response[BuyCreditsResponse200 | BuyCreditsResponse400 | BuyCreditsResponse401 | BuyCreditsResponse402 | BuyCreditsResponse403 | BuyCreditsResponse404 | BuyCreditsResponse422 | BuyCreditsResponse429 | BuyCreditsResponse500 | BuyCreditsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -182,6 +191,7 @@ def sync(
     | BuyCreditsResponse402
     | BuyCreditsResponse403
     | BuyCreditsResponse404
+    | BuyCreditsResponse422
     | BuyCreditsResponse429
     | BuyCreditsResponse500
     | BuyCreditsResponse503
@@ -206,7 +216,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        BuyCreditsResponse200 | BuyCreditsResponse400 | BuyCreditsResponse401 | BuyCreditsResponse402 | BuyCreditsResponse403 | BuyCreditsResponse404 | BuyCreditsResponse429 | BuyCreditsResponse500 | BuyCreditsResponse503
+        BuyCreditsResponse200 | BuyCreditsResponse400 | BuyCreditsResponse401 | BuyCreditsResponse402 | BuyCreditsResponse403 | BuyCreditsResponse404 | BuyCreditsResponse422 | BuyCreditsResponse429 | BuyCreditsResponse500 | BuyCreditsResponse503
     """
 
     return sync_detailed(
@@ -226,6 +236,7 @@ async def asyncio_detailed(
     | BuyCreditsResponse402
     | BuyCreditsResponse403
     | BuyCreditsResponse404
+    | BuyCreditsResponse422
     | BuyCreditsResponse429
     | BuyCreditsResponse500
     | BuyCreditsResponse503
@@ -249,7 +260,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[BuyCreditsResponse200 | BuyCreditsResponse400 | BuyCreditsResponse401 | BuyCreditsResponse402 | BuyCreditsResponse403 | BuyCreditsResponse404 | BuyCreditsResponse429 | BuyCreditsResponse500 | BuyCreditsResponse503]
+        Response[BuyCreditsResponse200 | BuyCreditsResponse400 | BuyCreditsResponse401 | BuyCreditsResponse402 | BuyCreditsResponse403 | BuyCreditsResponse404 | BuyCreditsResponse422 | BuyCreditsResponse429 | BuyCreditsResponse500 | BuyCreditsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -272,6 +283,7 @@ async def asyncio(
     | BuyCreditsResponse402
     | BuyCreditsResponse403
     | BuyCreditsResponse404
+    | BuyCreditsResponse422
     | BuyCreditsResponse429
     | BuyCreditsResponse500
     | BuyCreditsResponse503
@@ -296,7 +308,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        BuyCreditsResponse200 | BuyCreditsResponse400 | BuyCreditsResponse401 | BuyCreditsResponse402 | BuyCreditsResponse403 | BuyCreditsResponse404 | BuyCreditsResponse429 | BuyCreditsResponse500 | BuyCreditsResponse503
+        BuyCreditsResponse200 | BuyCreditsResponse400 | BuyCreditsResponse401 | BuyCreditsResponse402 | BuyCreditsResponse403 | BuyCreditsResponse404 | BuyCreditsResponse422 | BuyCreditsResponse429 | BuyCreditsResponse500 | BuyCreditsResponse503
     """
 
     return (

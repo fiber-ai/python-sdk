@@ -11,6 +11,7 @@ from ...models.get_subdivisions_response_401 import GetSubdivisionsResponse401
 from ...models.get_subdivisions_response_402 import GetSubdivisionsResponse402
 from ...models.get_subdivisions_response_403 import GetSubdivisionsResponse403
 from ...models.get_subdivisions_response_404 import GetSubdivisionsResponse404
+from ...models.get_subdivisions_response_422 import GetSubdivisionsResponse422
 from ...models.get_subdivisions_response_429 import GetSubdivisionsResponse429
 from ...models.get_subdivisions_response_500 import GetSubdivisionsResponse500
 from ...models.get_subdivisions_response_503 import GetSubdivisionsResponse503
@@ -49,6 +50,7 @@ def _parse_response(
     | GetSubdivisionsResponse402
     | GetSubdivisionsResponse403
     | GetSubdivisionsResponse404
+    | GetSubdivisionsResponse422
     | GetSubdivisionsResponse429
     | GetSubdivisionsResponse500
     | GetSubdivisionsResponse503
@@ -84,6 +86,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetSubdivisionsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetSubdivisionsResponse429.from_dict(response.json())
 
@@ -114,6 +121,7 @@ def _build_response(
     | GetSubdivisionsResponse402
     | GetSubdivisionsResponse403
     | GetSubdivisionsResponse404
+    | GetSubdivisionsResponse422
     | GetSubdivisionsResponse429
     | GetSubdivisionsResponse500
     | GetSubdivisionsResponse503
@@ -138,6 +146,7 @@ def sync_detailed(
     | GetSubdivisionsResponse402
     | GetSubdivisionsResponse403
     | GetSubdivisionsResponse404
+    | GetSubdivisionsResponse422
     | GetSubdivisionsResponse429
     | GetSubdivisionsResponse500
     | GetSubdivisionsResponse503
@@ -161,7 +170,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetSubdivisionsResponse200 | GetSubdivisionsResponse400 | GetSubdivisionsResponse401 | GetSubdivisionsResponse402 | GetSubdivisionsResponse403 | GetSubdivisionsResponse404 | GetSubdivisionsResponse429 | GetSubdivisionsResponse500 | GetSubdivisionsResponse503]
+        Response[GetSubdivisionsResponse200 | GetSubdivisionsResponse400 | GetSubdivisionsResponse401 | GetSubdivisionsResponse402 | GetSubdivisionsResponse403 | GetSubdivisionsResponse404 | GetSubdivisionsResponse422 | GetSubdivisionsResponse429 | GetSubdivisionsResponse500 | GetSubdivisionsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -188,6 +197,7 @@ def sync(
     | GetSubdivisionsResponse402
     | GetSubdivisionsResponse403
     | GetSubdivisionsResponse404
+    | GetSubdivisionsResponse422
     | GetSubdivisionsResponse429
     | GetSubdivisionsResponse500
     | GetSubdivisionsResponse503
@@ -212,7 +222,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetSubdivisionsResponse200 | GetSubdivisionsResponse400 | GetSubdivisionsResponse401 | GetSubdivisionsResponse402 | GetSubdivisionsResponse403 | GetSubdivisionsResponse404 | GetSubdivisionsResponse429 | GetSubdivisionsResponse500 | GetSubdivisionsResponse503
+        GetSubdivisionsResponse200 | GetSubdivisionsResponse400 | GetSubdivisionsResponse401 | GetSubdivisionsResponse402 | GetSubdivisionsResponse403 | GetSubdivisionsResponse404 | GetSubdivisionsResponse422 | GetSubdivisionsResponse429 | GetSubdivisionsResponse500 | GetSubdivisionsResponse503
     """
 
     return sync_detailed(
@@ -234,6 +244,7 @@ async def asyncio_detailed(
     | GetSubdivisionsResponse402
     | GetSubdivisionsResponse403
     | GetSubdivisionsResponse404
+    | GetSubdivisionsResponse422
     | GetSubdivisionsResponse429
     | GetSubdivisionsResponse500
     | GetSubdivisionsResponse503
@@ -257,7 +268,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetSubdivisionsResponse200 | GetSubdivisionsResponse400 | GetSubdivisionsResponse401 | GetSubdivisionsResponse402 | GetSubdivisionsResponse403 | GetSubdivisionsResponse404 | GetSubdivisionsResponse429 | GetSubdivisionsResponse500 | GetSubdivisionsResponse503]
+        Response[GetSubdivisionsResponse200 | GetSubdivisionsResponse400 | GetSubdivisionsResponse401 | GetSubdivisionsResponse402 | GetSubdivisionsResponse403 | GetSubdivisionsResponse404 | GetSubdivisionsResponse422 | GetSubdivisionsResponse429 | GetSubdivisionsResponse500 | GetSubdivisionsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -282,6 +293,7 @@ async def asyncio(
     | GetSubdivisionsResponse402
     | GetSubdivisionsResponse403
     | GetSubdivisionsResponse404
+    | GetSubdivisionsResponse422
     | GetSubdivisionsResponse429
     | GetSubdivisionsResponse500
     | GetSubdivisionsResponse503
@@ -306,7 +318,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetSubdivisionsResponse200 | GetSubdivisionsResponse400 | GetSubdivisionsResponse401 | GetSubdivisionsResponse402 | GetSubdivisionsResponse403 | GetSubdivisionsResponse404 | GetSubdivisionsResponse429 | GetSubdivisionsResponse500 | GetSubdivisionsResponse503
+        GetSubdivisionsResponse200 | GetSubdivisionsResponse400 | GetSubdivisionsResponse401 | GetSubdivisionsResponse402 | GetSubdivisionsResponse403 | GetSubdivisionsResponse404 | GetSubdivisionsResponse422 | GetSubdivisionsResponse429 | GetSubdivisionsResponse500 | GetSubdivisionsResponse503
     """
 
     return (

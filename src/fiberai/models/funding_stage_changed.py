@@ -20,6 +20,8 @@ class FundingStageChanged:
         entity_type (Literal['company']):
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
         to_stages (list[FundingStageChangedToStagesType0Item] | None | Unset): Only alert if new stage is one of these.
             Omit for any stage change.
     """
@@ -27,6 +29,7 @@ class FundingStageChanged:
     type_: Literal["funding_stage_changed"]
     entity_type: Literal["company"]
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
     to_stages: list[FundingStageChangedToStagesType0Item] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -40,6 +43,8 @@ class FundingStageChanged:
             lookback_days = UNSET
         else:
             lookback_days = self.lookback_days
+
+        is_dummy = self.is_dummy
 
         to_stages: list[str] | None | Unset
         if isinstance(self.to_stages, Unset):
@@ -63,6 +68,8 @@ class FundingStageChanged:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
         if to_stages is not UNSET:
             field_dict["toStages"] = to_stages
 
@@ -87,6 +94,8 @@ class FundingStageChanged:
             return cast(int | None | Unset, data)
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
+
+        is_dummy = d.pop("isDummy", UNSET)
 
         def _parse_to_stages(data: object) -> list[FundingStageChangedToStagesType0Item] | None | Unset:
             if data is None:
@@ -114,6 +123,7 @@ class FundingStageChanged:
             type_=type_,
             entity_type=entity_type,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
             to_stages=to_stages,
         )
 

@@ -11,6 +11,7 @@ from ...models.get_tags_response_401 import GetTagsResponse401
 from ...models.get_tags_response_402 import GetTagsResponse402
 from ...models.get_tags_response_403 import GetTagsResponse403
 from ...models.get_tags_response_404 import GetTagsResponse404
+from ...models.get_tags_response_422 import GetTagsResponse422
 from ...models.get_tags_response_429 import GetTagsResponse429
 from ...models.get_tags_response_500 import GetTagsResponse500
 from ...models.get_tags_response_503 import GetTagsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GetTagsResponse402
     | GetTagsResponse403
     | GetTagsResponse404
+    | GetTagsResponse422
     | GetTagsResponse429
     | GetTagsResponse500
     | GetTagsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetTagsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetTagsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GetTagsResponse402
     | GetTagsResponse403
     | GetTagsResponse404
+    | GetTagsResponse422
     | GetTagsResponse429
     | GetTagsResponse500
     | GetTagsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GetTagsResponse402
     | GetTagsResponse403
     | GetTagsResponse404
+    | GetTagsResponse422
     | GetTagsResponse429
     | GetTagsResponse500
     | GetTagsResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetTagsResponse200 | GetTagsResponse400 | GetTagsResponse401 | GetTagsResponse402 | GetTagsResponse403 | GetTagsResponse404 | GetTagsResponse429 | GetTagsResponse500 | GetTagsResponse503]
+        Response[GetTagsResponse200 | GetTagsResponse400 | GetTagsResponse401 | GetTagsResponse402 | GetTagsResponse403 | GetTagsResponse404 | GetTagsResponse422 | GetTagsResponse429 | GetTagsResponse500 | GetTagsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | GetTagsResponse402
     | GetTagsResponse403
     | GetTagsResponse404
+    | GetTagsResponse422
     | GetTagsResponse429
     | GetTagsResponse500
     | GetTagsResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetTagsResponse200 | GetTagsResponse400 | GetTagsResponse401 | GetTagsResponse402 | GetTagsResponse403 | GetTagsResponse404 | GetTagsResponse429 | GetTagsResponse500 | GetTagsResponse503
+        GetTagsResponse200 | GetTagsResponse400 | GetTagsResponse401 | GetTagsResponse402 | GetTagsResponse403 | GetTagsResponse404 | GetTagsResponse422 | GetTagsResponse429 | GetTagsResponse500 | GetTagsResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | GetTagsResponse402
     | GetTagsResponse403
     | GetTagsResponse404
+    | GetTagsResponse422
     | GetTagsResponse429
     | GetTagsResponse500
     | GetTagsResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetTagsResponse200 | GetTagsResponse400 | GetTagsResponse401 | GetTagsResponse402 | GetTagsResponse403 | GetTagsResponse404 | GetTagsResponse429 | GetTagsResponse500 | GetTagsResponse503]
+        Response[GetTagsResponse200 | GetTagsResponse400 | GetTagsResponse401 | GetTagsResponse402 | GetTagsResponse403 | GetTagsResponse404 | GetTagsResponse422 | GetTagsResponse429 | GetTagsResponse500 | GetTagsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | GetTagsResponse402
     | GetTagsResponse403
     | GetTagsResponse404
+    | GetTagsResponse422
     | GetTagsResponse429
     | GetTagsResponse500
     | GetTagsResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetTagsResponse200 | GetTagsResponse400 | GetTagsResponse401 | GetTagsResponse402 | GetTagsResponse403 | GetTagsResponse404 | GetTagsResponse429 | GetTagsResponse500 | GetTagsResponse503
+        GetTagsResponse200 | GetTagsResponse400 | GetTagsResponse401 | GetTagsResponse402 | GetTagsResponse403 | GetTagsResponse404 | GetTagsResponse422 | GetTagsResponse429 | GetTagsResponse500 | GetTagsResponse503
     """
 
     return (

@@ -12,6 +12,7 @@ from ...models.update_auto_topup_settings_response_401 import UpdateAutoTopupSet
 from ...models.update_auto_topup_settings_response_402 import UpdateAutoTopupSettingsResponse402
 from ...models.update_auto_topup_settings_response_403 import UpdateAutoTopupSettingsResponse403
 from ...models.update_auto_topup_settings_response_404 import UpdateAutoTopupSettingsResponse404
+from ...models.update_auto_topup_settings_response_422 import UpdateAutoTopupSettingsResponse422
 from ...models.update_auto_topup_settings_response_429 import UpdateAutoTopupSettingsResponse429
 from ...models.update_auto_topup_settings_response_500 import UpdateAutoTopupSettingsResponse500
 from ...models.update_auto_topup_settings_response_503 import UpdateAutoTopupSettingsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | UpdateAutoTopupSettingsResponse402
     | UpdateAutoTopupSettingsResponse403
     | UpdateAutoTopupSettingsResponse404
+    | UpdateAutoTopupSettingsResponse422
     | UpdateAutoTopupSettingsResponse429
     | UpdateAutoTopupSettingsResponse500
     | UpdateAutoTopupSettingsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = UpdateAutoTopupSettingsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = UpdateAutoTopupSettingsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | UpdateAutoTopupSettingsResponse402
     | UpdateAutoTopupSettingsResponse403
     | UpdateAutoTopupSettingsResponse404
+    | UpdateAutoTopupSettingsResponse422
     | UpdateAutoTopupSettingsResponse429
     | UpdateAutoTopupSettingsResponse500
     | UpdateAutoTopupSettingsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | UpdateAutoTopupSettingsResponse402
     | UpdateAutoTopupSettingsResponse403
     | UpdateAutoTopupSettingsResponse404
+    | UpdateAutoTopupSettingsResponse422
     | UpdateAutoTopupSettingsResponse429
     | UpdateAutoTopupSettingsResponse500
     | UpdateAutoTopupSettingsResponse503
@@ -157,7 +166,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[UpdateAutoTopupSettingsResponse200 | UpdateAutoTopupSettingsResponse400 | UpdateAutoTopupSettingsResponse401 | UpdateAutoTopupSettingsResponse402 | UpdateAutoTopupSettingsResponse403 | UpdateAutoTopupSettingsResponse404 | UpdateAutoTopupSettingsResponse429 | UpdateAutoTopupSettingsResponse500 | UpdateAutoTopupSettingsResponse503]
+        Response[UpdateAutoTopupSettingsResponse200 | UpdateAutoTopupSettingsResponse400 | UpdateAutoTopupSettingsResponse401 | UpdateAutoTopupSettingsResponse402 | UpdateAutoTopupSettingsResponse403 | UpdateAutoTopupSettingsResponse404 | UpdateAutoTopupSettingsResponse422 | UpdateAutoTopupSettingsResponse429 | UpdateAutoTopupSettingsResponse500 | UpdateAutoTopupSettingsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -182,6 +191,7 @@ def sync(
     | UpdateAutoTopupSettingsResponse402
     | UpdateAutoTopupSettingsResponse403
     | UpdateAutoTopupSettingsResponse404
+    | UpdateAutoTopupSettingsResponse422
     | UpdateAutoTopupSettingsResponse429
     | UpdateAutoTopupSettingsResponse500
     | UpdateAutoTopupSettingsResponse503
@@ -206,7 +216,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        UpdateAutoTopupSettingsResponse200 | UpdateAutoTopupSettingsResponse400 | UpdateAutoTopupSettingsResponse401 | UpdateAutoTopupSettingsResponse402 | UpdateAutoTopupSettingsResponse403 | UpdateAutoTopupSettingsResponse404 | UpdateAutoTopupSettingsResponse429 | UpdateAutoTopupSettingsResponse500 | UpdateAutoTopupSettingsResponse503
+        UpdateAutoTopupSettingsResponse200 | UpdateAutoTopupSettingsResponse400 | UpdateAutoTopupSettingsResponse401 | UpdateAutoTopupSettingsResponse402 | UpdateAutoTopupSettingsResponse403 | UpdateAutoTopupSettingsResponse404 | UpdateAutoTopupSettingsResponse422 | UpdateAutoTopupSettingsResponse429 | UpdateAutoTopupSettingsResponse500 | UpdateAutoTopupSettingsResponse503
     """
 
     return sync_detailed(
@@ -226,6 +236,7 @@ async def asyncio_detailed(
     | UpdateAutoTopupSettingsResponse402
     | UpdateAutoTopupSettingsResponse403
     | UpdateAutoTopupSettingsResponse404
+    | UpdateAutoTopupSettingsResponse422
     | UpdateAutoTopupSettingsResponse429
     | UpdateAutoTopupSettingsResponse500
     | UpdateAutoTopupSettingsResponse503
@@ -249,7 +260,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[UpdateAutoTopupSettingsResponse200 | UpdateAutoTopupSettingsResponse400 | UpdateAutoTopupSettingsResponse401 | UpdateAutoTopupSettingsResponse402 | UpdateAutoTopupSettingsResponse403 | UpdateAutoTopupSettingsResponse404 | UpdateAutoTopupSettingsResponse429 | UpdateAutoTopupSettingsResponse500 | UpdateAutoTopupSettingsResponse503]
+        Response[UpdateAutoTopupSettingsResponse200 | UpdateAutoTopupSettingsResponse400 | UpdateAutoTopupSettingsResponse401 | UpdateAutoTopupSettingsResponse402 | UpdateAutoTopupSettingsResponse403 | UpdateAutoTopupSettingsResponse404 | UpdateAutoTopupSettingsResponse422 | UpdateAutoTopupSettingsResponse429 | UpdateAutoTopupSettingsResponse500 | UpdateAutoTopupSettingsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -272,6 +283,7 @@ async def asyncio(
     | UpdateAutoTopupSettingsResponse402
     | UpdateAutoTopupSettingsResponse403
     | UpdateAutoTopupSettingsResponse404
+    | UpdateAutoTopupSettingsResponse422
     | UpdateAutoTopupSettingsResponse429
     | UpdateAutoTopupSettingsResponse500
     | UpdateAutoTopupSettingsResponse503
@@ -296,7 +308,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        UpdateAutoTopupSettingsResponse200 | UpdateAutoTopupSettingsResponse400 | UpdateAutoTopupSettingsResponse401 | UpdateAutoTopupSettingsResponse402 | UpdateAutoTopupSettingsResponse403 | UpdateAutoTopupSettingsResponse404 | UpdateAutoTopupSettingsResponse429 | UpdateAutoTopupSettingsResponse500 | UpdateAutoTopupSettingsResponse503
+        UpdateAutoTopupSettingsResponse200 | UpdateAutoTopupSettingsResponse400 | UpdateAutoTopupSettingsResponse401 | UpdateAutoTopupSettingsResponse402 | UpdateAutoTopupSettingsResponse403 | UpdateAutoTopupSettingsResponse404 | UpdateAutoTopupSettingsResponse422 | UpdateAutoTopupSettingsResponse429 | UpdateAutoTopupSettingsResponse500 | UpdateAutoTopupSettingsResponse503
     """
 
     return (

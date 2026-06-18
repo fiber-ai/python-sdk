@@ -12,6 +12,7 @@ from ...models.post_search_by_keywords_response_401 import PostSearchByKeywordsR
 from ...models.post_search_by_keywords_response_402 import PostSearchByKeywordsResponse402
 from ...models.post_search_by_keywords_response_403 import PostSearchByKeywordsResponse403
 from ...models.post_search_by_keywords_response_404 import PostSearchByKeywordsResponse404
+from ...models.post_search_by_keywords_response_422 import PostSearchByKeywordsResponse422
 from ...models.post_search_by_keywords_response_429 import PostSearchByKeywordsResponse429
 from ...models.post_search_by_keywords_response_500 import PostSearchByKeywordsResponse500
 from ...models.post_search_by_keywords_response_503 import PostSearchByKeywordsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | PostSearchByKeywordsResponse402
     | PostSearchByKeywordsResponse403
     | PostSearchByKeywordsResponse404
+    | PostSearchByKeywordsResponse422
     | PostSearchByKeywordsResponse429
     | PostSearchByKeywordsResponse500
     | PostSearchByKeywordsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = PostSearchByKeywordsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = PostSearchByKeywordsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | PostSearchByKeywordsResponse402
     | PostSearchByKeywordsResponse403
     | PostSearchByKeywordsResponse404
+    | PostSearchByKeywordsResponse422
     | PostSearchByKeywordsResponse429
     | PostSearchByKeywordsResponse500
     | PostSearchByKeywordsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | PostSearchByKeywordsResponse402
     | PostSearchByKeywordsResponse403
     | PostSearchByKeywordsResponse404
+    | PostSearchByKeywordsResponse422
     | PostSearchByKeywordsResponse429
     | PostSearchByKeywordsResponse500
     | PostSearchByKeywordsResponse503
@@ -180,7 +189,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PostSearchByKeywordsResponse200 | PostSearchByKeywordsResponse400 | PostSearchByKeywordsResponse401 | PostSearchByKeywordsResponse402 | PostSearchByKeywordsResponse403 | PostSearchByKeywordsResponse404 | PostSearchByKeywordsResponse429 | PostSearchByKeywordsResponse500 | PostSearchByKeywordsResponse503]
+        Response[PostSearchByKeywordsResponse200 | PostSearchByKeywordsResponse400 | PostSearchByKeywordsResponse401 | PostSearchByKeywordsResponse402 | PostSearchByKeywordsResponse403 | PostSearchByKeywordsResponse404 | PostSearchByKeywordsResponse422 | PostSearchByKeywordsResponse429 | PostSearchByKeywordsResponse500 | PostSearchByKeywordsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -205,6 +214,7 @@ def sync(
     | PostSearchByKeywordsResponse402
     | PostSearchByKeywordsResponse403
     | PostSearchByKeywordsResponse404
+    | PostSearchByKeywordsResponse422
     | PostSearchByKeywordsResponse429
     | PostSearchByKeywordsResponse500
     | PostSearchByKeywordsResponse503
@@ -252,7 +262,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PostSearchByKeywordsResponse200 | PostSearchByKeywordsResponse400 | PostSearchByKeywordsResponse401 | PostSearchByKeywordsResponse402 | PostSearchByKeywordsResponse403 | PostSearchByKeywordsResponse404 | PostSearchByKeywordsResponse429 | PostSearchByKeywordsResponse500 | PostSearchByKeywordsResponse503
+        PostSearchByKeywordsResponse200 | PostSearchByKeywordsResponse400 | PostSearchByKeywordsResponse401 | PostSearchByKeywordsResponse402 | PostSearchByKeywordsResponse403 | PostSearchByKeywordsResponse404 | PostSearchByKeywordsResponse422 | PostSearchByKeywordsResponse429 | PostSearchByKeywordsResponse500 | PostSearchByKeywordsResponse503
     """
 
     return sync_detailed(
@@ -272,6 +282,7 @@ async def asyncio_detailed(
     | PostSearchByKeywordsResponse402
     | PostSearchByKeywordsResponse403
     | PostSearchByKeywordsResponse404
+    | PostSearchByKeywordsResponse422
     | PostSearchByKeywordsResponse429
     | PostSearchByKeywordsResponse500
     | PostSearchByKeywordsResponse503
@@ -318,7 +329,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PostSearchByKeywordsResponse200 | PostSearchByKeywordsResponse400 | PostSearchByKeywordsResponse401 | PostSearchByKeywordsResponse402 | PostSearchByKeywordsResponse403 | PostSearchByKeywordsResponse404 | PostSearchByKeywordsResponse429 | PostSearchByKeywordsResponse500 | PostSearchByKeywordsResponse503]
+        Response[PostSearchByKeywordsResponse200 | PostSearchByKeywordsResponse400 | PostSearchByKeywordsResponse401 | PostSearchByKeywordsResponse402 | PostSearchByKeywordsResponse403 | PostSearchByKeywordsResponse404 | PostSearchByKeywordsResponse422 | PostSearchByKeywordsResponse429 | PostSearchByKeywordsResponse500 | PostSearchByKeywordsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -341,6 +352,7 @@ async def asyncio(
     | PostSearchByKeywordsResponse402
     | PostSearchByKeywordsResponse403
     | PostSearchByKeywordsResponse404
+    | PostSearchByKeywordsResponse422
     | PostSearchByKeywordsResponse429
     | PostSearchByKeywordsResponse500
     | PostSearchByKeywordsResponse503
@@ -388,7 +400,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PostSearchByKeywordsResponse200 | PostSearchByKeywordsResponse400 | PostSearchByKeywordsResponse401 | PostSearchByKeywordsResponse402 | PostSearchByKeywordsResponse403 | PostSearchByKeywordsResponse404 | PostSearchByKeywordsResponse429 | PostSearchByKeywordsResponse500 | PostSearchByKeywordsResponse503
+        PostSearchByKeywordsResponse200 | PostSearchByKeywordsResponse400 | PostSearchByKeywordsResponse401 | PostSearchByKeywordsResponse402 | PostSearchByKeywordsResponse403 | PostSearchByKeywordsResponse404 | PostSearchByKeywordsResponse422 | PostSearchByKeywordsResponse429 | PostSearchByKeywordsResponse500 | PostSearchByKeywordsResponse503
     """
 
     return (

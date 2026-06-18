@@ -12,6 +12,7 @@ from ...models.job_posting_search_response_401 import JobPostingSearchResponse40
 from ...models.job_posting_search_response_402 import JobPostingSearchResponse402
 from ...models.job_posting_search_response_403 import JobPostingSearchResponse403
 from ...models.job_posting_search_response_404 import JobPostingSearchResponse404
+from ...models.job_posting_search_response_422 import JobPostingSearchResponse422
 from ...models.job_posting_search_response_429 import JobPostingSearchResponse429
 from ...models.job_posting_search_response_500 import JobPostingSearchResponse500
 from ...models.job_posting_search_response_503 import JobPostingSearchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | JobPostingSearchResponse402
     | JobPostingSearchResponse403
     | JobPostingSearchResponse404
+    | JobPostingSearchResponse422
     | JobPostingSearchResponse429
     | JobPostingSearchResponse500
     | JobPostingSearchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = JobPostingSearchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = JobPostingSearchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | JobPostingSearchResponse402
     | JobPostingSearchResponse403
     | JobPostingSearchResponse404
+    | JobPostingSearchResponse422
     | JobPostingSearchResponse429
     | JobPostingSearchResponse500
     | JobPostingSearchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | JobPostingSearchResponse402
     | JobPostingSearchResponse403
     | JobPostingSearchResponse404
+    | JobPostingSearchResponse422
     | JobPostingSearchResponse429
     | JobPostingSearchResponse500
     | JobPostingSearchResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[JobPostingSearchResponse200 | JobPostingSearchResponse400 | JobPostingSearchResponse401 | JobPostingSearchResponse402 | JobPostingSearchResponse403 | JobPostingSearchResponse404 | JobPostingSearchResponse429 | JobPostingSearchResponse500 | JobPostingSearchResponse503]
+        Response[JobPostingSearchResponse200 | JobPostingSearchResponse400 | JobPostingSearchResponse401 | JobPostingSearchResponse402 | JobPostingSearchResponse403 | JobPostingSearchResponse404 | JobPostingSearchResponse422 | JobPostingSearchResponse429 | JobPostingSearchResponse500 | JobPostingSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | JobPostingSearchResponse402
     | JobPostingSearchResponse403
     | JobPostingSearchResponse404
+    | JobPostingSearchResponse422
     | JobPostingSearchResponse429
     | JobPostingSearchResponse500
     | JobPostingSearchResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        JobPostingSearchResponse200 | JobPostingSearchResponse400 | JobPostingSearchResponse401 | JobPostingSearchResponse402 | JobPostingSearchResponse403 | JobPostingSearchResponse404 | JobPostingSearchResponse429 | JobPostingSearchResponse500 | JobPostingSearchResponse503
+        JobPostingSearchResponse200 | JobPostingSearchResponse400 | JobPostingSearchResponse401 | JobPostingSearchResponse402 | JobPostingSearchResponse403 | JobPostingSearchResponse404 | JobPostingSearchResponse422 | JobPostingSearchResponse429 | JobPostingSearchResponse500 | JobPostingSearchResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | JobPostingSearchResponse402
     | JobPostingSearchResponse403
     | JobPostingSearchResponse404
+    | JobPostingSearchResponse422
     | JobPostingSearchResponse429
     | JobPostingSearchResponse500
     | JobPostingSearchResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[JobPostingSearchResponse200 | JobPostingSearchResponse400 | JobPostingSearchResponse401 | JobPostingSearchResponse402 | JobPostingSearchResponse403 | JobPostingSearchResponse404 | JobPostingSearchResponse429 | JobPostingSearchResponse500 | JobPostingSearchResponse503]
+        Response[JobPostingSearchResponse200 | JobPostingSearchResponse400 | JobPostingSearchResponse401 | JobPostingSearchResponse402 | JobPostingSearchResponse403 | JobPostingSearchResponse404 | JobPostingSearchResponse422 | JobPostingSearchResponse429 | JobPostingSearchResponse500 | JobPostingSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | JobPostingSearchResponse402
     | JobPostingSearchResponse403
     | JobPostingSearchResponse404
+    | JobPostingSearchResponse422
     | JobPostingSearchResponse429
     | JobPostingSearchResponse500
     | JobPostingSearchResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        JobPostingSearchResponse200 | JobPostingSearchResponse400 | JobPostingSearchResponse401 | JobPostingSearchResponse402 | JobPostingSearchResponse403 | JobPostingSearchResponse404 | JobPostingSearchResponse429 | JobPostingSearchResponse500 | JobPostingSearchResponse503
+        JobPostingSearchResponse200 | JobPostingSearchResponse400 | JobPostingSearchResponse401 | JobPostingSearchResponse402 | JobPostingSearchResponse403 | JobPostingSearchResponse404 | JobPostingSearchResponse422 | JobPostingSearchResponse429 | JobPostingSearchResponse500 | JobPostingSearchResponse503
     """
 
     return (

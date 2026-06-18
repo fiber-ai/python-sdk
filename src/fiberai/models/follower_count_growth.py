@@ -19,16 +19,22 @@ class FollowerCountGrowth:
         entity_type (Literal['company']):
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
         min_absolute_growth (int | None | Unset): Minimum absolute follower increase to trigger. Omit or set to 0 for
             any increase.
         min_percent_growth (float | None | Unset): Minimum percent follower increase to trigger. Omit for any increase.
+        min_starting_follower_count (int | None | Unset): Only alert if the company had at least this many followers
+            before the growth. Omit for any starting count.
     """
 
     type_: Literal["follower_count_growth"]
     entity_type: Literal["company"]
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
     min_absolute_growth: int | None | Unset = UNSET
     min_percent_growth: float | None | Unset = UNSET
+    min_starting_follower_count: int | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -42,6 +48,8 @@ class FollowerCountGrowth:
         else:
             lookback_days = self.lookback_days
 
+        is_dummy = self.is_dummy
+
         min_absolute_growth: int | None | Unset
         if isinstance(self.min_absolute_growth, Unset):
             min_absolute_growth = UNSET
@@ -54,6 +62,12 @@ class FollowerCountGrowth:
         else:
             min_percent_growth = self.min_percent_growth
 
+        min_starting_follower_count: int | None | Unset
+        if isinstance(self.min_starting_follower_count, Unset):
+            min_starting_follower_count = UNSET
+        else:
+            min_starting_follower_count = self.min_starting_follower_count
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -64,10 +78,14 @@ class FollowerCountGrowth:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
         if min_absolute_growth is not UNSET:
             field_dict["minAbsoluteGrowth"] = min_absolute_growth
         if min_percent_growth is not UNSET:
             field_dict["minPercentGrowth"] = min_percent_growth
+        if min_starting_follower_count is not UNSET:
+            field_dict["minStartingFollowerCount"] = min_starting_follower_count
 
         return field_dict
 
@@ -91,6 +109,8 @@ class FollowerCountGrowth:
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
+        is_dummy = d.pop("isDummy", UNSET)
+
         def _parse_min_absolute_growth(data: object) -> int | None | Unset:
             if data is None:
                 return data
@@ -109,12 +129,23 @@ class FollowerCountGrowth:
 
         min_percent_growth = _parse_min_percent_growth(d.pop("minPercentGrowth", UNSET))
 
+        def _parse_min_starting_follower_count(data: object) -> int | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(int | None | Unset, data)
+
+        min_starting_follower_count = _parse_min_starting_follower_count(d.pop("minStartingFollowerCount", UNSET))
+
         follower_count_growth = cls(
             type_=type_,
             entity_type=entity_type,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
             min_absolute_growth=min_absolute_growth,
             min_percent_growth=min_percent_growth,
+            min_starting_follower_count=min_starting_follower_count,
         )
 
         follower_count_growth.additional_properties = d

@@ -11,6 +11,7 @@ from ...models.slushie_run_response_401 import SlushieRunResponse401
 from ...models.slushie_run_response_402 import SlushieRunResponse402
 from ...models.slushie_run_response_403 import SlushieRunResponse403
 from ...models.slushie_run_response_404 import SlushieRunResponse404
+from ...models.slushie_run_response_422 import SlushieRunResponse422
 from ...models.slushie_run_response_429 import SlushieRunResponse429
 from ...models.slushie_run_response_500 import SlushieRunResponse500
 from ...models.slushie_run_response_503 import SlushieRunResponse503
@@ -44,6 +45,7 @@ def _parse_response(
     | SlushieRunResponse402
     | SlushieRunResponse403
     | SlushieRunResponse404
+    | SlushieRunResponse422
     | SlushieRunResponse429
     | SlushieRunResponse500
     | SlushieRunResponse503
@@ -74,6 +76,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = SlushieRunResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = SlushieRunResponse429.from_dict(response.json())
 
@@ -103,6 +110,7 @@ def _build_response(
     | SlushieRunResponse402
     | SlushieRunResponse403
     | SlushieRunResponse404
+    | SlushieRunResponse422
     | SlushieRunResponse429
     | SlushieRunResponse500
     | SlushieRunResponse503
@@ -125,6 +133,7 @@ def sync_detailed(
     | SlushieRunResponse402
     | SlushieRunResponse403
     | SlushieRunResponse404
+    | SlushieRunResponse422
     | SlushieRunResponse429
     | SlushieRunResponse500
     | SlushieRunResponse503
@@ -154,7 +163,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[SlushieRunResponse400 | SlushieRunResponse401 | SlushieRunResponse402 | SlushieRunResponse403 | SlushieRunResponse404 | SlushieRunResponse429 | SlushieRunResponse500 | SlushieRunResponse503]
+        Response[SlushieRunResponse400 | SlushieRunResponse401 | SlushieRunResponse402 | SlushieRunResponse403 | SlushieRunResponse404 | SlushieRunResponse422 | SlushieRunResponse429 | SlushieRunResponse500 | SlushieRunResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -178,6 +187,7 @@ def sync(
     | SlushieRunResponse402
     | SlushieRunResponse403
     | SlushieRunResponse404
+    | SlushieRunResponse422
     | SlushieRunResponse429
     | SlushieRunResponse500
     | SlushieRunResponse503
@@ -208,7 +218,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        SlushieRunResponse400 | SlushieRunResponse401 | SlushieRunResponse402 | SlushieRunResponse403 | SlushieRunResponse404 | SlushieRunResponse429 | SlushieRunResponse500 | SlushieRunResponse503
+        SlushieRunResponse400 | SlushieRunResponse401 | SlushieRunResponse402 | SlushieRunResponse403 | SlushieRunResponse404 | SlushieRunResponse422 | SlushieRunResponse429 | SlushieRunResponse500 | SlushieRunResponse503
     """
 
     return sync_detailed(
@@ -227,6 +237,7 @@ async def asyncio_detailed(
     | SlushieRunResponse402
     | SlushieRunResponse403
     | SlushieRunResponse404
+    | SlushieRunResponse422
     | SlushieRunResponse429
     | SlushieRunResponse500
     | SlushieRunResponse503
@@ -256,7 +267,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[SlushieRunResponse400 | SlushieRunResponse401 | SlushieRunResponse402 | SlushieRunResponse403 | SlushieRunResponse404 | SlushieRunResponse429 | SlushieRunResponse500 | SlushieRunResponse503]
+        Response[SlushieRunResponse400 | SlushieRunResponse401 | SlushieRunResponse402 | SlushieRunResponse403 | SlushieRunResponse404 | SlushieRunResponse422 | SlushieRunResponse429 | SlushieRunResponse500 | SlushieRunResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -278,6 +289,7 @@ async def asyncio(
     | SlushieRunResponse402
     | SlushieRunResponse403
     | SlushieRunResponse404
+    | SlushieRunResponse422
     | SlushieRunResponse429
     | SlushieRunResponse500
     | SlushieRunResponse503
@@ -308,7 +320,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        SlushieRunResponse400 | SlushieRunResponse401 | SlushieRunResponse402 | SlushieRunResponse403 | SlushieRunResponse404 | SlushieRunResponse429 | SlushieRunResponse500 | SlushieRunResponse503
+        SlushieRunResponse400 | SlushieRunResponse401 | SlushieRunResponse402 | SlushieRunResponse403 | SlushieRunResponse404 | SlushieRunResponse422 | SlushieRunResponse429 | SlushieRunResponse500 | SlushieRunResponse503
     """
 
     return (

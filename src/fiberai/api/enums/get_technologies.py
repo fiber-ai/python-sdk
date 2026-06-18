@@ -11,6 +11,7 @@ from ...models.get_technologies_response_401 import GetTechnologiesResponse401
 from ...models.get_technologies_response_402 import GetTechnologiesResponse402
 from ...models.get_technologies_response_403 import GetTechnologiesResponse403
 from ...models.get_technologies_response_404 import GetTechnologiesResponse404
+from ...models.get_technologies_response_422 import GetTechnologiesResponse422
 from ...models.get_technologies_response_429 import GetTechnologiesResponse429
 from ...models.get_technologies_response_500 import GetTechnologiesResponse500
 from ...models.get_technologies_response_503 import GetTechnologiesResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GetTechnologiesResponse402
     | GetTechnologiesResponse403
     | GetTechnologiesResponse404
+    | GetTechnologiesResponse422
     | GetTechnologiesResponse429
     | GetTechnologiesResponse500
     | GetTechnologiesResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetTechnologiesResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetTechnologiesResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GetTechnologiesResponse402
     | GetTechnologiesResponse403
     | GetTechnologiesResponse404
+    | GetTechnologiesResponse422
     | GetTechnologiesResponse429
     | GetTechnologiesResponse500
     | GetTechnologiesResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GetTechnologiesResponse402
     | GetTechnologiesResponse403
     | GetTechnologiesResponse404
+    | GetTechnologiesResponse422
     | GetTechnologiesResponse429
     | GetTechnologiesResponse500
     | GetTechnologiesResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetTechnologiesResponse200 | GetTechnologiesResponse400 | GetTechnologiesResponse401 | GetTechnologiesResponse402 | GetTechnologiesResponse403 | GetTechnologiesResponse404 | GetTechnologiesResponse429 | GetTechnologiesResponse500 | GetTechnologiesResponse503]
+        Response[GetTechnologiesResponse200 | GetTechnologiesResponse400 | GetTechnologiesResponse401 | GetTechnologiesResponse402 | GetTechnologiesResponse403 | GetTechnologiesResponse404 | GetTechnologiesResponse422 | GetTechnologiesResponse429 | GetTechnologiesResponse500 | GetTechnologiesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | GetTechnologiesResponse402
     | GetTechnologiesResponse403
     | GetTechnologiesResponse404
+    | GetTechnologiesResponse422
     | GetTechnologiesResponse429
     | GetTechnologiesResponse500
     | GetTechnologiesResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetTechnologiesResponse200 | GetTechnologiesResponse400 | GetTechnologiesResponse401 | GetTechnologiesResponse402 | GetTechnologiesResponse403 | GetTechnologiesResponse404 | GetTechnologiesResponse429 | GetTechnologiesResponse500 | GetTechnologiesResponse503
+        GetTechnologiesResponse200 | GetTechnologiesResponse400 | GetTechnologiesResponse401 | GetTechnologiesResponse402 | GetTechnologiesResponse403 | GetTechnologiesResponse404 | GetTechnologiesResponse422 | GetTechnologiesResponse429 | GetTechnologiesResponse500 | GetTechnologiesResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | GetTechnologiesResponse402
     | GetTechnologiesResponse403
     | GetTechnologiesResponse404
+    | GetTechnologiesResponse422
     | GetTechnologiesResponse429
     | GetTechnologiesResponse500
     | GetTechnologiesResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetTechnologiesResponse200 | GetTechnologiesResponse400 | GetTechnologiesResponse401 | GetTechnologiesResponse402 | GetTechnologiesResponse403 | GetTechnologiesResponse404 | GetTechnologiesResponse429 | GetTechnologiesResponse500 | GetTechnologiesResponse503]
+        Response[GetTechnologiesResponse200 | GetTechnologiesResponse400 | GetTechnologiesResponse401 | GetTechnologiesResponse402 | GetTechnologiesResponse403 | GetTechnologiesResponse404 | GetTechnologiesResponse422 | GetTechnologiesResponse429 | GetTechnologiesResponse500 | GetTechnologiesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | GetTechnologiesResponse402
     | GetTechnologiesResponse403
     | GetTechnologiesResponse404
+    | GetTechnologiesResponse422
     | GetTechnologiesResponse429
     | GetTechnologiesResponse500
     | GetTechnologiesResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetTechnologiesResponse200 | GetTechnologiesResponse400 | GetTechnologiesResponse401 | GetTechnologiesResponse402 | GetTechnologiesResponse403 | GetTechnologiesResponse404 | GetTechnologiesResponse429 | GetTechnologiesResponse500 | GetTechnologiesResponse503
+        GetTechnologiesResponse200 | GetTechnologiesResponse400 | GetTechnologiesResponse401 | GetTechnologiesResponse402 | GetTechnologiesResponse403 | GetTechnologiesResponse404 | GetTechnologiesResponse422 | GetTechnologiesResponse429 | GetTechnologiesResponse500 | GetTechnologiesResponse503
     """
 
     return (

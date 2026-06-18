@@ -27,10 +27,10 @@ class GetTrackerOverviewResponse200Output:
     """
     Attributes:
         summary (GetTrackerOverviewResponse200OutputSummary):
-        company_lists (list[GetTrackerOverviewResponse200OutputCompanyListsItem]): All active, non-archived company
-            tracker lists with rules and refresh estimates.
-        person_lists (list[GetTrackerOverviewResponse200OutputPersonListsItem]): All active, non-archived person tracker
-            lists with rules and refresh estimates.
+        company_lists (list[GetTrackerOverviewResponse200OutputCompanyListsItem]): All non-archived company tracker
+            lists with refresh estimates. May include inactive lists.
+        person_lists (list[GetTrackerOverviewResponse200OutputPersonListsItem]): All non-archived person tracker lists
+            with refresh estimates. May include inactive lists.
         upcoming_refreshes (list[GetTrackerOverviewResponse200OutputUpcomingRefreshesItem]): Next refreshes across all
             lists, sorted earliest first. Use this to forecast upcoming charges.
     """

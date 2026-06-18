@@ -24,6 +24,9 @@ from ...models.poll_exhaustive_contact_enrichment_result_response_403 import (
 from ...models.poll_exhaustive_contact_enrichment_result_response_404 import (
     PollExhaustiveContactEnrichmentResultResponse404,
 )
+from ...models.poll_exhaustive_contact_enrichment_result_response_422 import (
+    PollExhaustiveContactEnrichmentResultResponse422,
+)
 from ...models.poll_exhaustive_contact_enrichment_result_response_429 import (
     PollExhaustiveContactEnrichmentResultResponse429,
 )
@@ -64,6 +67,7 @@ def _parse_response(
     | PollExhaustiveContactEnrichmentResultResponse402
     | PollExhaustiveContactEnrichmentResultResponse403
     | PollExhaustiveContactEnrichmentResultResponse404
+    | PollExhaustiveContactEnrichmentResultResponse422
     | PollExhaustiveContactEnrichmentResultResponse429
     | PollExhaustiveContactEnrichmentResultResponse500
     | PollExhaustiveContactEnrichmentResultResponse503
@@ -99,6 +103,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = PollExhaustiveContactEnrichmentResultResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = PollExhaustiveContactEnrichmentResultResponse429.from_dict(response.json())
 
@@ -129,6 +138,7 @@ def _build_response(
     | PollExhaustiveContactEnrichmentResultResponse402
     | PollExhaustiveContactEnrichmentResultResponse403
     | PollExhaustiveContactEnrichmentResultResponse404
+    | PollExhaustiveContactEnrichmentResultResponse422
     | PollExhaustiveContactEnrichmentResultResponse429
     | PollExhaustiveContactEnrichmentResultResponse500
     | PollExhaustiveContactEnrichmentResultResponse503
@@ -152,6 +162,7 @@ def sync_detailed(
     | PollExhaustiveContactEnrichmentResultResponse402
     | PollExhaustiveContactEnrichmentResultResponse403
     | PollExhaustiveContactEnrichmentResultResponse404
+    | PollExhaustiveContactEnrichmentResultResponse422
     | PollExhaustiveContactEnrichmentResultResponse429
     | PollExhaustiveContactEnrichmentResultResponse500
     | PollExhaustiveContactEnrichmentResultResponse503
@@ -160,7 +171,9 @@ def sync_detailed(
 
      Polls the status of an exhaustive contact reveal task. Pass the task ID returned by /contact-
     details/exhaustive/start. Returns the current status and, once complete, the full set of discovered
-    emails and phone numbers.
+    emails and phone numbers. Includes both high-quality emails and low-quality emails
+    (risky/undeliverable). Low-quality emails failed our internal validation checks and should be
+    filtered out before use, but are included for transparency.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
@@ -172,7 +185,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PollExhaustiveContactEnrichmentResultResponse200 | PollExhaustiveContactEnrichmentResultResponse400 | PollExhaustiveContactEnrichmentResultResponse401 | PollExhaustiveContactEnrichmentResultResponse402 | PollExhaustiveContactEnrichmentResultResponse403 | PollExhaustiveContactEnrichmentResultResponse404 | PollExhaustiveContactEnrichmentResultResponse429 | PollExhaustiveContactEnrichmentResultResponse500 | PollExhaustiveContactEnrichmentResultResponse503]
+        Response[PollExhaustiveContactEnrichmentResultResponse200 | PollExhaustiveContactEnrichmentResultResponse400 | PollExhaustiveContactEnrichmentResultResponse401 | PollExhaustiveContactEnrichmentResultResponse402 | PollExhaustiveContactEnrichmentResultResponse403 | PollExhaustiveContactEnrichmentResultResponse404 | PollExhaustiveContactEnrichmentResultResponse422 | PollExhaustiveContactEnrichmentResultResponse429 | PollExhaustiveContactEnrichmentResultResponse500 | PollExhaustiveContactEnrichmentResultResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -197,6 +210,7 @@ def sync(
     | PollExhaustiveContactEnrichmentResultResponse402
     | PollExhaustiveContactEnrichmentResultResponse403
     | PollExhaustiveContactEnrichmentResultResponse404
+    | PollExhaustiveContactEnrichmentResultResponse422
     | PollExhaustiveContactEnrichmentResultResponse429
     | PollExhaustiveContactEnrichmentResultResponse500
     | PollExhaustiveContactEnrichmentResultResponse503
@@ -206,7 +220,9 @@ def sync(
 
      Polls the status of an exhaustive contact reveal task. Pass the task ID returned by /contact-
     details/exhaustive/start. Returns the current status and, once complete, the full set of discovered
-    emails and phone numbers.
+    emails and phone numbers. Includes both high-quality emails and low-quality emails
+    (risky/undeliverable). Low-quality emails failed our internal validation checks and should be
+    filtered out before use, but are included for transparency.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
@@ -218,7 +234,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PollExhaustiveContactEnrichmentResultResponse200 | PollExhaustiveContactEnrichmentResultResponse400 | PollExhaustiveContactEnrichmentResultResponse401 | PollExhaustiveContactEnrichmentResultResponse402 | PollExhaustiveContactEnrichmentResultResponse403 | PollExhaustiveContactEnrichmentResultResponse404 | PollExhaustiveContactEnrichmentResultResponse429 | PollExhaustiveContactEnrichmentResultResponse500 | PollExhaustiveContactEnrichmentResultResponse503
+        PollExhaustiveContactEnrichmentResultResponse200 | PollExhaustiveContactEnrichmentResultResponse400 | PollExhaustiveContactEnrichmentResultResponse401 | PollExhaustiveContactEnrichmentResultResponse402 | PollExhaustiveContactEnrichmentResultResponse403 | PollExhaustiveContactEnrichmentResultResponse404 | PollExhaustiveContactEnrichmentResultResponse422 | PollExhaustiveContactEnrichmentResultResponse429 | PollExhaustiveContactEnrichmentResultResponse500 | PollExhaustiveContactEnrichmentResultResponse503
     """
 
     return sync_detailed(
@@ -238,6 +254,7 @@ async def asyncio_detailed(
     | PollExhaustiveContactEnrichmentResultResponse402
     | PollExhaustiveContactEnrichmentResultResponse403
     | PollExhaustiveContactEnrichmentResultResponse404
+    | PollExhaustiveContactEnrichmentResultResponse422
     | PollExhaustiveContactEnrichmentResultResponse429
     | PollExhaustiveContactEnrichmentResultResponse500
     | PollExhaustiveContactEnrichmentResultResponse503
@@ -246,7 +263,9 @@ async def asyncio_detailed(
 
      Polls the status of an exhaustive contact reveal task. Pass the task ID returned by /contact-
     details/exhaustive/start. Returns the current status and, once complete, the full set of discovered
-    emails and phone numbers.
+    emails and phone numbers. Includes both high-quality emails and low-quality emails
+    (risky/undeliverable). Low-quality emails failed our internal validation checks and should be
+    filtered out before use, but are included for transparency.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
@@ -258,7 +277,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PollExhaustiveContactEnrichmentResultResponse200 | PollExhaustiveContactEnrichmentResultResponse400 | PollExhaustiveContactEnrichmentResultResponse401 | PollExhaustiveContactEnrichmentResultResponse402 | PollExhaustiveContactEnrichmentResultResponse403 | PollExhaustiveContactEnrichmentResultResponse404 | PollExhaustiveContactEnrichmentResultResponse429 | PollExhaustiveContactEnrichmentResultResponse500 | PollExhaustiveContactEnrichmentResultResponse503]
+        Response[PollExhaustiveContactEnrichmentResultResponse200 | PollExhaustiveContactEnrichmentResultResponse400 | PollExhaustiveContactEnrichmentResultResponse401 | PollExhaustiveContactEnrichmentResultResponse402 | PollExhaustiveContactEnrichmentResultResponse403 | PollExhaustiveContactEnrichmentResultResponse404 | PollExhaustiveContactEnrichmentResultResponse422 | PollExhaustiveContactEnrichmentResultResponse429 | PollExhaustiveContactEnrichmentResultResponse500 | PollExhaustiveContactEnrichmentResultResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -281,6 +300,7 @@ async def asyncio(
     | PollExhaustiveContactEnrichmentResultResponse402
     | PollExhaustiveContactEnrichmentResultResponse403
     | PollExhaustiveContactEnrichmentResultResponse404
+    | PollExhaustiveContactEnrichmentResultResponse422
     | PollExhaustiveContactEnrichmentResultResponse429
     | PollExhaustiveContactEnrichmentResultResponse500
     | PollExhaustiveContactEnrichmentResultResponse503
@@ -290,7 +310,9 @@ async def asyncio(
 
      Polls the status of an exhaustive contact reveal task. Pass the task ID returned by /contact-
     details/exhaustive/start. Returns the current status and, once complete, the full set of discovered
-    emails and phone numbers.
+    emails and phone numbers. Includes both high-quality emails and low-quality emails
+    (risky/undeliverable). Low-quality emails failed our internal validation checks and should be
+    filtered out before use, but are included for transparency.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
@@ -302,7 +324,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PollExhaustiveContactEnrichmentResultResponse200 | PollExhaustiveContactEnrichmentResultResponse400 | PollExhaustiveContactEnrichmentResultResponse401 | PollExhaustiveContactEnrichmentResultResponse402 | PollExhaustiveContactEnrichmentResultResponse403 | PollExhaustiveContactEnrichmentResultResponse404 | PollExhaustiveContactEnrichmentResultResponse429 | PollExhaustiveContactEnrichmentResultResponse500 | PollExhaustiveContactEnrichmentResultResponse503
+        PollExhaustiveContactEnrichmentResultResponse200 | PollExhaustiveContactEnrichmentResultResponse400 | PollExhaustiveContactEnrichmentResultResponse401 | PollExhaustiveContactEnrichmentResultResponse402 | PollExhaustiveContactEnrichmentResultResponse403 | PollExhaustiveContactEnrichmentResultResponse404 | PollExhaustiveContactEnrichmentResultResponse422 | PollExhaustiveContactEnrichmentResultResponse429 | PollExhaustiveContactEnrichmentResultResponse500 | PollExhaustiveContactEnrichmentResultResponse503
     """
 
     return (

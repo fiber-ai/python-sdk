@@ -20,14 +20,17 @@ class NewFundingRound:
         entity_type (Literal['company']):
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
         min_amount_usd (float | None | Unset): Only alert for rounds above this amount. Omit for any amount.
-        round_types (list[NewFundingRoundRoundTypesType0Item] | None | Unset): Only alert for these round types. Omit
-            for any round.
+        round_types (list[NewFundingRoundRoundTypesType0Item] | None | Unset): Round types to alert on. Defaults to
+            equity-focused types when omitted. Set explicitly to include debt/grant types.
     """
 
     type_: Literal["new_funding_round"]
     entity_type: Literal["company"]
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
     min_amount_usd: float | None | Unset = UNSET
     round_types: list[NewFundingRoundRoundTypesType0Item] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -42,6 +45,8 @@ class NewFundingRound:
             lookback_days = UNSET
         else:
             lookback_days = self.lookback_days
+
+        is_dummy = self.is_dummy
 
         min_amount_usd: float | None | Unset
         if isinstance(self.min_amount_usd, Unset):
@@ -71,6 +76,8 @@ class NewFundingRound:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
         if min_amount_usd is not UNSET:
             field_dict["minAmountUsd"] = min_amount_usd
         if round_types is not UNSET:
@@ -97,6 +104,8 @@ class NewFundingRound:
             return cast(int | None | Unset, data)
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
+
+        is_dummy = d.pop("isDummy", UNSET)
 
         def _parse_min_amount_usd(data: object) -> float | None | Unset:
             if data is None:
@@ -133,6 +142,7 @@ class NewFundingRound:
             type_=type_,
             entity_type=entity_type,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
             min_amount_usd=min_amount_usd,
             round_types=round_types,
         )

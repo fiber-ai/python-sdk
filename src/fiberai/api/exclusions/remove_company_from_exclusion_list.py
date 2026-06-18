@@ -12,6 +12,7 @@ from ...models.remove_company_from_exclusion_list_response_401 import RemoveComp
 from ...models.remove_company_from_exclusion_list_response_402 import RemoveCompanyFromExclusionListResponse402
 from ...models.remove_company_from_exclusion_list_response_403 import RemoveCompanyFromExclusionListResponse403
 from ...models.remove_company_from_exclusion_list_response_404 import RemoveCompanyFromExclusionListResponse404
+from ...models.remove_company_from_exclusion_list_response_422 import RemoveCompanyFromExclusionListResponse422
 from ...models.remove_company_from_exclusion_list_response_429 import RemoveCompanyFromExclusionListResponse429
 from ...models.remove_company_from_exclusion_list_response_500 import RemoveCompanyFromExclusionListResponse500
 from ...models.remove_company_from_exclusion_list_response_503 import RemoveCompanyFromExclusionListResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | RemoveCompanyFromExclusionListResponse402
     | RemoveCompanyFromExclusionListResponse403
     | RemoveCompanyFromExclusionListResponse404
+    | RemoveCompanyFromExclusionListResponse422
     | RemoveCompanyFromExclusionListResponse429
     | RemoveCompanyFromExclusionListResponse500
     | RemoveCompanyFromExclusionListResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = RemoveCompanyFromExclusionListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = RemoveCompanyFromExclusionListResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | RemoveCompanyFromExclusionListResponse402
     | RemoveCompanyFromExclusionListResponse403
     | RemoveCompanyFromExclusionListResponse404
+    | RemoveCompanyFromExclusionListResponse422
     | RemoveCompanyFromExclusionListResponse429
     | RemoveCompanyFromExclusionListResponse500
     | RemoveCompanyFromExclusionListResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | RemoveCompanyFromExclusionListResponse402
     | RemoveCompanyFromExclusionListResponse403
     | RemoveCompanyFromExclusionListResponse404
+    | RemoveCompanyFromExclusionListResponse422
     | RemoveCompanyFromExclusionListResponse429
     | RemoveCompanyFromExclusionListResponse500
     | RemoveCompanyFromExclusionListResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[RemoveCompanyFromExclusionListResponse200 | RemoveCompanyFromExclusionListResponse400 | RemoveCompanyFromExclusionListResponse401 | RemoveCompanyFromExclusionListResponse402 | RemoveCompanyFromExclusionListResponse403 | RemoveCompanyFromExclusionListResponse404 | RemoveCompanyFromExclusionListResponse429 | RemoveCompanyFromExclusionListResponse500 | RemoveCompanyFromExclusionListResponse503]
+        Response[RemoveCompanyFromExclusionListResponse200 | RemoveCompanyFromExclusionListResponse400 | RemoveCompanyFromExclusionListResponse401 | RemoveCompanyFromExclusionListResponse402 | RemoveCompanyFromExclusionListResponse403 | RemoveCompanyFromExclusionListResponse404 | RemoveCompanyFromExclusionListResponse422 | RemoveCompanyFromExclusionListResponse429 | RemoveCompanyFromExclusionListResponse500 | RemoveCompanyFromExclusionListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | RemoveCompanyFromExclusionListResponse402
     | RemoveCompanyFromExclusionListResponse403
     | RemoveCompanyFromExclusionListResponse404
+    | RemoveCompanyFromExclusionListResponse422
     | RemoveCompanyFromExclusionListResponse429
     | RemoveCompanyFromExclusionListResponse500
     | RemoveCompanyFromExclusionListResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        RemoveCompanyFromExclusionListResponse200 | RemoveCompanyFromExclusionListResponse400 | RemoveCompanyFromExclusionListResponse401 | RemoveCompanyFromExclusionListResponse402 | RemoveCompanyFromExclusionListResponse403 | RemoveCompanyFromExclusionListResponse404 | RemoveCompanyFromExclusionListResponse429 | RemoveCompanyFromExclusionListResponse500 | RemoveCompanyFromExclusionListResponse503
+        RemoveCompanyFromExclusionListResponse200 | RemoveCompanyFromExclusionListResponse400 | RemoveCompanyFromExclusionListResponse401 | RemoveCompanyFromExclusionListResponse402 | RemoveCompanyFromExclusionListResponse403 | RemoveCompanyFromExclusionListResponse404 | RemoveCompanyFromExclusionListResponse422 | RemoveCompanyFromExclusionListResponse429 | RemoveCompanyFromExclusionListResponse500 | RemoveCompanyFromExclusionListResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | RemoveCompanyFromExclusionListResponse402
     | RemoveCompanyFromExclusionListResponse403
     | RemoveCompanyFromExclusionListResponse404
+    | RemoveCompanyFromExclusionListResponse422
     | RemoveCompanyFromExclusionListResponse429
     | RemoveCompanyFromExclusionListResponse500
     | RemoveCompanyFromExclusionListResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[RemoveCompanyFromExclusionListResponse200 | RemoveCompanyFromExclusionListResponse400 | RemoveCompanyFromExclusionListResponse401 | RemoveCompanyFromExclusionListResponse402 | RemoveCompanyFromExclusionListResponse403 | RemoveCompanyFromExclusionListResponse404 | RemoveCompanyFromExclusionListResponse429 | RemoveCompanyFromExclusionListResponse500 | RemoveCompanyFromExclusionListResponse503]
+        Response[RemoveCompanyFromExclusionListResponse200 | RemoveCompanyFromExclusionListResponse400 | RemoveCompanyFromExclusionListResponse401 | RemoveCompanyFromExclusionListResponse402 | RemoveCompanyFromExclusionListResponse403 | RemoveCompanyFromExclusionListResponse404 | RemoveCompanyFromExclusionListResponse422 | RemoveCompanyFromExclusionListResponse429 | RemoveCompanyFromExclusionListResponse500 | RemoveCompanyFromExclusionListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | RemoveCompanyFromExclusionListResponse402
     | RemoveCompanyFromExclusionListResponse403
     | RemoveCompanyFromExclusionListResponse404
+    | RemoveCompanyFromExclusionListResponse422
     | RemoveCompanyFromExclusionListResponse429
     | RemoveCompanyFromExclusionListResponse500
     | RemoveCompanyFromExclusionListResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        RemoveCompanyFromExclusionListResponse200 | RemoveCompanyFromExclusionListResponse400 | RemoveCompanyFromExclusionListResponse401 | RemoveCompanyFromExclusionListResponse402 | RemoveCompanyFromExclusionListResponse403 | RemoveCompanyFromExclusionListResponse404 | RemoveCompanyFromExclusionListResponse429 | RemoveCompanyFromExclusionListResponse500 | RemoveCompanyFromExclusionListResponse503
+        RemoveCompanyFromExclusionListResponse200 | RemoveCompanyFromExclusionListResponse400 | RemoveCompanyFromExclusionListResponse401 | RemoveCompanyFromExclusionListResponse402 | RemoveCompanyFromExclusionListResponse403 | RemoveCompanyFromExclusionListResponse404 | RemoveCompanyFromExclusionListResponse422 | RemoveCompanyFromExclusionListResponse429 | RemoveCompanyFromExclusionListResponse500 | RemoveCompanyFromExclusionListResponse503
     """
 
     return (

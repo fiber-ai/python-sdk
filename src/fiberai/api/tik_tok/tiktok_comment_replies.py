@@ -12,6 +12,7 @@ from ...models.tiktok_comment_replies_response_401 import TiktokCommentRepliesRe
 from ...models.tiktok_comment_replies_response_402 import TiktokCommentRepliesResponse402
 from ...models.tiktok_comment_replies_response_403 import TiktokCommentRepliesResponse403
 from ...models.tiktok_comment_replies_response_404 import TiktokCommentRepliesResponse404
+from ...models.tiktok_comment_replies_response_422 import TiktokCommentRepliesResponse422
 from ...models.tiktok_comment_replies_response_429 import TiktokCommentRepliesResponse429
 from ...models.tiktok_comment_replies_response_500 import TiktokCommentRepliesResponse500
 from ...models.tiktok_comment_replies_response_503 import TiktokCommentRepliesResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | TiktokCommentRepliesResponse402
     | TiktokCommentRepliesResponse403
     | TiktokCommentRepliesResponse404
+    | TiktokCommentRepliesResponse422
     | TiktokCommentRepliesResponse429
     | TiktokCommentRepliesResponse500
     | TiktokCommentRepliesResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = TiktokCommentRepliesResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = TiktokCommentRepliesResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | TiktokCommentRepliesResponse402
     | TiktokCommentRepliesResponse403
     | TiktokCommentRepliesResponse404
+    | TiktokCommentRepliesResponse422
     | TiktokCommentRepliesResponse429
     | TiktokCommentRepliesResponse500
     | TiktokCommentRepliesResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | TiktokCommentRepliesResponse402
     | TiktokCommentRepliesResponse403
     | TiktokCommentRepliesResponse404
+    | TiktokCommentRepliesResponse422
     | TiktokCommentRepliesResponse429
     | TiktokCommentRepliesResponse500
     | TiktokCommentRepliesResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokCommentRepliesResponse200 | TiktokCommentRepliesResponse400 | TiktokCommentRepliesResponse401 | TiktokCommentRepliesResponse402 | TiktokCommentRepliesResponse403 | TiktokCommentRepliesResponse404 | TiktokCommentRepliesResponse429 | TiktokCommentRepliesResponse500 | TiktokCommentRepliesResponse503]
+        Response[TiktokCommentRepliesResponse200 | TiktokCommentRepliesResponse400 | TiktokCommentRepliesResponse401 | TiktokCommentRepliesResponse402 | TiktokCommentRepliesResponse403 | TiktokCommentRepliesResponse404 | TiktokCommentRepliesResponse422 | TiktokCommentRepliesResponse429 | TiktokCommentRepliesResponse500 | TiktokCommentRepliesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | TiktokCommentRepliesResponse402
     | TiktokCommentRepliesResponse403
     | TiktokCommentRepliesResponse404
+    | TiktokCommentRepliesResponse422
     | TiktokCommentRepliesResponse429
     | TiktokCommentRepliesResponse500
     | TiktokCommentRepliesResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokCommentRepliesResponse200 | TiktokCommentRepliesResponse400 | TiktokCommentRepliesResponse401 | TiktokCommentRepliesResponse402 | TiktokCommentRepliesResponse403 | TiktokCommentRepliesResponse404 | TiktokCommentRepliesResponse429 | TiktokCommentRepliesResponse500 | TiktokCommentRepliesResponse503
+        TiktokCommentRepliesResponse200 | TiktokCommentRepliesResponse400 | TiktokCommentRepliesResponse401 | TiktokCommentRepliesResponse402 | TiktokCommentRepliesResponse403 | TiktokCommentRepliesResponse404 | TiktokCommentRepliesResponse422 | TiktokCommentRepliesResponse429 | TiktokCommentRepliesResponse500 | TiktokCommentRepliesResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | TiktokCommentRepliesResponse402
     | TiktokCommentRepliesResponse403
     | TiktokCommentRepliesResponse404
+    | TiktokCommentRepliesResponse422
     | TiktokCommentRepliesResponse429
     | TiktokCommentRepliesResponse500
     | TiktokCommentRepliesResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokCommentRepliesResponse200 | TiktokCommentRepliesResponse400 | TiktokCommentRepliesResponse401 | TiktokCommentRepliesResponse402 | TiktokCommentRepliesResponse403 | TiktokCommentRepliesResponse404 | TiktokCommentRepliesResponse429 | TiktokCommentRepliesResponse500 | TiktokCommentRepliesResponse503]
+        Response[TiktokCommentRepliesResponse200 | TiktokCommentRepliesResponse400 | TiktokCommentRepliesResponse401 | TiktokCommentRepliesResponse402 | TiktokCommentRepliesResponse403 | TiktokCommentRepliesResponse404 | TiktokCommentRepliesResponse422 | TiktokCommentRepliesResponse429 | TiktokCommentRepliesResponse500 | TiktokCommentRepliesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | TiktokCommentRepliesResponse402
     | TiktokCommentRepliesResponse403
     | TiktokCommentRepliesResponse404
+    | TiktokCommentRepliesResponse422
     | TiktokCommentRepliesResponse429
     | TiktokCommentRepliesResponse500
     | TiktokCommentRepliesResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokCommentRepliesResponse200 | TiktokCommentRepliesResponse400 | TiktokCommentRepliesResponse401 | TiktokCommentRepliesResponse402 | TiktokCommentRepliesResponse403 | TiktokCommentRepliesResponse404 | TiktokCommentRepliesResponse429 | TiktokCommentRepliesResponse500 | TiktokCommentRepliesResponse503
+        TiktokCommentRepliesResponse200 | TiktokCommentRepliesResponse400 | TiktokCommentRepliesResponse401 | TiktokCommentRepliesResponse402 | TiktokCommentRepliesResponse403 | TiktokCommentRepliesResponse404 | TiktokCommentRepliesResponse422 | TiktokCommentRepliesResponse429 | TiktokCommentRepliesResponse500 | TiktokCommentRepliesResponse503
     """
 
     return (

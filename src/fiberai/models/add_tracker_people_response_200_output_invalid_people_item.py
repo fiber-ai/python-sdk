@@ -13,8 +13,8 @@ T = TypeVar("T", bound="AddTrackerPeopleResponse200OutputInvalidPeopleItem")
 class AddTrackerPeopleResponse200OutputInvalidPeopleItem:
     """
     Attributes:
-        index (int): Index in the input array
-        reason (str): Why this person was skipped
+        index (int): Index in the input array.
+        reason (str): Why this person was skipped.
     """
 
     index: int

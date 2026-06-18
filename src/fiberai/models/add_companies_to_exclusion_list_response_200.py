@@ -42,6 +42,7 @@ class AddCompaniesToExclusionListResponse200:
         charge_info (AddCompaniesToExclusionListResponse200ChargeInfoType0 |
             AddCompaniesToExclusionListResponse200ChargeInfoType1 | AddCompaniesToExclusionListResponse200ChargeInfoType2 |
             AddCompaniesToExclusionListResponse200ChargeInfoType3 | AddCompaniesToExclusionListResponse200ChargeInfoType4):
+        advice (list[str]): Tips, recommendations, and suggestions for using this API effectively.
         warnings (list[AddCompaniesToExclusionListResponse200WarningsType0Item] | None | Unset): Warnings about
             extraneous fields in request
     """
@@ -54,6 +55,7 @@ class AddCompaniesToExclusionListResponse200:
         | AddCompaniesToExclusionListResponse200ChargeInfoType3
         | AddCompaniesToExclusionListResponse200ChargeInfoType4
     )
+    advice: list[str]
     warnings: list[AddCompaniesToExclusionListResponse200WarningsType0Item] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
@@ -84,6 +86,8 @@ class AddCompaniesToExclusionListResponse200:
         else:
             charge_info = self.charge_info.to_dict()
 
+        advice = self.advice
+
         warnings: list[dict[str, Any]] | None | Unset
         if isinstance(self.warnings, Unset):
             warnings = UNSET
@@ -102,6 +106,7 @@ class AddCompaniesToExclusionListResponse200:
             {
                 "output": output,
                 "chargeInfo": charge_info,
+                "advice": advice,
             }
         )
         if warnings is not UNSET:
@@ -185,6 +190,8 @@ class AddCompaniesToExclusionListResponse200:
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 
+        advice = cast(list[str], d.pop("advice"))
+
         def _parse_warnings(
             data: object,
         ) -> list[AddCompaniesToExclusionListResponse200WarningsType0Item] | None | Unset:
@@ -214,6 +221,7 @@ class AddCompaniesToExclusionListResponse200:
         add_companies_to_exclusion_list_response_200 = cls(
             output=output,
             charge_info=charge_info,
+            advice=advice,
             warnings=warnings,
         )
 

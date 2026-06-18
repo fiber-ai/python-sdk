@@ -13,6 +13,7 @@ from ...models.remove_tracker_companies_response_401 import RemoveTrackerCompani
 from ...models.remove_tracker_companies_response_402 import RemoveTrackerCompaniesResponse402
 from ...models.remove_tracker_companies_response_403 import RemoveTrackerCompaniesResponse403
 from ...models.remove_tracker_companies_response_404 import RemoveTrackerCompaniesResponse404
+from ...models.remove_tracker_companies_response_422 import RemoveTrackerCompaniesResponse422
 from ...models.remove_tracker_companies_response_429 import RemoveTrackerCompaniesResponse429
 from ...models.remove_tracker_companies_response_500 import RemoveTrackerCompaniesResponse500
 from ...models.remove_tracker_companies_response_503 import RemoveTrackerCompaniesResponse503
@@ -58,6 +59,7 @@ def _parse_response(
     | RemoveTrackerCompaniesResponse402
     | RemoveTrackerCompaniesResponse403
     | RemoveTrackerCompaniesResponse404
+    | RemoveTrackerCompaniesResponse422
     | RemoveTrackerCompaniesResponse429
     | RemoveTrackerCompaniesResponse500
     | RemoveTrackerCompaniesResponse503
@@ -93,6 +95,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = RemoveTrackerCompaniesResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = RemoveTrackerCompaniesResponse429.from_dict(response.json())
 
@@ -123,6 +130,7 @@ def _build_response(
     | RemoveTrackerCompaniesResponse402
     | RemoveTrackerCompaniesResponse403
     | RemoveTrackerCompaniesResponse404
+    | RemoveTrackerCompaniesResponse422
     | RemoveTrackerCompaniesResponse429
     | RemoveTrackerCompaniesResponse500
     | RemoveTrackerCompaniesResponse503
@@ -148,6 +156,7 @@ def sync_detailed(
     | RemoveTrackerCompaniesResponse402
     | RemoveTrackerCompaniesResponse403
     | RemoveTrackerCompaniesResponse404
+    | RemoveTrackerCompaniesResponse422
     | RemoveTrackerCompaniesResponse429
     | RemoveTrackerCompaniesResponse500
     | RemoveTrackerCompaniesResponse503
@@ -157,7 +166,7 @@ def sync_detailed(
      Remove companies from a company tracker list. Deactivates them so they are no longer monitored, but
     preserves their signal history. Uses the same identifier format as add-companies.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -172,7 +181,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[RemoveTrackerCompaniesResponse200 | RemoveTrackerCompaniesResponse400 | RemoveTrackerCompaniesResponse401 | RemoveTrackerCompaniesResponse402 | RemoveTrackerCompaniesResponse403 | RemoveTrackerCompaniesResponse404 | RemoveTrackerCompaniesResponse429 | RemoveTrackerCompaniesResponse500 | RemoveTrackerCompaniesResponse503]
+        Response[RemoveTrackerCompaniesResponse200 | RemoveTrackerCompaniesResponse400 | RemoveTrackerCompaniesResponse401 | RemoveTrackerCompaniesResponse402 | RemoveTrackerCompaniesResponse403 | RemoveTrackerCompaniesResponse404 | RemoveTrackerCompaniesResponse422 | RemoveTrackerCompaniesResponse429 | RemoveTrackerCompaniesResponse500 | RemoveTrackerCompaniesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -201,6 +210,7 @@ def sync(
     | RemoveTrackerCompaniesResponse402
     | RemoveTrackerCompaniesResponse403
     | RemoveTrackerCompaniesResponse404
+    | RemoveTrackerCompaniesResponse422
     | RemoveTrackerCompaniesResponse429
     | RemoveTrackerCompaniesResponse500
     | RemoveTrackerCompaniesResponse503
@@ -211,7 +221,7 @@ def sync(
      Remove companies from a company tracker list. Deactivates them so they are no longer monitored, but
     preserves their signal history. Uses the same identifier format as add-companies.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -226,7 +236,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        RemoveTrackerCompaniesResponse200 | RemoveTrackerCompaniesResponse400 | RemoveTrackerCompaniesResponse401 | RemoveTrackerCompaniesResponse402 | RemoveTrackerCompaniesResponse403 | RemoveTrackerCompaniesResponse404 | RemoveTrackerCompaniesResponse429 | RemoveTrackerCompaniesResponse500 | RemoveTrackerCompaniesResponse503
+        RemoveTrackerCompaniesResponse200 | RemoveTrackerCompaniesResponse400 | RemoveTrackerCompaniesResponse401 | RemoveTrackerCompaniesResponse402 | RemoveTrackerCompaniesResponse403 | RemoveTrackerCompaniesResponse404 | RemoveTrackerCompaniesResponse422 | RemoveTrackerCompaniesResponse429 | RemoveTrackerCompaniesResponse500 | RemoveTrackerCompaniesResponse503
     """
 
     return sync_detailed(
@@ -250,6 +260,7 @@ async def asyncio_detailed(
     | RemoveTrackerCompaniesResponse402
     | RemoveTrackerCompaniesResponse403
     | RemoveTrackerCompaniesResponse404
+    | RemoveTrackerCompaniesResponse422
     | RemoveTrackerCompaniesResponse429
     | RemoveTrackerCompaniesResponse500
     | RemoveTrackerCompaniesResponse503
@@ -259,7 +270,7 @@ async def asyncio_detailed(
      Remove companies from a company tracker list. Deactivates them so they are no longer monitored, but
     preserves their signal history. Uses the same identifier format as add-companies.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -274,7 +285,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[RemoveTrackerCompaniesResponse200 | RemoveTrackerCompaniesResponse400 | RemoveTrackerCompaniesResponse401 | RemoveTrackerCompaniesResponse402 | RemoveTrackerCompaniesResponse403 | RemoveTrackerCompaniesResponse404 | RemoveTrackerCompaniesResponse429 | RemoveTrackerCompaniesResponse500 | RemoveTrackerCompaniesResponse503]
+        Response[RemoveTrackerCompaniesResponse200 | RemoveTrackerCompaniesResponse400 | RemoveTrackerCompaniesResponse401 | RemoveTrackerCompaniesResponse402 | RemoveTrackerCompaniesResponse403 | RemoveTrackerCompaniesResponse404 | RemoveTrackerCompaniesResponse422 | RemoveTrackerCompaniesResponse429 | RemoveTrackerCompaniesResponse500 | RemoveTrackerCompaniesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -301,6 +312,7 @@ async def asyncio(
     | RemoveTrackerCompaniesResponse402
     | RemoveTrackerCompaniesResponse403
     | RemoveTrackerCompaniesResponse404
+    | RemoveTrackerCompaniesResponse422
     | RemoveTrackerCompaniesResponse429
     | RemoveTrackerCompaniesResponse500
     | RemoveTrackerCompaniesResponse503
@@ -311,7 +323,7 @@ async def asyncio(
      Remove companies from a company tracker list. Deactivates them so they are no longer monitored, but
     preserves their signal history. Uses the same identifier format as add-companies.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -326,7 +338,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        RemoveTrackerCompaniesResponse200 | RemoveTrackerCompaniesResponse400 | RemoveTrackerCompaniesResponse401 | RemoveTrackerCompaniesResponse402 | RemoveTrackerCompaniesResponse403 | RemoveTrackerCompaniesResponse404 | RemoveTrackerCompaniesResponse429 | RemoveTrackerCompaniesResponse500 | RemoveTrackerCompaniesResponse503
+        RemoveTrackerCompaniesResponse200 | RemoveTrackerCompaniesResponse400 | RemoveTrackerCompaniesResponse401 | RemoveTrackerCompaniesResponse402 | RemoveTrackerCompaniesResponse403 | RemoveTrackerCompaniesResponse404 | RemoveTrackerCompaniesResponse422 | RemoveTrackerCompaniesResponse429 | RemoveTrackerCompaniesResponse500 | RemoveTrackerCompaniesResponse503
     """
 
     return (

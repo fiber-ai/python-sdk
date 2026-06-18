@@ -24,6 +24,9 @@ from ...models.get_excluded_companies_for_exclusion_list_response_403 import (
 from ...models.get_excluded_companies_for_exclusion_list_response_404 import (
     GetExcludedCompaniesForExclusionListResponse404,
 )
+from ...models.get_excluded_companies_for_exclusion_list_response_422 import (
+    GetExcludedCompaniesForExclusionListResponse422,
+)
 from ...models.get_excluded_companies_for_exclusion_list_response_429 import (
     GetExcludedCompaniesForExclusionListResponse429,
 )
@@ -64,6 +67,7 @@ def _parse_response(
     | GetExcludedCompaniesForExclusionListResponse402
     | GetExcludedCompaniesForExclusionListResponse403
     | GetExcludedCompaniesForExclusionListResponse404
+    | GetExcludedCompaniesForExclusionListResponse422
     | GetExcludedCompaniesForExclusionListResponse429
     | GetExcludedCompaniesForExclusionListResponse500
     | GetExcludedCompaniesForExclusionListResponse503
@@ -99,6 +103,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetExcludedCompaniesForExclusionListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetExcludedCompaniesForExclusionListResponse429.from_dict(response.json())
 
@@ -129,6 +138,7 @@ def _build_response(
     | GetExcludedCompaniesForExclusionListResponse402
     | GetExcludedCompaniesForExclusionListResponse403
     | GetExcludedCompaniesForExclusionListResponse404
+    | GetExcludedCompaniesForExclusionListResponse422
     | GetExcludedCompaniesForExclusionListResponse429
     | GetExcludedCompaniesForExclusionListResponse500
     | GetExcludedCompaniesForExclusionListResponse503
@@ -152,6 +162,7 @@ def sync_detailed(
     | GetExcludedCompaniesForExclusionListResponse402
     | GetExcludedCompaniesForExclusionListResponse403
     | GetExcludedCompaniesForExclusionListResponse404
+    | GetExcludedCompaniesForExclusionListResponse422
     | GetExcludedCompaniesForExclusionListResponse429
     | GetExcludedCompaniesForExclusionListResponse500
     | GetExcludedCompaniesForExclusionListResponse503
@@ -173,7 +184,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetExcludedCompaniesForExclusionListResponse200 | GetExcludedCompaniesForExclusionListResponse400 | GetExcludedCompaniesForExclusionListResponse401 | GetExcludedCompaniesForExclusionListResponse402 | GetExcludedCompaniesForExclusionListResponse403 | GetExcludedCompaniesForExclusionListResponse404 | GetExcludedCompaniesForExclusionListResponse429 | GetExcludedCompaniesForExclusionListResponse500 | GetExcludedCompaniesForExclusionListResponse503]
+        Response[GetExcludedCompaniesForExclusionListResponse200 | GetExcludedCompaniesForExclusionListResponse400 | GetExcludedCompaniesForExclusionListResponse401 | GetExcludedCompaniesForExclusionListResponse402 | GetExcludedCompaniesForExclusionListResponse403 | GetExcludedCompaniesForExclusionListResponse404 | GetExcludedCompaniesForExclusionListResponse422 | GetExcludedCompaniesForExclusionListResponse429 | GetExcludedCompaniesForExclusionListResponse500 | GetExcludedCompaniesForExclusionListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -198,6 +209,7 @@ def sync(
     | GetExcludedCompaniesForExclusionListResponse402
     | GetExcludedCompaniesForExclusionListResponse403
     | GetExcludedCompaniesForExclusionListResponse404
+    | GetExcludedCompaniesForExclusionListResponse422
     | GetExcludedCompaniesForExclusionListResponse429
     | GetExcludedCompaniesForExclusionListResponse500
     | GetExcludedCompaniesForExclusionListResponse503
@@ -220,7 +232,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetExcludedCompaniesForExclusionListResponse200 | GetExcludedCompaniesForExclusionListResponse400 | GetExcludedCompaniesForExclusionListResponse401 | GetExcludedCompaniesForExclusionListResponse402 | GetExcludedCompaniesForExclusionListResponse403 | GetExcludedCompaniesForExclusionListResponse404 | GetExcludedCompaniesForExclusionListResponse429 | GetExcludedCompaniesForExclusionListResponse500 | GetExcludedCompaniesForExclusionListResponse503
+        GetExcludedCompaniesForExclusionListResponse200 | GetExcludedCompaniesForExclusionListResponse400 | GetExcludedCompaniesForExclusionListResponse401 | GetExcludedCompaniesForExclusionListResponse402 | GetExcludedCompaniesForExclusionListResponse403 | GetExcludedCompaniesForExclusionListResponse404 | GetExcludedCompaniesForExclusionListResponse422 | GetExcludedCompaniesForExclusionListResponse429 | GetExcludedCompaniesForExclusionListResponse500 | GetExcludedCompaniesForExclusionListResponse503
     """
 
     return sync_detailed(
@@ -240,6 +252,7 @@ async def asyncio_detailed(
     | GetExcludedCompaniesForExclusionListResponse402
     | GetExcludedCompaniesForExclusionListResponse403
     | GetExcludedCompaniesForExclusionListResponse404
+    | GetExcludedCompaniesForExclusionListResponse422
     | GetExcludedCompaniesForExclusionListResponse429
     | GetExcludedCompaniesForExclusionListResponse500
     | GetExcludedCompaniesForExclusionListResponse503
@@ -261,7 +274,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetExcludedCompaniesForExclusionListResponse200 | GetExcludedCompaniesForExclusionListResponse400 | GetExcludedCompaniesForExclusionListResponse401 | GetExcludedCompaniesForExclusionListResponse402 | GetExcludedCompaniesForExclusionListResponse403 | GetExcludedCompaniesForExclusionListResponse404 | GetExcludedCompaniesForExclusionListResponse429 | GetExcludedCompaniesForExclusionListResponse500 | GetExcludedCompaniesForExclusionListResponse503]
+        Response[GetExcludedCompaniesForExclusionListResponse200 | GetExcludedCompaniesForExclusionListResponse400 | GetExcludedCompaniesForExclusionListResponse401 | GetExcludedCompaniesForExclusionListResponse402 | GetExcludedCompaniesForExclusionListResponse403 | GetExcludedCompaniesForExclusionListResponse404 | GetExcludedCompaniesForExclusionListResponse422 | GetExcludedCompaniesForExclusionListResponse429 | GetExcludedCompaniesForExclusionListResponse500 | GetExcludedCompaniesForExclusionListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -284,6 +297,7 @@ async def asyncio(
     | GetExcludedCompaniesForExclusionListResponse402
     | GetExcludedCompaniesForExclusionListResponse403
     | GetExcludedCompaniesForExclusionListResponse404
+    | GetExcludedCompaniesForExclusionListResponse422
     | GetExcludedCompaniesForExclusionListResponse429
     | GetExcludedCompaniesForExclusionListResponse500
     | GetExcludedCompaniesForExclusionListResponse503
@@ -306,7 +320,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetExcludedCompaniesForExclusionListResponse200 | GetExcludedCompaniesForExclusionListResponse400 | GetExcludedCompaniesForExclusionListResponse401 | GetExcludedCompaniesForExclusionListResponse402 | GetExcludedCompaniesForExclusionListResponse403 | GetExcludedCompaniesForExclusionListResponse404 | GetExcludedCompaniesForExclusionListResponse429 | GetExcludedCompaniesForExclusionListResponse500 | GetExcludedCompaniesForExclusionListResponse503
+        GetExcludedCompaniesForExclusionListResponse200 | GetExcludedCompaniesForExclusionListResponse400 | GetExcludedCompaniesForExclusionListResponse401 | GetExcludedCompaniesForExclusionListResponse402 | GetExcludedCompaniesForExclusionListResponse403 | GetExcludedCompaniesForExclusionListResponse404 | GetExcludedCompaniesForExclusionListResponse422 | GetExcludedCompaniesForExclusionListResponse429 | GetExcludedCompaniesForExclusionListResponse500 | GetExcludedCompaniesForExclusionListResponse503
     """
 
     return (

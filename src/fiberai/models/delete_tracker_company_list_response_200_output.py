@@ -13,10 +13,10 @@ T = TypeVar("T", bound="DeleteTrackerCompanyListResponse200Output")
 class DeleteTrackerCompanyListResponse200Output:
     """
     Attributes:
-        id (str): ID of the archived list
-        name (str): Name of the archived list
-        is_archived (bool): List has been archived
-        is_active (bool): Monitoring has been stopped
+        id (str): ID of the archived list.
+        name (str): Name of the archived list.
+        is_archived (bool): List has been archived.
+        is_active (bool): Monitoring has been stopped.
     """
 
     id: str

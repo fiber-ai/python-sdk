@@ -12,6 +12,7 @@ from ...models.instagram_user_reels_response_401 import InstagramUserReelsRespon
 from ...models.instagram_user_reels_response_402 import InstagramUserReelsResponse402
 from ...models.instagram_user_reels_response_403 import InstagramUserReelsResponse403
 from ...models.instagram_user_reels_response_404 import InstagramUserReelsResponse404
+from ...models.instagram_user_reels_response_422 import InstagramUserReelsResponse422
 from ...models.instagram_user_reels_response_429 import InstagramUserReelsResponse429
 from ...models.instagram_user_reels_response_500 import InstagramUserReelsResponse500
 from ...models.instagram_user_reels_response_503 import InstagramUserReelsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | InstagramUserReelsResponse402
     | InstagramUserReelsResponse403
     | InstagramUserReelsResponse404
+    | InstagramUserReelsResponse422
     | InstagramUserReelsResponse429
     | InstagramUserReelsResponse500
     | InstagramUserReelsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = InstagramUserReelsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = InstagramUserReelsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | InstagramUserReelsResponse402
     | InstagramUserReelsResponse403
     | InstagramUserReelsResponse404
+    | InstagramUserReelsResponse422
     | InstagramUserReelsResponse429
     | InstagramUserReelsResponse500
     | InstagramUserReelsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | InstagramUserReelsResponse402
     | InstagramUserReelsResponse403
     | InstagramUserReelsResponse404
+    | InstagramUserReelsResponse422
     | InstagramUserReelsResponse429
     | InstagramUserReelsResponse500
     | InstagramUserReelsResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[InstagramUserReelsResponse200 | InstagramUserReelsResponse400 | InstagramUserReelsResponse401 | InstagramUserReelsResponse402 | InstagramUserReelsResponse403 | InstagramUserReelsResponse404 | InstagramUserReelsResponse429 | InstagramUserReelsResponse500 | InstagramUserReelsResponse503]
+        Response[InstagramUserReelsResponse200 | InstagramUserReelsResponse400 | InstagramUserReelsResponse401 | InstagramUserReelsResponse402 | InstagramUserReelsResponse403 | InstagramUserReelsResponse404 | InstagramUserReelsResponse422 | InstagramUserReelsResponse429 | InstagramUserReelsResponse500 | InstagramUserReelsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | InstagramUserReelsResponse402
     | InstagramUserReelsResponse403
     | InstagramUserReelsResponse404
+    | InstagramUserReelsResponse422
     | InstagramUserReelsResponse429
     | InstagramUserReelsResponse500
     | InstagramUserReelsResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        InstagramUserReelsResponse200 | InstagramUserReelsResponse400 | InstagramUserReelsResponse401 | InstagramUserReelsResponse402 | InstagramUserReelsResponse403 | InstagramUserReelsResponse404 | InstagramUserReelsResponse429 | InstagramUserReelsResponse500 | InstagramUserReelsResponse503
+        InstagramUserReelsResponse200 | InstagramUserReelsResponse400 | InstagramUserReelsResponse401 | InstagramUserReelsResponse402 | InstagramUserReelsResponse403 | InstagramUserReelsResponse404 | InstagramUserReelsResponse422 | InstagramUserReelsResponse429 | InstagramUserReelsResponse500 | InstagramUserReelsResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | InstagramUserReelsResponse402
     | InstagramUserReelsResponse403
     | InstagramUserReelsResponse404
+    | InstagramUserReelsResponse422
     | InstagramUserReelsResponse429
     | InstagramUserReelsResponse500
     | InstagramUserReelsResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[InstagramUserReelsResponse200 | InstagramUserReelsResponse400 | InstagramUserReelsResponse401 | InstagramUserReelsResponse402 | InstagramUserReelsResponse403 | InstagramUserReelsResponse404 | InstagramUserReelsResponse429 | InstagramUserReelsResponse500 | InstagramUserReelsResponse503]
+        Response[InstagramUserReelsResponse200 | InstagramUserReelsResponse400 | InstagramUserReelsResponse401 | InstagramUserReelsResponse402 | InstagramUserReelsResponse403 | InstagramUserReelsResponse404 | InstagramUserReelsResponse422 | InstagramUserReelsResponse429 | InstagramUserReelsResponse500 | InstagramUserReelsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | InstagramUserReelsResponse402
     | InstagramUserReelsResponse403
     | InstagramUserReelsResponse404
+    | InstagramUserReelsResponse422
     | InstagramUserReelsResponse429
     | InstagramUserReelsResponse500
     | InstagramUserReelsResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        InstagramUserReelsResponse200 | InstagramUserReelsResponse400 | InstagramUserReelsResponse401 | InstagramUserReelsResponse402 | InstagramUserReelsResponse403 | InstagramUserReelsResponse404 | InstagramUserReelsResponse429 | InstagramUserReelsResponse500 | InstagramUserReelsResponse503
+        InstagramUserReelsResponse200 | InstagramUserReelsResponse400 | InstagramUserReelsResponse401 | InstagramUserReelsResponse402 | InstagramUserReelsResponse403 | InstagramUserReelsResponse404 | InstagramUserReelsResponse422 | InstagramUserReelsResponse429 | InstagramUserReelsResponse500 | InstagramUserReelsResponse503
     """
 
     return (

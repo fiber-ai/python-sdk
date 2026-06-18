@@ -12,6 +12,7 @@ from ...models.standardize_profile_response_401 import StandardizeProfileRespons
 from ...models.standardize_profile_response_402 import StandardizeProfileResponse402
 from ...models.standardize_profile_response_403 import StandardizeProfileResponse403
 from ...models.standardize_profile_response_404 import StandardizeProfileResponse404
+from ...models.standardize_profile_response_422 import StandardizeProfileResponse422
 from ...models.standardize_profile_response_429 import StandardizeProfileResponse429
 from ...models.standardize_profile_response_500 import StandardizeProfileResponse500
 from ...models.standardize_profile_response_503 import StandardizeProfileResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | StandardizeProfileResponse402
     | StandardizeProfileResponse403
     | StandardizeProfileResponse404
+    | StandardizeProfileResponse422
     | StandardizeProfileResponse429
     | StandardizeProfileResponse500
     | StandardizeProfileResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = StandardizeProfileResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = StandardizeProfileResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | StandardizeProfileResponse402
     | StandardizeProfileResponse403
     | StandardizeProfileResponse404
+    | StandardizeProfileResponse422
     | StandardizeProfileResponse429
     | StandardizeProfileResponse500
     | StandardizeProfileResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | StandardizeProfileResponse402
     | StandardizeProfileResponse403
     | StandardizeProfileResponse404
+    | StandardizeProfileResponse422
     | StandardizeProfileResponse429
     | StandardizeProfileResponse500
     | StandardizeProfileResponse503
@@ -158,7 +167,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[StandardizeProfileResponse200 | StandardizeProfileResponse400 | StandardizeProfileResponse401 | StandardizeProfileResponse402 | StandardizeProfileResponse403 | StandardizeProfileResponse404 | StandardizeProfileResponse429 | StandardizeProfileResponse500 | StandardizeProfileResponse503]
+        Response[StandardizeProfileResponse200 | StandardizeProfileResponse400 | StandardizeProfileResponse401 | StandardizeProfileResponse402 | StandardizeProfileResponse403 | StandardizeProfileResponse404 | StandardizeProfileResponse422 | StandardizeProfileResponse429 | StandardizeProfileResponse500 | StandardizeProfileResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -183,6 +192,7 @@ def sync(
     | StandardizeProfileResponse402
     | StandardizeProfileResponse403
     | StandardizeProfileResponse404
+    | StandardizeProfileResponse422
     | StandardizeProfileResponse429
     | StandardizeProfileResponse500
     | StandardizeProfileResponse503
@@ -208,7 +218,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        StandardizeProfileResponse200 | StandardizeProfileResponse400 | StandardizeProfileResponse401 | StandardizeProfileResponse402 | StandardizeProfileResponse403 | StandardizeProfileResponse404 | StandardizeProfileResponse429 | StandardizeProfileResponse500 | StandardizeProfileResponse503
+        StandardizeProfileResponse200 | StandardizeProfileResponse400 | StandardizeProfileResponse401 | StandardizeProfileResponse402 | StandardizeProfileResponse403 | StandardizeProfileResponse404 | StandardizeProfileResponse422 | StandardizeProfileResponse429 | StandardizeProfileResponse500 | StandardizeProfileResponse503
     """
 
     return sync_detailed(
@@ -228,6 +238,7 @@ async def asyncio_detailed(
     | StandardizeProfileResponse402
     | StandardizeProfileResponse403
     | StandardizeProfileResponse404
+    | StandardizeProfileResponse422
     | StandardizeProfileResponse429
     | StandardizeProfileResponse500
     | StandardizeProfileResponse503
@@ -252,7 +263,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[StandardizeProfileResponse200 | StandardizeProfileResponse400 | StandardizeProfileResponse401 | StandardizeProfileResponse402 | StandardizeProfileResponse403 | StandardizeProfileResponse404 | StandardizeProfileResponse429 | StandardizeProfileResponse500 | StandardizeProfileResponse503]
+        Response[StandardizeProfileResponse200 | StandardizeProfileResponse400 | StandardizeProfileResponse401 | StandardizeProfileResponse402 | StandardizeProfileResponse403 | StandardizeProfileResponse404 | StandardizeProfileResponse422 | StandardizeProfileResponse429 | StandardizeProfileResponse500 | StandardizeProfileResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -275,6 +286,7 @@ async def asyncio(
     | StandardizeProfileResponse402
     | StandardizeProfileResponse403
     | StandardizeProfileResponse404
+    | StandardizeProfileResponse422
     | StandardizeProfileResponse429
     | StandardizeProfileResponse500
     | StandardizeProfileResponse503
@@ -300,7 +312,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        StandardizeProfileResponse200 | StandardizeProfileResponse400 | StandardizeProfileResponse401 | StandardizeProfileResponse402 | StandardizeProfileResponse403 | StandardizeProfileResponse404 | StandardizeProfileResponse429 | StandardizeProfileResponse500 | StandardizeProfileResponse503
+        StandardizeProfileResponse200 | StandardizeProfileResponse400 | StandardizeProfileResponse401 | StandardizeProfileResponse402 | StandardizeProfileResponse403 | StandardizeProfileResponse404 | StandardizeProfileResponse422 | StandardizeProfileResponse429 | StandardizeProfileResponse500 | StandardizeProfileResponse503
     """
 
     return (

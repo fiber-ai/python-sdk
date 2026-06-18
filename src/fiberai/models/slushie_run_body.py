@@ -23,8 +23,8 @@ class SlushieRunBody:
         company_exclusion_list_i_ds (list[str] | None | Unset): IDs of exclusion lists to filter out companies. Applied
             when returning companies, or to narrow company-based profile filtering.
         people_exclusion_list_i_ds (list[str] | None | Unset): IDs of exclusion lists to filter out people.
-        page_token (None | str | Unset): Opaque pagination token from a previous response. Pass the value of
-            nextPageToken from the prior response.
+        page_token (None | str | Unset): Pagination token from a previous response. Pass the value of nextPageToken from
+            the prior response.
         get_detailed_education (bool | None | Unset): Whether to include deep details about each educational item, like
             the school's LinkedIn URL, website, location, etc. That'll be put in the detailedEducation array. This slows
             down the API call, so only enable this if you need it. Only applies when the result type is people; ignored for

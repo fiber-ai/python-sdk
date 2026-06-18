@@ -12,6 +12,7 @@ from ...models.delete_tracker_person_list_response_401 import DeleteTrackerPerso
 from ...models.delete_tracker_person_list_response_402 import DeleteTrackerPersonListResponse402
 from ...models.delete_tracker_person_list_response_403 import DeleteTrackerPersonListResponse403
 from ...models.delete_tracker_person_list_response_404 import DeleteTrackerPersonListResponse404
+from ...models.delete_tracker_person_list_response_422 import DeleteTrackerPersonListResponse422
 from ...models.delete_tracker_person_list_response_429 import DeleteTrackerPersonListResponse429
 from ...models.delete_tracker_person_list_response_500 import DeleteTrackerPersonListResponse500
 from ...models.delete_tracker_person_list_response_503 import DeleteTrackerPersonListResponse503
@@ -50,6 +51,7 @@ def _parse_response(
     | DeleteTrackerPersonListResponse402
     | DeleteTrackerPersonListResponse403
     | DeleteTrackerPersonListResponse404
+    | DeleteTrackerPersonListResponse422
     | DeleteTrackerPersonListResponse429
     | DeleteTrackerPersonListResponse500
     | DeleteTrackerPersonListResponse503
@@ -85,6 +87,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = DeleteTrackerPersonListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = DeleteTrackerPersonListResponse429.from_dict(response.json())
 
@@ -115,6 +122,7 @@ def _build_response(
     | DeleteTrackerPersonListResponse402
     | DeleteTrackerPersonListResponse403
     | DeleteTrackerPersonListResponse404
+    | DeleteTrackerPersonListResponse422
     | DeleteTrackerPersonListResponse429
     | DeleteTrackerPersonListResponse500
     | DeleteTrackerPersonListResponse503
@@ -139,16 +147,17 @@ def sync_detailed(
     | DeleteTrackerPersonListResponse402
     | DeleteTrackerPersonListResponse403
     | DeleteTrackerPersonListResponse404
+    | DeleteTrackerPersonListResponse422
     | DeleteTrackerPersonListResponse429
     | DeleteTrackerPersonListResponse500
     | DeleteTrackerPersonListResponse503
 ]:
-    r"""Delete person tracker list
+    r"""Archive person tracker list
 
      Archive a person tracker list. Stops all monitoring and deactivates all tracked people and rules on
     the list. Signal history is preserved for audit purposes.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -162,7 +171,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DeleteTrackerPersonListResponse200 | DeleteTrackerPersonListResponse400 | DeleteTrackerPersonListResponse401 | DeleteTrackerPersonListResponse402 | DeleteTrackerPersonListResponse403 | DeleteTrackerPersonListResponse404 | DeleteTrackerPersonListResponse429 | DeleteTrackerPersonListResponse500 | DeleteTrackerPersonListResponse503]
+        Response[DeleteTrackerPersonListResponse200 | DeleteTrackerPersonListResponse400 | DeleteTrackerPersonListResponse401 | DeleteTrackerPersonListResponse402 | DeleteTrackerPersonListResponse403 | DeleteTrackerPersonListResponse404 | DeleteTrackerPersonListResponse422 | DeleteTrackerPersonListResponse429 | DeleteTrackerPersonListResponse500 | DeleteTrackerPersonListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -189,17 +198,18 @@ def sync(
     | DeleteTrackerPersonListResponse402
     | DeleteTrackerPersonListResponse403
     | DeleteTrackerPersonListResponse404
+    | DeleteTrackerPersonListResponse422
     | DeleteTrackerPersonListResponse429
     | DeleteTrackerPersonListResponse500
     | DeleteTrackerPersonListResponse503
     | None
 ):
-    r"""Delete person tracker list
+    r"""Archive person tracker list
 
      Archive a person tracker list. Stops all monitoring and deactivates all tracked people and rules on
     the list. Signal history is preserved for audit purposes.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -213,7 +223,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DeleteTrackerPersonListResponse200 | DeleteTrackerPersonListResponse400 | DeleteTrackerPersonListResponse401 | DeleteTrackerPersonListResponse402 | DeleteTrackerPersonListResponse403 | DeleteTrackerPersonListResponse404 | DeleteTrackerPersonListResponse429 | DeleteTrackerPersonListResponse500 | DeleteTrackerPersonListResponse503
+        DeleteTrackerPersonListResponse200 | DeleteTrackerPersonListResponse400 | DeleteTrackerPersonListResponse401 | DeleteTrackerPersonListResponse402 | DeleteTrackerPersonListResponse403 | DeleteTrackerPersonListResponse404 | DeleteTrackerPersonListResponse422 | DeleteTrackerPersonListResponse429 | DeleteTrackerPersonListResponse500 | DeleteTrackerPersonListResponse503
     """
 
     return sync_detailed(
@@ -235,16 +245,17 @@ async def asyncio_detailed(
     | DeleteTrackerPersonListResponse402
     | DeleteTrackerPersonListResponse403
     | DeleteTrackerPersonListResponse404
+    | DeleteTrackerPersonListResponse422
     | DeleteTrackerPersonListResponse429
     | DeleteTrackerPersonListResponse500
     | DeleteTrackerPersonListResponse503
 ]:
-    r"""Delete person tracker list
+    r"""Archive person tracker list
 
      Archive a person tracker list. Stops all monitoring and deactivates all tracked people and rules on
     the list. Signal history is preserved for audit purposes.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -258,7 +269,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DeleteTrackerPersonListResponse200 | DeleteTrackerPersonListResponse400 | DeleteTrackerPersonListResponse401 | DeleteTrackerPersonListResponse402 | DeleteTrackerPersonListResponse403 | DeleteTrackerPersonListResponse404 | DeleteTrackerPersonListResponse429 | DeleteTrackerPersonListResponse500 | DeleteTrackerPersonListResponse503]
+        Response[DeleteTrackerPersonListResponse200 | DeleteTrackerPersonListResponse400 | DeleteTrackerPersonListResponse401 | DeleteTrackerPersonListResponse402 | DeleteTrackerPersonListResponse403 | DeleteTrackerPersonListResponse404 | DeleteTrackerPersonListResponse422 | DeleteTrackerPersonListResponse429 | DeleteTrackerPersonListResponse500 | DeleteTrackerPersonListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -283,17 +294,18 @@ async def asyncio(
     | DeleteTrackerPersonListResponse402
     | DeleteTrackerPersonListResponse403
     | DeleteTrackerPersonListResponse404
+    | DeleteTrackerPersonListResponse422
     | DeleteTrackerPersonListResponse429
     | DeleteTrackerPersonListResponse500
     | DeleteTrackerPersonListResponse503
     | None
 ):
-    r"""Delete person tracker list
+    r"""Archive person tracker list
 
      Archive a person tracker list. Stops all monitoring and deactivates all tracked people and rules on
     the list. Signal history is preserved for audit purposes.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -307,7 +319,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DeleteTrackerPersonListResponse200 | DeleteTrackerPersonListResponse400 | DeleteTrackerPersonListResponse401 | DeleteTrackerPersonListResponse402 | DeleteTrackerPersonListResponse403 | DeleteTrackerPersonListResponse404 | DeleteTrackerPersonListResponse429 | DeleteTrackerPersonListResponse500 | DeleteTrackerPersonListResponse503
+        DeleteTrackerPersonListResponse200 | DeleteTrackerPersonListResponse400 | DeleteTrackerPersonListResponse401 | DeleteTrackerPersonListResponse402 | DeleteTrackerPersonListResponse403 | DeleteTrackerPersonListResponse404 | DeleteTrackerPersonListResponse422 | DeleteTrackerPersonListResponse429 | DeleteTrackerPersonListResponse500 | DeleteTrackerPersonListResponse503
     """
 
     return (

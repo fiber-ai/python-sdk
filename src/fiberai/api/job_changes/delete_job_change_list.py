@@ -12,6 +12,7 @@ from ...models.delete_job_change_list_response_401 import DeleteJobChangeListRes
 from ...models.delete_job_change_list_response_402 import DeleteJobChangeListResponse402
 from ...models.delete_job_change_list_response_403 import DeleteJobChangeListResponse403
 from ...models.delete_job_change_list_response_404 import DeleteJobChangeListResponse404
+from ...models.delete_job_change_list_response_422 import DeleteJobChangeListResponse422
 from ...models.delete_job_change_list_response_429 import DeleteJobChangeListResponse429
 from ...models.delete_job_change_list_response_500 import DeleteJobChangeListResponse500
 from ...models.delete_job_change_list_response_503 import DeleteJobChangeListResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | DeleteJobChangeListResponse402
     | DeleteJobChangeListResponse403
     | DeleteJobChangeListResponse404
+    | DeleteJobChangeListResponse422
     | DeleteJobChangeListResponse429
     | DeleteJobChangeListResponse500
     | DeleteJobChangeListResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = DeleteJobChangeListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = DeleteJobChangeListResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | DeleteJobChangeListResponse402
     | DeleteJobChangeListResponse403
     | DeleteJobChangeListResponse404
+    | DeleteJobChangeListResponse422
     | DeleteJobChangeListResponse429
     | DeleteJobChangeListResponse500
     | DeleteJobChangeListResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | DeleteJobChangeListResponse402
     | DeleteJobChangeListResponse403
     | DeleteJobChangeListResponse404
+    | DeleteJobChangeListResponse422
     | DeleteJobChangeListResponse429
     | DeleteJobChangeListResponse500
     | DeleteJobChangeListResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DeleteJobChangeListResponse200 | DeleteJobChangeListResponse400 | DeleteJobChangeListResponse401 | DeleteJobChangeListResponse402 | DeleteJobChangeListResponse403 | DeleteJobChangeListResponse404 | DeleteJobChangeListResponse429 | DeleteJobChangeListResponse500 | DeleteJobChangeListResponse503]
+        Response[DeleteJobChangeListResponse200 | DeleteJobChangeListResponse400 | DeleteJobChangeListResponse401 | DeleteJobChangeListResponse402 | DeleteJobChangeListResponse403 | DeleteJobChangeListResponse404 | DeleteJobChangeListResponse422 | DeleteJobChangeListResponse429 | DeleteJobChangeListResponse500 | DeleteJobChangeListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | DeleteJobChangeListResponse402
     | DeleteJobChangeListResponse403
     | DeleteJobChangeListResponse404
+    | DeleteJobChangeListResponse422
     | DeleteJobChangeListResponse429
     | DeleteJobChangeListResponse500
     | DeleteJobChangeListResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DeleteJobChangeListResponse200 | DeleteJobChangeListResponse400 | DeleteJobChangeListResponse401 | DeleteJobChangeListResponse402 | DeleteJobChangeListResponse403 | DeleteJobChangeListResponse404 | DeleteJobChangeListResponse429 | DeleteJobChangeListResponse500 | DeleteJobChangeListResponse503
+        DeleteJobChangeListResponse200 | DeleteJobChangeListResponse400 | DeleteJobChangeListResponse401 | DeleteJobChangeListResponse402 | DeleteJobChangeListResponse403 | DeleteJobChangeListResponse404 | DeleteJobChangeListResponse422 | DeleteJobChangeListResponse429 | DeleteJobChangeListResponse500 | DeleteJobChangeListResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | DeleteJobChangeListResponse402
     | DeleteJobChangeListResponse403
     | DeleteJobChangeListResponse404
+    | DeleteJobChangeListResponse422
     | DeleteJobChangeListResponse429
     | DeleteJobChangeListResponse500
     | DeleteJobChangeListResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DeleteJobChangeListResponse200 | DeleteJobChangeListResponse400 | DeleteJobChangeListResponse401 | DeleteJobChangeListResponse402 | DeleteJobChangeListResponse403 | DeleteJobChangeListResponse404 | DeleteJobChangeListResponse429 | DeleteJobChangeListResponse500 | DeleteJobChangeListResponse503]
+        Response[DeleteJobChangeListResponse200 | DeleteJobChangeListResponse400 | DeleteJobChangeListResponse401 | DeleteJobChangeListResponse402 | DeleteJobChangeListResponse403 | DeleteJobChangeListResponse404 | DeleteJobChangeListResponse422 | DeleteJobChangeListResponse429 | DeleteJobChangeListResponse500 | DeleteJobChangeListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | DeleteJobChangeListResponse402
     | DeleteJobChangeListResponse403
     | DeleteJobChangeListResponse404
+    | DeleteJobChangeListResponse422
     | DeleteJobChangeListResponse429
     | DeleteJobChangeListResponse500
     | DeleteJobChangeListResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DeleteJobChangeListResponse200 | DeleteJobChangeListResponse400 | DeleteJobChangeListResponse401 | DeleteJobChangeListResponse402 | DeleteJobChangeListResponse403 | DeleteJobChangeListResponse404 | DeleteJobChangeListResponse429 | DeleteJobChangeListResponse500 | DeleteJobChangeListResponse503
+        DeleteJobChangeListResponse200 | DeleteJobChangeListResponse400 | DeleteJobChangeListResponse401 | DeleteJobChangeListResponse402 | DeleteJobChangeListResponse403 | DeleteJobChangeListResponse404 | DeleteJobChangeListResponse422 | DeleteJobChangeListResponse429 | DeleteJobChangeListResponse500 | DeleteJobChangeListResponse503
     """
 
     return (

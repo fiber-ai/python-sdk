@@ -12,6 +12,7 @@ from ...models.reddit_subreddit_posts_response_401 import RedditSubredditPostsRe
 from ...models.reddit_subreddit_posts_response_402 import RedditSubredditPostsResponse402
 from ...models.reddit_subreddit_posts_response_403 import RedditSubredditPostsResponse403
 from ...models.reddit_subreddit_posts_response_404 import RedditSubredditPostsResponse404
+from ...models.reddit_subreddit_posts_response_422 import RedditSubredditPostsResponse422
 from ...models.reddit_subreddit_posts_response_429 import RedditSubredditPostsResponse429
 from ...models.reddit_subreddit_posts_response_500 import RedditSubredditPostsResponse500
 from ...models.reddit_subreddit_posts_response_503 import RedditSubredditPostsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | RedditSubredditPostsResponse402
     | RedditSubredditPostsResponse403
     | RedditSubredditPostsResponse404
+    | RedditSubredditPostsResponse422
     | RedditSubredditPostsResponse429
     | RedditSubredditPostsResponse500
     | RedditSubredditPostsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = RedditSubredditPostsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = RedditSubredditPostsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | RedditSubredditPostsResponse402
     | RedditSubredditPostsResponse403
     | RedditSubredditPostsResponse404
+    | RedditSubredditPostsResponse422
     | RedditSubredditPostsResponse429
     | RedditSubredditPostsResponse500
     | RedditSubredditPostsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | RedditSubredditPostsResponse402
     | RedditSubredditPostsResponse403
     | RedditSubredditPostsResponse404
+    | RedditSubredditPostsResponse422
     | RedditSubredditPostsResponse429
     | RedditSubredditPostsResponse500
     | RedditSubredditPostsResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[RedditSubredditPostsResponse200 | RedditSubredditPostsResponse400 | RedditSubredditPostsResponse401 | RedditSubredditPostsResponse402 | RedditSubredditPostsResponse403 | RedditSubredditPostsResponse404 | RedditSubredditPostsResponse429 | RedditSubredditPostsResponse500 | RedditSubredditPostsResponse503]
+        Response[RedditSubredditPostsResponse200 | RedditSubredditPostsResponse400 | RedditSubredditPostsResponse401 | RedditSubredditPostsResponse402 | RedditSubredditPostsResponse403 | RedditSubredditPostsResponse404 | RedditSubredditPostsResponse422 | RedditSubredditPostsResponse429 | RedditSubredditPostsResponse500 | RedditSubredditPostsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | RedditSubredditPostsResponse402
     | RedditSubredditPostsResponse403
     | RedditSubredditPostsResponse404
+    | RedditSubredditPostsResponse422
     | RedditSubredditPostsResponse429
     | RedditSubredditPostsResponse500
     | RedditSubredditPostsResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        RedditSubredditPostsResponse200 | RedditSubredditPostsResponse400 | RedditSubredditPostsResponse401 | RedditSubredditPostsResponse402 | RedditSubredditPostsResponse403 | RedditSubredditPostsResponse404 | RedditSubredditPostsResponse429 | RedditSubredditPostsResponse500 | RedditSubredditPostsResponse503
+        RedditSubredditPostsResponse200 | RedditSubredditPostsResponse400 | RedditSubredditPostsResponse401 | RedditSubredditPostsResponse402 | RedditSubredditPostsResponse403 | RedditSubredditPostsResponse404 | RedditSubredditPostsResponse422 | RedditSubredditPostsResponse429 | RedditSubredditPostsResponse500 | RedditSubredditPostsResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | RedditSubredditPostsResponse402
     | RedditSubredditPostsResponse403
     | RedditSubredditPostsResponse404
+    | RedditSubredditPostsResponse422
     | RedditSubredditPostsResponse429
     | RedditSubredditPostsResponse500
     | RedditSubredditPostsResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[RedditSubredditPostsResponse200 | RedditSubredditPostsResponse400 | RedditSubredditPostsResponse401 | RedditSubredditPostsResponse402 | RedditSubredditPostsResponse403 | RedditSubredditPostsResponse404 | RedditSubredditPostsResponse429 | RedditSubredditPostsResponse500 | RedditSubredditPostsResponse503]
+        Response[RedditSubredditPostsResponse200 | RedditSubredditPostsResponse400 | RedditSubredditPostsResponse401 | RedditSubredditPostsResponse402 | RedditSubredditPostsResponse403 | RedditSubredditPostsResponse404 | RedditSubredditPostsResponse422 | RedditSubredditPostsResponse429 | RedditSubredditPostsResponse500 | RedditSubredditPostsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | RedditSubredditPostsResponse402
     | RedditSubredditPostsResponse403
     | RedditSubredditPostsResponse404
+    | RedditSubredditPostsResponse422
     | RedditSubredditPostsResponse429
     | RedditSubredditPostsResponse500
     | RedditSubredditPostsResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        RedditSubredditPostsResponse200 | RedditSubredditPostsResponse400 | RedditSubredditPostsResponse401 | RedditSubredditPostsResponse402 | RedditSubredditPostsResponse403 | RedditSubredditPostsResponse404 | RedditSubredditPostsResponse429 | RedditSubredditPostsResponse500 | RedditSubredditPostsResponse503
+        RedditSubredditPostsResponse200 | RedditSubredditPostsResponse400 | RedditSubredditPostsResponse401 | RedditSubredditPostsResponse402 | RedditSubredditPostsResponse403 | RedditSubredditPostsResponse404 | RedditSubredditPostsResponse422 | RedditSubredditPostsResponse429 | RedditSubredditPostsResponse500 | RedditSubredditPostsResponse503
     """
 
     return (

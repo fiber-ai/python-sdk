@@ -41,6 +41,9 @@ if TYPE_CHECKING:
     from ..models.people_search_count_body_search_params_fuzzy_name_type_0 import (
         PeopleSearchCountBodySearchParamsFuzzyNameType0,
     )
+    from ..models.people_search_count_body_search_params_industry_type_0 import (
+        PeopleSearchCountBodySearchParamsIndustryType0,
+    )
     from ..models.people_search_count_body_search_params_job_status_type_0 import (
         PeopleSearchCountBodySearchParamsJobStatusType0,
     )
@@ -55,6 +58,12 @@ if TYPE_CHECKING:
     )
     from ..models.people_search_count_body_search_params_job_title_v3_type_0 import (
         PeopleSearchCountBodySearchParamsJobTitleV3Type0,
+    )
+    from ..models.people_search_count_body_search_params_joined_linked_in_at_type_0 import (
+        PeopleSearchCountBodySearchParamsJoinedLinkedInAtType0,
+    )
+    from ..models.people_search_count_body_search_params_joined_linked_in_at_type_1 import (
+        PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1,
     )
     from ..models.people_search_count_body_search_params_keyword_search_options_type_0 import (
         PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0,
@@ -164,12 +173,20 @@ class PeopleSearchCountBodySearchParams:
         years_of_experience (None | PeopleSearchCountBodySearchParamsYearsOfExperienceType0 | Unset):
         job_title_v3 (None | PeopleSearchCountBodySearchParamsJobTitleV3Type0 | Unset):
         open_to_work (bool | None | Unset):
+        is_hiring (bool | None | Unset):
         has_profile_picture (bool | None | Unset):
         state (None | PeopleSearchCountBodySearchParamsStateType0 | Unset):
         certifications (None | PeopleSearchCountBodySearchParamsCertificationsType0 | Unset):
         publications (None | PeopleSearchCountBodySearchParamsPublicationsType0 | Unset):
         has_no_education (bool | None | Unset):
         employment_type (None | PeopleSearchCountBodySearchParamsEmploymentTypeType0 | Unset):
+        is_top_voice (bool | None | Unset):
+        has_premium (bool | None | Unset):
+        is_influencer (bool | None | Unset):
+        industry (None | PeopleSearchCountBodySearchParamsIndustryType0 | Unset):
+        is_verified (bool | None | Unset):
+        joined_linked_in_at (None | PeopleSearchCountBodySearchParamsJoinedLinkedInAtType0 |
+            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1 | Unset):
         get_detailed_education (bool | None | Unset): Whether to include deep details about each educational item, like
             the school's LinkedIn URL, website, location, etc. That'll be put in the detailedEducation array. This slows
             down the API call, so only enable this if you need it. Default: False.
@@ -238,12 +255,24 @@ class PeopleSearchCountBodySearchParams:
     years_of_experience: None | PeopleSearchCountBodySearchParamsYearsOfExperienceType0 | Unset = UNSET
     job_title_v3: None | PeopleSearchCountBodySearchParamsJobTitleV3Type0 | Unset = UNSET
     open_to_work: bool | None | Unset = UNSET
+    is_hiring: bool | None | Unset = UNSET
     has_profile_picture: bool | None | Unset = UNSET
     state: None | PeopleSearchCountBodySearchParamsStateType0 | Unset = UNSET
     certifications: None | PeopleSearchCountBodySearchParamsCertificationsType0 | Unset = UNSET
     publications: None | PeopleSearchCountBodySearchParamsPublicationsType0 | Unset = UNSET
     has_no_education: bool | None | Unset = UNSET
     employment_type: None | PeopleSearchCountBodySearchParamsEmploymentTypeType0 | Unset = UNSET
+    is_top_voice: bool | None | Unset = UNSET
+    has_premium: bool | None | Unset = UNSET
+    is_influencer: bool | None | Unset = UNSET
+    industry: None | PeopleSearchCountBodySearchParamsIndustryType0 | Unset = UNSET
+    is_verified: bool | None | Unset = UNSET
+    joined_linked_in_at: (
+        None
+        | PeopleSearchCountBodySearchParamsJoinedLinkedInAtType0
+        | PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1
+        | Unset
+    ) = UNSET
     get_detailed_education: bool | None | Unset = False
     get_detailed_work_experience: bool | None | Unset = False
     tags: None | PeopleSearchCountBodySearchParamsTagsType0 | Unset = UNSET
@@ -284,6 +313,9 @@ class PeopleSearchCountBodySearchParams:
         from ..models.people_search_count_body_search_params_fuzzy_name_type_0 import (
             PeopleSearchCountBodySearchParamsFuzzyNameType0,
         )
+        from ..models.people_search_count_body_search_params_industry_type_0 import (
+            PeopleSearchCountBodySearchParamsIndustryType0,
+        )
         from ..models.people_search_count_body_search_params_job_status_type_0 import (
             PeopleSearchCountBodySearchParamsJobStatusType0,
         )
@@ -298,6 +330,12 @@ class PeopleSearchCountBodySearchParams:
         )
         from ..models.people_search_count_body_search_params_job_title_v3_type_0 import (
             PeopleSearchCountBodySearchParamsJobTitleV3Type0,
+        )
+        from ..models.people_search_count_body_search_params_joined_linked_in_at_type_0 import (
+            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType0,
+        )
+        from ..models.people_search_count_body_search_params_joined_linked_in_at_type_1 import (
+            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1,
         )
         from ..models.people_search_count_body_search_params_keyword_search_options_type_0 import (
             PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0,
@@ -592,6 +630,12 @@ class PeopleSearchCountBodySearchParams:
         else:
             open_to_work = self.open_to_work
 
+        is_hiring: bool | None | Unset
+        if isinstance(self.is_hiring, Unset):
+            is_hiring = UNSET
+        else:
+            is_hiring = self.is_hiring
+
         has_profile_picture: bool | None | Unset
         if isinstance(self.has_profile_picture, Unset):
             has_profile_picture = UNSET
@@ -635,6 +679,48 @@ class PeopleSearchCountBodySearchParams:
             employment_type = self.employment_type.to_dict()
         else:
             employment_type = self.employment_type
+
+        is_top_voice: bool | None | Unset
+        if isinstance(self.is_top_voice, Unset):
+            is_top_voice = UNSET
+        else:
+            is_top_voice = self.is_top_voice
+
+        has_premium: bool | None | Unset
+        if isinstance(self.has_premium, Unset):
+            has_premium = UNSET
+        else:
+            has_premium = self.has_premium
+
+        is_influencer: bool | None | Unset
+        if isinstance(self.is_influencer, Unset):
+            is_influencer = UNSET
+        else:
+            is_influencer = self.is_influencer
+
+        industry: dict[str, Any] | None | Unset
+        if isinstance(self.industry, Unset):
+            industry = UNSET
+        elif isinstance(self.industry, PeopleSearchCountBodySearchParamsIndustryType0):
+            industry = self.industry.to_dict()
+        else:
+            industry = self.industry
+
+        is_verified: bool | None | Unset
+        if isinstance(self.is_verified, Unset):
+            is_verified = UNSET
+        else:
+            is_verified = self.is_verified
+
+        joined_linked_in_at: dict[str, Any] | None | Unset
+        if isinstance(self.joined_linked_in_at, Unset):
+            joined_linked_in_at = UNSET
+        elif isinstance(self.joined_linked_in_at, PeopleSearchCountBodySearchParamsJoinedLinkedInAtType0):
+            joined_linked_in_at = self.joined_linked_in_at.to_dict()
+        elif isinstance(self.joined_linked_in_at, PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1):
+            joined_linked_in_at = self.joined_linked_in_at.to_dict()
+        else:
+            joined_linked_in_at = self.joined_linked_in_at
 
         get_detailed_education: bool | None | Unset
         if isinstance(self.get_detailed_education, Unset):
@@ -733,6 +819,8 @@ class PeopleSearchCountBodySearchParams:
             field_dict["jobTitleV3"] = job_title_v3
         if open_to_work is not UNSET:
             field_dict["openToWork"] = open_to_work
+        if is_hiring is not UNSET:
+            field_dict["isHiring"] = is_hiring
         if has_profile_picture is not UNSET:
             field_dict["hasProfilePicture"] = has_profile_picture
         if state is not UNSET:
@@ -745,6 +833,18 @@ class PeopleSearchCountBodySearchParams:
             field_dict["hasNoEducation"] = has_no_education
         if employment_type is not UNSET:
             field_dict["employmentType"] = employment_type
+        if is_top_voice is not UNSET:
+            field_dict["isTopVoice"] = is_top_voice
+        if has_premium is not UNSET:
+            field_dict["hasPremium"] = has_premium
+        if is_influencer is not UNSET:
+            field_dict["isInfluencer"] = is_influencer
+        if industry is not UNSET:
+            field_dict["industry"] = industry
+        if is_verified is not UNSET:
+            field_dict["isVerified"] = is_verified
+        if joined_linked_in_at is not UNSET:
+            field_dict["joinedLinkedInAt"] = joined_linked_in_at
         if get_detailed_education is not UNSET:
             field_dict["getDetailedEducation"] = get_detailed_education
         if get_detailed_work_experience is not UNSET:
@@ -793,6 +893,9 @@ class PeopleSearchCountBodySearchParams:
         from ..models.people_search_count_body_search_params_fuzzy_name_type_0 import (
             PeopleSearchCountBodySearchParamsFuzzyNameType0,
         )
+        from ..models.people_search_count_body_search_params_industry_type_0 import (
+            PeopleSearchCountBodySearchParamsIndustryType0,
+        )
         from ..models.people_search_count_body_search_params_job_status_type_0 import (
             PeopleSearchCountBodySearchParamsJobStatusType0,
         )
@@ -807,6 +910,12 @@ class PeopleSearchCountBodySearchParams:
         )
         from ..models.people_search_count_body_search_params_job_title_v3_type_0 import (
             PeopleSearchCountBodySearchParamsJobTitleV3Type0,
+        )
+        from ..models.people_search_count_body_search_params_joined_linked_in_at_type_0 import (
+            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType0,
+        )
+        from ..models.people_search_count_body_search_params_joined_linked_in_at_type_1 import (
+            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1,
         )
         from ..models.people_search_count_body_search_params_keyword_search_options_type_0 import (
             PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0,
@@ -1469,6 +1578,15 @@ class PeopleSearchCountBodySearchParams:
 
         open_to_work = _parse_open_to_work(d.pop("openToWork", UNSET))
 
+        def _parse_is_hiring(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        is_hiring = _parse_is_hiring(d.pop("isHiring", UNSET))
+
         def _parse_has_profile_picture(data: object) -> bool | None | Unset:
             if data is None:
                 return data
@@ -1554,6 +1672,97 @@ class PeopleSearchCountBodySearchParams:
             return cast(None | PeopleSearchCountBodySearchParamsEmploymentTypeType0 | Unset, data)
 
         employment_type = _parse_employment_type(d.pop("employmentType", UNSET))
+
+        def _parse_is_top_voice(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        is_top_voice = _parse_is_top_voice(d.pop("isTopVoice", UNSET))
+
+        def _parse_has_premium(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        has_premium = _parse_has_premium(d.pop("hasPremium", UNSET))
+
+        def _parse_is_influencer(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        is_influencer = _parse_is_influencer(d.pop("isInfluencer", UNSET))
+
+        def _parse_industry(data: object) -> None | PeopleSearchCountBodySearchParamsIndustryType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                industry_type_0 = PeopleSearchCountBodySearchParamsIndustryType0.from_dict(data)
+
+                return industry_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | PeopleSearchCountBodySearchParamsIndustryType0 | Unset, data)
+
+        industry = _parse_industry(d.pop("industry", UNSET))
+
+        def _parse_is_verified(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        is_verified = _parse_is_verified(d.pop("isVerified", UNSET))
+
+        def _parse_joined_linked_in_at(
+            data: object,
+        ) -> (
+            None
+            | PeopleSearchCountBodySearchParamsJoinedLinkedInAtType0
+            | PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                joined_linked_in_at_type_0 = PeopleSearchCountBodySearchParamsJoinedLinkedInAtType0.from_dict(data)
+
+                return joined_linked_in_at_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                joined_linked_in_at_type_1 = PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1.from_dict(data)
+
+                return joined_linked_in_at_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PeopleSearchCountBodySearchParamsJoinedLinkedInAtType0
+                | PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1
+                | Unset,
+                data,
+            )
+
+        joined_linked_in_at = _parse_joined_linked_in_at(d.pop("joinedLinkedInAt", UNSET))
 
         def _parse_get_detailed_education(data: object) -> bool | None | Unset:
             if data is None:
@@ -1657,12 +1866,19 @@ class PeopleSearchCountBodySearchParams:
             years_of_experience=years_of_experience,
             job_title_v3=job_title_v3,
             open_to_work=open_to_work,
+            is_hiring=is_hiring,
             has_profile_picture=has_profile_picture,
             state=state,
             certifications=certifications,
             publications=publications,
             has_no_education=has_no_education,
             employment_type=employment_type,
+            is_top_voice=is_top_voice,
+            has_premium=has_premium,
+            is_influencer=is_influencer,
+            industry=industry,
+            is_verified=is_verified,
+            joined_linked_in_at=joined_linked_in_at,
             get_detailed_education=get_detailed_education,
             get_detailed_work_experience=get_detailed_work_experience,
             tags=tags,

@@ -12,6 +12,7 @@ from ...models.get_audience_status_response_401 import GetAudienceStatusResponse
 from ...models.get_audience_status_response_402 import GetAudienceStatusResponse402
 from ...models.get_audience_status_response_403 import GetAudienceStatusResponse403
 from ...models.get_audience_status_response_404 import GetAudienceStatusResponse404
+from ...models.get_audience_status_response_422 import GetAudienceStatusResponse422
 from ...models.get_audience_status_response_429 import GetAudienceStatusResponse429
 from ...models.get_audience_status_response_500 import GetAudienceStatusResponse500
 from ...models.get_audience_status_response_503 import GetAudienceStatusResponse503
@@ -50,6 +51,7 @@ def _parse_response(
     | GetAudienceStatusResponse402
     | GetAudienceStatusResponse403
     | GetAudienceStatusResponse404
+    | GetAudienceStatusResponse422
     | GetAudienceStatusResponse429
     | GetAudienceStatusResponse500
     | GetAudienceStatusResponse503
@@ -85,6 +87,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetAudienceStatusResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetAudienceStatusResponse429.from_dict(response.json())
 
@@ -115,6 +122,7 @@ def _build_response(
     | GetAudienceStatusResponse402
     | GetAudienceStatusResponse403
     | GetAudienceStatusResponse404
+    | GetAudienceStatusResponse422
     | GetAudienceStatusResponse429
     | GetAudienceStatusResponse500
     | GetAudienceStatusResponse503
@@ -139,6 +147,7 @@ def sync_detailed(
     | GetAudienceStatusResponse402
     | GetAudienceStatusResponse403
     | GetAudienceStatusResponse404
+    | GetAudienceStatusResponse422
     | GetAudienceStatusResponse429
     | GetAudienceStatusResponse500
     | GetAudienceStatusResponse503
@@ -163,7 +172,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetAudienceStatusResponse200 | GetAudienceStatusResponse400 | GetAudienceStatusResponse401 | GetAudienceStatusResponse402 | GetAudienceStatusResponse403 | GetAudienceStatusResponse404 | GetAudienceStatusResponse429 | GetAudienceStatusResponse500 | GetAudienceStatusResponse503]
+        Response[GetAudienceStatusResponse200 | GetAudienceStatusResponse400 | GetAudienceStatusResponse401 | GetAudienceStatusResponse402 | GetAudienceStatusResponse403 | GetAudienceStatusResponse404 | GetAudienceStatusResponse422 | GetAudienceStatusResponse429 | GetAudienceStatusResponse500 | GetAudienceStatusResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -190,6 +199,7 @@ def sync(
     | GetAudienceStatusResponse402
     | GetAudienceStatusResponse403
     | GetAudienceStatusResponse404
+    | GetAudienceStatusResponse422
     | GetAudienceStatusResponse429
     | GetAudienceStatusResponse500
     | GetAudienceStatusResponse503
@@ -215,7 +225,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetAudienceStatusResponse200 | GetAudienceStatusResponse400 | GetAudienceStatusResponse401 | GetAudienceStatusResponse402 | GetAudienceStatusResponse403 | GetAudienceStatusResponse404 | GetAudienceStatusResponse429 | GetAudienceStatusResponse500 | GetAudienceStatusResponse503
+        GetAudienceStatusResponse200 | GetAudienceStatusResponse400 | GetAudienceStatusResponse401 | GetAudienceStatusResponse402 | GetAudienceStatusResponse403 | GetAudienceStatusResponse404 | GetAudienceStatusResponse422 | GetAudienceStatusResponse429 | GetAudienceStatusResponse500 | GetAudienceStatusResponse503
     """
 
     return sync_detailed(
@@ -237,6 +247,7 @@ async def asyncio_detailed(
     | GetAudienceStatusResponse402
     | GetAudienceStatusResponse403
     | GetAudienceStatusResponse404
+    | GetAudienceStatusResponse422
     | GetAudienceStatusResponse429
     | GetAudienceStatusResponse500
     | GetAudienceStatusResponse503
@@ -261,7 +272,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetAudienceStatusResponse200 | GetAudienceStatusResponse400 | GetAudienceStatusResponse401 | GetAudienceStatusResponse402 | GetAudienceStatusResponse403 | GetAudienceStatusResponse404 | GetAudienceStatusResponse429 | GetAudienceStatusResponse500 | GetAudienceStatusResponse503]
+        Response[GetAudienceStatusResponse200 | GetAudienceStatusResponse400 | GetAudienceStatusResponse401 | GetAudienceStatusResponse402 | GetAudienceStatusResponse403 | GetAudienceStatusResponse404 | GetAudienceStatusResponse422 | GetAudienceStatusResponse429 | GetAudienceStatusResponse500 | GetAudienceStatusResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -286,6 +297,7 @@ async def asyncio(
     | GetAudienceStatusResponse402
     | GetAudienceStatusResponse403
     | GetAudienceStatusResponse404
+    | GetAudienceStatusResponse422
     | GetAudienceStatusResponse429
     | GetAudienceStatusResponse500
     | GetAudienceStatusResponse503
@@ -311,7 +323,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetAudienceStatusResponse200 | GetAudienceStatusResponse400 | GetAudienceStatusResponse401 | GetAudienceStatusResponse402 | GetAudienceStatusResponse403 | GetAudienceStatusResponse404 | GetAudienceStatusResponse429 | GetAudienceStatusResponse500 | GetAudienceStatusResponse503
+        GetAudienceStatusResponse200 | GetAudienceStatusResponse400 | GetAudienceStatusResponse401 | GetAudienceStatusResponse402 | GetAudienceStatusResponse403 | GetAudienceStatusResponse404 | GetAudienceStatusResponse422 | GetAudienceStatusResponse429 | GetAudienceStatusResponse500 | GetAudienceStatusResponse503
     """
 
     return (

@@ -24,7 +24,7 @@ class LiteContactRevealBody:
         api_key (str): Your Fiber API key
         input_ (LiteContactRevealBodyInputType0 | LiteContactRevealBodyInputType1): Person lookup parameters. Use mode
             'linkedin' or 'name-domain'.
-        enrichment_type (LiteContactRevealBodyEnrichmentType | Unset): Which email types to look for.
+        enrichment_type (LiteContactRevealBodyEnrichmentType | Unset): Which email and phone types to look for.
     """
 
     api_key: str

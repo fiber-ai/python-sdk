@@ -12,6 +12,7 @@ from ...models.poll_local_business_search_response_401 import PollLocalBusinessS
 from ...models.poll_local_business_search_response_402 import PollLocalBusinessSearchResponse402
 from ...models.poll_local_business_search_response_403 import PollLocalBusinessSearchResponse403
 from ...models.poll_local_business_search_response_404 import PollLocalBusinessSearchResponse404
+from ...models.poll_local_business_search_response_422 import PollLocalBusinessSearchResponse422
 from ...models.poll_local_business_search_response_429 import PollLocalBusinessSearchResponse429
 from ...models.poll_local_business_search_response_500 import PollLocalBusinessSearchResponse500
 from ...models.poll_local_business_search_response_503 import PollLocalBusinessSearchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | PollLocalBusinessSearchResponse402
     | PollLocalBusinessSearchResponse403
     | PollLocalBusinessSearchResponse404
+    | PollLocalBusinessSearchResponse422
     | PollLocalBusinessSearchResponse429
     | PollLocalBusinessSearchResponse500
     | PollLocalBusinessSearchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = PollLocalBusinessSearchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = PollLocalBusinessSearchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | PollLocalBusinessSearchResponse402
     | PollLocalBusinessSearchResponse403
     | PollLocalBusinessSearchResponse404
+    | PollLocalBusinessSearchResponse422
     | PollLocalBusinessSearchResponse429
     | PollLocalBusinessSearchResponse500
     | PollLocalBusinessSearchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | PollLocalBusinessSearchResponse402
     | PollLocalBusinessSearchResponse403
     | PollLocalBusinessSearchResponse404
+    | PollLocalBusinessSearchResponse422
     | PollLocalBusinessSearchResponse429
     | PollLocalBusinessSearchResponse500
     | PollLocalBusinessSearchResponse503
@@ -152,7 +161,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PollLocalBusinessSearchResponse200 | PollLocalBusinessSearchResponse400 | PollLocalBusinessSearchResponse401 | PollLocalBusinessSearchResponse402 | PollLocalBusinessSearchResponse403 | PollLocalBusinessSearchResponse404 | PollLocalBusinessSearchResponse429 | PollLocalBusinessSearchResponse500 | PollLocalBusinessSearchResponse503]
+        Response[PollLocalBusinessSearchResponse200 | PollLocalBusinessSearchResponse400 | PollLocalBusinessSearchResponse401 | PollLocalBusinessSearchResponse402 | PollLocalBusinessSearchResponse403 | PollLocalBusinessSearchResponse404 | PollLocalBusinessSearchResponse422 | PollLocalBusinessSearchResponse429 | PollLocalBusinessSearchResponse500 | PollLocalBusinessSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -177,6 +186,7 @@ def sync(
     | PollLocalBusinessSearchResponse402
     | PollLocalBusinessSearchResponse403
     | PollLocalBusinessSearchResponse404
+    | PollLocalBusinessSearchResponse422
     | PollLocalBusinessSearchResponse429
     | PollLocalBusinessSearchResponse500
     | PollLocalBusinessSearchResponse503
@@ -196,7 +206,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PollLocalBusinessSearchResponse200 | PollLocalBusinessSearchResponse400 | PollLocalBusinessSearchResponse401 | PollLocalBusinessSearchResponse402 | PollLocalBusinessSearchResponse403 | PollLocalBusinessSearchResponse404 | PollLocalBusinessSearchResponse429 | PollLocalBusinessSearchResponse500 | PollLocalBusinessSearchResponse503
+        PollLocalBusinessSearchResponse200 | PollLocalBusinessSearchResponse400 | PollLocalBusinessSearchResponse401 | PollLocalBusinessSearchResponse402 | PollLocalBusinessSearchResponse403 | PollLocalBusinessSearchResponse404 | PollLocalBusinessSearchResponse422 | PollLocalBusinessSearchResponse429 | PollLocalBusinessSearchResponse500 | PollLocalBusinessSearchResponse503
     """
 
     return sync_detailed(
@@ -216,6 +226,7 @@ async def asyncio_detailed(
     | PollLocalBusinessSearchResponse402
     | PollLocalBusinessSearchResponse403
     | PollLocalBusinessSearchResponse404
+    | PollLocalBusinessSearchResponse422
     | PollLocalBusinessSearchResponse429
     | PollLocalBusinessSearchResponse500
     | PollLocalBusinessSearchResponse503
@@ -234,7 +245,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PollLocalBusinessSearchResponse200 | PollLocalBusinessSearchResponse400 | PollLocalBusinessSearchResponse401 | PollLocalBusinessSearchResponse402 | PollLocalBusinessSearchResponse403 | PollLocalBusinessSearchResponse404 | PollLocalBusinessSearchResponse429 | PollLocalBusinessSearchResponse500 | PollLocalBusinessSearchResponse503]
+        Response[PollLocalBusinessSearchResponse200 | PollLocalBusinessSearchResponse400 | PollLocalBusinessSearchResponse401 | PollLocalBusinessSearchResponse402 | PollLocalBusinessSearchResponse403 | PollLocalBusinessSearchResponse404 | PollLocalBusinessSearchResponse422 | PollLocalBusinessSearchResponse429 | PollLocalBusinessSearchResponse500 | PollLocalBusinessSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -257,6 +268,7 @@ async def asyncio(
     | PollLocalBusinessSearchResponse402
     | PollLocalBusinessSearchResponse403
     | PollLocalBusinessSearchResponse404
+    | PollLocalBusinessSearchResponse422
     | PollLocalBusinessSearchResponse429
     | PollLocalBusinessSearchResponse500
     | PollLocalBusinessSearchResponse503
@@ -276,7 +288,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PollLocalBusinessSearchResponse200 | PollLocalBusinessSearchResponse400 | PollLocalBusinessSearchResponse401 | PollLocalBusinessSearchResponse402 | PollLocalBusinessSearchResponse403 | PollLocalBusinessSearchResponse404 | PollLocalBusinessSearchResponse429 | PollLocalBusinessSearchResponse500 | PollLocalBusinessSearchResponse503
+        PollLocalBusinessSearchResponse200 | PollLocalBusinessSearchResponse400 | PollLocalBusinessSearchResponse401 | PollLocalBusinessSearchResponse402 | PollLocalBusinessSearchResponse403 | PollLocalBusinessSearchResponse404 | PollLocalBusinessSearchResponse422 | PollLocalBusinessSearchResponse429 | PollLocalBusinessSearchResponse500 | PollLocalBusinessSearchResponse503
     """
 
     return (

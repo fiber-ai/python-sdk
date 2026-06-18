@@ -12,6 +12,7 @@ from ...models.delete_tracker_company_list_response_401 import DeleteTrackerComp
 from ...models.delete_tracker_company_list_response_402 import DeleteTrackerCompanyListResponse402
 from ...models.delete_tracker_company_list_response_403 import DeleteTrackerCompanyListResponse403
 from ...models.delete_tracker_company_list_response_404 import DeleteTrackerCompanyListResponse404
+from ...models.delete_tracker_company_list_response_422 import DeleteTrackerCompanyListResponse422
 from ...models.delete_tracker_company_list_response_429 import DeleteTrackerCompanyListResponse429
 from ...models.delete_tracker_company_list_response_500 import DeleteTrackerCompanyListResponse500
 from ...models.delete_tracker_company_list_response_503 import DeleteTrackerCompanyListResponse503
@@ -50,6 +51,7 @@ def _parse_response(
     | DeleteTrackerCompanyListResponse402
     | DeleteTrackerCompanyListResponse403
     | DeleteTrackerCompanyListResponse404
+    | DeleteTrackerCompanyListResponse422
     | DeleteTrackerCompanyListResponse429
     | DeleteTrackerCompanyListResponse500
     | DeleteTrackerCompanyListResponse503
@@ -85,6 +87,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = DeleteTrackerCompanyListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = DeleteTrackerCompanyListResponse429.from_dict(response.json())
 
@@ -115,6 +122,7 @@ def _build_response(
     | DeleteTrackerCompanyListResponse402
     | DeleteTrackerCompanyListResponse403
     | DeleteTrackerCompanyListResponse404
+    | DeleteTrackerCompanyListResponse422
     | DeleteTrackerCompanyListResponse429
     | DeleteTrackerCompanyListResponse500
     | DeleteTrackerCompanyListResponse503
@@ -139,16 +147,17 @@ def sync_detailed(
     | DeleteTrackerCompanyListResponse402
     | DeleteTrackerCompanyListResponse403
     | DeleteTrackerCompanyListResponse404
+    | DeleteTrackerCompanyListResponse422
     | DeleteTrackerCompanyListResponse429
     | DeleteTrackerCompanyListResponse500
     | DeleteTrackerCompanyListResponse503
 ]:
-    r"""Delete company tracker list
+    r"""Archive company tracker list
 
      Archive a company tracker list. Stops all monitoring and deactivates all tracked companies and rules
     on the list. Signal history is preserved for audit purposes.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -162,7 +171,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DeleteTrackerCompanyListResponse200 | DeleteTrackerCompanyListResponse400 | DeleteTrackerCompanyListResponse401 | DeleteTrackerCompanyListResponse402 | DeleteTrackerCompanyListResponse403 | DeleteTrackerCompanyListResponse404 | DeleteTrackerCompanyListResponse429 | DeleteTrackerCompanyListResponse500 | DeleteTrackerCompanyListResponse503]
+        Response[DeleteTrackerCompanyListResponse200 | DeleteTrackerCompanyListResponse400 | DeleteTrackerCompanyListResponse401 | DeleteTrackerCompanyListResponse402 | DeleteTrackerCompanyListResponse403 | DeleteTrackerCompanyListResponse404 | DeleteTrackerCompanyListResponse422 | DeleteTrackerCompanyListResponse429 | DeleteTrackerCompanyListResponse500 | DeleteTrackerCompanyListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -189,17 +198,18 @@ def sync(
     | DeleteTrackerCompanyListResponse402
     | DeleteTrackerCompanyListResponse403
     | DeleteTrackerCompanyListResponse404
+    | DeleteTrackerCompanyListResponse422
     | DeleteTrackerCompanyListResponse429
     | DeleteTrackerCompanyListResponse500
     | DeleteTrackerCompanyListResponse503
     | None
 ):
-    r"""Delete company tracker list
+    r"""Archive company tracker list
 
      Archive a company tracker list. Stops all monitoring and deactivates all tracked companies and rules
     on the list. Signal history is preserved for audit purposes.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -213,7 +223,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DeleteTrackerCompanyListResponse200 | DeleteTrackerCompanyListResponse400 | DeleteTrackerCompanyListResponse401 | DeleteTrackerCompanyListResponse402 | DeleteTrackerCompanyListResponse403 | DeleteTrackerCompanyListResponse404 | DeleteTrackerCompanyListResponse429 | DeleteTrackerCompanyListResponse500 | DeleteTrackerCompanyListResponse503
+        DeleteTrackerCompanyListResponse200 | DeleteTrackerCompanyListResponse400 | DeleteTrackerCompanyListResponse401 | DeleteTrackerCompanyListResponse402 | DeleteTrackerCompanyListResponse403 | DeleteTrackerCompanyListResponse404 | DeleteTrackerCompanyListResponse422 | DeleteTrackerCompanyListResponse429 | DeleteTrackerCompanyListResponse500 | DeleteTrackerCompanyListResponse503
     """
 
     return sync_detailed(
@@ -235,16 +245,17 @@ async def asyncio_detailed(
     | DeleteTrackerCompanyListResponse402
     | DeleteTrackerCompanyListResponse403
     | DeleteTrackerCompanyListResponse404
+    | DeleteTrackerCompanyListResponse422
     | DeleteTrackerCompanyListResponse429
     | DeleteTrackerCompanyListResponse500
     | DeleteTrackerCompanyListResponse503
 ]:
-    r"""Delete company tracker list
+    r"""Archive company tracker list
 
      Archive a company tracker list. Stops all monitoring and deactivates all tracked companies and rules
     on the list. Signal history is preserved for audit purposes.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -258,7 +269,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DeleteTrackerCompanyListResponse200 | DeleteTrackerCompanyListResponse400 | DeleteTrackerCompanyListResponse401 | DeleteTrackerCompanyListResponse402 | DeleteTrackerCompanyListResponse403 | DeleteTrackerCompanyListResponse404 | DeleteTrackerCompanyListResponse429 | DeleteTrackerCompanyListResponse500 | DeleteTrackerCompanyListResponse503]
+        Response[DeleteTrackerCompanyListResponse200 | DeleteTrackerCompanyListResponse400 | DeleteTrackerCompanyListResponse401 | DeleteTrackerCompanyListResponse402 | DeleteTrackerCompanyListResponse403 | DeleteTrackerCompanyListResponse404 | DeleteTrackerCompanyListResponse422 | DeleteTrackerCompanyListResponse429 | DeleteTrackerCompanyListResponse500 | DeleteTrackerCompanyListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -283,17 +294,18 @@ async def asyncio(
     | DeleteTrackerCompanyListResponse402
     | DeleteTrackerCompanyListResponse403
     | DeleteTrackerCompanyListResponse404
+    | DeleteTrackerCompanyListResponse422
     | DeleteTrackerCompanyListResponse429
     | DeleteTrackerCompanyListResponse500
     | DeleteTrackerCompanyListResponse503
     | None
 ):
-    r"""Delete company tracker list
+    r"""Archive company tracker list
 
      Archive a company tracker list. Stops all monitoring and deactivates all tracked companies and rules
     on the list. Signal history is preserved for audit purposes.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -307,7 +319,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DeleteTrackerCompanyListResponse200 | DeleteTrackerCompanyListResponse400 | DeleteTrackerCompanyListResponse401 | DeleteTrackerCompanyListResponse402 | DeleteTrackerCompanyListResponse403 | DeleteTrackerCompanyListResponse404 | DeleteTrackerCompanyListResponse429 | DeleteTrackerCompanyListResponse500 | DeleteTrackerCompanyListResponse503
+        DeleteTrackerCompanyListResponse200 | DeleteTrackerCompanyListResponse400 | DeleteTrackerCompanyListResponse401 | DeleteTrackerCompanyListResponse402 | DeleteTrackerCompanyListResponse403 | DeleteTrackerCompanyListResponse404 | DeleteTrackerCompanyListResponse422 | DeleteTrackerCompanyListResponse429 | DeleteTrackerCompanyListResponse500 | DeleteTrackerCompanyListResponse503
     """
 
     return (

@@ -30,6 +30,7 @@ class CompanyTypeaheadResponse200:
         charge_info (CompanyTypeaheadResponse200ChargeInfoType0 | CompanyTypeaheadResponse200ChargeInfoType1 |
             CompanyTypeaheadResponse200ChargeInfoType2 | CompanyTypeaheadResponse200ChargeInfoType3 |
             CompanyTypeaheadResponse200ChargeInfoType4):
+        advice (list[str]): Tips, recommendations, and suggestions for using this API effectively.
         warnings (list[CompanyTypeaheadResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields
             in request
     """
@@ -42,6 +43,7 @@ class CompanyTypeaheadResponse200:
         | CompanyTypeaheadResponse200ChargeInfoType3
         | CompanyTypeaheadResponse200ChargeInfoType4
     )
+    advice: list[str]
     warnings: list[CompanyTypeaheadResponse200WarningsType0Item] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
@@ -75,6 +77,8 @@ class CompanyTypeaheadResponse200:
         else:
             charge_info = self.charge_info.to_dict()
 
+        advice = self.advice
+
         warnings: list[dict[str, Any]] | None | Unset
         if isinstance(self.warnings, Unset):
             warnings = UNSET
@@ -93,6 +97,7 @@ class CompanyTypeaheadResponse200:
             {
                 "output": output,
                 "chargeInfo": charge_info,
+                "advice": advice,
             }
         )
         if warnings is not UNSET:
@@ -179,6 +184,8 @@ class CompanyTypeaheadResponse200:
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 
+        advice = cast(list[str], d.pop("advice"))
+
         def _parse_warnings(data: object) -> list[CompanyTypeaheadResponse200WarningsType0Item] | None | Unset:
             if data is None:
                 return data
@@ -206,6 +213,7 @@ class CompanyTypeaheadResponse200:
         company_typeahead_response_200 = cls(
             output=output,
             charge_info=charge_info,
+            advice=advice,
             warnings=warnings,
         )
 

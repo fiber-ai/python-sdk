@@ -12,6 +12,7 @@ from ...models.validate_phone_number_response_401 import ValidatePhoneNumberResp
 from ...models.validate_phone_number_response_402 import ValidatePhoneNumberResponse402
 from ...models.validate_phone_number_response_403 import ValidatePhoneNumberResponse403
 from ...models.validate_phone_number_response_404 import ValidatePhoneNumberResponse404
+from ...models.validate_phone_number_response_422 import ValidatePhoneNumberResponse422
 from ...models.validate_phone_number_response_429 import ValidatePhoneNumberResponse429
 from ...models.validate_phone_number_response_500 import ValidatePhoneNumberResponse500
 from ...models.validate_phone_number_response_503 import ValidatePhoneNumberResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | ValidatePhoneNumberResponse402
     | ValidatePhoneNumberResponse403
     | ValidatePhoneNumberResponse404
+    | ValidatePhoneNumberResponse422
     | ValidatePhoneNumberResponse429
     | ValidatePhoneNumberResponse500
     | ValidatePhoneNumberResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = ValidatePhoneNumberResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = ValidatePhoneNumberResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | ValidatePhoneNumberResponse402
     | ValidatePhoneNumberResponse403
     | ValidatePhoneNumberResponse404
+    | ValidatePhoneNumberResponse422
     | ValidatePhoneNumberResponse429
     | ValidatePhoneNumberResponse500
     | ValidatePhoneNumberResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | ValidatePhoneNumberResponse402
     | ValidatePhoneNumberResponse403
     | ValidatePhoneNumberResponse404
+    | ValidatePhoneNumberResponse422
     | ValidatePhoneNumberResponse429
     | ValidatePhoneNumberResponse500
     | ValidatePhoneNumberResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ValidatePhoneNumberResponse200 | ValidatePhoneNumberResponse400 | ValidatePhoneNumberResponse401 | ValidatePhoneNumberResponse402 | ValidatePhoneNumberResponse403 | ValidatePhoneNumberResponse404 | ValidatePhoneNumberResponse429 | ValidatePhoneNumberResponse500 | ValidatePhoneNumberResponse503]
+        Response[ValidatePhoneNumberResponse200 | ValidatePhoneNumberResponse400 | ValidatePhoneNumberResponse401 | ValidatePhoneNumberResponse402 | ValidatePhoneNumberResponse403 | ValidatePhoneNumberResponse404 | ValidatePhoneNumberResponse422 | ValidatePhoneNumberResponse429 | ValidatePhoneNumberResponse500 | ValidatePhoneNumberResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | ValidatePhoneNumberResponse402
     | ValidatePhoneNumberResponse403
     | ValidatePhoneNumberResponse404
+    | ValidatePhoneNumberResponse422
     | ValidatePhoneNumberResponse429
     | ValidatePhoneNumberResponse500
     | ValidatePhoneNumberResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ValidatePhoneNumberResponse200 | ValidatePhoneNumberResponse400 | ValidatePhoneNumberResponse401 | ValidatePhoneNumberResponse402 | ValidatePhoneNumberResponse403 | ValidatePhoneNumberResponse404 | ValidatePhoneNumberResponse429 | ValidatePhoneNumberResponse500 | ValidatePhoneNumberResponse503
+        ValidatePhoneNumberResponse200 | ValidatePhoneNumberResponse400 | ValidatePhoneNumberResponse401 | ValidatePhoneNumberResponse402 | ValidatePhoneNumberResponse403 | ValidatePhoneNumberResponse404 | ValidatePhoneNumberResponse422 | ValidatePhoneNumberResponse429 | ValidatePhoneNumberResponse500 | ValidatePhoneNumberResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | ValidatePhoneNumberResponse402
     | ValidatePhoneNumberResponse403
     | ValidatePhoneNumberResponse404
+    | ValidatePhoneNumberResponse422
     | ValidatePhoneNumberResponse429
     | ValidatePhoneNumberResponse500
     | ValidatePhoneNumberResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ValidatePhoneNumberResponse200 | ValidatePhoneNumberResponse400 | ValidatePhoneNumberResponse401 | ValidatePhoneNumberResponse402 | ValidatePhoneNumberResponse403 | ValidatePhoneNumberResponse404 | ValidatePhoneNumberResponse429 | ValidatePhoneNumberResponse500 | ValidatePhoneNumberResponse503]
+        Response[ValidatePhoneNumberResponse200 | ValidatePhoneNumberResponse400 | ValidatePhoneNumberResponse401 | ValidatePhoneNumberResponse402 | ValidatePhoneNumberResponse403 | ValidatePhoneNumberResponse404 | ValidatePhoneNumberResponse422 | ValidatePhoneNumberResponse429 | ValidatePhoneNumberResponse500 | ValidatePhoneNumberResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | ValidatePhoneNumberResponse402
     | ValidatePhoneNumberResponse403
     | ValidatePhoneNumberResponse404
+    | ValidatePhoneNumberResponse422
     | ValidatePhoneNumberResponse429
     | ValidatePhoneNumberResponse500
     | ValidatePhoneNumberResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ValidatePhoneNumberResponse200 | ValidatePhoneNumberResponse400 | ValidatePhoneNumberResponse401 | ValidatePhoneNumberResponse402 | ValidatePhoneNumberResponse403 | ValidatePhoneNumberResponse404 | ValidatePhoneNumberResponse429 | ValidatePhoneNumberResponse500 | ValidatePhoneNumberResponse503
+        ValidatePhoneNumberResponse200 | ValidatePhoneNumberResponse400 | ValidatePhoneNumberResponse401 | ValidatePhoneNumberResponse402 | ValidatePhoneNumberResponse403 | ValidatePhoneNumberResponse404 | ValidatePhoneNumberResponse422 | ValidatePhoneNumberResponse429 | ValidatePhoneNumberResponse500 | ValidatePhoneNumberResponse503
     """
 
     return (

@@ -12,6 +12,7 @@ from ...models.domain_lookup_polling_response_401 import DomainLookupPollingResp
 from ...models.domain_lookup_polling_response_402 import DomainLookupPollingResponse402
 from ...models.domain_lookup_polling_response_403 import DomainLookupPollingResponse403
 from ...models.domain_lookup_polling_response_404 import DomainLookupPollingResponse404
+from ...models.domain_lookup_polling_response_422 import DomainLookupPollingResponse422
 from ...models.domain_lookup_polling_response_429 import DomainLookupPollingResponse429
 from ...models.domain_lookup_polling_response_500 import DomainLookupPollingResponse500
 from ...models.domain_lookup_polling_response_503 import DomainLookupPollingResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | DomainLookupPollingResponse402
     | DomainLookupPollingResponse403
     | DomainLookupPollingResponse404
+    | DomainLookupPollingResponse422
     | DomainLookupPollingResponse429
     | DomainLookupPollingResponse500
     | DomainLookupPollingResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = DomainLookupPollingResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = DomainLookupPollingResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | DomainLookupPollingResponse402
     | DomainLookupPollingResponse403
     | DomainLookupPollingResponse404
+    | DomainLookupPollingResponse422
     | DomainLookupPollingResponse429
     | DomainLookupPollingResponse500
     | DomainLookupPollingResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | DomainLookupPollingResponse402
     | DomainLookupPollingResponse403
     | DomainLookupPollingResponse404
+    | DomainLookupPollingResponse422
     | DomainLookupPollingResponse429
     | DomainLookupPollingResponse500
     | DomainLookupPollingResponse503
@@ -152,7 +161,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DomainLookupPollingResponse200 | DomainLookupPollingResponse400 | DomainLookupPollingResponse401 | DomainLookupPollingResponse402 | DomainLookupPollingResponse403 | DomainLookupPollingResponse404 | DomainLookupPollingResponse429 | DomainLookupPollingResponse500 | DomainLookupPollingResponse503]
+        Response[DomainLookupPollingResponse200 | DomainLookupPollingResponse400 | DomainLookupPollingResponse401 | DomainLookupPollingResponse402 | DomainLookupPollingResponse403 | DomainLookupPollingResponse404 | DomainLookupPollingResponse422 | DomainLookupPollingResponse429 | DomainLookupPollingResponse500 | DomainLookupPollingResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -177,6 +186,7 @@ def sync(
     | DomainLookupPollingResponse402
     | DomainLookupPollingResponse403
     | DomainLookupPollingResponse404
+    | DomainLookupPollingResponse422
     | DomainLookupPollingResponse429
     | DomainLookupPollingResponse500
     | DomainLookupPollingResponse503
@@ -196,7 +206,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DomainLookupPollingResponse200 | DomainLookupPollingResponse400 | DomainLookupPollingResponse401 | DomainLookupPollingResponse402 | DomainLookupPollingResponse403 | DomainLookupPollingResponse404 | DomainLookupPollingResponse429 | DomainLookupPollingResponse500 | DomainLookupPollingResponse503
+        DomainLookupPollingResponse200 | DomainLookupPollingResponse400 | DomainLookupPollingResponse401 | DomainLookupPollingResponse402 | DomainLookupPollingResponse403 | DomainLookupPollingResponse404 | DomainLookupPollingResponse422 | DomainLookupPollingResponse429 | DomainLookupPollingResponse500 | DomainLookupPollingResponse503
     """
 
     return sync_detailed(
@@ -216,6 +226,7 @@ async def asyncio_detailed(
     | DomainLookupPollingResponse402
     | DomainLookupPollingResponse403
     | DomainLookupPollingResponse404
+    | DomainLookupPollingResponse422
     | DomainLookupPollingResponse429
     | DomainLookupPollingResponse500
     | DomainLookupPollingResponse503
@@ -234,7 +245,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DomainLookupPollingResponse200 | DomainLookupPollingResponse400 | DomainLookupPollingResponse401 | DomainLookupPollingResponse402 | DomainLookupPollingResponse403 | DomainLookupPollingResponse404 | DomainLookupPollingResponse429 | DomainLookupPollingResponse500 | DomainLookupPollingResponse503]
+        Response[DomainLookupPollingResponse200 | DomainLookupPollingResponse400 | DomainLookupPollingResponse401 | DomainLookupPollingResponse402 | DomainLookupPollingResponse403 | DomainLookupPollingResponse404 | DomainLookupPollingResponse422 | DomainLookupPollingResponse429 | DomainLookupPollingResponse500 | DomainLookupPollingResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -257,6 +268,7 @@ async def asyncio(
     | DomainLookupPollingResponse402
     | DomainLookupPollingResponse403
     | DomainLookupPollingResponse404
+    | DomainLookupPollingResponse422
     | DomainLookupPollingResponse429
     | DomainLookupPollingResponse500
     | DomainLookupPollingResponse503
@@ -276,7 +288,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DomainLookupPollingResponse200 | DomainLookupPollingResponse400 | DomainLookupPollingResponse401 | DomainLookupPollingResponse402 | DomainLookupPollingResponse403 | DomainLookupPollingResponse404 | DomainLookupPollingResponse429 | DomainLookupPollingResponse500 | DomainLookupPollingResponse503
+        DomainLookupPollingResponse200 | DomainLookupPollingResponse400 | DomainLookupPollingResponse401 | DomainLookupPollingResponse402 | DomainLookupPollingResponse403 | DomainLookupPollingResponse404 | DomainLookupPollingResponse422 | DomainLookupPollingResponse429 | DomainLookupPollingResponse500 | DomainLookupPollingResponse503
     """
 
     return (

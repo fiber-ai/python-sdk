@@ -12,6 +12,7 @@ from ...models.add_profiles_to_list_response_401 import AddProfilesToListRespons
 from ...models.add_profiles_to_list_response_402 import AddProfilesToListResponse402
 from ...models.add_profiles_to_list_response_403 import AddProfilesToListResponse403
 from ...models.add_profiles_to_list_response_404 import AddProfilesToListResponse404
+from ...models.add_profiles_to_list_response_422 import AddProfilesToListResponse422
 from ...models.add_profiles_to_list_response_429 import AddProfilesToListResponse429
 from ...models.add_profiles_to_list_response_500 import AddProfilesToListResponse500
 from ...models.add_profiles_to_list_response_503 import AddProfilesToListResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | AddProfilesToListResponse402
     | AddProfilesToListResponse403
     | AddProfilesToListResponse404
+    | AddProfilesToListResponse422
     | AddProfilesToListResponse429
     | AddProfilesToListResponse500
     | AddProfilesToListResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = AddProfilesToListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = AddProfilesToListResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | AddProfilesToListResponse402
     | AddProfilesToListResponse403
     | AddProfilesToListResponse404
+    | AddProfilesToListResponse422
     | AddProfilesToListResponse429
     | AddProfilesToListResponse500
     | AddProfilesToListResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | AddProfilesToListResponse402
     | AddProfilesToListResponse403
     | AddProfilesToListResponse404
+    | AddProfilesToListResponse422
     | AddProfilesToListResponse429
     | AddProfilesToListResponse500
     | AddProfilesToListResponse503
@@ -146,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per Number of prospect tracking&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per per profile tracked&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (AddProfilesToListBody):
@@ -157,7 +166,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[AddProfilesToListResponse200 | AddProfilesToListResponse400 | AddProfilesToListResponse401 | AddProfilesToListResponse402 | AddProfilesToListResponse403 | AddProfilesToListResponse404 | AddProfilesToListResponse429 | AddProfilesToListResponse500 | AddProfilesToListResponse503]
+        Response[AddProfilesToListResponse200 | AddProfilesToListResponse400 | AddProfilesToListResponse401 | AddProfilesToListResponse402 | AddProfilesToListResponse403 | AddProfilesToListResponse404 | AddProfilesToListResponse422 | AddProfilesToListResponse429 | AddProfilesToListResponse500 | AddProfilesToListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -182,6 +191,7 @@ def sync(
     | AddProfilesToListResponse402
     | AddProfilesToListResponse403
     | AddProfilesToListResponse404
+    | AddProfilesToListResponse422
     | AddProfilesToListResponse429
     | AddProfilesToListResponse500
     | AddProfilesToListResponse503
@@ -195,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per Number of prospect tracking&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per per profile tracked&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (AddProfilesToListBody):
@@ -206,7 +216,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        AddProfilesToListResponse200 | AddProfilesToListResponse400 | AddProfilesToListResponse401 | AddProfilesToListResponse402 | AddProfilesToListResponse403 | AddProfilesToListResponse404 | AddProfilesToListResponse429 | AddProfilesToListResponse500 | AddProfilesToListResponse503
+        AddProfilesToListResponse200 | AddProfilesToListResponse400 | AddProfilesToListResponse401 | AddProfilesToListResponse402 | AddProfilesToListResponse403 | AddProfilesToListResponse404 | AddProfilesToListResponse422 | AddProfilesToListResponse429 | AddProfilesToListResponse500 | AddProfilesToListResponse503
     """
 
     return sync_detailed(
@@ -226,6 +236,7 @@ async def asyncio_detailed(
     | AddProfilesToListResponse402
     | AddProfilesToListResponse403
     | AddProfilesToListResponse404
+    | AddProfilesToListResponse422
     | AddProfilesToListResponse429
     | AddProfilesToListResponse500
     | AddProfilesToListResponse503
@@ -238,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per Number of prospect tracking&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per per profile tracked&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (AddProfilesToListBody):
@@ -249,7 +260,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[AddProfilesToListResponse200 | AddProfilesToListResponse400 | AddProfilesToListResponse401 | AddProfilesToListResponse402 | AddProfilesToListResponse403 | AddProfilesToListResponse404 | AddProfilesToListResponse429 | AddProfilesToListResponse500 | AddProfilesToListResponse503]
+        Response[AddProfilesToListResponse200 | AddProfilesToListResponse400 | AddProfilesToListResponse401 | AddProfilesToListResponse402 | AddProfilesToListResponse403 | AddProfilesToListResponse404 | AddProfilesToListResponse422 | AddProfilesToListResponse429 | AddProfilesToListResponse500 | AddProfilesToListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -272,6 +283,7 @@ async def asyncio(
     | AddProfilesToListResponse402
     | AddProfilesToListResponse403
     | AddProfilesToListResponse404
+    | AddProfilesToListResponse422
     | AddProfilesToListResponse429
     | AddProfilesToListResponse500
     | AddProfilesToListResponse503
@@ -285,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per Number of prospect tracking&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per per profile tracked&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (AddProfilesToListBody):
@@ -296,7 +308,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        AddProfilesToListResponse200 | AddProfilesToListResponse400 | AddProfilesToListResponse401 | AddProfilesToListResponse402 | AddProfilesToListResponse403 | AddProfilesToListResponse404 | AddProfilesToListResponse429 | AddProfilesToListResponse500 | AddProfilesToListResponse503
+        AddProfilesToListResponse200 | AddProfilesToListResponse400 | AddProfilesToListResponse401 | AddProfilesToListResponse402 | AddProfilesToListResponse403 | AddProfilesToListResponse404 | AddProfilesToListResponse422 | AddProfilesToListResponse429 | AddProfilesToListResponse500 | AddProfilesToListResponse503
     """
 
     return (

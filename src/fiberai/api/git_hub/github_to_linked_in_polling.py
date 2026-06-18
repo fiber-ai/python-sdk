@@ -12,6 +12,7 @@ from ...models.github_to_linked_in_polling_response_401 import GithubToLinkedInP
 from ...models.github_to_linked_in_polling_response_402 import GithubToLinkedInPollingResponse402
 from ...models.github_to_linked_in_polling_response_403 import GithubToLinkedInPollingResponse403
 from ...models.github_to_linked_in_polling_response_404 import GithubToLinkedInPollingResponse404
+from ...models.github_to_linked_in_polling_response_422 import GithubToLinkedInPollingResponse422
 from ...models.github_to_linked_in_polling_response_429 import GithubToLinkedInPollingResponse429
 from ...models.github_to_linked_in_polling_response_500 import GithubToLinkedInPollingResponse500
 from ...models.github_to_linked_in_polling_response_503 import GithubToLinkedInPollingResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GithubToLinkedInPollingResponse402
     | GithubToLinkedInPollingResponse403
     | GithubToLinkedInPollingResponse404
+    | GithubToLinkedInPollingResponse422
     | GithubToLinkedInPollingResponse429
     | GithubToLinkedInPollingResponse500
     | GithubToLinkedInPollingResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GithubToLinkedInPollingResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GithubToLinkedInPollingResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GithubToLinkedInPollingResponse402
     | GithubToLinkedInPollingResponse403
     | GithubToLinkedInPollingResponse404
+    | GithubToLinkedInPollingResponse422
     | GithubToLinkedInPollingResponse429
     | GithubToLinkedInPollingResponse500
     | GithubToLinkedInPollingResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GithubToLinkedInPollingResponse402
     | GithubToLinkedInPollingResponse403
     | GithubToLinkedInPollingResponse404
+    | GithubToLinkedInPollingResponse422
     | GithubToLinkedInPollingResponse429
     | GithubToLinkedInPollingResponse500
     | GithubToLinkedInPollingResponse503
@@ -152,7 +161,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GithubToLinkedInPollingResponse200 | GithubToLinkedInPollingResponse400 | GithubToLinkedInPollingResponse401 | GithubToLinkedInPollingResponse402 | GithubToLinkedInPollingResponse403 | GithubToLinkedInPollingResponse404 | GithubToLinkedInPollingResponse429 | GithubToLinkedInPollingResponse500 | GithubToLinkedInPollingResponse503]
+        Response[GithubToLinkedInPollingResponse200 | GithubToLinkedInPollingResponse400 | GithubToLinkedInPollingResponse401 | GithubToLinkedInPollingResponse402 | GithubToLinkedInPollingResponse403 | GithubToLinkedInPollingResponse404 | GithubToLinkedInPollingResponse422 | GithubToLinkedInPollingResponse429 | GithubToLinkedInPollingResponse500 | GithubToLinkedInPollingResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -177,6 +186,7 @@ def sync(
     | GithubToLinkedInPollingResponse402
     | GithubToLinkedInPollingResponse403
     | GithubToLinkedInPollingResponse404
+    | GithubToLinkedInPollingResponse422
     | GithubToLinkedInPollingResponse429
     | GithubToLinkedInPollingResponse500
     | GithubToLinkedInPollingResponse503
@@ -196,7 +206,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GithubToLinkedInPollingResponse200 | GithubToLinkedInPollingResponse400 | GithubToLinkedInPollingResponse401 | GithubToLinkedInPollingResponse402 | GithubToLinkedInPollingResponse403 | GithubToLinkedInPollingResponse404 | GithubToLinkedInPollingResponse429 | GithubToLinkedInPollingResponse500 | GithubToLinkedInPollingResponse503
+        GithubToLinkedInPollingResponse200 | GithubToLinkedInPollingResponse400 | GithubToLinkedInPollingResponse401 | GithubToLinkedInPollingResponse402 | GithubToLinkedInPollingResponse403 | GithubToLinkedInPollingResponse404 | GithubToLinkedInPollingResponse422 | GithubToLinkedInPollingResponse429 | GithubToLinkedInPollingResponse500 | GithubToLinkedInPollingResponse503
     """
 
     return sync_detailed(
@@ -216,6 +226,7 @@ async def asyncio_detailed(
     | GithubToLinkedInPollingResponse402
     | GithubToLinkedInPollingResponse403
     | GithubToLinkedInPollingResponse404
+    | GithubToLinkedInPollingResponse422
     | GithubToLinkedInPollingResponse429
     | GithubToLinkedInPollingResponse500
     | GithubToLinkedInPollingResponse503
@@ -234,7 +245,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GithubToLinkedInPollingResponse200 | GithubToLinkedInPollingResponse400 | GithubToLinkedInPollingResponse401 | GithubToLinkedInPollingResponse402 | GithubToLinkedInPollingResponse403 | GithubToLinkedInPollingResponse404 | GithubToLinkedInPollingResponse429 | GithubToLinkedInPollingResponse500 | GithubToLinkedInPollingResponse503]
+        Response[GithubToLinkedInPollingResponse200 | GithubToLinkedInPollingResponse400 | GithubToLinkedInPollingResponse401 | GithubToLinkedInPollingResponse402 | GithubToLinkedInPollingResponse403 | GithubToLinkedInPollingResponse404 | GithubToLinkedInPollingResponse422 | GithubToLinkedInPollingResponse429 | GithubToLinkedInPollingResponse500 | GithubToLinkedInPollingResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -257,6 +268,7 @@ async def asyncio(
     | GithubToLinkedInPollingResponse402
     | GithubToLinkedInPollingResponse403
     | GithubToLinkedInPollingResponse404
+    | GithubToLinkedInPollingResponse422
     | GithubToLinkedInPollingResponse429
     | GithubToLinkedInPollingResponse500
     | GithubToLinkedInPollingResponse503
@@ -276,7 +288,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GithubToLinkedInPollingResponse200 | GithubToLinkedInPollingResponse400 | GithubToLinkedInPollingResponse401 | GithubToLinkedInPollingResponse402 | GithubToLinkedInPollingResponse403 | GithubToLinkedInPollingResponse404 | GithubToLinkedInPollingResponse429 | GithubToLinkedInPollingResponse500 | GithubToLinkedInPollingResponse503
+        GithubToLinkedInPollingResponse200 | GithubToLinkedInPollingResponse400 | GithubToLinkedInPollingResponse401 | GithubToLinkedInPollingResponse402 | GithubToLinkedInPollingResponse403 | GithubToLinkedInPollingResponse404 | GithubToLinkedInPollingResponse422 | GithubToLinkedInPollingResponse429 | GithubToLinkedInPollingResponse500 | GithubToLinkedInPollingResponse503
     """
 
     return (

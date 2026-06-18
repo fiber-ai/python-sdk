@@ -12,6 +12,7 @@ from ...models.get_audience_prospects_response_401 import GetAudienceProspectsRe
 from ...models.get_audience_prospects_response_402 import GetAudienceProspectsResponse402
 from ...models.get_audience_prospects_response_403 import GetAudienceProspectsResponse403
 from ...models.get_audience_prospects_response_404 import GetAudienceProspectsResponse404
+from ...models.get_audience_prospects_response_422 import GetAudienceProspectsResponse422
 from ...models.get_audience_prospects_response_429 import GetAudienceProspectsResponse429
 from ...models.get_audience_prospects_response_500 import GetAudienceProspectsResponse500
 from ...models.get_audience_prospects_response_503 import GetAudienceProspectsResponse503
@@ -61,6 +62,7 @@ def _parse_response(
     | GetAudienceProspectsResponse402
     | GetAudienceProspectsResponse403
     | GetAudienceProspectsResponse404
+    | GetAudienceProspectsResponse422
     | GetAudienceProspectsResponse429
     | GetAudienceProspectsResponse500
     | GetAudienceProspectsResponse503
@@ -96,6 +98,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetAudienceProspectsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetAudienceProspectsResponse429.from_dict(response.json())
 
@@ -126,6 +133,7 @@ def _build_response(
     | GetAudienceProspectsResponse402
     | GetAudienceProspectsResponse403
     | GetAudienceProspectsResponse404
+    | GetAudienceProspectsResponse422
     | GetAudienceProspectsResponse429
     | GetAudienceProspectsResponse500
     | GetAudienceProspectsResponse503
@@ -152,6 +160,7 @@ def sync_detailed(
     | GetAudienceProspectsResponse402
     | GetAudienceProspectsResponse403
     | GetAudienceProspectsResponse404
+    | GetAudienceProspectsResponse422
     | GetAudienceProspectsResponse429
     | GetAudienceProspectsResponse500
     | GetAudienceProspectsResponse503
@@ -177,7 +186,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetAudienceProspectsResponse200 | GetAudienceProspectsResponse400 | GetAudienceProspectsResponse401 | GetAudienceProspectsResponse402 | GetAudienceProspectsResponse403 | GetAudienceProspectsResponse404 | GetAudienceProspectsResponse429 | GetAudienceProspectsResponse500 | GetAudienceProspectsResponse503]
+        Response[GetAudienceProspectsResponse200 | GetAudienceProspectsResponse400 | GetAudienceProspectsResponse401 | GetAudienceProspectsResponse402 | GetAudienceProspectsResponse403 | GetAudienceProspectsResponse404 | GetAudienceProspectsResponse422 | GetAudienceProspectsResponse429 | GetAudienceProspectsResponse500 | GetAudienceProspectsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -208,6 +217,7 @@ def sync(
     | GetAudienceProspectsResponse402
     | GetAudienceProspectsResponse403
     | GetAudienceProspectsResponse404
+    | GetAudienceProspectsResponse422
     | GetAudienceProspectsResponse429
     | GetAudienceProspectsResponse500
     | GetAudienceProspectsResponse503
@@ -234,7 +244,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetAudienceProspectsResponse200 | GetAudienceProspectsResponse400 | GetAudienceProspectsResponse401 | GetAudienceProspectsResponse402 | GetAudienceProspectsResponse403 | GetAudienceProspectsResponse404 | GetAudienceProspectsResponse429 | GetAudienceProspectsResponse500 | GetAudienceProspectsResponse503
+        GetAudienceProspectsResponse200 | GetAudienceProspectsResponse400 | GetAudienceProspectsResponse401 | GetAudienceProspectsResponse402 | GetAudienceProspectsResponse403 | GetAudienceProspectsResponse404 | GetAudienceProspectsResponse422 | GetAudienceProspectsResponse429 | GetAudienceProspectsResponse500 | GetAudienceProspectsResponse503
     """
 
     return sync_detailed(
@@ -260,6 +270,7 @@ async def asyncio_detailed(
     | GetAudienceProspectsResponse402
     | GetAudienceProspectsResponse403
     | GetAudienceProspectsResponse404
+    | GetAudienceProspectsResponse422
     | GetAudienceProspectsResponse429
     | GetAudienceProspectsResponse500
     | GetAudienceProspectsResponse503
@@ -285,7 +296,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetAudienceProspectsResponse200 | GetAudienceProspectsResponse400 | GetAudienceProspectsResponse401 | GetAudienceProspectsResponse402 | GetAudienceProspectsResponse403 | GetAudienceProspectsResponse404 | GetAudienceProspectsResponse429 | GetAudienceProspectsResponse500 | GetAudienceProspectsResponse503]
+        Response[GetAudienceProspectsResponse200 | GetAudienceProspectsResponse400 | GetAudienceProspectsResponse401 | GetAudienceProspectsResponse402 | GetAudienceProspectsResponse403 | GetAudienceProspectsResponse404 | GetAudienceProspectsResponse422 | GetAudienceProspectsResponse429 | GetAudienceProspectsResponse500 | GetAudienceProspectsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -314,6 +325,7 @@ async def asyncio(
     | GetAudienceProspectsResponse402
     | GetAudienceProspectsResponse403
     | GetAudienceProspectsResponse404
+    | GetAudienceProspectsResponse422
     | GetAudienceProspectsResponse429
     | GetAudienceProspectsResponse500
     | GetAudienceProspectsResponse503
@@ -340,7 +352,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetAudienceProspectsResponse200 | GetAudienceProspectsResponse400 | GetAudienceProspectsResponse401 | GetAudienceProspectsResponse402 | GetAudienceProspectsResponse403 | GetAudienceProspectsResponse404 | GetAudienceProspectsResponse429 | GetAudienceProspectsResponse500 | GetAudienceProspectsResponse503
+        GetAudienceProspectsResponse200 | GetAudienceProspectsResponse400 | GetAudienceProspectsResponse401 | GetAudienceProspectsResponse402 | GetAudienceProspectsResponse403 | GetAudienceProspectsResponse404 | GetAudienceProspectsResponse422 | GetAudienceProspectsResponse429 | GetAudienceProspectsResponse500 | GetAudienceProspectsResponse503
     """
 
     return (

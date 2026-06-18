@@ -12,6 +12,7 @@ from ...models.get_scouting_report_response_401 import GetScoutingReportResponse
 from ...models.get_scouting_report_response_402 import GetScoutingReportResponse402
 from ...models.get_scouting_report_response_403 import GetScoutingReportResponse403
 from ...models.get_scouting_report_response_404 import GetScoutingReportResponse404
+from ...models.get_scouting_report_response_422 import GetScoutingReportResponse422
 from ...models.get_scouting_report_response_429 import GetScoutingReportResponse429
 from ...models.get_scouting_report_response_500 import GetScoutingReportResponse500
 from ...models.get_scouting_report_response_503 import GetScoutingReportResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GetScoutingReportResponse402
     | GetScoutingReportResponse403
     | GetScoutingReportResponse404
+    | GetScoutingReportResponse422
     | GetScoutingReportResponse429
     | GetScoutingReportResponse500
     | GetScoutingReportResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetScoutingReportResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetScoutingReportResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GetScoutingReportResponse402
     | GetScoutingReportResponse403
     | GetScoutingReportResponse404
+    | GetScoutingReportResponse422
     | GetScoutingReportResponse429
     | GetScoutingReportResponse500
     | GetScoutingReportResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GetScoutingReportResponse402
     | GetScoutingReportResponse403
     | GetScoutingReportResponse404
+    | GetScoutingReportResponse422
     | GetScoutingReportResponse429
     | GetScoutingReportResponse500
     | GetScoutingReportResponse503
@@ -157,7 +166,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetScoutingReportResponse200 | GetScoutingReportResponse400 | GetScoutingReportResponse401 | GetScoutingReportResponse402 | GetScoutingReportResponse403 | GetScoutingReportResponse404 | GetScoutingReportResponse429 | GetScoutingReportResponse500 | GetScoutingReportResponse503]
+        Response[GetScoutingReportResponse200 | GetScoutingReportResponse400 | GetScoutingReportResponse401 | GetScoutingReportResponse402 | GetScoutingReportResponse403 | GetScoutingReportResponse404 | GetScoutingReportResponse422 | GetScoutingReportResponse429 | GetScoutingReportResponse500 | GetScoutingReportResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -182,6 +191,7 @@ def sync(
     | GetScoutingReportResponse402
     | GetScoutingReportResponse403
     | GetScoutingReportResponse404
+    | GetScoutingReportResponse422
     | GetScoutingReportResponse429
     | GetScoutingReportResponse500
     | GetScoutingReportResponse503
@@ -206,7 +216,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetScoutingReportResponse200 | GetScoutingReportResponse400 | GetScoutingReportResponse401 | GetScoutingReportResponse402 | GetScoutingReportResponse403 | GetScoutingReportResponse404 | GetScoutingReportResponse429 | GetScoutingReportResponse500 | GetScoutingReportResponse503
+        GetScoutingReportResponse200 | GetScoutingReportResponse400 | GetScoutingReportResponse401 | GetScoutingReportResponse402 | GetScoutingReportResponse403 | GetScoutingReportResponse404 | GetScoutingReportResponse422 | GetScoutingReportResponse429 | GetScoutingReportResponse500 | GetScoutingReportResponse503
     """
 
     return sync_detailed(
@@ -226,6 +236,7 @@ async def asyncio_detailed(
     | GetScoutingReportResponse402
     | GetScoutingReportResponse403
     | GetScoutingReportResponse404
+    | GetScoutingReportResponse422
     | GetScoutingReportResponse429
     | GetScoutingReportResponse500
     | GetScoutingReportResponse503
@@ -249,7 +260,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetScoutingReportResponse200 | GetScoutingReportResponse400 | GetScoutingReportResponse401 | GetScoutingReportResponse402 | GetScoutingReportResponse403 | GetScoutingReportResponse404 | GetScoutingReportResponse429 | GetScoutingReportResponse500 | GetScoutingReportResponse503]
+        Response[GetScoutingReportResponse200 | GetScoutingReportResponse400 | GetScoutingReportResponse401 | GetScoutingReportResponse402 | GetScoutingReportResponse403 | GetScoutingReportResponse404 | GetScoutingReportResponse422 | GetScoutingReportResponse429 | GetScoutingReportResponse500 | GetScoutingReportResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -272,6 +283,7 @@ async def asyncio(
     | GetScoutingReportResponse402
     | GetScoutingReportResponse403
     | GetScoutingReportResponse404
+    | GetScoutingReportResponse422
     | GetScoutingReportResponse429
     | GetScoutingReportResponse500
     | GetScoutingReportResponse503
@@ -296,7 +308,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetScoutingReportResponse200 | GetScoutingReportResponse400 | GetScoutingReportResponse401 | GetScoutingReportResponse402 | GetScoutingReportResponse403 | GetScoutingReportResponse404 | GetScoutingReportResponse429 | GetScoutingReportResponse500 | GetScoutingReportResponse503
+        GetScoutingReportResponse200 | GetScoutingReportResponse400 | GetScoutingReportResponse401 | GetScoutingReportResponse402 | GetScoutingReportResponse403 | GetScoutingReportResponse404 | GetScoutingReportResponse422 | GetScoutingReportResponse429 | GetScoutingReportResponse500 | GetScoutingReportResponse503
     """
 
     return (

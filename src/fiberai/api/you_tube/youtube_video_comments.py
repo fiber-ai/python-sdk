@@ -12,6 +12,7 @@ from ...models.youtube_video_comments_response_401 import YoutubeVideoCommentsRe
 from ...models.youtube_video_comments_response_402 import YoutubeVideoCommentsResponse402
 from ...models.youtube_video_comments_response_403 import YoutubeVideoCommentsResponse403
 from ...models.youtube_video_comments_response_404 import YoutubeVideoCommentsResponse404
+from ...models.youtube_video_comments_response_422 import YoutubeVideoCommentsResponse422
 from ...models.youtube_video_comments_response_429 import YoutubeVideoCommentsResponse429
 from ...models.youtube_video_comments_response_500 import YoutubeVideoCommentsResponse500
 from ...models.youtube_video_comments_response_503 import YoutubeVideoCommentsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | YoutubeVideoCommentsResponse402
     | YoutubeVideoCommentsResponse403
     | YoutubeVideoCommentsResponse404
+    | YoutubeVideoCommentsResponse422
     | YoutubeVideoCommentsResponse429
     | YoutubeVideoCommentsResponse500
     | YoutubeVideoCommentsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = YoutubeVideoCommentsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = YoutubeVideoCommentsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | YoutubeVideoCommentsResponse402
     | YoutubeVideoCommentsResponse403
     | YoutubeVideoCommentsResponse404
+    | YoutubeVideoCommentsResponse422
     | YoutubeVideoCommentsResponse429
     | YoutubeVideoCommentsResponse500
     | YoutubeVideoCommentsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | YoutubeVideoCommentsResponse402
     | YoutubeVideoCommentsResponse403
     | YoutubeVideoCommentsResponse404
+    | YoutubeVideoCommentsResponse422
     | YoutubeVideoCommentsResponse429
     | YoutubeVideoCommentsResponse500
     | YoutubeVideoCommentsResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[YoutubeVideoCommentsResponse200 | YoutubeVideoCommentsResponse400 | YoutubeVideoCommentsResponse401 | YoutubeVideoCommentsResponse402 | YoutubeVideoCommentsResponse403 | YoutubeVideoCommentsResponse404 | YoutubeVideoCommentsResponse429 | YoutubeVideoCommentsResponse500 | YoutubeVideoCommentsResponse503]
+        Response[YoutubeVideoCommentsResponse200 | YoutubeVideoCommentsResponse400 | YoutubeVideoCommentsResponse401 | YoutubeVideoCommentsResponse402 | YoutubeVideoCommentsResponse403 | YoutubeVideoCommentsResponse404 | YoutubeVideoCommentsResponse422 | YoutubeVideoCommentsResponse429 | YoutubeVideoCommentsResponse500 | YoutubeVideoCommentsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | YoutubeVideoCommentsResponse402
     | YoutubeVideoCommentsResponse403
     | YoutubeVideoCommentsResponse404
+    | YoutubeVideoCommentsResponse422
     | YoutubeVideoCommentsResponse429
     | YoutubeVideoCommentsResponse500
     | YoutubeVideoCommentsResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        YoutubeVideoCommentsResponse200 | YoutubeVideoCommentsResponse400 | YoutubeVideoCommentsResponse401 | YoutubeVideoCommentsResponse402 | YoutubeVideoCommentsResponse403 | YoutubeVideoCommentsResponse404 | YoutubeVideoCommentsResponse429 | YoutubeVideoCommentsResponse500 | YoutubeVideoCommentsResponse503
+        YoutubeVideoCommentsResponse200 | YoutubeVideoCommentsResponse400 | YoutubeVideoCommentsResponse401 | YoutubeVideoCommentsResponse402 | YoutubeVideoCommentsResponse403 | YoutubeVideoCommentsResponse404 | YoutubeVideoCommentsResponse422 | YoutubeVideoCommentsResponse429 | YoutubeVideoCommentsResponse500 | YoutubeVideoCommentsResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | YoutubeVideoCommentsResponse402
     | YoutubeVideoCommentsResponse403
     | YoutubeVideoCommentsResponse404
+    | YoutubeVideoCommentsResponse422
     | YoutubeVideoCommentsResponse429
     | YoutubeVideoCommentsResponse500
     | YoutubeVideoCommentsResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[YoutubeVideoCommentsResponse200 | YoutubeVideoCommentsResponse400 | YoutubeVideoCommentsResponse401 | YoutubeVideoCommentsResponse402 | YoutubeVideoCommentsResponse403 | YoutubeVideoCommentsResponse404 | YoutubeVideoCommentsResponse429 | YoutubeVideoCommentsResponse500 | YoutubeVideoCommentsResponse503]
+        Response[YoutubeVideoCommentsResponse200 | YoutubeVideoCommentsResponse400 | YoutubeVideoCommentsResponse401 | YoutubeVideoCommentsResponse402 | YoutubeVideoCommentsResponse403 | YoutubeVideoCommentsResponse404 | YoutubeVideoCommentsResponse422 | YoutubeVideoCommentsResponse429 | YoutubeVideoCommentsResponse500 | YoutubeVideoCommentsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | YoutubeVideoCommentsResponse402
     | YoutubeVideoCommentsResponse403
     | YoutubeVideoCommentsResponse404
+    | YoutubeVideoCommentsResponse422
     | YoutubeVideoCommentsResponse429
     | YoutubeVideoCommentsResponse500
     | YoutubeVideoCommentsResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        YoutubeVideoCommentsResponse200 | YoutubeVideoCommentsResponse400 | YoutubeVideoCommentsResponse401 | YoutubeVideoCommentsResponse402 | YoutubeVideoCommentsResponse403 | YoutubeVideoCommentsResponse404 | YoutubeVideoCommentsResponse429 | YoutubeVideoCommentsResponse500 | YoutubeVideoCommentsResponse503
+        YoutubeVideoCommentsResponse200 | YoutubeVideoCommentsResponse400 | YoutubeVideoCommentsResponse401 | YoutubeVideoCommentsResponse402 | YoutubeVideoCommentsResponse403 | YoutubeVideoCommentsResponse404 | YoutubeVideoCommentsResponse422 | YoutubeVideoCommentsResponse429 | YoutubeVideoCommentsResponse500 | YoutubeVideoCommentsResponse503
     """
 
     return (

@@ -12,6 +12,7 @@ from ...models.tiktok_search_keyword_response_401 import TiktokSearchKeywordResp
 from ...models.tiktok_search_keyword_response_402 import TiktokSearchKeywordResponse402
 from ...models.tiktok_search_keyword_response_403 import TiktokSearchKeywordResponse403
 from ...models.tiktok_search_keyword_response_404 import TiktokSearchKeywordResponse404
+from ...models.tiktok_search_keyword_response_422 import TiktokSearchKeywordResponse422
 from ...models.tiktok_search_keyword_response_429 import TiktokSearchKeywordResponse429
 from ...models.tiktok_search_keyword_response_500 import TiktokSearchKeywordResponse500
 from ...models.tiktok_search_keyword_response_503 import TiktokSearchKeywordResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | TiktokSearchKeywordResponse402
     | TiktokSearchKeywordResponse403
     | TiktokSearchKeywordResponse404
+    | TiktokSearchKeywordResponse422
     | TiktokSearchKeywordResponse429
     | TiktokSearchKeywordResponse500
     | TiktokSearchKeywordResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = TiktokSearchKeywordResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = TiktokSearchKeywordResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | TiktokSearchKeywordResponse402
     | TiktokSearchKeywordResponse403
     | TiktokSearchKeywordResponse404
+    | TiktokSearchKeywordResponse422
     | TiktokSearchKeywordResponse429
     | TiktokSearchKeywordResponse500
     | TiktokSearchKeywordResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | TiktokSearchKeywordResponse402
     | TiktokSearchKeywordResponse403
     | TiktokSearchKeywordResponse404
+    | TiktokSearchKeywordResponse422
     | TiktokSearchKeywordResponse429
     | TiktokSearchKeywordResponse500
     | TiktokSearchKeywordResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokSearchKeywordResponse200 | TiktokSearchKeywordResponse400 | TiktokSearchKeywordResponse401 | TiktokSearchKeywordResponse402 | TiktokSearchKeywordResponse403 | TiktokSearchKeywordResponse404 | TiktokSearchKeywordResponse429 | TiktokSearchKeywordResponse500 | TiktokSearchKeywordResponse503]
+        Response[TiktokSearchKeywordResponse200 | TiktokSearchKeywordResponse400 | TiktokSearchKeywordResponse401 | TiktokSearchKeywordResponse402 | TiktokSearchKeywordResponse403 | TiktokSearchKeywordResponse404 | TiktokSearchKeywordResponse422 | TiktokSearchKeywordResponse429 | TiktokSearchKeywordResponse500 | TiktokSearchKeywordResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | TiktokSearchKeywordResponse402
     | TiktokSearchKeywordResponse403
     | TiktokSearchKeywordResponse404
+    | TiktokSearchKeywordResponse422
     | TiktokSearchKeywordResponse429
     | TiktokSearchKeywordResponse500
     | TiktokSearchKeywordResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokSearchKeywordResponse200 | TiktokSearchKeywordResponse400 | TiktokSearchKeywordResponse401 | TiktokSearchKeywordResponse402 | TiktokSearchKeywordResponse403 | TiktokSearchKeywordResponse404 | TiktokSearchKeywordResponse429 | TiktokSearchKeywordResponse500 | TiktokSearchKeywordResponse503
+        TiktokSearchKeywordResponse200 | TiktokSearchKeywordResponse400 | TiktokSearchKeywordResponse401 | TiktokSearchKeywordResponse402 | TiktokSearchKeywordResponse403 | TiktokSearchKeywordResponse404 | TiktokSearchKeywordResponse422 | TiktokSearchKeywordResponse429 | TiktokSearchKeywordResponse500 | TiktokSearchKeywordResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | TiktokSearchKeywordResponse402
     | TiktokSearchKeywordResponse403
     | TiktokSearchKeywordResponse404
+    | TiktokSearchKeywordResponse422
     | TiktokSearchKeywordResponse429
     | TiktokSearchKeywordResponse500
     | TiktokSearchKeywordResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokSearchKeywordResponse200 | TiktokSearchKeywordResponse400 | TiktokSearchKeywordResponse401 | TiktokSearchKeywordResponse402 | TiktokSearchKeywordResponse403 | TiktokSearchKeywordResponse404 | TiktokSearchKeywordResponse429 | TiktokSearchKeywordResponse500 | TiktokSearchKeywordResponse503]
+        Response[TiktokSearchKeywordResponse200 | TiktokSearchKeywordResponse400 | TiktokSearchKeywordResponse401 | TiktokSearchKeywordResponse402 | TiktokSearchKeywordResponse403 | TiktokSearchKeywordResponse404 | TiktokSearchKeywordResponse422 | TiktokSearchKeywordResponse429 | TiktokSearchKeywordResponse500 | TiktokSearchKeywordResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | TiktokSearchKeywordResponse402
     | TiktokSearchKeywordResponse403
     | TiktokSearchKeywordResponse404
+    | TiktokSearchKeywordResponse422
     | TiktokSearchKeywordResponse429
     | TiktokSearchKeywordResponse500
     | TiktokSearchKeywordResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokSearchKeywordResponse200 | TiktokSearchKeywordResponse400 | TiktokSearchKeywordResponse401 | TiktokSearchKeywordResponse402 | TiktokSearchKeywordResponse403 | TiktokSearchKeywordResponse404 | TiktokSearchKeywordResponse429 | TiktokSearchKeywordResponse500 | TiktokSearchKeywordResponse503
+        TiktokSearchKeywordResponse200 | TiktokSearchKeywordResponse400 | TiktokSearchKeywordResponse401 | TiktokSearchKeywordResponse402 | TiktokSearchKeywordResponse403 | TiktokSearchKeywordResponse404 | TiktokSearchKeywordResponse422 | TiktokSearchKeywordResponse429 | TiktokSearchKeywordResponse500 | TiktokSearchKeywordResponse503
     """
 
     return (

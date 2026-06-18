@@ -24,6 +24,9 @@ from ...models.create_company_exclusion_list_from_audience_response_403 import (
 from ...models.create_company_exclusion_list_from_audience_response_404 import (
     CreateCompanyExclusionListFromAudienceResponse404,
 )
+from ...models.create_company_exclusion_list_from_audience_response_422 import (
+    CreateCompanyExclusionListFromAudienceResponse422,
+)
 from ...models.create_company_exclusion_list_from_audience_response_429 import (
     CreateCompanyExclusionListFromAudienceResponse429,
 )
@@ -64,6 +67,7 @@ def _parse_response(
     | CreateCompanyExclusionListFromAudienceResponse402
     | CreateCompanyExclusionListFromAudienceResponse403
     | CreateCompanyExclusionListFromAudienceResponse404
+    | CreateCompanyExclusionListFromAudienceResponse422
     | CreateCompanyExclusionListFromAudienceResponse429
     | CreateCompanyExclusionListFromAudienceResponse500
     | CreateCompanyExclusionListFromAudienceResponse503
@@ -99,6 +103,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = CreateCompanyExclusionListFromAudienceResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = CreateCompanyExclusionListFromAudienceResponse429.from_dict(response.json())
 
@@ -129,6 +138,7 @@ def _build_response(
     | CreateCompanyExclusionListFromAudienceResponse402
     | CreateCompanyExclusionListFromAudienceResponse403
     | CreateCompanyExclusionListFromAudienceResponse404
+    | CreateCompanyExclusionListFromAudienceResponse422
     | CreateCompanyExclusionListFromAudienceResponse429
     | CreateCompanyExclusionListFromAudienceResponse500
     | CreateCompanyExclusionListFromAudienceResponse503
@@ -152,6 +162,7 @@ def sync_detailed(
     | CreateCompanyExclusionListFromAudienceResponse402
     | CreateCompanyExclusionListFromAudienceResponse403
     | CreateCompanyExclusionListFromAudienceResponse404
+    | CreateCompanyExclusionListFromAudienceResponse422
     | CreateCompanyExclusionListFromAudienceResponse429
     | CreateCompanyExclusionListFromAudienceResponse500
     | CreateCompanyExclusionListFromAudienceResponse503
@@ -174,7 +185,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CreateCompanyExclusionListFromAudienceResponse200 | CreateCompanyExclusionListFromAudienceResponse400 | CreateCompanyExclusionListFromAudienceResponse401 | CreateCompanyExclusionListFromAudienceResponse402 | CreateCompanyExclusionListFromAudienceResponse403 | CreateCompanyExclusionListFromAudienceResponse404 | CreateCompanyExclusionListFromAudienceResponse429 | CreateCompanyExclusionListFromAudienceResponse500 | CreateCompanyExclusionListFromAudienceResponse503]
+        Response[CreateCompanyExclusionListFromAudienceResponse200 | CreateCompanyExclusionListFromAudienceResponse400 | CreateCompanyExclusionListFromAudienceResponse401 | CreateCompanyExclusionListFromAudienceResponse402 | CreateCompanyExclusionListFromAudienceResponse403 | CreateCompanyExclusionListFromAudienceResponse404 | CreateCompanyExclusionListFromAudienceResponse422 | CreateCompanyExclusionListFromAudienceResponse429 | CreateCompanyExclusionListFromAudienceResponse500 | CreateCompanyExclusionListFromAudienceResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -199,6 +210,7 @@ def sync(
     | CreateCompanyExclusionListFromAudienceResponse402
     | CreateCompanyExclusionListFromAudienceResponse403
     | CreateCompanyExclusionListFromAudienceResponse404
+    | CreateCompanyExclusionListFromAudienceResponse422
     | CreateCompanyExclusionListFromAudienceResponse429
     | CreateCompanyExclusionListFromAudienceResponse500
     | CreateCompanyExclusionListFromAudienceResponse503
@@ -222,7 +234,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CreateCompanyExclusionListFromAudienceResponse200 | CreateCompanyExclusionListFromAudienceResponse400 | CreateCompanyExclusionListFromAudienceResponse401 | CreateCompanyExclusionListFromAudienceResponse402 | CreateCompanyExclusionListFromAudienceResponse403 | CreateCompanyExclusionListFromAudienceResponse404 | CreateCompanyExclusionListFromAudienceResponse429 | CreateCompanyExclusionListFromAudienceResponse500 | CreateCompanyExclusionListFromAudienceResponse503
+        CreateCompanyExclusionListFromAudienceResponse200 | CreateCompanyExclusionListFromAudienceResponse400 | CreateCompanyExclusionListFromAudienceResponse401 | CreateCompanyExclusionListFromAudienceResponse402 | CreateCompanyExclusionListFromAudienceResponse403 | CreateCompanyExclusionListFromAudienceResponse404 | CreateCompanyExclusionListFromAudienceResponse422 | CreateCompanyExclusionListFromAudienceResponse429 | CreateCompanyExclusionListFromAudienceResponse500 | CreateCompanyExclusionListFromAudienceResponse503
     """
 
     return sync_detailed(
@@ -242,6 +254,7 @@ async def asyncio_detailed(
     | CreateCompanyExclusionListFromAudienceResponse402
     | CreateCompanyExclusionListFromAudienceResponse403
     | CreateCompanyExclusionListFromAudienceResponse404
+    | CreateCompanyExclusionListFromAudienceResponse422
     | CreateCompanyExclusionListFromAudienceResponse429
     | CreateCompanyExclusionListFromAudienceResponse500
     | CreateCompanyExclusionListFromAudienceResponse503
@@ -264,7 +277,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CreateCompanyExclusionListFromAudienceResponse200 | CreateCompanyExclusionListFromAudienceResponse400 | CreateCompanyExclusionListFromAudienceResponse401 | CreateCompanyExclusionListFromAudienceResponse402 | CreateCompanyExclusionListFromAudienceResponse403 | CreateCompanyExclusionListFromAudienceResponse404 | CreateCompanyExclusionListFromAudienceResponse429 | CreateCompanyExclusionListFromAudienceResponse500 | CreateCompanyExclusionListFromAudienceResponse503]
+        Response[CreateCompanyExclusionListFromAudienceResponse200 | CreateCompanyExclusionListFromAudienceResponse400 | CreateCompanyExclusionListFromAudienceResponse401 | CreateCompanyExclusionListFromAudienceResponse402 | CreateCompanyExclusionListFromAudienceResponse403 | CreateCompanyExclusionListFromAudienceResponse404 | CreateCompanyExclusionListFromAudienceResponse422 | CreateCompanyExclusionListFromAudienceResponse429 | CreateCompanyExclusionListFromAudienceResponse500 | CreateCompanyExclusionListFromAudienceResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -287,6 +300,7 @@ async def asyncio(
     | CreateCompanyExclusionListFromAudienceResponse402
     | CreateCompanyExclusionListFromAudienceResponse403
     | CreateCompanyExclusionListFromAudienceResponse404
+    | CreateCompanyExclusionListFromAudienceResponse422
     | CreateCompanyExclusionListFromAudienceResponse429
     | CreateCompanyExclusionListFromAudienceResponse500
     | CreateCompanyExclusionListFromAudienceResponse503
@@ -310,7 +324,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CreateCompanyExclusionListFromAudienceResponse200 | CreateCompanyExclusionListFromAudienceResponse400 | CreateCompanyExclusionListFromAudienceResponse401 | CreateCompanyExclusionListFromAudienceResponse402 | CreateCompanyExclusionListFromAudienceResponse403 | CreateCompanyExclusionListFromAudienceResponse404 | CreateCompanyExclusionListFromAudienceResponse429 | CreateCompanyExclusionListFromAudienceResponse500 | CreateCompanyExclusionListFromAudienceResponse503
+        CreateCompanyExclusionListFromAudienceResponse200 | CreateCompanyExclusionListFromAudienceResponse400 | CreateCompanyExclusionListFromAudienceResponse401 | CreateCompanyExclusionListFromAudienceResponse402 | CreateCompanyExclusionListFromAudienceResponse403 | CreateCompanyExclusionListFromAudienceResponse404 | CreateCompanyExclusionListFromAudienceResponse422 | CreateCompanyExclusionListFromAudienceResponse429 | CreateCompanyExclusionListFromAudienceResponse500 | CreateCompanyExclusionListFromAudienceResponse503
     """
 
     return (

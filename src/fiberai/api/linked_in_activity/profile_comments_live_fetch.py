@@ -12,6 +12,7 @@ from ...models.profile_comments_live_fetch_response_401 import ProfileCommentsLi
 from ...models.profile_comments_live_fetch_response_402 import ProfileCommentsLiveFetchResponse402
 from ...models.profile_comments_live_fetch_response_403 import ProfileCommentsLiveFetchResponse403
 from ...models.profile_comments_live_fetch_response_404 import ProfileCommentsLiveFetchResponse404
+from ...models.profile_comments_live_fetch_response_422 import ProfileCommentsLiveFetchResponse422
 from ...models.profile_comments_live_fetch_response_429 import ProfileCommentsLiveFetchResponse429
 from ...models.profile_comments_live_fetch_response_500 import ProfileCommentsLiveFetchResponse500
 from ...models.profile_comments_live_fetch_response_503 import ProfileCommentsLiveFetchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | ProfileCommentsLiveFetchResponse402
     | ProfileCommentsLiveFetchResponse403
     | ProfileCommentsLiveFetchResponse404
+    | ProfileCommentsLiveFetchResponse422
     | ProfileCommentsLiveFetchResponse429
     | ProfileCommentsLiveFetchResponse500
     | ProfileCommentsLiveFetchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = ProfileCommentsLiveFetchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = ProfileCommentsLiveFetchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | ProfileCommentsLiveFetchResponse402
     | ProfileCommentsLiveFetchResponse403
     | ProfileCommentsLiveFetchResponse404
+    | ProfileCommentsLiveFetchResponse422
     | ProfileCommentsLiveFetchResponse429
     | ProfileCommentsLiveFetchResponse500
     | ProfileCommentsLiveFetchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | ProfileCommentsLiveFetchResponse402
     | ProfileCommentsLiveFetchResponse403
     | ProfileCommentsLiveFetchResponse404
+    | ProfileCommentsLiveFetchResponse422
     | ProfileCommentsLiveFetchResponse429
     | ProfileCommentsLiveFetchResponse500
     | ProfileCommentsLiveFetchResponse503
@@ -159,7 +168,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ProfileCommentsLiveFetchResponse200 | ProfileCommentsLiveFetchResponse400 | ProfileCommentsLiveFetchResponse401 | ProfileCommentsLiveFetchResponse402 | ProfileCommentsLiveFetchResponse403 | ProfileCommentsLiveFetchResponse404 | ProfileCommentsLiveFetchResponse429 | ProfileCommentsLiveFetchResponse500 | ProfileCommentsLiveFetchResponse503]
+        Response[ProfileCommentsLiveFetchResponse200 | ProfileCommentsLiveFetchResponse400 | ProfileCommentsLiveFetchResponse401 | ProfileCommentsLiveFetchResponse402 | ProfileCommentsLiveFetchResponse403 | ProfileCommentsLiveFetchResponse404 | ProfileCommentsLiveFetchResponse422 | ProfileCommentsLiveFetchResponse429 | ProfileCommentsLiveFetchResponse500 | ProfileCommentsLiveFetchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -184,6 +193,7 @@ def sync(
     | ProfileCommentsLiveFetchResponse402
     | ProfileCommentsLiveFetchResponse403
     | ProfileCommentsLiveFetchResponse404
+    | ProfileCommentsLiveFetchResponse422
     | ProfileCommentsLiveFetchResponse429
     | ProfileCommentsLiveFetchResponse500
     | ProfileCommentsLiveFetchResponse503
@@ -210,7 +220,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ProfileCommentsLiveFetchResponse200 | ProfileCommentsLiveFetchResponse400 | ProfileCommentsLiveFetchResponse401 | ProfileCommentsLiveFetchResponse402 | ProfileCommentsLiveFetchResponse403 | ProfileCommentsLiveFetchResponse404 | ProfileCommentsLiveFetchResponse429 | ProfileCommentsLiveFetchResponse500 | ProfileCommentsLiveFetchResponse503
+        ProfileCommentsLiveFetchResponse200 | ProfileCommentsLiveFetchResponse400 | ProfileCommentsLiveFetchResponse401 | ProfileCommentsLiveFetchResponse402 | ProfileCommentsLiveFetchResponse403 | ProfileCommentsLiveFetchResponse404 | ProfileCommentsLiveFetchResponse422 | ProfileCommentsLiveFetchResponse429 | ProfileCommentsLiveFetchResponse500 | ProfileCommentsLiveFetchResponse503
     """
 
     return sync_detailed(
@@ -230,6 +240,7 @@ async def asyncio_detailed(
     | ProfileCommentsLiveFetchResponse402
     | ProfileCommentsLiveFetchResponse403
     | ProfileCommentsLiveFetchResponse404
+    | ProfileCommentsLiveFetchResponse422
     | ProfileCommentsLiveFetchResponse429
     | ProfileCommentsLiveFetchResponse500
     | ProfileCommentsLiveFetchResponse503
@@ -255,7 +266,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ProfileCommentsLiveFetchResponse200 | ProfileCommentsLiveFetchResponse400 | ProfileCommentsLiveFetchResponse401 | ProfileCommentsLiveFetchResponse402 | ProfileCommentsLiveFetchResponse403 | ProfileCommentsLiveFetchResponse404 | ProfileCommentsLiveFetchResponse429 | ProfileCommentsLiveFetchResponse500 | ProfileCommentsLiveFetchResponse503]
+        Response[ProfileCommentsLiveFetchResponse200 | ProfileCommentsLiveFetchResponse400 | ProfileCommentsLiveFetchResponse401 | ProfileCommentsLiveFetchResponse402 | ProfileCommentsLiveFetchResponse403 | ProfileCommentsLiveFetchResponse404 | ProfileCommentsLiveFetchResponse422 | ProfileCommentsLiveFetchResponse429 | ProfileCommentsLiveFetchResponse500 | ProfileCommentsLiveFetchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -278,6 +289,7 @@ async def asyncio(
     | ProfileCommentsLiveFetchResponse402
     | ProfileCommentsLiveFetchResponse403
     | ProfileCommentsLiveFetchResponse404
+    | ProfileCommentsLiveFetchResponse422
     | ProfileCommentsLiveFetchResponse429
     | ProfileCommentsLiveFetchResponse500
     | ProfileCommentsLiveFetchResponse503
@@ -304,7 +316,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ProfileCommentsLiveFetchResponse200 | ProfileCommentsLiveFetchResponse400 | ProfileCommentsLiveFetchResponse401 | ProfileCommentsLiveFetchResponse402 | ProfileCommentsLiveFetchResponse403 | ProfileCommentsLiveFetchResponse404 | ProfileCommentsLiveFetchResponse429 | ProfileCommentsLiveFetchResponse500 | ProfileCommentsLiveFetchResponse503
+        ProfileCommentsLiveFetchResponse200 | ProfileCommentsLiveFetchResponse400 | ProfileCommentsLiveFetchResponse401 | ProfileCommentsLiveFetchResponse402 | ProfileCommentsLiveFetchResponse403 | ProfileCommentsLiveFetchResponse404 | ProfileCommentsLiveFetchResponse422 | ProfileCommentsLiveFetchResponse429 | ProfileCommentsLiveFetchResponse500 | ProfileCommentsLiveFetchResponse503
     """
 
     return (

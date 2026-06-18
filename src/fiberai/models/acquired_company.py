@@ -19,12 +19,15 @@ class AcquiredCompany:
         entity_type (Literal['company']):
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
         min_price_usd (float | None | Unset): Only alert for acquisitions above this price. Omit for any acquisition.
     """
 
     type_: Literal["acquired_company"]
     entity_type: Literal["company"]
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
     min_price_usd: float | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -38,6 +41,8 @@ class AcquiredCompany:
             lookback_days = UNSET
         else:
             lookback_days = self.lookback_days
+
+        is_dummy = self.is_dummy
 
         min_price_usd: float | None | Unset
         if isinstance(self.min_price_usd, Unset):
@@ -55,6 +60,8 @@ class AcquiredCompany:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
         if min_price_usd is not UNSET:
             field_dict["minPriceUsd"] = min_price_usd
 
@@ -80,6 +87,8 @@ class AcquiredCompany:
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
+        is_dummy = d.pop("isDummy", UNSET)
+
         def _parse_min_price_usd(data: object) -> float | None | Unset:
             if data is None:
                 return data
@@ -93,6 +102,7 @@ class AcquiredCompany:
             type_=type_,
             entity_type=entity_type,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
             min_price_usd=min_price_usd,
         )
 

@@ -12,6 +12,7 @@ from ...models.company_live_enrich_response_401 import CompanyLiveEnrichResponse
 from ...models.company_live_enrich_response_402 import CompanyLiveEnrichResponse402
 from ...models.company_live_enrich_response_403 import CompanyLiveEnrichResponse403
 from ...models.company_live_enrich_response_404 import CompanyLiveEnrichResponse404
+from ...models.company_live_enrich_response_422 import CompanyLiveEnrichResponse422
 from ...models.company_live_enrich_response_429 import CompanyLiveEnrichResponse429
 from ...models.company_live_enrich_response_500 import CompanyLiveEnrichResponse500
 from ...models.company_live_enrich_response_503 import CompanyLiveEnrichResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | CompanyLiveEnrichResponse402
     | CompanyLiveEnrichResponse403
     | CompanyLiveEnrichResponse404
+    | CompanyLiveEnrichResponse422
     | CompanyLiveEnrichResponse429
     | CompanyLiveEnrichResponse500
     | CompanyLiveEnrichResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = CompanyLiveEnrichResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = CompanyLiveEnrichResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | CompanyLiveEnrichResponse402
     | CompanyLiveEnrichResponse403
     | CompanyLiveEnrichResponse404
+    | CompanyLiveEnrichResponse422
     | CompanyLiveEnrichResponse429
     | CompanyLiveEnrichResponse500
     | CompanyLiveEnrichResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | CompanyLiveEnrichResponse402
     | CompanyLiveEnrichResponse403
     | CompanyLiveEnrichResponse404
+    | CompanyLiveEnrichResponse422
     | CompanyLiveEnrichResponse429
     | CompanyLiveEnrichResponse500
     | CompanyLiveEnrichResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CompanyLiveEnrichResponse200 | CompanyLiveEnrichResponse400 | CompanyLiveEnrichResponse401 | CompanyLiveEnrichResponse402 | CompanyLiveEnrichResponse403 | CompanyLiveEnrichResponse404 | CompanyLiveEnrichResponse429 | CompanyLiveEnrichResponse500 | CompanyLiveEnrichResponse503]
+        Response[CompanyLiveEnrichResponse200 | CompanyLiveEnrichResponse400 | CompanyLiveEnrichResponse401 | CompanyLiveEnrichResponse402 | CompanyLiveEnrichResponse403 | CompanyLiveEnrichResponse404 | CompanyLiveEnrichResponse422 | CompanyLiveEnrichResponse429 | CompanyLiveEnrichResponse500 | CompanyLiveEnrichResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | CompanyLiveEnrichResponse402
     | CompanyLiveEnrichResponse403
     | CompanyLiveEnrichResponse404
+    | CompanyLiveEnrichResponse422
     | CompanyLiveEnrichResponse429
     | CompanyLiveEnrichResponse500
     | CompanyLiveEnrichResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CompanyLiveEnrichResponse200 | CompanyLiveEnrichResponse400 | CompanyLiveEnrichResponse401 | CompanyLiveEnrichResponse402 | CompanyLiveEnrichResponse403 | CompanyLiveEnrichResponse404 | CompanyLiveEnrichResponse429 | CompanyLiveEnrichResponse500 | CompanyLiveEnrichResponse503
+        CompanyLiveEnrichResponse200 | CompanyLiveEnrichResponse400 | CompanyLiveEnrichResponse401 | CompanyLiveEnrichResponse402 | CompanyLiveEnrichResponse403 | CompanyLiveEnrichResponse404 | CompanyLiveEnrichResponse422 | CompanyLiveEnrichResponse429 | CompanyLiveEnrichResponse500 | CompanyLiveEnrichResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | CompanyLiveEnrichResponse402
     | CompanyLiveEnrichResponse403
     | CompanyLiveEnrichResponse404
+    | CompanyLiveEnrichResponse422
     | CompanyLiveEnrichResponse429
     | CompanyLiveEnrichResponse500
     | CompanyLiveEnrichResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CompanyLiveEnrichResponse200 | CompanyLiveEnrichResponse400 | CompanyLiveEnrichResponse401 | CompanyLiveEnrichResponse402 | CompanyLiveEnrichResponse403 | CompanyLiveEnrichResponse404 | CompanyLiveEnrichResponse429 | CompanyLiveEnrichResponse500 | CompanyLiveEnrichResponse503]
+        Response[CompanyLiveEnrichResponse200 | CompanyLiveEnrichResponse400 | CompanyLiveEnrichResponse401 | CompanyLiveEnrichResponse402 | CompanyLiveEnrichResponse403 | CompanyLiveEnrichResponse404 | CompanyLiveEnrichResponse422 | CompanyLiveEnrichResponse429 | CompanyLiveEnrichResponse500 | CompanyLiveEnrichResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | CompanyLiveEnrichResponse402
     | CompanyLiveEnrichResponse403
     | CompanyLiveEnrichResponse404
+    | CompanyLiveEnrichResponse422
     | CompanyLiveEnrichResponse429
     | CompanyLiveEnrichResponse500
     | CompanyLiveEnrichResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CompanyLiveEnrichResponse200 | CompanyLiveEnrichResponse400 | CompanyLiveEnrichResponse401 | CompanyLiveEnrichResponse402 | CompanyLiveEnrichResponse403 | CompanyLiveEnrichResponse404 | CompanyLiveEnrichResponse429 | CompanyLiveEnrichResponse500 | CompanyLiveEnrichResponse503
+        CompanyLiveEnrichResponse200 | CompanyLiveEnrichResponse400 | CompanyLiveEnrichResponse401 | CompanyLiveEnrichResponse402 | CompanyLiveEnrichResponse403 | CompanyLiveEnrichResponse404 | CompanyLiveEnrichResponse422 | CompanyLiveEnrichResponse429 | CompanyLiveEnrichResponse500 | CompanyLiveEnrichResponse503
     """
 
     return (

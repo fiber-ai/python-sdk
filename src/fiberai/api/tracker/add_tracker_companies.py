@@ -13,6 +13,7 @@ from ...models.add_tracker_companies_response_401 import AddTrackerCompaniesResp
 from ...models.add_tracker_companies_response_402 import AddTrackerCompaniesResponse402
 from ...models.add_tracker_companies_response_403 import AddTrackerCompaniesResponse403
 from ...models.add_tracker_companies_response_404 import AddTrackerCompaniesResponse404
+from ...models.add_tracker_companies_response_422 import AddTrackerCompaniesResponse422
 from ...models.add_tracker_companies_response_429 import AddTrackerCompaniesResponse429
 from ...models.add_tracker_companies_response_500 import AddTrackerCompaniesResponse500
 from ...models.add_tracker_companies_response_503 import AddTrackerCompaniesResponse503
@@ -50,6 +51,7 @@ def _parse_response(
     | AddTrackerCompaniesResponse402
     | AddTrackerCompaniesResponse403
     | AddTrackerCompaniesResponse404
+    | AddTrackerCompaniesResponse422
     | AddTrackerCompaniesResponse429
     | AddTrackerCompaniesResponse500
     | AddTrackerCompaniesResponse503
@@ -85,6 +87,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = AddTrackerCompaniesResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = AddTrackerCompaniesResponse429.from_dict(response.json())
 
@@ -115,6 +122,7 @@ def _build_response(
     | AddTrackerCompaniesResponse402
     | AddTrackerCompaniesResponse403
     | AddTrackerCompaniesResponse404
+    | AddTrackerCompaniesResponse422
     | AddTrackerCompaniesResponse429
     | AddTrackerCompaniesResponse500
     | AddTrackerCompaniesResponse503
@@ -139,16 +147,17 @@ def sync_detailed(
     | AddTrackerCompaniesResponse402
     | AddTrackerCompaniesResponse403
     | AddTrackerCompaniesResponse404
+    | AddTrackerCompaniesResponse422
     | AddTrackerCompaniesResponse429
     | AddTrackerCompaniesResponse500
     | AddTrackerCompaniesResponse503
 ]:
     r"""Add companies to tracker list
 
-     Add companies to a tracker list. Identify companies by LinkedIn URL, organization ID, or slug. At
-    least one identifier is required per company.
+     Add companies to a company tracker list. Identify companies by LinkedIn URL, organization ID, slug,
+    or website domain. At least one identifier is required per company.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -162,7 +171,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[AddTrackerCompaniesResponse200 | AddTrackerCompaniesResponse400 | AddTrackerCompaniesResponse401 | AddTrackerCompaniesResponse402 | AddTrackerCompaniesResponse403 | AddTrackerCompaniesResponse404 | AddTrackerCompaniesResponse429 | AddTrackerCompaniesResponse500 | AddTrackerCompaniesResponse503]
+        Response[AddTrackerCompaniesResponse200 | AddTrackerCompaniesResponse400 | AddTrackerCompaniesResponse401 | AddTrackerCompaniesResponse402 | AddTrackerCompaniesResponse403 | AddTrackerCompaniesResponse404 | AddTrackerCompaniesResponse422 | AddTrackerCompaniesResponse429 | AddTrackerCompaniesResponse500 | AddTrackerCompaniesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -189,6 +198,7 @@ def sync(
     | AddTrackerCompaniesResponse402
     | AddTrackerCompaniesResponse403
     | AddTrackerCompaniesResponse404
+    | AddTrackerCompaniesResponse422
     | AddTrackerCompaniesResponse429
     | AddTrackerCompaniesResponse500
     | AddTrackerCompaniesResponse503
@@ -196,10 +206,10 @@ def sync(
 ):
     r"""Add companies to tracker list
 
-     Add companies to a tracker list. Identify companies by LinkedIn URL, organization ID, or slug. At
-    least one identifier is required per company.
+     Add companies to a company tracker list. Identify companies by LinkedIn URL, organization ID, slug,
+    or website domain. At least one identifier is required per company.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -213,7 +223,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        AddTrackerCompaniesResponse200 | AddTrackerCompaniesResponse400 | AddTrackerCompaniesResponse401 | AddTrackerCompaniesResponse402 | AddTrackerCompaniesResponse403 | AddTrackerCompaniesResponse404 | AddTrackerCompaniesResponse429 | AddTrackerCompaniesResponse500 | AddTrackerCompaniesResponse503
+        AddTrackerCompaniesResponse200 | AddTrackerCompaniesResponse400 | AddTrackerCompaniesResponse401 | AddTrackerCompaniesResponse402 | AddTrackerCompaniesResponse403 | AddTrackerCompaniesResponse404 | AddTrackerCompaniesResponse422 | AddTrackerCompaniesResponse429 | AddTrackerCompaniesResponse500 | AddTrackerCompaniesResponse503
     """
 
     return sync_detailed(
@@ -235,16 +245,17 @@ async def asyncio_detailed(
     | AddTrackerCompaniesResponse402
     | AddTrackerCompaniesResponse403
     | AddTrackerCompaniesResponse404
+    | AddTrackerCompaniesResponse422
     | AddTrackerCompaniesResponse429
     | AddTrackerCompaniesResponse500
     | AddTrackerCompaniesResponse503
 ]:
     r"""Add companies to tracker list
 
-     Add companies to a tracker list. Identify companies by LinkedIn URL, organization ID, or slug. At
-    least one identifier is required per company.
+     Add companies to a company tracker list. Identify companies by LinkedIn URL, organization ID, slug,
+    or website domain. At least one identifier is required per company.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -258,7 +269,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[AddTrackerCompaniesResponse200 | AddTrackerCompaniesResponse400 | AddTrackerCompaniesResponse401 | AddTrackerCompaniesResponse402 | AddTrackerCompaniesResponse403 | AddTrackerCompaniesResponse404 | AddTrackerCompaniesResponse429 | AddTrackerCompaniesResponse500 | AddTrackerCompaniesResponse503]
+        Response[AddTrackerCompaniesResponse200 | AddTrackerCompaniesResponse400 | AddTrackerCompaniesResponse401 | AddTrackerCompaniesResponse402 | AddTrackerCompaniesResponse403 | AddTrackerCompaniesResponse404 | AddTrackerCompaniesResponse422 | AddTrackerCompaniesResponse429 | AddTrackerCompaniesResponse500 | AddTrackerCompaniesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -283,6 +294,7 @@ async def asyncio(
     | AddTrackerCompaniesResponse402
     | AddTrackerCompaniesResponse403
     | AddTrackerCompaniesResponse404
+    | AddTrackerCompaniesResponse422
     | AddTrackerCompaniesResponse429
     | AddTrackerCompaniesResponse500
     | AddTrackerCompaniesResponse503
@@ -290,10 +302,10 @@ async def asyncio(
 ):
     r"""Add companies to tracker list
 
-     Add companies to a tracker list. Identify companies by LinkedIn URL, organization ID, or slug. At
-    least one identifier is required per company.
+     Add companies to a company tracker list. Identify companies by LinkedIn URL, organization ID, slug,
+    or website domain. At least one identifier is required per company.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -307,7 +319,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        AddTrackerCompaniesResponse200 | AddTrackerCompaniesResponse400 | AddTrackerCompaniesResponse401 | AddTrackerCompaniesResponse402 | AddTrackerCompaniesResponse403 | AddTrackerCompaniesResponse404 | AddTrackerCompaniesResponse429 | AddTrackerCompaniesResponse500 | AddTrackerCompaniesResponse503
+        AddTrackerCompaniesResponse200 | AddTrackerCompaniesResponse400 | AddTrackerCompaniesResponse401 | AddTrackerCompaniesResponse402 | AddTrackerCompaniesResponse403 | AddTrackerCompaniesResponse404 | AddTrackerCompaniesResponse422 | AddTrackerCompaniesResponse429 | AddTrackerCompaniesResponse500 | AddTrackerCompaniesResponse503
     """
 
     return (

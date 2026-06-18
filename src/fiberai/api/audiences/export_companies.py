@@ -13,6 +13,7 @@ from ...models.export_companies_response_401 import ExportCompaniesResponse401
 from ...models.export_companies_response_402 import ExportCompaniesResponse402
 from ...models.export_companies_response_403 import ExportCompaniesResponse403
 from ...models.export_companies_response_404 import ExportCompaniesResponse404
+from ...models.export_companies_response_422 import ExportCompaniesResponse422
 from ...models.export_companies_response_429 import ExportCompaniesResponse429
 from ...models.export_companies_response_500 import ExportCompaniesResponse500
 from ...models.export_companies_response_503 import ExportCompaniesResponse503
@@ -50,6 +51,7 @@ def _parse_response(
     | ExportCompaniesResponse402
     | ExportCompaniesResponse403
     | ExportCompaniesResponse404
+    | ExportCompaniesResponse422
     | ExportCompaniesResponse429
     | ExportCompaniesResponse500
     | ExportCompaniesResponse503
@@ -85,6 +87,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = ExportCompaniesResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = ExportCompaniesResponse429.from_dict(response.json())
 
@@ -115,6 +122,7 @@ def _build_response(
     | ExportCompaniesResponse402
     | ExportCompaniesResponse403
     | ExportCompaniesResponse404
+    | ExportCompaniesResponse422
     | ExportCompaniesResponse429
     | ExportCompaniesResponse500
     | ExportCompaniesResponse503
@@ -139,6 +147,7 @@ def sync_detailed(
     | ExportCompaniesResponse402
     | ExportCompaniesResponse403
     | ExportCompaniesResponse404
+    | ExportCompaniesResponse422
     | ExportCompaniesResponse429
     | ExportCompaniesResponse500
     | ExportCompaniesResponse503
@@ -163,7 +172,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ExportCompaniesResponse200 | ExportCompaniesResponse400 | ExportCompaniesResponse401 | ExportCompaniesResponse402 | ExportCompaniesResponse403 | ExportCompaniesResponse404 | ExportCompaniesResponse429 | ExportCompaniesResponse500 | ExportCompaniesResponse503]
+        Response[ExportCompaniesResponse200 | ExportCompaniesResponse400 | ExportCompaniesResponse401 | ExportCompaniesResponse402 | ExportCompaniesResponse403 | ExportCompaniesResponse404 | ExportCompaniesResponse422 | ExportCompaniesResponse429 | ExportCompaniesResponse500 | ExportCompaniesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -190,6 +199,7 @@ def sync(
     | ExportCompaniesResponse402
     | ExportCompaniesResponse403
     | ExportCompaniesResponse404
+    | ExportCompaniesResponse422
     | ExportCompaniesResponse429
     | ExportCompaniesResponse500
     | ExportCompaniesResponse503
@@ -215,7 +225,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ExportCompaniesResponse200 | ExportCompaniesResponse400 | ExportCompaniesResponse401 | ExportCompaniesResponse402 | ExportCompaniesResponse403 | ExportCompaniesResponse404 | ExportCompaniesResponse429 | ExportCompaniesResponse500 | ExportCompaniesResponse503
+        ExportCompaniesResponse200 | ExportCompaniesResponse400 | ExportCompaniesResponse401 | ExportCompaniesResponse402 | ExportCompaniesResponse403 | ExportCompaniesResponse404 | ExportCompaniesResponse422 | ExportCompaniesResponse429 | ExportCompaniesResponse500 | ExportCompaniesResponse503
     """
 
     return sync_detailed(
@@ -237,6 +247,7 @@ async def asyncio_detailed(
     | ExportCompaniesResponse402
     | ExportCompaniesResponse403
     | ExportCompaniesResponse404
+    | ExportCompaniesResponse422
     | ExportCompaniesResponse429
     | ExportCompaniesResponse500
     | ExportCompaniesResponse503
@@ -261,7 +272,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ExportCompaniesResponse200 | ExportCompaniesResponse400 | ExportCompaniesResponse401 | ExportCompaniesResponse402 | ExportCompaniesResponse403 | ExportCompaniesResponse404 | ExportCompaniesResponse429 | ExportCompaniesResponse500 | ExportCompaniesResponse503]
+        Response[ExportCompaniesResponse200 | ExportCompaniesResponse400 | ExportCompaniesResponse401 | ExportCompaniesResponse402 | ExportCompaniesResponse403 | ExportCompaniesResponse404 | ExportCompaniesResponse422 | ExportCompaniesResponse429 | ExportCompaniesResponse500 | ExportCompaniesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -286,6 +297,7 @@ async def asyncio(
     | ExportCompaniesResponse402
     | ExportCompaniesResponse403
     | ExportCompaniesResponse404
+    | ExportCompaniesResponse422
     | ExportCompaniesResponse429
     | ExportCompaniesResponse500
     | ExportCompaniesResponse503
@@ -311,7 +323,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ExportCompaniesResponse200 | ExportCompaniesResponse400 | ExportCompaniesResponse401 | ExportCompaniesResponse402 | ExportCompaniesResponse403 | ExportCompaniesResponse404 | ExportCompaniesResponse429 | ExportCompaniesResponse500 | ExportCompaniesResponse503
+        ExportCompaniesResponse200 | ExportCompaniesResponse400 | ExportCompaniesResponse401 | ExportCompaniesResponse402 | ExportCompaniesResponse403 | ExportCompaniesResponse404 | ExportCompaniesResponse422 | ExportCompaniesResponse429 | ExportCompaniesResponse500 | ExportCompaniesResponse503
     """
 
     return (

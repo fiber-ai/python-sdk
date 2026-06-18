@@ -12,6 +12,7 @@ from ...models.bulk_profile_pic_response_401 import BulkProfilePicResponse401
 from ...models.bulk_profile_pic_response_402 import BulkProfilePicResponse402
 from ...models.bulk_profile_pic_response_403 import BulkProfilePicResponse403
 from ...models.bulk_profile_pic_response_404 import BulkProfilePicResponse404
+from ...models.bulk_profile_pic_response_422 import BulkProfilePicResponse422
 from ...models.bulk_profile_pic_response_429 import BulkProfilePicResponse429
 from ...models.bulk_profile_pic_response_500 import BulkProfilePicResponse500
 from ...models.bulk_profile_pic_response_503 import BulkProfilePicResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | BulkProfilePicResponse402
     | BulkProfilePicResponse403
     | BulkProfilePicResponse404
+    | BulkProfilePicResponse422
     | BulkProfilePicResponse429
     | BulkProfilePicResponse500
     | BulkProfilePicResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = BulkProfilePicResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = BulkProfilePicResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | BulkProfilePicResponse402
     | BulkProfilePicResponse403
     | BulkProfilePicResponse404
+    | BulkProfilePicResponse422
     | BulkProfilePicResponse429
     | BulkProfilePicResponse500
     | BulkProfilePicResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | BulkProfilePicResponse402
     | BulkProfilePicResponse403
     | BulkProfilePicResponse404
+    | BulkProfilePicResponse422
     | BulkProfilePicResponse429
     | BulkProfilePicResponse500
     | BulkProfilePicResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[BulkProfilePicResponse200 | BulkProfilePicResponse400 | BulkProfilePicResponse401 | BulkProfilePicResponse402 | BulkProfilePicResponse403 | BulkProfilePicResponse404 | BulkProfilePicResponse429 | BulkProfilePicResponse500 | BulkProfilePicResponse503]
+        Response[BulkProfilePicResponse200 | BulkProfilePicResponse400 | BulkProfilePicResponse401 | BulkProfilePicResponse402 | BulkProfilePicResponse403 | BulkProfilePicResponse404 | BulkProfilePicResponse422 | BulkProfilePicResponse429 | BulkProfilePicResponse500 | BulkProfilePicResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | BulkProfilePicResponse402
     | BulkProfilePicResponse403
     | BulkProfilePicResponse404
+    | BulkProfilePicResponse422
     | BulkProfilePicResponse429
     | BulkProfilePicResponse500
     | BulkProfilePicResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        BulkProfilePicResponse200 | BulkProfilePicResponse400 | BulkProfilePicResponse401 | BulkProfilePicResponse402 | BulkProfilePicResponse403 | BulkProfilePicResponse404 | BulkProfilePicResponse429 | BulkProfilePicResponse500 | BulkProfilePicResponse503
+        BulkProfilePicResponse200 | BulkProfilePicResponse400 | BulkProfilePicResponse401 | BulkProfilePicResponse402 | BulkProfilePicResponse403 | BulkProfilePicResponse404 | BulkProfilePicResponse422 | BulkProfilePicResponse429 | BulkProfilePicResponse500 | BulkProfilePicResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | BulkProfilePicResponse402
     | BulkProfilePicResponse403
     | BulkProfilePicResponse404
+    | BulkProfilePicResponse422
     | BulkProfilePicResponse429
     | BulkProfilePicResponse500
     | BulkProfilePicResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[BulkProfilePicResponse200 | BulkProfilePicResponse400 | BulkProfilePicResponse401 | BulkProfilePicResponse402 | BulkProfilePicResponse403 | BulkProfilePicResponse404 | BulkProfilePicResponse429 | BulkProfilePicResponse500 | BulkProfilePicResponse503]
+        Response[BulkProfilePicResponse200 | BulkProfilePicResponse400 | BulkProfilePicResponse401 | BulkProfilePicResponse402 | BulkProfilePicResponse403 | BulkProfilePicResponse404 | BulkProfilePicResponse422 | BulkProfilePicResponse429 | BulkProfilePicResponse500 | BulkProfilePicResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | BulkProfilePicResponse402
     | BulkProfilePicResponse403
     | BulkProfilePicResponse404
+    | BulkProfilePicResponse422
     | BulkProfilePicResponse429
     | BulkProfilePicResponse500
     | BulkProfilePicResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        BulkProfilePicResponse200 | BulkProfilePicResponse400 | BulkProfilePicResponse401 | BulkProfilePicResponse402 | BulkProfilePicResponse403 | BulkProfilePicResponse404 | BulkProfilePicResponse429 | BulkProfilePicResponse500 | BulkProfilePicResponse503
+        BulkProfilePicResponse200 | BulkProfilePicResponse400 | BulkProfilePicResponse401 | BulkProfilePicResponse402 | BulkProfilePicResponse403 | BulkProfilePicResponse404 | BulkProfilePicResponse422 | BulkProfilePicResponse429 | BulkProfilePicResponse500 | BulkProfilePicResponse503
     """
 
     return (

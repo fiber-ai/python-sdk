@@ -12,6 +12,7 @@ from ...models.create_company_exclusion_list_response_401 import CreateCompanyEx
 from ...models.create_company_exclusion_list_response_402 import CreateCompanyExclusionListResponse402
 from ...models.create_company_exclusion_list_response_403 import CreateCompanyExclusionListResponse403
 from ...models.create_company_exclusion_list_response_404 import CreateCompanyExclusionListResponse404
+from ...models.create_company_exclusion_list_response_422 import CreateCompanyExclusionListResponse422
 from ...models.create_company_exclusion_list_response_429 import CreateCompanyExclusionListResponse429
 from ...models.create_company_exclusion_list_response_500 import CreateCompanyExclusionListResponse500
 from ...models.create_company_exclusion_list_response_503 import CreateCompanyExclusionListResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | CreateCompanyExclusionListResponse402
     | CreateCompanyExclusionListResponse403
     | CreateCompanyExclusionListResponse404
+    | CreateCompanyExclusionListResponse422
     | CreateCompanyExclusionListResponse429
     | CreateCompanyExclusionListResponse500
     | CreateCompanyExclusionListResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = CreateCompanyExclusionListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = CreateCompanyExclusionListResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | CreateCompanyExclusionListResponse402
     | CreateCompanyExclusionListResponse403
     | CreateCompanyExclusionListResponse404
+    | CreateCompanyExclusionListResponse422
     | CreateCompanyExclusionListResponse429
     | CreateCompanyExclusionListResponse500
     | CreateCompanyExclusionListResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | CreateCompanyExclusionListResponse402
     | CreateCompanyExclusionListResponse403
     | CreateCompanyExclusionListResponse404
+    | CreateCompanyExclusionListResponse422
     | CreateCompanyExclusionListResponse429
     | CreateCompanyExclusionListResponse500
     | CreateCompanyExclusionListResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CreateCompanyExclusionListResponse200 | CreateCompanyExclusionListResponse400 | CreateCompanyExclusionListResponse401 | CreateCompanyExclusionListResponse402 | CreateCompanyExclusionListResponse403 | CreateCompanyExclusionListResponse404 | CreateCompanyExclusionListResponse429 | CreateCompanyExclusionListResponse500 | CreateCompanyExclusionListResponse503]
+        Response[CreateCompanyExclusionListResponse200 | CreateCompanyExclusionListResponse400 | CreateCompanyExclusionListResponse401 | CreateCompanyExclusionListResponse402 | CreateCompanyExclusionListResponse403 | CreateCompanyExclusionListResponse404 | CreateCompanyExclusionListResponse422 | CreateCompanyExclusionListResponse429 | CreateCompanyExclusionListResponse500 | CreateCompanyExclusionListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | CreateCompanyExclusionListResponse402
     | CreateCompanyExclusionListResponse403
     | CreateCompanyExclusionListResponse404
+    | CreateCompanyExclusionListResponse422
     | CreateCompanyExclusionListResponse429
     | CreateCompanyExclusionListResponse500
     | CreateCompanyExclusionListResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CreateCompanyExclusionListResponse200 | CreateCompanyExclusionListResponse400 | CreateCompanyExclusionListResponse401 | CreateCompanyExclusionListResponse402 | CreateCompanyExclusionListResponse403 | CreateCompanyExclusionListResponse404 | CreateCompanyExclusionListResponse429 | CreateCompanyExclusionListResponse500 | CreateCompanyExclusionListResponse503
+        CreateCompanyExclusionListResponse200 | CreateCompanyExclusionListResponse400 | CreateCompanyExclusionListResponse401 | CreateCompanyExclusionListResponse402 | CreateCompanyExclusionListResponse403 | CreateCompanyExclusionListResponse404 | CreateCompanyExclusionListResponse422 | CreateCompanyExclusionListResponse429 | CreateCompanyExclusionListResponse500 | CreateCompanyExclusionListResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | CreateCompanyExclusionListResponse402
     | CreateCompanyExclusionListResponse403
     | CreateCompanyExclusionListResponse404
+    | CreateCompanyExclusionListResponse422
     | CreateCompanyExclusionListResponse429
     | CreateCompanyExclusionListResponse500
     | CreateCompanyExclusionListResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CreateCompanyExclusionListResponse200 | CreateCompanyExclusionListResponse400 | CreateCompanyExclusionListResponse401 | CreateCompanyExclusionListResponse402 | CreateCompanyExclusionListResponse403 | CreateCompanyExclusionListResponse404 | CreateCompanyExclusionListResponse429 | CreateCompanyExclusionListResponse500 | CreateCompanyExclusionListResponse503]
+        Response[CreateCompanyExclusionListResponse200 | CreateCompanyExclusionListResponse400 | CreateCompanyExclusionListResponse401 | CreateCompanyExclusionListResponse402 | CreateCompanyExclusionListResponse403 | CreateCompanyExclusionListResponse404 | CreateCompanyExclusionListResponse422 | CreateCompanyExclusionListResponse429 | CreateCompanyExclusionListResponse500 | CreateCompanyExclusionListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | CreateCompanyExclusionListResponse402
     | CreateCompanyExclusionListResponse403
     | CreateCompanyExclusionListResponse404
+    | CreateCompanyExclusionListResponse422
     | CreateCompanyExclusionListResponse429
     | CreateCompanyExclusionListResponse500
     | CreateCompanyExclusionListResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CreateCompanyExclusionListResponse200 | CreateCompanyExclusionListResponse400 | CreateCompanyExclusionListResponse401 | CreateCompanyExclusionListResponse402 | CreateCompanyExclusionListResponse403 | CreateCompanyExclusionListResponse404 | CreateCompanyExclusionListResponse429 | CreateCompanyExclusionListResponse500 | CreateCompanyExclusionListResponse503
+        CreateCompanyExclusionListResponse200 | CreateCompanyExclusionListResponse400 | CreateCompanyExclusionListResponse401 | CreateCompanyExclusionListResponse402 | CreateCompanyExclusionListResponse403 | CreateCompanyExclusionListResponse404 | CreateCompanyExclusionListResponse422 | CreateCompanyExclusionListResponse429 | CreateCompanyExclusionListResponse500 | CreateCompanyExclusionListResponse503
     """
 
     return (

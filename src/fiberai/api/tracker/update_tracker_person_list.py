@@ -7,12 +7,12 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.update_tracker_person_list_body import UpdateTrackerPersonListBody
-from ...models.update_tracker_person_list_response_200 import UpdateTrackerPersonListResponse200
 from ...models.update_tracker_person_list_response_400 import UpdateTrackerPersonListResponse400
 from ...models.update_tracker_person_list_response_401 import UpdateTrackerPersonListResponse401
 from ...models.update_tracker_person_list_response_402 import UpdateTrackerPersonListResponse402
 from ...models.update_tracker_person_list_response_403 import UpdateTrackerPersonListResponse403
 from ...models.update_tracker_person_list_response_404 import UpdateTrackerPersonListResponse404
+from ...models.update_tracker_person_list_response_422 import UpdateTrackerPersonListResponse422
 from ...models.update_tracker_person_list_response_429 import UpdateTrackerPersonListResponse429
 from ...models.update_tracker_person_list_response_500 import UpdateTrackerPersonListResponse500
 from ...models.update_tracker_person_list_response_503 import UpdateTrackerPersonListResponse503
@@ -44,22 +44,17 @@ def _get_kwargs(
 def _parse_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
 ) -> (
-    UpdateTrackerPersonListResponse200
-    | UpdateTrackerPersonListResponse400
+    UpdateTrackerPersonListResponse400
     | UpdateTrackerPersonListResponse401
     | UpdateTrackerPersonListResponse402
     | UpdateTrackerPersonListResponse403
     | UpdateTrackerPersonListResponse404
+    | UpdateTrackerPersonListResponse422
     | UpdateTrackerPersonListResponse429
     | UpdateTrackerPersonListResponse500
     | UpdateTrackerPersonListResponse503
     | None
 ):
-    if response.status_code == 200:
-        response_200 = UpdateTrackerPersonListResponse200.from_dict(response.json())
-
-        return response_200
-
     if response.status_code == 400:
         response_400 = UpdateTrackerPersonListResponse400.from_dict(response.json())
 
@@ -85,6 +80,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = UpdateTrackerPersonListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = UpdateTrackerPersonListResponse429.from_dict(response.json())
 
@@ -109,12 +109,12 @@ def _parse_response(
 def _build_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
 ) -> Response[
-    UpdateTrackerPersonListResponse200
-    | UpdateTrackerPersonListResponse400
+    UpdateTrackerPersonListResponse400
     | UpdateTrackerPersonListResponse401
     | UpdateTrackerPersonListResponse402
     | UpdateTrackerPersonListResponse403
     | UpdateTrackerPersonListResponse404
+    | UpdateTrackerPersonListResponse422
     | UpdateTrackerPersonListResponse429
     | UpdateTrackerPersonListResponse500
     | UpdateTrackerPersonListResponse503
@@ -133,23 +133,22 @@ def sync_detailed(
     client: AuthenticatedClient | Client,
     body: UpdateTrackerPersonListBody,
 ) -> Response[
-    UpdateTrackerPersonListResponse200
-    | UpdateTrackerPersonListResponse400
+    UpdateTrackerPersonListResponse400
     | UpdateTrackerPersonListResponse401
     | UpdateTrackerPersonListResponse402
     | UpdateTrackerPersonListResponse403
     | UpdateTrackerPersonListResponse404
+    | UpdateTrackerPersonListResponse422
     | UpdateTrackerPersonListResponse429
     | UpdateTrackerPersonListResponse500
     | UpdateTrackerPersonListResponse503
 ]:
     r"""Update person tracker list
 
-     Update a person tracker list. Can change name, refresh interval, active status, or manage tracking
-    rules. Supports replace-all (trackingRules) or granular (addRules/removeRuleIds) rule management —
-    but not both in one request.
+     Update a person tracker list. Supports replace-all (`trackingRules`) or granular
+    (`addRules`/`removeRuleIds`) rule management — but not both in one request.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -163,7 +162,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[UpdateTrackerPersonListResponse200 | UpdateTrackerPersonListResponse400 | UpdateTrackerPersonListResponse401 | UpdateTrackerPersonListResponse402 | UpdateTrackerPersonListResponse403 | UpdateTrackerPersonListResponse404 | UpdateTrackerPersonListResponse429 | UpdateTrackerPersonListResponse500 | UpdateTrackerPersonListResponse503]
+        Response[UpdateTrackerPersonListResponse400 | UpdateTrackerPersonListResponse401 | UpdateTrackerPersonListResponse402 | UpdateTrackerPersonListResponse403 | UpdateTrackerPersonListResponse404 | UpdateTrackerPersonListResponse422 | UpdateTrackerPersonListResponse429 | UpdateTrackerPersonListResponse500 | UpdateTrackerPersonListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -184,12 +183,12 @@ def sync(
     client: AuthenticatedClient | Client,
     body: UpdateTrackerPersonListBody,
 ) -> (
-    UpdateTrackerPersonListResponse200
-    | UpdateTrackerPersonListResponse400
+    UpdateTrackerPersonListResponse400
     | UpdateTrackerPersonListResponse401
     | UpdateTrackerPersonListResponse402
     | UpdateTrackerPersonListResponse403
     | UpdateTrackerPersonListResponse404
+    | UpdateTrackerPersonListResponse422
     | UpdateTrackerPersonListResponse429
     | UpdateTrackerPersonListResponse500
     | UpdateTrackerPersonListResponse503
@@ -197,11 +196,10 @@ def sync(
 ):
     r"""Update person tracker list
 
-     Update a person tracker list. Can change name, refresh interval, active status, or manage tracking
-    rules. Supports replace-all (trackingRules) or granular (addRules/removeRuleIds) rule management —
-    but not both in one request.
+     Update a person tracker list. Supports replace-all (`trackingRules`) or granular
+    (`addRules`/`removeRuleIds`) rule management — but not both in one request.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -215,7 +213,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        UpdateTrackerPersonListResponse200 | UpdateTrackerPersonListResponse400 | UpdateTrackerPersonListResponse401 | UpdateTrackerPersonListResponse402 | UpdateTrackerPersonListResponse403 | UpdateTrackerPersonListResponse404 | UpdateTrackerPersonListResponse429 | UpdateTrackerPersonListResponse500 | UpdateTrackerPersonListResponse503
+        UpdateTrackerPersonListResponse400 | UpdateTrackerPersonListResponse401 | UpdateTrackerPersonListResponse402 | UpdateTrackerPersonListResponse403 | UpdateTrackerPersonListResponse404 | UpdateTrackerPersonListResponse422 | UpdateTrackerPersonListResponse429 | UpdateTrackerPersonListResponse500 | UpdateTrackerPersonListResponse503
     """
 
     return sync_detailed(
@@ -231,23 +229,22 @@ async def asyncio_detailed(
     client: AuthenticatedClient | Client,
     body: UpdateTrackerPersonListBody,
 ) -> Response[
-    UpdateTrackerPersonListResponse200
-    | UpdateTrackerPersonListResponse400
+    UpdateTrackerPersonListResponse400
     | UpdateTrackerPersonListResponse401
     | UpdateTrackerPersonListResponse402
     | UpdateTrackerPersonListResponse403
     | UpdateTrackerPersonListResponse404
+    | UpdateTrackerPersonListResponse422
     | UpdateTrackerPersonListResponse429
     | UpdateTrackerPersonListResponse500
     | UpdateTrackerPersonListResponse503
 ]:
     r"""Update person tracker list
 
-     Update a person tracker list. Can change name, refresh interval, active status, or manage tracking
-    rules. Supports replace-all (trackingRules) or granular (addRules/removeRuleIds) rule management —
-    but not both in one request.
+     Update a person tracker list. Supports replace-all (`trackingRules`) or granular
+    (`addRules`/`removeRuleIds`) rule management — but not both in one request.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -261,7 +258,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[UpdateTrackerPersonListResponse200 | UpdateTrackerPersonListResponse400 | UpdateTrackerPersonListResponse401 | UpdateTrackerPersonListResponse402 | UpdateTrackerPersonListResponse403 | UpdateTrackerPersonListResponse404 | UpdateTrackerPersonListResponse429 | UpdateTrackerPersonListResponse500 | UpdateTrackerPersonListResponse503]
+        Response[UpdateTrackerPersonListResponse400 | UpdateTrackerPersonListResponse401 | UpdateTrackerPersonListResponse402 | UpdateTrackerPersonListResponse403 | UpdateTrackerPersonListResponse404 | UpdateTrackerPersonListResponse422 | UpdateTrackerPersonListResponse429 | UpdateTrackerPersonListResponse500 | UpdateTrackerPersonListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -280,12 +277,12 @@ async def asyncio(
     client: AuthenticatedClient | Client,
     body: UpdateTrackerPersonListBody,
 ) -> (
-    UpdateTrackerPersonListResponse200
-    | UpdateTrackerPersonListResponse400
+    UpdateTrackerPersonListResponse400
     | UpdateTrackerPersonListResponse401
     | UpdateTrackerPersonListResponse402
     | UpdateTrackerPersonListResponse403
     | UpdateTrackerPersonListResponse404
+    | UpdateTrackerPersonListResponse422
     | UpdateTrackerPersonListResponse429
     | UpdateTrackerPersonListResponse500
     | UpdateTrackerPersonListResponse503
@@ -293,11 +290,10 @@ async def asyncio(
 ):
     r"""Update person tracker list
 
-     Update a person tracker list. Can change name, refresh interval, active status, or manage tracking
-    rules. Supports replace-all (trackingRules) or granular (addRules/removeRuleIds) rule management —
-    but not both in one request.
+     Update a person tracker list. Supports replace-all (`trackingRules`) or granular
+    (`addRules`/`removeRuleIds`) rule management — but not both in one request.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -311,7 +307,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        UpdateTrackerPersonListResponse200 | UpdateTrackerPersonListResponse400 | UpdateTrackerPersonListResponse401 | UpdateTrackerPersonListResponse402 | UpdateTrackerPersonListResponse403 | UpdateTrackerPersonListResponse404 | UpdateTrackerPersonListResponse429 | UpdateTrackerPersonListResponse500 | UpdateTrackerPersonListResponse503
+        UpdateTrackerPersonListResponse400 | UpdateTrackerPersonListResponse401 | UpdateTrackerPersonListResponse402 | UpdateTrackerPersonListResponse403 | UpdateTrackerPersonListResponse404 | UpdateTrackerPersonListResponse422 | UpdateTrackerPersonListResponse429 | UpdateTrackerPersonListResponse500 | UpdateTrackerPersonListResponse503
     """
 
     return (

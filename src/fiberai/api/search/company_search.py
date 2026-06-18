@@ -12,6 +12,7 @@ from ...models.company_search_response_401 import CompanySearchResponse401
 from ...models.company_search_response_402 import CompanySearchResponse402
 from ...models.company_search_response_403 import CompanySearchResponse403
 from ...models.company_search_response_404 import CompanySearchResponse404
+from ...models.company_search_response_422 import CompanySearchResponse422
 from ...models.company_search_response_429 import CompanySearchResponse429
 from ...models.company_search_response_500 import CompanySearchResponse500
 from ...models.company_search_response_503 import CompanySearchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | CompanySearchResponse402
     | CompanySearchResponse403
     | CompanySearchResponse404
+    | CompanySearchResponse422
     | CompanySearchResponse429
     | CompanySearchResponse500
     | CompanySearchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = CompanySearchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = CompanySearchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | CompanySearchResponse402
     | CompanySearchResponse403
     | CompanySearchResponse404
+    | CompanySearchResponse422
     | CompanySearchResponse429
     | CompanySearchResponse500
     | CompanySearchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | CompanySearchResponse402
     | CompanySearchResponse403
     | CompanySearchResponse404
+    | CompanySearchResponse422
     | CompanySearchResponse429
     | CompanySearchResponse500
     | CompanySearchResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CompanySearchResponse200 | CompanySearchResponse400 | CompanySearchResponse401 | CompanySearchResponse402 | CompanySearchResponse403 | CompanySearchResponse404 | CompanySearchResponse429 | CompanySearchResponse500 | CompanySearchResponse503]
+        Response[CompanySearchResponse200 | CompanySearchResponse400 | CompanySearchResponse401 | CompanySearchResponse402 | CompanySearchResponse403 | CompanySearchResponse404 | CompanySearchResponse422 | CompanySearchResponse429 | CompanySearchResponse500 | CompanySearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | CompanySearchResponse402
     | CompanySearchResponse403
     | CompanySearchResponse404
+    | CompanySearchResponse422
     | CompanySearchResponse429
     | CompanySearchResponse500
     | CompanySearchResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CompanySearchResponse200 | CompanySearchResponse400 | CompanySearchResponse401 | CompanySearchResponse402 | CompanySearchResponse403 | CompanySearchResponse404 | CompanySearchResponse429 | CompanySearchResponse500 | CompanySearchResponse503
+        CompanySearchResponse200 | CompanySearchResponse400 | CompanySearchResponse401 | CompanySearchResponse402 | CompanySearchResponse403 | CompanySearchResponse404 | CompanySearchResponse422 | CompanySearchResponse429 | CompanySearchResponse500 | CompanySearchResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | CompanySearchResponse402
     | CompanySearchResponse403
     | CompanySearchResponse404
+    | CompanySearchResponse422
     | CompanySearchResponse429
     | CompanySearchResponse500
     | CompanySearchResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CompanySearchResponse200 | CompanySearchResponse400 | CompanySearchResponse401 | CompanySearchResponse402 | CompanySearchResponse403 | CompanySearchResponse404 | CompanySearchResponse429 | CompanySearchResponse500 | CompanySearchResponse503]
+        Response[CompanySearchResponse200 | CompanySearchResponse400 | CompanySearchResponse401 | CompanySearchResponse402 | CompanySearchResponse403 | CompanySearchResponse404 | CompanySearchResponse422 | CompanySearchResponse429 | CompanySearchResponse500 | CompanySearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | CompanySearchResponse402
     | CompanySearchResponse403
     | CompanySearchResponse404
+    | CompanySearchResponse422
     | CompanySearchResponse429
     | CompanySearchResponse500
     | CompanySearchResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CompanySearchResponse200 | CompanySearchResponse400 | CompanySearchResponse401 | CompanySearchResponse402 | CompanySearchResponse403 | CompanySearchResponse404 | CompanySearchResponse429 | CompanySearchResponse500 | CompanySearchResponse503
+        CompanySearchResponse200 | CompanySearchResponse400 | CompanySearchResponse401 | CompanySearchResponse402 | CompanySearchResponse403 | CompanySearchResponse404 | CompanySearchResponse422 | CompanySearchResponse429 | CompanySearchResponse500 | CompanySearchResponse503
     """
 
     return (

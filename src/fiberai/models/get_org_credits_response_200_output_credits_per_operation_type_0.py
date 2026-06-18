@@ -46,6 +46,12 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_exhaustive_work_email_reveal import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0ExhaustiveWorkEmailReveal,
     )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_find_company_lookalikes import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0FindCompanyLookalikes,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_find_person_lookalikes import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0FindPersonLookalikes,
+    )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_flight_search import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearch,
     )
@@ -63,6 +69,9 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_company_latest_li_post import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyLatestLiPost,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_company_layoffs import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyLayoffs,
     )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_company_revenue import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyRevenue,
@@ -139,6 +148,12 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_lite_email_reveal import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0LiteEmailReveal,
     )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_lite_phone_reveal import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0LitePhoneReveal,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_lite_reverse_email_lookup import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0LiteReverseEmailLookup,
+    )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_live_enrich_company import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0LiveEnrichCompany,
     )
@@ -183,6 +198,9 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_real_estate_search import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0RealEstateSearch,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_reverse_phone_lookup import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0ReversePhoneLookup,
     )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_sales_nav_company_scrape import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrape,
@@ -262,6 +280,15 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_entity import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntity,
     )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_entity_gold import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntityGold,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_entity_platinum import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntityPlatinum,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_entity_silver import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntitySilver,
+    )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_persons_job_changes import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackPersonsJobChanges,
     )
@@ -324,6 +351,8 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         work_email_reveal (GetOrgCreditsResponse200OutputCreditsPerOperationType0WorkEmailReveal):
         personal_email_reveal (GetOrgCreditsResponse200OutputCreditsPerOperationType0PersonalEmailReveal):
         lite_email_reveal (GetOrgCreditsResponse200OutputCreditsPerOperationType0LiteEmailReveal):
+        lite_phone_reveal (GetOrgCreditsResponse200OutputCreditsPerOperationType0LitePhoneReveal):
+        lite_reverse_email_lookup (GetOrgCreditsResponse200OutputCreditsPerOperationType0LiteReverseEmailLookup):
         all_email_reveal (GetOrgCreditsResponse200OutputCreditsPerOperationType0AllEmailReveal):
         phone_reveal (GetOrgCreditsResponse200OutputCreditsPerOperationType0PhoneReveal):
         combined_reveal (GetOrgCreditsResponse200OutputCreditsPerOperationType0CombinedReveal):
@@ -408,7 +437,14 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         mosaic_row (GetOrgCreditsResponse200OutputCreditsPerOperationType0MosaicRow):
         get_entity_from_db (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetEntityFromDb):
         track_entity (GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntity):
+        track_entity_silver (GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntitySilver):
+        track_entity_gold (GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntityGold):
+        track_entity_platinum (GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntityPlatinum):
         blue_collar_job_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0BlueCollarJobSearch):
+        get_company_layoffs (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyLayoffs):
+        reverse_phone_lookup (GetOrgCreditsResponse200OutputCreditsPerOperationType0ReversePhoneLookup):
+        find_company_lookalikes (GetOrgCreditsResponse200OutputCreditsPerOperationType0FindCompanyLookalikes):
+        find_person_lookalikes (GetOrgCreditsResponse200OutputCreditsPerOperationType0FindPersonLookalikes):
     """
 
     get_company_from_db: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyFromDb
@@ -432,6 +468,8 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
     work_email_reveal: GetOrgCreditsResponse200OutputCreditsPerOperationType0WorkEmailReveal
     personal_email_reveal: GetOrgCreditsResponse200OutputCreditsPerOperationType0PersonalEmailReveal
     lite_email_reveal: GetOrgCreditsResponse200OutputCreditsPerOperationType0LiteEmailReveal
+    lite_phone_reveal: GetOrgCreditsResponse200OutputCreditsPerOperationType0LitePhoneReveal
+    lite_reverse_email_lookup: GetOrgCreditsResponse200OutputCreditsPerOperationType0LiteReverseEmailLookup
     all_email_reveal: GetOrgCreditsResponse200OutputCreditsPerOperationType0AllEmailReveal
     phone_reveal: GetOrgCreditsResponse200OutputCreditsPerOperationType0PhoneReveal
     combined_reveal: GetOrgCreditsResponse200OutputCreditsPerOperationType0CombinedReveal
@@ -514,10 +552,33 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
     mosaic_row: GetOrgCreditsResponse200OutputCreditsPerOperationType0MosaicRow
     get_entity_from_db: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetEntityFromDb
     track_entity: GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntity
+    track_entity_silver: GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntitySilver
+    track_entity_gold: GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntityGold
+    track_entity_platinum: GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntityPlatinum
     blue_collar_job_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0BlueCollarJobSearch
+    get_company_layoffs: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyLayoffs
+    reverse_phone_lookup: GetOrgCreditsResponse200OutputCreditsPerOperationType0ReversePhoneLookup
+    find_company_lookalikes: GetOrgCreditsResponse200OutputCreditsPerOperationType0FindCompanyLookalikes
+    find_person_lookalikes: GetOrgCreditsResponse200OutputCreditsPerOperationType0FindPersonLookalikes
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_channel_details import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeChannelDetails,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_search import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeSearch,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_video_comments import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoComments,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_video_details import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoDetails,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_video_transcript import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeVideoTranscript,
+        )
+
         get_company_from_db = self.get_company_from_db.to_dict()
 
         get_person_from_db = self.get_person_from_db.to_dict()
@@ -555,6 +616,10 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         personal_email_reveal = self.personal_email_reveal.to_dict()
 
         lite_email_reveal = self.lite_email_reveal.to_dict()
+
+        lite_phone_reveal = self.lite_phone_reveal.to_dict()
+
+        lite_reverse_email_lookup = self.lite_reverse_email_lookup.to_dict()
 
         all_email_reveal = self.all_email_reveal.to_dict()
 
@@ -708,7 +773,21 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
 
         track_entity = self.track_entity.to_dict()
 
+        track_entity_silver = self.track_entity_silver.to_dict()
+
+        track_entity_gold = self.track_entity_gold.to_dict()
+
+        track_entity_platinum = self.track_entity_platinum.to_dict()
+
         blue_collar_job_search = self.blue_collar_job_search.to_dict()
+
+        get_company_layoffs = self.get_company_layoffs.to_dict()
+
+        reverse_phone_lookup = self.reverse_phone_lookup.to_dict()
+
+        find_company_lookalikes = self.find_company_lookalikes.to_dict()
+
+        find_person_lookalikes = self.find_person_lookalikes.to_dict()
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -733,6 +812,8 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
                 "workEmailReveal": work_email_reveal,
                 "personalEmailReveal": personal_email_reveal,
                 "liteEmailReveal": lite_email_reveal,
+                "litePhoneReveal": lite_phone_reveal,
+                "liteReverseEmailLookup": lite_reverse_email_lookup,
                 "allEmailReveal": all_email_reveal,
                 "phoneReveal": phone_reveal,
                 "combinedReveal": combined_reveal,
@@ -809,7 +890,14 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
                 "mosaicRow": mosaic_row,
                 "getEntityFromDb": get_entity_from_db,
                 "trackEntity": track_entity,
+                "trackEntitySilver": track_entity_silver,
+                "trackEntityGold": track_entity_gold,
+                "trackEntityPlatinum": track_entity_platinum,
                 "blueCollarJobSearch": blue_collar_job_search,
+                "getCompanyLayoffs": get_company_layoffs,
+                "reversePhoneLookup": reverse_phone_lookup,
+                "findCompanyLookalikes": find_company_lookalikes,
+                "findPersonLookalikes": find_person_lookalikes,
             }
         )
 
@@ -856,6 +944,12 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_exhaustive_work_email_reveal import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0ExhaustiveWorkEmailReveal,
         )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_find_company_lookalikes import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0FindCompanyLookalikes,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_find_person_lookalikes import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0FindPersonLookalikes,
+        )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_flight_search import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearch,
         )
@@ -873,6 +967,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_company_latest_li_post import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyLatestLiPost,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_company_layoffs import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyLayoffs,
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_company_revenue import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyRevenue,
@@ -949,6 +1046,12 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_lite_email_reveal import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0LiteEmailReveal,
         )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_lite_phone_reveal import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0LitePhoneReveal,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_lite_reverse_email_lookup import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0LiteReverseEmailLookup,
+        )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_live_enrich_company import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0LiveEnrichCompany,
         )
@@ -993,6 +1096,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_real_estate_search import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0RealEstateSearch,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_reverse_phone_lookup import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0ReversePhoneLookup,
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_sales_nav_company_scrape import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0SalesNavCompanyScrape,
@@ -1071,6 +1177,15 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_entity import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntity,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_entity_gold import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntityGold,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_entity_platinum import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntityPlatinum,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_entity_silver import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntitySilver,
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_track_persons_job_changes import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackPersonsJobChanges,
@@ -1193,6 +1308,16 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
 
         lite_email_reveal = GetOrgCreditsResponse200OutputCreditsPerOperationType0LiteEmailReveal.from_dict(
             d.pop("liteEmailReveal")
+        )
+
+        lite_phone_reveal = GetOrgCreditsResponse200OutputCreditsPerOperationType0LitePhoneReveal.from_dict(
+            d.pop("litePhoneReveal")
+        )
+
+        lite_reverse_email_lookup = (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0LiteReverseEmailLookup.from_dict(
+                d.pop("liteReverseEmailLookup")
+            )
         )
 
         all_email_reveal = GetOrgCreditsResponse200OutputCreditsPerOperationType0AllEmailReveal.from_dict(
@@ -1537,8 +1662,36 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
 
         track_entity = GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntity.from_dict(d.pop("trackEntity"))
 
+        track_entity_silver = GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntitySilver.from_dict(
+            d.pop("trackEntitySilver")
+        )
+
+        track_entity_gold = GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntityGold.from_dict(
+            d.pop("trackEntityGold")
+        )
+
+        track_entity_platinum = GetOrgCreditsResponse200OutputCreditsPerOperationType0TrackEntityPlatinum.from_dict(
+            d.pop("trackEntityPlatinum")
+        )
+
         blue_collar_job_search = GetOrgCreditsResponse200OutputCreditsPerOperationType0BlueCollarJobSearch.from_dict(
             d.pop("blueCollarJobSearch")
+        )
+
+        get_company_layoffs = GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyLayoffs.from_dict(
+            d.pop("getCompanyLayoffs")
+        )
+
+        reverse_phone_lookup = GetOrgCreditsResponse200OutputCreditsPerOperationType0ReversePhoneLookup.from_dict(
+            d.pop("reversePhoneLookup")
+        )
+
+        find_company_lookalikes = GetOrgCreditsResponse200OutputCreditsPerOperationType0FindCompanyLookalikes.from_dict(
+            d.pop("findCompanyLookalikes")
+        )
+
+        find_person_lookalikes = GetOrgCreditsResponse200OutputCreditsPerOperationType0FindPersonLookalikes.from_dict(
+            d.pop("findPersonLookalikes")
         )
 
         get_org_credits_response_200_output_credits_per_operation_type_0 = cls(
@@ -1561,6 +1714,8 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             work_email_reveal=work_email_reveal,
             personal_email_reveal=personal_email_reveal,
             lite_email_reveal=lite_email_reveal,
+            lite_phone_reveal=lite_phone_reveal,
+            lite_reverse_email_lookup=lite_reverse_email_lookup,
             all_email_reveal=all_email_reveal,
             phone_reveal=phone_reveal,
             combined_reveal=combined_reveal,
@@ -1637,7 +1792,14 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             mosaic_row=mosaic_row,
             get_entity_from_db=get_entity_from_db,
             track_entity=track_entity,
+            track_entity_silver=track_entity_silver,
+            track_entity_gold=track_entity_gold,
+            track_entity_platinum=track_entity_platinum,
             blue_collar_job_search=blue_collar_job_search,
+            get_company_layoffs=get_company_layoffs,
+            reverse_phone_lookup=reverse_phone_lookup,
+            find_company_lookalikes=find_company_lookalikes,
+            find_person_lookalikes=find_person_lookalikes,
         )
 
         get_org_credits_response_200_output_credits_per_operation_type_0.additional_properties = d

@@ -19,12 +19,15 @@ class PersonSkillsAdded:
         entity_type (Literal['person']):
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
         skills (list[str] | None | Unset): Only alert for these specific skills being added. Omit for any new skill.
     """
 
     type_: Literal["person_skills_added"]
     entity_type: Literal["person"]
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
     skills: list[str] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -38,6 +41,8 @@ class PersonSkillsAdded:
             lookback_days = UNSET
         else:
             lookback_days = self.lookback_days
+
+        is_dummy = self.is_dummy
 
         skills: list[str] | None | Unset
         if isinstance(self.skills, Unset):
@@ -58,6 +63,8 @@ class PersonSkillsAdded:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
         if skills is not UNSET:
             field_dict["skills"] = skills
 
@@ -83,6 +90,8 @@ class PersonSkillsAdded:
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
+        is_dummy = d.pop("isDummy", UNSET)
+
         def _parse_skills(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
@@ -104,6 +113,7 @@ class PersonSkillsAdded:
             type_=type_,
             entity_type=entity_type,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
             skills=skills,
         )
 

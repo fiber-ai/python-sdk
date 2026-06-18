@@ -11,6 +11,7 @@ from ...models.get_flight_regions_response_401 import GetFlightRegionsResponse40
 from ...models.get_flight_regions_response_402 import GetFlightRegionsResponse402
 from ...models.get_flight_regions_response_403 import GetFlightRegionsResponse403
 from ...models.get_flight_regions_response_404 import GetFlightRegionsResponse404
+from ...models.get_flight_regions_response_422 import GetFlightRegionsResponse422
 from ...models.get_flight_regions_response_429 import GetFlightRegionsResponse429
 from ...models.get_flight_regions_response_500 import GetFlightRegionsResponse500
 from ...models.get_flight_regions_response_503 import GetFlightRegionsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GetFlightRegionsResponse402
     | GetFlightRegionsResponse403
     | GetFlightRegionsResponse404
+    | GetFlightRegionsResponse422
     | GetFlightRegionsResponse429
     | GetFlightRegionsResponse500
     | GetFlightRegionsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetFlightRegionsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetFlightRegionsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GetFlightRegionsResponse402
     | GetFlightRegionsResponse403
     | GetFlightRegionsResponse404
+    | GetFlightRegionsResponse422
     | GetFlightRegionsResponse429
     | GetFlightRegionsResponse500
     | GetFlightRegionsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GetFlightRegionsResponse402
     | GetFlightRegionsResponse403
     | GetFlightRegionsResponse404
+    | GetFlightRegionsResponse422
     | GetFlightRegionsResponse429
     | GetFlightRegionsResponse500
     | GetFlightRegionsResponse503
@@ -157,7 +166,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetFlightRegionsResponse200 | GetFlightRegionsResponse400 | GetFlightRegionsResponse401 | GetFlightRegionsResponse402 | GetFlightRegionsResponse403 | GetFlightRegionsResponse404 | GetFlightRegionsResponse429 | GetFlightRegionsResponse500 | GetFlightRegionsResponse503]
+        Response[GetFlightRegionsResponse200 | GetFlightRegionsResponse400 | GetFlightRegionsResponse401 | GetFlightRegionsResponse402 | GetFlightRegionsResponse403 | GetFlightRegionsResponse404 | GetFlightRegionsResponse422 | GetFlightRegionsResponse429 | GetFlightRegionsResponse500 | GetFlightRegionsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -182,6 +191,7 @@ def sync(
     | GetFlightRegionsResponse402
     | GetFlightRegionsResponse403
     | GetFlightRegionsResponse404
+    | GetFlightRegionsResponse422
     | GetFlightRegionsResponse429
     | GetFlightRegionsResponse500
     | GetFlightRegionsResponse503
@@ -206,7 +216,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetFlightRegionsResponse200 | GetFlightRegionsResponse400 | GetFlightRegionsResponse401 | GetFlightRegionsResponse402 | GetFlightRegionsResponse403 | GetFlightRegionsResponse404 | GetFlightRegionsResponse429 | GetFlightRegionsResponse500 | GetFlightRegionsResponse503
+        GetFlightRegionsResponse200 | GetFlightRegionsResponse400 | GetFlightRegionsResponse401 | GetFlightRegionsResponse402 | GetFlightRegionsResponse403 | GetFlightRegionsResponse404 | GetFlightRegionsResponse422 | GetFlightRegionsResponse429 | GetFlightRegionsResponse500 | GetFlightRegionsResponse503
     """
 
     return sync_detailed(
@@ -226,6 +236,7 @@ async def asyncio_detailed(
     | GetFlightRegionsResponse402
     | GetFlightRegionsResponse403
     | GetFlightRegionsResponse404
+    | GetFlightRegionsResponse422
     | GetFlightRegionsResponse429
     | GetFlightRegionsResponse500
     | GetFlightRegionsResponse503
@@ -249,7 +260,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetFlightRegionsResponse200 | GetFlightRegionsResponse400 | GetFlightRegionsResponse401 | GetFlightRegionsResponse402 | GetFlightRegionsResponse403 | GetFlightRegionsResponse404 | GetFlightRegionsResponse429 | GetFlightRegionsResponse500 | GetFlightRegionsResponse503]
+        Response[GetFlightRegionsResponse200 | GetFlightRegionsResponse400 | GetFlightRegionsResponse401 | GetFlightRegionsResponse402 | GetFlightRegionsResponse403 | GetFlightRegionsResponse404 | GetFlightRegionsResponse422 | GetFlightRegionsResponse429 | GetFlightRegionsResponse500 | GetFlightRegionsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -272,6 +283,7 @@ async def asyncio(
     | GetFlightRegionsResponse402
     | GetFlightRegionsResponse403
     | GetFlightRegionsResponse404
+    | GetFlightRegionsResponse422
     | GetFlightRegionsResponse429
     | GetFlightRegionsResponse500
     | GetFlightRegionsResponse503
@@ -296,7 +308,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetFlightRegionsResponse200 | GetFlightRegionsResponse400 | GetFlightRegionsResponse401 | GetFlightRegionsResponse402 | GetFlightRegionsResponse403 | GetFlightRegionsResponse404 | GetFlightRegionsResponse429 | GetFlightRegionsResponse500 | GetFlightRegionsResponse503
+        GetFlightRegionsResponse200 | GetFlightRegionsResponse400 | GetFlightRegionsResponse401 | GetFlightRegionsResponse402 | GetFlightRegionsResponse403 | GetFlightRegionsResponse404 | GetFlightRegionsResponse422 | GetFlightRegionsResponse429 | GetFlightRegionsResponse500 | GetFlightRegionsResponse503
     """
 
     return (

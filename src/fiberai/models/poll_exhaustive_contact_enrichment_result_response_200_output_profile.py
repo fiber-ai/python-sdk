@@ -15,6 +15,9 @@ if TYPE_CHECKING:
     from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_emails_item import (
         PollExhaustiveContactEnrichmentResultResponse200OutputProfileEmailsItem,
     )
+    from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_low_quality_emails_type_0_item import (
+        PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0Item,
+    )
     from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_phone_numbers_item import (
         PollExhaustiveContactEnrichmentResultResponse200OutputProfilePhoneNumbersItem,
     )
@@ -32,6 +35,9 @@ class PollExhaustiveContactEnrichmentResultResponse200OutputProfile:
         status (PollExhaustiveContactEnrichmentResultResponse200OutputProfileStatus):
         error (str | Unset):
         exhaustive (bool | None | Unset):
+        low_quality_emails (list[PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0Item]
+            | None | Unset): Emails that failed internal validation checks (risky or undeliverable). These are included for
+            transparency but should be filtered out before use.
     """
 
     emails: list[PollExhaustiveContactEnrichmentResultResponse200OutputProfileEmailsItem]
@@ -39,6 +45,9 @@ class PollExhaustiveContactEnrichmentResultResponse200OutputProfile:
     status: PollExhaustiveContactEnrichmentResultResponse200OutputProfileStatus
     error: str | Unset = UNSET
     exhaustive: bool | None | Unset = UNSET
+    low_quality_emails: (
+        list[PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0Item] | None | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -62,6 +71,18 @@ class PollExhaustiveContactEnrichmentResultResponse200OutputProfile:
         else:
             exhaustive = self.exhaustive
 
+        low_quality_emails: list[dict[str, Any]] | None | Unset
+        if isinstance(self.low_quality_emails, Unset):
+            low_quality_emails = UNSET
+        elif isinstance(self.low_quality_emails, list):
+            low_quality_emails = []
+            for low_quality_emails_type_0_item_data in self.low_quality_emails:
+                low_quality_emails_type_0_item = low_quality_emails_type_0_item_data.to_dict()
+                low_quality_emails.append(low_quality_emails_type_0_item)
+
+        else:
+            low_quality_emails = self.low_quality_emails
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -75,6 +96,8 @@ class PollExhaustiveContactEnrichmentResultResponse200OutputProfile:
             field_dict["error"] = error
         if exhaustive is not UNSET:
             field_dict["exhaustive"] = exhaustive
+        if low_quality_emails is not UNSET:
+            field_dict["lowQualityEmails"] = low_quality_emails
 
         return field_dict
 
@@ -82,6 +105,9 @@ class PollExhaustiveContactEnrichmentResultResponse200OutputProfile:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_emails_item import (
             PollExhaustiveContactEnrichmentResultResponse200OutputProfileEmailsItem,
+        )
+        from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_low_quality_emails_type_0_item import (
+            PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0Item,
         )
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_phone_numbers_item import (
             PollExhaustiveContactEnrichmentResultResponse200OutputProfilePhoneNumbersItem,
@@ -121,12 +147,46 @@ class PollExhaustiveContactEnrichmentResultResponse200OutputProfile:
 
         exhaustive = _parse_exhaustive(d.pop("exhaustive", UNSET))
 
+        def _parse_low_quality_emails(
+            data: object,
+        ) -> (
+            list[PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0Item] | None | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                low_quality_emails_type_0 = []
+                _low_quality_emails_type_0 = data
+                for low_quality_emails_type_0_item_data in _low_quality_emails_type_0:
+                    low_quality_emails_type_0_item = PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0Item.from_dict(
+                        low_quality_emails_type_0_item_data
+                    )
+
+                    low_quality_emails_type_0.append(low_quality_emails_type_0_item)
+
+                return low_quality_emails_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                list[PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0Item]
+                | None
+                | Unset,
+                data,
+            )
+
+        low_quality_emails = _parse_low_quality_emails(d.pop("lowQualityEmails", UNSET))
+
         poll_exhaustive_contact_enrichment_result_response_200_output_profile = cls(
             emails=emails,
             phone_numbers=phone_numbers,
             status=status,
             error=error,
             exhaustive=exhaustive,
+            low_quality_emails=low_quality_emails,
         )
 
         poll_exhaustive_contact_enrichment_result_response_200_output_profile.additional_properties = d

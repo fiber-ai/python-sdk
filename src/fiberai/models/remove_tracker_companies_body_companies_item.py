@@ -15,16 +15,19 @@ T = TypeVar("T", bound="RemoveTrackerCompaniesBodyCompaniesItem")
 class RemoveTrackerCompaniesBodyCompaniesItem:
     """
     Attributes:
-        linkedin_url (None | str | Unset): Full LinkedIn company URL
+        linkedin_url (None | str | Unset): Full LinkedIn company URL.
         linkedin_org_id (None | str | Unset): A company's stable numeric identifier. This is NOT derived from their
             company page URL — retrieve it from a live enrichment lookup. Digits only.
         linkedin_slug (None | str | Unset): The handle in a company page URL — e.g. `microsoft` in
             https://www.linkedin.com/company/microsoft/.
+        domain (None | str | Unset): Company website domain (e.g. 'fiber.ai'). Will be resolved to the company profile
+            identifier.
     """
 
     linkedin_url: None | str | Unset = UNSET
     linkedin_org_id: None | str | Unset = UNSET
     linkedin_slug: None | str | Unset = UNSET
+    domain: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -46,6 +49,12 @@ class RemoveTrackerCompaniesBodyCompaniesItem:
         else:
             linkedin_slug = self.linkedin_slug
 
+        domain: None | str | Unset
+        if isinstance(self.domain, Unset):
+            domain = UNSET
+        else:
+            domain = self.domain
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -55,6 +64,8 @@ class RemoveTrackerCompaniesBodyCompaniesItem:
             field_dict["linkedinOrgId"] = linkedin_org_id
         if linkedin_slug is not UNSET:
             field_dict["linkedinSlug"] = linkedin_slug
+        if domain is not UNSET:
+            field_dict["domain"] = domain
 
         return field_dict
 
@@ -89,10 +100,20 @@ class RemoveTrackerCompaniesBodyCompaniesItem:
 
         linkedin_slug = _parse_linkedin_slug(d.pop("linkedinSlug", UNSET))
 
+        def _parse_domain(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        domain = _parse_domain(d.pop("domain", UNSET))
+
         remove_tracker_companies_body_companies_item = cls(
             linkedin_url=linkedin_url,
             linkedin_org_id=linkedin_org_id,
             linkedin_slug=linkedin_slug,
+            domain=domain,
         )
 
         remove_tracker_companies_body_companies_item.additional_properties = d

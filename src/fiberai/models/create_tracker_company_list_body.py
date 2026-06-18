@@ -31,6 +31,7 @@ if TYPE_CHECKING:
     from ..models.new_investor import NewInvestor
     from ..models.new_office_location import NewOfficeLocation
     from ..models.news_with_keyword import NewsWithKeyword
+    from ..models.recent_layoffs import RecentLayoffs
     from ..models.recently_hired_with_title import RecentlyHiredWithTitle
     from ..models.technology_added import TechnologyAdded
 
@@ -43,13 +44,13 @@ class CreateTrackerCompanyListBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        name (str): Human-readable name for the tracker list
-        refresh_interval_days (int): How often to check tracked companies for changes, in days
+        name (str): Human-readable name for the tracker list.
+        refresh_interval_days (int): How often to check tracked companies for changes, in days.
         tracking_rules (list[AcquiredCompany | CompanyDescriptionChanged | CompanyLogoChanged | CompanyNameChanged |
             CompanyNews | CompanyPosted | CompanyPostedWithKeyword | CompanyStatusChanged | CompanyWentInactive |
             DepartmentSizeThreshold | EmployeeCountMilestone | FollowerCountGrowth | FundingStageChanged |
             HeadcountCrossedThreshold | HeadcountGrowthPercent | HQLocationChanged | JobPostingInFunction |
-            JobPostingWithKeyword | NewFundingRound | NewInvestor | NewOfficeLocation | NewsWithKeyword |
+            JobPostingWithKeyword | NewFundingRound | NewInvestor | NewOfficeLocation | NewsWithKeyword | RecentLayoffs |
             RecentlyHiredWithTitle | TechnologyAdded] | None | Unset): Tracking rules to evaluate against this list's
             entities. Multiple rules can be active simultaneously.
     """
@@ -81,6 +82,7 @@ class CreateTrackerCompanyListBody:
             | NewInvestor
             | NewOfficeLocation
             | NewsWithKeyword
+            | RecentLayoffs
             | RecentlyHiredWithTitle
             | TechnologyAdded
         ]
@@ -99,6 +101,7 @@ class CreateTrackerCompanyListBody:
         from ..models.company_posted_with_keyword import CompanyPostedWithKeyword
         from ..models.company_status_changed import CompanyStatusChanged
         from ..models.company_went_inactive import CompanyWentInactive
+        from ..models.department_size_threshold import DepartmentSizeThreshold
         from ..models.employee_count_milestone import EmployeeCountMilestone
         from ..models.follower_count_growth import FollowerCountGrowth
         from ..models.funding_stage_changed import FundingStageChanged
@@ -173,6 +176,8 @@ class CreateTrackerCompanyListBody:
                     tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
                 elif isinstance(tracking_rules_type_0_item_data, RecentlyHiredWithTitle):
                     tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
+                elif isinstance(tracking_rules_type_0_item_data, DepartmentSizeThreshold):
+                    tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
                 else:
                     tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
 
@@ -219,6 +224,7 @@ class CreateTrackerCompanyListBody:
         from ..models.new_investor import NewInvestor
         from ..models.new_office_location import NewOfficeLocation
         from ..models.news_with_keyword import NewsWithKeyword
+        from ..models.recent_layoffs import RecentLayoffs
         from ..models.recently_hired_with_title import RecentlyHiredWithTitle
         from ..models.technology_added import TechnologyAdded
 
@@ -255,6 +261,7 @@ class CreateTrackerCompanyListBody:
                 | NewInvestor
                 | NewOfficeLocation
                 | NewsWithKeyword
+                | RecentLayoffs
                 | RecentlyHiredWithTitle
                 | TechnologyAdded
             ]
@@ -297,6 +304,7 @@ class CreateTrackerCompanyListBody:
                         | NewInvestor
                         | NewOfficeLocation
                         | NewsWithKeyword
+                        | RecentLayoffs
                         | RecentlyHiredWithTitle
                         | TechnologyAdded
                     ):
@@ -484,11 +492,19 @@ class CreateTrackerCompanyListBody:
                             return tracking_rules_type_0_item_type_22
                         except (TypeError, ValueError, AttributeError, KeyError):
                             pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            tracking_rules_type_0_item_type_23 = DepartmentSizeThreshold.from_dict(data)
+
+                            return tracking_rules_type_0_item_type_23
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        tracking_rules_type_0_item_type_23 = DepartmentSizeThreshold.from_dict(data)
+                        tracking_rules_type_0_item_type_24 = RecentLayoffs.from_dict(data)
 
-                        return tracking_rules_type_0_item_type_23
+                        return tracking_rules_type_0_item_type_24
 
                     tracking_rules_type_0_item = _parse_tracking_rules_type_0_item(tracking_rules_type_0_item_data)
 
@@ -521,6 +537,7 @@ class CreateTrackerCompanyListBody:
                     | NewInvestor
                     | NewOfficeLocation
                     | NewsWithKeyword
+                    | RecentLayoffs
                     | RecentlyHiredWithTitle
                     | TechnologyAdded
                 ]

@@ -12,6 +12,7 @@ from ...models.tiktok_song_videos_response_401 import TiktokSongVideosResponse40
 from ...models.tiktok_song_videos_response_402 import TiktokSongVideosResponse402
 from ...models.tiktok_song_videos_response_403 import TiktokSongVideosResponse403
 from ...models.tiktok_song_videos_response_404 import TiktokSongVideosResponse404
+from ...models.tiktok_song_videos_response_422 import TiktokSongVideosResponse422
 from ...models.tiktok_song_videos_response_429 import TiktokSongVideosResponse429
 from ...models.tiktok_song_videos_response_500 import TiktokSongVideosResponse500
 from ...models.tiktok_song_videos_response_503 import TiktokSongVideosResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | TiktokSongVideosResponse402
     | TiktokSongVideosResponse403
     | TiktokSongVideosResponse404
+    | TiktokSongVideosResponse422
     | TiktokSongVideosResponse429
     | TiktokSongVideosResponse500
     | TiktokSongVideosResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = TiktokSongVideosResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = TiktokSongVideosResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | TiktokSongVideosResponse402
     | TiktokSongVideosResponse403
     | TiktokSongVideosResponse404
+    | TiktokSongVideosResponse422
     | TiktokSongVideosResponse429
     | TiktokSongVideosResponse500
     | TiktokSongVideosResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | TiktokSongVideosResponse402
     | TiktokSongVideosResponse403
     | TiktokSongVideosResponse404
+    | TiktokSongVideosResponse422
     | TiktokSongVideosResponse429
     | TiktokSongVideosResponse500
     | TiktokSongVideosResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokSongVideosResponse200 | TiktokSongVideosResponse400 | TiktokSongVideosResponse401 | TiktokSongVideosResponse402 | TiktokSongVideosResponse403 | TiktokSongVideosResponse404 | TiktokSongVideosResponse429 | TiktokSongVideosResponse500 | TiktokSongVideosResponse503]
+        Response[TiktokSongVideosResponse200 | TiktokSongVideosResponse400 | TiktokSongVideosResponse401 | TiktokSongVideosResponse402 | TiktokSongVideosResponse403 | TiktokSongVideosResponse404 | TiktokSongVideosResponse422 | TiktokSongVideosResponse429 | TiktokSongVideosResponse500 | TiktokSongVideosResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | TiktokSongVideosResponse402
     | TiktokSongVideosResponse403
     | TiktokSongVideosResponse404
+    | TiktokSongVideosResponse422
     | TiktokSongVideosResponse429
     | TiktokSongVideosResponse500
     | TiktokSongVideosResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokSongVideosResponse200 | TiktokSongVideosResponse400 | TiktokSongVideosResponse401 | TiktokSongVideosResponse402 | TiktokSongVideosResponse403 | TiktokSongVideosResponse404 | TiktokSongVideosResponse429 | TiktokSongVideosResponse500 | TiktokSongVideosResponse503
+        TiktokSongVideosResponse200 | TiktokSongVideosResponse400 | TiktokSongVideosResponse401 | TiktokSongVideosResponse402 | TiktokSongVideosResponse403 | TiktokSongVideosResponse404 | TiktokSongVideosResponse422 | TiktokSongVideosResponse429 | TiktokSongVideosResponse500 | TiktokSongVideosResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | TiktokSongVideosResponse402
     | TiktokSongVideosResponse403
     | TiktokSongVideosResponse404
+    | TiktokSongVideosResponse422
     | TiktokSongVideosResponse429
     | TiktokSongVideosResponse500
     | TiktokSongVideosResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokSongVideosResponse200 | TiktokSongVideosResponse400 | TiktokSongVideosResponse401 | TiktokSongVideosResponse402 | TiktokSongVideosResponse403 | TiktokSongVideosResponse404 | TiktokSongVideosResponse429 | TiktokSongVideosResponse500 | TiktokSongVideosResponse503]
+        Response[TiktokSongVideosResponse200 | TiktokSongVideosResponse400 | TiktokSongVideosResponse401 | TiktokSongVideosResponse402 | TiktokSongVideosResponse403 | TiktokSongVideosResponse404 | TiktokSongVideosResponse422 | TiktokSongVideosResponse429 | TiktokSongVideosResponse500 | TiktokSongVideosResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | TiktokSongVideosResponse402
     | TiktokSongVideosResponse403
     | TiktokSongVideosResponse404
+    | TiktokSongVideosResponse422
     | TiktokSongVideosResponse429
     | TiktokSongVideosResponse500
     | TiktokSongVideosResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokSongVideosResponse200 | TiktokSongVideosResponse400 | TiktokSongVideosResponse401 | TiktokSongVideosResponse402 | TiktokSongVideosResponse403 | TiktokSongVideosResponse404 | TiktokSongVideosResponse429 | TiktokSongVideosResponse500 | TiktokSongVideosResponse503
+        TiktokSongVideosResponse200 | TiktokSongVideosResponse400 | TiktokSongVideosResponse401 | TiktokSongVideosResponse402 | TiktokSongVideosResponse403 | TiktokSongVideosResponse404 | TiktokSongVideosResponse422 | TiktokSongVideosResponse429 | TiktokSongVideosResponse500 | TiktokSongVideosResponse503
     """
 
     return (

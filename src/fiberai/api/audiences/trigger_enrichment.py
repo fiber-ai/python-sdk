@@ -13,6 +13,7 @@ from ...models.trigger_enrichment_response_401 import TriggerEnrichmentResponse4
 from ...models.trigger_enrichment_response_402 import TriggerEnrichmentResponse402
 from ...models.trigger_enrichment_response_403 import TriggerEnrichmentResponse403
 from ...models.trigger_enrichment_response_404 import TriggerEnrichmentResponse404
+from ...models.trigger_enrichment_response_422 import TriggerEnrichmentResponse422
 from ...models.trigger_enrichment_response_429 import TriggerEnrichmentResponse429
 from ...models.trigger_enrichment_response_500 import TriggerEnrichmentResponse500
 from ...models.trigger_enrichment_response_503 import TriggerEnrichmentResponse503
@@ -50,6 +51,7 @@ def _parse_response(
     | TriggerEnrichmentResponse402
     | TriggerEnrichmentResponse403
     | TriggerEnrichmentResponse404
+    | TriggerEnrichmentResponse422
     | TriggerEnrichmentResponse429
     | TriggerEnrichmentResponse500
     | TriggerEnrichmentResponse503
@@ -85,6 +87,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = TriggerEnrichmentResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = TriggerEnrichmentResponse429.from_dict(response.json())
 
@@ -115,6 +122,7 @@ def _build_response(
     | TriggerEnrichmentResponse402
     | TriggerEnrichmentResponse403
     | TriggerEnrichmentResponse404
+    | TriggerEnrichmentResponse422
     | TriggerEnrichmentResponse429
     | TriggerEnrichmentResponse500
     | TriggerEnrichmentResponse503
@@ -139,6 +147,7 @@ def sync_detailed(
     | TriggerEnrichmentResponse402
     | TriggerEnrichmentResponse403
     | TriggerEnrichmentResponse404
+    | TriggerEnrichmentResponse422
     | TriggerEnrichmentResponse429
     | TriggerEnrichmentResponse500
     | TriggerEnrichmentResponse503
@@ -166,7 +175,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TriggerEnrichmentResponse200 | TriggerEnrichmentResponse400 | TriggerEnrichmentResponse401 | TriggerEnrichmentResponse402 | TriggerEnrichmentResponse403 | TriggerEnrichmentResponse404 | TriggerEnrichmentResponse429 | TriggerEnrichmentResponse500 | TriggerEnrichmentResponse503]
+        Response[TriggerEnrichmentResponse200 | TriggerEnrichmentResponse400 | TriggerEnrichmentResponse401 | TriggerEnrichmentResponse402 | TriggerEnrichmentResponse403 | TriggerEnrichmentResponse404 | TriggerEnrichmentResponse422 | TriggerEnrichmentResponse429 | TriggerEnrichmentResponse500 | TriggerEnrichmentResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -193,6 +202,7 @@ def sync(
     | TriggerEnrichmentResponse402
     | TriggerEnrichmentResponse403
     | TriggerEnrichmentResponse404
+    | TriggerEnrichmentResponse422
     | TriggerEnrichmentResponse429
     | TriggerEnrichmentResponse500
     | TriggerEnrichmentResponse503
@@ -221,7 +231,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TriggerEnrichmentResponse200 | TriggerEnrichmentResponse400 | TriggerEnrichmentResponse401 | TriggerEnrichmentResponse402 | TriggerEnrichmentResponse403 | TriggerEnrichmentResponse404 | TriggerEnrichmentResponse429 | TriggerEnrichmentResponse500 | TriggerEnrichmentResponse503
+        TriggerEnrichmentResponse200 | TriggerEnrichmentResponse400 | TriggerEnrichmentResponse401 | TriggerEnrichmentResponse402 | TriggerEnrichmentResponse403 | TriggerEnrichmentResponse404 | TriggerEnrichmentResponse422 | TriggerEnrichmentResponse429 | TriggerEnrichmentResponse500 | TriggerEnrichmentResponse503
     """
 
     return sync_detailed(
@@ -243,6 +253,7 @@ async def asyncio_detailed(
     | TriggerEnrichmentResponse402
     | TriggerEnrichmentResponse403
     | TriggerEnrichmentResponse404
+    | TriggerEnrichmentResponse422
     | TriggerEnrichmentResponse429
     | TriggerEnrichmentResponse500
     | TriggerEnrichmentResponse503
@@ -270,7 +281,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TriggerEnrichmentResponse200 | TriggerEnrichmentResponse400 | TriggerEnrichmentResponse401 | TriggerEnrichmentResponse402 | TriggerEnrichmentResponse403 | TriggerEnrichmentResponse404 | TriggerEnrichmentResponse429 | TriggerEnrichmentResponse500 | TriggerEnrichmentResponse503]
+        Response[TriggerEnrichmentResponse200 | TriggerEnrichmentResponse400 | TriggerEnrichmentResponse401 | TriggerEnrichmentResponse402 | TriggerEnrichmentResponse403 | TriggerEnrichmentResponse404 | TriggerEnrichmentResponse422 | TriggerEnrichmentResponse429 | TriggerEnrichmentResponse500 | TriggerEnrichmentResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -295,6 +306,7 @@ async def asyncio(
     | TriggerEnrichmentResponse402
     | TriggerEnrichmentResponse403
     | TriggerEnrichmentResponse404
+    | TriggerEnrichmentResponse422
     | TriggerEnrichmentResponse429
     | TriggerEnrichmentResponse500
     | TriggerEnrichmentResponse503
@@ -323,7 +335,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TriggerEnrichmentResponse200 | TriggerEnrichmentResponse400 | TriggerEnrichmentResponse401 | TriggerEnrichmentResponse402 | TriggerEnrichmentResponse403 | TriggerEnrichmentResponse404 | TriggerEnrichmentResponse429 | TriggerEnrichmentResponse500 | TriggerEnrichmentResponse503
+        TriggerEnrichmentResponse200 | TriggerEnrichmentResponse400 | TriggerEnrichmentResponse401 | TriggerEnrichmentResponse402 | TriggerEnrichmentResponse403 | TriggerEnrichmentResponse404 | TriggerEnrichmentResponse422 | TriggerEnrichmentResponse429 | TriggerEnrichmentResponse500 | TriggerEnrichmentResponse503
     """
 
     return (

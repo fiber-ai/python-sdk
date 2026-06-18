@@ -12,6 +12,7 @@ from ...models.check_google_maps_results_response_401 import CheckGoogleMapsResu
 from ...models.check_google_maps_results_response_402 import CheckGoogleMapsResultsResponse402
 from ...models.check_google_maps_results_response_403 import CheckGoogleMapsResultsResponse403
 from ...models.check_google_maps_results_response_404 import CheckGoogleMapsResultsResponse404
+from ...models.check_google_maps_results_response_422 import CheckGoogleMapsResultsResponse422
 from ...models.check_google_maps_results_response_429 import CheckGoogleMapsResultsResponse429
 from ...models.check_google_maps_results_response_500 import CheckGoogleMapsResultsResponse500
 from ...models.check_google_maps_results_response_503 import CheckGoogleMapsResultsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | CheckGoogleMapsResultsResponse402
     | CheckGoogleMapsResultsResponse403
     | CheckGoogleMapsResultsResponse404
+    | CheckGoogleMapsResultsResponse422
     | CheckGoogleMapsResultsResponse429
     | CheckGoogleMapsResultsResponse500
     | CheckGoogleMapsResultsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = CheckGoogleMapsResultsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = CheckGoogleMapsResultsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | CheckGoogleMapsResultsResponse402
     | CheckGoogleMapsResultsResponse403
     | CheckGoogleMapsResultsResponse404
+    | CheckGoogleMapsResultsResponse422
     | CheckGoogleMapsResultsResponse429
     | CheckGoogleMapsResultsResponse500
     | CheckGoogleMapsResultsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | CheckGoogleMapsResultsResponse402
     | CheckGoogleMapsResultsResponse403
     | CheckGoogleMapsResultsResponse404
+    | CheckGoogleMapsResultsResponse422
     | CheckGoogleMapsResultsResponse429
     | CheckGoogleMapsResultsResponse500
     | CheckGoogleMapsResultsResponse503
@@ -152,7 +161,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CheckGoogleMapsResultsResponse200 | CheckGoogleMapsResultsResponse400 | CheckGoogleMapsResultsResponse401 | CheckGoogleMapsResultsResponse402 | CheckGoogleMapsResultsResponse403 | CheckGoogleMapsResultsResponse404 | CheckGoogleMapsResultsResponse429 | CheckGoogleMapsResultsResponse500 | CheckGoogleMapsResultsResponse503]
+        Response[CheckGoogleMapsResultsResponse200 | CheckGoogleMapsResultsResponse400 | CheckGoogleMapsResultsResponse401 | CheckGoogleMapsResultsResponse402 | CheckGoogleMapsResultsResponse403 | CheckGoogleMapsResultsResponse404 | CheckGoogleMapsResultsResponse422 | CheckGoogleMapsResultsResponse429 | CheckGoogleMapsResultsResponse500 | CheckGoogleMapsResultsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -177,6 +186,7 @@ def sync(
     | CheckGoogleMapsResultsResponse402
     | CheckGoogleMapsResultsResponse403
     | CheckGoogleMapsResultsResponse404
+    | CheckGoogleMapsResultsResponse422
     | CheckGoogleMapsResultsResponse429
     | CheckGoogleMapsResultsResponse500
     | CheckGoogleMapsResultsResponse503
@@ -196,7 +206,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CheckGoogleMapsResultsResponse200 | CheckGoogleMapsResultsResponse400 | CheckGoogleMapsResultsResponse401 | CheckGoogleMapsResultsResponse402 | CheckGoogleMapsResultsResponse403 | CheckGoogleMapsResultsResponse404 | CheckGoogleMapsResultsResponse429 | CheckGoogleMapsResultsResponse500 | CheckGoogleMapsResultsResponse503
+        CheckGoogleMapsResultsResponse200 | CheckGoogleMapsResultsResponse400 | CheckGoogleMapsResultsResponse401 | CheckGoogleMapsResultsResponse402 | CheckGoogleMapsResultsResponse403 | CheckGoogleMapsResultsResponse404 | CheckGoogleMapsResultsResponse422 | CheckGoogleMapsResultsResponse429 | CheckGoogleMapsResultsResponse500 | CheckGoogleMapsResultsResponse503
     """
 
     return sync_detailed(
@@ -216,6 +226,7 @@ async def asyncio_detailed(
     | CheckGoogleMapsResultsResponse402
     | CheckGoogleMapsResultsResponse403
     | CheckGoogleMapsResultsResponse404
+    | CheckGoogleMapsResultsResponse422
     | CheckGoogleMapsResultsResponse429
     | CheckGoogleMapsResultsResponse500
     | CheckGoogleMapsResultsResponse503
@@ -234,7 +245,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CheckGoogleMapsResultsResponse200 | CheckGoogleMapsResultsResponse400 | CheckGoogleMapsResultsResponse401 | CheckGoogleMapsResultsResponse402 | CheckGoogleMapsResultsResponse403 | CheckGoogleMapsResultsResponse404 | CheckGoogleMapsResultsResponse429 | CheckGoogleMapsResultsResponse500 | CheckGoogleMapsResultsResponse503]
+        Response[CheckGoogleMapsResultsResponse200 | CheckGoogleMapsResultsResponse400 | CheckGoogleMapsResultsResponse401 | CheckGoogleMapsResultsResponse402 | CheckGoogleMapsResultsResponse403 | CheckGoogleMapsResultsResponse404 | CheckGoogleMapsResultsResponse422 | CheckGoogleMapsResultsResponse429 | CheckGoogleMapsResultsResponse500 | CheckGoogleMapsResultsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -257,6 +268,7 @@ async def asyncio(
     | CheckGoogleMapsResultsResponse402
     | CheckGoogleMapsResultsResponse403
     | CheckGoogleMapsResultsResponse404
+    | CheckGoogleMapsResultsResponse422
     | CheckGoogleMapsResultsResponse429
     | CheckGoogleMapsResultsResponse500
     | CheckGoogleMapsResultsResponse503
@@ -276,7 +288,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CheckGoogleMapsResultsResponse200 | CheckGoogleMapsResultsResponse400 | CheckGoogleMapsResultsResponse401 | CheckGoogleMapsResultsResponse402 | CheckGoogleMapsResultsResponse403 | CheckGoogleMapsResultsResponse404 | CheckGoogleMapsResultsResponse429 | CheckGoogleMapsResultsResponse500 | CheckGoogleMapsResultsResponse503
+        CheckGoogleMapsResultsResponse200 | CheckGoogleMapsResultsResponse400 | CheckGoogleMapsResultsResponse401 | CheckGoogleMapsResultsResponse402 | CheckGoogleMapsResultsResponse403 | CheckGoogleMapsResultsResponse404 | CheckGoogleMapsResultsResponse422 | CheckGoogleMapsResultsResponse429 | CheckGoogleMapsResultsResponse500 | CheckGoogleMapsResultsResponse503
     """
 
     return (

@@ -12,6 +12,7 @@ from ...models.start_depth_chart_response_401 import StartDepthChartResponse401
 from ...models.start_depth_chart_response_402 import StartDepthChartResponse402
 from ...models.start_depth_chart_response_403 import StartDepthChartResponse403
 from ...models.start_depth_chart_response_404 import StartDepthChartResponse404
+from ...models.start_depth_chart_response_422 import StartDepthChartResponse422
 from ...models.start_depth_chart_response_429 import StartDepthChartResponse429
 from ...models.start_depth_chart_response_500 import StartDepthChartResponse500
 from ...models.start_depth_chart_response_503 import StartDepthChartResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | StartDepthChartResponse402
     | StartDepthChartResponse403
     | StartDepthChartResponse404
+    | StartDepthChartResponse422
     | StartDepthChartResponse429
     | StartDepthChartResponse500
     | StartDepthChartResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = StartDepthChartResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = StartDepthChartResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | StartDepthChartResponse402
     | StartDepthChartResponse403
     | StartDepthChartResponse404
+    | StartDepthChartResponse422
     | StartDepthChartResponse429
     | StartDepthChartResponse500
     | StartDepthChartResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | StartDepthChartResponse402
     | StartDepthChartResponse403
     | StartDepthChartResponse404
+    | StartDepthChartResponse422
     | StartDepthChartResponse429
     | StartDepthChartResponse500
     | StartDepthChartResponse503
@@ -157,7 +166,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[StartDepthChartResponse200 | StartDepthChartResponse400 | StartDepthChartResponse401 | StartDepthChartResponse402 | StartDepthChartResponse403 | StartDepthChartResponse404 | StartDepthChartResponse429 | StartDepthChartResponse500 | StartDepthChartResponse503]
+        Response[StartDepthChartResponse200 | StartDepthChartResponse400 | StartDepthChartResponse401 | StartDepthChartResponse402 | StartDepthChartResponse403 | StartDepthChartResponse404 | StartDepthChartResponse422 | StartDepthChartResponse429 | StartDepthChartResponse500 | StartDepthChartResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -182,6 +191,7 @@ def sync(
     | StartDepthChartResponse402
     | StartDepthChartResponse403
     | StartDepthChartResponse404
+    | StartDepthChartResponse422
     | StartDepthChartResponse429
     | StartDepthChartResponse500
     | StartDepthChartResponse503
@@ -206,7 +216,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        StartDepthChartResponse200 | StartDepthChartResponse400 | StartDepthChartResponse401 | StartDepthChartResponse402 | StartDepthChartResponse403 | StartDepthChartResponse404 | StartDepthChartResponse429 | StartDepthChartResponse500 | StartDepthChartResponse503
+        StartDepthChartResponse200 | StartDepthChartResponse400 | StartDepthChartResponse401 | StartDepthChartResponse402 | StartDepthChartResponse403 | StartDepthChartResponse404 | StartDepthChartResponse422 | StartDepthChartResponse429 | StartDepthChartResponse500 | StartDepthChartResponse503
     """
 
     return sync_detailed(
@@ -226,6 +236,7 @@ async def asyncio_detailed(
     | StartDepthChartResponse402
     | StartDepthChartResponse403
     | StartDepthChartResponse404
+    | StartDepthChartResponse422
     | StartDepthChartResponse429
     | StartDepthChartResponse500
     | StartDepthChartResponse503
@@ -249,7 +260,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[StartDepthChartResponse200 | StartDepthChartResponse400 | StartDepthChartResponse401 | StartDepthChartResponse402 | StartDepthChartResponse403 | StartDepthChartResponse404 | StartDepthChartResponse429 | StartDepthChartResponse500 | StartDepthChartResponse503]
+        Response[StartDepthChartResponse200 | StartDepthChartResponse400 | StartDepthChartResponse401 | StartDepthChartResponse402 | StartDepthChartResponse403 | StartDepthChartResponse404 | StartDepthChartResponse422 | StartDepthChartResponse429 | StartDepthChartResponse500 | StartDepthChartResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -272,6 +283,7 @@ async def asyncio(
     | StartDepthChartResponse402
     | StartDepthChartResponse403
     | StartDepthChartResponse404
+    | StartDepthChartResponse422
     | StartDepthChartResponse429
     | StartDepthChartResponse500
     | StartDepthChartResponse503
@@ -296,7 +308,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        StartDepthChartResponse200 | StartDepthChartResponse400 | StartDepthChartResponse401 | StartDepthChartResponse402 | StartDepthChartResponse403 | StartDepthChartResponse404 | StartDepthChartResponse429 | StartDepthChartResponse500 | StartDepthChartResponse503
+        StartDepthChartResponse200 | StartDepthChartResponse400 | StartDepthChartResponse401 | StartDepthChartResponse402 | StartDepthChartResponse403 | StartDepthChartResponse404 | StartDepthChartResponse422 | StartDepthChartResponse429 | StartDepthChartResponse500 | StartDepthChartResponse503
     """
 
     return (

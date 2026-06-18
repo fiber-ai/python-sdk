@@ -12,6 +12,7 @@ from ...models.google_maps_search_response_401 import GoogleMapsSearchResponse40
 from ...models.google_maps_search_response_402 import GoogleMapsSearchResponse402
 from ...models.google_maps_search_response_403 import GoogleMapsSearchResponse403
 from ...models.google_maps_search_response_404 import GoogleMapsSearchResponse404
+from ...models.google_maps_search_response_422 import GoogleMapsSearchResponse422
 from ...models.google_maps_search_response_429 import GoogleMapsSearchResponse429
 from ...models.google_maps_search_response_500 import GoogleMapsSearchResponse500
 from ...models.google_maps_search_response_503 import GoogleMapsSearchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GoogleMapsSearchResponse402
     | GoogleMapsSearchResponse403
     | GoogleMapsSearchResponse404
+    | GoogleMapsSearchResponse422
     | GoogleMapsSearchResponse429
     | GoogleMapsSearchResponse500
     | GoogleMapsSearchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GoogleMapsSearchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GoogleMapsSearchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GoogleMapsSearchResponse402
     | GoogleMapsSearchResponse403
     | GoogleMapsSearchResponse404
+    | GoogleMapsSearchResponse422
     | GoogleMapsSearchResponse429
     | GoogleMapsSearchResponse500
     | GoogleMapsSearchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GoogleMapsSearchResponse402
     | GoogleMapsSearchResponse403
     | GoogleMapsSearchResponse404
+    | GoogleMapsSearchResponse422
     | GoogleMapsSearchResponse429
     | GoogleMapsSearchResponse500
     | GoogleMapsSearchResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GoogleMapsSearchResponse200 | GoogleMapsSearchResponse400 | GoogleMapsSearchResponse401 | GoogleMapsSearchResponse402 | GoogleMapsSearchResponse403 | GoogleMapsSearchResponse404 | GoogleMapsSearchResponse429 | GoogleMapsSearchResponse500 | GoogleMapsSearchResponse503]
+        Response[GoogleMapsSearchResponse200 | GoogleMapsSearchResponse400 | GoogleMapsSearchResponse401 | GoogleMapsSearchResponse402 | GoogleMapsSearchResponse403 | GoogleMapsSearchResponse404 | GoogleMapsSearchResponse422 | GoogleMapsSearchResponse429 | GoogleMapsSearchResponse500 | GoogleMapsSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | GoogleMapsSearchResponse402
     | GoogleMapsSearchResponse403
     | GoogleMapsSearchResponse404
+    | GoogleMapsSearchResponse422
     | GoogleMapsSearchResponse429
     | GoogleMapsSearchResponse500
     | GoogleMapsSearchResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GoogleMapsSearchResponse200 | GoogleMapsSearchResponse400 | GoogleMapsSearchResponse401 | GoogleMapsSearchResponse402 | GoogleMapsSearchResponse403 | GoogleMapsSearchResponse404 | GoogleMapsSearchResponse429 | GoogleMapsSearchResponse500 | GoogleMapsSearchResponse503
+        GoogleMapsSearchResponse200 | GoogleMapsSearchResponse400 | GoogleMapsSearchResponse401 | GoogleMapsSearchResponse402 | GoogleMapsSearchResponse403 | GoogleMapsSearchResponse404 | GoogleMapsSearchResponse422 | GoogleMapsSearchResponse429 | GoogleMapsSearchResponse500 | GoogleMapsSearchResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | GoogleMapsSearchResponse402
     | GoogleMapsSearchResponse403
     | GoogleMapsSearchResponse404
+    | GoogleMapsSearchResponse422
     | GoogleMapsSearchResponse429
     | GoogleMapsSearchResponse500
     | GoogleMapsSearchResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GoogleMapsSearchResponse200 | GoogleMapsSearchResponse400 | GoogleMapsSearchResponse401 | GoogleMapsSearchResponse402 | GoogleMapsSearchResponse403 | GoogleMapsSearchResponse404 | GoogleMapsSearchResponse429 | GoogleMapsSearchResponse500 | GoogleMapsSearchResponse503]
+        Response[GoogleMapsSearchResponse200 | GoogleMapsSearchResponse400 | GoogleMapsSearchResponse401 | GoogleMapsSearchResponse402 | GoogleMapsSearchResponse403 | GoogleMapsSearchResponse404 | GoogleMapsSearchResponse422 | GoogleMapsSearchResponse429 | GoogleMapsSearchResponse500 | GoogleMapsSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | GoogleMapsSearchResponse402
     | GoogleMapsSearchResponse403
     | GoogleMapsSearchResponse404
+    | GoogleMapsSearchResponse422
     | GoogleMapsSearchResponse429
     | GoogleMapsSearchResponse500
     | GoogleMapsSearchResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GoogleMapsSearchResponse200 | GoogleMapsSearchResponse400 | GoogleMapsSearchResponse401 | GoogleMapsSearchResponse402 | GoogleMapsSearchResponse403 | GoogleMapsSearchResponse404 | GoogleMapsSearchResponse429 | GoogleMapsSearchResponse500 | GoogleMapsSearchResponse503
+        GoogleMapsSearchResponse200 | GoogleMapsSearchResponse400 | GoogleMapsSearchResponse401 | GoogleMapsSearchResponse402 | GoogleMapsSearchResponse403 | GoogleMapsSearchResponse404 | GoogleMapsSearchResponse422 | GoogleMapsSearchResponse429 | GoogleMapsSearchResponse500 | GoogleMapsSearchResponse503
     """
 
     return (

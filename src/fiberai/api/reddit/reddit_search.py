@@ -12,6 +12,7 @@ from ...models.reddit_search_response_401 import RedditSearchResponse401
 from ...models.reddit_search_response_402 import RedditSearchResponse402
 from ...models.reddit_search_response_403 import RedditSearchResponse403
 from ...models.reddit_search_response_404 import RedditSearchResponse404
+from ...models.reddit_search_response_422 import RedditSearchResponse422
 from ...models.reddit_search_response_429 import RedditSearchResponse429
 from ...models.reddit_search_response_500 import RedditSearchResponse500
 from ...models.reddit_search_response_503 import RedditSearchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | RedditSearchResponse402
     | RedditSearchResponse403
     | RedditSearchResponse404
+    | RedditSearchResponse422
     | RedditSearchResponse429
     | RedditSearchResponse500
     | RedditSearchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = RedditSearchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = RedditSearchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | RedditSearchResponse402
     | RedditSearchResponse403
     | RedditSearchResponse404
+    | RedditSearchResponse422
     | RedditSearchResponse429
     | RedditSearchResponse500
     | RedditSearchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | RedditSearchResponse402
     | RedditSearchResponse403
     | RedditSearchResponse404
+    | RedditSearchResponse422
     | RedditSearchResponse429
     | RedditSearchResponse500
     | RedditSearchResponse503
@@ -157,7 +166,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[RedditSearchResponse200 | RedditSearchResponse400 | RedditSearchResponse401 | RedditSearchResponse402 | RedditSearchResponse403 | RedditSearchResponse404 | RedditSearchResponse429 | RedditSearchResponse500 | RedditSearchResponse503]
+        Response[RedditSearchResponse200 | RedditSearchResponse400 | RedditSearchResponse401 | RedditSearchResponse402 | RedditSearchResponse403 | RedditSearchResponse404 | RedditSearchResponse422 | RedditSearchResponse429 | RedditSearchResponse500 | RedditSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -182,6 +191,7 @@ def sync(
     | RedditSearchResponse402
     | RedditSearchResponse403
     | RedditSearchResponse404
+    | RedditSearchResponse422
     | RedditSearchResponse429
     | RedditSearchResponse500
     | RedditSearchResponse503
@@ -206,7 +216,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        RedditSearchResponse200 | RedditSearchResponse400 | RedditSearchResponse401 | RedditSearchResponse402 | RedditSearchResponse403 | RedditSearchResponse404 | RedditSearchResponse429 | RedditSearchResponse500 | RedditSearchResponse503
+        RedditSearchResponse200 | RedditSearchResponse400 | RedditSearchResponse401 | RedditSearchResponse402 | RedditSearchResponse403 | RedditSearchResponse404 | RedditSearchResponse422 | RedditSearchResponse429 | RedditSearchResponse500 | RedditSearchResponse503
     """
 
     return sync_detailed(
@@ -226,6 +236,7 @@ async def asyncio_detailed(
     | RedditSearchResponse402
     | RedditSearchResponse403
     | RedditSearchResponse404
+    | RedditSearchResponse422
     | RedditSearchResponse429
     | RedditSearchResponse500
     | RedditSearchResponse503
@@ -249,7 +260,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[RedditSearchResponse200 | RedditSearchResponse400 | RedditSearchResponse401 | RedditSearchResponse402 | RedditSearchResponse403 | RedditSearchResponse404 | RedditSearchResponse429 | RedditSearchResponse500 | RedditSearchResponse503]
+        Response[RedditSearchResponse200 | RedditSearchResponse400 | RedditSearchResponse401 | RedditSearchResponse402 | RedditSearchResponse403 | RedditSearchResponse404 | RedditSearchResponse422 | RedditSearchResponse429 | RedditSearchResponse500 | RedditSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -272,6 +283,7 @@ async def asyncio(
     | RedditSearchResponse402
     | RedditSearchResponse403
     | RedditSearchResponse404
+    | RedditSearchResponse422
     | RedditSearchResponse429
     | RedditSearchResponse500
     | RedditSearchResponse503
@@ -296,7 +308,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        RedditSearchResponse200 | RedditSearchResponse400 | RedditSearchResponse401 | RedditSearchResponse402 | RedditSearchResponse403 | RedditSearchResponse404 | RedditSearchResponse429 | RedditSearchResponse500 | RedditSearchResponse503
+        RedditSearchResponse200 | RedditSearchResponse400 | RedditSearchResponse401 | RedditSearchResponse402 | RedditSearchResponse403 | RedditSearchResponse404 | RedditSearchResponse422 | RedditSearchResponse429 | RedditSearchResponse500 | RedditSearchResponse503
     """
 
     return (

@@ -12,6 +12,7 @@ from ...models.youtube_video_details_response_401 import YoutubeVideoDetailsResp
 from ...models.youtube_video_details_response_402 import YoutubeVideoDetailsResponse402
 from ...models.youtube_video_details_response_403 import YoutubeVideoDetailsResponse403
 from ...models.youtube_video_details_response_404 import YoutubeVideoDetailsResponse404
+from ...models.youtube_video_details_response_422 import YoutubeVideoDetailsResponse422
 from ...models.youtube_video_details_response_429 import YoutubeVideoDetailsResponse429
 from ...models.youtube_video_details_response_500 import YoutubeVideoDetailsResponse500
 from ...models.youtube_video_details_response_503 import YoutubeVideoDetailsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | YoutubeVideoDetailsResponse402
     | YoutubeVideoDetailsResponse403
     | YoutubeVideoDetailsResponse404
+    | YoutubeVideoDetailsResponse422
     | YoutubeVideoDetailsResponse429
     | YoutubeVideoDetailsResponse500
     | YoutubeVideoDetailsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = YoutubeVideoDetailsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = YoutubeVideoDetailsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | YoutubeVideoDetailsResponse402
     | YoutubeVideoDetailsResponse403
     | YoutubeVideoDetailsResponse404
+    | YoutubeVideoDetailsResponse422
     | YoutubeVideoDetailsResponse429
     | YoutubeVideoDetailsResponse500
     | YoutubeVideoDetailsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | YoutubeVideoDetailsResponse402
     | YoutubeVideoDetailsResponse403
     | YoutubeVideoDetailsResponse404
+    | YoutubeVideoDetailsResponse422
     | YoutubeVideoDetailsResponse429
     | YoutubeVideoDetailsResponse500
     | YoutubeVideoDetailsResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[YoutubeVideoDetailsResponse200 | YoutubeVideoDetailsResponse400 | YoutubeVideoDetailsResponse401 | YoutubeVideoDetailsResponse402 | YoutubeVideoDetailsResponse403 | YoutubeVideoDetailsResponse404 | YoutubeVideoDetailsResponse429 | YoutubeVideoDetailsResponse500 | YoutubeVideoDetailsResponse503]
+        Response[YoutubeVideoDetailsResponse200 | YoutubeVideoDetailsResponse400 | YoutubeVideoDetailsResponse401 | YoutubeVideoDetailsResponse402 | YoutubeVideoDetailsResponse403 | YoutubeVideoDetailsResponse404 | YoutubeVideoDetailsResponse422 | YoutubeVideoDetailsResponse429 | YoutubeVideoDetailsResponse500 | YoutubeVideoDetailsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | YoutubeVideoDetailsResponse402
     | YoutubeVideoDetailsResponse403
     | YoutubeVideoDetailsResponse404
+    | YoutubeVideoDetailsResponse422
     | YoutubeVideoDetailsResponse429
     | YoutubeVideoDetailsResponse500
     | YoutubeVideoDetailsResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        YoutubeVideoDetailsResponse200 | YoutubeVideoDetailsResponse400 | YoutubeVideoDetailsResponse401 | YoutubeVideoDetailsResponse402 | YoutubeVideoDetailsResponse403 | YoutubeVideoDetailsResponse404 | YoutubeVideoDetailsResponse429 | YoutubeVideoDetailsResponse500 | YoutubeVideoDetailsResponse503
+        YoutubeVideoDetailsResponse200 | YoutubeVideoDetailsResponse400 | YoutubeVideoDetailsResponse401 | YoutubeVideoDetailsResponse402 | YoutubeVideoDetailsResponse403 | YoutubeVideoDetailsResponse404 | YoutubeVideoDetailsResponse422 | YoutubeVideoDetailsResponse429 | YoutubeVideoDetailsResponse500 | YoutubeVideoDetailsResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | YoutubeVideoDetailsResponse402
     | YoutubeVideoDetailsResponse403
     | YoutubeVideoDetailsResponse404
+    | YoutubeVideoDetailsResponse422
     | YoutubeVideoDetailsResponse429
     | YoutubeVideoDetailsResponse500
     | YoutubeVideoDetailsResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[YoutubeVideoDetailsResponse200 | YoutubeVideoDetailsResponse400 | YoutubeVideoDetailsResponse401 | YoutubeVideoDetailsResponse402 | YoutubeVideoDetailsResponse403 | YoutubeVideoDetailsResponse404 | YoutubeVideoDetailsResponse429 | YoutubeVideoDetailsResponse500 | YoutubeVideoDetailsResponse503]
+        Response[YoutubeVideoDetailsResponse200 | YoutubeVideoDetailsResponse400 | YoutubeVideoDetailsResponse401 | YoutubeVideoDetailsResponse402 | YoutubeVideoDetailsResponse403 | YoutubeVideoDetailsResponse404 | YoutubeVideoDetailsResponse422 | YoutubeVideoDetailsResponse429 | YoutubeVideoDetailsResponse500 | YoutubeVideoDetailsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | YoutubeVideoDetailsResponse402
     | YoutubeVideoDetailsResponse403
     | YoutubeVideoDetailsResponse404
+    | YoutubeVideoDetailsResponse422
     | YoutubeVideoDetailsResponse429
     | YoutubeVideoDetailsResponse500
     | YoutubeVideoDetailsResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        YoutubeVideoDetailsResponse200 | YoutubeVideoDetailsResponse400 | YoutubeVideoDetailsResponse401 | YoutubeVideoDetailsResponse402 | YoutubeVideoDetailsResponse403 | YoutubeVideoDetailsResponse404 | YoutubeVideoDetailsResponse429 | YoutubeVideoDetailsResponse500 | YoutubeVideoDetailsResponse503
+        YoutubeVideoDetailsResponse200 | YoutubeVideoDetailsResponse400 | YoutubeVideoDetailsResponse401 | YoutubeVideoDetailsResponse402 | YoutubeVideoDetailsResponse403 | YoutubeVideoDetailsResponse404 | YoutubeVideoDetailsResponse422 | YoutubeVideoDetailsResponse429 | YoutubeVideoDetailsResponse500 | YoutubeVideoDetailsResponse503
     """
 
     return (

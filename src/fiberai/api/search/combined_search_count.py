@@ -12,6 +12,7 @@ from ...models.combined_search_count_response_401 import CombinedSearchCountResp
 from ...models.combined_search_count_response_402 import CombinedSearchCountResponse402
 from ...models.combined_search_count_response_403 import CombinedSearchCountResponse403
 from ...models.combined_search_count_response_404 import CombinedSearchCountResponse404
+from ...models.combined_search_count_response_422 import CombinedSearchCountResponse422
 from ...models.combined_search_count_response_429 import CombinedSearchCountResponse429
 from ...models.combined_search_count_response_500 import CombinedSearchCountResponse500
 from ...models.combined_search_count_response_503 import CombinedSearchCountResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | CombinedSearchCountResponse402
     | CombinedSearchCountResponse403
     | CombinedSearchCountResponse404
+    | CombinedSearchCountResponse422
     | CombinedSearchCountResponse429
     | CombinedSearchCountResponse500
     | CombinedSearchCountResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = CombinedSearchCountResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = CombinedSearchCountResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | CombinedSearchCountResponse402
     | CombinedSearchCountResponse403
     | CombinedSearchCountResponse404
+    | CombinedSearchCountResponse422
     | CombinedSearchCountResponse429
     | CombinedSearchCountResponse500
     | CombinedSearchCountResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | CombinedSearchCountResponse402
     | CombinedSearchCountResponse403
     | CombinedSearchCountResponse404
+    | CombinedSearchCountResponse422
     | CombinedSearchCountResponse429
     | CombinedSearchCountResponse500
     | CombinedSearchCountResponse503
@@ -158,7 +167,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CombinedSearchCountResponse200 | CombinedSearchCountResponse400 | CombinedSearchCountResponse401 | CombinedSearchCountResponse402 | CombinedSearchCountResponse403 | CombinedSearchCountResponse404 | CombinedSearchCountResponse429 | CombinedSearchCountResponse500 | CombinedSearchCountResponse503]
+        Response[CombinedSearchCountResponse200 | CombinedSearchCountResponse400 | CombinedSearchCountResponse401 | CombinedSearchCountResponse402 | CombinedSearchCountResponse403 | CombinedSearchCountResponse404 | CombinedSearchCountResponse422 | CombinedSearchCountResponse429 | CombinedSearchCountResponse500 | CombinedSearchCountResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -183,6 +192,7 @@ def sync(
     | CombinedSearchCountResponse402
     | CombinedSearchCountResponse403
     | CombinedSearchCountResponse404
+    | CombinedSearchCountResponse422
     | CombinedSearchCountResponse429
     | CombinedSearchCountResponse500
     | CombinedSearchCountResponse503
@@ -208,7 +218,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CombinedSearchCountResponse200 | CombinedSearchCountResponse400 | CombinedSearchCountResponse401 | CombinedSearchCountResponse402 | CombinedSearchCountResponse403 | CombinedSearchCountResponse404 | CombinedSearchCountResponse429 | CombinedSearchCountResponse500 | CombinedSearchCountResponse503
+        CombinedSearchCountResponse200 | CombinedSearchCountResponse400 | CombinedSearchCountResponse401 | CombinedSearchCountResponse402 | CombinedSearchCountResponse403 | CombinedSearchCountResponse404 | CombinedSearchCountResponse422 | CombinedSearchCountResponse429 | CombinedSearchCountResponse500 | CombinedSearchCountResponse503
     """
 
     return sync_detailed(
@@ -228,6 +238,7 @@ async def asyncio_detailed(
     | CombinedSearchCountResponse402
     | CombinedSearchCountResponse403
     | CombinedSearchCountResponse404
+    | CombinedSearchCountResponse422
     | CombinedSearchCountResponse429
     | CombinedSearchCountResponse500
     | CombinedSearchCountResponse503
@@ -252,7 +263,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CombinedSearchCountResponse200 | CombinedSearchCountResponse400 | CombinedSearchCountResponse401 | CombinedSearchCountResponse402 | CombinedSearchCountResponse403 | CombinedSearchCountResponse404 | CombinedSearchCountResponse429 | CombinedSearchCountResponse500 | CombinedSearchCountResponse503]
+        Response[CombinedSearchCountResponse200 | CombinedSearchCountResponse400 | CombinedSearchCountResponse401 | CombinedSearchCountResponse402 | CombinedSearchCountResponse403 | CombinedSearchCountResponse404 | CombinedSearchCountResponse422 | CombinedSearchCountResponse429 | CombinedSearchCountResponse500 | CombinedSearchCountResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -275,6 +286,7 @@ async def asyncio(
     | CombinedSearchCountResponse402
     | CombinedSearchCountResponse403
     | CombinedSearchCountResponse404
+    | CombinedSearchCountResponse422
     | CombinedSearchCountResponse429
     | CombinedSearchCountResponse500
     | CombinedSearchCountResponse503
@@ -300,7 +312,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CombinedSearchCountResponse200 | CombinedSearchCountResponse400 | CombinedSearchCountResponse401 | CombinedSearchCountResponse402 | CombinedSearchCountResponse403 | CombinedSearchCountResponse404 | CombinedSearchCountResponse429 | CombinedSearchCountResponse500 | CombinedSearchCountResponse503
+        CombinedSearchCountResponse200 | CombinedSearchCountResponse400 | CombinedSearchCountResponse401 | CombinedSearchCountResponse402 | CombinedSearchCountResponse403 | CombinedSearchCountResponse404 | CombinedSearchCountResponse422 | CombinedSearchCountResponse429 | CombinedSearchCountResponse500 | CombinedSearchCountResponse503
     """
 
     return (

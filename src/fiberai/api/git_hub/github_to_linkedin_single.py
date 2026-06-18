@@ -12,6 +12,7 @@ from ...models.github_to_linkedin_single_response_401 import GithubToLinkedinSin
 from ...models.github_to_linkedin_single_response_402 import GithubToLinkedinSingleResponse402
 from ...models.github_to_linkedin_single_response_403 import GithubToLinkedinSingleResponse403
 from ...models.github_to_linkedin_single_response_404 import GithubToLinkedinSingleResponse404
+from ...models.github_to_linkedin_single_response_422 import GithubToLinkedinSingleResponse422
 from ...models.github_to_linkedin_single_response_429 import GithubToLinkedinSingleResponse429
 from ...models.github_to_linkedin_single_response_500 import GithubToLinkedinSingleResponse500
 from ...models.github_to_linkedin_single_response_503 import GithubToLinkedinSingleResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GithubToLinkedinSingleResponse402
     | GithubToLinkedinSingleResponse403
     | GithubToLinkedinSingleResponse404
+    | GithubToLinkedinSingleResponse422
     | GithubToLinkedinSingleResponse429
     | GithubToLinkedinSingleResponse500
     | GithubToLinkedinSingleResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GithubToLinkedinSingleResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GithubToLinkedinSingleResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GithubToLinkedinSingleResponse402
     | GithubToLinkedinSingleResponse403
     | GithubToLinkedinSingleResponse404
+    | GithubToLinkedinSingleResponse422
     | GithubToLinkedinSingleResponse429
     | GithubToLinkedinSingleResponse500
     | GithubToLinkedinSingleResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GithubToLinkedinSingleResponse402
     | GithubToLinkedinSingleResponse403
     | GithubToLinkedinSingleResponse404
+    | GithubToLinkedinSingleResponse422
     | GithubToLinkedinSingleResponse429
     | GithubToLinkedinSingleResponse500
     | GithubToLinkedinSingleResponse503
@@ -163,7 +172,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GithubToLinkedinSingleResponse200 | GithubToLinkedinSingleResponse400 | GithubToLinkedinSingleResponse401 | GithubToLinkedinSingleResponse402 | GithubToLinkedinSingleResponse403 | GithubToLinkedinSingleResponse404 | GithubToLinkedinSingleResponse429 | GithubToLinkedinSingleResponse500 | GithubToLinkedinSingleResponse503]
+        Response[GithubToLinkedinSingleResponse200 | GithubToLinkedinSingleResponse400 | GithubToLinkedinSingleResponse401 | GithubToLinkedinSingleResponse402 | GithubToLinkedinSingleResponse403 | GithubToLinkedinSingleResponse404 | GithubToLinkedinSingleResponse422 | GithubToLinkedinSingleResponse429 | GithubToLinkedinSingleResponse500 | GithubToLinkedinSingleResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -188,6 +197,7 @@ def sync(
     | GithubToLinkedinSingleResponse402
     | GithubToLinkedinSingleResponse403
     | GithubToLinkedinSingleResponse404
+    | GithubToLinkedinSingleResponse422
     | GithubToLinkedinSingleResponse429
     | GithubToLinkedinSingleResponse500
     | GithubToLinkedinSingleResponse503
@@ -218,7 +228,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GithubToLinkedinSingleResponse200 | GithubToLinkedinSingleResponse400 | GithubToLinkedinSingleResponse401 | GithubToLinkedinSingleResponse402 | GithubToLinkedinSingleResponse403 | GithubToLinkedinSingleResponse404 | GithubToLinkedinSingleResponse429 | GithubToLinkedinSingleResponse500 | GithubToLinkedinSingleResponse503
+        GithubToLinkedinSingleResponse200 | GithubToLinkedinSingleResponse400 | GithubToLinkedinSingleResponse401 | GithubToLinkedinSingleResponse402 | GithubToLinkedinSingleResponse403 | GithubToLinkedinSingleResponse404 | GithubToLinkedinSingleResponse422 | GithubToLinkedinSingleResponse429 | GithubToLinkedinSingleResponse500 | GithubToLinkedinSingleResponse503
     """
 
     return sync_detailed(
@@ -238,6 +248,7 @@ async def asyncio_detailed(
     | GithubToLinkedinSingleResponse402
     | GithubToLinkedinSingleResponse403
     | GithubToLinkedinSingleResponse404
+    | GithubToLinkedinSingleResponse422
     | GithubToLinkedinSingleResponse429
     | GithubToLinkedinSingleResponse500
     | GithubToLinkedinSingleResponse503
@@ -267,7 +278,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GithubToLinkedinSingleResponse200 | GithubToLinkedinSingleResponse400 | GithubToLinkedinSingleResponse401 | GithubToLinkedinSingleResponse402 | GithubToLinkedinSingleResponse403 | GithubToLinkedinSingleResponse404 | GithubToLinkedinSingleResponse429 | GithubToLinkedinSingleResponse500 | GithubToLinkedinSingleResponse503]
+        Response[GithubToLinkedinSingleResponse200 | GithubToLinkedinSingleResponse400 | GithubToLinkedinSingleResponse401 | GithubToLinkedinSingleResponse402 | GithubToLinkedinSingleResponse403 | GithubToLinkedinSingleResponse404 | GithubToLinkedinSingleResponse422 | GithubToLinkedinSingleResponse429 | GithubToLinkedinSingleResponse500 | GithubToLinkedinSingleResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -290,6 +301,7 @@ async def asyncio(
     | GithubToLinkedinSingleResponse402
     | GithubToLinkedinSingleResponse403
     | GithubToLinkedinSingleResponse404
+    | GithubToLinkedinSingleResponse422
     | GithubToLinkedinSingleResponse429
     | GithubToLinkedinSingleResponse500
     | GithubToLinkedinSingleResponse503
@@ -320,7 +332,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GithubToLinkedinSingleResponse200 | GithubToLinkedinSingleResponse400 | GithubToLinkedinSingleResponse401 | GithubToLinkedinSingleResponse402 | GithubToLinkedinSingleResponse403 | GithubToLinkedinSingleResponse404 | GithubToLinkedinSingleResponse429 | GithubToLinkedinSingleResponse500 | GithubToLinkedinSingleResponse503
+        GithubToLinkedinSingleResponse200 | GithubToLinkedinSingleResponse400 | GithubToLinkedinSingleResponse401 | GithubToLinkedinSingleResponse402 | GithubToLinkedinSingleResponse403 | GithubToLinkedinSingleResponse404 | GithubToLinkedinSingleResponse422 | GithubToLinkedinSingleResponse429 | GithubToLinkedinSingleResponse500 | GithubToLinkedinSingleResponse503
     """
 
     return (

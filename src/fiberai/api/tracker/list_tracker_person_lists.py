@@ -5,12 +5,12 @@ import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.list_tracker_person_lists_response_200 import ListTrackerPersonListsResponse200
 from ...models.list_tracker_person_lists_response_400 import ListTrackerPersonListsResponse400
 from ...models.list_tracker_person_lists_response_401 import ListTrackerPersonListsResponse401
 from ...models.list_tracker_person_lists_response_402 import ListTrackerPersonListsResponse402
 from ...models.list_tracker_person_lists_response_403 import ListTrackerPersonListsResponse403
 from ...models.list_tracker_person_lists_response_404 import ListTrackerPersonListsResponse404
+from ...models.list_tracker_person_lists_response_422 import ListTrackerPersonListsResponse422
 from ...models.list_tracker_person_lists_response_429 import ListTrackerPersonListsResponse429
 from ...models.list_tracker_person_lists_response_500 import ListTrackerPersonListsResponse500
 from ...models.list_tracker_person_lists_response_503 import ListTrackerPersonListsResponse503
@@ -40,22 +40,17 @@ def _get_kwargs(
 def _parse_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
 ) -> (
-    ListTrackerPersonListsResponse200
-    | ListTrackerPersonListsResponse400
+    ListTrackerPersonListsResponse400
     | ListTrackerPersonListsResponse401
     | ListTrackerPersonListsResponse402
     | ListTrackerPersonListsResponse403
     | ListTrackerPersonListsResponse404
+    | ListTrackerPersonListsResponse422
     | ListTrackerPersonListsResponse429
     | ListTrackerPersonListsResponse500
     | ListTrackerPersonListsResponse503
     | None
 ):
-    if response.status_code == 200:
-        response_200 = ListTrackerPersonListsResponse200.from_dict(response.json())
-
-        return response_200
-
     if response.status_code == 400:
         response_400 = ListTrackerPersonListsResponse400.from_dict(response.json())
 
@@ -81,6 +76,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = ListTrackerPersonListsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = ListTrackerPersonListsResponse429.from_dict(response.json())
 
@@ -105,12 +105,12 @@ def _parse_response(
 def _build_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
 ) -> Response[
-    ListTrackerPersonListsResponse200
-    | ListTrackerPersonListsResponse400
+    ListTrackerPersonListsResponse400
     | ListTrackerPersonListsResponse401
     | ListTrackerPersonListsResponse402
     | ListTrackerPersonListsResponse403
     | ListTrackerPersonListsResponse404
+    | ListTrackerPersonListsResponse422
     | ListTrackerPersonListsResponse429
     | ListTrackerPersonListsResponse500
     | ListTrackerPersonListsResponse503
@@ -128,12 +128,12 @@ def sync_detailed(
     client: AuthenticatedClient | Client,
     api_key: str,
 ) -> Response[
-    ListTrackerPersonListsResponse200
-    | ListTrackerPersonListsResponse400
+    ListTrackerPersonListsResponse400
     | ListTrackerPersonListsResponse401
     | ListTrackerPersonListsResponse402
     | ListTrackerPersonListsResponse403
     | ListTrackerPersonListsResponse404
+    | ListTrackerPersonListsResponse422
     | ListTrackerPersonListsResponse429
     | ListTrackerPersonListsResponse500
     | ListTrackerPersonListsResponse503
@@ -155,7 +155,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ListTrackerPersonListsResponse200 | ListTrackerPersonListsResponse400 | ListTrackerPersonListsResponse401 | ListTrackerPersonListsResponse402 | ListTrackerPersonListsResponse403 | ListTrackerPersonListsResponse404 | ListTrackerPersonListsResponse429 | ListTrackerPersonListsResponse500 | ListTrackerPersonListsResponse503]
+        Response[ListTrackerPersonListsResponse400 | ListTrackerPersonListsResponse401 | ListTrackerPersonListsResponse402 | ListTrackerPersonListsResponse403 | ListTrackerPersonListsResponse404 | ListTrackerPersonListsResponse422 | ListTrackerPersonListsResponse429 | ListTrackerPersonListsResponse500 | ListTrackerPersonListsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -174,12 +174,12 @@ def sync(
     client: AuthenticatedClient | Client,
     api_key: str,
 ) -> (
-    ListTrackerPersonListsResponse200
-    | ListTrackerPersonListsResponse400
+    ListTrackerPersonListsResponse400
     | ListTrackerPersonListsResponse401
     | ListTrackerPersonListsResponse402
     | ListTrackerPersonListsResponse403
     | ListTrackerPersonListsResponse404
+    | ListTrackerPersonListsResponse422
     | ListTrackerPersonListsResponse429
     | ListTrackerPersonListsResponse500
     | ListTrackerPersonListsResponse503
@@ -202,7 +202,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ListTrackerPersonListsResponse200 | ListTrackerPersonListsResponse400 | ListTrackerPersonListsResponse401 | ListTrackerPersonListsResponse402 | ListTrackerPersonListsResponse403 | ListTrackerPersonListsResponse404 | ListTrackerPersonListsResponse429 | ListTrackerPersonListsResponse500 | ListTrackerPersonListsResponse503
+        ListTrackerPersonListsResponse400 | ListTrackerPersonListsResponse401 | ListTrackerPersonListsResponse402 | ListTrackerPersonListsResponse403 | ListTrackerPersonListsResponse404 | ListTrackerPersonListsResponse422 | ListTrackerPersonListsResponse429 | ListTrackerPersonListsResponse500 | ListTrackerPersonListsResponse503
     """
 
     return sync_detailed(
@@ -216,12 +216,12 @@ async def asyncio_detailed(
     client: AuthenticatedClient | Client,
     api_key: str,
 ) -> Response[
-    ListTrackerPersonListsResponse200
-    | ListTrackerPersonListsResponse400
+    ListTrackerPersonListsResponse400
     | ListTrackerPersonListsResponse401
     | ListTrackerPersonListsResponse402
     | ListTrackerPersonListsResponse403
     | ListTrackerPersonListsResponse404
+    | ListTrackerPersonListsResponse422
     | ListTrackerPersonListsResponse429
     | ListTrackerPersonListsResponse500
     | ListTrackerPersonListsResponse503
@@ -243,7 +243,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ListTrackerPersonListsResponse200 | ListTrackerPersonListsResponse400 | ListTrackerPersonListsResponse401 | ListTrackerPersonListsResponse402 | ListTrackerPersonListsResponse403 | ListTrackerPersonListsResponse404 | ListTrackerPersonListsResponse429 | ListTrackerPersonListsResponse500 | ListTrackerPersonListsResponse503]
+        Response[ListTrackerPersonListsResponse400 | ListTrackerPersonListsResponse401 | ListTrackerPersonListsResponse402 | ListTrackerPersonListsResponse403 | ListTrackerPersonListsResponse404 | ListTrackerPersonListsResponse422 | ListTrackerPersonListsResponse429 | ListTrackerPersonListsResponse500 | ListTrackerPersonListsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -260,12 +260,12 @@ async def asyncio(
     client: AuthenticatedClient | Client,
     api_key: str,
 ) -> (
-    ListTrackerPersonListsResponse200
-    | ListTrackerPersonListsResponse400
+    ListTrackerPersonListsResponse400
     | ListTrackerPersonListsResponse401
     | ListTrackerPersonListsResponse402
     | ListTrackerPersonListsResponse403
     | ListTrackerPersonListsResponse404
+    | ListTrackerPersonListsResponse422
     | ListTrackerPersonListsResponse429
     | ListTrackerPersonListsResponse500
     | ListTrackerPersonListsResponse503
@@ -288,7 +288,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ListTrackerPersonListsResponse200 | ListTrackerPersonListsResponse400 | ListTrackerPersonListsResponse401 | ListTrackerPersonListsResponse402 | ListTrackerPersonListsResponse403 | ListTrackerPersonListsResponse404 | ListTrackerPersonListsResponse429 | ListTrackerPersonListsResponse500 | ListTrackerPersonListsResponse503
+        ListTrackerPersonListsResponse400 | ListTrackerPersonListsResponse401 | ListTrackerPersonListsResponse402 | ListTrackerPersonListsResponse403 | ListTrackerPersonListsResponse404 | ListTrackerPersonListsResponse422 | ListTrackerPersonListsResponse429 | ListTrackerPersonListsResponse500 | ListTrackerPersonListsResponse503
     """
 
     return (

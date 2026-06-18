@@ -12,6 +12,7 @@ from ...models.create_audience_response_401 import CreateAudienceResponse401
 from ...models.create_audience_response_402 import CreateAudienceResponse402
 from ...models.create_audience_response_403 import CreateAudienceResponse403
 from ...models.create_audience_response_404 import CreateAudienceResponse404
+from ...models.create_audience_response_422 import CreateAudienceResponse422
 from ...models.create_audience_response_429 import CreateAudienceResponse429
 from ...models.create_audience_response_500 import CreateAudienceResponse500
 from ...models.create_audience_response_503 import CreateAudienceResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | CreateAudienceResponse402
     | CreateAudienceResponse403
     | CreateAudienceResponse404
+    | CreateAudienceResponse422
     | CreateAudienceResponse429
     | CreateAudienceResponse500
     | CreateAudienceResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = CreateAudienceResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = CreateAudienceResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | CreateAudienceResponse402
     | CreateAudienceResponse403
     | CreateAudienceResponse404
+    | CreateAudienceResponse422
     | CreateAudienceResponse429
     | CreateAudienceResponse500
     | CreateAudienceResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | CreateAudienceResponse402
     | CreateAudienceResponse403
     | CreateAudienceResponse404
+    | CreateAudienceResponse422
     | CreateAudienceResponse429
     | CreateAudienceResponse500
     | CreateAudienceResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CreateAudienceResponse200 | CreateAudienceResponse400 | CreateAudienceResponse401 | CreateAudienceResponse402 | CreateAudienceResponse403 | CreateAudienceResponse404 | CreateAudienceResponse429 | CreateAudienceResponse500 | CreateAudienceResponse503]
+        Response[CreateAudienceResponse200 | CreateAudienceResponse400 | CreateAudienceResponse401 | CreateAudienceResponse402 | CreateAudienceResponse403 | CreateAudienceResponse404 | CreateAudienceResponse422 | CreateAudienceResponse429 | CreateAudienceResponse500 | CreateAudienceResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | CreateAudienceResponse402
     | CreateAudienceResponse403
     | CreateAudienceResponse404
+    | CreateAudienceResponse422
     | CreateAudienceResponse429
     | CreateAudienceResponse500
     | CreateAudienceResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CreateAudienceResponse200 | CreateAudienceResponse400 | CreateAudienceResponse401 | CreateAudienceResponse402 | CreateAudienceResponse403 | CreateAudienceResponse404 | CreateAudienceResponse429 | CreateAudienceResponse500 | CreateAudienceResponse503
+        CreateAudienceResponse200 | CreateAudienceResponse400 | CreateAudienceResponse401 | CreateAudienceResponse402 | CreateAudienceResponse403 | CreateAudienceResponse404 | CreateAudienceResponse422 | CreateAudienceResponse429 | CreateAudienceResponse500 | CreateAudienceResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | CreateAudienceResponse402
     | CreateAudienceResponse403
     | CreateAudienceResponse404
+    | CreateAudienceResponse422
     | CreateAudienceResponse429
     | CreateAudienceResponse500
     | CreateAudienceResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CreateAudienceResponse200 | CreateAudienceResponse400 | CreateAudienceResponse401 | CreateAudienceResponse402 | CreateAudienceResponse403 | CreateAudienceResponse404 | CreateAudienceResponse429 | CreateAudienceResponse500 | CreateAudienceResponse503]
+        Response[CreateAudienceResponse200 | CreateAudienceResponse400 | CreateAudienceResponse401 | CreateAudienceResponse402 | CreateAudienceResponse403 | CreateAudienceResponse404 | CreateAudienceResponse422 | CreateAudienceResponse429 | CreateAudienceResponse500 | CreateAudienceResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | CreateAudienceResponse402
     | CreateAudienceResponse403
     | CreateAudienceResponse404
+    | CreateAudienceResponse422
     | CreateAudienceResponse429
     | CreateAudienceResponse500
     | CreateAudienceResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CreateAudienceResponse200 | CreateAudienceResponse400 | CreateAudienceResponse401 | CreateAudienceResponse402 | CreateAudienceResponse403 | CreateAudienceResponse404 | CreateAudienceResponse429 | CreateAudienceResponse500 | CreateAudienceResponse503
+        CreateAudienceResponse200 | CreateAudienceResponse400 | CreateAudienceResponse401 | CreateAudienceResponse402 | CreateAudienceResponse403 | CreateAudienceResponse404 | CreateAudienceResponse422 | CreateAudienceResponse429 | CreateAudienceResponse500 | CreateAudienceResponse503
     """
 
     return (

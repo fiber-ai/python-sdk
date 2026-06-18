@@ -12,6 +12,7 @@ from ...models.cancel_batch_contact_details_response_401 import CancelBatchConta
 from ...models.cancel_batch_contact_details_response_402 import CancelBatchContactDetailsResponse402
 from ...models.cancel_batch_contact_details_response_403 import CancelBatchContactDetailsResponse403
 from ...models.cancel_batch_contact_details_response_404 import CancelBatchContactDetailsResponse404
+from ...models.cancel_batch_contact_details_response_422 import CancelBatchContactDetailsResponse422
 from ...models.cancel_batch_contact_details_response_429 import CancelBatchContactDetailsResponse429
 from ...models.cancel_batch_contact_details_response_500 import CancelBatchContactDetailsResponse500
 from ...models.cancel_batch_contact_details_response_503 import CancelBatchContactDetailsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | CancelBatchContactDetailsResponse402
     | CancelBatchContactDetailsResponse403
     | CancelBatchContactDetailsResponse404
+    | CancelBatchContactDetailsResponse422
     | CancelBatchContactDetailsResponse429
     | CancelBatchContactDetailsResponse500
     | CancelBatchContactDetailsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = CancelBatchContactDetailsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = CancelBatchContactDetailsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | CancelBatchContactDetailsResponse402
     | CancelBatchContactDetailsResponse403
     | CancelBatchContactDetailsResponse404
+    | CancelBatchContactDetailsResponse422
     | CancelBatchContactDetailsResponse429
     | CancelBatchContactDetailsResponse500
     | CancelBatchContactDetailsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | CancelBatchContactDetailsResponse402
     | CancelBatchContactDetailsResponse403
     | CancelBatchContactDetailsResponse404
+    | CancelBatchContactDetailsResponse422
     | CancelBatchContactDetailsResponse429
     | CancelBatchContactDetailsResponse500
     | CancelBatchContactDetailsResponse503
@@ -153,7 +162,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CancelBatchContactDetailsResponse200 | CancelBatchContactDetailsResponse400 | CancelBatchContactDetailsResponse401 | CancelBatchContactDetailsResponse402 | CancelBatchContactDetailsResponse403 | CancelBatchContactDetailsResponse404 | CancelBatchContactDetailsResponse429 | CancelBatchContactDetailsResponse500 | CancelBatchContactDetailsResponse503]
+        Response[CancelBatchContactDetailsResponse200 | CancelBatchContactDetailsResponse400 | CancelBatchContactDetailsResponse401 | CancelBatchContactDetailsResponse402 | CancelBatchContactDetailsResponse403 | CancelBatchContactDetailsResponse404 | CancelBatchContactDetailsResponse422 | CancelBatchContactDetailsResponse429 | CancelBatchContactDetailsResponse500 | CancelBatchContactDetailsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -178,6 +187,7 @@ def sync(
     | CancelBatchContactDetailsResponse402
     | CancelBatchContactDetailsResponse403
     | CancelBatchContactDetailsResponse404
+    | CancelBatchContactDetailsResponse422
     | CancelBatchContactDetailsResponse429
     | CancelBatchContactDetailsResponse500
     | CancelBatchContactDetailsResponse503
@@ -198,7 +208,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CancelBatchContactDetailsResponse200 | CancelBatchContactDetailsResponse400 | CancelBatchContactDetailsResponse401 | CancelBatchContactDetailsResponse402 | CancelBatchContactDetailsResponse403 | CancelBatchContactDetailsResponse404 | CancelBatchContactDetailsResponse429 | CancelBatchContactDetailsResponse500 | CancelBatchContactDetailsResponse503
+        CancelBatchContactDetailsResponse200 | CancelBatchContactDetailsResponse400 | CancelBatchContactDetailsResponse401 | CancelBatchContactDetailsResponse402 | CancelBatchContactDetailsResponse403 | CancelBatchContactDetailsResponse404 | CancelBatchContactDetailsResponse422 | CancelBatchContactDetailsResponse429 | CancelBatchContactDetailsResponse500 | CancelBatchContactDetailsResponse503
     """
 
     return sync_detailed(
@@ -218,6 +228,7 @@ async def asyncio_detailed(
     | CancelBatchContactDetailsResponse402
     | CancelBatchContactDetailsResponse403
     | CancelBatchContactDetailsResponse404
+    | CancelBatchContactDetailsResponse422
     | CancelBatchContactDetailsResponse429
     | CancelBatchContactDetailsResponse500
     | CancelBatchContactDetailsResponse503
@@ -237,7 +248,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CancelBatchContactDetailsResponse200 | CancelBatchContactDetailsResponse400 | CancelBatchContactDetailsResponse401 | CancelBatchContactDetailsResponse402 | CancelBatchContactDetailsResponse403 | CancelBatchContactDetailsResponse404 | CancelBatchContactDetailsResponse429 | CancelBatchContactDetailsResponse500 | CancelBatchContactDetailsResponse503]
+        Response[CancelBatchContactDetailsResponse200 | CancelBatchContactDetailsResponse400 | CancelBatchContactDetailsResponse401 | CancelBatchContactDetailsResponse402 | CancelBatchContactDetailsResponse403 | CancelBatchContactDetailsResponse404 | CancelBatchContactDetailsResponse422 | CancelBatchContactDetailsResponse429 | CancelBatchContactDetailsResponse500 | CancelBatchContactDetailsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -260,6 +271,7 @@ async def asyncio(
     | CancelBatchContactDetailsResponse402
     | CancelBatchContactDetailsResponse403
     | CancelBatchContactDetailsResponse404
+    | CancelBatchContactDetailsResponse422
     | CancelBatchContactDetailsResponse429
     | CancelBatchContactDetailsResponse500
     | CancelBatchContactDetailsResponse503
@@ -280,7 +292,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CancelBatchContactDetailsResponse200 | CancelBatchContactDetailsResponse400 | CancelBatchContactDetailsResponse401 | CancelBatchContactDetailsResponse402 | CancelBatchContactDetailsResponse403 | CancelBatchContactDetailsResponse404 | CancelBatchContactDetailsResponse429 | CancelBatchContactDetailsResponse500 | CancelBatchContactDetailsResponse503
+        CancelBatchContactDetailsResponse200 | CancelBatchContactDetailsResponse400 | CancelBatchContactDetailsResponse401 | CancelBatchContactDetailsResponse402 | CancelBatchContactDetailsResponse403 | CancelBatchContactDetailsResponse404 | CancelBatchContactDetailsResponse422 | CancelBatchContactDetailsResponse429 | CancelBatchContactDetailsResponse500 | CancelBatchContactDetailsResponse503
     """
 
     return (

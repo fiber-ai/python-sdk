@@ -6,6 +6,7 @@ from typing import Any, Literal, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.department_size_threshold_department import DepartmentSizeThresholdDepartment
 from ..models.department_size_threshold_direction import DepartmentSizeThresholdDirection
 from ..types import UNSET, Unset
 
@@ -18,21 +19,24 @@ class DepartmentSizeThreshold:
     Attributes:
         type_ (Literal['department_size_threshold']):
         entity_type (Literal['company']):
-        department (str): Department name to track (e.g. 'Engineering', 'Sales'). Matched against the company's
+        department (DepartmentSizeThresholdDepartment): Department to track. Matched against the company's
             organizational structure.
         threshold (int): The employee count threshold to watch for crossing
         direction (DepartmentSizeThresholdDirection): Whether to alert when department size crosses above or below the
             threshold
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
     """
 
     type_: Literal["department_size_threshold"]
     entity_type: Literal["company"]
-    department: str
+    department: DepartmentSizeThresholdDepartment
     threshold: int
     direction: DepartmentSizeThresholdDirection
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -40,7 +44,7 @@ class DepartmentSizeThreshold:
 
         entity_type = self.entity_type
 
-        department = self.department
+        department = self.department.value
 
         threshold = self.threshold
 
@@ -51,6 +55,8 @@ class DepartmentSizeThreshold:
             lookback_days = UNSET
         else:
             lookback_days = self.lookback_days
+
+        is_dummy = self.is_dummy
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -65,6 +71,8 @@ class DepartmentSizeThreshold:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
 
         return field_dict
 
@@ -79,7 +87,7 @@ class DepartmentSizeThreshold:
         if entity_type != "company":
             raise ValueError(f"entityType must match const 'company', got '{entity_type}'")
 
-        department = d.pop("department")
+        department = DepartmentSizeThresholdDepartment(d.pop("department"))
 
         threshold = d.pop("threshold")
 
@@ -94,6 +102,8 @@ class DepartmentSizeThreshold:
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
+        is_dummy = d.pop("isDummy", UNSET)
+
         department_size_threshold = cls(
             type_=type_,
             entity_type=entity_type,
@@ -101,6 +111,7 @@ class DepartmentSizeThreshold:
             threshold=threshold,
             direction=direction,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
         )
 
         department_size_threshold.additional_properties = d

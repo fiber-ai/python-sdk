@@ -12,6 +12,7 @@ from ...models.tiktok_search_hashtag_response_401 import TiktokSearchHashtagResp
 from ...models.tiktok_search_hashtag_response_402 import TiktokSearchHashtagResponse402
 from ...models.tiktok_search_hashtag_response_403 import TiktokSearchHashtagResponse403
 from ...models.tiktok_search_hashtag_response_404 import TiktokSearchHashtagResponse404
+from ...models.tiktok_search_hashtag_response_422 import TiktokSearchHashtagResponse422
 from ...models.tiktok_search_hashtag_response_429 import TiktokSearchHashtagResponse429
 from ...models.tiktok_search_hashtag_response_500 import TiktokSearchHashtagResponse500
 from ...models.tiktok_search_hashtag_response_503 import TiktokSearchHashtagResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | TiktokSearchHashtagResponse402
     | TiktokSearchHashtagResponse403
     | TiktokSearchHashtagResponse404
+    | TiktokSearchHashtagResponse422
     | TiktokSearchHashtagResponse429
     | TiktokSearchHashtagResponse500
     | TiktokSearchHashtagResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = TiktokSearchHashtagResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = TiktokSearchHashtagResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | TiktokSearchHashtagResponse402
     | TiktokSearchHashtagResponse403
     | TiktokSearchHashtagResponse404
+    | TiktokSearchHashtagResponse422
     | TiktokSearchHashtagResponse429
     | TiktokSearchHashtagResponse500
     | TiktokSearchHashtagResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | TiktokSearchHashtagResponse402
     | TiktokSearchHashtagResponse403
     | TiktokSearchHashtagResponse404
+    | TiktokSearchHashtagResponse422
     | TiktokSearchHashtagResponse429
     | TiktokSearchHashtagResponse500
     | TiktokSearchHashtagResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokSearchHashtagResponse200 | TiktokSearchHashtagResponse400 | TiktokSearchHashtagResponse401 | TiktokSearchHashtagResponse402 | TiktokSearchHashtagResponse403 | TiktokSearchHashtagResponse404 | TiktokSearchHashtagResponse429 | TiktokSearchHashtagResponse500 | TiktokSearchHashtagResponse503]
+        Response[TiktokSearchHashtagResponse200 | TiktokSearchHashtagResponse400 | TiktokSearchHashtagResponse401 | TiktokSearchHashtagResponse402 | TiktokSearchHashtagResponse403 | TiktokSearchHashtagResponse404 | TiktokSearchHashtagResponse422 | TiktokSearchHashtagResponse429 | TiktokSearchHashtagResponse500 | TiktokSearchHashtagResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | TiktokSearchHashtagResponse402
     | TiktokSearchHashtagResponse403
     | TiktokSearchHashtagResponse404
+    | TiktokSearchHashtagResponse422
     | TiktokSearchHashtagResponse429
     | TiktokSearchHashtagResponse500
     | TiktokSearchHashtagResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokSearchHashtagResponse200 | TiktokSearchHashtagResponse400 | TiktokSearchHashtagResponse401 | TiktokSearchHashtagResponse402 | TiktokSearchHashtagResponse403 | TiktokSearchHashtagResponse404 | TiktokSearchHashtagResponse429 | TiktokSearchHashtagResponse500 | TiktokSearchHashtagResponse503
+        TiktokSearchHashtagResponse200 | TiktokSearchHashtagResponse400 | TiktokSearchHashtagResponse401 | TiktokSearchHashtagResponse402 | TiktokSearchHashtagResponse403 | TiktokSearchHashtagResponse404 | TiktokSearchHashtagResponse422 | TiktokSearchHashtagResponse429 | TiktokSearchHashtagResponse500 | TiktokSearchHashtagResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | TiktokSearchHashtagResponse402
     | TiktokSearchHashtagResponse403
     | TiktokSearchHashtagResponse404
+    | TiktokSearchHashtagResponse422
     | TiktokSearchHashtagResponse429
     | TiktokSearchHashtagResponse500
     | TiktokSearchHashtagResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokSearchHashtagResponse200 | TiktokSearchHashtagResponse400 | TiktokSearchHashtagResponse401 | TiktokSearchHashtagResponse402 | TiktokSearchHashtagResponse403 | TiktokSearchHashtagResponse404 | TiktokSearchHashtagResponse429 | TiktokSearchHashtagResponse500 | TiktokSearchHashtagResponse503]
+        Response[TiktokSearchHashtagResponse200 | TiktokSearchHashtagResponse400 | TiktokSearchHashtagResponse401 | TiktokSearchHashtagResponse402 | TiktokSearchHashtagResponse403 | TiktokSearchHashtagResponse404 | TiktokSearchHashtagResponse422 | TiktokSearchHashtagResponse429 | TiktokSearchHashtagResponse500 | TiktokSearchHashtagResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | TiktokSearchHashtagResponse402
     | TiktokSearchHashtagResponse403
     | TiktokSearchHashtagResponse404
+    | TiktokSearchHashtagResponse422
     | TiktokSearchHashtagResponse429
     | TiktokSearchHashtagResponse500
     | TiktokSearchHashtagResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokSearchHashtagResponse200 | TiktokSearchHashtagResponse400 | TiktokSearchHashtagResponse401 | TiktokSearchHashtagResponse402 | TiktokSearchHashtagResponse403 | TiktokSearchHashtagResponse404 | TiktokSearchHashtagResponse429 | TiktokSearchHashtagResponse500 | TiktokSearchHashtagResponse503
+        TiktokSearchHashtagResponse200 | TiktokSearchHashtagResponse400 | TiktokSearchHashtagResponse401 | TiktokSearchHashtagResponse402 | TiktokSearchHashtagResponse403 | TiktokSearchHashtagResponse404 | TiktokSearchHashtagResponse422 | TiktokSearchHashtagResponse429 | TiktokSearchHashtagResponse500 | TiktokSearchHashtagResponse503
     """
 
     return (

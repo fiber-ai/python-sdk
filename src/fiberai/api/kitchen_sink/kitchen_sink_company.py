@@ -12,6 +12,7 @@ from ...models.kitchen_sink_company_response_401 import KitchenSinkCompanyRespon
 from ...models.kitchen_sink_company_response_402 import KitchenSinkCompanyResponse402
 from ...models.kitchen_sink_company_response_403 import KitchenSinkCompanyResponse403
 from ...models.kitchen_sink_company_response_404 import KitchenSinkCompanyResponse404
+from ...models.kitchen_sink_company_response_422 import KitchenSinkCompanyResponse422
 from ...models.kitchen_sink_company_response_429 import KitchenSinkCompanyResponse429
 from ...models.kitchen_sink_company_response_500 import KitchenSinkCompanyResponse500
 from ...models.kitchen_sink_company_response_503 import KitchenSinkCompanyResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | KitchenSinkCompanyResponse402
     | KitchenSinkCompanyResponse403
     | KitchenSinkCompanyResponse404
+    | KitchenSinkCompanyResponse422
     | KitchenSinkCompanyResponse429
     | KitchenSinkCompanyResponse500
     | KitchenSinkCompanyResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = KitchenSinkCompanyResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = KitchenSinkCompanyResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | KitchenSinkCompanyResponse402
     | KitchenSinkCompanyResponse403
     | KitchenSinkCompanyResponse404
+    | KitchenSinkCompanyResponse422
     | KitchenSinkCompanyResponse429
     | KitchenSinkCompanyResponse500
     | KitchenSinkCompanyResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | KitchenSinkCompanyResponse402
     | KitchenSinkCompanyResponse403
     | KitchenSinkCompanyResponse404
+    | KitchenSinkCompanyResponse422
     | KitchenSinkCompanyResponse429
     | KitchenSinkCompanyResponse500
     | KitchenSinkCompanyResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[KitchenSinkCompanyResponse200 | KitchenSinkCompanyResponse400 | KitchenSinkCompanyResponse401 | KitchenSinkCompanyResponse402 | KitchenSinkCompanyResponse403 | KitchenSinkCompanyResponse404 | KitchenSinkCompanyResponse429 | KitchenSinkCompanyResponse500 | KitchenSinkCompanyResponse503]
+        Response[KitchenSinkCompanyResponse200 | KitchenSinkCompanyResponse400 | KitchenSinkCompanyResponse401 | KitchenSinkCompanyResponse402 | KitchenSinkCompanyResponse403 | KitchenSinkCompanyResponse404 | KitchenSinkCompanyResponse422 | KitchenSinkCompanyResponse429 | KitchenSinkCompanyResponse500 | KitchenSinkCompanyResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | KitchenSinkCompanyResponse402
     | KitchenSinkCompanyResponse403
     | KitchenSinkCompanyResponse404
+    | KitchenSinkCompanyResponse422
     | KitchenSinkCompanyResponse429
     | KitchenSinkCompanyResponse500
     | KitchenSinkCompanyResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        KitchenSinkCompanyResponse200 | KitchenSinkCompanyResponse400 | KitchenSinkCompanyResponse401 | KitchenSinkCompanyResponse402 | KitchenSinkCompanyResponse403 | KitchenSinkCompanyResponse404 | KitchenSinkCompanyResponse429 | KitchenSinkCompanyResponse500 | KitchenSinkCompanyResponse503
+        KitchenSinkCompanyResponse200 | KitchenSinkCompanyResponse400 | KitchenSinkCompanyResponse401 | KitchenSinkCompanyResponse402 | KitchenSinkCompanyResponse403 | KitchenSinkCompanyResponse404 | KitchenSinkCompanyResponse422 | KitchenSinkCompanyResponse429 | KitchenSinkCompanyResponse500 | KitchenSinkCompanyResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | KitchenSinkCompanyResponse402
     | KitchenSinkCompanyResponse403
     | KitchenSinkCompanyResponse404
+    | KitchenSinkCompanyResponse422
     | KitchenSinkCompanyResponse429
     | KitchenSinkCompanyResponse500
     | KitchenSinkCompanyResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[KitchenSinkCompanyResponse200 | KitchenSinkCompanyResponse400 | KitchenSinkCompanyResponse401 | KitchenSinkCompanyResponse402 | KitchenSinkCompanyResponse403 | KitchenSinkCompanyResponse404 | KitchenSinkCompanyResponse429 | KitchenSinkCompanyResponse500 | KitchenSinkCompanyResponse503]
+        Response[KitchenSinkCompanyResponse200 | KitchenSinkCompanyResponse400 | KitchenSinkCompanyResponse401 | KitchenSinkCompanyResponse402 | KitchenSinkCompanyResponse403 | KitchenSinkCompanyResponse404 | KitchenSinkCompanyResponse422 | KitchenSinkCompanyResponse429 | KitchenSinkCompanyResponse500 | KitchenSinkCompanyResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | KitchenSinkCompanyResponse402
     | KitchenSinkCompanyResponse403
     | KitchenSinkCompanyResponse404
+    | KitchenSinkCompanyResponse422
     | KitchenSinkCompanyResponse429
     | KitchenSinkCompanyResponse500
     | KitchenSinkCompanyResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        KitchenSinkCompanyResponse200 | KitchenSinkCompanyResponse400 | KitchenSinkCompanyResponse401 | KitchenSinkCompanyResponse402 | KitchenSinkCompanyResponse403 | KitchenSinkCompanyResponse404 | KitchenSinkCompanyResponse429 | KitchenSinkCompanyResponse500 | KitchenSinkCompanyResponse503
+        KitchenSinkCompanyResponse200 | KitchenSinkCompanyResponse400 | KitchenSinkCompanyResponse401 | KitchenSinkCompanyResponse402 | KitchenSinkCompanyResponse403 | KitchenSinkCompanyResponse404 | KitchenSinkCompanyResponse422 | KitchenSinkCompanyResponse429 | KitchenSinkCompanyResponse500 | KitchenSinkCompanyResponse503
     """
 
     return (

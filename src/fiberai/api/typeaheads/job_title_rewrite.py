@@ -12,6 +12,7 @@ from ...models.job_title_rewrite_response_401 import JobTitleRewriteResponse401
 from ...models.job_title_rewrite_response_402 import JobTitleRewriteResponse402
 from ...models.job_title_rewrite_response_403 import JobTitleRewriteResponse403
 from ...models.job_title_rewrite_response_404 import JobTitleRewriteResponse404
+from ...models.job_title_rewrite_response_422 import JobTitleRewriteResponse422
 from ...models.job_title_rewrite_response_429 import JobTitleRewriteResponse429
 from ...models.job_title_rewrite_response_500 import JobTitleRewriteResponse500
 from ...models.job_title_rewrite_response_503 import JobTitleRewriteResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | JobTitleRewriteResponse402
     | JobTitleRewriteResponse403
     | JobTitleRewriteResponse404
+    | JobTitleRewriteResponse422
     | JobTitleRewriteResponse429
     | JobTitleRewriteResponse500
     | JobTitleRewriteResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = JobTitleRewriteResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = JobTitleRewriteResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | JobTitleRewriteResponse402
     | JobTitleRewriteResponse403
     | JobTitleRewriteResponse404
+    | JobTitleRewriteResponse422
     | JobTitleRewriteResponse429
     | JobTitleRewriteResponse500
     | JobTitleRewriteResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | JobTitleRewriteResponse402
     | JobTitleRewriteResponse403
     | JobTitleRewriteResponse404
+    | JobTitleRewriteResponse422
     | JobTitleRewriteResponse429
     | JobTitleRewriteResponse500
     | JobTitleRewriteResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[JobTitleRewriteResponse200 | JobTitleRewriteResponse400 | JobTitleRewriteResponse401 | JobTitleRewriteResponse402 | JobTitleRewriteResponse403 | JobTitleRewriteResponse404 | JobTitleRewriteResponse429 | JobTitleRewriteResponse500 | JobTitleRewriteResponse503]
+        Response[JobTitleRewriteResponse200 | JobTitleRewriteResponse400 | JobTitleRewriteResponse401 | JobTitleRewriteResponse402 | JobTitleRewriteResponse403 | JobTitleRewriteResponse404 | JobTitleRewriteResponse422 | JobTitleRewriteResponse429 | JobTitleRewriteResponse500 | JobTitleRewriteResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | JobTitleRewriteResponse402
     | JobTitleRewriteResponse403
     | JobTitleRewriteResponse404
+    | JobTitleRewriteResponse422
     | JobTitleRewriteResponse429
     | JobTitleRewriteResponse500
     | JobTitleRewriteResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        JobTitleRewriteResponse200 | JobTitleRewriteResponse400 | JobTitleRewriteResponse401 | JobTitleRewriteResponse402 | JobTitleRewriteResponse403 | JobTitleRewriteResponse404 | JobTitleRewriteResponse429 | JobTitleRewriteResponse500 | JobTitleRewriteResponse503
+        JobTitleRewriteResponse200 | JobTitleRewriteResponse400 | JobTitleRewriteResponse401 | JobTitleRewriteResponse402 | JobTitleRewriteResponse403 | JobTitleRewriteResponse404 | JobTitleRewriteResponse422 | JobTitleRewriteResponse429 | JobTitleRewriteResponse500 | JobTitleRewriteResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | JobTitleRewriteResponse402
     | JobTitleRewriteResponse403
     | JobTitleRewriteResponse404
+    | JobTitleRewriteResponse422
     | JobTitleRewriteResponse429
     | JobTitleRewriteResponse500
     | JobTitleRewriteResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[JobTitleRewriteResponse200 | JobTitleRewriteResponse400 | JobTitleRewriteResponse401 | JobTitleRewriteResponse402 | JobTitleRewriteResponse403 | JobTitleRewriteResponse404 | JobTitleRewriteResponse429 | JobTitleRewriteResponse500 | JobTitleRewriteResponse503]
+        Response[JobTitleRewriteResponse200 | JobTitleRewriteResponse400 | JobTitleRewriteResponse401 | JobTitleRewriteResponse402 | JobTitleRewriteResponse403 | JobTitleRewriteResponse404 | JobTitleRewriteResponse422 | JobTitleRewriteResponse429 | JobTitleRewriteResponse500 | JobTitleRewriteResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | JobTitleRewriteResponse402
     | JobTitleRewriteResponse403
     | JobTitleRewriteResponse404
+    | JobTitleRewriteResponse422
     | JobTitleRewriteResponse429
     | JobTitleRewriteResponse500
     | JobTitleRewriteResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        JobTitleRewriteResponse200 | JobTitleRewriteResponse400 | JobTitleRewriteResponse401 | JobTitleRewriteResponse402 | JobTitleRewriteResponse403 | JobTitleRewriteResponse404 | JobTitleRewriteResponse429 | JobTitleRewriteResponse500 | JobTitleRewriteResponse503
+        JobTitleRewriteResponse200 | JobTitleRewriteResponse400 | JobTitleRewriteResponse401 | JobTitleRewriteResponse402 | JobTitleRewriteResponse403 | JobTitleRewriteResponse404 | JobTitleRewriteResponse422 | JobTitleRewriteResponse429 | JobTitleRewriteResponse500 | JobTitleRewriteResponse503
     """
 
     return (

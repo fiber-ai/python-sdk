@@ -12,6 +12,7 @@ from ...models.lite_contact_reveal_response_401 import LiteContactRevealResponse
 from ...models.lite_contact_reveal_response_402 import LiteContactRevealResponse402
 from ...models.lite_contact_reveal_response_403 import LiteContactRevealResponse403
 from ...models.lite_contact_reveal_response_404 import LiteContactRevealResponse404
+from ...models.lite_contact_reveal_response_422 import LiteContactRevealResponse422
 from ...models.lite_contact_reveal_response_429 import LiteContactRevealResponse429
 from ...models.lite_contact_reveal_response_500 import LiteContactRevealResponse500
 from ...models.lite_contact_reveal_response_503 import LiteContactRevealResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | LiteContactRevealResponse402
     | LiteContactRevealResponse403
     | LiteContactRevealResponse404
+    | LiteContactRevealResponse422
     | LiteContactRevealResponse429
     | LiteContactRevealResponse500
     | LiteContactRevealResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = LiteContactRevealResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = LiteContactRevealResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | LiteContactRevealResponse402
     | LiteContactRevealResponse403
     | LiteContactRevealResponse404
+    | LiteContactRevealResponse422
     | LiteContactRevealResponse429
     | LiteContactRevealResponse500
     | LiteContactRevealResponse503
@@ -134,20 +142,22 @@ def sync_detailed(
     | LiteContactRevealResponse402
     | LiteContactRevealResponse403
     | LiteContactRevealResponse404
+    | LiteContactRevealResponse422
     | LiteContactRevealResponse429
     | LiteContactRevealResponse500
     | LiteContactRevealResponse503
 ]:
     r"""Reveal contact details (lite)
 
-     Low-cost contact reveal path that searches differently. Compared with other contact reveal
-    endpoints, this endpoint is priced lower but has lower yield (it may miss contacts that other
+     Low-cost contact reveal path that searches for emails and phone numbers. Compared with other contact
+    reveal endpoints, this endpoint is priced lower but has lower yield (it may miss contacts that other
     endpoints can find).
 
     <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per lite email reveal&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per lite email reveal + 2 credits per lite phone
+    reveal&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
+    vary.\">ⓘ</span></span>
 
     <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
     your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
@@ -160,7 +170,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[LiteContactRevealResponse200 | LiteContactRevealResponse400 | LiteContactRevealResponse401 | LiteContactRevealResponse402 | LiteContactRevealResponse403 | LiteContactRevealResponse404 | LiteContactRevealResponse429 | LiteContactRevealResponse500 | LiteContactRevealResponse503]
+        Response[LiteContactRevealResponse200 | LiteContactRevealResponse400 | LiteContactRevealResponse401 | LiteContactRevealResponse402 | LiteContactRevealResponse403 | LiteContactRevealResponse404 | LiteContactRevealResponse422 | LiteContactRevealResponse429 | LiteContactRevealResponse500 | LiteContactRevealResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -185,6 +195,7 @@ def sync(
     | LiteContactRevealResponse402
     | LiteContactRevealResponse403
     | LiteContactRevealResponse404
+    | LiteContactRevealResponse422
     | LiteContactRevealResponse429
     | LiteContactRevealResponse500
     | LiteContactRevealResponse503
@@ -192,14 +203,15 @@ def sync(
 ):
     r"""Reveal contact details (lite)
 
-     Low-cost contact reveal path that searches differently. Compared with other contact reveal
-    endpoints, this endpoint is priced lower but has lower yield (it may miss contacts that other
+     Low-cost contact reveal path that searches for emails and phone numbers. Compared with other contact
+    reveal endpoints, this endpoint is priced lower but has lower yield (it may miss contacts that other
     endpoints can find).
 
     <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per lite email reveal&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per lite email reveal + 2 credits per lite phone
+    reveal&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
+    vary.\">ⓘ</span></span>
 
     <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
     your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
@@ -212,7 +224,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        LiteContactRevealResponse200 | LiteContactRevealResponse400 | LiteContactRevealResponse401 | LiteContactRevealResponse402 | LiteContactRevealResponse403 | LiteContactRevealResponse404 | LiteContactRevealResponse429 | LiteContactRevealResponse500 | LiteContactRevealResponse503
+        LiteContactRevealResponse200 | LiteContactRevealResponse400 | LiteContactRevealResponse401 | LiteContactRevealResponse402 | LiteContactRevealResponse403 | LiteContactRevealResponse404 | LiteContactRevealResponse422 | LiteContactRevealResponse429 | LiteContactRevealResponse500 | LiteContactRevealResponse503
     """
 
     return sync_detailed(
@@ -232,20 +244,22 @@ async def asyncio_detailed(
     | LiteContactRevealResponse402
     | LiteContactRevealResponse403
     | LiteContactRevealResponse404
+    | LiteContactRevealResponse422
     | LiteContactRevealResponse429
     | LiteContactRevealResponse500
     | LiteContactRevealResponse503
 ]:
     r"""Reveal contact details (lite)
 
-     Low-cost contact reveal path that searches differently. Compared with other contact reveal
-    endpoints, this endpoint is priced lower but has lower yield (it may miss contacts that other
+     Low-cost contact reveal path that searches for emails and phone numbers. Compared with other contact
+    reveal endpoints, this endpoint is priced lower but has lower yield (it may miss contacts that other
     endpoints can find).
 
     <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per lite email reveal&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per lite email reveal + 2 credits per lite phone
+    reveal&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
+    vary.\">ⓘ</span></span>
 
     <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
     your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
@@ -258,7 +272,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[LiteContactRevealResponse200 | LiteContactRevealResponse400 | LiteContactRevealResponse401 | LiteContactRevealResponse402 | LiteContactRevealResponse403 | LiteContactRevealResponse404 | LiteContactRevealResponse429 | LiteContactRevealResponse500 | LiteContactRevealResponse503]
+        Response[LiteContactRevealResponse200 | LiteContactRevealResponse400 | LiteContactRevealResponse401 | LiteContactRevealResponse402 | LiteContactRevealResponse403 | LiteContactRevealResponse404 | LiteContactRevealResponse422 | LiteContactRevealResponse429 | LiteContactRevealResponse500 | LiteContactRevealResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -281,6 +295,7 @@ async def asyncio(
     | LiteContactRevealResponse402
     | LiteContactRevealResponse403
     | LiteContactRevealResponse404
+    | LiteContactRevealResponse422
     | LiteContactRevealResponse429
     | LiteContactRevealResponse500
     | LiteContactRevealResponse503
@@ -288,14 +303,15 @@ async def asyncio(
 ):
     r"""Reveal contact details (lite)
 
-     Low-cost contact reveal path that searches differently. Compared with other contact reveal
-    endpoints, this endpoint is priced lower but has lower yield (it may miss contacts that other
+     Low-cost contact reveal path that searches for emails and phone numbers. Compared with other contact
+    reveal endpoints, this endpoint is priced lower but has lower yield (it may miss contacts that other
     endpoints can find).
 
     <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per lite email reveal&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per lite email reveal + 2 credits per lite phone
+    reveal&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
+    vary.\">ⓘ</span></span>
 
     <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
     your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
@@ -308,7 +324,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        LiteContactRevealResponse200 | LiteContactRevealResponse400 | LiteContactRevealResponse401 | LiteContactRevealResponse402 | LiteContactRevealResponse403 | LiteContactRevealResponse404 | LiteContactRevealResponse429 | LiteContactRevealResponse500 | LiteContactRevealResponse503
+        LiteContactRevealResponse200 | LiteContactRevealResponse400 | LiteContactRevealResponse401 | LiteContactRevealResponse402 | LiteContactRevealResponse403 | LiteContactRevealResponse404 | LiteContactRevealResponse422 | LiteContactRevealResponse429 | LiteContactRevealResponse500 | LiteContactRevealResponse503
     """
 
     return (

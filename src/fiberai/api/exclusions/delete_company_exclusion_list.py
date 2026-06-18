@@ -12,6 +12,7 @@ from ...models.delete_company_exclusion_list_response_401 import DeleteCompanyEx
 from ...models.delete_company_exclusion_list_response_402 import DeleteCompanyExclusionListResponse402
 from ...models.delete_company_exclusion_list_response_403 import DeleteCompanyExclusionListResponse403
 from ...models.delete_company_exclusion_list_response_404 import DeleteCompanyExclusionListResponse404
+from ...models.delete_company_exclusion_list_response_422 import DeleteCompanyExclusionListResponse422
 from ...models.delete_company_exclusion_list_response_429 import DeleteCompanyExclusionListResponse429
 from ...models.delete_company_exclusion_list_response_500 import DeleteCompanyExclusionListResponse500
 from ...models.delete_company_exclusion_list_response_503 import DeleteCompanyExclusionListResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | DeleteCompanyExclusionListResponse402
     | DeleteCompanyExclusionListResponse403
     | DeleteCompanyExclusionListResponse404
+    | DeleteCompanyExclusionListResponse422
     | DeleteCompanyExclusionListResponse429
     | DeleteCompanyExclusionListResponse500
     | DeleteCompanyExclusionListResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = DeleteCompanyExclusionListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = DeleteCompanyExclusionListResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | DeleteCompanyExclusionListResponse402
     | DeleteCompanyExclusionListResponse403
     | DeleteCompanyExclusionListResponse404
+    | DeleteCompanyExclusionListResponse422
     | DeleteCompanyExclusionListResponse429
     | DeleteCompanyExclusionListResponse500
     | DeleteCompanyExclusionListResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | DeleteCompanyExclusionListResponse402
     | DeleteCompanyExclusionListResponse403
     | DeleteCompanyExclusionListResponse404
+    | DeleteCompanyExclusionListResponse422
     | DeleteCompanyExclusionListResponse429
     | DeleteCompanyExclusionListResponse500
     | DeleteCompanyExclusionListResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DeleteCompanyExclusionListResponse200 | DeleteCompanyExclusionListResponse400 | DeleteCompanyExclusionListResponse401 | DeleteCompanyExclusionListResponse402 | DeleteCompanyExclusionListResponse403 | DeleteCompanyExclusionListResponse404 | DeleteCompanyExclusionListResponse429 | DeleteCompanyExclusionListResponse500 | DeleteCompanyExclusionListResponse503]
+        Response[DeleteCompanyExclusionListResponse200 | DeleteCompanyExclusionListResponse400 | DeleteCompanyExclusionListResponse401 | DeleteCompanyExclusionListResponse402 | DeleteCompanyExclusionListResponse403 | DeleteCompanyExclusionListResponse404 | DeleteCompanyExclusionListResponse422 | DeleteCompanyExclusionListResponse429 | DeleteCompanyExclusionListResponse500 | DeleteCompanyExclusionListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | DeleteCompanyExclusionListResponse402
     | DeleteCompanyExclusionListResponse403
     | DeleteCompanyExclusionListResponse404
+    | DeleteCompanyExclusionListResponse422
     | DeleteCompanyExclusionListResponse429
     | DeleteCompanyExclusionListResponse500
     | DeleteCompanyExclusionListResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DeleteCompanyExclusionListResponse200 | DeleteCompanyExclusionListResponse400 | DeleteCompanyExclusionListResponse401 | DeleteCompanyExclusionListResponse402 | DeleteCompanyExclusionListResponse403 | DeleteCompanyExclusionListResponse404 | DeleteCompanyExclusionListResponse429 | DeleteCompanyExclusionListResponse500 | DeleteCompanyExclusionListResponse503
+        DeleteCompanyExclusionListResponse200 | DeleteCompanyExclusionListResponse400 | DeleteCompanyExclusionListResponse401 | DeleteCompanyExclusionListResponse402 | DeleteCompanyExclusionListResponse403 | DeleteCompanyExclusionListResponse404 | DeleteCompanyExclusionListResponse422 | DeleteCompanyExclusionListResponse429 | DeleteCompanyExclusionListResponse500 | DeleteCompanyExclusionListResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | DeleteCompanyExclusionListResponse402
     | DeleteCompanyExclusionListResponse403
     | DeleteCompanyExclusionListResponse404
+    | DeleteCompanyExclusionListResponse422
     | DeleteCompanyExclusionListResponse429
     | DeleteCompanyExclusionListResponse500
     | DeleteCompanyExclusionListResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DeleteCompanyExclusionListResponse200 | DeleteCompanyExclusionListResponse400 | DeleteCompanyExclusionListResponse401 | DeleteCompanyExclusionListResponse402 | DeleteCompanyExclusionListResponse403 | DeleteCompanyExclusionListResponse404 | DeleteCompanyExclusionListResponse429 | DeleteCompanyExclusionListResponse500 | DeleteCompanyExclusionListResponse503]
+        Response[DeleteCompanyExclusionListResponse200 | DeleteCompanyExclusionListResponse400 | DeleteCompanyExclusionListResponse401 | DeleteCompanyExclusionListResponse402 | DeleteCompanyExclusionListResponse403 | DeleteCompanyExclusionListResponse404 | DeleteCompanyExclusionListResponse422 | DeleteCompanyExclusionListResponse429 | DeleteCompanyExclusionListResponse500 | DeleteCompanyExclusionListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | DeleteCompanyExclusionListResponse402
     | DeleteCompanyExclusionListResponse403
     | DeleteCompanyExclusionListResponse404
+    | DeleteCompanyExclusionListResponse422
     | DeleteCompanyExclusionListResponse429
     | DeleteCompanyExclusionListResponse500
     | DeleteCompanyExclusionListResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DeleteCompanyExclusionListResponse200 | DeleteCompanyExclusionListResponse400 | DeleteCompanyExclusionListResponse401 | DeleteCompanyExclusionListResponse402 | DeleteCompanyExclusionListResponse403 | DeleteCompanyExclusionListResponse404 | DeleteCompanyExclusionListResponse429 | DeleteCompanyExclusionListResponse500 | DeleteCompanyExclusionListResponse503
+        DeleteCompanyExclusionListResponse200 | DeleteCompanyExclusionListResponse400 | DeleteCompanyExclusionListResponse401 | DeleteCompanyExclusionListResponse402 | DeleteCompanyExclusionListResponse403 | DeleteCompanyExclusionListResponse404 | DeleteCompanyExclusionListResponse422 | DeleteCompanyExclusionListResponse429 | DeleteCompanyExclusionListResponse500 | DeleteCompanyExclusionListResponse503
     """
 
     return (

@@ -12,6 +12,7 @@ from ...models.tiktok_unified_search_response_401 import TiktokUnifiedSearchResp
 from ...models.tiktok_unified_search_response_402 import TiktokUnifiedSearchResponse402
 from ...models.tiktok_unified_search_response_403 import TiktokUnifiedSearchResponse403
 from ...models.tiktok_unified_search_response_404 import TiktokUnifiedSearchResponse404
+from ...models.tiktok_unified_search_response_422 import TiktokUnifiedSearchResponse422
 from ...models.tiktok_unified_search_response_429 import TiktokUnifiedSearchResponse429
 from ...models.tiktok_unified_search_response_500 import TiktokUnifiedSearchResponse500
 from ...models.tiktok_unified_search_response_503 import TiktokUnifiedSearchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | TiktokUnifiedSearchResponse402
     | TiktokUnifiedSearchResponse403
     | TiktokUnifiedSearchResponse404
+    | TiktokUnifiedSearchResponse422
     | TiktokUnifiedSearchResponse429
     | TiktokUnifiedSearchResponse500
     | TiktokUnifiedSearchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = TiktokUnifiedSearchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = TiktokUnifiedSearchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | TiktokUnifiedSearchResponse402
     | TiktokUnifiedSearchResponse403
     | TiktokUnifiedSearchResponse404
+    | TiktokUnifiedSearchResponse422
     | TiktokUnifiedSearchResponse429
     | TiktokUnifiedSearchResponse500
     | TiktokUnifiedSearchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | TiktokUnifiedSearchResponse402
     | TiktokUnifiedSearchResponse403
     | TiktokUnifiedSearchResponse404
+    | TiktokUnifiedSearchResponse422
     | TiktokUnifiedSearchResponse429
     | TiktokUnifiedSearchResponse500
     | TiktokUnifiedSearchResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokUnifiedSearchResponse200 | TiktokUnifiedSearchResponse400 | TiktokUnifiedSearchResponse401 | TiktokUnifiedSearchResponse402 | TiktokUnifiedSearchResponse403 | TiktokUnifiedSearchResponse404 | TiktokUnifiedSearchResponse429 | TiktokUnifiedSearchResponse500 | TiktokUnifiedSearchResponse503]
+        Response[TiktokUnifiedSearchResponse200 | TiktokUnifiedSearchResponse400 | TiktokUnifiedSearchResponse401 | TiktokUnifiedSearchResponse402 | TiktokUnifiedSearchResponse403 | TiktokUnifiedSearchResponse404 | TiktokUnifiedSearchResponse422 | TiktokUnifiedSearchResponse429 | TiktokUnifiedSearchResponse500 | TiktokUnifiedSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | TiktokUnifiedSearchResponse402
     | TiktokUnifiedSearchResponse403
     | TiktokUnifiedSearchResponse404
+    | TiktokUnifiedSearchResponse422
     | TiktokUnifiedSearchResponse429
     | TiktokUnifiedSearchResponse500
     | TiktokUnifiedSearchResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokUnifiedSearchResponse200 | TiktokUnifiedSearchResponse400 | TiktokUnifiedSearchResponse401 | TiktokUnifiedSearchResponse402 | TiktokUnifiedSearchResponse403 | TiktokUnifiedSearchResponse404 | TiktokUnifiedSearchResponse429 | TiktokUnifiedSearchResponse500 | TiktokUnifiedSearchResponse503
+        TiktokUnifiedSearchResponse200 | TiktokUnifiedSearchResponse400 | TiktokUnifiedSearchResponse401 | TiktokUnifiedSearchResponse402 | TiktokUnifiedSearchResponse403 | TiktokUnifiedSearchResponse404 | TiktokUnifiedSearchResponse422 | TiktokUnifiedSearchResponse429 | TiktokUnifiedSearchResponse500 | TiktokUnifiedSearchResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | TiktokUnifiedSearchResponse402
     | TiktokUnifiedSearchResponse403
     | TiktokUnifiedSearchResponse404
+    | TiktokUnifiedSearchResponse422
     | TiktokUnifiedSearchResponse429
     | TiktokUnifiedSearchResponse500
     | TiktokUnifiedSearchResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokUnifiedSearchResponse200 | TiktokUnifiedSearchResponse400 | TiktokUnifiedSearchResponse401 | TiktokUnifiedSearchResponse402 | TiktokUnifiedSearchResponse403 | TiktokUnifiedSearchResponse404 | TiktokUnifiedSearchResponse429 | TiktokUnifiedSearchResponse500 | TiktokUnifiedSearchResponse503]
+        Response[TiktokUnifiedSearchResponse200 | TiktokUnifiedSearchResponse400 | TiktokUnifiedSearchResponse401 | TiktokUnifiedSearchResponse402 | TiktokUnifiedSearchResponse403 | TiktokUnifiedSearchResponse404 | TiktokUnifiedSearchResponse422 | TiktokUnifiedSearchResponse429 | TiktokUnifiedSearchResponse500 | TiktokUnifiedSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | TiktokUnifiedSearchResponse402
     | TiktokUnifiedSearchResponse403
     | TiktokUnifiedSearchResponse404
+    | TiktokUnifiedSearchResponse422
     | TiktokUnifiedSearchResponse429
     | TiktokUnifiedSearchResponse500
     | TiktokUnifiedSearchResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokUnifiedSearchResponse200 | TiktokUnifiedSearchResponse400 | TiktokUnifiedSearchResponse401 | TiktokUnifiedSearchResponse402 | TiktokUnifiedSearchResponse403 | TiktokUnifiedSearchResponse404 | TiktokUnifiedSearchResponse429 | TiktokUnifiedSearchResponse500 | TiktokUnifiedSearchResponse503
+        TiktokUnifiedSearchResponse200 | TiktokUnifiedSearchResponse400 | TiktokUnifiedSearchResponse401 | TiktokUnifiedSearchResponse402 | TiktokUnifiedSearchResponse403 | TiktokUnifiedSearchResponse404 | TiktokUnifiedSearchResponse422 | TiktokUnifiedSearchResponse429 | TiktokUnifiedSearchResponse500 | TiktokUnifiedSearchResponse503
     """
 
     return (

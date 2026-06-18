@@ -31,8 +31,12 @@ if TYPE_CHECKING:
     from ..models.new_investor import NewInvestor
     from ..models.new_office_location import NewOfficeLocation
     from ..models.news_with_keyword import NewsWithKeyword
+    from ..models.recent_layoffs import RecentLayoffs
     from ..models.recently_hired_with_title import RecentlyHiredWithTitle
     from ..models.technology_added import TechnologyAdded
+    from ..models.update_tracker_company_list_body_update_rule_flags_type_0_item import (
+        UpdateTrackerCompanyListBodyUpdateRuleFlagsType0Item,
+    )
 
 
 T = TypeVar("T", bound="UpdateTrackerCompanyListBody")
@@ -43,24 +47,28 @@ class UpdateTrackerCompanyListBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        name (None | str | Unset): New name for the list
-        refresh_interval_days (int | None | Unset): New check interval in days
-        is_active (bool | None | Unset): Pause or resume the list
+        name (None | str | Unset): New name for the list.
+        refresh_interval_days (int | None | Unset): New check interval in days.
+        is_active (bool | None | Unset): Pause or resume monitoring on the list.
         tracking_rules (list[AcquiredCompany | CompanyDescriptionChanged | CompanyLogoChanged | CompanyNameChanged |
             CompanyNews | CompanyPosted | CompanyPostedWithKeyword | CompanyStatusChanged | CompanyWentInactive |
             DepartmentSizeThreshold | EmployeeCountMilestone | FollowerCountGrowth | FundingStageChanged |
             HeadcountCrossedThreshold | HeadcountGrowthPercent | HQLocationChanged | JobPostingInFunction |
-            JobPostingWithKeyword | NewFundingRound | NewInvestor | NewOfficeLocation | NewsWithKeyword |
+            JobPostingWithKeyword | NewFundingRound | NewInvestor | NewOfficeLocation | NewsWithKeyword | RecentLayoffs |
             RecentlyHiredWithTitle | TechnologyAdded] | None | Unset): Replace ALL existing rules with this set. Pass empty
-            array to clear all rules. Omit to leave unchanged. Cannot be used with addRules/removeRuleIds.
+            array to clear all rules. Omit to leave unchanged. Cannot be used with `addRules`/`removeRuleIds`.
         add_rules (list[AcquiredCompany | CompanyDescriptionChanged | CompanyLogoChanged | CompanyNameChanged |
             CompanyNews | CompanyPosted | CompanyPostedWithKeyword | CompanyStatusChanged | CompanyWentInactive |
             DepartmentSizeThreshold | EmployeeCountMilestone | FollowerCountGrowth | FundingStageChanged |
             HeadcountCrossedThreshold | HeadcountGrowthPercent | HQLocationChanged | JobPostingInFunction |
-            JobPostingWithKeyword | NewFundingRound | NewInvestor | NewOfficeLocation | NewsWithKeyword |
+            JobPostingWithKeyword | NewFundingRound | NewInvestor | NewOfficeLocation | NewsWithKeyword | RecentLayoffs |
             RecentlyHiredWithTitle | TechnologyAdded] | None | Unset): Add rules to the existing set without removing
-            others. Cannot be used with trackingRules.
-        remove_rule_ids (list[str] | None | Unset): Rule IDs to remove. Cannot be used with trackingRules.
+            others. The total active rules on the list (existing + added) must not exceed the per-list cap. Cannot be used
+            with `trackingRules`.
+        remove_rule_ids (list[str] | None | Unset): Rule IDs to remove. Cannot be used with `trackingRules`.
+        update_rule_flags (list[UpdateTrackerCompanyListBodyUpdateRuleFlagsType0Item] | None | Unset): Toggle `isDummy`
+            on existing rules by ID. Use this to convert a real rule into a dummy rule (or vice versa) without recreating
+            it.
     """
 
     api_key: str
@@ -91,6 +99,7 @@ class UpdateTrackerCompanyListBody:
             | NewInvestor
             | NewOfficeLocation
             | NewsWithKeyword
+            | RecentLayoffs
             | RecentlyHiredWithTitle
             | TechnologyAdded
         ]
@@ -121,6 +130,7 @@ class UpdateTrackerCompanyListBody:
             | NewInvestor
             | NewOfficeLocation
             | NewsWithKeyword
+            | RecentLayoffs
             | RecentlyHiredWithTitle
             | TechnologyAdded
         ]
@@ -128,6 +138,7 @@ class UpdateTrackerCompanyListBody:
         | Unset
     ) = UNSET
     remove_rule_ids: list[str] | None | Unset = UNSET
+    update_rule_flags: list[UpdateTrackerCompanyListBodyUpdateRuleFlagsType0Item] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -140,6 +151,7 @@ class UpdateTrackerCompanyListBody:
         from ..models.company_posted_with_keyword import CompanyPostedWithKeyword
         from ..models.company_status_changed import CompanyStatusChanged
         from ..models.company_went_inactive import CompanyWentInactive
+        from ..models.department_size_threshold import DepartmentSizeThreshold
         from ..models.employee_count_milestone import EmployeeCountMilestone
         from ..models.follower_count_growth import FollowerCountGrowth
         from ..models.funding_stage_changed import FundingStageChanged
@@ -228,6 +240,8 @@ class UpdateTrackerCompanyListBody:
                     tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
                 elif isinstance(tracking_rules_type_0_item_data, RecentlyHiredWithTitle):
                     tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
+                elif isinstance(tracking_rules_type_0_item_data, DepartmentSizeThreshold):
+                    tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
                 else:
                     tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
 
@@ -289,6 +303,8 @@ class UpdateTrackerCompanyListBody:
                     add_rules_type_0_item = add_rules_type_0_item_data.to_dict()
                 elif isinstance(add_rules_type_0_item_data, RecentlyHiredWithTitle):
                     add_rules_type_0_item = add_rules_type_0_item_data.to_dict()
+                elif isinstance(add_rules_type_0_item_data, DepartmentSizeThreshold):
+                    add_rules_type_0_item = add_rules_type_0_item_data.to_dict()
                 else:
                     add_rules_type_0_item = add_rules_type_0_item_data.to_dict()
 
@@ -305,6 +321,18 @@ class UpdateTrackerCompanyListBody:
 
         else:
             remove_rule_ids = self.remove_rule_ids
+
+        update_rule_flags: list[dict[str, Any]] | None | Unset
+        if isinstance(self.update_rule_flags, Unset):
+            update_rule_flags = UNSET
+        elif isinstance(self.update_rule_flags, list):
+            update_rule_flags = []
+            for update_rule_flags_type_0_item_data in self.update_rule_flags:
+                update_rule_flags_type_0_item = update_rule_flags_type_0_item_data.to_dict()
+                update_rule_flags.append(update_rule_flags_type_0_item)
+
+        else:
+            update_rule_flags = self.update_rule_flags
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -325,6 +353,8 @@ class UpdateTrackerCompanyListBody:
             field_dict["addRules"] = add_rules
         if remove_rule_ids is not UNSET:
             field_dict["removeRuleIds"] = remove_rule_ids
+        if update_rule_flags is not UNSET:
+            field_dict["updateRuleFlags"] = update_rule_flags
 
         return field_dict
 
@@ -352,8 +382,12 @@ class UpdateTrackerCompanyListBody:
         from ..models.new_investor import NewInvestor
         from ..models.new_office_location import NewOfficeLocation
         from ..models.news_with_keyword import NewsWithKeyword
+        from ..models.recent_layoffs import RecentLayoffs
         from ..models.recently_hired_with_title import RecentlyHiredWithTitle
         from ..models.technology_added import TechnologyAdded
+        from ..models.update_tracker_company_list_body_update_rule_flags_type_0_item import (
+            UpdateTrackerCompanyListBodyUpdateRuleFlagsType0Item,
+        )
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")
@@ -411,6 +445,7 @@ class UpdateTrackerCompanyListBody:
                 | NewInvestor
                 | NewOfficeLocation
                 | NewsWithKeyword
+                | RecentLayoffs
                 | RecentlyHiredWithTitle
                 | TechnologyAdded
             ]
@@ -453,6 +488,7 @@ class UpdateTrackerCompanyListBody:
                         | NewInvestor
                         | NewOfficeLocation
                         | NewsWithKeyword
+                        | RecentLayoffs
                         | RecentlyHiredWithTitle
                         | TechnologyAdded
                     ):
@@ -640,11 +676,19 @@ class UpdateTrackerCompanyListBody:
                             return tracking_rules_type_0_item_type_22
                         except (TypeError, ValueError, AttributeError, KeyError):
                             pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            tracking_rules_type_0_item_type_23 = DepartmentSizeThreshold.from_dict(data)
+
+                            return tracking_rules_type_0_item_type_23
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        tracking_rules_type_0_item_type_23 = DepartmentSizeThreshold.from_dict(data)
+                        tracking_rules_type_0_item_type_24 = RecentLayoffs.from_dict(data)
 
-                        return tracking_rules_type_0_item_type_23
+                        return tracking_rules_type_0_item_type_24
 
                     tracking_rules_type_0_item = _parse_tracking_rules_type_0_item(tracking_rules_type_0_item_data)
 
@@ -677,6 +721,7 @@ class UpdateTrackerCompanyListBody:
                     | NewInvestor
                     | NewOfficeLocation
                     | NewsWithKeyword
+                    | RecentLayoffs
                     | RecentlyHiredWithTitle
                     | TechnologyAdded
                 ]
@@ -713,6 +758,7 @@ class UpdateTrackerCompanyListBody:
                 | NewInvestor
                 | NewOfficeLocation
                 | NewsWithKeyword
+                | RecentLayoffs
                 | RecentlyHiredWithTitle
                 | TechnologyAdded
             ]
@@ -755,6 +801,7 @@ class UpdateTrackerCompanyListBody:
                         | NewInvestor
                         | NewOfficeLocation
                         | NewsWithKeyword
+                        | RecentLayoffs
                         | RecentlyHiredWithTitle
                         | TechnologyAdded
                     ):
@@ -942,11 +989,19 @@ class UpdateTrackerCompanyListBody:
                             return add_rules_type_0_item_type_22
                         except (TypeError, ValueError, AttributeError, KeyError):
                             pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            add_rules_type_0_item_type_23 = DepartmentSizeThreshold.from_dict(data)
+
+                            return add_rules_type_0_item_type_23
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        add_rules_type_0_item_type_23 = DepartmentSizeThreshold.from_dict(data)
+                        add_rules_type_0_item_type_24 = RecentLayoffs.from_dict(data)
 
-                        return add_rules_type_0_item_type_23
+                        return add_rules_type_0_item_type_24
 
                     add_rules_type_0_item = _parse_add_rules_type_0_item(add_rules_type_0_item_data)
 
@@ -979,6 +1034,7 @@ class UpdateTrackerCompanyListBody:
                     | NewInvestor
                     | NewOfficeLocation
                     | NewsWithKeyword
+                    | RecentLayoffs
                     | RecentlyHiredWithTitle
                     | TechnologyAdded
                 ]
@@ -1006,6 +1062,32 @@ class UpdateTrackerCompanyListBody:
 
         remove_rule_ids = _parse_remove_rule_ids(d.pop("removeRuleIds", UNSET))
 
+        def _parse_update_rule_flags(
+            data: object,
+        ) -> list[UpdateTrackerCompanyListBodyUpdateRuleFlagsType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                update_rule_flags_type_0 = []
+                _update_rule_flags_type_0 = data
+                for update_rule_flags_type_0_item_data in _update_rule_flags_type_0:
+                    update_rule_flags_type_0_item = UpdateTrackerCompanyListBodyUpdateRuleFlagsType0Item.from_dict(
+                        update_rule_flags_type_0_item_data
+                    )
+
+                    update_rule_flags_type_0.append(update_rule_flags_type_0_item)
+
+                return update_rule_flags_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[UpdateTrackerCompanyListBodyUpdateRuleFlagsType0Item] | None | Unset, data)
+
+        update_rule_flags = _parse_update_rule_flags(d.pop("updateRuleFlags", UNSET))
+
         update_tracker_company_list_body = cls(
             api_key=api_key,
             name=name,
@@ -1014,6 +1096,7 @@ class UpdateTrackerCompanyListBody:
             tracking_rules=tracking_rules,
             add_rules=add_rules,
             remove_rule_ids=remove_rule_ids,
+            update_rule_flags=update_rule_flags,
         )
 
         update_tracker_company_list_body.additional_properties = d

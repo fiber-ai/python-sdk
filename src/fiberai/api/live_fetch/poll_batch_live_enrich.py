@@ -12,6 +12,7 @@ from ...models.poll_batch_live_enrich_response_401 import PollBatchLiveEnrichRes
 from ...models.poll_batch_live_enrich_response_402 import PollBatchLiveEnrichResponse402
 from ...models.poll_batch_live_enrich_response_403 import PollBatchLiveEnrichResponse403
 from ...models.poll_batch_live_enrich_response_404 import PollBatchLiveEnrichResponse404
+from ...models.poll_batch_live_enrich_response_422 import PollBatchLiveEnrichResponse422
 from ...models.poll_batch_live_enrich_response_429 import PollBatchLiveEnrichResponse429
 from ...models.poll_batch_live_enrich_response_500 import PollBatchLiveEnrichResponse500
 from ...models.poll_batch_live_enrich_response_503 import PollBatchLiveEnrichResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | PollBatchLiveEnrichResponse402
     | PollBatchLiveEnrichResponse403
     | PollBatchLiveEnrichResponse404
+    | PollBatchLiveEnrichResponse422
     | PollBatchLiveEnrichResponse429
     | PollBatchLiveEnrichResponse500
     | PollBatchLiveEnrichResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = PollBatchLiveEnrichResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = PollBatchLiveEnrichResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | PollBatchLiveEnrichResponse402
     | PollBatchLiveEnrichResponse403
     | PollBatchLiveEnrichResponse404
+    | PollBatchLiveEnrichResponse422
     | PollBatchLiveEnrichResponse429
     | PollBatchLiveEnrichResponse500
     | PollBatchLiveEnrichResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | PollBatchLiveEnrichResponse402
     | PollBatchLiveEnrichResponse403
     | PollBatchLiveEnrichResponse404
+    | PollBatchLiveEnrichResponse422
     | PollBatchLiveEnrichResponse429
     | PollBatchLiveEnrichResponse500
     | PollBatchLiveEnrichResponse503
@@ -153,7 +162,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PollBatchLiveEnrichResponse200 | PollBatchLiveEnrichResponse400 | PollBatchLiveEnrichResponse401 | PollBatchLiveEnrichResponse402 | PollBatchLiveEnrichResponse403 | PollBatchLiveEnrichResponse404 | PollBatchLiveEnrichResponse429 | PollBatchLiveEnrichResponse500 | PollBatchLiveEnrichResponse503]
+        Response[PollBatchLiveEnrichResponse200 | PollBatchLiveEnrichResponse400 | PollBatchLiveEnrichResponse401 | PollBatchLiveEnrichResponse402 | PollBatchLiveEnrichResponse403 | PollBatchLiveEnrichResponse404 | PollBatchLiveEnrichResponse422 | PollBatchLiveEnrichResponse429 | PollBatchLiveEnrichResponse500 | PollBatchLiveEnrichResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -178,6 +187,7 @@ def sync(
     | PollBatchLiveEnrichResponse402
     | PollBatchLiveEnrichResponse403
     | PollBatchLiveEnrichResponse404
+    | PollBatchLiveEnrichResponse422
     | PollBatchLiveEnrichResponse429
     | PollBatchLiveEnrichResponse500
     | PollBatchLiveEnrichResponse503
@@ -198,7 +208,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PollBatchLiveEnrichResponse200 | PollBatchLiveEnrichResponse400 | PollBatchLiveEnrichResponse401 | PollBatchLiveEnrichResponse402 | PollBatchLiveEnrichResponse403 | PollBatchLiveEnrichResponse404 | PollBatchLiveEnrichResponse429 | PollBatchLiveEnrichResponse500 | PollBatchLiveEnrichResponse503
+        PollBatchLiveEnrichResponse200 | PollBatchLiveEnrichResponse400 | PollBatchLiveEnrichResponse401 | PollBatchLiveEnrichResponse402 | PollBatchLiveEnrichResponse403 | PollBatchLiveEnrichResponse404 | PollBatchLiveEnrichResponse422 | PollBatchLiveEnrichResponse429 | PollBatchLiveEnrichResponse500 | PollBatchLiveEnrichResponse503
     """
 
     return sync_detailed(
@@ -218,6 +228,7 @@ async def asyncio_detailed(
     | PollBatchLiveEnrichResponse402
     | PollBatchLiveEnrichResponse403
     | PollBatchLiveEnrichResponse404
+    | PollBatchLiveEnrichResponse422
     | PollBatchLiveEnrichResponse429
     | PollBatchLiveEnrichResponse500
     | PollBatchLiveEnrichResponse503
@@ -237,7 +248,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PollBatchLiveEnrichResponse200 | PollBatchLiveEnrichResponse400 | PollBatchLiveEnrichResponse401 | PollBatchLiveEnrichResponse402 | PollBatchLiveEnrichResponse403 | PollBatchLiveEnrichResponse404 | PollBatchLiveEnrichResponse429 | PollBatchLiveEnrichResponse500 | PollBatchLiveEnrichResponse503]
+        Response[PollBatchLiveEnrichResponse200 | PollBatchLiveEnrichResponse400 | PollBatchLiveEnrichResponse401 | PollBatchLiveEnrichResponse402 | PollBatchLiveEnrichResponse403 | PollBatchLiveEnrichResponse404 | PollBatchLiveEnrichResponse422 | PollBatchLiveEnrichResponse429 | PollBatchLiveEnrichResponse500 | PollBatchLiveEnrichResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -260,6 +271,7 @@ async def asyncio(
     | PollBatchLiveEnrichResponse402
     | PollBatchLiveEnrichResponse403
     | PollBatchLiveEnrichResponse404
+    | PollBatchLiveEnrichResponse422
     | PollBatchLiveEnrichResponse429
     | PollBatchLiveEnrichResponse500
     | PollBatchLiveEnrichResponse503
@@ -280,7 +292,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PollBatchLiveEnrichResponse200 | PollBatchLiveEnrichResponse400 | PollBatchLiveEnrichResponse401 | PollBatchLiveEnrichResponse402 | PollBatchLiveEnrichResponse403 | PollBatchLiveEnrichResponse404 | PollBatchLiveEnrichResponse429 | PollBatchLiveEnrichResponse500 | PollBatchLiveEnrichResponse503
+        PollBatchLiveEnrichResponse200 | PollBatchLiveEnrichResponse400 | PollBatchLiveEnrichResponse401 | PollBatchLiveEnrichResponse402 | PollBatchLiveEnrichResponse403 | PollBatchLiveEnrichResponse404 | PollBatchLiveEnrichResponse422 | PollBatchLiveEnrichResponse429 | PollBatchLiveEnrichResponse500 | PollBatchLiveEnrichResponse503
     """
 
     return (

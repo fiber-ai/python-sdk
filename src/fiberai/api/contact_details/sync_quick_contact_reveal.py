@@ -12,6 +12,7 @@ from ...models.sync_quick_contact_reveal_response_401 import SyncQuickContactRev
 from ...models.sync_quick_contact_reveal_response_402 import SyncQuickContactRevealResponse402
 from ...models.sync_quick_contact_reveal_response_403 import SyncQuickContactRevealResponse403
 from ...models.sync_quick_contact_reveal_response_404 import SyncQuickContactRevealResponse404
+from ...models.sync_quick_contact_reveal_response_422 import SyncQuickContactRevealResponse422
 from ...models.sync_quick_contact_reveal_response_429 import SyncQuickContactRevealResponse429
 from ...models.sync_quick_contact_reveal_response_500 import SyncQuickContactRevealResponse500
 from ...models.sync_quick_contact_reveal_response_503 import SyncQuickContactRevealResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | SyncQuickContactRevealResponse402
     | SyncQuickContactRevealResponse403
     | SyncQuickContactRevealResponse404
+    | SyncQuickContactRevealResponse422
     | SyncQuickContactRevealResponse429
     | SyncQuickContactRevealResponse500
     | SyncQuickContactRevealResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = SyncQuickContactRevealResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = SyncQuickContactRevealResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | SyncQuickContactRevealResponse402
     | SyncQuickContactRevealResponse403
     | SyncQuickContactRevealResponse404
+    | SyncQuickContactRevealResponse422
     | SyncQuickContactRevealResponse429
     | SyncQuickContactRevealResponse500
     | SyncQuickContactRevealResponse503
@@ -134,16 +142,18 @@ def sync_detailed(
     | SyncQuickContactRevealResponse402
     | SyncQuickContactRevealResponse403
     | SyncQuickContactRevealResponse404
+    | SyncQuickContactRevealResponse422
     | SyncQuickContactRevealResponse429
     | SyncQuickContactRevealResponse500
     | SyncQuickContactRevealResponse503
 ]:
     r"""Reveal contact details (standard)
 
-     Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Only requires a
-    LinkedIn URL; profile details are resolved automatically. For faster results at a higher credit
-    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage (async, slower, higher
-    cost), use the /contact-details/exhaustive/start endpoint.
+     Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Accepts a
+    LinkedIn profile URL, slug, Sales Navigator URN, or numeric LinkedIn user ID; profile details are
+    resolved automatically. For faster results at a higher credit cost, use the /contact-
+    details/turbo/sync endpoint. For maximum coverage (async, slower, higher cost), use the /contact-
+    details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 200 requests per 1 minute</span>
 
@@ -164,7 +174,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503]
+        Response[SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse422 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -189,6 +199,7 @@ def sync(
     | SyncQuickContactRevealResponse402
     | SyncQuickContactRevealResponse403
     | SyncQuickContactRevealResponse404
+    | SyncQuickContactRevealResponse422
     | SyncQuickContactRevealResponse429
     | SyncQuickContactRevealResponse500
     | SyncQuickContactRevealResponse503
@@ -196,10 +207,11 @@ def sync(
 ):
     r"""Reveal contact details (standard)
 
-     Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Only requires a
-    LinkedIn URL; profile details are resolved automatically. For faster results at a higher credit
-    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage (async, slower, higher
-    cost), use the /contact-details/exhaustive/start endpoint.
+     Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Accepts a
+    LinkedIn profile URL, slug, Sales Navigator URN, or numeric LinkedIn user ID; profile details are
+    resolved automatically. For faster results at a higher credit cost, use the /contact-
+    details/turbo/sync endpoint. For maximum coverage (async, slower, higher cost), use the /contact-
+    details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 200 requests per 1 minute</span>
 
@@ -220,7 +232,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503
+        SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse422 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503
     """
 
     return sync_detailed(
@@ -240,16 +252,18 @@ async def asyncio_detailed(
     | SyncQuickContactRevealResponse402
     | SyncQuickContactRevealResponse403
     | SyncQuickContactRevealResponse404
+    | SyncQuickContactRevealResponse422
     | SyncQuickContactRevealResponse429
     | SyncQuickContactRevealResponse500
     | SyncQuickContactRevealResponse503
 ]:
     r"""Reveal contact details (standard)
 
-     Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Only requires a
-    LinkedIn URL; profile details are resolved automatically. For faster results at a higher credit
-    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage (async, slower, higher
-    cost), use the /contact-details/exhaustive/start endpoint.
+     Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Accepts a
+    LinkedIn profile URL, slug, Sales Navigator URN, or numeric LinkedIn user ID; profile details are
+    resolved automatically. For faster results at a higher credit cost, use the /contact-
+    details/turbo/sync endpoint. For maximum coverage (async, slower, higher cost), use the /contact-
+    details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 200 requests per 1 minute</span>
 
@@ -270,7 +284,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503]
+        Response[SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse422 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -293,6 +307,7 @@ async def asyncio(
     | SyncQuickContactRevealResponse402
     | SyncQuickContactRevealResponse403
     | SyncQuickContactRevealResponse404
+    | SyncQuickContactRevealResponse422
     | SyncQuickContactRevealResponse429
     | SyncQuickContactRevealResponse500
     | SyncQuickContactRevealResponse503
@@ -300,10 +315,11 @@ async def asyncio(
 ):
     r"""Reveal contact details (standard)
 
-     Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Only requires a
-    LinkedIn URL; profile details are resolved automatically. For faster results at a higher credit
-    cost, use the /contact-details/turbo/sync endpoint. For maximum coverage (async, slower, higher
-    cost), use the /contact-details/exhaustive/start endpoint.
+     Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Accepts a
+    LinkedIn profile URL, slug, Sales Navigator URN, or numeric LinkedIn user ID; profile details are
+    resolved automatically. For faster results at a higher credit cost, use the /contact-
+    details/turbo/sync endpoint. For maximum coverage (async, slower, higher cost), use the /contact-
+    details/exhaustive/start endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 200 requests per 1 minute</span>
 
@@ -324,7 +340,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503
+        SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse422 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503
     """
 
     return (

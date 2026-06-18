@@ -1,0 +1,2077 @@
+from __future__ import annotations
+
+from collections.abc import Mapping
+from typing import TYPE_CHECKING, Any, TypeVar, cast
+
+from attrs import define as _attrs_define
+
+from ..types import UNSET, Unset
+
+if TYPE_CHECKING:
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_approx_age_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsApproxAgeType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_certifications_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCertificationsType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_company_match_mode_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_company_match_mode_type_1 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType1,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_country_3_letter_code_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCountry3LetterCodeType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_current_jobs_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_employment_type_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_exact_profile_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_exact_profile_v2_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileV2Type0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_fuzzy_name_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsFuzzyNameType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_industry_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsIndustryType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_status_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_status_type_1 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType1,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_status_type_2 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType2,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_title_v2_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV2Type0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_title_v3_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_joined_linked_in_at_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_joined_linked_in_at_type_1 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType1,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_keyword_search_options_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_keywords_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_keywords_v2_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_languages_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLanguagesType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_left_stealth_at_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_left_stealth_at_type_1 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType1,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_num_connections_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumConnectionsType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_num_followers_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumFollowersType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_past_job_text_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobTextType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_past_jobs_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_publications_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPublicationsType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_sort_type_0_item import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSortType0Item,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_started_at_company_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_started_at_company_type_1 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType1,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_started_in_role_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_started_in_role_type_1 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType1,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_state_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStateType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_stealth_v2_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_stealth_v2_type_1 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type1,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_tags_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTagsType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_time_zone_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTimeZoneType0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_years_of_experience_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsYearsOfExperienceType0,
+    )
+
+
+T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType2ProfileSearchParams")
+
+
+@_attrs_define
+class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
+    """The profile search parameters. Uses the same schema as the profile search endpoint.
+
+    Attributes:
+        country_3_letter_code (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCountry3LetterCodeType0 | None |
+            Unset):
+        num_connections (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumConnectionsType0 | None | Unset):
+        num_followers (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumFollowersType0 | None | Unset):
+        approx_age (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsApproxAgeType0 | None | Unset):
+        keywords (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsType0 | None | Unset):
+        keywords_v2 (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0 | None | Unset):
+        keyword_search_options (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0 |
+            None | Unset):
+        job_title_v2 (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV2Type0 | None | Unset):
+        exact_profile (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0 | None | Unset):
+        exact_profile_v2 (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileV2Type0 | None | Unset):
+        started_in_role (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0 |
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType1 | None | Unset):
+        started_at_company (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType0 |
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType1 | None | Unset):
+        location (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0 | None | Unset):
+        past_jobs (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0 | None | Unset):
+        current_jobs (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0 | None | Unset):
+        languages (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLanguagesType0 | None | Unset):
+        left_stealth_at (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType0 |
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType1 | None | Unset):
+        is_in_stealth (bool | None | Unset):
+        stealth_v2 (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type0 |
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type1 | None | Unset):
+        job_status (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType0 |
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType1 |
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType2 | None | Unset):
+        time_zone (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTimeZoneType0 | None | Unset):
+        past_job_text (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobTextType0 | None | Unset):
+        fuzzy_name (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsFuzzyNameType0 | None | Unset):
+        company_match_mode (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType0 |
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType1 | None | Unset):
+        years_of_experience (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsYearsOfExperienceType0 | None |
+            Unset):
+        job_title_v3 (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0 | None | Unset):
+        open_to_work (bool | None | Unset):
+        is_hiring (bool | None | Unset):
+        has_profile_picture (bool | None | Unset):
+        state (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStateType0 | None | Unset):
+        certifications (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCertificationsType0 | None | Unset):
+        publications (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPublicationsType0 | None | Unset):
+        has_no_education (bool | None | Unset):
+        employment_type (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0 | None | Unset):
+        is_top_voice (bool | None | Unset):
+        has_premium (bool | None | Unset):
+        is_influencer (bool | None | Unset):
+        industry (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsIndustryType0 | None | Unset):
+        is_verified (bool | None | Unset):
+        joined_linked_in_at (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0 |
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType1 | None | Unset):
+        get_detailed_education (bool | None | Unset): Whether to include deep details about each educational item, like
+            the school's LinkedIn URL, website, location, etc. That'll be put in the detailedEducation array. This slows
+            down the API call, so only enable this if you need it. Default: False.
+        get_detailed_work_experience (bool | None | Unset): Whether to include deep details about each work experience
+            item, like the company's LinkedIn URL, website, location, etc. That'll be put in the detailedWorkExperience
+            array. This slows down the API call, so only enable this if you need it. Default: False.
+        tags (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTagsType0 | None | Unset):
+        education (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0 | None | Unset):
+        sort (list[CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSortType0Item] | None | Unset): Sort order
+            for people results. Clauses are applied in order. Omit to use the default ranking. Note: changing the sort
+            invalidates any existing cursor — start a new pagination run when the sort changes.
+    """
+
+    country_3_letter_code: (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCountry3LetterCodeType0 | None | Unset
+    ) = UNSET
+    num_connections: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumConnectionsType0 | None | Unset = UNSET
+    num_followers: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumFollowersType0 | None | Unset = UNSET
+    approx_age: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsApproxAgeType0 | None | Unset = UNSET
+    keywords: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsType0 | None | Unset = UNSET
+    keywords_v2: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0 | None | Unset = UNSET
+    keyword_search_options: (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0 | None | Unset
+    ) = UNSET
+    job_title_v2: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV2Type0 | None | Unset = UNSET
+    exact_profile: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0 | None | Unset = UNSET
+    exact_profile_v2: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileV2Type0 | None | Unset = (
+        UNSET
+    )
+    started_in_role: (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0
+        | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType1
+        | None
+        | Unset
+    ) = UNSET
+    started_at_company: (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType0
+        | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType1
+        | None
+        | Unset
+    ) = UNSET
+    location: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0 | None | Unset = UNSET
+    past_jobs: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0 | None | Unset = UNSET
+    current_jobs: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0 | None | Unset = UNSET
+    languages: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLanguagesType0 | None | Unset = UNSET
+    left_stealth_at: (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType0
+        | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType1
+        | None
+        | Unset
+    ) = UNSET
+    is_in_stealth: bool | None | Unset = UNSET
+    stealth_v2: (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type0
+        | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type1
+        | None
+        | Unset
+    ) = UNSET
+    job_status: (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType0
+        | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType1
+        | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType2
+        | None
+        | Unset
+    ) = UNSET
+    time_zone: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTimeZoneType0 | None | Unset = UNSET
+    past_job_text: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobTextType0 | None | Unset = UNSET
+    fuzzy_name: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsFuzzyNameType0 | None | Unset = UNSET
+    company_match_mode: (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType0
+        | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType1
+        | None
+        | Unset
+    ) = UNSET
+    years_of_experience: (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsYearsOfExperienceType0 | None | Unset
+    ) = UNSET
+    job_title_v3: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0 | None | Unset = UNSET
+    open_to_work: bool | None | Unset = UNSET
+    is_hiring: bool | None | Unset = UNSET
+    has_profile_picture: bool | None | Unset = UNSET
+    state: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStateType0 | None | Unset = UNSET
+    certifications: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCertificationsType0 | None | Unset = UNSET
+    publications: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPublicationsType0 | None | Unset = UNSET
+    has_no_education: bool | None | Unset = UNSET
+    employment_type: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0 | None | Unset = UNSET
+    is_top_voice: bool | None | Unset = UNSET
+    has_premium: bool | None | Unset = UNSET
+    is_influencer: bool | None | Unset = UNSET
+    industry: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsIndustryType0 | None | Unset = UNSET
+    is_verified: bool | None | Unset = UNSET
+    joined_linked_in_at: (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0
+        | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType1
+        | None
+        | Unset
+    ) = UNSET
+    get_detailed_education: bool | None | Unset = False
+    get_detailed_work_experience: bool | None | Unset = False
+    tags: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTagsType0 | None | Unset = UNSET
+    education: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0 | None | Unset = UNSET
+    sort: list[CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSortType0Item] | None | Unset = UNSET
+
+    def to_dict(self) -> dict[str, Any]:
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_approx_age_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsApproxAgeType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_certifications_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCertificationsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_company_match_mode_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_company_match_mode_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_country_3_letter_code_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCountry3LetterCodeType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_current_jobs_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_employment_type_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_exact_profile_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_exact_profile_v2_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileV2Type0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_fuzzy_name_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsFuzzyNameType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_industry_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsIndustryType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_status_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_status_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_status_type_2 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType2,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_title_v2_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV2Type0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_title_v3_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_joined_linked_in_at_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_joined_linked_in_at_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_keyword_search_options_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_keywords_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_keywords_v2_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_languages_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLanguagesType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_left_stealth_at_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_left_stealth_at_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_num_connections_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumConnectionsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_num_followers_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumFollowersType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_past_job_text_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobTextType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_past_jobs_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_publications_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPublicationsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_started_at_company_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_started_at_company_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_started_in_role_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_started_in_role_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_state_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStateType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_stealth_v2_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_stealth_v2_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type1,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_tags_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTagsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_time_zone_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTimeZoneType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_years_of_experience_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsYearsOfExperienceType0,
+        )
+
+        country_3_letter_code: dict[str, Any] | None | Unset
+        if isinstance(self.country_3_letter_code, Unset):
+            country_3_letter_code = UNSET
+        elif isinstance(
+            self.country_3_letter_code, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCountry3LetterCodeType0
+        ):
+            country_3_letter_code = self.country_3_letter_code.to_dict()
+        else:
+            country_3_letter_code = self.country_3_letter_code
+
+        num_connections: dict[str, Any] | None | Unset
+        if isinstance(self.num_connections, Unset):
+            num_connections = UNSET
+        elif isinstance(
+            self.num_connections, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumConnectionsType0
+        ):
+            num_connections = self.num_connections.to_dict()
+        else:
+            num_connections = self.num_connections
+
+        num_followers: dict[str, Any] | None | Unset
+        if isinstance(self.num_followers, Unset):
+            num_followers = UNSET
+        elif isinstance(self.num_followers, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumFollowersType0):
+            num_followers = self.num_followers.to_dict()
+        else:
+            num_followers = self.num_followers
+
+        approx_age: dict[str, Any] | None | Unset
+        if isinstance(self.approx_age, Unset):
+            approx_age = UNSET
+        elif isinstance(self.approx_age, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsApproxAgeType0):
+            approx_age = self.approx_age.to_dict()
+        else:
+            approx_age = self.approx_age
+
+        keywords: dict[str, Any] | None | Unset
+        if isinstance(self.keywords, Unset):
+            keywords = UNSET
+        elif isinstance(self.keywords, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsType0):
+            keywords = self.keywords.to_dict()
+        else:
+            keywords = self.keywords
+
+        keywords_v2: dict[str, Any] | None | Unset
+        if isinstance(self.keywords_v2, Unset):
+            keywords_v2 = UNSET
+        elif isinstance(self.keywords_v2, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0):
+            keywords_v2 = self.keywords_v2.to_dict()
+        else:
+            keywords_v2 = self.keywords_v2
+
+        keyword_search_options: dict[str, Any] | None | Unset
+        if isinstance(self.keyword_search_options, Unset):
+            keyword_search_options = UNSET
+        elif isinstance(
+            self.keyword_search_options,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0,
+        ):
+            keyword_search_options = self.keyword_search_options.to_dict()
+        else:
+            keyword_search_options = self.keyword_search_options
+
+        job_title_v2: dict[str, Any] | None | Unset
+        if isinstance(self.job_title_v2, Unset):
+            job_title_v2 = UNSET
+        elif isinstance(self.job_title_v2, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV2Type0):
+            job_title_v2 = self.job_title_v2.to_dict()
+        else:
+            job_title_v2 = self.job_title_v2
+
+        exact_profile: dict[str, Any] | None | Unset
+        if isinstance(self.exact_profile, Unset):
+            exact_profile = UNSET
+        elif isinstance(self.exact_profile, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0):
+            exact_profile = self.exact_profile.to_dict()
+        else:
+            exact_profile = self.exact_profile
+
+        exact_profile_v2: dict[str, Any] | None | Unset
+        if isinstance(self.exact_profile_v2, Unset):
+            exact_profile_v2 = UNSET
+        elif isinstance(
+            self.exact_profile_v2, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileV2Type0
+        ):
+            exact_profile_v2 = self.exact_profile_v2.to_dict()
+        else:
+            exact_profile_v2 = self.exact_profile_v2
+
+        started_in_role: dict[str, Any] | None | Unset
+        if isinstance(self.started_in_role, Unset):
+            started_in_role = UNSET
+        elif isinstance(
+            self.started_in_role, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0
+        ):
+            started_in_role = self.started_in_role.to_dict()
+        elif isinstance(
+            self.started_in_role, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType1
+        ):
+            started_in_role = self.started_in_role.to_dict()
+        else:
+            started_in_role = self.started_in_role
+
+        started_at_company: dict[str, Any] | None | Unset
+        if isinstance(self.started_at_company, Unset):
+            started_at_company = UNSET
+        elif isinstance(
+            self.started_at_company, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType0
+        ):
+            started_at_company = self.started_at_company.to_dict()
+        elif isinstance(
+            self.started_at_company, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType1
+        ):
+            started_at_company = self.started_at_company.to_dict()
+        else:
+            started_at_company = self.started_at_company
+
+        location: dict[str, Any] | None | Unset
+        if isinstance(self.location, Unset):
+            location = UNSET
+        elif isinstance(self.location, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0):
+            location = self.location.to_dict()
+        else:
+            location = self.location
+
+        past_jobs: dict[str, Any] | None | Unset
+        if isinstance(self.past_jobs, Unset):
+            past_jobs = UNSET
+        elif isinstance(self.past_jobs, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0):
+            past_jobs = self.past_jobs.to_dict()
+        else:
+            past_jobs = self.past_jobs
+
+        current_jobs: dict[str, Any] | None | Unset
+        if isinstance(self.current_jobs, Unset):
+            current_jobs = UNSET
+        elif isinstance(self.current_jobs, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0):
+            current_jobs = self.current_jobs.to_dict()
+        else:
+            current_jobs = self.current_jobs
+
+        languages: dict[str, Any] | None | Unset
+        if isinstance(self.languages, Unset):
+            languages = UNSET
+        elif isinstance(self.languages, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLanguagesType0):
+            languages = self.languages.to_dict()
+        else:
+            languages = self.languages
+
+        left_stealth_at: dict[str, Any] | None | Unset
+        if isinstance(self.left_stealth_at, Unset):
+            left_stealth_at = UNSET
+        elif isinstance(
+            self.left_stealth_at, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType0
+        ):
+            left_stealth_at = self.left_stealth_at.to_dict()
+        elif isinstance(
+            self.left_stealth_at, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType1
+        ):
+            left_stealth_at = self.left_stealth_at.to_dict()
+        else:
+            left_stealth_at = self.left_stealth_at
+
+        is_in_stealth: bool | None | Unset
+        if isinstance(self.is_in_stealth, Unset):
+            is_in_stealth = UNSET
+        else:
+            is_in_stealth = self.is_in_stealth
+
+        stealth_v2: dict[str, Any] | None | Unset
+        if isinstance(self.stealth_v2, Unset):
+            stealth_v2 = UNSET
+        elif isinstance(self.stealth_v2, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type0):
+            stealth_v2 = self.stealth_v2.to_dict()
+        elif isinstance(self.stealth_v2, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type1):
+            stealth_v2 = self.stealth_v2.to_dict()
+        else:
+            stealth_v2 = self.stealth_v2
+
+        job_status: dict[str, Any] | None | Unset
+        if isinstance(self.job_status, Unset):
+            job_status = UNSET
+        elif isinstance(self.job_status, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType0):
+            job_status = self.job_status.to_dict()
+        elif isinstance(self.job_status, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType1):
+            job_status = self.job_status.to_dict()
+        elif isinstance(self.job_status, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType2):
+            job_status = self.job_status.to_dict()
+        else:
+            job_status = self.job_status
+
+        time_zone: dict[str, Any] | None | Unset
+        if isinstance(self.time_zone, Unset):
+            time_zone = UNSET
+        elif isinstance(self.time_zone, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTimeZoneType0):
+            time_zone = self.time_zone.to_dict()
+        else:
+            time_zone = self.time_zone
+
+        past_job_text: dict[str, Any] | None | Unset
+        if isinstance(self.past_job_text, Unset):
+            past_job_text = UNSET
+        elif isinstance(self.past_job_text, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobTextType0):
+            past_job_text = self.past_job_text.to_dict()
+        else:
+            past_job_text = self.past_job_text
+
+        fuzzy_name: dict[str, Any] | None | Unset
+        if isinstance(self.fuzzy_name, Unset):
+            fuzzy_name = UNSET
+        elif isinstance(self.fuzzy_name, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsFuzzyNameType0):
+            fuzzy_name = self.fuzzy_name.to_dict()
+        else:
+            fuzzy_name = self.fuzzy_name
+
+        company_match_mode: dict[str, Any] | None | Unset
+        if isinstance(self.company_match_mode, Unset):
+            company_match_mode = UNSET
+        elif isinstance(
+            self.company_match_mode, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType0
+        ):
+            company_match_mode = self.company_match_mode.to_dict()
+        elif isinstance(
+            self.company_match_mode, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType1
+        ):
+            company_match_mode = self.company_match_mode.to_dict()
+        else:
+            company_match_mode = self.company_match_mode
+
+        years_of_experience: dict[str, Any] | None | Unset
+        if isinstance(self.years_of_experience, Unset):
+            years_of_experience = UNSET
+        elif isinstance(
+            self.years_of_experience, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsYearsOfExperienceType0
+        ):
+            years_of_experience = self.years_of_experience.to_dict()
+        else:
+            years_of_experience = self.years_of_experience
+
+        job_title_v3: dict[str, Any] | None | Unset
+        if isinstance(self.job_title_v3, Unset):
+            job_title_v3 = UNSET
+        elif isinstance(self.job_title_v3, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0):
+            job_title_v3 = self.job_title_v3.to_dict()
+        else:
+            job_title_v3 = self.job_title_v3
+
+        open_to_work: bool | None | Unset
+        if isinstance(self.open_to_work, Unset):
+            open_to_work = UNSET
+        else:
+            open_to_work = self.open_to_work
+
+        is_hiring: bool | None | Unset
+        if isinstance(self.is_hiring, Unset):
+            is_hiring = UNSET
+        else:
+            is_hiring = self.is_hiring
+
+        has_profile_picture: bool | None | Unset
+        if isinstance(self.has_profile_picture, Unset):
+            has_profile_picture = UNSET
+        else:
+            has_profile_picture = self.has_profile_picture
+
+        state: dict[str, Any] | None | Unset
+        if isinstance(self.state, Unset):
+            state = UNSET
+        elif isinstance(self.state, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStateType0):
+            state = self.state.to_dict()
+        else:
+            state = self.state
+
+        certifications: dict[str, Any] | None | Unset
+        if isinstance(self.certifications, Unset):
+            certifications = UNSET
+        elif isinstance(
+            self.certifications, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCertificationsType0
+        ):
+            certifications = self.certifications.to_dict()
+        else:
+            certifications = self.certifications
+
+        publications: dict[str, Any] | None | Unset
+        if isinstance(self.publications, Unset):
+            publications = UNSET
+        elif isinstance(self.publications, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPublicationsType0):
+            publications = self.publications.to_dict()
+        else:
+            publications = self.publications
+
+        has_no_education: bool | None | Unset
+        if isinstance(self.has_no_education, Unset):
+            has_no_education = UNSET
+        else:
+            has_no_education = self.has_no_education
+
+        employment_type: dict[str, Any] | None | Unset
+        if isinstance(self.employment_type, Unset):
+            employment_type = UNSET
+        elif isinstance(
+            self.employment_type, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0
+        ):
+            employment_type = self.employment_type.to_dict()
+        else:
+            employment_type = self.employment_type
+
+        is_top_voice: bool | None | Unset
+        if isinstance(self.is_top_voice, Unset):
+            is_top_voice = UNSET
+        else:
+            is_top_voice = self.is_top_voice
+
+        has_premium: bool | None | Unset
+        if isinstance(self.has_premium, Unset):
+            has_premium = UNSET
+        else:
+            has_premium = self.has_premium
+
+        is_influencer: bool | None | Unset
+        if isinstance(self.is_influencer, Unset):
+            is_influencer = UNSET
+        else:
+            is_influencer = self.is_influencer
+
+        industry: dict[str, Any] | None | Unset
+        if isinstance(self.industry, Unset):
+            industry = UNSET
+        elif isinstance(self.industry, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsIndustryType0):
+            industry = self.industry.to_dict()
+        else:
+            industry = self.industry
+
+        is_verified: bool | None | Unset
+        if isinstance(self.is_verified, Unset):
+            is_verified = UNSET
+        else:
+            is_verified = self.is_verified
+
+        joined_linked_in_at: dict[str, Any] | None | Unset
+        if isinstance(self.joined_linked_in_at, Unset):
+            joined_linked_in_at = UNSET
+        elif isinstance(
+            self.joined_linked_in_at, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0
+        ):
+            joined_linked_in_at = self.joined_linked_in_at.to_dict()
+        elif isinstance(
+            self.joined_linked_in_at, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType1
+        ):
+            joined_linked_in_at = self.joined_linked_in_at.to_dict()
+        else:
+            joined_linked_in_at = self.joined_linked_in_at
+
+        get_detailed_education: bool | None | Unset
+        if isinstance(self.get_detailed_education, Unset):
+            get_detailed_education = UNSET
+        else:
+            get_detailed_education = self.get_detailed_education
+
+        get_detailed_work_experience: bool | None | Unset
+        if isinstance(self.get_detailed_work_experience, Unset):
+            get_detailed_work_experience = UNSET
+        else:
+            get_detailed_work_experience = self.get_detailed_work_experience
+
+        tags: dict[str, Any] | None | Unset
+        if isinstance(self.tags, Unset):
+            tags = UNSET
+        elif isinstance(self.tags, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTagsType0):
+            tags = self.tags.to_dict()
+        else:
+            tags = self.tags
+
+        education: dict[str, Any] | None | Unset
+        if isinstance(self.education, Unset):
+            education = UNSET
+        elif isinstance(self.education, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0):
+            education = self.education.to_dict()
+        else:
+            education = self.education
+
+        sort: list[dict[str, Any]] | None | Unset
+        if isinstance(self.sort, Unset):
+            sort = UNSET
+        elif isinstance(self.sort, list):
+            sort = []
+            for sort_type_0_item_data in self.sort:
+                sort_type_0_item = sort_type_0_item_data.to_dict()
+                sort.append(sort_type_0_item)
+
+        else:
+            sort = self.sort
+
+        field_dict: dict[str, Any] = {}
+
+        field_dict.update({})
+        if country_3_letter_code is not UNSET:
+            field_dict["country3LetterCode"] = country_3_letter_code
+        if num_connections is not UNSET:
+            field_dict["numConnections"] = num_connections
+        if num_followers is not UNSET:
+            field_dict["numFollowers"] = num_followers
+        if approx_age is not UNSET:
+            field_dict["approxAge"] = approx_age
+        if keywords is not UNSET:
+            field_dict["keywords"] = keywords
+        if keywords_v2 is not UNSET:
+            field_dict["keywordsV2"] = keywords_v2
+        if keyword_search_options is not UNSET:
+            field_dict["keywordSearchOptions"] = keyword_search_options
+        if job_title_v2 is not UNSET:
+            field_dict["jobTitleV2"] = job_title_v2
+        if exact_profile is not UNSET:
+            field_dict["exactProfile"] = exact_profile
+        if exact_profile_v2 is not UNSET:
+            field_dict["exactProfileV2"] = exact_profile_v2
+        if started_in_role is not UNSET:
+            field_dict["startedInRole"] = started_in_role
+        if started_at_company is not UNSET:
+            field_dict["startedAtCompany"] = started_at_company
+        if location is not UNSET:
+            field_dict["location"] = location
+        if past_jobs is not UNSET:
+            field_dict["pastJobs"] = past_jobs
+        if current_jobs is not UNSET:
+            field_dict["currentJobs"] = current_jobs
+        if languages is not UNSET:
+            field_dict["languages"] = languages
+        if left_stealth_at is not UNSET:
+            field_dict["leftStealthAt"] = left_stealth_at
+        if is_in_stealth is not UNSET:
+            field_dict["isInStealth"] = is_in_stealth
+        if stealth_v2 is not UNSET:
+            field_dict["stealthV2"] = stealth_v2
+        if job_status is not UNSET:
+            field_dict["jobStatus"] = job_status
+        if time_zone is not UNSET:
+            field_dict["timeZone"] = time_zone
+        if past_job_text is not UNSET:
+            field_dict["pastJobText"] = past_job_text
+        if fuzzy_name is not UNSET:
+            field_dict["fuzzyName"] = fuzzy_name
+        if company_match_mode is not UNSET:
+            field_dict["companyMatchMode"] = company_match_mode
+        if years_of_experience is not UNSET:
+            field_dict["yearsOfExperience"] = years_of_experience
+        if job_title_v3 is not UNSET:
+            field_dict["jobTitleV3"] = job_title_v3
+        if open_to_work is not UNSET:
+            field_dict["openToWork"] = open_to_work
+        if is_hiring is not UNSET:
+            field_dict["isHiring"] = is_hiring
+        if has_profile_picture is not UNSET:
+            field_dict["hasProfilePicture"] = has_profile_picture
+        if state is not UNSET:
+            field_dict["state"] = state
+        if certifications is not UNSET:
+            field_dict["certifications"] = certifications
+        if publications is not UNSET:
+            field_dict["publications"] = publications
+        if has_no_education is not UNSET:
+            field_dict["hasNoEducation"] = has_no_education
+        if employment_type is not UNSET:
+            field_dict["employmentType"] = employment_type
+        if is_top_voice is not UNSET:
+            field_dict["isTopVoice"] = is_top_voice
+        if has_premium is not UNSET:
+            field_dict["hasPremium"] = has_premium
+        if is_influencer is not UNSET:
+            field_dict["isInfluencer"] = is_influencer
+        if industry is not UNSET:
+            field_dict["industry"] = industry
+        if is_verified is not UNSET:
+            field_dict["isVerified"] = is_verified
+        if joined_linked_in_at is not UNSET:
+            field_dict["joinedLinkedInAt"] = joined_linked_in_at
+        if get_detailed_education is not UNSET:
+            field_dict["getDetailedEducation"] = get_detailed_education
+        if get_detailed_work_experience is not UNSET:
+            field_dict["getDetailedWorkExperience"] = get_detailed_work_experience
+        if tags is not UNSET:
+            field_dict["tags"] = tags
+        if education is not UNSET:
+            field_dict["education"] = education
+        if sort is not UNSET:
+            field_dict["sort"] = sort
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_approx_age_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsApproxAgeType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_certifications_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCertificationsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_company_match_mode_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_company_match_mode_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_country_3_letter_code_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCountry3LetterCodeType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_current_jobs_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_employment_type_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_exact_profile_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_exact_profile_v2_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileV2Type0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_fuzzy_name_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsFuzzyNameType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_industry_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsIndustryType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_status_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_status_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_status_type_2 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType2,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_title_v2_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV2Type0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_title_v3_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_joined_linked_in_at_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_joined_linked_in_at_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_keyword_search_options_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_keywords_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_keywords_v2_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_languages_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLanguagesType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_left_stealth_at_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_left_stealth_at_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_num_connections_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumConnectionsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_num_followers_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumFollowersType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_past_job_text_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobTextType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_past_jobs_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_publications_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPublicationsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_sort_type_0_item import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSortType0Item,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_started_at_company_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_started_at_company_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_started_in_role_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_started_in_role_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType1,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_state_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStateType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_stealth_v2_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_stealth_v2_type_1 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type1,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_tags_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTagsType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_time_zone_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTimeZoneType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_years_of_experience_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsYearsOfExperienceType0,
+        )
+
+        d = dict(src_dict)
+
+        def _parse_country_3_letter_code(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCountry3LetterCodeType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                country_3_letter_code_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCountry3LetterCodeType0.from_dict(data)
+                )
+
+                return country_3_letter_code_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCountry3LetterCodeType0 | None | Unset, data
+            )
+
+        country_3_letter_code = _parse_country_3_letter_code(d.pop("country3LetterCode", UNSET))
+
+        def _parse_num_connections(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumConnectionsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                num_connections_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumConnectionsType0.from_dict(data)
+                )
+
+                return num_connections_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumConnectionsType0 | None | Unset, data
+            )
+
+        num_connections = _parse_num_connections(d.pop("numConnections", UNSET))
+
+        def _parse_num_followers(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumFollowersType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                num_followers_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumFollowersType0.from_dict(data)
+                )
+
+                return num_followers_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsNumFollowersType0 | None | Unset, data)
+
+        num_followers = _parse_num_followers(d.pop("numFollowers", UNSET))
+
+        def _parse_approx_age(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsApproxAgeType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                approx_age_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsApproxAgeType0.from_dict(
+                    data
+                )
+
+                return approx_age_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsApproxAgeType0 | None | Unset, data)
+
+        approx_age = _parse_approx_age(d.pop("approxAge", UNSET))
+
+        def _parse_keywords(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                keywords_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsType0.from_dict(data)
+
+                return keywords_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsType0 | None | Unset, data)
+
+        keywords = _parse_keywords(d.pop("keywords", UNSET))
+
+        def _parse_keywords_v2(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                keywords_v2_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0.from_dict(
+                    data
+                )
+
+                return keywords_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0 | None | Unset, data)
+
+        keywords_v2 = _parse_keywords_v2(d.pop("keywordsV2", UNSET))
+
+        def _parse_keyword_search_options(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                keyword_search_options_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0.from_dict(data)
+                )
+
+                return keyword_search_options_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0 | None | Unset, data
+            )
+
+        keyword_search_options = _parse_keyword_search_options(d.pop("keywordSearchOptions", UNSET))
+
+        def _parse_job_title_v2(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV2Type0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_title_v2_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV2Type0.from_dict(data)
+                )
+
+                return job_title_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV2Type0 | None | Unset, data)
+
+        job_title_v2 = _parse_job_title_v2(d.pop("jobTitleV2", UNSET))
+
+        def _parse_exact_profile(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                exact_profile_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0.from_dict(data)
+                )
+
+                return exact_profile_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0 | None | Unset, data)
+
+        exact_profile = _parse_exact_profile(d.pop("exactProfile", UNSET))
+
+        def _parse_exact_profile_v2(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileV2Type0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                exact_profile_v2_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileV2Type0.from_dict(data)
+                )
+
+                return exact_profile_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileV2Type0 | None | Unset, data
+            )
+
+        exact_profile_v2 = _parse_exact_profile_v2(d.pop("exactProfileV2", UNSET))
+
+        def _parse_started_in_role(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0
+            | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                started_in_role_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0.from_dict(data)
+                )
+
+                return started_in_role_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                started_in_role_type_1 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType1.from_dict(data)
+                )
+
+                return started_in_role_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0
+                | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType1
+                | None
+                | Unset,
+                data,
+            )
+
+        started_in_role = _parse_started_in_role(d.pop("startedInRole", UNSET))
+
+        def _parse_started_at_company(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType0
+            | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                started_at_company_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType0.from_dict(data)
+                )
+
+                return started_at_company_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                started_at_company_type_1 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType1.from_dict(data)
+                )
+
+                return started_at_company_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType0
+                | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType1
+                | None
+                | Unset,
+                data,
+            )
+
+        started_at_company = _parse_started_at_company(d.pop("startedAtCompany", UNSET))
+
+        def _parse_location(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                location_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0.from_dict(data)
+
+                return location_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0 | None | Unset, data)
+
+        location = _parse_location(d.pop("location", UNSET))
+
+        def _parse_past_jobs(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                past_jobs_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0.from_dict(
+                    data
+                )
+
+                return past_jobs_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0 | None | Unset, data)
+
+        past_jobs = _parse_past_jobs(d.pop("pastJobs", UNSET))
+
+        def _parse_current_jobs(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                current_jobs_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0.from_dict(data)
+                )
+
+                return current_jobs_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0 | None | Unset, data)
+
+        current_jobs = _parse_current_jobs(d.pop("currentJobs", UNSET))
+
+        def _parse_languages(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLanguagesType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                languages_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLanguagesType0.from_dict(
+                    data
+                )
+
+                return languages_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLanguagesType0 | None | Unset, data)
+
+        languages = _parse_languages(d.pop("languages", UNSET))
+
+        def _parse_left_stealth_at(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType0
+            | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                left_stealth_at_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType0.from_dict(data)
+                )
+
+                return left_stealth_at_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                left_stealth_at_type_1 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType1.from_dict(data)
+                )
+
+                return left_stealth_at_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType0
+                | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType1
+                | None
+                | Unset,
+                data,
+            )
+
+        left_stealth_at = _parse_left_stealth_at(d.pop("leftStealthAt", UNSET))
+
+        def _parse_is_in_stealth(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        is_in_stealth = _parse_is_in_stealth(d.pop("isInStealth", UNSET))
+
+        def _parse_stealth_v2(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type0
+            | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                stealth_v2_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type0.from_dict(
+                    data
+                )
+
+                return stealth_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                stealth_v2_type_1 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type1.from_dict(
+                    data
+                )
+
+                return stealth_v2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type0
+                | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type1
+                | None
+                | Unset,
+                data,
+            )
+
+        stealth_v2 = _parse_stealth_v2(d.pop("stealthV2", UNSET))
+
+        def _parse_job_status(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType0
+            | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType1
+            | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType2
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_status_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType0.from_dict(
+                    data
+                )
+
+                return job_status_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_status_type_1 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType1.from_dict(
+                    data
+                )
+
+                return job_status_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_status_type_2 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType2.from_dict(
+                    data
+                )
+
+                return job_status_type_2
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType0
+                | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType1
+                | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType2
+                | None
+                | Unset,
+                data,
+            )
+
+        job_status = _parse_job_status(d.pop("jobStatus", UNSET))
+
+        def _parse_time_zone(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTimeZoneType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                time_zone_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTimeZoneType0.from_dict(
+                    data
+                )
+
+                return time_zone_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTimeZoneType0 | None | Unset, data)
+
+        time_zone = _parse_time_zone(d.pop("timeZone", UNSET))
+
+        def _parse_past_job_text(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobTextType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                past_job_text_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobTextType0.from_dict(data)
+                )
+
+                return past_job_text_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobTextType0 | None | Unset, data)
+
+        past_job_text = _parse_past_job_text(d.pop("pastJobText", UNSET))
+
+        def _parse_fuzzy_name(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsFuzzyNameType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                fuzzy_name_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsFuzzyNameType0.from_dict(
+                    data
+                )
+
+                return fuzzy_name_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsFuzzyNameType0 | None | Unset, data)
+
+        fuzzy_name = _parse_fuzzy_name(d.pop("fuzzyName", UNSET))
+
+        def _parse_company_match_mode(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType0
+            | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                company_match_mode_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType0.from_dict(data)
+                )
+
+                return company_match_mode_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                company_match_mode_type_1 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType1.from_dict(data)
+                )
+
+                return company_match_mode_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType0
+                | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCompanyMatchModeType1
+                | None
+                | Unset,
+                data,
+            )
+
+        company_match_mode = _parse_company_match_mode(d.pop("companyMatchMode", UNSET))
+
+        def _parse_years_of_experience(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsYearsOfExperienceType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                years_of_experience_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsYearsOfExperienceType0.from_dict(data)
+                )
+
+                return years_of_experience_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsYearsOfExperienceType0 | None | Unset, data
+            )
+
+        years_of_experience = _parse_years_of_experience(d.pop("yearsOfExperience", UNSET))
+
+        def _parse_job_title_v3(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_title_v3_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0.from_dict(data)
+                )
+
+                return job_title_v3_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0 | None | Unset, data)
+
+        job_title_v3 = _parse_job_title_v3(d.pop("jobTitleV3", UNSET))
+
+        def _parse_open_to_work(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        open_to_work = _parse_open_to_work(d.pop("openToWork", UNSET))
+
+        def _parse_is_hiring(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        is_hiring = _parse_is_hiring(d.pop("isHiring", UNSET))
+
+        def _parse_has_profile_picture(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        has_profile_picture = _parse_has_profile_picture(d.pop("hasProfilePicture", UNSET))
+
+        def _parse_state(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStateType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                state_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStateType0.from_dict(data)
+
+                return state_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStateType0 | None | Unset, data)
+
+        state = _parse_state(d.pop("state", UNSET))
+
+        def _parse_certifications(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCertificationsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                certifications_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCertificationsType0.from_dict(data)
+                )
+
+                return certifications_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCertificationsType0 | None | Unset, data
+            )
+
+        certifications = _parse_certifications(d.pop("certifications", UNSET))
+
+        def _parse_publications(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPublicationsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                publications_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPublicationsType0.from_dict(data)
+                )
+
+                return publications_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPublicationsType0 | None | Unset, data)
+
+        publications = _parse_publications(d.pop("publications", UNSET))
+
+        def _parse_has_no_education(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        has_no_education = _parse_has_no_education(d.pop("hasNoEducation", UNSET))
+
+        def _parse_employment_type(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                employment_type_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0.from_dict(data)
+                )
+
+                return employment_type_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0 | None | Unset, data
+            )
+
+        employment_type = _parse_employment_type(d.pop("employmentType", UNSET))
+
+        def _parse_is_top_voice(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        is_top_voice = _parse_is_top_voice(d.pop("isTopVoice", UNSET))
+
+        def _parse_has_premium(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        has_premium = _parse_has_premium(d.pop("hasPremium", UNSET))
+
+        def _parse_is_influencer(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        is_influencer = _parse_is_influencer(d.pop("isInfluencer", UNSET))
+
+        def _parse_industry(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsIndustryType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                industry_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsIndustryType0.from_dict(data)
+
+                return industry_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsIndustryType0 | None | Unset, data)
+
+        industry = _parse_industry(d.pop("industry", UNSET))
+
+        def _parse_is_verified(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        is_verified = _parse_is_verified(d.pop("isVerified", UNSET))
+
+        def _parse_joined_linked_in_at(
+            data: object,
+        ) -> (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0
+            | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                joined_linked_in_at_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0.from_dict(data)
+                )
+
+                return joined_linked_in_at_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                joined_linked_in_at_type_1 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType1.from_dict(data)
+                )
+
+                return joined_linked_in_at_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0
+                | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType1
+                | None
+                | Unset,
+                data,
+            )
+
+        joined_linked_in_at = _parse_joined_linked_in_at(d.pop("joinedLinkedInAt", UNSET))
+
+        def _parse_get_detailed_education(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        get_detailed_education = _parse_get_detailed_education(d.pop("getDetailedEducation", UNSET))
+
+        def _parse_get_detailed_work_experience(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        get_detailed_work_experience = _parse_get_detailed_work_experience(d.pop("getDetailedWorkExperience", UNSET))
+
+        def _parse_tags(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTagsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                tags_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTagsType0.from_dict(data)
+
+                return tags_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTagsType0 | None | Unset, data)
+
+        tags = _parse_tags(d.pop("tags", UNSET))
+
+        def _parse_education(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                education_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0.from_dict(
+                    data
+                )
+
+                return education_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0 | None | Unset, data)
+
+        education = _parse_education(d.pop("education", UNSET))
+
+        def _parse_sort(
+            data: object,
+        ) -> list[CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSortType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                sort_type_0 = []
+                _sort_type_0 = data
+                for sort_type_0_item_data in _sort_type_0:
+                    sort_type_0_item = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSortType0Item.from_dict(
+                        sort_type_0_item_data
+                    )
+
+                    sort_type_0.append(sort_type_0_item)
+
+                return sort_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                list[CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSortType0Item] | None | Unset, data
+            )
+
+        sort = _parse_sort(d.pop("sort", UNSET))
+
+        create_saved_search_body_search_params_type_2_profile_search_params = cls(
+            country_3_letter_code=country_3_letter_code,
+            num_connections=num_connections,
+            num_followers=num_followers,
+            approx_age=approx_age,
+            keywords=keywords,
+            keywords_v2=keywords_v2,
+            keyword_search_options=keyword_search_options,
+            job_title_v2=job_title_v2,
+            exact_profile=exact_profile,
+            exact_profile_v2=exact_profile_v2,
+            started_in_role=started_in_role,
+            started_at_company=started_at_company,
+            location=location,
+            past_jobs=past_jobs,
+            current_jobs=current_jobs,
+            languages=languages,
+            left_stealth_at=left_stealth_at,
+            is_in_stealth=is_in_stealth,
+            stealth_v2=stealth_v2,
+            job_status=job_status,
+            time_zone=time_zone,
+            past_job_text=past_job_text,
+            fuzzy_name=fuzzy_name,
+            company_match_mode=company_match_mode,
+            years_of_experience=years_of_experience,
+            job_title_v3=job_title_v3,
+            open_to_work=open_to_work,
+            is_hiring=is_hiring,
+            has_profile_picture=has_profile_picture,
+            state=state,
+            certifications=certifications,
+            publications=publications,
+            has_no_education=has_no_education,
+            employment_type=employment_type,
+            is_top_voice=is_top_voice,
+            has_premium=has_premium,
+            is_influencer=is_influencer,
+            industry=industry,
+            is_verified=is_verified,
+            joined_linked_in_at=joined_linked_in_at,
+            get_detailed_education=get_detailed_education,
+            get_detailed_work_experience=get_detailed_work_experience,
+            tags=tags,
+            education=education,
+            sort=sort,
+        )
+
+        return create_saved_search_body_search_params_type_2_profile_search_params

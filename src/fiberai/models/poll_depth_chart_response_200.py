@@ -31,6 +31,7 @@ class PollDepthChartResponse200:
         charge_info (PollDepthChartResponse200ChargeInfoType0 | PollDepthChartResponse200ChargeInfoType1 |
             PollDepthChartResponse200ChargeInfoType2 | PollDepthChartResponse200ChargeInfoType3 |
             PollDepthChartResponse200ChargeInfoType4):
+        advice (list[str]): Tips, recommendations, and suggestions for using this API effectively.
         warnings (list[PollDepthChartResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields in
             request
     """
@@ -47,6 +48,7 @@ class PollDepthChartResponse200:
         | PollDepthChartResponse200ChargeInfoType3
         | PollDepthChartResponse200ChargeInfoType4
     )
+    advice: list[str]
     warnings: list[PollDepthChartResponse200WarningsType0Item] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
@@ -77,6 +79,8 @@ class PollDepthChartResponse200:
         else:
             charge_info = self.charge_info.to_dict()
 
+        advice = self.advice
+
         warnings: list[dict[str, Any]] | None | Unset
         if isinstance(self.warnings, Unset):
             warnings = UNSET
@@ -95,6 +99,7 @@ class PollDepthChartResponse200:
             {
                 "output": output,
                 "chargeInfo": charge_info,
+                "advice": advice,
             }
         )
         if warnings is not UNSET:
@@ -198,6 +203,8 @@ class PollDepthChartResponse200:
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 
+        advice = cast(list[str], d.pop("advice"))
+
         def _parse_warnings(data: object) -> list[PollDepthChartResponse200WarningsType0Item] | None | Unset:
             if data is None:
                 return data
@@ -225,6 +232,7 @@ class PollDepthChartResponse200:
         poll_depth_chart_response_200 = cls(
             output=output,
             charge_info=charge_info,
+            advice=advice,
             warnings=warnings,
         )
 

@@ -12,6 +12,7 @@ from ...models.tiktok_user_following_response_401 import TiktokUserFollowingResp
 from ...models.tiktok_user_following_response_402 import TiktokUserFollowingResponse402
 from ...models.tiktok_user_following_response_403 import TiktokUserFollowingResponse403
 from ...models.tiktok_user_following_response_404 import TiktokUserFollowingResponse404
+from ...models.tiktok_user_following_response_422 import TiktokUserFollowingResponse422
 from ...models.tiktok_user_following_response_429 import TiktokUserFollowingResponse429
 from ...models.tiktok_user_following_response_500 import TiktokUserFollowingResponse500
 from ...models.tiktok_user_following_response_503 import TiktokUserFollowingResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | TiktokUserFollowingResponse402
     | TiktokUserFollowingResponse403
     | TiktokUserFollowingResponse404
+    | TiktokUserFollowingResponse422
     | TiktokUserFollowingResponse429
     | TiktokUserFollowingResponse500
     | TiktokUserFollowingResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = TiktokUserFollowingResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = TiktokUserFollowingResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | TiktokUserFollowingResponse402
     | TiktokUserFollowingResponse403
     | TiktokUserFollowingResponse404
+    | TiktokUserFollowingResponse422
     | TiktokUserFollowingResponse429
     | TiktokUserFollowingResponse500
     | TiktokUserFollowingResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | TiktokUserFollowingResponse402
     | TiktokUserFollowingResponse403
     | TiktokUserFollowingResponse404
+    | TiktokUserFollowingResponse422
     | TiktokUserFollowingResponse429
     | TiktokUserFollowingResponse500
     | TiktokUserFollowingResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokUserFollowingResponse200 | TiktokUserFollowingResponse400 | TiktokUserFollowingResponse401 | TiktokUserFollowingResponse402 | TiktokUserFollowingResponse403 | TiktokUserFollowingResponse404 | TiktokUserFollowingResponse429 | TiktokUserFollowingResponse500 | TiktokUserFollowingResponse503]
+        Response[TiktokUserFollowingResponse200 | TiktokUserFollowingResponse400 | TiktokUserFollowingResponse401 | TiktokUserFollowingResponse402 | TiktokUserFollowingResponse403 | TiktokUserFollowingResponse404 | TiktokUserFollowingResponse422 | TiktokUserFollowingResponse429 | TiktokUserFollowingResponse500 | TiktokUserFollowingResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | TiktokUserFollowingResponse402
     | TiktokUserFollowingResponse403
     | TiktokUserFollowingResponse404
+    | TiktokUserFollowingResponse422
     | TiktokUserFollowingResponse429
     | TiktokUserFollowingResponse500
     | TiktokUserFollowingResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokUserFollowingResponse200 | TiktokUserFollowingResponse400 | TiktokUserFollowingResponse401 | TiktokUserFollowingResponse402 | TiktokUserFollowingResponse403 | TiktokUserFollowingResponse404 | TiktokUserFollowingResponse429 | TiktokUserFollowingResponse500 | TiktokUserFollowingResponse503
+        TiktokUserFollowingResponse200 | TiktokUserFollowingResponse400 | TiktokUserFollowingResponse401 | TiktokUserFollowingResponse402 | TiktokUserFollowingResponse403 | TiktokUserFollowingResponse404 | TiktokUserFollowingResponse422 | TiktokUserFollowingResponse429 | TiktokUserFollowingResponse500 | TiktokUserFollowingResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | TiktokUserFollowingResponse402
     | TiktokUserFollowingResponse403
     | TiktokUserFollowingResponse404
+    | TiktokUserFollowingResponse422
     | TiktokUserFollowingResponse429
     | TiktokUserFollowingResponse500
     | TiktokUserFollowingResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokUserFollowingResponse200 | TiktokUserFollowingResponse400 | TiktokUserFollowingResponse401 | TiktokUserFollowingResponse402 | TiktokUserFollowingResponse403 | TiktokUserFollowingResponse404 | TiktokUserFollowingResponse429 | TiktokUserFollowingResponse500 | TiktokUserFollowingResponse503]
+        Response[TiktokUserFollowingResponse200 | TiktokUserFollowingResponse400 | TiktokUserFollowingResponse401 | TiktokUserFollowingResponse402 | TiktokUserFollowingResponse403 | TiktokUserFollowingResponse404 | TiktokUserFollowingResponse422 | TiktokUserFollowingResponse429 | TiktokUserFollowingResponse500 | TiktokUserFollowingResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | TiktokUserFollowingResponse402
     | TiktokUserFollowingResponse403
     | TiktokUserFollowingResponse404
+    | TiktokUserFollowingResponse422
     | TiktokUserFollowingResponse429
     | TiktokUserFollowingResponse500
     | TiktokUserFollowingResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokUserFollowingResponse200 | TiktokUserFollowingResponse400 | TiktokUserFollowingResponse401 | TiktokUserFollowingResponse402 | TiktokUserFollowingResponse403 | TiktokUserFollowingResponse404 | TiktokUserFollowingResponse429 | TiktokUserFollowingResponse500 | TiktokUserFollowingResponse503
+        TiktokUserFollowingResponse200 | TiktokUserFollowingResponse400 | TiktokUserFollowingResponse401 | TiktokUserFollowingResponse402 | TiktokUserFollowingResponse403 | TiktokUserFollowingResponse404 | TiktokUserFollowingResponse422 | TiktokUserFollowingResponse429 | TiktokUserFollowingResponse500 | TiktokUserFollowingResponse503
     """
 
     return (

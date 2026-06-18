@@ -19,14 +19,17 @@ class NewInvestor:
         entity_type (Literal['company']):
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
-        investor_types (list[str] | None | Unset): Only alert for these investor types (e.g. 'venture_capital'). Omit
-            for any new investor.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
+        investor_names (list[str] | None | Unset): Only alert when a new investor's name matches one of these (exact,
+            case-insensitive). Omit for any new investor.
     """
 
     type_: Literal["new_investor"]
     entity_type: Literal["company"]
     lookback_days: int | None | Unset = UNSET
-    investor_types: list[str] | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
+    investor_names: list[str] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -40,14 +43,16 @@ class NewInvestor:
         else:
             lookback_days = self.lookback_days
 
-        investor_types: list[str] | None | Unset
-        if isinstance(self.investor_types, Unset):
-            investor_types = UNSET
-        elif isinstance(self.investor_types, list):
-            investor_types = self.investor_types
+        is_dummy = self.is_dummy
+
+        investor_names: list[str] | None | Unset
+        if isinstance(self.investor_names, Unset):
+            investor_names = UNSET
+        elif isinstance(self.investor_names, list):
+            investor_names = self.investor_names
 
         else:
-            investor_types = self.investor_types
+            investor_names = self.investor_names
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -59,8 +64,10 @@ class NewInvestor:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
-        if investor_types is not UNSET:
-            field_dict["investorTypes"] = investor_types
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
+        if investor_names is not UNSET:
+            field_dict["investorNames"] = investor_names
 
         return field_dict
 
@@ -84,7 +91,9 @@ class NewInvestor:
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
-        def _parse_investor_types(data: object) -> list[str] | None | Unset:
+        is_dummy = d.pop("isDummy", UNSET)
+
+        def _parse_investor_names(data: object) -> list[str] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -92,20 +101,21 @@ class NewInvestor:
             try:
                 if not isinstance(data, list):
                     raise TypeError()
-                investor_types_type_0 = cast(list[str], data)
+                investor_names_type_0 = cast(list[str], data)
 
-                return investor_types_type_0
+                return investor_names_type_0
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             return cast(list[str] | None | Unset, data)
 
-        investor_types = _parse_investor_types(d.pop("investorTypes", UNSET))
+        investor_names = _parse_investor_names(d.pop("investorNames", UNSET))
 
         new_investor = cls(
             type_=type_,
             entity_type=entity_type,
             lookback_days=lookback_days,
-            investor_types=investor_types,
+            is_dummy=is_dummy,
+            investor_names=investor_names,
         )
 
         new_investor.additional_properties = d

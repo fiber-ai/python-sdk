@@ -12,6 +12,7 @@ from ...models.poll_depth_chart_response_401 import PollDepthChartResponse401
 from ...models.poll_depth_chart_response_402 import PollDepthChartResponse402
 from ...models.poll_depth_chart_response_403 import PollDepthChartResponse403
 from ...models.poll_depth_chart_response_404 import PollDepthChartResponse404
+from ...models.poll_depth_chart_response_422 import PollDepthChartResponse422
 from ...models.poll_depth_chart_response_429 import PollDepthChartResponse429
 from ...models.poll_depth_chart_response_500 import PollDepthChartResponse500
 from ...models.poll_depth_chart_response_503 import PollDepthChartResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | PollDepthChartResponse402
     | PollDepthChartResponse403
     | PollDepthChartResponse404
+    | PollDepthChartResponse422
     | PollDepthChartResponse429
     | PollDepthChartResponse500
     | PollDepthChartResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = PollDepthChartResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = PollDepthChartResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | PollDepthChartResponse402
     | PollDepthChartResponse403
     | PollDepthChartResponse404
+    | PollDepthChartResponse422
     | PollDepthChartResponse429
     | PollDepthChartResponse500
     | PollDepthChartResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | PollDepthChartResponse402
     | PollDepthChartResponse403
     | PollDepthChartResponse404
+    | PollDepthChartResponse422
     | PollDepthChartResponse429
     | PollDepthChartResponse500
     | PollDepthChartResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PollDepthChartResponse200 | PollDepthChartResponse400 | PollDepthChartResponse401 | PollDepthChartResponse402 | PollDepthChartResponse403 | PollDepthChartResponse404 | PollDepthChartResponse429 | PollDepthChartResponse500 | PollDepthChartResponse503]
+        Response[PollDepthChartResponse200 | PollDepthChartResponse400 | PollDepthChartResponse401 | PollDepthChartResponse402 | PollDepthChartResponse403 | PollDepthChartResponse404 | PollDepthChartResponse422 | PollDepthChartResponse429 | PollDepthChartResponse500 | PollDepthChartResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | PollDepthChartResponse402
     | PollDepthChartResponse403
     | PollDepthChartResponse404
+    | PollDepthChartResponse422
     | PollDepthChartResponse429
     | PollDepthChartResponse500
     | PollDepthChartResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PollDepthChartResponse200 | PollDepthChartResponse400 | PollDepthChartResponse401 | PollDepthChartResponse402 | PollDepthChartResponse403 | PollDepthChartResponse404 | PollDepthChartResponse429 | PollDepthChartResponse500 | PollDepthChartResponse503
+        PollDepthChartResponse200 | PollDepthChartResponse400 | PollDepthChartResponse401 | PollDepthChartResponse402 | PollDepthChartResponse403 | PollDepthChartResponse404 | PollDepthChartResponse422 | PollDepthChartResponse429 | PollDepthChartResponse500 | PollDepthChartResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | PollDepthChartResponse402
     | PollDepthChartResponse403
     | PollDepthChartResponse404
+    | PollDepthChartResponse422
     | PollDepthChartResponse429
     | PollDepthChartResponse500
     | PollDepthChartResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PollDepthChartResponse200 | PollDepthChartResponse400 | PollDepthChartResponse401 | PollDepthChartResponse402 | PollDepthChartResponse403 | PollDepthChartResponse404 | PollDepthChartResponse429 | PollDepthChartResponse500 | PollDepthChartResponse503]
+        Response[PollDepthChartResponse200 | PollDepthChartResponse400 | PollDepthChartResponse401 | PollDepthChartResponse402 | PollDepthChartResponse403 | PollDepthChartResponse404 | PollDepthChartResponse422 | PollDepthChartResponse429 | PollDepthChartResponse500 | PollDepthChartResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | PollDepthChartResponse402
     | PollDepthChartResponse403
     | PollDepthChartResponse404
+    | PollDepthChartResponse422
     | PollDepthChartResponse429
     | PollDepthChartResponse500
     | PollDepthChartResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PollDepthChartResponse200 | PollDepthChartResponse400 | PollDepthChartResponse401 | PollDepthChartResponse402 | PollDepthChartResponse403 | PollDepthChartResponse404 | PollDepthChartResponse429 | PollDepthChartResponse500 | PollDepthChartResponse503
+        PollDepthChartResponse200 | PollDepthChartResponse400 | PollDepthChartResponse401 | PollDepthChartResponse402 | PollDepthChartResponse403 | PollDepthChartResponse404 | PollDepthChartResponse422 | PollDepthChartResponse429 | PollDepthChartResponse500 | PollDepthChartResponse503
     """
 
     return (

@@ -19,10 +19,10 @@ T = TypeVar("T", bound="RemoveTrackerCompaniesResponse200Output")
 class RemoveTrackerCompaniesResponse200Output:
     """
     Attributes:
-        removed (int): Number of companies successfully deactivated
-        not_found (int): Number of identifiers not found or already inactive
+        removed (int): Number of companies successfully deactivated.
+        not_found (int): Number of identifiers not found or already inactive.
         failed_identifiers (list[RemoveTrackerCompaniesResponse200OutputFailedIdentifiersItem]): Details on identifiers
-            that could not be removed
+            that could not be removed.
     """
 
     removed: int

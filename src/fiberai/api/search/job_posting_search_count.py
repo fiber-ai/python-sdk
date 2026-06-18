@@ -12,6 +12,7 @@ from ...models.job_posting_search_count_response_401 import JobPostingSearchCoun
 from ...models.job_posting_search_count_response_402 import JobPostingSearchCountResponse402
 from ...models.job_posting_search_count_response_403 import JobPostingSearchCountResponse403
 from ...models.job_posting_search_count_response_404 import JobPostingSearchCountResponse404
+from ...models.job_posting_search_count_response_422 import JobPostingSearchCountResponse422
 from ...models.job_posting_search_count_response_429 import JobPostingSearchCountResponse429
 from ...models.job_posting_search_count_response_500 import JobPostingSearchCountResponse500
 from ...models.job_posting_search_count_response_503 import JobPostingSearchCountResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | JobPostingSearchCountResponse402
     | JobPostingSearchCountResponse403
     | JobPostingSearchCountResponse404
+    | JobPostingSearchCountResponse422
     | JobPostingSearchCountResponse429
     | JobPostingSearchCountResponse500
     | JobPostingSearchCountResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = JobPostingSearchCountResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = JobPostingSearchCountResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | JobPostingSearchCountResponse402
     | JobPostingSearchCountResponse403
     | JobPostingSearchCountResponse404
+    | JobPostingSearchCountResponse422
     | JobPostingSearchCountResponse429
     | JobPostingSearchCountResponse500
     | JobPostingSearchCountResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | JobPostingSearchCountResponse402
     | JobPostingSearchCountResponse403
     | JobPostingSearchCountResponse404
+    | JobPostingSearchCountResponse422
     | JobPostingSearchCountResponse429
     | JobPostingSearchCountResponse500
     | JobPostingSearchCountResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[JobPostingSearchCountResponse200 | JobPostingSearchCountResponse400 | JobPostingSearchCountResponse401 | JobPostingSearchCountResponse402 | JobPostingSearchCountResponse403 | JobPostingSearchCountResponse404 | JobPostingSearchCountResponse429 | JobPostingSearchCountResponse500 | JobPostingSearchCountResponse503]
+        Response[JobPostingSearchCountResponse200 | JobPostingSearchCountResponse400 | JobPostingSearchCountResponse401 | JobPostingSearchCountResponse402 | JobPostingSearchCountResponse403 | JobPostingSearchCountResponse404 | JobPostingSearchCountResponse422 | JobPostingSearchCountResponse429 | JobPostingSearchCountResponse500 | JobPostingSearchCountResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | JobPostingSearchCountResponse402
     | JobPostingSearchCountResponse403
     | JobPostingSearchCountResponse404
+    | JobPostingSearchCountResponse422
     | JobPostingSearchCountResponse429
     | JobPostingSearchCountResponse500
     | JobPostingSearchCountResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        JobPostingSearchCountResponse200 | JobPostingSearchCountResponse400 | JobPostingSearchCountResponse401 | JobPostingSearchCountResponse402 | JobPostingSearchCountResponse403 | JobPostingSearchCountResponse404 | JobPostingSearchCountResponse429 | JobPostingSearchCountResponse500 | JobPostingSearchCountResponse503
+        JobPostingSearchCountResponse200 | JobPostingSearchCountResponse400 | JobPostingSearchCountResponse401 | JobPostingSearchCountResponse402 | JobPostingSearchCountResponse403 | JobPostingSearchCountResponse404 | JobPostingSearchCountResponse422 | JobPostingSearchCountResponse429 | JobPostingSearchCountResponse500 | JobPostingSearchCountResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | JobPostingSearchCountResponse402
     | JobPostingSearchCountResponse403
     | JobPostingSearchCountResponse404
+    | JobPostingSearchCountResponse422
     | JobPostingSearchCountResponse429
     | JobPostingSearchCountResponse500
     | JobPostingSearchCountResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[JobPostingSearchCountResponse200 | JobPostingSearchCountResponse400 | JobPostingSearchCountResponse401 | JobPostingSearchCountResponse402 | JobPostingSearchCountResponse403 | JobPostingSearchCountResponse404 | JobPostingSearchCountResponse429 | JobPostingSearchCountResponse500 | JobPostingSearchCountResponse503]
+        Response[JobPostingSearchCountResponse200 | JobPostingSearchCountResponse400 | JobPostingSearchCountResponse401 | JobPostingSearchCountResponse402 | JobPostingSearchCountResponse403 | JobPostingSearchCountResponse404 | JobPostingSearchCountResponse422 | JobPostingSearchCountResponse429 | JobPostingSearchCountResponse500 | JobPostingSearchCountResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | JobPostingSearchCountResponse402
     | JobPostingSearchCountResponse403
     | JobPostingSearchCountResponse404
+    | JobPostingSearchCountResponse422
     | JobPostingSearchCountResponse429
     | JobPostingSearchCountResponse500
     | JobPostingSearchCountResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        JobPostingSearchCountResponse200 | JobPostingSearchCountResponse400 | JobPostingSearchCountResponse401 | JobPostingSearchCountResponse402 | JobPostingSearchCountResponse403 | JobPostingSearchCountResponse404 | JobPostingSearchCountResponse429 | JobPostingSearchCountResponse500 | JobPostingSearchCountResponse503
+        JobPostingSearchCountResponse200 | JobPostingSearchCountResponse400 | JobPostingSearchCountResponse401 | JobPostingSearchCountResponse402 | JobPostingSearchCountResponse403 | JobPostingSearchCountResponse404 | JobPostingSearchCountResponse422 | JobPostingSearchCountResponse429 | JobPostingSearchCountResponse500 | JobPostingSearchCountResponse503
     """
 
     return (

@@ -12,6 +12,7 @@ from ...models.tiktok_video_comments_response_401 import TiktokVideoCommentsResp
 from ...models.tiktok_video_comments_response_402 import TiktokVideoCommentsResponse402
 from ...models.tiktok_video_comments_response_403 import TiktokVideoCommentsResponse403
 from ...models.tiktok_video_comments_response_404 import TiktokVideoCommentsResponse404
+from ...models.tiktok_video_comments_response_422 import TiktokVideoCommentsResponse422
 from ...models.tiktok_video_comments_response_429 import TiktokVideoCommentsResponse429
 from ...models.tiktok_video_comments_response_500 import TiktokVideoCommentsResponse500
 from ...models.tiktok_video_comments_response_503 import TiktokVideoCommentsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | TiktokVideoCommentsResponse402
     | TiktokVideoCommentsResponse403
     | TiktokVideoCommentsResponse404
+    | TiktokVideoCommentsResponse422
     | TiktokVideoCommentsResponse429
     | TiktokVideoCommentsResponse500
     | TiktokVideoCommentsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = TiktokVideoCommentsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = TiktokVideoCommentsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | TiktokVideoCommentsResponse402
     | TiktokVideoCommentsResponse403
     | TiktokVideoCommentsResponse404
+    | TiktokVideoCommentsResponse422
     | TiktokVideoCommentsResponse429
     | TiktokVideoCommentsResponse500
     | TiktokVideoCommentsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | TiktokVideoCommentsResponse402
     | TiktokVideoCommentsResponse403
     | TiktokVideoCommentsResponse404
+    | TiktokVideoCommentsResponse422
     | TiktokVideoCommentsResponse429
     | TiktokVideoCommentsResponse500
     | TiktokVideoCommentsResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokVideoCommentsResponse200 | TiktokVideoCommentsResponse400 | TiktokVideoCommentsResponse401 | TiktokVideoCommentsResponse402 | TiktokVideoCommentsResponse403 | TiktokVideoCommentsResponse404 | TiktokVideoCommentsResponse429 | TiktokVideoCommentsResponse500 | TiktokVideoCommentsResponse503]
+        Response[TiktokVideoCommentsResponse200 | TiktokVideoCommentsResponse400 | TiktokVideoCommentsResponse401 | TiktokVideoCommentsResponse402 | TiktokVideoCommentsResponse403 | TiktokVideoCommentsResponse404 | TiktokVideoCommentsResponse422 | TiktokVideoCommentsResponse429 | TiktokVideoCommentsResponse500 | TiktokVideoCommentsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | TiktokVideoCommentsResponse402
     | TiktokVideoCommentsResponse403
     | TiktokVideoCommentsResponse404
+    | TiktokVideoCommentsResponse422
     | TiktokVideoCommentsResponse429
     | TiktokVideoCommentsResponse500
     | TiktokVideoCommentsResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokVideoCommentsResponse200 | TiktokVideoCommentsResponse400 | TiktokVideoCommentsResponse401 | TiktokVideoCommentsResponse402 | TiktokVideoCommentsResponse403 | TiktokVideoCommentsResponse404 | TiktokVideoCommentsResponse429 | TiktokVideoCommentsResponse500 | TiktokVideoCommentsResponse503
+        TiktokVideoCommentsResponse200 | TiktokVideoCommentsResponse400 | TiktokVideoCommentsResponse401 | TiktokVideoCommentsResponse402 | TiktokVideoCommentsResponse403 | TiktokVideoCommentsResponse404 | TiktokVideoCommentsResponse422 | TiktokVideoCommentsResponse429 | TiktokVideoCommentsResponse500 | TiktokVideoCommentsResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | TiktokVideoCommentsResponse402
     | TiktokVideoCommentsResponse403
     | TiktokVideoCommentsResponse404
+    | TiktokVideoCommentsResponse422
     | TiktokVideoCommentsResponse429
     | TiktokVideoCommentsResponse500
     | TiktokVideoCommentsResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TiktokVideoCommentsResponse200 | TiktokVideoCommentsResponse400 | TiktokVideoCommentsResponse401 | TiktokVideoCommentsResponse402 | TiktokVideoCommentsResponse403 | TiktokVideoCommentsResponse404 | TiktokVideoCommentsResponse429 | TiktokVideoCommentsResponse500 | TiktokVideoCommentsResponse503]
+        Response[TiktokVideoCommentsResponse200 | TiktokVideoCommentsResponse400 | TiktokVideoCommentsResponse401 | TiktokVideoCommentsResponse402 | TiktokVideoCommentsResponse403 | TiktokVideoCommentsResponse404 | TiktokVideoCommentsResponse422 | TiktokVideoCommentsResponse429 | TiktokVideoCommentsResponse500 | TiktokVideoCommentsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | TiktokVideoCommentsResponse402
     | TiktokVideoCommentsResponse403
     | TiktokVideoCommentsResponse404
+    | TiktokVideoCommentsResponse422
     | TiktokVideoCommentsResponse429
     | TiktokVideoCommentsResponse500
     | TiktokVideoCommentsResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TiktokVideoCommentsResponse200 | TiktokVideoCommentsResponse400 | TiktokVideoCommentsResponse401 | TiktokVideoCommentsResponse402 | TiktokVideoCommentsResponse403 | TiktokVideoCommentsResponse404 | TiktokVideoCommentsResponse429 | TiktokVideoCommentsResponse500 | TiktokVideoCommentsResponse503
+        TiktokVideoCommentsResponse200 | TiktokVideoCommentsResponse400 | TiktokVideoCommentsResponse401 | TiktokVideoCommentsResponse402 | TiktokVideoCommentsResponse403 | TiktokVideoCommentsResponse404 | TiktokVideoCommentsResponse422 | TiktokVideoCommentsResponse429 | TiktokVideoCommentsResponse500 | TiktokVideoCommentsResponse503
     """
 
     return (

@@ -12,6 +12,7 @@ from ...models.delete_prospect_exclusion_list_response_401 import DeleteProspect
 from ...models.delete_prospect_exclusion_list_response_402 import DeleteProspectExclusionListResponse402
 from ...models.delete_prospect_exclusion_list_response_403 import DeleteProspectExclusionListResponse403
 from ...models.delete_prospect_exclusion_list_response_404 import DeleteProspectExclusionListResponse404
+from ...models.delete_prospect_exclusion_list_response_422 import DeleteProspectExclusionListResponse422
 from ...models.delete_prospect_exclusion_list_response_429 import DeleteProspectExclusionListResponse429
 from ...models.delete_prospect_exclusion_list_response_500 import DeleteProspectExclusionListResponse500
 from ...models.delete_prospect_exclusion_list_response_503 import DeleteProspectExclusionListResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | DeleteProspectExclusionListResponse402
     | DeleteProspectExclusionListResponse403
     | DeleteProspectExclusionListResponse404
+    | DeleteProspectExclusionListResponse422
     | DeleteProspectExclusionListResponse429
     | DeleteProspectExclusionListResponse500
     | DeleteProspectExclusionListResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = DeleteProspectExclusionListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = DeleteProspectExclusionListResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | DeleteProspectExclusionListResponse402
     | DeleteProspectExclusionListResponse403
     | DeleteProspectExclusionListResponse404
+    | DeleteProspectExclusionListResponse422
     | DeleteProspectExclusionListResponse429
     | DeleteProspectExclusionListResponse500
     | DeleteProspectExclusionListResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | DeleteProspectExclusionListResponse402
     | DeleteProspectExclusionListResponse403
     | DeleteProspectExclusionListResponse404
+    | DeleteProspectExclusionListResponse422
     | DeleteProspectExclusionListResponse429
     | DeleteProspectExclusionListResponse500
     | DeleteProspectExclusionListResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DeleteProspectExclusionListResponse200 | DeleteProspectExclusionListResponse400 | DeleteProspectExclusionListResponse401 | DeleteProspectExclusionListResponse402 | DeleteProspectExclusionListResponse403 | DeleteProspectExclusionListResponse404 | DeleteProspectExclusionListResponse429 | DeleteProspectExclusionListResponse500 | DeleteProspectExclusionListResponse503]
+        Response[DeleteProspectExclusionListResponse200 | DeleteProspectExclusionListResponse400 | DeleteProspectExclusionListResponse401 | DeleteProspectExclusionListResponse402 | DeleteProspectExclusionListResponse403 | DeleteProspectExclusionListResponse404 | DeleteProspectExclusionListResponse422 | DeleteProspectExclusionListResponse429 | DeleteProspectExclusionListResponse500 | DeleteProspectExclusionListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | DeleteProspectExclusionListResponse402
     | DeleteProspectExclusionListResponse403
     | DeleteProspectExclusionListResponse404
+    | DeleteProspectExclusionListResponse422
     | DeleteProspectExclusionListResponse429
     | DeleteProspectExclusionListResponse500
     | DeleteProspectExclusionListResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DeleteProspectExclusionListResponse200 | DeleteProspectExclusionListResponse400 | DeleteProspectExclusionListResponse401 | DeleteProspectExclusionListResponse402 | DeleteProspectExclusionListResponse403 | DeleteProspectExclusionListResponse404 | DeleteProspectExclusionListResponse429 | DeleteProspectExclusionListResponse500 | DeleteProspectExclusionListResponse503
+        DeleteProspectExclusionListResponse200 | DeleteProspectExclusionListResponse400 | DeleteProspectExclusionListResponse401 | DeleteProspectExclusionListResponse402 | DeleteProspectExclusionListResponse403 | DeleteProspectExclusionListResponse404 | DeleteProspectExclusionListResponse422 | DeleteProspectExclusionListResponse429 | DeleteProspectExclusionListResponse500 | DeleteProspectExclusionListResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | DeleteProspectExclusionListResponse402
     | DeleteProspectExclusionListResponse403
     | DeleteProspectExclusionListResponse404
+    | DeleteProspectExclusionListResponse422
     | DeleteProspectExclusionListResponse429
     | DeleteProspectExclusionListResponse500
     | DeleteProspectExclusionListResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DeleteProspectExclusionListResponse200 | DeleteProspectExclusionListResponse400 | DeleteProspectExclusionListResponse401 | DeleteProspectExclusionListResponse402 | DeleteProspectExclusionListResponse403 | DeleteProspectExclusionListResponse404 | DeleteProspectExclusionListResponse429 | DeleteProspectExclusionListResponse500 | DeleteProspectExclusionListResponse503]
+        Response[DeleteProspectExclusionListResponse200 | DeleteProspectExclusionListResponse400 | DeleteProspectExclusionListResponse401 | DeleteProspectExclusionListResponse402 | DeleteProspectExclusionListResponse403 | DeleteProspectExclusionListResponse404 | DeleteProspectExclusionListResponse422 | DeleteProspectExclusionListResponse429 | DeleteProspectExclusionListResponse500 | DeleteProspectExclusionListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | DeleteProspectExclusionListResponse402
     | DeleteProspectExclusionListResponse403
     | DeleteProspectExclusionListResponse404
+    | DeleteProspectExclusionListResponse422
     | DeleteProspectExclusionListResponse429
     | DeleteProspectExclusionListResponse500
     | DeleteProspectExclusionListResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DeleteProspectExclusionListResponse200 | DeleteProspectExclusionListResponse400 | DeleteProspectExclusionListResponse401 | DeleteProspectExclusionListResponse402 | DeleteProspectExclusionListResponse403 | DeleteProspectExclusionListResponse404 | DeleteProspectExclusionListResponse429 | DeleteProspectExclusionListResponse500 | DeleteProspectExclusionListResponse503
+        DeleteProspectExclusionListResponse200 | DeleteProspectExclusionListResponse400 | DeleteProspectExclusionListResponse401 | DeleteProspectExclusionListResponse402 | DeleteProspectExclusionListResponse403 | DeleteProspectExclusionListResponse404 | DeleteProspectExclusionListResponse422 | DeleteProspectExclusionListResponse429 | DeleteProspectExclusionListResponse500 | DeleteProspectExclusionListResponse503
     """
 
     return (

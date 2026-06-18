@@ -7,12 +7,12 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.update_tracker_company_list_body import UpdateTrackerCompanyListBody
-from ...models.update_tracker_company_list_response_200 import UpdateTrackerCompanyListResponse200
 from ...models.update_tracker_company_list_response_400 import UpdateTrackerCompanyListResponse400
 from ...models.update_tracker_company_list_response_401 import UpdateTrackerCompanyListResponse401
 from ...models.update_tracker_company_list_response_402 import UpdateTrackerCompanyListResponse402
 from ...models.update_tracker_company_list_response_403 import UpdateTrackerCompanyListResponse403
 from ...models.update_tracker_company_list_response_404 import UpdateTrackerCompanyListResponse404
+from ...models.update_tracker_company_list_response_422 import UpdateTrackerCompanyListResponse422
 from ...models.update_tracker_company_list_response_429 import UpdateTrackerCompanyListResponse429
 from ...models.update_tracker_company_list_response_500 import UpdateTrackerCompanyListResponse500
 from ...models.update_tracker_company_list_response_503 import UpdateTrackerCompanyListResponse503
@@ -44,22 +44,17 @@ def _get_kwargs(
 def _parse_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
 ) -> (
-    UpdateTrackerCompanyListResponse200
-    | UpdateTrackerCompanyListResponse400
+    UpdateTrackerCompanyListResponse400
     | UpdateTrackerCompanyListResponse401
     | UpdateTrackerCompanyListResponse402
     | UpdateTrackerCompanyListResponse403
     | UpdateTrackerCompanyListResponse404
+    | UpdateTrackerCompanyListResponse422
     | UpdateTrackerCompanyListResponse429
     | UpdateTrackerCompanyListResponse500
     | UpdateTrackerCompanyListResponse503
     | None
 ):
-    if response.status_code == 200:
-        response_200 = UpdateTrackerCompanyListResponse200.from_dict(response.json())
-
-        return response_200
-
     if response.status_code == 400:
         response_400 = UpdateTrackerCompanyListResponse400.from_dict(response.json())
 
@@ -85,6 +80,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = UpdateTrackerCompanyListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = UpdateTrackerCompanyListResponse429.from_dict(response.json())
 
@@ -109,12 +109,12 @@ def _parse_response(
 def _build_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
 ) -> Response[
-    UpdateTrackerCompanyListResponse200
-    | UpdateTrackerCompanyListResponse400
+    UpdateTrackerCompanyListResponse400
     | UpdateTrackerCompanyListResponse401
     | UpdateTrackerCompanyListResponse402
     | UpdateTrackerCompanyListResponse403
     | UpdateTrackerCompanyListResponse404
+    | UpdateTrackerCompanyListResponse422
     | UpdateTrackerCompanyListResponse429
     | UpdateTrackerCompanyListResponse500
     | UpdateTrackerCompanyListResponse503
@@ -133,23 +133,22 @@ def sync_detailed(
     client: AuthenticatedClient | Client,
     body: UpdateTrackerCompanyListBody,
 ) -> Response[
-    UpdateTrackerCompanyListResponse200
-    | UpdateTrackerCompanyListResponse400
+    UpdateTrackerCompanyListResponse400
     | UpdateTrackerCompanyListResponse401
     | UpdateTrackerCompanyListResponse402
     | UpdateTrackerCompanyListResponse403
     | UpdateTrackerCompanyListResponse404
+    | UpdateTrackerCompanyListResponse422
     | UpdateTrackerCompanyListResponse429
     | UpdateTrackerCompanyListResponse500
     | UpdateTrackerCompanyListResponse503
 ]:
     r"""Update company tracker list
 
-     Update a company tracker list. Can change name, refresh interval, active status, or manage tracking
-    rules. Supports replace-all (trackingRules) or granular (addRules/removeRuleIds) rule management —
-    but not both in one request.
+     Update a company tracker list. Supports replace-all (`trackingRules`) or granular
+    (`addRules`/`removeRuleIds`) rule management — but not both in one request.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -163,7 +162,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[UpdateTrackerCompanyListResponse200 | UpdateTrackerCompanyListResponse400 | UpdateTrackerCompanyListResponse401 | UpdateTrackerCompanyListResponse402 | UpdateTrackerCompanyListResponse403 | UpdateTrackerCompanyListResponse404 | UpdateTrackerCompanyListResponse429 | UpdateTrackerCompanyListResponse500 | UpdateTrackerCompanyListResponse503]
+        Response[UpdateTrackerCompanyListResponse400 | UpdateTrackerCompanyListResponse401 | UpdateTrackerCompanyListResponse402 | UpdateTrackerCompanyListResponse403 | UpdateTrackerCompanyListResponse404 | UpdateTrackerCompanyListResponse422 | UpdateTrackerCompanyListResponse429 | UpdateTrackerCompanyListResponse500 | UpdateTrackerCompanyListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -184,12 +183,12 @@ def sync(
     client: AuthenticatedClient | Client,
     body: UpdateTrackerCompanyListBody,
 ) -> (
-    UpdateTrackerCompanyListResponse200
-    | UpdateTrackerCompanyListResponse400
+    UpdateTrackerCompanyListResponse400
     | UpdateTrackerCompanyListResponse401
     | UpdateTrackerCompanyListResponse402
     | UpdateTrackerCompanyListResponse403
     | UpdateTrackerCompanyListResponse404
+    | UpdateTrackerCompanyListResponse422
     | UpdateTrackerCompanyListResponse429
     | UpdateTrackerCompanyListResponse500
     | UpdateTrackerCompanyListResponse503
@@ -197,11 +196,10 @@ def sync(
 ):
     r"""Update company tracker list
 
-     Update a company tracker list. Can change name, refresh interval, active status, or manage tracking
-    rules. Supports replace-all (trackingRules) or granular (addRules/removeRuleIds) rule management —
-    but not both in one request.
+     Update a company tracker list. Supports replace-all (`trackingRules`) or granular
+    (`addRules`/`removeRuleIds`) rule management — but not both in one request.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -215,7 +213,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        UpdateTrackerCompanyListResponse200 | UpdateTrackerCompanyListResponse400 | UpdateTrackerCompanyListResponse401 | UpdateTrackerCompanyListResponse402 | UpdateTrackerCompanyListResponse403 | UpdateTrackerCompanyListResponse404 | UpdateTrackerCompanyListResponse429 | UpdateTrackerCompanyListResponse500 | UpdateTrackerCompanyListResponse503
+        UpdateTrackerCompanyListResponse400 | UpdateTrackerCompanyListResponse401 | UpdateTrackerCompanyListResponse402 | UpdateTrackerCompanyListResponse403 | UpdateTrackerCompanyListResponse404 | UpdateTrackerCompanyListResponse422 | UpdateTrackerCompanyListResponse429 | UpdateTrackerCompanyListResponse500 | UpdateTrackerCompanyListResponse503
     """
 
     return sync_detailed(
@@ -231,23 +229,22 @@ async def asyncio_detailed(
     client: AuthenticatedClient | Client,
     body: UpdateTrackerCompanyListBody,
 ) -> Response[
-    UpdateTrackerCompanyListResponse200
-    | UpdateTrackerCompanyListResponse400
+    UpdateTrackerCompanyListResponse400
     | UpdateTrackerCompanyListResponse401
     | UpdateTrackerCompanyListResponse402
     | UpdateTrackerCompanyListResponse403
     | UpdateTrackerCompanyListResponse404
+    | UpdateTrackerCompanyListResponse422
     | UpdateTrackerCompanyListResponse429
     | UpdateTrackerCompanyListResponse500
     | UpdateTrackerCompanyListResponse503
 ]:
     r"""Update company tracker list
 
-     Update a company tracker list. Can change name, refresh interval, active status, or manage tracking
-    rules. Supports replace-all (trackingRules) or granular (addRules/removeRuleIds) rule management —
-    but not both in one request.
+     Update a company tracker list. Supports replace-all (`trackingRules`) or granular
+    (`addRules`/`removeRuleIds`) rule management — but not both in one request.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -261,7 +258,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[UpdateTrackerCompanyListResponse200 | UpdateTrackerCompanyListResponse400 | UpdateTrackerCompanyListResponse401 | UpdateTrackerCompanyListResponse402 | UpdateTrackerCompanyListResponse403 | UpdateTrackerCompanyListResponse404 | UpdateTrackerCompanyListResponse429 | UpdateTrackerCompanyListResponse500 | UpdateTrackerCompanyListResponse503]
+        Response[UpdateTrackerCompanyListResponse400 | UpdateTrackerCompanyListResponse401 | UpdateTrackerCompanyListResponse402 | UpdateTrackerCompanyListResponse403 | UpdateTrackerCompanyListResponse404 | UpdateTrackerCompanyListResponse422 | UpdateTrackerCompanyListResponse429 | UpdateTrackerCompanyListResponse500 | UpdateTrackerCompanyListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -280,12 +277,12 @@ async def asyncio(
     client: AuthenticatedClient | Client,
     body: UpdateTrackerCompanyListBody,
 ) -> (
-    UpdateTrackerCompanyListResponse200
-    | UpdateTrackerCompanyListResponse400
+    UpdateTrackerCompanyListResponse400
     | UpdateTrackerCompanyListResponse401
     | UpdateTrackerCompanyListResponse402
     | UpdateTrackerCompanyListResponse403
     | UpdateTrackerCompanyListResponse404
+    | UpdateTrackerCompanyListResponse422
     | UpdateTrackerCompanyListResponse429
     | UpdateTrackerCompanyListResponse500
     | UpdateTrackerCompanyListResponse503
@@ -293,11 +290,10 @@ async def asyncio(
 ):
     r"""Update company tracker list
 
-     Update a company tracker list. Can change name, refresh interval, active status, or manage tracking
-    rules. Supports replace-all (trackingRules) or granular (addRules/removeRuleIds) rule management —
-    but not both in one request.
+     Update a company tracker list. Supports replace-all (`trackingRules`) or granular
+    (`addRules`/`removeRuleIds`) rule management — but not both in one request.
 
-    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -311,7 +307,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        UpdateTrackerCompanyListResponse200 | UpdateTrackerCompanyListResponse400 | UpdateTrackerCompanyListResponse401 | UpdateTrackerCompanyListResponse402 | UpdateTrackerCompanyListResponse403 | UpdateTrackerCompanyListResponse404 | UpdateTrackerCompanyListResponse429 | UpdateTrackerCompanyListResponse500 | UpdateTrackerCompanyListResponse503
+        UpdateTrackerCompanyListResponse400 | UpdateTrackerCompanyListResponse401 | UpdateTrackerCompanyListResponse402 | UpdateTrackerCompanyListResponse403 | UpdateTrackerCompanyListResponse404 | UpdateTrackerCompanyListResponse422 | UpdateTrackerCompanyListResponse429 | UpdateTrackerCompanyListResponse500 | UpdateTrackerCompanyListResponse503
     """
 
     return (

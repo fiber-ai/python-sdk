@@ -12,6 +12,7 @@ from ...models.paginated_combined_search_response_401 import PaginatedCombinedSe
 from ...models.paginated_combined_search_response_402 import PaginatedCombinedSearchResponse402
 from ...models.paginated_combined_search_response_403 import PaginatedCombinedSearchResponse403
 from ...models.paginated_combined_search_response_404 import PaginatedCombinedSearchResponse404
+from ...models.paginated_combined_search_response_422 import PaginatedCombinedSearchResponse422
 from ...models.paginated_combined_search_response_429 import PaginatedCombinedSearchResponse429
 from ...models.paginated_combined_search_response_500 import PaginatedCombinedSearchResponse500
 from ...models.paginated_combined_search_response_503 import PaginatedCombinedSearchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | PaginatedCombinedSearchResponse402
     | PaginatedCombinedSearchResponse403
     | PaginatedCombinedSearchResponse404
+    | PaginatedCombinedSearchResponse422
     | PaginatedCombinedSearchResponse429
     | PaginatedCombinedSearchResponse500
     | PaginatedCombinedSearchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = PaginatedCombinedSearchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = PaginatedCombinedSearchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | PaginatedCombinedSearchResponse402
     | PaginatedCombinedSearchResponse403
     | PaginatedCombinedSearchResponse404
+    | PaginatedCombinedSearchResponse422
     | PaginatedCombinedSearchResponse429
     | PaginatedCombinedSearchResponse500
     | PaginatedCombinedSearchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | PaginatedCombinedSearchResponse402
     | PaginatedCombinedSearchResponse403
     | PaginatedCombinedSearchResponse404
+    | PaginatedCombinedSearchResponse422
     | PaginatedCombinedSearchResponse429
     | PaginatedCombinedSearchResponse500
     | PaginatedCombinedSearchResponse503
@@ -162,7 +171,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PaginatedCombinedSearchResponse200 | PaginatedCombinedSearchResponse400 | PaginatedCombinedSearchResponse401 | PaginatedCombinedSearchResponse402 | PaginatedCombinedSearchResponse403 | PaginatedCombinedSearchResponse404 | PaginatedCombinedSearchResponse429 | PaginatedCombinedSearchResponse500 | PaginatedCombinedSearchResponse503]
+        Response[PaginatedCombinedSearchResponse200 | PaginatedCombinedSearchResponse400 | PaginatedCombinedSearchResponse401 | PaginatedCombinedSearchResponse402 | PaginatedCombinedSearchResponse403 | PaginatedCombinedSearchResponse404 | PaginatedCombinedSearchResponse422 | PaginatedCombinedSearchResponse429 | PaginatedCombinedSearchResponse500 | PaginatedCombinedSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -187,6 +196,7 @@ def sync(
     | PaginatedCombinedSearchResponse402
     | PaginatedCombinedSearchResponse403
     | PaginatedCombinedSearchResponse404
+    | PaginatedCombinedSearchResponse422
     | PaginatedCombinedSearchResponse429
     | PaginatedCombinedSearchResponse500
     | PaginatedCombinedSearchResponse503
@@ -216,7 +226,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PaginatedCombinedSearchResponse200 | PaginatedCombinedSearchResponse400 | PaginatedCombinedSearchResponse401 | PaginatedCombinedSearchResponse402 | PaginatedCombinedSearchResponse403 | PaginatedCombinedSearchResponse404 | PaginatedCombinedSearchResponse429 | PaginatedCombinedSearchResponse500 | PaginatedCombinedSearchResponse503
+        PaginatedCombinedSearchResponse200 | PaginatedCombinedSearchResponse400 | PaginatedCombinedSearchResponse401 | PaginatedCombinedSearchResponse402 | PaginatedCombinedSearchResponse403 | PaginatedCombinedSearchResponse404 | PaginatedCombinedSearchResponse422 | PaginatedCombinedSearchResponse429 | PaginatedCombinedSearchResponse500 | PaginatedCombinedSearchResponse503
     """
 
     return sync_detailed(
@@ -236,6 +246,7 @@ async def asyncio_detailed(
     | PaginatedCombinedSearchResponse402
     | PaginatedCombinedSearchResponse403
     | PaginatedCombinedSearchResponse404
+    | PaginatedCombinedSearchResponse422
     | PaginatedCombinedSearchResponse429
     | PaginatedCombinedSearchResponse500
     | PaginatedCombinedSearchResponse503
@@ -264,7 +275,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PaginatedCombinedSearchResponse200 | PaginatedCombinedSearchResponse400 | PaginatedCombinedSearchResponse401 | PaginatedCombinedSearchResponse402 | PaginatedCombinedSearchResponse403 | PaginatedCombinedSearchResponse404 | PaginatedCombinedSearchResponse429 | PaginatedCombinedSearchResponse500 | PaginatedCombinedSearchResponse503]
+        Response[PaginatedCombinedSearchResponse200 | PaginatedCombinedSearchResponse400 | PaginatedCombinedSearchResponse401 | PaginatedCombinedSearchResponse402 | PaginatedCombinedSearchResponse403 | PaginatedCombinedSearchResponse404 | PaginatedCombinedSearchResponse422 | PaginatedCombinedSearchResponse429 | PaginatedCombinedSearchResponse500 | PaginatedCombinedSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -287,6 +298,7 @@ async def asyncio(
     | PaginatedCombinedSearchResponse402
     | PaginatedCombinedSearchResponse403
     | PaginatedCombinedSearchResponse404
+    | PaginatedCombinedSearchResponse422
     | PaginatedCombinedSearchResponse429
     | PaginatedCombinedSearchResponse500
     | PaginatedCombinedSearchResponse503
@@ -316,7 +328,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PaginatedCombinedSearchResponse200 | PaginatedCombinedSearchResponse400 | PaginatedCombinedSearchResponse401 | PaginatedCombinedSearchResponse402 | PaginatedCombinedSearchResponse403 | PaginatedCombinedSearchResponse404 | PaginatedCombinedSearchResponse429 | PaginatedCombinedSearchResponse500 | PaginatedCombinedSearchResponse503
+        PaginatedCombinedSearchResponse200 | PaginatedCombinedSearchResponse400 | PaginatedCombinedSearchResponse401 | PaginatedCombinedSearchResponse402 | PaginatedCombinedSearchResponse403 | PaginatedCombinedSearchResponse404 | PaginatedCombinedSearchResponse422 | PaginatedCombinedSearchResponse429 | PaginatedCombinedSearchResponse500 | PaginatedCombinedSearchResponse503
     """
 
     return (

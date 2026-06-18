@@ -17,10 +17,10 @@ class UpdateJobChangeListResponse200Output:
     Attributes:
         id (str): The ID of the job change list.
         name (str): The name of the job change list.
-        status (UpdateJobChangeListResponse200OutputStatus): Status of the Journeyman list. 'NORMAL' = list has profiles
-            and is ready to use. 'DRAFT' = list is empty, no profiles added yet. 'BUILDING' = profiles are currently being
-            added to the list. 'ERROR' = list is broken and unusable; contact support.
-        is_active (bool): Is the list is active or not. By default, the list is in-active.
+        status (UpdateJobChangeListResponse200OutputStatus): Status of the job changes list. 'NORMAL' = list has
+            profiles and is ready to use. 'DRAFT' = list is empty, no profiles added yet. 'BUILDING' = profiles are
+            currently being added to the list. 'ERROR' = an error occurred while processing the list; contact support.
+        is_active (bool): Whether the list is active. Defaults to inactive.
     """
 
     id: str

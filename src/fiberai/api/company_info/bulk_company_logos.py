@@ -12,6 +12,7 @@ from ...models.bulk_company_logos_response_401 import BulkCompanyLogosResponse40
 from ...models.bulk_company_logos_response_402 import BulkCompanyLogosResponse402
 from ...models.bulk_company_logos_response_403 import BulkCompanyLogosResponse403
 from ...models.bulk_company_logos_response_404 import BulkCompanyLogosResponse404
+from ...models.bulk_company_logos_response_422 import BulkCompanyLogosResponse422
 from ...models.bulk_company_logos_response_429 import BulkCompanyLogosResponse429
 from ...models.bulk_company_logos_response_500 import BulkCompanyLogosResponse500
 from ...models.bulk_company_logos_response_503 import BulkCompanyLogosResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | BulkCompanyLogosResponse402
     | BulkCompanyLogosResponse403
     | BulkCompanyLogosResponse404
+    | BulkCompanyLogosResponse422
     | BulkCompanyLogosResponse429
     | BulkCompanyLogosResponse500
     | BulkCompanyLogosResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = BulkCompanyLogosResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = BulkCompanyLogosResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | BulkCompanyLogosResponse402
     | BulkCompanyLogosResponse403
     | BulkCompanyLogosResponse404
+    | BulkCompanyLogosResponse422
     | BulkCompanyLogosResponse429
     | BulkCompanyLogosResponse500
     | BulkCompanyLogosResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | BulkCompanyLogosResponse402
     | BulkCompanyLogosResponse403
     | BulkCompanyLogosResponse404
+    | BulkCompanyLogosResponse422
     | BulkCompanyLogosResponse429
     | BulkCompanyLogosResponse500
     | BulkCompanyLogosResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[BulkCompanyLogosResponse200 | BulkCompanyLogosResponse400 | BulkCompanyLogosResponse401 | BulkCompanyLogosResponse402 | BulkCompanyLogosResponse403 | BulkCompanyLogosResponse404 | BulkCompanyLogosResponse429 | BulkCompanyLogosResponse500 | BulkCompanyLogosResponse503]
+        Response[BulkCompanyLogosResponse200 | BulkCompanyLogosResponse400 | BulkCompanyLogosResponse401 | BulkCompanyLogosResponse402 | BulkCompanyLogosResponse403 | BulkCompanyLogosResponse404 | BulkCompanyLogosResponse422 | BulkCompanyLogosResponse429 | BulkCompanyLogosResponse500 | BulkCompanyLogosResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | BulkCompanyLogosResponse402
     | BulkCompanyLogosResponse403
     | BulkCompanyLogosResponse404
+    | BulkCompanyLogosResponse422
     | BulkCompanyLogosResponse429
     | BulkCompanyLogosResponse500
     | BulkCompanyLogosResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        BulkCompanyLogosResponse200 | BulkCompanyLogosResponse400 | BulkCompanyLogosResponse401 | BulkCompanyLogosResponse402 | BulkCompanyLogosResponse403 | BulkCompanyLogosResponse404 | BulkCompanyLogosResponse429 | BulkCompanyLogosResponse500 | BulkCompanyLogosResponse503
+        BulkCompanyLogosResponse200 | BulkCompanyLogosResponse400 | BulkCompanyLogosResponse401 | BulkCompanyLogosResponse402 | BulkCompanyLogosResponse403 | BulkCompanyLogosResponse404 | BulkCompanyLogosResponse422 | BulkCompanyLogosResponse429 | BulkCompanyLogosResponse500 | BulkCompanyLogosResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | BulkCompanyLogosResponse402
     | BulkCompanyLogosResponse403
     | BulkCompanyLogosResponse404
+    | BulkCompanyLogosResponse422
     | BulkCompanyLogosResponse429
     | BulkCompanyLogosResponse500
     | BulkCompanyLogosResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[BulkCompanyLogosResponse200 | BulkCompanyLogosResponse400 | BulkCompanyLogosResponse401 | BulkCompanyLogosResponse402 | BulkCompanyLogosResponse403 | BulkCompanyLogosResponse404 | BulkCompanyLogosResponse429 | BulkCompanyLogosResponse500 | BulkCompanyLogosResponse503]
+        Response[BulkCompanyLogosResponse200 | BulkCompanyLogosResponse400 | BulkCompanyLogosResponse401 | BulkCompanyLogosResponse402 | BulkCompanyLogosResponse403 | BulkCompanyLogosResponse404 | BulkCompanyLogosResponse422 | BulkCompanyLogosResponse429 | BulkCompanyLogosResponse500 | BulkCompanyLogosResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | BulkCompanyLogosResponse402
     | BulkCompanyLogosResponse403
     | BulkCompanyLogosResponse404
+    | BulkCompanyLogosResponse422
     | BulkCompanyLogosResponse429
     | BulkCompanyLogosResponse500
     | BulkCompanyLogosResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        BulkCompanyLogosResponse200 | BulkCompanyLogosResponse400 | BulkCompanyLogosResponse401 | BulkCompanyLogosResponse402 | BulkCompanyLogosResponse403 | BulkCompanyLogosResponse404 | BulkCompanyLogosResponse429 | BulkCompanyLogosResponse500 | BulkCompanyLogosResponse503
+        BulkCompanyLogosResponse200 | BulkCompanyLogosResponse400 | BulkCompanyLogosResponse401 | BulkCompanyLogosResponse402 | BulkCompanyLogosResponse403 | BulkCompanyLogosResponse404 | BulkCompanyLogosResponse422 | BulkCompanyLogosResponse429 | BulkCompanyLogosResponse500 | BulkCompanyLogosResponse503
     """
 
     return (

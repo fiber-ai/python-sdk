@@ -12,6 +12,7 @@ from ...models.skills_typeahead_response_401 import SkillsTypeaheadResponse401
 from ...models.skills_typeahead_response_402 import SkillsTypeaheadResponse402
 from ...models.skills_typeahead_response_403 import SkillsTypeaheadResponse403
 from ...models.skills_typeahead_response_404 import SkillsTypeaheadResponse404
+from ...models.skills_typeahead_response_422 import SkillsTypeaheadResponse422
 from ...models.skills_typeahead_response_429 import SkillsTypeaheadResponse429
 from ...models.skills_typeahead_response_500 import SkillsTypeaheadResponse500
 from ...models.skills_typeahead_response_503 import SkillsTypeaheadResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | SkillsTypeaheadResponse402
     | SkillsTypeaheadResponse403
     | SkillsTypeaheadResponse404
+    | SkillsTypeaheadResponse422
     | SkillsTypeaheadResponse429
     | SkillsTypeaheadResponse500
     | SkillsTypeaheadResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = SkillsTypeaheadResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = SkillsTypeaheadResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | SkillsTypeaheadResponse402
     | SkillsTypeaheadResponse403
     | SkillsTypeaheadResponse404
+    | SkillsTypeaheadResponse422
     | SkillsTypeaheadResponse429
     | SkillsTypeaheadResponse500
     | SkillsTypeaheadResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | SkillsTypeaheadResponse402
     | SkillsTypeaheadResponse403
     | SkillsTypeaheadResponse404
+    | SkillsTypeaheadResponse422
     | SkillsTypeaheadResponse429
     | SkillsTypeaheadResponse500
     | SkillsTypeaheadResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[SkillsTypeaheadResponse200 | SkillsTypeaheadResponse400 | SkillsTypeaheadResponse401 | SkillsTypeaheadResponse402 | SkillsTypeaheadResponse403 | SkillsTypeaheadResponse404 | SkillsTypeaheadResponse429 | SkillsTypeaheadResponse500 | SkillsTypeaheadResponse503]
+        Response[SkillsTypeaheadResponse200 | SkillsTypeaheadResponse400 | SkillsTypeaheadResponse401 | SkillsTypeaheadResponse402 | SkillsTypeaheadResponse403 | SkillsTypeaheadResponse404 | SkillsTypeaheadResponse422 | SkillsTypeaheadResponse429 | SkillsTypeaheadResponse500 | SkillsTypeaheadResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | SkillsTypeaheadResponse402
     | SkillsTypeaheadResponse403
     | SkillsTypeaheadResponse404
+    | SkillsTypeaheadResponse422
     | SkillsTypeaheadResponse429
     | SkillsTypeaheadResponse500
     | SkillsTypeaheadResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        SkillsTypeaheadResponse200 | SkillsTypeaheadResponse400 | SkillsTypeaheadResponse401 | SkillsTypeaheadResponse402 | SkillsTypeaheadResponse403 | SkillsTypeaheadResponse404 | SkillsTypeaheadResponse429 | SkillsTypeaheadResponse500 | SkillsTypeaheadResponse503
+        SkillsTypeaheadResponse200 | SkillsTypeaheadResponse400 | SkillsTypeaheadResponse401 | SkillsTypeaheadResponse402 | SkillsTypeaheadResponse403 | SkillsTypeaheadResponse404 | SkillsTypeaheadResponse422 | SkillsTypeaheadResponse429 | SkillsTypeaheadResponse500 | SkillsTypeaheadResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | SkillsTypeaheadResponse402
     | SkillsTypeaheadResponse403
     | SkillsTypeaheadResponse404
+    | SkillsTypeaheadResponse422
     | SkillsTypeaheadResponse429
     | SkillsTypeaheadResponse500
     | SkillsTypeaheadResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[SkillsTypeaheadResponse200 | SkillsTypeaheadResponse400 | SkillsTypeaheadResponse401 | SkillsTypeaheadResponse402 | SkillsTypeaheadResponse403 | SkillsTypeaheadResponse404 | SkillsTypeaheadResponse429 | SkillsTypeaheadResponse500 | SkillsTypeaheadResponse503]
+        Response[SkillsTypeaheadResponse200 | SkillsTypeaheadResponse400 | SkillsTypeaheadResponse401 | SkillsTypeaheadResponse402 | SkillsTypeaheadResponse403 | SkillsTypeaheadResponse404 | SkillsTypeaheadResponse422 | SkillsTypeaheadResponse429 | SkillsTypeaheadResponse500 | SkillsTypeaheadResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | SkillsTypeaheadResponse402
     | SkillsTypeaheadResponse403
     | SkillsTypeaheadResponse404
+    | SkillsTypeaheadResponse422
     | SkillsTypeaheadResponse429
     | SkillsTypeaheadResponse500
     | SkillsTypeaheadResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        SkillsTypeaheadResponse200 | SkillsTypeaheadResponse400 | SkillsTypeaheadResponse401 | SkillsTypeaheadResponse402 | SkillsTypeaheadResponse403 | SkillsTypeaheadResponse404 | SkillsTypeaheadResponse429 | SkillsTypeaheadResponse500 | SkillsTypeaheadResponse503
+        SkillsTypeaheadResponse200 | SkillsTypeaheadResponse400 | SkillsTypeaheadResponse401 | SkillsTypeaheadResponse402 | SkillsTypeaheadResponse403 | SkillsTypeaheadResponse404 | SkillsTypeaheadResponse422 | SkillsTypeaheadResponse429 | SkillsTypeaheadResponse500 | SkillsTypeaheadResponse503
     """
 
     return (

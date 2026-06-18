@@ -19,12 +19,15 @@ class PersonPosted:
         entity_type (Literal['person']):
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
         min_reactions (int | None | Unset): Only alert for posts with at least this many reactions. Omit for any.
     """
 
     type_: Literal["person_posted"]
     entity_type: Literal["person"]
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
     min_reactions: int | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -38,6 +41,8 @@ class PersonPosted:
             lookback_days = UNSET
         else:
             lookback_days = self.lookback_days
+
+        is_dummy = self.is_dummy
 
         min_reactions: int | None | Unset
         if isinstance(self.min_reactions, Unset):
@@ -55,6 +60,8 @@ class PersonPosted:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
         if min_reactions is not UNSET:
             field_dict["minReactions"] = min_reactions
 
@@ -80,6 +87,8 @@ class PersonPosted:
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
+        is_dummy = d.pop("isDummy", UNSET)
+
         def _parse_min_reactions(data: object) -> int | None | Unset:
             if data is None:
                 return data
@@ -93,6 +102,7 @@ class PersonPosted:
             type_=type_,
             entity_type=entity_type,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
             min_reactions=min_reactions,
         )
 

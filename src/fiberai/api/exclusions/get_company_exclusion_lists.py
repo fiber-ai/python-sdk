@@ -12,6 +12,7 @@ from ...models.get_company_exclusion_lists_response_401 import GetCompanyExclusi
 from ...models.get_company_exclusion_lists_response_402 import GetCompanyExclusionListsResponse402
 from ...models.get_company_exclusion_lists_response_403 import GetCompanyExclusionListsResponse403
 from ...models.get_company_exclusion_lists_response_404 import GetCompanyExclusionListsResponse404
+from ...models.get_company_exclusion_lists_response_422 import GetCompanyExclusionListsResponse422
 from ...models.get_company_exclusion_lists_response_429 import GetCompanyExclusionListsResponse429
 from ...models.get_company_exclusion_lists_response_500 import GetCompanyExclusionListsResponse500
 from ...models.get_company_exclusion_lists_response_503 import GetCompanyExclusionListsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GetCompanyExclusionListsResponse402
     | GetCompanyExclusionListsResponse403
     | GetCompanyExclusionListsResponse404
+    | GetCompanyExclusionListsResponse422
     | GetCompanyExclusionListsResponse429
     | GetCompanyExclusionListsResponse500
     | GetCompanyExclusionListsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetCompanyExclusionListsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetCompanyExclusionListsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GetCompanyExclusionListsResponse402
     | GetCompanyExclusionListsResponse403
     | GetCompanyExclusionListsResponse404
+    | GetCompanyExclusionListsResponse422
     | GetCompanyExclusionListsResponse429
     | GetCompanyExclusionListsResponse500
     | GetCompanyExclusionListsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GetCompanyExclusionListsResponse402
     | GetCompanyExclusionListsResponse403
     | GetCompanyExclusionListsResponse404
+    | GetCompanyExclusionListsResponse422
     | GetCompanyExclusionListsResponse429
     | GetCompanyExclusionListsResponse500
     | GetCompanyExclusionListsResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetCompanyExclusionListsResponse200 | GetCompanyExclusionListsResponse400 | GetCompanyExclusionListsResponse401 | GetCompanyExclusionListsResponse402 | GetCompanyExclusionListsResponse403 | GetCompanyExclusionListsResponse404 | GetCompanyExclusionListsResponse429 | GetCompanyExclusionListsResponse500 | GetCompanyExclusionListsResponse503]
+        Response[GetCompanyExclusionListsResponse200 | GetCompanyExclusionListsResponse400 | GetCompanyExclusionListsResponse401 | GetCompanyExclusionListsResponse402 | GetCompanyExclusionListsResponse403 | GetCompanyExclusionListsResponse404 | GetCompanyExclusionListsResponse422 | GetCompanyExclusionListsResponse429 | GetCompanyExclusionListsResponse500 | GetCompanyExclusionListsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | GetCompanyExclusionListsResponse402
     | GetCompanyExclusionListsResponse403
     | GetCompanyExclusionListsResponse404
+    | GetCompanyExclusionListsResponse422
     | GetCompanyExclusionListsResponse429
     | GetCompanyExclusionListsResponse500
     | GetCompanyExclusionListsResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetCompanyExclusionListsResponse200 | GetCompanyExclusionListsResponse400 | GetCompanyExclusionListsResponse401 | GetCompanyExclusionListsResponse402 | GetCompanyExclusionListsResponse403 | GetCompanyExclusionListsResponse404 | GetCompanyExclusionListsResponse429 | GetCompanyExclusionListsResponse500 | GetCompanyExclusionListsResponse503
+        GetCompanyExclusionListsResponse200 | GetCompanyExclusionListsResponse400 | GetCompanyExclusionListsResponse401 | GetCompanyExclusionListsResponse402 | GetCompanyExclusionListsResponse403 | GetCompanyExclusionListsResponse404 | GetCompanyExclusionListsResponse422 | GetCompanyExclusionListsResponse429 | GetCompanyExclusionListsResponse500 | GetCompanyExclusionListsResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | GetCompanyExclusionListsResponse402
     | GetCompanyExclusionListsResponse403
     | GetCompanyExclusionListsResponse404
+    | GetCompanyExclusionListsResponse422
     | GetCompanyExclusionListsResponse429
     | GetCompanyExclusionListsResponse500
     | GetCompanyExclusionListsResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetCompanyExclusionListsResponse200 | GetCompanyExclusionListsResponse400 | GetCompanyExclusionListsResponse401 | GetCompanyExclusionListsResponse402 | GetCompanyExclusionListsResponse403 | GetCompanyExclusionListsResponse404 | GetCompanyExclusionListsResponse429 | GetCompanyExclusionListsResponse500 | GetCompanyExclusionListsResponse503]
+        Response[GetCompanyExclusionListsResponse200 | GetCompanyExclusionListsResponse400 | GetCompanyExclusionListsResponse401 | GetCompanyExclusionListsResponse402 | GetCompanyExclusionListsResponse403 | GetCompanyExclusionListsResponse404 | GetCompanyExclusionListsResponse422 | GetCompanyExclusionListsResponse429 | GetCompanyExclusionListsResponse500 | GetCompanyExclusionListsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | GetCompanyExclusionListsResponse402
     | GetCompanyExclusionListsResponse403
     | GetCompanyExclusionListsResponse404
+    | GetCompanyExclusionListsResponse422
     | GetCompanyExclusionListsResponse429
     | GetCompanyExclusionListsResponse500
     | GetCompanyExclusionListsResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetCompanyExclusionListsResponse200 | GetCompanyExclusionListsResponse400 | GetCompanyExclusionListsResponse401 | GetCompanyExclusionListsResponse402 | GetCompanyExclusionListsResponse403 | GetCompanyExclusionListsResponse404 | GetCompanyExclusionListsResponse429 | GetCompanyExclusionListsResponse500 | GetCompanyExclusionListsResponse503
+        GetCompanyExclusionListsResponse200 | GetCompanyExclusionListsResponse400 | GetCompanyExclusionListsResponse401 | GetCompanyExclusionListsResponse402 | GetCompanyExclusionListsResponse403 | GetCompanyExclusionListsResponse404 | GetCompanyExclusionListsResponse422 | GetCompanyExclusionListsResponse429 | GetCompanyExclusionListsResponse500 | GetCompanyExclusionListsResponse503
     """
 
     return (

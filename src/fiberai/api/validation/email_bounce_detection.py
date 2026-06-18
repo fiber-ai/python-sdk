@@ -12,6 +12,7 @@ from ...models.email_bounce_detection_response_401 import EmailBounceDetectionRe
 from ...models.email_bounce_detection_response_402 import EmailBounceDetectionResponse402
 from ...models.email_bounce_detection_response_403 import EmailBounceDetectionResponse403
 from ...models.email_bounce_detection_response_404 import EmailBounceDetectionResponse404
+from ...models.email_bounce_detection_response_422 import EmailBounceDetectionResponse422
 from ...models.email_bounce_detection_response_429 import EmailBounceDetectionResponse429
 from ...models.email_bounce_detection_response_500 import EmailBounceDetectionResponse500
 from ...models.email_bounce_detection_response_503 import EmailBounceDetectionResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | EmailBounceDetectionResponse402
     | EmailBounceDetectionResponse403
     | EmailBounceDetectionResponse404
+    | EmailBounceDetectionResponse422
     | EmailBounceDetectionResponse429
     | EmailBounceDetectionResponse500
     | EmailBounceDetectionResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = EmailBounceDetectionResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = EmailBounceDetectionResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | EmailBounceDetectionResponse402
     | EmailBounceDetectionResponse403
     | EmailBounceDetectionResponse404
+    | EmailBounceDetectionResponse422
     | EmailBounceDetectionResponse429
     | EmailBounceDetectionResponse500
     | EmailBounceDetectionResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | EmailBounceDetectionResponse402
     | EmailBounceDetectionResponse403
     | EmailBounceDetectionResponse404
+    | EmailBounceDetectionResponse422
     | EmailBounceDetectionResponse429
     | EmailBounceDetectionResponse500
     | EmailBounceDetectionResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[EmailBounceDetectionResponse200 | EmailBounceDetectionResponse400 | EmailBounceDetectionResponse401 | EmailBounceDetectionResponse402 | EmailBounceDetectionResponse403 | EmailBounceDetectionResponse404 | EmailBounceDetectionResponse429 | EmailBounceDetectionResponse500 | EmailBounceDetectionResponse503]
+        Response[EmailBounceDetectionResponse200 | EmailBounceDetectionResponse400 | EmailBounceDetectionResponse401 | EmailBounceDetectionResponse402 | EmailBounceDetectionResponse403 | EmailBounceDetectionResponse404 | EmailBounceDetectionResponse422 | EmailBounceDetectionResponse429 | EmailBounceDetectionResponse500 | EmailBounceDetectionResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | EmailBounceDetectionResponse402
     | EmailBounceDetectionResponse403
     | EmailBounceDetectionResponse404
+    | EmailBounceDetectionResponse422
     | EmailBounceDetectionResponse429
     | EmailBounceDetectionResponse500
     | EmailBounceDetectionResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        EmailBounceDetectionResponse200 | EmailBounceDetectionResponse400 | EmailBounceDetectionResponse401 | EmailBounceDetectionResponse402 | EmailBounceDetectionResponse403 | EmailBounceDetectionResponse404 | EmailBounceDetectionResponse429 | EmailBounceDetectionResponse500 | EmailBounceDetectionResponse503
+        EmailBounceDetectionResponse200 | EmailBounceDetectionResponse400 | EmailBounceDetectionResponse401 | EmailBounceDetectionResponse402 | EmailBounceDetectionResponse403 | EmailBounceDetectionResponse404 | EmailBounceDetectionResponse422 | EmailBounceDetectionResponse429 | EmailBounceDetectionResponse500 | EmailBounceDetectionResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | EmailBounceDetectionResponse402
     | EmailBounceDetectionResponse403
     | EmailBounceDetectionResponse404
+    | EmailBounceDetectionResponse422
     | EmailBounceDetectionResponse429
     | EmailBounceDetectionResponse500
     | EmailBounceDetectionResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[EmailBounceDetectionResponse200 | EmailBounceDetectionResponse400 | EmailBounceDetectionResponse401 | EmailBounceDetectionResponse402 | EmailBounceDetectionResponse403 | EmailBounceDetectionResponse404 | EmailBounceDetectionResponse429 | EmailBounceDetectionResponse500 | EmailBounceDetectionResponse503]
+        Response[EmailBounceDetectionResponse200 | EmailBounceDetectionResponse400 | EmailBounceDetectionResponse401 | EmailBounceDetectionResponse402 | EmailBounceDetectionResponse403 | EmailBounceDetectionResponse404 | EmailBounceDetectionResponse422 | EmailBounceDetectionResponse429 | EmailBounceDetectionResponse500 | EmailBounceDetectionResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | EmailBounceDetectionResponse402
     | EmailBounceDetectionResponse403
     | EmailBounceDetectionResponse404
+    | EmailBounceDetectionResponse422
     | EmailBounceDetectionResponse429
     | EmailBounceDetectionResponse500
     | EmailBounceDetectionResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        EmailBounceDetectionResponse200 | EmailBounceDetectionResponse400 | EmailBounceDetectionResponse401 | EmailBounceDetectionResponse402 | EmailBounceDetectionResponse403 | EmailBounceDetectionResponse404 | EmailBounceDetectionResponse429 | EmailBounceDetectionResponse500 | EmailBounceDetectionResponse503
+        EmailBounceDetectionResponse200 | EmailBounceDetectionResponse400 | EmailBounceDetectionResponse401 | EmailBounceDetectionResponse402 | EmailBounceDetectionResponse403 | EmailBounceDetectionResponse404 | EmailBounceDetectionResponse422 | EmailBounceDetectionResponse429 | EmailBounceDetectionResponse500 | EmailBounceDetectionResponse503
     """
 
     return (

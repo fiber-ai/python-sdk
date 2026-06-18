@@ -12,6 +12,7 @@ from ...models.domain_lookup_trigger_response_401 import DomainLookupTriggerResp
 from ...models.domain_lookup_trigger_response_402 import DomainLookupTriggerResponse402
 from ...models.domain_lookup_trigger_response_403 import DomainLookupTriggerResponse403
 from ...models.domain_lookup_trigger_response_404 import DomainLookupTriggerResponse404
+from ...models.domain_lookup_trigger_response_422 import DomainLookupTriggerResponse422
 from ...models.domain_lookup_trigger_response_429 import DomainLookupTriggerResponse429
 from ...models.domain_lookup_trigger_response_500 import DomainLookupTriggerResponse500
 from ...models.domain_lookup_trigger_response_503 import DomainLookupTriggerResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | DomainLookupTriggerResponse402
     | DomainLookupTriggerResponse403
     | DomainLookupTriggerResponse404
+    | DomainLookupTriggerResponse422
     | DomainLookupTriggerResponse429
     | DomainLookupTriggerResponse500
     | DomainLookupTriggerResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = DomainLookupTriggerResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = DomainLookupTriggerResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | DomainLookupTriggerResponse402
     | DomainLookupTriggerResponse403
     | DomainLookupTriggerResponse404
+    | DomainLookupTriggerResponse422
     | DomainLookupTriggerResponse429
     | DomainLookupTriggerResponse500
     | DomainLookupTriggerResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | DomainLookupTriggerResponse402
     | DomainLookupTriggerResponse403
     | DomainLookupTriggerResponse404
+    | DomainLookupTriggerResponse422
     | DomainLookupTriggerResponse429
     | DomainLookupTriggerResponse500
     | DomainLookupTriggerResponse503
@@ -157,7 +166,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DomainLookupTriggerResponse200 | DomainLookupTriggerResponse400 | DomainLookupTriggerResponse401 | DomainLookupTriggerResponse402 | DomainLookupTriggerResponse403 | DomainLookupTriggerResponse404 | DomainLookupTriggerResponse429 | DomainLookupTriggerResponse500 | DomainLookupTriggerResponse503]
+        Response[DomainLookupTriggerResponse200 | DomainLookupTriggerResponse400 | DomainLookupTriggerResponse401 | DomainLookupTriggerResponse402 | DomainLookupTriggerResponse403 | DomainLookupTriggerResponse404 | DomainLookupTriggerResponse422 | DomainLookupTriggerResponse429 | DomainLookupTriggerResponse500 | DomainLookupTriggerResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -182,6 +191,7 @@ def sync(
     | DomainLookupTriggerResponse402
     | DomainLookupTriggerResponse403
     | DomainLookupTriggerResponse404
+    | DomainLookupTriggerResponse422
     | DomainLookupTriggerResponse429
     | DomainLookupTriggerResponse500
     | DomainLookupTriggerResponse503
@@ -206,7 +216,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DomainLookupTriggerResponse200 | DomainLookupTriggerResponse400 | DomainLookupTriggerResponse401 | DomainLookupTriggerResponse402 | DomainLookupTriggerResponse403 | DomainLookupTriggerResponse404 | DomainLookupTriggerResponse429 | DomainLookupTriggerResponse500 | DomainLookupTriggerResponse503
+        DomainLookupTriggerResponse200 | DomainLookupTriggerResponse400 | DomainLookupTriggerResponse401 | DomainLookupTriggerResponse402 | DomainLookupTriggerResponse403 | DomainLookupTriggerResponse404 | DomainLookupTriggerResponse422 | DomainLookupTriggerResponse429 | DomainLookupTriggerResponse500 | DomainLookupTriggerResponse503
     """
 
     return sync_detailed(
@@ -226,6 +236,7 @@ async def asyncio_detailed(
     | DomainLookupTriggerResponse402
     | DomainLookupTriggerResponse403
     | DomainLookupTriggerResponse404
+    | DomainLookupTriggerResponse422
     | DomainLookupTriggerResponse429
     | DomainLookupTriggerResponse500
     | DomainLookupTriggerResponse503
@@ -249,7 +260,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DomainLookupTriggerResponse200 | DomainLookupTriggerResponse400 | DomainLookupTriggerResponse401 | DomainLookupTriggerResponse402 | DomainLookupTriggerResponse403 | DomainLookupTriggerResponse404 | DomainLookupTriggerResponse429 | DomainLookupTriggerResponse500 | DomainLookupTriggerResponse503]
+        Response[DomainLookupTriggerResponse200 | DomainLookupTriggerResponse400 | DomainLookupTriggerResponse401 | DomainLookupTriggerResponse402 | DomainLookupTriggerResponse403 | DomainLookupTriggerResponse404 | DomainLookupTriggerResponse422 | DomainLookupTriggerResponse429 | DomainLookupTriggerResponse500 | DomainLookupTriggerResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -272,6 +283,7 @@ async def asyncio(
     | DomainLookupTriggerResponse402
     | DomainLookupTriggerResponse403
     | DomainLookupTriggerResponse404
+    | DomainLookupTriggerResponse422
     | DomainLookupTriggerResponse429
     | DomainLookupTriggerResponse500
     | DomainLookupTriggerResponse503
@@ -296,7 +308,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DomainLookupTriggerResponse200 | DomainLookupTriggerResponse400 | DomainLookupTriggerResponse401 | DomainLookupTriggerResponse402 | DomainLookupTriggerResponse403 | DomainLookupTriggerResponse404 | DomainLookupTriggerResponse429 | DomainLookupTriggerResponse500 | DomainLookupTriggerResponse503
+        DomainLookupTriggerResponse200 | DomainLookupTriggerResponse400 | DomainLookupTriggerResponse401 | DomainLookupTriggerResponse402 | DomainLookupTriggerResponse403 | DomainLookupTriggerResponse404 | DomainLookupTriggerResponse422 | DomainLookupTriggerResponse429 | DomainLookupTriggerResponse500 | DomainLookupTriggerResponse503
     """
 
     return (

@@ -12,6 +12,7 @@ from ...models.fetch_real_estate_listings_response_401 import FetchRealEstateLis
 from ...models.fetch_real_estate_listings_response_402 import FetchRealEstateListingsResponse402
 from ...models.fetch_real_estate_listings_response_403 import FetchRealEstateListingsResponse403
 from ...models.fetch_real_estate_listings_response_404 import FetchRealEstateListingsResponse404
+from ...models.fetch_real_estate_listings_response_422 import FetchRealEstateListingsResponse422
 from ...models.fetch_real_estate_listings_response_429 import FetchRealEstateListingsResponse429
 from ...models.fetch_real_estate_listings_response_500 import FetchRealEstateListingsResponse500
 from ...models.fetch_real_estate_listings_response_503 import FetchRealEstateListingsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | FetchRealEstateListingsResponse402
     | FetchRealEstateListingsResponse403
     | FetchRealEstateListingsResponse404
+    | FetchRealEstateListingsResponse422
     | FetchRealEstateListingsResponse429
     | FetchRealEstateListingsResponse500
     | FetchRealEstateListingsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = FetchRealEstateListingsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = FetchRealEstateListingsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | FetchRealEstateListingsResponse402
     | FetchRealEstateListingsResponse403
     | FetchRealEstateListingsResponse404
+    | FetchRealEstateListingsResponse422
     | FetchRealEstateListingsResponse429
     | FetchRealEstateListingsResponse500
     | FetchRealEstateListingsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | FetchRealEstateListingsResponse402
     | FetchRealEstateListingsResponse403
     | FetchRealEstateListingsResponse404
+    | FetchRealEstateListingsResponse422
     | FetchRealEstateListingsResponse429
     | FetchRealEstateListingsResponse500
     | FetchRealEstateListingsResponse503
@@ -160,7 +169,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[FetchRealEstateListingsResponse200 | FetchRealEstateListingsResponse400 | FetchRealEstateListingsResponse401 | FetchRealEstateListingsResponse402 | FetchRealEstateListingsResponse403 | FetchRealEstateListingsResponse404 | FetchRealEstateListingsResponse429 | FetchRealEstateListingsResponse500 | FetchRealEstateListingsResponse503]
+        Response[FetchRealEstateListingsResponse200 | FetchRealEstateListingsResponse400 | FetchRealEstateListingsResponse401 | FetchRealEstateListingsResponse402 | FetchRealEstateListingsResponse403 | FetchRealEstateListingsResponse404 | FetchRealEstateListingsResponse422 | FetchRealEstateListingsResponse429 | FetchRealEstateListingsResponse500 | FetchRealEstateListingsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -185,6 +194,7 @@ def sync(
     | FetchRealEstateListingsResponse402
     | FetchRealEstateListingsResponse403
     | FetchRealEstateListingsResponse404
+    | FetchRealEstateListingsResponse422
     | FetchRealEstateListingsResponse429
     | FetchRealEstateListingsResponse500
     | FetchRealEstateListingsResponse503
@@ -212,7 +222,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        FetchRealEstateListingsResponse200 | FetchRealEstateListingsResponse400 | FetchRealEstateListingsResponse401 | FetchRealEstateListingsResponse402 | FetchRealEstateListingsResponse403 | FetchRealEstateListingsResponse404 | FetchRealEstateListingsResponse429 | FetchRealEstateListingsResponse500 | FetchRealEstateListingsResponse503
+        FetchRealEstateListingsResponse200 | FetchRealEstateListingsResponse400 | FetchRealEstateListingsResponse401 | FetchRealEstateListingsResponse402 | FetchRealEstateListingsResponse403 | FetchRealEstateListingsResponse404 | FetchRealEstateListingsResponse422 | FetchRealEstateListingsResponse429 | FetchRealEstateListingsResponse500 | FetchRealEstateListingsResponse503
     """
 
     return sync_detailed(
@@ -232,6 +242,7 @@ async def asyncio_detailed(
     | FetchRealEstateListingsResponse402
     | FetchRealEstateListingsResponse403
     | FetchRealEstateListingsResponse404
+    | FetchRealEstateListingsResponse422
     | FetchRealEstateListingsResponse429
     | FetchRealEstateListingsResponse500
     | FetchRealEstateListingsResponse503
@@ -258,7 +269,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[FetchRealEstateListingsResponse200 | FetchRealEstateListingsResponse400 | FetchRealEstateListingsResponse401 | FetchRealEstateListingsResponse402 | FetchRealEstateListingsResponse403 | FetchRealEstateListingsResponse404 | FetchRealEstateListingsResponse429 | FetchRealEstateListingsResponse500 | FetchRealEstateListingsResponse503]
+        Response[FetchRealEstateListingsResponse200 | FetchRealEstateListingsResponse400 | FetchRealEstateListingsResponse401 | FetchRealEstateListingsResponse402 | FetchRealEstateListingsResponse403 | FetchRealEstateListingsResponse404 | FetchRealEstateListingsResponse422 | FetchRealEstateListingsResponse429 | FetchRealEstateListingsResponse500 | FetchRealEstateListingsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -281,6 +292,7 @@ async def asyncio(
     | FetchRealEstateListingsResponse402
     | FetchRealEstateListingsResponse403
     | FetchRealEstateListingsResponse404
+    | FetchRealEstateListingsResponse422
     | FetchRealEstateListingsResponse429
     | FetchRealEstateListingsResponse500
     | FetchRealEstateListingsResponse503
@@ -308,7 +320,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        FetchRealEstateListingsResponse200 | FetchRealEstateListingsResponse400 | FetchRealEstateListingsResponse401 | FetchRealEstateListingsResponse402 | FetchRealEstateListingsResponse403 | FetchRealEstateListingsResponse404 | FetchRealEstateListingsResponse429 | FetchRealEstateListingsResponse500 | FetchRealEstateListingsResponse503
+        FetchRealEstateListingsResponse200 | FetchRealEstateListingsResponse400 | FetchRealEstateListingsResponse401 | FetchRealEstateListingsResponse402 | FetchRealEstateListingsResponse403 | FetchRealEstateListingsResponse404 | FetchRealEstateListingsResponse422 | FetchRealEstateListingsResponse429 | FetchRealEstateListingsResponse500 | FetchRealEstateListingsResponse503
     """
 
     return (

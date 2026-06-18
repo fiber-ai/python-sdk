@@ -40,6 +40,7 @@ class DeleteCompanyExclusionListResponse200:
         charge_info (DeleteCompanyExclusionListResponse200ChargeInfoType0 |
             DeleteCompanyExclusionListResponse200ChargeInfoType1 | DeleteCompanyExclusionListResponse200ChargeInfoType2 |
             DeleteCompanyExclusionListResponse200ChargeInfoType3 | DeleteCompanyExclusionListResponse200ChargeInfoType4):
+        advice (list[str]): Tips, recommendations, and suggestions for using this API effectively.
         warnings (list[DeleteCompanyExclusionListResponse200WarningsType0Item] | None | Unset): Warnings about
             extraneous fields in request
     """
@@ -52,6 +53,7 @@ class DeleteCompanyExclusionListResponse200:
         | DeleteCompanyExclusionListResponse200ChargeInfoType3
         | DeleteCompanyExclusionListResponse200ChargeInfoType4
     )
+    advice: list[str]
     warnings: list[DeleteCompanyExclusionListResponse200WarningsType0Item] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
@@ -82,6 +84,8 @@ class DeleteCompanyExclusionListResponse200:
         else:
             charge_info = self.charge_info.to_dict()
 
+        advice = self.advice
+
         warnings: list[dict[str, Any]] | None | Unset
         if isinstance(self.warnings, Unset):
             warnings = UNSET
@@ -100,6 +104,7 @@ class DeleteCompanyExclusionListResponse200:
             {
                 "output": output,
                 "chargeInfo": charge_info,
+                "advice": advice,
             }
         )
         if warnings is not UNSET:
@@ -183,6 +188,8 @@ class DeleteCompanyExclusionListResponse200:
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 
+        advice = cast(list[str], d.pop("advice"))
+
         def _parse_warnings(
             data: object,
         ) -> list[DeleteCompanyExclusionListResponse200WarningsType0Item] | None | Unset:
@@ -212,6 +219,7 @@ class DeleteCompanyExclusionListResponse200:
         delete_company_exclusion_list_response_200 = cls(
             output=output,
             charge_info=charge_info,
+            advice=advice,
             warnings=warnings,
         )
 

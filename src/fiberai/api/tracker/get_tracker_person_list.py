@@ -6,12 +6,12 @@ import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.get_tracker_person_list_response_200 import GetTrackerPersonListResponse200
 from ...models.get_tracker_person_list_response_400 import GetTrackerPersonListResponse400
 from ...models.get_tracker_person_list_response_401 import GetTrackerPersonListResponse401
 from ...models.get_tracker_person_list_response_402 import GetTrackerPersonListResponse402
 from ...models.get_tracker_person_list_response_403 import GetTrackerPersonListResponse403
 from ...models.get_tracker_person_list_response_404 import GetTrackerPersonListResponse404
+from ...models.get_tracker_person_list_response_422 import GetTrackerPersonListResponse422
 from ...models.get_tracker_person_list_response_429 import GetTrackerPersonListResponse429
 from ...models.get_tracker_person_list_response_500 import GetTrackerPersonListResponse500
 from ...models.get_tracker_person_list_response_503 import GetTrackerPersonListResponse503
@@ -44,22 +44,17 @@ def _get_kwargs(
 def _parse_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
 ) -> (
-    GetTrackerPersonListResponse200
-    | GetTrackerPersonListResponse400
+    GetTrackerPersonListResponse400
     | GetTrackerPersonListResponse401
     | GetTrackerPersonListResponse402
     | GetTrackerPersonListResponse403
     | GetTrackerPersonListResponse404
+    | GetTrackerPersonListResponse422
     | GetTrackerPersonListResponse429
     | GetTrackerPersonListResponse500
     | GetTrackerPersonListResponse503
     | None
 ):
-    if response.status_code == 200:
-        response_200 = GetTrackerPersonListResponse200.from_dict(response.json())
-
-        return response_200
-
     if response.status_code == 400:
         response_400 = GetTrackerPersonListResponse400.from_dict(response.json())
 
@@ -85,6 +80,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetTrackerPersonListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetTrackerPersonListResponse429.from_dict(response.json())
 
@@ -109,12 +109,12 @@ def _parse_response(
 def _build_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
 ) -> Response[
-    GetTrackerPersonListResponse200
-    | GetTrackerPersonListResponse400
+    GetTrackerPersonListResponse400
     | GetTrackerPersonListResponse401
     | GetTrackerPersonListResponse402
     | GetTrackerPersonListResponse403
     | GetTrackerPersonListResponse404
+    | GetTrackerPersonListResponse422
     | GetTrackerPersonListResponse429
     | GetTrackerPersonListResponse500
     | GetTrackerPersonListResponse503
@@ -133,12 +133,12 @@ def sync_detailed(
     client: AuthenticatedClient | Client,
     api_key: str,
 ) -> Response[
-    GetTrackerPersonListResponse200
-    | GetTrackerPersonListResponse400
+    GetTrackerPersonListResponse400
     | GetTrackerPersonListResponse401
     | GetTrackerPersonListResponse402
     | GetTrackerPersonListResponse403
     | GetTrackerPersonListResponse404
+    | GetTrackerPersonListResponse422
     | GetTrackerPersonListResponse429
     | GetTrackerPersonListResponse500
     | GetTrackerPersonListResponse503
@@ -161,7 +161,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetTrackerPersonListResponse200 | GetTrackerPersonListResponse400 | GetTrackerPersonListResponse401 | GetTrackerPersonListResponse402 | GetTrackerPersonListResponse403 | GetTrackerPersonListResponse404 | GetTrackerPersonListResponse429 | GetTrackerPersonListResponse500 | GetTrackerPersonListResponse503]
+        Response[GetTrackerPersonListResponse400 | GetTrackerPersonListResponse401 | GetTrackerPersonListResponse402 | GetTrackerPersonListResponse403 | GetTrackerPersonListResponse404 | GetTrackerPersonListResponse422 | GetTrackerPersonListResponse429 | GetTrackerPersonListResponse500 | GetTrackerPersonListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -182,12 +182,12 @@ def sync(
     client: AuthenticatedClient | Client,
     api_key: str,
 ) -> (
-    GetTrackerPersonListResponse200
-    | GetTrackerPersonListResponse400
+    GetTrackerPersonListResponse400
     | GetTrackerPersonListResponse401
     | GetTrackerPersonListResponse402
     | GetTrackerPersonListResponse403
     | GetTrackerPersonListResponse404
+    | GetTrackerPersonListResponse422
     | GetTrackerPersonListResponse429
     | GetTrackerPersonListResponse500
     | GetTrackerPersonListResponse503
@@ -211,7 +211,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetTrackerPersonListResponse200 | GetTrackerPersonListResponse400 | GetTrackerPersonListResponse401 | GetTrackerPersonListResponse402 | GetTrackerPersonListResponse403 | GetTrackerPersonListResponse404 | GetTrackerPersonListResponse429 | GetTrackerPersonListResponse500 | GetTrackerPersonListResponse503
+        GetTrackerPersonListResponse400 | GetTrackerPersonListResponse401 | GetTrackerPersonListResponse402 | GetTrackerPersonListResponse403 | GetTrackerPersonListResponse404 | GetTrackerPersonListResponse422 | GetTrackerPersonListResponse429 | GetTrackerPersonListResponse500 | GetTrackerPersonListResponse503
     """
 
     return sync_detailed(
@@ -227,12 +227,12 @@ async def asyncio_detailed(
     client: AuthenticatedClient | Client,
     api_key: str,
 ) -> Response[
-    GetTrackerPersonListResponse200
-    | GetTrackerPersonListResponse400
+    GetTrackerPersonListResponse400
     | GetTrackerPersonListResponse401
     | GetTrackerPersonListResponse402
     | GetTrackerPersonListResponse403
     | GetTrackerPersonListResponse404
+    | GetTrackerPersonListResponse422
     | GetTrackerPersonListResponse429
     | GetTrackerPersonListResponse500
     | GetTrackerPersonListResponse503
@@ -255,7 +255,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetTrackerPersonListResponse200 | GetTrackerPersonListResponse400 | GetTrackerPersonListResponse401 | GetTrackerPersonListResponse402 | GetTrackerPersonListResponse403 | GetTrackerPersonListResponse404 | GetTrackerPersonListResponse429 | GetTrackerPersonListResponse500 | GetTrackerPersonListResponse503]
+        Response[GetTrackerPersonListResponse400 | GetTrackerPersonListResponse401 | GetTrackerPersonListResponse402 | GetTrackerPersonListResponse403 | GetTrackerPersonListResponse404 | GetTrackerPersonListResponse422 | GetTrackerPersonListResponse429 | GetTrackerPersonListResponse500 | GetTrackerPersonListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -274,12 +274,12 @@ async def asyncio(
     client: AuthenticatedClient | Client,
     api_key: str,
 ) -> (
-    GetTrackerPersonListResponse200
-    | GetTrackerPersonListResponse400
+    GetTrackerPersonListResponse400
     | GetTrackerPersonListResponse401
     | GetTrackerPersonListResponse402
     | GetTrackerPersonListResponse403
     | GetTrackerPersonListResponse404
+    | GetTrackerPersonListResponse422
     | GetTrackerPersonListResponse429
     | GetTrackerPersonListResponse500
     | GetTrackerPersonListResponse503
@@ -303,7 +303,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetTrackerPersonListResponse200 | GetTrackerPersonListResponse400 | GetTrackerPersonListResponse401 | GetTrackerPersonListResponse402 | GetTrackerPersonListResponse403 | GetTrackerPersonListResponse404 | GetTrackerPersonListResponse429 | GetTrackerPersonListResponse500 | GetTrackerPersonListResponse503
+        GetTrackerPersonListResponse400 | GetTrackerPersonListResponse401 | GetTrackerPersonListResponse402 | GetTrackerPersonListResponse403 | GetTrackerPersonListResponse404 | GetTrackerPersonListResponse422 | GetTrackerPersonListResponse429 | GetTrackerPersonListResponse500 | GetTrackerPersonListResponse503
     """
 
     return (

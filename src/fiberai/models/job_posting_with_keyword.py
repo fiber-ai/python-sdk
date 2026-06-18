@@ -7,6 +7,7 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.job_posting_with_keyword_location_types_type_0_item import JobPostingWithKeywordLocationTypesType0Item
+from ..models.job_posting_with_keyword_seniority_levels_type_0_item import JobPostingWithKeywordSeniorityLevelsType0Item
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="JobPostingWithKeyword")
@@ -21,17 +22,24 @@ class JobPostingWithKeyword:
         keywords (list[str]): Alert when a job posting title contains any of these keywords
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
-        seniority_levels (list[str] | None | Unset): Only alert for these seniority levels. Omit for any level.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
+        seniority_levels (list[JobPostingWithKeywordSeniorityLevelsType0Item] | None | Unset): Only alert for these
+            seniority levels. Omit for any level.
         location_types (list[JobPostingWithKeywordLocationTypesType0Item] | None | Unset): Only alert for these location
             types. Omit for any.
+        min_postings (int | None | Unset): Only alert if at least this many NEW matching postings are detected in a
+            single check cycle. Omit for 1 (any new match).
     """
 
     type_: Literal["job_posting_with_keyword"]
     entity_type: Literal["company"]
     keywords: list[str]
     lookback_days: int | None | Unset = UNSET
-    seniority_levels: list[str] | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
+    seniority_levels: list[JobPostingWithKeywordSeniorityLevelsType0Item] | None | Unset = UNSET
     location_types: list[JobPostingWithKeywordLocationTypesType0Item] | None | Unset = UNSET
+    min_postings: int | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -47,11 +55,16 @@ class JobPostingWithKeyword:
         else:
             lookback_days = self.lookback_days
 
+        is_dummy = self.is_dummy
+
         seniority_levels: list[str] | None | Unset
         if isinstance(self.seniority_levels, Unset):
             seniority_levels = UNSET
         elif isinstance(self.seniority_levels, list):
-            seniority_levels = self.seniority_levels
+            seniority_levels = []
+            for seniority_levels_type_0_item_data in self.seniority_levels:
+                seniority_levels_type_0_item = seniority_levels_type_0_item_data.value
+                seniority_levels.append(seniority_levels_type_0_item)
 
         else:
             seniority_levels = self.seniority_levels
@@ -68,6 +81,12 @@ class JobPostingWithKeyword:
         else:
             location_types = self.location_types
 
+        min_postings: int | None | Unset
+        if isinstance(self.min_postings, Unset):
+            min_postings = UNSET
+        else:
+            min_postings = self.min_postings
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -79,10 +98,14 @@ class JobPostingWithKeyword:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
         if seniority_levels is not UNSET:
             field_dict["seniorityLevels"] = seniority_levels
         if location_types is not UNSET:
             field_dict["locationTypes"] = location_types
+        if min_postings is not UNSET:
+            field_dict["minPostings"] = min_postings
 
         return field_dict
 
@@ -108,7 +131,9 @@ class JobPostingWithKeyword:
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
-        def _parse_seniority_levels(data: object) -> list[str] | None | Unset:
+        is_dummy = d.pop("isDummy", UNSET)
+
+        def _parse_seniority_levels(data: object) -> list[JobPostingWithKeywordSeniorityLevelsType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -116,12 +141,19 @@ class JobPostingWithKeyword:
             try:
                 if not isinstance(data, list):
                     raise TypeError()
-                seniority_levels_type_0 = cast(list[str], data)
+                seniority_levels_type_0 = []
+                _seniority_levels_type_0 = data
+                for seniority_levels_type_0_item_data in _seniority_levels_type_0:
+                    seniority_levels_type_0_item = JobPostingWithKeywordSeniorityLevelsType0Item(
+                        seniority_levels_type_0_item_data
+                    )
+
+                    seniority_levels_type_0.append(seniority_levels_type_0_item)
 
                 return seniority_levels_type_0
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(list[str] | None | Unset, data)
+            return cast(list[JobPostingWithKeywordSeniorityLevelsType0Item] | None | Unset, data)
 
         seniority_levels = _parse_seniority_levels(d.pop("seniorityLevels", UNSET))
 
@@ -149,13 +181,24 @@ class JobPostingWithKeyword:
 
         location_types = _parse_location_types(d.pop("locationTypes", UNSET))
 
+        def _parse_min_postings(data: object) -> int | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(int | None | Unset, data)
+
+        min_postings = _parse_min_postings(d.pop("minPostings", UNSET))
+
         job_posting_with_keyword = cls(
             type_=type_,
             entity_type=entity_type,
             keywords=keywords,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
             seniority_levels=seniority_levels,
             location_types=location_types,
+            min_postings=min_postings,
         )
 
         job_posting_with_keyword.additional_properties = d

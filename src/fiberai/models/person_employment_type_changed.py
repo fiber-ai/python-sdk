@@ -6,6 +6,7 @@ from typing import Any, Literal, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.person_employment_type_changed_to_types_type_0_item import PersonEmploymentTypeChangedToTypesType0Item
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PersonEmploymentTypeChanged")
@@ -19,14 +20,17 @@ class PersonEmploymentTypeChanged:
         entity_type (Literal['person']):
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
-        to_types (list[str] | None | Unset): Only alert if new employment type is one of these (e.g. 'Contract', 'Part-
-            time'). Omit for any change.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
+        to_types (list[PersonEmploymentTypeChangedToTypesType0Item] | None | Unset): Only alert if new employment type
+            is one of these. Omit for any change.
     """
 
     type_: Literal["person_employment_type_changed"]
     entity_type: Literal["person"]
     lookback_days: int | None | Unset = UNSET
-    to_types: list[str] | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
+    to_types: list[PersonEmploymentTypeChangedToTypesType0Item] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -40,11 +44,16 @@ class PersonEmploymentTypeChanged:
         else:
             lookback_days = self.lookback_days
 
+        is_dummy = self.is_dummy
+
         to_types: list[str] | None | Unset
         if isinstance(self.to_types, Unset):
             to_types = UNSET
         elif isinstance(self.to_types, list):
-            to_types = self.to_types
+            to_types = []
+            for to_types_type_0_item_data in self.to_types:
+                to_types_type_0_item = to_types_type_0_item_data.value
+                to_types.append(to_types_type_0_item)
 
         else:
             to_types = self.to_types
@@ -59,6 +68,8 @@ class PersonEmploymentTypeChanged:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
         if to_types is not UNSET:
             field_dict["toTypes"] = to_types
 
@@ -84,7 +95,9 @@ class PersonEmploymentTypeChanged:
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
-        def _parse_to_types(data: object) -> list[str] | None | Unset:
+        is_dummy = d.pop("isDummy", UNSET)
+
+        def _parse_to_types(data: object) -> list[PersonEmploymentTypeChangedToTypesType0Item] | None | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
@@ -92,12 +105,17 @@ class PersonEmploymentTypeChanged:
             try:
                 if not isinstance(data, list):
                     raise TypeError()
-                to_types_type_0 = cast(list[str], data)
+                to_types_type_0 = []
+                _to_types_type_0 = data
+                for to_types_type_0_item_data in _to_types_type_0:
+                    to_types_type_0_item = PersonEmploymentTypeChangedToTypesType0Item(to_types_type_0_item_data)
+
+                    to_types_type_0.append(to_types_type_0_item)
 
                 return to_types_type_0
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(list[str] | None | Unset, data)
+            return cast(list[PersonEmploymentTypeChangedToTypesType0Item] | None | Unset, data)
 
         to_types = _parse_to_types(d.pop("toTypes", UNSET))
 
@@ -105,6 +123,7 @@ class PersonEmploymentTypeChanged:
             type_=type_,
             entity_type=entity_type,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
             to_types=to_types,
         )
 

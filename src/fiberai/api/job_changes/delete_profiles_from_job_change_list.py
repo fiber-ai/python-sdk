@@ -12,6 +12,7 @@ from ...models.delete_profiles_from_job_change_list_response_401 import DeletePr
 from ...models.delete_profiles_from_job_change_list_response_402 import DeleteProfilesFromJobChangeListResponse402
 from ...models.delete_profiles_from_job_change_list_response_403 import DeleteProfilesFromJobChangeListResponse403
 from ...models.delete_profiles_from_job_change_list_response_404 import DeleteProfilesFromJobChangeListResponse404
+from ...models.delete_profiles_from_job_change_list_response_422 import DeleteProfilesFromJobChangeListResponse422
 from ...models.delete_profiles_from_job_change_list_response_429 import DeleteProfilesFromJobChangeListResponse429
 from ...models.delete_profiles_from_job_change_list_response_500 import DeleteProfilesFromJobChangeListResponse500
 from ...models.delete_profiles_from_job_change_list_response_503 import DeleteProfilesFromJobChangeListResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | DeleteProfilesFromJobChangeListResponse402
     | DeleteProfilesFromJobChangeListResponse403
     | DeleteProfilesFromJobChangeListResponse404
+    | DeleteProfilesFromJobChangeListResponse422
     | DeleteProfilesFromJobChangeListResponse429
     | DeleteProfilesFromJobChangeListResponse500
     | DeleteProfilesFromJobChangeListResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = DeleteProfilesFromJobChangeListResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = DeleteProfilesFromJobChangeListResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | DeleteProfilesFromJobChangeListResponse402
     | DeleteProfilesFromJobChangeListResponse403
     | DeleteProfilesFromJobChangeListResponse404
+    | DeleteProfilesFromJobChangeListResponse422
     | DeleteProfilesFromJobChangeListResponse429
     | DeleteProfilesFromJobChangeListResponse500
     | DeleteProfilesFromJobChangeListResponse503
@@ -134,13 +142,14 @@ def sync_detailed(
     | DeleteProfilesFromJobChangeListResponse402
     | DeleteProfilesFromJobChangeListResponse403
     | DeleteProfilesFromJobChangeListResponse404
+    | DeleteProfilesFromJobChangeListResponse422
     | DeleteProfilesFromJobChangeListResponse429
     | DeleteProfilesFromJobChangeListResponse500
     | DeleteProfilesFromJobChangeListResponse503
 ]:
-    r"""Delete profiles from the lists
+    r"""Delete profiles from a job change list
 
-     This will remove people from job changes tracking lists
+     Remove profiles from a job changes tracking list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DeleteProfilesFromJobChangeListResponse200 | DeleteProfilesFromJobChangeListResponse400 | DeleteProfilesFromJobChangeListResponse401 | DeleteProfilesFromJobChangeListResponse402 | DeleteProfilesFromJobChangeListResponse403 | DeleteProfilesFromJobChangeListResponse404 | DeleteProfilesFromJobChangeListResponse429 | DeleteProfilesFromJobChangeListResponse500 | DeleteProfilesFromJobChangeListResponse503]
+        Response[DeleteProfilesFromJobChangeListResponse200 | DeleteProfilesFromJobChangeListResponse400 | DeleteProfilesFromJobChangeListResponse401 | DeleteProfilesFromJobChangeListResponse402 | DeleteProfilesFromJobChangeListResponse403 | DeleteProfilesFromJobChangeListResponse404 | DeleteProfilesFromJobChangeListResponse422 | DeleteProfilesFromJobChangeListResponse429 | DeleteProfilesFromJobChangeListResponse500 | DeleteProfilesFromJobChangeListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,14 +189,15 @@ def sync(
     | DeleteProfilesFromJobChangeListResponse402
     | DeleteProfilesFromJobChangeListResponse403
     | DeleteProfilesFromJobChangeListResponse404
+    | DeleteProfilesFromJobChangeListResponse422
     | DeleteProfilesFromJobChangeListResponse429
     | DeleteProfilesFromJobChangeListResponse500
     | DeleteProfilesFromJobChangeListResponse503
     | None
 ):
-    r"""Delete profiles from the lists
+    r"""Delete profiles from a job change list
 
-     This will remove people from job changes tracking lists
+     Remove profiles from a job changes tracking list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DeleteProfilesFromJobChangeListResponse200 | DeleteProfilesFromJobChangeListResponse400 | DeleteProfilesFromJobChangeListResponse401 | DeleteProfilesFromJobChangeListResponse402 | DeleteProfilesFromJobChangeListResponse403 | DeleteProfilesFromJobChangeListResponse404 | DeleteProfilesFromJobChangeListResponse429 | DeleteProfilesFromJobChangeListResponse500 | DeleteProfilesFromJobChangeListResponse503
+        DeleteProfilesFromJobChangeListResponse200 | DeleteProfilesFromJobChangeListResponse400 | DeleteProfilesFromJobChangeListResponse401 | DeleteProfilesFromJobChangeListResponse402 | DeleteProfilesFromJobChangeListResponse403 | DeleteProfilesFromJobChangeListResponse404 | DeleteProfilesFromJobChangeListResponse422 | DeleteProfilesFromJobChangeListResponse429 | DeleteProfilesFromJobChangeListResponse500 | DeleteProfilesFromJobChangeListResponse503
     """
 
     return sync_detailed(
@@ -222,13 +232,14 @@ async def asyncio_detailed(
     | DeleteProfilesFromJobChangeListResponse402
     | DeleteProfilesFromJobChangeListResponse403
     | DeleteProfilesFromJobChangeListResponse404
+    | DeleteProfilesFromJobChangeListResponse422
     | DeleteProfilesFromJobChangeListResponse429
     | DeleteProfilesFromJobChangeListResponse500
     | DeleteProfilesFromJobChangeListResponse503
 ]:
-    r"""Delete profiles from the lists
+    r"""Delete profiles from a job change list
 
-     This will remove people from job changes tracking lists
+     Remove profiles from a job changes tracking list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[DeleteProfilesFromJobChangeListResponse200 | DeleteProfilesFromJobChangeListResponse400 | DeleteProfilesFromJobChangeListResponse401 | DeleteProfilesFromJobChangeListResponse402 | DeleteProfilesFromJobChangeListResponse403 | DeleteProfilesFromJobChangeListResponse404 | DeleteProfilesFromJobChangeListResponse429 | DeleteProfilesFromJobChangeListResponse500 | DeleteProfilesFromJobChangeListResponse503]
+        Response[DeleteProfilesFromJobChangeListResponse200 | DeleteProfilesFromJobChangeListResponse400 | DeleteProfilesFromJobChangeListResponse401 | DeleteProfilesFromJobChangeListResponse402 | DeleteProfilesFromJobChangeListResponse403 | DeleteProfilesFromJobChangeListResponse404 | DeleteProfilesFromJobChangeListResponse422 | DeleteProfilesFromJobChangeListResponse429 | DeleteProfilesFromJobChangeListResponse500 | DeleteProfilesFromJobChangeListResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,14 +277,15 @@ async def asyncio(
     | DeleteProfilesFromJobChangeListResponse402
     | DeleteProfilesFromJobChangeListResponse403
     | DeleteProfilesFromJobChangeListResponse404
+    | DeleteProfilesFromJobChangeListResponse422
     | DeleteProfilesFromJobChangeListResponse429
     | DeleteProfilesFromJobChangeListResponse500
     | DeleteProfilesFromJobChangeListResponse503
     | None
 ):
-    r"""Delete profiles from the lists
+    r"""Delete profiles from a job change list
 
-     This will remove people from job changes tracking lists
+     Remove profiles from a job changes tracking list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        DeleteProfilesFromJobChangeListResponse200 | DeleteProfilesFromJobChangeListResponse400 | DeleteProfilesFromJobChangeListResponse401 | DeleteProfilesFromJobChangeListResponse402 | DeleteProfilesFromJobChangeListResponse403 | DeleteProfilesFromJobChangeListResponse404 | DeleteProfilesFromJobChangeListResponse429 | DeleteProfilesFromJobChangeListResponse500 | DeleteProfilesFromJobChangeListResponse503
+        DeleteProfilesFromJobChangeListResponse200 | DeleteProfilesFromJobChangeListResponse400 | DeleteProfilesFromJobChangeListResponse401 | DeleteProfilesFromJobChangeListResponse402 | DeleteProfilesFromJobChangeListResponse403 | DeleteProfilesFromJobChangeListResponse404 | DeleteProfilesFromJobChangeListResponse422 | DeleteProfilesFromJobChangeListResponse429 | DeleteProfilesFromJobChangeListResponse500 | DeleteProfilesFromJobChangeListResponse503
     """
 
     return (

@@ -12,6 +12,7 @@ from ...models.location_typeahead_response_401 import LocationTypeaheadResponse4
 from ...models.location_typeahead_response_402 import LocationTypeaheadResponse402
 from ...models.location_typeahead_response_403 import LocationTypeaheadResponse403
 from ...models.location_typeahead_response_404 import LocationTypeaheadResponse404
+from ...models.location_typeahead_response_422 import LocationTypeaheadResponse422
 from ...models.location_typeahead_response_429 import LocationTypeaheadResponse429
 from ...models.location_typeahead_response_500 import LocationTypeaheadResponse500
 from ...models.location_typeahead_response_503 import LocationTypeaheadResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | LocationTypeaheadResponse402
     | LocationTypeaheadResponse403
     | LocationTypeaheadResponse404
+    | LocationTypeaheadResponse422
     | LocationTypeaheadResponse429
     | LocationTypeaheadResponse500
     | LocationTypeaheadResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = LocationTypeaheadResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = LocationTypeaheadResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | LocationTypeaheadResponse402
     | LocationTypeaheadResponse403
     | LocationTypeaheadResponse404
+    | LocationTypeaheadResponse422
     | LocationTypeaheadResponse429
     | LocationTypeaheadResponse500
     | LocationTypeaheadResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | LocationTypeaheadResponse402
     | LocationTypeaheadResponse403
     | LocationTypeaheadResponse404
+    | LocationTypeaheadResponse422
     | LocationTypeaheadResponse429
     | LocationTypeaheadResponse500
     | LocationTypeaheadResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[LocationTypeaheadResponse200 | LocationTypeaheadResponse400 | LocationTypeaheadResponse401 | LocationTypeaheadResponse402 | LocationTypeaheadResponse403 | LocationTypeaheadResponse404 | LocationTypeaheadResponse429 | LocationTypeaheadResponse500 | LocationTypeaheadResponse503]
+        Response[LocationTypeaheadResponse200 | LocationTypeaheadResponse400 | LocationTypeaheadResponse401 | LocationTypeaheadResponse402 | LocationTypeaheadResponse403 | LocationTypeaheadResponse404 | LocationTypeaheadResponse422 | LocationTypeaheadResponse429 | LocationTypeaheadResponse500 | LocationTypeaheadResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | LocationTypeaheadResponse402
     | LocationTypeaheadResponse403
     | LocationTypeaheadResponse404
+    | LocationTypeaheadResponse422
     | LocationTypeaheadResponse429
     | LocationTypeaheadResponse500
     | LocationTypeaheadResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        LocationTypeaheadResponse200 | LocationTypeaheadResponse400 | LocationTypeaheadResponse401 | LocationTypeaheadResponse402 | LocationTypeaheadResponse403 | LocationTypeaheadResponse404 | LocationTypeaheadResponse429 | LocationTypeaheadResponse500 | LocationTypeaheadResponse503
+        LocationTypeaheadResponse200 | LocationTypeaheadResponse400 | LocationTypeaheadResponse401 | LocationTypeaheadResponse402 | LocationTypeaheadResponse403 | LocationTypeaheadResponse404 | LocationTypeaheadResponse422 | LocationTypeaheadResponse429 | LocationTypeaheadResponse500 | LocationTypeaheadResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | LocationTypeaheadResponse402
     | LocationTypeaheadResponse403
     | LocationTypeaheadResponse404
+    | LocationTypeaheadResponse422
     | LocationTypeaheadResponse429
     | LocationTypeaheadResponse500
     | LocationTypeaheadResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[LocationTypeaheadResponse200 | LocationTypeaheadResponse400 | LocationTypeaheadResponse401 | LocationTypeaheadResponse402 | LocationTypeaheadResponse403 | LocationTypeaheadResponse404 | LocationTypeaheadResponse429 | LocationTypeaheadResponse500 | LocationTypeaheadResponse503]
+        Response[LocationTypeaheadResponse200 | LocationTypeaheadResponse400 | LocationTypeaheadResponse401 | LocationTypeaheadResponse402 | LocationTypeaheadResponse403 | LocationTypeaheadResponse404 | LocationTypeaheadResponse422 | LocationTypeaheadResponse429 | LocationTypeaheadResponse500 | LocationTypeaheadResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | LocationTypeaheadResponse402
     | LocationTypeaheadResponse403
     | LocationTypeaheadResponse404
+    | LocationTypeaheadResponse422
     | LocationTypeaheadResponse429
     | LocationTypeaheadResponse500
     | LocationTypeaheadResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        LocationTypeaheadResponse200 | LocationTypeaheadResponse400 | LocationTypeaheadResponse401 | LocationTypeaheadResponse402 | LocationTypeaheadResponse403 | LocationTypeaheadResponse404 | LocationTypeaheadResponse429 | LocationTypeaheadResponse500 | LocationTypeaheadResponse503
+        LocationTypeaheadResponse200 | LocationTypeaheadResponse400 | LocationTypeaheadResponse401 | LocationTypeaheadResponse402 | LocationTypeaheadResponse403 | LocationTypeaheadResponse404 | LocationTypeaheadResponse422 | LocationTypeaheadResponse429 | LocationTypeaheadResponse500 | LocationTypeaheadResponse503
     """
 
     return (

@@ -12,6 +12,7 @@ from ...models.poll_batch_contact_details_response_401 import PollBatchContactDe
 from ...models.poll_batch_contact_details_response_402 import PollBatchContactDetailsResponse402
 from ...models.poll_batch_contact_details_response_403 import PollBatchContactDetailsResponse403
 from ...models.poll_batch_contact_details_response_404 import PollBatchContactDetailsResponse404
+from ...models.poll_batch_contact_details_response_422 import PollBatchContactDetailsResponse422
 from ...models.poll_batch_contact_details_response_429 import PollBatchContactDetailsResponse429
 from ...models.poll_batch_contact_details_response_500 import PollBatchContactDetailsResponse500
 from ...models.poll_batch_contact_details_response_503 import PollBatchContactDetailsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | PollBatchContactDetailsResponse402
     | PollBatchContactDetailsResponse403
     | PollBatchContactDetailsResponse404
+    | PollBatchContactDetailsResponse422
     | PollBatchContactDetailsResponse429
     | PollBatchContactDetailsResponse500
     | PollBatchContactDetailsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = PollBatchContactDetailsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = PollBatchContactDetailsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | PollBatchContactDetailsResponse402
     | PollBatchContactDetailsResponse403
     | PollBatchContactDetailsResponse404
+    | PollBatchContactDetailsResponse422
     | PollBatchContactDetailsResponse429
     | PollBatchContactDetailsResponse500
     | PollBatchContactDetailsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | PollBatchContactDetailsResponse402
     | PollBatchContactDetailsResponse403
     | PollBatchContactDetailsResponse404
+    | PollBatchContactDetailsResponse422
     | PollBatchContactDetailsResponse429
     | PollBatchContactDetailsResponse500
     | PollBatchContactDetailsResponse503
@@ -154,7 +163,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PollBatchContactDetailsResponse200 | PollBatchContactDetailsResponse400 | PollBatchContactDetailsResponse401 | PollBatchContactDetailsResponse402 | PollBatchContactDetailsResponse403 | PollBatchContactDetailsResponse404 | PollBatchContactDetailsResponse429 | PollBatchContactDetailsResponse500 | PollBatchContactDetailsResponse503]
+        Response[PollBatchContactDetailsResponse200 | PollBatchContactDetailsResponse400 | PollBatchContactDetailsResponse401 | PollBatchContactDetailsResponse402 | PollBatchContactDetailsResponse403 | PollBatchContactDetailsResponse404 | PollBatchContactDetailsResponse422 | PollBatchContactDetailsResponse429 | PollBatchContactDetailsResponse500 | PollBatchContactDetailsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -179,6 +188,7 @@ def sync(
     | PollBatchContactDetailsResponse402
     | PollBatchContactDetailsResponse403
     | PollBatchContactDetailsResponse404
+    | PollBatchContactDetailsResponse422
     | PollBatchContactDetailsResponse429
     | PollBatchContactDetailsResponse500
     | PollBatchContactDetailsResponse503
@@ -200,7 +210,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PollBatchContactDetailsResponse200 | PollBatchContactDetailsResponse400 | PollBatchContactDetailsResponse401 | PollBatchContactDetailsResponse402 | PollBatchContactDetailsResponse403 | PollBatchContactDetailsResponse404 | PollBatchContactDetailsResponse429 | PollBatchContactDetailsResponse500 | PollBatchContactDetailsResponse503
+        PollBatchContactDetailsResponse200 | PollBatchContactDetailsResponse400 | PollBatchContactDetailsResponse401 | PollBatchContactDetailsResponse402 | PollBatchContactDetailsResponse403 | PollBatchContactDetailsResponse404 | PollBatchContactDetailsResponse422 | PollBatchContactDetailsResponse429 | PollBatchContactDetailsResponse500 | PollBatchContactDetailsResponse503
     """
 
     return sync_detailed(
@@ -220,6 +230,7 @@ async def asyncio_detailed(
     | PollBatchContactDetailsResponse402
     | PollBatchContactDetailsResponse403
     | PollBatchContactDetailsResponse404
+    | PollBatchContactDetailsResponse422
     | PollBatchContactDetailsResponse429
     | PollBatchContactDetailsResponse500
     | PollBatchContactDetailsResponse503
@@ -240,7 +251,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PollBatchContactDetailsResponse200 | PollBatchContactDetailsResponse400 | PollBatchContactDetailsResponse401 | PollBatchContactDetailsResponse402 | PollBatchContactDetailsResponse403 | PollBatchContactDetailsResponse404 | PollBatchContactDetailsResponse429 | PollBatchContactDetailsResponse500 | PollBatchContactDetailsResponse503]
+        Response[PollBatchContactDetailsResponse200 | PollBatchContactDetailsResponse400 | PollBatchContactDetailsResponse401 | PollBatchContactDetailsResponse402 | PollBatchContactDetailsResponse403 | PollBatchContactDetailsResponse404 | PollBatchContactDetailsResponse422 | PollBatchContactDetailsResponse429 | PollBatchContactDetailsResponse500 | PollBatchContactDetailsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -263,6 +274,7 @@ async def asyncio(
     | PollBatchContactDetailsResponse402
     | PollBatchContactDetailsResponse403
     | PollBatchContactDetailsResponse404
+    | PollBatchContactDetailsResponse422
     | PollBatchContactDetailsResponse429
     | PollBatchContactDetailsResponse500
     | PollBatchContactDetailsResponse503
@@ -284,7 +296,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PollBatchContactDetailsResponse200 | PollBatchContactDetailsResponse400 | PollBatchContactDetailsResponse401 | PollBatchContactDetailsResponse402 | PollBatchContactDetailsResponse403 | PollBatchContactDetailsResponse404 | PollBatchContactDetailsResponse429 | PollBatchContactDetailsResponse500 | PollBatchContactDetailsResponse503
+        PollBatchContactDetailsResponse200 | PollBatchContactDetailsResponse400 | PollBatchContactDetailsResponse401 | PollBatchContactDetailsResponse402 | PollBatchContactDetailsResponse403 | PollBatchContactDetailsResponse404 | PollBatchContactDetailsResponse422 | PollBatchContactDetailsResponse429 | PollBatchContactDetailsResponse500 | PollBatchContactDetailsResponse503
     """
 
     return (

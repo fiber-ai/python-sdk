@@ -12,6 +12,7 @@ from ...models.get_company_revenue_response_401 import GetCompanyRevenueResponse
 from ...models.get_company_revenue_response_402 import GetCompanyRevenueResponse402
 from ...models.get_company_revenue_response_403 import GetCompanyRevenueResponse403
 from ...models.get_company_revenue_response_404 import GetCompanyRevenueResponse404
+from ...models.get_company_revenue_response_422 import GetCompanyRevenueResponse422
 from ...models.get_company_revenue_response_429 import GetCompanyRevenueResponse429
 from ...models.get_company_revenue_response_500 import GetCompanyRevenueResponse500
 from ...models.get_company_revenue_response_503 import GetCompanyRevenueResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GetCompanyRevenueResponse402
     | GetCompanyRevenueResponse403
     | GetCompanyRevenueResponse404
+    | GetCompanyRevenueResponse422
     | GetCompanyRevenueResponse429
     | GetCompanyRevenueResponse500
     | GetCompanyRevenueResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetCompanyRevenueResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetCompanyRevenueResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GetCompanyRevenueResponse402
     | GetCompanyRevenueResponse403
     | GetCompanyRevenueResponse404
+    | GetCompanyRevenueResponse422
     | GetCompanyRevenueResponse429
     | GetCompanyRevenueResponse500
     | GetCompanyRevenueResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GetCompanyRevenueResponse402
     | GetCompanyRevenueResponse403
     | GetCompanyRevenueResponse404
+    | GetCompanyRevenueResponse422
     | GetCompanyRevenueResponse429
     | GetCompanyRevenueResponse500
     | GetCompanyRevenueResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetCompanyRevenueResponse200 | GetCompanyRevenueResponse400 | GetCompanyRevenueResponse401 | GetCompanyRevenueResponse402 | GetCompanyRevenueResponse403 | GetCompanyRevenueResponse404 | GetCompanyRevenueResponse429 | GetCompanyRevenueResponse500 | GetCompanyRevenueResponse503]
+        Response[GetCompanyRevenueResponse200 | GetCompanyRevenueResponse400 | GetCompanyRevenueResponse401 | GetCompanyRevenueResponse402 | GetCompanyRevenueResponse403 | GetCompanyRevenueResponse404 | GetCompanyRevenueResponse422 | GetCompanyRevenueResponse429 | GetCompanyRevenueResponse500 | GetCompanyRevenueResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | GetCompanyRevenueResponse402
     | GetCompanyRevenueResponse403
     | GetCompanyRevenueResponse404
+    | GetCompanyRevenueResponse422
     | GetCompanyRevenueResponse429
     | GetCompanyRevenueResponse500
     | GetCompanyRevenueResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetCompanyRevenueResponse200 | GetCompanyRevenueResponse400 | GetCompanyRevenueResponse401 | GetCompanyRevenueResponse402 | GetCompanyRevenueResponse403 | GetCompanyRevenueResponse404 | GetCompanyRevenueResponse429 | GetCompanyRevenueResponse500 | GetCompanyRevenueResponse503
+        GetCompanyRevenueResponse200 | GetCompanyRevenueResponse400 | GetCompanyRevenueResponse401 | GetCompanyRevenueResponse402 | GetCompanyRevenueResponse403 | GetCompanyRevenueResponse404 | GetCompanyRevenueResponse422 | GetCompanyRevenueResponse429 | GetCompanyRevenueResponse500 | GetCompanyRevenueResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | GetCompanyRevenueResponse402
     | GetCompanyRevenueResponse403
     | GetCompanyRevenueResponse404
+    | GetCompanyRevenueResponse422
     | GetCompanyRevenueResponse429
     | GetCompanyRevenueResponse500
     | GetCompanyRevenueResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetCompanyRevenueResponse200 | GetCompanyRevenueResponse400 | GetCompanyRevenueResponse401 | GetCompanyRevenueResponse402 | GetCompanyRevenueResponse403 | GetCompanyRevenueResponse404 | GetCompanyRevenueResponse429 | GetCompanyRevenueResponse500 | GetCompanyRevenueResponse503]
+        Response[GetCompanyRevenueResponse200 | GetCompanyRevenueResponse400 | GetCompanyRevenueResponse401 | GetCompanyRevenueResponse402 | GetCompanyRevenueResponse403 | GetCompanyRevenueResponse404 | GetCompanyRevenueResponse422 | GetCompanyRevenueResponse429 | GetCompanyRevenueResponse500 | GetCompanyRevenueResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | GetCompanyRevenueResponse402
     | GetCompanyRevenueResponse403
     | GetCompanyRevenueResponse404
+    | GetCompanyRevenueResponse422
     | GetCompanyRevenueResponse429
     | GetCompanyRevenueResponse500
     | GetCompanyRevenueResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetCompanyRevenueResponse200 | GetCompanyRevenueResponse400 | GetCompanyRevenueResponse401 | GetCompanyRevenueResponse402 | GetCompanyRevenueResponse403 | GetCompanyRevenueResponse404 | GetCompanyRevenueResponse429 | GetCompanyRevenueResponse500 | GetCompanyRevenueResponse503
+        GetCompanyRevenueResponse200 | GetCompanyRevenueResponse400 | GetCompanyRevenueResponse401 | GetCompanyRevenueResponse402 | GetCompanyRevenueResponse403 | GetCompanyRevenueResponse404 | GetCompanyRevenueResponse422 | GetCompanyRevenueResponse429 | GetCompanyRevenueResponse500 | GetCompanyRevenueResponse503
     """
 
     return (

@@ -1,0 +1,127 @@
+from __future__ import annotations
+
+from collections.abc import Mapping
+from typing import TYPE_CHECKING, Any, TypeVar, cast
+
+from attrs import define as _attrs_define
+from attrs import field as _attrs_field
+
+from ..models.premium_phone_reveal_response_200_output_phone_numbers_item_type import (
+    PremiumPhoneRevealResponse200OutputPhoneNumbersItemType,
+)
+from ..types import UNSET, Unset
+
+if TYPE_CHECKING:
+    from ..models.premium_phone_reveal_response_200_output_phone_numbers_item_caller_id_validation_type_0 import (
+        PremiumPhoneRevealResponse200OutputPhoneNumbersItemCallerIdValidationType0,
+    )
+
+
+T = TypeVar("T", bound="PremiumPhoneRevealResponse200OutputPhoneNumbersItem")
+
+
+@_attrs_define
+class PremiumPhoneRevealResponse200OutputPhoneNumbersItem:
+    """
+    Attributes:
+        number (str): Phone number in E.164 format.
+        type_ (PremiumPhoneRevealResponse200OutputPhoneNumbersItemType): Phone line type.
+        caller_id_validation (None | PremiumPhoneRevealResponse200OutputPhoneNumbersItemCallerIdValidationType0 |
+            Unset): Result for attempted phone number verification.
+    """
+
+    number: str
+    type_: PremiumPhoneRevealResponse200OutputPhoneNumbersItemType
+    caller_id_validation: None | PremiumPhoneRevealResponse200OutputPhoneNumbersItemCallerIdValidationType0 | Unset = (
+        UNSET
+    )
+    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        from ..models.premium_phone_reveal_response_200_output_phone_numbers_item_caller_id_validation_type_0 import (
+            PremiumPhoneRevealResponse200OutputPhoneNumbersItemCallerIdValidationType0,
+        )
+
+        number = self.number
+
+        type_ = self.type_.value
+
+        caller_id_validation: dict[str, Any] | None | Unset
+        if isinstance(self.caller_id_validation, Unset):
+            caller_id_validation = UNSET
+        elif isinstance(
+            self.caller_id_validation, PremiumPhoneRevealResponse200OutputPhoneNumbersItemCallerIdValidationType0
+        ):
+            caller_id_validation = self.caller_id_validation.to_dict()
+        else:
+            caller_id_validation = self.caller_id_validation
+
+        field_dict: dict[str, Any] = {}
+        field_dict.update(self.additional_properties)
+        field_dict.update(
+            {
+                "number": number,
+                "type": type_,
+            }
+        )
+        if caller_id_validation is not UNSET:
+            field_dict["callerIdValidation"] = caller_id_validation
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.premium_phone_reveal_response_200_output_phone_numbers_item_caller_id_validation_type_0 import (
+            PremiumPhoneRevealResponse200OutputPhoneNumbersItemCallerIdValidationType0,
+        )
+
+        d = dict(src_dict)
+        number = d.pop("number")
+
+        type_ = PremiumPhoneRevealResponse200OutputPhoneNumbersItemType(d.pop("type"))
+
+        def _parse_caller_id_validation(
+            data: object,
+        ) -> None | PremiumPhoneRevealResponse200OutputPhoneNumbersItemCallerIdValidationType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                caller_id_validation_type_0 = (
+                    PremiumPhoneRevealResponse200OutputPhoneNumbersItemCallerIdValidationType0.from_dict(data)
+                )
+
+                return caller_id_validation_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | PremiumPhoneRevealResponse200OutputPhoneNumbersItemCallerIdValidationType0 | Unset, data)
+
+        caller_id_validation = _parse_caller_id_validation(d.pop("callerIdValidation", UNSET))
+
+        premium_phone_reveal_response_200_output_phone_numbers_item = cls(
+            number=number,
+            type_=type_,
+            caller_id_validation=caller_id_validation,
+        )
+
+        premium_phone_reveal_response_200_output_phone_numbers_item.additional_properties = d
+        return premium_phone_reveal_response_200_output_phone_numbers_item
+
+    @property
+    def additional_keys(self) -> list[str]:
+        return list(self.additional_properties.keys())
+
+    def __getitem__(self, key: str) -> Any:
+        return self.additional_properties[key]
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        self.additional_properties[key] = value
+
+    def __delitem__(self, key: str) -> None:
+        del self.additional_properties[key]
+
+    def __contains__(self, key: str) -> bool:
+        return key in self.additional_properties

@@ -19,10 +19,10 @@ T = TypeVar("T", bound="AddTrackerPeopleResponse200Output")
 class AddTrackerPeopleResponse200Output:
     """
     Attributes:
-        added (int): Number of people successfully added
-        skipped (int): Number skipped (duplicates or invalid)
+        added (int): Number of people successfully added.
+        skipped (int): Number skipped (duplicates or invalid).
         invalid_people (list[AddTrackerPeopleResponse200OutputInvalidPeopleItem]): Details on any people that could not
-            be added
+            be added.
     """
 
     added: int

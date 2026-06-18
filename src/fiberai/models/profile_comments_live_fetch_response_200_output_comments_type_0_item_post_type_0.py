@@ -24,11 +24,13 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0:
         post_urn (None | str | Unset):
         post_url (None | str | Unset):
         author (None | ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0AuthorType0 | Unset):
+        content (None | str | Unset):
     """
 
     post_urn: None | str | Unset = UNSET
     post_url: None | str | Unset = UNSET
     author: None | ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0AuthorType0 | Unset = UNSET
+    content: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -56,6 +58,12 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0:
         else:
             author = self.author
 
+        content: None | str | Unset
+        if isinstance(self.content, Unset):
+            content = UNSET
+        else:
+            content = self.content
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -65,6 +73,8 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0:
             field_dict["postUrl"] = post_url
         if author is not UNSET:
             field_dict["author"] = author
+        if content is not UNSET:
+            field_dict["content"] = content
 
         return field_dict
 
@@ -117,10 +127,20 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0:
 
         author = _parse_author(d.pop("author", UNSET))
 
+        def _parse_content(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        content = _parse_content(d.pop("content", UNSET))
+
         profile_comments_live_fetch_response_200_output_comments_type_0_item_post_type_0 = cls(
             post_urn=post_urn,
             post_url=post_url,
             author=author,
+            content=content,
         )
 
         profile_comments_live_fetch_response_200_output_comments_type_0_item_post_type_0.additional_properties = d

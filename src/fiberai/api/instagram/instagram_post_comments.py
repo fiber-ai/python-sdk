@@ -12,6 +12,7 @@ from ...models.instagram_post_comments_response_401 import InstagramPostComments
 from ...models.instagram_post_comments_response_402 import InstagramPostCommentsResponse402
 from ...models.instagram_post_comments_response_403 import InstagramPostCommentsResponse403
 from ...models.instagram_post_comments_response_404 import InstagramPostCommentsResponse404
+from ...models.instagram_post_comments_response_422 import InstagramPostCommentsResponse422
 from ...models.instagram_post_comments_response_429 import InstagramPostCommentsResponse429
 from ...models.instagram_post_comments_response_500 import InstagramPostCommentsResponse500
 from ...models.instagram_post_comments_response_503 import InstagramPostCommentsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | InstagramPostCommentsResponse402
     | InstagramPostCommentsResponse403
     | InstagramPostCommentsResponse404
+    | InstagramPostCommentsResponse422
     | InstagramPostCommentsResponse429
     | InstagramPostCommentsResponse500
     | InstagramPostCommentsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = InstagramPostCommentsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = InstagramPostCommentsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | InstagramPostCommentsResponse402
     | InstagramPostCommentsResponse403
     | InstagramPostCommentsResponse404
+    | InstagramPostCommentsResponse422
     | InstagramPostCommentsResponse429
     | InstagramPostCommentsResponse500
     | InstagramPostCommentsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | InstagramPostCommentsResponse402
     | InstagramPostCommentsResponse403
     | InstagramPostCommentsResponse404
+    | InstagramPostCommentsResponse422
     | InstagramPostCommentsResponse429
     | InstagramPostCommentsResponse500
     | InstagramPostCommentsResponse503
@@ -157,7 +166,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[InstagramPostCommentsResponse200 | InstagramPostCommentsResponse400 | InstagramPostCommentsResponse401 | InstagramPostCommentsResponse402 | InstagramPostCommentsResponse403 | InstagramPostCommentsResponse404 | InstagramPostCommentsResponse429 | InstagramPostCommentsResponse500 | InstagramPostCommentsResponse503]
+        Response[InstagramPostCommentsResponse200 | InstagramPostCommentsResponse400 | InstagramPostCommentsResponse401 | InstagramPostCommentsResponse402 | InstagramPostCommentsResponse403 | InstagramPostCommentsResponse404 | InstagramPostCommentsResponse422 | InstagramPostCommentsResponse429 | InstagramPostCommentsResponse500 | InstagramPostCommentsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -182,6 +191,7 @@ def sync(
     | InstagramPostCommentsResponse402
     | InstagramPostCommentsResponse403
     | InstagramPostCommentsResponse404
+    | InstagramPostCommentsResponse422
     | InstagramPostCommentsResponse429
     | InstagramPostCommentsResponse500
     | InstagramPostCommentsResponse503
@@ -206,7 +216,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        InstagramPostCommentsResponse200 | InstagramPostCommentsResponse400 | InstagramPostCommentsResponse401 | InstagramPostCommentsResponse402 | InstagramPostCommentsResponse403 | InstagramPostCommentsResponse404 | InstagramPostCommentsResponse429 | InstagramPostCommentsResponse500 | InstagramPostCommentsResponse503
+        InstagramPostCommentsResponse200 | InstagramPostCommentsResponse400 | InstagramPostCommentsResponse401 | InstagramPostCommentsResponse402 | InstagramPostCommentsResponse403 | InstagramPostCommentsResponse404 | InstagramPostCommentsResponse422 | InstagramPostCommentsResponse429 | InstagramPostCommentsResponse500 | InstagramPostCommentsResponse503
     """
 
     return sync_detailed(
@@ -226,6 +236,7 @@ async def asyncio_detailed(
     | InstagramPostCommentsResponse402
     | InstagramPostCommentsResponse403
     | InstagramPostCommentsResponse404
+    | InstagramPostCommentsResponse422
     | InstagramPostCommentsResponse429
     | InstagramPostCommentsResponse500
     | InstagramPostCommentsResponse503
@@ -249,7 +260,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[InstagramPostCommentsResponse200 | InstagramPostCommentsResponse400 | InstagramPostCommentsResponse401 | InstagramPostCommentsResponse402 | InstagramPostCommentsResponse403 | InstagramPostCommentsResponse404 | InstagramPostCommentsResponse429 | InstagramPostCommentsResponse500 | InstagramPostCommentsResponse503]
+        Response[InstagramPostCommentsResponse200 | InstagramPostCommentsResponse400 | InstagramPostCommentsResponse401 | InstagramPostCommentsResponse402 | InstagramPostCommentsResponse403 | InstagramPostCommentsResponse404 | InstagramPostCommentsResponse422 | InstagramPostCommentsResponse429 | InstagramPostCommentsResponse500 | InstagramPostCommentsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -272,6 +283,7 @@ async def asyncio(
     | InstagramPostCommentsResponse402
     | InstagramPostCommentsResponse403
     | InstagramPostCommentsResponse404
+    | InstagramPostCommentsResponse422
     | InstagramPostCommentsResponse429
     | InstagramPostCommentsResponse500
     | InstagramPostCommentsResponse503
@@ -296,7 +308,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        InstagramPostCommentsResponse200 | InstagramPostCommentsResponse400 | InstagramPostCommentsResponse401 | InstagramPostCommentsResponse402 | InstagramPostCommentsResponse403 | InstagramPostCommentsResponse404 | InstagramPostCommentsResponse429 | InstagramPostCommentsResponse500 | InstagramPostCommentsResponse503
+        InstagramPostCommentsResponse200 | InstagramPostCommentsResponse400 | InstagramPostCommentsResponse401 | InstagramPostCommentsResponse402 | InstagramPostCommentsResponse403 | InstagramPostCommentsResponse404 | InstagramPostCommentsResponse422 | InstagramPostCommentsResponse429 | InstagramPostCommentsResponse500 | InstagramPostCommentsResponse503
     """
 
     return (

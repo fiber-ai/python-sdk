@@ -12,6 +12,7 @@ from ...models.get_audience_companies_response_401 import GetAudienceCompaniesRe
 from ...models.get_audience_companies_response_402 import GetAudienceCompaniesResponse402
 from ...models.get_audience_companies_response_403 import GetAudienceCompaniesResponse403
 from ...models.get_audience_companies_response_404 import GetAudienceCompaniesResponse404
+from ...models.get_audience_companies_response_422 import GetAudienceCompaniesResponse422
 from ...models.get_audience_companies_response_429 import GetAudienceCompaniesResponse429
 from ...models.get_audience_companies_response_500 import GetAudienceCompaniesResponse500
 from ...models.get_audience_companies_response_503 import GetAudienceCompaniesResponse503
@@ -61,6 +62,7 @@ def _parse_response(
     | GetAudienceCompaniesResponse402
     | GetAudienceCompaniesResponse403
     | GetAudienceCompaniesResponse404
+    | GetAudienceCompaniesResponse422
     | GetAudienceCompaniesResponse429
     | GetAudienceCompaniesResponse500
     | GetAudienceCompaniesResponse503
@@ -96,6 +98,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetAudienceCompaniesResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetAudienceCompaniesResponse429.from_dict(response.json())
 
@@ -126,6 +133,7 @@ def _build_response(
     | GetAudienceCompaniesResponse402
     | GetAudienceCompaniesResponse403
     | GetAudienceCompaniesResponse404
+    | GetAudienceCompaniesResponse422
     | GetAudienceCompaniesResponse429
     | GetAudienceCompaniesResponse500
     | GetAudienceCompaniesResponse503
@@ -152,6 +160,7 @@ def sync_detailed(
     | GetAudienceCompaniesResponse402
     | GetAudienceCompaniesResponse403
     | GetAudienceCompaniesResponse404
+    | GetAudienceCompaniesResponse422
     | GetAudienceCompaniesResponse429
     | GetAudienceCompaniesResponse500
     | GetAudienceCompaniesResponse503
@@ -177,7 +186,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetAudienceCompaniesResponse200 | GetAudienceCompaniesResponse400 | GetAudienceCompaniesResponse401 | GetAudienceCompaniesResponse402 | GetAudienceCompaniesResponse403 | GetAudienceCompaniesResponse404 | GetAudienceCompaniesResponse429 | GetAudienceCompaniesResponse500 | GetAudienceCompaniesResponse503]
+        Response[GetAudienceCompaniesResponse200 | GetAudienceCompaniesResponse400 | GetAudienceCompaniesResponse401 | GetAudienceCompaniesResponse402 | GetAudienceCompaniesResponse403 | GetAudienceCompaniesResponse404 | GetAudienceCompaniesResponse422 | GetAudienceCompaniesResponse429 | GetAudienceCompaniesResponse500 | GetAudienceCompaniesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -208,6 +217,7 @@ def sync(
     | GetAudienceCompaniesResponse402
     | GetAudienceCompaniesResponse403
     | GetAudienceCompaniesResponse404
+    | GetAudienceCompaniesResponse422
     | GetAudienceCompaniesResponse429
     | GetAudienceCompaniesResponse500
     | GetAudienceCompaniesResponse503
@@ -234,7 +244,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetAudienceCompaniesResponse200 | GetAudienceCompaniesResponse400 | GetAudienceCompaniesResponse401 | GetAudienceCompaniesResponse402 | GetAudienceCompaniesResponse403 | GetAudienceCompaniesResponse404 | GetAudienceCompaniesResponse429 | GetAudienceCompaniesResponse500 | GetAudienceCompaniesResponse503
+        GetAudienceCompaniesResponse200 | GetAudienceCompaniesResponse400 | GetAudienceCompaniesResponse401 | GetAudienceCompaniesResponse402 | GetAudienceCompaniesResponse403 | GetAudienceCompaniesResponse404 | GetAudienceCompaniesResponse422 | GetAudienceCompaniesResponse429 | GetAudienceCompaniesResponse500 | GetAudienceCompaniesResponse503
     """
 
     return sync_detailed(
@@ -260,6 +270,7 @@ async def asyncio_detailed(
     | GetAudienceCompaniesResponse402
     | GetAudienceCompaniesResponse403
     | GetAudienceCompaniesResponse404
+    | GetAudienceCompaniesResponse422
     | GetAudienceCompaniesResponse429
     | GetAudienceCompaniesResponse500
     | GetAudienceCompaniesResponse503
@@ -285,7 +296,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetAudienceCompaniesResponse200 | GetAudienceCompaniesResponse400 | GetAudienceCompaniesResponse401 | GetAudienceCompaniesResponse402 | GetAudienceCompaniesResponse403 | GetAudienceCompaniesResponse404 | GetAudienceCompaniesResponse429 | GetAudienceCompaniesResponse500 | GetAudienceCompaniesResponse503]
+        Response[GetAudienceCompaniesResponse200 | GetAudienceCompaniesResponse400 | GetAudienceCompaniesResponse401 | GetAudienceCompaniesResponse402 | GetAudienceCompaniesResponse403 | GetAudienceCompaniesResponse404 | GetAudienceCompaniesResponse422 | GetAudienceCompaniesResponse429 | GetAudienceCompaniesResponse500 | GetAudienceCompaniesResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -314,6 +325,7 @@ async def asyncio(
     | GetAudienceCompaniesResponse402
     | GetAudienceCompaniesResponse403
     | GetAudienceCompaniesResponse404
+    | GetAudienceCompaniesResponse422
     | GetAudienceCompaniesResponse429
     | GetAudienceCompaniesResponse500
     | GetAudienceCompaniesResponse503
@@ -340,7 +352,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetAudienceCompaniesResponse200 | GetAudienceCompaniesResponse400 | GetAudienceCompaniesResponse401 | GetAudienceCompaniesResponse402 | GetAudienceCompaniesResponse403 | GetAudienceCompaniesResponse404 | GetAudienceCompaniesResponse429 | GetAudienceCompaniesResponse500 | GetAudienceCompaniesResponse503
+        GetAudienceCompaniesResponse200 | GetAudienceCompaniesResponse400 | GetAudienceCompaniesResponse401 | GetAudienceCompaniesResponse402 | GetAudienceCompaniesResponse403 | GetAudienceCompaniesResponse404 | GetAudienceCompaniesResponse422 | GetAudienceCompaniesResponse429 | GetAudienceCompaniesResponse500 | GetAudienceCompaniesResponse503
     """
 
     return (

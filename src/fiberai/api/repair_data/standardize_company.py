@@ -12,6 +12,7 @@ from ...models.standardize_company_response_401 import StandardizeCompanyRespons
 from ...models.standardize_company_response_402 import StandardizeCompanyResponse402
 from ...models.standardize_company_response_403 import StandardizeCompanyResponse403
 from ...models.standardize_company_response_404 import StandardizeCompanyResponse404
+from ...models.standardize_company_response_422 import StandardizeCompanyResponse422
 from ...models.standardize_company_response_429 import StandardizeCompanyResponse429
 from ...models.standardize_company_response_500 import StandardizeCompanyResponse500
 from ...models.standardize_company_response_503 import StandardizeCompanyResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | StandardizeCompanyResponse402
     | StandardizeCompanyResponse403
     | StandardizeCompanyResponse404
+    | StandardizeCompanyResponse422
     | StandardizeCompanyResponse429
     | StandardizeCompanyResponse500
     | StandardizeCompanyResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = StandardizeCompanyResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = StandardizeCompanyResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | StandardizeCompanyResponse402
     | StandardizeCompanyResponse403
     | StandardizeCompanyResponse404
+    | StandardizeCompanyResponse422
     | StandardizeCompanyResponse429
     | StandardizeCompanyResponse500
     | StandardizeCompanyResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | StandardizeCompanyResponse402
     | StandardizeCompanyResponse403
     | StandardizeCompanyResponse404
+    | StandardizeCompanyResponse422
     | StandardizeCompanyResponse429
     | StandardizeCompanyResponse500
     | StandardizeCompanyResponse503
@@ -145,8 +154,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company standardization&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (StandardizeCompanyBody):
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[StandardizeCompanyResponse200 | StandardizeCompanyResponse400 | StandardizeCompanyResponse401 | StandardizeCompanyResponse402 | StandardizeCompanyResponse403 | StandardizeCompanyResponse404 | StandardizeCompanyResponse429 | StandardizeCompanyResponse500 | StandardizeCompanyResponse503]
+        Response[StandardizeCompanyResponse200 | StandardizeCompanyResponse400 | StandardizeCompanyResponse401 | StandardizeCompanyResponse402 | StandardizeCompanyResponse403 | StandardizeCompanyResponse404 | StandardizeCompanyResponse422 | StandardizeCompanyResponse429 | StandardizeCompanyResponse500 | StandardizeCompanyResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | StandardizeCompanyResponse402
     | StandardizeCompanyResponse403
     | StandardizeCompanyResponse404
+    | StandardizeCompanyResponse422
     | StandardizeCompanyResponse429
     | StandardizeCompanyResponse500
     | StandardizeCompanyResponse503
@@ -193,8 +203,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company standardization&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (StandardizeCompanyBody):
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        StandardizeCompanyResponse200 | StandardizeCompanyResponse400 | StandardizeCompanyResponse401 | StandardizeCompanyResponse402 | StandardizeCompanyResponse403 | StandardizeCompanyResponse404 | StandardizeCompanyResponse429 | StandardizeCompanyResponse500 | StandardizeCompanyResponse503
+        StandardizeCompanyResponse200 | StandardizeCompanyResponse400 | StandardizeCompanyResponse401 | StandardizeCompanyResponse402 | StandardizeCompanyResponse403 | StandardizeCompanyResponse404 | StandardizeCompanyResponse422 | StandardizeCompanyResponse429 | StandardizeCompanyResponse500 | StandardizeCompanyResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | StandardizeCompanyResponse402
     | StandardizeCompanyResponse403
     | StandardizeCompanyResponse404
+    | StandardizeCompanyResponse422
     | StandardizeCompanyResponse429
     | StandardizeCompanyResponse500
     | StandardizeCompanyResponse503
@@ -235,8 +246,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company standardization&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (StandardizeCompanyBody):
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[StandardizeCompanyResponse200 | StandardizeCompanyResponse400 | StandardizeCompanyResponse401 | StandardizeCompanyResponse402 | StandardizeCompanyResponse403 | StandardizeCompanyResponse404 | StandardizeCompanyResponse429 | StandardizeCompanyResponse500 | StandardizeCompanyResponse503]
+        Response[StandardizeCompanyResponse200 | StandardizeCompanyResponse400 | StandardizeCompanyResponse401 | StandardizeCompanyResponse402 | StandardizeCompanyResponse403 | StandardizeCompanyResponse404 | StandardizeCompanyResponse422 | StandardizeCompanyResponse429 | StandardizeCompanyResponse500 | StandardizeCompanyResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | StandardizeCompanyResponse402
     | StandardizeCompanyResponse403
     | StandardizeCompanyResponse404
+    | StandardizeCompanyResponse422
     | StandardizeCompanyResponse429
     | StandardizeCompanyResponse500
     | StandardizeCompanyResponse503
@@ -281,8 +293,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company standardization&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (StandardizeCompanyBody):
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        StandardizeCompanyResponse200 | StandardizeCompanyResponse400 | StandardizeCompanyResponse401 | StandardizeCompanyResponse402 | StandardizeCompanyResponse403 | StandardizeCompanyResponse404 | StandardizeCompanyResponse429 | StandardizeCompanyResponse500 | StandardizeCompanyResponse503
+        StandardizeCompanyResponse200 | StandardizeCompanyResponse400 | StandardizeCompanyResponse401 | StandardizeCompanyResponse402 | StandardizeCompanyResponse403 | StandardizeCompanyResponse404 | StandardizeCompanyResponse422 | StandardizeCompanyResponse429 | StandardizeCompanyResponse500 | StandardizeCompanyResponse503
     """
 
     return (

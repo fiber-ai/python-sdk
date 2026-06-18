@@ -44,6 +44,7 @@ class TriggerExhaustiveContactEnrichmentResponse200:
             TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType2 |
             TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType3 |
             TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType4):
+        advice (list[str]): Tips, recommendations, and suggestions for using this API effectively.
         warnings (list[TriggerExhaustiveContactEnrichmentResponse200WarningsType0Item] | None | Unset): Warnings about
             extraneous fields in request
     """
@@ -56,6 +57,7 @@ class TriggerExhaustiveContactEnrichmentResponse200:
         | TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType3
         | TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType4
     )
+    advice: list[str]
     warnings: list[TriggerExhaustiveContactEnrichmentResponse200WarningsType0Item] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
@@ -86,6 +88,8 @@ class TriggerExhaustiveContactEnrichmentResponse200:
         else:
             charge_info = self.charge_info.to_dict()
 
+        advice = self.advice
+
         warnings: list[dict[str, Any]] | None | Unset
         if isinstance(self.warnings, Unset):
             warnings = UNSET
@@ -104,6 +108,7 @@ class TriggerExhaustiveContactEnrichmentResponse200:
             {
                 "output": output,
                 "chargeInfo": charge_info,
+                "advice": advice,
             }
         )
         if warnings is not UNSET:
@@ -187,6 +192,8 @@ class TriggerExhaustiveContactEnrichmentResponse200:
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 
+        advice = cast(list[str], d.pop("advice"))
+
         def _parse_warnings(
             data: object,
         ) -> list[TriggerExhaustiveContactEnrichmentResponse200WarningsType0Item] | None | Unset:
@@ -216,6 +223,7 @@ class TriggerExhaustiveContactEnrichmentResponse200:
         trigger_exhaustive_contact_enrichment_response_200 = cls(
             output=output,
             charge_info=charge_info,
+            advice=advice,
             warnings=warnings,
         )
 

@@ -11,6 +11,7 @@ from ...models.get_tracker_overview_response_401 import GetTrackerOverviewRespon
 from ...models.get_tracker_overview_response_402 import GetTrackerOverviewResponse402
 from ...models.get_tracker_overview_response_403 import GetTrackerOverviewResponse403
 from ...models.get_tracker_overview_response_404 import GetTrackerOverviewResponse404
+from ...models.get_tracker_overview_response_422 import GetTrackerOverviewResponse422
 from ...models.get_tracker_overview_response_429 import GetTrackerOverviewResponse429
 from ...models.get_tracker_overview_response_500 import GetTrackerOverviewResponse500
 from ...models.get_tracker_overview_response_503 import GetTrackerOverviewResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GetTrackerOverviewResponse402
     | GetTrackerOverviewResponse403
     | GetTrackerOverviewResponse404
+    | GetTrackerOverviewResponse422
     | GetTrackerOverviewResponse429
     | GetTrackerOverviewResponse500
     | GetTrackerOverviewResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetTrackerOverviewResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetTrackerOverviewResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GetTrackerOverviewResponse402
     | GetTrackerOverviewResponse403
     | GetTrackerOverviewResponse404
+    | GetTrackerOverviewResponse422
     | GetTrackerOverviewResponse429
     | GetTrackerOverviewResponse500
     | GetTrackerOverviewResponse503
@@ -134,15 +142,15 @@ def sync_detailed(
     | GetTrackerOverviewResponse402
     | GetTrackerOverviewResponse403
     | GetTrackerOverviewResponse404
+    | GetTrackerOverviewResponse422
     | GetTrackerOverviewResponse429
     | GetTrackerOverviewResponse500
     | GetTrackerOverviewResponse503
 ]:
-    r"""Get tracker overview
+    r"""Summarize all tracker lists
 
-     Returns a single-call summary of all of your tracker lists, the rules attached to each, and a
-    forecast of upcoming refreshes with the credits each refresh will cost. Useful for monitoring credit
-    burn and seeing what's being tracked at a glance.
+     Returns every tracker list you own in a single call, with entity counts and a forecast of upcoming
+    refresh costs. Use the individual GET endpoints for full rule details.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -157,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetTrackerOverviewResponse200 | GetTrackerOverviewResponse400 | GetTrackerOverviewResponse401 | GetTrackerOverviewResponse402 | GetTrackerOverviewResponse403 | GetTrackerOverviewResponse404 | GetTrackerOverviewResponse429 | GetTrackerOverviewResponse500 | GetTrackerOverviewResponse503]
+        Response[GetTrackerOverviewResponse200 | GetTrackerOverviewResponse400 | GetTrackerOverviewResponse401 | GetTrackerOverviewResponse402 | GetTrackerOverviewResponse403 | GetTrackerOverviewResponse404 | GetTrackerOverviewResponse422 | GetTrackerOverviewResponse429 | GetTrackerOverviewResponse500 | GetTrackerOverviewResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -182,16 +190,16 @@ def sync(
     | GetTrackerOverviewResponse402
     | GetTrackerOverviewResponse403
     | GetTrackerOverviewResponse404
+    | GetTrackerOverviewResponse422
     | GetTrackerOverviewResponse429
     | GetTrackerOverviewResponse500
     | GetTrackerOverviewResponse503
     | None
 ):
-    r"""Get tracker overview
+    r"""Summarize all tracker lists
 
-     Returns a single-call summary of all of your tracker lists, the rules attached to each, and a
-    forecast of upcoming refreshes with the credits each refresh will cost. Useful for monitoring credit
-    burn and seeing what's being tracked at a glance.
+     Returns every tracker list you own in a single call, with entity counts and a forecast of upcoming
+    refresh costs. Use the individual GET endpoints for full rule details.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -206,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetTrackerOverviewResponse200 | GetTrackerOverviewResponse400 | GetTrackerOverviewResponse401 | GetTrackerOverviewResponse402 | GetTrackerOverviewResponse403 | GetTrackerOverviewResponse404 | GetTrackerOverviewResponse429 | GetTrackerOverviewResponse500 | GetTrackerOverviewResponse503
+        GetTrackerOverviewResponse200 | GetTrackerOverviewResponse400 | GetTrackerOverviewResponse401 | GetTrackerOverviewResponse402 | GetTrackerOverviewResponse403 | GetTrackerOverviewResponse404 | GetTrackerOverviewResponse422 | GetTrackerOverviewResponse429 | GetTrackerOverviewResponse500 | GetTrackerOverviewResponse503
     """
 
     return sync_detailed(
@@ -226,15 +234,15 @@ async def asyncio_detailed(
     | GetTrackerOverviewResponse402
     | GetTrackerOverviewResponse403
     | GetTrackerOverviewResponse404
+    | GetTrackerOverviewResponse422
     | GetTrackerOverviewResponse429
     | GetTrackerOverviewResponse500
     | GetTrackerOverviewResponse503
 ]:
-    r"""Get tracker overview
+    r"""Summarize all tracker lists
 
-     Returns a single-call summary of all of your tracker lists, the rules attached to each, and a
-    forecast of upcoming refreshes with the credits each refresh will cost. Useful for monitoring credit
-    burn and seeing what's being tracked at a glance.
+     Returns every tracker list you own in a single call, with entity counts and a forecast of upcoming
+    refresh costs. Use the individual GET endpoints for full rule details.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -249,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetTrackerOverviewResponse200 | GetTrackerOverviewResponse400 | GetTrackerOverviewResponse401 | GetTrackerOverviewResponse402 | GetTrackerOverviewResponse403 | GetTrackerOverviewResponse404 | GetTrackerOverviewResponse429 | GetTrackerOverviewResponse500 | GetTrackerOverviewResponse503]
+        Response[GetTrackerOverviewResponse200 | GetTrackerOverviewResponse400 | GetTrackerOverviewResponse401 | GetTrackerOverviewResponse402 | GetTrackerOverviewResponse403 | GetTrackerOverviewResponse404 | GetTrackerOverviewResponse422 | GetTrackerOverviewResponse429 | GetTrackerOverviewResponse500 | GetTrackerOverviewResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -272,16 +280,16 @@ async def asyncio(
     | GetTrackerOverviewResponse402
     | GetTrackerOverviewResponse403
     | GetTrackerOverviewResponse404
+    | GetTrackerOverviewResponse422
     | GetTrackerOverviewResponse429
     | GetTrackerOverviewResponse500
     | GetTrackerOverviewResponse503
     | None
 ):
-    r"""Get tracker overview
+    r"""Summarize all tracker lists
 
-     Returns a single-call summary of all of your tracker lists, the rules attached to each, and a
-    forecast of upcoming refreshes with the credits each refresh will cost. Useful for monitoring credit
-    burn and seeing what's being tracked at a glance.
+     Returns every tracker list you own in a single call, with entity counts and a forecast of upcoming
+    refresh costs. Use the individual GET endpoints for full rule details.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -296,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetTrackerOverviewResponse200 | GetTrackerOverviewResponse400 | GetTrackerOverviewResponse401 | GetTrackerOverviewResponse402 | GetTrackerOverviewResponse403 | GetTrackerOverviewResponse404 | GetTrackerOverviewResponse429 | GetTrackerOverviewResponse500 | GetTrackerOverviewResponse503
+        GetTrackerOverviewResponse200 | GetTrackerOverviewResponse400 | GetTrackerOverviewResponse401 | GetTrackerOverviewResponse402 | GetTrackerOverviewResponse403 | GetTrackerOverviewResponse404 | GetTrackerOverviewResponse422 | GetTrackerOverviewResponse429 | GetTrackerOverviewResponse500 | GetTrackerOverviewResponse503
     """
 
     return (

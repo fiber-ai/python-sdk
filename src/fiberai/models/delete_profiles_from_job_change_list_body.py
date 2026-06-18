@@ -14,8 +14,8 @@ class DeleteProfilesFromJobChangeListBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        profile_ids (list[str]): The ID of the profiles you want remove.
-        job_change_list_id (str): Job change list id from where you want to delete profiles.
+        profile_ids (list[str]): The IDs of the profiles to remove.
+        job_change_list_id (str): The ID of the job change list to remove profiles from.
     """
 
     api_key: str

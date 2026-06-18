@@ -19,10 +19,10 @@ T = TypeVar("T", bound="AddTrackerCompaniesResponse200Output")
 class AddTrackerCompaniesResponse200Output:
     """
     Attributes:
-        added (int): Number of companies successfully added
-        skipped (int): Number skipped (duplicates or invalid)
+        added (int): Number of companies successfully added.
+        skipped (int): Number skipped (duplicates or invalid).
         invalid_companies (list[AddTrackerCompaniesResponse200OutputInvalidCompaniesItem]): Details on any companies
-            that could not be added
+            that could not be added.
     """
 
     added: int

@@ -13,8 +13,8 @@ T = TypeVar("T", bound="AddTrackerCompaniesResponse200OutputInvalidCompaniesItem
 class AddTrackerCompaniesResponse200OutputInvalidCompaniesItem:
     """
     Attributes:
-        index (int): Index in the input array
-        reason (str): Why this company was skipped
+        index (int): Index in the input array.
+        reason (str): Why this company was skipped.
     """
 
     index: int

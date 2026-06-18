@@ -1,0 +1,8526 @@
+from __future__ import annotations
+
+from collections.abc import Mapping
+from typing import TYPE_CHECKING, Any, TypeVar
+
+from attrs import define as _attrs_define
+
+from ..types import UNSET, Unset
+
+if TYPE_CHECKING:
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0abw import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ABW,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0afg import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AFG,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ago import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AGO,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aia import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AIA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ala import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0alb import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALB,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0and import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AND,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ant import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ANT,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0are import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARE,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0arg import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARG,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0arm import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0asm import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ASM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ata import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0atf import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATF,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0atg import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATG,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aus import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUS,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aut import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUT,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aze import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AZE,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bdi import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BDI,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bel import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEL,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ben import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bes import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BES,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bfa import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BFA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bgd import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGD,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bgr import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bhr import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bhs import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHS,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bih import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BIH,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0blm import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0blr import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0blz import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLZ,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bmu import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BMU,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bol import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BOL,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bra import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0brb import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRB,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0brn import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0btn import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BTN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bvt import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BVT,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bwa import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BWA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0caf import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAF,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0can import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cck import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CCK,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0che import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHE,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0chl import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHL,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0chn import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0civ import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CIV,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cmr import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CMR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cod import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COD,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cog import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COG,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cok import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COK,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0col import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COL,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0com import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cpv import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CPV,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cri import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CRI,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cub import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUB,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cuw import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUW,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cxr import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CXR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cym import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cyp import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYP,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cze import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CZE,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0deu import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DEU,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dji import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DJI,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dma import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DMA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dnk import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DNK,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dom import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DOM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dza import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DZA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ecu import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ECU,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0egy import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EGY,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0eri import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ERI,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0esh import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESH,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0esp import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESP,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0est import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EST,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0eth import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ETH,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fin import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FIN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fji import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FJI,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0flk import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FLK,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fra import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fro import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRO,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fsm import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FSM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gab import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GAB,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gbr import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GBR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0geo import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GEO,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ggy import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GGY,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gha import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GHA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gib import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIB,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gin import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0glp import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GLP,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gmb import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GMB,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gnb import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNB,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gnq import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNQ,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0grc import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRC,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0grd import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRD,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0grl import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRL,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gtm import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GTM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0guf import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUF,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gum import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0guy import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUY,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hkg import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HKG,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hmd import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HMD,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hnd import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HND,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hrv import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HRV,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hti import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HTI,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hun import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HUN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0idn import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IDN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0imn import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IMN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ind import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IND,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0iot import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IOT,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irl import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRL,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irn import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irq import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRQ,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0isl import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISL,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0isr import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ita import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ITA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jam import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JAM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jey import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JEY,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jor import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JOR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jpn import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JPN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kaz import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KAZ,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ken import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KEN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kgz import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KGZ,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0khm import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KHM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kir import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KIR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kna import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KNA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kor import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KOR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kwt import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KWT,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lao import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LAO,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lbn import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lbr import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lby import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBY,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lca import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LCA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lie import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LIE,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lka import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LKA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lso import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LSO,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ltu import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LTU,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lux import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LUX,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lva import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LVA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mac import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAC,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0maf import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAF,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mar import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mco import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MCO,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mda import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mdg import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDG,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mdv import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDV,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mex import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MEX,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mhl import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MHL,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mkd import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MKD,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mli import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLI,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mlt import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLT,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mmr import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MMR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mne import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNE,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mng import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNG,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mnp import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNP,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0moz import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MOZ,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mrt import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MRT,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0msr import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MSR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mtq import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MTQ,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mus import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mwi import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MWI,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mys import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYS,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0myt import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYT,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nam import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NAM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ncl import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NCL,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ner import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NER,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nfk import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NFK,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nga import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NGA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nic import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIC,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0niu import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIU,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nld import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NLD,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nor import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NOR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0npl import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NPL,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nru import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NRU,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nzl import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NZL,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0omn import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0OMN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pak import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAK,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pan import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pcn import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PCN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0per import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PER,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0phl import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PHL,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0plw import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PLW,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0png import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PNG,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pol import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0POL,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pri import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRI,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0prk import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRK,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0prt import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRT,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pry import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRY,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pse import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PSE,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pyf import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PYF,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0qat import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0QAT,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0reu import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0REU,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rou import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ROU,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rus import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RUS,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rwa import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RWA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sau import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SAU,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sdn import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SDN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sen import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SEN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sgp import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGP,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sgs import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGS,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0shn import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SHN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sjm import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SJM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0slb import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLB,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sle import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLE,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0slv import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLV,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0smr import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SMR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0som import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SOM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0spm import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SPM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0srb import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SRB,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ssd import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SSD,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0stp import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0STP,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sur import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SUR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0svk import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVK,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0svn import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0swe import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWE,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0swz import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWZ,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sxm import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SXM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0syc import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYC,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0syr import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tca import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tcd import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCD,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tgo import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TGO,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tha import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0THA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tjk import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TJK,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tkl import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKL,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tkm import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tls import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TLS,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ton import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TON,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tto import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TTO,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tun import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tur import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tuv import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUV,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0twn import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TWN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tza import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TZA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0uga import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UGA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ukr import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UKR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0umi import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UMI,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ury import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0URY,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0usa import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0USA,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0uzb import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UZB,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vat import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VAT,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vct import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VCT,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ven import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VEN,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vgb import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VGB,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vir import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VIR,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vnm import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VNM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vut import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VUT,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0wlf import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WLF,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0wsm import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WSM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0xkx import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0XKX,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0yem import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0YEM,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zaf import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZAF,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zmb import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZMB,
+    )
+    from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zwe import (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZWE,
+    )
+
+
+T = TypeVar(
+    "T",
+    bound="GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0",
+)
+
+
+@_attrs_define
+class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0:
+    """
+    Attributes:
+        usa
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0USA
+            | Unset):
+        gbr
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GBR
+            | Unset):
+        fra
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRA
+            | Unset):
+        ind
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IND
+            | Unset):
+        bra
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRA
+            | Unset):
+        deu
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DEU
+            | Unset):
+        esp
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESP
+            | Unset):
+        can
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAN
+            | Unset):
+        aus
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUS
+            | Unset):
+        nld
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NLD
+            | Unset):
+        ita
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ITA
+            | Unset):
+        zaf
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZAF
+            | Unset):
+        bel
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEL
+            | Unset):
+        chn
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHN
+            | Unset):
+        tur
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUR
+            | Unset):
+        mex
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MEX
+            | Unset):
+        che
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHE
+            | Unset):
+        nor
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NOR
+            | Unset):
+        are
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARE
+            | Unset):
+        swe
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWE
+            | Unset):
+        pol
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0POL
+            | Unset):
+        idn
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IDN
+            | Unset):
+        arg
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARG
+            | Unset):
+        prt
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRT
+            | Unset):
+        col
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COL
+            | Unset):
+        chl
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHL
+            | Unset):
+        pak
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAK
+            | Unset):
+        dnk
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DNK
+            | Unset):
+        jpn
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JPN
+            | Unset):
+        nga
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NGA
+            | Unset):
+        sgp
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGP
+            | Unset):
+        per
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PER
+            | Unset):
+        nzl
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NZL
+            | Unset):
+        aut
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUT
+            | Unset):
+        irl
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRL
+            | Unset):
+        mys
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYS
+            | Unset):
+        bgd
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGD
+            | Unset):
+        egy
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EGY
+            | Unset):
+        isr
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISR
+            | Unset):
+        sau
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SAU
+            | Unset):
+        phl
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PHL
+            | Unset):
+        fin
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FIN
+            | Unset):
+        irn
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRN
+            | Unset):
+        rou
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ROU
+            | Unset):
+        cze
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CZE
+            | Unset):
+        grc
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRC
+            | Unset):
+        hkg
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HKG
+            | Unset):
+        hun
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HUN
+            | Unset):
+        ken
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KEN
+            | Unset):
+        mar
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAR
+            | Unset):
+        vnm
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VNM
+            | Unset):
+        rus
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RUS
+            | Unset):
+        ukr
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UKR
+            | Unset):
+        ecu
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ECU
+            | Unset):
+        tha
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0THA
+            | Unset):
+        lka
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LKA
+            | Unset):
+        kor
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KOR
+            | Unset):
+        bgr
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGR
+            | Unset):
+        gha
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GHA
+            | Unset):
+        srb
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SRB
+            | Unset):
+        twn
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TWN
+            | Unset):
+        hrv
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HRV
+            | Unset):
+        ltu
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LTU
+            | Unset):
+        pri
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRI
+            | Unset):
+        svk
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVK
+            | Unset):
+        tun
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUN
+            | Unset):
+        est
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EST
+            | Unset):
+        ven
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VEN
+            | Unset):
+        cri
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CRI
+            | Unset):
+        pan
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAN
+            | Unset):
+        ury
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0URY
+            | Unset):
+        lbn
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBN
+            | Unset):
+        lux
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LUX
+            | Unset):
+        cyp
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYP
+            | Unset):
+        npl
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NPL
+            | Unset):
+        jor
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JOR
+            | Unset):
+        svn
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVN
+            | Unset):
+        mtq
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MTQ
+            | Unset):
+        qat
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0QAT
+            | Unset):
+        glp
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GLP
+            | Unset):
+        uga
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UGA
+            | Unset):
+        dza
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DZA
+            | Unset):
+        gtm
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GTM
+            | Unset):
+        cmr
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CMR
+            | Unset):
+        lva
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LVA
+            | Unset):
+        dom
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DOM
+            | Unset):
+        aze
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AZE
+            | Unset):
+        geo
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GEO
+            | Unset):
+        sen
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SEN
+            | Unset):
+        tza
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TZA
+            | Unset):
+        zwe
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZWE
+            | Unset):
+        kwt
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KWT
+            | Unset):
+        mlt
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLT
+            | Unset):
+        omn
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0OMN
+            | Unset):
+        bol
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BOL
+            | Unset):
+        slv
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLV
+            | Unset):
+        arm
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARM
+            | Unset):
+        pry
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRY
+            | Unset):
+        irq
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRQ
+            | Unset):
+        khm
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KHM
+            | Unset):
+        bih
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BIH
+            | Unset):
+        ago
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AGO
+            | Unset):
+        bhr
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHR
+            | Unset):
+        alb
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALB
+            | Unset):
+        kaz
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KAZ
+            | Unset):
+        civ
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CIV
+            | Unset):
+        eth
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ETH
+            | Unset):
+        mus
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS
+            | Unset):
+        zmb
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZMB
+            | Unset):
+        mkd
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MKD
+            | Unset):
+        cod
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COD
+            | Unset):
+        blr
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLR
+            | Unset):
+        moz
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MOZ
+            | Unset):
+        reu
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0REU
+            | Unset):
+        tto
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TTO
+            | Unset):
+        guf
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUF
+            | Unset):
+        isl
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISL
+            | Unset):
+        mmr
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MMR
+            | Unset):
+        hnd
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HND
+            | Unset):
+        rwa
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RWA
+            | Unset):
+        mdg
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDG
+            | Unset):
+        ben
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEN
+            | Unset):
+        uzb
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UZB
+            | Unset):
+        nam
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NAM
+            | Unset):
+        bwa
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BWA
+            | Unset):
+        mda
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDA
+            | Unset):
+        jey
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JEY
+            | Unset):
+        nic
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIC
+            | Unset):
+        sdn
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SDN
+            | Unset):
+        jam
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JAM
+            | Unset):
+        imn
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IMN
+            | Unset):
+        bfa
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BFA
+            | Unset):
+        mng
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNG
+            | Unset):
+        mne
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNE
+            | Unset):
+        mco
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MCO
+            | Unset):
+        tgo
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TGO
+            | Unset):
+        afg
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AFG
+            | Unset):
+        lby
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBY
+            | Unset):
+        xkx
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0XKX
+            | Unset):
+        cym
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYM
+            | Unset):
+        mwi
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MWI
+            | Unset):
+        som
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SOM
+            | Unset):
+        png
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PNG
+            | Unset):
+        mdv
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDV
+            | Unset):
+        mli
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLI
+            | Unset):
+        gin
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIN
+            | Unset):
+        pse
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PSE
+            | Unset):
+        gab
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GAB
+            | Unset):
+        lie
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LIE
+            | Unset):
+        hti
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HTI
+            | Unset):
+        syr
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYR
+            | Unset):
+        brb
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRB
+            | Unset):
+        yem
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0YEM
+            | Unset):
+        ggy
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GGY
+            | Unset):
+        ncl
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NCL
+            | Unset):
+        and_
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AND
+            | Unset):
+        sur
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SUR
+            | Unset):
+        myt
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYT
+            | Unset):
+        kgz
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KGZ
+            | Unset):
+        bhs
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHS
+            | Unset):
+        gib
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIB
+            | Unset):
+        cog
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COG
+            | Unset):
+        fji
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FJI
+            | Unset):
+        blm
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLM
+            | Unset):
+        cuw
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUW
+            | Unset):
+        cub
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUB
+            | Unset):
+        sle
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLE
+            | Unset):
+        blz
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLZ
+            | Unset):
+        ner
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NER
+            | Unset):
+        lbr
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBR
+            | Unset):
+        vir
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VIR
+            | Unset):
+        pyf
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PYF
+            | Unset):
+        gum
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUM
+            | Unset):
+        mrt
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MRT
+            | Unset):
+        abw
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ABW
+            | Unset):
+        syc
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYC
+            | Unset):
+        guy
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUY
+            | Unset):
+        lso
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LSO
+            | Unset):
+        swz
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWZ
+            | Unset):
+        ssd
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SSD
+            | Unset):
+        lca
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LCA
+            | Unset):
+        mac
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAC
+            | Unset):
+        smr
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SMR
+            | Unset):
+        lao
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LAO
+            | Unset):
+        brn
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRN
+            | Unset):
+        tcd
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCD
+            | Unset):
+        bmu
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BMU
+            | Unset):
+        vgb
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VGB
+            | Unset):
+        prk
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRK
+            | Unset):
+        btn
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BTN
+            | Unset):
+        bdi
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BDI
+            | Unset):
+        fro
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRO
+            | Unset):
+        tjk
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TJK
+            | Unset):
+        gmb
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GMB
+            | Unset):
+        stp
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0STP
+            | Unset):
+        ant
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ANT
+            | Unset):
+        vct
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VCT
+            | Unset):
+        dji
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DJI
+            | Unset):
+        cpv
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CPV
+            | Unset):
+        tkm
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKM
+            | Unset):
+        atg
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATG
+            | Unset):
+        tca
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCA
+            | Unset):
+        kna
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KNA
+            | Unset):
+        grd
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRD
+            | Unset):
+        asm
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ASM
+            | Unset):
+        vut
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VUT
+            | Unset):
+        gnq
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNQ
+            | Unset):
+        grl
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRL
+            | Unset):
+        sxm
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SXM
+            | Unset):
+        mnp
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNP
+            | Unset):
+        com
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COM
+            | Unset):
+        tls
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TLS
+            | Unset):
+        sjm
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SJM
+            | Unset):
+        caf
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAF
+            | Unset):
+        dma
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DMA
+            | Unset):
+        maf
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAF
+            | Unset):
+        wsm
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WSM
+            | Unset):
+        bes
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BES
+            | Unset):
+        mhl
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MHL
+            | Unset):
+        aia
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AIA
+            | Unset):
+        ton
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TON
+            | Unset):
+        cok
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COK
+            | Unset):
+        slb
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLB
+            | Unset):
+        spm
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SPM
+            | Unset):
+        gnb
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNB
+            | Unset):
+        ata
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATA
+            | Unset):
+        tuv
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUV
+            | Unset):
+        ala
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALA
+            | Unset):
+        iot
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IOT
+            | Unset):
+        eri
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ERI
+            | Unset):
+        plw
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PLW
+            | Unset):
+        fsm
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FSM
+            | Unset):
+        nru
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NRU
+            | Unset):
+        pcn
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PCN
+            | Unset):
+        flk
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FLK
+            | Unset):
+        msr
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MSR
+            | Unset):
+        vat
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VAT
+            | Unset):
+        kir
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KIR
+            | Unset):
+        shn
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SHN
+            | Unset):
+        niu
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIU
+            | Unset):
+        wlf
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WLF
+            | Unset):
+        hmd
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HMD
+            | Unset):
+        cxr
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CXR
+            | Unset):
+        nfk
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NFK
+            | Unset):
+        atf
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATF
+            | Unset):
+        cck
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CCK
+            | Unset):
+        sgs
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGS
+            | Unset):
+        bvt
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BVT
+            | Unset):
+        umi
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UMI
+            | Unset):
+        esh
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESH
+            | Unset):
+        tkl
+            (GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKL
+            | Unset):
+    """
+
+    usa: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0USA
+        | Unset
+    ) = UNSET
+    gbr: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GBR
+        | Unset
+    ) = UNSET
+    fra: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRA
+        | Unset
+    ) = UNSET
+    ind: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IND
+        | Unset
+    ) = UNSET
+    bra: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRA
+        | Unset
+    ) = UNSET
+    deu: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DEU
+        | Unset
+    ) = UNSET
+    esp: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESP
+        | Unset
+    ) = UNSET
+    can: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAN
+        | Unset
+    ) = UNSET
+    aus: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUS
+        | Unset
+    ) = UNSET
+    nld: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NLD
+        | Unset
+    ) = UNSET
+    ita: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ITA
+        | Unset
+    ) = UNSET
+    zaf: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZAF
+        | Unset
+    ) = UNSET
+    bel: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEL
+        | Unset
+    ) = UNSET
+    chn: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHN
+        | Unset
+    ) = UNSET
+    tur: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUR
+        | Unset
+    ) = UNSET
+    mex: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MEX
+        | Unset
+    ) = UNSET
+    che: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHE
+        | Unset
+    ) = UNSET
+    nor: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NOR
+        | Unset
+    ) = UNSET
+    are: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARE
+        | Unset
+    ) = UNSET
+    swe: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWE
+        | Unset
+    ) = UNSET
+    pol: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0POL
+        | Unset
+    ) = UNSET
+    idn: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IDN
+        | Unset
+    ) = UNSET
+    arg: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARG
+        | Unset
+    ) = UNSET
+    prt: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRT
+        | Unset
+    ) = UNSET
+    col: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COL
+        | Unset
+    ) = UNSET
+    chl: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHL
+        | Unset
+    ) = UNSET
+    pak: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAK
+        | Unset
+    ) = UNSET
+    dnk: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DNK
+        | Unset
+    ) = UNSET
+    jpn: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JPN
+        | Unset
+    ) = UNSET
+    nga: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NGA
+        | Unset
+    ) = UNSET
+    sgp: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGP
+        | Unset
+    ) = UNSET
+    per: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PER
+        | Unset
+    ) = UNSET
+    nzl: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NZL
+        | Unset
+    ) = UNSET
+    aut: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUT
+        | Unset
+    ) = UNSET
+    irl: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRL
+        | Unset
+    ) = UNSET
+    mys: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYS
+        | Unset
+    ) = UNSET
+    bgd: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGD
+        | Unset
+    ) = UNSET
+    egy: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EGY
+        | Unset
+    ) = UNSET
+    isr: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISR
+        | Unset
+    ) = UNSET
+    sau: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SAU
+        | Unset
+    ) = UNSET
+    phl: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PHL
+        | Unset
+    ) = UNSET
+    fin: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FIN
+        | Unset
+    ) = UNSET
+    irn: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRN
+        | Unset
+    ) = UNSET
+    rou: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ROU
+        | Unset
+    ) = UNSET
+    cze: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CZE
+        | Unset
+    ) = UNSET
+    grc: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRC
+        | Unset
+    ) = UNSET
+    hkg: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HKG
+        | Unset
+    ) = UNSET
+    hun: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HUN
+        | Unset
+    ) = UNSET
+    ken: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KEN
+        | Unset
+    ) = UNSET
+    mar: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAR
+        | Unset
+    ) = UNSET
+    vnm: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VNM
+        | Unset
+    ) = UNSET
+    rus: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RUS
+        | Unset
+    ) = UNSET
+    ukr: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UKR
+        | Unset
+    ) = UNSET
+    ecu: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ECU
+        | Unset
+    ) = UNSET
+    tha: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0THA
+        | Unset
+    ) = UNSET
+    lka: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LKA
+        | Unset
+    ) = UNSET
+    kor: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KOR
+        | Unset
+    ) = UNSET
+    bgr: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGR
+        | Unset
+    ) = UNSET
+    gha: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GHA
+        | Unset
+    ) = UNSET
+    srb: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SRB
+        | Unset
+    ) = UNSET
+    twn: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TWN
+        | Unset
+    ) = UNSET
+    hrv: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HRV
+        | Unset
+    ) = UNSET
+    ltu: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LTU
+        | Unset
+    ) = UNSET
+    pri: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRI
+        | Unset
+    ) = UNSET
+    svk: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVK
+        | Unset
+    ) = UNSET
+    tun: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUN
+        | Unset
+    ) = UNSET
+    est: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EST
+        | Unset
+    ) = UNSET
+    ven: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VEN
+        | Unset
+    ) = UNSET
+    cri: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CRI
+        | Unset
+    ) = UNSET
+    pan: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAN
+        | Unset
+    ) = UNSET
+    ury: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0URY
+        | Unset
+    ) = UNSET
+    lbn: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBN
+        | Unset
+    ) = UNSET
+    lux: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LUX
+        | Unset
+    ) = UNSET
+    cyp: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYP
+        | Unset
+    ) = UNSET
+    npl: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NPL
+        | Unset
+    ) = UNSET
+    jor: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JOR
+        | Unset
+    ) = UNSET
+    svn: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVN
+        | Unset
+    ) = UNSET
+    mtq: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MTQ
+        | Unset
+    ) = UNSET
+    qat: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0QAT
+        | Unset
+    ) = UNSET
+    glp: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GLP
+        | Unset
+    ) = UNSET
+    uga: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UGA
+        | Unset
+    ) = UNSET
+    dza: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DZA
+        | Unset
+    ) = UNSET
+    gtm: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GTM
+        | Unset
+    ) = UNSET
+    cmr: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CMR
+        | Unset
+    ) = UNSET
+    lva: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LVA
+        | Unset
+    ) = UNSET
+    dom: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DOM
+        | Unset
+    ) = UNSET
+    aze: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AZE
+        | Unset
+    ) = UNSET
+    geo: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GEO
+        | Unset
+    ) = UNSET
+    sen: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SEN
+        | Unset
+    ) = UNSET
+    tza: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TZA
+        | Unset
+    ) = UNSET
+    zwe: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZWE
+        | Unset
+    ) = UNSET
+    kwt: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KWT
+        | Unset
+    ) = UNSET
+    mlt: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLT
+        | Unset
+    ) = UNSET
+    omn: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0OMN
+        | Unset
+    ) = UNSET
+    bol: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BOL
+        | Unset
+    ) = UNSET
+    slv: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLV
+        | Unset
+    ) = UNSET
+    arm: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARM
+        | Unset
+    ) = UNSET
+    pry: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRY
+        | Unset
+    ) = UNSET
+    irq: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRQ
+        | Unset
+    ) = UNSET
+    khm: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KHM
+        | Unset
+    ) = UNSET
+    bih: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BIH
+        | Unset
+    ) = UNSET
+    ago: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AGO
+        | Unset
+    ) = UNSET
+    bhr: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHR
+        | Unset
+    ) = UNSET
+    alb: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALB
+        | Unset
+    ) = UNSET
+    kaz: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KAZ
+        | Unset
+    ) = UNSET
+    civ: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CIV
+        | Unset
+    ) = UNSET
+    eth: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ETH
+        | Unset
+    ) = UNSET
+    mus: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS
+        | Unset
+    ) = UNSET
+    zmb: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZMB
+        | Unset
+    ) = UNSET
+    mkd: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MKD
+        | Unset
+    ) = UNSET
+    cod: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COD
+        | Unset
+    ) = UNSET
+    blr: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLR
+        | Unset
+    ) = UNSET
+    moz: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MOZ
+        | Unset
+    ) = UNSET
+    reu: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0REU
+        | Unset
+    ) = UNSET
+    tto: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TTO
+        | Unset
+    ) = UNSET
+    guf: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUF
+        | Unset
+    ) = UNSET
+    isl: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISL
+        | Unset
+    ) = UNSET
+    mmr: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MMR
+        | Unset
+    ) = UNSET
+    hnd: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HND
+        | Unset
+    ) = UNSET
+    rwa: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RWA
+        | Unset
+    ) = UNSET
+    mdg: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDG
+        | Unset
+    ) = UNSET
+    ben: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEN
+        | Unset
+    ) = UNSET
+    uzb: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UZB
+        | Unset
+    ) = UNSET
+    nam: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NAM
+        | Unset
+    ) = UNSET
+    bwa: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BWA
+        | Unset
+    ) = UNSET
+    mda: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDA
+        | Unset
+    ) = UNSET
+    jey: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JEY
+        | Unset
+    ) = UNSET
+    nic: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIC
+        | Unset
+    ) = UNSET
+    sdn: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SDN
+        | Unset
+    ) = UNSET
+    jam: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JAM
+        | Unset
+    ) = UNSET
+    imn: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IMN
+        | Unset
+    ) = UNSET
+    bfa: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BFA
+        | Unset
+    ) = UNSET
+    mng: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNG
+        | Unset
+    ) = UNSET
+    mne: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNE
+        | Unset
+    ) = UNSET
+    mco: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MCO
+        | Unset
+    ) = UNSET
+    tgo: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TGO
+        | Unset
+    ) = UNSET
+    afg: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AFG
+        | Unset
+    ) = UNSET
+    lby: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBY
+        | Unset
+    ) = UNSET
+    xkx: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0XKX
+        | Unset
+    ) = UNSET
+    cym: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYM
+        | Unset
+    ) = UNSET
+    mwi: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MWI
+        | Unset
+    ) = UNSET
+    som: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SOM
+        | Unset
+    ) = UNSET
+    png: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PNG
+        | Unset
+    ) = UNSET
+    mdv: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDV
+        | Unset
+    ) = UNSET
+    mli: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLI
+        | Unset
+    ) = UNSET
+    gin: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIN
+        | Unset
+    ) = UNSET
+    pse: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PSE
+        | Unset
+    ) = UNSET
+    gab: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GAB
+        | Unset
+    ) = UNSET
+    lie: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LIE
+        | Unset
+    ) = UNSET
+    hti: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HTI
+        | Unset
+    ) = UNSET
+    syr: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYR
+        | Unset
+    ) = UNSET
+    brb: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRB
+        | Unset
+    ) = UNSET
+    yem: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0YEM
+        | Unset
+    ) = UNSET
+    ggy: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GGY
+        | Unset
+    ) = UNSET
+    ncl: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NCL
+        | Unset
+    ) = UNSET
+    and_: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AND
+        | Unset
+    ) = UNSET
+    sur: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SUR
+        | Unset
+    ) = UNSET
+    myt: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYT
+        | Unset
+    ) = UNSET
+    kgz: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KGZ
+        | Unset
+    ) = UNSET
+    bhs: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHS
+        | Unset
+    ) = UNSET
+    gib: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIB
+        | Unset
+    ) = UNSET
+    cog: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COG
+        | Unset
+    ) = UNSET
+    fji: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FJI
+        | Unset
+    ) = UNSET
+    blm: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLM
+        | Unset
+    ) = UNSET
+    cuw: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUW
+        | Unset
+    ) = UNSET
+    cub: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUB
+        | Unset
+    ) = UNSET
+    sle: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLE
+        | Unset
+    ) = UNSET
+    blz: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLZ
+        | Unset
+    ) = UNSET
+    ner: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NER
+        | Unset
+    ) = UNSET
+    lbr: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBR
+        | Unset
+    ) = UNSET
+    vir: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VIR
+        | Unset
+    ) = UNSET
+    pyf: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PYF
+        | Unset
+    ) = UNSET
+    gum: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUM
+        | Unset
+    ) = UNSET
+    mrt: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MRT
+        | Unset
+    ) = UNSET
+    abw: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ABW
+        | Unset
+    ) = UNSET
+    syc: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYC
+        | Unset
+    ) = UNSET
+    guy: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUY
+        | Unset
+    ) = UNSET
+    lso: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LSO
+        | Unset
+    ) = UNSET
+    swz: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWZ
+        | Unset
+    ) = UNSET
+    ssd: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SSD
+        | Unset
+    ) = UNSET
+    lca: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LCA
+        | Unset
+    ) = UNSET
+    mac: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAC
+        | Unset
+    ) = UNSET
+    smr: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SMR
+        | Unset
+    ) = UNSET
+    lao: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LAO
+        | Unset
+    ) = UNSET
+    brn: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRN
+        | Unset
+    ) = UNSET
+    tcd: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCD
+        | Unset
+    ) = UNSET
+    bmu: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BMU
+        | Unset
+    ) = UNSET
+    vgb: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VGB
+        | Unset
+    ) = UNSET
+    prk: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRK
+        | Unset
+    ) = UNSET
+    btn: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BTN
+        | Unset
+    ) = UNSET
+    bdi: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BDI
+        | Unset
+    ) = UNSET
+    fro: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRO
+        | Unset
+    ) = UNSET
+    tjk: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TJK
+        | Unset
+    ) = UNSET
+    gmb: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GMB
+        | Unset
+    ) = UNSET
+    stp: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0STP
+        | Unset
+    ) = UNSET
+    ant: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ANT
+        | Unset
+    ) = UNSET
+    vct: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VCT
+        | Unset
+    ) = UNSET
+    dji: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DJI
+        | Unset
+    ) = UNSET
+    cpv: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CPV
+        | Unset
+    ) = UNSET
+    tkm: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKM
+        | Unset
+    ) = UNSET
+    atg: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATG
+        | Unset
+    ) = UNSET
+    tca: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCA
+        | Unset
+    ) = UNSET
+    kna: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KNA
+        | Unset
+    ) = UNSET
+    grd: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRD
+        | Unset
+    ) = UNSET
+    asm: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ASM
+        | Unset
+    ) = UNSET
+    vut: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VUT
+        | Unset
+    ) = UNSET
+    gnq: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNQ
+        | Unset
+    ) = UNSET
+    grl: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRL
+        | Unset
+    ) = UNSET
+    sxm: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SXM
+        | Unset
+    ) = UNSET
+    mnp: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNP
+        | Unset
+    ) = UNSET
+    com: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COM
+        | Unset
+    ) = UNSET
+    tls: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TLS
+        | Unset
+    ) = UNSET
+    sjm: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SJM
+        | Unset
+    ) = UNSET
+    caf: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAF
+        | Unset
+    ) = UNSET
+    dma: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DMA
+        | Unset
+    ) = UNSET
+    maf: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAF
+        | Unset
+    ) = UNSET
+    wsm: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WSM
+        | Unset
+    ) = UNSET
+    bes: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BES
+        | Unset
+    ) = UNSET
+    mhl: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MHL
+        | Unset
+    ) = UNSET
+    aia: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AIA
+        | Unset
+    ) = UNSET
+    ton: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TON
+        | Unset
+    ) = UNSET
+    cok: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COK
+        | Unset
+    ) = UNSET
+    slb: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLB
+        | Unset
+    ) = UNSET
+    spm: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SPM
+        | Unset
+    ) = UNSET
+    gnb: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNB
+        | Unset
+    ) = UNSET
+    ata: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATA
+        | Unset
+    ) = UNSET
+    tuv: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUV
+        | Unset
+    ) = UNSET
+    ala: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALA
+        | Unset
+    ) = UNSET
+    iot: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IOT
+        | Unset
+    ) = UNSET
+    eri: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ERI
+        | Unset
+    ) = UNSET
+    plw: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PLW
+        | Unset
+    ) = UNSET
+    fsm: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FSM
+        | Unset
+    ) = UNSET
+    nru: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NRU
+        | Unset
+    ) = UNSET
+    pcn: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PCN
+        | Unset
+    ) = UNSET
+    flk: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FLK
+        | Unset
+    ) = UNSET
+    msr: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MSR
+        | Unset
+    ) = UNSET
+    vat: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VAT
+        | Unset
+    ) = UNSET
+    kir: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KIR
+        | Unset
+    ) = UNSET
+    shn: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SHN
+        | Unset
+    ) = UNSET
+    niu: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIU
+        | Unset
+    ) = UNSET
+    wlf: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WLF
+        | Unset
+    ) = UNSET
+    hmd: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HMD
+        | Unset
+    ) = UNSET
+    cxr: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CXR
+        | Unset
+    ) = UNSET
+    nfk: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NFK
+        | Unset
+    ) = UNSET
+    atf: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATF
+        | Unset
+    ) = UNSET
+    cck: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CCK
+        | Unset
+    ) = UNSET
+    sgs: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGS
+        | Unset
+    ) = UNSET
+    bvt: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BVT
+        | Unset
+    ) = UNSET
+    umi: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UMI
+        | Unset
+    ) = UNSET
+    esh: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESH
+        | Unset
+    ) = UNSET
+    tkl: (
+        GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKL
+        | Unset
+    ) = UNSET
+
+    def to_dict(self) -> dict[str, Any]:
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hrv import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HRV,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hti import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HTI,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hun import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HUN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0idn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IDN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0imn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IMN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ind import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IND,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0iot import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IOT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irq import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRQ,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0isl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0isr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ita import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ITA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jam import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JAM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jey import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JEY,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jor import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JOR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jpn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JPN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kaz import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KAZ,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ken import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KEN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kgz import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KGZ,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0khm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KHM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kir import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KIR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kna import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KNA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kor import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KOR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kwt import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KWT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lao import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LAO,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lbn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lbr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lby import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBY,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lca import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LCA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lie import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LIE,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lka import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LKA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lso import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LSO,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ltu import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LTU,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lux import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LUX,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lva import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LVA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mac import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAC,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0maf import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAF,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mar import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mco import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MCO,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mda import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mdg import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDG,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mdv import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDV,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mex import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MEX,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mhl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MHL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mkd import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MKD,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mli import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLI,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mlt import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mmr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MMR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mne import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNE,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mng import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNG,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mnp import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNP,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0moz import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MOZ,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mrt import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MRT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0msr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MSR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mtq import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MTQ,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mus import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mwi import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MWI,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mys import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYS,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0myt import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nam import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NAM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ncl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NCL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ner import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NER,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nfk import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NFK,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nga import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NGA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nic import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIC,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0niu import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIU,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nld import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NLD,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nor import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NOR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0npl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NPL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nru import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NRU,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nzl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NZL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0omn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0OMN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pak import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAK,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pan import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pcn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PCN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0per import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PER,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0phl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PHL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0plw import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PLW,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0png import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PNG,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pol import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0POL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pri import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRI,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0prk import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRK,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0prt import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pry import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRY,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pse import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PSE,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pyf import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PYF,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0qat import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0QAT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0reu import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0REU,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rou import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ROU,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rus import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RUS,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rwa import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RWA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sau import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SAU,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sdn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SDN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sen import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SEN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sgp import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGP,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sgs import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGS,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0shn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SHN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sjm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SJM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0slb import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sle import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLE,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0slv import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLV,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0smr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SMR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0som import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SOM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0spm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SPM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0srb import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SRB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ssd import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SSD,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0stp import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0STP,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sur import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SUR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0svk import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVK,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0svn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0swe import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWE,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0swz import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWZ,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sxm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SXM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0syc import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYC,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0syr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tca import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tcd import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCD,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tgo import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TGO,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tha import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0THA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tjk import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TJK,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tkl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tkm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tls import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TLS,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ton import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TON,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tto import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TTO,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tun import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tur import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tuv import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUV,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0twn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TWN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tza import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TZA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0uga import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UGA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ukr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UKR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0umi import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UMI,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ury import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0URY,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0usa import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0USA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0uzb import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UZB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vat import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VAT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vct import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VCT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ven import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VEN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vgb import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VGB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vir import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VIR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vnm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VNM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vut import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VUT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0wlf import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WLF,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0wsm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WSM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0xkx import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0XKX,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0yem import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0YEM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zaf import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZAF,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zmb import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZMB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zwe import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZWE,
+        )
+
+        usa: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.usa, Unset):
+            usa = self.usa.to_dict()
+
+        gbr: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.gbr, Unset):
+            gbr = self.gbr.to_dict()
+
+        fra: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.fra, Unset):
+            fra = self.fra.to_dict()
+
+        ind: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ind, Unset):
+            ind = self.ind.to_dict()
+
+        bra: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.bra, Unset):
+            bra = self.bra.to_dict()
+
+        deu: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.deu, Unset):
+            deu = self.deu.to_dict()
+
+        esp: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.esp, Unset):
+            esp = self.esp.to_dict()
+
+        can: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.can, Unset):
+            can = self.can.to_dict()
+
+        aus: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.aus, Unset):
+            aus = self.aus.to_dict()
+
+        nld: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.nld, Unset):
+            nld = self.nld.to_dict()
+
+        ita: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ita, Unset):
+            ita = self.ita.to_dict()
+
+        zaf: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.zaf, Unset):
+            zaf = self.zaf.to_dict()
+
+        bel: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.bel, Unset):
+            bel = self.bel.to_dict()
+
+        chn: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.chn, Unset):
+            chn = self.chn.to_dict()
+
+        tur: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.tur, Unset):
+            tur = self.tur.to_dict()
+
+        mex: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mex, Unset):
+            mex = self.mex.to_dict()
+
+        che: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.che, Unset):
+            che = self.che.to_dict()
+
+        nor: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.nor, Unset):
+            nor = self.nor.to_dict()
+
+        are: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.are, Unset):
+            are = self.are.to_dict()
+
+        swe: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.swe, Unset):
+            swe = self.swe.to_dict()
+
+        pol: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.pol, Unset):
+            pol = self.pol.to_dict()
+
+        idn: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.idn, Unset):
+            idn = self.idn.to_dict()
+
+        arg: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.arg, Unset):
+            arg = self.arg.to_dict()
+
+        prt: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.prt, Unset):
+            prt = self.prt.to_dict()
+
+        col: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.col, Unset):
+            col = self.col.to_dict()
+
+        chl: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.chl, Unset):
+            chl = self.chl.to_dict()
+
+        pak: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.pak, Unset):
+            pak = self.pak.to_dict()
+
+        dnk: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.dnk, Unset):
+            dnk = self.dnk.to_dict()
+
+        jpn: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.jpn, Unset):
+            jpn = self.jpn.to_dict()
+
+        nga: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.nga, Unset):
+            nga = self.nga.to_dict()
+
+        sgp: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.sgp, Unset):
+            sgp = self.sgp.to_dict()
+
+        per: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.per, Unset):
+            per = self.per.to_dict()
+
+        nzl: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.nzl, Unset):
+            nzl = self.nzl.to_dict()
+
+        aut: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.aut, Unset):
+            aut = self.aut.to_dict()
+
+        irl: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.irl, Unset):
+            irl = self.irl.to_dict()
+
+        mys: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mys, Unset):
+            mys = self.mys.to_dict()
+
+        bgd: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.bgd, Unset):
+            bgd = self.bgd.to_dict()
+
+        egy: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.egy, Unset):
+            egy = self.egy.to_dict()
+
+        isr: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.isr, Unset):
+            isr = self.isr.to_dict()
+
+        sau: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.sau, Unset):
+            sau = self.sau.to_dict()
+
+        phl: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.phl, Unset):
+            phl = self.phl.to_dict()
+
+        fin: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.fin, Unset):
+            fin = self.fin.to_dict()
+
+        irn: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.irn, Unset):
+            irn = self.irn.to_dict()
+
+        rou: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.rou, Unset):
+            rou = self.rou.to_dict()
+
+        cze: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.cze, Unset):
+            cze = self.cze.to_dict()
+
+        grc: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.grc, Unset):
+            grc = self.grc.to_dict()
+
+        hkg: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.hkg, Unset):
+            hkg = self.hkg.to_dict()
+
+        hun: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.hun, Unset):
+            hun = self.hun.to_dict()
+
+        ken: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ken, Unset):
+            ken = self.ken.to_dict()
+
+        mar: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mar, Unset):
+            mar = self.mar.to_dict()
+
+        vnm: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.vnm, Unset):
+            vnm = self.vnm.to_dict()
+
+        rus: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.rus, Unset):
+            rus = self.rus.to_dict()
+
+        ukr: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ukr, Unset):
+            ukr = self.ukr.to_dict()
+
+        ecu: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ecu, Unset):
+            ecu = self.ecu.to_dict()
+
+        tha: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.tha, Unset):
+            tha = self.tha.to_dict()
+
+        lka: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.lka, Unset):
+            lka = self.lka.to_dict()
+
+        kor: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.kor, Unset):
+            kor = self.kor.to_dict()
+
+        bgr: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.bgr, Unset):
+            bgr = self.bgr.to_dict()
+
+        gha: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.gha, Unset):
+            gha = self.gha.to_dict()
+
+        srb: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.srb, Unset):
+            srb = self.srb.to_dict()
+
+        twn: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.twn, Unset):
+            twn = self.twn.to_dict()
+
+        hrv: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.hrv, Unset):
+            hrv = self.hrv.to_dict()
+
+        ltu: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ltu, Unset):
+            ltu = self.ltu.to_dict()
+
+        pri: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.pri, Unset):
+            pri = self.pri.to_dict()
+
+        svk: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.svk, Unset):
+            svk = self.svk.to_dict()
+
+        tun: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.tun, Unset):
+            tun = self.tun.to_dict()
+
+        est: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.est, Unset):
+            est = self.est.to_dict()
+
+        ven: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ven, Unset):
+            ven = self.ven.to_dict()
+
+        cri: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.cri, Unset):
+            cri = self.cri.to_dict()
+
+        pan: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.pan, Unset):
+            pan = self.pan.to_dict()
+
+        ury: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ury, Unset):
+            ury = self.ury.to_dict()
+
+        lbn: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.lbn, Unset):
+            lbn = self.lbn.to_dict()
+
+        lux: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.lux, Unset):
+            lux = self.lux.to_dict()
+
+        cyp: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.cyp, Unset):
+            cyp = self.cyp.to_dict()
+
+        npl: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.npl, Unset):
+            npl = self.npl.to_dict()
+
+        jor: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.jor, Unset):
+            jor = self.jor.to_dict()
+
+        svn: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.svn, Unset):
+            svn = self.svn.to_dict()
+
+        mtq: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mtq, Unset):
+            mtq = self.mtq.to_dict()
+
+        qat: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.qat, Unset):
+            qat = self.qat.to_dict()
+
+        glp: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.glp, Unset):
+            glp = self.glp.to_dict()
+
+        uga: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.uga, Unset):
+            uga = self.uga.to_dict()
+
+        dza: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.dza, Unset):
+            dza = self.dza.to_dict()
+
+        gtm: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.gtm, Unset):
+            gtm = self.gtm.to_dict()
+
+        cmr: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.cmr, Unset):
+            cmr = self.cmr.to_dict()
+
+        lva: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.lva, Unset):
+            lva = self.lva.to_dict()
+
+        dom: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.dom, Unset):
+            dom = self.dom.to_dict()
+
+        aze: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.aze, Unset):
+            aze = self.aze.to_dict()
+
+        geo: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.geo, Unset):
+            geo = self.geo.to_dict()
+
+        sen: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.sen, Unset):
+            sen = self.sen.to_dict()
+
+        tza: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.tza, Unset):
+            tza = self.tza.to_dict()
+
+        zwe: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.zwe, Unset):
+            zwe = self.zwe.to_dict()
+
+        kwt: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.kwt, Unset):
+            kwt = self.kwt.to_dict()
+
+        mlt: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mlt, Unset):
+            mlt = self.mlt.to_dict()
+
+        omn: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.omn, Unset):
+            omn = self.omn.to_dict()
+
+        bol: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.bol, Unset):
+            bol = self.bol.to_dict()
+
+        slv: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.slv, Unset):
+            slv = self.slv.to_dict()
+
+        arm: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.arm, Unset):
+            arm = self.arm.to_dict()
+
+        pry: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.pry, Unset):
+            pry = self.pry.to_dict()
+
+        irq: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.irq, Unset):
+            irq = self.irq.to_dict()
+
+        khm: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.khm, Unset):
+            khm = self.khm.to_dict()
+
+        bih: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.bih, Unset):
+            bih = self.bih.to_dict()
+
+        ago: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ago, Unset):
+            ago = self.ago.to_dict()
+
+        bhr: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.bhr, Unset):
+            bhr = self.bhr.to_dict()
+
+        alb: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.alb, Unset):
+            alb = self.alb.to_dict()
+
+        kaz: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.kaz, Unset):
+            kaz = self.kaz.to_dict()
+
+        civ: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.civ, Unset):
+            civ = self.civ.to_dict()
+
+        eth: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.eth, Unset):
+            eth = self.eth.to_dict()
+
+        mus: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mus, Unset):
+            mus = self.mus.to_dict()
+
+        zmb: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.zmb, Unset):
+            zmb = self.zmb.to_dict()
+
+        mkd: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mkd, Unset):
+            mkd = self.mkd.to_dict()
+
+        cod: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.cod, Unset):
+            cod = self.cod.to_dict()
+
+        blr: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.blr, Unset):
+            blr = self.blr.to_dict()
+
+        moz: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.moz, Unset):
+            moz = self.moz.to_dict()
+
+        reu: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.reu, Unset):
+            reu = self.reu.to_dict()
+
+        tto: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.tto, Unset):
+            tto = self.tto.to_dict()
+
+        guf: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.guf, Unset):
+            guf = self.guf.to_dict()
+
+        isl: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.isl, Unset):
+            isl = self.isl.to_dict()
+
+        mmr: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mmr, Unset):
+            mmr = self.mmr.to_dict()
+
+        hnd: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.hnd, Unset):
+            hnd = self.hnd.to_dict()
+
+        rwa: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.rwa, Unset):
+            rwa = self.rwa.to_dict()
+
+        mdg: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mdg, Unset):
+            mdg = self.mdg.to_dict()
+
+        ben: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ben, Unset):
+            ben = self.ben.to_dict()
+
+        uzb: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.uzb, Unset):
+            uzb = self.uzb.to_dict()
+
+        nam: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.nam, Unset):
+            nam = self.nam.to_dict()
+
+        bwa: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.bwa, Unset):
+            bwa = self.bwa.to_dict()
+
+        mda: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mda, Unset):
+            mda = self.mda.to_dict()
+
+        jey: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.jey, Unset):
+            jey = self.jey.to_dict()
+
+        nic: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.nic, Unset):
+            nic = self.nic.to_dict()
+
+        sdn: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.sdn, Unset):
+            sdn = self.sdn.to_dict()
+
+        jam: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.jam, Unset):
+            jam = self.jam.to_dict()
+
+        imn: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.imn, Unset):
+            imn = self.imn.to_dict()
+
+        bfa: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.bfa, Unset):
+            bfa = self.bfa.to_dict()
+
+        mng: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mng, Unset):
+            mng = self.mng.to_dict()
+
+        mne: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mne, Unset):
+            mne = self.mne.to_dict()
+
+        mco: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mco, Unset):
+            mco = self.mco.to_dict()
+
+        tgo: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.tgo, Unset):
+            tgo = self.tgo.to_dict()
+
+        afg: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.afg, Unset):
+            afg = self.afg.to_dict()
+
+        lby: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.lby, Unset):
+            lby = self.lby.to_dict()
+
+        xkx: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.xkx, Unset):
+            xkx = self.xkx.to_dict()
+
+        cym: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.cym, Unset):
+            cym = self.cym.to_dict()
+
+        mwi: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mwi, Unset):
+            mwi = self.mwi.to_dict()
+
+        som: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.som, Unset):
+            som = self.som.to_dict()
+
+        png: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.png, Unset):
+            png = self.png.to_dict()
+
+        mdv: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mdv, Unset):
+            mdv = self.mdv.to_dict()
+
+        mli: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mli, Unset):
+            mli = self.mli.to_dict()
+
+        gin: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.gin, Unset):
+            gin = self.gin.to_dict()
+
+        pse: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.pse, Unset):
+            pse = self.pse.to_dict()
+
+        gab: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.gab, Unset):
+            gab = self.gab.to_dict()
+
+        lie: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.lie, Unset):
+            lie = self.lie.to_dict()
+
+        hti: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.hti, Unset):
+            hti = self.hti.to_dict()
+
+        syr: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.syr, Unset):
+            syr = self.syr.to_dict()
+
+        brb: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.brb, Unset):
+            brb = self.brb.to_dict()
+
+        yem: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.yem, Unset):
+            yem = self.yem.to_dict()
+
+        ggy: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ggy, Unset):
+            ggy = self.ggy.to_dict()
+
+        ncl: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ncl, Unset):
+            ncl = self.ncl.to_dict()
+
+        and_: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.and_, Unset):
+            and_ = self.and_.to_dict()
+
+        sur: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.sur, Unset):
+            sur = self.sur.to_dict()
+
+        myt: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.myt, Unset):
+            myt = self.myt.to_dict()
+
+        kgz: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.kgz, Unset):
+            kgz = self.kgz.to_dict()
+
+        bhs: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.bhs, Unset):
+            bhs = self.bhs.to_dict()
+
+        gib: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.gib, Unset):
+            gib = self.gib.to_dict()
+
+        cog: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.cog, Unset):
+            cog = self.cog.to_dict()
+
+        fji: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.fji, Unset):
+            fji = self.fji.to_dict()
+
+        blm: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.blm, Unset):
+            blm = self.blm.to_dict()
+
+        cuw: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.cuw, Unset):
+            cuw = self.cuw.to_dict()
+
+        cub: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.cub, Unset):
+            cub = self.cub.to_dict()
+
+        sle: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.sle, Unset):
+            sle = self.sle.to_dict()
+
+        blz: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.blz, Unset):
+            blz = self.blz.to_dict()
+
+        ner: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ner, Unset):
+            ner = self.ner.to_dict()
+
+        lbr: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.lbr, Unset):
+            lbr = self.lbr.to_dict()
+
+        vir: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.vir, Unset):
+            vir = self.vir.to_dict()
+
+        pyf: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.pyf, Unset):
+            pyf = self.pyf.to_dict()
+
+        gum: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.gum, Unset):
+            gum = self.gum.to_dict()
+
+        mrt: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mrt, Unset):
+            mrt = self.mrt.to_dict()
+
+        abw: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.abw, Unset):
+            abw = self.abw.to_dict()
+
+        syc: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.syc, Unset):
+            syc = self.syc.to_dict()
+
+        guy: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.guy, Unset):
+            guy = self.guy.to_dict()
+
+        lso: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.lso, Unset):
+            lso = self.lso.to_dict()
+
+        swz: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.swz, Unset):
+            swz = self.swz.to_dict()
+
+        ssd: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ssd, Unset):
+            ssd = self.ssd.to_dict()
+
+        lca: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.lca, Unset):
+            lca = self.lca.to_dict()
+
+        mac: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mac, Unset):
+            mac = self.mac.to_dict()
+
+        smr: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.smr, Unset):
+            smr = self.smr.to_dict()
+
+        lao: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.lao, Unset):
+            lao = self.lao.to_dict()
+
+        brn: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.brn, Unset):
+            brn = self.brn.to_dict()
+
+        tcd: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.tcd, Unset):
+            tcd = self.tcd.to_dict()
+
+        bmu: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.bmu, Unset):
+            bmu = self.bmu.to_dict()
+
+        vgb: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.vgb, Unset):
+            vgb = self.vgb.to_dict()
+
+        prk: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.prk, Unset):
+            prk = self.prk.to_dict()
+
+        btn: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.btn, Unset):
+            btn = self.btn.to_dict()
+
+        bdi: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.bdi, Unset):
+            bdi = self.bdi.to_dict()
+
+        fro: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.fro, Unset):
+            fro = self.fro.to_dict()
+
+        tjk: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.tjk, Unset):
+            tjk = self.tjk.to_dict()
+
+        gmb: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.gmb, Unset):
+            gmb = self.gmb.to_dict()
+
+        stp: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.stp, Unset):
+            stp = self.stp.to_dict()
+
+        ant: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ant, Unset):
+            ant = self.ant.to_dict()
+
+        vct: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.vct, Unset):
+            vct = self.vct.to_dict()
+
+        dji: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.dji, Unset):
+            dji = self.dji.to_dict()
+
+        cpv: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.cpv, Unset):
+            cpv = self.cpv.to_dict()
+
+        tkm: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.tkm, Unset):
+            tkm = self.tkm.to_dict()
+
+        atg: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.atg, Unset):
+            atg = self.atg.to_dict()
+
+        tca: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.tca, Unset):
+            tca = self.tca.to_dict()
+
+        kna: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.kna, Unset):
+            kna = self.kna.to_dict()
+
+        grd: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.grd, Unset):
+            grd = self.grd.to_dict()
+
+        asm: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.asm, Unset):
+            asm = self.asm.to_dict()
+
+        vut: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.vut, Unset):
+            vut = self.vut.to_dict()
+
+        gnq: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.gnq, Unset):
+            gnq = self.gnq.to_dict()
+
+        grl: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.grl, Unset):
+            grl = self.grl.to_dict()
+
+        sxm: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.sxm, Unset):
+            sxm = self.sxm.to_dict()
+
+        mnp: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mnp, Unset):
+            mnp = self.mnp.to_dict()
+
+        com: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.com, Unset):
+            com = self.com.to_dict()
+
+        tls: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.tls, Unset):
+            tls = self.tls.to_dict()
+
+        sjm: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.sjm, Unset):
+            sjm = self.sjm.to_dict()
+
+        caf: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.caf, Unset):
+            caf = self.caf.to_dict()
+
+        dma: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.dma, Unset):
+            dma = self.dma.to_dict()
+
+        maf: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.maf, Unset):
+            maf = self.maf.to_dict()
+
+        wsm: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.wsm, Unset):
+            wsm = self.wsm.to_dict()
+
+        bes: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.bes, Unset):
+            bes = self.bes.to_dict()
+
+        mhl: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.mhl, Unset):
+            mhl = self.mhl.to_dict()
+
+        aia: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.aia, Unset):
+            aia = self.aia.to_dict()
+
+        ton: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ton, Unset):
+            ton = self.ton.to_dict()
+
+        cok: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.cok, Unset):
+            cok = self.cok.to_dict()
+
+        slb: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.slb, Unset):
+            slb = self.slb.to_dict()
+
+        spm: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.spm, Unset):
+            spm = self.spm.to_dict()
+
+        gnb: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.gnb, Unset):
+            gnb = self.gnb.to_dict()
+
+        ata: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ata, Unset):
+            ata = self.ata.to_dict()
+
+        tuv: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.tuv, Unset):
+            tuv = self.tuv.to_dict()
+
+        ala: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.ala, Unset):
+            ala = self.ala.to_dict()
+
+        iot: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.iot, Unset):
+            iot = self.iot.to_dict()
+
+        eri: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.eri, Unset):
+            eri = self.eri.to_dict()
+
+        plw: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.plw, Unset):
+            plw = self.plw.to_dict()
+
+        fsm: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.fsm, Unset):
+            fsm = self.fsm.to_dict()
+
+        nru: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.nru, Unset):
+            nru = self.nru.to_dict()
+
+        pcn: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.pcn, Unset):
+            pcn = self.pcn.to_dict()
+
+        flk: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.flk, Unset):
+            flk = self.flk.to_dict()
+
+        msr: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.msr, Unset):
+            msr = self.msr.to_dict()
+
+        vat: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.vat, Unset):
+            vat = self.vat.to_dict()
+
+        kir: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.kir, Unset):
+            kir = self.kir.to_dict()
+
+        shn: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.shn, Unset):
+            shn = self.shn.to_dict()
+
+        niu: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.niu, Unset):
+            niu = self.niu.to_dict()
+
+        wlf: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.wlf, Unset):
+            wlf = self.wlf.to_dict()
+
+        hmd: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.hmd, Unset):
+            hmd = self.hmd.to_dict()
+
+        cxr: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.cxr, Unset):
+            cxr = self.cxr.to_dict()
+
+        nfk: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.nfk, Unset):
+            nfk = self.nfk.to_dict()
+
+        atf: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.atf, Unset):
+            atf = self.atf.to_dict()
+
+        cck: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.cck, Unset):
+            cck = self.cck.to_dict()
+
+        sgs: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.sgs, Unset):
+            sgs = self.sgs.to_dict()
+
+        bvt: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.bvt, Unset):
+            bvt = self.bvt.to_dict()
+
+        umi: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.umi, Unset):
+            umi = self.umi.to_dict()
+
+        esh: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.esh, Unset):
+            esh = self.esh.to_dict()
+
+        tkl: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.tkl, Unset):
+            tkl = self.tkl.to_dict()
+
+        field_dict: dict[str, Any] = {}
+
+        field_dict.update({})
+        if usa is not UNSET:
+            field_dict["USA"] = usa
+        if gbr is not UNSET:
+            field_dict["GBR"] = gbr
+        if fra is not UNSET:
+            field_dict["FRA"] = fra
+        if ind is not UNSET:
+            field_dict["IND"] = ind
+        if bra is not UNSET:
+            field_dict["BRA"] = bra
+        if deu is not UNSET:
+            field_dict["DEU"] = deu
+        if esp is not UNSET:
+            field_dict["ESP"] = esp
+        if can is not UNSET:
+            field_dict["CAN"] = can
+        if aus is not UNSET:
+            field_dict["AUS"] = aus
+        if nld is not UNSET:
+            field_dict["NLD"] = nld
+        if ita is not UNSET:
+            field_dict["ITA"] = ita
+        if zaf is not UNSET:
+            field_dict["ZAF"] = zaf
+        if bel is not UNSET:
+            field_dict["BEL"] = bel
+        if chn is not UNSET:
+            field_dict["CHN"] = chn
+        if tur is not UNSET:
+            field_dict["TUR"] = tur
+        if mex is not UNSET:
+            field_dict["MEX"] = mex
+        if che is not UNSET:
+            field_dict["CHE"] = che
+        if nor is not UNSET:
+            field_dict["NOR"] = nor
+        if are is not UNSET:
+            field_dict["ARE"] = are
+        if swe is not UNSET:
+            field_dict["SWE"] = swe
+        if pol is not UNSET:
+            field_dict["POL"] = pol
+        if idn is not UNSET:
+            field_dict["IDN"] = idn
+        if arg is not UNSET:
+            field_dict["ARG"] = arg
+        if prt is not UNSET:
+            field_dict["PRT"] = prt
+        if col is not UNSET:
+            field_dict["COL"] = col
+        if chl is not UNSET:
+            field_dict["CHL"] = chl
+        if pak is not UNSET:
+            field_dict["PAK"] = pak
+        if dnk is not UNSET:
+            field_dict["DNK"] = dnk
+        if jpn is not UNSET:
+            field_dict["JPN"] = jpn
+        if nga is not UNSET:
+            field_dict["NGA"] = nga
+        if sgp is not UNSET:
+            field_dict["SGP"] = sgp
+        if per is not UNSET:
+            field_dict["PER"] = per
+        if nzl is not UNSET:
+            field_dict["NZL"] = nzl
+        if aut is not UNSET:
+            field_dict["AUT"] = aut
+        if irl is not UNSET:
+            field_dict["IRL"] = irl
+        if mys is not UNSET:
+            field_dict["MYS"] = mys
+        if bgd is not UNSET:
+            field_dict["BGD"] = bgd
+        if egy is not UNSET:
+            field_dict["EGY"] = egy
+        if isr is not UNSET:
+            field_dict["ISR"] = isr
+        if sau is not UNSET:
+            field_dict["SAU"] = sau
+        if phl is not UNSET:
+            field_dict["PHL"] = phl
+        if fin is not UNSET:
+            field_dict["FIN"] = fin
+        if irn is not UNSET:
+            field_dict["IRN"] = irn
+        if rou is not UNSET:
+            field_dict["ROU"] = rou
+        if cze is not UNSET:
+            field_dict["CZE"] = cze
+        if grc is not UNSET:
+            field_dict["GRC"] = grc
+        if hkg is not UNSET:
+            field_dict["HKG"] = hkg
+        if hun is not UNSET:
+            field_dict["HUN"] = hun
+        if ken is not UNSET:
+            field_dict["KEN"] = ken
+        if mar is not UNSET:
+            field_dict["MAR"] = mar
+        if vnm is not UNSET:
+            field_dict["VNM"] = vnm
+        if rus is not UNSET:
+            field_dict["RUS"] = rus
+        if ukr is not UNSET:
+            field_dict["UKR"] = ukr
+        if ecu is not UNSET:
+            field_dict["ECU"] = ecu
+        if tha is not UNSET:
+            field_dict["THA"] = tha
+        if lka is not UNSET:
+            field_dict["LKA"] = lka
+        if kor is not UNSET:
+            field_dict["KOR"] = kor
+        if bgr is not UNSET:
+            field_dict["BGR"] = bgr
+        if gha is not UNSET:
+            field_dict["GHA"] = gha
+        if srb is not UNSET:
+            field_dict["SRB"] = srb
+        if twn is not UNSET:
+            field_dict["TWN"] = twn
+        if hrv is not UNSET:
+            field_dict["HRV"] = hrv
+        if ltu is not UNSET:
+            field_dict["LTU"] = ltu
+        if pri is not UNSET:
+            field_dict["PRI"] = pri
+        if svk is not UNSET:
+            field_dict["SVK"] = svk
+        if tun is not UNSET:
+            field_dict["TUN"] = tun
+        if est is not UNSET:
+            field_dict["EST"] = est
+        if ven is not UNSET:
+            field_dict["VEN"] = ven
+        if cri is not UNSET:
+            field_dict["CRI"] = cri
+        if pan is not UNSET:
+            field_dict["PAN"] = pan
+        if ury is not UNSET:
+            field_dict["URY"] = ury
+        if lbn is not UNSET:
+            field_dict["LBN"] = lbn
+        if lux is not UNSET:
+            field_dict["LUX"] = lux
+        if cyp is not UNSET:
+            field_dict["CYP"] = cyp
+        if npl is not UNSET:
+            field_dict["NPL"] = npl
+        if jor is not UNSET:
+            field_dict["JOR"] = jor
+        if svn is not UNSET:
+            field_dict["SVN"] = svn
+        if mtq is not UNSET:
+            field_dict["MTQ"] = mtq
+        if qat is not UNSET:
+            field_dict["QAT"] = qat
+        if glp is not UNSET:
+            field_dict["GLP"] = glp
+        if uga is not UNSET:
+            field_dict["UGA"] = uga
+        if dza is not UNSET:
+            field_dict["DZA"] = dza
+        if gtm is not UNSET:
+            field_dict["GTM"] = gtm
+        if cmr is not UNSET:
+            field_dict["CMR"] = cmr
+        if lva is not UNSET:
+            field_dict["LVA"] = lva
+        if dom is not UNSET:
+            field_dict["DOM"] = dom
+        if aze is not UNSET:
+            field_dict["AZE"] = aze
+        if geo is not UNSET:
+            field_dict["GEO"] = geo
+        if sen is not UNSET:
+            field_dict["SEN"] = sen
+        if tza is not UNSET:
+            field_dict["TZA"] = tza
+        if zwe is not UNSET:
+            field_dict["ZWE"] = zwe
+        if kwt is not UNSET:
+            field_dict["KWT"] = kwt
+        if mlt is not UNSET:
+            field_dict["MLT"] = mlt
+        if omn is not UNSET:
+            field_dict["OMN"] = omn
+        if bol is not UNSET:
+            field_dict["BOL"] = bol
+        if slv is not UNSET:
+            field_dict["SLV"] = slv
+        if arm is not UNSET:
+            field_dict["ARM"] = arm
+        if pry is not UNSET:
+            field_dict["PRY"] = pry
+        if irq is not UNSET:
+            field_dict["IRQ"] = irq
+        if khm is not UNSET:
+            field_dict["KHM"] = khm
+        if bih is not UNSET:
+            field_dict["BIH"] = bih
+        if ago is not UNSET:
+            field_dict["AGO"] = ago
+        if bhr is not UNSET:
+            field_dict["BHR"] = bhr
+        if alb is not UNSET:
+            field_dict["ALB"] = alb
+        if kaz is not UNSET:
+            field_dict["KAZ"] = kaz
+        if civ is not UNSET:
+            field_dict["CIV"] = civ
+        if eth is not UNSET:
+            field_dict["ETH"] = eth
+        if mus is not UNSET:
+            field_dict["MUS"] = mus
+        if zmb is not UNSET:
+            field_dict["ZMB"] = zmb
+        if mkd is not UNSET:
+            field_dict["MKD"] = mkd
+        if cod is not UNSET:
+            field_dict["COD"] = cod
+        if blr is not UNSET:
+            field_dict["BLR"] = blr
+        if moz is not UNSET:
+            field_dict["MOZ"] = moz
+        if reu is not UNSET:
+            field_dict["REU"] = reu
+        if tto is not UNSET:
+            field_dict["TTO"] = tto
+        if guf is not UNSET:
+            field_dict["GUF"] = guf
+        if isl is not UNSET:
+            field_dict["ISL"] = isl
+        if mmr is not UNSET:
+            field_dict["MMR"] = mmr
+        if hnd is not UNSET:
+            field_dict["HND"] = hnd
+        if rwa is not UNSET:
+            field_dict["RWA"] = rwa
+        if mdg is not UNSET:
+            field_dict["MDG"] = mdg
+        if ben is not UNSET:
+            field_dict["BEN"] = ben
+        if uzb is not UNSET:
+            field_dict["UZB"] = uzb
+        if nam is not UNSET:
+            field_dict["NAM"] = nam
+        if bwa is not UNSET:
+            field_dict["BWA"] = bwa
+        if mda is not UNSET:
+            field_dict["MDA"] = mda
+        if jey is not UNSET:
+            field_dict["JEY"] = jey
+        if nic is not UNSET:
+            field_dict["NIC"] = nic
+        if sdn is not UNSET:
+            field_dict["SDN"] = sdn
+        if jam is not UNSET:
+            field_dict["JAM"] = jam
+        if imn is not UNSET:
+            field_dict["IMN"] = imn
+        if bfa is not UNSET:
+            field_dict["BFA"] = bfa
+        if mng is not UNSET:
+            field_dict["MNG"] = mng
+        if mne is not UNSET:
+            field_dict["MNE"] = mne
+        if mco is not UNSET:
+            field_dict["MCO"] = mco
+        if tgo is not UNSET:
+            field_dict["TGO"] = tgo
+        if afg is not UNSET:
+            field_dict["AFG"] = afg
+        if lby is not UNSET:
+            field_dict["LBY"] = lby
+        if xkx is not UNSET:
+            field_dict["XKX"] = xkx
+        if cym is not UNSET:
+            field_dict["CYM"] = cym
+        if mwi is not UNSET:
+            field_dict["MWI"] = mwi
+        if som is not UNSET:
+            field_dict["SOM"] = som
+        if png is not UNSET:
+            field_dict["PNG"] = png
+        if mdv is not UNSET:
+            field_dict["MDV"] = mdv
+        if mli is not UNSET:
+            field_dict["MLI"] = mli
+        if gin is not UNSET:
+            field_dict["GIN"] = gin
+        if pse is not UNSET:
+            field_dict["PSE"] = pse
+        if gab is not UNSET:
+            field_dict["GAB"] = gab
+        if lie is not UNSET:
+            field_dict["LIE"] = lie
+        if hti is not UNSET:
+            field_dict["HTI"] = hti
+        if syr is not UNSET:
+            field_dict["SYR"] = syr
+        if brb is not UNSET:
+            field_dict["BRB"] = brb
+        if yem is not UNSET:
+            field_dict["YEM"] = yem
+        if ggy is not UNSET:
+            field_dict["GGY"] = ggy
+        if ncl is not UNSET:
+            field_dict["NCL"] = ncl
+        if and_ is not UNSET:
+            field_dict["AND"] = and_
+        if sur is not UNSET:
+            field_dict["SUR"] = sur
+        if myt is not UNSET:
+            field_dict["MYT"] = myt
+        if kgz is not UNSET:
+            field_dict["KGZ"] = kgz
+        if bhs is not UNSET:
+            field_dict["BHS"] = bhs
+        if gib is not UNSET:
+            field_dict["GIB"] = gib
+        if cog is not UNSET:
+            field_dict["COG"] = cog
+        if fji is not UNSET:
+            field_dict["FJI"] = fji
+        if blm is not UNSET:
+            field_dict["BLM"] = blm
+        if cuw is not UNSET:
+            field_dict["CUW"] = cuw
+        if cub is not UNSET:
+            field_dict["CUB"] = cub
+        if sle is not UNSET:
+            field_dict["SLE"] = sle
+        if blz is not UNSET:
+            field_dict["BLZ"] = blz
+        if ner is not UNSET:
+            field_dict["NER"] = ner
+        if lbr is not UNSET:
+            field_dict["LBR"] = lbr
+        if vir is not UNSET:
+            field_dict["VIR"] = vir
+        if pyf is not UNSET:
+            field_dict["PYF"] = pyf
+        if gum is not UNSET:
+            field_dict["GUM"] = gum
+        if mrt is not UNSET:
+            field_dict["MRT"] = mrt
+        if abw is not UNSET:
+            field_dict["ABW"] = abw
+        if syc is not UNSET:
+            field_dict["SYC"] = syc
+        if guy is not UNSET:
+            field_dict["GUY"] = guy
+        if lso is not UNSET:
+            field_dict["LSO"] = lso
+        if swz is not UNSET:
+            field_dict["SWZ"] = swz
+        if ssd is not UNSET:
+            field_dict["SSD"] = ssd
+        if lca is not UNSET:
+            field_dict["LCA"] = lca
+        if mac is not UNSET:
+            field_dict["MAC"] = mac
+        if smr is not UNSET:
+            field_dict["SMR"] = smr
+        if lao is not UNSET:
+            field_dict["LAO"] = lao
+        if brn is not UNSET:
+            field_dict["BRN"] = brn
+        if tcd is not UNSET:
+            field_dict["TCD"] = tcd
+        if bmu is not UNSET:
+            field_dict["BMU"] = bmu
+        if vgb is not UNSET:
+            field_dict["VGB"] = vgb
+        if prk is not UNSET:
+            field_dict["PRK"] = prk
+        if btn is not UNSET:
+            field_dict["BTN"] = btn
+        if bdi is not UNSET:
+            field_dict["BDI"] = bdi
+        if fro is not UNSET:
+            field_dict["FRO"] = fro
+        if tjk is not UNSET:
+            field_dict["TJK"] = tjk
+        if gmb is not UNSET:
+            field_dict["GMB"] = gmb
+        if stp is not UNSET:
+            field_dict["STP"] = stp
+        if ant is not UNSET:
+            field_dict["ANT"] = ant
+        if vct is not UNSET:
+            field_dict["VCT"] = vct
+        if dji is not UNSET:
+            field_dict["DJI"] = dji
+        if cpv is not UNSET:
+            field_dict["CPV"] = cpv
+        if tkm is not UNSET:
+            field_dict["TKM"] = tkm
+        if atg is not UNSET:
+            field_dict["ATG"] = atg
+        if tca is not UNSET:
+            field_dict["TCA"] = tca
+        if kna is not UNSET:
+            field_dict["KNA"] = kna
+        if grd is not UNSET:
+            field_dict["GRD"] = grd
+        if asm is not UNSET:
+            field_dict["ASM"] = asm
+        if vut is not UNSET:
+            field_dict["VUT"] = vut
+        if gnq is not UNSET:
+            field_dict["GNQ"] = gnq
+        if grl is not UNSET:
+            field_dict["GRL"] = grl
+        if sxm is not UNSET:
+            field_dict["SXM"] = sxm
+        if mnp is not UNSET:
+            field_dict["MNP"] = mnp
+        if com is not UNSET:
+            field_dict["COM"] = com
+        if tls is not UNSET:
+            field_dict["TLS"] = tls
+        if sjm is not UNSET:
+            field_dict["SJM"] = sjm
+        if caf is not UNSET:
+            field_dict["CAF"] = caf
+        if dma is not UNSET:
+            field_dict["DMA"] = dma
+        if maf is not UNSET:
+            field_dict["MAF"] = maf
+        if wsm is not UNSET:
+            field_dict["WSM"] = wsm
+        if bes is not UNSET:
+            field_dict["BES"] = bes
+        if mhl is not UNSET:
+            field_dict["MHL"] = mhl
+        if aia is not UNSET:
+            field_dict["AIA"] = aia
+        if ton is not UNSET:
+            field_dict["TON"] = ton
+        if cok is not UNSET:
+            field_dict["COK"] = cok
+        if slb is not UNSET:
+            field_dict["SLB"] = slb
+        if spm is not UNSET:
+            field_dict["SPM"] = spm
+        if gnb is not UNSET:
+            field_dict["GNB"] = gnb
+        if ata is not UNSET:
+            field_dict["ATA"] = ata
+        if tuv is not UNSET:
+            field_dict["TUV"] = tuv
+        if ala is not UNSET:
+            field_dict["ALA"] = ala
+        if iot is not UNSET:
+            field_dict["IOT"] = iot
+        if eri is not UNSET:
+            field_dict["ERI"] = eri
+        if plw is not UNSET:
+            field_dict["PLW"] = plw
+        if fsm is not UNSET:
+            field_dict["FSM"] = fsm
+        if nru is not UNSET:
+            field_dict["NRU"] = nru
+        if pcn is not UNSET:
+            field_dict["PCN"] = pcn
+        if flk is not UNSET:
+            field_dict["FLK"] = flk
+        if msr is not UNSET:
+            field_dict["MSR"] = msr
+        if vat is not UNSET:
+            field_dict["VAT"] = vat
+        if kir is not UNSET:
+            field_dict["KIR"] = kir
+        if shn is not UNSET:
+            field_dict["SHN"] = shn
+        if niu is not UNSET:
+            field_dict["NIU"] = niu
+        if wlf is not UNSET:
+            field_dict["WLF"] = wlf
+        if hmd is not UNSET:
+            field_dict["HMD"] = hmd
+        if cxr is not UNSET:
+            field_dict["CXR"] = cxr
+        if nfk is not UNSET:
+            field_dict["NFK"] = nfk
+        if atf is not UNSET:
+            field_dict["ATF"] = atf
+        if cck is not UNSET:
+            field_dict["CCK"] = cck
+        if sgs is not UNSET:
+            field_dict["SGS"] = sgs
+        if bvt is not UNSET:
+            field_dict["BVT"] = bvt
+        if umi is not UNSET:
+            field_dict["UMI"] = umi
+        if esh is not UNSET:
+            field_dict["ESH"] = esh
+        if tkl is not UNSET:
+            field_dict["TKL"] = tkl
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0abw import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ABW,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0afg import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AFG,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ago import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AGO,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aia import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AIA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ala import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0alb import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0and import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AND,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ant import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ANT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0are import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARE,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0arg import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARG,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0arm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0asm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ASM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ata import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0atf import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATF,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0atg import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATG,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aus import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUS,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aut import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aze import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AZE,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bdi import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BDI,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bel import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ben import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bes import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BES,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bfa import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BFA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bgd import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGD,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bgr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bhr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bhs import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHS,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bih import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BIH,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0blm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0blr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0blz import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLZ,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bmu import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BMU,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bol import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BOL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bra import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0brb import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0brn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0btn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BTN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bvt import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BVT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bwa import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BWA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0caf import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAF,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0can import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cck import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CCK,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0che import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHE,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0chl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0chn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0civ import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CIV,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cmr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CMR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cod import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COD,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cog import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COG,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cok import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COK,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0col import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0com import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cpv import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CPV,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cri import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CRI,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cub import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cuw import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUW,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cxr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CXR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cym import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cyp import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYP,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cze import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CZE,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0deu import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DEU,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dji import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DJI,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dma import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DMA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dnk import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DNK,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dom import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DOM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dza import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DZA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ecu import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ECU,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0egy import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EGY,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0eri import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ERI,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0esh import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESH,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0esp import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESP,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0est import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EST,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0eth import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ETH,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fin import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FIN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fji import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FJI,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0flk import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FLK,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fra import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fro import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRO,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fsm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FSM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gab import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GAB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gbr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GBR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0geo import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GEO,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ggy import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GGY,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gha import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GHA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gib import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gin import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0glp import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GLP,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gmb import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GMB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gnb import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gnq import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNQ,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0grc import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRC,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0grd import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRD,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0grl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gtm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GTM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0guf import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUF,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gum import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0guy import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUY,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hkg import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HKG,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hmd import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HMD,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hnd import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HND,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hrv import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HRV,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hti import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HTI,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hun import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HUN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0idn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IDN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0imn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IMN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ind import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IND,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0iot import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IOT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irq import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRQ,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0isl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0isr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ita import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ITA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jam import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JAM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jey import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JEY,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jor import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JOR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jpn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JPN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kaz import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KAZ,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ken import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KEN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kgz import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KGZ,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0khm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KHM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kir import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KIR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kna import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KNA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kor import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KOR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kwt import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KWT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lao import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LAO,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lbn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lbr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lby import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBY,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lca import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LCA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lie import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LIE,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lka import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LKA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lso import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LSO,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ltu import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LTU,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lux import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LUX,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lva import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LVA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mac import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAC,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0maf import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAF,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mar import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mco import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MCO,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mda import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mdg import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDG,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mdv import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDV,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mex import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MEX,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mhl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MHL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mkd import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MKD,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mli import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLI,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mlt import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mmr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MMR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mne import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNE,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mng import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNG,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mnp import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNP,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0moz import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MOZ,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mrt import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MRT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0msr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MSR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mtq import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MTQ,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mus import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mwi import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MWI,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mys import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYS,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0myt import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nam import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NAM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ncl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NCL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ner import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NER,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nfk import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NFK,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nga import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NGA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nic import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIC,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0niu import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIU,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nld import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NLD,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nor import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NOR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0npl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NPL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nru import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NRU,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nzl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NZL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0omn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0OMN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pak import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAK,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pan import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pcn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PCN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0per import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PER,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0phl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PHL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0plw import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PLW,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0png import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PNG,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pol import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0POL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pri import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRI,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0prk import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRK,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0prt import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pry import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRY,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pse import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PSE,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pyf import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PYF,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0qat import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0QAT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0reu import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0REU,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rou import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ROU,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rus import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RUS,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rwa import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RWA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sau import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SAU,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sdn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SDN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sen import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SEN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sgp import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGP,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sgs import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGS,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0shn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SHN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sjm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SJM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0slb import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sle import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLE,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0slv import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLV,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0smr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SMR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0som import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SOM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0spm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SPM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0srb import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SRB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ssd import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SSD,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0stp import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0STP,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sur import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SUR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0svk import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVK,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0svn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0swe import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWE,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0swz import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWZ,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sxm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SXM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0syc import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYC,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0syr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tca import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tcd import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCD,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tgo import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TGO,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tha import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0THA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tjk import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TJK,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tkl import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKL,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tkm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tls import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TLS,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ton import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TON,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tto import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TTO,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tun import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tur import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tuv import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUV,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0twn import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TWN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tza import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TZA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0uga import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UGA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ukr import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UKR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0umi import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UMI,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ury import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0URY,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0usa import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0USA,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0uzb import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UZB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vat import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VAT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vct import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VCT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ven import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VEN,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vgb import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VGB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vir import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VIR,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vnm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VNM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vut import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VUT,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0wlf import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WLF,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0wsm import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WSM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0xkx import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0XKX,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0yem import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0YEM,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zaf import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZAF,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zmb import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZMB,
+        )
+        from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zwe import (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZWE,
+        )
+
+        d = dict(src_dict)
+        _usa = d.pop("USA", UNSET)
+        usa: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0USA
+            | Unset
+        )
+        if isinstance(_usa, Unset):
+            usa = UNSET
+        else:
+            usa = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0USA.from_dict(
+                _usa
+            )
+
+        _gbr = d.pop("GBR", UNSET)
+        gbr: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GBR
+            | Unset
+        )
+        if isinstance(_gbr, Unset):
+            gbr = UNSET
+        else:
+            gbr = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GBR.from_dict(
+                _gbr
+            )
+
+        _fra = d.pop("FRA", UNSET)
+        fra: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRA
+            | Unset
+        )
+        if isinstance(_fra, Unset):
+            fra = UNSET
+        else:
+            fra = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRA.from_dict(
+                _fra
+            )
+
+        _ind = d.pop("IND", UNSET)
+        ind: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IND
+            | Unset
+        )
+        if isinstance(_ind, Unset):
+            ind = UNSET
+        else:
+            ind = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IND.from_dict(
+                _ind
+            )
+
+        _bra = d.pop("BRA", UNSET)
+        bra: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRA
+            | Unset
+        )
+        if isinstance(_bra, Unset):
+            bra = UNSET
+        else:
+            bra = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRA.from_dict(
+                _bra
+            )
+
+        _deu = d.pop("DEU", UNSET)
+        deu: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DEU
+            | Unset
+        )
+        if isinstance(_deu, Unset):
+            deu = UNSET
+        else:
+            deu = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DEU.from_dict(
+                _deu
+            )
+
+        _esp = d.pop("ESP", UNSET)
+        esp: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESP
+            | Unset
+        )
+        if isinstance(_esp, Unset):
+            esp = UNSET
+        else:
+            esp = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESP.from_dict(
+                _esp
+            )
+
+        _can = d.pop("CAN", UNSET)
+        can: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAN
+            | Unset
+        )
+        if isinstance(_can, Unset):
+            can = UNSET
+        else:
+            can = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAN.from_dict(
+                _can
+            )
+
+        _aus = d.pop("AUS", UNSET)
+        aus: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUS
+            | Unset
+        )
+        if isinstance(_aus, Unset):
+            aus = UNSET
+        else:
+            aus = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUS.from_dict(
+                _aus
+            )
+
+        _nld = d.pop("NLD", UNSET)
+        nld: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NLD
+            | Unset
+        )
+        if isinstance(_nld, Unset):
+            nld = UNSET
+        else:
+            nld = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NLD.from_dict(
+                _nld
+            )
+
+        _ita = d.pop("ITA", UNSET)
+        ita: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ITA
+            | Unset
+        )
+        if isinstance(_ita, Unset):
+            ita = UNSET
+        else:
+            ita = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ITA.from_dict(
+                _ita
+            )
+
+        _zaf = d.pop("ZAF", UNSET)
+        zaf: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZAF
+            | Unset
+        )
+        if isinstance(_zaf, Unset):
+            zaf = UNSET
+        else:
+            zaf = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZAF.from_dict(
+                _zaf
+            )
+
+        _bel = d.pop("BEL", UNSET)
+        bel: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEL
+            | Unset
+        )
+        if isinstance(_bel, Unset):
+            bel = UNSET
+        else:
+            bel = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEL.from_dict(
+                _bel
+            )
+
+        _chn = d.pop("CHN", UNSET)
+        chn: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHN
+            | Unset
+        )
+        if isinstance(_chn, Unset):
+            chn = UNSET
+        else:
+            chn = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHN.from_dict(
+                _chn
+            )
+
+        _tur = d.pop("TUR", UNSET)
+        tur: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUR
+            | Unset
+        )
+        if isinstance(_tur, Unset):
+            tur = UNSET
+        else:
+            tur = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUR.from_dict(
+                _tur
+            )
+
+        _mex = d.pop("MEX", UNSET)
+        mex: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MEX
+            | Unset
+        )
+        if isinstance(_mex, Unset):
+            mex = UNSET
+        else:
+            mex = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MEX.from_dict(
+                _mex
+            )
+
+        _che = d.pop("CHE", UNSET)
+        che: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHE
+            | Unset
+        )
+        if isinstance(_che, Unset):
+            che = UNSET
+        else:
+            che = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHE.from_dict(
+                _che
+            )
+
+        _nor = d.pop("NOR", UNSET)
+        nor: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NOR
+            | Unset
+        )
+        if isinstance(_nor, Unset):
+            nor = UNSET
+        else:
+            nor = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NOR.from_dict(
+                _nor
+            )
+
+        _are = d.pop("ARE", UNSET)
+        are: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARE
+            | Unset
+        )
+        if isinstance(_are, Unset):
+            are = UNSET
+        else:
+            are = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARE.from_dict(
+                _are
+            )
+
+        _swe = d.pop("SWE", UNSET)
+        swe: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWE
+            | Unset
+        )
+        if isinstance(_swe, Unset):
+            swe = UNSET
+        else:
+            swe = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWE.from_dict(
+                _swe
+            )
+
+        _pol = d.pop("POL", UNSET)
+        pol: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0POL
+            | Unset
+        )
+        if isinstance(_pol, Unset):
+            pol = UNSET
+        else:
+            pol = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0POL.from_dict(
+                _pol
+            )
+
+        _idn = d.pop("IDN", UNSET)
+        idn: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IDN
+            | Unset
+        )
+        if isinstance(_idn, Unset):
+            idn = UNSET
+        else:
+            idn = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IDN.from_dict(
+                _idn
+            )
+
+        _arg = d.pop("ARG", UNSET)
+        arg: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARG
+            | Unset
+        )
+        if isinstance(_arg, Unset):
+            arg = UNSET
+        else:
+            arg = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARG.from_dict(
+                _arg
+            )
+
+        _prt = d.pop("PRT", UNSET)
+        prt: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRT
+            | Unset
+        )
+        if isinstance(_prt, Unset):
+            prt = UNSET
+        else:
+            prt = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRT.from_dict(
+                _prt
+            )
+
+        _col = d.pop("COL", UNSET)
+        col: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COL
+            | Unset
+        )
+        if isinstance(_col, Unset):
+            col = UNSET
+        else:
+            col = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COL.from_dict(
+                _col
+            )
+
+        _chl = d.pop("CHL", UNSET)
+        chl: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHL
+            | Unset
+        )
+        if isinstance(_chl, Unset):
+            chl = UNSET
+        else:
+            chl = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHL.from_dict(
+                _chl
+            )
+
+        _pak = d.pop("PAK", UNSET)
+        pak: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAK
+            | Unset
+        )
+        if isinstance(_pak, Unset):
+            pak = UNSET
+        else:
+            pak = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAK.from_dict(
+                _pak
+            )
+
+        _dnk = d.pop("DNK", UNSET)
+        dnk: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DNK
+            | Unset
+        )
+        if isinstance(_dnk, Unset):
+            dnk = UNSET
+        else:
+            dnk = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DNK.from_dict(
+                _dnk
+            )
+
+        _jpn = d.pop("JPN", UNSET)
+        jpn: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JPN
+            | Unset
+        )
+        if isinstance(_jpn, Unset):
+            jpn = UNSET
+        else:
+            jpn = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JPN.from_dict(
+                _jpn
+            )
+
+        _nga = d.pop("NGA", UNSET)
+        nga: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NGA
+            | Unset
+        )
+        if isinstance(_nga, Unset):
+            nga = UNSET
+        else:
+            nga = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NGA.from_dict(
+                _nga
+            )
+
+        _sgp = d.pop("SGP", UNSET)
+        sgp: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGP
+            | Unset
+        )
+        if isinstance(_sgp, Unset):
+            sgp = UNSET
+        else:
+            sgp = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGP.from_dict(
+                _sgp
+            )
+
+        _per = d.pop("PER", UNSET)
+        per: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PER
+            | Unset
+        )
+        if isinstance(_per, Unset):
+            per = UNSET
+        else:
+            per = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PER.from_dict(
+                _per
+            )
+
+        _nzl = d.pop("NZL", UNSET)
+        nzl: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NZL
+            | Unset
+        )
+        if isinstance(_nzl, Unset):
+            nzl = UNSET
+        else:
+            nzl = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NZL.from_dict(
+                _nzl
+            )
+
+        _aut = d.pop("AUT", UNSET)
+        aut: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUT
+            | Unset
+        )
+        if isinstance(_aut, Unset):
+            aut = UNSET
+        else:
+            aut = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUT.from_dict(
+                _aut
+            )
+
+        _irl = d.pop("IRL", UNSET)
+        irl: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRL
+            | Unset
+        )
+        if isinstance(_irl, Unset):
+            irl = UNSET
+        else:
+            irl = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRL.from_dict(
+                _irl
+            )
+
+        _mys = d.pop("MYS", UNSET)
+        mys: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYS
+            | Unset
+        )
+        if isinstance(_mys, Unset):
+            mys = UNSET
+        else:
+            mys = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYS.from_dict(
+                _mys
+            )
+
+        _bgd = d.pop("BGD", UNSET)
+        bgd: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGD
+            | Unset
+        )
+        if isinstance(_bgd, Unset):
+            bgd = UNSET
+        else:
+            bgd = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGD.from_dict(
+                _bgd
+            )
+
+        _egy = d.pop("EGY", UNSET)
+        egy: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EGY
+            | Unset
+        )
+        if isinstance(_egy, Unset):
+            egy = UNSET
+        else:
+            egy = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EGY.from_dict(
+                _egy
+            )
+
+        _isr = d.pop("ISR", UNSET)
+        isr: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISR
+            | Unset
+        )
+        if isinstance(_isr, Unset):
+            isr = UNSET
+        else:
+            isr = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISR.from_dict(
+                _isr
+            )
+
+        _sau = d.pop("SAU", UNSET)
+        sau: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SAU
+            | Unset
+        )
+        if isinstance(_sau, Unset):
+            sau = UNSET
+        else:
+            sau = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SAU.from_dict(
+                _sau
+            )
+
+        _phl = d.pop("PHL", UNSET)
+        phl: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PHL
+            | Unset
+        )
+        if isinstance(_phl, Unset):
+            phl = UNSET
+        else:
+            phl = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PHL.from_dict(
+                _phl
+            )
+
+        _fin = d.pop("FIN", UNSET)
+        fin: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FIN
+            | Unset
+        )
+        if isinstance(_fin, Unset):
+            fin = UNSET
+        else:
+            fin = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FIN.from_dict(
+                _fin
+            )
+
+        _irn = d.pop("IRN", UNSET)
+        irn: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRN
+            | Unset
+        )
+        if isinstance(_irn, Unset):
+            irn = UNSET
+        else:
+            irn = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRN.from_dict(
+                _irn
+            )
+
+        _rou = d.pop("ROU", UNSET)
+        rou: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ROU
+            | Unset
+        )
+        if isinstance(_rou, Unset):
+            rou = UNSET
+        else:
+            rou = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ROU.from_dict(
+                _rou
+            )
+
+        _cze = d.pop("CZE", UNSET)
+        cze: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CZE
+            | Unset
+        )
+        if isinstance(_cze, Unset):
+            cze = UNSET
+        else:
+            cze = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CZE.from_dict(
+                _cze
+            )
+
+        _grc = d.pop("GRC", UNSET)
+        grc: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRC
+            | Unset
+        )
+        if isinstance(_grc, Unset):
+            grc = UNSET
+        else:
+            grc = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRC.from_dict(
+                _grc
+            )
+
+        _hkg = d.pop("HKG", UNSET)
+        hkg: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HKG
+            | Unset
+        )
+        if isinstance(_hkg, Unset):
+            hkg = UNSET
+        else:
+            hkg = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HKG.from_dict(
+                _hkg
+            )
+
+        _hun = d.pop("HUN", UNSET)
+        hun: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HUN
+            | Unset
+        )
+        if isinstance(_hun, Unset):
+            hun = UNSET
+        else:
+            hun = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HUN.from_dict(
+                _hun
+            )
+
+        _ken = d.pop("KEN", UNSET)
+        ken: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KEN
+            | Unset
+        )
+        if isinstance(_ken, Unset):
+            ken = UNSET
+        else:
+            ken = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KEN.from_dict(
+                _ken
+            )
+
+        _mar = d.pop("MAR", UNSET)
+        mar: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAR
+            | Unset
+        )
+        if isinstance(_mar, Unset):
+            mar = UNSET
+        else:
+            mar = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAR.from_dict(
+                _mar
+            )
+
+        _vnm = d.pop("VNM", UNSET)
+        vnm: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VNM
+            | Unset
+        )
+        if isinstance(_vnm, Unset):
+            vnm = UNSET
+        else:
+            vnm = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VNM.from_dict(
+                _vnm
+            )
+
+        _rus = d.pop("RUS", UNSET)
+        rus: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RUS
+            | Unset
+        )
+        if isinstance(_rus, Unset):
+            rus = UNSET
+        else:
+            rus = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RUS.from_dict(
+                _rus
+            )
+
+        _ukr = d.pop("UKR", UNSET)
+        ukr: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UKR
+            | Unset
+        )
+        if isinstance(_ukr, Unset):
+            ukr = UNSET
+        else:
+            ukr = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UKR.from_dict(
+                _ukr
+            )
+
+        _ecu = d.pop("ECU", UNSET)
+        ecu: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ECU
+            | Unset
+        )
+        if isinstance(_ecu, Unset):
+            ecu = UNSET
+        else:
+            ecu = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ECU.from_dict(
+                _ecu
+            )
+
+        _tha = d.pop("THA", UNSET)
+        tha: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0THA
+            | Unset
+        )
+        if isinstance(_tha, Unset):
+            tha = UNSET
+        else:
+            tha = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0THA.from_dict(
+                _tha
+            )
+
+        _lka = d.pop("LKA", UNSET)
+        lka: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LKA
+            | Unset
+        )
+        if isinstance(_lka, Unset):
+            lka = UNSET
+        else:
+            lka = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LKA.from_dict(
+                _lka
+            )
+
+        _kor = d.pop("KOR", UNSET)
+        kor: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KOR
+            | Unset
+        )
+        if isinstance(_kor, Unset):
+            kor = UNSET
+        else:
+            kor = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KOR.from_dict(
+                _kor
+            )
+
+        _bgr = d.pop("BGR", UNSET)
+        bgr: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGR
+            | Unset
+        )
+        if isinstance(_bgr, Unset):
+            bgr = UNSET
+        else:
+            bgr = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGR.from_dict(
+                _bgr
+            )
+
+        _gha = d.pop("GHA", UNSET)
+        gha: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GHA
+            | Unset
+        )
+        if isinstance(_gha, Unset):
+            gha = UNSET
+        else:
+            gha = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GHA.from_dict(
+                _gha
+            )
+
+        _srb = d.pop("SRB", UNSET)
+        srb: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SRB
+            | Unset
+        )
+        if isinstance(_srb, Unset):
+            srb = UNSET
+        else:
+            srb = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SRB.from_dict(
+                _srb
+            )
+
+        _twn = d.pop("TWN", UNSET)
+        twn: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TWN
+            | Unset
+        )
+        if isinstance(_twn, Unset):
+            twn = UNSET
+        else:
+            twn = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TWN.from_dict(
+                _twn
+            )
+
+        _hrv = d.pop("HRV", UNSET)
+        hrv: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HRV
+            | Unset
+        )
+        if isinstance(_hrv, Unset):
+            hrv = UNSET
+        else:
+            hrv = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HRV.from_dict(
+                _hrv
+            )
+
+        _ltu = d.pop("LTU", UNSET)
+        ltu: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LTU
+            | Unset
+        )
+        if isinstance(_ltu, Unset):
+            ltu = UNSET
+        else:
+            ltu = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LTU.from_dict(
+                _ltu
+            )
+
+        _pri = d.pop("PRI", UNSET)
+        pri: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRI
+            | Unset
+        )
+        if isinstance(_pri, Unset):
+            pri = UNSET
+        else:
+            pri = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRI.from_dict(
+                _pri
+            )
+
+        _svk = d.pop("SVK", UNSET)
+        svk: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVK
+            | Unset
+        )
+        if isinstance(_svk, Unset):
+            svk = UNSET
+        else:
+            svk = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVK.from_dict(
+                _svk
+            )
+
+        _tun = d.pop("TUN", UNSET)
+        tun: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUN
+            | Unset
+        )
+        if isinstance(_tun, Unset):
+            tun = UNSET
+        else:
+            tun = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUN.from_dict(
+                _tun
+            )
+
+        _est = d.pop("EST", UNSET)
+        est: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EST
+            | Unset
+        )
+        if isinstance(_est, Unset):
+            est = UNSET
+        else:
+            est = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EST.from_dict(
+                _est
+            )
+
+        _ven = d.pop("VEN", UNSET)
+        ven: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VEN
+            | Unset
+        )
+        if isinstance(_ven, Unset):
+            ven = UNSET
+        else:
+            ven = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VEN.from_dict(
+                _ven
+            )
+
+        _cri = d.pop("CRI", UNSET)
+        cri: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CRI
+            | Unset
+        )
+        if isinstance(_cri, Unset):
+            cri = UNSET
+        else:
+            cri = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CRI.from_dict(
+                _cri
+            )
+
+        _pan = d.pop("PAN", UNSET)
+        pan: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAN
+            | Unset
+        )
+        if isinstance(_pan, Unset):
+            pan = UNSET
+        else:
+            pan = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAN.from_dict(
+                _pan
+            )
+
+        _ury = d.pop("URY", UNSET)
+        ury: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0URY
+            | Unset
+        )
+        if isinstance(_ury, Unset):
+            ury = UNSET
+        else:
+            ury = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0URY.from_dict(
+                _ury
+            )
+
+        _lbn = d.pop("LBN", UNSET)
+        lbn: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBN
+            | Unset
+        )
+        if isinstance(_lbn, Unset):
+            lbn = UNSET
+        else:
+            lbn = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBN.from_dict(
+                _lbn
+            )
+
+        _lux = d.pop("LUX", UNSET)
+        lux: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LUX
+            | Unset
+        )
+        if isinstance(_lux, Unset):
+            lux = UNSET
+        else:
+            lux = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LUX.from_dict(
+                _lux
+            )
+
+        _cyp = d.pop("CYP", UNSET)
+        cyp: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYP
+            | Unset
+        )
+        if isinstance(_cyp, Unset):
+            cyp = UNSET
+        else:
+            cyp = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYP.from_dict(
+                _cyp
+            )
+
+        _npl = d.pop("NPL", UNSET)
+        npl: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NPL
+            | Unset
+        )
+        if isinstance(_npl, Unset):
+            npl = UNSET
+        else:
+            npl = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NPL.from_dict(
+                _npl
+            )
+
+        _jor = d.pop("JOR", UNSET)
+        jor: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JOR
+            | Unset
+        )
+        if isinstance(_jor, Unset):
+            jor = UNSET
+        else:
+            jor = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JOR.from_dict(
+                _jor
+            )
+
+        _svn = d.pop("SVN", UNSET)
+        svn: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVN
+            | Unset
+        )
+        if isinstance(_svn, Unset):
+            svn = UNSET
+        else:
+            svn = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVN.from_dict(
+                _svn
+            )
+
+        _mtq = d.pop("MTQ", UNSET)
+        mtq: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MTQ
+            | Unset
+        )
+        if isinstance(_mtq, Unset):
+            mtq = UNSET
+        else:
+            mtq = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MTQ.from_dict(
+                _mtq
+            )
+
+        _qat = d.pop("QAT", UNSET)
+        qat: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0QAT
+            | Unset
+        )
+        if isinstance(_qat, Unset):
+            qat = UNSET
+        else:
+            qat = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0QAT.from_dict(
+                _qat
+            )
+
+        _glp = d.pop("GLP", UNSET)
+        glp: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GLP
+            | Unset
+        )
+        if isinstance(_glp, Unset):
+            glp = UNSET
+        else:
+            glp = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GLP.from_dict(
+                _glp
+            )
+
+        _uga = d.pop("UGA", UNSET)
+        uga: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UGA
+            | Unset
+        )
+        if isinstance(_uga, Unset):
+            uga = UNSET
+        else:
+            uga = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UGA.from_dict(
+                _uga
+            )
+
+        _dza = d.pop("DZA", UNSET)
+        dza: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DZA
+            | Unset
+        )
+        if isinstance(_dza, Unset):
+            dza = UNSET
+        else:
+            dza = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DZA.from_dict(
+                _dza
+            )
+
+        _gtm = d.pop("GTM", UNSET)
+        gtm: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GTM
+            | Unset
+        )
+        if isinstance(_gtm, Unset):
+            gtm = UNSET
+        else:
+            gtm = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GTM.from_dict(
+                _gtm
+            )
+
+        _cmr = d.pop("CMR", UNSET)
+        cmr: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CMR
+            | Unset
+        )
+        if isinstance(_cmr, Unset):
+            cmr = UNSET
+        else:
+            cmr = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CMR.from_dict(
+                _cmr
+            )
+
+        _lva = d.pop("LVA", UNSET)
+        lva: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LVA
+            | Unset
+        )
+        if isinstance(_lva, Unset):
+            lva = UNSET
+        else:
+            lva = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LVA.from_dict(
+                _lva
+            )
+
+        _dom = d.pop("DOM", UNSET)
+        dom: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DOM
+            | Unset
+        )
+        if isinstance(_dom, Unset):
+            dom = UNSET
+        else:
+            dom = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DOM.from_dict(
+                _dom
+            )
+
+        _aze = d.pop("AZE", UNSET)
+        aze: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AZE
+            | Unset
+        )
+        if isinstance(_aze, Unset):
+            aze = UNSET
+        else:
+            aze = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AZE.from_dict(
+                _aze
+            )
+
+        _geo = d.pop("GEO", UNSET)
+        geo: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GEO
+            | Unset
+        )
+        if isinstance(_geo, Unset):
+            geo = UNSET
+        else:
+            geo = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GEO.from_dict(
+                _geo
+            )
+
+        _sen = d.pop("SEN", UNSET)
+        sen: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SEN
+            | Unset
+        )
+        if isinstance(_sen, Unset):
+            sen = UNSET
+        else:
+            sen = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SEN.from_dict(
+                _sen
+            )
+
+        _tza = d.pop("TZA", UNSET)
+        tza: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TZA
+            | Unset
+        )
+        if isinstance(_tza, Unset):
+            tza = UNSET
+        else:
+            tza = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TZA.from_dict(
+                _tza
+            )
+
+        _zwe = d.pop("ZWE", UNSET)
+        zwe: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZWE
+            | Unset
+        )
+        if isinstance(_zwe, Unset):
+            zwe = UNSET
+        else:
+            zwe = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZWE.from_dict(
+                _zwe
+            )
+
+        _kwt = d.pop("KWT", UNSET)
+        kwt: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KWT
+            | Unset
+        )
+        if isinstance(_kwt, Unset):
+            kwt = UNSET
+        else:
+            kwt = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KWT.from_dict(
+                _kwt
+            )
+
+        _mlt = d.pop("MLT", UNSET)
+        mlt: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLT
+            | Unset
+        )
+        if isinstance(_mlt, Unset):
+            mlt = UNSET
+        else:
+            mlt = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLT.from_dict(
+                _mlt
+            )
+
+        _omn = d.pop("OMN", UNSET)
+        omn: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0OMN
+            | Unset
+        )
+        if isinstance(_omn, Unset):
+            omn = UNSET
+        else:
+            omn = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0OMN.from_dict(
+                _omn
+            )
+
+        _bol = d.pop("BOL", UNSET)
+        bol: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BOL
+            | Unset
+        )
+        if isinstance(_bol, Unset):
+            bol = UNSET
+        else:
+            bol = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BOL.from_dict(
+                _bol
+            )
+
+        _slv = d.pop("SLV", UNSET)
+        slv: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLV
+            | Unset
+        )
+        if isinstance(_slv, Unset):
+            slv = UNSET
+        else:
+            slv = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLV.from_dict(
+                _slv
+            )
+
+        _arm = d.pop("ARM", UNSET)
+        arm: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARM
+            | Unset
+        )
+        if isinstance(_arm, Unset):
+            arm = UNSET
+        else:
+            arm = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARM.from_dict(
+                _arm
+            )
+
+        _pry = d.pop("PRY", UNSET)
+        pry: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRY
+            | Unset
+        )
+        if isinstance(_pry, Unset):
+            pry = UNSET
+        else:
+            pry = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRY.from_dict(
+                _pry
+            )
+
+        _irq = d.pop("IRQ", UNSET)
+        irq: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRQ
+            | Unset
+        )
+        if isinstance(_irq, Unset):
+            irq = UNSET
+        else:
+            irq = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRQ.from_dict(
+                _irq
+            )
+
+        _khm = d.pop("KHM", UNSET)
+        khm: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KHM
+            | Unset
+        )
+        if isinstance(_khm, Unset):
+            khm = UNSET
+        else:
+            khm = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KHM.from_dict(
+                _khm
+            )
+
+        _bih = d.pop("BIH", UNSET)
+        bih: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BIH
+            | Unset
+        )
+        if isinstance(_bih, Unset):
+            bih = UNSET
+        else:
+            bih = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BIH.from_dict(
+                _bih
+            )
+
+        _ago = d.pop("AGO", UNSET)
+        ago: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AGO
+            | Unset
+        )
+        if isinstance(_ago, Unset):
+            ago = UNSET
+        else:
+            ago = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AGO.from_dict(
+                _ago
+            )
+
+        _bhr = d.pop("BHR", UNSET)
+        bhr: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHR
+            | Unset
+        )
+        if isinstance(_bhr, Unset):
+            bhr = UNSET
+        else:
+            bhr = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHR.from_dict(
+                _bhr
+            )
+
+        _alb = d.pop("ALB", UNSET)
+        alb: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALB
+            | Unset
+        )
+        if isinstance(_alb, Unset):
+            alb = UNSET
+        else:
+            alb = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALB.from_dict(
+                _alb
+            )
+
+        _kaz = d.pop("KAZ", UNSET)
+        kaz: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KAZ
+            | Unset
+        )
+        if isinstance(_kaz, Unset):
+            kaz = UNSET
+        else:
+            kaz = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KAZ.from_dict(
+                _kaz
+            )
+
+        _civ = d.pop("CIV", UNSET)
+        civ: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CIV
+            | Unset
+        )
+        if isinstance(_civ, Unset):
+            civ = UNSET
+        else:
+            civ = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CIV.from_dict(
+                _civ
+            )
+
+        _eth = d.pop("ETH", UNSET)
+        eth: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ETH
+            | Unset
+        )
+        if isinstance(_eth, Unset):
+            eth = UNSET
+        else:
+            eth = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ETH.from_dict(
+                _eth
+            )
+
+        _mus = d.pop("MUS", UNSET)
+        mus: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS
+            | Unset
+        )
+        if isinstance(_mus, Unset):
+            mus = UNSET
+        else:
+            mus = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS.from_dict(
+                _mus
+            )
+
+        _zmb = d.pop("ZMB", UNSET)
+        zmb: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZMB
+            | Unset
+        )
+        if isinstance(_zmb, Unset):
+            zmb = UNSET
+        else:
+            zmb = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZMB.from_dict(
+                _zmb
+            )
+
+        _mkd = d.pop("MKD", UNSET)
+        mkd: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MKD
+            | Unset
+        )
+        if isinstance(_mkd, Unset):
+            mkd = UNSET
+        else:
+            mkd = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MKD.from_dict(
+                _mkd
+            )
+
+        _cod = d.pop("COD", UNSET)
+        cod: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COD
+            | Unset
+        )
+        if isinstance(_cod, Unset):
+            cod = UNSET
+        else:
+            cod = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COD.from_dict(
+                _cod
+            )
+
+        _blr = d.pop("BLR", UNSET)
+        blr: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLR
+            | Unset
+        )
+        if isinstance(_blr, Unset):
+            blr = UNSET
+        else:
+            blr = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLR.from_dict(
+                _blr
+            )
+
+        _moz = d.pop("MOZ", UNSET)
+        moz: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MOZ
+            | Unset
+        )
+        if isinstance(_moz, Unset):
+            moz = UNSET
+        else:
+            moz = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MOZ.from_dict(
+                _moz
+            )
+
+        _reu = d.pop("REU", UNSET)
+        reu: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0REU
+            | Unset
+        )
+        if isinstance(_reu, Unset):
+            reu = UNSET
+        else:
+            reu = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0REU.from_dict(
+                _reu
+            )
+
+        _tto = d.pop("TTO", UNSET)
+        tto: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TTO
+            | Unset
+        )
+        if isinstance(_tto, Unset):
+            tto = UNSET
+        else:
+            tto = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TTO.from_dict(
+                _tto
+            )
+
+        _guf = d.pop("GUF", UNSET)
+        guf: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUF
+            | Unset
+        )
+        if isinstance(_guf, Unset):
+            guf = UNSET
+        else:
+            guf = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUF.from_dict(
+                _guf
+            )
+
+        _isl = d.pop("ISL", UNSET)
+        isl: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISL
+            | Unset
+        )
+        if isinstance(_isl, Unset):
+            isl = UNSET
+        else:
+            isl = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISL.from_dict(
+                _isl
+            )
+
+        _mmr = d.pop("MMR", UNSET)
+        mmr: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MMR
+            | Unset
+        )
+        if isinstance(_mmr, Unset):
+            mmr = UNSET
+        else:
+            mmr = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MMR.from_dict(
+                _mmr
+            )
+
+        _hnd = d.pop("HND", UNSET)
+        hnd: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HND
+            | Unset
+        )
+        if isinstance(_hnd, Unset):
+            hnd = UNSET
+        else:
+            hnd = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HND.from_dict(
+                _hnd
+            )
+
+        _rwa = d.pop("RWA", UNSET)
+        rwa: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RWA
+            | Unset
+        )
+        if isinstance(_rwa, Unset):
+            rwa = UNSET
+        else:
+            rwa = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RWA.from_dict(
+                _rwa
+            )
+
+        _mdg = d.pop("MDG", UNSET)
+        mdg: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDG
+            | Unset
+        )
+        if isinstance(_mdg, Unset):
+            mdg = UNSET
+        else:
+            mdg = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDG.from_dict(
+                _mdg
+            )
+
+        _ben = d.pop("BEN", UNSET)
+        ben: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEN
+            | Unset
+        )
+        if isinstance(_ben, Unset):
+            ben = UNSET
+        else:
+            ben = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEN.from_dict(
+                _ben
+            )
+
+        _uzb = d.pop("UZB", UNSET)
+        uzb: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UZB
+            | Unset
+        )
+        if isinstance(_uzb, Unset):
+            uzb = UNSET
+        else:
+            uzb = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UZB.from_dict(
+                _uzb
+            )
+
+        _nam = d.pop("NAM", UNSET)
+        nam: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NAM
+            | Unset
+        )
+        if isinstance(_nam, Unset):
+            nam = UNSET
+        else:
+            nam = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NAM.from_dict(
+                _nam
+            )
+
+        _bwa = d.pop("BWA", UNSET)
+        bwa: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BWA
+            | Unset
+        )
+        if isinstance(_bwa, Unset):
+            bwa = UNSET
+        else:
+            bwa = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BWA.from_dict(
+                _bwa
+            )
+
+        _mda = d.pop("MDA", UNSET)
+        mda: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDA
+            | Unset
+        )
+        if isinstance(_mda, Unset):
+            mda = UNSET
+        else:
+            mda = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDA.from_dict(
+                _mda
+            )
+
+        _jey = d.pop("JEY", UNSET)
+        jey: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JEY
+            | Unset
+        )
+        if isinstance(_jey, Unset):
+            jey = UNSET
+        else:
+            jey = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JEY.from_dict(
+                _jey
+            )
+
+        _nic = d.pop("NIC", UNSET)
+        nic: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIC
+            | Unset
+        )
+        if isinstance(_nic, Unset):
+            nic = UNSET
+        else:
+            nic = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIC.from_dict(
+                _nic
+            )
+
+        _sdn = d.pop("SDN", UNSET)
+        sdn: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SDN
+            | Unset
+        )
+        if isinstance(_sdn, Unset):
+            sdn = UNSET
+        else:
+            sdn = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SDN.from_dict(
+                _sdn
+            )
+
+        _jam = d.pop("JAM", UNSET)
+        jam: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JAM
+            | Unset
+        )
+        if isinstance(_jam, Unset):
+            jam = UNSET
+        else:
+            jam = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JAM.from_dict(
+                _jam
+            )
+
+        _imn = d.pop("IMN", UNSET)
+        imn: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IMN
+            | Unset
+        )
+        if isinstance(_imn, Unset):
+            imn = UNSET
+        else:
+            imn = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IMN.from_dict(
+                _imn
+            )
+
+        _bfa = d.pop("BFA", UNSET)
+        bfa: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BFA
+            | Unset
+        )
+        if isinstance(_bfa, Unset):
+            bfa = UNSET
+        else:
+            bfa = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BFA.from_dict(
+                _bfa
+            )
+
+        _mng = d.pop("MNG", UNSET)
+        mng: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNG
+            | Unset
+        )
+        if isinstance(_mng, Unset):
+            mng = UNSET
+        else:
+            mng = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNG.from_dict(
+                _mng
+            )
+
+        _mne = d.pop("MNE", UNSET)
+        mne: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNE
+            | Unset
+        )
+        if isinstance(_mne, Unset):
+            mne = UNSET
+        else:
+            mne = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNE.from_dict(
+                _mne
+            )
+
+        _mco = d.pop("MCO", UNSET)
+        mco: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MCO
+            | Unset
+        )
+        if isinstance(_mco, Unset):
+            mco = UNSET
+        else:
+            mco = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MCO.from_dict(
+                _mco
+            )
+
+        _tgo = d.pop("TGO", UNSET)
+        tgo: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TGO
+            | Unset
+        )
+        if isinstance(_tgo, Unset):
+            tgo = UNSET
+        else:
+            tgo = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TGO.from_dict(
+                _tgo
+            )
+
+        _afg = d.pop("AFG", UNSET)
+        afg: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AFG
+            | Unset
+        )
+        if isinstance(_afg, Unset):
+            afg = UNSET
+        else:
+            afg = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AFG.from_dict(
+                _afg
+            )
+
+        _lby = d.pop("LBY", UNSET)
+        lby: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBY
+            | Unset
+        )
+        if isinstance(_lby, Unset):
+            lby = UNSET
+        else:
+            lby = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBY.from_dict(
+                _lby
+            )
+
+        _xkx = d.pop("XKX", UNSET)
+        xkx: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0XKX
+            | Unset
+        )
+        if isinstance(_xkx, Unset):
+            xkx = UNSET
+        else:
+            xkx = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0XKX.from_dict(
+                _xkx
+            )
+
+        _cym = d.pop("CYM", UNSET)
+        cym: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYM
+            | Unset
+        )
+        if isinstance(_cym, Unset):
+            cym = UNSET
+        else:
+            cym = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYM.from_dict(
+                _cym
+            )
+
+        _mwi = d.pop("MWI", UNSET)
+        mwi: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MWI
+            | Unset
+        )
+        if isinstance(_mwi, Unset):
+            mwi = UNSET
+        else:
+            mwi = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MWI.from_dict(
+                _mwi
+            )
+
+        _som = d.pop("SOM", UNSET)
+        som: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SOM
+            | Unset
+        )
+        if isinstance(_som, Unset):
+            som = UNSET
+        else:
+            som = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SOM.from_dict(
+                _som
+            )
+
+        _png = d.pop("PNG", UNSET)
+        png: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PNG
+            | Unset
+        )
+        if isinstance(_png, Unset):
+            png = UNSET
+        else:
+            png = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PNG.from_dict(
+                _png
+            )
+
+        _mdv = d.pop("MDV", UNSET)
+        mdv: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDV
+            | Unset
+        )
+        if isinstance(_mdv, Unset):
+            mdv = UNSET
+        else:
+            mdv = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDV.from_dict(
+                _mdv
+            )
+
+        _mli = d.pop("MLI", UNSET)
+        mli: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLI
+            | Unset
+        )
+        if isinstance(_mli, Unset):
+            mli = UNSET
+        else:
+            mli = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLI.from_dict(
+                _mli
+            )
+
+        _gin = d.pop("GIN", UNSET)
+        gin: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIN
+            | Unset
+        )
+        if isinstance(_gin, Unset):
+            gin = UNSET
+        else:
+            gin = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIN.from_dict(
+                _gin
+            )
+
+        _pse = d.pop("PSE", UNSET)
+        pse: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PSE
+            | Unset
+        )
+        if isinstance(_pse, Unset):
+            pse = UNSET
+        else:
+            pse = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PSE.from_dict(
+                _pse
+            )
+
+        _gab = d.pop("GAB", UNSET)
+        gab: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GAB
+            | Unset
+        )
+        if isinstance(_gab, Unset):
+            gab = UNSET
+        else:
+            gab = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GAB.from_dict(
+                _gab
+            )
+
+        _lie = d.pop("LIE", UNSET)
+        lie: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LIE
+            | Unset
+        )
+        if isinstance(_lie, Unset):
+            lie = UNSET
+        else:
+            lie = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LIE.from_dict(
+                _lie
+            )
+
+        _hti = d.pop("HTI", UNSET)
+        hti: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HTI
+            | Unset
+        )
+        if isinstance(_hti, Unset):
+            hti = UNSET
+        else:
+            hti = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HTI.from_dict(
+                _hti
+            )
+
+        _syr = d.pop("SYR", UNSET)
+        syr: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYR
+            | Unset
+        )
+        if isinstance(_syr, Unset):
+            syr = UNSET
+        else:
+            syr = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYR.from_dict(
+                _syr
+            )
+
+        _brb = d.pop("BRB", UNSET)
+        brb: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRB
+            | Unset
+        )
+        if isinstance(_brb, Unset):
+            brb = UNSET
+        else:
+            brb = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRB.from_dict(
+                _brb
+            )
+
+        _yem = d.pop("YEM", UNSET)
+        yem: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0YEM
+            | Unset
+        )
+        if isinstance(_yem, Unset):
+            yem = UNSET
+        else:
+            yem = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0YEM.from_dict(
+                _yem
+            )
+
+        _ggy = d.pop("GGY", UNSET)
+        ggy: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GGY
+            | Unset
+        )
+        if isinstance(_ggy, Unset):
+            ggy = UNSET
+        else:
+            ggy = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GGY.from_dict(
+                _ggy
+            )
+
+        _ncl = d.pop("NCL", UNSET)
+        ncl: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NCL
+            | Unset
+        )
+        if isinstance(_ncl, Unset):
+            ncl = UNSET
+        else:
+            ncl = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NCL.from_dict(
+                _ncl
+            )
+
+        _and_ = d.pop("AND", UNSET)
+        and_: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AND
+            | Unset
+        )
+        if isinstance(_and_, Unset):
+            and_ = UNSET
+        else:
+            and_ = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AND.from_dict(
+                _and_
+            )
+
+        _sur = d.pop("SUR", UNSET)
+        sur: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SUR
+            | Unset
+        )
+        if isinstance(_sur, Unset):
+            sur = UNSET
+        else:
+            sur = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SUR.from_dict(
+                _sur
+            )
+
+        _myt = d.pop("MYT", UNSET)
+        myt: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYT
+            | Unset
+        )
+        if isinstance(_myt, Unset):
+            myt = UNSET
+        else:
+            myt = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYT.from_dict(
+                _myt
+            )
+
+        _kgz = d.pop("KGZ", UNSET)
+        kgz: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KGZ
+            | Unset
+        )
+        if isinstance(_kgz, Unset):
+            kgz = UNSET
+        else:
+            kgz = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KGZ.from_dict(
+                _kgz
+            )
+
+        _bhs = d.pop("BHS", UNSET)
+        bhs: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHS
+            | Unset
+        )
+        if isinstance(_bhs, Unset):
+            bhs = UNSET
+        else:
+            bhs = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHS.from_dict(
+                _bhs
+            )
+
+        _gib = d.pop("GIB", UNSET)
+        gib: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIB
+            | Unset
+        )
+        if isinstance(_gib, Unset):
+            gib = UNSET
+        else:
+            gib = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIB.from_dict(
+                _gib
+            )
+
+        _cog = d.pop("COG", UNSET)
+        cog: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COG
+            | Unset
+        )
+        if isinstance(_cog, Unset):
+            cog = UNSET
+        else:
+            cog = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COG.from_dict(
+                _cog
+            )
+
+        _fji = d.pop("FJI", UNSET)
+        fji: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FJI
+            | Unset
+        )
+        if isinstance(_fji, Unset):
+            fji = UNSET
+        else:
+            fji = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FJI.from_dict(
+                _fji
+            )
+
+        _blm = d.pop("BLM", UNSET)
+        blm: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLM
+            | Unset
+        )
+        if isinstance(_blm, Unset):
+            blm = UNSET
+        else:
+            blm = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLM.from_dict(
+                _blm
+            )
+
+        _cuw = d.pop("CUW", UNSET)
+        cuw: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUW
+            | Unset
+        )
+        if isinstance(_cuw, Unset):
+            cuw = UNSET
+        else:
+            cuw = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUW.from_dict(
+                _cuw
+            )
+
+        _cub = d.pop("CUB", UNSET)
+        cub: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUB
+            | Unset
+        )
+        if isinstance(_cub, Unset):
+            cub = UNSET
+        else:
+            cub = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUB.from_dict(
+                _cub
+            )
+
+        _sle = d.pop("SLE", UNSET)
+        sle: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLE
+            | Unset
+        )
+        if isinstance(_sle, Unset):
+            sle = UNSET
+        else:
+            sle = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLE.from_dict(
+                _sle
+            )
+
+        _blz = d.pop("BLZ", UNSET)
+        blz: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLZ
+            | Unset
+        )
+        if isinstance(_blz, Unset):
+            blz = UNSET
+        else:
+            blz = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLZ.from_dict(
+                _blz
+            )
+
+        _ner = d.pop("NER", UNSET)
+        ner: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NER
+            | Unset
+        )
+        if isinstance(_ner, Unset):
+            ner = UNSET
+        else:
+            ner = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NER.from_dict(
+                _ner
+            )
+
+        _lbr = d.pop("LBR", UNSET)
+        lbr: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBR
+            | Unset
+        )
+        if isinstance(_lbr, Unset):
+            lbr = UNSET
+        else:
+            lbr = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBR.from_dict(
+                _lbr
+            )
+
+        _vir = d.pop("VIR", UNSET)
+        vir: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VIR
+            | Unset
+        )
+        if isinstance(_vir, Unset):
+            vir = UNSET
+        else:
+            vir = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VIR.from_dict(
+                _vir
+            )
+
+        _pyf = d.pop("PYF", UNSET)
+        pyf: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PYF
+            | Unset
+        )
+        if isinstance(_pyf, Unset):
+            pyf = UNSET
+        else:
+            pyf = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PYF.from_dict(
+                _pyf
+            )
+
+        _gum = d.pop("GUM", UNSET)
+        gum: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUM
+            | Unset
+        )
+        if isinstance(_gum, Unset):
+            gum = UNSET
+        else:
+            gum = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUM.from_dict(
+                _gum
+            )
+
+        _mrt = d.pop("MRT", UNSET)
+        mrt: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MRT
+            | Unset
+        )
+        if isinstance(_mrt, Unset):
+            mrt = UNSET
+        else:
+            mrt = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MRT.from_dict(
+                _mrt
+            )
+
+        _abw = d.pop("ABW", UNSET)
+        abw: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ABW
+            | Unset
+        )
+        if isinstance(_abw, Unset):
+            abw = UNSET
+        else:
+            abw = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ABW.from_dict(
+                _abw
+            )
+
+        _syc = d.pop("SYC", UNSET)
+        syc: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYC
+            | Unset
+        )
+        if isinstance(_syc, Unset):
+            syc = UNSET
+        else:
+            syc = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYC.from_dict(
+                _syc
+            )
+
+        _guy = d.pop("GUY", UNSET)
+        guy: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUY
+            | Unset
+        )
+        if isinstance(_guy, Unset):
+            guy = UNSET
+        else:
+            guy = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUY.from_dict(
+                _guy
+            )
+
+        _lso = d.pop("LSO", UNSET)
+        lso: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LSO
+            | Unset
+        )
+        if isinstance(_lso, Unset):
+            lso = UNSET
+        else:
+            lso = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LSO.from_dict(
+                _lso
+            )
+
+        _swz = d.pop("SWZ", UNSET)
+        swz: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWZ
+            | Unset
+        )
+        if isinstance(_swz, Unset):
+            swz = UNSET
+        else:
+            swz = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWZ.from_dict(
+                _swz
+            )
+
+        _ssd = d.pop("SSD", UNSET)
+        ssd: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SSD
+            | Unset
+        )
+        if isinstance(_ssd, Unset):
+            ssd = UNSET
+        else:
+            ssd = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SSD.from_dict(
+                _ssd
+            )
+
+        _lca = d.pop("LCA", UNSET)
+        lca: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LCA
+            | Unset
+        )
+        if isinstance(_lca, Unset):
+            lca = UNSET
+        else:
+            lca = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LCA.from_dict(
+                _lca
+            )
+
+        _mac = d.pop("MAC", UNSET)
+        mac: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAC
+            | Unset
+        )
+        if isinstance(_mac, Unset):
+            mac = UNSET
+        else:
+            mac = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAC.from_dict(
+                _mac
+            )
+
+        _smr = d.pop("SMR", UNSET)
+        smr: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SMR
+            | Unset
+        )
+        if isinstance(_smr, Unset):
+            smr = UNSET
+        else:
+            smr = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SMR.from_dict(
+                _smr
+            )
+
+        _lao = d.pop("LAO", UNSET)
+        lao: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LAO
+            | Unset
+        )
+        if isinstance(_lao, Unset):
+            lao = UNSET
+        else:
+            lao = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LAO.from_dict(
+                _lao
+            )
+
+        _brn = d.pop("BRN", UNSET)
+        brn: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRN
+            | Unset
+        )
+        if isinstance(_brn, Unset):
+            brn = UNSET
+        else:
+            brn = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRN.from_dict(
+                _brn
+            )
+
+        _tcd = d.pop("TCD", UNSET)
+        tcd: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCD
+            | Unset
+        )
+        if isinstance(_tcd, Unset):
+            tcd = UNSET
+        else:
+            tcd = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCD.from_dict(
+                _tcd
+            )
+
+        _bmu = d.pop("BMU", UNSET)
+        bmu: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BMU
+            | Unset
+        )
+        if isinstance(_bmu, Unset):
+            bmu = UNSET
+        else:
+            bmu = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BMU.from_dict(
+                _bmu
+            )
+
+        _vgb = d.pop("VGB", UNSET)
+        vgb: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VGB
+            | Unset
+        )
+        if isinstance(_vgb, Unset):
+            vgb = UNSET
+        else:
+            vgb = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VGB.from_dict(
+                _vgb
+            )
+
+        _prk = d.pop("PRK", UNSET)
+        prk: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRK
+            | Unset
+        )
+        if isinstance(_prk, Unset):
+            prk = UNSET
+        else:
+            prk = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRK.from_dict(
+                _prk
+            )
+
+        _btn = d.pop("BTN", UNSET)
+        btn: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BTN
+            | Unset
+        )
+        if isinstance(_btn, Unset):
+            btn = UNSET
+        else:
+            btn = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BTN.from_dict(
+                _btn
+            )
+
+        _bdi = d.pop("BDI", UNSET)
+        bdi: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BDI
+            | Unset
+        )
+        if isinstance(_bdi, Unset):
+            bdi = UNSET
+        else:
+            bdi = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BDI.from_dict(
+                _bdi
+            )
+
+        _fro = d.pop("FRO", UNSET)
+        fro: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRO
+            | Unset
+        )
+        if isinstance(_fro, Unset):
+            fro = UNSET
+        else:
+            fro = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRO.from_dict(
+                _fro
+            )
+
+        _tjk = d.pop("TJK", UNSET)
+        tjk: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TJK
+            | Unset
+        )
+        if isinstance(_tjk, Unset):
+            tjk = UNSET
+        else:
+            tjk = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TJK.from_dict(
+                _tjk
+            )
+
+        _gmb = d.pop("GMB", UNSET)
+        gmb: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GMB
+            | Unset
+        )
+        if isinstance(_gmb, Unset):
+            gmb = UNSET
+        else:
+            gmb = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GMB.from_dict(
+                _gmb
+            )
+
+        _stp = d.pop("STP", UNSET)
+        stp: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0STP
+            | Unset
+        )
+        if isinstance(_stp, Unset):
+            stp = UNSET
+        else:
+            stp = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0STP.from_dict(
+                _stp
+            )
+
+        _ant = d.pop("ANT", UNSET)
+        ant: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ANT
+            | Unset
+        )
+        if isinstance(_ant, Unset):
+            ant = UNSET
+        else:
+            ant = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ANT.from_dict(
+                _ant
+            )
+
+        _vct = d.pop("VCT", UNSET)
+        vct: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VCT
+            | Unset
+        )
+        if isinstance(_vct, Unset):
+            vct = UNSET
+        else:
+            vct = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VCT.from_dict(
+                _vct
+            )
+
+        _dji = d.pop("DJI", UNSET)
+        dji: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DJI
+            | Unset
+        )
+        if isinstance(_dji, Unset):
+            dji = UNSET
+        else:
+            dji = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DJI.from_dict(
+                _dji
+            )
+
+        _cpv = d.pop("CPV", UNSET)
+        cpv: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CPV
+            | Unset
+        )
+        if isinstance(_cpv, Unset):
+            cpv = UNSET
+        else:
+            cpv = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CPV.from_dict(
+                _cpv
+            )
+
+        _tkm = d.pop("TKM", UNSET)
+        tkm: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKM
+            | Unset
+        )
+        if isinstance(_tkm, Unset):
+            tkm = UNSET
+        else:
+            tkm = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKM.from_dict(
+                _tkm
+            )
+
+        _atg = d.pop("ATG", UNSET)
+        atg: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATG
+            | Unset
+        )
+        if isinstance(_atg, Unset):
+            atg = UNSET
+        else:
+            atg = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATG.from_dict(
+                _atg
+            )
+
+        _tca = d.pop("TCA", UNSET)
+        tca: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCA
+            | Unset
+        )
+        if isinstance(_tca, Unset):
+            tca = UNSET
+        else:
+            tca = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCA.from_dict(
+                _tca
+            )
+
+        _kna = d.pop("KNA", UNSET)
+        kna: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KNA
+            | Unset
+        )
+        if isinstance(_kna, Unset):
+            kna = UNSET
+        else:
+            kna = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KNA.from_dict(
+                _kna
+            )
+
+        _grd = d.pop("GRD", UNSET)
+        grd: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRD
+            | Unset
+        )
+        if isinstance(_grd, Unset):
+            grd = UNSET
+        else:
+            grd = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRD.from_dict(
+                _grd
+            )
+
+        _asm = d.pop("ASM", UNSET)
+        asm: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ASM
+            | Unset
+        )
+        if isinstance(_asm, Unset):
+            asm = UNSET
+        else:
+            asm = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ASM.from_dict(
+                _asm
+            )
+
+        _vut = d.pop("VUT", UNSET)
+        vut: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VUT
+            | Unset
+        )
+        if isinstance(_vut, Unset):
+            vut = UNSET
+        else:
+            vut = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VUT.from_dict(
+                _vut
+            )
+
+        _gnq = d.pop("GNQ", UNSET)
+        gnq: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNQ
+            | Unset
+        )
+        if isinstance(_gnq, Unset):
+            gnq = UNSET
+        else:
+            gnq = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNQ.from_dict(
+                _gnq
+            )
+
+        _grl = d.pop("GRL", UNSET)
+        grl: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRL
+            | Unset
+        )
+        if isinstance(_grl, Unset):
+            grl = UNSET
+        else:
+            grl = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRL.from_dict(
+                _grl
+            )
+
+        _sxm = d.pop("SXM", UNSET)
+        sxm: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SXM
+            | Unset
+        )
+        if isinstance(_sxm, Unset):
+            sxm = UNSET
+        else:
+            sxm = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SXM.from_dict(
+                _sxm
+            )
+
+        _mnp = d.pop("MNP", UNSET)
+        mnp: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNP
+            | Unset
+        )
+        if isinstance(_mnp, Unset):
+            mnp = UNSET
+        else:
+            mnp = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNP.from_dict(
+                _mnp
+            )
+
+        _com = d.pop("COM", UNSET)
+        com: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COM
+            | Unset
+        )
+        if isinstance(_com, Unset):
+            com = UNSET
+        else:
+            com = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COM.from_dict(
+                _com
+            )
+
+        _tls = d.pop("TLS", UNSET)
+        tls: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TLS
+            | Unset
+        )
+        if isinstance(_tls, Unset):
+            tls = UNSET
+        else:
+            tls = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TLS.from_dict(
+                _tls
+            )
+
+        _sjm = d.pop("SJM", UNSET)
+        sjm: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SJM
+            | Unset
+        )
+        if isinstance(_sjm, Unset):
+            sjm = UNSET
+        else:
+            sjm = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SJM.from_dict(
+                _sjm
+            )
+
+        _caf = d.pop("CAF", UNSET)
+        caf: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAF
+            | Unset
+        )
+        if isinstance(_caf, Unset):
+            caf = UNSET
+        else:
+            caf = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAF.from_dict(
+                _caf
+            )
+
+        _dma = d.pop("DMA", UNSET)
+        dma: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DMA
+            | Unset
+        )
+        if isinstance(_dma, Unset):
+            dma = UNSET
+        else:
+            dma = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DMA.from_dict(
+                _dma
+            )
+
+        _maf = d.pop("MAF", UNSET)
+        maf: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAF
+            | Unset
+        )
+        if isinstance(_maf, Unset):
+            maf = UNSET
+        else:
+            maf = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAF.from_dict(
+                _maf
+            )
+
+        _wsm = d.pop("WSM", UNSET)
+        wsm: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WSM
+            | Unset
+        )
+        if isinstance(_wsm, Unset):
+            wsm = UNSET
+        else:
+            wsm = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WSM.from_dict(
+                _wsm
+            )
+
+        _bes = d.pop("BES", UNSET)
+        bes: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BES
+            | Unset
+        )
+        if isinstance(_bes, Unset):
+            bes = UNSET
+        else:
+            bes = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BES.from_dict(
+                _bes
+            )
+
+        _mhl = d.pop("MHL", UNSET)
+        mhl: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MHL
+            | Unset
+        )
+        if isinstance(_mhl, Unset):
+            mhl = UNSET
+        else:
+            mhl = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MHL.from_dict(
+                _mhl
+            )
+
+        _aia = d.pop("AIA", UNSET)
+        aia: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AIA
+            | Unset
+        )
+        if isinstance(_aia, Unset):
+            aia = UNSET
+        else:
+            aia = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AIA.from_dict(
+                _aia
+            )
+
+        _ton = d.pop("TON", UNSET)
+        ton: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TON
+            | Unset
+        )
+        if isinstance(_ton, Unset):
+            ton = UNSET
+        else:
+            ton = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TON.from_dict(
+                _ton
+            )
+
+        _cok = d.pop("COK", UNSET)
+        cok: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COK
+            | Unset
+        )
+        if isinstance(_cok, Unset):
+            cok = UNSET
+        else:
+            cok = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COK.from_dict(
+                _cok
+            )
+
+        _slb = d.pop("SLB", UNSET)
+        slb: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLB
+            | Unset
+        )
+        if isinstance(_slb, Unset):
+            slb = UNSET
+        else:
+            slb = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLB.from_dict(
+                _slb
+            )
+
+        _spm = d.pop("SPM", UNSET)
+        spm: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SPM
+            | Unset
+        )
+        if isinstance(_spm, Unset):
+            spm = UNSET
+        else:
+            spm = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SPM.from_dict(
+                _spm
+            )
+
+        _gnb = d.pop("GNB", UNSET)
+        gnb: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNB
+            | Unset
+        )
+        if isinstance(_gnb, Unset):
+            gnb = UNSET
+        else:
+            gnb = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNB.from_dict(
+                _gnb
+            )
+
+        _ata = d.pop("ATA", UNSET)
+        ata: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATA
+            | Unset
+        )
+        if isinstance(_ata, Unset):
+            ata = UNSET
+        else:
+            ata = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATA.from_dict(
+                _ata
+            )
+
+        _tuv = d.pop("TUV", UNSET)
+        tuv: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUV
+            | Unset
+        )
+        if isinstance(_tuv, Unset):
+            tuv = UNSET
+        else:
+            tuv = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUV.from_dict(
+                _tuv
+            )
+
+        _ala = d.pop("ALA", UNSET)
+        ala: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALA
+            | Unset
+        )
+        if isinstance(_ala, Unset):
+            ala = UNSET
+        else:
+            ala = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALA.from_dict(
+                _ala
+            )
+
+        _iot = d.pop("IOT", UNSET)
+        iot: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IOT
+            | Unset
+        )
+        if isinstance(_iot, Unset):
+            iot = UNSET
+        else:
+            iot = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IOT.from_dict(
+                _iot
+            )
+
+        _eri = d.pop("ERI", UNSET)
+        eri: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ERI
+            | Unset
+        )
+        if isinstance(_eri, Unset):
+            eri = UNSET
+        else:
+            eri = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ERI.from_dict(
+                _eri
+            )
+
+        _plw = d.pop("PLW", UNSET)
+        plw: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PLW
+            | Unset
+        )
+        if isinstance(_plw, Unset):
+            plw = UNSET
+        else:
+            plw = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PLW.from_dict(
+                _plw
+            )
+
+        _fsm = d.pop("FSM", UNSET)
+        fsm: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FSM
+            | Unset
+        )
+        if isinstance(_fsm, Unset):
+            fsm = UNSET
+        else:
+            fsm = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FSM.from_dict(
+                _fsm
+            )
+
+        _nru = d.pop("NRU", UNSET)
+        nru: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NRU
+            | Unset
+        )
+        if isinstance(_nru, Unset):
+            nru = UNSET
+        else:
+            nru = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NRU.from_dict(
+                _nru
+            )
+
+        _pcn = d.pop("PCN", UNSET)
+        pcn: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PCN
+            | Unset
+        )
+        if isinstance(_pcn, Unset):
+            pcn = UNSET
+        else:
+            pcn = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PCN.from_dict(
+                _pcn
+            )
+
+        _flk = d.pop("FLK", UNSET)
+        flk: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FLK
+            | Unset
+        )
+        if isinstance(_flk, Unset):
+            flk = UNSET
+        else:
+            flk = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FLK.from_dict(
+                _flk
+            )
+
+        _msr = d.pop("MSR", UNSET)
+        msr: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MSR
+            | Unset
+        )
+        if isinstance(_msr, Unset):
+            msr = UNSET
+        else:
+            msr = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MSR.from_dict(
+                _msr
+            )
+
+        _vat = d.pop("VAT", UNSET)
+        vat: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VAT
+            | Unset
+        )
+        if isinstance(_vat, Unset):
+            vat = UNSET
+        else:
+            vat = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VAT.from_dict(
+                _vat
+            )
+
+        _kir = d.pop("KIR", UNSET)
+        kir: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KIR
+            | Unset
+        )
+        if isinstance(_kir, Unset):
+            kir = UNSET
+        else:
+            kir = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KIR.from_dict(
+                _kir
+            )
+
+        _shn = d.pop("SHN", UNSET)
+        shn: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SHN
+            | Unset
+        )
+        if isinstance(_shn, Unset):
+            shn = UNSET
+        else:
+            shn = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SHN.from_dict(
+                _shn
+            )
+
+        _niu = d.pop("NIU", UNSET)
+        niu: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIU
+            | Unset
+        )
+        if isinstance(_niu, Unset):
+            niu = UNSET
+        else:
+            niu = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIU.from_dict(
+                _niu
+            )
+
+        _wlf = d.pop("WLF", UNSET)
+        wlf: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WLF
+            | Unset
+        )
+        if isinstance(_wlf, Unset):
+            wlf = UNSET
+        else:
+            wlf = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WLF.from_dict(
+                _wlf
+            )
+
+        _hmd = d.pop("HMD", UNSET)
+        hmd: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HMD
+            | Unset
+        )
+        if isinstance(_hmd, Unset):
+            hmd = UNSET
+        else:
+            hmd = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HMD.from_dict(
+                _hmd
+            )
+
+        _cxr = d.pop("CXR", UNSET)
+        cxr: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CXR
+            | Unset
+        )
+        if isinstance(_cxr, Unset):
+            cxr = UNSET
+        else:
+            cxr = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CXR.from_dict(
+                _cxr
+            )
+
+        _nfk = d.pop("NFK", UNSET)
+        nfk: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NFK
+            | Unset
+        )
+        if isinstance(_nfk, Unset):
+            nfk = UNSET
+        else:
+            nfk = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NFK.from_dict(
+                _nfk
+            )
+
+        _atf = d.pop("ATF", UNSET)
+        atf: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATF
+            | Unset
+        )
+        if isinstance(_atf, Unset):
+            atf = UNSET
+        else:
+            atf = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATF.from_dict(
+                _atf
+            )
+
+        _cck = d.pop("CCK", UNSET)
+        cck: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CCK
+            | Unset
+        )
+        if isinstance(_cck, Unset):
+            cck = UNSET
+        else:
+            cck = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CCK.from_dict(
+                _cck
+            )
+
+        _sgs = d.pop("SGS", UNSET)
+        sgs: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGS
+            | Unset
+        )
+        if isinstance(_sgs, Unset):
+            sgs = UNSET
+        else:
+            sgs = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGS.from_dict(
+                _sgs
+            )
+
+        _bvt = d.pop("BVT", UNSET)
+        bvt: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BVT
+            | Unset
+        )
+        if isinstance(_bvt, Unset):
+            bvt = UNSET
+        else:
+            bvt = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BVT.from_dict(
+                _bvt
+            )
+
+        _umi = d.pop("UMI", UNSET)
+        umi: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UMI
+            | Unset
+        )
+        if isinstance(_umi, Unset):
+            umi = UNSET
+        else:
+            umi = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UMI.from_dict(
+                _umi
+            )
+
+        _esh = d.pop("ESH", UNSET)
+        esh: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESH
+            | Unset
+        )
+        if isinstance(_esh, Unset):
+            esh = UNSET
+        else:
+            esh = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESH.from_dict(
+                _esh
+            )
+
+        _tkl = d.pop("TKL", UNSET)
+        tkl: (
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKL
+            | Unset
+        )
+        if isinstance(_tkl, Unset):
+            tkl = UNSET
+        else:
+            tkl = GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKL.from_dict(
+                _tkl
+            )
+
+        get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0 = cls(
+            usa=usa,
+            gbr=gbr,
+            fra=fra,
+            ind=ind,
+            bra=bra,
+            deu=deu,
+            esp=esp,
+            can=can,
+            aus=aus,
+            nld=nld,
+            ita=ita,
+            zaf=zaf,
+            bel=bel,
+            chn=chn,
+            tur=tur,
+            mex=mex,
+            che=che,
+            nor=nor,
+            are=are,
+            swe=swe,
+            pol=pol,
+            idn=idn,
+            arg=arg,
+            prt=prt,
+            col=col,
+            chl=chl,
+            pak=pak,
+            dnk=dnk,
+            jpn=jpn,
+            nga=nga,
+            sgp=sgp,
+            per=per,
+            nzl=nzl,
+            aut=aut,
+            irl=irl,
+            mys=mys,
+            bgd=bgd,
+            egy=egy,
+            isr=isr,
+            sau=sau,
+            phl=phl,
+            fin=fin,
+            irn=irn,
+            rou=rou,
+            cze=cze,
+            grc=grc,
+            hkg=hkg,
+            hun=hun,
+            ken=ken,
+            mar=mar,
+            vnm=vnm,
+            rus=rus,
+            ukr=ukr,
+            ecu=ecu,
+            tha=tha,
+            lka=lka,
+            kor=kor,
+            bgr=bgr,
+            gha=gha,
+            srb=srb,
+            twn=twn,
+            hrv=hrv,
+            ltu=ltu,
+            pri=pri,
+            svk=svk,
+            tun=tun,
+            est=est,
+            ven=ven,
+            cri=cri,
+            pan=pan,
+            ury=ury,
+            lbn=lbn,
+            lux=lux,
+            cyp=cyp,
+            npl=npl,
+            jor=jor,
+            svn=svn,
+            mtq=mtq,
+            qat=qat,
+            glp=glp,
+            uga=uga,
+            dza=dza,
+            gtm=gtm,
+            cmr=cmr,
+            lva=lva,
+            dom=dom,
+            aze=aze,
+            geo=geo,
+            sen=sen,
+            tza=tza,
+            zwe=zwe,
+            kwt=kwt,
+            mlt=mlt,
+            omn=omn,
+            bol=bol,
+            slv=slv,
+            arm=arm,
+            pry=pry,
+            irq=irq,
+            khm=khm,
+            bih=bih,
+            ago=ago,
+            bhr=bhr,
+            alb=alb,
+            kaz=kaz,
+            civ=civ,
+            eth=eth,
+            mus=mus,
+            zmb=zmb,
+            mkd=mkd,
+            cod=cod,
+            blr=blr,
+            moz=moz,
+            reu=reu,
+            tto=tto,
+            guf=guf,
+            isl=isl,
+            mmr=mmr,
+            hnd=hnd,
+            rwa=rwa,
+            mdg=mdg,
+            ben=ben,
+            uzb=uzb,
+            nam=nam,
+            bwa=bwa,
+            mda=mda,
+            jey=jey,
+            nic=nic,
+            sdn=sdn,
+            jam=jam,
+            imn=imn,
+            bfa=bfa,
+            mng=mng,
+            mne=mne,
+            mco=mco,
+            tgo=tgo,
+            afg=afg,
+            lby=lby,
+            xkx=xkx,
+            cym=cym,
+            mwi=mwi,
+            som=som,
+            png=png,
+            mdv=mdv,
+            mli=mli,
+            gin=gin,
+            pse=pse,
+            gab=gab,
+            lie=lie,
+            hti=hti,
+            syr=syr,
+            brb=brb,
+            yem=yem,
+            ggy=ggy,
+            ncl=ncl,
+            and_=and_,
+            sur=sur,
+            myt=myt,
+            kgz=kgz,
+            bhs=bhs,
+            gib=gib,
+            cog=cog,
+            fji=fji,
+            blm=blm,
+            cuw=cuw,
+            cub=cub,
+            sle=sle,
+            blz=blz,
+            ner=ner,
+            lbr=lbr,
+            vir=vir,
+            pyf=pyf,
+            gum=gum,
+            mrt=mrt,
+            abw=abw,
+            syc=syc,
+            guy=guy,
+            lso=lso,
+            swz=swz,
+            ssd=ssd,
+            lca=lca,
+            mac=mac,
+            smr=smr,
+            lao=lao,
+            brn=brn,
+            tcd=tcd,
+            bmu=bmu,
+            vgb=vgb,
+            prk=prk,
+            btn=btn,
+            bdi=bdi,
+            fro=fro,
+            tjk=tjk,
+            gmb=gmb,
+            stp=stp,
+            ant=ant,
+            vct=vct,
+            dji=dji,
+            cpv=cpv,
+            tkm=tkm,
+            atg=atg,
+            tca=tca,
+            kna=kna,
+            grd=grd,
+            asm=asm,
+            vut=vut,
+            gnq=gnq,
+            grl=grl,
+            sxm=sxm,
+            mnp=mnp,
+            com=com,
+            tls=tls,
+            sjm=sjm,
+            caf=caf,
+            dma=dma,
+            maf=maf,
+            wsm=wsm,
+            bes=bes,
+            mhl=mhl,
+            aia=aia,
+            ton=ton,
+            cok=cok,
+            slb=slb,
+            spm=spm,
+            gnb=gnb,
+            ata=ata,
+            tuv=tuv,
+            ala=ala,
+            iot=iot,
+            eri=eri,
+            plw=plw,
+            fsm=fsm,
+            nru=nru,
+            pcn=pcn,
+            flk=flk,
+            msr=msr,
+            vat=vat,
+            kir=kir,
+            shn=shn,
+            niu=niu,
+            wlf=wlf,
+            hmd=hmd,
+            cxr=cxr,
+            nfk=nfk,
+            atf=atf,
+            cck=cck,
+            sgs=sgs,
+            bvt=bvt,
+            umi=umi,
+            esh=esh,
+            tkl=tkl,
+        )
+
+        return get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0

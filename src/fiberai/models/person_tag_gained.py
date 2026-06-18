@@ -6,6 +6,7 @@ from typing import Any, Literal, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.person_tag_gained_tags_item import PersonTagGainedTagsItem
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PersonTagGained")
@@ -17,15 +18,18 @@ class PersonTagGained:
     Attributes:
         type_ (Literal['person_tag_gained']):
         entity_type (Literal['person']):
-        tags (list[str]): Alert when the person gains any of these system-assigned tags
+        tags (list[PersonTagGainedTagsItem]): Alert when the person gains any of these system-assigned tags.
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
+        is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
+            normal pipeline runs.
     """
 
     type_: Literal["person_tag_gained"]
     entity_type: Literal["person"]
-    tags: list[str]
+    tags: list[PersonTagGainedTagsItem]
     lookback_days: int | None | Unset = UNSET
+    is_dummy: bool | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -33,13 +37,18 @@ class PersonTagGained:
 
         entity_type = self.entity_type
 
-        tags = self.tags
+        tags = []
+        for tags_item_data in self.tags:
+            tags_item = tags_item_data.value
+            tags.append(tags_item)
 
         lookback_days: int | None | Unset
         if isinstance(self.lookback_days, Unset):
             lookback_days = UNSET
         else:
             lookback_days = self.lookback_days
+
+        is_dummy = self.is_dummy
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -52,6 +61,8 @@ class PersonTagGained:
         )
         if lookback_days is not UNSET:
             field_dict["lookbackDays"] = lookback_days
+        if is_dummy is not UNSET:
+            field_dict["isDummy"] = is_dummy
 
         return field_dict
 
@@ -66,7 +77,12 @@ class PersonTagGained:
         if entity_type != "person":
             raise ValueError(f"entityType must match const 'person', got '{entity_type}'")
 
-        tags = cast(list[str], d.pop("tags"))
+        tags = []
+        _tags = d.pop("tags")
+        for tags_item_data in _tags:
+            tags_item = PersonTagGainedTagsItem(tags_item_data)
+
+            tags.append(tags_item)
 
         def _parse_lookback_days(data: object) -> int | None | Unset:
             if data is None:
@@ -77,11 +93,14 @@ class PersonTagGained:
 
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
+        is_dummy = d.pop("isDummy", UNSET)
+
         person_tag_gained = cls(
             type_=type_,
             entity_type=entity_type,
             tags=tags,
             lookback_days=lookback_days,
+            is_dummy=is_dummy,
         )
 
         person_tag_gained.additional_properties = d

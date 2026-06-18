@@ -12,6 +12,7 @@ from ...models.people_search_response_401 import PeopleSearchResponse401
 from ...models.people_search_response_402 import PeopleSearchResponse402
 from ...models.people_search_response_403 import PeopleSearchResponse403
 from ...models.people_search_response_404 import PeopleSearchResponse404
+from ...models.people_search_response_422 import PeopleSearchResponse422
 from ...models.people_search_response_429 import PeopleSearchResponse429
 from ...models.people_search_response_500 import PeopleSearchResponse500
 from ...models.people_search_response_503 import PeopleSearchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | PeopleSearchResponse402
     | PeopleSearchResponse403
     | PeopleSearchResponse404
+    | PeopleSearchResponse422
     | PeopleSearchResponse429
     | PeopleSearchResponse500
     | PeopleSearchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = PeopleSearchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = PeopleSearchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | PeopleSearchResponse402
     | PeopleSearchResponse403
     | PeopleSearchResponse404
+    | PeopleSearchResponse422
     | PeopleSearchResponse429
     | PeopleSearchResponse500
     | PeopleSearchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | PeopleSearchResponse402
     | PeopleSearchResponse403
     | PeopleSearchResponse404
+    | PeopleSearchResponse422
     | PeopleSearchResponse429
     | PeopleSearchResponse500
     | PeopleSearchResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PeopleSearchResponse200 | PeopleSearchResponse400 | PeopleSearchResponse401 | PeopleSearchResponse402 | PeopleSearchResponse403 | PeopleSearchResponse404 | PeopleSearchResponse429 | PeopleSearchResponse500 | PeopleSearchResponse503]
+        Response[PeopleSearchResponse200 | PeopleSearchResponse400 | PeopleSearchResponse401 | PeopleSearchResponse402 | PeopleSearchResponse403 | PeopleSearchResponse404 | PeopleSearchResponse422 | PeopleSearchResponse429 | PeopleSearchResponse500 | PeopleSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | PeopleSearchResponse402
     | PeopleSearchResponse403
     | PeopleSearchResponse404
+    | PeopleSearchResponse422
     | PeopleSearchResponse429
     | PeopleSearchResponse500
     | PeopleSearchResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PeopleSearchResponse200 | PeopleSearchResponse400 | PeopleSearchResponse401 | PeopleSearchResponse402 | PeopleSearchResponse403 | PeopleSearchResponse404 | PeopleSearchResponse429 | PeopleSearchResponse500 | PeopleSearchResponse503
+        PeopleSearchResponse200 | PeopleSearchResponse400 | PeopleSearchResponse401 | PeopleSearchResponse402 | PeopleSearchResponse403 | PeopleSearchResponse404 | PeopleSearchResponse422 | PeopleSearchResponse429 | PeopleSearchResponse500 | PeopleSearchResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | PeopleSearchResponse402
     | PeopleSearchResponse403
     | PeopleSearchResponse404
+    | PeopleSearchResponse422
     | PeopleSearchResponse429
     | PeopleSearchResponse500
     | PeopleSearchResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PeopleSearchResponse200 | PeopleSearchResponse400 | PeopleSearchResponse401 | PeopleSearchResponse402 | PeopleSearchResponse403 | PeopleSearchResponse404 | PeopleSearchResponse429 | PeopleSearchResponse500 | PeopleSearchResponse503]
+        Response[PeopleSearchResponse200 | PeopleSearchResponse400 | PeopleSearchResponse401 | PeopleSearchResponse402 | PeopleSearchResponse403 | PeopleSearchResponse404 | PeopleSearchResponse422 | PeopleSearchResponse429 | PeopleSearchResponse500 | PeopleSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | PeopleSearchResponse402
     | PeopleSearchResponse403
     | PeopleSearchResponse404
+    | PeopleSearchResponse422
     | PeopleSearchResponse429
     | PeopleSearchResponse500
     | PeopleSearchResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PeopleSearchResponse200 | PeopleSearchResponse400 | PeopleSearchResponse401 | PeopleSearchResponse402 | PeopleSearchResponse403 | PeopleSearchResponse404 | PeopleSearchResponse429 | PeopleSearchResponse500 | PeopleSearchResponse503
+        PeopleSearchResponse200 | PeopleSearchResponse400 | PeopleSearchResponse401 | PeopleSearchResponse402 | PeopleSearchResponse403 | PeopleSearchResponse404 | PeopleSearchResponse422 | PeopleSearchResponse429 | PeopleSearchResponse500 | PeopleSearchResponse503
     """
 
     return (

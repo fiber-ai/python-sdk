@@ -24,6 +24,9 @@ from ...models.create_prospect_exclusion_list_from_audience_response_403 import 
 from ...models.create_prospect_exclusion_list_from_audience_response_404 import (
     CreateProspectExclusionListFromAudienceResponse404,
 )
+from ...models.create_prospect_exclusion_list_from_audience_response_422 import (
+    CreateProspectExclusionListFromAudienceResponse422,
+)
 from ...models.create_prospect_exclusion_list_from_audience_response_429 import (
     CreateProspectExclusionListFromAudienceResponse429,
 )
@@ -64,6 +67,7 @@ def _parse_response(
     | CreateProspectExclusionListFromAudienceResponse402
     | CreateProspectExclusionListFromAudienceResponse403
     | CreateProspectExclusionListFromAudienceResponse404
+    | CreateProspectExclusionListFromAudienceResponse422
     | CreateProspectExclusionListFromAudienceResponse429
     | CreateProspectExclusionListFromAudienceResponse500
     | CreateProspectExclusionListFromAudienceResponse503
@@ -99,6 +103,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = CreateProspectExclusionListFromAudienceResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = CreateProspectExclusionListFromAudienceResponse429.from_dict(response.json())
 
@@ -129,6 +138,7 @@ def _build_response(
     | CreateProspectExclusionListFromAudienceResponse402
     | CreateProspectExclusionListFromAudienceResponse403
     | CreateProspectExclusionListFromAudienceResponse404
+    | CreateProspectExclusionListFromAudienceResponse422
     | CreateProspectExclusionListFromAudienceResponse429
     | CreateProspectExclusionListFromAudienceResponse500
     | CreateProspectExclusionListFromAudienceResponse503
@@ -152,6 +162,7 @@ def sync_detailed(
     | CreateProspectExclusionListFromAudienceResponse402
     | CreateProspectExclusionListFromAudienceResponse403
     | CreateProspectExclusionListFromAudienceResponse404
+    | CreateProspectExclusionListFromAudienceResponse422
     | CreateProspectExclusionListFromAudienceResponse429
     | CreateProspectExclusionListFromAudienceResponse500
     | CreateProspectExclusionListFromAudienceResponse503
@@ -173,7 +184,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CreateProspectExclusionListFromAudienceResponse200 | CreateProspectExclusionListFromAudienceResponse400 | CreateProspectExclusionListFromAudienceResponse401 | CreateProspectExclusionListFromAudienceResponse402 | CreateProspectExclusionListFromAudienceResponse403 | CreateProspectExclusionListFromAudienceResponse404 | CreateProspectExclusionListFromAudienceResponse429 | CreateProspectExclusionListFromAudienceResponse500 | CreateProspectExclusionListFromAudienceResponse503]
+        Response[CreateProspectExclusionListFromAudienceResponse200 | CreateProspectExclusionListFromAudienceResponse400 | CreateProspectExclusionListFromAudienceResponse401 | CreateProspectExclusionListFromAudienceResponse402 | CreateProspectExclusionListFromAudienceResponse403 | CreateProspectExclusionListFromAudienceResponse404 | CreateProspectExclusionListFromAudienceResponse422 | CreateProspectExclusionListFromAudienceResponse429 | CreateProspectExclusionListFromAudienceResponse500 | CreateProspectExclusionListFromAudienceResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -198,6 +209,7 @@ def sync(
     | CreateProspectExclusionListFromAudienceResponse402
     | CreateProspectExclusionListFromAudienceResponse403
     | CreateProspectExclusionListFromAudienceResponse404
+    | CreateProspectExclusionListFromAudienceResponse422
     | CreateProspectExclusionListFromAudienceResponse429
     | CreateProspectExclusionListFromAudienceResponse500
     | CreateProspectExclusionListFromAudienceResponse503
@@ -220,7 +232,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CreateProspectExclusionListFromAudienceResponse200 | CreateProspectExclusionListFromAudienceResponse400 | CreateProspectExclusionListFromAudienceResponse401 | CreateProspectExclusionListFromAudienceResponse402 | CreateProspectExclusionListFromAudienceResponse403 | CreateProspectExclusionListFromAudienceResponse404 | CreateProspectExclusionListFromAudienceResponse429 | CreateProspectExclusionListFromAudienceResponse500 | CreateProspectExclusionListFromAudienceResponse503
+        CreateProspectExclusionListFromAudienceResponse200 | CreateProspectExclusionListFromAudienceResponse400 | CreateProspectExclusionListFromAudienceResponse401 | CreateProspectExclusionListFromAudienceResponse402 | CreateProspectExclusionListFromAudienceResponse403 | CreateProspectExclusionListFromAudienceResponse404 | CreateProspectExclusionListFromAudienceResponse422 | CreateProspectExclusionListFromAudienceResponse429 | CreateProspectExclusionListFromAudienceResponse500 | CreateProspectExclusionListFromAudienceResponse503
     """
 
     return sync_detailed(
@@ -240,6 +252,7 @@ async def asyncio_detailed(
     | CreateProspectExclusionListFromAudienceResponse402
     | CreateProspectExclusionListFromAudienceResponse403
     | CreateProspectExclusionListFromAudienceResponse404
+    | CreateProspectExclusionListFromAudienceResponse422
     | CreateProspectExclusionListFromAudienceResponse429
     | CreateProspectExclusionListFromAudienceResponse500
     | CreateProspectExclusionListFromAudienceResponse503
@@ -261,7 +274,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[CreateProspectExclusionListFromAudienceResponse200 | CreateProspectExclusionListFromAudienceResponse400 | CreateProspectExclusionListFromAudienceResponse401 | CreateProspectExclusionListFromAudienceResponse402 | CreateProspectExclusionListFromAudienceResponse403 | CreateProspectExclusionListFromAudienceResponse404 | CreateProspectExclusionListFromAudienceResponse429 | CreateProspectExclusionListFromAudienceResponse500 | CreateProspectExclusionListFromAudienceResponse503]
+        Response[CreateProspectExclusionListFromAudienceResponse200 | CreateProspectExclusionListFromAudienceResponse400 | CreateProspectExclusionListFromAudienceResponse401 | CreateProspectExclusionListFromAudienceResponse402 | CreateProspectExclusionListFromAudienceResponse403 | CreateProspectExclusionListFromAudienceResponse404 | CreateProspectExclusionListFromAudienceResponse422 | CreateProspectExclusionListFromAudienceResponse429 | CreateProspectExclusionListFromAudienceResponse500 | CreateProspectExclusionListFromAudienceResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -284,6 +297,7 @@ async def asyncio(
     | CreateProspectExclusionListFromAudienceResponse402
     | CreateProspectExclusionListFromAudienceResponse403
     | CreateProspectExclusionListFromAudienceResponse404
+    | CreateProspectExclusionListFromAudienceResponse422
     | CreateProspectExclusionListFromAudienceResponse429
     | CreateProspectExclusionListFromAudienceResponse500
     | CreateProspectExclusionListFromAudienceResponse503
@@ -306,7 +320,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        CreateProspectExclusionListFromAudienceResponse200 | CreateProspectExclusionListFromAudienceResponse400 | CreateProspectExclusionListFromAudienceResponse401 | CreateProspectExclusionListFromAudienceResponse402 | CreateProspectExclusionListFromAudienceResponse403 | CreateProspectExclusionListFromAudienceResponse404 | CreateProspectExclusionListFromAudienceResponse429 | CreateProspectExclusionListFromAudienceResponse500 | CreateProspectExclusionListFromAudienceResponse503
+        CreateProspectExclusionListFromAudienceResponse200 | CreateProspectExclusionListFromAudienceResponse400 | CreateProspectExclusionListFromAudienceResponse401 | CreateProspectExclusionListFromAudienceResponse402 | CreateProspectExclusionListFromAudienceResponse403 | CreateProspectExclusionListFromAudienceResponse404 | CreateProspectExclusionListFromAudienceResponse422 | CreateProspectExclusionListFromAudienceResponse429 | CreateProspectExclusionListFromAudienceResponse500 | CreateProspectExclusionListFromAudienceResponse503
     """
 
     return (

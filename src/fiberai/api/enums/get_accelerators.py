@@ -11,6 +11,7 @@ from ...models.get_accelerators_response_401 import GetAcceleratorsResponse401
 from ...models.get_accelerators_response_402 import GetAcceleratorsResponse402
 from ...models.get_accelerators_response_403 import GetAcceleratorsResponse403
 from ...models.get_accelerators_response_404 import GetAcceleratorsResponse404
+from ...models.get_accelerators_response_422 import GetAcceleratorsResponse422
 from ...models.get_accelerators_response_429 import GetAcceleratorsResponse429
 from ...models.get_accelerators_response_500 import GetAcceleratorsResponse500
 from ...models.get_accelerators_response_503 import GetAcceleratorsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GetAcceleratorsResponse402
     | GetAcceleratorsResponse403
     | GetAcceleratorsResponse404
+    | GetAcceleratorsResponse422
     | GetAcceleratorsResponse429
     | GetAcceleratorsResponse500
     | GetAcceleratorsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetAcceleratorsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetAcceleratorsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GetAcceleratorsResponse402
     | GetAcceleratorsResponse403
     | GetAcceleratorsResponse404
+    | GetAcceleratorsResponse422
     | GetAcceleratorsResponse429
     | GetAcceleratorsResponse500
     | GetAcceleratorsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GetAcceleratorsResponse402
     | GetAcceleratorsResponse403
     | GetAcceleratorsResponse404
+    | GetAcceleratorsResponse422
     | GetAcceleratorsResponse429
     | GetAcceleratorsResponse500
     | GetAcceleratorsResponse503
@@ -156,7 +165,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetAcceleratorsResponse200 | GetAcceleratorsResponse400 | GetAcceleratorsResponse401 | GetAcceleratorsResponse402 | GetAcceleratorsResponse403 | GetAcceleratorsResponse404 | GetAcceleratorsResponse429 | GetAcceleratorsResponse500 | GetAcceleratorsResponse503]
+        Response[GetAcceleratorsResponse200 | GetAcceleratorsResponse400 | GetAcceleratorsResponse401 | GetAcceleratorsResponse402 | GetAcceleratorsResponse403 | GetAcceleratorsResponse404 | GetAcceleratorsResponse422 | GetAcceleratorsResponse429 | GetAcceleratorsResponse500 | GetAcceleratorsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +190,7 @@ def sync(
     | GetAcceleratorsResponse402
     | GetAcceleratorsResponse403
     | GetAcceleratorsResponse404
+    | GetAcceleratorsResponse422
     | GetAcceleratorsResponse429
     | GetAcceleratorsResponse500
     | GetAcceleratorsResponse503
@@ -204,7 +214,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetAcceleratorsResponse200 | GetAcceleratorsResponse400 | GetAcceleratorsResponse401 | GetAcceleratorsResponse402 | GetAcceleratorsResponse403 | GetAcceleratorsResponse404 | GetAcceleratorsResponse429 | GetAcceleratorsResponse500 | GetAcceleratorsResponse503
+        GetAcceleratorsResponse200 | GetAcceleratorsResponse400 | GetAcceleratorsResponse401 | GetAcceleratorsResponse402 | GetAcceleratorsResponse403 | GetAcceleratorsResponse404 | GetAcceleratorsResponse422 | GetAcceleratorsResponse429 | GetAcceleratorsResponse500 | GetAcceleratorsResponse503
     """
 
     return sync_detailed(
@@ -224,6 +234,7 @@ async def asyncio_detailed(
     | GetAcceleratorsResponse402
     | GetAcceleratorsResponse403
     | GetAcceleratorsResponse404
+    | GetAcceleratorsResponse422
     | GetAcceleratorsResponse429
     | GetAcceleratorsResponse500
     | GetAcceleratorsResponse503
@@ -246,7 +257,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetAcceleratorsResponse200 | GetAcceleratorsResponse400 | GetAcceleratorsResponse401 | GetAcceleratorsResponse402 | GetAcceleratorsResponse403 | GetAcceleratorsResponse404 | GetAcceleratorsResponse429 | GetAcceleratorsResponse500 | GetAcceleratorsResponse503]
+        Response[GetAcceleratorsResponse200 | GetAcceleratorsResponse400 | GetAcceleratorsResponse401 | GetAcceleratorsResponse402 | GetAcceleratorsResponse403 | GetAcceleratorsResponse404 | GetAcceleratorsResponse422 | GetAcceleratorsResponse429 | GetAcceleratorsResponse500 | GetAcceleratorsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -269,6 +280,7 @@ async def asyncio(
     | GetAcceleratorsResponse402
     | GetAcceleratorsResponse403
     | GetAcceleratorsResponse404
+    | GetAcceleratorsResponse422
     | GetAcceleratorsResponse429
     | GetAcceleratorsResponse500
     | GetAcceleratorsResponse503
@@ -292,7 +304,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetAcceleratorsResponse200 | GetAcceleratorsResponse400 | GetAcceleratorsResponse401 | GetAcceleratorsResponse402 | GetAcceleratorsResponse403 | GetAcceleratorsResponse404 | GetAcceleratorsResponse429 | GetAcceleratorsResponse500 | GetAcceleratorsResponse503
+        GetAcceleratorsResponse200 | GetAcceleratorsResponse400 | GetAcceleratorsResponse401 | GetAcceleratorsResponse402 | GetAcceleratorsResponse403 | GetAcceleratorsResponse404 | GetAcceleratorsResponse422 | GetAcceleratorsResponse429 | GetAcceleratorsResponse500 | GetAcceleratorsResponse503
     """
 
     return (

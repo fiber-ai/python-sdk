@@ -12,6 +12,7 @@ from ...models.reddit_subreddit_search_response_401 import RedditSubredditSearch
 from ...models.reddit_subreddit_search_response_402 import RedditSubredditSearchResponse402
 from ...models.reddit_subreddit_search_response_403 import RedditSubredditSearchResponse403
 from ...models.reddit_subreddit_search_response_404 import RedditSubredditSearchResponse404
+from ...models.reddit_subreddit_search_response_422 import RedditSubredditSearchResponse422
 from ...models.reddit_subreddit_search_response_429 import RedditSubredditSearchResponse429
 from ...models.reddit_subreddit_search_response_500 import RedditSubredditSearchResponse500
 from ...models.reddit_subreddit_search_response_503 import RedditSubredditSearchResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | RedditSubredditSearchResponse402
     | RedditSubredditSearchResponse403
     | RedditSubredditSearchResponse404
+    | RedditSubredditSearchResponse422
     | RedditSubredditSearchResponse429
     | RedditSubredditSearchResponse500
     | RedditSubredditSearchResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = RedditSubredditSearchResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = RedditSubredditSearchResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | RedditSubredditSearchResponse402
     | RedditSubredditSearchResponse403
     | RedditSubredditSearchResponse404
+    | RedditSubredditSearchResponse422
     | RedditSubredditSearchResponse429
     | RedditSubredditSearchResponse500
     | RedditSubredditSearchResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | RedditSubredditSearchResponse402
     | RedditSubredditSearchResponse403
     | RedditSubredditSearchResponse404
+    | RedditSubredditSearchResponse422
     | RedditSubredditSearchResponse429
     | RedditSubredditSearchResponse500
     | RedditSubredditSearchResponse503
@@ -157,7 +166,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[RedditSubredditSearchResponse200 | RedditSubredditSearchResponse400 | RedditSubredditSearchResponse401 | RedditSubredditSearchResponse402 | RedditSubredditSearchResponse403 | RedditSubredditSearchResponse404 | RedditSubredditSearchResponse429 | RedditSubredditSearchResponse500 | RedditSubredditSearchResponse503]
+        Response[RedditSubredditSearchResponse200 | RedditSubredditSearchResponse400 | RedditSubredditSearchResponse401 | RedditSubredditSearchResponse402 | RedditSubredditSearchResponse403 | RedditSubredditSearchResponse404 | RedditSubredditSearchResponse422 | RedditSubredditSearchResponse429 | RedditSubredditSearchResponse500 | RedditSubredditSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -182,6 +191,7 @@ def sync(
     | RedditSubredditSearchResponse402
     | RedditSubredditSearchResponse403
     | RedditSubredditSearchResponse404
+    | RedditSubredditSearchResponse422
     | RedditSubredditSearchResponse429
     | RedditSubredditSearchResponse500
     | RedditSubredditSearchResponse503
@@ -206,7 +216,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        RedditSubredditSearchResponse200 | RedditSubredditSearchResponse400 | RedditSubredditSearchResponse401 | RedditSubredditSearchResponse402 | RedditSubredditSearchResponse403 | RedditSubredditSearchResponse404 | RedditSubredditSearchResponse429 | RedditSubredditSearchResponse500 | RedditSubredditSearchResponse503
+        RedditSubredditSearchResponse200 | RedditSubredditSearchResponse400 | RedditSubredditSearchResponse401 | RedditSubredditSearchResponse402 | RedditSubredditSearchResponse403 | RedditSubredditSearchResponse404 | RedditSubredditSearchResponse422 | RedditSubredditSearchResponse429 | RedditSubredditSearchResponse500 | RedditSubredditSearchResponse503
     """
 
     return sync_detailed(
@@ -226,6 +236,7 @@ async def asyncio_detailed(
     | RedditSubredditSearchResponse402
     | RedditSubredditSearchResponse403
     | RedditSubredditSearchResponse404
+    | RedditSubredditSearchResponse422
     | RedditSubredditSearchResponse429
     | RedditSubredditSearchResponse500
     | RedditSubredditSearchResponse503
@@ -249,7 +260,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[RedditSubredditSearchResponse200 | RedditSubredditSearchResponse400 | RedditSubredditSearchResponse401 | RedditSubredditSearchResponse402 | RedditSubredditSearchResponse403 | RedditSubredditSearchResponse404 | RedditSubredditSearchResponse429 | RedditSubredditSearchResponse500 | RedditSubredditSearchResponse503]
+        Response[RedditSubredditSearchResponse200 | RedditSubredditSearchResponse400 | RedditSubredditSearchResponse401 | RedditSubredditSearchResponse402 | RedditSubredditSearchResponse403 | RedditSubredditSearchResponse404 | RedditSubredditSearchResponse422 | RedditSubredditSearchResponse429 | RedditSubredditSearchResponse500 | RedditSubredditSearchResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -272,6 +283,7 @@ async def asyncio(
     | RedditSubredditSearchResponse402
     | RedditSubredditSearchResponse403
     | RedditSubredditSearchResponse404
+    | RedditSubredditSearchResponse422
     | RedditSubredditSearchResponse429
     | RedditSubredditSearchResponse500
     | RedditSubredditSearchResponse503
@@ -296,7 +308,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        RedditSubredditSearchResponse200 | RedditSubredditSearchResponse400 | RedditSubredditSearchResponse401 | RedditSubredditSearchResponse402 | RedditSubredditSearchResponse403 | RedditSubredditSearchResponse404 | RedditSubredditSearchResponse429 | RedditSubredditSearchResponse500 | RedditSubredditSearchResponse503
+        RedditSubredditSearchResponse200 | RedditSubredditSearchResponse400 | RedditSubredditSearchResponse401 | RedditSubredditSearchResponse402 | RedditSubredditSearchResponse403 | RedditSubredditSearchResponse404 | RedditSubredditSearchResponse422 | RedditSubredditSearchResponse429 | RedditSubredditSearchResponse500 | RedditSubredditSearchResponse503
     """
 
     return (

@@ -11,6 +11,7 @@ from ...models.get_org_credits_response_401 import GetOrgCreditsResponse401
 from ...models.get_org_credits_response_402 import GetOrgCreditsResponse402
 from ...models.get_org_credits_response_403 import GetOrgCreditsResponse403
 from ...models.get_org_credits_response_404 import GetOrgCreditsResponse404
+from ...models.get_org_credits_response_422 import GetOrgCreditsResponse422
 from ...models.get_org_credits_response_429 import GetOrgCreditsResponse429
 from ...models.get_org_credits_response_500 import GetOrgCreditsResponse500
 from ...models.get_org_credits_response_503 import GetOrgCreditsResponse503
@@ -46,6 +47,7 @@ def _parse_response(
     | GetOrgCreditsResponse402
     | GetOrgCreditsResponse403
     | GetOrgCreditsResponse404
+    | GetOrgCreditsResponse422
     | GetOrgCreditsResponse429
     | GetOrgCreditsResponse500
     | GetOrgCreditsResponse503
@@ -81,6 +83,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 422:
+        response_422 = GetOrgCreditsResponse422.from_dict(response.json())
+
+        return response_422
+
     if response.status_code == 429:
         response_429 = GetOrgCreditsResponse429.from_dict(response.json())
 
@@ -111,6 +118,7 @@ def _build_response(
     | GetOrgCreditsResponse402
     | GetOrgCreditsResponse403
     | GetOrgCreditsResponse404
+    | GetOrgCreditsResponse422
     | GetOrgCreditsResponse429
     | GetOrgCreditsResponse500
     | GetOrgCreditsResponse503
@@ -134,6 +142,7 @@ def sync_detailed(
     | GetOrgCreditsResponse402
     | GetOrgCreditsResponse403
     | GetOrgCreditsResponse404
+    | GetOrgCreditsResponse422
     | GetOrgCreditsResponse429
     | GetOrgCreditsResponse500
     | GetOrgCreditsResponse503
@@ -155,7 +164,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetOrgCreditsResponse200 | GetOrgCreditsResponse400 | GetOrgCreditsResponse401 | GetOrgCreditsResponse402 | GetOrgCreditsResponse403 | GetOrgCreditsResponse404 | GetOrgCreditsResponse429 | GetOrgCreditsResponse500 | GetOrgCreditsResponse503]
+        Response[GetOrgCreditsResponse200 | GetOrgCreditsResponse400 | GetOrgCreditsResponse401 | GetOrgCreditsResponse402 | GetOrgCreditsResponse403 | GetOrgCreditsResponse404 | GetOrgCreditsResponse422 | GetOrgCreditsResponse429 | GetOrgCreditsResponse500 | GetOrgCreditsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -180,6 +189,7 @@ def sync(
     | GetOrgCreditsResponse402
     | GetOrgCreditsResponse403
     | GetOrgCreditsResponse404
+    | GetOrgCreditsResponse422
     | GetOrgCreditsResponse429
     | GetOrgCreditsResponse500
     | GetOrgCreditsResponse503
@@ -202,7 +212,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetOrgCreditsResponse200 | GetOrgCreditsResponse400 | GetOrgCreditsResponse401 | GetOrgCreditsResponse402 | GetOrgCreditsResponse403 | GetOrgCreditsResponse404 | GetOrgCreditsResponse429 | GetOrgCreditsResponse500 | GetOrgCreditsResponse503
+        GetOrgCreditsResponse200 | GetOrgCreditsResponse400 | GetOrgCreditsResponse401 | GetOrgCreditsResponse402 | GetOrgCreditsResponse403 | GetOrgCreditsResponse404 | GetOrgCreditsResponse422 | GetOrgCreditsResponse429 | GetOrgCreditsResponse500 | GetOrgCreditsResponse503
     """
 
     return sync_detailed(
@@ -222,6 +232,7 @@ async def asyncio_detailed(
     | GetOrgCreditsResponse402
     | GetOrgCreditsResponse403
     | GetOrgCreditsResponse404
+    | GetOrgCreditsResponse422
     | GetOrgCreditsResponse429
     | GetOrgCreditsResponse500
     | GetOrgCreditsResponse503
@@ -243,7 +254,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[GetOrgCreditsResponse200 | GetOrgCreditsResponse400 | GetOrgCreditsResponse401 | GetOrgCreditsResponse402 | GetOrgCreditsResponse403 | GetOrgCreditsResponse404 | GetOrgCreditsResponse429 | GetOrgCreditsResponse500 | GetOrgCreditsResponse503]
+        Response[GetOrgCreditsResponse200 | GetOrgCreditsResponse400 | GetOrgCreditsResponse401 | GetOrgCreditsResponse402 | GetOrgCreditsResponse403 | GetOrgCreditsResponse404 | GetOrgCreditsResponse422 | GetOrgCreditsResponse429 | GetOrgCreditsResponse500 | GetOrgCreditsResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -266,6 +277,7 @@ async def asyncio(
     | GetOrgCreditsResponse402
     | GetOrgCreditsResponse403
     | GetOrgCreditsResponse404
+    | GetOrgCreditsResponse422
     | GetOrgCreditsResponse429
     | GetOrgCreditsResponse500
     | GetOrgCreditsResponse503
@@ -288,7 +300,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        GetOrgCreditsResponse200 | GetOrgCreditsResponse400 | GetOrgCreditsResponse401 | GetOrgCreditsResponse402 | GetOrgCreditsResponse403 | GetOrgCreditsResponse404 | GetOrgCreditsResponse429 | GetOrgCreditsResponse500 | GetOrgCreditsResponse503
+        GetOrgCreditsResponse200 | GetOrgCreditsResponse400 | GetOrgCreditsResponse401 | GetOrgCreditsResponse402 | GetOrgCreditsResponse403 | GetOrgCreditsResponse404 | GetOrgCreditsResponse422 | GetOrgCreditsResponse429 | GetOrgCreditsResponse500 | GetOrgCreditsResponse503
     """
 
     return (

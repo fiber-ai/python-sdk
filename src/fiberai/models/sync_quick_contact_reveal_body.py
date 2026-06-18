@@ -20,8 +20,9 @@ class SyncQuickContactRevealBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        linkedin_url (str): The person's LinkedIn URL (e.g. 'https://www.linkedin.com/in/william-h-gates') or a bare
-            slug (e.g. 'william-h-gates').
+        linkedin_url (str): The person's LinkedIn identifier. Accepts a full LinkedIn profile URL (e.g.
+            'https://www.linkedin.com/in/williamhgates/'), a bare slug (e.g. 'williamhgates'), a Sales Navigator URN (e.g.
+            'ACwAAA-001MBbIvJon'), or a numeric LinkedIn user ID (e.g. '443105112').
         enrichment_type (SyncQuickContactRevealBodyEnrichmentType | Unset): The enrichment types to request. Credits are
             charged per selected type.
         validate_emails (bool | Unset): Whether to bounce-validate emails before returning them. Disabling this speeds
