@@ -149,10 +149,11 @@ def sync_detailed(
 ]:
     """Poll depth chart generation result
 
-     Polls the status of a depth chart generation — a close analog to a company's internal org chart.
-    Pass the report ID returned by /depth-chart/start. Returns the current status and, once complete,
-    the depth chart aggregate with employee distribution across functions and seniority levels. Includes
-    summary stats for each bucket, but does not list the people in each bucket.
+     Retrieves the employee breakdown started by the `depth-chart/start` endpoint. Pass the report ID you
+    received when you started the report. Returns the current status and, once complete, numerical
+    counts of employees grouped by department, seniority, or both, plus a printable markdown summary in
+    tabular format — useful for CLI output or for LLMs building reports. Returns summary stats per
+    bucket, not the individual people in each bucket.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -197,10 +198,11 @@ def sync(
 ):
     """Poll depth chart generation result
 
-     Polls the status of a depth chart generation — a close analog to a company's internal org chart.
-    Pass the report ID returned by /depth-chart/start. Returns the current status and, once complete,
-    the depth chart aggregate with employee distribution across functions and seniority levels. Includes
-    summary stats for each bucket, but does not list the people in each bucket.
+     Retrieves the employee breakdown started by the `depth-chart/start` endpoint. Pass the report ID you
+    received when you started the report. Returns the current status and, once complete, numerical
+    counts of employees grouped by department, seniority, or both, plus a printable markdown summary in
+    tabular format — useful for CLI output or for LLMs building reports. Returns summary stats per
+    bucket, not the individual people in each bucket.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -239,10 +241,11 @@ async def asyncio_detailed(
 ]:
     """Poll depth chart generation result
 
-     Polls the status of a depth chart generation — a close analog to a company's internal org chart.
-    Pass the report ID returned by /depth-chart/start. Returns the current status and, once complete,
-    the depth chart aggregate with employee distribution across functions and seniority levels. Includes
-    summary stats for each bucket, but does not list the people in each bucket.
+     Retrieves the employee breakdown started by the `depth-chart/start` endpoint. Pass the report ID you
+    received when you started the report. Returns the current status and, once complete, numerical
+    counts of employees grouped by department, seniority, or both, plus a printable markdown summary in
+    tabular format — useful for CLI output or for LLMs building reports. Returns summary stats per
+    bucket, not the individual people in each bucket.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -285,10 +288,11 @@ async def asyncio(
 ):
     """Poll depth chart generation result
 
-     Polls the status of a depth chart generation — a close analog to a company's internal org chart.
-    Pass the report ID returned by /depth-chart/start. Returns the current status and, once complete,
-    the depth chart aggregate with employee distribution across functions and seniority levels. Includes
-    summary stats for each bucket, but does not list the people in each bucket.
+     Retrieves the employee breakdown started by the `depth-chart/start` endpoint. Pass the report ID you
+    received when you started the report. Returns the current status and, once complete, numerical
+    counts of employees grouped by department, seniority, or both, plus a printable markdown summary in
+    tabular format — useful for CLI output or for LLMs building reports. Returns summary stats per
+    bucket, not the individual people in each bucket.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 

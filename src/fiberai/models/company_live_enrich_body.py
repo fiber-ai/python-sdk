@@ -21,8 +21,9 @@ class CompanyLiveEnrichBody:
         value (str): The company's LinkedIn slug (e.g. 'microsoft'), LinkedIn URL (e.g.
             'https://www.linkedin.com/company/microsoft'), LinkedIn organization ID (e.g. '1441'), or Fiber company ID (e.g.
             'comp_1441').
-        get_historical_headcount (bool | Unset): Whether to compute the company's historical employee count and recent
-            growth trends. No additional cost, but may take longer. Default: False.
+        get_historical_headcount (bool | Unset): Whether to compute the company's overall employee count over time and
+            recent growth trends. This returns total headcount through time, not a per-department breakdown — for per-
+            department headcount, use the Depth Chart endpoints. No additional cost, but may take longer. Default: False.
     """
 
     api_key: str

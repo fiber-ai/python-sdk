@@ -149,12 +149,11 @@ def sync_detailed(
 ]:
     """Start depth chart generation
 
-     Generates an organizational depth chart for a company — a close analog to the company's internal org
-    chart. Classifies employees by function (Engineering, Sales, Marketing, etc.) and seniority level
-    (Junior through Executive). This is asynchronous: call this endpoint to start generation, then poll
-    /depth-chart/poll with the returned report ID. Processing typically takes 1-5 minutes depending on
-    company size. Depth chart generation processes up to 10,000 employee profiles per report; larger
-    companies are truncated to the most relevant profiles.
+     Generates a breakdown of the number of employees at a given company by department/function
+    (Engineering, Sales, Marketing, etc.), seniority (Junior through Executive), or both. This helps
+    answer questions like, 'how many senior engineers does this company have?'. Asynchronous; use the
+    polling endpoint to get your results. Processes up to 10,000 employees per report. This is a more
+    thorough alternative to guessing a company's internal org chart.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -199,12 +198,11 @@ def sync(
 ):
     """Start depth chart generation
 
-     Generates an organizational depth chart for a company — a close analog to the company's internal org
-    chart. Classifies employees by function (Engineering, Sales, Marketing, etc.) and seniority level
-    (Junior through Executive). This is asynchronous: call this endpoint to start generation, then poll
-    /depth-chart/poll with the returned report ID. Processing typically takes 1-5 minutes depending on
-    company size. Depth chart generation processes up to 10,000 employee profiles per report; larger
-    companies are truncated to the most relevant profiles.
+     Generates a breakdown of the number of employees at a given company by department/function
+    (Engineering, Sales, Marketing, etc.), seniority (Junior through Executive), or both. This helps
+    answer questions like, 'how many senior engineers does this company have?'. Asynchronous; use the
+    polling endpoint to get your results. Processes up to 10,000 employees per report. This is a more
+    thorough alternative to guessing a company's internal org chart.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -243,12 +241,11 @@ async def asyncio_detailed(
 ]:
     """Start depth chart generation
 
-     Generates an organizational depth chart for a company — a close analog to the company's internal org
-    chart. Classifies employees by function (Engineering, Sales, Marketing, etc.) and seniority level
-    (Junior through Executive). This is asynchronous: call this endpoint to start generation, then poll
-    /depth-chart/poll with the returned report ID. Processing typically takes 1-5 minutes depending on
-    company size. Depth chart generation processes up to 10,000 employee profiles per report; larger
-    companies are truncated to the most relevant profiles.
+     Generates a breakdown of the number of employees at a given company by department/function
+    (Engineering, Sales, Marketing, etc.), seniority (Junior through Executive), or both. This helps
+    answer questions like, 'how many senior engineers does this company have?'. Asynchronous; use the
+    polling endpoint to get your results. Processes up to 10,000 employees per report. This is a more
+    thorough alternative to guessing a company's internal org chart.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -291,12 +288,11 @@ async def asyncio(
 ):
     """Start depth chart generation
 
-     Generates an organizational depth chart for a company — a close analog to the company's internal org
-    chart. Classifies employees by function (Engineering, Sales, Marketing, etc.) and seniority level
-    (Junior through Executive). This is asynchronous: call this endpoint to start generation, then poll
-    /depth-chart/poll with the returned report ID. Processing typically takes 1-5 minutes depending on
-    company size. Depth chart generation processes up to 10,000 employee profiles per report; larger
-    companies are truncated to the most relevant profiles.
+     Generates a breakdown of the number of employees at a given company by department/function
+    (Engineering, Sales, Marketing, etc.), seniority (Junior through Executive), or both. This helps
+    answer questions like, 'how many senior engineers does this company have?'. Asynchronous; use the
+    polling endpoint to get your results. Processes up to 10,000 employees per report. This is a more
+    thorough alternative to guessing a company's internal org chart.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
