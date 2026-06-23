@@ -159,6 +159,9 @@ def sync_detailed(
     the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
     vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.\">ⓘ</span></span>
 
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
+
     Args:
         body (KitchenSinkBulkProfileBody):
 
@@ -210,6 +213,9 @@ def sync(
     the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
     vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.\">ⓘ</span></span>
 
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
+
     Args:
         body (KitchenSinkBulkProfileBody):
 
@@ -254,6 +260,9 @@ async def asyncio_detailed(
     <span>💰 <strong>Cost:</strong> Pay per person: 2 credits per lookup, plus 2 additional credits when
     the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
     vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (KitchenSinkBulkProfileBody):
@@ -303,6 +312,9 @@ async def asyncio(
     <span>💰 <strong>Cost:</strong> Pay per person: 2 credits per lookup, plus 2 additional credits when
     the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
     vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (KitchenSinkBulkProfileBody):

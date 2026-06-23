@@ -157,6 +157,9 @@ def sync_detailed(
     <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
+
     Args:
         body (KitchenSinkBulkCompanyBody):
 
@@ -206,6 +209,9 @@ def sync(
     <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
+
     Args:
         body (KitchenSinkBulkCompanyBody):
 
@@ -248,6 +254,9 @@ async def asyncio_detailed(
 
     <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (KitchenSinkBulkCompanyBody):
@@ -295,6 +304,9 @@ async def asyncio(
 
     <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
+
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (KitchenSinkBulkCompanyBody):

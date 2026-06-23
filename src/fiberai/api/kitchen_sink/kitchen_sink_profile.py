@@ -159,8 +159,8 @@ def sync_detailed(
     the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
     vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.\">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (KitchenSinkProfileBody):
@@ -213,8 +213,8 @@ def sync(
     the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
     vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.\">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (KitchenSinkProfileBody):
@@ -261,8 +261,8 @@ async def asyncio_detailed(
     the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
     vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.\">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (KitchenSinkProfileBody):
@@ -313,8 +313,8 @@ async def asyncio(
     the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
     vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.\">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
 
     Args:
         body (KitchenSinkProfileBody):
