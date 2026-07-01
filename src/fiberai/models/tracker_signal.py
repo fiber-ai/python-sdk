@@ -7,7 +7,6 @@ from typing import TYPE_CHECKING, Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.tracker_signal_delivery_status import TrackerSignalDeliveryStatus
 from ..models.tracker_signal_entity_type import TrackerSignalEntityType
 
 if TYPE_CHECKING:
@@ -51,9 +50,6 @@ class TrackerSignal:
             PersonExperienceChange | PersonReactionChange | ScalarDeltaChange | TenureChange | TrackedEmployeeChange]):
             Array of objects describing what changed. Shape depends on signal type.
         observed_at (datetime.datetime): When the signal was detected.
-        delivery_status (TrackerSignalDeliveryStatus): Webhook delivery status.
-        delivered_at (datetime.datetime | None): When the webhook was successfully delivered. Null when status is
-            PENDING, FAILED, or SKIPPED.
         centi_credits_charged (int): Credits charged for the tracker check that produced this signal, in centi-credits
             (100 = 1 credit).
         is_dummy (bool): When true, this signal was generated synthetically via the `fire-dummy` endpoint.
@@ -87,8 +83,6 @@ class TrackerSignal:
         | TrackedEmployeeChange
     ]
     observed_at: datetime.datetime
-    delivery_status: TrackerSignalDeliveryStatus
-    delivered_at: datetime.datetime | None
     centi_credits_charged: int
     is_dummy: bool
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -172,14 +166,6 @@ class TrackerSignal:
 
         observed_at = self.observed_at.isoformat()
 
-        delivery_status = self.delivery_status.value
-
-        delivered_at: None | str
-        if isinstance(self.delivered_at, datetime.datetime):
-            delivered_at = self.delivered_at.isoformat()
-        else:
-            delivered_at = self.delivered_at
-
         centi_credits_charged = self.centi_credits_charged
 
         is_dummy = self.is_dummy
@@ -196,8 +182,6 @@ class TrackerSignal:
                 "summary": summary,
                 "changeData": change_data,
                 "observedAt": observed_at,
-                "deliveryStatus": delivery_status,
-                "deliveredAt": delivered_at,
                 "centiCreditsCharged": centi_credits_charged,
                 "isDummy": is_dummy,
             }
@@ -428,23 +412,6 @@ class TrackerSignal:
 
         observed_at = datetime.datetime.fromisoformat(d.pop("observedAt"))
 
-        delivery_status = TrackerSignalDeliveryStatus(d.pop("deliveryStatus"))
-
-        def _parse_delivered_at(data: object) -> datetime.datetime | None:
-            if data is None:
-                return data
-            try:
-                if not isinstance(data, str):
-                    raise TypeError()
-                delivered_at_type_0 = datetime.datetime.fromisoformat(data)
-
-                return delivered_at_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(datetime.datetime | None, data)
-
-        delivered_at = _parse_delivered_at(d.pop("deliveredAt"))
-
         centi_credits_charged = d.pop("centiCreditsCharged")
 
         is_dummy = d.pop("isDummy")
@@ -458,8 +425,6 @@ class TrackerSignal:
             summary=summary,
             change_data=change_data,
             observed_at=observed_at,
-            delivery_status=delivery_status,
-            delivered_at=delivered_at,
             centi_credits_charged=centi_credits_charged,
             is_dummy=is_dummy,
         )

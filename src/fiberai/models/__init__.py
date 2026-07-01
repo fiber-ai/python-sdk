@@ -40709,7 +40709,6 @@ from .tiktok_video_transcript_response_500 import TiktokVideoTranscriptResponse5
 from .tiktok_video_transcript_response_503 import TiktokVideoTranscriptResponse503
 from .tracked_employee_change import TrackedEmployeeChange
 from .tracker_signal import TrackerSignal
-from .tracker_signal_delivery_status import TrackerSignalDeliveryStatus
 from .tracker_signal_entity_type import TrackerSignalEntityType
 from .trigger_enrichment_body import TriggerEnrichmentBody
 from .trigger_enrichment_body_enrichment_type import TriggerEnrichmentBodyEnrichmentType
@@ -58024,7 +58023,6 @@ __all__ = (
     "TiktokVideoTranscriptResponse503",
     "TrackedEmployeeChange",
     "TrackerSignal",
-    "TrackerSignalDeliveryStatus",
     "TrackerSignalEntityType",
     "TriggerEnrichmentBody",
     "TriggerEnrichmentBodyEnrichmentType",
