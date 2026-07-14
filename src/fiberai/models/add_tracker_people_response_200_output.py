@@ -19,19 +19,26 @@ T = TypeVar("T", bound="AddTrackerPeopleResponse200Output")
 class AddTrackerPeopleResponse200Output:
     """
     Attributes:
-        added (int): Number of people successfully added.
-        skipped (int): Number skipped (duplicates or invalid).
+        added (int): Number of people fully resolved and added to the list.
+        pending (int): Number of people accepted and added to the list but whose profile is still being resolved in the
+            background. They become fully tracked once resolution finishes (usually within minutes); a profile that turns
+            out not to exist is dropped automatically.
+        skipped (int): Number of people not added because they were already in the list or appeared more than once in
+            this request. People that could not be resolved are reported in invalidPeople, not here.
         invalid_people (list[AddTrackerPeopleResponse200OutputInvalidPeopleItem]): Details on any people that could not
             be added.
     """
 
     added: int
+    pending: int
     skipped: int
     invalid_people: list[AddTrackerPeopleResponse200OutputInvalidPeopleItem]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         added = self.added
+
+        pending = self.pending
 
         skipped = self.skipped
 
@@ -45,6 +52,7 @@ class AddTrackerPeopleResponse200Output:
         field_dict.update(
             {
                 "added": added,
+                "pending": pending,
                 "skipped": skipped,
                 "invalidPeople": invalid_people,
             }
@@ -61,6 +69,8 @@ class AddTrackerPeopleResponse200Output:
         d = dict(src_dict)
         added = d.pop("added")
 
+        pending = d.pop("pending")
+
         skipped = d.pop("skipped")
 
         invalid_people = []
@@ -72,6 +82,7 @@ class AddTrackerPeopleResponse200Output:
 
         add_tracker_people_response_200_output = cls(
             added=added,
+            pending=pending,
             skipped=skipped,
             invalid_people=invalid_people,
         )
