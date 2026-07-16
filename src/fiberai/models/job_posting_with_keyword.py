@@ -27,7 +27,7 @@ class JobPostingWithKeyword:
         seniority_levels (list[JobPostingWithKeywordSeniorityLevelsType0Item] | None | Unset): Only alert for these
             seniority levels. Omit for any level.
         location_types (list[JobPostingWithKeywordLocationTypesType0Item] | None | Unset): Only alert for these location
-            types. Omit for any.
+            types. Omit for any. Deprecated.
         min_postings (int | None | Unset): Only alert if at least this many NEW matching postings are detected in a
             single check cycle. Omit for 1 (any new match).
     """

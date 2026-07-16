@@ -90,8 +90,8 @@ class JobPostingSearchBodySearchParams:
             range in USD
         years_of_experience (JobPostingSearchBodySearchParamsYearsOfExperienceType0 | None | Unset): Filter by years of
             experience required
-        job_location_type (list[JobPostingSearchBodySearchParamsJobLocationTypeType0Item] | None | Unset): Array of work
-            location types
+        job_location_type (list[JobPostingSearchBodySearchParamsJobLocationTypeType0Item] | None | Unset): Filter by
+            work location type. Deprecated.
         employment_type (list[JobPostingSearchBodySearchParamsEmploymentTypeType0Item] | None | Unset): Array of
             employment types (e.g., Full-time, Part-time, Contract, Internship)
         seniority_level (list[JobPostingSearchBodySearchParamsSeniorityLevelType0Item] | None | Unset): Array of

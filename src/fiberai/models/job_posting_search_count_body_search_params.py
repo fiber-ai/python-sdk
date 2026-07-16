@@ -93,8 +93,8 @@ class JobPostingSearchCountBodySearchParams:
             salary range in USD
         years_of_experience (JobPostingSearchCountBodySearchParamsYearsOfExperienceType0 | None | Unset): Filter by
             years of experience required
-        job_location_type (list[JobPostingSearchCountBodySearchParamsJobLocationTypeType0Item] | None | Unset): Array of
-            work location types
+        job_location_type (list[JobPostingSearchCountBodySearchParamsJobLocationTypeType0Item] | None | Unset): Filter
+            by work location type. Deprecated.
         employment_type (list[JobPostingSearchCountBodySearchParamsEmploymentTypeType0Item] | None | Unset): Array of
             employment types (e.g., Full-time, Part-time, Contract, Internship)
         seniority_level (list[JobPostingSearchCountBodySearchParamsSeniorityLevelType0Item] | None | Unset): Array of
