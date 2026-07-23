@@ -6,6 +6,8 @@ from typing import Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..types import UNSET, Unset
+
 T = TypeVar("T", bound="FundingRoundChange")
 
 
@@ -17,12 +19,14 @@ class FundingRoundChange:
         amount_usd (float | None): Amount raised in USD
         date (None | str): ISO date of the round
         investors (list[str]): Investor names
+        crunchbase_url (None | str | Unset): URL to the funding round page on Crunchbase, when available
     """
 
     type_: str
     amount_usd: float | None
     date: None | str
     investors: list[str]
+    crunchbase_url: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -36,6 +40,12 @@ class FundingRoundChange:
 
         investors = self.investors
 
+        crunchbase_url: None | str | Unset
+        if isinstance(self.crunchbase_url, Unset):
+            crunchbase_url = UNSET
+        else:
+            crunchbase_url = self.crunchbase_url
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -46,6 +56,8 @@ class FundingRoundChange:
                 "investors": investors,
             }
         )
+        if crunchbase_url is not UNSET:
+            field_dict["crunchbaseUrl"] = crunchbase_url
 
         return field_dict
 
@@ -70,11 +82,21 @@ class FundingRoundChange:
 
         investors = cast(list[str], d.pop("investors"))
 
+        def _parse_crunchbase_url(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        crunchbase_url = _parse_crunchbase_url(d.pop("crunchbaseUrl", UNSET))
+
         funding_round_change = cls(
             type_=type_,
             amount_usd=amount_usd,
             date=date,
             investors=investors,
+            crunchbase_url=crunchbase_url,
         )
 
         funding_round_change.additional_properties = d

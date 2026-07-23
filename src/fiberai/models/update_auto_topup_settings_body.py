@@ -21,12 +21,18 @@ class UpdateAutoTopupSettingsBody:
             isEnabled is true.
         credits_to_buy (int | None | Unset): Number of credits to purchase when auto top-up triggers. Required when
             isEnabled is true.
+        max_per_day (int | None | Unset): Maximum number of auto top-ups allowed in a rolling 24-hour window. Set to
+            null to remove the daily limit.
+        max_per_month (int | None | Unset): Maximum number of auto top-ups allowed per calendar month (UTC). When
+            reached, auto top-up pauses until the next calendar month. Set to null to remove the monthly limit.
     """
 
     api_key: str
     is_enabled: bool
     credit_threshold: int | None | Unset = UNSET
     credits_to_buy: int | None | Unset = UNSET
+    max_per_day: int | None | Unset = UNSET
+    max_per_month: int | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -46,6 +52,18 @@ class UpdateAutoTopupSettingsBody:
         else:
             credits_to_buy = self.credits_to_buy
 
+        max_per_day: int | None | Unset
+        if isinstance(self.max_per_day, Unset):
+            max_per_day = UNSET
+        else:
+            max_per_day = self.max_per_day
+
+        max_per_month: int | None | Unset
+        if isinstance(self.max_per_month, Unset):
+            max_per_month = UNSET
+        else:
+            max_per_month = self.max_per_month
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -58,6 +76,10 @@ class UpdateAutoTopupSettingsBody:
             field_dict["creditThreshold"] = credit_threshold
         if credits_to_buy is not UNSET:
             field_dict["creditsToBuy"] = credits_to_buy
+        if max_per_day is not UNSET:
+            field_dict["maxPerDay"] = max_per_day
+        if max_per_month is not UNSET:
+            field_dict["maxPerMonth"] = max_per_month
 
         return field_dict
 
@@ -86,11 +108,31 @@ class UpdateAutoTopupSettingsBody:
 
         credits_to_buy = _parse_credits_to_buy(d.pop("creditsToBuy", UNSET))
 
+        def _parse_max_per_day(data: object) -> int | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(int | None | Unset, data)
+
+        max_per_day = _parse_max_per_day(d.pop("maxPerDay", UNSET))
+
+        def _parse_max_per_month(data: object) -> int | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(int | None | Unset, data)
+
+        max_per_month = _parse_max_per_month(d.pop("maxPerMonth", UNSET))
+
         update_auto_topup_settings_body = cls(
             api_key=api_key,
             is_enabled=is_enabled,
             credit_threshold=credit_threshold,
             credits_to_buy=credits_to_buy,
+            max_per_day=max_per_day,
+            max_per_month=max_per_month,
         )
 
         update_auto_topup_settings_body.additional_properties = d

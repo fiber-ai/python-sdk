@@ -29,6 +29,9 @@ if TYPE_CHECKING:
     from ..models.combined_search_count_body_profile_params_education_type_0 import (
         CombinedSearchCountBodyProfileParamsEducationType0,
     )
+    from ..models.combined_search_count_body_profile_params_education_v2_type_0 import (
+        CombinedSearchCountBodyProfileParamsEducationV2Type0,
+    )
     from ..models.combined_search_count_body_profile_params_employment_type_type_0 import (
         CombinedSearchCountBodyProfileParamsEmploymentTypeType0,
     )
@@ -131,6 +134,9 @@ if TYPE_CHECKING:
     from ..models.combined_search_count_body_profile_params_time_zone_type_0 import (
         CombinedSearchCountBodyProfileParamsTimeZoneType0,
     )
+    from ..models.combined_search_count_body_profile_params_unemployment_type_0 import (
+        CombinedSearchCountBodyProfileParamsUnemploymentType0,
+    )
     from ..models.combined_search_count_body_profile_params_years_of_experience_type_0 import (
         CombinedSearchCountBodyProfileParamsYearsOfExperienceType0,
     )
@@ -168,6 +174,7 @@ class CombinedSearchCountBodyProfileParams:
             is_in_stealth (bool | None | Unset):
             stealth_v2 (CombinedSearchCountBodyProfileParamsStealthV2Type0 |
                 CombinedSearchCountBodyProfileParamsStealthV2Type1 | None | Unset):
+            education_v2 (CombinedSearchCountBodyProfileParamsEducationV2Type0 | None | Unset):
             job_status (CombinedSearchCountBodyProfileParamsJobStatusType0 |
                 CombinedSearchCountBodyProfileParamsJobStatusType1 | CombinedSearchCountBodyProfileParamsJobStatusType2 | None |
                 Unset):
@@ -193,6 +200,7 @@ class CombinedSearchCountBodyProfileParams:
             is_verified (bool | None | Unset):
             joined_linked_in_at (CombinedSearchCountBodyProfileParamsJoinedLinkedInAtType0 |
                 CombinedSearchCountBodyProfileParamsJoinedLinkedInAtType1 | None | Unset):
+            unemployment (CombinedSearchCountBodyProfileParamsUnemploymentType0 | None | Unset):
             get_detailed_education (bool | None | Unset): Whether to include deep details about each educational item, like
                 the school's LinkedIn URL, website, location, etc. That'll be put in the detailedEducation array. This slows
                 down the API call, so only enable this if you need it. Default: False.
@@ -245,6 +253,7 @@ class CombinedSearchCountBodyProfileParams:
         | None
         | Unset
     ) = UNSET
+    education_v2: CombinedSearchCountBodyProfileParamsEducationV2Type0 | None | Unset = UNSET
     job_status: (
         CombinedSearchCountBodyProfileParamsJobStatusType0
         | CombinedSearchCountBodyProfileParamsJobStatusType1
@@ -282,6 +291,7 @@ class CombinedSearchCountBodyProfileParams:
         | None
         | Unset
     ) = UNSET
+    unemployment: CombinedSearchCountBodyProfileParamsUnemploymentType0 | None | Unset = UNSET
     get_detailed_education: bool | None | Unset = False
     get_detailed_work_experience: bool | None | Unset = False
     tags: CombinedSearchCountBodyProfileParamsTagsType0 | None | Unset = UNSET
@@ -309,6 +319,9 @@ class CombinedSearchCountBodyProfileParams:
         )
         from ..models.combined_search_count_body_profile_params_education_type_0 import (
             CombinedSearchCountBodyProfileParamsEducationType0,
+        )
+        from ..models.combined_search_count_body_profile_params_education_v2_type_0 import (
+            CombinedSearchCountBodyProfileParamsEducationV2Type0,
         )
         from ..models.combined_search_count_body_profile_params_employment_type_type_0 import (
             CombinedSearchCountBodyProfileParamsEmploymentTypeType0,
@@ -408,6 +421,9 @@ class CombinedSearchCountBodyProfileParams:
         )
         from ..models.combined_search_count_body_profile_params_time_zone_type_0 import (
             CombinedSearchCountBodyProfileParamsTimeZoneType0,
+        )
+        from ..models.combined_search_count_body_profile_params_unemployment_type_0 import (
+            CombinedSearchCountBodyProfileParamsUnemploymentType0,
         )
         from ..models.combined_search_count_body_profile_params_years_of_experience_type_0 import (
             CombinedSearchCountBodyProfileParamsYearsOfExperienceType0,
@@ -571,6 +587,14 @@ class CombinedSearchCountBodyProfileParams:
         else:
             stealth_v2 = self.stealth_v2
 
+        education_v2: dict[str, Any] | None | Unset
+        if isinstance(self.education_v2, Unset):
+            education_v2 = UNSET
+        elif isinstance(self.education_v2, CombinedSearchCountBodyProfileParamsEducationV2Type0):
+            education_v2 = self.education_v2.to_dict()
+        else:
+            education_v2 = self.education_v2
+
         job_status: dict[str, Any] | None | Unset
         if isinstance(self.job_status, Unset):
             job_status = UNSET
@@ -731,6 +755,14 @@ class CombinedSearchCountBodyProfileParams:
         else:
             joined_linked_in_at = self.joined_linked_in_at
 
+        unemployment: dict[str, Any] | None | Unset
+        if isinstance(self.unemployment, Unset):
+            unemployment = UNSET
+        elif isinstance(self.unemployment, CombinedSearchCountBodyProfileParamsUnemploymentType0):
+            unemployment = self.unemployment.to_dict()
+        else:
+            unemployment = self.unemployment
+
         get_detailed_education: bool | None | Unset
         if isinstance(self.get_detailed_education, Unset):
             get_detailed_education = UNSET
@@ -812,6 +844,8 @@ class CombinedSearchCountBodyProfileParams:
             field_dict["isInStealth"] = is_in_stealth
         if stealth_v2 is not UNSET:
             field_dict["stealthV2"] = stealth_v2
+        if education_v2 is not UNSET:
+            field_dict["educationV2"] = education_v2
         if job_status is not UNSET:
             field_dict["jobStatus"] = job_status
         if time_zone is not UNSET:
@@ -854,6 +888,8 @@ class CombinedSearchCountBodyProfileParams:
             field_dict["isVerified"] = is_verified
         if joined_linked_in_at is not UNSET:
             field_dict["joinedLinkedInAt"] = joined_linked_in_at
+        if unemployment is not UNSET:
+            field_dict["unemployment"] = unemployment
         if get_detailed_education is not UNSET:
             field_dict["getDetailedEducation"] = get_detailed_education
         if get_detailed_work_experience is not UNSET:
@@ -889,6 +925,9 @@ class CombinedSearchCountBodyProfileParams:
         )
         from ..models.combined_search_count_body_profile_params_education_type_0 import (
             CombinedSearchCountBodyProfileParamsEducationType0,
+        )
+        from ..models.combined_search_count_body_profile_params_education_v2_type_0 import (
+            CombinedSearchCountBodyProfileParamsEducationV2Type0,
         )
         from ..models.combined_search_count_body_profile_params_employment_type_type_0 import (
             CombinedSearchCountBodyProfileParamsEmploymentTypeType0,
@@ -991,6 +1030,9 @@ class CombinedSearchCountBodyProfileParams:
         )
         from ..models.combined_search_count_body_profile_params_time_zone_type_0 import (
             CombinedSearchCountBodyProfileParamsTimeZoneType0,
+        )
+        from ..models.combined_search_count_body_profile_params_unemployment_type_0 import (
+            CombinedSearchCountBodyProfileParamsUnemploymentType0,
         )
         from ..models.combined_search_count_body_profile_params_years_of_experience_type_0 import (
             CombinedSearchCountBodyProfileParamsYearsOfExperienceType0,
@@ -1409,6 +1451,23 @@ class CombinedSearchCountBodyProfileParams:
 
         stealth_v2 = _parse_stealth_v2(d.pop("stealthV2", UNSET))
 
+        def _parse_education_v2(data: object) -> CombinedSearchCountBodyProfileParamsEducationV2Type0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                education_v2_type_0 = CombinedSearchCountBodyProfileParamsEducationV2Type0.from_dict(data)
+
+                return education_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CombinedSearchCountBodyProfileParamsEducationV2Type0 | None | Unset, data)
+
+        education_v2 = _parse_education_v2(d.pop("educationV2", UNSET))
+
         def _parse_job_status(
             data: object,
         ) -> (
@@ -1781,6 +1840,23 @@ class CombinedSearchCountBodyProfileParams:
 
         joined_linked_in_at = _parse_joined_linked_in_at(d.pop("joinedLinkedInAt", UNSET))
 
+        def _parse_unemployment(data: object) -> CombinedSearchCountBodyProfileParamsUnemploymentType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                unemployment_type_0 = CombinedSearchCountBodyProfileParamsUnemploymentType0.from_dict(data)
+
+                return unemployment_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CombinedSearchCountBodyProfileParamsUnemploymentType0 | None | Unset, data)
+
+        unemployment = _parse_unemployment(d.pop("unemployment", UNSET))
+
         def _parse_get_detailed_education(data: object) -> bool | None | Unset:
             if data is None:
                 return data
@@ -1877,6 +1953,7 @@ class CombinedSearchCountBodyProfileParams:
             left_stealth_at=left_stealth_at,
             is_in_stealth=is_in_stealth,
             stealth_v2=stealth_v2,
+            education_v2=education_v2,
             job_status=job_status,
             time_zone=time_zone,
             past_job_text=past_job_text,
@@ -1898,6 +1975,7 @@ class CombinedSearchCountBodyProfileParams:
             industry=industry,
             is_verified=is_verified,
             joined_linked_in_at=joined_linked_in_at,
+            unemployment=unemployment,
             get_detailed_education=get_detailed_education,
             get_detailed_work_experience=get_detailed_work_experience,
             tags=tags,

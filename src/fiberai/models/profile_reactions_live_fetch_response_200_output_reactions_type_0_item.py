@@ -44,6 +44,7 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
             thumbs-up.
         target (None | str | Unset):
         reacted_ago (None | str | Unset):
+        reacted_at (None | str | Unset):
         reactor (None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0 | Unset):
         post (None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0 | Unset):
         comment (None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0 | Unset):
@@ -59,6 +60,7 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
     ) = UNSET
     target: None | str | Unset = UNSET
     reacted_ago: None | str | Unset = UNSET
+    reacted_at: None | str | Unset = UNSET
     reactor: None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0 | Unset = UNSET
     post: None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0 | Unset = UNSET
     comment: None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0 | Unset = UNSET
@@ -105,6 +107,12 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
         else:
             reacted_ago = self.reacted_ago
 
+        reacted_at: None | str | Unset
+        if isinstance(self.reacted_at, Unset):
+            reacted_at = UNSET
+        else:
+            reacted_at = self.reacted_at
+
         reactor: dict[str, Any] | None | Unset
         if isinstance(self.reactor, Unset):
             reactor = UNSET
@@ -140,6 +148,8 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
             field_dict["target"] = target
         if reacted_ago is not UNSET:
             field_dict["reactedAgo"] = reacted_ago
+        if reacted_at is not UNSET:
+            field_dict["reactedAt"] = reacted_at
         if reactor is not UNSET:
             field_dict["reactor"] = reactor
         if post is not UNSET:
@@ -238,6 +248,15 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
 
         reacted_ago = _parse_reacted_ago(d.pop("reactedAgo", UNSET))
 
+        def _parse_reacted_at(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        reacted_at = _parse_reacted_at(d.pop("reactedAt", UNSET))
+
         def _parse_reactor(
             data: object,
         ) -> None | ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0 | Unset:
@@ -304,6 +323,7 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
             type_=type_,
             target=target,
             reacted_ago=reacted_ago,
+            reacted_at=reacted_at,
             reactor=reactor,
             post=post,
             comment=comment,

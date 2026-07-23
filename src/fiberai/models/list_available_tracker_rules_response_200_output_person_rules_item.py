@@ -32,6 +32,7 @@ class ListAvailableTrackerRulesResponse200OutputPersonRulesItem:
             company or person lists.
         description (str): What change this rule detects and when it fires.
         use_case (str): Sales-oriented example of why you would use this rule.
+        supports_initial_signals (bool): Whether this rule supports immediate initial signals on entity addition.
         config (ListAvailableTrackerRulesResponse200OutputPersonRulesItemConfig): Config schema and example for creating
             this rule type.
         signal (ListAvailableTrackerRulesResponse200OutputPersonRulesItemSignal): Signal output schema and example for
@@ -43,6 +44,7 @@ class ListAvailableTrackerRulesResponse200OutputPersonRulesItem:
     entity_type: ListAvailableTrackerRulesResponse200OutputPersonRulesItemEntityType
     description: str
     use_case: str
+    supports_initial_signals: bool
     config: ListAvailableTrackerRulesResponse200OutputPersonRulesItemConfig
     signal: ListAvailableTrackerRulesResponse200OutputPersonRulesItemSignal
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -58,6 +60,8 @@ class ListAvailableTrackerRulesResponse200OutputPersonRulesItem:
 
         use_case = self.use_case
 
+        supports_initial_signals = self.supports_initial_signals
+
         config = self.config.to_dict()
 
         signal = self.signal.to_dict()
@@ -71,6 +75,7 @@ class ListAvailableTrackerRulesResponse200OutputPersonRulesItem:
                 "entityType": entity_type,
                 "description": description,
                 "useCase": use_case,
+                "supportsInitialSignals": supports_initial_signals,
                 "config": config,
                 "signal": signal,
             }
@@ -98,6 +103,8 @@ class ListAvailableTrackerRulesResponse200OutputPersonRulesItem:
 
         use_case = d.pop("useCase")
 
+        supports_initial_signals = d.pop("supportsInitialSignals")
+
         config = ListAvailableTrackerRulesResponse200OutputPersonRulesItemConfig.from_dict(d.pop("config"))
 
         signal = ListAvailableTrackerRulesResponse200OutputPersonRulesItemSignal.from_dict(d.pop("signal"))
@@ -108,6 +115,7 @@ class ListAvailableTrackerRulesResponse200OutputPersonRulesItem:
             entity_type=entity_type,
             description=description,
             use_case=use_case,
+            supports_initial_signals=supports_initial_signals,
             config=config,
             signal=signal,
         )

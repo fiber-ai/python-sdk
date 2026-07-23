@@ -21,6 +21,9 @@ if TYPE_CHECKING:
     from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_count_v2_type_0 import (
         PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0,
     )
+    from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_trends_v2_type_0 import (
+        PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0,
+    )
     from ..models.paginated_combined_search_body_company_config_type_0_search_params_employees_type_0 import (
         PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0,
     )
@@ -173,6 +176,8 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
         technologies_v2 (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesV2Type0 | Unset):
         revenue_range_usd (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangeUSDType0 |
             Unset):
+        employee_trends_v2 (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0 |
+            Unset):
         tags (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTagsType0 | Unset):
         linkedin_industries (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLinkedinIndustriesType0 |
             Unset):
@@ -253,6 +258,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
     revenue_range_usd: None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangeUSDType0 | Unset = (
         UNSET
     )
+    employee_trends_v2: (
+        None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0 | Unset
+    ) = UNSET
     tags: None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTagsType0 | Unset = UNSET
     linkedin_industries: (
         None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLinkedinIndustriesType0 | Unset
@@ -272,6 +280,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_count_v2_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0,
+        )
+        from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_trends_v2_type_0 import (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0,
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employees_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0,
@@ -689,6 +700,16 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
         else:
             revenue_range_usd = self.revenue_range_usd
 
+        employee_trends_v2: dict[str, Any] | None | Unset
+        if isinstance(self.employee_trends_v2, Unset):
+            employee_trends_v2 = UNSET
+        elif isinstance(
+            self.employee_trends_v2, PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0
+        ):
+            employee_trends_v2 = self.employee_trends_v2.to_dict()
+        else:
+            employee_trends_v2 = self.employee_trends_v2
+
         tags: dict[str, Any] | None | Unset
         if isinstance(self.tags, Unset):
             tags = UNSET
@@ -790,6 +811,8 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
             field_dict["technologiesV2"] = technologies_v2
         if revenue_range_usd is not UNSET:
             field_dict["revenueRangeUSD"] = revenue_range_usd
+        if employee_trends_v2 is not UNSET:
+            field_dict["employeeTrendsV2"] = employee_trends_v2
         if tags is not UNSET:
             field_dict["tags"] = tags
         if linkedin_industries is not UNSET:
@@ -812,6 +835,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_count_v2_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0,
+        )
+        from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_trends_v2_type_0 import (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0,
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employees_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0,
@@ -1688,6 +1714,29 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
 
         revenue_range_usd = _parse_revenue_range_usd(d.pop("revenueRangeUSD", UNSET))
 
+        def _parse_employee_trends_v2(
+            data: object,
+        ) -> None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                employee_trends_v2_type_0 = (
+                    PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0.from_dict(data)
+                )
+
+                return employee_trends_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0 | Unset, data
+            )
+
+        employee_trends_v2 = _parse_employee_trends_v2(d.pop("employeeTrendsV2", UNSET))
+
         def _parse_tags(
             data: object,
         ) -> None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTagsType0 | Unset:
@@ -1793,6 +1842,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
             investors_v2=investors_v2,
             technologies_v2=technologies_v2,
             revenue_range_usd=revenue_range_usd,
+            employee_trends_v2=employee_trends_v2,
             tags=tags,
             linkedin_industries=linkedin_industries,
             sort=sort,

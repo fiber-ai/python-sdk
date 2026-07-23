@@ -6,6 +6,8 @@ from typing import Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..types import UNSET, Unset
+
 T = TypeVar("T", bound="PersonExperienceChange")
 
 
@@ -23,6 +25,8 @@ class PersonExperienceChange:
         location (None | str): Position location
         employment_type (None | str): Employment type
         seniority (None | str): Seniority level
+        linkedin_company_slug (None | str | Unset): LinkedIn company vanity slug
+        company_domains (list[str] | None | Unset): Known company domains
     """
 
     linkedin_company_id: None | str
@@ -35,6 +39,8 @@ class PersonExperienceChange:
     location: None | str
     employment_type: None | str
     seniority: None | str
+    linkedin_company_slug: None | str | Unset = UNSET
+    company_domains: list[str] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -67,6 +73,21 @@ class PersonExperienceChange:
         seniority: None | str
         seniority = self.seniority
 
+        linkedin_company_slug: None | str | Unset
+        if isinstance(self.linkedin_company_slug, Unset):
+            linkedin_company_slug = UNSET
+        else:
+            linkedin_company_slug = self.linkedin_company_slug
+
+        company_domains: list[str] | None | Unset
+        if isinstance(self.company_domains, Unset):
+            company_domains = UNSET
+        elif isinstance(self.company_domains, list):
+            company_domains = self.company_domains
+
+        else:
+            company_domains = self.company_domains
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -83,6 +104,10 @@ class PersonExperienceChange:
                 "seniority": seniority,
             }
         )
+        if linkedin_company_slug is not UNSET:
+            field_dict["linkedinCompanySlug"] = linkedin_company_slug
+        if company_domains is not UNSET:
+            field_dict["companyDomains"] = company_domains
 
         return field_dict
 
@@ -155,6 +180,32 @@ class PersonExperienceChange:
 
         seniority = _parse_seniority(d.pop("seniority"))
 
+        def _parse_linkedin_company_slug(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        linkedin_company_slug = _parse_linkedin_company_slug(d.pop("linkedinCompanySlug", UNSET))
+
+        def _parse_company_domains(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                company_domains_type_0 = cast(list[str], data)
+
+                return company_domains_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        company_domains = _parse_company_domains(d.pop("companyDomains", UNSET))
+
         person_experience_change = cls(
             linkedin_company_id=linkedin_company_id,
             company_name=company_name,
@@ -166,6 +217,8 @@ class PersonExperienceChange:
             location=location,
             employment_type=employment_type,
             seniority=seniority,
+            linkedin_company_slug=linkedin_company_slug,
+            company_domains=company_domains,
         )
 
         person_experience_change.additional_properties = d

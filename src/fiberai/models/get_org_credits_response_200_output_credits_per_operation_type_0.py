@@ -76,6 +76,9 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_company_revenue import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyRevenue,
     )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_department_size import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0GetDepartmentSize,
+    )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_email_from_github_username import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0GetEmailFromGithubUsername,
     )
@@ -135,6 +138,12 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_google_maps_scrape import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0GoogleMapsScrape,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_hotel_property_lookup import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0HotelPropertyLookup,
+    )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_hotel_search import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0HotelSearch,
     )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_job_title_rewrite import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0JobTitleRewrite,
@@ -445,6 +454,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         reverse_phone_lookup (GetOrgCreditsResponse200OutputCreditsPerOperationType0ReversePhoneLookup):
         find_company_lookalikes (GetOrgCreditsResponse200OutputCreditsPerOperationType0FindCompanyLookalikes):
         find_person_lookalikes (GetOrgCreditsResponse200OutputCreditsPerOperationType0FindPersonLookalikes):
+        hotel_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0HotelSearch):
+        hotel_property_lookup (GetOrgCreditsResponse200OutputCreditsPerOperationType0HotelPropertyLookup):
+        get_department_size (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetDepartmentSize):
     """
 
     get_company_from_db: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyFromDb
@@ -560,9 +572,21 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
     reverse_phone_lookup: GetOrgCreditsResponse200OutputCreditsPerOperationType0ReversePhoneLookup
     find_company_lookalikes: GetOrgCreditsResponse200OutputCreditsPerOperationType0FindCompanyLookalikes
     find_person_lookalikes: GetOrgCreditsResponse200OutputCreditsPerOperationType0FindPersonLookalikes
+    hotel_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0HotelSearch
+    hotel_property_lookup: GetOrgCreditsResponse200OutputCreditsPerOperationType0HotelPropertyLookup
+    get_department_size: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetDepartmentSize
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_webpage_scrape import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScrape,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_webpage_screenshot import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScreenshot,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_work_email_reveal import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0WorkEmailReveal,
+        )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_youtube_channel_details import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0YoutubeChannelDetails,
         )
@@ -789,6 +813,12 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
 
         find_person_lookalikes = self.find_person_lookalikes.to_dict()
 
+        hotel_search = self.hotel_search.to_dict()
+
+        hotel_property_lookup = self.hotel_property_lookup.to_dict()
+
+        get_department_size = self.get_department_size.to_dict()
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -898,6 +928,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
                 "reversePhoneLookup": reverse_phone_lookup,
                 "findCompanyLookalikes": find_company_lookalikes,
                 "findPersonLookalikes": find_person_lookalikes,
+                "hotelSearch": hotel_search,
+                "hotelPropertyLookup": hotel_property_lookup,
+                "getDepartmentSize": get_department_size,
             }
         )
 
@@ -974,6 +1007,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_company_revenue import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyRevenue,
         )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_department_size import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0GetDepartmentSize,
+        )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_get_email_from_github_username import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0GetEmailFromGithubUsername,
         )
@@ -1033,6 +1069,12 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_google_maps_scrape import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0GoogleMapsScrape,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_hotel_property_lookup import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0HotelPropertyLookup,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_hotel_search import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0HotelSearch,
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_job_title_rewrite import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0JobTitleRewrite,
@@ -1694,6 +1736,16 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             d.pop("findPersonLookalikes")
         )
 
+        hotel_search = GetOrgCreditsResponse200OutputCreditsPerOperationType0HotelSearch.from_dict(d.pop("hotelSearch"))
+
+        hotel_property_lookup = GetOrgCreditsResponse200OutputCreditsPerOperationType0HotelPropertyLookup.from_dict(
+            d.pop("hotelPropertyLookup")
+        )
+
+        get_department_size = GetOrgCreditsResponse200OutputCreditsPerOperationType0GetDepartmentSize.from_dict(
+            d.pop("getDepartmentSize")
+        )
+
         get_org_credits_response_200_output_credits_per_operation_type_0 = cls(
             get_company_from_db=get_company_from_db,
             get_person_from_db=get_person_from_db,
@@ -1800,6 +1852,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             reverse_phone_lookup=reverse_phone_lookup,
             find_company_lookalikes=find_company_lookalikes,
             find_person_lookalikes=find_person_lookalikes,
+            hotel_search=hotel_search,
+            hotel_property_lookup=hotel_property_lookup,
+            get_department_size=get_department_size,
         )
 
         get_org_credits_response_200_output_credits_per_operation_type_0.additional_properties = d

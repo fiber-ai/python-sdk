@@ -1,0 +1,10 @@
+from enum import Enum
+
+
+class PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemYearsType0FinishedSchoolAtType1WindowType2Method(
+    str, Enum
+):
+    CALENDAR = "calendar"
+
+    def __str__(self) -> str:
+        return str(self.value)

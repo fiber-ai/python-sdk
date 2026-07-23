@@ -6,6 +6,8 @@ from typing import Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..types import UNSET, Unset
+
 T = TypeVar("T", bound="PersonReactionChange")
 
 
@@ -19,6 +21,7 @@ class PersonReactionChange:
         post_url (None | str): URL to the LinkedIn post
         post_author_name (None | str): Name of the post author
         reacted_ago (None | str): Relative time since the reaction
+        reacted_at (None | str | Unset): Exact ISO timestamp when the reaction occurred
     """
 
     reaction_id: str
@@ -27,6 +30,7 @@ class PersonReactionChange:
     post_url: None | str
     post_author_name: None | str
     reacted_ago: None | str
+    reacted_at: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -47,6 +51,12 @@ class PersonReactionChange:
         reacted_ago: None | str
         reacted_ago = self.reacted_ago
 
+        reacted_at: None | str | Unset
+        if isinstance(self.reacted_at, Unset):
+            reacted_at = UNSET
+        else:
+            reacted_at = self.reacted_at
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -59,6 +69,8 @@ class PersonReactionChange:
                 "reactedAgo": reacted_ago,
             }
         )
+        if reacted_at is not UNSET:
+            field_dict["reactedAt"] = reacted_at
 
         return field_dict
 
@@ -102,6 +114,15 @@ class PersonReactionChange:
 
         reacted_ago = _parse_reacted_ago(d.pop("reactedAgo"))
 
+        def _parse_reacted_at(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        reacted_at = _parse_reacted_at(d.pop("reactedAt", UNSET))
+
         person_reaction_change = cls(
             reaction_id=reaction_id,
             type_=type_,
@@ -109,6 +130,7 @@ class PersonReactionChange:
             post_url=post_url,
             post_author_name=post_author_name,
             reacted_ago=reacted_ago,
+            reacted_at=reacted_at,
         )
 
         person_reaction_change.additional_properties = d

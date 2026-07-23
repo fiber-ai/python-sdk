@@ -1,12 +1,15 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..types import UNSET, Unset
+
 if TYPE_CHECKING:
+    from ..models.add_tracker_people_body_initial_signals_type_0 import AddTrackerPeopleBodyInitialSignalsType0
     from ..models.add_tracker_people_body_people_item import AddTrackerPeopleBodyPeopleItem
 
 
@@ -19,19 +22,33 @@ class AddTrackerPeopleBody:
     Attributes:
         api_key (str): Your Fiber API key
         people (list[AddTrackerPeopleBodyPeopleItem]): People to add. At least one identifier required per person.
+        initial_signals (AddTrackerPeopleBodyInitialSignalsType0 | None | Unset): When provided, generates signals
+            immediately for recent events (funding rounds, news, job postings, social posts) without waiting for the first
+            tracking cycle. Only certain rule types support initial signals.
     """
 
     api_key: str
     people: list[AddTrackerPeopleBodyPeopleItem]
+    initial_signals: AddTrackerPeopleBodyInitialSignalsType0 | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.add_tracker_people_body_initial_signals_type_0 import AddTrackerPeopleBodyInitialSignalsType0
+
         api_key = self.api_key
 
         people = []
         for people_item_data in self.people:
             people_item = people_item_data.to_dict()
             people.append(people_item)
+
+        initial_signals: dict[str, Any] | None | Unset
+        if isinstance(self.initial_signals, Unset):
+            initial_signals = UNSET
+        elif isinstance(self.initial_signals, AddTrackerPeopleBodyInitialSignalsType0):
+            initial_signals = self.initial_signals.to_dict()
+        else:
+            initial_signals = self.initial_signals
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -41,11 +58,14 @@ class AddTrackerPeopleBody:
                 "people": people,
             }
         )
+        if initial_signals is not UNSET:
+            field_dict["initialSignals"] = initial_signals
 
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.add_tracker_people_body_initial_signals_type_0 import AddTrackerPeopleBodyInitialSignalsType0
         from ..models.add_tracker_people_body_people_item import AddTrackerPeopleBodyPeopleItem
 
         d = dict(src_dict)
@@ -58,9 +78,27 @@ class AddTrackerPeopleBody:
 
             people.append(people_item)
 
+        def _parse_initial_signals(data: object) -> AddTrackerPeopleBodyInitialSignalsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                initial_signals_type_0 = AddTrackerPeopleBodyInitialSignalsType0.from_dict(data)
+
+                return initial_signals_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(AddTrackerPeopleBodyInitialSignalsType0 | None | Unset, data)
+
+        initial_signals = _parse_initial_signals(d.pop("initialSignals", UNSET))
+
         add_tracker_people_body = cls(
             api_key=api_key,
             people=people,
+            initial_signals=initial_signals,
         )
 
         add_tracker_people_body.additional_properties = d

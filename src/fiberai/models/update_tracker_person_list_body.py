@@ -36,6 +36,9 @@ if TYPE_CHECKING:
     from ..models.person_tag_gained import PersonTagGained
     from ..models.person_tenure_milestone import PersonTenureMilestone
     from ..models.person_title_changed import PersonTitleChanged
+    from ..models.update_tracker_person_list_body_initial_signals_type_0 import (
+        UpdateTrackerPersonListBodyInitialSignalsType0,
+    )
     from ..models.update_tracker_person_list_body_update_rule_flags_type_0_item import (
         UpdateTrackerPersonListBodyUpdateRuleFlagsType0Item,
     )
@@ -72,6 +75,9 @@ class UpdateTrackerPersonListBody:
         update_rule_flags (list[UpdateTrackerPersonListBodyUpdateRuleFlagsType0Item] | None | Unset): Toggle `isDummy`
             on existing rules by ID. Use this to convert a real rule into a dummy rule (or vice versa) without recreating
             it.
+        initial_signals (None | Unset | UpdateTrackerPersonListBodyInitialSignalsType0): When provided, generates
+            signals immediately for recent events (funding rounds, news, job postings, social posts) without waiting for the
+            first tracking cycle. Only certain rule types support initial signals.
     """
 
     api_key: str
@@ -146,6 +152,7 @@ class UpdateTrackerPersonListBody:
     ) = UNSET
     remove_rule_ids: list[str] | None | Unset = UNSET
     update_rule_flags: list[UpdateTrackerPersonListBodyUpdateRuleFlagsType0Item] | None | Unset = UNSET
+    initial_signals: None | Unset | UpdateTrackerPersonListBodyInitialSignalsType0 = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -175,6 +182,9 @@ class UpdateTrackerPersonListBody:
         from ..models.person_summary_changed import PersonSummaryChanged
         from ..models.person_tag_gained import PersonTagGained
         from ..models.person_title_changed import PersonTitleChanged
+        from ..models.update_tracker_person_list_body_initial_signals_type_0 import (
+            UpdateTrackerPersonListBodyInitialSignalsType0,
+        )
 
         api_key = self.api_key
 
@@ -351,6 +361,14 @@ class UpdateTrackerPersonListBody:
         else:
             update_rule_flags = self.update_rule_flags
 
+        initial_signals: dict[str, Any] | None | Unset
+        if isinstance(self.initial_signals, Unset):
+            initial_signals = UNSET
+        elif isinstance(self.initial_signals, UpdateTrackerPersonListBodyInitialSignalsType0):
+            initial_signals = self.initial_signals.to_dict()
+        else:
+            initial_signals = self.initial_signals
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -372,6 +390,8 @@ class UpdateTrackerPersonListBody:
             field_dict["removeRuleIds"] = remove_rule_ids
         if update_rule_flags is not UNSET:
             field_dict["updateRuleFlags"] = update_rule_flags
+        if initial_signals is not UNSET:
+            field_dict["initialSignals"] = initial_signals
 
         return field_dict
 
@@ -404,6 +424,9 @@ class UpdateTrackerPersonListBody:
         from ..models.person_tag_gained import PersonTagGained
         from ..models.person_tenure_milestone import PersonTenureMilestone
         from ..models.person_title_changed import PersonTitleChanged
+        from ..models.update_tracker_person_list_body_initial_signals_type_0 import (
+            UpdateTrackerPersonListBodyInitialSignalsType0,
+        )
         from ..models.update_tracker_person_list_body_update_rule_flags_type_0_item import (
             UpdateTrackerPersonListBodyUpdateRuleFlagsType0Item,
         )
@@ -1151,6 +1174,23 @@ class UpdateTrackerPersonListBody:
 
         update_rule_flags = _parse_update_rule_flags(d.pop("updateRuleFlags", UNSET))
 
+        def _parse_initial_signals(data: object) -> None | Unset | UpdateTrackerPersonListBodyInitialSignalsType0:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                initial_signals_type_0 = UpdateTrackerPersonListBodyInitialSignalsType0.from_dict(data)
+
+                return initial_signals_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | Unset | UpdateTrackerPersonListBodyInitialSignalsType0, data)
+
+        initial_signals = _parse_initial_signals(d.pop("initialSignals", UNSET))
+
         update_tracker_person_list_body = cls(
             api_key=api_key,
             name=name,
@@ -1160,6 +1200,7 @@ class UpdateTrackerPersonListBody:
             add_rules=add_rules,
             remove_rule_ids=remove_rule_ids,
             update_rule_flags=update_rule_flags,
+            initial_signals=initial_signals,
         )
 
         update_tracker_person_list_body.additional_properties = d

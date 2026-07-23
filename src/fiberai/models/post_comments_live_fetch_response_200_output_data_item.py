@@ -18,6 +18,9 @@ if TYPE_CHECKING:
     from ..models.post_comments_live_fetch_response_200_output_data_item_reactions_by_type_type_0_item import (
         PostCommentsLiveFetchResponse200OutputDataItemReactionsByTypeType0Item,
     )
+    from ..models.post_comments_live_fetch_response_200_output_data_item_tagged_users_type_0_item import (
+        PostCommentsLiveFetchResponse200OutputDataItemTaggedUsersType0Item,
+    )
 
 
 T = TypeVar("T", bound="PostCommentsLiveFetchResponse200OutputDataItem")
@@ -33,6 +36,7 @@ class PostCommentsLiveFetchResponse200OutputDataItem:
         num_comments (float | None | Unset):
         reactions_by_type (list[PostCommentsLiveFetchResponse200OutputDataItemReactionsByTypeType0Item] | None | Unset):
         created_at (None | str | Unset):
+        tagged_users (list[PostCommentsLiveFetchResponse200OutputDataItemTaggedUsersType0Item] | None | Unset):
         comments (list[PostCommentsLiveFetchResponse200OutputDataItemCommentsType0Item] | None | Unset):
     """
 
@@ -44,6 +48,7 @@ class PostCommentsLiveFetchResponse200OutputDataItem:
         UNSET
     )
     created_at: None | str | Unset = UNSET
+    tagged_users: list[PostCommentsLiveFetchResponse200OutputDataItemTaggedUsersType0Item] | None | Unset = UNSET
     comments: list[PostCommentsLiveFetchResponse200OutputDataItemCommentsType0Item] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -96,6 +101,18 @@ class PostCommentsLiveFetchResponse200OutputDataItem:
         else:
             created_at = self.created_at
 
+        tagged_users: list[dict[str, Any]] | None | Unset
+        if isinstance(self.tagged_users, Unset):
+            tagged_users = UNSET
+        elif isinstance(self.tagged_users, list):
+            tagged_users = []
+            for tagged_users_type_0_item_data in self.tagged_users:
+                tagged_users_type_0_item = tagged_users_type_0_item_data.to_dict()
+                tagged_users.append(tagged_users_type_0_item)
+
+        else:
+            tagged_users = self.tagged_users
+
         comments: list[dict[str, Any]] | None | Unset
         if isinstance(self.comments, Unset):
             comments = UNSET
@@ -123,6 +140,8 @@ class PostCommentsLiveFetchResponse200OutputDataItem:
             field_dict["reactionsByType"] = reactions_by_type
         if created_at is not UNSET:
             field_dict["createdAt"] = created_at
+        if tagged_users is not UNSET:
+            field_dict["taggedUsers"] = tagged_users
         if comments is not UNSET:
             field_dict["comments"] = comments
 
@@ -138,6 +157,9 @@ class PostCommentsLiveFetchResponse200OutputDataItem:
         )
         from ..models.post_comments_live_fetch_response_200_output_data_item_reactions_by_type_type_0_item import (
             PostCommentsLiveFetchResponse200OutputDataItemReactionsByTypeType0Item,
+        )
+        from ..models.post_comments_live_fetch_response_200_output_data_item_tagged_users_type_0_item import (
+            PostCommentsLiveFetchResponse200OutputDataItemTaggedUsersType0Item,
         )
 
         d = dict(src_dict)
@@ -227,6 +249,34 @@ class PostCommentsLiveFetchResponse200OutputDataItem:
 
         created_at = _parse_created_at(d.pop("createdAt", UNSET))
 
+        def _parse_tagged_users(
+            data: object,
+        ) -> list[PostCommentsLiveFetchResponse200OutputDataItemTaggedUsersType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                tagged_users_type_0 = []
+                _tagged_users_type_0 = data
+                for tagged_users_type_0_item_data in _tagged_users_type_0:
+                    tagged_users_type_0_item = (
+                        PostCommentsLiveFetchResponse200OutputDataItemTaggedUsersType0Item.from_dict(
+                            tagged_users_type_0_item_data
+                        )
+                    )
+
+                    tagged_users_type_0.append(tagged_users_type_0_item)
+
+                return tagged_users_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[PostCommentsLiveFetchResponse200OutputDataItemTaggedUsersType0Item] | None | Unset, data)
+
+        tagged_users = _parse_tagged_users(d.pop("taggedUsers", UNSET))
+
         def _parse_comments(
             data: object,
         ) -> list[PostCommentsLiveFetchResponse200OutputDataItemCommentsType0Item] | None | Unset:
@@ -260,6 +310,7 @@ class PostCommentsLiveFetchResponse200OutputDataItem:
             num_comments=num_comments,
             reactions_by_type=reactions_by_type,
             created_at=created_at,
+            tagged_users=tagged_users,
             comments=comments,
         )
 

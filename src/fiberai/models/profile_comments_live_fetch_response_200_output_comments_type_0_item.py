@@ -27,6 +27,7 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0Item:
         comment_id (None | str | Unset):
         content (None | str | Unset):
         commented_ago (None | str | Unset):
+        commented_at (None | str | Unset):
         commenter (None | ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0 | Unset):
         post (None | ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0 | Unset):
     """
@@ -34,6 +35,7 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0Item:
     comment_id: None | str | Unset = UNSET
     content: None | str | Unset = UNSET
     commented_ago: None | str | Unset = UNSET
+    commented_at: None | str | Unset = UNSET
     commenter: None | ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0 | Unset = UNSET
     post: None | ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0 | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -64,6 +66,12 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0Item:
         else:
             commented_ago = self.commented_ago
 
+        commented_at: None | str | Unset
+        if isinstance(self.commented_at, Unset):
+            commented_at = UNSET
+        else:
+            commented_at = self.commented_at
+
         commenter: dict[str, Any] | None | Unset
         if isinstance(self.commenter, Unset):
             commenter = UNSET
@@ -89,6 +97,8 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0Item:
             field_dict["content"] = content
         if commented_ago is not UNSET:
             field_dict["commentedAgo"] = commented_ago
+        if commented_at is not UNSET:
+            field_dict["commentedAt"] = commented_at
         if commenter is not UNSET:
             field_dict["commenter"] = commenter
         if post is not UNSET:
@@ -134,6 +144,15 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0Item:
 
         commented_ago = _parse_commented_ago(d.pop("commentedAgo", UNSET))
 
+        def _parse_commented_at(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        commented_at = _parse_commented_at(d.pop("commentedAt", UNSET))
+
         def _parse_commenter(
             data: object,
         ) -> None | ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0 | Unset:
@@ -178,6 +197,7 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0Item:
             comment_id=comment_id,
             content=content,
             commented_ago=commented_ago,
+            commented_at=commented_at,
             commenter=commenter,
             post=post,
         )

@@ -19,11 +19,14 @@ class PostCommentsLiveFetchBody:
         content_id (str): You can get LinkedIn posts from the Profile or Company Posts endpoints. (e.g.,
             'urn:li:activity:7123456789012345678' or 'urn:li:ugcPost:7391650829398675456')
         cursor (None | str | Unset): Pagination cursor for fetching additional pages of posts
+        include_tagged_users (bool | None | Unset): When true, also returns the LinkedIn users @-mentioned (tagged)
+            inside each comment. This might be slower so only enable it if needed. Default: False.
     """
 
     api_key: str
     content_id: str
     cursor: None | str | Unset = UNSET
+    include_tagged_users: bool | None | Unset = False
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -37,6 +40,12 @@ class PostCommentsLiveFetchBody:
         else:
             cursor = self.cursor
 
+        include_tagged_users: bool | None | Unset
+        if isinstance(self.include_tagged_users, Unset):
+            include_tagged_users = UNSET
+        else:
+            include_tagged_users = self.include_tagged_users
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -47,6 +56,8 @@ class PostCommentsLiveFetchBody:
         )
         if cursor is not UNSET:
             field_dict["cursor"] = cursor
+        if include_tagged_users is not UNSET:
+            field_dict["includeTaggedUsers"] = include_tagged_users
 
         return field_dict
 
@@ -66,10 +77,20 @@ class PostCommentsLiveFetchBody:
 
         cursor = _parse_cursor(d.pop("cursor", UNSET))
 
+        def _parse_include_tagged_users(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        include_tagged_users = _parse_include_tagged_users(d.pop("includeTaggedUsers", UNSET))
+
         post_comments_live_fetch_body = cls(
             api_key=api_key,
             content_id=content_id,
             cursor=cursor,
+            include_tagged_users=include_tagged_users,
         )
 
         post_comments_live_fetch_body.additional_properties = d

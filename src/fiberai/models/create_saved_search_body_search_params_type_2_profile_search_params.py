@@ -29,6 +29,9 @@ if TYPE_CHECKING:
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0,
     )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_v2_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0,
+    )
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_employment_type_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0,
     )
@@ -131,6 +134,9 @@ if TYPE_CHECKING:
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_time_zone_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTimeZoneType0,
     )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_unemployment_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0,
+    )
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_years_of_experience_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsYearsOfExperienceType0,
     )
@@ -169,6 +175,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         is_in_stealth (bool | None | Unset):
         stealth_v2 (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type0 |
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type1 | None | Unset):
+        education_v2 (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0 | None | Unset):
         job_status (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType0 |
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType1 |
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType2 | None | Unset):
@@ -195,6 +202,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         is_verified (bool | None | Unset):
         joined_linked_in_at (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0 |
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType1 | None | Unset):
+        unemployment (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0 | None | Unset):
         get_detailed_education (bool | None | Unset): Whether to include deep details about each educational item, like
             the school's LinkedIn URL, website, location, etc. That'll be put in the detailedEducation array. This slows
             down the API call, so only enable this if you need it. Default: False.
@@ -253,6 +261,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         | None
         | Unset
     ) = UNSET
+    education_v2: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0 | None | Unset = UNSET
     job_status: (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType0
         | CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType1
@@ -292,6 +301,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         | None
         | Unset
     ) = UNSET
+    unemployment: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0 | None | Unset = UNSET
     get_detailed_education: bool | None | Unset = False
     get_detailed_work_experience: bool | None | Unset = False
     tags: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTagsType0 | None | Unset = UNSET
@@ -319,6 +329,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_v2_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0,
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_employment_type_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0,
@@ -418,6 +431,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_time_zone_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTimeZoneType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_unemployment_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0,
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_years_of_experience_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsYearsOfExperienceType0,
@@ -602,6 +618,14 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         else:
             stealth_v2 = self.stealth_v2
 
+        education_v2: dict[str, Any] | None | Unset
+        if isinstance(self.education_v2, Unset):
+            education_v2 = UNSET
+        elif isinstance(self.education_v2, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0):
+            education_v2 = self.education_v2.to_dict()
+        else:
+            education_v2 = self.education_v2
+
         job_status: dict[str, Any] | None | Unset
         if isinstance(self.job_status, Unset):
             job_status = UNSET
@@ -776,6 +800,14 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         else:
             joined_linked_in_at = self.joined_linked_in_at
 
+        unemployment: dict[str, Any] | None | Unset
+        if isinstance(self.unemployment, Unset):
+            unemployment = UNSET
+        elif isinstance(self.unemployment, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0):
+            unemployment = self.unemployment.to_dict()
+        else:
+            unemployment = self.unemployment
+
         get_detailed_education: bool | None | Unset
         if isinstance(self.get_detailed_education, Unset):
             get_detailed_education = UNSET
@@ -857,6 +889,8 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             field_dict["isInStealth"] = is_in_stealth
         if stealth_v2 is not UNSET:
             field_dict["stealthV2"] = stealth_v2
+        if education_v2 is not UNSET:
+            field_dict["educationV2"] = education_v2
         if job_status is not UNSET:
             field_dict["jobStatus"] = job_status
         if time_zone is not UNSET:
@@ -899,6 +933,8 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             field_dict["isVerified"] = is_verified
         if joined_linked_in_at is not UNSET:
             field_dict["joinedLinkedInAt"] = joined_linked_in_at
+        if unemployment is not UNSET:
+            field_dict["unemployment"] = unemployment
         if get_detailed_education is not UNSET:
             field_dict["getDetailedEducation"] = get_detailed_education
         if get_detailed_work_experience is not UNSET:
@@ -934,6 +970,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_v2_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0,
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_employment_type_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0,
@@ -1036,6 +1075,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_time_zone_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTimeZoneType0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_unemployment_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0,
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_years_of_experience_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsYearsOfExperienceType0,
@@ -1518,6 +1560,27 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
 
         stealth_v2 = _parse_stealth_v2(d.pop("stealthV2", UNSET))
 
+        def _parse_education_v2(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                education_v2_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0.from_dict(data)
+                )
+
+                return education_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0 | None | Unset, data)
+
+        education_v2 = _parse_education_v2(d.pop("educationV2", UNSET))
+
         def _parse_job_status(
             data: object,
         ) -> (
@@ -1940,6 +2003,27 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
 
         joined_linked_in_at = _parse_joined_linked_in_at(d.pop("joinedLinkedInAt", UNSET))
 
+        def _parse_unemployment(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                unemployment_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0.from_dict(data)
+                )
+
+                return unemployment_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0 | None | Unset, data)
+
+        unemployment = _parse_unemployment(d.pop("unemployment", UNSET))
+
         def _parse_get_detailed_education(data: object) -> bool | None | Unset:
             if data is None:
                 return data
@@ -2046,6 +2130,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             left_stealth_at=left_stealth_at,
             is_in_stealth=is_in_stealth,
             stealth_v2=stealth_v2,
+            education_v2=education_v2,
             job_status=job_status,
             time_zone=time_zone,
             past_job_text=past_job_text,
@@ -2067,6 +2152,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             industry=industry,
             is_verified=is_verified,
             joined_linked_in_at=joined_linked_in_at,
+            unemployment=unemployment,
             get_detailed_education=get_detailed_education,
             get_detailed_work_experience=get_detailed_work_experience,
             tags=tags,

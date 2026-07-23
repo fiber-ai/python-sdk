@@ -10,6 +10,7 @@ from ..models.job_posting_change_location_type_type_1 import JobPostingChangeLoc
 from ..models.job_posting_change_location_type_type_2_type_1 import JobPostingChangeLocationTypeType2Type1
 from ..models.job_posting_change_location_type_type_3_type_1 import JobPostingChangeLocationTypeType3Type1
 from ..models.job_posting_change_status import JobPostingChangeStatus
+from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="JobPostingChange")
 
@@ -28,6 +29,7 @@ class JobPostingChange:
         job_function (None | str): Department or function
         posted_at (None | str): ISO date when posted
         status (JobPostingChangeStatus): Job posting status
+        job_functions (list[str] | Unset): All job functions this posting belongs to
     """
 
     job_id: str
@@ -44,6 +46,7 @@ class JobPostingChange:
     job_function: None | str
     posted_at: None | str
     status: JobPostingChangeStatus
+    job_functions: list[str] | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -78,6 +81,10 @@ class JobPostingChange:
 
         status = self.status.value
 
+        job_functions: list[str] | Unset = UNSET
+        if not isinstance(self.job_functions, Unset):
+            job_functions = self.job_functions
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -93,6 +100,8 @@ class JobPostingChange:
                 "status": status,
             }
         )
+        if job_functions is not UNSET:
+            field_dict["jobFunctions"] = job_functions
 
         return field_dict
 
@@ -184,6 +193,8 @@ class JobPostingChange:
 
         status = JobPostingChangeStatus(d.pop("status"))
 
+        job_functions = cast(list[str], d.pop("jobFunctions", UNSET))
+
         job_posting_change = cls(
             job_id=job_id,
             title=title,
@@ -194,6 +205,7 @@ class JobPostingChange:
             job_function=job_function,
             posted_at=posted_at,
             status=status,
+            job_functions=job_functions,
         )
 
         job_posting_change.additional_properties = d

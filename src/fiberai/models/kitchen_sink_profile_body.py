@@ -6,6 +6,9 @@ from typing import TYPE_CHECKING, Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.kitchen_sink_profile_body_thoroughness_type_1 import KitchenSinkProfileBodyThoroughnessType1
+from ..models.kitchen_sink_profile_body_thoroughness_type_2_type_1 import KitchenSinkProfileBodyThoroughnessType2Type1
+from ..models.kitchen_sink_profile_body_thoroughness_type_3_type_1 import KitchenSinkProfileBodyThoroughnessType3Type1
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -76,6 +79,10 @@ class KitchenSinkProfileBody:
         school_domain (KitchenSinkProfileBodySchoolDomainType0 | None | Unset):
         fuzzy_search (bool | None | Unset): When true, enables fuzzy name matching. Useful when exact name spelling is
             uncertain. Default: False.
+        thoroughness (KitchenSinkProfileBodyThoroughnessType1 | KitchenSinkProfileBodyThoroughnessType2Type1 |
+            KitchenSinkProfileBodyThoroughnessType3Type1 | None | Unset): Controls how thoroughly to search. Higher values
+            recover more matches at the cost of additional latency; lower values return faster. Omit to use the recommended
+            default. Default: KitchenSinkProfileBodyThoroughnessType1.HIGH.
         get_detailed_education (bool | None | Unset): When true, returns detailed_education[] with school_details for
             each education entry. Default: False.
         get_detailed_work_experience (bool | None | Unset): When true, returns detailed_work_experiences[] with
@@ -118,6 +125,13 @@ class KitchenSinkProfileBody:
     ) = UNSET
     school_domain: KitchenSinkProfileBodySchoolDomainType0 | None | Unset = UNSET
     fuzzy_search: bool | None | Unset = False
+    thoroughness: (
+        KitchenSinkProfileBodyThoroughnessType1
+        | KitchenSinkProfileBodyThoroughnessType2Type1
+        | KitchenSinkProfileBodyThoroughnessType3Type1
+        | None
+        | Unset
+    ) = KitchenSinkProfileBodyThoroughnessType1.HIGH
     get_detailed_education: bool | None | Unset = False
     get_detailed_work_experience: bool | None | Unset = False
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -291,6 +305,18 @@ class KitchenSinkProfileBody:
         else:
             fuzzy_search = self.fuzzy_search
 
+        thoroughness: None | str | Unset
+        if isinstance(self.thoroughness, Unset):
+            thoroughness = UNSET
+        elif isinstance(self.thoroughness, KitchenSinkProfileBodyThoroughnessType1):
+            thoroughness = self.thoroughness.value
+        elif isinstance(self.thoroughness, KitchenSinkProfileBodyThoroughnessType2Type1):
+            thoroughness = self.thoroughness.value
+        elif isinstance(self.thoroughness, KitchenSinkProfileBodyThoroughnessType3Type1):
+            thoroughness = self.thoroughness.value
+        else:
+            thoroughness = self.thoroughness
+
         get_detailed_education: bool | None | Unset
         if isinstance(self.get_detailed_education, Unset):
             get_detailed_education = UNSET
@@ -342,6 +368,8 @@ class KitchenSinkProfileBody:
             field_dict["schoolDomain"] = school_domain
         if fuzzy_search is not UNSET:
             field_dict["fuzzySearch"] = fuzzy_search
+        if thoroughness is not UNSET:
+            field_dict["thoroughness"] = thoroughness
         if get_detailed_education is not UNSET:
             field_dict["getDetailedEducation"] = get_detailed_education
         if get_detailed_work_experience is not UNSET:
@@ -712,6 +740,54 @@ class KitchenSinkProfileBody:
 
         fuzzy_search = _parse_fuzzy_search(d.pop("fuzzySearch", UNSET))
 
+        def _parse_thoroughness(
+            data: object,
+        ) -> (
+            KitchenSinkProfileBodyThoroughnessType1
+            | KitchenSinkProfileBodyThoroughnessType2Type1
+            | KitchenSinkProfileBodyThoroughnessType3Type1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                thoroughness_type_1 = KitchenSinkProfileBodyThoroughnessType1(data)
+
+                return thoroughness_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                thoroughness_type_2_type_1 = KitchenSinkProfileBodyThoroughnessType2Type1(data)
+
+                return thoroughness_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                thoroughness_type_3_type_1 = KitchenSinkProfileBodyThoroughnessType3Type1(data)
+
+                return thoroughness_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                KitchenSinkProfileBodyThoroughnessType1
+                | KitchenSinkProfileBodyThoroughnessType2Type1
+                | KitchenSinkProfileBodyThoroughnessType3Type1
+                | None
+                | Unset,
+                data,
+            )
+
+        thoroughness = _parse_thoroughness(d.pop("thoroughness", UNSET))
+
         def _parse_get_detailed_education(data: object) -> bool | None | Unset:
             if data is None:
                 return data
@@ -748,6 +824,7 @@ class KitchenSinkProfileBody:
             school_identifier=school_identifier,
             school_domain=school_domain,
             fuzzy_search=fuzzy_search,
+            thoroughness=thoroughness,
             get_detailed_education=get_detailed_education,
             get_detailed_work_experience=get_detailed_work_experience,
         )

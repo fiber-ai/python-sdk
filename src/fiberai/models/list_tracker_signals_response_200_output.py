@@ -7,7 +7,7 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.tracker_signal import TrackerSignal
+    from ..models.tracker_signal_output import TrackerSignalOutput
 
 
 T = TypeVar("T", bound="ListTrackerSignalsResponse200Output")
@@ -17,11 +17,11 @@ T = TypeVar("T", bound="ListTrackerSignalsResponse200Output")
 class ListTrackerSignalsResponse200Output:
     """
     Attributes:
-        signals (list[TrackerSignal]):
+        signals (list[TrackerSignalOutput]):
         next_cursor (None | str): Cursor for fetching the next page. Null when there are no more results.
     """
 
-    signals: list[TrackerSignal]
+    signals: list[TrackerSignalOutput]
     next_cursor: None | str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -47,13 +47,13 @@ class ListTrackerSignalsResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.tracker_signal import TrackerSignal
+        from ..models.tracker_signal_output import TrackerSignalOutput
 
         d = dict(src_dict)
         signals = []
         _signals = d.pop("signals")
         for signals_item_data in _signals:
-            signals_item = TrackerSignal.from_dict(signals_item_data)
+            signals_item = TrackerSignalOutput.from_dict(signals_item_data)
 
             signals.append(signals_item)
 

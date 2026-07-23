@@ -21,6 +21,9 @@ if TYPE_CHECKING:
     from ..models.company_count_body_search_params_employee_count_v2_type_0 import (
         CompanyCountBodySearchParamsEmployeeCountV2Type0,
     )
+    from ..models.company_count_body_search_params_employee_trends_v2_type_0 import (
+        CompanyCountBodySearchParamsEmployeeTrendsV2Type0,
+    )
     from ..models.company_count_body_search_params_employees_type_0 import CompanyCountBodySearchParamsEmployeesType0
     from ..models.company_count_body_search_params_exact_company_type_0 import (
         CompanyCountBodySearchParamsExactCompanyType0,
@@ -141,6 +144,7 @@ class CompanyCountBodySearchParams:
         investors_v2 (CompanyCountBodySearchParamsInvestorsV2Type0 | None | Unset):
         technologies_v2 (CompanyCountBodySearchParamsTechnologiesV2Type0 | None | Unset):
         revenue_range_usd (CompanyCountBodySearchParamsRevenueRangeUSDType0 | None | Unset):
+        employee_trends_v2 (CompanyCountBodySearchParamsEmployeeTrendsV2Type0 | None | Unset):
         tags (CompanyCountBodySearchParamsTagsType0 | None | Unset):
         linkedin_industries (CompanyCountBodySearchParamsLinkedinIndustriesType0 | None | Unset):
         sort (list[CompanyCountBodySearchParamsSortType0Item] | None | Unset): Sort order for company results. Clauses
@@ -186,6 +190,7 @@ class CompanyCountBodySearchParams:
     investors_v2: CompanyCountBodySearchParamsInvestorsV2Type0 | None | Unset = UNSET
     technologies_v2: CompanyCountBodySearchParamsTechnologiesV2Type0 | None | Unset = UNSET
     revenue_range_usd: CompanyCountBodySearchParamsRevenueRangeUSDType0 | None | Unset = UNSET
+    employee_trends_v2: CompanyCountBodySearchParamsEmployeeTrendsV2Type0 | None | Unset = UNSET
     tags: CompanyCountBodySearchParamsTagsType0 | None | Unset = UNSET
     linkedin_industries: CompanyCountBodySearchParamsLinkedinIndustriesType0 | None | Unset = UNSET
     sort: list[CompanyCountBodySearchParamsSortType0Item] | None | Unset = UNSET
@@ -203,6 +208,9 @@ class CompanyCountBodySearchParams:
         )
         from ..models.company_count_body_search_params_employee_count_v2_type_0 import (
             CompanyCountBodySearchParamsEmployeeCountV2Type0,
+        )
+        from ..models.company_count_body_search_params_employee_trends_v2_type_0 import (
+            CompanyCountBodySearchParamsEmployeeTrendsV2Type0,
         )
         from ..models.company_count_body_search_params_employees_type_0 import (
             CompanyCountBodySearchParamsEmployeesType0,
@@ -565,6 +573,14 @@ class CompanyCountBodySearchParams:
         else:
             revenue_range_usd = self.revenue_range_usd
 
+        employee_trends_v2: dict[str, Any] | None | Unset
+        if isinstance(self.employee_trends_v2, Unset):
+            employee_trends_v2 = UNSET
+        elif isinstance(self.employee_trends_v2, CompanyCountBodySearchParamsEmployeeTrendsV2Type0):
+            employee_trends_v2 = self.employee_trends_v2.to_dict()
+        else:
+            employee_trends_v2 = self.employee_trends_v2
+
         tags: dict[str, Any] | None | Unset
         if isinstance(self.tags, Unset):
             tags = UNSET
@@ -664,6 +680,8 @@ class CompanyCountBodySearchParams:
             field_dict["technologiesV2"] = technologies_v2
         if revenue_range_usd is not UNSET:
             field_dict["revenueRangeUSD"] = revenue_range_usd
+        if employee_trends_v2 is not UNSET:
+            field_dict["employeeTrendsV2"] = employee_trends_v2
         if tags is not UNSET:
             field_dict["tags"] = tags
         if linkedin_industries is not UNSET:
@@ -686,6 +704,9 @@ class CompanyCountBodySearchParams:
         )
         from ..models.company_count_body_search_params_employee_count_v2_type_0 import (
             CompanyCountBodySearchParamsEmployeeCountV2Type0,
+        )
+        from ..models.company_count_body_search_params_employee_trends_v2_type_0 import (
+            CompanyCountBodySearchParamsEmployeeTrendsV2Type0,
         )
         from ..models.company_count_body_search_params_employees_type_0 import (
             CompanyCountBodySearchParamsEmployeesType0,
@@ -1397,6 +1418,23 @@ class CompanyCountBodySearchParams:
 
         revenue_range_usd = _parse_revenue_range_usd(d.pop("revenueRangeUSD", UNSET))
 
+        def _parse_employee_trends_v2(data: object) -> CompanyCountBodySearchParamsEmployeeTrendsV2Type0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                employee_trends_v2_type_0 = CompanyCountBodySearchParamsEmployeeTrendsV2Type0.from_dict(data)
+
+                return employee_trends_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CompanyCountBodySearchParamsEmployeeTrendsV2Type0 | None | Unset, data)
+
+        employee_trends_v2 = _parse_employee_trends_v2(d.pop("employeeTrendsV2", UNSET))
+
         def _parse_tags(data: object) -> CompanyCountBodySearchParamsTagsType0 | None | Unset:
             if data is None:
                 return data
@@ -1490,6 +1528,7 @@ class CompanyCountBodySearchParams:
             investors_v2=investors_v2,
             technologies_v2=technologies_v2,
             revenue_range_usd=revenue_range_usd,
+            employee_trends_v2=employee_trends_v2,
             tags=tags,
             linkedin_industries=linkedin_industries,
             sort=sort,

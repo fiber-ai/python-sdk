@@ -147,7 +147,7 @@ def sync_detailed(
     | StartDepthChartResponse500
     | StartDepthChartResponse503
 ]:
-    """Start depth chart generation
+    r"""Start depth chart generation
 
      Generates a breakdown of the number of employees at a given company by department/function
     (Engineering, Sales, Marketing, etc.), seniority (Junior through Executive), or both. This helps
@@ -156,6 +156,9 @@ def sync_detailed(
     thorough alternative to guessing a company's internal org chart.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+
+    <span>💰 <strong>Cost:</strong> 8 credits per depth chart report&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (StartDepthChartBody):
@@ -196,7 +199,7 @@ def sync(
     | StartDepthChartResponse503
     | None
 ):
-    """Start depth chart generation
+    r"""Start depth chart generation
 
      Generates a breakdown of the number of employees at a given company by department/function
     (Engineering, Sales, Marketing, etc.), seniority (Junior through Executive), or both. This helps
@@ -205,6 +208,9 @@ def sync(
     thorough alternative to guessing a company's internal org chart.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+
+    <span>💰 <strong>Cost:</strong> 8 credits per depth chart report&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (StartDepthChartBody):
@@ -239,7 +245,7 @@ async def asyncio_detailed(
     | StartDepthChartResponse500
     | StartDepthChartResponse503
 ]:
-    """Start depth chart generation
+    r"""Start depth chart generation
 
      Generates a breakdown of the number of employees at a given company by department/function
     (Engineering, Sales, Marketing, etc.), seniority (Junior through Executive), or both. This helps
@@ -248,6 +254,9 @@ async def asyncio_detailed(
     thorough alternative to guessing a company's internal org chart.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+
+    <span>💰 <strong>Cost:</strong> 8 credits per depth chart report&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (StartDepthChartBody):
@@ -286,7 +295,7 @@ async def asyncio(
     | StartDepthChartResponse503
     | None
 ):
-    """Start depth chart generation
+    r"""Start depth chart generation
 
      Generates a breakdown of the number of employees at a given company by department/function
     (Engineering, Sales, Marketing, etc.), seniority (Junior through Executive), or both. This helps
@@ -295,6 +304,9 @@ async def asyncio(
     thorough alternative to guessing a company's internal org chart.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
+
+    <span>💰 <strong>Cost:</strong> 8 credits per depth chart report&nbsp;<span title=\"Pricing shown is
+    default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
         body (StartDepthChartBody):

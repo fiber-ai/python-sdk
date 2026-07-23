@@ -6,6 +6,8 @@ from typing import Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..types import UNSET, Unset
+
 T = TypeVar("T", bound="PersonCommentChange")
 
 
@@ -19,6 +21,7 @@ class PersonCommentChange:
         post_url (None | str): URL to the LinkedIn post
         post_author_name (None | str): Name of the post author
         commented_ago (None | str): Relative time since the comment
+        commented_at (None | str | Unset): Exact ISO timestamp when the comment was made
     """
 
     comment_id: str
@@ -27,6 +30,7 @@ class PersonCommentChange:
     post_url: None | str
     post_author_name: None | str
     commented_ago: None | str
+    commented_at: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -47,6 +51,12 @@ class PersonCommentChange:
         commented_ago: None | str
         commented_ago = self.commented_ago
 
+        commented_at: None | str | Unset
+        if isinstance(self.commented_at, Unset):
+            commented_at = UNSET
+        else:
+            commented_at = self.commented_at
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -59,6 +69,8 @@ class PersonCommentChange:
                 "commentedAgo": commented_ago,
             }
         )
+        if commented_at is not UNSET:
+            field_dict["commentedAt"] = commented_at
 
         return field_dict
 
@@ -102,6 +114,15 @@ class PersonCommentChange:
 
         commented_ago = _parse_commented_ago(d.pop("commentedAgo"))
 
+        def _parse_commented_at(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        commented_at = _parse_commented_at(d.pop("commentedAt", UNSET))
+
         person_comment_change = cls(
             comment_id=comment_id,
             content=content,
@@ -109,6 +130,7 @@ class PersonCommentChange:
             post_url=post_url,
             post_author_name=post_author_name,
             commented_ago=commented_ago,
+            commented_at=commented_at,
         )
 
         person_comment_change.additional_properties = d

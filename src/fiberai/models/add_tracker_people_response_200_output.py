@@ -7,6 +7,12 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
+    from ..models.add_tracker_people_response_200_output_initial_signals_type_0 import (
+        AddTrackerPeopleResponse200OutputInitialSignalsType0,
+    )
+    from ..models.add_tracker_people_response_200_output_initial_signals_type_1 import (
+        AddTrackerPeopleResponse200OutputInitialSignalsType1,
+    )
     from ..models.add_tracker_people_response_200_output_invalid_people_item import (
         AddTrackerPeopleResponse200OutputInvalidPeopleItem,
     )
@@ -27,15 +33,24 @@ class AddTrackerPeopleResponse200Output:
             this request. People that could not be resolved are reported in invalidPeople, not here.
         invalid_people (list[AddTrackerPeopleResponse200OutputInvalidPeopleItem]): Details on any people that could not
             be added.
+        initial_signals (AddTrackerPeopleResponse200OutputInitialSignalsType0 |
+            AddTrackerPeopleResponse200OutputInitialSignalsType1): Status of the initial signals request.
     """
 
     added: int
     pending: int
     skipped: int
     invalid_people: list[AddTrackerPeopleResponse200OutputInvalidPeopleItem]
+    initial_signals: (
+        AddTrackerPeopleResponse200OutputInitialSignalsType0 | AddTrackerPeopleResponse200OutputInitialSignalsType1
+    )
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.add_tracker_people_response_200_output_initial_signals_type_0 import (
+            AddTrackerPeopleResponse200OutputInitialSignalsType0,
+        )
+
         added = self.added
 
         pending = self.pending
@@ -47,6 +62,12 @@ class AddTrackerPeopleResponse200Output:
             invalid_people_item = invalid_people_item_data.to_dict()
             invalid_people.append(invalid_people_item)
 
+        initial_signals: dict[str, Any]
+        if isinstance(self.initial_signals, AddTrackerPeopleResponse200OutputInitialSignalsType0):
+            initial_signals = self.initial_signals.to_dict()
+        else:
+            initial_signals = self.initial_signals.to_dict()
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -55,6 +76,7 @@ class AddTrackerPeopleResponse200Output:
                 "pending": pending,
                 "skipped": skipped,
                 "invalidPeople": invalid_people,
+                "initialSignals": initial_signals,
             }
         )
 
@@ -62,6 +84,12 @@ class AddTrackerPeopleResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.add_tracker_people_response_200_output_initial_signals_type_0 import (
+            AddTrackerPeopleResponse200OutputInitialSignalsType0,
+        )
+        from ..models.add_tracker_people_response_200_output_initial_signals_type_1 import (
+            AddTrackerPeopleResponse200OutputInitialSignalsType1,
+        )
         from ..models.add_tracker_people_response_200_output_invalid_people_item import (
             AddTrackerPeopleResponse200OutputInvalidPeopleItem,
         )
@@ -80,11 +108,33 @@ class AddTrackerPeopleResponse200Output:
 
             invalid_people.append(invalid_people_item)
 
+        def _parse_initial_signals(
+            data: object,
+        ) -> (
+            AddTrackerPeopleResponse200OutputInitialSignalsType0 | AddTrackerPeopleResponse200OutputInitialSignalsType1
+        ):
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                initial_signals_type_0 = AddTrackerPeopleResponse200OutputInitialSignalsType0.from_dict(data)
+
+                return initial_signals_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            if not isinstance(data, dict):
+                raise TypeError()
+            initial_signals_type_1 = AddTrackerPeopleResponse200OutputInitialSignalsType1.from_dict(data)
+
+            return initial_signals_type_1
+
+        initial_signals = _parse_initial_signals(d.pop("initialSignals"))
+
         add_tracker_people_response_200_output = cls(
             added=added,
             pending=pending,
             skipped=skipped,
             invalid_people=invalid_people,
+            initial_signals=initial_signals,
         )
 
         add_tracker_people_response_200_output.additional_properties = d

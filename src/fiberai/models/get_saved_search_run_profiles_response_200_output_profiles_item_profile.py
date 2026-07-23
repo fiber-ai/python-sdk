@@ -127,6 +127,7 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile:
         custom_data (GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileCustomDataType0 | None | Unset):
         relevance_score (float | None | Unset):
         last_sort_key (None | str | Unset):
+        last_updated_at (None | str | Unset):
         languages (list[GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileLanguagesType0Item] | None |
             Unset):
         detailed_education
@@ -201,6 +202,7 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile:
     custom_data: GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileCustomDataType0 | None | Unset = UNSET
     relevance_score: float | None | Unset = UNSET
     last_sort_key: None | str | Unset = UNSET
+    last_updated_at: None | str | Unset = UNSET
     languages: list[GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileLanguagesType0Item] | None | Unset = (
         UNSET
     )
@@ -593,6 +595,12 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile:
         else:
             last_sort_key = self.last_sort_key
 
+        last_updated_at: None | str | Unset
+        if isinstance(self.last_updated_at, Unset):
+            last_updated_at = UNSET
+        else:
+            last_updated_at = self.last_updated_at
+
         languages: list[dict[str, Any]] | None | Unset
         if isinstance(self.languages, Unset):
             languages = UNSET
@@ -724,6 +732,8 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile:
             field_dict["relevance_score"] = relevance_score
         if last_sort_key is not UNSET:
             field_dict["last_sort_key"] = last_sort_key
+        if last_updated_at is not UNSET:
+            field_dict["last_updated_at"] = last_updated_at
         if languages is not UNSET:
             field_dict["languages"] = languages
         if detailed_education is not UNSET:
@@ -1547,6 +1557,15 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile:
 
         last_sort_key = _parse_last_sort_key(d.pop("last_sort_key", UNSET))
 
+        def _parse_last_updated_at(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        last_updated_at = _parse_last_updated_at(d.pop("last_updated_at", UNSET))
+
         def _parse_languages(
             data: object,
         ) -> list[GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileLanguagesType0Item] | None | Unset:
@@ -1692,6 +1711,7 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile:
             custom_data=custom_data,
             relevance_score=relevance_score,
             last_sort_key=last_sort_key,
+            last_updated_at=last_updated_at,
             languages=languages,
             detailed_education=detailed_education,
             detailed_work_experiences=detailed_work_experiences,

@@ -29,6 +29,8 @@ class CombinedSearchCountBody:
             matching companies.
         prospect_exclusion_list_i_ds (list[str] | None | Unset): The IDs of prospect exclusion lists to filter out
             matching people.
+        get_fast_estimate (bool | Unset): When true, the people count is estimated rather than counted exactly — much
+            faster, but not perfectly accurate. Set to false if you need the exact count (slower). Default: True.
     """
 
     api_key: str
@@ -36,6 +38,7 @@ class CombinedSearchCountBody:
     profile_params: CombinedSearchCountBodyProfileParams | Unset = UNSET
     company_exclusion_list_i_ds: list[str] | None | Unset = UNSET
     prospect_exclusion_list_i_ds: list[str] | None | Unset = UNSET
+    get_fast_estimate: bool | Unset = True
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -65,6 +68,8 @@ class CombinedSearchCountBody:
         else:
             prospect_exclusion_list_i_ds = self.prospect_exclusion_list_i_ds
 
+        get_fast_estimate = self.get_fast_estimate
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -79,6 +84,8 @@ class CombinedSearchCountBody:
             field_dict["companyExclusionListIDs"] = company_exclusion_list_i_ds
         if prospect_exclusion_list_i_ds is not UNSET:
             field_dict["prospectExclusionListIDs"] = prospect_exclusion_list_i_ds
+        if get_fast_estimate is not UNSET:
+            field_dict["getFastEstimate"] = get_fast_estimate
 
         return field_dict
 
@@ -133,12 +140,15 @@ class CombinedSearchCountBody:
 
         prospect_exclusion_list_i_ds = _parse_prospect_exclusion_list_i_ds(d.pop("prospectExclusionListIDs", UNSET))
 
+        get_fast_estimate = d.pop("getFastEstimate", UNSET)
+
         combined_search_count_body = cls(
             api_key=api_key,
             company_params=company_params,
             profile_params=profile_params,
             company_exclusion_list_i_ds=company_exclusion_list_i_ds,
             prospect_exclusion_list_i_ds=prospect_exclusion_list_i_ds,
+            get_fast_estimate=get_fast_estimate,
         )
 
         combined_search_count_body.additional_properties = d

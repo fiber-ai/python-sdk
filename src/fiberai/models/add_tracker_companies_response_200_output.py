@@ -7,6 +7,12 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
+    from ..models.add_tracker_companies_response_200_output_initial_signals_type_0 import (
+        AddTrackerCompaniesResponse200OutputInitialSignalsType0,
+    )
+    from ..models.add_tracker_companies_response_200_output_initial_signals_type_1 import (
+        AddTrackerCompaniesResponse200OutputInitialSignalsType1,
+    )
     from ..models.add_tracker_companies_response_200_output_invalid_companies_item import (
         AddTrackerCompaniesResponse200OutputInvalidCompaniesItem,
     )
@@ -23,14 +29,24 @@ class AddTrackerCompaniesResponse200Output:
         skipped (int): Number skipped (duplicates or invalid).
         invalid_companies (list[AddTrackerCompaniesResponse200OutputInvalidCompaniesItem]): Details on any companies
             that could not be added.
+        initial_signals (AddTrackerCompaniesResponse200OutputInitialSignalsType0 |
+            AddTrackerCompaniesResponse200OutputInitialSignalsType1): Status of the initial signals request.
     """
 
     added: int
     skipped: int
     invalid_companies: list[AddTrackerCompaniesResponse200OutputInvalidCompaniesItem]
+    initial_signals: (
+        AddTrackerCompaniesResponse200OutputInitialSignalsType0
+        | AddTrackerCompaniesResponse200OutputInitialSignalsType1
+    )
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.add_tracker_companies_response_200_output_initial_signals_type_0 import (
+            AddTrackerCompaniesResponse200OutputInitialSignalsType0,
+        )
+
         added = self.added
 
         skipped = self.skipped
@@ -40,6 +56,12 @@ class AddTrackerCompaniesResponse200Output:
             invalid_companies_item = invalid_companies_item_data.to_dict()
             invalid_companies.append(invalid_companies_item)
 
+        initial_signals: dict[str, Any]
+        if isinstance(self.initial_signals, AddTrackerCompaniesResponse200OutputInitialSignalsType0):
+            initial_signals = self.initial_signals.to_dict()
+        else:
+            initial_signals = self.initial_signals.to_dict()
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -47,6 +69,7 @@ class AddTrackerCompaniesResponse200Output:
                 "added": added,
                 "skipped": skipped,
                 "invalidCompanies": invalid_companies,
+                "initialSignals": initial_signals,
             }
         )
 
@@ -54,6 +77,12 @@ class AddTrackerCompaniesResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.add_tracker_companies_response_200_output_initial_signals_type_0 import (
+            AddTrackerCompaniesResponse200OutputInitialSignalsType0,
+        )
+        from ..models.add_tracker_companies_response_200_output_initial_signals_type_1 import (
+            AddTrackerCompaniesResponse200OutputInitialSignalsType1,
+        )
         from ..models.add_tracker_companies_response_200_output_invalid_companies_item import (
             AddTrackerCompaniesResponse200OutputInvalidCompaniesItem,
         )
@@ -72,10 +101,33 @@ class AddTrackerCompaniesResponse200Output:
 
             invalid_companies.append(invalid_companies_item)
 
+        def _parse_initial_signals(
+            data: object,
+        ) -> (
+            AddTrackerCompaniesResponse200OutputInitialSignalsType0
+            | AddTrackerCompaniesResponse200OutputInitialSignalsType1
+        ):
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                initial_signals_type_0 = AddTrackerCompaniesResponse200OutputInitialSignalsType0.from_dict(data)
+
+                return initial_signals_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            if not isinstance(data, dict):
+                raise TypeError()
+            initial_signals_type_1 = AddTrackerCompaniesResponse200OutputInitialSignalsType1.from_dict(data)
+
+            return initial_signals_type_1
+
+        initial_signals = _parse_initial_signals(d.pop("initialSignals"))
+
         add_tracker_companies_response_200_output = cls(
             added=added,
             skipped=skipped,
             invalid_companies=invalid_companies,
+            initial_signals=initial_signals,
         )
 
         add_tracker_companies_response_200_output.additional_properties = d
