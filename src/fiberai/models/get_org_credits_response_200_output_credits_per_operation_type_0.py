@@ -52,6 +52,9 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_find_person_lookalikes import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0FindPersonLookalikes,
     )
+    from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_flight_booking_page import (
+        GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightBookingPage,
+    )
     from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_flight_search import (
         GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearch,
     )
@@ -457,6 +460,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         hotel_search (GetOrgCreditsResponse200OutputCreditsPerOperationType0HotelSearch):
         hotel_property_lookup (GetOrgCreditsResponse200OutputCreditsPerOperationType0HotelPropertyLookup):
         get_department_size (GetOrgCreditsResponse200OutputCreditsPerOperationType0GetDepartmentSize):
+        flight_booking_page (GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightBookingPage):
     """
 
     get_company_from_db: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetCompanyFromDb
@@ -575,9 +579,13 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
     hotel_search: GetOrgCreditsResponse200OutputCreditsPerOperationType0HotelSearch
     hotel_property_lookup: GetOrgCreditsResponse200OutputCreditsPerOperationType0HotelPropertyLookup
     get_department_size: GetOrgCreditsResponse200OutputCreditsPerOperationType0GetDepartmentSize
+    flight_booking_page: GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightBookingPage
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_validate_phone import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0ValidatePhone,
+        )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_webpage_scrape import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0WebpageScrape,
         )
@@ -819,6 +827,8 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
 
         get_department_size = self.get_department_size.to_dict()
 
+        flight_booking_page = self.flight_booking_page.to_dict()
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -931,6 +941,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
                 "hotelSearch": hotel_search,
                 "hotelPropertyLookup": hotel_property_lookup,
                 "getDepartmentSize": get_department_size,
+                "flightBookingPage": flight_booking_page,
             }
         )
 
@@ -982,6 +993,9 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_find_person_lookalikes import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0FindPersonLookalikes,
+        )
+        from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_flight_booking_page import (
+            GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightBookingPage,
         )
         from ..models.get_org_credits_response_200_output_credits_per_operation_type_0_flight_search import (
             GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearch,
@@ -1746,6 +1760,10 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             d.pop("getDepartmentSize")
         )
 
+        flight_booking_page = GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightBookingPage.from_dict(
+            d.pop("flightBookingPage")
+        )
+
         get_org_credits_response_200_output_credits_per_operation_type_0 = cls(
             get_company_from_db=get_company_from_db,
             get_person_from_db=get_person_from_db,
@@ -1855,6 +1873,7 @@ class GetOrgCreditsResponse200OutputCreditsPerOperationType0:
             hotel_search=hotel_search,
             hotel_property_lookup=hotel_property_lookup,
             get_department_size=get_department_size,
+            flight_booking_page=flight_booking_page,
         )
 
         get_org_credits_response_200_output_credits_per_operation_type_0.additional_properties = d

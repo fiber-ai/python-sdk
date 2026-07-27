@@ -20742,6 +20742,70 @@ from .fire_tracker_dummy_response_422 import FireTrackerDummyResponse422
 from .fire_tracker_dummy_response_429 import FireTrackerDummyResponse429
 from .fire_tracker_dummy_response_500 import FireTrackerDummyResponse500
 from .fire_tracker_dummy_response_503 import FireTrackerDummyResponse503
+from .flight_booking_options_body import FlightBookingOptionsBody
+from .flight_booking_options_body_trip_type_0 import FlightBookingOptionsBodyTripType0
+from .flight_booking_options_body_trip_type_0_flight_type import FlightBookingOptionsBodyTripType0FlightType
+from .flight_booking_options_body_trip_type_1 import FlightBookingOptionsBodyTripType1
+from .flight_booking_options_body_trip_type_1_flight_type import FlightBookingOptionsBodyTripType1FlightType
+from .flight_booking_options_body_trip_type_2 import FlightBookingOptionsBodyTripType2
+from .flight_booking_options_body_trip_type_2_flight_type import FlightBookingOptionsBodyTripType2FlightType
+from .flight_booking_options_body_trip_type_2_segments_item import FlightBookingOptionsBodyTripType2SegmentsItem
+from .flight_booking_options_response_200 import FlightBookingOptionsResponse200
+from .flight_booking_options_response_200_charge_info_type_0 import FlightBookingOptionsResponse200ChargeInfoType0
+from .flight_booking_options_response_200_charge_info_type_0_low_credit_alert_type_0 import (
+    FlightBookingOptionsResponse200ChargeInfoType0LowCreditAlertType0,
+)
+from .flight_booking_options_response_200_charge_info_type_0_method import (
+    FlightBookingOptionsResponse200ChargeInfoType0Method,
+)
+from .flight_booking_options_response_200_charge_info_type_1 import FlightBookingOptionsResponse200ChargeInfoType1
+from .flight_booking_options_response_200_charge_info_type_1_low_credit_alert_type_0 import (
+    FlightBookingOptionsResponse200ChargeInfoType1LowCreditAlertType0,
+)
+from .flight_booking_options_response_200_charge_info_type_1_method import (
+    FlightBookingOptionsResponse200ChargeInfoType1Method,
+)
+from .flight_booking_options_response_200_charge_info_type_2 import FlightBookingOptionsResponse200ChargeInfoType2
+from .flight_booking_options_response_200_charge_info_type_2_low_credit_alert_type_0 import (
+    FlightBookingOptionsResponse200ChargeInfoType2LowCreditAlertType0,
+)
+from .flight_booking_options_response_200_charge_info_type_2_method import (
+    FlightBookingOptionsResponse200ChargeInfoType2Method,
+)
+from .flight_booking_options_response_200_charge_info_type_3 import FlightBookingOptionsResponse200ChargeInfoType3
+from .flight_booking_options_response_200_charge_info_type_3_low_credit_alert_type_0 import (
+    FlightBookingOptionsResponse200ChargeInfoType3LowCreditAlertType0,
+)
+from .flight_booking_options_response_200_charge_info_type_3_method import (
+    FlightBookingOptionsResponse200ChargeInfoType3Method,
+)
+from .flight_booking_options_response_200_charge_info_type_4 import FlightBookingOptionsResponse200ChargeInfoType4
+from .flight_booking_options_response_200_charge_info_type_4_low_credit_alert_type_0 import (
+    FlightBookingOptionsResponse200ChargeInfoType4LowCreditAlertType0,
+)
+from .flight_booking_options_response_200_charge_info_type_4_method import (
+    FlightBookingOptionsResponse200ChargeInfoType4Method,
+)
+from .flight_booking_options_response_200_output import FlightBookingOptionsResponse200Output
+from .flight_booking_options_response_200_output_booking_options_item import (
+    FlightBookingOptionsResponse200OutputBookingOptionsItem,
+)
+from .flight_booking_options_response_200_output_booking_options_item_booking_link_type_0 import (
+    FlightBookingOptionsResponse200OutputBookingOptionsItemBookingLinkType0,
+)
+from .flight_booking_options_response_200_warnings_type_0_item import FlightBookingOptionsResponse200WarningsType0Item
+from .flight_booking_options_response_400 import FlightBookingOptionsResponse400
+from .flight_booking_options_response_401 import FlightBookingOptionsResponse401
+from .flight_booking_options_response_402 import FlightBookingOptionsResponse402
+from .flight_booking_options_response_402_out_of_credits_alert_type_0 import (
+    FlightBookingOptionsResponse402OutOfCreditsAlertType0,
+)
+from .flight_booking_options_response_403 import FlightBookingOptionsResponse403
+from .flight_booking_options_response_404 import FlightBookingOptionsResponse404
+from .flight_booking_options_response_422 import FlightBookingOptionsResponse422
+from .flight_booking_options_response_429 import FlightBookingOptionsResponse429
+from .flight_booking_options_response_500 import FlightBookingOptionsResponse500
+from .flight_booking_options_response_503 import FlightBookingOptionsResponse503
 from .flight_search_body import FlightSearchBody
 from .flight_search_body_airlines_type_0 import FlightSearchBodyAirlinesType0
 from .flight_search_body_connecting_airports_type_0 import FlightSearchBodyConnectingAirportsType0
@@ -23562,6 +23626,12 @@ from .get_org_credits_response_200_output_credits_per_operation_type_0_find_pers
 )
 from .get_org_credits_response_200_output_credits_per_operation_type_0_find_person_lookalikes_levels_item import (
     GetOrgCreditsResponse200OutputCreditsPerOperationType0FindPersonLookalikesLevelsItem,
+)
+from .get_org_credits_response_200_output_credits_per_operation_type_0_flight_booking_page import (
+    GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightBookingPage,
+)
+from .get_org_credits_response_200_output_credits_per_operation_type_0_flight_booking_page_levels_item import (
+    GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightBookingPageLevelsItem,
 )
 from .get_org_credits_response_200_output_credits_per_operation_type_0_flight_search import (
     GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearch,
@@ -54922,6 +54992,44 @@ __all__ = (
     "FireTrackerDummyResponse429",
     "FireTrackerDummyResponse500",
     "FireTrackerDummyResponse503",
+    "FlightBookingOptionsBody",
+    "FlightBookingOptionsBodyTripType0",
+    "FlightBookingOptionsBodyTripType0FlightType",
+    "FlightBookingOptionsBodyTripType1",
+    "FlightBookingOptionsBodyTripType1FlightType",
+    "FlightBookingOptionsBodyTripType2",
+    "FlightBookingOptionsBodyTripType2FlightType",
+    "FlightBookingOptionsBodyTripType2SegmentsItem",
+    "FlightBookingOptionsResponse200",
+    "FlightBookingOptionsResponse200ChargeInfoType0",
+    "FlightBookingOptionsResponse200ChargeInfoType0LowCreditAlertType0",
+    "FlightBookingOptionsResponse200ChargeInfoType0Method",
+    "FlightBookingOptionsResponse200ChargeInfoType1",
+    "FlightBookingOptionsResponse200ChargeInfoType1LowCreditAlertType0",
+    "FlightBookingOptionsResponse200ChargeInfoType1Method",
+    "FlightBookingOptionsResponse200ChargeInfoType2",
+    "FlightBookingOptionsResponse200ChargeInfoType2LowCreditAlertType0",
+    "FlightBookingOptionsResponse200ChargeInfoType2Method",
+    "FlightBookingOptionsResponse200ChargeInfoType3",
+    "FlightBookingOptionsResponse200ChargeInfoType3LowCreditAlertType0",
+    "FlightBookingOptionsResponse200ChargeInfoType3Method",
+    "FlightBookingOptionsResponse200ChargeInfoType4",
+    "FlightBookingOptionsResponse200ChargeInfoType4LowCreditAlertType0",
+    "FlightBookingOptionsResponse200ChargeInfoType4Method",
+    "FlightBookingOptionsResponse200Output",
+    "FlightBookingOptionsResponse200OutputBookingOptionsItem",
+    "FlightBookingOptionsResponse200OutputBookingOptionsItemBookingLinkType0",
+    "FlightBookingOptionsResponse200WarningsType0Item",
+    "FlightBookingOptionsResponse400",
+    "FlightBookingOptionsResponse401",
+    "FlightBookingOptionsResponse402",
+    "FlightBookingOptionsResponse402OutOfCreditsAlertType0",
+    "FlightBookingOptionsResponse403",
+    "FlightBookingOptionsResponse404",
+    "FlightBookingOptionsResponse422",
+    "FlightBookingOptionsResponse429",
+    "FlightBookingOptionsResponse500",
+    "FlightBookingOptionsResponse503",
     "FlightSearchBody",
     "FlightSearchBodyAirlinesType0",
     "FlightSearchBodyConnectingAirportsType0",
@@ -56169,6 +56277,8 @@ __all__ = (
     "GetOrgCreditsResponse200OutputCreditsPerOperationType0FindCompanyLookalikesLevelsItem",
     "GetOrgCreditsResponse200OutputCreditsPerOperationType0FindPersonLookalikes",
     "GetOrgCreditsResponse200OutputCreditsPerOperationType0FindPersonLookalikesLevelsItem",
+    "GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightBookingPage",
+    "GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightBookingPageLevelsItem",
     "GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearch",
     "GetOrgCreditsResponse200OutputCreditsPerOperationType0FlightSearchLevelsItem",
     "GetOrgCreditsResponse200OutputCreditsPerOperationType0GenerateDepthChart",

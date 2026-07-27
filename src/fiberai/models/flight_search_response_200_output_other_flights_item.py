@@ -40,8 +40,8 @@ class FlightSearchResponse200OutputOtherFlightsItem:
         layovers (list[FlightSearchResponse200OutputOtherFlightsItemLayoversItem]): Layovers for this itinerary.
         total_duration_minutes (int | None | Unset): Total itinerary duration in minutes.
         price (int | None | Unset): Total itinerary price in whole currency units.
-        booking_token (None | str | Unset): Opaque booking token. Pass this in follow-up requests to retrieve booking
-            options for this itinerary.
+        booking_token (None | str | Unset): Opaque booking token. Pass as `bookingToken` in POST /v1/flights/booking-
+            options to retrieve booking options for this itinerary.
         flight_type (FlightSearchResponse200OutputOtherFlightsItemFlightTypeType1 |
             FlightSearchResponse200OutputOtherFlightsItemFlightTypeType2Type1 |
             FlightSearchResponse200OutputOtherFlightsItemFlightTypeType3Type1 | None | Unset): Trip type for this itinerary.
