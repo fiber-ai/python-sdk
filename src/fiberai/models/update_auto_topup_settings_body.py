@@ -16,6 +16,8 @@ class UpdateAutoTopupSettingsBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
+        subscription_id (str): The subscription to configure auto top-up for. An organization can have multiple
+            subscriptions, each with its own auto top-up settings.
         is_enabled (bool): Whether auto top-up is enabled
         credit_threshold (int | None | Unset): Credit balance threshold below which auto top-up triggers. Required when
             isEnabled is true.
@@ -28,6 +30,7 @@ class UpdateAutoTopupSettingsBody:
     """
 
     api_key: str
+    subscription_id: str
     is_enabled: bool
     credit_threshold: int | None | Unset = UNSET
     credits_to_buy: int | None | Unset = UNSET
@@ -37,6 +40,8 @@ class UpdateAutoTopupSettingsBody:
 
     def to_dict(self) -> dict[str, Any]:
         api_key = self.api_key
+
+        subscription_id = self.subscription_id
 
         is_enabled = self.is_enabled
 
@@ -69,6 +74,7 @@ class UpdateAutoTopupSettingsBody:
         field_dict.update(
             {
                 "apiKey": api_key,
+                "subscriptionId": subscription_id,
                 "isEnabled": is_enabled,
             }
         )
@@ -87,6 +93,8 @@ class UpdateAutoTopupSettingsBody:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         api_key = d.pop("apiKey")
+
+        subscription_id = d.pop("subscriptionId")
 
         is_enabled = d.pop("isEnabled")
 
@@ -128,6 +136,7 @@ class UpdateAutoTopupSettingsBody:
 
         update_auto_topup_settings_body = cls(
             api_key=api_key,
+            subscription_id=subscription_id,
             is_enabled=is_enabled,
             credit_threshold=credit_threshold,
             credits_to_buy=credits_to_buy,

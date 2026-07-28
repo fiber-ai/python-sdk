@@ -14,19 +14,24 @@ class UpdateAutoTopupSettingsResponse200OutputType1:
     """
     Attributes:
         configured (bool):
+        subscription_id (str): The subscription these auto top-up settings belong to
     """
 
     configured: bool
+    subscription_id: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         configured = self.configured
+
+        subscription_id = self.subscription_id
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
                 "configured": configured,
+                "subscriptionId": subscription_id,
             }
         )
 
@@ -37,8 +42,11 @@ class UpdateAutoTopupSettingsResponse200OutputType1:
         d = dict(src_dict)
         configured = d.pop("configured")
 
+        subscription_id = d.pop("subscriptionId")
+
         update_auto_topup_settings_response_200_output_type_1 = cls(
             configured=configured,
+            subscription_id=subscription_id,
         )
 
         update_auto_topup_settings_response_200_output_type_1.additional_properties = d

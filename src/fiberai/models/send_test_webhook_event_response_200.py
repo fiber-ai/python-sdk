@@ -40,9 +40,9 @@ class SendTestWebhookEventResponse200:
         charge_info (SendTestWebhookEventResponse200ChargeInfoType0 | SendTestWebhookEventResponse200ChargeInfoType1 |
             SendTestWebhookEventResponse200ChargeInfoType2 | SendTestWebhookEventResponse200ChargeInfoType3 |
             SendTestWebhookEventResponse200ChargeInfoType4):
-        advice (list[str]): Tips, recommendations, and suggestions for using this API effectively.
         warnings (list[SendTestWebhookEventResponse200WarningsType0Item] | None | Unset): Warnings about extraneous
             fields in request
+        advice (list[str] | None | Unset): Tips, recommendations, and suggestions for using this API effectively.
     """
 
     output: SendTestWebhookEventResponse200Output
@@ -53,8 +53,8 @@ class SendTestWebhookEventResponse200:
         | SendTestWebhookEventResponse200ChargeInfoType3
         | SendTestWebhookEventResponse200ChargeInfoType4
     )
-    advice: list[str]
     warnings: list[SendTestWebhookEventResponse200WarningsType0Item] | None | Unset = UNSET
+    advice: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.send_test_webhook_event_response_200_charge_info_type_0 import (
@@ -84,8 +84,6 @@ class SendTestWebhookEventResponse200:
         else:
             charge_info = self.charge_info.to_dict()
 
-        advice = self.advice
-
         warnings: list[dict[str, Any]] | None | Unset
         if isinstance(self.warnings, Unset):
             warnings = UNSET
@@ -98,17 +96,27 @@ class SendTestWebhookEventResponse200:
         else:
             warnings = self.warnings
 
+        advice: list[str] | None | Unset
+        if isinstance(self.advice, Unset):
+            advice = UNSET
+        elif isinstance(self.advice, list):
+            advice = self.advice
+
+        else:
+            advice = self.advice
+
         field_dict: dict[str, Any] = {}
 
         field_dict.update(
             {
                 "output": output,
                 "chargeInfo": charge_info,
-                "advice": advice,
             }
         )
         if warnings is not UNSET:
             field_dict["warnings"] = warnings
+        if advice is not UNSET:
+            field_dict["advice"] = advice
 
         return field_dict
 
@@ -186,8 +194,6 @@ class SendTestWebhookEventResponse200:
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 
-        advice = cast(list[str], d.pop("advice"))
-
         def _parse_warnings(data: object) -> list[SendTestWebhookEventResponse200WarningsType0Item] | None | Unset:
             if data is None:
                 return data
@@ -212,11 +218,28 @@ class SendTestWebhookEventResponse200:
 
         warnings = _parse_warnings(d.pop("warnings", UNSET))
 
+        def _parse_advice(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                advice_type_0 = cast(list[str], data)
+
+                return advice_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        advice = _parse_advice(d.pop("advice", UNSET))
+
         send_test_webhook_event_response_200 = cls(
             output=output,
             charge_info=charge_info,
-            advice=advice,
             warnings=warnings,
+            advice=advice,
         )
 
         return send_test_webhook_event_response_200

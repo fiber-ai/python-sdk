@@ -160,8 +160,9 @@ def sync_detailed(
     <span>💰 <strong>Cost:</strong> Pay only for the data you request (exhaustive mode):<br />• 12
     credits for all phone numbers AND all emails<br />• 5 credits for work email only<br />• 5 credits
     for personal email only<br />• 4 credits for phone only<br />• 9 credits for all emails&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary. Credits are charged after the
-    reveal completes so partial reveals only bill for delivered data.\">ⓘ</span></span>
+    title=\"Pricing shown is default pricing. Actual pricing may vary. Credits are charged upfront for
+    the requested exhaustive bundle. Undelivered data is refunded per operation after the reveal
+    completes, so partial reveals only bill for delivered data.\">ⓘ</span></span>
 
     Args:
         body (TriggerExhaustiveContactEnrichmentBody):
@@ -215,8 +216,9 @@ def sync(
     <span>💰 <strong>Cost:</strong> Pay only for the data you request (exhaustive mode):<br />• 12
     credits for all phone numbers AND all emails<br />• 5 credits for work email only<br />• 5 credits
     for personal email only<br />• 4 credits for phone only<br />• 9 credits for all emails&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary. Credits are charged after the
-    reveal completes so partial reveals only bill for delivered data.\">ⓘ</span></span>
+    title=\"Pricing shown is default pricing. Actual pricing may vary. Credits are charged upfront for
+    the requested exhaustive bundle. Undelivered data is refunded per operation after the reveal
+    completes, so partial reveals only bill for delivered data.\">ⓘ</span></span>
 
     Args:
         body (TriggerExhaustiveContactEnrichmentBody):
@@ -264,8 +266,9 @@ async def asyncio_detailed(
     <span>💰 <strong>Cost:</strong> Pay only for the data you request (exhaustive mode):<br />• 12
     credits for all phone numbers AND all emails<br />• 5 credits for work email only<br />• 5 credits
     for personal email only<br />• 4 credits for phone only<br />• 9 credits for all emails&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary. Credits are charged after the
-    reveal completes so partial reveals only bill for delivered data.\">ⓘ</span></span>
+    title=\"Pricing shown is default pricing. Actual pricing may vary. Credits are charged upfront for
+    the requested exhaustive bundle. Undelivered data is refunded per operation after the reveal
+    completes, so partial reveals only bill for delivered data.\">ⓘ</span></span>
 
     Args:
         body (TriggerExhaustiveContactEnrichmentBody):
@@ -317,8 +320,9 @@ async def asyncio(
     <span>💰 <strong>Cost:</strong> Pay only for the data you request (exhaustive mode):<br />• 12
     credits for all phone numbers AND all emails<br />• 5 credits for work email only<br />• 5 credits
     for personal email only<br />• 4 credits for phone only<br />• 9 credits for all emails&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary. Credits are charged after the
-    reveal completes so partial reveals only bill for delivered data.\">ⓘ</span></span>
+    title=\"Pricing shown is default pricing. Actual pricing may vary. Credits are charged upfront for
+    the requested exhaustive bundle. Undelivered data is refunded per operation after the reveal
+    completes, so partial reveals only bill for delivered data.\">ⓘ</span></span>
 
     Args:
         body (TriggerExhaustiveContactEnrichmentBody):

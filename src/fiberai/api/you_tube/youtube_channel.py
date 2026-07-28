@@ -153,7 +153,7 @@ def sync_detailed(
     count, total views, and a paginated list of videos. Use `nextPageToken` from the response to
     paginate through additional video pages.
 
-    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -203,7 +203,7 @@ def sync(
     count, total views, and a paginated list of videos. Use `nextPageToken` from the response to
     paginate through additional video pages.
 
-    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -247,7 +247,7 @@ async def asyncio_detailed(
     count, total views, and a paginated list of videos. Use `nextPageToken` from the response to
     paginate through additional video pages.
 
-    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>
@@ -295,7 +295,7 @@ async def asyncio(
     count, total views, and a paginated list of videos. Use `nextPageToken` from the response to
     paginate through additional video pages.
 
-    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
     default pricing. Actual pricing may vary.\">ⓘ</span></span>

@@ -13,7 +13,7 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_charge_info_type_2 import GetOrgCreditsResponse200ChargeInfoType2
     from ..models.get_org_credits_response_200_charge_info_type_3 import GetOrgCreditsResponse200ChargeInfoType3
     from ..models.get_org_credits_response_200_charge_info_type_4 import GetOrgCreditsResponse200ChargeInfoType4
-    from ..models.get_org_credits_response_200_output import GetOrgCreditsResponse200Output
+    from ..models.get_org_credits_response_200_output_item import GetOrgCreditsResponse200OutputItem
     from ..models.get_org_credits_response_200_warnings_type_0_item import GetOrgCreditsResponse200WarningsType0Item
 
 
@@ -24,16 +24,16 @@ T = TypeVar("T", bound="GetOrgCreditsResponse200")
 class GetOrgCreditsResponse200:
     """
     Attributes:
-        output (GetOrgCreditsResponse200Output):
+        output (list[GetOrgCreditsResponse200OutputItem]):
         charge_info (GetOrgCreditsResponse200ChargeInfoType0 | GetOrgCreditsResponse200ChargeInfoType1 |
             GetOrgCreditsResponse200ChargeInfoType2 | GetOrgCreditsResponse200ChargeInfoType3 |
             GetOrgCreditsResponse200ChargeInfoType4):
-        advice (list[str]): Tips, recommendations, and suggestions for using this API effectively.
         warnings (list[GetOrgCreditsResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields in
             request
+        advice (list[str] | None | Unset): Tips, recommendations, and suggestions for using this API effectively.
     """
 
-    output: GetOrgCreditsResponse200Output
+    output: list[GetOrgCreditsResponse200OutputItem]
     charge_info: (
         GetOrgCreditsResponse200ChargeInfoType0
         | GetOrgCreditsResponse200ChargeInfoType1
@@ -41,8 +41,8 @@ class GetOrgCreditsResponse200:
         | GetOrgCreditsResponse200ChargeInfoType3
         | GetOrgCreditsResponse200ChargeInfoType4
     )
-    advice: list[str]
     warnings: list[GetOrgCreditsResponse200WarningsType0Item] | None | Unset = UNSET
+    advice: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_org_credits_response_200_charge_info_type_0 import GetOrgCreditsResponse200ChargeInfoType0
@@ -50,7 +50,10 @@ class GetOrgCreditsResponse200:
         from ..models.get_org_credits_response_200_charge_info_type_2 import GetOrgCreditsResponse200ChargeInfoType2
         from ..models.get_org_credits_response_200_charge_info_type_3 import GetOrgCreditsResponse200ChargeInfoType3
 
-        output = self.output.to_dict()
+        output = []
+        for output_item_data in self.output:
+            output_item = output_item_data.to_dict()
+            output.append(output_item)
 
         charge_info: dict[str, Any]
         if isinstance(self.charge_info, GetOrgCreditsResponse200ChargeInfoType0):
@@ -64,8 +67,6 @@ class GetOrgCreditsResponse200:
         else:
             charge_info = self.charge_info.to_dict()
 
-        advice = self.advice
-
         warnings: list[dict[str, Any]] | None | Unset
         if isinstance(self.warnings, Unset):
             warnings = UNSET
@@ -78,17 +79,27 @@ class GetOrgCreditsResponse200:
         else:
             warnings = self.warnings
 
+        advice: list[str] | None | Unset
+        if isinstance(self.advice, Unset):
+            advice = UNSET
+        elif isinstance(self.advice, list):
+            advice = self.advice
+
+        else:
+            advice = self.advice
+
         field_dict: dict[str, Any] = {}
 
         field_dict.update(
             {
                 "output": output,
                 "chargeInfo": charge_info,
-                "advice": advice,
             }
         )
         if warnings is not UNSET:
             field_dict["warnings"] = warnings
+        if advice is not UNSET:
+            field_dict["advice"] = advice
 
         return field_dict
 
@@ -99,11 +110,16 @@ class GetOrgCreditsResponse200:
         from ..models.get_org_credits_response_200_charge_info_type_2 import GetOrgCreditsResponse200ChargeInfoType2
         from ..models.get_org_credits_response_200_charge_info_type_3 import GetOrgCreditsResponse200ChargeInfoType3
         from ..models.get_org_credits_response_200_charge_info_type_4 import GetOrgCreditsResponse200ChargeInfoType4
-        from ..models.get_org_credits_response_200_output import GetOrgCreditsResponse200Output
+        from ..models.get_org_credits_response_200_output_item import GetOrgCreditsResponse200OutputItem
         from ..models.get_org_credits_response_200_warnings_type_0_item import GetOrgCreditsResponse200WarningsType0Item
 
         d = dict(src_dict)
-        output = GetOrgCreditsResponse200Output.from_dict(d.pop("output"))
+        output = []
+        _output = d.pop("output")
+        for output_item_data in _output:
+            output_item = GetOrgCreditsResponse200OutputItem.from_dict(output_item_data)
+
+            output.append(output_item)
 
         def _parse_charge_info(
             data: object,
@@ -154,8 +170,6 @@ class GetOrgCreditsResponse200:
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 
-        advice = cast(list[str], d.pop("advice"))
-
         def _parse_warnings(data: object) -> list[GetOrgCreditsResponse200WarningsType0Item] | None | Unset:
             if data is None:
                 return data
@@ -180,11 +194,28 @@ class GetOrgCreditsResponse200:
 
         warnings = _parse_warnings(d.pop("warnings", UNSET))
 
+        def _parse_advice(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                advice_type_0 = cast(list[str], data)
+
+                return advice_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        advice = _parse_advice(d.pop("advice", UNSET))
+
         get_org_credits_response_200 = cls(
             output=output,
             charge_info=charge_info,
-            advice=advice,
             warnings=warnings,
+            advice=advice,
         )
 
         return get_org_credits_response_200

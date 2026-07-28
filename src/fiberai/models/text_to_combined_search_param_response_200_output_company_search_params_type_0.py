@@ -1,0 +1,1307 @@
+from __future__ import annotations
+
+from collections.abc import Mapping
+from typing import TYPE_CHECKING, Any, TypeVar, cast
+
+from attrs import define as _attrs_define
+from attrs import field as _attrs_field
+
+from ..types import UNSET, Unset
+
+if TYPE_CHECKING:
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_accelerators_v2_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_employee_count_v2_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0EmployeeCountV2Type0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_exact_company_v2_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0ExactCompanyV2Type0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_fortune_rankings_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FortuneRankingsType0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_founded_on_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_founded_on_type_1 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType1,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_headquarters_country_code_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersCountryCodeType0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_headquarters_location_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersLocationType0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_headquarters_state_name_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersStateNameType0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_industries_v2_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0IndustriesV2Type0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_investors_v2_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0InvestorsV2Type0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_job_postings_v2_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0JobPostingsV2Type0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_keywords_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0KeywordsType0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_last_funded_on_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_last_funded_on_type_1 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType1,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_last_funding_usd_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundingUSDType0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_li_industries_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LiIndustriesType0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_naics_codes_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NaicsCodesType0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_name_like_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NameLikeType0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_office_locations_v2_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0OfficeLocationsV2Type0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_revenue_range_usd_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_stage_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0StageType0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_tags_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TagsType0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_technologies_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TechnologiesType0,
+    )
+    from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_total_funding_usd_type_0 import (
+        TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TotalFundingUSDType0,
+    )
+
+
+T = TypeVar("T", bound="TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0")
+
+
+@_attrs_define
+class TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0:
+    """
+    Attributes:
+        headquarters_country_code (None |
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersCountryCodeType0 | Unset):
+        headquarters_state_name (None |
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersStateNameType0 | Unset):
+        employee_count_v2 (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0EmployeeCountV2Type0
+            | Unset):
+        keywords (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0KeywordsType0 | Unset):
+        industries_v2 (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0IndustriesV2Type0 |
+            Unset):
+        stage (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0StageType0 | Unset):
+        total_funding_usd (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TotalFundingUSDType0
+            | Unset):
+        last_funding_usd (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundingUSDType0 |
+            Unset):
+        last_funded_on (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType0 |
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType1 | Unset):
+        founded_on (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType0 |
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType1 | Unset):
+        name_like (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NameLikeType0 | Unset):
+        accelerators_v2 (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0 |
+            Unset):
+        headquarters_location (None |
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersLocationType0 | Unset):
+        job_postings_v2 (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0JobPostingsV2Type0 |
+            Unset):
+        tags (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TagsType0 | Unset):
+        office_locations_v2 (None |
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0OfficeLocationsV2Type0 | Unset):
+        naics_codes (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NaicsCodesType0 | Unset):
+        technologies (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TechnologiesType0 |
+            Unset):
+        exact_company_v2 (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0ExactCompanyV2Type0 |
+            Unset):
+        li_industries (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LiIndustriesType0 |
+            Unset):
+        investors_v2 (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0InvestorsV2Type0 |
+            Unset):
+        fortune_rankings (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FortuneRankingsType0
+            | Unset):
+        revenue_range_usd (None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0
+            | Unset):
+    """
+
+    headquarters_country_code: (
+        None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersCountryCodeType0 | Unset
+    ) = UNSET
+    headquarters_state_name: (
+        None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersStateNameType0 | Unset
+    ) = UNSET
+    employee_count_v2: (
+        None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0EmployeeCountV2Type0 | Unset
+    ) = UNSET
+    keywords: None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0KeywordsType0 | Unset = UNSET
+    industries_v2: (
+        None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0IndustriesV2Type0 | Unset
+    ) = UNSET
+    stage: None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0StageType0 | Unset = UNSET
+    total_funding_usd: (
+        None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TotalFundingUSDType0 | Unset
+    ) = UNSET
+    last_funding_usd: (
+        None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundingUSDType0 | Unset
+    ) = UNSET
+    last_funded_on: (
+        None
+        | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType0
+        | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType1
+        | Unset
+    ) = UNSET
+    founded_on: (
+        None
+        | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType0
+        | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType1
+        | Unset
+    ) = UNSET
+    name_like: None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NameLikeType0 | Unset = UNSET
+    accelerators_v2: (
+        None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0 | Unset
+    ) = UNSET
+    headquarters_location: (
+        None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersLocationType0 | Unset
+    ) = UNSET
+    job_postings_v2: (
+        None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0JobPostingsV2Type0 | Unset
+    ) = UNSET
+    tags: None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TagsType0 | Unset = UNSET
+    office_locations_v2: (
+        None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0OfficeLocationsV2Type0 | Unset
+    ) = UNSET
+    naics_codes: None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NaicsCodesType0 | Unset = (
+        UNSET
+    )
+    technologies: None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TechnologiesType0 | Unset = (
+        UNSET
+    )
+    exact_company_v2: (
+        None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0ExactCompanyV2Type0 | Unset
+    ) = UNSET
+    li_industries: (
+        None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LiIndustriesType0 | Unset
+    ) = UNSET
+    investors_v2: None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0InvestorsV2Type0 | Unset = (
+        UNSET
+    )
+    fortune_rankings: (
+        None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FortuneRankingsType0 | Unset
+    ) = UNSET
+    revenue_range_usd: (
+        None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0 | Unset
+    ) = UNSET
+    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_accelerators_v2_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_employee_count_v2_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0EmployeeCountV2Type0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_exact_company_v2_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0ExactCompanyV2Type0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_fortune_rankings_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FortuneRankingsType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_founded_on_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_founded_on_type_1 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType1,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_headquarters_country_code_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersCountryCodeType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_headquarters_location_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersLocationType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_headquarters_state_name_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersStateNameType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_industries_v2_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0IndustriesV2Type0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_investors_v2_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0InvestorsV2Type0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_job_postings_v2_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0JobPostingsV2Type0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_keywords_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0KeywordsType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_last_funded_on_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_last_funded_on_type_1 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType1,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_last_funding_usd_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundingUSDType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_li_industries_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LiIndustriesType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_naics_codes_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NaicsCodesType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_name_like_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NameLikeType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_office_locations_v2_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0OfficeLocationsV2Type0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_revenue_range_usd_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_stage_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0StageType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_tags_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TagsType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_technologies_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TechnologiesType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_total_funding_usd_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TotalFundingUSDType0,
+        )
+
+        headquarters_country_code: dict[str, Any] | None | Unset
+        if isinstance(self.headquarters_country_code, Unset):
+            headquarters_country_code = UNSET
+        elif isinstance(
+            self.headquarters_country_code,
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersCountryCodeType0,
+        ):
+            headquarters_country_code = self.headquarters_country_code.to_dict()
+        else:
+            headquarters_country_code = self.headquarters_country_code
+
+        headquarters_state_name: dict[str, Any] | None | Unset
+        if isinstance(self.headquarters_state_name, Unset):
+            headquarters_state_name = UNSET
+        elif isinstance(
+            self.headquarters_state_name,
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersStateNameType0,
+        ):
+            headquarters_state_name = self.headquarters_state_name.to_dict()
+        else:
+            headquarters_state_name = self.headquarters_state_name
+
+        employee_count_v2: dict[str, Any] | None | Unset
+        if isinstance(self.employee_count_v2, Unset):
+            employee_count_v2 = UNSET
+        elif isinstance(
+            self.employee_count_v2,
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0EmployeeCountV2Type0,
+        ):
+            employee_count_v2 = self.employee_count_v2.to_dict()
+        else:
+            employee_count_v2 = self.employee_count_v2
+
+        keywords: dict[str, Any] | None | Unset
+        if isinstance(self.keywords, Unset):
+            keywords = UNSET
+        elif isinstance(self.keywords, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0KeywordsType0):
+            keywords = self.keywords.to_dict()
+        else:
+            keywords = self.keywords
+
+        industries_v2: dict[str, Any] | None | Unset
+        if isinstance(self.industries_v2, Unset):
+            industries_v2 = UNSET
+        elif isinstance(
+            self.industries_v2, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0IndustriesV2Type0
+        ):
+            industries_v2 = self.industries_v2.to_dict()
+        else:
+            industries_v2 = self.industries_v2
+
+        stage: dict[str, Any] | None | Unset
+        if isinstance(self.stage, Unset):
+            stage = UNSET
+        elif isinstance(self.stage, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0StageType0):
+            stage = self.stage.to_dict()
+        else:
+            stage = self.stage
+
+        total_funding_usd: dict[str, Any] | None | Unset
+        if isinstance(self.total_funding_usd, Unset):
+            total_funding_usd = UNSET
+        elif isinstance(
+            self.total_funding_usd,
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TotalFundingUSDType0,
+        ):
+            total_funding_usd = self.total_funding_usd.to_dict()
+        else:
+            total_funding_usd = self.total_funding_usd
+
+        last_funding_usd: dict[str, Any] | None | Unset
+        if isinstance(self.last_funding_usd, Unset):
+            last_funding_usd = UNSET
+        elif isinstance(
+            self.last_funding_usd, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundingUSDType0
+        ):
+            last_funding_usd = self.last_funding_usd.to_dict()
+        else:
+            last_funding_usd = self.last_funding_usd
+
+        last_funded_on: dict[str, Any] | None | Unset
+        if isinstance(self.last_funded_on, Unset):
+            last_funded_on = UNSET
+        elif isinstance(
+            self.last_funded_on, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType0
+        ):
+            last_funded_on = self.last_funded_on.to_dict()
+        elif isinstance(
+            self.last_funded_on, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType1
+        ):
+            last_funded_on = self.last_funded_on.to_dict()
+        else:
+            last_funded_on = self.last_funded_on
+
+        founded_on: dict[str, Any] | None | Unset
+        if isinstance(self.founded_on, Unset):
+            founded_on = UNSET
+        elif isinstance(
+            self.founded_on, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType0
+        ):
+            founded_on = self.founded_on.to_dict()
+        elif isinstance(
+            self.founded_on, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType1
+        ):
+            founded_on = self.founded_on.to_dict()
+        else:
+            founded_on = self.founded_on
+
+        name_like: dict[str, Any] | None | Unset
+        if isinstance(self.name_like, Unset):
+            name_like = UNSET
+        elif isinstance(
+            self.name_like, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NameLikeType0
+        ):
+            name_like = self.name_like.to_dict()
+        else:
+            name_like = self.name_like
+
+        accelerators_v2: dict[str, Any] | None | Unset
+        if isinstance(self.accelerators_v2, Unset):
+            accelerators_v2 = UNSET
+        elif isinstance(
+            self.accelerators_v2, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0
+        ):
+            accelerators_v2 = self.accelerators_v2.to_dict()
+        else:
+            accelerators_v2 = self.accelerators_v2
+
+        headquarters_location: dict[str, Any] | None | Unset
+        if isinstance(self.headquarters_location, Unset):
+            headquarters_location = UNSET
+        elif isinstance(
+            self.headquarters_location,
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersLocationType0,
+        ):
+            headquarters_location = self.headquarters_location.to_dict()
+        else:
+            headquarters_location = self.headquarters_location
+
+        job_postings_v2: dict[str, Any] | None | Unset
+        if isinstance(self.job_postings_v2, Unset):
+            job_postings_v2 = UNSET
+        elif isinstance(
+            self.job_postings_v2, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0JobPostingsV2Type0
+        ):
+            job_postings_v2 = self.job_postings_v2.to_dict()
+        else:
+            job_postings_v2 = self.job_postings_v2
+
+        tags: dict[str, Any] | None | Unset
+        if isinstance(self.tags, Unset):
+            tags = UNSET
+        elif isinstance(self.tags, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TagsType0):
+            tags = self.tags.to_dict()
+        else:
+            tags = self.tags
+
+        office_locations_v2: dict[str, Any] | None | Unset
+        if isinstance(self.office_locations_v2, Unset):
+            office_locations_v2 = UNSET
+        elif isinstance(
+            self.office_locations_v2,
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0OfficeLocationsV2Type0,
+        ):
+            office_locations_v2 = self.office_locations_v2.to_dict()
+        else:
+            office_locations_v2 = self.office_locations_v2
+
+        naics_codes: dict[str, Any] | None | Unset
+        if isinstance(self.naics_codes, Unset):
+            naics_codes = UNSET
+        elif isinstance(
+            self.naics_codes, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NaicsCodesType0
+        ):
+            naics_codes = self.naics_codes.to_dict()
+        else:
+            naics_codes = self.naics_codes
+
+        technologies: dict[str, Any] | None | Unset
+        if isinstance(self.technologies, Unset):
+            technologies = UNSET
+        elif isinstance(
+            self.technologies, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TechnologiesType0
+        ):
+            technologies = self.technologies.to_dict()
+        else:
+            technologies = self.technologies
+
+        exact_company_v2: dict[str, Any] | None | Unset
+        if isinstance(self.exact_company_v2, Unset):
+            exact_company_v2 = UNSET
+        elif isinstance(
+            self.exact_company_v2, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0ExactCompanyV2Type0
+        ):
+            exact_company_v2 = self.exact_company_v2.to_dict()
+        else:
+            exact_company_v2 = self.exact_company_v2
+
+        li_industries: dict[str, Any] | None | Unset
+        if isinstance(self.li_industries, Unset):
+            li_industries = UNSET
+        elif isinstance(
+            self.li_industries, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LiIndustriesType0
+        ):
+            li_industries = self.li_industries.to_dict()
+        else:
+            li_industries = self.li_industries
+
+        investors_v2: dict[str, Any] | None | Unset
+        if isinstance(self.investors_v2, Unset):
+            investors_v2 = UNSET
+        elif isinstance(
+            self.investors_v2, TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0InvestorsV2Type0
+        ):
+            investors_v2 = self.investors_v2.to_dict()
+        else:
+            investors_v2 = self.investors_v2
+
+        fortune_rankings: dict[str, Any] | None | Unset
+        if isinstance(self.fortune_rankings, Unset):
+            fortune_rankings = UNSET
+        elif isinstance(
+            self.fortune_rankings,
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FortuneRankingsType0,
+        ):
+            fortune_rankings = self.fortune_rankings.to_dict()
+        else:
+            fortune_rankings = self.fortune_rankings
+
+        revenue_range_usd: dict[str, Any] | None | Unset
+        if isinstance(self.revenue_range_usd, Unset):
+            revenue_range_usd = UNSET
+        elif isinstance(
+            self.revenue_range_usd,
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0,
+        ):
+            revenue_range_usd = self.revenue_range_usd.to_dict()
+        else:
+            revenue_range_usd = self.revenue_range_usd
+
+        field_dict: dict[str, Any] = {}
+        field_dict.update(self.additional_properties)
+        field_dict.update({})
+        if headquarters_country_code is not UNSET:
+            field_dict["headquartersCountryCode"] = headquarters_country_code
+        if headquarters_state_name is not UNSET:
+            field_dict["headquartersStateName"] = headquarters_state_name
+        if employee_count_v2 is not UNSET:
+            field_dict["employeeCountV2"] = employee_count_v2
+        if keywords is not UNSET:
+            field_dict["keywords"] = keywords
+        if industries_v2 is not UNSET:
+            field_dict["industriesV2"] = industries_v2
+        if stage is not UNSET:
+            field_dict["stage"] = stage
+        if total_funding_usd is not UNSET:
+            field_dict["totalFundingUSD"] = total_funding_usd
+        if last_funding_usd is not UNSET:
+            field_dict["lastFundingUSD"] = last_funding_usd
+        if last_funded_on is not UNSET:
+            field_dict["lastFundedOn"] = last_funded_on
+        if founded_on is not UNSET:
+            field_dict["foundedOn"] = founded_on
+        if name_like is not UNSET:
+            field_dict["nameLike"] = name_like
+        if accelerators_v2 is not UNSET:
+            field_dict["acceleratorsV2"] = accelerators_v2
+        if headquarters_location is not UNSET:
+            field_dict["headquartersLocation"] = headquarters_location
+        if job_postings_v2 is not UNSET:
+            field_dict["jobPostingsV2"] = job_postings_v2
+        if tags is not UNSET:
+            field_dict["tags"] = tags
+        if office_locations_v2 is not UNSET:
+            field_dict["officeLocationsV2"] = office_locations_v2
+        if naics_codes is not UNSET:
+            field_dict["naicsCodes"] = naics_codes
+        if technologies is not UNSET:
+            field_dict["technologies"] = technologies
+        if exact_company_v2 is not UNSET:
+            field_dict["exactCompanyV2"] = exact_company_v2
+        if li_industries is not UNSET:
+            field_dict["liIndustries"] = li_industries
+        if investors_v2 is not UNSET:
+            field_dict["investorsV2"] = investors_v2
+        if fortune_rankings is not UNSET:
+            field_dict["fortuneRankings"] = fortune_rankings
+        if revenue_range_usd is not UNSET:
+            field_dict["revenueRangeUSD"] = revenue_range_usd
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_accelerators_v2_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_employee_count_v2_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0EmployeeCountV2Type0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_exact_company_v2_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0ExactCompanyV2Type0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_fortune_rankings_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FortuneRankingsType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_founded_on_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_founded_on_type_1 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType1,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_headquarters_country_code_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersCountryCodeType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_headquarters_location_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersLocationType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_headquarters_state_name_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersStateNameType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_industries_v2_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0IndustriesV2Type0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_investors_v2_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0InvestorsV2Type0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_job_postings_v2_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0JobPostingsV2Type0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_keywords_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0KeywordsType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_last_funded_on_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_last_funded_on_type_1 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType1,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_last_funding_usd_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundingUSDType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_li_industries_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LiIndustriesType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_naics_codes_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NaicsCodesType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_name_like_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NameLikeType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_office_locations_v2_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0OfficeLocationsV2Type0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_revenue_range_usd_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_stage_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0StageType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_tags_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TagsType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_technologies_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TechnologiesType0,
+        )
+        from ..models.text_to_combined_search_param_response_200_output_company_search_params_type_0_total_funding_usd_type_0 import (
+            TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TotalFundingUSDType0,
+        )
+
+        d = dict(src_dict)
+
+        def _parse_headquarters_country_code(
+            data: object,
+        ) -> (
+            None
+            | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersCountryCodeType0
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                headquarters_country_code_type_0 = TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersCountryCodeType0.from_dict(
+                    data
+                )
+
+                return headquarters_country_code_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersCountryCodeType0
+                | Unset,
+                data,
+            )
+
+        headquarters_country_code = _parse_headquarters_country_code(d.pop("headquartersCountryCode", UNSET))
+
+        def _parse_headquarters_state_name(
+            data: object,
+        ) -> (
+            None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersStateNameType0 | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                headquarters_state_name_type_0 = TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersStateNameType0.from_dict(
+                    data
+                )
+
+                return headquarters_state_name_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersStateNameType0
+                | Unset,
+                data,
+            )
+
+        headquarters_state_name = _parse_headquarters_state_name(d.pop("headquartersStateName", UNSET))
+
+        def _parse_employee_count_v2(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0EmployeeCountV2Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                employee_count_v2_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0EmployeeCountV2Type0.from_dict(
+                        data
+                    )
+                )
+
+                return employee_count_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0EmployeeCountV2Type0 | Unset,
+                data,
+            )
+
+        employee_count_v2 = _parse_employee_count_v2(d.pop("employeeCountV2", UNSET))
+
+        def _parse_keywords(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0KeywordsType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                keywords_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0KeywordsType0.from_dict(data)
+                )
+
+                return keywords_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0KeywordsType0 | Unset, data
+            )
+
+        keywords = _parse_keywords(d.pop("keywords", UNSET))
+
+        def _parse_industries_v2(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0IndustriesV2Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                industries_v2_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0IndustriesV2Type0.from_dict(data)
+                )
+
+                return industries_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0IndustriesV2Type0 | Unset, data
+            )
+
+        industries_v2 = _parse_industries_v2(d.pop("industriesV2", UNSET))
+
+        def _parse_stage(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0StageType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                stage_type_0 = TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0StageType0.from_dict(
+                    data
+                )
+
+                return stage_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0StageType0 | Unset, data
+            )
+
+        stage = _parse_stage(d.pop("stage", UNSET))
+
+        def _parse_total_funding_usd(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TotalFundingUSDType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                total_funding_usd_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TotalFundingUSDType0.from_dict(
+                        data
+                    )
+                )
+
+                return total_funding_usd_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TotalFundingUSDType0 | Unset,
+                data,
+            )
+
+        total_funding_usd = _parse_total_funding_usd(d.pop("totalFundingUSD", UNSET))
+
+        def _parse_last_funding_usd(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundingUSDType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                last_funding_usd_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundingUSDType0.from_dict(
+                        data
+                    )
+                )
+
+                return last_funding_usd_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundingUSDType0 | Unset,
+                data,
+            )
+
+        last_funding_usd = _parse_last_funding_usd(d.pop("lastFundingUSD", UNSET))
+
+        def _parse_last_funded_on(
+            data: object,
+        ) -> (
+            None
+            | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType0
+            | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType1
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                last_funded_on_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType0.from_dict(data)
+                )
+
+                return last_funded_on_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                last_funded_on_type_1 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType1.from_dict(data)
+                )
+
+                return last_funded_on_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType0
+                | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LastFundedOnType1
+                | Unset,
+                data,
+            )
+
+        last_funded_on = _parse_last_funded_on(d.pop("lastFundedOn", UNSET))
+
+        def _parse_founded_on(
+            data: object,
+        ) -> (
+            None
+            | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType0
+            | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType1
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                founded_on_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType0.from_dict(data)
+                )
+
+                return founded_on_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                founded_on_type_1 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType1.from_dict(data)
+                )
+
+                return founded_on_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType0
+                | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FoundedOnType1
+                | Unset,
+                data,
+            )
+
+        founded_on = _parse_founded_on(d.pop("foundedOn", UNSET))
+
+        def _parse_name_like(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NameLikeType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                name_like_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NameLikeType0.from_dict(data)
+                )
+
+                return name_like_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NameLikeType0 | Unset, data
+            )
+
+        name_like = _parse_name_like(d.pop("nameLike", UNSET))
+
+        def _parse_accelerators_v2(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                accelerators_v2_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0.from_dict(
+                        data
+                    )
+                )
+
+                return accelerators_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0AcceleratorsV2Type0 | Unset,
+                data,
+            )
+
+        accelerators_v2 = _parse_accelerators_v2(d.pop("acceleratorsV2", UNSET))
+
+        def _parse_headquarters_location(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersLocationType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                headquarters_location_type_0 = TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersLocationType0.from_dict(
+                    data
+                )
+
+                return headquarters_location_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0HeadquartersLocationType0
+                | Unset,
+                data,
+            )
+
+        headquarters_location = _parse_headquarters_location(d.pop("headquartersLocation", UNSET))
+
+        def _parse_job_postings_v2(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0JobPostingsV2Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_postings_v2_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0JobPostingsV2Type0.from_dict(data)
+                )
+
+                return job_postings_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0JobPostingsV2Type0 | Unset,
+                data,
+            )
+
+        job_postings_v2 = _parse_job_postings_v2(d.pop("jobPostingsV2", UNSET))
+
+        def _parse_tags(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TagsType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                tags_type_0 = TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TagsType0.from_dict(
+                    data
+                )
+
+                return tags_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TagsType0 | Unset, data
+            )
+
+        tags = _parse_tags(d.pop("tags", UNSET))
+
+        def _parse_office_locations_v2(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0OfficeLocationsV2Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                office_locations_v2_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0OfficeLocationsV2Type0.from_dict(
+                        data
+                    )
+                )
+
+                return office_locations_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0OfficeLocationsV2Type0 | Unset,
+                data,
+            )
+
+        office_locations_v2 = _parse_office_locations_v2(d.pop("officeLocationsV2", UNSET))
+
+        def _parse_naics_codes(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NaicsCodesType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                naics_codes_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NaicsCodesType0.from_dict(data)
+                )
+
+                return naics_codes_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0NaicsCodesType0 | Unset, data
+            )
+
+        naics_codes = _parse_naics_codes(d.pop("naicsCodes", UNSET))
+
+        def _parse_technologies(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TechnologiesType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                technologies_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TechnologiesType0.from_dict(data)
+                )
+
+                return technologies_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0TechnologiesType0 | Unset, data
+            )
+
+        technologies = _parse_technologies(d.pop("technologies", UNSET))
+
+        def _parse_exact_company_v2(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0ExactCompanyV2Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                exact_company_v2_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0ExactCompanyV2Type0.from_dict(
+                        data
+                    )
+                )
+
+                return exact_company_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0ExactCompanyV2Type0 | Unset,
+                data,
+            )
+
+        exact_company_v2 = _parse_exact_company_v2(d.pop("exactCompanyV2", UNSET))
+
+        def _parse_li_industries(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LiIndustriesType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                li_industries_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LiIndustriesType0.from_dict(data)
+                )
+
+                return li_industries_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0LiIndustriesType0 | Unset, data
+            )
+
+        li_industries = _parse_li_industries(d.pop("liIndustries", UNSET))
+
+        def _parse_investors_v2(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0InvestorsV2Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                investors_v2_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0InvestorsV2Type0.from_dict(data)
+                )
+
+                return investors_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0InvestorsV2Type0 | Unset, data
+            )
+
+        investors_v2 = _parse_investors_v2(d.pop("investorsV2", UNSET))
+
+        def _parse_fortune_rankings(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FortuneRankingsType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                fortune_rankings_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FortuneRankingsType0.from_dict(
+                        data
+                    )
+                )
+
+                return fortune_rankings_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0FortuneRankingsType0 | Unset,
+                data,
+            )
+
+        fortune_rankings = _parse_fortune_rankings(d.pop("fortuneRankings", UNSET))
+
+        def _parse_revenue_range_usd(
+            data: object,
+        ) -> None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                revenue_range_usd_type_0 = (
+                    TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0.from_dict(
+                        data
+                    )
+                )
+
+                return revenue_range_usd_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | TextToCombinedSearchParamResponse200OutputCompanySearchParamsType0RevenueRangeUSDType0 | Unset,
+                data,
+            )
+
+        revenue_range_usd = _parse_revenue_range_usd(d.pop("revenueRangeUSD", UNSET))
+
+        text_to_combined_search_param_response_200_output_company_search_params_type_0 = cls(
+            headquarters_country_code=headquarters_country_code,
+            headquarters_state_name=headquarters_state_name,
+            employee_count_v2=employee_count_v2,
+            keywords=keywords,
+            industries_v2=industries_v2,
+            stage=stage,
+            total_funding_usd=total_funding_usd,
+            last_funding_usd=last_funding_usd,
+            last_funded_on=last_funded_on,
+            founded_on=founded_on,
+            name_like=name_like,
+            accelerators_v2=accelerators_v2,
+            headquarters_location=headquarters_location,
+            job_postings_v2=job_postings_v2,
+            tags=tags,
+            office_locations_v2=office_locations_v2,
+            naics_codes=naics_codes,
+            technologies=technologies,
+            exact_company_v2=exact_company_v2,
+            li_industries=li_industries,
+            investors_v2=investors_v2,
+            fortune_rankings=fortune_rankings,
+            revenue_range_usd=revenue_range_usd,
+        )
+
+        text_to_combined_search_param_response_200_output_company_search_params_type_0.additional_properties = d
+        return text_to_combined_search_param_response_200_output_company_search_params_type_0
+
+    @property
+    def additional_keys(self) -> list[str]:
+        return list(self.additional_properties.keys())
+
+    def __getitem__(self, key: str) -> Any:
+        return self.additional_properties[key]
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        self.additional_properties[key] = value
+
+    def __delitem__(self, key: str) -> None:
+        del self.additional_properties[key]
+
+    def __contains__(self, key: str) -> bool:
+        return key in self.additional_properties

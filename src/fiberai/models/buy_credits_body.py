@@ -16,18 +16,23 @@ class BuyCreditsBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
+        subscription_id (str): The subscription to add credits to. An organization can have multiple subscriptions, each
+            with its own credit balance.
         credits_to_buy (int): Number of credits to purchase. This will immediately charge your saved payment method.
         idempotency_key (None | str | Unset): A unique key to safely retry a purchase. If a request fails or times out,
             resend with the same key to avoid being charged twice. When omitted, each call is a new purchase.
     """
 
     api_key: str
+    subscription_id: str
     credits_to_buy: int
     idempotency_key: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         api_key = self.api_key
+
+        subscription_id = self.subscription_id
 
         credits_to_buy = self.credits_to_buy
 
@@ -42,6 +47,7 @@ class BuyCreditsBody:
         field_dict.update(
             {
                 "apiKey": api_key,
+                "subscriptionId": subscription_id,
                 "creditsToBuy": credits_to_buy,
             }
         )
@@ -54,6 +60,8 @@ class BuyCreditsBody:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         api_key = d.pop("apiKey")
+
+        subscription_id = d.pop("subscriptionId")
 
         credits_to_buy = d.pop("creditsToBuy")
 
@@ -68,6 +76,7 @@ class BuyCreditsBody:
 
         buy_credits_body = cls(
             api_key=api_key,
+            subscription_id=subscription_id,
             credits_to_buy=credits_to_buy,
             idempotency_key=idempotency_key,
         )

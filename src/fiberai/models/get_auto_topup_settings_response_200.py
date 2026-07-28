@@ -23,8 +23,7 @@ if TYPE_CHECKING:
     from ..models.get_auto_topup_settings_response_200_charge_info_type_4 import (
         GetAutoTopupSettingsResponse200ChargeInfoType4,
     )
-    from ..models.get_auto_topup_settings_response_200_output_type_0 import GetAutoTopupSettingsResponse200OutputType0
-    from ..models.get_auto_topup_settings_response_200_output_type_1 import GetAutoTopupSettingsResponse200OutputType1
+    from ..models.get_auto_topup_settings_response_200_output import GetAutoTopupSettingsResponse200Output
     from ..models.get_auto_topup_settings_response_200_warnings_type_0_item import (
         GetAutoTopupSettingsResponse200WarningsType0Item,
     )
@@ -37,16 +36,16 @@ T = TypeVar("T", bound="GetAutoTopupSettingsResponse200")
 class GetAutoTopupSettingsResponse200:
     """
     Attributes:
-        output (GetAutoTopupSettingsResponse200OutputType0 | GetAutoTopupSettingsResponse200OutputType1):
+        output (GetAutoTopupSettingsResponse200Output):
         charge_info (GetAutoTopupSettingsResponse200ChargeInfoType0 | GetAutoTopupSettingsResponse200ChargeInfoType1 |
             GetAutoTopupSettingsResponse200ChargeInfoType2 | GetAutoTopupSettingsResponse200ChargeInfoType3 |
             GetAutoTopupSettingsResponse200ChargeInfoType4):
-        advice (list[str]): Tips, recommendations, and suggestions for using this API effectively.
         warnings (list[GetAutoTopupSettingsResponse200WarningsType0Item] | None | Unset): Warnings about extraneous
             fields in request
+        advice (list[str] | None | Unset): Tips, recommendations, and suggestions for using this API effectively.
     """
 
-    output: GetAutoTopupSettingsResponse200OutputType0 | GetAutoTopupSettingsResponse200OutputType1
+    output: GetAutoTopupSettingsResponse200Output
     charge_info: (
         GetAutoTopupSettingsResponse200ChargeInfoType0
         | GetAutoTopupSettingsResponse200ChargeInfoType1
@@ -54,8 +53,8 @@ class GetAutoTopupSettingsResponse200:
         | GetAutoTopupSettingsResponse200ChargeInfoType3
         | GetAutoTopupSettingsResponse200ChargeInfoType4
     )
-    advice: list[str]
     warnings: list[GetAutoTopupSettingsResponse200WarningsType0Item] | None | Unset = UNSET
+    advice: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_auto_topup_settings_response_200_charge_info_type_0 import (
@@ -70,15 +69,8 @@ class GetAutoTopupSettingsResponse200:
         from ..models.get_auto_topup_settings_response_200_charge_info_type_3 import (
             GetAutoTopupSettingsResponse200ChargeInfoType3,
         )
-        from ..models.get_auto_topup_settings_response_200_output_type_0 import (
-            GetAutoTopupSettingsResponse200OutputType0,
-        )
 
-        output: dict[str, Any]
-        if isinstance(self.output, GetAutoTopupSettingsResponse200OutputType0):
-            output = self.output.to_dict()
-        else:
-            output = self.output.to_dict()
+        output = self.output.to_dict()
 
         charge_info: dict[str, Any]
         if isinstance(self.charge_info, GetAutoTopupSettingsResponse200ChargeInfoType0):
@@ -92,8 +84,6 @@ class GetAutoTopupSettingsResponse200:
         else:
             charge_info = self.charge_info.to_dict()
 
-        advice = self.advice
-
         warnings: list[dict[str, Any]] | None | Unset
         if isinstance(self.warnings, Unset):
             warnings = UNSET
@@ -106,17 +96,27 @@ class GetAutoTopupSettingsResponse200:
         else:
             warnings = self.warnings
 
+        advice: list[str] | None | Unset
+        if isinstance(self.advice, Unset):
+            advice = UNSET
+        elif isinstance(self.advice, list):
+            advice = self.advice
+
+        else:
+            advice = self.advice
+
         field_dict: dict[str, Any] = {}
 
         field_dict.update(
             {
                 "output": output,
                 "chargeInfo": charge_info,
-                "advice": advice,
             }
         )
         if warnings is not UNSET:
             field_dict["warnings"] = warnings
+        if advice is not UNSET:
+            field_dict["advice"] = advice
 
         return field_dict
 
@@ -137,36 +137,13 @@ class GetAutoTopupSettingsResponse200:
         from ..models.get_auto_topup_settings_response_200_charge_info_type_4 import (
             GetAutoTopupSettingsResponse200ChargeInfoType4,
         )
-        from ..models.get_auto_topup_settings_response_200_output_type_0 import (
-            GetAutoTopupSettingsResponse200OutputType0,
-        )
-        from ..models.get_auto_topup_settings_response_200_output_type_1 import (
-            GetAutoTopupSettingsResponse200OutputType1,
-        )
+        from ..models.get_auto_topup_settings_response_200_output import GetAutoTopupSettingsResponse200Output
         from ..models.get_auto_topup_settings_response_200_warnings_type_0_item import (
             GetAutoTopupSettingsResponse200WarningsType0Item,
         )
 
         d = dict(src_dict)
-
-        def _parse_output(
-            data: object,
-        ) -> GetAutoTopupSettingsResponse200OutputType0 | GetAutoTopupSettingsResponse200OutputType1:
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                output_type_0 = GetAutoTopupSettingsResponse200OutputType0.from_dict(data)
-
-                return output_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            if not isinstance(data, dict):
-                raise TypeError()
-            output_type_1 = GetAutoTopupSettingsResponse200OutputType1.from_dict(data)
-
-            return output_type_1
-
-        output = _parse_output(d.pop("output"))
+        output = GetAutoTopupSettingsResponse200Output.from_dict(d.pop("output"))
 
         def _parse_charge_info(
             data: object,
@@ -217,8 +194,6 @@ class GetAutoTopupSettingsResponse200:
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 
-        advice = cast(list[str], d.pop("advice"))
-
         def _parse_warnings(data: object) -> list[GetAutoTopupSettingsResponse200WarningsType0Item] | None | Unset:
             if data is None:
                 return data
@@ -243,11 +218,28 @@ class GetAutoTopupSettingsResponse200:
 
         warnings = _parse_warnings(d.pop("warnings", UNSET))
 
+        def _parse_advice(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                advice_type_0 = cast(list[str], data)
+
+                return advice_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        advice = _parse_advice(d.pop("advice", UNSET))
+
         get_auto_topup_settings_response_200 = cls(
             output=output,
             charge_info=charge_info,
-            advice=advice,
             warnings=warnings,
+            advice=advice,
         )
 
         return get_auto_topup_settings_response_200

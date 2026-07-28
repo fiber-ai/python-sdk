@@ -16,6 +16,7 @@ class UpdateAutoTopupSettingsResponse200OutputType0:
     """
     Attributes:
         configured (bool):
+        subscription_id (str): The subscription these auto top-up settings belong to
         is_enabled (bool): Whether auto top-up is currently enabled for this organization
         credit_threshold (int): Credit balance threshold below which auto top-up triggers
         credits_to_buy (int): Number of credits purchased when auto top-up triggers
@@ -26,6 +27,7 @@ class UpdateAutoTopupSettingsResponse200OutputType0:
     """
 
     configured: bool
+    subscription_id: str
     is_enabled: bool
     credit_threshold: int
     credits_to_buy: int
@@ -35,6 +37,8 @@ class UpdateAutoTopupSettingsResponse200OutputType0:
 
     def to_dict(self) -> dict[str, Any]:
         configured = self.configured
+
+        subscription_id = self.subscription_id
 
         is_enabled = self.is_enabled
 
@@ -59,6 +63,7 @@ class UpdateAutoTopupSettingsResponse200OutputType0:
         field_dict.update(
             {
                 "configured": configured,
+                "subscriptionId": subscription_id,
                 "isEnabled": is_enabled,
                 "creditThreshold": credit_threshold,
                 "creditsToBuy": credits_to_buy,
@@ -75,6 +80,8 @@ class UpdateAutoTopupSettingsResponse200OutputType0:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
         configured = d.pop("configured")
+
+        subscription_id = d.pop("subscriptionId")
 
         is_enabled = d.pop("isEnabled")
 
@@ -102,6 +109,7 @@ class UpdateAutoTopupSettingsResponse200OutputType0:
 
         update_auto_topup_settings_response_200_output_type_0 = cls(
             configured=configured,
+            subscription_id=subscription_id,
             is_enabled=is_enabled,
             credit_threshold=credit_threshold,
             credits_to_buy=credits_to_buy,

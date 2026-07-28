@@ -28,9 +28,9 @@ class TwitterProfileResponse200:
         charge_info (TwitterProfileResponse200ChargeInfoType0 | TwitterProfileResponse200ChargeInfoType1 |
             TwitterProfileResponse200ChargeInfoType2 | TwitterProfileResponse200ChargeInfoType3 |
             TwitterProfileResponse200ChargeInfoType4):
-        advice (list[str]): Tips, recommendations, and suggestions for using this API effectively.
         warnings (list[TwitterProfileResponse200WarningsType0Item] | None | Unset): Warnings about extraneous fields in
             request
+        advice (list[str] | None | Unset): Tips, recommendations, and suggestions for using this API effectively.
     """
 
     output: TwitterProfileResponse200Output
@@ -41,8 +41,8 @@ class TwitterProfileResponse200:
         | TwitterProfileResponse200ChargeInfoType3
         | TwitterProfileResponse200ChargeInfoType4
     )
-    advice: list[str]
     warnings: list[TwitterProfileResponse200WarningsType0Item] | None | Unset = UNSET
+    advice: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.twitter_profile_response_200_charge_info_type_0 import TwitterProfileResponse200ChargeInfoType0
@@ -64,8 +64,6 @@ class TwitterProfileResponse200:
         else:
             charge_info = self.charge_info.to_dict()
 
-        advice = self.advice
-
         warnings: list[dict[str, Any]] | None | Unset
         if isinstance(self.warnings, Unset):
             warnings = UNSET
@@ -78,17 +76,27 @@ class TwitterProfileResponse200:
         else:
             warnings = self.warnings
 
+        advice: list[str] | None | Unset
+        if isinstance(self.advice, Unset):
+            advice = UNSET
+        elif isinstance(self.advice, list):
+            advice = self.advice
+
+        else:
+            advice = self.advice
+
         field_dict: dict[str, Any] = {}
 
         field_dict.update(
             {
                 "output": output,
                 "chargeInfo": charge_info,
-                "advice": advice,
             }
         )
         if warnings is not UNSET:
             field_dict["warnings"] = warnings
+        if advice is not UNSET:
+            field_dict["advice"] = advice
 
         return field_dict
 
@@ -156,8 +164,6 @@ class TwitterProfileResponse200:
 
         charge_info = _parse_charge_info(d.pop("chargeInfo"))
 
-        advice = cast(list[str], d.pop("advice"))
-
         def _parse_warnings(data: object) -> list[TwitterProfileResponse200WarningsType0Item] | None | Unset:
             if data is None:
                 return data
@@ -182,11 +188,28 @@ class TwitterProfileResponse200:
 
         warnings = _parse_warnings(d.pop("warnings", UNSET))
 
+        def _parse_advice(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                advice_type_0 = cast(list[str], data)
+
+                return advice_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        advice = _parse_advice(d.pop("advice", UNSET))
+
         twitter_profile_response_200 = cls(
             output=output,
             charge_info=charge_info,
-            advice=advice,
             warnings=warnings,
+            advice=advice,
         )
 
         return twitter_profile_response_200
