@@ -5,7 +5,6 @@ import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.get_tags_body import GetTagsBody
 from ...models.get_tags_response_200 import GetTagsResponse200
 from ...models.get_tags_response_400 import GetTagsResponse400
 from ...models.get_tags_response_401 import GetTagsResponse401
@@ -16,25 +15,26 @@ from ...models.get_tags_response_422 import GetTagsResponse422
 from ...models.get_tags_response_429 import GetTagsResponse429
 from ...models.get_tags_response_500 import GetTagsResponse500
 from ...models.get_tags_response_503 import GetTagsResponse503
-from ...types import Response
+from ...types import UNSET, Response
 
 
 def _get_kwargs(
     *,
-    body: GetTagsBody,
+    api_key: str,
 ) -> dict[str, Any]:
-    headers: dict[str, Any] = {}
+
+    params: dict[str, Any] = {}
+
+    params["apiKey"] = api_key
+
+    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
 
     _kwargs: dict[str, Any] = {
-        "method": "post",
+        "method": "get",
         "url": "/v1/enums/tags",
+        "params": params,
     }
 
-    _kwargs["json"] = body.to_dict()
-
-    headers["Content-Type"] = "application/json"
-
-    _kwargs["headers"] = headers
     return _kwargs
 
 
@@ -134,7 +134,7 @@ def _build_response(
 def sync_detailed(
     *,
     client: AuthenticatedClient | Client,
-    body: GetTagsBody,
+    api_key: str,
 ) -> Response[
     GetTagsResponse200
     | GetTagsResponse400
@@ -158,7 +158,7 @@ def sync_detailed(
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
-        body (GetTagsBody):
+        api_key (str):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -169,7 +169,7 @@ def sync_detailed(
     """
 
     kwargs = _get_kwargs(
-        body=body,
+        api_key=api_key,
     )
 
     response = client.get_httpx_client().request(
@@ -182,7 +182,7 @@ def sync_detailed(
 def sync(
     *,
     client: AuthenticatedClient | Client,
-    body: GetTagsBody,
+    api_key: str,
 ) -> (
     GetTagsResponse200
     | GetTagsResponse400
@@ -207,7 +207,7 @@ def sync(
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
-        body (GetTagsBody):
+        api_key (str):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -219,14 +219,14 @@ def sync(
 
     return sync_detailed(
         client=client,
-        body=body,
+        api_key=api_key,
     ).parsed
 
 
 async def asyncio_detailed(
     *,
     client: AuthenticatedClient | Client,
-    body: GetTagsBody,
+    api_key: str,
 ) -> Response[
     GetTagsResponse200
     | GetTagsResponse400
@@ -250,7 +250,7 @@ async def asyncio_detailed(
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
-        body (GetTagsBody):
+        api_key (str):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -261,7 +261,7 @@ async def asyncio_detailed(
     """
 
     kwargs = _get_kwargs(
-        body=body,
+        api_key=api_key,
     )
 
     response = await client.get_async_httpx_client().request(**kwargs)
@@ -272,7 +272,7 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: AuthenticatedClient | Client,
-    body: GetTagsBody,
+    api_key: str,
 ) -> (
     GetTagsResponse200
     | GetTagsResponse400
@@ -297,7 +297,7 @@ async def asyncio(
     shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
 
     Args:
-        body (GetTagsBody):
+        api_key (str):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -310,6 +310,6 @@ async def asyncio(
     return (
         await asyncio_detailed(
             client=client,
-            body=body,
+            api_key=api_key,
         )
     ).parsed

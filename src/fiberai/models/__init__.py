@@ -26245,7 +26245,6 @@ from .get_subdivisions_response_422 import GetSubdivisionsResponse422
 from .get_subdivisions_response_429 import GetSubdivisionsResponse429
 from .get_subdivisions_response_500 import GetSubdivisionsResponse500
 from .get_subdivisions_response_503 import GetSubdivisionsResponse503
-from .get_tags_body import GetTagsBody
 from .get_tags_response_200 import GetTagsResponse200
 from .get_tags_response_200_charge_info_type_0 import GetTagsResponse200ChargeInfoType0
 from .get_tags_response_200_charge_info_type_0_low_credit_alert_type_0 import (
@@ -61136,7 +61135,6 @@ __all__ = (
     "GetSubdivisionsResponse429",
     "GetSubdivisionsResponse500",
     "GetSubdivisionsResponse503",
-    "GetTagsBody",
     "GetTagsResponse200",
     "GetTagsResponse200ChargeInfoType0",
     "GetTagsResponse200ChargeInfoType0LowCreditAlertType0",
