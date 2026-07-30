@@ -23311,6 +23311,9 @@ from .get_industries_response_200_charge_info_type_4_low_credit_alert_type_0 imp
 )
 from .get_industries_response_200_charge_info_type_4_method import GetIndustriesResponse200ChargeInfoType4Method
 from .get_industries_response_200_output import GetIndustriesResponse200Output
+from .get_industries_response_200_output_crunchbase_industry_groups import (
+    GetIndustriesResponse200OutputCrunchbaseIndustryGroups,
+)
 from .get_industries_response_200_warnings_type_0_item import GetIndustriesResponse200WarningsType0Item
 from .get_industries_response_400 import GetIndustriesResponse400
 from .get_industries_response_401 import GetIndustriesResponse401
@@ -59935,6 +59938,7 @@ __all__ = (
     "GetIndustriesResponse200ChargeInfoType4LowCreditAlertType0",
     "GetIndustriesResponse200ChargeInfoType4Method",
     "GetIndustriesResponse200Output",
+    "GetIndustriesResponse200OutputCrunchbaseIndustryGroups",
     "GetIndustriesResponse200WarningsType0Item",
     "GetIndustriesResponse400",
     "GetIndustriesResponse401",
