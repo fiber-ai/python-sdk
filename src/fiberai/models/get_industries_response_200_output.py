@@ -6,7 +6,12 @@ from typing import TYPE_CHECKING, Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..types import UNSET, Unset
+
 if TYPE_CHECKING:
+    from ..models.get_industries_response_200_output_company_counts_type_0 import (
+        GetIndustriesResponse200OutputCompanyCountsType0,
+    )
     from ..models.get_industries_response_200_output_crunchbase_industry_groups import (
         GetIndustriesResponse200OutputCrunchbaseIndustryGroups,
     )
@@ -27,15 +32,22 @@ class GetIndustriesResponse200Output:
             groups mapped to their constituent industries. Keys are industry group names, values are arrays of industry
             names belonging to that group. Use the keys to populate the `crunchbaseCategoryGroups` filter on the company-
             search API.
+        company_counts (GetIndustriesResponse200OutputCompanyCountsType0 | None | Unset): Number of companies matching
+            each value in the lists
     """
 
     fiber_industries: list[str]
     linkedin_industries: list[str]
     crunchbase_industries: list[str]
     crunchbase_industry_groups: GetIndustriesResponse200OutputCrunchbaseIndustryGroups
+    company_counts: GetIndustriesResponse200OutputCompanyCountsType0 | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.get_industries_response_200_output_company_counts_type_0 import (
+            GetIndustriesResponse200OutputCompanyCountsType0,
+        )
+
         fiber_industries = self.fiber_industries
 
         linkedin_industries = self.linkedin_industries
@@ -43,6 +55,14 @@ class GetIndustriesResponse200Output:
         crunchbase_industries = self.crunchbase_industries
 
         crunchbase_industry_groups = self.crunchbase_industry_groups.to_dict()
+
+        company_counts: dict[str, Any] | None | Unset
+        if isinstance(self.company_counts, Unset):
+            company_counts = UNSET
+        elif isinstance(self.company_counts, GetIndustriesResponse200OutputCompanyCountsType0):
+            company_counts = self.company_counts.to_dict()
+        else:
+            company_counts = self.company_counts
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -54,11 +74,16 @@ class GetIndustriesResponse200Output:
                 "crunchbaseIndustryGroups": crunchbase_industry_groups,
             }
         )
+        if company_counts is not UNSET:
+            field_dict["companyCounts"] = company_counts
 
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.get_industries_response_200_output_company_counts_type_0 import (
+            GetIndustriesResponse200OutputCompanyCountsType0,
+        )
         from ..models.get_industries_response_200_output_crunchbase_industry_groups import (
             GetIndustriesResponse200OutputCrunchbaseIndustryGroups,
         )
@@ -74,11 +99,29 @@ class GetIndustriesResponse200Output:
             d.pop("crunchbaseIndustryGroups")
         )
 
+        def _parse_company_counts(data: object) -> GetIndustriesResponse200OutputCompanyCountsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                company_counts_type_0 = GetIndustriesResponse200OutputCompanyCountsType0.from_dict(data)
+
+                return company_counts_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(GetIndustriesResponse200OutputCompanyCountsType0 | None | Unset, data)
+
+        company_counts = _parse_company_counts(d.pop("companyCounts", UNSET))
+
         get_industries_response_200_output = cls(
             fiber_industries=fiber_industries,
             linkedin_industries=linkedin_industries,
             crunchbase_industries=crunchbase_industries,
             crunchbase_industry_groups=crunchbase_industry_groups,
+            company_counts=company_counts,
         )
 
         get_industries_response_200_output.additional_properties = d

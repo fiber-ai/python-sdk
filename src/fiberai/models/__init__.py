@@ -23311,6 +23311,19 @@ from .get_industries_response_200_charge_info_type_4_low_credit_alert_type_0 imp
 )
 from .get_industries_response_200_charge_info_type_4_method import GetIndustriesResponse200ChargeInfoType4Method
 from .get_industries_response_200_output import GetIndustriesResponse200Output
+from .get_industries_response_200_output_company_counts_type_0 import GetIndustriesResponse200OutputCompanyCountsType0
+from .get_industries_response_200_output_company_counts_type_0_crunchbase_industries import (
+    GetIndustriesResponse200OutputCompanyCountsType0CrunchbaseIndustries,
+)
+from .get_industries_response_200_output_company_counts_type_0_crunchbase_industry_groups import (
+    GetIndustriesResponse200OutputCompanyCountsType0CrunchbaseIndustryGroups,
+)
+from .get_industries_response_200_output_company_counts_type_0_fiber_industries import (
+    GetIndustriesResponse200OutputCompanyCountsType0FiberIndustries,
+)
+from .get_industries_response_200_output_company_counts_type_0_linkedin_industries import (
+    GetIndustriesResponse200OutputCompanyCountsType0LinkedinIndustries,
+)
 from .get_industries_response_200_output_crunchbase_industry_groups import (
     GetIndustriesResponse200OutputCrunchbaseIndustryGroups,
 )
@@ -59938,6 +59951,11 @@ __all__ = (
     "GetIndustriesResponse200ChargeInfoType4LowCreditAlertType0",
     "GetIndustriesResponse200ChargeInfoType4Method",
     "GetIndustriesResponse200Output",
+    "GetIndustriesResponse200OutputCompanyCountsType0",
+    "GetIndustriesResponse200OutputCompanyCountsType0CrunchbaseIndustries",
+    "GetIndustriesResponse200OutputCompanyCountsType0CrunchbaseIndustryGroups",
+    "GetIndustriesResponse200OutputCompanyCountsType0FiberIndustries",
+    "GetIndustriesResponse200OutputCompanyCountsType0LinkedinIndustries",
     "GetIndustriesResponse200OutputCrunchbaseIndustryGroups",
     "GetIndustriesResponse200WarningsType0Item",
     "GetIndustriesResponse400",
