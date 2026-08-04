@@ -24,16 +24,16 @@ T = TypeVar("T", bound="GetIndustriesResponse200Output")
 class GetIndustriesResponse200Output:
     """
     Attributes:
-        fiber_industries (list[str]): Fiber's standardized list of industries
-        linkedin_industries (list[str]): LinkedIn's list of industries
+        fiber_industries (list[str]): Fiber's standardized list of industries.
+        linkedin_industries (list[str]): LinkedIn's list of industries.
         crunchbase_industries (list[str]): Crunchbase's list of industries (a.k.a. Crunchbase categories). Use these
             values to populate the `crunchbaseCategories` filter on the company-search API.
         crunchbase_industry_groups (GetIndustriesResponse200OutputCrunchbaseIndustryGroups): Crunchbase's industry
             groups mapped to their constituent industries. Keys are industry group names, values are arrays of industry
             names belonging to that group. Use the keys to populate the `crunchbaseCategoryGroups` filter on the company-
             search API.
-        company_counts (GetIndustriesResponse200OutputCompanyCountsType0 | None | Unset): Number of companies matching
-            each value in the lists
+        company_counts (GetIndustriesResponse200OutputCompanyCountsType0 | None | Unset): Shows the number of companies
+            in each industry.
     """
 
     fiber_industries: list[str]

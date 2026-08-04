@@ -26,7 +26,7 @@ T = TypeVar("T", bound="GetIndustriesResponse200OutputCompanyCountsType0")
 
 @_attrs_define
 class GetIndustriesResponse200OutputCompanyCountsType0:
-    """Number of companies matching each value in the lists
+    """Shows the number of companies in each industry.
 
     Attributes:
         fiber_industries (GetIndustriesResponse200OutputCompanyCountsType0FiberIndustries):
