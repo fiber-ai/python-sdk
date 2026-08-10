@@ -35,6 +35,9 @@ if TYPE_CHECKING:
     from ..models.combined_search_count_body_profile_params_employment_type_type_0 import (
         CombinedSearchCountBodyProfileParamsEmploymentTypeType0,
     )
+    from ..models.combined_search_count_body_profile_params_ever_worked_at_type_0 import (
+        CombinedSearchCountBodyProfileParamsEverWorkedAtType0,
+    )
     from ..models.combined_search_count_body_profile_params_exact_profile_type_0 import (
         CombinedSearchCountBodyProfileParamsExactProfileType0,
     )
@@ -168,6 +171,7 @@ class CombinedSearchCountBodyProfileParams:
             location (CombinedSearchCountBodyProfileParamsLocationType0 | None | Unset):
             past_jobs (CombinedSearchCountBodyProfileParamsPastJobsType0 | None | Unset):
             current_jobs (CombinedSearchCountBodyProfileParamsCurrentJobsType0 | None | Unset):
+            ever_worked_at (CombinedSearchCountBodyProfileParamsEverWorkedAtType0 | None | Unset):
             languages (CombinedSearchCountBodyProfileParamsLanguagesType0 | None | Unset):
             left_stealth_at (CombinedSearchCountBodyProfileParamsLeftStealthAtType0 |
                 CombinedSearchCountBodyProfileParamsLeftStealthAtType1 | None | Unset):
@@ -239,6 +243,7 @@ class CombinedSearchCountBodyProfileParams:
     location: CombinedSearchCountBodyProfileParamsLocationType0 | None | Unset = UNSET
     past_jobs: CombinedSearchCountBodyProfileParamsPastJobsType0 | None | Unset = UNSET
     current_jobs: CombinedSearchCountBodyProfileParamsCurrentJobsType0 | None | Unset = UNSET
+    ever_worked_at: CombinedSearchCountBodyProfileParamsEverWorkedAtType0 | None | Unset = UNSET
     languages: CombinedSearchCountBodyProfileParamsLanguagesType0 | None | Unset = UNSET
     left_stealth_at: (
         CombinedSearchCountBodyProfileParamsLeftStealthAtType0
@@ -325,6 +330,9 @@ class CombinedSearchCountBodyProfileParams:
         )
         from ..models.combined_search_count_body_profile_params_employment_type_type_0 import (
             CombinedSearchCountBodyProfileParamsEmploymentTypeType0,
+        )
+        from ..models.combined_search_count_body_profile_params_ever_worked_at_type_0 import (
+            CombinedSearchCountBodyProfileParamsEverWorkedAtType0,
         )
         from ..models.combined_search_count_body_profile_params_exact_profile_type_0 import (
             CombinedSearchCountBodyProfileParamsExactProfileType0,
@@ -552,6 +560,14 @@ class CombinedSearchCountBodyProfileParams:
             current_jobs = self.current_jobs.to_dict()
         else:
             current_jobs = self.current_jobs
+
+        ever_worked_at: dict[str, Any] | None | Unset
+        if isinstance(self.ever_worked_at, Unset):
+            ever_worked_at = UNSET
+        elif isinstance(self.ever_worked_at, CombinedSearchCountBodyProfileParamsEverWorkedAtType0):
+            ever_worked_at = self.ever_worked_at.to_dict()
+        else:
+            ever_worked_at = self.ever_worked_at
 
         languages: dict[str, Any] | None | Unset
         if isinstance(self.languages, Unset):
@@ -836,6 +852,8 @@ class CombinedSearchCountBodyProfileParams:
             field_dict["pastJobs"] = past_jobs
         if current_jobs is not UNSET:
             field_dict["currentJobs"] = current_jobs
+        if ever_worked_at is not UNSET:
+            field_dict["everWorkedAt"] = ever_worked_at
         if languages is not UNSET:
             field_dict["languages"] = languages
         if left_stealth_at is not UNSET:
@@ -931,6 +949,9 @@ class CombinedSearchCountBodyProfileParams:
         )
         from ..models.combined_search_count_body_profile_params_employment_type_type_0 import (
             CombinedSearchCountBodyProfileParamsEmploymentTypeType0,
+        )
+        from ..models.combined_search_count_body_profile_params_ever_worked_at_type_0 import (
+            CombinedSearchCountBodyProfileParamsEverWorkedAtType0,
         )
         from ..models.combined_search_count_body_profile_params_exact_profile_type_0 import (
             CombinedSearchCountBodyProfileParamsExactProfileType0,
@@ -1348,6 +1369,23 @@ class CombinedSearchCountBodyProfileParams:
             return cast(CombinedSearchCountBodyProfileParamsCurrentJobsType0 | None | Unset, data)
 
         current_jobs = _parse_current_jobs(d.pop("currentJobs", UNSET))
+
+        def _parse_ever_worked_at(data: object) -> CombinedSearchCountBodyProfileParamsEverWorkedAtType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                ever_worked_at_type_0 = CombinedSearchCountBodyProfileParamsEverWorkedAtType0.from_dict(data)
+
+                return ever_worked_at_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CombinedSearchCountBodyProfileParamsEverWorkedAtType0 | None | Unset, data)
+
+        ever_worked_at = _parse_ever_worked_at(d.pop("everWorkedAt", UNSET))
 
         def _parse_languages(data: object) -> CombinedSearchCountBodyProfileParamsLanguagesType0 | None | Unset:
             if data is None:
@@ -1949,6 +1987,7 @@ class CombinedSearchCountBodyProfileParams:
             location=location,
             past_jobs=past_jobs,
             current_jobs=current_jobs,
+            ever_worked_at=ever_worked_at,
             languages=languages,
             left_stealth_at=left_stealth_at,
             is_in_stealth=is_in_stealth,

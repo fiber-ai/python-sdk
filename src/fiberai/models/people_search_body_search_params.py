@@ -31,6 +31,9 @@ if TYPE_CHECKING:
     from ..models.people_search_body_search_params_employment_type_type_0 import (
         PeopleSearchBodySearchParamsEmploymentTypeType0,
     )
+    from ..models.people_search_body_search_params_ever_worked_at_type_0 import (
+        PeopleSearchBodySearchParamsEverWorkedAtType0,
+    )
     from ..models.people_search_body_search_params_exact_profile_type_0 import (
         PeopleSearchBodySearchParamsExactProfileType0,
     )
@@ -131,6 +134,7 @@ class PeopleSearchBodySearchParams:
         location (None | PeopleSearchBodySearchParamsLocationType0 | Unset):
         past_jobs (None | PeopleSearchBodySearchParamsPastJobsType0 | Unset):
         current_jobs (None | PeopleSearchBodySearchParamsCurrentJobsType0 | Unset):
+        ever_worked_at (None | PeopleSearchBodySearchParamsEverWorkedAtType0 | Unset):
         languages (None | PeopleSearchBodySearchParamsLanguagesType0 | Unset):
         left_stealth_at (None | PeopleSearchBodySearchParamsLeftStealthAtType0 |
             PeopleSearchBodySearchParamsLeftStealthAtType1 | Unset):
@@ -198,6 +202,7 @@ class PeopleSearchBodySearchParams:
     location: None | PeopleSearchBodySearchParamsLocationType0 | Unset = UNSET
     past_jobs: None | PeopleSearchBodySearchParamsPastJobsType0 | Unset = UNSET
     current_jobs: None | PeopleSearchBodySearchParamsCurrentJobsType0 | Unset = UNSET
+    ever_worked_at: None | PeopleSearchBodySearchParamsEverWorkedAtType0 | Unset = UNSET
     languages: None | PeopleSearchBodySearchParamsLanguagesType0 | Unset = UNSET
     left_stealth_at: (
         None | PeopleSearchBodySearchParamsLeftStealthAtType0 | PeopleSearchBodySearchParamsLeftStealthAtType1 | Unset
@@ -278,6 +283,9 @@ class PeopleSearchBodySearchParams:
         )
         from ..models.people_search_body_search_params_employment_type_type_0 import (
             PeopleSearchBodySearchParamsEmploymentTypeType0,
+        )
+        from ..models.people_search_body_search_params_ever_worked_at_type_0 import (
+            PeopleSearchBodySearchParamsEverWorkedAtType0,
         )
         from ..models.people_search_body_search_params_exact_profile_type_0 import (
             PeopleSearchBodySearchParamsExactProfileType0,
@@ -491,6 +499,14 @@ class PeopleSearchBodySearchParams:
             current_jobs = self.current_jobs.to_dict()
         else:
             current_jobs = self.current_jobs
+
+        ever_worked_at: dict[str, Any] | None | Unset
+        if isinstance(self.ever_worked_at, Unset):
+            ever_worked_at = UNSET
+        elif isinstance(self.ever_worked_at, PeopleSearchBodySearchParamsEverWorkedAtType0):
+            ever_worked_at = self.ever_worked_at.to_dict()
+        else:
+            ever_worked_at = self.ever_worked_at
 
         languages: dict[str, Any] | None | Unset
         if isinstance(self.languages, Unset):
@@ -775,6 +791,8 @@ class PeopleSearchBodySearchParams:
             field_dict["pastJobs"] = past_jobs
         if current_jobs is not UNSET:
             field_dict["currentJobs"] = current_jobs
+        if ever_worked_at is not UNSET:
+            field_dict["everWorkedAt"] = ever_worked_at
         if languages is not UNSET:
             field_dict["languages"] = languages
         if left_stealth_at is not UNSET:
@@ -870,6 +888,9 @@ class PeopleSearchBodySearchParams:
         )
         from ..models.people_search_body_search_params_employment_type_type_0 import (
             PeopleSearchBodySearchParamsEmploymentTypeType0,
+        )
+        from ..models.people_search_body_search_params_ever_worked_at_type_0 import (
+            PeopleSearchBodySearchParamsEverWorkedAtType0,
         )
         from ..models.people_search_body_search_params_exact_profile_type_0 import (
             PeopleSearchBodySearchParamsExactProfileType0,
@@ -1263,6 +1284,23 @@ class PeopleSearchBodySearchParams:
             return cast(None | PeopleSearchBodySearchParamsCurrentJobsType0 | Unset, data)
 
         current_jobs = _parse_current_jobs(d.pop("currentJobs", UNSET))
+
+        def _parse_ever_worked_at(data: object) -> None | PeopleSearchBodySearchParamsEverWorkedAtType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                ever_worked_at_type_0 = PeopleSearchBodySearchParamsEverWorkedAtType0.from_dict(data)
+
+                return ever_worked_at_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | PeopleSearchBodySearchParamsEverWorkedAtType0 | Unset, data)
+
+        ever_worked_at = _parse_ever_worked_at(d.pop("everWorkedAt", UNSET))
 
         def _parse_languages(data: object) -> None | PeopleSearchBodySearchParamsLanguagesType0 | Unset:
             if data is None:
@@ -1850,6 +1888,7 @@ class PeopleSearchBodySearchParams:
             location=location,
             past_jobs=past_jobs,
             current_jobs=current_jobs,
+            ever_worked_at=ever_worked_at,
             languages=languages,
             left_stealth_at=left_stealth_at,
             is_in_stealth=is_in_stealth,

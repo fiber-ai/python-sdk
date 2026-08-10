@@ -28,6 +28,9 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_domain_lookup_agent import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0DomainLookupAgent,
     )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_email_to_linkedin_miss import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0EmailToLinkedinMiss,
+    )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_email_to_linkedin_url import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0EmailToLinkedinUrl,
     )
@@ -45,6 +48,9 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_exhaustive_work_email_reveal import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ExhaustiveWorkEmailReveal,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_financial_instrument_lookup import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FinancialInstrumentLookup,
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_find_company_lookalikes import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FindCompanyLookalikes,
@@ -467,6 +473,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         hotel_property_lookup (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0HotelPropertyLookup):
         get_department_size (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetDepartmentSize):
         flight_booking_page (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FlightBookingPage):
+        financial_instrument_lookup
+            (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FinancialInstrumentLookup):
+        email_to_linkedin_miss (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0EmailToLinkedinMiss):
     """
 
     get_company_from_db: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyFromDb
@@ -590,9 +599,17 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
     hotel_property_lookup: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0HotelPropertyLookup
     get_department_size: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetDepartmentSize
     flight_booking_page: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FlightBookingPage
+    financial_instrument_lookup: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FinancialInstrumentLookup
+    email_to_linkedin_miss: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0EmailToLinkedinMiss
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_track_persons_job_changes import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TrackPersonsJobChanges,
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_validate_email import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ValidateEmail,
+        )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_validate_phone import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ValidatePhone,
         )
@@ -839,6 +856,10 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
 
         flight_booking_page = self.flight_booking_page.to_dict()
 
+        financial_instrument_lookup = self.financial_instrument_lookup.to_dict()
+
+        email_to_linkedin_miss = self.email_to_linkedin_miss.to_dict()
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -952,6 +973,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
                 "hotelPropertyLookup": hotel_property_lookup,
                 "getDepartmentSize": get_department_size,
                 "flightBookingPage": flight_booking_page,
+                "financialInstrumentLookup": financial_instrument_lookup,
+                "emailToLinkedinMiss": email_to_linkedin_miss,
             }
         )
 
@@ -980,6 +1003,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_domain_lookup_agent import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0DomainLookupAgent,
         )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_email_to_linkedin_miss import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0EmailToLinkedinMiss,
+        )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_email_to_linkedin_url import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0EmailToLinkedinUrl,
         )
@@ -997,6 +1023,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_exhaustive_work_email_reveal import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ExhaustiveWorkEmailReveal,
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_financial_instrument_lookup import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FinancialInstrumentLookup,
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_find_company_lookalikes import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FindCompanyLookalikes,
@@ -1814,6 +1843,18 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             d.pop("flightBookingPage")
         )
 
+        financial_instrument_lookup = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FinancialInstrumentLookup.from_dict(
+                d.pop("financialInstrumentLookup")
+            )
+        )
+
+        email_to_linkedin_miss = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0EmailToLinkedinMiss.from_dict(
+                d.pop("emailToLinkedinMiss")
+            )
+        )
+
         get_org_credits_response_200_output_item_credits_per_operation_type_0 = cls(
             get_company_from_db=get_company_from_db,
             get_person_from_db=get_person_from_db,
@@ -1924,6 +1965,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             hotel_property_lookup=hotel_property_lookup,
             get_department_size=get_department_size,
             flight_booking_page=flight_booking_page,
+            financial_instrument_lookup=financial_instrument_lookup,
+            email_to_linkedin_miss=email_to_linkedin_miss,
         )
 
         get_org_credits_response_200_output_item_credits_per_operation_type_0.additional_properties = d
