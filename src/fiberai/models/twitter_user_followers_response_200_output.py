@@ -21,9 +21,10 @@ T = TypeVar("T", bound="TwitterUserFollowersResponse200Output")
 class TwitterUserFollowersResponse200Output:
     """
     Attributes:
-        users (list[TwitterUserFollowersResponse200OutputUsersItem]): List of followers for this page.
+        users (list[TwitterUserFollowersResponse200OutputUsersItem]): Followers for this page. Early pages may over-
+            represent more recent followers; paginate further for broader coverage of the follower list.
         next_cursor (None | str | Unset): Cursor to retrieve the next page of followers. Pass as `cursor` in the next
-            request. Null if there are no more pages.
+            request. Null when no more followers are available for this handle.
     """
 
     users: list[TwitterUserFollowersResponse200OutputUsersItem]

@@ -16,9 +16,12 @@ class TwitterUserFollowersBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        handle (str): Twitter/X handle to fetch followers for. Accepts with or without a leading '@'.
+        handle (str): Twitter/X handle to fetch followers for. Accepts a bare handle with or without a leading '@' (e.g.
+            'elonmusk' or '@elonmusk') or a full profile URL (e.g. 'https://x.com/elonmusk' or
+            'https://twitter.com/elonmusk').
         cursor (None | str | Unset): Pagination cursor from a previous response to retrieve the next page of followers.
-            Omit for the first page.
+            Omit for the first page. Use each cursor promptly to fetch the next page — cursors may become invalid if reused
+            after a long delay.
     """
 
     api_key: str
