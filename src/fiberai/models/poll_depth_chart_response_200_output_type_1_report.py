@@ -31,7 +31,11 @@ class PollDepthChartResponse200OutputType1Report:
     Attributes:
         report_id (str): Unique identifier for this report
         company_info (PollDepthChartResponse200OutputType1ReportCompanyInfo): Company identification details
-        total_employees (float): Total number of classified employees in the depth chart
+        total_employees (float): Total employees at the company (official headcount when available, otherwise the
+            classified count)
+        classified_employees (float): Number of employees categorized in this depth chart. Bucket counts sum to this
+            value.
+        categorization_note (None | str): Explanation when the company is too large to categorize every employee in full
         average_tenure_months (float | None): Overall average tenure in months across all employees
         buckets (list[PollDepthChartResponse200OutputType1ReportBucketsItem]): One entry per function x seniority
             combination with headcount and average tenure. Includes summary stats for each bucket, but does not list the
@@ -47,6 +51,8 @@ class PollDepthChartResponse200OutputType1Report:
     report_id: str
     company_info: PollDepthChartResponse200OutputType1ReportCompanyInfo
     total_employees: float
+    classified_employees: float
+    categorization_note: None | str
     average_tenure_months: float | None
     buckets: list[PollDepthChartResponse200OutputType1ReportBucketsItem]
     seniority_stats: list[PollDepthChartResponse200OutputType1ReportSeniorityStatsItem]
@@ -60,6 +66,11 @@ class PollDepthChartResponse200OutputType1Report:
         company_info = self.company_info.to_dict()
 
         total_employees = self.total_employees
+
+        classified_employees = self.classified_employees
+
+        categorization_note: None | str
+        categorization_note = self.categorization_note
 
         average_tenure_months: float | None
         average_tenure_months = self.average_tenure_months
@@ -88,6 +99,8 @@ class PollDepthChartResponse200OutputType1Report:
                 "reportId": report_id,
                 "companyInfo": company_info,
                 "totalEmployees": total_employees,
+                "classifiedEmployees": classified_employees,
+                "categorizationNote": categorization_note,
                 "averageTenureMonths": average_tenure_months,
                 "buckets": buckets,
                 "seniorityStats": seniority_stats,
@@ -119,6 +132,15 @@ class PollDepthChartResponse200OutputType1Report:
         company_info = PollDepthChartResponse200OutputType1ReportCompanyInfo.from_dict(d.pop("companyInfo"))
 
         total_employees = d.pop("totalEmployees")
+
+        classified_employees = d.pop("classifiedEmployees")
+
+        def _parse_categorization_note(data: object) -> None | str:
+            if data is None:
+                return data
+            return cast(None | str, data)
+
+        categorization_note = _parse_categorization_note(d.pop("categorizationNote"))
 
         def _parse_average_tenure_months(data: object) -> float | None:
             if data is None:
@@ -158,6 +180,8 @@ class PollDepthChartResponse200OutputType1Report:
             report_id=report_id,
             company_info=company_info,
             total_employees=total_employees,
+            classified_employees=classified_employees,
+            categorization_note=categorization_note,
             average_tenure_months=average_tenure_months,
             buckets=buckets,
             seniority_stats=seniority_stats,

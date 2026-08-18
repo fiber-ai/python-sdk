@@ -170,10 +170,13 @@ def sync_detailed(
     """Poll exhaustive contact details reveal result
 
      Polls the status of an exhaustive contact reveal task. Pass the task ID returned by /contact-
-    details/exhaustive/start. Returns the current status and, once complete, the full set of discovered
-    emails and phone numbers. Includes both high-quality emails and low-quality emails
-    (risky/undeliverable). Low-quality emails failed our internal validation checks and should be
-    filtered out before use, but are included for transparency.
+    details/exhaustive/start. This is intentionally slow (completion typically takes approximately 4–8
+    minutes), as we run multiple enrichment sources in parallel to maximize yield. Do NOT use this in
+    time-sensitive applications -- try any of our other contact detail grabbing endpoints instead.
+    Returns the current status and, once complete, the full set of discovered emails and phone numbers.
+    Includes both high-quality emails and low-quality emails (risky/undeliverable). Low-quality emails
+    failed our internal validation checks and should be filtered out before use, but are included for
+    transparency.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
@@ -219,10 +222,13 @@ def sync(
     """Poll exhaustive contact details reveal result
 
      Polls the status of an exhaustive contact reveal task. Pass the task ID returned by /contact-
-    details/exhaustive/start. Returns the current status and, once complete, the full set of discovered
-    emails and phone numbers. Includes both high-quality emails and low-quality emails
-    (risky/undeliverable). Low-quality emails failed our internal validation checks and should be
-    filtered out before use, but are included for transparency.
+    details/exhaustive/start. This is intentionally slow (completion typically takes approximately 4–8
+    minutes), as we run multiple enrichment sources in parallel to maximize yield. Do NOT use this in
+    time-sensitive applications -- try any of our other contact detail grabbing endpoints instead.
+    Returns the current status and, once complete, the full set of discovered emails and phone numbers.
+    Includes both high-quality emails and low-quality emails (risky/undeliverable). Low-quality emails
+    failed our internal validation checks and should be filtered out before use, but are included for
+    transparency.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
@@ -262,10 +268,13 @@ async def asyncio_detailed(
     """Poll exhaustive contact details reveal result
 
      Polls the status of an exhaustive contact reveal task. Pass the task ID returned by /contact-
-    details/exhaustive/start. Returns the current status and, once complete, the full set of discovered
-    emails and phone numbers. Includes both high-quality emails and low-quality emails
-    (risky/undeliverable). Low-quality emails failed our internal validation checks and should be
-    filtered out before use, but are included for transparency.
+    details/exhaustive/start. This is intentionally slow (completion typically takes approximately 4–8
+    minutes), as we run multiple enrichment sources in parallel to maximize yield. Do NOT use this in
+    time-sensitive applications -- try any of our other contact detail grabbing endpoints instead.
+    Returns the current status and, once complete, the full set of discovered emails and phone numbers.
+    Includes both high-quality emails and low-quality emails (risky/undeliverable). Low-quality emails
+    failed our internal validation checks and should be filtered out before use, but are included for
+    transparency.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
@@ -309,10 +318,13 @@ async def asyncio(
     """Poll exhaustive contact details reveal result
 
      Polls the status of an exhaustive contact reveal task. Pass the task ID returned by /contact-
-    details/exhaustive/start. Returns the current status and, once complete, the full set of discovered
-    emails and phone numbers. Includes both high-quality emails and low-quality emails
-    (risky/undeliverable). Low-quality emails failed our internal validation checks and should be
-    filtered out before use, but are included for transparency.
+    details/exhaustive/start. This is intentionally slow (completion typically takes approximately 4–8
+    minutes), as we run multiple enrichment sources in parallel to maximize yield. Do NOT use this in
+    time-sensitive applications -- try any of our other contact detail grabbing endpoints instead.
+    Returns the current status and, once complete, the full set of discovered emails and phone numbers.
+    Includes both high-quality emails and low-quality emails (risky/undeliverable). Low-quality emails
+    failed our internal validation checks and should be filtered out before use, but are included for
+    transparency.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 

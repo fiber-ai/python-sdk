@@ -16,12 +16,12 @@ class LinkedInPostChange:
     """
     Attributes:
         post_id (str): LinkedIn post ID
-        post_url (None | str): URL to the post
-        caption (None | str): Post content
-        posted_at (None | str): ISO date when posted
-        num_reactions (float | None): Number of reactions
-        num_comments (float | None): Number of comments
-        num_shares (float | None): Number of shares
+        post_url (None | str | Unset): URL to the post
+        caption (None | str | Unset): Post content
+        posted_at (None | str | Unset): ISO date when posted
+        num_reactions (float | None | Unset): Number of reactions
+        num_comments (float | None | Unset): Number of comments
+        num_shares (float | None | Unset): Number of shares
         poster_name (None | str | Unset): Display name of the person who posted
         poster_slug (None | str | Unset): LinkedIn slug of the poster (e.g. 'williamhgates')
         poster_url (None | str | Unset): Full LinkedIn profile URL of the poster
@@ -29,12 +29,12 @@ class LinkedInPostChange:
     """
 
     post_id: str
-    post_url: None | str
-    caption: None | str
-    posted_at: None | str
-    num_reactions: float | None
-    num_comments: float | None
-    num_shares: float | None
+    post_url: None | str | Unset = UNSET
+    caption: None | str | Unset = UNSET
+    posted_at: None | str | Unset = UNSET
+    num_reactions: float | None | Unset = UNSET
+    num_comments: float | None | Unset = UNSET
+    num_shares: float | None | Unset = UNSET
     poster_name: None | str | Unset = UNSET
     poster_slug: None | str | Unset = UNSET
     poster_url: None | str | Unset = UNSET
@@ -44,23 +44,41 @@ class LinkedInPostChange:
     def to_dict(self) -> dict[str, Any]:
         post_id = self.post_id
 
-        post_url: None | str
-        post_url = self.post_url
+        post_url: None | str | Unset
+        if isinstance(self.post_url, Unset):
+            post_url = UNSET
+        else:
+            post_url = self.post_url
 
-        caption: None | str
-        caption = self.caption
+        caption: None | str | Unset
+        if isinstance(self.caption, Unset):
+            caption = UNSET
+        else:
+            caption = self.caption
 
-        posted_at: None | str
-        posted_at = self.posted_at
+        posted_at: None | str | Unset
+        if isinstance(self.posted_at, Unset):
+            posted_at = UNSET
+        else:
+            posted_at = self.posted_at
 
-        num_reactions: float | None
-        num_reactions = self.num_reactions
+        num_reactions: float | None | Unset
+        if isinstance(self.num_reactions, Unset):
+            num_reactions = UNSET
+        else:
+            num_reactions = self.num_reactions
 
-        num_comments: float | None
-        num_comments = self.num_comments
+        num_comments: float | None | Unset
+        if isinstance(self.num_comments, Unset):
+            num_comments = UNSET
+        else:
+            num_comments = self.num_comments
 
-        num_shares: float | None
-        num_shares = self.num_shares
+        num_shares: float | None | Unset
+        if isinstance(self.num_shares, Unset):
+            num_shares = UNSET
+        else:
+            num_shares = self.num_shares
 
         poster_name: None | str | Unset
         if isinstance(self.poster_name, Unset):
@@ -91,14 +109,20 @@ class LinkedInPostChange:
         field_dict.update(
             {
                 "postId": post_id,
-                "postUrl": post_url,
-                "caption": caption,
-                "postedAt": posted_at,
-                "numReactions": num_reactions,
-                "numComments": num_comments,
-                "numShares": num_shares,
             }
         )
+        if post_url is not UNSET:
+            field_dict["postUrl"] = post_url
+        if caption is not UNSET:
+            field_dict["caption"] = caption
+        if posted_at is not UNSET:
+            field_dict["postedAt"] = posted_at
+        if num_reactions is not UNSET:
+            field_dict["numReactions"] = num_reactions
+        if num_comments is not UNSET:
+            field_dict["numComments"] = num_comments
+        if num_shares is not UNSET:
+            field_dict["numShares"] = num_shares
         if poster_name is not UNSET:
             field_dict["posterName"] = poster_name
         if poster_slug is not UNSET:
@@ -115,47 +139,59 @@ class LinkedInPostChange:
         d = dict(src_dict)
         post_id = d.pop("postId")
 
-        def _parse_post_url(data: object) -> None | str:
+        def _parse_post_url(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        post_url = _parse_post_url(d.pop("postUrl"))
+        post_url = _parse_post_url(d.pop("postUrl", UNSET))
 
-        def _parse_caption(data: object) -> None | str:
+        def _parse_caption(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        caption = _parse_caption(d.pop("caption"))
+        caption = _parse_caption(d.pop("caption", UNSET))
 
-        def _parse_posted_at(data: object) -> None | str:
+        def _parse_posted_at(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        posted_at = _parse_posted_at(d.pop("postedAt"))
+        posted_at = _parse_posted_at(d.pop("postedAt", UNSET))
 
-        def _parse_num_reactions(data: object) -> float | None:
+        def _parse_num_reactions(data: object) -> float | None | Unset:
             if data is None:
                 return data
-            return cast(float | None, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(float | None | Unset, data)
 
-        num_reactions = _parse_num_reactions(d.pop("numReactions"))
+        num_reactions = _parse_num_reactions(d.pop("numReactions", UNSET))
 
-        def _parse_num_comments(data: object) -> float | None:
+        def _parse_num_comments(data: object) -> float | None | Unset:
             if data is None:
                 return data
-            return cast(float | None, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(float | None | Unset, data)
 
-        num_comments = _parse_num_comments(d.pop("numComments"))
+        num_comments = _parse_num_comments(d.pop("numComments", UNSET))
 
-        def _parse_num_shares(data: object) -> float | None:
+        def _parse_num_shares(data: object) -> float | None | Unset:
             if data is None:
                 return data
-            return cast(float | None, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(float | None | Unset, data)
 
-        num_shares = _parse_num_shares(d.pop("numShares"))
+        num_shares = _parse_num_shares(d.pop("numShares", UNSET))
 
         def _parse_poster_name(data: object) -> None | str | Unset:
             if data is None:

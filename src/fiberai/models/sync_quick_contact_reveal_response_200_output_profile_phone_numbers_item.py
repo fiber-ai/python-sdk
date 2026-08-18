@@ -6,10 +6,6 @@ from typing import Any, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.sync_quick_contact_reveal_response_200_output_profile_phone_numbers_item_type import (
-    SyncQuickContactRevealResponse200OutputProfilePhoneNumbersItemType,
-)
-
 T = TypeVar("T", bound="SyncQuickContactRevealResponse200OutputProfilePhoneNumbersItem")
 
 
@@ -18,17 +14,17 @@ class SyncQuickContactRevealResponse200OutputProfilePhoneNumbersItem:
     """
     Attributes:
         number (str):
-        type_ (SyncQuickContactRevealResponse200OutputProfilePhoneNumbersItemType):
+        type_ (str):
     """
 
     number: str
-    type_: SyncQuickContactRevealResponse200OutputProfilePhoneNumbersItemType
+    type_: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         number = self.number
 
-        type_ = self.type_.value
+        type_ = self.type_
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -46,7 +42,7 @@ class SyncQuickContactRevealResponse200OutputProfilePhoneNumbersItem:
         d = dict(src_dict)
         number = d.pop("number")
 
-        type_ = SyncQuickContactRevealResponse200OutputProfilePhoneNumbersItemType(d.pop("type"))
+        type_ = d.pop("type")
 
         sync_quick_contact_reveal_response_200_output_profile_phone_numbers_item = cls(
             number=number,

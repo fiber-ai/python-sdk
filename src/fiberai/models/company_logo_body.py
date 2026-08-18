@@ -14,9 +14,9 @@ class CompanyLogoBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        identifier (str): A company identifier: a LinkedIn company URL (e.g.
-            'https://www.linkedin.com/company/anthropic'), a LinkedIn company slug (e.g. 'anthropic'), a numeric LinkedIn
-            organization ID (e.g. '74126343'), or a company domain (e.g. 'anthropic.com'). The format is auto-detected.
+        identifier (str): A company identifier: a LinkedIn company URL (e.g. 'https://www.linkedin.com/company/openai'),
+            a LinkedIn company slug (e.g. 'openai'), a numeric LinkedIn organization ID (e.g. '11130470'), or a company
+            domain (e.g. 'openai.com'). The format is auto-detected.
     """
 
     api_key: str

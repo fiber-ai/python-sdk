@@ -16,7 +16,7 @@ class GetScoutingReportBodyCompanyType2:
     """
     Attributes:
         identifier (GetScoutingReportBodyCompanyType2Identifier):
-        value (str): LinkedIn numeric organization ID (e.g. '1441').
+        value (str): LinkedIn numeric organization ID (e.g. '11130470').
     """
 
     identifier: GetScoutingReportBodyCompanyType2Identifier

@@ -27,21 +27,27 @@ T = TypeVar("T", bound="SyncQuickContactRevealResponse200OutputProfile")
 class SyncQuickContactRevealResponse200OutputProfile:
     """
     Attributes:
+        status (SyncQuickContactRevealResponse200OutputProfileStatus):
         emails (list[SyncQuickContactRevealResponse200OutputProfileEmailsItem]):
         phone_numbers (list[SyncQuickContactRevealResponse200OutputProfilePhoneNumbersItem]):
-        status (SyncQuickContactRevealResponse200OutputProfileStatus):
-        error (str | Unset):
-        exhaustive (bool | None | Unset):
+        success (bool):
+        task_id (str):
+        linkedin_url (str):
+        name (None | str | Unset): The person's full name. Null when no resolved name is available.
     """
 
+    status: SyncQuickContactRevealResponse200OutputProfileStatus
     emails: list[SyncQuickContactRevealResponse200OutputProfileEmailsItem]
     phone_numbers: list[SyncQuickContactRevealResponse200OutputProfilePhoneNumbersItem]
-    status: SyncQuickContactRevealResponse200OutputProfileStatus
-    error: str | Unset = UNSET
-    exhaustive: bool | None | Unset = UNSET
+    success: bool
+    task_id: str
+    linkedin_url: str
+    name: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        status = self.status.value
+
         emails = []
         for emails_item_data in self.emails:
             emails_item = emails_item_data.to_dict()
@@ -52,29 +58,32 @@ class SyncQuickContactRevealResponse200OutputProfile:
             phone_numbers_item = phone_numbers_item_data.to_dict()
             phone_numbers.append(phone_numbers_item)
 
-        status = self.status.value
+        success = self.success
 
-        error = self.error
+        task_id = self.task_id
 
-        exhaustive: bool | None | Unset
-        if isinstance(self.exhaustive, Unset):
-            exhaustive = UNSET
+        linkedin_url = self.linkedin_url
+
+        name: None | str | Unset
+        if isinstance(self.name, Unset):
+            name = UNSET
         else:
-            exhaustive = self.exhaustive
+            name = self.name
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
+                "status": status,
                 "emails": emails,
                 "phoneNumbers": phone_numbers,
-                "status": status,
+                "success": success,
+                "task_id": task_id,
+                "linkedin_url": linkedin_url,
             }
         )
-        if error is not UNSET:
-            field_dict["error"] = error
-        if exhaustive is not UNSET:
-            field_dict["exhaustive"] = exhaustive
+        if name is not UNSET:
+            field_dict["name"] = name
 
         return field_dict
 
@@ -88,6 +97,8 @@ class SyncQuickContactRevealResponse200OutputProfile:
         )
 
         d = dict(src_dict)
+        status = SyncQuickContactRevealResponse200OutputProfileStatus(d.pop("status"))
+
         emails = []
         _emails = d.pop("emails")
         for emails_item_data in _emails:
@@ -104,25 +115,29 @@ class SyncQuickContactRevealResponse200OutputProfile:
 
             phone_numbers.append(phone_numbers_item)
 
-        status = SyncQuickContactRevealResponse200OutputProfileStatus(d.pop("status"))
+        success = d.pop("success")
 
-        error = d.pop("error", UNSET)
+        task_id = d.pop("task_id")
 
-        def _parse_exhaustive(data: object) -> bool | None | Unset:
+        linkedin_url = d.pop("linkedin_url")
+
+        def _parse_name(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            return cast(bool | None | Unset, data)
+            return cast(None | str | Unset, data)
 
-        exhaustive = _parse_exhaustive(d.pop("exhaustive", UNSET))
+        name = _parse_name(d.pop("name", UNSET))
 
         sync_quick_contact_reveal_response_200_output_profile = cls(
+            status=status,
             emails=emails,
             phone_numbers=phone_numbers,
-            status=status,
-            error=error,
-            exhaustive=exhaustive,
+            success=success,
+            task_id=task_id,
+            linkedin_url=linkedin_url,
+            name=name,
         )
 
         sync_quick_contact_reveal_response_200_output_profile.additional_properties = d

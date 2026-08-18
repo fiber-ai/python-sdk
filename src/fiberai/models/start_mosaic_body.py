@@ -20,16 +20,24 @@ class StartMosaicBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        source_url (str): HTTPS URL of the input CSV, TXT, XLSX, Google Sheet, Dropbox, or OneDrive share link. The file
-            is securely fetched and stored before processing.
-        prompt (None | str | Unset): Optional free-text instructions describing what to enrich or heal in the file.
+        source_url (str): HTTPS URL of the input file. Supported formats: CSV, TXT (one LinkedIn profile URL per line),
+            XLSX, or a public Google Sheet. You may also pass a public Google Drive file link, Dropbox share link, or
+            OneDrive / SharePoint share link. The link must be publicly accessible (e.g. Google Sheets / Drive: "Anyone with
+            the link can view"; Dropbox / OneDrive: link allows direct download) or the fetch will fail. Google Sheets
+            export the first tab only. For XLSX workbooks we auto-detect the most likely worksheet and header row; if
+            detection is unavailable we use the sheet with the most rows and treat row 1 as the header. Maximum file size is
+            50 MiB. The file is securely fetched and stored before processing.
+        custom_instructions (None | str | Unset): Optional additional instructions for the AI on top of our system
+            prompt — not a replacement for it. Use this to steer enrichment when your file needs extra context. Examples: "I
+            really want personal emails but I don't care about phones"; "These are all doctors — make sure you get office
+            phones, not home phones".
         options (None | StartMosaicBodyOptionsType0 | Unset): Feature toggles that control billing and enrichment
             (contact info, company details, live fetch, redline, max rows).
     """
 
     api_key: str
     source_url: str
-    prompt: None | str | Unset = UNSET
+    custom_instructions: None | str | Unset = UNSET
     options: None | StartMosaicBodyOptionsType0 | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -40,11 +48,11 @@ class StartMosaicBody:
 
         source_url = self.source_url
 
-        prompt: None | str | Unset
-        if isinstance(self.prompt, Unset):
-            prompt = UNSET
+        custom_instructions: None | str | Unset
+        if isinstance(self.custom_instructions, Unset):
+            custom_instructions = UNSET
         else:
-            prompt = self.prompt
+            custom_instructions = self.custom_instructions
 
         options: dict[str, Any] | None | Unset
         if isinstance(self.options, Unset):
@@ -62,8 +70,8 @@ class StartMosaicBody:
                 "sourceUrl": source_url,
             }
         )
-        if prompt is not UNSET:
-            field_dict["prompt"] = prompt
+        if custom_instructions is not UNSET:
+            field_dict["customInstructions"] = custom_instructions
         if options is not UNSET:
             field_dict["options"] = options
 
@@ -78,14 +86,14 @@ class StartMosaicBody:
 
         source_url = d.pop("sourceUrl")
 
-        def _parse_prompt(data: object) -> None | str | Unset:
+        def _parse_custom_instructions(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
             return cast(None | str | Unset, data)
 
-        prompt = _parse_prompt(d.pop("prompt", UNSET))
+        custom_instructions = _parse_custom_instructions(d.pop("customInstructions", UNSET))
 
         def _parse_options(data: object) -> None | StartMosaicBodyOptionsType0 | Unset:
             if data is None:
@@ -107,7 +115,7 @@ class StartMosaicBody:
         start_mosaic_body = cls(
             api_key=api_key,
             source_url=source_url,
-            prompt=prompt,
+            custom_instructions=custom_instructions,
             options=options,
         )
 

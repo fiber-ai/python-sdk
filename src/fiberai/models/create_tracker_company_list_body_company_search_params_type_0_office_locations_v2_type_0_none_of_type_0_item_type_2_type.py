@@ -1,0 +1,8 @@
+from enum import Enum
+
+
+class CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0NoneOfType0ItemType2Type(str, Enum):
+    GEOGRAPHY = "geography"
+
+    def __str__(self) -> str:
+        return str(self.value)

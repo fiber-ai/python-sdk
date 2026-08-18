@@ -9,6 +9,7 @@ from attrs import field as _attrs_field
 from ..models.news_article_change_sentiment_type_1 import NewsArticleChangeSentimentType1
 from ..models.news_article_change_sentiment_type_2_type_1 import NewsArticleChangeSentimentType2Type1
 from ..models.news_article_change_sentiment_type_3_type_1 import NewsArticleChangeSentimentType3Type1
+from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="NewsArticleChange")
 
@@ -19,24 +20,25 @@ class NewsArticleChange:
     Attributes:
         url (str): Article URL
         title (str): Article title
-        published_at (None | str): ISO date published
-        publisher_name (None | str): Publisher name
-        summary (None | str): Article summary
+        published_at (None | str | Unset): ISO date published
+        publisher_name (None | str | Unset): Publisher name
+        summary (None | str | Unset): Article summary
         sentiment (NewsArticleChangeSentimentType1 | NewsArticleChangeSentimentType2Type1 |
-            NewsArticleChangeSentimentType3Type1 | None): Sentiment of the article. Null if not classified.
+            NewsArticleChangeSentimentType3Type1 | None | Unset): Sentiment of the article. Null if not classified.
     """
 
     url: str
     title: str
-    published_at: None | str
-    publisher_name: None | str
-    summary: None | str
+    published_at: None | str | Unset = UNSET
+    publisher_name: None | str | Unset = UNSET
+    summary: None | str | Unset = UNSET
     sentiment: (
         NewsArticleChangeSentimentType1
         | NewsArticleChangeSentimentType2Type1
         | NewsArticleChangeSentimentType3Type1
         | None
-    )
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -44,17 +46,28 @@ class NewsArticleChange:
 
         title = self.title
 
-        published_at: None | str
-        published_at = self.published_at
+        published_at: None | str | Unset
+        if isinstance(self.published_at, Unset):
+            published_at = UNSET
+        else:
+            published_at = self.published_at
 
-        publisher_name: None | str
-        publisher_name = self.publisher_name
+        publisher_name: None | str | Unset
+        if isinstance(self.publisher_name, Unset):
+            publisher_name = UNSET
+        else:
+            publisher_name = self.publisher_name
 
-        summary: None | str
-        summary = self.summary
+        summary: None | str | Unset
+        if isinstance(self.summary, Unset):
+            summary = UNSET
+        else:
+            summary = self.summary
 
-        sentiment: None | str
-        if isinstance(self.sentiment, NewsArticleChangeSentimentType1):
+        sentiment: None | str | Unset
+        if isinstance(self.sentiment, Unset):
+            sentiment = UNSET
+        elif isinstance(self.sentiment, NewsArticleChangeSentimentType1):
             sentiment = self.sentiment.value
         elif isinstance(self.sentiment, NewsArticleChangeSentimentType2Type1):
             sentiment = self.sentiment.value
@@ -69,12 +82,16 @@ class NewsArticleChange:
             {
                 "url": url,
                 "title": title,
-                "publishedAt": published_at,
-                "publisherName": publisher_name,
-                "summary": summary,
-                "sentiment": sentiment,
             }
         )
+        if published_at is not UNSET:
+            field_dict["publishedAt"] = published_at
+        if publisher_name is not UNSET:
+            field_dict["publisherName"] = publisher_name
+        if summary is not UNSET:
+            field_dict["summary"] = summary
+        if sentiment is not UNSET:
+            field_dict["sentiment"] = sentiment
 
         return field_dict
 
@@ -85,26 +102,32 @@ class NewsArticleChange:
 
         title = d.pop("title")
 
-        def _parse_published_at(data: object) -> None | str:
+        def _parse_published_at(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        published_at = _parse_published_at(d.pop("publishedAt"))
+        published_at = _parse_published_at(d.pop("publishedAt", UNSET))
 
-        def _parse_publisher_name(data: object) -> None | str:
+        def _parse_publisher_name(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        publisher_name = _parse_publisher_name(d.pop("publisherName"))
+        publisher_name = _parse_publisher_name(d.pop("publisherName", UNSET))
 
-        def _parse_summary(data: object) -> None | str:
+        def _parse_summary(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        summary = _parse_summary(d.pop("summary"))
+        summary = _parse_summary(d.pop("summary", UNSET))
 
         def _parse_sentiment(
             data: object,
@@ -113,8 +136,11 @@ class NewsArticleChange:
             | NewsArticleChangeSentimentType2Type1
             | NewsArticleChangeSentimentType3Type1
             | None
+            | Unset
         ):
             if data is None:
+                return data
+            if isinstance(data, Unset):
                 return data
             try:
                 if not isinstance(data, str):
@@ -144,11 +170,12 @@ class NewsArticleChange:
                 NewsArticleChangeSentimentType1
                 | NewsArticleChangeSentimentType2Type1
                 | NewsArticleChangeSentimentType3Type1
-                | None,
+                | None
+                | Unset,
                 data,
             )
 
-        sentiment = _parse_sentiment(d.pop("sentiment"))
+        sentiment = _parse_sentiment(d.pop("sentiment", UNSET))
 
         news_article_change = cls(
             url=url,

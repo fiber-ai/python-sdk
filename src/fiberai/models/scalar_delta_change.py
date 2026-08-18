@@ -6,6 +6,8 @@ from typing import Any, Literal, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..types import UNSET, Unset
+
 T = TypeVar("T", bound="ScalarDeltaChange")
 
 
@@ -14,33 +16,41 @@ class ScalarDeltaChange:
     """
     Attributes:
         kind (Literal['scalar']):
-        previous (bool | None | str): Previous value
-        current (bool | None | str): Current value
+        previous (bool | None | str | Unset): Previous value
+        current (bool | None | str | Unset): Current value
     """
 
     kind: Literal["scalar"]
-    previous: bool | None | str
-    current: bool | None | str
+    previous: bool | None | str | Unset = UNSET
+    current: bool | None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         kind = self.kind
 
-        previous: bool | None | str
-        previous = self.previous
+        previous: bool | None | str | Unset
+        if isinstance(self.previous, Unset):
+            previous = UNSET
+        else:
+            previous = self.previous
 
-        current: bool | None | str
-        current = self.current
+        current: bool | None | str | Unset
+        if isinstance(self.current, Unset):
+            current = UNSET
+        else:
+            current = self.current
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
                 "kind": kind,
-                "previous": previous,
-                "current": current,
             }
         )
+        if previous is not UNSET:
+            field_dict["previous"] = previous
+        if current is not UNSET:
+            field_dict["current"] = current
 
         return field_dict
 
@@ -51,19 +61,23 @@ class ScalarDeltaChange:
         if kind != "scalar":
             raise ValueError(f"kind must match const 'scalar', got '{kind}'")
 
-        def _parse_previous(data: object) -> bool | None | str:
+        def _parse_previous(data: object) -> bool | None | str | Unset:
             if data is None:
                 return data
-            return cast(bool | None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | str | Unset, data)
 
-        previous = _parse_previous(d.pop("previous"))
+        previous = _parse_previous(d.pop("previous", UNSET))
 
-        def _parse_current(data: object) -> bool | None | str:
+        def _parse_current(data: object) -> bool | None | str | Unset:
             if data is None:
                 return data
-            return cast(bool | None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | str | Unset, data)
 
-        current = _parse_current(d.pop("current"))
+        current = _parse_current(d.pop("current", UNSET))
 
         scalar_delta_change = cls(
             kind=kind,

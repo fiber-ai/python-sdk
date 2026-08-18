@@ -25,7 +25,8 @@ T = TypeVar("T", bound="PaginatedCombinedSearchBodyProfileConfigType0SearchParam
 
 @_attrs_define
 class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPastJobsType0:
-    """
+    """Deprecated. Use jobs with status: 'past' instead.
+
     Attributes:
         any_of (list[PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPastJobsType0AnyOfType0Item] | None |
             Unset):

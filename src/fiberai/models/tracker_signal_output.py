@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     from ..models.acquisition_change import AcquisitionChange
     from ..models.certification_change import CertificationChange
     from ..models.company_location_change import CompanyLocationChange
+    from ..models.departed_from_list_change import DepartedFromListChange
     from ..models.department_size_change import DepartmentSizeChange
     from ..models.funding_round_change import FundingRoundChange
     from ..models.funding_stage_change import FundingStageChange
@@ -50,11 +51,11 @@ class TrackerSignalOutput:
             people.
         type_ (str): Signal type (e.g. headcount_crossed_threshold).
         summary (None | str): Human-readable description of what changed.
-        change_data (list[AcquisitionChange | CertificationChange | CompanyLocationChange | DepartmentSizeChange |
-            FundingRoundChange | FundingStageChange | InvestorChange | JobPostingChange | LayoffEventChange |
-            LinkedInPostChange | LocationDeltaChange | NamedItemChange | NewsArticleChange | NumericDeltaChange |
-            PersonCommentChange | PersonExperienceChange | PersonReactionChange | ScalarDeltaChange | TenureChange |
-            TrackedEmployeeChange]): Array of objects describing what changed. Shape depends on signal type.
+        change_data (list[AcquisitionChange | CertificationChange | CompanyLocationChange | DepartedFromListChange |
+            DepartmentSizeChange | FundingRoundChange | FundingStageChange | InvestorChange | JobPostingChange |
+            LayoffEventChange | LinkedInPostChange | LocationDeltaChange | NamedItemChange | NewsArticleChange |
+            NumericDeltaChange | PersonCommentChange | PersonExperienceChange | PersonReactionChange | ScalarDeltaChange |
+            TenureChange | TrackedEmployeeChange]): Array of objects describing what changed. Shape depends on signal type.
         sources (list[str]): URLs providing proof or more information about this signal.
         methodology (str): Explanation of how this signal was detected and verified.
         observed_at (datetime.datetime): When the signal was detected.
@@ -75,6 +76,7 @@ class TrackerSignalOutput:
         AcquisitionChange
         | CertificationChange
         | CompanyLocationChange
+        | DepartedFromListChange
         | DepartmentSizeChange
         | FundingRoundChange
         | FundingStageChange
@@ -104,6 +106,7 @@ class TrackerSignalOutput:
         from ..models.acquisition_change import AcquisitionChange
         from ..models.certification_change import CertificationChange
         from ..models.company_location_change import CompanyLocationChange
+        from ..models.departed_from_list_change import DepartedFromListChange
         from ..models.department_size_change import DepartmentSizeChange
         from ..models.funding_round_change import FundingRoundChange
         from ..models.funding_stage_change import FundingStageChange
@@ -177,6 +180,8 @@ class TrackerSignalOutput:
                 change_data_item = change_data_item_data.to_dict()
             elif isinstance(change_data_item_data, PersonCommentChange):
                 change_data_item = change_data_item_data.to_dict()
+            elif isinstance(change_data_item_data, DepartedFromListChange):
+                change_data_item = change_data_item_data.to_dict()
             elif isinstance(change_data_item_data, ScalarDeltaChange):
                 change_data_item = change_data_item_data.to_dict()
             elif isinstance(change_data_item_data, NumericDeltaChange):
@@ -224,6 +229,7 @@ class TrackerSignalOutput:
         from ..models.acquisition_change import AcquisitionChange
         from ..models.certification_change import CertificationChange
         from ..models.company_location_change import CompanyLocationChange
+        from ..models.departed_from_list_change import DepartedFromListChange
         from ..models.department_size_change import DepartmentSizeChange
         from ..models.funding_round_change import FundingRoundChange
         from ..models.funding_stage_change import FundingStageChange
@@ -284,6 +290,7 @@ class TrackerSignalOutput:
                 AcquisitionChange
                 | CertificationChange
                 | CompanyLocationChange
+                | DepartedFromListChange
                 | DepartmentSizeChange
                 | FundingRoundChange
                 | FundingStageChange
@@ -441,7 +448,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_19 = ScalarDeltaChange.from_dict(data)
+                    change_data_item_type_19 = DepartedFromListChange.from_dict(data)
 
                     return change_data_item_type_19
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -449,16 +456,24 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_22 = NumericDeltaChange.from_dict(data)
+                    change_data_item_type_20 = ScalarDeltaChange.from_dict(data)
 
-                    return change_data_item_type_22
+                    return change_data_item_type_20
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    change_data_item_type_23 = NumericDeltaChange.from_dict(data)
+
+                    return change_data_item_type_23
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                change_data_item_type_23 = NamedItemChange.from_dict(data)
+                change_data_item_type_24 = NamedItemChange.from_dict(data)
 
-                return change_data_item_type_23
+                return change_data_item_type_24
 
             change_data_item = _parse_change_data_item(change_data_item_data)
 

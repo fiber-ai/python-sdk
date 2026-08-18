@@ -6,14 +6,6 @@ from typing import Any, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.sync_quick_contact_reveal_response_200_output_profile_emails_item_status import (
-    SyncQuickContactRevealResponse200OutputProfileEmailsItemStatus,
-)
-from ..models.sync_quick_contact_reveal_response_200_output_profile_emails_item_type import (
-    SyncQuickContactRevealResponse200OutputProfileEmailsItemType,
-)
-from ..types import UNSET, Unset
-
 T = TypeVar("T", bound="SyncQuickContactRevealResponse200OutputProfileEmailsItem")
 
 
@@ -22,23 +14,17 @@ class SyncQuickContactRevealResponse200OutputProfileEmailsItem:
     """
     Attributes:
         email (str):
-        type_ (SyncQuickContactRevealResponse200OutputProfileEmailsItemType):
-        status (SyncQuickContactRevealResponse200OutputProfileEmailsItemStatus | Unset):
+        type_ (str):
     """
 
     email: str
-    type_: SyncQuickContactRevealResponse200OutputProfileEmailsItemType
-    status: SyncQuickContactRevealResponse200OutputProfileEmailsItemStatus | Unset = UNSET
+    type_: str
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         email = self.email
 
-        type_ = self.type_.value
-
-        status: str | Unset = UNSET
-        if not isinstance(self.status, Unset):
-            status = self.status.value
+        type_ = self.type_
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -48,8 +34,6 @@ class SyncQuickContactRevealResponse200OutputProfileEmailsItem:
                 "type": type_,
             }
         )
-        if status is not UNSET:
-            field_dict["status"] = status
 
         return field_dict
 
@@ -58,19 +42,11 @@ class SyncQuickContactRevealResponse200OutputProfileEmailsItem:
         d = dict(src_dict)
         email = d.pop("email")
 
-        type_ = SyncQuickContactRevealResponse200OutputProfileEmailsItemType(d.pop("type"))
-
-        _status = d.pop("status", UNSET)
-        status: SyncQuickContactRevealResponse200OutputProfileEmailsItemStatus | Unset
-        if isinstance(_status, Unset):
-            status = UNSET
-        else:
-            status = SyncQuickContactRevealResponse200OutputProfileEmailsItemStatus(_status)
+        type_ = d.pop("type")
 
         sync_quick_contact_reveal_response_200_output_profile_emails_item = cls(
             email=email,
             type_=type_,
-            status=status,
         )
 
         sync_quick_contact_reveal_response_200_output_profile_emails_item.additional_properties = d

@@ -16,7 +16,7 @@ class StartDepthChartBodyCompanyType2:
     """
     Attributes:
         identifier (StartDepthChartBodyCompanyType2Identifier):
-        value (str): LinkedIn numeric organization ID (e.g. '1441').
+        value (str): LinkedIn numeric organization ID (e.g. '11130470').
     """
 
     identifier: StartDepthChartBodyCompanyType2Identifier

@@ -7,6 +7,7 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.tenure_change_direction import TenureChangeDirection
+from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="TenureChange")
 
@@ -16,49 +17,61 @@ class TenureChange:
     """
     Attributes:
         kind (Literal['numeric']):
-        previous (float | None): Previous tenure in months
-        current (float | None): Current tenure in months
         direction (TenureChangeDirection): Direction of change
         absolute_change (float): Absolute change in months
-        percent_change (float | None): Percent change, null if previous was zero or null
+        previous (float | None | Unset): Previous tenure in months
+        current (float | None | Unset): Current tenure in months
+        percent_change (float | None | Unset): Percent change, null if previous was zero or null
     """
 
     kind: Literal["numeric"]
-    previous: float | None
-    current: float | None
     direction: TenureChangeDirection
     absolute_change: float
-    percent_change: float | None
+    previous: float | None | Unset = UNSET
+    current: float | None | Unset = UNSET
+    percent_change: float | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         kind = self.kind
 
-        previous: float | None
-        previous = self.previous
-
-        current: float | None
-        current = self.current
-
         direction = self.direction.value
 
         absolute_change = self.absolute_change
 
-        percent_change: float | None
-        percent_change = self.percent_change
+        previous: float | None | Unset
+        if isinstance(self.previous, Unset):
+            previous = UNSET
+        else:
+            previous = self.previous
+
+        current: float | None | Unset
+        if isinstance(self.current, Unset):
+            current = UNSET
+        else:
+            current = self.current
+
+        percent_change: float | None | Unset
+        if isinstance(self.percent_change, Unset):
+            percent_change = UNSET
+        else:
+            percent_change = self.percent_change
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
                 "kind": kind,
-                "previous": previous,
-                "current": current,
                 "direction": direction,
                 "absoluteChange": absolute_change,
-                "percentChange": percent_change,
             }
         )
+        if previous is not UNSET:
+            field_dict["previous"] = previous
+        if current is not UNSET:
+            field_dict["current"] = current
+        if percent_change is not UNSET:
+            field_dict["percentChange"] = percent_change
 
         return field_dict
 
@@ -69,37 +82,43 @@ class TenureChange:
         if kind != "numeric":
             raise ValueError(f"kind must match const 'numeric', got '{kind}'")
 
-        def _parse_previous(data: object) -> float | None:
-            if data is None:
-                return data
-            return cast(float | None, data)
-
-        previous = _parse_previous(d.pop("previous"))
-
-        def _parse_current(data: object) -> float | None:
-            if data is None:
-                return data
-            return cast(float | None, data)
-
-        current = _parse_current(d.pop("current"))
-
         direction = TenureChangeDirection(d.pop("direction"))
 
         absolute_change = d.pop("absoluteChange")
 
-        def _parse_percent_change(data: object) -> float | None:
+        def _parse_previous(data: object) -> float | None | Unset:
             if data is None:
                 return data
-            return cast(float | None, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(float | None | Unset, data)
 
-        percent_change = _parse_percent_change(d.pop("percentChange"))
+        previous = _parse_previous(d.pop("previous", UNSET))
+
+        def _parse_current(data: object) -> float | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(float | None | Unset, data)
+
+        current = _parse_current(d.pop("current", UNSET))
+
+        def _parse_percent_change(data: object) -> float | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(float | None | Unset, data)
+
+        percent_change = _parse_percent_change(d.pop("percentChange", UNSET))
 
         tenure_change = cls(
             kind=kind,
-            previous=previous,
-            current=current,
             direction=direction,
             absolute_change=absolute_change,
+            previous=previous,
+            current=current,
             percent_change=percent_change,
         )
 

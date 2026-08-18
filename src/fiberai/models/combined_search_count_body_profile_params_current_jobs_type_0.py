@@ -25,7 +25,8 @@ T = TypeVar("T", bound="CombinedSearchCountBodyProfileParamsCurrentJobsType0")
 
 @_attrs_define
 class CombinedSearchCountBodyProfileParamsCurrentJobsType0:
-    """
+    """Deprecated. Use jobs with status: 'current' instead.
+
     Attributes:
         any_of (list[CombinedSearchCountBodyProfileParamsCurrentJobsType0AnyOfType0Item] | None | Unset):
         all_of (list[CombinedSearchCountBodyProfileParamsCurrentJobsType0AllOfType0Item] | None | Unset):

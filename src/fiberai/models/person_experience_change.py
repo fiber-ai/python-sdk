@@ -15,63 +15,54 @@ T = TypeVar("T", bound="PersonExperienceChange")
 class PersonExperienceChange:
     """
     Attributes:
-        linkedin_company_id (None | str): LinkedIn company ID
-        company_name (None | str): Company name
-        company_linkedin_url (None | str): Company LinkedIn URL
-        title (None | str): Job title
         is_current (bool): Whether this is a current position
-        start_date (None | str): ISO start date
-        end_date (None | str): ISO end date
-        location (None | str): Position location
-        employment_type (None | str): Employment type
-        seniority (None | str): Seniority level
+        linkedin_company_id (None | str | Unset): LinkedIn company ID
+        company_name (None | str | Unset): Company name
+        company_linkedin_url (None | str | Unset): Company LinkedIn URL
         linkedin_company_slug (None | str | Unset): LinkedIn company vanity slug
         company_domains (list[str] | None | Unset): Known company domains
+        title (None | str | Unset): Job title
+        start_date (None | str | Unset): ISO start date
+        end_date (None | str | Unset): ISO end date
+        location (None | str | Unset): Position location
+        employment_type (None | str | Unset): Employment type
+        seniority (None | str | Unset): Seniority level
     """
 
-    linkedin_company_id: None | str
-    company_name: None | str
-    company_linkedin_url: None | str
-    title: None | str
     is_current: bool
-    start_date: None | str
-    end_date: None | str
-    location: None | str
-    employment_type: None | str
-    seniority: None | str
+    linkedin_company_id: None | str | Unset = UNSET
+    company_name: None | str | Unset = UNSET
+    company_linkedin_url: None | str | Unset = UNSET
     linkedin_company_slug: None | str | Unset = UNSET
     company_domains: list[str] | None | Unset = UNSET
+    title: None | str | Unset = UNSET
+    start_date: None | str | Unset = UNSET
+    end_date: None | str | Unset = UNSET
+    location: None | str | Unset = UNSET
+    employment_type: None | str | Unset = UNSET
+    seniority: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        linkedin_company_id: None | str
-        linkedin_company_id = self.linkedin_company_id
-
-        company_name: None | str
-        company_name = self.company_name
-
-        company_linkedin_url: None | str
-        company_linkedin_url = self.company_linkedin_url
-
-        title: None | str
-        title = self.title
-
         is_current = self.is_current
 
-        start_date: None | str
-        start_date = self.start_date
+        linkedin_company_id: None | str | Unset
+        if isinstance(self.linkedin_company_id, Unset):
+            linkedin_company_id = UNSET
+        else:
+            linkedin_company_id = self.linkedin_company_id
 
-        end_date: None | str
-        end_date = self.end_date
+        company_name: None | str | Unset
+        if isinstance(self.company_name, Unset):
+            company_name = UNSET
+        else:
+            company_name = self.company_name
 
-        location: None | str
-        location = self.location
-
-        employment_type: None | str
-        employment_type = self.employment_type
-
-        seniority: None | str
-        seniority = self.seniority
+        company_linkedin_url: None | str | Unset
+        if isinstance(self.company_linkedin_url, Unset):
+            company_linkedin_url = UNSET
+        else:
+            company_linkedin_url = self.company_linkedin_url
 
         linkedin_company_slug: None | str | Unset
         if isinstance(self.linkedin_company_slug, Unset):
@@ -88,97 +79,105 @@ class PersonExperienceChange:
         else:
             company_domains = self.company_domains
 
+        title: None | str | Unset
+        if isinstance(self.title, Unset):
+            title = UNSET
+        else:
+            title = self.title
+
+        start_date: None | str | Unset
+        if isinstance(self.start_date, Unset):
+            start_date = UNSET
+        else:
+            start_date = self.start_date
+
+        end_date: None | str | Unset
+        if isinstance(self.end_date, Unset):
+            end_date = UNSET
+        else:
+            end_date = self.end_date
+
+        location: None | str | Unset
+        if isinstance(self.location, Unset):
+            location = UNSET
+        else:
+            location = self.location
+
+        employment_type: None | str | Unset
+        if isinstance(self.employment_type, Unset):
+            employment_type = UNSET
+        else:
+            employment_type = self.employment_type
+
+        seniority: None | str | Unset
+        if isinstance(self.seniority, Unset):
+            seniority = UNSET
+        else:
+            seniority = self.seniority
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
-                "linkedinCompanyId": linkedin_company_id,
-                "companyName": company_name,
-                "companyLinkedinUrl": company_linkedin_url,
-                "title": title,
                 "isCurrent": is_current,
-                "startDate": start_date,
-                "endDate": end_date,
-                "location": location,
-                "employmentType": employment_type,
-                "seniority": seniority,
             }
         )
+        if linkedin_company_id is not UNSET:
+            field_dict["linkedinCompanyId"] = linkedin_company_id
+        if company_name is not UNSET:
+            field_dict["companyName"] = company_name
+        if company_linkedin_url is not UNSET:
+            field_dict["companyLinkedinUrl"] = company_linkedin_url
         if linkedin_company_slug is not UNSET:
             field_dict["linkedinCompanySlug"] = linkedin_company_slug
         if company_domains is not UNSET:
             field_dict["companyDomains"] = company_domains
+        if title is not UNSET:
+            field_dict["title"] = title
+        if start_date is not UNSET:
+            field_dict["startDate"] = start_date
+        if end_date is not UNSET:
+            field_dict["endDate"] = end_date
+        if location is not UNSET:
+            field_dict["location"] = location
+        if employment_type is not UNSET:
+            field_dict["employmentType"] = employment_type
+        if seniority is not UNSET:
+            field_dict["seniority"] = seniority
 
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-
-        def _parse_linkedin_company_id(data: object) -> None | str:
-            if data is None:
-                return data
-            return cast(None | str, data)
-
-        linkedin_company_id = _parse_linkedin_company_id(d.pop("linkedinCompanyId"))
-
-        def _parse_company_name(data: object) -> None | str:
-            if data is None:
-                return data
-            return cast(None | str, data)
-
-        company_name = _parse_company_name(d.pop("companyName"))
-
-        def _parse_company_linkedin_url(data: object) -> None | str:
-            if data is None:
-                return data
-            return cast(None | str, data)
-
-        company_linkedin_url = _parse_company_linkedin_url(d.pop("companyLinkedinUrl"))
-
-        def _parse_title(data: object) -> None | str:
-            if data is None:
-                return data
-            return cast(None | str, data)
-
-        title = _parse_title(d.pop("title"))
-
         is_current = d.pop("isCurrent")
 
-        def _parse_start_date(data: object) -> None | str:
+        def _parse_linkedin_company_id(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        start_date = _parse_start_date(d.pop("startDate"))
+        linkedin_company_id = _parse_linkedin_company_id(d.pop("linkedinCompanyId", UNSET))
 
-        def _parse_end_date(data: object) -> None | str:
+        def _parse_company_name(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        end_date = _parse_end_date(d.pop("endDate"))
+        company_name = _parse_company_name(d.pop("companyName", UNSET))
 
-        def _parse_location(data: object) -> None | str:
+        def _parse_company_linkedin_url(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
-
-        location = _parse_location(d.pop("location"))
-
-        def _parse_employment_type(data: object) -> None | str:
-            if data is None:
+            if isinstance(data, Unset):
                 return data
-            return cast(None | str, data)
+            return cast(None | str | Unset, data)
 
-        employment_type = _parse_employment_type(d.pop("employmentType"))
-
-        def _parse_seniority(data: object) -> None | str:
-            if data is None:
-                return data
-            return cast(None | str, data)
-
-        seniority = _parse_seniority(d.pop("seniority"))
+        company_linkedin_url = _parse_company_linkedin_url(d.pop("companyLinkedinUrl", UNSET))
 
         def _parse_linkedin_company_slug(data: object) -> None | str | Unset:
             if data is None:
@@ -206,19 +205,73 @@ class PersonExperienceChange:
 
         company_domains = _parse_company_domains(d.pop("companyDomains", UNSET))
 
+        def _parse_title(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        title = _parse_title(d.pop("title", UNSET))
+
+        def _parse_start_date(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        start_date = _parse_start_date(d.pop("startDate", UNSET))
+
+        def _parse_end_date(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        end_date = _parse_end_date(d.pop("endDate", UNSET))
+
+        def _parse_location(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        location = _parse_location(d.pop("location", UNSET))
+
+        def _parse_employment_type(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        employment_type = _parse_employment_type(d.pop("employmentType", UNSET))
+
+        def _parse_seniority(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        seniority = _parse_seniority(d.pop("seniority", UNSET))
+
         person_experience_change = cls(
+            is_current=is_current,
             linkedin_company_id=linkedin_company_id,
             company_name=company_name,
             company_linkedin_url=company_linkedin_url,
+            linkedin_company_slug=linkedin_company_slug,
+            company_domains=company_domains,
             title=title,
-            is_current=is_current,
             start_date=start_date,
             end_date=end_date,
             location=location,
             employment_type=employment_type,
             seniority=seniority,
-            linkedin_company_slug=linkedin_company_slug,
-            company_domains=company_domains,
         )
 
         person_experience_change.additional_properties = d

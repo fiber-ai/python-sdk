@@ -16,7 +16,7 @@ class GetScoutingReportBodyCompanyType1:
     """
     Attributes:
         identifier (GetScoutingReportBodyCompanyType1Identifier):
-        value (str): LinkedIn company slug (e.g. 'anthropic').
+        value (str): LinkedIn company slug (e.g. 'openai').
     """
 
     identifier: GetScoutingReportBodyCompanyType1Identifier

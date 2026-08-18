@@ -6,6 +6,8 @@ from typing import TYPE_CHECKING, Any, Literal, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..types import UNSET, Unset
+
 if TYPE_CHECKING:
     from ..models.company_location_change import CompanyLocationChange
 
@@ -23,7 +25,7 @@ class LocationDeltaChange:
         country_changed (bool):
         state_changed (bool):
         city_changed (bool):
-        distance_miles (float | None): Distance moved in miles, when both locations are geocoded
+        distance_miles (float | None | Unset): Distance moved in miles, when both locations are geocoded
     """
 
     kind: Literal["location"]
@@ -32,7 +34,7 @@ class LocationDeltaChange:
     country_changed: bool
     state_changed: bool
     city_changed: bool
-    distance_miles: float | None
+    distance_miles: float | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -58,8 +60,11 @@ class LocationDeltaChange:
 
         city_changed = self.city_changed
 
-        distance_miles: float | None
-        distance_miles = self.distance_miles
+        distance_miles: float | None | Unset
+        if isinstance(self.distance_miles, Unset):
+            distance_miles = UNSET
+        else:
+            distance_miles = self.distance_miles
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -71,9 +76,10 @@ class LocationDeltaChange:
                 "countryChanged": country_changed,
                 "stateChanged": state_changed,
                 "cityChanged": city_changed,
-                "distanceMiles": distance_miles,
             }
         )
+        if distance_miles is not UNSET:
+            field_dict["distanceMiles"] = distance_miles
 
         return field_dict
 
@@ -122,12 +128,14 @@ class LocationDeltaChange:
 
         city_changed = d.pop("cityChanged")
 
-        def _parse_distance_miles(data: object) -> float | None:
+        def _parse_distance_miles(data: object) -> float | None | Unset:
             if data is None:
                 return data
-            return cast(float | None, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(float | None | Unset, data)
 
-        distance_miles = _parse_distance_miles(d.pop("distanceMiles"))
+        distance_miles = _parse_distance_miles(d.pop("distanceMiles", UNSET))
 
         location_delta_change = cls(
             kind=kind,

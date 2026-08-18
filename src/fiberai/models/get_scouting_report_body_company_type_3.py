@@ -16,7 +16,7 @@ class GetScoutingReportBodyCompanyType3:
     """
     Attributes:
         identifier (GetScoutingReportBodyCompanyType3Identifier):
-        value (str): Company website domain (e.g. 'anthropic.com').
+        value (str): Company website domain (e.g. 'openai.com').
     """
 
     identifier: GetScoutingReportBodyCompanyType3Identifier

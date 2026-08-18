@@ -49,6 +49,9 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_exhaustive_work_email_reveal import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ExhaustiveWorkEmailReveal,
     )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_fetch_company_employee import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FetchCompanyEmployee,
+    )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_financial_instrument_lookup import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FinancialInstrumentLookup,
     )
@@ -162,6 +165,9 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_kitchen_sink_person import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0KitchenSinkPerson,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_lead_list_from_domain import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LeadListFromDomain,
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_lite_email_reveal import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LiteEmailReveal,
@@ -285,6 +291,9 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_standardize_person_slug import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0StandardizePersonSlug,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_talent_flow import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TalentFlow,
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_text_to_company_search_params import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TextToCompanySearchParams,
@@ -476,6 +485,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         financial_instrument_lookup
             (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FinancialInstrumentLookup):
         email_to_linkedin_miss (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0EmailToLinkedinMiss):
+        talent_flow (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TalentFlow):
+        lead_list_from_domain (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LeadListFromDomain):
+        fetch_company_employee (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FetchCompanyEmployee):
     """
 
     get_company_from_db: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyFromDb
@@ -601,9 +613,21 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
     flight_booking_page: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FlightBookingPage
     financial_instrument_lookup: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FinancialInstrumentLookup
     email_to_linkedin_miss: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0EmailToLinkedinMiss
+    talent_flow: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TalentFlow
+    lead_list_from_domain: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LeadListFromDomain
+    fetch_company_employee: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FetchCompanyEmployee
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_track_entity_gold import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TrackEntityGold,
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_track_entity_platinum import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TrackEntityPlatinum,
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_track_entity_silver import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TrackEntitySilver,
+        )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_track_persons_job_changes import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TrackPersonsJobChanges,
         )
@@ -860,6 +884,12 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
 
         email_to_linkedin_miss = self.email_to_linkedin_miss.to_dict()
 
+        talent_flow = self.talent_flow.to_dict()
+
+        lead_list_from_domain = self.lead_list_from_domain.to_dict()
+
+        fetch_company_employee = self.fetch_company_employee.to_dict()
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -975,6 +1005,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
                 "flightBookingPage": flight_booking_page,
                 "financialInstrumentLookup": financial_instrument_lookup,
                 "emailToLinkedinMiss": email_to_linkedin_miss,
+                "talentFlow": talent_flow,
+                "leadListFromDomain": lead_list_from_domain,
+                "fetchCompanyEmployee": fetch_company_employee,
             }
         )
 
@@ -1023,6 +1056,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_exhaustive_work_email_reveal import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ExhaustiveWorkEmailReveal,
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_fetch_company_employee import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FetchCompanyEmployee,
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_financial_instrument_lookup import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FinancialInstrumentLookup,
@@ -1137,6 +1173,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_kitchen_sink_person import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0KitchenSinkPerson,
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_lead_list_from_domain import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LeadListFromDomain,
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_lite_email_reveal import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LiteEmailReveal,
@@ -1260,6 +1299,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_standardize_person_slug import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0StandardizePersonSlug,
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_talent_flow import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TalentFlow,
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_text_to_company_search_params import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TextToCompanySearchParams,
@@ -1855,6 +1897,20 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             )
         )
 
+        talent_flow = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TalentFlow.from_dict(
+            d.pop("talentFlow")
+        )
+
+        lead_list_from_domain = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LeadListFromDomain.from_dict(
+            d.pop("leadListFromDomain")
+        )
+
+        fetch_company_employee = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FetchCompanyEmployee.from_dict(
+                d.pop("fetchCompanyEmployee")
+            )
+        )
+
         get_org_credits_response_200_output_item_credits_per_operation_type_0 = cls(
             get_company_from_db=get_company_from_db,
             get_person_from_db=get_person_from_db,
@@ -1967,6 +2023,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             flight_booking_page=flight_booking_page,
             financial_instrument_lookup=financial_instrument_lookup,
             email_to_linkedin_miss=email_to_linkedin_miss,
+            talent_flow=talent_flow,
+            lead_list_from_domain=lead_list_from_domain,
+            fetch_company_employee=fetch_company_employee,
         )
 
         get_org_credits_response_200_output_item_credits_per_operation_type_0.additional_properties = d

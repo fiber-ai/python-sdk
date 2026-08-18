@@ -152,8 +152,9 @@ def sync_detailed(
      Starts an asynchronous Mosaic job that heals and enriches an arbitrary CSV, TXT, XLSX, or public
     Google Sheet. Pass a public HTTPS URL (Google Drive / Sheets, Dropbox, OneDrive, or a direct file
     link). The file is securely fetched and stored before processing. Credits are charged inside the
-    background job after the file is parsed (based on row count and selected options). Use the polling
-    endpoint with the returned run ID to retrieve status and download links.
+    background job after the file is parsed (based on row count and selected options). The first Mosaic
+    run for an organization may be a free trial (first 1,000 rows free; overage billed against normal
+    credits). Use the polling endpoint with the returned run ID to retrieve status and download links.
 
     <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
 
@@ -208,8 +209,9 @@ def sync(
      Starts an asynchronous Mosaic job that heals and enriches an arbitrary CSV, TXT, XLSX, or public
     Google Sheet. Pass a public HTTPS URL (Google Drive / Sheets, Dropbox, OneDrive, or a direct file
     link). The file is securely fetched and stored before processing. Credits are charged inside the
-    background job after the file is parsed (based on row count and selected options). Use the polling
-    endpoint with the returned run ID to retrieve status and download links.
+    background job after the file is parsed (based on row count and selected options). The first Mosaic
+    run for an organization may be a free trial (first 1,000 rows free; overage billed against normal
+    credits). Use the polling endpoint with the returned run ID to retrieve status and download links.
 
     <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
 
@@ -258,8 +260,9 @@ async def asyncio_detailed(
      Starts an asynchronous Mosaic job that heals and enriches an arbitrary CSV, TXT, XLSX, or public
     Google Sheet. Pass a public HTTPS URL (Google Drive / Sheets, Dropbox, OneDrive, or a direct file
     link). The file is securely fetched and stored before processing. Credits are charged inside the
-    background job after the file is parsed (based on row count and selected options). Use the polling
-    endpoint with the returned run ID to retrieve status and download links.
+    background job after the file is parsed (based on row count and selected options). The first Mosaic
+    run for an organization may be a free trial (first 1,000 rows free; overage billed against normal
+    credits). Use the polling endpoint with the returned run ID to retrieve status and download links.
 
     <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
 
@@ -312,8 +315,9 @@ async def asyncio(
      Starts an asynchronous Mosaic job that heals and enriches an arbitrary CSV, TXT, XLSX, or public
     Google Sheet. Pass a public HTTPS URL (Google Drive / Sheets, Dropbox, OneDrive, or a direct file
     link). The file is securely fetched and stored before processing. Credits are charged inside the
-    background job after the file is parsed (based on row count and selected options). Use the polling
-    endpoint with the returned run ID to retrieve status and download links.
+    background job after the file is parsed (based on row count and selected options). The first Mosaic
+    run for an organization may be a free trial (first 1,000 rows free; overage billed against normal
+    credits). Use the polling endpoint with the returned run ID to retrieve status and download links.
 
     <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
 

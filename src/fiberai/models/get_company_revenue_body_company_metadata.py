@@ -16,9 +16,9 @@ class GetCompanyRevenueBodyCompanyMetadata:
     """
     Attributes:
         name (None | str | Unset): Company display name (optional, helps disambiguate)
-        domain (None | str | Unset): Company website domain (e.g. 'anthropic.com'), optional
-        linkedin_url (None | str | Unset): LinkedIn company URL or slug (e.g.
-            'https://www.linkedin.com/company/anthropic' or 'anthropic')
+        domain (None | str | Unset): Company website domain (e.g. 'openai.com'), optional
+        linkedin_url (None | str | Unset): LinkedIn company URL or slug (e.g. 'https://www.linkedin.com/company/openai'
+            or 'openai')
         linkedin_org_id (None | str | Unset): LinkedIn numeric organization ID (e.g. '1441'), optional
     """
 

@@ -22,11 +22,11 @@ T = TypeVar("T", bound="CompanyLocationChange")
 class CompanyLocationChange:
     """
     Attributes:
-        city (None | str): City name
-        state (None | str): State or province
-        country (None | str): Country name
-        country_code (None | str): ISO country code
-        coordinates (CompanyLocationChangeCoordinatesType0 | None): Geocoded coordinates, when known
+        city (None | str | Unset): City name
+        state (None | str | Unset): State or province
+        country (None | str | Unset): Country name
+        country_code (None | str | Unset): ISO country code
+        coordinates (CompanyLocationChangeCoordinatesType0 | None | Unset): Geocoded coordinates, when known
         street_address (None | str | Unset): Street address of the office
         postal_code (None | str | Unset): Postal or ZIP code
         change_type (CompanyLocationChangeChangeTypeType1 | CompanyLocationChangeChangeTypeType2Type1 |
@@ -34,11 +34,11 @@ class CompanyLocationChange:
             report only net-new locations, so this is always 'added'; the field is unset in other location signals.
     """
 
-    city: None | str
-    state: None | str
-    country: None | str
-    country_code: None | str
-    coordinates: CompanyLocationChangeCoordinatesType0 | None
+    city: None | str | Unset = UNSET
+    state: None | str | Unset = UNSET
+    country: None | str | Unset = UNSET
+    country_code: None | str | Unset = UNSET
+    coordinates: CompanyLocationChangeCoordinatesType0 | None | Unset = UNSET
     street_address: None | str | Unset = UNSET
     postal_code: None | str | Unset = UNSET
     change_type: (
@@ -53,20 +53,34 @@ class CompanyLocationChange:
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_location_change_coordinates_type_0 import CompanyLocationChangeCoordinatesType0
 
-        city: None | str
-        city = self.city
+        city: None | str | Unset
+        if isinstance(self.city, Unset):
+            city = UNSET
+        else:
+            city = self.city
 
-        state: None | str
-        state = self.state
+        state: None | str | Unset
+        if isinstance(self.state, Unset):
+            state = UNSET
+        else:
+            state = self.state
 
-        country: None | str
-        country = self.country
+        country: None | str | Unset
+        if isinstance(self.country, Unset):
+            country = UNSET
+        else:
+            country = self.country
 
-        country_code: None | str
-        country_code = self.country_code
+        country_code: None | str | Unset
+        if isinstance(self.country_code, Unset):
+            country_code = UNSET
+        else:
+            country_code = self.country_code
 
-        coordinates: dict[str, Any] | None
-        if isinstance(self.coordinates, CompanyLocationChangeCoordinatesType0):
+        coordinates: dict[str, Any] | None | Unset
+        if isinstance(self.coordinates, Unset):
+            coordinates = UNSET
+        elif isinstance(self.coordinates, CompanyLocationChangeCoordinatesType0):
             coordinates = self.coordinates.to_dict()
         else:
             coordinates = self.coordinates
@@ -97,15 +111,17 @@ class CompanyLocationChange:
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
-        field_dict.update(
-            {
-                "city": city,
-                "state": state,
-                "country": country,
-                "countryCode": country_code,
-                "coordinates": coordinates,
-            }
-        )
+        field_dict.update({})
+        if city is not UNSET:
+            field_dict["city"] = city
+        if state is not UNSET:
+            field_dict["state"] = state
+        if country is not UNSET:
+            field_dict["country"] = country
+        if country_code is not UNSET:
+            field_dict["countryCode"] = country_code
+        if coordinates is not UNSET:
+            field_dict["coordinates"] = coordinates
         if street_address is not UNSET:
             field_dict["streetAddress"] = street_address
         if postal_code is not UNSET:
@@ -121,36 +137,46 @@ class CompanyLocationChange:
 
         d = dict(src_dict)
 
-        def _parse_city(data: object) -> None | str:
+        def _parse_city(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        city = _parse_city(d.pop("city"))
+        city = _parse_city(d.pop("city", UNSET))
 
-        def _parse_state(data: object) -> None | str:
+        def _parse_state(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        state = _parse_state(d.pop("state"))
+        state = _parse_state(d.pop("state", UNSET))
 
-        def _parse_country(data: object) -> None | str:
+        def _parse_country(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        country = _parse_country(d.pop("country"))
+        country = _parse_country(d.pop("country", UNSET))
 
-        def _parse_country_code(data: object) -> None | str:
+        def _parse_country_code(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        country_code = _parse_country_code(d.pop("countryCode"))
+        country_code = _parse_country_code(d.pop("countryCode", UNSET))
 
-        def _parse_coordinates(data: object) -> CompanyLocationChangeCoordinatesType0 | None:
+        def _parse_coordinates(data: object) -> CompanyLocationChangeCoordinatesType0 | None | Unset:
             if data is None:
+                return data
+            if isinstance(data, Unset):
                 return data
             try:
                 if not isinstance(data, dict):
@@ -160,9 +186,9 @@ class CompanyLocationChange:
                 return coordinates_type_0
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
-            return cast(CompanyLocationChangeCoordinatesType0 | None, data)
+            return cast(CompanyLocationChangeCoordinatesType0 | None | Unset, data)
 
-        coordinates = _parse_coordinates(d.pop("coordinates"))
+        coordinates = _parse_coordinates(d.pop("coordinates", UNSET))
 
         def _parse_street_address(data: object) -> None | str | Unset:
             if data is None:

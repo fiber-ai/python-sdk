@@ -9,7 +9,9 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.start_mosaic_body_options_type_0_contact_info import StartMosaicBodyOptionsType0ContactInfo
+    from ..models.start_mosaic_body_options_type_0_contact_info_type_0 import (
+        StartMosaicBodyOptionsType0ContactInfoType0,
+    )
 
 
 T = TypeVar("T", bound="StartMosaicBodyOptionsType0")
@@ -20,14 +22,22 @@ class StartMosaicBodyOptionsType0:
     """Feature toggles that control billing and enrichment (contact info, company details, live fetch, redline, max rows).
 
     Attributes:
-        contact_info (StartMosaicBodyOptionsType0ContactInfo | Unset):
-        include_company_details (bool | Unset):  Default: False.
-        live_fetch (bool | Unset):  Default: True.
-        run_redline (bool | Unset):  Default: False.
-        max_rows (int | None | Unset):
+        contact_info (None | StartMosaicBodyOptionsType0ContactInfoType0 | Unset): Which kinds of contact info to reveal
+            per row — work email, personal email, and/or phone — independently selectable. Omit to skip contact reveal
+            entirely. When enabled, adds the matching contact-reveal operation(s) per billable row.
+        include_company_details (bool | Unset): When true, enriches each person's current employer with funding,
+            offices, headcount, and related company fields. Adds the company lookup operation per billable row. Default:
+            False.
+        live_fetch (bool | Unset): When true, runs live profile fetch and web-search slug recovery when the enrichment
+            plan calls for it. Bundled into the base Mosaic row charge — no separate operation. When false, the engine skips
+            gated live-fetch steps only. Default: True.
+        run_redline (bool | Unset): When true, compares enriched output against your input columns to flag staleness or
+            mismatches. No separate billing operation. Default: False.
+        max_rows (int | None | Unset): Cap how many input rows are processed and billed for this run (maximum 20,000).
+            Useful for trial runs or cost control.
     """
 
-    contact_info: StartMosaicBodyOptionsType0ContactInfo | Unset = UNSET
+    contact_info: None | StartMosaicBodyOptionsType0ContactInfoType0 | Unset = UNSET
     include_company_details: bool | Unset = False
     live_fetch: bool | Unset = True
     run_redline: bool | Unset = False
@@ -35,9 +45,17 @@ class StartMosaicBodyOptionsType0:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        contact_info: dict[str, Any] | Unset = UNSET
-        if not isinstance(self.contact_info, Unset):
+        from ..models.start_mosaic_body_options_type_0_contact_info_type_0 import (
+            StartMosaicBodyOptionsType0ContactInfoType0,
+        )
+
+        contact_info: dict[str, Any] | None | Unset
+        if isinstance(self.contact_info, Unset):
+            contact_info = UNSET
+        elif isinstance(self.contact_info, StartMosaicBodyOptionsType0ContactInfoType0):
             contact_info = self.contact_info.to_dict()
+        else:
+            contact_info = self.contact_info
 
         include_company_details = self.include_company_details
 
@@ -69,15 +87,28 @@ class StartMosaicBodyOptionsType0:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.start_mosaic_body_options_type_0_contact_info import StartMosaicBodyOptionsType0ContactInfo
+        from ..models.start_mosaic_body_options_type_0_contact_info_type_0 import (
+            StartMosaicBodyOptionsType0ContactInfoType0,
+        )
 
         d = dict(src_dict)
-        _contact_info = d.pop("contactInfo", UNSET)
-        contact_info: StartMosaicBodyOptionsType0ContactInfo | Unset
-        if isinstance(_contact_info, Unset):
-            contact_info = UNSET
-        else:
-            contact_info = StartMosaicBodyOptionsType0ContactInfo.from_dict(_contact_info)
+
+        def _parse_contact_info(data: object) -> None | StartMosaicBodyOptionsType0ContactInfoType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                contact_info_type_0 = StartMosaicBodyOptionsType0ContactInfoType0.from_dict(data)
+
+                return contact_info_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | StartMosaicBodyOptionsType0ContactInfoType0 | Unset, data)
+
+        contact_info = _parse_contact_info(d.pop("contactInfo", UNSET))
 
         include_company_details = d.pop("includeCompanyDetails", UNSET)
 

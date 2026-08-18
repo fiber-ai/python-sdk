@@ -15,7 +15,7 @@ class StartMosaicResponse200Output:
     Attributes:
         run_id (str): Unique Mosaic run ID. Poll /mosaic/poll with this ID to check status and retrieve results.
         is_free_trial_run (bool): True when this run used the organization's one-time free Mosaic trial. The first 1,000
-            processed rows are free; rows beyond that are billed against normal credits.
+            rows are free; rows beyond that are billed against normal credits.
     """
 
     run_id: str

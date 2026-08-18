@@ -15,7 +15,7 @@ T = TypeVar("T", bound="GetCompanyRevenueResponse200OutputCompany")
 class GetCompanyRevenueResponse200OutputCompany:
     """
     Attributes:
-        linkedin_url (str): LinkedIn company URL (e.g. 'https://www.linkedin.com/company/anthropic')
+        linkedin_url (str): LinkedIn company URL (e.g. 'https://www.linkedin.com/company/openai')
         linkedin_org_id (str): LinkedIn organization ID, if known
         name (None | str | Unset): Company display name, if known
         domain (None | str | Unset): Company website domain, if known

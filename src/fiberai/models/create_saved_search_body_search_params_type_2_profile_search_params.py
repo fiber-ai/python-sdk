@@ -35,9 +35,6 @@ if TYPE_CHECKING:
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_employment_type_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0,
     )
-    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_ever_worked_at_type_0 import (
-        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEverWorkedAtType0,
-    )
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_exact_profile_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0,
     )
@@ -64,6 +61,9 @@ if TYPE_CHECKING:
     )
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_title_v3_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0,
+    )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_jobs_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobsType0,
     )
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_joined_linked_in_at_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0,
@@ -170,9 +170,6 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         started_at_company (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType0 |
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType1 | None | Unset):
         location (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0 | None | Unset):
-        past_jobs (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0 | None | Unset):
-        current_jobs (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0 | None | Unset):
-        ever_worked_at (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEverWorkedAtType0 | None | Unset):
         languages (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLanguagesType0 | None | Unset):
         left_stealth_at (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType0 |
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType1 | None | Unset):
@@ -215,6 +212,14 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             array. This slows down the API call, so only enable this if you need it. Default: False.
         tags (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTagsType0 | None | Unset):
         education (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0 | None | Unset):
+        jobs (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobsType0 | None | Unset): Filter by work
+            experience: named companies (LinkedIn org ID, URL, slug, or domain), job titles, or both on the same entry, with
+            per-entry tenure. Replaces the deprecated pastJobs and currentJobs fields. Prefer jobs alone during migration —
+            sending jobs together with pastJobs or currentJobs ANDs them as separate query clauses.
+        past_jobs (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0 | None | Unset): Deprecated.
+            Use jobs with status: 'past' instead.
+        current_jobs (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0 | None | Unset):
+            Deprecated. Use jobs with status: 'current' instead.
         sort (list[CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSortType0Item] | None | Unset): Sort order
             for people results. Clauses are applied in order. Omit to use the default ranking. Note: changing the sort
             invalidates any existing cursor — start a new pagination run when the sort changes.
@@ -249,9 +254,6 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         | Unset
     ) = UNSET
     location: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0 | None | Unset = UNSET
-    past_jobs: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0 | None | Unset = UNSET
-    current_jobs: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0 | None | Unset = UNSET
-    ever_worked_at: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEverWorkedAtType0 | None | Unset = UNSET
     languages: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLanguagesType0 | None | Unset = UNSET
     left_stealth_at: (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLeftStealthAtType0
@@ -311,6 +313,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
     get_detailed_work_experience: bool | None | Unset = False
     tags: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsTagsType0 | None | Unset = UNSET
     education: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0 | None | Unset = UNSET
+    jobs: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobsType0 | None | Unset = UNSET
+    past_jobs: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0 | None | Unset = UNSET
+    current_jobs: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0 | None | Unset = UNSET
     sort: list[CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSortType0Item] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
@@ -341,9 +346,6 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_employment_type_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0,
         )
-        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_ever_worked_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEverWorkedAtType0,
-        )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_exact_profile_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0,
         )
@@ -370,6 +372,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_title_v3_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_jobs_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobsType0,
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_joined_linked_in_at_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0,
@@ -571,32 +576,6 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             location = self.location.to_dict()
         else:
             location = self.location
-
-        past_jobs: dict[str, Any] | None | Unset
-        if isinstance(self.past_jobs, Unset):
-            past_jobs = UNSET
-        elif isinstance(self.past_jobs, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0):
-            past_jobs = self.past_jobs.to_dict()
-        else:
-            past_jobs = self.past_jobs
-
-        current_jobs: dict[str, Any] | None | Unset
-        if isinstance(self.current_jobs, Unset):
-            current_jobs = UNSET
-        elif isinstance(self.current_jobs, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0):
-            current_jobs = self.current_jobs.to_dict()
-        else:
-            current_jobs = self.current_jobs
-
-        ever_worked_at: dict[str, Any] | None | Unset
-        if isinstance(self.ever_worked_at, Unset):
-            ever_worked_at = UNSET
-        elif isinstance(
-            self.ever_worked_at, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEverWorkedAtType0
-        ):
-            ever_worked_at = self.ever_worked_at.to_dict()
-        else:
-            ever_worked_at = self.ever_worked_at
 
         languages: dict[str, Any] | None | Unset
         if isinstance(self.languages, Unset):
@@ -854,6 +833,30 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         else:
             education = self.education
 
+        jobs: dict[str, Any] | None | Unset
+        if isinstance(self.jobs, Unset):
+            jobs = UNSET
+        elif isinstance(self.jobs, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobsType0):
+            jobs = self.jobs.to_dict()
+        else:
+            jobs = self.jobs
+
+        past_jobs: dict[str, Any] | None | Unset
+        if isinstance(self.past_jobs, Unset):
+            past_jobs = UNSET
+        elif isinstance(self.past_jobs, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0):
+            past_jobs = self.past_jobs.to_dict()
+        else:
+            past_jobs = self.past_jobs
+
+        current_jobs: dict[str, Any] | None | Unset
+        if isinstance(self.current_jobs, Unset):
+            current_jobs = UNSET
+        elif isinstance(self.current_jobs, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0):
+            current_jobs = self.current_jobs.to_dict()
+        else:
+            current_jobs = self.current_jobs
+
         sort: list[dict[str, Any]] | None | Unset
         if isinstance(self.sort, Unset):
             sort = UNSET
@@ -895,12 +898,6 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             field_dict["startedAtCompany"] = started_at_company
         if location is not UNSET:
             field_dict["location"] = location
-        if past_jobs is not UNSET:
-            field_dict["pastJobs"] = past_jobs
-        if current_jobs is not UNSET:
-            field_dict["currentJobs"] = current_jobs
-        if ever_worked_at is not UNSET:
-            field_dict["everWorkedAt"] = ever_worked_at
         if languages is not UNSET:
             field_dict["languages"] = languages
         if left_stealth_at is not UNSET:
@@ -963,6 +960,12 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             field_dict["tags"] = tags
         if education is not UNSET:
             field_dict["education"] = education
+        if jobs is not UNSET:
+            field_dict["jobs"] = jobs
+        if past_jobs is not UNSET:
+            field_dict["pastJobs"] = past_jobs
+        if current_jobs is not UNSET:
+            field_dict["currentJobs"] = current_jobs
         if sort is not UNSET:
             field_dict["sort"] = sort
 
@@ -997,9 +1000,6 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_employment_type_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEmploymentTypeType0,
         )
-        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_ever_worked_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEverWorkedAtType0,
-        )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_exact_profile_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0,
         )
@@ -1026,6 +1026,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_title_v3_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0,
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_jobs_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobsType0,
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_joined_linked_in_at_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0,
@@ -1426,69 +1429,6 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0 | None | Unset, data)
 
         location = _parse_location(d.pop("location", UNSET))
-
-        def _parse_past_jobs(
-            data: object,
-        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0 | None | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                past_jobs_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0.from_dict(
-                    data
-                )
-
-                return past_jobs_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0 | None | Unset, data)
-
-        past_jobs = _parse_past_jobs(d.pop("pastJobs", UNSET))
-
-        def _parse_current_jobs(
-            data: object,
-        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0 | None | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                current_jobs_type_0 = (
-                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0.from_dict(data)
-                )
-
-                return current_jobs_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0 | None | Unset, data)
-
-        current_jobs = _parse_current_jobs(d.pop("currentJobs", UNSET))
-
-        def _parse_ever_worked_at(
-            data: object,
-        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEverWorkedAtType0 | None | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                ever_worked_at_type_0 = (
-                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEverWorkedAtType0.from_dict(data)
-                )
-
-                return ever_worked_at_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEverWorkedAtType0 | None | Unset, data)
-
-        ever_worked_at = _parse_ever_worked_at(d.pop("everWorkedAt", UNSET))
 
         def _parse_languages(
             data: object,
@@ -2126,6 +2066,67 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
 
         education = _parse_education(d.pop("education", UNSET))
 
+        def _parse_jobs(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                jobs_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobsType0.from_dict(data)
+
+                return jobs_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobsType0 | None | Unset, data)
+
+        jobs = _parse_jobs(d.pop("jobs", UNSET))
+
+        def _parse_past_jobs(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                past_jobs_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0.from_dict(
+                    data
+                )
+
+                return past_jobs_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobsType0 | None | Unset, data)
+
+        past_jobs = _parse_past_jobs(d.pop("pastJobs", UNSET))
+
+        def _parse_current_jobs(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                current_jobs_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0.from_dict(data)
+                )
+
+                return current_jobs_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsCurrentJobsType0 | None | Unset, data)
+
+        current_jobs = _parse_current_jobs(d.pop("currentJobs", UNSET))
+
         def _parse_sort(
             data: object,
         ) -> list[CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSortType0Item] | None | Unset:
@@ -2168,9 +2169,6 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             started_in_role=started_in_role,
             started_at_company=started_at_company,
             location=location,
-            past_jobs=past_jobs,
-            current_jobs=current_jobs,
-            ever_worked_at=ever_worked_at,
             languages=languages,
             left_stealth_at=left_stealth_at,
             is_in_stealth=is_in_stealth,
@@ -2202,6 +2200,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             get_detailed_work_experience=get_detailed_work_experience,
             tags=tags,
             education=education,
+            jobs=jobs,
+            past_jobs=past_jobs,
+            current_jobs=current_jobs,
             sort=sort,
         )
 

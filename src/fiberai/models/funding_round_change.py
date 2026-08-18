@@ -16,29 +16,35 @@ class FundingRoundChange:
     """
     Attributes:
         type_ (str): Funding round type
-        amount_usd (float | None): Amount raised in USD
-        date (None | str): ISO date of the round
         investors (list[str]): Investor names
+        amount_usd (float | None | Unset): Amount raised in USD
+        date (None | str | Unset): ISO date of the round
         crunchbase_url (None | str | Unset): URL to the funding round page on Crunchbase, when available
     """
 
     type_: str
-    amount_usd: float | None
-    date: None | str
     investors: list[str]
+    amount_usd: float | None | Unset = UNSET
+    date: None | str | Unset = UNSET
     crunchbase_url: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         type_ = self.type_
 
-        amount_usd: float | None
-        amount_usd = self.amount_usd
-
-        date: None | str
-        date = self.date
-
         investors = self.investors
+
+        amount_usd: float | None | Unset
+        if isinstance(self.amount_usd, Unset):
+            amount_usd = UNSET
+        else:
+            amount_usd = self.amount_usd
+
+        date: None | str | Unset
+        if isinstance(self.date, Unset):
+            date = UNSET
+        else:
+            date = self.date
 
         crunchbase_url: None | str | Unset
         if isinstance(self.crunchbase_url, Unset):
@@ -51,11 +57,13 @@ class FundingRoundChange:
         field_dict.update(
             {
                 "type": type_,
-                "amountUsd": amount_usd,
-                "date": date,
                 "investors": investors,
             }
         )
+        if amount_usd is not UNSET:
+            field_dict["amountUsd"] = amount_usd
+        if date is not UNSET:
+            field_dict["date"] = date
         if crunchbase_url is not UNSET:
             field_dict["crunchbaseUrl"] = crunchbase_url
 
@@ -66,21 +74,25 @@ class FundingRoundChange:
         d = dict(src_dict)
         type_ = d.pop("type")
 
-        def _parse_amount_usd(data: object) -> float | None:
-            if data is None:
-                return data
-            return cast(float | None, data)
-
-        amount_usd = _parse_amount_usd(d.pop("amountUsd"))
-
-        def _parse_date(data: object) -> None | str:
-            if data is None:
-                return data
-            return cast(None | str, data)
-
-        date = _parse_date(d.pop("date"))
-
         investors = cast(list[str], d.pop("investors"))
+
+        def _parse_amount_usd(data: object) -> float | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(float | None | Unset, data)
+
+        amount_usd = _parse_amount_usd(d.pop("amountUsd", UNSET))
+
+        def _parse_date(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        date = _parse_date(d.pop("date", UNSET))
 
         def _parse_crunchbase_url(data: object) -> None | str | Unset:
             if data is None:
@@ -93,9 +105,9 @@ class FundingRoundChange:
 
         funding_round_change = cls(
             type_=type_,
+            investors=investors,
             amount_usd=amount_usd,
             date=date,
-            investors=investors,
             crunchbase_url=crunchbase_url,
         )
 

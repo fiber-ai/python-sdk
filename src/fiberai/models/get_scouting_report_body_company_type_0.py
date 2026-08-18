@@ -16,7 +16,7 @@ class GetScoutingReportBodyCompanyType0:
     """
     Attributes:
         identifier (GetScoutingReportBodyCompanyType0Identifier):
-        value (str): LinkedIn company URL (e.g. 'https://www.linkedin.com/company/anthropic').
+        value (str): LinkedIn company URL (e.g. 'https://www.linkedin.com/company/openai').
     """
 
     identifier: GetScoutingReportBodyCompanyType0Identifier

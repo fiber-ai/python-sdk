@@ -20,15 +20,21 @@ class PollMosaicResponse200OutputRun:
     """Current Mosaic run state. When status is done, outputCsvUrl and reportUrl are temporary download links.
 
     Attributes:
-        run_id (str):
-        status (PollMosaicResponse200OutputRunStatus):
+        run_id (str): Unique Mosaic run ID. Pass this to /mosaic/poll.
+        status (PollMosaicResponse200OutputRunStatus): Run lifecycle status. `pending` = queued, `running` = in
+            progress, `done` = finished successfully, `failed` = terminal error. Download links are present only when status
+            is `done`.
         row_count (int | None): Rows detected in the input file.
         processed_row_count (int | None): Rows enriched and written to the output CSV (<= rowCount when maxRows or the
             free-trial cap applies).
-        is_free_trial_run (bool):
-        stats (None | PollMosaicResponse200OutputRunStatsType0):
-        output_csv_url (None | str):
-        report_url (None | str):
+        is_free_trial_run (bool): True when this run used the organization's one-time free Mosaic trial (first 1,000
+            rows free).
+        stats (None | PollMosaicResponse200OutputRunStatsType0): Aggregate enrichment statistics. Present when the run
+            has finished processing rows.
+        output_csv_url (None | str): Temporary HTTPS download link for the enriched CSV. Present only when status is
+            `done`.
+        report_url (None | str): Temporary HTTPS download link for the Markdown summary report. Present only when status
+            is `done`.
     """
 
     run_id: str

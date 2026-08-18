@@ -18,6 +18,9 @@ if TYPE_CHECKING:
     from ..models.company_posted_with_keyword import CompanyPostedWithKeyword
     from ..models.company_status_changed import CompanyStatusChanged
     from ..models.company_went_inactive import CompanyWentInactive
+    from ..models.create_tracker_company_list_body_company_search_params_type_0 import (
+        CreateTrackerCompanyListBodyCompanySearchParamsType0,
+    )
     from ..models.department_size_threshold import DepartmentSizeThreshold
     from ..models.employee_count_milestone import EmployeeCountMilestone
     from ..models.follower_count_growth import FollowerCountGrowth
@@ -53,6 +56,12 @@ class CreateTrackerCompanyListBody:
             JobPostingWithKeyword | NewFundingRound | NewInvestor | NewOfficeLocation | NewsWithKeyword | RecentLayoffs |
             RecentlyHiredWithTitle | TechnologyAdded] | None | Unset): Tracking rules to evaluate against this list's
             entities. Multiple rules can be active simultaneously.
+        company_search_params (CreateTrackerCompanyListBodyCompanySearchParamsType0 | None | Unset): If provided, this
+            list becomes DYNAMIC: rather than adding companies manually, the list auto-populates with companies matching
+            these filters and refreshes over time (new matches are added; companies that no longer match are dropped). Uses
+            the same filters as the company search endpoint. Omit to create a static, manually-managed list.
+        max_dynamic_members (int | None | Unset): For dynamic lists only: the maximum number of companies to keep in the
+            list. Defaults to 10000. Ignored for static lists.
     """
 
     api_key: str
@@ -89,6 +98,8 @@ class CreateTrackerCompanyListBody:
         | None
         | Unset
     ) = UNSET
+    company_search_params: CreateTrackerCompanyListBodyCompanySearchParamsType0 | None | Unset = UNSET
+    max_dynamic_members: int | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -101,6 +112,9 @@ class CreateTrackerCompanyListBody:
         from ..models.company_posted_with_keyword import CompanyPostedWithKeyword
         from ..models.company_status_changed import CompanyStatusChanged
         from ..models.company_went_inactive import CompanyWentInactive
+        from ..models.create_tracker_company_list_body_company_search_params_type_0 import (
+            CreateTrackerCompanyListBodyCompanySearchParamsType0,
+        )
         from ..models.department_size_threshold import DepartmentSizeThreshold
         from ..models.employee_count_milestone import EmployeeCountMilestone
         from ..models.follower_count_growth import FollowerCountGrowth
@@ -186,6 +200,20 @@ class CreateTrackerCompanyListBody:
         else:
             tracking_rules = self.tracking_rules
 
+        company_search_params: dict[str, Any] | None | Unset
+        if isinstance(self.company_search_params, Unset):
+            company_search_params = UNSET
+        elif isinstance(self.company_search_params, CreateTrackerCompanyListBodyCompanySearchParamsType0):
+            company_search_params = self.company_search_params.to_dict()
+        else:
+            company_search_params = self.company_search_params
+
+        max_dynamic_members: int | None | Unset
+        if isinstance(self.max_dynamic_members, Unset):
+            max_dynamic_members = UNSET
+        else:
+            max_dynamic_members = self.max_dynamic_members
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -197,6 +225,10 @@ class CreateTrackerCompanyListBody:
         )
         if tracking_rules is not UNSET:
             field_dict["trackingRules"] = tracking_rules
+        if company_search_params is not UNSET:
+            field_dict["companySearchParams"] = company_search_params
+        if max_dynamic_members is not UNSET:
+            field_dict["maxDynamicMembers"] = max_dynamic_members
 
         return field_dict
 
@@ -211,6 +243,9 @@ class CreateTrackerCompanyListBody:
         from ..models.company_posted_with_keyword import CompanyPostedWithKeyword
         from ..models.company_status_changed import CompanyStatusChanged
         from ..models.company_went_inactive import CompanyWentInactive
+        from ..models.create_tracker_company_list_body_company_search_params_type_0 import (
+            CreateTrackerCompanyListBodyCompanySearchParamsType0,
+        )
         from ..models.department_size_threshold import DepartmentSizeThreshold
         from ..models.employee_count_milestone import EmployeeCountMilestone
         from ..models.follower_count_growth import FollowerCountGrowth
@@ -548,11 +583,41 @@ class CreateTrackerCompanyListBody:
 
         tracking_rules = _parse_tracking_rules(d.pop("trackingRules", UNSET))
 
+        def _parse_company_search_params(
+            data: object,
+        ) -> CreateTrackerCompanyListBodyCompanySearchParamsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                company_search_params_type_0 = CreateTrackerCompanyListBodyCompanySearchParamsType0.from_dict(data)
+
+                return company_search_params_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateTrackerCompanyListBodyCompanySearchParamsType0 | None | Unset, data)
+
+        company_search_params = _parse_company_search_params(d.pop("companySearchParams", UNSET))
+
+        def _parse_max_dynamic_members(data: object) -> int | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(int | None | Unset, data)
+
+        max_dynamic_members = _parse_max_dynamic_members(d.pop("maxDynamicMembers", UNSET))
+
         create_tracker_company_list_body = cls(
             api_key=api_key,
             name=name,
             refresh_interval_days=refresh_interval_days,
             tracking_rules=tracking_rules,
+            company_search_params=company_search_params,
+            max_dynamic_members=max_dynamic_members,
         )
 
         create_tracker_company_list_body.additional_properties = d

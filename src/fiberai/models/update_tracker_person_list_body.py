@@ -55,6 +55,9 @@ class UpdateTrackerPersonListBody:
         name (None | str | Unset): New name for the list.
         refresh_interval_days (int | None | Unset): New check interval in days.
         is_active (bool | None | Unset): Pause or resume monitoring on the list.
+        max_dynamic_members (int | None | Unset): For dynamic lists only: update the maximum number of people to keep in
+            the list. Lowering it applies going forward (the refresh stops adding past the new cap; existing over-cap
+            members are not evicted). Ignored for static lists.
         tracking_rules (list[PersonBecameInfluencer | PersonBecamePremium | PersonBecameTopVoice | PersonBecameVerified
             | PersonChangedCompany | PersonCommentedOnPost | PersonConnectionsMilestone | PersonEmploymentTypeChanged |
             PersonFollowerMilestone | PersonGotDemoted | PersonGotPromoted | PersonHeadlineChanged | PersonIsHiring |
@@ -84,6 +87,7 @@ class UpdateTrackerPersonListBody:
     name: None | str | Unset = UNSET
     refresh_interval_days: int | None | Unset = UNSET
     is_active: bool | None | Unset = UNSET
+    max_dynamic_members: int | None | Unset = UNSET
     tracking_rules: (
         list[
             PersonBecameInfluencer
@@ -205,6 +209,12 @@ class UpdateTrackerPersonListBody:
             is_active = UNSET
         else:
             is_active = self.is_active
+
+        max_dynamic_members: int | None | Unset
+        if isinstance(self.max_dynamic_members, Unset):
+            max_dynamic_members = UNSET
+        else:
+            max_dynamic_members = self.max_dynamic_members
 
         tracking_rules: list[dict[str, Any]] | None | Unset
         if isinstance(self.tracking_rules, Unset):
@@ -382,6 +392,8 @@ class UpdateTrackerPersonListBody:
             field_dict["refreshIntervalDays"] = refresh_interval_days
         if is_active is not UNSET:
             field_dict["isActive"] = is_active
+        if max_dynamic_members is not UNSET:
+            field_dict["maxDynamicMembers"] = max_dynamic_members
         if tracking_rules is not UNSET:
             field_dict["trackingRules"] = tracking_rules
         if add_rules is not UNSET:
@@ -460,6 +472,15 @@ class UpdateTrackerPersonListBody:
             return cast(bool | None | Unset, data)
 
         is_active = _parse_is_active(d.pop("isActive", UNSET))
+
+        def _parse_max_dynamic_members(data: object) -> int | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(int | None | Unset, data)
+
+        max_dynamic_members = _parse_max_dynamic_members(d.pop("maxDynamicMembers", UNSET))
 
         def _parse_tracking_rules(
             data: object,
@@ -1196,6 +1217,7 @@ class UpdateTrackerPersonListBody:
             name=name,
             refresh_interval_days=refresh_interval_days,
             is_active=is_active,
+            max_dynamic_members=max_dynamic_members,
             tracking_rules=tracking_rules,
             add_rules=add_rules,
             remove_rule_ids=remove_rule_ids,

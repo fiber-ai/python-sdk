@@ -16,7 +16,7 @@ class StartDepthChartBodyCompanyType3:
     """
     Attributes:
         identifier (StartDepthChartBodyCompanyType3Identifier):
-        value (str): Company website domain (e.g. 'anthropic.com').
+        value (str): Company website domain (e.g. 'openai.com').
     """
 
     identifier: StartDepthChartBodyCompanyType3Identifier

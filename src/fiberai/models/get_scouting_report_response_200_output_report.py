@@ -39,6 +39,9 @@ if TYPE_CHECKING:
     from ..models.get_scouting_report_response_200_output_report_news_item import (
         GetScoutingReportResponse200OutputReportNewsItem,
     )
+    from ..models.get_scouting_report_response_200_output_report_office_locations_item import (
+        GetScoutingReportResponse200OutputReportOfficeLocationsItem,
+    )
 
 
 T = TypeVar("T", bound="GetScoutingReportResponse200OutputReport")
@@ -59,6 +62,8 @@ class GetScoutingReportResponse200OutputReport:
         historical_headcount (GetScoutingReportResponse200OutputReportHistoricalHeadcountType0 | None):
         company_summary (None | str):
         company_profile (GetScoutingReportResponse200OutputReportCompanyProfileType0 | None):
+        office_locations (list[GetScoutingReportResponse200OutputReportOfficeLocationsItem]): Company office locations
+            with structured address details and coordinates. Empty when no office data is available.
         about_description (None | str | Unset):
         funding_info (GetScoutingReportResponse200OutputReportFundingInfoType0 | None | Unset):
     """
@@ -73,6 +78,7 @@ class GetScoutingReportResponse200OutputReport:
     historical_headcount: GetScoutingReportResponse200OutputReportHistoricalHeadcountType0 | None
     company_summary: None | str
     company_profile: GetScoutingReportResponse200OutputReportCompanyProfileType0 | None
+    office_locations: list[GetScoutingReportResponse200OutputReportOfficeLocationsItem]
     about_description: None | str | Unset = UNSET
     funding_info: GetScoutingReportResponse200OutputReportFundingInfoType0 | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -138,6 +144,11 @@ class GetScoutingReportResponse200OutputReport:
         else:
             company_profile = self.company_profile
 
+        office_locations = []
+        for office_locations_item_data in self.office_locations:
+            office_locations_item = office_locations_item_data.to_dict()
+            office_locations.append(office_locations_item)
+
         about_description: None | str | Unset
         if isinstance(self.about_description, Unset):
             about_description = UNSET
@@ -166,6 +177,7 @@ class GetScoutingReportResponse200OutputReport:
                 "historicalHeadcount": historical_headcount,
                 "companySummary": company_summary,
                 "companyProfile": company_profile,
+                "officeLocations": office_locations,
             }
         )
         if about_description is not UNSET:
@@ -206,6 +218,9 @@ class GetScoutingReportResponse200OutputReport:
         )
         from ..models.get_scouting_report_response_200_output_report_news_item import (
             GetScoutingReportResponse200OutputReportNewsItem,
+        )
+        from ..models.get_scouting_report_response_200_output_report_office_locations_item import (
+            GetScoutingReportResponse200OutputReportOfficeLocationsItem,
         )
 
         d = dict(src_dict)
@@ -301,6 +316,15 @@ class GetScoutingReportResponse200OutputReport:
 
         company_profile = _parse_company_profile(d.pop("companyProfile"))
 
+        office_locations = []
+        _office_locations = d.pop("officeLocations")
+        for office_locations_item_data in _office_locations:
+            office_locations_item = GetScoutingReportResponse200OutputReportOfficeLocationsItem.from_dict(
+                office_locations_item_data
+            )
+
+            office_locations.append(office_locations_item)
+
         def _parse_about_description(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -340,6 +364,7 @@ class GetScoutingReportResponse200OutputReport:
             historical_headcount=historical_headcount,
             company_summary=company_summary,
             company_profile=company_profile,
+            office_locations=office_locations,
             about_description=about_description,
             funding_info=funding_info,
         )

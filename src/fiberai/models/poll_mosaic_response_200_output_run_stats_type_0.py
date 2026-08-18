@@ -11,7 +11,8 @@ T = TypeVar("T", bound="PollMosaicResponse200OutputRunStatsType0")
 
 @_attrs_define
 class PollMosaicResponse200OutputRunStatsType0:
-    """
+    """Aggregate enrichment statistics. Present when the run has finished processing rows.
+
     Attributes:
         input_rows (int):
         output_rows (int):

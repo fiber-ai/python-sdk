@@ -16,40 +16,55 @@ class PersonReactionChange:
     """
     Attributes:
         reaction_id (str): Unique reaction identifier (dedup key)
-        type_ (None | str): Reaction type (LIKE, LOVE, INSIGHTFUL, CELEBRATE, SUPPORT, FUNNY)
-        post_content (None | str): Content of the reacted post
-        post_url (None | str): URL to the LinkedIn post
-        post_author_name (None | str): Name of the post author
-        reacted_ago (None | str): Relative time since the reaction
+        type_ (None | str | Unset): Reaction type (LIKE, LOVE, INSIGHTFUL, CELEBRATE, SUPPORT, FUNNY)
+        post_content (None | str | Unset): Content of the reacted post
+        post_url (None | str | Unset): URL to the LinkedIn post
+        post_author_name (None | str | Unset): Name of the post author
+        reacted_ago (None | str | Unset): Relative time since the reaction
         reacted_at (None | str | Unset): Exact ISO timestamp when the reaction occurred
     """
 
     reaction_id: str
-    type_: None | str
-    post_content: None | str
-    post_url: None | str
-    post_author_name: None | str
-    reacted_ago: None | str
+    type_: None | str | Unset = UNSET
+    post_content: None | str | Unset = UNSET
+    post_url: None | str | Unset = UNSET
+    post_author_name: None | str | Unset = UNSET
+    reacted_ago: None | str | Unset = UNSET
     reacted_at: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         reaction_id = self.reaction_id
 
-        type_: None | str
-        type_ = self.type_
+        type_: None | str | Unset
+        if isinstance(self.type_, Unset):
+            type_ = UNSET
+        else:
+            type_ = self.type_
 
-        post_content: None | str
-        post_content = self.post_content
+        post_content: None | str | Unset
+        if isinstance(self.post_content, Unset):
+            post_content = UNSET
+        else:
+            post_content = self.post_content
 
-        post_url: None | str
-        post_url = self.post_url
+        post_url: None | str | Unset
+        if isinstance(self.post_url, Unset):
+            post_url = UNSET
+        else:
+            post_url = self.post_url
 
-        post_author_name: None | str
-        post_author_name = self.post_author_name
+        post_author_name: None | str | Unset
+        if isinstance(self.post_author_name, Unset):
+            post_author_name = UNSET
+        else:
+            post_author_name = self.post_author_name
 
-        reacted_ago: None | str
-        reacted_ago = self.reacted_ago
+        reacted_ago: None | str | Unset
+        if isinstance(self.reacted_ago, Unset):
+            reacted_ago = UNSET
+        else:
+            reacted_ago = self.reacted_ago
 
         reacted_at: None | str | Unset
         if isinstance(self.reacted_at, Unset):
@@ -62,13 +77,18 @@ class PersonReactionChange:
         field_dict.update(
             {
                 "reactionId": reaction_id,
-                "type": type_,
-                "postContent": post_content,
-                "postUrl": post_url,
-                "postAuthorName": post_author_name,
-                "reactedAgo": reacted_ago,
             }
         )
+        if type_ is not UNSET:
+            field_dict["type"] = type_
+        if post_content is not UNSET:
+            field_dict["postContent"] = post_content
+        if post_url is not UNSET:
+            field_dict["postUrl"] = post_url
+        if post_author_name is not UNSET:
+            field_dict["postAuthorName"] = post_author_name
+        if reacted_ago is not UNSET:
+            field_dict["reactedAgo"] = reacted_ago
         if reacted_at is not UNSET:
             field_dict["reactedAt"] = reacted_at
 
@@ -79,40 +99,50 @@ class PersonReactionChange:
         d = dict(src_dict)
         reaction_id = d.pop("reactionId")
 
-        def _parse_type_(data: object) -> None | str:
+        def _parse_type_(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        type_ = _parse_type_(d.pop("type"))
+        type_ = _parse_type_(d.pop("type", UNSET))
 
-        def _parse_post_content(data: object) -> None | str:
+        def _parse_post_content(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        post_content = _parse_post_content(d.pop("postContent"))
+        post_content = _parse_post_content(d.pop("postContent", UNSET))
 
-        def _parse_post_url(data: object) -> None | str:
+        def _parse_post_url(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        post_url = _parse_post_url(d.pop("postUrl"))
+        post_url = _parse_post_url(d.pop("postUrl", UNSET))
 
-        def _parse_post_author_name(data: object) -> None | str:
+        def _parse_post_author_name(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        post_author_name = _parse_post_author_name(d.pop("postAuthorName"))
+        post_author_name = _parse_post_author_name(d.pop("postAuthorName", UNSET))
 
-        def _parse_reacted_ago(data: object) -> None | str:
+        def _parse_reacted_ago(data: object) -> None | str | Unset:
             if data is None:
                 return data
-            return cast(None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
 
-        reacted_ago = _parse_reacted_ago(d.pop("reactedAgo"))
+        reacted_ago = _parse_reacted_ago(d.pop("reactedAgo", UNSET))
 
         def _parse_reacted_at(data: object) -> None | str | Unset:
             if data is None:

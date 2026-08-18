@@ -20,15 +20,15 @@ class FundingStageChange:
     """
     Attributes:
         kind (Literal['scalar']):
-        previous (bool | None | str): Previous funding stage
-        current (bool | None | str): Current funding stage
+        previous (bool | None | str | Unset): Previous funding stage
+        current (bool | None | str | Unset): Current funding stage
         current_round_details (FundingRoundChange | None | Unset): Details of the funding round that drove the new
             stage, when available
     """
 
     kind: Literal["scalar"]
-    previous: bool | None | str
-    current: bool | None | str
+    previous: bool | None | str | Unset = UNSET
+    current: bool | None | str | Unset = UNSET
     current_round_details: FundingRoundChange | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -37,11 +37,17 @@ class FundingStageChange:
 
         kind = self.kind
 
-        previous: bool | None | str
-        previous = self.previous
+        previous: bool | None | str | Unset
+        if isinstance(self.previous, Unset):
+            previous = UNSET
+        else:
+            previous = self.previous
 
-        current: bool | None | str
-        current = self.current
+        current: bool | None | str | Unset
+        if isinstance(self.current, Unset):
+            current = UNSET
+        else:
+            current = self.current
 
         current_round_details: dict[str, Any] | None | Unset
         if isinstance(self.current_round_details, Unset):
@@ -56,10 +62,12 @@ class FundingStageChange:
         field_dict.update(
             {
                 "kind": kind,
-                "previous": previous,
-                "current": current,
             }
         )
+        if previous is not UNSET:
+            field_dict["previous"] = previous
+        if current is not UNSET:
+            field_dict["current"] = current
         if current_round_details is not UNSET:
             field_dict["currentRoundDetails"] = current_round_details
 
@@ -74,19 +82,23 @@ class FundingStageChange:
         if kind != "scalar":
             raise ValueError(f"kind must match const 'scalar', got '{kind}'")
 
-        def _parse_previous(data: object) -> bool | None | str:
+        def _parse_previous(data: object) -> bool | None | str | Unset:
             if data is None:
                 return data
-            return cast(bool | None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | str | Unset, data)
 
-        previous = _parse_previous(d.pop("previous"))
+        previous = _parse_previous(d.pop("previous", UNSET))
 
-        def _parse_current(data: object) -> bool | None | str:
+        def _parse_current(data: object) -> bool | None | str | Unset:
             if data is None:
                 return data
-            return cast(bool | None | str, data)
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | str | Unset, data)
 
-        current = _parse_current(d.pop("current"))
+        current = _parse_current(d.pop("current", UNSET))
 
         def _parse_current_round_details(data: object) -> FundingRoundChange | None | Unset:
             if data is None:

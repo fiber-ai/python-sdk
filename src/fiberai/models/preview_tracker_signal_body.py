@@ -168,6 +168,7 @@ class PreviewTrackerSignalBody:
         from ..models.person_became_top_voice import PersonBecameTopVoice
         from ..models.person_became_verified import PersonBecameVerified
         from ..models.person_changed_company import PersonChangedCompany
+        from ..models.person_commented_on_post import PersonCommentedOnPost
         from ..models.person_connections_milestone import PersonConnectionsMilestone
         from ..models.person_employment_type_changed import PersonEmploymentTypeChanged
         from ..models.person_follower_milestone import PersonFollowerMilestone
@@ -187,7 +188,6 @@ class PreviewTrackerSignalBody:
         from ..models.person_stuck_in_role import PersonStuckInRole
         from ..models.person_summary_changed import PersonSummaryChanged
         from ..models.person_tag_gained import PersonTagGained
-        from ..models.person_tenure_milestone import PersonTenureMilestone
         from ..models.person_title_changed import PersonTitleChanged
         from ..models.recent_layoffs import RecentLayoffs
         from ..models.recently_hired_with_title import RecentlyHiredWithTitle
@@ -266,6 +266,10 @@ class PreviewTrackerSignalBody:
             config = self.config.to_dict()
         elif isinstance(self.config, PersonPostedWithKeyword):
             config = self.config.to_dict()
+        elif isinstance(self.config, PersonReactedToPost):
+            config = self.config.to_dict()
+        elif isinstance(self.config, PersonCommentedOnPost):
+            config = self.config.to_dict()
         elif isinstance(self.config, PersonSkillsAdded):
             config = self.config.to_dict()
         elif isinstance(self.config, PersonGotPromoted):
@@ -293,10 +297,6 @@ class PreviewTrackerSignalBody:
         elif isinstance(self.config, PersonGotDemoted):
             config = self.config.to_dict()
         elif isinstance(self.config, PersonStuckInRole):
-            config = self.config.to_dict()
-        elif isinstance(self.config, PersonTenureMilestone):
-            config = self.config.to_dict()
-        elif isinstance(self.config, PersonReactedToPost):
             config = self.config.to_dict()
         else:
             config = self.config.to_dict()
@@ -709,7 +709,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_35 = PersonSkillsAdded.from_dict(data)
+                config_type_35 = PersonReactedToPost.from_dict(data)
 
                 return config_type_35
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -717,7 +717,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_36 = PersonGotPromoted.from_dict(data)
+                config_type_36 = PersonCommentedOnPost.from_dict(data)
 
                 return config_type_36
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -725,7 +725,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_37 = PersonStartedCompany.from_dict(data)
+                config_type_37 = PersonSkillsAdded.from_dict(data)
 
                 return config_type_37
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -733,7 +733,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_38 = PersonEmploymentTypeChanged.from_dict(data)
+                config_type_38 = PersonGotPromoted.from_dict(data)
 
                 return config_type_38
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -741,7 +741,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_39 = PersonConnectionsMilestone.from_dict(data)
+                config_type_39 = PersonStartedCompany.from_dict(data)
 
                 return config_type_39
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -749,7 +749,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_40 = PersonFollowerMilestone.from_dict(data)
+                config_type_40 = PersonEmploymentTypeChanged.from_dict(data)
 
                 return config_type_40
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -757,7 +757,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_41 = PersonSummaryChanged.from_dict(data)
+                config_type_41 = PersonConnectionsMilestone.from_dict(data)
 
                 return config_type_41
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -765,7 +765,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_42 = PersonNewCertification.from_dict(data)
+                config_type_42 = PersonFollowerMilestone.from_dict(data)
 
                 return config_type_42
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -773,7 +773,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_43 = PersonBecameVerified.from_dict(data)
+                config_type_43 = PersonSummaryChanged.from_dict(data)
 
                 return config_type_43
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -781,7 +781,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_44 = PersonBecamePremium.from_dict(data)
+                config_type_44 = PersonNewCertification.from_dict(data)
 
                 return config_type_44
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -789,7 +789,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_45 = PersonBecameInfluencer.from_dict(data)
+                config_type_45 = PersonBecameVerified.from_dict(data)
 
                 return config_type_45
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -797,7 +797,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_46 = PersonBecameTopVoice.from_dict(data)
+                config_type_46 = PersonBecamePremium.from_dict(data)
 
                 return config_type_46
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -805,7 +805,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_47 = PersonGotDemoted.from_dict(data)
+                config_type_47 = PersonBecameInfluencer.from_dict(data)
 
                 return config_type_47
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -813,7 +813,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_48 = PersonStuckInRole.from_dict(data)
+                config_type_48 = PersonBecameTopVoice.from_dict(data)
 
                 return config_type_48
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -821,7 +821,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_49 = PersonTenureMilestone.from_dict(data)
+                config_type_49 = PersonGotDemoted.from_dict(data)
 
                 return config_type_49
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -829,14 +829,14 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_50 = PersonReactedToPost.from_dict(data)
+                config_type_50 = PersonStuckInRole.from_dict(data)
 
                 return config_type_50
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
             if not isinstance(data, dict):
                 raise TypeError()
-            config_type_51 = PersonCommentedOnPost.from_dict(data)
+            config_type_51 = PersonTenureMilestone.from_dict(data)
 
             return config_type_51
 

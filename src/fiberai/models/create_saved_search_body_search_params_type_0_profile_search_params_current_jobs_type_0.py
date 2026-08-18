@@ -25,7 +25,8 @@ T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType0ProfileSearchParam
 
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCurrentJobsType0:
-    """
+    """Deprecated. Use jobs with status: 'current' instead.
+
     Attributes:
         any_of (list[CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCurrentJobsType0AnyOfType0Item] | None |
             Unset):
