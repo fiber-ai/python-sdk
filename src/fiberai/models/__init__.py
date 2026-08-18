@@ -34696,6 +34696,9 @@ from .lite_contact_reveal_body_input_type_0 import LiteContactRevealBodyInputTyp
 from .lite_contact_reveal_body_input_type_0_mode import LiteContactRevealBodyInputType0Mode
 from .lite_contact_reveal_body_input_type_1 import LiteContactRevealBodyInputType1
 from .lite_contact_reveal_body_input_type_1_mode import LiteContactRevealBodyInputType1Mode
+from .lite_contact_reveal_body_patience_type_1 import LiteContactRevealBodyPatienceType1
+from .lite_contact_reveal_body_patience_type_2_type_1 import LiteContactRevealBodyPatienceType2Type1
+from .lite_contact_reveal_body_patience_type_3_type_1 import LiteContactRevealBodyPatienceType3Type1
 from .lite_contact_reveal_response_200 import LiteContactRevealResponse200
 from .lite_contact_reveal_response_200_charge_info_type_0 import LiteContactRevealResponse200ChargeInfoType0
 from .lite_contact_reveal_response_200_charge_info_type_0_low_credit_alert_type_0 import (
@@ -48474,6 +48477,9 @@ from .stealth_founders_search_response_500 import StealthFoundersSearchResponse5
 from .stealth_founders_search_response_503 import StealthFoundersSearchResponse503
 from .sync_quick_contact_reveal_body import SyncQuickContactRevealBody
 from .sync_quick_contact_reveal_body_enrichment_type import SyncQuickContactRevealBodyEnrichmentType
+from .sync_quick_contact_reveal_body_patience_type_1 import SyncQuickContactRevealBodyPatienceType1
+from .sync_quick_contact_reveal_body_patience_type_2_type_1 import SyncQuickContactRevealBodyPatienceType2Type1
+from .sync_quick_contact_reveal_body_patience_type_3_type_1 import SyncQuickContactRevealBodyPatienceType3Type1
 from .sync_quick_contact_reveal_response_200 import SyncQuickContactRevealResponse200
 from .sync_quick_contact_reveal_response_200_charge_info_type_0 import SyncQuickContactRevealResponse200ChargeInfoType0
 from .sync_quick_contact_reveal_response_200_charge_info_type_0_low_credit_alert_type_0 import (
@@ -48538,6 +48544,9 @@ from .sync_quick_contact_reveal_response_500 import SyncQuickContactRevealRespon
 from .sync_quick_contact_reveal_response_503 import SyncQuickContactRevealResponse503
 from .sync_turbo_contact_enrichment_body import SyncTurboContactEnrichmentBody
 from .sync_turbo_contact_enrichment_body_enrichment_type import SyncTurboContactEnrichmentBodyEnrichmentType
+from .sync_turbo_contact_enrichment_body_patience_type_1 import SyncTurboContactEnrichmentBodyPatienceType1
+from .sync_turbo_contact_enrichment_body_patience_type_2_type_1 import SyncTurboContactEnrichmentBodyPatienceType2Type1
+from .sync_turbo_contact_enrichment_body_patience_type_3_type_1 import SyncTurboContactEnrichmentBodyPatienceType3Type1
 from .sync_turbo_contact_enrichment_response_200 import SyncTurboContactEnrichmentResponse200
 from .sync_turbo_contact_enrichment_response_200_charge_info_type_0 import (
     SyncTurboContactEnrichmentResponse200ChargeInfoType0,
@@ -64287,6 +64296,9 @@ __all__ = (
     "LiteContactRevealBodyInputType0Mode",
     "LiteContactRevealBodyInputType1",
     "LiteContactRevealBodyInputType1Mode",
+    "LiteContactRevealBodyPatienceType1",
+    "LiteContactRevealBodyPatienceType2Type1",
+    "LiteContactRevealBodyPatienceType3Type1",
     "LiteContactRevealResponse200",
     "LiteContactRevealResponse200ChargeInfoType0",
     "LiteContactRevealResponse200ChargeInfoType0LowCreditAlertType0",
@@ -69673,6 +69685,9 @@ __all__ = (
     "StealthFoundersSearchResponse503",
     "SyncQuickContactRevealBody",
     "SyncQuickContactRevealBodyEnrichmentType",
+    "SyncQuickContactRevealBodyPatienceType1",
+    "SyncQuickContactRevealBodyPatienceType2Type1",
+    "SyncQuickContactRevealBodyPatienceType3Type1",
     "SyncQuickContactRevealResponse200",
     "SyncQuickContactRevealResponse200ChargeInfoType0",
     "SyncQuickContactRevealResponse200ChargeInfoType0LowCreditAlertType0",
@@ -69707,6 +69722,9 @@ __all__ = (
     "SyncQuickContactRevealResponse503",
     "SyncTurboContactEnrichmentBody",
     "SyncTurboContactEnrichmentBodyEnrichmentType",
+    "SyncTurboContactEnrichmentBodyPatienceType1",
+    "SyncTurboContactEnrichmentBodyPatienceType2Type1",
+    "SyncTurboContactEnrichmentBodyPatienceType3Type1",
     "SyncTurboContactEnrichmentResponse200",
     "SyncTurboContactEnrichmentResponse200ChargeInfoType0",
     "SyncTurboContactEnrichmentResponse200ChargeInfoType0LowCreditAlertType0",
