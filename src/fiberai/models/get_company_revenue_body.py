@@ -17,7 +17,7 @@ T = TypeVar("T", bound="GetCompanyRevenueBody")
 class GetCompanyRevenueBody:
     """
     Attributes:
-        api_key (str):
+        api_key (str): Your Fiber API key
         company_metadata (GetCompanyRevenueBodyCompanyMetadata):
     """
 
