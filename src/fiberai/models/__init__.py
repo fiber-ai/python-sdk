@@ -770,6 +770,62 @@ from .cancel_batch_contact_details_response_422 import CancelBatchContactDetails
 from .cancel_batch_contact_details_response_429 import CancelBatchContactDetailsResponse429
 from .cancel_batch_contact_details_response_500 import CancelBatchContactDetailsResponse500
 from .cancel_batch_contact_details_response_503 import CancelBatchContactDetailsResponse503
+from .cards_attach_body import CardsAttachBody
+from .cards_attach_response_200 import CardsAttachResponse200
+from .cards_attach_response_200_charge_info_type_0 import CardsAttachResponse200ChargeInfoType0
+from .cards_attach_response_200_charge_info_type_0_low_credit_alert_type_0 import (
+    CardsAttachResponse200ChargeInfoType0LowCreditAlertType0,
+)
+from .cards_attach_response_200_charge_info_type_0_method import CardsAttachResponse200ChargeInfoType0Method
+from .cards_attach_response_200_charge_info_type_1 import CardsAttachResponse200ChargeInfoType1
+from .cards_attach_response_200_charge_info_type_1_low_credit_alert_type_0 import (
+    CardsAttachResponse200ChargeInfoType1LowCreditAlertType0,
+)
+from .cards_attach_response_200_charge_info_type_1_method import CardsAttachResponse200ChargeInfoType1Method
+from .cards_attach_response_200_charge_info_type_2 import CardsAttachResponse200ChargeInfoType2
+from .cards_attach_response_200_charge_info_type_2_low_credit_alert_type_0 import (
+    CardsAttachResponse200ChargeInfoType2LowCreditAlertType0,
+)
+from .cards_attach_response_200_charge_info_type_2_method import CardsAttachResponse200ChargeInfoType2Method
+from .cards_attach_response_200_charge_info_type_3 import CardsAttachResponse200ChargeInfoType3
+from .cards_attach_response_200_charge_info_type_3_low_credit_alert_type_0 import (
+    CardsAttachResponse200ChargeInfoType3LowCreditAlertType0,
+)
+from .cards_attach_response_200_charge_info_type_3_method import CardsAttachResponse200ChargeInfoType3Method
+from .cards_attach_response_200_charge_info_type_4 import CardsAttachResponse200ChargeInfoType4
+from .cards_attach_response_200_charge_info_type_4_low_credit_alert_type_0 import (
+    CardsAttachResponse200ChargeInfoType4LowCreditAlertType0,
+)
+from .cards_attach_response_200_charge_info_type_4_method import CardsAttachResponse200ChargeInfoType4Method
+from .cards_attach_response_200_output import CardsAttachResponse200Output
+from .cards_attach_response_200_output_payment_method import CardsAttachResponse200OutputPaymentMethod
+from .cards_attach_response_200_output_status import CardsAttachResponse200OutputStatus
+from .cards_attach_response_200_warnings_type_0_item import CardsAttachResponse200WarningsType0Item
+from .cards_attach_response_400_type_0 import CardsAttachResponse400Type0
+from .cards_attach_response_400_type_0_reason import CardsAttachResponse400Type0Reason
+from .cards_attach_response_400_type_0_status import CardsAttachResponse400Type0Status
+from .cards_attach_response_400_type_1 import CardsAttachResponse400Type1
+from .cards_attach_response_401 import CardsAttachResponse401
+from .cards_attach_response_402 import CardsAttachResponse402
+from .cards_attach_response_402_reason import CardsAttachResponse402Reason
+from .cards_attach_response_402_status import CardsAttachResponse402Status
+from .cards_attach_response_403 import CardsAttachResponse403
+from .cards_attach_response_404 import CardsAttachResponse404
+from .cards_attach_response_404_reason import CardsAttachResponse404Reason
+from .cards_attach_response_404_status import CardsAttachResponse404Status
+from .cards_attach_response_409 import CardsAttachResponse409
+from .cards_attach_response_409_reason import CardsAttachResponse409Reason
+from .cards_attach_response_409_status import CardsAttachResponse409Status
+from .cards_attach_response_422 import CardsAttachResponse422
+from .cards_attach_response_429_type_0 import CardsAttachResponse429Type0
+from .cards_attach_response_429_type_0_reason import CardsAttachResponse429Type0Reason
+from .cards_attach_response_429_type_0_status import CardsAttachResponse429Type0Status
+from .cards_attach_response_429_type_1 import CardsAttachResponse429Type1
+from .cards_attach_response_500_type_0 import CardsAttachResponse500Type0
+from .cards_attach_response_500_type_0_reason import CardsAttachResponse500Type0Reason
+from .cards_attach_response_500_type_0_status import CardsAttachResponse500Type0Status
+from .cards_attach_response_500_type_1 import CardsAttachResponse500Type1
+from .cards_attach_response_503 import CardsAttachResponse503
 from .certification_change import CertificationChange
 from .check_google_maps_results_body import CheckGoogleMapsResultsBody
 from .check_google_maps_results_response_200 import CheckGoogleMapsResultsResponse200
@@ -53010,6 +53066,52 @@ __all__ = (
     "CancelBatchContactDetailsResponse429",
     "CancelBatchContactDetailsResponse500",
     "CancelBatchContactDetailsResponse503",
+    "CardsAttachBody",
+    "CardsAttachResponse200",
+    "CardsAttachResponse200ChargeInfoType0",
+    "CardsAttachResponse200ChargeInfoType0LowCreditAlertType0",
+    "CardsAttachResponse200ChargeInfoType0Method",
+    "CardsAttachResponse200ChargeInfoType1",
+    "CardsAttachResponse200ChargeInfoType1LowCreditAlertType0",
+    "CardsAttachResponse200ChargeInfoType1Method",
+    "CardsAttachResponse200ChargeInfoType2",
+    "CardsAttachResponse200ChargeInfoType2LowCreditAlertType0",
+    "CardsAttachResponse200ChargeInfoType2Method",
+    "CardsAttachResponse200ChargeInfoType3",
+    "CardsAttachResponse200ChargeInfoType3LowCreditAlertType0",
+    "CardsAttachResponse200ChargeInfoType3Method",
+    "CardsAttachResponse200ChargeInfoType4",
+    "CardsAttachResponse200ChargeInfoType4LowCreditAlertType0",
+    "CardsAttachResponse200ChargeInfoType4Method",
+    "CardsAttachResponse200Output",
+    "CardsAttachResponse200OutputPaymentMethod",
+    "CardsAttachResponse200OutputStatus",
+    "CardsAttachResponse200WarningsType0Item",
+    "CardsAttachResponse400Type0",
+    "CardsAttachResponse400Type0Reason",
+    "CardsAttachResponse400Type0Status",
+    "CardsAttachResponse400Type1",
+    "CardsAttachResponse401",
+    "CardsAttachResponse402",
+    "CardsAttachResponse402Reason",
+    "CardsAttachResponse402Status",
+    "CardsAttachResponse403",
+    "CardsAttachResponse404",
+    "CardsAttachResponse404Reason",
+    "CardsAttachResponse404Status",
+    "CardsAttachResponse409",
+    "CardsAttachResponse409Reason",
+    "CardsAttachResponse409Status",
+    "CardsAttachResponse422",
+    "CardsAttachResponse429Type0",
+    "CardsAttachResponse429Type0Reason",
+    "CardsAttachResponse429Type0Status",
+    "CardsAttachResponse429Type1",
+    "CardsAttachResponse500Type0",
+    "CardsAttachResponse500Type0Reason",
+    "CardsAttachResponse500Type0Status",
+    "CardsAttachResponse500Type1",
+    "CardsAttachResponse503",
     "CertificationChange",
     "CheckGoogleMapsResultsBody",
     "CheckGoogleMapsResultsResponse200",
