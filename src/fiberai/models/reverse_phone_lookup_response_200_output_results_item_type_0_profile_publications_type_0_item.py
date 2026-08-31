@@ -117,7 +117,7 @@ class ReversePhoneLookupResponse200OutputResultsItemType0ProfilePublicationsType
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_publications_type_0_item_collaborators_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfilePublicationsType0ItemCollaboratorsType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfilePublicationsType0ItemCollaboratorsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

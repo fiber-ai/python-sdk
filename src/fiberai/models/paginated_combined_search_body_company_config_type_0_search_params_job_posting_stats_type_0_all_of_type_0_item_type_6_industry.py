@@ -1,9 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0AllOfType0ItemType6Industry(
-    str, Enum
-):
+class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0AllOfType0ItemType6Industry(StrEnum):
     ADMINISTRATIVE_SERVICES = "Administrative Services"
     AEROSPACE_MILITARY = "Aerospace & Military"
     ARTIFICIAL_INTELLIGENCE = "Artificial Intelligence"

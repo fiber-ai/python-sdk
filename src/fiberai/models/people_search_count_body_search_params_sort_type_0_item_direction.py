@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchCountBodySearchParamsSortType0ItemDirection(str, Enum):
+class PeopleSearchCountBodySearchParamsSortType0ItemDirection(StrEnum):
     ASC = "asc"
     DESC = "desc"
 

@@ -32,7 +32,7 @@ class PeopleSearchBodySearchParamsKeywordSearchOptionsType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_body_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import (
-            PeopleSearchBodySearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,
+            PeopleSearchBodySearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,  # noqa: PLC0415
         )
 
         fields_to_search_over: dict[str, Any] | None | Unset
@@ -56,7 +56,7 @@ class PeopleSearchBodySearchParamsKeywordSearchOptionsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import (
-            PeopleSearchBodySearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,
+            PeopleSearchBodySearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

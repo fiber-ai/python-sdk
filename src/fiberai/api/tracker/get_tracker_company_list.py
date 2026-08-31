@@ -143,14 +143,14 @@ def sync_detailed(
     | GetTrackerCompanyListResponse500
     | GetTrackerCompanyListResponse503
 ]:
-    r"""Get company tracker list
+    """Get company tracker list
 
      Get a single company tracker list by ID.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -193,14 +193,14 @@ def sync(
     | GetTrackerCompanyListResponse503
     | None
 ):
-    r"""Get company tracker list
+    """Get company tracker list
 
      Get a single company tracker list by ID.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | GetTrackerCompanyListResponse500
     | GetTrackerCompanyListResponse503
 ]:
-    r"""Get company tracker list
+    """Get company tracker list
 
      Get a single company tracker list by ID.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -285,14 +285,14 @@ async def asyncio(
     | GetTrackerCompanyListResponse503
     | None
 ):
-    r"""Get company tracker list
+    """Get company tracker list
 
      Get a single company tracker list by ID.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):

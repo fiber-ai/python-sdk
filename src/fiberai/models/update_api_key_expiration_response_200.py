@@ -58,16 +58,16 @@ class UpdateApiKeyExpirationResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.update_api_key_expiration_response_200_charge_info_type_0 import (
-            UpdateApiKeyExpirationResponse200ChargeInfoType0,
+            UpdateApiKeyExpirationResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.update_api_key_expiration_response_200_charge_info_type_1 import (
-            UpdateApiKeyExpirationResponse200ChargeInfoType1,
+            UpdateApiKeyExpirationResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.update_api_key_expiration_response_200_charge_info_type_2 import (
-            UpdateApiKeyExpirationResponse200ChargeInfoType2,
+            UpdateApiKeyExpirationResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.update_api_key_expiration_response_200_charge_info_type_3 import (
-            UpdateApiKeyExpirationResponse200ChargeInfoType3,
+            UpdateApiKeyExpirationResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class UpdateApiKeyExpirationResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.update_api_key_expiration_response_200_charge_info_type_0 import (
-            UpdateApiKeyExpirationResponse200ChargeInfoType0,
+            UpdateApiKeyExpirationResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.update_api_key_expiration_response_200_charge_info_type_1 import (
-            UpdateApiKeyExpirationResponse200ChargeInfoType1,
+            UpdateApiKeyExpirationResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.update_api_key_expiration_response_200_charge_info_type_2 import (
-            UpdateApiKeyExpirationResponse200ChargeInfoType2,
+            UpdateApiKeyExpirationResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.update_api_key_expiration_response_200_charge_info_type_3 import (
-            UpdateApiKeyExpirationResponse200ChargeInfoType3,
+            UpdateApiKeyExpirationResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.update_api_key_expiration_response_200_charge_info_type_4 import (
-            UpdateApiKeyExpirationResponse200ChargeInfoType4,
+            UpdateApiKeyExpirationResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.update_api_key_expiration_response_200_output import UpdateApiKeyExpirationResponse200Output
+        from ..models.update_api_key_expiration_response_200_output import (
+            UpdateApiKeyExpirationResponse200Output,  # noqa: PLC0415
+        )
         from ..models.update_api_key_expiration_response_200_warnings_type_0_item import (
-            UpdateApiKeyExpirationResponse200WarningsType0Item,
+            UpdateApiKeyExpirationResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

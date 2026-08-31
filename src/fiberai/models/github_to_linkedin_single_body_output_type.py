@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GithubToLinkedinSingleBodyOutputType(str, Enum):
+class GithubToLinkedinSingleBodyOutputType(StrEnum):
     BOTH = "both"
     EMAIL = "email"
     LINKEDIN = "linkedin"

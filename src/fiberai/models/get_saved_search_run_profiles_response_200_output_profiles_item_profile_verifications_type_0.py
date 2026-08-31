@@ -77,7 +77,7 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileVerifications
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_verifications_type_0_verification_types_type_0_item import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileVerificationsType0VerificationTypesType0Item,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileVerificationsType0VerificationTypesType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

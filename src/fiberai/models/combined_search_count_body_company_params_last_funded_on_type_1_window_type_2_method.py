@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyCompanyParamsLastFundedOnType1WindowType2Method(str, Enum):
+class CombinedSearchCountBodyCompanyParamsLastFundedOnType1WindowType2Method(StrEnum):
     CALENDAR = "calendar"
 
     def __str__(self) -> str:

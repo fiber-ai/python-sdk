@@ -76,10 +76,10 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_type_0_any_of_type_0_item import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyType0AnyOfType0Item,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyType0AnyOfType0Item,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_type_0_none_of_type_0_item import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyType0NoneOfType0Item,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyType0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

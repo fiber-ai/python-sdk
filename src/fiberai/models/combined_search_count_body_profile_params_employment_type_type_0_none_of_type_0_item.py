@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyProfileParamsEmploymentTypeType0NoneOfType0Item(str, Enum):
+class CombinedSearchCountBodyProfileParamsEmploymentTypeType0NoneOfType0Item(StrEnum):
     CONTRACT = "Contract"
     FULL_TIME = "Full-time"
     INTERNSHIP = "Internship"

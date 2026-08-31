@@ -57,7 +57,7 @@ class FlightBookingOptionsResponse200OutputBookingOptionsItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.flight_booking_options_response_200_output_booking_options_item_booking_link_type_0 import (
-            FlightBookingOptionsResponse200OutputBookingOptionsItemBookingLinkType0,
+            FlightBookingOptionsResponse200OutputBookingOptionsItemBookingLinkType0,  # noqa: PLC0415
         )
 
         provider_name = self.provider_name
@@ -137,7 +137,7 @@ class FlightBookingOptionsResponse200OutputBookingOptionsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.flight_booking_options_response_200_output_booking_options_item_booking_link_type_0 import (
-            FlightBookingOptionsResponse200OutputBookingOptionsItemBookingLinkType0,
+            FlightBookingOptionsResponse200OutputBookingOptionsItemBookingLinkType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

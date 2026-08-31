@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class JobPostingChangeStatus(str, Enum):
+class JobPostingChangeStatus(StrEnum):
     ACTIVE = "active"
     CLOSED = "closed"
 

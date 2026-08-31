@@ -104,13 +104,13 @@ class PollExhaustiveContactEnrichmentResultResponse200OutputProfile:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_emails_item import (
-            PollExhaustiveContactEnrichmentResultResponse200OutputProfileEmailsItem,
+            PollExhaustiveContactEnrichmentResultResponse200OutputProfileEmailsItem,  # noqa: PLC0415
         )
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_low_quality_emails_type_0_item import (
-            PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0Item,
+            PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0Item,  # noqa: PLC0415
         )
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_phone_numbers_item import (
-            PollExhaustiveContactEnrichmentResultResponse200OutputProfilePhoneNumbersItem,
+            PollExhaustiveContactEnrichmentResultResponse200OutputProfilePhoneNumbersItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

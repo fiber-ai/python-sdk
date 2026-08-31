@@ -59,19 +59,19 @@ class CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_jobs_type_0_any_of_type_0_item_company_type_0 import (
-            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType0,
+            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_jobs_type_0_any_of_type_0_item_company_type_1 import (
-            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType1,
+            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_jobs_type_0_any_of_type_0_item_company_type_2 import (
-            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType2,
+            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType2,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_jobs_type_0_any_of_type_0_item_company_type_3 import (
-            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType3,
+            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType3,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_jobs_type_0_any_of_type_0_item_job_title_type_0 import (
-            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemJobTitleType0,
+            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemJobTitleType0,  # noqa: PLC0415
         )
 
         status = self.status.value
@@ -115,19 +115,19 @@ class CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_jobs_type_0_any_of_type_0_item_company_type_0 import (
-            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType0,
+            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_jobs_type_0_any_of_type_0_item_company_type_1 import (
-            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType1,
+            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_jobs_type_0_any_of_type_0_item_company_type_2 import (
-            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType2,
+            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType2,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_jobs_type_0_any_of_type_0_item_company_type_3 import (
-            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType3,
+            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemCompanyType3,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_jobs_type_0_any_of_type_0_item_job_title_type_0 import (
-            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemJobTitleType0,
+            CombinedSearchCountBodyProfileParamsJobsType0AnyOfType0ItemJobTitleType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

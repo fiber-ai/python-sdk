@@ -58,16 +58,16 @@ class InstagramUserReelsResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.instagram_user_reels_response_200_charge_info_type_0 import (
-            InstagramUserReelsResponse200ChargeInfoType0,
+            InstagramUserReelsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.instagram_user_reels_response_200_charge_info_type_1 import (
-            InstagramUserReelsResponse200ChargeInfoType1,
+            InstagramUserReelsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.instagram_user_reels_response_200_charge_info_type_2 import (
-            InstagramUserReelsResponse200ChargeInfoType2,
+            InstagramUserReelsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.instagram_user_reels_response_200_charge_info_type_3 import (
-            InstagramUserReelsResponse200ChargeInfoType3,
+            InstagramUserReelsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class InstagramUserReelsResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.instagram_user_reels_response_200_charge_info_type_0 import (
-            InstagramUserReelsResponse200ChargeInfoType0,
+            InstagramUserReelsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.instagram_user_reels_response_200_charge_info_type_1 import (
-            InstagramUserReelsResponse200ChargeInfoType1,
+            InstagramUserReelsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.instagram_user_reels_response_200_charge_info_type_2 import (
-            InstagramUserReelsResponse200ChargeInfoType2,
+            InstagramUserReelsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.instagram_user_reels_response_200_charge_info_type_3 import (
-            InstagramUserReelsResponse200ChargeInfoType3,
+            InstagramUserReelsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.instagram_user_reels_response_200_charge_info_type_4 import (
-            InstagramUserReelsResponse200ChargeInfoType4,
+            InstagramUserReelsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.instagram_user_reels_response_200_output import InstagramUserReelsResponse200Output
+        from ..models.instagram_user_reels_response_200_output import (
+            InstagramUserReelsResponse200Output,  # noqa: PLC0415
+        )
         from ..models.instagram_user_reels_response_200_warnings_type_0_item import (
-            InstagramUserReelsResponse200WarningsType0Item,
+            InstagramUserReelsResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

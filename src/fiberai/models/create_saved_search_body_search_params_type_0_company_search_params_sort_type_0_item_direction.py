@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType0CompanySearchParamsSortType0ItemDirection(str, Enum):
+class CreateSavedSearchBodySearchParamsType0CompanySearchParamsSortType0ItemDirection(StrEnum):
     ASC = "asc"
     DESC = "desc"
 

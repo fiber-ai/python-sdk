@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemJobLocationTypeType0Item(str, Enum):
+class CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemJobLocationTypeType0Item(StrEnum):
     HYBRID = "Hybrid"
     ON_SITE = "On-site"
     REMOTE = "Remote"

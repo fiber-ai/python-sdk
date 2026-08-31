@@ -70,10 +70,10 @@ class StealthFoundersSearchResponse200OutputDataItemProfile:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.stealth_founders_search_response_200_output_data_item_profile_current_job_type_0 import (
-            StealthFoundersSearchResponse200OutputDataItemProfileCurrentJobType0,
+            StealthFoundersSearchResponse200OutputDataItemProfileCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.stealth_founders_search_response_200_output_data_item_profile_inferred_location_type_0 import (
-            StealthFoundersSearchResponse200OutputDataItemProfileInferredLocationType0,
+            StealthFoundersSearchResponse200OutputDataItemProfileInferredLocationType0,  # noqa: PLC0415
         )
 
         primary_slug = self.primary_slug
@@ -243,16 +243,16 @@ class StealthFoundersSearchResponse200OutputDataItemProfile:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.stealth_founders_search_response_200_output_data_item_profile_current_job_type_0 import (
-            StealthFoundersSearchResponse200OutputDataItemProfileCurrentJobType0,
+            StealthFoundersSearchResponse200OutputDataItemProfileCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.stealth_founders_search_response_200_output_data_item_profile_education_type_0_item import (
-            StealthFoundersSearchResponse200OutputDataItemProfileEducationType0Item,
+            StealthFoundersSearchResponse200OutputDataItemProfileEducationType0Item,  # noqa: PLC0415
         )
         from ..models.stealth_founders_search_response_200_output_data_item_profile_experiences_type_0_item import (
-            StealthFoundersSearchResponse200OutputDataItemProfileExperiencesType0Item,
+            StealthFoundersSearchResponse200OutputDataItemProfileExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.stealth_founders_search_response_200_output_data_item_profile_inferred_location_type_0 import (
-            StealthFoundersSearchResponse200OutputDataItemProfileInferredLocationType0,
+            StealthFoundersSearchResponse200OutputDataItemProfileInferredLocationType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

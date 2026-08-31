@@ -51,7 +51,7 @@ class FlightBookingOptionsBodyTripType2:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.flight_booking_options_body_trip_type_2_segments_item import (
-            FlightBookingOptionsBodyTripType2SegmentsItem,
+            FlightBookingOptionsBodyTripType2SegmentsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

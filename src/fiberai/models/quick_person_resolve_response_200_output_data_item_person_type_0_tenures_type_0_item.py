@@ -83,7 +83,7 @@ class QuickPersonResolveResponse200OutputDataItemPersonType0TenuresType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_tenures_type_0_item_date_range import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0TenuresType0ItemDateRange,
+            QuickPersonResolveResponse200OutputDataItemPersonType0TenuresType0ItemDateRange,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

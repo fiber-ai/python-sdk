@@ -147,7 +147,7 @@ def sync_detailed(
     | GithubToLinkedinSingleResponse500
     | GithubToLinkedinSingleResponse503
 ]:
-    r"""Find person by GitHub username (single)
+    """Find person by GitHub username (single)
 
      Given a GitHub username, find the person's LinkedIn profile and extract work emails.
     Use `outputType` to control what data is returned and charged for.
@@ -158,11 +158,11 @@ def sync_detailed(
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 5 credits per person (LinkedIn lookup) + 3 credits per person (email
-    extraction)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary.\">ⓘ</span></span>
+    extraction)&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (GithubToLinkedinSingleBody):
@@ -203,7 +203,7 @@ def sync(
     | GithubToLinkedinSingleResponse503
     | None
 ):
-    r"""Find person by GitHub username (single)
+    """Find person by GitHub username (single)
 
      Given a GitHub username, find the person's LinkedIn profile and extract work emails.
     Use `outputType` to control what data is returned and charged for.
@@ -214,11 +214,11 @@ def sync(
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 5 credits per person (LinkedIn lookup) + 3 credits per person (email
-    extraction)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary.\">ⓘ</span></span>
+    extraction)&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (GithubToLinkedinSingleBody):
@@ -253,7 +253,7 @@ async def asyncio_detailed(
     | GithubToLinkedinSingleResponse500
     | GithubToLinkedinSingleResponse503
 ]:
-    r"""Find person by GitHub username (single)
+    """Find person by GitHub username (single)
 
      Given a GitHub username, find the person's LinkedIn profile and extract work emails.
     Use `outputType` to control what data is returned and charged for.
@@ -264,11 +264,11 @@ async def asyncio_detailed(
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 5 credits per person (LinkedIn lookup) + 3 credits per person (email
-    extraction)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary.\">ⓘ</span></span>
+    extraction)&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (GithubToLinkedinSingleBody):
@@ -307,7 +307,7 @@ async def asyncio(
     | GithubToLinkedinSingleResponse503
     | None
 ):
-    r"""Find person by GitHub username (single)
+    """Find person by GitHub username (single)
 
      Given a GitHub username, find the person's LinkedIn profile and extract work emails.
     Use `outputType` to control what data is returned and charged for.
@@ -318,11 +318,11 @@ async def asyncio(
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 5 credits per person (LinkedIn lookup) + 3 credits per person (email
-    extraction)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary.\">ⓘ</span></span>
+    extraction)&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (GithubToLinkedinSingleBody):

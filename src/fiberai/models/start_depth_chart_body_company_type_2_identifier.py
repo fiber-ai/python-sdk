@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class StartDepthChartBodyCompanyType2Identifier(str, Enum):
+class StartDepthChartBodyCompanyType2Identifier(StrEnum):
     LINKEDINORGID = "linkedinOrgId"
 
     def __str__(self) -> str:

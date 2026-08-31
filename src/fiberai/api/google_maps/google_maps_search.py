@@ -147,14 +147,14 @@ def sync_detailed(
     | GoogleMapsSearchResponse500
     | GoogleMapsSearchResponse503
 ]:
-    r"""Start a search on Google Maps
+    """Start a search on Google Maps
 
      Start a search for local businesses or other places of interest on Google Maps
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per business found&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per business found&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GoogleMapsSearchBody):
@@ -195,14 +195,14 @@ def sync(
     | GoogleMapsSearchResponse503
     | None
 ):
-    r"""Start a search on Google Maps
+    """Start a search on Google Maps
 
      Start a search for local businesses or other places of interest on Google Maps
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per business found&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per business found&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GoogleMapsSearchBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | GoogleMapsSearchResponse500
     | GoogleMapsSearchResponse503
 ]:
-    r"""Start a search on Google Maps
+    """Start a search on Google Maps
 
      Start a search for local businesses or other places of interest on Google Maps
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per business found&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per business found&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GoogleMapsSearchBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | GoogleMapsSearchResponse503
     | None
 ):
-    r"""Start a search on Google Maps
+    """Start a search on Google Maps
 
      Start a search for local businesses or other places of interest on Google Maps
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per business found&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per business found&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GoogleMapsSearchBody):

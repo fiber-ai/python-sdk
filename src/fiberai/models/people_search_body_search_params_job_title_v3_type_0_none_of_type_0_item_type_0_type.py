@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchBodySearchParamsJobTitleV3Type0NoneOfType0ItemType0Type(str, Enum):
+class PeopleSearchBodySearchParamsJobTitleV3Type0NoneOfType0ItemType0Type(StrEnum):
     PLAIN = "plain"
 
     def __str__(self) -> str:

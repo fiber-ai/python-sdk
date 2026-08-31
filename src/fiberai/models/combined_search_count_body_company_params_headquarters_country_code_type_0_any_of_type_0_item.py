@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyCompanyParamsHeadquartersCountryCodeType0AnyOfType0Item(str, Enum):
+class CombinedSearchCountBodyCompanyParamsHeadquartersCountryCodeType0AnyOfType0Item(StrEnum):
     ABW = "ABW"
     AFG = "AFG"
     AGO = "AGO"

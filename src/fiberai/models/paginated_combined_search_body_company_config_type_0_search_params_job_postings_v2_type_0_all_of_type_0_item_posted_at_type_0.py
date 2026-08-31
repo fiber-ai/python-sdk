@@ -45,7 +45,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_all_of_type_0_item_posted_at_type_0_range_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType0RangeType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -76,7 +76,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_all_of_type_0_item_posted_at_type_0_range_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType0RangeType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemPostedAtType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

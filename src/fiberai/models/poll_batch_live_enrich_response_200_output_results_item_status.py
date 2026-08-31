@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PollBatchLiveEnrichResponse200OutputResultsItemStatus(str, Enum):
+class PollBatchLiveEnrichResponse200OutputResultsItemStatus(StrEnum):
     COMPLETED = "COMPLETED"
     FAILED = "FAILED"
     MALFORMED = "MALFORMED"

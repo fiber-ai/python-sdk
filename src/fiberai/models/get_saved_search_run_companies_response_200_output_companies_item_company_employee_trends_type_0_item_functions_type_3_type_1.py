@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyEmployeeTrendsType0ItemFunctionsType3Type1(
-    str, Enum
+    StrEnum
 ):
     ACCOUNTING = "accounting"
     ADMINISTRATIVE = "administrative"

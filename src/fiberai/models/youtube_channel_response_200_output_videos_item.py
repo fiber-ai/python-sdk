@@ -43,7 +43,7 @@ class YoutubeChannelResponse200OutputVideosItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.youtube_channel_response_200_output_videos_item_published_at_type_0 import (
-            YoutubeChannelResponse200OutputVideosItemPublishedAtType0,
+            YoutubeChannelResponse200OutputVideosItemPublishedAtType0,  # noqa: PLC0415
         )
 
         id = self.id
@@ -106,7 +106,7 @@ class YoutubeChannelResponse200OutputVideosItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.youtube_channel_response_200_output_videos_item_published_at_type_0 import (
-            YoutubeChannelResponse200OutputVideosItemPublishedAtType0,
+            YoutubeChannelResponse200OutputVideosItemPublishedAtType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

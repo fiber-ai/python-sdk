@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0PropertiesType0CountryType0NoneOfType0Item(
-    str, Enum
+    StrEnum
 ):
     ABW = "ABW"
     AFG = "AFG"

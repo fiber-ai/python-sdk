@@ -53,7 +53,7 @@ class CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0Item
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_body_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_2_vertices_item import (
-            CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType2VerticesItem,
+            CompanySearchBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType2VerticesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

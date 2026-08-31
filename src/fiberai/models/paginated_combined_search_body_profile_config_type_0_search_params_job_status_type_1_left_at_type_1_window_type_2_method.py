@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobStatusType1LeftAtType1WindowType2Method(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobStatusType1LeftAtType1WindowType2Method(StrEnum):
     CALENDAR = "calendar"
 
     def __str__(self) -> str:

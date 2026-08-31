@@ -152,15 +152,15 @@ def sync_detailed(
     | DeleteWebhookEndpointResponse500
     | DeleteWebhookEndpointResponse503
 ]:
-    r"""Delete webhook endpoint
+    """Delete webhook endpoint
 
      Delete a webhook endpoint. All future event deliveries to its URL stop immediately. Deleting
     webhooks is free.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):
@@ -204,15 +204,15 @@ def sync(
     | DeleteWebhookEndpointResponse503
     | None
 ):
-    r"""Delete webhook endpoint
+    """Delete webhook endpoint
 
      Delete a webhook endpoint. All future event deliveries to its URL stop immediately. Deleting
     webhooks is free.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):
@@ -250,15 +250,15 @@ async def asyncio_detailed(
     | DeleteWebhookEndpointResponse500
     | DeleteWebhookEndpointResponse503
 ]:
-    r"""Delete webhook endpoint
+    """Delete webhook endpoint
 
      Delete a webhook endpoint. All future event deliveries to its URL stop immediately. Deleting
     webhooks is free.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):
@@ -300,15 +300,15 @@ async def asyncio(
     | DeleteWebhookEndpointResponse503
     | None
 ):
-    r"""Delete webhook endpoint
+    """Delete webhook endpoint
 
      Delete a webhook endpoint. All future event deliveries to its URL stop immediately. Deleting
     webhooks is free.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):

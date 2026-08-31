@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PostCommentsLiveFetchResponse200ChargeInfoType3Method(str, Enum):
+class PostCommentsLiveFetchResponse200ChargeInfoType3Method(StrEnum):
     FREE = "free"
 
     def __str__(self) -> str:

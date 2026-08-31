@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class JobPostingSearchBodySearchParamsIsActiveType2Type1(str, Enum):
+class JobPostingSearchBodySearchParamsIsActiveType2Type1(StrEnum):
     FALSE = "false"
     NO_PREFERENCE = "no_preference"
     TRUE = "true"

@@ -57,10 +57,10 @@ class FlightSearchResponse200OutputAirportsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.flight_search_response_200_output_airports_item_arrival_item import (
-            FlightSearchResponse200OutputAirportsItemArrivalItem,
+            FlightSearchResponse200OutputAirportsItemArrivalItem,  # noqa: PLC0415
         )
         from ..models.flight_search_response_200_output_airports_item_departure_item import (
-            FlightSearchResponse200OutputAirportsItemDepartureItem,
+            FlightSearchResponse200OutputAirportsItemDepartureItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

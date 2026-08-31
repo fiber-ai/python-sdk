@@ -62,19 +62,19 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfTyp
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_jobs_type_0_any_of_type_0_item_company_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_jobs_type_0_any_of_type_0_item_company_type_1 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType1,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_jobs_type_0_any_of_type_0_item_company_type_2 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType2,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType2,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_jobs_type_0_any_of_type_0_item_company_type_3 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType3,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType3,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_jobs_type_0_any_of_type_0_item_job_title_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemJobTitleType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemJobTitleType0,  # noqa: PLC0415
         )
 
         status = self.status.value
@@ -129,19 +129,19 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfTyp
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_jobs_type_0_any_of_type_0_item_company_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_jobs_type_0_any_of_type_0_item_company_type_1 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType1,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_jobs_type_0_any_of_type_0_item_company_type_2 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType2,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType2,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_jobs_type_0_any_of_type_0_item_company_type_3 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType3,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType3,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_jobs_type_0_any_of_type_0_item_job_title_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemJobTitleType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemJobTitleType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

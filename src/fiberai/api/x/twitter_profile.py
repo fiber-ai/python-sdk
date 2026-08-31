@@ -147,15 +147,15 @@ def sync_detailed(
     | TwitterProfileResponse500
     | TwitterProfileResponse503
 ]:
-    r"""Fetch Twitter/X user profile
+    """Fetch Twitter/X user profile
 
      Fetches the public profile for a Twitter/X user by handle. Returns follower/following counts, bio,
     verification status, and account metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterProfileBody):
@@ -196,15 +196,15 @@ def sync(
     | TwitterProfileResponse503
     | None
 ):
-    r"""Fetch Twitter/X user profile
+    """Fetch Twitter/X user profile
 
      Fetches the public profile for a Twitter/X user by handle. Returns follower/following counts, bio,
     verification status, and account metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterProfileBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TwitterProfileResponse500
     | TwitterProfileResponse503
 ]:
-    r"""Fetch Twitter/X user profile
+    """Fetch Twitter/X user profile
 
      Fetches the public profile for a Twitter/X user by handle. Returns follower/following counts, bio,
     verification status, and account metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterProfileBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TwitterProfileResponse503
     | None
 ):
-    r"""Fetch Twitter/X user profile
+    """Fetch Twitter/X user profile
 
      Fetches the public profile for a Twitter/X user by handle. Returns follower/following counts, bio,
     verification status, and account metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterProfileBody):

@@ -50,7 +50,7 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

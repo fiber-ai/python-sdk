@@ -147,14 +147,14 @@ def sync_detailed(
     | TiktokVideoTranscriptResponse500
     | TiktokVideoTranscriptResponse503
 ]:
-    r"""Fetch TikTok video transcript
+    """Fetch TikTok video transcript
 
      Fetches the spoken word transcript for a TikTok video, broken into timed segments.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokVideoTranscriptBody):
@@ -195,14 +195,14 @@ def sync(
     | TiktokVideoTranscriptResponse503
     | None
 ):
-    r"""Fetch TikTok video transcript
+    """Fetch TikTok video transcript
 
      Fetches the spoken word transcript for a TikTok video, broken into timed segments.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokVideoTranscriptBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | TiktokVideoTranscriptResponse500
     | TiktokVideoTranscriptResponse503
 ]:
-    r"""Fetch TikTok video transcript
+    """Fetch TikTok video transcript
 
      Fetches the spoken word transcript for a TikTok video, broken into timed segments.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokVideoTranscriptBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | TiktokVideoTranscriptResponse503
     | None
 ):
-    r"""Fetch TikTok video transcript
+    """Fetch TikTok video transcript
 
      Fetches the spoken word transcript for a TikTok video, broken into timed segments.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokVideoTranscriptBody):

@@ -43,10 +43,10 @@ class CompanySearchBodySearchParamsEmployeesType0RulesItemJobStatusType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_search_body_search_params_employees_type_0_rules_item_job_status_type_1_left_at_type_0 import (
-            CompanySearchBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType0,
+            CompanySearchBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_employees_type_0_rules_item_job_status_type_1_left_at_type_1 import (
-            CompanySearchBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1,
+            CompanySearchBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1,  # noqa: PLC0415
         )
 
         status = self.status.value
@@ -76,10 +76,10 @@ class CompanySearchBodySearchParamsEmployeesType0RulesItemJobStatusType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_body_search_params_employees_type_0_rules_item_job_status_type_1_left_at_type_0 import (
-            CompanySearchBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType0,
+            CompanySearchBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_employees_type_0_rules_item_job_status_type_1_left_at_type_1 import (
-            CompanySearchBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1,
+            CompanySearchBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

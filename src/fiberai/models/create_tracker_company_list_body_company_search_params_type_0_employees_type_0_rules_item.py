@@ -65,19 +65,19 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesIte
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0_rules_item_employee_filters_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemEmployeeFiltersType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemEmployeeFiltersType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0_rules_item_employees_to_match_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemEmployeesToMatchType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemEmployeesToMatchType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0_rules_item_job_status_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0_rules_item_job_status_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0_rules_item_job_status_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType2,  # noqa: PLC0415
         )
 
         employees_to_match: dict[str, Any]
@@ -135,22 +135,22 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesIte
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0_rules_item_employee_filters_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemEmployeeFiltersType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemEmployeeFiltersType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0_rules_item_employees_to_match_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemEmployeesToMatchType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemEmployeesToMatchType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0_rules_item_employees_to_match_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemEmployeesToMatchType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemEmployeesToMatchType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0_rules_item_job_status_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0_rules_item_job_status_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0_rules_item_job_status_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -51,19 +51,19 @@ class ProfileLiveEnrichResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.profile_live_enrich_response_200_charge_info_type_0 import (
-            ProfileLiveEnrichResponse200ChargeInfoType0,
+            ProfileLiveEnrichResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_charge_info_type_1 import (
-            ProfileLiveEnrichResponse200ChargeInfoType1,
+            ProfileLiveEnrichResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_charge_info_type_2 import (
-            ProfileLiveEnrichResponse200ChargeInfoType2,
+            ProfileLiveEnrichResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_charge_info_type_3 import (
-            ProfileLiveEnrichResponse200ChargeInfoType3,
+            ProfileLiveEnrichResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnriched,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnriched,  # noqa: PLC0415
         )
 
         output: dict[str, Any]
@@ -123,28 +123,28 @@ class ProfileLiveEnrichResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.profile_live_enrich_response_200_charge_info_type_0 import (
-            ProfileLiveEnrichResponse200ChargeInfoType0,
+            ProfileLiveEnrichResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_charge_info_type_1 import (
-            ProfileLiveEnrichResponse200ChargeInfoType1,
+            ProfileLiveEnrichResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_charge_info_type_2 import (
-            ProfileLiveEnrichResponse200ChargeInfoType2,
+            ProfileLiveEnrichResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_charge_info_type_3 import (
-            ProfileLiveEnrichResponse200ChargeInfoType3,
+            ProfileLiveEnrichResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_charge_info_type_4 import (
-            ProfileLiveEnrichResponse200ChargeInfoType4,
+            ProfileLiveEnrichResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnriched,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnriched,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_not_found import (
-            ProfileLiveEnrichResponse200ProfileNotFound,
+            ProfileLiveEnrichResponse200ProfileNotFound,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_warnings_type_0_item import (
-            ProfileLiveEnrichResponse200WarningsType0Item,
+            ProfileLiveEnrichResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

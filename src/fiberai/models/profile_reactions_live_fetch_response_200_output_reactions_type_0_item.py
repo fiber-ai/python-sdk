@@ -68,13 +68,13 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0 import (
-            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0,
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0,  # noqa: PLC0415
         )
         from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_post_type_0 import (
-            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0,
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0,  # noqa: PLC0415
         )
         from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_reactor_type_0 import (
-            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0,
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0,  # noqa: PLC0415
         )
 
         reaction_id: None | str | Unset
@@ -162,13 +162,13 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_comment_type_0 import (
-            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0,
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemCommentType0,  # noqa: PLC0415
         )
         from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_post_type_0 import (
-            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0,
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0,  # noqa: PLC0415
         )
         from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_reactor_type_0 import (
-            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0,
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

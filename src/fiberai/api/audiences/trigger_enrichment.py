@@ -152,7 +152,7 @@ def sync_detailed(
     | TriggerEnrichmentResponse500
     | TriggerEnrichmentResponse503
 ]:
-    r"""Trigger audience enrichment
+    """Trigger audience enrichment
 
      Triggers the audience enrichment process. This runs company and prospect enrichment (live data,
     Sales Navigator, contact details) based on the configured enrichment types. The enrichment runs
@@ -162,9 +162,9 @@ def sync_detailed(
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged immediately: 2 per work email, 2 per personal
-    email, 3 per phone number, 1 per prospect live enrichment.&nbsp;<span title=\"Pricing shown is
+    email, 3 per phone number, 1 per prospect live enrichment.&nbsp;<span title="Pricing shown is
     default pricing. Actual pricing may vary. Your total charge will vary based on the enrichment types
-    selected and number of prospects.\">ⓘ</span></span>
+    selected and number of prospects.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -208,7 +208,7 @@ def sync(
     | TriggerEnrichmentResponse503
     | None
 ):
-    r"""Trigger audience enrichment
+    """Trigger audience enrichment
 
      Triggers the audience enrichment process. This runs company and prospect enrichment (live data,
     Sales Navigator, contact details) based on the configured enrichment types. The enrichment runs
@@ -218,9 +218,9 @@ def sync(
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged immediately: 2 per work email, 2 per personal
-    email, 3 per phone number, 1 per prospect live enrichment.&nbsp;<span title=\"Pricing shown is
+    email, 3 per phone number, 1 per prospect live enrichment.&nbsp;<span title="Pricing shown is
     default pricing. Actual pricing may vary. Your total charge will vary based on the enrichment types
-    selected and number of prospects.\">ⓘ</span></span>
+    selected and number of prospects.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -258,7 +258,7 @@ async def asyncio_detailed(
     | TriggerEnrichmentResponse500
     | TriggerEnrichmentResponse503
 ]:
-    r"""Trigger audience enrichment
+    """Trigger audience enrichment
 
      Triggers the audience enrichment process. This runs company and prospect enrichment (live data,
     Sales Navigator, contact details) based on the configured enrichment types. The enrichment runs
@@ -268,9 +268,9 @@ async def asyncio_detailed(
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged immediately: 2 per work email, 2 per personal
-    email, 3 per phone number, 1 per prospect live enrichment.&nbsp;<span title=\"Pricing shown is
+    email, 3 per phone number, 1 per prospect live enrichment.&nbsp;<span title="Pricing shown is
     default pricing. Actual pricing may vary. Your total charge will vary based on the enrichment types
-    selected and number of prospects.\">ⓘ</span></span>
+    selected and number of prospects.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -312,7 +312,7 @@ async def asyncio(
     | TriggerEnrichmentResponse503
     | None
 ):
-    r"""Trigger audience enrichment
+    """Trigger audience enrichment
 
      Triggers the audience enrichment process. This runs company and prospect enrichment (live data,
     Sales Navigator, contact details) based on the configured enrichment types. The enrichment runs
@@ -322,9 +322,9 @@ async def asyncio(
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged immediately: 2 per work email, 2 per personal
-    email, 3 per phone number, 1 per prospect live enrichment.&nbsp;<span title=\"Pricing shown is
+    email, 3 per phone number, 1 per prospect live enrichment.&nbsp;<span title="Pricing shown is
     default pricing. Actual pricing may vary. Your total charge will vary based on the enrichment types
-    selected and number of prospects.\">ⓘ</span></span>
+    selected and number of prospects.">ⓘ</span></span>
 
     Args:
         audience_id (str):

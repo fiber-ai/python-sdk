@@ -40,9 +40,9 @@ class GetDepartmentSizeBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_department_size_body_company_type_0 import GetDepartmentSizeBodyCompanyType0
-        from ..models.get_department_size_body_company_type_1 import GetDepartmentSizeBodyCompanyType1
-        from ..models.get_department_size_body_company_type_2 import GetDepartmentSizeBodyCompanyType2
+        from ..models.get_department_size_body_company_type_0 import GetDepartmentSizeBodyCompanyType0  # noqa: PLC0415
+        from ..models.get_department_size_body_company_type_1 import GetDepartmentSizeBodyCompanyType1  # noqa: PLC0415
+        from ..models.get_department_size_body_company_type_2 import GetDepartmentSizeBodyCompanyType2  # noqa: PLC0415
 
         api_key = self.api_key
 
@@ -75,11 +75,13 @@ class GetDepartmentSizeBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_department_size_body_company_type_0 import GetDepartmentSizeBodyCompanyType0
-        from ..models.get_department_size_body_company_type_1 import GetDepartmentSizeBodyCompanyType1
-        from ..models.get_department_size_body_company_type_2 import GetDepartmentSizeBodyCompanyType2
-        from ..models.get_department_size_body_company_type_3 import GetDepartmentSizeBodyCompanyType3
-        from ..models.get_department_size_body_departments_item import GetDepartmentSizeBodyDepartmentsItem
+        from ..models.get_department_size_body_company_type_0 import GetDepartmentSizeBodyCompanyType0  # noqa: PLC0415
+        from ..models.get_department_size_body_company_type_1 import GetDepartmentSizeBodyCompanyType1  # noqa: PLC0415
+        from ..models.get_department_size_body_company_type_2 import GetDepartmentSizeBodyCompanyType2  # noqa: PLC0415
+        from ..models.get_department_size_body_company_type_3 import GetDepartmentSizeBodyCompanyType3  # noqa: PLC0415
+        from ..models.get_department_size_body_departments_item import (
+            GetDepartmentSizeBodyDepartmentsItem,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

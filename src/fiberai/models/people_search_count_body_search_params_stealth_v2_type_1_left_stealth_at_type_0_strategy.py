@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchCountBodySearchParamsStealthV2Type1LeftStealthAtType0Strategy(str, Enum):
+class PeopleSearchCountBodySearchParamsStealthV2Type1LeftStealthAtType0Strategy(StrEnum):
     ABSOLUTE = "absolute"
 
     def __str__(self) -> str:

@@ -45,10 +45,18 @@ class FlightSearchResponse200:
     advice: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.flight_search_response_200_charge_info_type_0 import FlightSearchResponse200ChargeInfoType0
-        from ..models.flight_search_response_200_charge_info_type_1 import FlightSearchResponse200ChargeInfoType1
-        from ..models.flight_search_response_200_charge_info_type_2 import FlightSearchResponse200ChargeInfoType2
-        from ..models.flight_search_response_200_charge_info_type_3 import FlightSearchResponse200ChargeInfoType3
+        from ..models.flight_search_response_200_charge_info_type_0 import (
+            FlightSearchResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.flight_search_response_200_charge_info_type_1 import (
+            FlightSearchResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.flight_search_response_200_charge_info_type_2 import (
+            FlightSearchResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.flight_search_response_200_charge_info_type_3 import (
+            FlightSearchResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
 
         output = self.output.to_dict()
 
@@ -102,13 +110,25 @@ class FlightSearchResponse200:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.flight_search_response_200_charge_info_type_0 import FlightSearchResponse200ChargeInfoType0
-        from ..models.flight_search_response_200_charge_info_type_1 import FlightSearchResponse200ChargeInfoType1
-        from ..models.flight_search_response_200_charge_info_type_2 import FlightSearchResponse200ChargeInfoType2
-        from ..models.flight_search_response_200_charge_info_type_3 import FlightSearchResponse200ChargeInfoType3
-        from ..models.flight_search_response_200_charge_info_type_4 import FlightSearchResponse200ChargeInfoType4
-        from ..models.flight_search_response_200_output import FlightSearchResponse200Output
-        from ..models.flight_search_response_200_warnings_type_0_item import FlightSearchResponse200WarningsType0Item
+        from ..models.flight_search_response_200_charge_info_type_0 import (
+            FlightSearchResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.flight_search_response_200_charge_info_type_1 import (
+            FlightSearchResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.flight_search_response_200_charge_info_type_2 import (
+            FlightSearchResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.flight_search_response_200_charge_info_type_3 import (
+            FlightSearchResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
+        from ..models.flight_search_response_200_charge_info_type_4 import (
+            FlightSearchResponse200ChargeInfoType4,  # noqa: PLC0415
+        )
+        from ..models.flight_search_response_200_output import FlightSearchResponse200Output  # noqa: PLC0415
+        from ..models.flight_search_response_200_warnings_type_0_item import (
+            FlightSearchResponse200WarningsType0Item,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         output = FlightSearchResponse200Output.from_dict(d.pop("output"))

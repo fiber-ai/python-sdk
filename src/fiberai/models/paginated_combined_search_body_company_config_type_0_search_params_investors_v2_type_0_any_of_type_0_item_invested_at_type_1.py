@@ -54,13 +54,13 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0A
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_investors_v2_type_0_any_of_type_0_item_invested_at_type_1_window_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_investors_v2_type_0_any_of_type_0_item_invested_at_type_1_window_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_investors_v2_type_0_any_of_type_0_item_invested_at_type_1_window_type_2 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType2,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -101,13 +101,13 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0A
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_investors_v2_type_0_any_of_type_0_item_invested_at_type_1_window_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_investors_v2_type_0_any_of_type_0_item_invested_at_type_1_window_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_investors_v2_type_0_any_of_type_0_item_invested_at_type_1_window_type_2 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType2,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

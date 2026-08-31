@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsSortType0ItemField(str, Enum):
+class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsSortType0ItemField(StrEnum):
     CAREERSTARTEDAT = "careerStartedAt"
     CONNECTIONCOUNT = "connectionCount"
     CURRENTCOMPANYSTARTEDAT = "currentCompanyStartedAt"

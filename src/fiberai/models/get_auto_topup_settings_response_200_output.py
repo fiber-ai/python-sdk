@@ -33,7 +33,7 @@ class GetAutoTopupSettingsResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_auto_topup_settings_response_200_output_settings_item_type_0 import (
-            GetAutoTopupSettingsResponse200OutputSettingsItemType0,
+            GetAutoTopupSettingsResponse200OutputSettingsItemType0,  # noqa: PLC0415
         )
 
         settings = []
@@ -59,10 +59,10 @@ class GetAutoTopupSettingsResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_auto_topup_settings_response_200_output_settings_item_type_0 import (
-            GetAutoTopupSettingsResponse200OutputSettingsItemType0,
+            GetAutoTopupSettingsResponse200OutputSettingsItemType0,  # noqa: PLC0415
         )
         from ..models.get_auto_topup_settings_response_200_output_settings_item_type_1 import (
-            GetAutoTopupSettingsResponse200OutputSettingsItemType1,
+            GetAutoTopupSettingsResponse200OutputSettingsItemType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

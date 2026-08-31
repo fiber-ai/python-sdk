@@ -45,10 +45,18 @@ class GetTalentFlowResponse200:
     advice: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_talent_flow_response_200_charge_info_type_0 import GetTalentFlowResponse200ChargeInfoType0
-        from ..models.get_talent_flow_response_200_charge_info_type_1 import GetTalentFlowResponse200ChargeInfoType1
-        from ..models.get_talent_flow_response_200_charge_info_type_2 import GetTalentFlowResponse200ChargeInfoType2
-        from ..models.get_talent_flow_response_200_charge_info_type_3 import GetTalentFlowResponse200ChargeInfoType3
+        from ..models.get_talent_flow_response_200_charge_info_type_0 import (
+            GetTalentFlowResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.get_talent_flow_response_200_charge_info_type_1 import (
+            GetTalentFlowResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.get_talent_flow_response_200_charge_info_type_2 import (
+            GetTalentFlowResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.get_talent_flow_response_200_charge_info_type_3 import (
+            GetTalentFlowResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
 
         output = self.output.to_dict()
 
@@ -102,13 +110,25 @@ class GetTalentFlowResponse200:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_talent_flow_response_200_charge_info_type_0 import GetTalentFlowResponse200ChargeInfoType0
-        from ..models.get_talent_flow_response_200_charge_info_type_1 import GetTalentFlowResponse200ChargeInfoType1
-        from ..models.get_talent_flow_response_200_charge_info_type_2 import GetTalentFlowResponse200ChargeInfoType2
-        from ..models.get_talent_flow_response_200_charge_info_type_3 import GetTalentFlowResponse200ChargeInfoType3
-        from ..models.get_talent_flow_response_200_charge_info_type_4 import GetTalentFlowResponse200ChargeInfoType4
-        from ..models.get_talent_flow_response_200_output import GetTalentFlowResponse200Output
-        from ..models.get_talent_flow_response_200_warnings_type_0_item import GetTalentFlowResponse200WarningsType0Item
+        from ..models.get_talent_flow_response_200_charge_info_type_0 import (
+            GetTalentFlowResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.get_talent_flow_response_200_charge_info_type_1 import (
+            GetTalentFlowResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.get_talent_flow_response_200_charge_info_type_2 import (
+            GetTalentFlowResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.get_talent_flow_response_200_charge_info_type_3 import (
+            GetTalentFlowResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
+        from ..models.get_talent_flow_response_200_charge_info_type_4 import (
+            GetTalentFlowResponse200ChargeInfoType4,  # noqa: PLC0415
+        )
+        from ..models.get_talent_flow_response_200_output import GetTalentFlowResponse200Output  # noqa: PLC0415
+        from ..models.get_talent_flow_response_200_warnings_type_0_item import (
+            GetTalentFlowResponse200WarningsType0Item,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         output = GetTalentFlowResponse200Output.from_dict(d.pop("output"))

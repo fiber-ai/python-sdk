@@ -59,7 +59,7 @@ class FlightBookingOptionsResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.flight_booking_options_response_200_output_booking_options_item import (
-            FlightBookingOptionsResponse200OutputBookingOptionsItem,
+            FlightBookingOptionsResponse200OutputBookingOptionsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

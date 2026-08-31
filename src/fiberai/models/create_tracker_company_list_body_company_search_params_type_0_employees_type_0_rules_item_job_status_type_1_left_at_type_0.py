@@ -45,7 +45,7 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesIte
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0_rules_item_job_status_type_1_left_at_type_0_range_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType1LeftAtType0RangeType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType1LeftAtType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -76,7 +76,7 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesIte
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0_rules_item_job_status_type_1_left_at_type_0_range_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType1LeftAtType0RangeType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType1LeftAtType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

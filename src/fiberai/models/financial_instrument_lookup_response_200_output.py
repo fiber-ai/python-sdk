@@ -71,19 +71,19 @@ class FinancialInstrumentLookupResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.financial_instrument_lookup_response_200_output_company_info_type_0 import (
-            FinancialInstrumentLookupResponse200OutputCompanyInfoType0,
+            FinancialInstrumentLookupResponse200OutputCompanyInfoType0,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_output_extended_hours_quote_type_0 import (
-            FinancialInstrumentLookupResponse200OutputExtendedHoursQuoteType0,
+            FinancialInstrumentLookupResponse200OutputExtendedHoursQuoteType0,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_output_instrument_type_0 import (
-            FinancialInstrumentLookupResponse200OutputInstrumentType0,
+            FinancialInstrumentLookupResponse200OutputInstrumentType0,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_output_key_stats_type_0 import (
-            FinancialInstrumentLookupResponse200OutputKeyStatsType0,
+            FinancialInstrumentLookupResponse200OutputKeyStatsType0,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_output_quote_type_0 import (
-            FinancialInstrumentLookupResponse200OutputQuoteType0,
+            FinancialInstrumentLookupResponse200OutputQuoteType0,  # noqa: PLC0415
         )
 
         instrument: dict[str, Any] | None | Unset
@@ -187,28 +187,28 @@ class FinancialInstrumentLookupResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.financial_instrument_lookup_response_200_output_company_info_type_0 import (
-            FinancialInstrumentLookupResponse200OutputCompanyInfoType0,
+            FinancialInstrumentLookupResponse200OutputCompanyInfoType0,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_output_extended_hours_quote_type_0 import (
-            FinancialInstrumentLookupResponse200OutputExtendedHoursQuoteType0,
+            FinancialInstrumentLookupResponse200OutputExtendedHoursQuoteType0,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_output_financials_type_0_item import (
-            FinancialInstrumentLookupResponse200OutputFinancialsType0Item,
+            FinancialInstrumentLookupResponse200OutputFinancialsType0Item,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_output_instrument_type_0 import (
-            FinancialInstrumentLookupResponse200OutputInstrumentType0,
+            FinancialInstrumentLookupResponse200OutputInstrumentType0,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_output_key_stats_type_0 import (
-            FinancialInstrumentLookupResponse200OutputKeyStatsType0,
+            FinancialInstrumentLookupResponse200OutputKeyStatsType0,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_output_news_type_0_item import (
-            FinancialInstrumentLookupResponse200OutputNewsType0Item,
+            FinancialInstrumentLookupResponse200OutputNewsType0Item,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_output_price_history_type_0_item import (
-            FinancialInstrumentLookupResponse200OutputPriceHistoryType0Item,
+            FinancialInstrumentLookupResponse200OutputPriceHistoryType0Item,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_output_quote_type_0 import (
-            FinancialInstrumentLookupResponse200OutputQuoteType0,
+            FinancialInstrumentLookupResponse200OutputQuoteType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

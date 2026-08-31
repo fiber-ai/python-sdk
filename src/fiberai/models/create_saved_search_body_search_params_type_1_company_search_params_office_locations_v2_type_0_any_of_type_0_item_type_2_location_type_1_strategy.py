@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1Strategy(
-    str, Enum
+    StrEnum
 ):
     FREE_FORM_CITY = "free-form-city"
 

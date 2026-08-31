@@ -178,31 +178,31 @@ class FetchRealEstateListingsResponse200OutputPropertiesItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_base_rent_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_estimated_monthly_rent_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemEstimatedMonthlyRentType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemEstimatedMonthlyRentType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_estimated_price_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemEstimatedPriceType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemEstimatedPriceType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_facts_and_features_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemFactsAndFeaturesType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemFactsAndFeaturesType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_open_house_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemOpenHouseType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemOpenHouseType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_price_change_amount_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemPriceChangeAmountType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemPriceChangeAmountType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_price_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemPriceType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemPriceType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_primary_tag_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemPrimaryTagType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemPrimaryTagType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_tax_assessed_value_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemTaxAssessedValueType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemTaxAssessedValueType0,  # noqa: PLC0415
         )
 
         listing_id = self.listing_id
@@ -647,37 +647,37 @@ class FetchRealEstateListingsResponse200OutputPropertiesItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_base_rent_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_estimated_monthly_rent_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemEstimatedMonthlyRentType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemEstimatedMonthlyRentType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_estimated_price_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemEstimatedPriceType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemEstimatedPriceType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_facts_and_features_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemFactsAndFeaturesType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemFactsAndFeaturesType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_listing_tags_type_0_item import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemListingTagsType0Item,
+            FetchRealEstateListingsResponse200OutputPropertiesItemListingTagsType0Item,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_open_house_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemOpenHouseType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemOpenHouseType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_price_change_amount_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemPriceChangeAmountType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemPriceChangeAmountType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_price_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemPriceType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemPriceType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_primary_tag_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemPrimaryTagType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemPrimaryTagType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_rental_units_type_0_item import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemRentalUnitsType0Item,
+            FetchRealEstateListingsResponse200OutputPropertiesItemRentalUnitsType0Item,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_tax_assessed_value_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemTaxAssessedValueType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemTaxAssessedValueType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

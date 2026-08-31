@@ -45,10 +45,18 @@ class SkillsTypeaheadResponse200:
     advice: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.skills_typeahead_response_200_charge_info_type_0 import SkillsTypeaheadResponse200ChargeInfoType0
-        from ..models.skills_typeahead_response_200_charge_info_type_1 import SkillsTypeaheadResponse200ChargeInfoType1
-        from ..models.skills_typeahead_response_200_charge_info_type_2 import SkillsTypeaheadResponse200ChargeInfoType2
-        from ..models.skills_typeahead_response_200_charge_info_type_3 import SkillsTypeaheadResponse200ChargeInfoType3
+        from ..models.skills_typeahead_response_200_charge_info_type_0 import (
+            SkillsTypeaheadResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.skills_typeahead_response_200_charge_info_type_1 import (
+            SkillsTypeaheadResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.skills_typeahead_response_200_charge_info_type_2 import (
+            SkillsTypeaheadResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.skills_typeahead_response_200_charge_info_type_3 import (
+            SkillsTypeaheadResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
 
         output = []
         for output_item_data in self.output:
@@ -105,14 +113,26 @@ class SkillsTypeaheadResponse200:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.skills_typeahead_response_200_charge_info_type_0 import SkillsTypeaheadResponse200ChargeInfoType0
-        from ..models.skills_typeahead_response_200_charge_info_type_1 import SkillsTypeaheadResponse200ChargeInfoType1
-        from ..models.skills_typeahead_response_200_charge_info_type_2 import SkillsTypeaheadResponse200ChargeInfoType2
-        from ..models.skills_typeahead_response_200_charge_info_type_3 import SkillsTypeaheadResponse200ChargeInfoType3
-        from ..models.skills_typeahead_response_200_charge_info_type_4 import SkillsTypeaheadResponse200ChargeInfoType4
-        from ..models.skills_typeahead_response_200_output_item import SkillsTypeaheadResponse200OutputItem
+        from ..models.skills_typeahead_response_200_charge_info_type_0 import (
+            SkillsTypeaheadResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.skills_typeahead_response_200_charge_info_type_1 import (
+            SkillsTypeaheadResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.skills_typeahead_response_200_charge_info_type_2 import (
+            SkillsTypeaheadResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.skills_typeahead_response_200_charge_info_type_3 import (
+            SkillsTypeaheadResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
+        from ..models.skills_typeahead_response_200_charge_info_type_4 import (
+            SkillsTypeaheadResponse200ChargeInfoType4,  # noqa: PLC0415
+        )
+        from ..models.skills_typeahead_response_200_output_item import (
+            SkillsTypeaheadResponse200OutputItem,  # noqa: PLC0415
+        )
         from ..models.skills_typeahead_response_200_warnings_type_0_item import (
-            SkillsTypeaheadResponse200WarningsType0Item,
+            SkillsTypeaheadResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

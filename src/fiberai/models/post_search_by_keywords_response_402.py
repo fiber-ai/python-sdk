@@ -32,7 +32,7 @@ class PostSearchByKeywordsResponse402:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.post_search_by_keywords_response_402_out_of_credits_alert_type_0 import (
-            PostSearchByKeywordsResponse402OutOfCreditsAlertType0,
+            PostSearchByKeywordsResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         message = self.message
@@ -60,7 +60,7 @@ class PostSearchByKeywordsResponse402:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.post_search_by_keywords_response_402_out_of_credits_alert_type_0 import (
-            PostSearchByKeywordsResponse402OutOfCreditsAlertType0,
+            PostSearchByKeywordsResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

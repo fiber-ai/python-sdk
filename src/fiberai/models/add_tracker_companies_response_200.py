@@ -58,16 +58,16 @@ class AddTrackerCompaniesResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.add_tracker_companies_response_200_charge_info_type_0 import (
-            AddTrackerCompaniesResponse200ChargeInfoType0,
+            AddTrackerCompaniesResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.add_tracker_companies_response_200_charge_info_type_1 import (
-            AddTrackerCompaniesResponse200ChargeInfoType1,
+            AddTrackerCompaniesResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.add_tracker_companies_response_200_charge_info_type_2 import (
-            AddTrackerCompaniesResponse200ChargeInfoType2,
+            AddTrackerCompaniesResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.add_tracker_companies_response_200_charge_info_type_3 import (
-            AddTrackerCompaniesResponse200ChargeInfoType3,
+            AddTrackerCompaniesResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class AddTrackerCompaniesResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.add_tracker_companies_response_200_charge_info_type_0 import (
-            AddTrackerCompaniesResponse200ChargeInfoType0,
+            AddTrackerCompaniesResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.add_tracker_companies_response_200_charge_info_type_1 import (
-            AddTrackerCompaniesResponse200ChargeInfoType1,
+            AddTrackerCompaniesResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.add_tracker_companies_response_200_charge_info_type_2 import (
-            AddTrackerCompaniesResponse200ChargeInfoType2,
+            AddTrackerCompaniesResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.add_tracker_companies_response_200_charge_info_type_3 import (
-            AddTrackerCompaniesResponse200ChargeInfoType3,
+            AddTrackerCompaniesResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.add_tracker_companies_response_200_charge_info_type_4 import (
-            AddTrackerCompaniesResponse200ChargeInfoType4,
+            AddTrackerCompaniesResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.add_tracker_companies_response_200_output import AddTrackerCompaniesResponse200Output
+        from ..models.add_tracker_companies_response_200_output import (
+            AddTrackerCompaniesResponse200Output,  # noqa: PLC0415
+        )
         from ..models.add_tracker_companies_response_200_warnings_type_0_item import (
-            AddTrackerCompaniesResponse200WarningsType0Item,
+            AddTrackerCompaniesResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

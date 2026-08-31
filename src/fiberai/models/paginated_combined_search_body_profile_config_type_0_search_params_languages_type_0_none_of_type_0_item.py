@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLanguagesType0NoneOfType0Item(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLanguagesType0NoneOfType0Item(StrEnum):
     AFRIKAANS = "Afrikaans"
     AKAN = "Akan"
     ALBANIAN = "Albanian"

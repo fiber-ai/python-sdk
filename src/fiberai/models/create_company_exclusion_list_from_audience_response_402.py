@@ -32,7 +32,7 @@ class CreateCompanyExclusionListFromAudienceResponse402:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_company_exclusion_list_from_audience_response_402_out_of_credits_alert_type_0 import (
-            CreateCompanyExclusionListFromAudienceResponse402OutOfCreditsAlertType0,
+            CreateCompanyExclusionListFromAudienceResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         message = self.message
@@ -62,7 +62,7 @@ class CreateCompanyExclusionListFromAudienceResponse402:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_company_exclusion_list_from_audience_response_402_out_of_credits_alert_type_0 import (
-            CreateCompanyExclusionListFromAudienceResponse402OutOfCreditsAlertType0,
+            CreateCompanyExclusionListFromAudienceResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

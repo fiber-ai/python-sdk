@@ -40,7 +40,7 @@ class StandardizeCompanyResponse200ChargeInfoType4:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.standardize_company_response_200_charge_info_type_4_low_credit_alert_type_0 import (
-            StandardizeCompanyResponse200ChargeInfoType4LowCreditAlertType0,
+            StandardizeCompanyResponse200ChargeInfoType4LowCreditAlertType0,  # noqa: PLC0415
         )
 
         method = self.method.value
@@ -74,7 +74,7 @@ class StandardizeCompanyResponse200ChargeInfoType4:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.standardize_company_response_200_charge_info_type_4_low_credit_alert_type_0 import (
-            StandardizeCompanyResponse200ChargeInfoType4LowCreditAlertType0,
+            StandardizeCompanyResponse200ChargeInfoType4LowCreditAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

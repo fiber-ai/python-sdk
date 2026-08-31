@@ -58,16 +58,16 @@ class CombinedSearchCountResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_response_200_charge_info_type_0 import (
-            CombinedSearchCountResponse200ChargeInfoType0,
+            CombinedSearchCountResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_response_200_charge_info_type_1 import (
-            CombinedSearchCountResponse200ChargeInfoType1,
+            CombinedSearchCountResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_response_200_charge_info_type_2 import (
-            CombinedSearchCountResponse200ChargeInfoType2,
+            CombinedSearchCountResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.combined_search_count_response_200_charge_info_type_3 import (
-            CombinedSearchCountResponse200ChargeInfoType3,
+            CombinedSearchCountResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class CombinedSearchCountResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_response_200_charge_info_type_0 import (
-            CombinedSearchCountResponse200ChargeInfoType0,
+            CombinedSearchCountResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_response_200_charge_info_type_1 import (
-            CombinedSearchCountResponse200ChargeInfoType1,
+            CombinedSearchCountResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_response_200_charge_info_type_2 import (
-            CombinedSearchCountResponse200ChargeInfoType2,
+            CombinedSearchCountResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.combined_search_count_response_200_charge_info_type_3 import (
-            CombinedSearchCountResponse200ChargeInfoType3,
+            CombinedSearchCountResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.combined_search_count_response_200_charge_info_type_4 import (
-            CombinedSearchCountResponse200ChargeInfoType4,
+            CombinedSearchCountResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.combined_search_count_response_200_output import CombinedSearchCountResponse200Output
+        from ..models.combined_search_count_response_200_output import (
+            CombinedSearchCountResponse200Output,  # noqa: PLC0415
+        )
         from ..models.combined_search_count_response_200_warnings_type_0_item import (
-            CombinedSearchCountResponse200WarningsType0Item,
+            CombinedSearchCountResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

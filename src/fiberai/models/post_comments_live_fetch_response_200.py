@@ -58,16 +58,16 @@ class PostCommentsLiveFetchResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.post_comments_live_fetch_response_200_charge_info_type_0 import (
-            PostCommentsLiveFetchResponse200ChargeInfoType0,
+            PostCommentsLiveFetchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.post_comments_live_fetch_response_200_charge_info_type_1 import (
-            PostCommentsLiveFetchResponse200ChargeInfoType1,
+            PostCommentsLiveFetchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.post_comments_live_fetch_response_200_charge_info_type_2 import (
-            PostCommentsLiveFetchResponse200ChargeInfoType2,
+            PostCommentsLiveFetchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.post_comments_live_fetch_response_200_charge_info_type_3 import (
-            PostCommentsLiveFetchResponse200ChargeInfoType3,
+            PostCommentsLiveFetchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class PostCommentsLiveFetchResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.post_comments_live_fetch_response_200_charge_info_type_0 import (
-            PostCommentsLiveFetchResponse200ChargeInfoType0,
+            PostCommentsLiveFetchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.post_comments_live_fetch_response_200_charge_info_type_1 import (
-            PostCommentsLiveFetchResponse200ChargeInfoType1,
+            PostCommentsLiveFetchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.post_comments_live_fetch_response_200_charge_info_type_2 import (
-            PostCommentsLiveFetchResponse200ChargeInfoType2,
+            PostCommentsLiveFetchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.post_comments_live_fetch_response_200_charge_info_type_3 import (
-            PostCommentsLiveFetchResponse200ChargeInfoType3,
+            PostCommentsLiveFetchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.post_comments_live_fetch_response_200_charge_info_type_4 import (
-            PostCommentsLiveFetchResponse200ChargeInfoType4,
+            PostCommentsLiveFetchResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.post_comments_live_fetch_response_200_output import PostCommentsLiveFetchResponse200Output
+        from ..models.post_comments_live_fetch_response_200_output import (
+            PostCommentsLiveFetchResponse200Output,  # noqa: PLC0415
+        )
         from ..models.post_comments_live_fetch_response_200_warnings_type_0_item import (
-            PostCommentsLiveFetchResponse200WarningsType0Item,
+            PostCommentsLiveFetchResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

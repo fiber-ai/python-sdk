@@ -41,7 +41,9 @@ class GetHotelBrandsResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_hotel_brands_response_200_output_brands_item import GetHotelBrandsResponse200OutputBrandsItem
+        from ..models.get_hotel_brands_response_200_output_brands_item import (
+            GetHotelBrandsResponse200OutputBrandsItem,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         brands = []

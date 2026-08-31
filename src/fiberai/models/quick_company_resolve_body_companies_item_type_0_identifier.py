@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class QuickCompanyResolveBodyCompaniesItemType0Identifier(str, Enum):
+class QuickCompanyResolveBodyCompaniesItemType0Identifier(StrEnum):
     LINKEDINURL = "linkedinUrl"
 
     def __str__(self) -> str:

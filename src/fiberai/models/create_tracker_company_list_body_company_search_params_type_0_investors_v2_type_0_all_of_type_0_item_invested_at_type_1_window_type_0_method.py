@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestedAtType1WindowType0Method(
-    str, Enum
+    StrEnum
 ):
     LASTN = "lastN"
 

@@ -89,7 +89,7 @@ class SyncTurboContactEnrichmentBody:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.sync_turbo_contact_enrichment_body_enrichment_type import (
-            SyncTurboContactEnrichmentBodyEnrichmentType,
+            SyncTurboContactEnrichmentBodyEnrichmentType,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

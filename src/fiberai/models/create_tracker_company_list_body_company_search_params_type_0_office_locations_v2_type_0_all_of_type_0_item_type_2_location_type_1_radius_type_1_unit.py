@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0AllOfType0ItemType2LocationType1RadiusType1Unit(
-    str, Enum
+    StrEnum
 ):
     KILOMETERS = "kilometers"
 

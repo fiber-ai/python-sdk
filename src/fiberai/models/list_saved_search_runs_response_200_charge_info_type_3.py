@@ -38,7 +38,7 @@ class ListSavedSearchRunsResponse200ChargeInfoType3:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.list_saved_search_runs_response_200_charge_info_type_3_low_credit_alert_type_0 import (
-            ListSavedSearchRunsResponse200ChargeInfoType3LowCreditAlertType0,
+            ListSavedSearchRunsResponse200ChargeInfoType3LowCreditAlertType0,  # noqa: PLC0415
         )
 
         method = self.method.value
@@ -69,7 +69,7 @@ class ListSavedSearchRunsResponse200ChargeInfoType3:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.list_saved_search_runs_response_200_charge_info_type_3_low_credit_alert_type_0 import (
-            ListSavedSearchRunsResponse200ChargeInfoType3LowCreditAlertType0,
+            ListSavedSearchRunsResponse200ChargeInfoType3LowCreditAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -57,7 +57,7 @@ class PollGoogleMapsResultsResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_google_maps_results_response_200_output_results_item import (
-            PollGoogleMapsResultsResponse200OutputResultsItem,
+            PollGoogleMapsResultsResponse200OutputResultsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

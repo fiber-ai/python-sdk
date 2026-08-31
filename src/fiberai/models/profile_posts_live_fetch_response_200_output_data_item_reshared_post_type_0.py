@@ -54,16 +54,16 @@ class ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.profile_posts_live_fetch_response_200_output_data_item_reshared_post_type_0_author_type_0 import (
-            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0AuthorType0,
+            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0AuthorType0,  # noqa: PLC0415
         )
         from ..models.profile_posts_live_fetch_response_200_output_data_item_reshared_post_type_0_engagement_type_0 import (
-            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0EngagementType0,
+            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0EngagementType0,  # noqa: PLC0415
         )
         from ..models.profile_posts_live_fetch_response_200_output_data_item_reshared_post_type_0_posted_at_type_0 import (
-            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0PostedAtType0,
+            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0PostedAtType0,  # noqa: PLC0415
         )
         from ..models.profile_posts_live_fetch_response_200_output_data_item_reshared_post_type_0_video_type_0 import (
-            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0VideoType0,
+            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0VideoType0,  # noqa: PLC0415
         )
 
         post_id = self.post_id
@@ -158,16 +158,16 @@ class ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.profile_posts_live_fetch_response_200_output_data_item_reshared_post_type_0_author_type_0 import (
-            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0AuthorType0,
+            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0AuthorType0,  # noqa: PLC0415
         )
         from ..models.profile_posts_live_fetch_response_200_output_data_item_reshared_post_type_0_engagement_type_0 import (
-            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0EngagementType0,
+            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0EngagementType0,  # noqa: PLC0415
         )
         from ..models.profile_posts_live_fetch_response_200_output_data_item_reshared_post_type_0_posted_at_type_0 import (
-            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0PostedAtType0,
+            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0PostedAtType0,  # noqa: PLC0415
         )
         from ..models.profile_posts_live_fetch_response_200_output_data_item_reshared_post_type_0_video_type_0 import (
-            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0VideoType0,
+            ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0VideoType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -58,16 +58,16 @@ class UpdateJobChangeListResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.update_job_change_list_response_200_charge_info_type_0 import (
-            UpdateJobChangeListResponse200ChargeInfoType0,
+            UpdateJobChangeListResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.update_job_change_list_response_200_charge_info_type_1 import (
-            UpdateJobChangeListResponse200ChargeInfoType1,
+            UpdateJobChangeListResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.update_job_change_list_response_200_charge_info_type_2 import (
-            UpdateJobChangeListResponse200ChargeInfoType2,
+            UpdateJobChangeListResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.update_job_change_list_response_200_charge_info_type_3 import (
-            UpdateJobChangeListResponse200ChargeInfoType3,
+            UpdateJobChangeListResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class UpdateJobChangeListResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.update_job_change_list_response_200_charge_info_type_0 import (
-            UpdateJobChangeListResponse200ChargeInfoType0,
+            UpdateJobChangeListResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.update_job_change_list_response_200_charge_info_type_1 import (
-            UpdateJobChangeListResponse200ChargeInfoType1,
+            UpdateJobChangeListResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.update_job_change_list_response_200_charge_info_type_2 import (
-            UpdateJobChangeListResponse200ChargeInfoType2,
+            UpdateJobChangeListResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.update_job_change_list_response_200_charge_info_type_3 import (
-            UpdateJobChangeListResponse200ChargeInfoType3,
+            UpdateJobChangeListResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.update_job_change_list_response_200_charge_info_type_4 import (
-            UpdateJobChangeListResponse200ChargeInfoType4,
+            UpdateJobChangeListResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.update_job_change_list_response_200_output import UpdateJobChangeListResponse200Output
+        from ..models.update_job_change_list_response_200_output import (
+            UpdateJobChangeListResponse200Output,  # noqa: PLC0415
+        )
         from ..models.update_job_change_list_response_200_warnings_type_0_item import (
-            UpdateJobChangeListResponse200WarningsType0Item,
+            UpdateJobChangeListResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -147,14 +147,14 @@ def sync_detailed(
     | DeleteProfilesFromJobChangeListResponse500
     | DeleteProfilesFromJobChangeListResponse503
 ]:
-    r"""Delete profiles from a job change list
+    """Delete profiles from a job change list
 
      Remove profiles from a job changes tracking list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (DeleteProfilesFromJobChangeListBody):
@@ -195,14 +195,14 @@ def sync(
     | DeleteProfilesFromJobChangeListResponse503
     | None
 ):
-    r"""Delete profiles from a job change list
+    """Delete profiles from a job change list
 
      Remove profiles from a job changes tracking list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (DeleteProfilesFromJobChangeListBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | DeleteProfilesFromJobChangeListResponse500
     | DeleteProfilesFromJobChangeListResponse503
 ]:
-    r"""Delete profiles from a job change list
+    """Delete profiles from a job change list
 
      Remove profiles from a job changes tracking list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (DeleteProfilesFromJobChangeListBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | DeleteProfilesFromJobChangeListResponse503
     | None
 ):
-    r"""Delete profiles from a job change list
+    """Delete profiles from a job change list
 
      Remove profiles from a job changes tracking list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (DeleteProfilesFromJobChangeListBody):

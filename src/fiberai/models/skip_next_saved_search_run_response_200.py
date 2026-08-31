@@ -58,16 +58,16 @@ class SkipNextSavedSearchRunResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.skip_next_saved_search_run_response_200_charge_info_type_0 import (
-            SkipNextSavedSearchRunResponse200ChargeInfoType0,
+            SkipNextSavedSearchRunResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.skip_next_saved_search_run_response_200_charge_info_type_1 import (
-            SkipNextSavedSearchRunResponse200ChargeInfoType1,
+            SkipNextSavedSearchRunResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.skip_next_saved_search_run_response_200_charge_info_type_2 import (
-            SkipNextSavedSearchRunResponse200ChargeInfoType2,
+            SkipNextSavedSearchRunResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.skip_next_saved_search_run_response_200_charge_info_type_3 import (
-            SkipNextSavedSearchRunResponse200ChargeInfoType3,
+            SkipNextSavedSearchRunResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class SkipNextSavedSearchRunResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.skip_next_saved_search_run_response_200_charge_info_type_0 import (
-            SkipNextSavedSearchRunResponse200ChargeInfoType0,
+            SkipNextSavedSearchRunResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.skip_next_saved_search_run_response_200_charge_info_type_1 import (
-            SkipNextSavedSearchRunResponse200ChargeInfoType1,
+            SkipNextSavedSearchRunResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.skip_next_saved_search_run_response_200_charge_info_type_2 import (
-            SkipNextSavedSearchRunResponse200ChargeInfoType2,
+            SkipNextSavedSearchRunResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.skip_next_saved_search_run_response_200_charge_info_type_3 import (
-            SkipNextSavedSearchRunResponse200ChargeInfoType3,
+            SkipNextSavedSearchRunResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.skip_next_saved_search_run_response_200_charge_info_type_4 import (
-            SkipNextSavedSearchRunResponse200ChargeInfoType4,
+            SkipNextSavedSearchRunResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.skip_next_saved_search_run_response_200_output import SkipNextSavedSearchRunResponse200Output
+        from ..models.skip_next_saved_search_run_response_200_output import (
+            SkipNextSavedSearchRunResponse200Output,  # noqa: PLC0415
+        )
         from ..models.skip_next_saved_search_run_response_200_warnings_type_0_item import (
-            SkipNextSavedSearchRunResponse200WarningsType0Item,
+            SkipNextSavedSearchRunResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

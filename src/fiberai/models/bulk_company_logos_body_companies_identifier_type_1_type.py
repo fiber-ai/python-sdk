@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class BulkCompanyLogosBodyCompaniesIdentifierType1Type(str, Enum):
+class BulkCompanyLogosBodyCompaniesIdentifierType1Type(StrEnum):
     LINKEDINURLS = "linkedinUrls"
 
     def __str__(self) -> str:

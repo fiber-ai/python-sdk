@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType1WindowType2Which(str, Enum):
+class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType1WindowType2Which(StrEnum):
     CURRENT = "current"
     PREVIOUS = "previous"
 

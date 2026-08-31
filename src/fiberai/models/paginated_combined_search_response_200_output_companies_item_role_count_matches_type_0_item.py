@@ -45,13 +45,13 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_response_200_output_companies_item_role_count_matches_type_0_item_num_matching_employees_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_role_count_matches_type_0_item_num_matching_employees_type_1 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_role_count_matches_type_0_item_num_matching_employees_type_2 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,  # noqa: PLC0415
         )
 
         num_matching_employees: dict[str, Any]
@@ -86,16 +86,16 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_output_companies_item_role_count_matches_type_0_item_num_matching_employees_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_role_count_matches_type_0_item_num_matching_employees_type_1 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_role_count_matches_type_0_item_num_matching_employees_type_2 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_role_count_matches_type_0_item_num_matching_employees_type_3 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType3,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

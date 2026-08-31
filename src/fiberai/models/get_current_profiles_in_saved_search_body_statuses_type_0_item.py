@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetCurrentProfilesInSavedSearchBodyStatusesType0Item(str, Enum):
+class GetCurrentProfilesInSavedSearchBodyStatusesType0Item(StrEnum):
     DEPARTED = "departed"
     JOINED = "joined"
     RETURNED = "returned"

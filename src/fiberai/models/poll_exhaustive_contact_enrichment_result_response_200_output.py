@@ -46,7 +46,7 @@ class PollExhaustiveContactEnrichmentResultResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile import (
-            PollExhaustiveContactEnrichmentResultResponse200OutputProfile,
+            PollExhaustiveContactEnrichmentResultResponse200OutputProfile,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

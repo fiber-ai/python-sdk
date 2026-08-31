@@ -147,7 +147,7 @@ def sync_detailed(
     | InstagramPostCommentsResponse500
     | InstagramPostCommentsResponse503
 ]:
-    r"""Fetch Instagram post comments
+    """Fetch Instagram post comments
 
      Fetches comments for an Instagram post. Returns a paginated list. Use the `nextPageToken` field from
     the response to retrieve subsequent pages. Accepts a full post URL (e.g.
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramPostCommentsBody):
@@ -197,7 +197,7 @@ def sync(
     | InstagramPostCommentsResponse503
     | None
 ):
-    r"""Fetch Instagram post comments
+    """Fetch Instagram post comments
 
      Fetches comments for an Instagram post. Returns a paginated list. Use the `nextPageToken` field from
     the response to retrieve subsequent pages. Accepts a full post URL (e.g.
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramPostCommentsBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | InstagramPostCommentsResponse500
     | InstagramPostCommentsResponse503
 ]:
-    r"""Fetch Instagram post comments
+    """Fetch Instagram post comments
 
      Fetches comments for an Instagram post. Returns a paginated list. Use the `nextPageToken` field from
     the response to retrieve subsequent pages. Accepts a full post URL (e.g.
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramPostCommentsBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | InstagramPostCommentsResponse503
     | None
 ):
-    r"""Fetch Instagram post comments
+    """Fetch Instagram post comments
 
      Fetches comments for an Instagram post. Returns a paginated list. Use the `nextPageToken` field from
     the response to retrieve subsequent pages. Accepts a full post URL (e.g.
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramPostCommentsBody):

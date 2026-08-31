@@ -44,7 +44,7 @@ class AddTrackerCompaniesResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.add_tracker_companies_response_200_output_initial_signals_type_0 import (
-            AddTrackerCompaniesResponse200OutputInitialSignalsType0,
+            AddTrackerCompaniesResponse200OutputInitialSignalsType0,  # noqa: PLC0415
         )
 
         added = self.added
@@ -78,13 +78,13 @@ class AddTrackerCompaniesResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.add_tracker_companies_response_200_output_initial_signals_type_0 import (
-            AddTrackerCompaniesResponse200OutputInitialSignalsType0,
+            AddTrackerCompaniesResponse200OutputInitialSignalsType0,  # noqa: PLC0415
         )
         from ..models.add_tracker_companies_response_200_output_initial_signals_type_1 import (
-            AddTrackerCompaniesResponse200OutputInitialSignalsType1,
+            AddTrackerCompaniesResponse200OutputInitialSignalsType1,  # noqa: PLC0415
         )
         from ..models.add_tracker_companies_response_200_output_invalid_companies_item import (
-            AddTrackerCompaniesResponse200OutputInvalidCompaniesItem,
+            AddTrackerCompaniesResponse200OutputInvalidCompaniesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

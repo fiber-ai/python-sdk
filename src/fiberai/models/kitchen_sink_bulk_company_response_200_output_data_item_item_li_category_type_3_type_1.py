@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class KitchenSinkBulkCompanyResponse200OutputDataItemItemLiCategoryType3Type1(str, Enum):
+class KitchenSinkBulkCompanyResponse200OutputDataItemItemLiCategoryType3Type1(StrEnum):
     C = "C"
     S = "S"
     W = "W"

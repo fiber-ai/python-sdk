@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType3Identifier(
-    str, Enum
+    StrEnum
 ):
     ADVANCED = "advanced"
 

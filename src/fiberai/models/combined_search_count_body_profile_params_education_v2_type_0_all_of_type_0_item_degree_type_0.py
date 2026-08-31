@@ -50,7 +50,7 @@ class CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemDegreeTy
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_all_of_type_0_item_degree_type_0_criteria import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemDegreeType0Criteria,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemDegreeType0Criteria,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

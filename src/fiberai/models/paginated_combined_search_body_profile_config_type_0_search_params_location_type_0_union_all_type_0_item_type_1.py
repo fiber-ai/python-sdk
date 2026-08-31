@@ -45,7 +45,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0Unio
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_union_all_type_0_item_type_1_radius_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType1RadiusType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType1RadiusType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -84,10 +84,10 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0Unio
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_union_all_type_0_item_type_1_radius_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType1RadiusType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType1RadiusType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_location_type_0_union_all_type_0_item_type_1_radius_type_1 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType1RadiusType1,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLocationType0UnionAllType0ItemType1RadiusType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -117,7 +117,7 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfilePublicationsType
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_publications_type_0_item_collaborators_type_0_item import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfilePublicationsType0ItemCollaboratorsType0Item,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfilePublicationsType0ItemCollaboratorsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

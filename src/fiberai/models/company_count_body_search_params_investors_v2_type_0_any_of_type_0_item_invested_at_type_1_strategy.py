@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1Strategy(str, Enum):
+class CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1Strategy(StrEnum):
     RELATIVE = "relative"
 
     def __str__(self) -> str:

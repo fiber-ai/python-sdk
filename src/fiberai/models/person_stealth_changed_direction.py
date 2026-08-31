@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PersonStealthChangedDirection(str, Enum):
+class PersonStealthChangedDirection(StrEnum):
     EITHER = "either"
     ENTERED = "entered"
     EXITED = "exited"

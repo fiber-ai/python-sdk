@@ -38,7 +38,7 @@ class GetProspectExclusionListsResponse200ChargeInfoType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_1_low_credit_alert_type_0 import (
-            GetProspectExclusionListsResponse200ChargeInfoType1LowCreditAlertType0,
+            GetProspectExclusionListsResponse200ChargeInfoType1LowCreditAlertType0,  # noqa: PLC0415
         )
 
         method = self.method.value
@@ -69,7 +69,7 @@ class GetProspectExclusionListsResponse200ChargeInfoType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_1_low_credit_alert_type_0 import (
-            GetProspectExclusionListsResponse200ChargeInfoType1LowCreditAlertType0,
+            GetProspectExclusionListsResponse200ChargeInfoType1LowCreditAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

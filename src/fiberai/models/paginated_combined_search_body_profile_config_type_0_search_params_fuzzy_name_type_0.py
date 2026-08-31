@@ -44,7 +44,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsFuzzyNameType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_fuzzy_name_type_0_any_of_item import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsFuzzyNameType0AnyOfItem,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsFuzzyNameType0AnyOfItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

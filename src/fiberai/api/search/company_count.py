@@ -147,14 +147,14 @@ def sync_detailed(
     | CompanyCountResponse500
     | CompanyCountResponse503
 ]:
-    r"""Company count
+    """Company count
 
      Get count of companies matching search filters
 
     <span>⚡ <strong>Rate limit:</strong> 180 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanyCountBody):
@@ -195,14 +195,14 @@ def sync(
     | CompanyCountResponse503
     | None
 ):
-    r"""Company count
+    """Company count
 
      Get count of companies matching search filters
 
     <span>⚡ <strong>Rate limit:</strong> 180 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanyCountBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | CompanyCountResponse500
     | CompanyCountResponse503
 ]:
-    r"""Company count
+    """Company count
 
      Get count of companies matching search filters
 
     <span>⚡ <strong>Rate limit:</strong> 180 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanyCountBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | CompanyCountResponse503
     | None
 ):
-    r"""Company count
+    """Company count
 
      Get count of companies matching search filters
 
     <span>⚡ <strong>Rate limit:</strong> 180 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanyCountBody):

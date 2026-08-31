@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchBodySearchParamsIndustryType0NoneOfType0Item(str, Enum):
+class PeopleSearchBodySearchParamsIndustryType0NoneOfType0Item(StrEnum):
     ACCOUNTING = "Accounting"
     ADMINISTRATION_OF_JUSTICE = "Administration of Justice"
     ADVERTISING_SERVICES = "Advertising Services"

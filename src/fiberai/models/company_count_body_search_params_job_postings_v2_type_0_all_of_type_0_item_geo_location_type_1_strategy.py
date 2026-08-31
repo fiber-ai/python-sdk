@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanyCountBodySearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType1Strategy(str, Enum):
+class CompanyCountBodySearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType1Strategy(StrEnum):
     FREE_FORM_CITY = "free-form-city"
 
     def __str__(self) -> str:

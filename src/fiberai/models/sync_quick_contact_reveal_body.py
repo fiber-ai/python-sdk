@@ -95,7 +95,9 @@ class SyncQuickContactRevealBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.sync_quick_contact_reveal_body_enrichment_type import SyncQuickContactRevealBodyEnrichmentType
+        from ..models.sync_quick_contact_reveal_body_enrichment_type import (
+            SyncQuickContactRevealBodyEnrichmentType,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

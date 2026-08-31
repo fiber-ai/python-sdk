@@ -352,43 +352,43 @@ class QuickCompanyResolveResponse200OutputDataItemCompanyType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_best_funding_round_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0BestFundingRoundType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0BestFundingRoundType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_custom_data_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0CustomDataType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0CustomDataType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_employee_count_consensus_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0EmployeeCountConsensusType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0EmployeeCountConsensusType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_funding_round_stats_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0FundingRoundStatsType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0FundingRoundStatsType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_investment_stats_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0InvestmentStatsType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0InvestmentStatsType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_location_consensus_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LocationConsensusType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LocationConsensusType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_locations_stats_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LocationsStatsType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LocationsStatsType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_num_matching_locations_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0NumMatchingLocationsType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0NumMatchingLocationsType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_platforms_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0PlatformsType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0PlatformsType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_revenue_estimate_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0RevenueEstimateType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0RevenueEstimateType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_stock_info_consensus_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0StockInfoConsensusType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0StockInfoConsensusType0,  # noqa: PLC0415
         )
 
         linkedin_id: None | str | Unset
@@ -1276,79 +1276,79 @@ class QuickCompanyResolveResponse200OutputDataItemCompanyType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_accelerators_type_0_item import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0AcceleratorsType0Item,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0AcceleratorsType0Item,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_acquisitions_type_0_item import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0AcquisitionsType0Item,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0AcquisitionsType0Item,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_best_funding_round_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0BestFundingRoundType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0BestFundingRoundType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_custom_data_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0CustomDataType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0CustomDataType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_employee_count_consensus_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0EmployeeCountConsensusType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0EmployeeCountConsensusType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_employee_trends_type_0_item import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0EmployeeTrendsType0Item,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0EmployeeTrendsType0Item,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_fortune_rankings_type_0_item import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0FortuneRankingsType0Item,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0FortuneRankingsType0Item,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_full_funding_rounds_type_0_item import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0FullFundingRoundsType0Item,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0FullFundingRoundsType0Item,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_funding_round_stats_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0FundingRoundStatsType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0FundingRoundStatsType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_funding_rounds_type_0_item import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0FundingRoundsType0Item,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0FundingRoundsType0Item,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_investment_stats_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0InvestmentStatsType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0InvestmentStatsType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_investors_type_0_item import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0InvestorsType0Item,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0InvestorsType0Item,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_industries_type_0_item import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiIndustriesType0Item,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiIndustriesType0Item,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_locations_type_0_item import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiLocationsType0Item,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiLocationsType0Item,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_location_consensus_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LocationConsensusType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LocationConsensusType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_locations_stats_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LocationsStatsType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LocationsStatsType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_num_matching_locations_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0NumMatchingLocationsType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0NumMatchingLocationsType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_platforms_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0PlatformsType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0PlatformsType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_revenue_estimate_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0RevenueEstimateType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0RevenueEstimateType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_role_count_matches_type_0_item import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0RoleCountMatchesType0Item,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0RoleCountMatchesType0Item,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_similar_companies_type_0_item import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0SimilarCompaniesType0Item,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0SimilarCompaniesType0Item,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_stock_info_consensus_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0StockInfoConsensusType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0StockInfoConsensusType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_technologies_used_type_0_item import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0TechnologiesUsedType0Item,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0TechnologiesUsedType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

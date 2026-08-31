@@ -62,16 +62,16 @@ class CreateCompanyExclusionListFromAudienceResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_company_exclusion_list_from_audience_response_200_charge_info_type_0 import (
-            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType0,
+            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.create_company_exclusion_list_from_audience_response_200_charge_info_type_1 import (
-            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType1,
+            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.create_company_exclusion_list_from_audience_response_200_charge_info_type_2 import (
-            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType2,
+            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.create_company_exclusion_list_from_audience_response_200_charge_info_type_3 import (
-            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType3,
+            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -127,25 +127,25 @@ class CreateCompanyExclusionListFromAudienceResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_company_exclusion_list_from_audience_response_200_charge_info_type_0 import (
-            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType0,
+            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.create_company_exclusion_list_from_audience_response_200_charge_info_type_1 import (
-            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType1,
+            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.create_company_exclusion_list_from_audience_response_200_charge_info_type_2 import (
-            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType2,
+            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.create_company_exclusion_list_from_audience_response_200_charge_info_type_3 import (
-            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType3,
+            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.create_company_exclusion_list_from_audience_response_200_charge_info_type_4 import (
-            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType4,
+            CreateCompanyExclusionListFromAudienceResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.create_company_exclusion_list_from_audience_response_200_output import (
-            CreateCompanyExclusionListFromAudienceResponse200Output,
+            CreateCompanyExclusionListFromAudienceResponse200Output,  # noqa: PLC0415
         )
         from ..models.create_company_exclusion_list_from_audience_response_200_warnings_type_0_item import (
-            CreateCompanyExclusionListFromAudienceResponse200WarningsType0Item,
+            CreateCompanyExclusionListFromAudienceResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

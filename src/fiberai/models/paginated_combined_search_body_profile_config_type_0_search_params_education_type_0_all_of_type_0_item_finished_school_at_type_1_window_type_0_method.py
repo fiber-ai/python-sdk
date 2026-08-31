@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType0Method(
-    str, Enum
+    StrEnum
 ):
     LASTN = "lastN"
 

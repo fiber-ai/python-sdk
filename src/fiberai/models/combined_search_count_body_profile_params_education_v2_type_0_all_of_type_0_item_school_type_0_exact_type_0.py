@@ -80,22 +80,22 @@ class CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolTy
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_any_of_type_0_item_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType0,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_any_of_type_0_item_type_1 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType1,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_any_of_type_0_item_type_2 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType2,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_none_of_type_0_item_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType0,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_none_of_type_0_item_type_1 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType1,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_none_of_type_0_item_type_2 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType2,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType2,  # noqa: PLC0415
         )
 
         any_of: list[dict[str, Any]] | None | Unset
@@ -171,28 +171,28 @@ class CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolTy
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_any_of_type_0_item_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType0,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_any_of_type_0_item_type_1 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType1,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_any_of_type_0_item_type_2 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType2,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_any_of_type_0_item_type_3 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType3,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType3,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_none_of_type_0_item_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType0,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_none_of_type_0_item_type_1 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType1,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_none_of_type_0_item_type_2 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType2,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_none_of_type_0_item_type_3 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType3,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

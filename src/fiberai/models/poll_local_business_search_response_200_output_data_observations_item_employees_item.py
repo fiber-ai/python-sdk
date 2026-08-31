@@ -54,10 +54,10 @@ class PollLocalBusinessSearchResponse200OutputDataObservationsItemEmployeesItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.poll_local_business_search_response_200_output_data_observations_item_employees_item_email_address_type_0 import (
-            PollLocalBusinessSearchResponse200OutputDataObservationsItemEmployeesItemEmailAddressType0,
+            PollLocalBusinessSearchResponse200OutputDataObservationsItemEmployeesItemEmailAddressType0,  # noqa: PLC0415
         )
         from ..models.poll_local_business_search_response_200_output_data_observations_item_employees_item_phone_number_type_0 import (
-            PollLocalBusinessSearchResponse200OutputDataObservationsItemEmployeesItemPhoneNumberType0,
+            PollLocalBusinessSearchResponse200OutputDataObservationsItemEmployeesItemPhoneNumberType0,  # noqa: PLC0415
         )
 
         name = self.name
@@ -118,13 +118,13 @@ class PollLocalBusinessSearchResponse200OutputDataObservationsItemEmployeesItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_local_business_search_response_200_output_data_observations_item_employees_item_email_address_type_0 import (
-            PollLocalBusinessSearchResponse200OutputDataObservationsItemEmployeesItemEmailAddressType0,
+            PollLocalBusinessSearchResponse200OutputDataObservationsItemEmployeesItemEmailAddressType0,  # noqa: PLC0415
         )
         from ..models.poll_local_business_search_response_200_output_data_observations_item_employees_item_phone_number_type_0 import (
-            PollLocalBusinessSearchResponse200OutputDataObservationsItemEmployeesItemPhoneNumberType0,
+            PollLocalBusinessSearchResponse200OutputDataObservationsItemEmployeesItemPhoneNumberType0,  # noqa: PLC0415
         )
         from ..models.poll_local_business_search_response_200_output_data_observations_item_employees_item_social_media_links_item import (
-            PollLocalBusinessSearchResponse200OutputDataObservationsItemEmployeesItemSocialMediaLinksItem,
+            PollLocalBusinessSearchResponse200OutputDataObservationsItemEmployeesItemSocialMediaLinksItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

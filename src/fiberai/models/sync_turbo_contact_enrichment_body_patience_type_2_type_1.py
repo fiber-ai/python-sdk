@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class SyncTurboContactEnrichmentBodyPatienceType2Type1(str, Enum):
+class SyncTurboContactEnrichmentBodyPatienceType2Type1(StrEnum):
     EXTREME = "EXTREME"
     HIGH = "HIGH"
     LOW = "LOW"

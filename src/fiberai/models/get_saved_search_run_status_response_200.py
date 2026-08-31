@@ -58,16 +58,16 @@ class GetSavedSearchRunStatusResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_saved_search_run_status_response_200_charge_info_type_0 import (
-            GetSavedSearchRunStatusResponse200ChargeInfoType0,
+            GetSavedSearchRunStatusResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_status_response_200_charge_info_type_1 import (
-            GetSavedSearchRunStatusResponse200ChargeInfoType1,
+            GetSavedSearchRunStatusResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_status_response_200_charge_info_type_2 import (
-            GetSavedSearchRunStatusResponse200ChargeInfoType2,
+            GetSavedSearchRunStatusResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_status_response_200_charge_info_type_3 import (
-            GetSavedSearchRunStatusResponse200ChargeInfoType3,
+            GetSavedSearchRunStatusResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class GetSavedSearchRunStatusResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_saved_search_run_status_response_200_charge_info_type_0 import (
-            GetSavedSearchRunStatusResponse200ChargeInfoType0,
+            GetSavedSearchRunStatusResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_status_response_200_charge_info_type_1 import (
-            GetSavedSearchRunStatusResponse200ChargeInfoType1,
+            GetSavedSearchRunStatusResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_status_response_200_charge_info_type_2 import (
-            GetSavedSearchRunStatusResponse200ChargeInfoType2,
+            GetSavedSearchRunStatusResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_status_response_200_charge_info_type_3 import (
-            GetSavedSearchRunStatusResponse200ChargeInfoType3,
+            GetSavedSearchRunStatusResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_status_response_200_charge_info_type_4 import (
-            GetSavedSearchRunStatusResponse200ChargeInfoType4,
+            GetSavedSearchRunStatusResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.get_saved_search_run_status_response_200_output import GetSavedSearchRunStatusResponse200Output
+        from ..models.get_saved_search_run_status_response_200_output import (
+            GetSavedSearchRunStatusResponse200Output,  # noqa: PLC0415
+        )
         from ..models.get_saved_search_run_status_response_200_warnings_type_0_item import (
-            GetSavedSearchRunStatusResponse200WarningsType0Item,
+            GetSavedSearchRunStatusResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

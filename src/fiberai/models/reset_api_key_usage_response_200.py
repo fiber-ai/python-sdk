@@ -48,16 +48,16 @@ class ResetApiKeyUsageResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.reset_api_key_usage_response_200_charge_info_type_0 import (
-            ResetApiKeyUsageResponse200ChargeInfoType0,
+            ResetApiKeyUsageResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.reset_api_key_usage_response_200_charge_info_type_1 import (
-            ResetApiKeyUsageResponse200ChargeInfoType1,
+            ResetApiKeyUsageResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.reset_api_key_usage_response_200_charge_info_type_2 import (
-            ResetApiKeyUsageResponse200ChargeInfoType2,
+            ResetApiKeyUsageResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.reset_api_key_usage_response_200_charge_info_type_3 import (
-            ResetApiKeyUsageResponse200ChargeInfoType3,
+            ResetApiKeyUsageResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class ResetApiKeyUsageResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.reset_api_key_usage_response_200_charge_info_type_0 import (
-            ResetApiKeyUsageResponse200ChargeInfoType0,
+            ResetApiKeyUsageResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.reset_api_key_usage_response_200_charge_info_type_1 import (
-            ResetApiKeyUsageResponse200ChargeInfoType1,
+            ResetApiKeyUsageResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.reset_api_key_usage_response_200_charge_info_type_2 import (
-            ResetApiKeyUsageResponse200ChargeInfoType2,
+            ResetApiKeyUsageResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.reset_api_key_usage_response_200_charge_info_type_3 import (
-            ResetApiKeyUsageResponse200ChargeInfoType3,
+            ResetApiKeyUsageResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.reset_api_key_usage_response_200_charge_info_type_4 import (
-            ResetApiKeyUsageResponse200ChargeInfoType4,
+            ResetApiKeyUsageResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.reset_api_key_usage_response_200_output import ResetApiKeyUsageResponse200Output
+        from ..models.reset_api_key_usage_response_200_output import ResetApiKeyUsageResponse200Output  # noqa: PLC0415
         from ..models.reset_api_key_usage_response_200_warnings_type_0_item import (
-            ResetApiKeyUsageResponse200WarningsType0Item,
+            ResetApiKeyUsageResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

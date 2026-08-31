@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class JobPostingSearchBodySearchParamsCountryOrRegionCodeType0Item(str, Enum):
+class JobPostingSearchBodySearchParamsCountryOrRegionCodeType0Item(StrEnum):
     ABW = "ABW"
     AFG = "AFG"
     AGO = "AGO"

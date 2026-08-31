@@ -61,10 +61,10 @@ class GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyHistoricalH
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_historical_headcount_type_0_growth import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyHistoricalHeadcountType0Growth,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyHistoricalHeadcountType0Growth,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_historical_headcount_type_0_snapshots_item import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyHistoricalHeadcountType0SnapshotsItem,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyHistoricalHeadcountType0SnapshotsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

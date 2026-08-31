@@ -76,22 +76,22 @@ class CompanySearchBodySearchParamsExactCompanyV2Type0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_search_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_0 import (
-            CompanySearchBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0,
+            CompanySearchBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_1 import (
-            CompanySearchBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1,
+            CompanySearchBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_2 import (
-            CompanySearchBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2,
+            CompanySearchBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_0 import (
-            CompanySearchBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0,
+            CompanySearchBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_1 import (
-            CompanySearchBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1,
+            CompanySearchBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_2 import (
-            CompanySearchBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2,
+            CompanySearchBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2,  # noqa: PLC0415
         )
 
         any_of: list[dict[str, Any]] | None | Unset
@@ -161,28 +161,28 @@ class CompanySearchBodySearchParamsExactCompanyV2Type0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_0 import (
-            CompanySearchBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0,
+            CompanySearchBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_1 import (
-            CompanySearchBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1,
+            CompanySearchBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_2 import (
-            CompanySearchBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2,
+            CompanySearchBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_exact_company_v2_type_0_any_of_type_0_item_type_3 import (
-            CompanySearchBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3,
+            CompanySearchBodySearchParamsExactCompanyV2Type0AnyOfType0ItemType3,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_0 import (
-            CompanySearchBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0,
+            CompanySearchBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_1 import (
-            CompanySearchBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1,
+            CompanySearchBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_2 import (
-            CompanySearchBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2,
+            CompanySearchBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_exact_company_v2_type_0_none_of_type_0_item_type_3 import (
-            CompanySearchBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3,
+            CompanySearchBodySearchParamsExactCompanyV2Type0NoneOfType0ItemType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

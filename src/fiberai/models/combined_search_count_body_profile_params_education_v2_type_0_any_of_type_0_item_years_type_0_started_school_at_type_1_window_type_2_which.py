@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemYearsType0StartedSchoolAtType1WindowType2Which(
-    str, Enum
+    StrEnum
 ):
     CURRENT = "current"
     PREVIOUS = "previous"

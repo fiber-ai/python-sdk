@@ -270,112 +270,112 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_accelerators_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_categories_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoriesType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoriesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_category_groups_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_count_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_trends_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employees_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_exact_company_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsExactCompanyType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsExactCompanyType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_exact_company_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsExactCompanyV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsExactCompanyV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_fortune_rankings_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_founded_on_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFoundedOnType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFoundedOnType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_founded_on_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFoundedOnType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFoundedOnType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_country_code_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersCountryCodeType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersCountryCodeType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_state_name_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersStateNameType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersStateNameType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_industries_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsIndustriesV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsIndustriesV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_investors_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_posting_stats_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_keywords_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsKeywordsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsKeywordsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_last_funded_on_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLastFundedOnType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLastFundedOnType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_last_funded_on_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLastFundedOnType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLastFundedOnType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_last_funding_usd_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLastFundingUSDType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLastFundingUSDType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_linkedin_industries_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLinkedinIndustriesType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLinkedinIndustriesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_naics_codes_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsNaicsCodesType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsNaicsCodesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_name_like_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsNameLikeType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsNameLikeType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_num_words_in_name_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsNumWordsInNameType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsNumWordsInNameType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_revenue_range_usd_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangeUSDType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangeUSDType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_special_flags_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSpecialFlagsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSpecialFlagsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_stage_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStageType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStageType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_status_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStatusType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStatusType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_tags_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTagsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTagsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_technologies_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_technologies_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_tlds_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTldsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTldsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_total_funding_usd_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTotalFundingUSDType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTotalFundingUSDType0,  # noqa: PLC0415
         )
 
         exact_company_v2: dict[str, Any] | None | Unset
@@ -825,115 +825,115 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_accelerators_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_categories_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoriesType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoriesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_category_groups_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_count_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_trends_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employees_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_exact_company_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsExactCompanyType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsExactCompanyType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_exact_company_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsExactCompanyV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsExactCompanyV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_fortune_rankings_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_founded_on_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFoundedOnType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFoundedOnType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_founded_on_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFoundedOnType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFoundedOnType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_country_code_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersCountryCodeType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersCountryCodeType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_state_name_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersStateNameType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersStateNameType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_industries_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsIndustriesV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsIndustriesV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_investors_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsInvestorsV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_posting_stats_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_keywords_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsKeywordsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsKeywordsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_last_funded_on_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLastFundedOnType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLastFundedOnType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_last_funded_on_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLastFundedOnType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLastFundedOnType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_last_funding_usd_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLastFundingUSDType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLastFundingUSDType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_linkedin_industries_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLinkedinIndustriesType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLinkedinIndustriesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_naics_codes_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsNaicsCodesType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsNaicsCodesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_name_like_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsNameLikeType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsNameLikeType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_num_words_in_name_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsNumWordsInNameType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsNumWordsInNameType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_revenue_range_usd_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangeUSDType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangeUSDType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_sort_type_0_item import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSortType0Item,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSortType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_special_flags_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSpecialFlagsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSpecialFlagsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_stage_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStageType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStageType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_status_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStatusType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStatusType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_tags_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTagsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTagsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_technologies_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_technologies_v2_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesV2Type0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesV2Type0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_tlds_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTldsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTldsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_total_funding_usd_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTotalFundingUSDType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTotalFundingUSDType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

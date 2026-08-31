@@ -147,15 +147,15 @@ def sync_detailed(
     | StartBatchLiveEnrichResponse500
     | StartBatchLiveEnrichResponse503
 ]:
-    r"""Start batch live enrichment
+    """Start batch live enrichment
 
      Starts a batch live enrichment job for multiple LinkedIn profiles or companies (up to 10,000). This
     is an asynchronous task; use the polling endpoint to check progress and get results.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per live fetch&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per live fetch&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StartBatchLiveEnrichBody):
@@ -196,15 +196,15 @@ def sync(
     | StartBatchLiveEnrichResponse503
     | None
 ):
-    r"""Start batch live enrichment
+    """Start batch live enrichment
 
      Starts a batch live enrichment job for multiple LinkedIn profiles or companies (up to 10,000). This
     is an asynchronous task; use the polling endpoint to check progress and get results.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per live fetch&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per live fetch&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StartBatchLiveEnrichBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | StartBatchLiveEnrichResponse500
     | StartBatchLiveEnrichResponse503
 ]:
-    r"""Start batch live enrichment
+    """Start batch live enrichment
 
      Starts a batch live enrichment job for multiple LinkedIn profiles or companies (up to 10,000). This
     is an asynchronous task; use the polling endpoint to check progress and get results.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per live fetch&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per live fetch&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StartBatchLiveEnrichBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | StartBatchLiveEnrichResponse503
     | None
 ):
-    r"""Start batch live enrichment
+    """Start batch live enrichment
 
      Starts a batch live enrichment job for multiple LinkedIn profiles or companies (up to 10,000). This
     is an asynchronous task; use the polling endpoint to check progress and get results.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per live fetch&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per live fetch&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StartBatchLiveEnrichBody):

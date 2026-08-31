@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanyCountBodySearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType3Region(str, Enum):
+class CompanyCountBodySearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType3Region(StrEnum):
     BOSTON_ROUTE_128 = "boston-route-128"
     CHICAGOLAND = "chicagoland"
     DALLAS_FORT_WORTH = "dallas-fort-worth"

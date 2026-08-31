@@ -34,7 +34,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLeftStealthAtType
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_left_stealth_at_type_0_range_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLeftStealthAtType0RangeType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLeftStealthAtType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -64,7 +64,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLeftStealthAtType
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_left_stealth_at_type_0_range_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLeftStealthAtType0RangeType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLeftStealthAtType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

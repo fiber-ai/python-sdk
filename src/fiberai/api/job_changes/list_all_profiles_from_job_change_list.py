@@ -147,14 +147,14 @@ def sync_detailed(
     | ListAllProfilesFromJobChangeListResponse500
     | ListAllProfilesFromJobChangeListResponse503
 ]:
-    r"""Lists all profiles from a job change list
+    """Lists all profiles from a job change list
 
      Get current state of all profiles from the list. Returns basic info for each profile.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ListAllProfilesFromJobChangeListBody):
@@ -195,14 +195,14 @@ def sync(
     | ListAllProfilesFromJobChangeListResponse503
     | None
 ):
-    r"""Lists all profiles from a job change list
+    """Lists all profiles from a job change list
 
      Get current state of all profiles from the list. Returns basic info for each profile.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ListAllProfilesFromJobChangeListBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | ListAllProfilesFromJobChangeListResponse500
     | ListAllProfilesFromJobChangeListResponse503
 ]:
-    r"""Lists all profiles from a job change list
+    """Lists all profiles from a job change list
 
      Get current state of all profiles from the list. Returns basic info for each profile.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ListAllProfilesFromJobChangeListBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | ListAllProfilesFromJobChangeListResponse503
     | None
 ):
-    r"""Lists all profiles from a job change list
+    """Lists all profiles from a job change list
 
      Get current state of all profiles from the list. Returns basic info for each profile.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ListAllProfilesFromJobChangeListBody):

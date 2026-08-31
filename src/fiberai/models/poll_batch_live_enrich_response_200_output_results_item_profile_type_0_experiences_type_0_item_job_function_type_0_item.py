@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PollBatchLiveEnrichResponse200OutputResultsItemProfileType0ExperiencesType0ItemJobFunctionType0Item(str, Enum):
+class PollBatchLiveEnrichResponse200OutputResultsItemProfileType0ExperiencesType0ItemJobFunctionType0Item(StrEnum):
     ACCOUNTING = "Accounting"
     ADMINISTRATIVE = "Administrative"
     ADVERTISING = "Advertising"

@@ -56,7 +56,7 @@ class ProfilePostsLiveFetchResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.profile_posts_live_fetch_response_200_output_data_item import (
-            ProfilePostsLiveFetchResponse200OutputDataItem,
+            ProfilePostsLiveFetchResponse200OutputDataItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

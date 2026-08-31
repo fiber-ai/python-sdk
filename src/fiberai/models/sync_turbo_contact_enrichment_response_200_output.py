@@ -46,7 +46,7 @@ class SyncTurboContactEnrichmentResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.sync_turbo_contact_enrichment_response_200_output_profile import (
-            SyncTurboContactEnrichmentResponse200OutputProfile,
+            SyncTurboContactEnrichmentResponse200OutputProfile,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

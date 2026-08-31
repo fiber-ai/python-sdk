@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FlightSearchResponse200OutputPriceInsightsType0PriceLevelType3Type1(str, Enum):
+class FlightSearchResponse200OutputPriceInsightsType0PriceLevelType3Type1(StrEnum):
     HIGH = "high"
     LOW = "low"
     TYPICAL = "typical"

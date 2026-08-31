@@ -42,10 +42,10 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_unemployment_type_0_became_unemployed_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0BecameUnemployedAtType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0BecameUnemployedAtType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_unemployment_type_0_became_unemployed_at_type_1 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0BecameUnemployedAtType1,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0BecameUnemployedAtType1,  # noqa: PLC0415
         )
 
         is_unemployed = self.is_unemployed
@@ -81,10 +81,10 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_unemployment_type_0_became_unemployed_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0BecameUnemployedAtType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0BecameUnemployedAtType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_unemployment_type_0_became_unemployed_at_type_1 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0BecameUnemployedAtType1,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsUnemploymentType0BecameUnemployedAtType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

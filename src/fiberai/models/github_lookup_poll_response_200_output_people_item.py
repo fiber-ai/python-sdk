@@ -49,13 +49,13 @@ class GithubLookupPollResponse200OutputPeopleItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.github_lookup_poll_response_200_output_people_item_github_profile_type_0 import (
-            GithubLookupPollResponse200OutputPeopleItemGithubProfileType0,
+            GithubLookupPollResponse200OutputPeopleItemGithubProfileType0,  # noqa: PLC0415
         )
         from ..models.github_lookup_poll_response_200_output_people_item_github_profile_type_1 import (
-            GithubLookupPollResponse200OutputPeopleItemGithubProfileType1,
+            GithubLookupPollResponse200OutputPeopleItemGithubProfileType1,  # noqa: PLC0415
         )
         from ..models.github_lookup_poll_response_200_output_people_item_github_profile_type_2 import (
-            GithubLookupPollResponse200OutputPeopleItemGithubProfileType2,
+            GithubLookupPollResponse200OutputPeopleItemGithubProfileType2,  # noqa: PLC0415
         )
 
         person = self.person.to_dict()
@@ -84,19 +84,19 @@ class GithubLookupPollResponse200OutputPeopleItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.github_lookup_poll_response_200_output_people_item_github_profile_type_0 import (
-            GithubLookupPollResponse200OutputPeopleItemGithubProfileType0,
+            GithubLookupPollResponse200OutputPeopleItemGithubProfileType0,  # noqa: PLC0415
         )
         from ..models.github_lookup_poll_response_200_output_people_item_github_profile_type_1 import (
-            GithubLookupPollResponse200OutputPeopleItemGithubProfileType1,
+            GithubLookupPollResponse200OutputPeopleItemGithubProfileType1,  # noqa: PLC0415
         )
         from ..models.github_lookup_poll_response_200_output_people_item_github_profile_type_2 import (
-            GithubLookupPollResponse200OutputPeopleItemGithubProfileType2,
+            GithubLookupPollResponse200OutputPeopleItemGithubProfileType2,  # noqa: PLC0415
         )
         from ..models.github_lookup_poll_response_200_output_people_item_github_profile_type_3 import (
-            GithubLookupPollResponse200OutputPeopleItemGithubProfileType3,
+            GithubLookupPollResponse200OutputPeopleItemGithubProfileType3,  # noqa: PLC0415
         )
         from ..models.github_lookup_poll_response_200_output_people_item_person import (
-            GithubLookupPollResponse200OutputPeopleItemPerson,
+            GithubLookupPollResponse200OutputPeopleItemPerson,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

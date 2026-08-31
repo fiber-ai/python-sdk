@@ -70,10 +70,10 @@ class TiktokUnifiedSearchResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.tiktok_unified_search_response_200_output_users_item import (
-            TiktokUnifiedSearchResponse200OutputUsersItem,
+            TiktokUnifiedSearchResponse200OutputUsersItem,  # noqa: PLC0415
         )
         from ..models.tiktok_unified_search_response_200_output_videos_item import (
-            TiktokUnifiedSearchResponse200OutputVideosItem,
+            TiktokUnifiedSearchResponse200OutputVideosItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

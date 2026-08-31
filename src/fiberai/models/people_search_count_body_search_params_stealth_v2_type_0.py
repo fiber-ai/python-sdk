@@ -43,10 +43,10 @@ class PeopleSearchCountBodySearchParamsStealthV2Type0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_count_body_search_params_stealth_v2_type_0_entered_stealth_at_type_0 import (
-            PeopleSearchCountBodySearchParamsStealthV2Type0EnteredStealthAtType0,
+            PeopleSearchCountBodySearchParamsStealthV2Type0EnteredStealthAtType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_stealth_v2_type_0_entered_stealth_at_type_1 import (
-            PeopleSearchCountBodySearchParamsStealthV2Type0EnteredStealthAtType1,
+            PeopleSearchCountBodySearchParamsStealthV2Type0EnteredStealthAtType1,  # noqa: PLC0415
         )
 
         status = self.status.value
@@ -76,10 +76,10 @@ class PeopleSearchCountBodySearchParamsStealthV2Type0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_body_search_params_stealth_v2_type_0_entered_stealth_at_type_0 import (
-            PeopleSearchCountBodySearchParamsStealthV2Type0EnteredStealthAtType0,
+            PeopleSearchCountBodySearchParamsStealthV2Type0EnteredStealthAtType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_stealth_v2_type_0_entered_stealth_at_type_1 import (
-            PeopleSearchCountBodySearchParamsStealthV2Type0EnteredStealthAtType1,
+            PeopleSearchCountBodySearchParamsStealthV2Type0EnteredStealthAtType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

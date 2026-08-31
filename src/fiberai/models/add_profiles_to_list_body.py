@@ -51,7 +51,7 @@ class AddProfilesToListBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.add_profiles_to_list_body_profiles_item import AddProfilesToListBodyProfilesItem
+        from ..models.add_profiles_to_list_body_profiles_item import AddProfilesToListBodyProfilesItem  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

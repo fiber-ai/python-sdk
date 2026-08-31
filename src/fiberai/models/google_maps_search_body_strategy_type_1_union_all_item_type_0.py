@@ -58,7 +58,7 @@ class GoogleMapsSearchBodyStrategyType1UnionAllItemType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.google_maps_search_body_strategy_type_1_union_all_item_type_0_center import (
-            GoogleMapsSearchBodyStrategyType1UnionAllItemType0Center,
+            GoogleMapsSearchBodyStrategyType1UnionAllItemType0Center,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -42,10 +42,10 @@ class BulkCompanyLogosBody:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.bulk_company_logos_body_companies_identifier_type_0 import (
-            BulkCompanyLogosBodyCompaniesIdentifierType0,
+            BulkCompanyLogosBodyCompaniesIdentifierType0,  # noqa: PLC0415
         )
         from ..models.bulk_company_logos_body_companies_identifier_type_1 import (
-            BulkCompanyLogosBodyCompaniesIdentifierType1,
+            BulkCompanyLogosBodyCompaniesIdentifierType1,  # noqa: PLC0415
         )
 
         api_key = self.api_key
@@ -72,13 +72,13 @@ class BulkCompanyLogosBody:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.bulk_company_logos_body_companies_identifier_type_0 import (
-            BulkCompanyLogosBodyCompaniesIdentifierType0,
+            BulkCompanyLogosBodyCompaniesIdentifierType0,  # noqa: PLC0415
         )
         from ..models.bulk_company_logos_body_companies_identifier_type_1 import (
-            BulkCompanyLogosBodyCompaniesIdentifierType1,
+            BulkCompanyLogosBodyCompaniesIdentifierType1,  # noqa: PLC0415
         )
         from ..models.bulk_company_logos_body_companies_identifier_type_2 import (
-            BulkCompanyLogosBodyCompaniesIdentifierType2,
+            BulkCompanyLogosBodyCompaniesIdentifierType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

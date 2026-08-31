@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemYearsType0FinishedSchoolAtType1WindowType2Method(
-    str, Enum
+    StrEnum
 ):
     CALENDAR = "calendar"
 

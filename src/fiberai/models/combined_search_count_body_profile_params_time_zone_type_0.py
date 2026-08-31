@@ -44,7 +44,7 @@ class CombinedSearchCountBodyProfileParamsTimeZoneType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_time_zone_type_0_any_of_item import (
-            CombinedSearchCountBodyProfileParamsTimeZoneType0AnyOfItem,
+            CombinedSearchCountBodyProfileParamsTimeZoneType0AnyOfItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

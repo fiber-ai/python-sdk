@@ -47,7 +47,7 @@ class LiteContactRevealBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.lite_contact_reveal_body_input_type_0 import LiteContactRevealBodyInputType0
+        from ..models.lite_contact_reveal_body_input_type_0 import LiteContactRevealBodyInputType0  # noqa: PLC0415
 
         api_key = self.api_key
 
@@ -90,9 +90,11 @@ class LiteContactRevealBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.lite_contact_reveal_body_enrichment_type import LiteContactRevealBodyEnrichmentType
-        from ..models.lite_contact_reveal_body_input_type_0 import LiteContactRevealBodyInputType0
-        from ..models.lite_contact_reveal_body_input_type_1 import LiteContactRevealBodyInputType1
+        from ..models.lite_contact_reveal_body_enrichment_type import (
+            LiteContactRevealBodyEnrichmentType,  # noqa: PLC0415
+        )
+        from ..models.lite_contact_reveal_body_input_type_0 import LiteContactRevealBodyInputType0  # noqa: PLC0415
+        from ..models.lite_contact_reveal_body_input_type_1 import LiteContactRevealBodyInputType1  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

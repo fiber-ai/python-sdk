@@ -147,7 +147,7 @@ def sync_detailed(
     | KitchenSinkBulkProfileResponse500
     | KitchenSinkBulkProfileResponse503
 ]:
-    r"""Kitchen sink bulk profile lookup
+    """Kitchen sink bulk profile lookup
 
      Search for many people using a variety of parameters such as LinkedIn slug, LinkedIn URL, or current
     company information. Returns profile data for each person if found. Providing more information per
@@ -156,11 +156,11 @@ def sync_detailed(
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay per person: 2 credits per lookup, plus 2 additional credits when
-    the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.\">ⓘ</span></span>
+    the liveFetch flag is set.&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (KitchenSinkBulkProfileBody):
@@ -201,7 +201,7 @@ def sync(
     | KitchenSinkBulkProfileResponse503
     | None
 ):
-    r"""Kitchen sink bulk profile lookup
+    """Kitchen sink bulk profile lookup
 
      Search for many people using a variety of parameters such as LinkedIn slug, LinkedIn URL, or current
     company information. Returns profile data for each person if found. Providing more information per
@@ -210,11 +210,11 @@ def sync(
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay per person: 2 credits per lookup, plus 2 additional credits when
-    the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.\">ⓘ</span></span>
+    the liveFetch flag is set.&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (KitchenSinkBulkProfileBody):
@@ -249,7 +249,7 @@ async def asyncio_detailed(
     | KitchenSinkBulkProfileResponse500
     | KitchenSinkBulkProfileResponse503
 ]:
-    r"""Kitchen sink bulk profile lookup
+    """Kitchen sink bulk profile lookup
 
      Search for many people using a variety of parameters such as LinkedIn slug, LinkedIn URL, or current
     company information. Returns profile data for each person if found. Providing more information per
@@ -258,11 +258,11 @@ async def asyncio_detailed(
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay per person: 2 credits per lookup, plus 2 additional credits when
-    the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.\">ⓘ</span></span>
+    the liveFetch flag is set.&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (KitchenSinkBulkProfileBody):
@@ -301,7 +301,7 @@ async def asyncio(
     | KitchenSinkBulkProfileResponse503
     | None
 ):
-    r"""Kitchen sink bulk profile lookup
+    """Kitchen sink bulk profile lookup
 
      Search for many people using a variety of parameters such as LinkedIn slug, LinkedIn URL, or current
     company information. Returns profile data for each person if found. Providing more information per
@@ -310,11 +310,11 @@ async def asyncio(
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Pay per person: 2 credits per lookup, plus 2 additional credits when
-    the liveFetch flag is set.&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.\">ⓘ</span></span>
+    the liveFetch flag is set.&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary. LinkedIn live fetch credits only apply when the liveFetch flag is set.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (KitchenSinkBulkProfileBody):

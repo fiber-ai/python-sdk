@@ -100,13 +100,13 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0CrunchbaseCategoriesTy
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_crunchbase_categories_type_0_all_of_type_0_item import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0CrunchbaseCategoriesType0AllOfType0Item,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0CrunchbaseCategoriesType0AllOfType0Item,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_crunchbase_categories_type_0_any_of_type_0_item import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0CrunchbaseCategoriesType0AnyOfType0Item,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0CrunchbaseCategoriesType0AnyOfType0Item,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_crunchbase_categories_type_0_none_of_type_0_item import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0CrunchbaseCategoriesType0NoneOfType0Item,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0CrunchbaseCategoriesType0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

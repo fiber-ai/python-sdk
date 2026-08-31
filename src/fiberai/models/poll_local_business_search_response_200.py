@@ -58,16 +58,16 @@ class PollLocalBusinessSearchResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.poll_local_business_search_response_200_charge_info_type_0 import (
-            PollLocalBusinessSearchResponse200ChargeInfoType0,
+            PollLocalBusinessSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.poll_local_business_search_response_200_charge_info_type_1 import (
-            PollLocalBusinessSearchResponse200ChargeInfoType1,
+            PollLocalBusinessSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.poll_local_business_search_response_200_charge_info_type_2 import (
-            PollLocalBusinessSearchResponse200ChargeInfoType2,
+            PollLocalBusinessSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.poll_local_business_search_response_200_charge_info_type_3 import (
-            PollLocalBusinessSearchResponse200ChargeInfoType3,
+            PollLocalBusinessSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class PollLocalBusinessSearchResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_local_business_search_response_200_charge_info_type_0 import (
-            PollLocalBusinessSearchResponse200ChargeInfoType0,
+            PollLocalBusinessSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.poll_local_business_search_response_200_charge_info_type_1 import (
-            PollLocalBusinessSearchResponse200ChargeInfoType1,
+            PollLocalBusinessSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.poll_local_business_search_response_200_charge_info_type_2 import (
-            PollLocalBusinessSearchResponse200ChargeInfoType2,
+            PollLocalBusinessSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.poll_local_business_search_response_200_charge_info_type_3 import (
-            PollLocalBusinessSearchResponse200ChargeInfoType3,
+            PollLocalBusinessSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.poll_local_business_search_response_200_charge_info_type_4 import (
-            PollLocalBusinessSearchResponse200ChargeInfoType4,
+            PollLocalBusinessSearchResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.poll_local_business_search_response_200_output import PollLocalBusinessSearchResponse200Output
+        from ..models.poll_local_business_search_response_200_output import (
+            PollLocalBusinessSearchResponse200Output,  # noqa: PLC0415
+        )
         from ..models.poll_local_business_search_response_200_warnings_type_0_item import (
-            PollLocalBusinessSearchResponse200WarningsType0Item,
+            PollLocalBusinessSearchResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

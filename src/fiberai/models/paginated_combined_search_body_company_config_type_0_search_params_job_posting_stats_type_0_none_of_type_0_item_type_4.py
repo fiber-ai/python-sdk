@@ -51,7 +51,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsTy
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_posting_stats_type_0_none_of_type_0_item_type_4_range_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType4RangeType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType4RangeType0,  # noqa: PLC0415
         )
 
         rule = self.rule.value
@@ -82,10 +82,10 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsTy
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_posting_stats_type_0_none_of_type_0_item_type_4_range_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType4RangeType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType4RangeType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_posting_stats_type_0_none_of_type_0_item_type_4_range_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType4RangeType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType4RangeType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

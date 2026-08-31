@@ -86,10 +86,10 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationType0Any
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_type_0_any_of_type_0_item_school_type_0_any_of_type_0_item import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationType0AnyOfType0ItemSchoolType0AnyOfType0Item,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationType0AnyOfType0ItemSchoolType0AnyOfType0Item,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_type_0_any_of_type_0_item_school_type_0_none_of_type_0_item import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationType0AnyOfType0ItemSchoolType0NoneOfType0Item,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationType0AnyOfType0ItemSchoolType0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

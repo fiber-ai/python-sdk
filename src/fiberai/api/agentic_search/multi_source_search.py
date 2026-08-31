@@ -147,25 +147,25 @@ def sync_detailed(
     | MultiSourceSearchResponse500
     | MultiSourceSearchResponse503
 ]:
-    r"""Multi-source AI search
+    """Multi-source AI search
 
      AI-powered natural language search across multiple sources (LinkedIn, Google Maps, web, and more).
     Ideal for local business search where companies/employees have spotty web or LinkedIn presence.
 
     **Pagination flow:**
 
-    1. **First page** — send `{ search: { request: \"initial\", query: \"...\", pageSize: 10 } }`. The
+    1. **First page** — send `{ search: { request: "initial", query: "...", pageSize: 10 } }`. The
     `pageSize` you choose here is locked for the entire session.
-    2. **Subsequent pages** — send `{ search: { request: \"subsequent\", cursor: \"<nextCursor>\" } }`.
+    2. **Subsequent pages** — send `{ search: { request: "subsequent", cursor: "<nextCursor>" } }`.
     3. When `nextCursor` is `null` in the response, there are no more results.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the search completes based on results: 2
     credits per company found and 2 credits per prospect found. Each query resolves to either companies
-    or prospects, so only one rate applies per page.&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary. Your total charge depends on the number of results returned and
-    which entity type the query resolves to.\">ⓘ</span></span>
+    or prospects, so only one rate applies per page.&nbsp;<span title="Pricing shown is default pricing.
+    Actual pricing may vary. Your total charge depends on the number of results returned and which
+    entity type the query resolves to.">ⓘ</span></span>
 
     Args:
         body (MultiSourceSearchBody):
@@ -206,25 +206,25 @@ def sync(
     | MultiSourceSearchResponse503
     | None
 ):
-    r"""Multi-source AI search
+    """Multi-source AI search
 
      AI-powered natural language search across multiple sources (LinkedIn, Google Maps, web, and more).
     Ideal for local business search where companies/employees have spotty web or LinkedIn presence.
 
     **Pagination flow:**
 
-    1. **First page** — send `{ search: { request: \"initial\", query: \"...\", pageSize: 10 } }`. The
+    1. **First page** — send `{ search: { request: "initial", query: "...", pageSize: 10 } }`. The
     `pageSize` you choose here is locked for the entire session.
-    2. **Subsequent pages** — send `{ search: { request: \"subsequent\", cursor: \"<nextCursor>\" } }`.
+    2. **Subsequent pages** — send `{ search: { request: "subsequent", cursor: "<nextCursor>" } }`.
     3. When `nextCursor` is `null` in the response, there are no more results.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the search completes based on results: 2
     credits per company found and 2 credits per prospect found. Each query resolves to either companies
-    or prospects, so only one rate applies per page.&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary. Your total charge depends on the number of results returned and
-    which entity type the query resolves to.\">ⓘ</span></span>
+    or prospects, so only one rate applies per page.&nbsp;<span title="Pricing shown is default pricing.
+    Actual pricing may vary. Your total charge depends on the number of results returned and which
+    entity type the query resolves to.">ⓘ</span></span>
 
     Args:
         body (MultiSourceSearchBody):
@@ -259,25 +259,25 @@ async def asyncio_detailed(
     | MultiSourceSearchResponse500
     | MultiSourceSearchResponse503
 ]:
-    r"""Multi-source AI search
+    """Multi-source AI search
 
      AI-powered natural language search across multiple sources (LinkedIn, Google Maps, web, and more).
     Ideal for local business search where companies/employees have spotty web or LinkedIn presence.
 
     **Pagination flow:**
 
-    1. **First page** — send `{ search: { request: \"initial\", query: \"...\", pageSize: 10 } }`. The
+    1. **First page** — send `{ search: { request: "initial", query: "...", pageSize: 10 } }`. The
     `pageSize` you choose here is locked for the entire session.
-    2. **Subsequent pages** — send `{ search: { request: \"subsequent\", cursor: \"<nextCursor>\" } }`.
+    2. **Subsequent pages** — send `{ search: { request: "subsequent", cursor: "<nextCursor>" } }`.
     3. When `nextCursor` is `null` in the response, there are no more results.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the search completes based on results: 2
     credits per company found and 2 credits per prospect found. Each query resolves to either companies
-    or prospects, so only one rate applies per page.&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary. Your total charge depends on the number of results returned and
-    which entity type the query resolves to.\">ⓘ</span></span>
+    or prospects, so only one rate applies per page.&nbsp;<span title="Pricing shown is default pricing.
+    Actual pricing may vary. Your total charge depends on the number of results returned and which
+    entity type the query resolves to.">ⓘ</span></span>
 
     Args:
         body (MultiSourceSearchBody):
@@ -316,25 +316,25 @@ async def asyncio(
     | MultiSourceSearchResponse503
     | None
 ):
-    r"""Multi-source AI search
+    """Multi-source AI search
 
      AI-powered natural language search across multiple sources (LinkedIn, Google Maps, web, and more).
     Ideal for local business search where companies/employees have spotty web or LinkedIn presence.
 
     **Pagination flow:**
 
-    1. **First page** — send `{ search: { request: \"initial\", query: \"...\", pageSize: 10 } }`. The
+    1. **First page** — send `{ search: { request: "initial", query: "...", pageSize: 10 } }`. The
     `pageSize` you choose here is locked for the entire session.
-    2. **Subsequent pages** — send `{ search: { request: \"subsequent\", cursor: \"<nextCursor>\" } }`.
+    2. **Subsequent pages** — send `{ search: { request: "subsequent", cursor: "<nextCursor>" } }`.
     3. When `nextCursor` is `null` in the response, there are no more results.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the search completes based on results: 2
     credits per company found and 2 credits per prospect found. Each query resolves to either companies
-    or prospects, so only one rate applies per page.&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary. Your total charge depends on the number of results returned and
-    which entity type the query resolves to.\">ⓘ</span></span>
+    or prospects, so only one rate applies per page.&nbsp;<span title="Pricing shown is default pricing.
+    Actual pricing may vary. Your total charge depends on the number of results returned and which
+    entity type the query resolves to.">ⓘ</span></span>
 
     Args:
         body (MultiSourceSearchBody):

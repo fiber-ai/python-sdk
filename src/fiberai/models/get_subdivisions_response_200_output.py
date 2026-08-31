@@ -49,7 +49,7 @@ class GetSubdivisionsResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_subdivisions_response_200_output_subdivisions_item import (
-            GetSubdivisionsResponse200OutputSubdivisionsItem,
+            GetSubdivisionsResponse200OutputSubdivisionsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

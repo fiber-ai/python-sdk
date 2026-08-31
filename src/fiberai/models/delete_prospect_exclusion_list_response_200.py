@@ -58,16 +58,16 @@ class DeleteProspectExclusionListResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.delete_prospect_exclusion_list_response_200_charge_info_type_0 import (
-            DeleteProspectExclusionListResponse200ChargeInfoType0,
+            DeleteProspectExclusionListResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.delete_prospect_exclusion_list_response_200_charge_info_type_1 import (
-            DeleteProspectExclusionListResponse200ChargeInfoType1,
+            DeleteProspectExclusionListResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.delete_prospect_exclusion_list_response_200_charge_info_type_2 import (
-            DeleteProspectExclusionListResponse200ChargeInfoType2,
+            DeleteProspectExclusionListResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.delete_prospect_exclusion_list_response_200_charge_info_type_3 import (
-            DeleteProspectExclusionListResponse200ChargeInfoType3,
+            DeleteProspectExclusionListResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,25 +123,25 @@ class DeleteProspectExclusionListResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.delete_prospect_exclusion_list_response_200_charge_info_type_0 import (
-            DeleteProspectExclusionListResponse200ChargeInfoType0,
+            DeleteProspectExclusionListResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.delete_prospect_exclusion_list_response_200_charge_info_type_1 import (
-            DeleteProspectExclusionListResponse200ChargeInfoType1,
+            DeleteProspectExclusionListResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.delete_prospect_exclusion_list_response_200_charge_info_type_2 import (
-            DeleteProspectExclusionListResponse200ChargeInfoType2,
+            DeleteProspectExclusionListResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.delete_prospect_exclusion_list_response_200_charge_info_type_3 import (
-            DeleteProspectExclusionListResponse200ChargeInfoType3,
+            DeleteProspectExclusionListResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.delete_prospect_exclusion_list_response_200_charge_info_type_4 import (
-            DeleteProspectExclusionListResponse200ChargeInfoType4,
+            DeleteProspectExclusionListResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.delete_prospect_exclusion_list_response_200_output import (
-            DeleteProspectExclusionListResponse200Output,
+            DeleteProspectExclusionListResponse200Output,  # noqa: PLC0415
         )
         from ..models.delete_prospect_exclusion_list_response_200_warnings_type_0_item import (
-            DeleteProspectExclusionListResponse200WarningsType0Item,
+            DeleteProspectExclusionListResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

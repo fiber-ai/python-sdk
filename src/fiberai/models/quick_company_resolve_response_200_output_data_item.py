@@ -39,7 +39,7 @@ class QuickCompanyResolveResponse200OutputDataItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0,  # noqa: PLC0415
         )
 
         identifier = self.identifier.value
@@ -73,7 +73,7 @@ class QuickCompanyResolveResponse200OutputDataItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -147,7 +147,7 @@ def sync_detailed(
     | CreateSavedSearchResponse500
     | CreateSavedSearchResponse503
 ]:
-    r"""Create saved search
+    """Create saved search
 
      Create a new saved search. Given search params, it automatically re-runs it periodically and tells
     you which new people and/or companies fit your parameters over time (and also who drops out or
@@ -157,7 +157,7 @@ def sync_detailed(
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per prospect/company found in search&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateSavedSearchBody):
@@ -198,7 +198,7 @@ def sync(
     | CreateSavedSearchResponse503
     | None
 ):
-    r"""Create saved search
+    """Create saved search
 
      Create a new saved search. Given search params, it automatically re-runs it periodically and tells
     you which new people and/or companies fit your parameters over time (and also who drops out or
@@ -208,7 +208,7 @@ def sync(
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per prospect/company found in search&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateSavedSearchBody):
@@ -243,7 +243,7 @@ async def asyncio_detailed(
     | CreateSavedSearchResponse500
     | CreateSavedSearchResponse503
 ]:
-    r"""Create saved search
+    """Create saved search
 
      Create a new saved search. Given search params, it automatically re-runs it periodically and tells
     you which new people and/or companies fit your parameters over time (and also who drops out or
@@ -253,7 +253,7 @@ async def asyncio_detailed(
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per prospect/company found in search&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateSavedSearchBody):
@@ -292,7 +292,7 @@ async def asyncio(
     | CreateSavedSearchResponse503
     | None
 ):
-    r"""Create saved search
+    """Create saved search
 
      Create a new saved search. Given search params, it automatically re-runs it periodically and tells
     you which new people and/or companies fit your parameters over time (and also who drops out or
@@ -302,7 +302,7 @@ async def asyncio(
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per prospect/company found in search&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateSavedSearchBody):

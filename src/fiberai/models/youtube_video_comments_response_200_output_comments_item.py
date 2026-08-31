@@ -41,7 +41,7 @@ class YoutubeVideoCommentsResponse200OutputCommentsItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.youtube_video_comments_response_200_output_comments_item_published_at_type_0 import (
-            YoutubeVideoCommentsResponse200OutputCommentsItemPublishedAtType0,
+            YoutubeVideoCommentsResponse200OutputCommentsItemPublishedAtType0,  # noqa: PLC0415
         )
 
         id: None | str | Unset
@@ -103,7 +103,7 @@ class YoutubeVideoCommentsResponse200OutputCommentsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.youtube_video_comments_response_200_output_comments_item_published_at_type_0 import (
-            YoutubeVideoCommentsResponse200OutputCommentsItemPublishedAtType0,
+            YoutubeVideoCommentsResponse200OutputCommentsItemPublishedAtType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

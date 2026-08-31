@@ -147,15 +147,15 @@ def sync_detailed(
     | TwitterUserFollowingResponse500
     | TwitterUserFollowingResponse503
 ]:
-    r"""Fetch Twitter/X user following
+    """Fetch Twitter/X user following
 
      Fetches a page of accounts a Twitter/X user follows. Use the `cursor` field from the response to
     retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterUserFollowingBody):
@@ -196,15 +196,15 @@ def sync(
     | TwitterUserFollowingResponse503
     | None
 ):
-    r"""Fetch Twitter/X user following
+    """Fetch Twitter/X user following
 
      Fetches a page of accounts a Twitter/X user follows. Use the `cursor` field from the response to
     retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterUserFollowingBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TwitterUserFollowingResponse500
     | TwitterUserFollowingResponse503
 ]:
-    r"""Fetch Twitter/X user following
+    """Fetch Twitter/X user following
 
      Fetches a page of accounts a Twitter/X user follows. Use the `cursor` field from the response to
     retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterUserFollowingBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TwitterUserFollowingResponse503
     | None
 ):
-    r"""Fetch Twitter/X user following
+    """Fetch Twitter/X user following
 
      Fetches a page of accounts a Twitter/X user follows. Use the `cursor` field from the response to
     retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterUserFollowingBody):

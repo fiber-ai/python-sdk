@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobTextType0CriteriaItemRule(str, Enum):
+class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPastJobTextType0CriteriaItemRule(StrEnum):
     EXCLUDES = "excludes"
     INCLUDES = "includes"
 

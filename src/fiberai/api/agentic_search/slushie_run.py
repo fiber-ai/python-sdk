@@ -138,7 +138,7 @@ def sync_detailed(
     | SlushieRunResponse500
     | SlushieRunResponse503
 ]:
-    r"""Natural language search
+    """Natural language search
 
      Takes free-form text (e.g., 'Senior Product Managers at Series A FinTech startups in New York') and
     returns matching companies or people. The API determines the result type based on query
@@ -149,11 +149,11 @@ def sync_detailed(
 
     <span>💰 <strong>Cost:</strong> Fixed costs per request (first page only):<br />• 2 credits for AI
     search interpretation<br /><br />Variable costs per result:<br />• 1 credits per company returned<br
-    />• 1 credits per profile returned&nbsp;<span title=\"Pricing shown is default pricing. Actual
-    pricing may vary.\">ⓘ</span></span>
+    />• 1 credits per profile returned&nbsp;<span title="Pricing shown is default pricing. Actual
+    pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SlushieRunBody):
@@ -193,7 +193,7 @@ def sync(
     | SlushieRunResponse503
     | None
 ):
-    r"""Natural language search
+    """Natural language search
 
      Takes free-form text (e.g., 'Senior Product Managers at Series A FinTech startups in New York') and
     returns matching companies or people. The API determines the result type based on query
@@ -204,11 +204,11 @@ def sync(
 
     <span>💰 <strong>Cost:</strong> Fixed costs per request (first page only):<br />• 2 credits for AI
     search interpretation<br /><br />Variable costs per result:<br />• 1 credits per company returned<br
-    />• 1 credits per profile returned&nbsp;<span title=\"Pricing shown is default pricing. Actual
-    pricing may vary.\">ⓘ</span></span>
+    />• 1 credits per profile returned&nbsp;<span title="Pricing shown is default pricing. Actual
+    pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SlushieRunBody):
@@ -242,7 +242,7 @@ async def asyncio_detailed(
     | SlushieRunResponse500
     | SlushieRunResponse503
 ]:
-    r"""Natural language search
+    """Natural language search
 
      Takes free-form text (e.g., 'Senior Product Managers at Series A FinTech startups in New York') and
     returns matching companies or people. The API determines the result type based on query
@@ -253,11 +253,11 @@ async def asyncio_detailed(
 
     <span>💰 <strong>Cost:</strong> Fixed costs per request (first page only):<br />• 2 credits for AI
     search interpretation<br /><br />Variable costs per result:<br />• 1 credits per company returned<br
-    />• 1 credits per profile returned&nbsp;<span title=\"Pricing shown is default pricing. Actual
-    pricing may vary.\">ⓘ</span></span>
+    />• 1 credits per profile returned&nbsp;<span title="Pricing shown is default pricing. Actual
+    pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SlushieRunBody):
@@ -295,7 +295,7 @@ async def asyncio(
     | SlushieRunResponse503
     | None
 ):
-    r"""Natural language search
+    """Natural language search
 
      Takes free-form text (e.g., 'Senior Product Managers at Series A FinTech startups in New York') and
     returns matching companies or people. The API determines the result type based on query
@@ -306,11 +306,11 @@ async def asyncio(
 
     <span>💰 <strong>Cost:</strong> Fixed costs per request (first page only):<br />• 2 credits for AI
     search interpretation<br /><br />Variable costs per result:<br />• 1 credits per company returned<br
-    />• 1 credits per profile returned&nbsp;<span title=\"Pricing shown is default pricing. Actual
-    pricing may vary.\">ⓘ</span></span>
+    />• 1 credits per profile returned&nbsp;<span title="Pricing shown is default pricing. Actual
+    pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SlushieRunBody):

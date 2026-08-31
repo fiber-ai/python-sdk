@@ -52,7 +52,7 @@ class KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0I
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_detailed_education_type_0_item_school_details_type_0 import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0,  # noqa: PLC0415
         )
 
         school_details: dict[str, Any] | None | Unset
@@ -157,7 +157,7 @@ class KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0I
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_detailed_education_type_0_item_school_details_type_0 import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0ItemSchoolDetailsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

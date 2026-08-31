@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ProfileLiveEnrichResponse200ChargeInfoType3Method(str, Enum):
+class ProfileLiveEnrichResponse200ChargeInfoType3Method(StrEnum):
     FREE = "free"
 
     def __str__(self) -> str:

@@ -75,13 +75,13 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0J
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_job_location_type_stats_type_0_hybrid import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0Hybrid,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0Hybrid,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_job_location_type_stats_type_0_on_site import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0OnSite,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0OnSite,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_job_location_type_stats_type_0_remote import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0Remote,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0Remote,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

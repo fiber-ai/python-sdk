@@ -34,7 +34,7 @@ class CompanySearchBodySearchParamsFoundedOnType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_search_body_search_params_founded_on_type_0_range_type_0 import (
-            CompanySearchBodySearchParamsFoundedOnType0RangeType0,
+            CompanySearchBodySearchParamsFoundedOnType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -62,7 +62,7 @@ class CompanySearchBodySearchParamsFoundedOnType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_body_search_params_founded_on_type_0_range_type_0 import (
-            CompanySearchBodySearchParamsFoundedOnType0RangeType0,
+            CompanySearchBodySearchParamsFoundedOnType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

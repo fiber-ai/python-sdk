@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType0CompanySearchParamsStageType0AnyOfType0Item(str, Enum):
+class CreateSavedSearchBodySearchParamsType0CompanySearchParamsStageType0AnyOfType0Item(StrEnum):
     ACQUIRED = "acquired"
     CLOSED = "closed"
     NO_FUNDING_YET = "no_funding_yet"

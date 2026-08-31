@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType2Strategy(
-    str, Enum
+    StrEnum
 ):
     POLYGON = "polygon"
 

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class KitchenSinkBulkCompanyResponse200OutputDataItemItemBestFundingRoundType0RoundTypeType3Type1(str, Enum):
+class KitchenSinkBulkCompanyResponse200OutputDataItemItemBestFundingRoundType0RoundTypeType3Type1(StrEnum):
     ANGEL = "angel"
     CONVERTIBLE_NOTE = "convertible_note"
     CORPORATE_ROUND = "corporate_round"

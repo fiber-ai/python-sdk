@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType2Type(str, Enum):
+class CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType2Type(StrEnum):
     NONE = "none"
 
     def __str__(self) -> str:

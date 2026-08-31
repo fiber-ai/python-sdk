@@ -40,7 +40,7 @@ class SocialMediaLookupBatchPollingResponse200ChargeInfoType2:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.social_media_lookup_batch_polling_response_200_charge_info_type_2_low_credit_alert_type_0 import (
-            SocialMediaLookupBatchPollingResponse200ChargeInfoType2LowCreditAlertType0,
+            SocialMediaLookupBatchPollingResponse200ChargeInfoType2LowCreditAlertType0,  # noqa: PLC0415
         )
 
         method = self.method.value
@@ -76,7 +76,7 @@ class SocialMediaLookupBatchPollingResponse200ChargeInfoType2:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.social_media_lookup_batch_polling_response_200_charge_info_type_2_low_credit_alert_type_0 import (
-            SocialMediaLookupBatchPollingResponse200ChargeInfoType2LowCreditAlertType0,
+            SocialMediaLookupBatchPollingResponse200ChargeInfoType2LowCreditAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -58,7 +58,7 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItemLiLocationsType0ItemL
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_response_200_output_companies_item_li_locations_type_0_item_location_type_0_coordinates_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiLocationsType0ItemLocationType0CoordinatesType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiLocationsType0ItemLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         street_address: None | str | Unset
@@ -179,7 +179,7 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItemLiLocationsType0ItemL
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_output_companies_item_li_locations_type_0_item_location_type_0_coordinates_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiLocationsType0ItemLocationType0CoordinatesType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiLocationsType0ItemLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

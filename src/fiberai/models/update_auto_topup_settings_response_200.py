@@ -63,19 +63,19 @@ class UpdateAutoTopupSettingsResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.update_auto_topup_settings_response_200_charge_info_type_0 import (
-            UpdateAutoTopupSettingsResponse200ChargeInfoType0,
+            UpdateAutoTopupSettingsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.update_auto_topup_settings_response_200_charge_info_type_1 import (
-            UpdateAutoTopupSettingsResponse200ChargeInfoType1,
+            UpdateAutoTopupSettingsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.update_auto_topup_settings_response_200_charge_info_type_2 import (
-            UpdateAutoTopupSettingsResponse200ChargeInfoType2,
+            UpdateAutoTopupSettingsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.update_auto_topup_settings_response_200_charge_info_type_3 import (
-            UpdateAutoTopupSettingsResponse200ChargeInfoType3,
+            UpdateAutoTopupSettingsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.update_auto_topup_settings_response_200_output_type_0 import (
-            UpdateAutoTopupSettingsResponse200OutputType0,
+            UpdateAutoTopupSettingsResponse200OutputType0,  # noqa: PLC0415
         )
 
         output: dict[str, Any]
@@ -135,28 +135,28 @@ class UpdateAutoTopupSettingsResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.update_auto_topup_settings_response_200_charge_info_type_0 import (
-            UpdateAutoTopupSettingsResponse200ChargeInfoType0,
+            UpdateAutoTopupSettingsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.update_auto_topup_settings_response_200_charge_info_type_1 import (
-            UpdateAutoTopupSettingsResponse200ChargeInfoType1,
+            UpdateAutoTopupSettingsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.update_auto_topup_settings_response_200_charge_info_type_2 import (
-            UpdateAutoTopupSettingsResponse200ChargeInfoType2,
+            UpdateAutoTopupSettingsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.update_auto_topup_settings_response_200_charge_info_type_3 import (
-            UpdateAutoTopupSettingsResponse200ChargeInfoType3,
+            UpdateAutoTopupSettingsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.update_auto_topup_settings_response_200_charge_info_type_4 import (
-            UpdateAutoTopupSettingsResponse200ChargeInfoType4,
+            UpdateAutoTopupSettingsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.update_auto_topup_settings_response_200_output_type_0 import (
-            UpdateAutoTopupSettingsResponse200OutputType0,
+            UpdateAutoTopupSettingsResponse200OutputType0,  # noqa: PLC0415
         )
         from ..models.update_auto_topup_settings_response_200_output_type_1 import (
-            UpdateAutoTopupSettingsResponse200OutputType1,
+            UpdateAutoTopupSettingsResponse200OutputType1,  # noqa: PLC0415
         )
         from ..models.update_auto_topup_settings_response_200_warnings_type_0_item import (
-            UpdateAutoTopupSettingsResponse200WarningsType0Item,
+            UpdateAutoTopupSettingsResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

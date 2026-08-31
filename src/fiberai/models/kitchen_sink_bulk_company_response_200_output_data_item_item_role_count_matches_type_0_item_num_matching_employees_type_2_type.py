@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class KitchenSinkBulkCompanyResponse200OutputDataItemItemRoleCountMatchesType0ItemNumMatchingEmployeesType2Type(
-    str, Enum
+    StrEnum
 ):
     NONE = "none"
 

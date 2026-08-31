@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2Strategy(str, Enum):
+class CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2Strategy(StrEnum):
     POLYGON = "polygon"
 
     def __str__(self) -> str:

@@ -58,10 +58,10 @@ class CompanyLiveEnrichResponse200OutputCompanyHistoricalHeadcountType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_live_enrich_response_200_output_company_historical_headcount_type_0_growth import (
-            CompanyLiveEnrichResponse200OutputCompanyHistoricalHeadcountType0Growth,
+            CompanyLiveEnrichResponse200OutputCompanyHistoricalHeadcountType0Growth,  # noqa: PLC0415
         )
         from ..models.company_live_enrich_response_200_output_company_historical_headcount_type_0_snapshots_item import (
-            CompanyLiveEnrichResponse200OutputCompanyHistoricalHeadcountType0SnapshotsItem,
+            CompanyLiveEnrichResponse200OutputCompanyHistoricalHeadcountType0SnapshotsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

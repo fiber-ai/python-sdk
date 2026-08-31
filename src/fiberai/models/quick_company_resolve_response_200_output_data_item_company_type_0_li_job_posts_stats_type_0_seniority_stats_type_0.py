@@ -141,25 +141,25 @@ class QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsTyp
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_seniority_stats_type_0_associate import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0SeniorityStatsType0Associate,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0SeniorityStatsType0Associate,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_seniority_stats_type_0_director import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0SeniorityStatsType0Director,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0SeniorityStatsType0Director,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_seniority_stats_type_0_entry_level import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0SeniorityStatsType0EntryLevel,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0SeniorityStatsType0EntryLevel,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_seniority_stats_type_0_executive import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0SeniorityStatsType0Executive,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0SeniorityStatsType0Executive,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_seniority_stats_type_0_internship import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0SeniorityStatsType0Internship,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0SeniorityStatsType0Internship,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_seniority_stats_type_0_mid_senior_level import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_seniority_stats_type_0_not_applicable import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0SeniorityStatsType0NotApplicable,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0SeniorityStatsType0NotApplicable,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

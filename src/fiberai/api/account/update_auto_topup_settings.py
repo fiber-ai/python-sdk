@@ -147,7 +147,7 @@ def sync_detailed(
     | UpdateAutoTopupSettingsResponse500
     | UpdateAutoTopupSettingsResponse503
 ]:
-    r"""Update auto top-up settings
+    """Update auto top-up settings
 
      Update the organization's auto top-up configuration. Enabling auto top-up will automatically charge
     your organization's saved payment method via Stripe when your credit balance falls below the
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateAutoTopupSettingsBody):
@@ -197,7 +197,7 @@ def sync(
     | UpdateAutoTopupSettingsResponse503
     | None
 ):
-    r"""Update auto top-up settings
+    """Update auto top-up settings
 
      Update the organization's auto top-up configuration. Enabling auto top-up will automatically charge
     your organization's saved payment method via Stripe when your credit balance falls below the
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateAutoTopupSettingsBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | UpdateAutoTopupSettingsResponse500
     | UpdateAutoTopupSettingsResponse503
 ]:
-    r"""Update auto top-up settings
+    """Update auto top-up settings
 
      Update the organization's auto top-up configuration. Enabling auto top-up will automatically charge
     your organization's saved payment method via Stripe when your credit balance falls below the
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateAutoTopupSettingsBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | UpdateAutoTopupSettingsResponse503
     | None
 ):
-    r"""Update auto top-up settings
+    """Update auto top-up settings
 
      Update the organization's auto top-up configuration. Enabling auto top-up will automatically charge
     your organization's saved payment method via Stripe when your credit balance falls below the
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateAutoTopupSettingsBody):

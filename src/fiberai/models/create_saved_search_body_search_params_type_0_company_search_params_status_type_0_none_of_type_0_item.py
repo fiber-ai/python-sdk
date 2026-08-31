@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType0CompanySearchParamsStatusType0NoneOfType0Item(str, Enum):
+class CreateSavedSearchBodySearchParamsType0CompanySearchParamsStatusType0NoneOfType0Item(StrEnum):
     ACQUIRED = "acquired"
     ACTIVE = "active"
     CLOSED = "closed"

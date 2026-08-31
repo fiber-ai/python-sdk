@@ -152,7 +152,7 @@ def sync_detailed(
     | ExportCompaniesResponse500
     | ExportCompaniesResponse503
 ]:
-    r"""Export audience companies to CSV
+    """Export audience companies to CSV
 
      Triggers CSV export of companies in an audience. The export runs asynchronously - CSV links will be
     sent to the provided email address (if userEmail is provided) or returned in the API response.
@@ -160,8 +160,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -205,7 +205,7 @@ def sync(
     | ExportCompaniesResponse503
     | None
 ):
-    r"""Export audience companies to CSV
+    """Export audience companies to CSV
 
      Triggers CSV export of companies in an audience. The export runs asynchronously - CSV links will be
     sent to the provided email address (if userEmail is provided) or returned in the API response.
@@ -213,8 +213,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -252,7 +252,7 @@ async def asyncio_detailed(
     | ExportCompaniesResponse500
     | ExportCompaniesResponse503
 ]:
-    r"""Export audience companies to CSV
+    """Export audience companies to CSV
 
      Triggers CSV export of companies in an audience. The export runs asynchronously - CSV links will be
     sent to the provided email address (if userEmail is provided) or returned in the API response.
@@ -260,8 +260,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -303,7 +303,7 @@ async def asyncio(
     | ExportCompaniesResponse503
     | None
 ):
-    r"""Export audience companies to CSV
+    """Export audience companies to CSV
 
      Triggers CSV export of companies in an audience. The export runs asynchronously - CSV links will be
     sent to the provided email address (if userEmail is provided) or returned in the API response.
@@ -311,8 +311,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):

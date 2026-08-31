@@ -68,10 +68,10 @@ class PollBatchContactDetailsResponse200OutputPageResultsItemOutputsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_batch_contact_details_response_200_output_page_results_item_outputs_type_0_emails_item import (
-            PollBatchContactDetailsResponse200OutputPageResultsItemOutputsType0EmailsItem,
+            PollBatchContactDetailsResponse200OutputPageResultsItemOutputsType0EmailsItem,  # noqa: PLC0415
         )
         from ..models.poll_batch_contact_details_response_200_output_page_results_item_outputs_type_0_phone_numbers_item import (
-            PollBatchContactDetailsResponse200OutputPageResultsItemOutputsType0PhoneNumbersItem,
+            PollBatchContactDetailsResponse200OutputPageResultsItemOutputsType0PhoneNumbersItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

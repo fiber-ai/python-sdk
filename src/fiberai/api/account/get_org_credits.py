@@ -147,14 +147,14 @@ def sync_detailed(
     | GetOrgCreditsResponse500
     | GetOrgCreditsResponse503
 ]:
-    r"""Get organization credits
+    """Get organization credits
 
      Get credits for an organization
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -195,14 +195,14 @@ def sync(
     | GetOrgCreditsResponse503
     | None
 ):
-    r"""Get organization credits
+    """Get organization credits
 
      Get credits for an organization
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | GetOrgCreditsResponse500
     | GetOrgCreditsResponse503
 ]:
-    r"""Get organization credits
+    """Get organization credits
 
      Get credits for an organization
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -283,14 +283,14 @@ async def asyncio(
     | GetOrgCreditsResponse503
     | None
 ):
-    r"""Get organization credits
+    """Get organization credits
 
      Get credits for an organization
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):

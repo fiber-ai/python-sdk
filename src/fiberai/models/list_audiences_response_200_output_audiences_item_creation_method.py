@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ListAudiencesResponse200OutputAudiencesItemCreationMethod(str, Enum):
+class ListAudiencesResponse200OutputAudiencesItemCreationMethod(StrEnum):
     BATCH_ENRICHMENT = "BATCH_ENRICHMENT"
     CLONED = "CLONED"
     COMPANY_UPLOAD = "COMPANY_UPLOAD"

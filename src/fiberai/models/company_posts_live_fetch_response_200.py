@@ -58,16 +58,16 @@ class CompanyPostsLiveFetchResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_posts_live_fetch_response_200_charge_info_type_0 import (
-            CompanyPostsLiveFetchResponse200ChargeInfoType0,
+            CompanyPostsLiveFetchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.company_posts_live_fetch_response_200_charge_info_type_1 import (
-            CompanyPostsLiveFetchResponse200ChargeInfoType1,
+            CompanyPostsLiveFetchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.company_posts_live_fetch_response_200_charge_info_type_2 import (
-            CompanyPostsLiveFetchResponse200ChargeInfoType2,
+            CompanyPostsLiveFetchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.company_posts_live_fetch_response_200_charge_info_type_3 import (
-            CompanyPostsLiveFetchResponse200ChargeInfoType3,
+            CompanyPostsLiveFetchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class CompanyPostsLiveFetchResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_posts_live_fetch_response_200_charge_info_type_0 import (
-            CompanyPostsLiveFetchResponse200ChargeInfoType0,
+            CompanyPostsLiveFetchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.company_posts_live_fetch_response_200_charge_info_type_1 import (
-            CompanyPostsLiveFetchResponse200ChargeInfoType1,
+            CompanyPostsLiveFetchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.company_posts_live_fetch_response_200_charge_info_type_2 import (
-            CompanyPostsLiveFetchResponse200ChargeInfoType2,
+            CompanyPostsLiveFetchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.company_posts_live_fetch_response_200_charge_info_type_3 import (
-            CompanyPostsLiveFetchResponse200ChargeInfoType3,
+            CompanyPostsLiveFetchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.company_posts_live_fetch_response_200_charge_info_type_4 import (
-            CompanyPostsLiveFetchResponse200ChargeInfoType4,
+            CompanyPostsLiveFetchResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.company_posts_live_fetch_response_200_output import CompanyPostsLiveFetchResponse200Output
+        from ..models.company_posts_live_fetch_response_200_output import (
+            CompanyPostsLiveFetchResponse200Output,  # noqa: PLC0415
+        )
         from ..models.company_posts_live_fetch_response_200_warnings_type_0_item import (
-            CompanyPostsLiveFetchResponse200WarningsType0Item,
+            CompanyPostsLiveFetchResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

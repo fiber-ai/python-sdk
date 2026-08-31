@@ -33,7 +33,7 @@ class FundingStageChange:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.funding_round_change import FundingRoundChange
+        from ..models.funding_round_change import FundingRoundChange  # noqa: PLC0415
 
         kind = self.kind
 
@@ -75,7 +75,7 @@ class FundingStageChange:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.funding_round_change import FundingRoundChange
+        from ..models.funding_round_change import FundingRoundChange  # noqa: PLC0415
 
         d = dict(src_dict)
         kind = cast(Literal["scalar"], d.pop("kind"))

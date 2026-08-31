@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0NoneOfType0ItemType(
-    str, Enum
+    StrEnum
 ):
     GROUP = "group"
 

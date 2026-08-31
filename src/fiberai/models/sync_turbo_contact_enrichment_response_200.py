@@ -58,16 +58,16 @@ class SyncTurboContactEnrichmentResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.sync_turbo_contact_enrichment_response_200_charge_info_type_0 import (
-            SyncTurboContactEnrichmentResponse200ChargeInfoType0,
+            SyncTurboContactEnrichmentResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.sync_turbo_contact_enrichment_response_200_charge_info_type_1 import (
-            SyncTurboContactEnrichmentResponse200ChargeInfoType1,
+            SyncTurboContactEnrichmentResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.sync_turbo_contact_enrichment_response_200_charge_info_type_2 import (
-            SyncTurboContactEnrichmentResponse200ChargeInfoType2,
+            SyncTurboContactEnrichmentResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.sync_turbo_contact_enrichment_response_200_charge_info_type_3 import (
-            SyncTurboContactEnrichmentResponse200ChargeInfoType3,
+            SyncTurboContactEnrichmentResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,25 +123,25 @@ class SyncTurboContactEnrichmentResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.sync_turbo_contact_enrichment_response_200_charge_info_type_0 import (
-            SyncTurboContactEnrichmentResponse200ChargeInfoType0,
+            SyncTurboContactEnrichmentResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.sync_turbo_contact_enrichment_response_200_charge_info_type_1 import (
-            SyncTurboContactEnrichmentResponse200ChargeInfoType1,
+            SyncTurboContactEnrichmentResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.sync_turbo_contact_enrichment_response_200_charge_info_type_2 import (
-            SyncTurboContactEnrichmentResponse200ChargeInfoType2,
+            SyncTurboContactEnrichmentResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.sync_turbo_contact_enrichment_response_200_charge_info_type_3 import (
-            SyncTurboContactEnrichmentResponse200ChargeInfoType3,
+            SyncTurboContactEnrichmentResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.sync_turbo_contact_enrichment_response_200_charge_info_type_4 import (
-            SyncTurboContactEnrichmentResponse200ChargeInfoType4,
+            SyncTurboContactEnrichmentResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.sync_turbo_contact_enrichment_response_200_output import (
-            SyncTurboContactEnrichmentResponse200Output,
+            SyncTurboContactEnrichmentResponse200Output,  # noqa: PLC0415
         )
         from ..models.sync_turbo_contact_enrichment_response_200_warnings_type_0_item import (
-            SyncTurboContactEnrichmentResponse200WarningsType0Item,
+            SyncTurboContactEnrichmentResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

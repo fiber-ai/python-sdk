@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemStatus(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemStatus(StrEnum):
     ANY = "any"
     CURRENT = "current"
     PAST = "past"

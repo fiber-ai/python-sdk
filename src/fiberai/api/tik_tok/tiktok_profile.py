@@ -147,14 +147,14 @@ def sync_detailed(
     | TiktokProfileResponse500
     | TiktokProfileResponse503
 ]:
-    r"""Fetch TikTok user profile
+    """Fetch TikTok user profile
 
      Fetches profile information for a TikTok user including follower counts, bio, and account type.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokProfileBody):
@@ -195,14 +195,14 @@ def sync(
     | TiktokProfileResponse503
     | None
 ):
-    r"""Fetch TikTok user profile
+    """Fetch TikTok user profile
 
      Fetches profile information for a TikTok user including follower counts, bio, and account type.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokProfileBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | TiktokProfileResponse500
     | TiktokProfileResponse503
 ]:
-    r"""Fetch TikTok user profile
+    """Fetch TikTok user profile
 
      Fetches profile information for a TikTok user including follower counts, bio, and account type.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokProfileBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | TiktokProfileResponse503
     | None
 ):
-    r"""Fetch TikTok user profile
+    """Fetch TikTok user profile
 
      Fetches profile information for a TikTok user including follower counts, bio, and account type.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokProfileBody):

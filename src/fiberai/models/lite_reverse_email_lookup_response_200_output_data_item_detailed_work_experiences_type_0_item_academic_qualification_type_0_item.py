@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class LiteReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemAcademicQualificationType0Item(
-    str, Enum
+    StrEnum
 ):
     ASSOCIATE_DEGREE = "Associate Degree"
     BACHELOR_DEGREE = "Bachelor Degree"

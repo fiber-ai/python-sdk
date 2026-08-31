@@ -101,13 +101,13 @@ class ReversePhoneLookupResponse200OutputResultsItemType1Company:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_inferred_location_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyInferredLocationType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_locations_stats_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyLocationsStatsType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyLocationsStatsType0,  # noqa: PLC0415
         )
 
         slug = self.slug
@@ -359,19 +359,19 @@ class ReversePhoneLookupResponse200OutputResultsItemType1Company:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_industries_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyIndustriesType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyIndustriesType0Item,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_inferred_location_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyInferredLocationType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_locations_stats_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyLocationsStatsType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyLocationsStatsType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_locations_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyLocationsType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyLocationsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

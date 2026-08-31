@@ -47,10 +47,10 @@ class MultiSourceSearchBodySearchType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.multi_source_search_body_search_type_0_company_filters_type_0 import (
-            MultiSourceSearchBodySearchType0CompanyFiltersType0,
+            MultiSourceSearchBodySearchType0CompanyFiltersType0,  # noqa: PLC0415
         )
         from ..models.multi_source_search_body_search_type_0_people_filters_type_0 import (
-            MultiSourceSearchBodySearchType0PeopleFiltersType0,
+            MultiSourceSearchBodySearchType0PeopleFiltersType0,  # noqa: PLC0415
         )
 
         request = self.request.value
@@ -95,10 +95,10 @@ class MultiSourceSearchBodySearchType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.multi_source_search_body_search_type_0_company_filters_type_0 import (
-            MultiSourceSearchBodySearchType0CompanyFiltersType0,
+            MultiSourceSearchBodySearchType0CompanyFiltersType0,  # noqa: PLC0415
         )
         from ..models.multi_source_search_body_search_type_0_people_filters_type_0 import (
-            MultiSourceSearchBodySearchType0PeopleFiltersType0,
+            MultiSourceSearchBodySearchType0PeopleFiltersType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

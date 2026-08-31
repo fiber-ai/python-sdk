@@ -137,7 +137,7 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItemFullFundingRoundsType
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_output_companies_item_full_funding_rounds_type_0_item_investors_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemFullFundingRoundsType0ItemInvestorsType0Item,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemFullFundingRoundsType0ItemInvestorsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

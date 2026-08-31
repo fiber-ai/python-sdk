@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1(str, Enum):
+class PaginatedCombinedSearchResponse200OutputCompaniesItemEmployeeTrendsType0ItemFunctionsType3Type1(StrEnum):
     ACCOUNTING = "accounting"
     ADMINISTRATIVE = "administrative"
     ARTS_AND_DESIGN = "arts_and_design"

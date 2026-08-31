@@ -41,7 +41,7 @@ class StartBatchContactDetailsBodyPersonDetailsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.start_batch_contact_details_body_person_details_item_linkedin_url import (
-            StartBatchContactDetailsBodyPersonDetailsItemLinkedinUrl,
+            StartBatchContactDetailsBodyPersonDetailsItemLinkedinUrl,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -61,22 +61,22 @@ class PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_count_body_search_params_education_v2_type_0_all_of_type_0_item_degree_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemDegreeType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemDegreeType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_all_of_type_0_item_degree_type_1 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemDegreeType1,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemDegreeType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_all_of_type_0_item_field_of_study_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemFieldOfStudyType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemFieldOfStudyType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_all_of_type_0_item_keywords_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemKeywordsType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemKeywordsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_all_of_type_0_item_school_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_all_of_type_0_item_years_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemYearsType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemYearsType0,  # noqa: PLC0415
         )
 
         keywords: dict[str, Any] | None | Unset
@@ -142,22 +142,22 @@ class PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_body_search_params_education_v2_type_0_all_of_type_0_item_degree_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemDegreeType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemDegreeType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_all_of_type_0_item_degree_type_1 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemDegreeType1,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemDegreeType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_all_of_type_0_item_field_of_study_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemFieldOfStudyType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemFieldOfStudyType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_all_of_type_0_item_keywords_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemKeywordsType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemKeywordsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_all_of_type_0_item_school_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_all_of_type_0_item_years_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemYearsType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AllOfType0ItemYearsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FundingStageChangedToStagesType0Item(str, Enum):
+class FundingStageChangedToStagesType0Item(StrEnum):
     ACQUIRED = "acquired"
     PRE_SEED = "pre_seed"
     PRIVATE_EQUITY = "private_equity"

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanySearchBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType2Which(str, Enum):
+class CompanySearchBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType2Which(StrEnum):
     CURRENT = "current"
     PREVIOUS = "previous"
 

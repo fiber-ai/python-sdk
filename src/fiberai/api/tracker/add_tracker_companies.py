@@ -152,15 +152,15 @@ def sync_detailed(
     | AddTrackerCompaniesResponse500
     | AddTrackerCompaniesResponse503
 ]:
-    r"""Add companies to tracker list
+    """Add companies to tracker list
 
      Add companies to a company tracker list. Identify companies by LinkedIn URL, organization ID, slug,
     or website domain. At least one identifier is required per company.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -204,15 +204,15 @@ def sync(
     | AddTrackerCompaniesResponse503
     | None
 ):
-    r"""Add companies to tracker list
+    """Add companies to tracker list
 
      Add companies to a company tracker list. Identify companies by LinkedIn URL, organization ID, slug,
     or website domain. At least one identifier is required per company.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -250,15 +250,15 @@ async def asyncio_detailed(
     | AddTrackerCompaniesResponse500
     | AddTrackerCompaniesResponse503
 ]:
-    r"""Add companies to tracker list
+    """Add companies to tracker list
 
      Add companies to a company tracker list. Identify companies by LinkedIn URL, organization ID, slug,
     or website domain. At least one identifier is required per company.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -300,15 +300,15 @@ async def asyncio(
     | AddTrackerCompaniesResponse503
     | None
 ):
-    r"""Add companies to tracker list
+    """Add companies to tracker list
 
      Add companies to a company tracker list. Identify companies by LinkedIn URL, organization ID, slug,
     or website domain. At least one identifier is required per company.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):

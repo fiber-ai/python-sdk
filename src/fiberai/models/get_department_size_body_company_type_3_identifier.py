@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetDepartmentSizeBodyCompanyType3Identifier(str, Enum):
+class GetDepartmentSizeBodyCompanyType3Identifier(StrEnum):
     DOMAIN = "domain"
 
     def __str__(self) -> str:

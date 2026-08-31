@@ -41,7 +41,7 @@ class MultiSourceSearchBodySearchType0PeopleFiltersType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.multi_source_search_body_search_type_0_people_filters_type_0_job_titles_type_0 import (
-            MultiSourceSearchBodySearchType0PeopleFiltersType0JobTitlesType0,
+            MultiSourceSearchBodySearchType0PeopleFiltersType0JobTitlesType0,  # noqa: PLC0415
         )
 
         country_codes: list[str] | None | Unset
@@ -101,7 +101,7 @@ class MultiSourceSearchBodySearchType0PeopleFiltersType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.multi_source_search_body_search_type_0_people_filters_type_0_job_titles_type_0 import (
-            MultiSourceSearchBodySearchType0PeopleFiltersType0JobTitlesType0,
+            MultiSourceSearchBodySearchType0PeopleFiltersType0JobTitlesType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

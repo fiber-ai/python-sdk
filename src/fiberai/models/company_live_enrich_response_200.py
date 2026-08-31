@@ -48,16 +48,16 @@ class CompanyLiveEnrichResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_live_enrich_response_200_charge_info_type_0 import (
-            CompanyLiveEnrichResponse200ChargeInfoType0,
+            CompanyLiveEnrichResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.company_live_enrich_response_200_charge_info_type_1 import (
-            CompanyLiveEnrichResponse200ChargeInfoType1,
+            CompanyLiveEnrichResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.company_live_enrich_response_200_charge_info_type_2 import (
-            CompanyLiveEnrichResponse200ChargeInfoType2,
+            CompanyLiveEnrichResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.company_live_enrich_response_200_charge_info_type_3 import (
-            CompanyLiveEnrichResponse200ChargeInfoType3,
+            CompanyLiveEnrichResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class CompanyLiveEnrichResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_live_enrich_response_200_charge_info_type_0 import (
-            CompanyLiveEnrichResponse200ChargeInfoType0,
+            CompanyLiveEnrichResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.company_live_enrich_response_200_charge_info_type_1 import (
-            CompanyLiveEnrichResponse200ChargeInfoType1,
+            CompanyLiveEnrichResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.company_live_enrich_response_200_charge_info_type_2 import (
-            CompanyLiveEnrichResponse200ChargeInfoType2,
+            CompanyLiveEnrichResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.company_live_enrich_response_200_charge_info_type_3 import (
-            CompanyLiveEnrichResponse200ChargeInfoType3,
+            CompanyLiveEnrichResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.company_live_enrich_response_200_charge_info_type_4 import (
-            CompanyLiveEnrichResponse200ChargeInfoType4,
+            CompanyLiveEnrichResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.company_live_enrich_response_200_output import CompanyLiveEnrichResponse200Output
+        from ..models.company_live_enrich_response_200_output import CompanyLiveEnrichResponse200Output  # noqa: PLC0415
         from ..models.company_live_enrich_response_200_warnings_type_0_item import (
-            CompanyLiveEnrichResponse200WarningsType0Item,
+            CompanyLiveEnrichResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

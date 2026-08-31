@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1WindowType0Method(
-    str, Enum
+    StrEnum
 ):
     LASTN = "lastN"
 

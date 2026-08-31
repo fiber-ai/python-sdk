@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class DepartmentSizeThresholdDirection(str, Enum):
+class DepartmentSizeThresholdDirection(StrEnum):
     ABOVE = "above"
     BELOW = "below"
 

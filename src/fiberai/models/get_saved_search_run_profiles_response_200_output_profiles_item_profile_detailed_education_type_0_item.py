@@ -55,7 +55,7 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEduca
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_detailed_education_type_0_item_school_details_type_0 import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemSchoolDetailsType0,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemSchoolDetailsType0,  # noqa: PLC0415
         )
 
         school_details: dict[str, Any] | None | Unset
@@ -160,7 +160,7 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEduca
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_detailed_education_type_0_item_school_details_type_0 import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemSchoolDetailsType0,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemSchoolDetailsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

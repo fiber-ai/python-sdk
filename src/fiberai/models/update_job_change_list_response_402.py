@@ -32,7 +32,7 @@ class UpdateJobChangeListResponse402:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.update_job_change_list_response_402_out_of_credits_alert_type_0 import (
-            UpdateJobChangeListResponse402OutOfCreditsAlertType0,
+            UpdateJobChangeListResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         message = self.message
@@ -60,7 +60,7 @@ class UpdateJobChangeListResponse402:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.update_job_change_list_response_402_out_of_credits_alert_type_0 import (
-            UpdateJobChangeListResponse402OutOfCreditsAlertType0,
+            UpdateJobChangeListResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

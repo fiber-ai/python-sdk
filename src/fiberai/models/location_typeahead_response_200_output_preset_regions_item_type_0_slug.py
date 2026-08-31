@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class LocationTypeaheadResponse200OutputPresetRegionsItemType0Slug(str, Enum):
+class LocationTypeaheadResponse200OutputPresetRegionsItemType0Slug(StrEnum):
     BOSTON_ROUTE_128 = "boston-route-128"
     CHICAGOLAND = "chicagoland"
     DALLAS_FORT_WORTH = "dallas-fort-worth"

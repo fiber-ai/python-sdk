@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsCrunchbaseCategoryGroupsType0NoneOfType0ItemType(
-    str, Enum
+    StrEnum
 ):
     GROUP = "group"
 

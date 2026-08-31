@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType0Strategy(
-    str, Enum
+    StrEnum
 ):
     RADIAL_DISTANCE = "radial-distance"
 

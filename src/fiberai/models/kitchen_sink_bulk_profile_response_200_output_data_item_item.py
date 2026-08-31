@@ -190,16 +190,16 @@ class KitchenSinkBulkProfileResponse200OutputDataItemItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_current_job_type_0 import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemCurrentJobType0,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_custom_data_type_0 import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemCustomDataType0,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_inferred_location_type_0 import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemInferredLocationType0,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_verifications_type_0 import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemVerificationsType0,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemVerificationsType0,  # noqa: PLC0415
         )
 
         primary_slug = self.primary_slug
@@ -716,58 +716,58 @@ class KitchenSinkBulkProfileResponse200OutputDataItemItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_articles_type_0_item import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemArticlesType0Item,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemArticlesType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_certifications_type_0_item import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemCertificationsType0Item,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemCertificationsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_courses_type_0_item import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemCoursesType0Item,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemCoursesType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_current_job_type_0 import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemCurrentJobType0,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_custom_data_type_0 import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemCustomDataType0,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_detailed_education_type_0_item import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0Item,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedEducationType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_detailed_work_experiences_type_0_item import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedWorkExperiencesType0Item,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemDetailedWorkExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_education_type_0_item import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemEducationType0Item,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemEducationType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_experiences_type_0_item import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemExperiencesType0Item,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_inferred_location_type_0 import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemInferredLocationType0,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_languages_type_0_item import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemLanguagesType0Item,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemLanguagesType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_organizations_type_0_item import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemOrganizationsType0Item,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemOrganizationsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_patents_type_0_item import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemPatentsType0Item,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemPatentsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_projects_type_0_item import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemProjectsType0Item,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemProjectsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_publications_type_0_item import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemPublicationsType0Item,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemPublicationsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_tenures_type_0_item import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemTenuresType0Item,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemTenuresType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_verifications_type_0 import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemVerificationsType0,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemVerificationsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item_volunteering_type_0_item import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItemVolunteeringType0Item,
+            KitchenSinkBulkProfileResponse200OutputDataItemItemVolunteeringType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

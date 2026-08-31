@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FinancialInstrumentLookupBodyWindowType2Type1(str, Enum):
+class FinancialInstrumentLookupBodyWindowType2Type1(StrEnum):
     MAX = "MAX"
     VALUE_0 = "1D"
     VALUE_1 = "5D"

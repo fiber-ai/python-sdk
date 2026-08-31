@@ -152,7 +152,7 @@ def sync_detailed(
     | GetAudienceStatusResponse500
     | GetAudienceStatusResponse503
 ]:
-    r"""Get audience status
+    """Get audience status
 
      Gets the status and basic statistics of an audience. Use this to poll for build completion after
     triggering a build. Status values: DRAFT (waiting for configuration), BUILDING (search in progress),
@@ -160,8 +160,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -205,7 +205,7 @@ def sync(
     | GetAudienceStatusResponse503
     | None
 ):
-    r"""Get audience status
+    """Get audience status
 
      Gets the status and basic statistics of an audience. Use this to poll for build completion after
     triggering a build. Status values: DRAFT (waiting for configuration), BUILDING (search in progress),
@@ -213,8 +213,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -252,7 +252,7 @@ async def asyncio_detailed(
     | GetAudienceStatusResponse500
     | GetAudienceStatusResponse503
 ]:
-    r"""Get audience status
+    """Get audience status
 
      Gets the status and basic statistics of an audience. Use this to poll for build completion after
     triggering a build. Status values: DRAFT (waiting for configuration), BUILDING (search in progress),
@@ -260,8 +260,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -303,7 +303,7 @@ async def asyncio(
     | GetAudienceStatusResponse503
     | None
 ):
-    r"""Get audience status
+    """Get audience status
 
      Gets the status and basic statistics of an audience. Use this to poll for build completion after
     triggering a build. Status values: DRAFT (waiting for configuration), BUILDING (search in progress),
@@ -311,8 +311,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):

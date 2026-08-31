@@ -702,136 +702,136 @@ class QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsTyp
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_accounting import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_administrative import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_advertising import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_analyst import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_art_creative import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_arts_and_design import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_business_development import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_community_social_services import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_consulting import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_customer_service import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_design import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Design,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Design,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_distribution import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_education import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Education,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Education,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_engineering import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_entrepreneurship import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_finance import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Finance,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Finance,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_general_business import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_health_care_provider import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_healthcare_services import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_human_resources import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_information_technology import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_legal import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Legal,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Legal,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_management import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Management,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Management,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_manufacturing import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_marketing import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_military_protective_services import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_operations import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Operations,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Operations,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_other import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Other,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Other,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_product_management import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_production import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Production,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Production,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_program_product_management import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_project_management import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_public_relations import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_purchasing import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_quality_assurance import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_real_estate import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_research import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Research,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Research,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_sales import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Sales,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Sales,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_science import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Science,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Science,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_strategy_planning import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_supply_chain import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_support import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Support,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Support,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_training import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Training,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0Training,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_writing_editing import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

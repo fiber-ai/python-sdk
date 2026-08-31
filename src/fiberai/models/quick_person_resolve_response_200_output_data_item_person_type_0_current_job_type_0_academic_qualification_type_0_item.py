@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class QuickPersonResolveResponse200OutputDataItemPersonType0CurrentJobType0AcademicQualificationType0Item(str, Enum):
+class QuickPersonResolveResponse200OutputDataItemPersonType0CurrentJobType0AcademicQualificationType0Item(StrEnum):
     ASSOCIATE_DEGREE = "Associate Degree"
     BACHELOR_DEGREE = "Bachelor Degree"
     HIGH_SCHOOL = "High School"

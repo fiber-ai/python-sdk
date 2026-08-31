@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class LocationTypeaheadResponse200ChargeInfoType0Method(str, Enum):
+class LocationTypeaheadResponse200ChargeInfoType0Method(StrEnum):
     CHARGED_NOW = "charged-now"
 
     def __str__(self) -> str:

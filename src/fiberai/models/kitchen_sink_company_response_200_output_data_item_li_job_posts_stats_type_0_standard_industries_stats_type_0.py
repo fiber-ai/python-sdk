@@ -745,151 +745,151 @@ class KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardInd
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_administrative_services import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_aerospace_military import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_artificial_intelligence import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_arts_music import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_automotive import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_business_services import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_cloud import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_construction import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consulting import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_goods import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_services import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_design import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Design,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Design,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_education import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Education,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Education,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_energy import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_entertainment import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_environmental import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_events import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Events,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Events,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_farming_agriculture import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_finance import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_food_beverage import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_gaming import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_government import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Government,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Government,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_hardware import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_healthcare import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_hospitality import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_industrials import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_information_technology import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_insurance import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_legal import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_life_sciences import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_logistics import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_manufacturing import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_marketing_advertising import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_media import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Media,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Media,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_mining import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_nonprofit import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_publishing import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_real_estate import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_retail import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_science_engineering import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_security import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Security,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Security,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_software import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Software,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Software,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_sports import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_telecom import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_trade import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_transportation import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_travel_tourism import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_utilities import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_venture_capital import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

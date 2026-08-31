@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FinancialInstrumentLookupBodyInstrumentType0Type(str, Enum):
+class FinancialInstrumentLookupBodyInstrumentType0Type(StrEnum):
     INDEX = "index"
 
     def __str__(self) -> str:

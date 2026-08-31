@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ListAvailableTrackerRulesResponse200OutputPersonRulesItemEntityType(str, Enum):
+class ListAvailableTrackerRulesResponse200OutputPersonRulesItemEntityType(StrEnum):
     COMPANY = "company"
     PERSON = "person"
 

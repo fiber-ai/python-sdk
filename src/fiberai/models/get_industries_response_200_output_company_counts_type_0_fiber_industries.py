@@ -11,8 +11,6 @@ T = TypeVar("T", bound="GetIndustriesResponse200OutputCompanyCountsType0FiberInd
 
 @_attrs_define
 class GetIndustriesResponse200OutputCompanyCountsType0FiberIndustries:
-    """ """
-
     additional_properties: dict[str, float] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

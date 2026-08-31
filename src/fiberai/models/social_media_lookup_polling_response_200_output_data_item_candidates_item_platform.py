@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class SocialMediaLookupPollingResponse200OutputDataItemCandidatesItemPlatform(str, Enum):
+class SocialMediaLookupPollingResponse200OutputDataItemCandidatesItemPlatform(StrEnum):
     ASK_FM = "ASK_FM"
     BLUESKY = "BLUESKY"
     DISCORD = "DISCORD"

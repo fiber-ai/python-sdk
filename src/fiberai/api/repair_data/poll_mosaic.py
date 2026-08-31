@@ -147,15 +147,15 @@ def sync_detailed(
     | PollMosaicResponse500
     | PollMosaicResponse503
 ]:
-    r"""Poll Mosaic run status
+    """Poll Mosaic run status
 
      Retrieves the status of a Mosaic job started by `/mosaic/start`. When the run is done, the response
     includes temporary download links for the enriched CSV and the summary report.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (PollMosaicBody):
@@ -196,15 +196,15 @@ def sync(
     | PollMosaicResponse503
     | None
 ):
-    r"""Poll Mosaic run status
+    """Poll Mosaic run status
 
      Retrieves the status of a Mosaic job started by `/mosaic/start`. When the run is done, the response
     includes temporary download links for the enriched CSV and the summary report.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (PollMosaicBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | PollMosaicResponse500
     | PollMosaicResponse503
 ]:
-    r"""Poll Mosaic run status
+    """Poll Mosaic run status
 
      Retrieves the status of a Mosaic job started by `/mosaic/start`. When the run is done, the response
     includes temporary download links for the enriched CSV and the summary report.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (PollMosaicBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | PollMosaicResponse503
     | None
 ):
-    r"""Poll Mosaic run status
+    """Poll Mosaic run status
 
      Retrieves the status of a Mosaic job started by `/mosaic/start`. When the run is done, the response
     includes temporary download links for the enriched CSV and the summary report.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (PollMosaicBody):

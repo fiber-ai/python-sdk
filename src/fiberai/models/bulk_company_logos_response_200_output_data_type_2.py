@@ -53,7 +53,7 @@ class BulkCompanyLogosResponse200OutputDataType2:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.bulk_company_logos_response_200_output_data_type_2_data_item import (
-            BulkCompanyLogosResponse200OutputDataType2DataItem,
+            BulkCompanyLogosResponse200OutputDataType2DataItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

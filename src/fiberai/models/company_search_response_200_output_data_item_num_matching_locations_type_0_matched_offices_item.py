@@ -36,7 +36,7 @@ class CompanySearchResponse200OutputDataItemNumMatchingLocationsType0MatchedOffi
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_search_response_200_output_data_item_num_matching_locations_type_0_matched_offices_item_location_type_0 import (
-            CompanySearchResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0,
+            CompanySearchResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0,  # noqa: PLC0415
         )
 
         address: None | str | Unset
@@ -77,7 +77,7 @@ class CompanySearchResponse200OutputDataItemNumMatchingLocationsType0MatchedOffi
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_response_200_output_data_item_num_matching_locations_type_0_matched_offices_item_location_type_0 import (
-            CompanySearchResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0,
+            CompanySearchResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

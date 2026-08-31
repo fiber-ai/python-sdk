@@ -38,7 +38,7 @@ class TiktokPopularSongsResponse200ChargeInfoType3:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.tiktok_popular_songs_response_200_charge_info_type_3_low_credit_alert_type_0 import (
-            TiktokPopularSongsResponse200ChargeInfoType3LowCreditAlertType0,
+            TiktokPopularSongsResponse200ChargeInfoType3LowCreditAlertType0,  # noqa: PLC0415
         )
 
         method = self.method.value
@@ -69,7 +69,7 @@ class TiktokPopularSongsResponse200ChargeInfoType3:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.tiktok_popular_songs_response_200_charge_info_type_3_low_credit_alert_type_0 import (
-            TiktokPopularSongsResponse200ChargeInfoType3LowCreditAlertType0,
+            TiktokPopularSongsResponse200ChargeInfoType3LowCreditAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

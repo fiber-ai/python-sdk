@@ -58,16 +58,16 @@ class AddProfilesToListResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.add_profiles_to_list_response_200_charge_info_type_0 import (
-            AddProfilesToListResponse200ChargeInfoType0,
+            AddProfilesToListResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.add_profiles_to_list_response_200_charge_info_type_1 import (
-            AddProfilesToListResponse200ChargeInfoType1,
+            AddProfilesToListResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.add_profiles_to_list_response_200_charge_info_type_2 import (
-            AddProfilesToListResponse200ChargeInfoType2,
+            AddProfilesToListResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.add_profiles_to_list_response_200_charge_info_type_3 import (
-            AddProfilesToListResponse200ChargeInfoType3,
+            AddProfilesToListResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class AddProfilesToListResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.add_profiles_to_list_response_200_charge_info_type_0 import (
-            AddProfilesToListResponse200ChargeInfoType0,
+            AddProfilesToListResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.add_profiles_to_list_response_200_charge_info_type_1 import (
-            AddProfilesToListResponse200ChargeInfoType1,
+            AddProfilesToListResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.add_profiles_to_list_response_200_charge_info_type_2 import (
-            AddProfilesToListResponse200ChargeInfoType2,
+            AddProfilesToListResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.add_profiles_to_list_response_200_charge_info_type_3 import (
-            AddProfilesToListResponse200ChargeInfoType3,
+            AddProfilesToListResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.add_profiles_to_list_response_200_charge_info_type_4 import (
-            AddProfilesToListResponse200ChargeInfoType4,
+            AddProfilesToListResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.add_profiles_to_list_response_200_output import AddProfilesToListResponse200Output
+        from ..models.add_profiles_to_list_response_200_output import (
+            AddProfilesToListResponse200Output,  # noqa: PLC0415
+        )
         from ..models.add_profiles_to_list_response_200_warnings_type_0_item import (
-            AddProfilesToListResponse200WarningsType0Item,
+            AddProfilesToListResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

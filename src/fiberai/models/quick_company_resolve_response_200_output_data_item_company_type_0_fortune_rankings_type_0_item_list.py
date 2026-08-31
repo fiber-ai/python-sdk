@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class QuickCompanyResolveResponse200OutputDataItemCompanyType0FortuneRankingsType0ItemList(str, Enum):
+class QuickCompanyResolveResponse200OutputDataItemCompanyType0FortuneRankingsType0ItemList(StrEnum):
     FORTUNE_500_USA = "fortune-500-usa"
 
     def __str__(self) -> str:

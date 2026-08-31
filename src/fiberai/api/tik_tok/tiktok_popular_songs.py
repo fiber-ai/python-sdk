@@ -147,14 +147,14 @@ def sync_detailed(
     | TiktokPopularSongsResponse500
     | TiktokPopularSongsResponse503
 ]:
-    r"""Fetch popular TikTok songs
+    """Fetch popular TikTok songs
 
      Fetches a list of currently popular songs/sounds on TikTok.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokPopularSongsBody):
@@ -195,14 +195,14 @@ def sync(
     | TiktokPopularSongsResponse503
     | None
 ):
-    r"""Fetch popular TikTok songs
+    """Fetch popular TikTok songs
 
      Fetches a list of currently popular songs/sounds on TikTok.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokPopularSongsBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | TiktokPopularSongsResponse500
     | TiktokPopularSongsResponse503
 ]:
-    r"""Fetch popular TikTok songs
+    """Fetch popular TikTok songs
 
      Fetches a list of currently popular songs/sounds on TikTok.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokPopularSongsBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | TiktokPopularSongsResponse503
     | None
 ):
-    r"""Fetch popular TikTok songs
+    """Fetch popular TikTok songs
 
      Fetches a list of currently popular songs/sounds on TikTok.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokPopularSongsBody):

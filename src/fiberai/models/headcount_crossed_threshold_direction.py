@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class HeadcountCrossedThresholdDirection(str, Enum):
+class HeadcountCrossedThresholdDirection(StrEnum):
     ABOVE = "above"
     BELOW = "below"
 

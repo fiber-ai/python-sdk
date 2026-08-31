@@ -57,7 +57,7 @@ class EstimateEnrichmentCostResponse200OutputBreakdownWaterfall:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.estimate_enrichment_cost_response_200_output_breakdown_waterfall_operations import (
-            EstimateEnrichmentCostResponse200OutputBreakdownWaterfallOperations,
+            EstimateEnrichmentCostResponse200OutputBreakdownWaterfallOperations,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

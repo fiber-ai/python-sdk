@@ -38,7 +38,7 @@ class KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0Matche
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0_matched_offices_item_location_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0,
+            KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0,  # noqa: PLC0415
         )
 
         address: None | str | Unset
@@ -79,7 +79,7 @@ class KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0Matche
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0_matched_offices_item_location_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0,
+            KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItemLocationType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -77,22 +77,22 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0N
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_investors_v2_type_0_none_of_type_0_item_invested_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_investors_v2_type_0_none_of_type_0_item_invested_at_type_1 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_investors_v2_type_0_none_of_type_0_item_investment_rounds_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestmentRoundsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestmentRoundsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_investors_v2_type_0_none_of_type_0_item_investor_identifier_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_investors_v2_type_0_none_of_type_0_item_investor_identifier_type_1 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType1,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_investors_v2_type_0_none_of_type_0_item_investor_identifier_type_2 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType2,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType2,  # noqa: PLC0415
         )
 
         investor_identifier: dict[str, Any]
@@ -158,25 +158,25 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0N
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_investors_v2_type_0_none_of_type_0_item_invested_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_investors_v2_type_0_none_of_type_0_item_invested_at_type_1 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_investors_v2_type_0_none_of_type_0_item_investment_rounds_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestmentRoundsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestmentRoundsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_investors_v2_type_0_none_of_type_0_item_investor_identifier_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_investors_v2_type_0_none_of_type_0_item_investor_identifier_type_1 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType1,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_investors_v2_type_0_none_of_type_0_item_investor_identifier_type_2 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType2,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_investors_v2_type_0_none_of_type_0_item_investor_identifier_type_3 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType3,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

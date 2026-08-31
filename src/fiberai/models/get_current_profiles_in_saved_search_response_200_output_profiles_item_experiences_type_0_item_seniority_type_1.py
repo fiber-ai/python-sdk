@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemExperiencesType0ItemSeniorityType1(str, Enum):
+class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemExperiencesType0ItemSeniorityType1(StrEnum):
     ASSOCIATE = "Associate"
     DIRECTOR = "Director"
     ENTRY_LEVEL = "Entry level"

@@ -44,7 +44,7 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_time_zone_type_0_any_of_item import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyOfItem,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyOfItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -45,7 +45,7 @@ class CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2Loca
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_search_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_1_radius_type_0 import (
-            CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1RadiusType0,
+            CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1RadiusType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -83,10 +83,10 @@ class CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2Loca
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_1_radius_type_0 import (
-            CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1RadiusType0,
+            CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1RadiusType0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_1_radius_type_1 import (
-            CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1RadiusType1,
+            CompanySearchBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1RadiusType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

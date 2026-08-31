@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateAudienceBodyCreationMethodType1(str, Enum):
+class CreateAudienceBodyCreationMethodType1(StrEnum):
     NORMAL = "NORMAL"
     START_FROM_PROSPECTS = "START_FROM_PROSPECTS"
 

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType0Identifier(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AnyOfType0ItemCompanyType0Identifier(StrEnum):
     LINKEDINURL = "linkedinUrl"
 
     def __str__(self) -> str:

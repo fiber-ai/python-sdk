@@ -299,43 +299,43 @@ class KitchenSinkCompanyResponse200OutputDataItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.kitchen_sink_company_response_200_output_data_item_best_funding_round_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemBestFundingRoundType0,
+            KitchenSinkCompanyResponse200OutputDataItemBestFundingRoundType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_custom_data_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemCustomDataType0,
+            KitchenSinkCompanyResponse200OutputDataItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_employee_count_consensus_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemEmployeeCountConsensusType0,
+            KitchenSinkCompanyResponse200OutputDataItemEmployeeCountConsensusType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_funding_round_stats_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemFundingRoundStatsType0,
+            KitchenSinkCompanyResponse200OutputDataItemFundingRoundStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_historical_headcount_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0,
+            KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_investment_stats_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemInvestmentStatsType0,
+            KitchenSinkCompanyResponse200OutputDataItemInvestmentStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_location_consensus_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemLocationConsensusType0,
+            KitchenSinkCompanyResponse200OutputDataItemLocationConsensusType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_locations_stats_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemLocationsStatsType0,
+            KitchenSinkCompanyResponse200OutputDataItemLocationsStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0,
+            KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_platforms_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemPlatformsType0,
+            KitchenSinkCompanyResponse200OutputDataItemPlatformsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_revenue_estimate_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemRevenueEstimateType0,
+            KitchenSinkCompanyResponse200OutputDataItemRevenueEstimateType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_stock_info_consensus_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemStockInfoConsensusType0,
+            KitchenSinkCompanyResponse200OutputDataItemStockInfoConsensusType0,  # noqa: PLC0415
         )
 
         linkedin_id: None | str | Unset
@@ -1203,79 +1203,79 @@ class KitchenSinkCompanyResponse200OutputDataItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_company_response_200_output_data_item_accelerators_type_0_item import (
-            KitchenSinkCompanyResponse200OutputDataItemAcceleratorsType0Item,
+            KitchenSinkCompanyResponse200OutputDataItemAcceleratorsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_acquisitions_type_0_item import (
-            KitchenSinkCompanyResponse200OutputDataItemAcquisitionsType0Item,
+            KitchenSinkCompanyResponse200OutputDataItemAcquisitionsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_best_funding_round_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemBestFundingRoundType0,
+            KitchenSinkCompanyResponse200OutputDataItemBestFundingRoundType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_custom_data_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemCustomDataType0,
+            KitchenSinkCompanyResponse200OutputDataItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_employee_count_consensus_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemEmployeeCountConsensusType0,
+            KitchenSinkCompanyResponse200OutputDataItemEmployeeCountConsensusType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_employee_trends_type_0_item import (
-            KitchenSinkCompanyResponse200OutputDataItemEmployeeTrendsType0Item,
+            KitchenSinkCompanyResponse200OutputDataItemEmployeeTrendsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_fortune_rankings_type_0_item import (
-            KitchenSinkCompanyResponse200OutputDataItemFortuneRankingsType0Item,
+            KitchenSinkCompanyResponse200OutputDataItemFortuneRankingsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_full_funding_rounds_type_0_item import (
-            KitchenSinkCompanyResponse200OutputDataItemFullFundingRoundsType0Item,
+            KitchenSinkCompanyResponse200OutputDataItemFullFundingRoundsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_funding_round_stats_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemFundingRoundStatsType0,
+            KitchenSinkCompanyResponse200OutputDataItemFundingRoundStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_funding_rounds_type_0_item import (
-            KitchenSinkCompanyResponse200OutputDataItemFundingRoundsType0Item,
+            KitchenSinkCompanyResponse200OutputDataItemFundingRoundsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_historical_headcount_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0,
+            KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_investment_stats_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemInvestmentStatsType0,
+            KitchenSinkCompanyResponse200OutputDataItemInvestmentStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_investors_type_0_item import (
-            KitchenSinkCompanyResponse200OutputDataItemInvestorsType0Item,
+            KitchenSinkCompanyResponse200OutputDataItemInvestorsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_industries_type_0_item import (
-            KitchenSinkCompanyResponse200OutputDataItemLiIndustriesType0Item,
+            KitchenSinkCompanyResponse200OutputDataItemLiIndustriesType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_locations_type_0_item import (
-            KitchenSinkCompanyResponse200OutputDataItemLiLocationsType0Item,
+            KitchenSinkCompanyResponse200OutputDataItemLiLocationsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_location_consensus_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemLocationConsensusType0,
+            KitchenSinkCompanyResponse200OutputDataItemLocationConsensusType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_locations_stats_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemLocationsStatsType0,
+            KitchenSinkCompanyResponse200OutputDataItemLocationsStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_num_matching_locations_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0,
+            KitchenSinkCompanyResponse200OutputDataItemNumMatchingLocationsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_platforms_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemPlatformsType0,
+            KitchenSinkCompanyResponse200OutputDataItemPlatformsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_revenue_estimate_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemRevenueEstimateType0,
+            KitchenSinkCompanyResponse200OutputDataItemRevenueEstimateType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_role_count_matches_type_0_item import (
-            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0Item,
+            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_similar_companies_type_0_item import (
-            KitchenSinkCompanyResponse200OutputDataItemSimilarCompaniesType0Item,
+            KitchenSinkCompanyResponse200OutputDataItemSimilarCompaniesType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_stock_info_consensus_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemStockInfoConsensusType0,
+            KitchenSinkCompanyResponse200OutputDataItemStockInfoConsensusType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_technologies_used_type_0_item import (
-            KitchenSinkCompanyResponse200OutputDataItemTechnologiesUsedType0Item,
+            KitchenSinkCompanyResponse200OutputDataItemTechnologiesUsedType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

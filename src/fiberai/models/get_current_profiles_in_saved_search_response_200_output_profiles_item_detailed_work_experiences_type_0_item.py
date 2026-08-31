@@ -115,7 +115,7 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemDetailedWorkEx
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_detailed_work_experiences_type_0_item_company_details_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,  # noqa: PLC0415
         )
 
         company_details: dict[str, Any] | None | Unset
@@ -293,7 +293,7 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemDetailedWorkEx
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_detailed_work_experiences_type_0_item_company_details_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

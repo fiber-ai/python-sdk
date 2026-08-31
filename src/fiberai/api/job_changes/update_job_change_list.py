@@ -147,14 +147,14 @@ def sync_detailed(
     | UpdateJobChangeListResponse500
     | UpdateJobChangeListResponse503
 ]:
-    r"""Update job change list
+    """Update job change list
 
      Update the name or active status of a job changes list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateJobChangeListBody):
@@ -195,14 +195,14 @@ def sync(
     | UpdateJobChangeListResponse503
     | None
 ):
-    r"""Update job change list
+    """Update job change list
 
      Update the name or active status of a job changes list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateJobChangeListBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | UpdateJobChangeListResponse500
     | UpdateJobChangeListResponse503
 ]:
-    r"""Update job change list
+    """Update job change list
 
      Update the name or active status of a job changes list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateJobChangeListBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | UpdateJobChangeListResponse503
     | None
 ):
-    r"""Update job change list
+    """Update job change list
 
      Update the name or active status of a job changes list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateJobChangeListBody):

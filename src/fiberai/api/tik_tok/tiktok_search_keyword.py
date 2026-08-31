@@ -147,15 +147,15 @@ def sync_detailed(
     | TiktokSearchKeywordResponse500
     | TiktokSearchKeywordResponse503
 ]:
-    r"""Search TikTok videos by keyword
+    """Search TikTok videos by keyword
 
      Searches for TikTok videos by keyword or phrase. Returns a paginated list of matching videos. Use
     the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSearchKeywordBody):
@@ -196,15 +196,15 @@ def sync(
     | TiktokSearchKeywordResponse503
     | None
 ):
-    r"""Search TikTok videos by keyword
+    """Search TikTok videos by keyword
 
      Searches for TikTok videos by keyword or phrase. Returns a paginated list of matching videos. Use
     the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSearchKeywordBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TiktokSearchKeywordResponse500
     | TiktokSearchKeywordResponse503
 ]:
-    r"""Search TikTok videos by keyword
+    """Search TikTok videos by keyword
 
      Searches for TikTok videos by keyword or phrase. Returns a paginated list of matching videos. Use
     the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSearchKeywordBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TiktokSearchKeywordResponse503
     | None
 ):
-    r"""Search TikTok videos by keyword
+    """Search TikTok videos by keyword
 
      Searches for TikTok videos by keyword or phrase. Returns a paginated list of matching videos. Use
     the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSearchKeywordBody):

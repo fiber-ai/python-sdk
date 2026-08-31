@@ -147,15 +147,15 @@ def sync_detailed(
     | HotelPropertyResponse500
     | HotelPropertyResponse503
 ]:
-    r"""Get hotel property details
+    """Get hotel property details
 
      Retrieves full details for a single hotel or vacation rental, including amenities, images, and
     booking offers.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per property lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per property lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (HotelPropertyBody):
@@ -196,15 +196,15 @@ def sync(
     | HotelPropertyResponse503
     | None
 ):
-    r"""Get hotel property details
+    """Get hotel property details
 
      Retrieves full details for a single hotel or vacation rental, including amenities, images, and
     booking offers.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per property lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per property lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (HotelPropertyBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | HotelPropertyResponse500
     | HotelPropertyResponse503
 ]:
-    r"""Get hotel property details
+    """Get hotel property details
 
      Retrieves full details for a single hotel or vacation rental, including amenities, images, and
     booking offers.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per property lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per property lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (HotelPropertyBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | HotelPropertyResponse503
     | None
 ):
-    r"""Get hotel property details
+    """Get hotel property details
 
      Retrieves full details for a single hotel or vacation rental, including amenities, images, and
     booking offers.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per property lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per property lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (HotelPropertyBody):

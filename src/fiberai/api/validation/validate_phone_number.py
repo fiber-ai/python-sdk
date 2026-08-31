@@ -147,15 +147,15 @@ def sync_detailed(
     | ValidatePhoneNumberResponse500
     | ValidatePhoneNumberResponse503
 ]:
-    r"""Validate a single phone number
+    """Validate a single phone number
 
      Validates a phone number and returns detailed information including whether it's valid, reachable
     (active/alive), carrier information, and the caller ID name associated with the number.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per phone validation&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per phone validation&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ValidatePhoneNumberBody):
@@ -196,15 +196,15 @@ def sync(
     | ValidatePhoneNumberResponse503
     | None
 ):
-    r"""Validate a single phone number
+    """Validate a single phone number
 
      Validates a phone number and returns detailed information including whether it's valid, reachable
     (active/alive), carrier information, and the caller ID name associated with the number.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per phone validation&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per phone validation&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ValidatePhoneNumberBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | ValidatePhoneNumberResponse500
     | ValidatePhoneNumberResponse503
 ]:
-    r"""Validate a single phone number
+    """Validate a single phone number
 
      Validates a phone number and returns detailed information including whether it's valid, reachable
     (active/alive), carrier information, and the caller ID name associated with the number.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per phone validation&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per phone validation&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ValidatePhoneNumberBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | ValidatePhoneNumberResponse503
     | None
 ):
-    r"""Validate a single phone number
+    """Validate a single phone number
 
      Validates a phone number and returns detailed information including whether it's valid, reachable
     (active/alive), carrier information, and the caller ID name associated with the number.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per phone validation&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per phone validation&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ValidatePhoneNumberBody):

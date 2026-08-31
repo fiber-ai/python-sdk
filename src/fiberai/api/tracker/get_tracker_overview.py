@@ -147,15 +147,15 @@ def sync_detailed(
     | GetTrackerOverviewResponse500
     | GetTrackerOverviewResponse503
 ]:
-    r"""Summarize all tracker lists
+    """Summarize all tracker lists
 
      Returns every tracker list you own in a single call, with entity counts and a forecast of upcoming
     refresh costs. Use the individual GET endpoints for full rule details.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -196,15 +196,15 @@ def sync(
     | GetTrackerOverviewResponse503
     | None
 ):
-    r"""Summarize all tracker lists
+    """Summarize all tracker lists
 
      Returns every tracker list you own in a single call, with entity counts and a forecast of upcoming
     refresh costs. Use the individual GET endpoints for full rule details.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | GetTrackerOverviewResponse500
     | GetTrackerOverviewResponse503
 ]:
-    r"""Summarize all tracker lists
+    """Summarize all tracker lists
 
      Returns every tracker list you own in a single call, with entity counts and a forecast of upcoming
     refresh costs. Use the individual GET endpoints for full rule details.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -286,15 +286,15 @@ async def asyncio(
     | GetTrackerOverviewResponse503
     | None
 ):
-    r"""Summarize all tracker lists
+    """Summarize all tracker lists
 
      Returns every tracker list you own in a single call, with entity counts and a forecast of upcoming
     refresh costs. Use the individual GET endpoints for full rule details.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):

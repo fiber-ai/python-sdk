@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class AddCompaniesToExclusionListResponse200ChargeInfoType2Method(str, Enum):
+class AddCompaniesToExclusionListResponse200ChargeInfoType2Method(StrEnum):
     CHARGED_FOR_ASYNC_PROCESS = "charged-for-async-process"
 
     def __str__(self) -> str:

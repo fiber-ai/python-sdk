@@ -30,7 +30,7 @@ class GetDepartmentSizeBodyDepartmentsItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_department_size_body_departments_item_titles_type_0 import (
-            GetDepartmentSizeBodyDepartmentsItemTitlesType0,
+            GetDepartmentSizeBodyDepartmentsItemTitlesType0,  # noqa: PLC0415
         )
 
         name = self.name
@@ -53,7 +53,7 @@ class GetDepartmentSizeBodyDepartmentsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_department_size_body_departments_item_titles_type_0 import (
-            GetDepartmentSizeBodyDepartmentsItemTitlesType0,
+            GetDepartmentSizeBodyDepartmentsItemTitlesType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

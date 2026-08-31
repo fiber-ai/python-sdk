@@ -32,7 +32,7 @@ class CreateProspectExclusionListResponse402:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_prospect_exclusion_list_response_402_out_of_credits_alert_type_0 import (
-            CreateProspectExclusionListResponse402OutOfCreditsAlertType0,
+            CreateProspectExclusionListResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         message = self.message
@@ -60,7 +60,7 @@ class CreateProspectExclusionListResponse402:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_prospect_exclusion_list_response_402_out_of_credits_alert_type_0 import (
-            CreateProspectExclusionListResponse402OutOfCreditsAlertType0,
+            CreateProspectExclusionListResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

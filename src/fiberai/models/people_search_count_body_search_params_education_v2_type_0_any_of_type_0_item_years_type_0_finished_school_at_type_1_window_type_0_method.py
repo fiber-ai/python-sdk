@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0FinishedSchoolAtType1WindowType0Method(
-    str, Enum
+    StrEnum
 ):
     LASTN = "lastN"
 

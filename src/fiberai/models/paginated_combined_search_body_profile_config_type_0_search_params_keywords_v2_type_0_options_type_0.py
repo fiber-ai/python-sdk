@@ -35,7 +35,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0Op
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_keywords_v2_type_0_options_type_0_fields_to_search_over_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0,  # noqa: PLC0415
         )
 
         fields_to_search_over: dict[str, Any] | None | Unset
@@ -60,7 +60,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0Op
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_keywords_v2_type_0_options_type_0_fields_to_search_over_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

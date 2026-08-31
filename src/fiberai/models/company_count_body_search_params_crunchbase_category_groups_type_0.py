@@ -89,13 +89,13 @@ class CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_count_body_search_params_crunchbase_category_groups_type_0_all_of_type_0_item import (
-            CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0AllOfType0Item,
+            CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0AllOfType0Item,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_crunchbase_category_groups_type_0_any_of_type_0_item import (
-            CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0AnyOfType0Item,
+            CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0AnyOfType0Item,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_crunchbase_category_groups_type_0_none_of_type_0_item import (
-            CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0NoneOfType0Item,
+            CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

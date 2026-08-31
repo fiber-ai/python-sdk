@@ -56,7 +56,7 @@ class PaginatedCombinedSearchResponse200OutputProfilesItemInferredLocationType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_response_200_output_profiles_item_inferred_location_type_0_coordinates_type_0 import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemInferredLocationType0CoordinatesType0,
+            PaginatedCombinedSearchResponse200OutputProfilesItemInferredLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         street_address: None | str | Unset
@@ -176,7 +176,7 @@ class PaginatedCombinedSearchResponse200OutputProfilesItemInferredLocationType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_output_profiles_item_inferred_location_type_0_coordinates_type_0 import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemInferredLocationType0CoordinatesType0,
+            PaginatedCombinedSearchResponse200OutputProfilesItemInferredLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

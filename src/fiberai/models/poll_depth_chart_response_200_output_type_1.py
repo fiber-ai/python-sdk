@@ -46,7 +46,7 @@ class PollDepthChartResponse200OutputType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_depth_chart_response_200_output_type_1_report import (
-            PollDepthChartResponse200OutputType1Report,
+            PollDepthChartResponse200OutputType1Report,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

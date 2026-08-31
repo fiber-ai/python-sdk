@@ -44,7 +44,7 @@ class TiktokPopularSongsResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.tiktok_popular_songs_response_200_output_songs_item import (
-            TiktokPopularSongsResponse200OutputSongsItem,
+            TiktokPopularSongsResponse200OutputSongsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

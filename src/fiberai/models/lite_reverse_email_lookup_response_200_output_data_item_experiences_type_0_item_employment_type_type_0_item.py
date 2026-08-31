@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class LiteReverseEmailLookupResponse200OutputDataItemExperiencesType0ItemEmploymentTypeType0Item(str, Enum):
+class LiteReverseEmailLookupResponse200OutputDataItemExperiencesType0ItemEmploymentTypeType0Item(StrEnum):
     CONTRACT = "Contract"
     FULL_TIME = "Full-time"
     INTERNSHIP = "Internship"

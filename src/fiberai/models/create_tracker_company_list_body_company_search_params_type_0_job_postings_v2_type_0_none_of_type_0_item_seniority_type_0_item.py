@@ -1,9 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0NoneOfType0ItemSeniorityType0Item(
-    str, Enum
-):
+class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0NoneOfType0ItemSeniorityType0Item(StrEnum):
     ASSOCIATE = "Associate"
     DIRECTOR = "Director"
     ENTRY_LEVEL = "Entry level"

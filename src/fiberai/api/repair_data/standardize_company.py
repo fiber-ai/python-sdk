@@ -147,15 +147,15 @@ def sync_detailed(
     | StandardizeCompanyResponse500
     | StandardizeCompanyResponse503
 ]:
-    r"""Standardize LinkedIn company identifier
+    """Standardize LinkedIn company identifier
 
      Resolves a company LinkedIn identifier (slug, organization ID, or URL) to a standardized LinkedIn
     company URL with metadata. Useful for normalizing company identifiers from different sources.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StandardizeCompanyBody):
@@ -196,15 +196,15 @@ def sync(
     | StandardizeCompanyResponse503
     | None
 ):
-    r"""Standardize LinkedIn company identifier
+    """Standardize LinkedIn company identifier
 
      Resolves a company LinkedIn identifier (slug, organization ID, or URL) to a standardized LinkedIn
     company URL with metadata. Useful for normalizing company identifiers from different sources.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StandardizeCompanyBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | StandardizeCompanyResponse500
     | StandardizeCompanyResponse503
 ]:
-    r"""Standardize LinkedIn company identifier
+    """Standardize LinkedIn company identifier
 
      Resolves a company LinkedIn identifier (slug, organization ID, or URL) to a standardized LinkedIn
     company URL with metadata. Useful for normalizing company identifiers from different sources.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StandardizeCompanyBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | StandardizeCompanyResponse503
     | None
 ):
-    r"""Standardize LinkedIn company identifier
+    """Standardize LinkedIn company identifier
 
      Resolves a company LinkedIn identifier (slug, organization ID, or URL) to a standardized LinkedIn
     company URL with metadata. Useful for normalizing company identifiers from different sources.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StandardizeCompanyBody):

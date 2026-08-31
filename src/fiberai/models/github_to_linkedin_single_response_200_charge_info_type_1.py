@@ -38,7 +38,7 @@ class GithubToLinkedinSingleResponse200ChargeInfoType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.github_to_linkedin_single_response_200_charge_info_type_1_low_credit_alert_type_0 import (
-            GithubToLinkedinSingleResponse200ChargeInfoType1LowCreditAlertType0,
+            GithubToLinkedinSingleResponse200ChargeInfoType1LowCreditAlertType0,  # noqa: PLC0415
         )
 
         method = self.method.value
@@ -69,7 +69,7 @@ class GithubToLinkedinSingleResponse200ChargeInfoType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.github_to_linkedin_single_response_200_charge_info_type_1_low_credit_alert_type_0 import (
-            GithubToLinkedinSingleResponse200ChargeInfoType1LowCreditAlertType0,
+            GithubToLinkedinSingleResponse200ChargeInfoType1LowCreditAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

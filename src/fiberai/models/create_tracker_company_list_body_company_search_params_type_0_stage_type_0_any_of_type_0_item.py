@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateTrackerCompanyListBodyCompanySearchParamsType0StageType0AnyOfType0Item(str, Enum):
+class CreateTrackerCompanyListBodyCompanySearchParamsType0StageType0AnyOfType0Item(StrEnum):
     ACQUIRED = "acquired"
     CLOSED = "closed"
     NO_FUNDING_YET = "no_funding_yet"

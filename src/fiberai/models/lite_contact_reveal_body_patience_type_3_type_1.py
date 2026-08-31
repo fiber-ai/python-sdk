@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class LiteContactRevealBodyPatienceType3Type1(str, Enum):
+class LiteContactRevealBodyPatienceType3Type1(StrEnum):
     EXTREME = "EXTREME"
     HIGH = "HIGH"
     LOW = "LOW"

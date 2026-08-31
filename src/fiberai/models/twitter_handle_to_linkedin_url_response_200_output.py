@@ -38,7 +38,7 @@ class TwitterHandleToLinkedinUrlResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.twitter_handle_to_linkedin_url_response_200_output_x_profile_type_0 import (
-            TwitterHandleToLinkedinUrlResponse200OutputXProfileType0,
+            TwitterHandleToLinkedinUrlResponse200OutputXProfileType0,  # noqa: PLC0415
         )
 
         confidence_out_of_10 = self.confidence_out_of_10
@@ -82,7 +82,7 @@ class TwitterHandleToLinkedinUrlResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.twitter_handle_to_linkedin_url_response_200_output_x_profile_type_0 import (
-            TwitterHandleToLinkedinUrlResponse200OutputXProfileType0,
+            TwitterHandleToLinkedinUrlResponse200OutputXProfileType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

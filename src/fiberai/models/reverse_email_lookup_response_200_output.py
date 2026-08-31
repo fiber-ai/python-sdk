@@ -35,7 +35,7 @@ class ReverseEmailLookupResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.reverse_email_lookup_response_200_output_rejection_type_0 import (
-            ReverseEmailLookupResponse200OutputRejectionType0,
+            ReverseEmailLookupResponse200OutputRejectionType0,  # noqa: PLC0415
         )
 
         data = []
@@ -66,10 +66,10 @@ class ReverseEmailLookupResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.reverse_email_lookup_response_200_output_data_item import (
-            ReverseEmailLookupResponse200OutputDataItem,
+            ReverseEmailLookupResponse200OutputDataItem,  # noqa: PLC0415
         )
         from ..models.reverse_email_lookup_response_200_output_rejection_type_0 import (
-            ReverseEmailLookupResponse200OutputRejectionType0,
+            ReverseEmailLookupResponse200OutputRejectionType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

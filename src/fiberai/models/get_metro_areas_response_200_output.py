@@ -34,7 +34,7 @@ class GetMetroAreasResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_metro_areas_response_200_output_metro_areas_item_type_0 import (
-            GetMetroAreasResponse200OutputMetroAreasItemType0,
+            GetMetroAreasResponse200OutputMetroAreasItemType0,  # noqa: PLC0415
         )
 
         metro_areas = []
@@ -60,10 +60,10 @@ class GetMetroAreasResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_metro_areas_response_200_output_metro_areas_item_type_0 import (
-            GetMetroAreasResponse200OutputMetroAreasItemType0,
+            GetMetroAreasResponse200OutputMetroAreasItemType0,  # noqa: PLC0415
         )
         from ..models.get_metro_areas_response_200_output_metro_areas_item_type_1 import (
-            GetMetroAreasResponse200OutputMetroAreasItemType1,
+            GetMetroAreasResponse200OutputMetroAreasItemType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

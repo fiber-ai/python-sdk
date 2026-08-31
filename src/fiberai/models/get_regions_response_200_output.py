@@ -50,8 +50,12 @@ class GetRegionsResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_regions_response_200_output_countries_item import GetRegionsResponse200OutputCountriesItem
-        from ..models.get_regions_response_200_output_regions_item import GetRegionsResponse200OutputRegionsItem
+        from ..models.get_regions_response_200_output_countries_item import (
+            GetRegionsResponse200OutputCountriesItem,  # noqa: PLC0415
+        )
+        from ..models.get_regions_response_200_output_regions_item import (
+            GetRegionsResponse200OutputRegionsItem,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         countries = []

@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemYearsType0FinishedSchoolAtType1WindowType2Period(
-    str, Enum
+    StrEnum
 ):
     DAY = "day"
     MONTH = "month"

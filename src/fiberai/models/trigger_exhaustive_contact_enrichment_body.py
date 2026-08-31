@@ -60,7 +60,7 @@ class TriggerExhaustiveContactEnrichmentBody:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.trigger_exhaustive_contact_enrichment_body_enrichment_type import (
-            TriggerExhaustiveContactEnrichmentBodyEnrichmentType,
+            TriggerExhaustiveContactEnrichmentBodyEnrichmentType,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

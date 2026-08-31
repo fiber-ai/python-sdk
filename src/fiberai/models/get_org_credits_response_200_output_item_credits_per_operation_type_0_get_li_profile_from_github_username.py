@@ -45,7 +45,7 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetLiProfileFrom
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_get_li_profile_from_github_username_levels_item import (
-            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetLiProfileFromGithubUsernameLevelsItem,
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetLiProfileFromGithubUsernameLevelsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -58,16 +58,16 @@ class StealthFoundersSearchResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.stealth_founders_search_response_200_charge_info_type_0 import (
-            StealthFoundersSearchResponse200ChargeInfoType0,
+            StealthFoundersSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.stealth_founders_search_response_200_charge_info_type_1 import (
-            StealthFoundersSearchResponse200ChargeInfoType1,
+            StealthFoundersSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.stealth_founders_search_response_200_charge_info_type_2 import (
-            StealthFoundersSearchResponse200ChargeInfoType2,
+            StealthFoundersSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.stealth_founders_search_response_200_charge_info_type_3 import (
-            StealthFoundersSearchResponse200ChargeInfoType3,
+            StealthFoundersSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class StealthFoundersSearchResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.stealth_founders_search_response_200_charge_info_type_0 import (
-            StealthFoundersSearchResponse200ChargeInfoType0,
+            StealthFoundersSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.stealth_founders_search_response_200_charge_info_type_1 import (
-            StealthFoundersSearchResponse200ChargeInfoType1,
+            StealthFoundersSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.stealth_founders_search_response_200_charge_info_type_2 import (
-            StealthFoundersSearchResponse200ChargeInfoType2,
+            StealthFoundersSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.stealth_founders_search_response_200_charge_info_type_3 import (
-            StealthFoundersSearchResponse200ChargeInfoType3,
+            StealthFoundersSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.stealth_founders_search_response_200_charge_info_type_4 import (
-            StealthFoundersSearchResponse200ChargeInfoType4,
+            StealthFoundersSearchResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.stealth_founders_search_response_200_output import StealthFoundersSearchResponse200Output
+        from ..models.stealth_founders_search_response_200_output import (
+            StealthFoundersSearchResponse200Output,  # noqa: PLC0415
+        )
         from ..models.stealth_founders_search_response_200_warnings_type_0_item import (
-            StealthFoundersSearchResponse200WarningsType0Item,
+            StealthFoundersSearchResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

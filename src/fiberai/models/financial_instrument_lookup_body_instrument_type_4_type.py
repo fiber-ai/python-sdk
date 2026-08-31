@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FinancialInstrumentLookupBodyInstrumentType4Type(str, Enum):
+class FinancialInstrumentLookupBodyInstrumentType4Type(StrEnum):
     CUSTOMSYMBOL = "customSymbol"
 
     def __str__(self) -> str:

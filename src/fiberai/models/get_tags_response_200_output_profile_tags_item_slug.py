@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetTagsResponse200OutputProfileTagsItemSlug(str, Enum):
+class GetTagsResponse200OutputProfileTagsItemSlug(StrEnum):
     ATTENDED_TOP_GLOBAL_UNIVERSITY = "attended-top-global-university"
     ATTENDED_TOP_US_UNIVERSITY = "attended-top-us-university"
     BOARD_MEMBER = "board-member"

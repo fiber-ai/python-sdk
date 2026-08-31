@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class StartBatchContactDetailsResponse200ChargeInfoType4Method(str, Enum):
+class StartBatchContactDetailsResponse200ChargeInfoType4Method(StrEnum):
     CREDITS_REFUNDED = "credits-refunded"
 
     def __str__(self) -> str:

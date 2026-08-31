@@ -76,22 +76,22 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0_any_of_type_0_item_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0_any_of_type_0_item_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0_any_of_type_0_item_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0_none_of_type_0_item_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0NoneOfType0ItemType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0NoneOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0_none_of_type_0_item_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0NoneOfType0ItemType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0NoneOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0_none_of_type_0_item_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0NoneOfType0ItemType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0NoneOfType0ItemType2,  # noqa: PLC0415
         )
 
         any_of: list[dict[str, Any]] | None | Unset
@@ -167,28 +167,28 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0_any_of_type_0_item_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0_any_of_type_0_item_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0_any_of_type_0_item_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0_any_of_type_0_item_type_3 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType3,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType3,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0_none_of_type_0_item_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0NoneOfType0ItemType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0NoneOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0_none_of_type_0_item_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0NoneOfType0ItemType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0NoneOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0_none_of_type_0_item_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0NoneOfType0ItemType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0NoneOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0_none_of_type_0_item_type_3 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0NoneOfType0ItemType3,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0NoneOfType0ItemType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

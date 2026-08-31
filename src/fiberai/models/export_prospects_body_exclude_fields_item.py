@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ExportProspectsBodyExcludeFieldsItem(str, Enum):
+class ExportProspectsBodyExcludeFieldsItem(StrEnum):
     AGE = "age"
     ARTICLES = "articles"
     ARTICLES_RAW = "articles_raw"

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class HeadcountGrowthPercentDirection(str, Enum):
+class HeadcountGrowthPercentDirection(StrEnum):
     EITHER = "either"
     GREW = "grew"
     SHRANK = "shrank"

@@ -58,16 +58,16 @@ class DeleteCompanyExclusionListResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.delete_company_exclusion_list_response_200_charge_info_type_0 import (
-            DeleteCompanyExclusionListResponse200ChargeInfoType0,
+            DeleteCompanyExclusionListResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.delete_company_exclusion_list_response_200_charge_info_type_1 import (
-            DeleteCompanyExclusionListResponse200ChargeInfoType1,
+            DeleteCompanyExclusionListResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.delete_company_exclusion_list_response_200_charge_info_type_2 import (
-            DeleteCompanyExclusionListResponse200ChargeInfoType2,
+            DeleteCompanyExclusionListResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.delete_company_exclusion_list_response_200_charge_info_type_3 import (
-            DeleteCompanyExclusionListResponse200ChargeInfoType3,
+            DeleteCompanyExclusionListResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,25 +123,25 @@ class DeleteCompanyExclusionListResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.delete_company_exclusion_list_response_200_charge_info_type_0 import (
-            DeleteCompanyExclusionListResponse200ChargeInfoType0,
+            DeleteCompanyExclusionListResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.delete_company_exclusion_list_response_200_charge_info_type_1 import (
-            DeleteCompanyExclusionListResponse200ChargeInfoType1,
+            DeleteCompanyExclusionListResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.delete_company_exclusion_list_response_200_charge_info_type_2 import (
-            DeleteCompanyExclusionListResponse200ChargeInfoType2,
+            DeleteCompanyExclusionListResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.delete_company_exclusion_list_response_200_charge_info_type_3 import (
-            DeleteCompanyExclusionListResponse200ChargeInfoType3,
+            DeleteCompanyExclusionListResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.delete_company_exclusion_list_response_200_charge_info_type_4 import (
-            DeleteCompanyExclusionListResponse200ChargeInfoType4,
+            DeleteCompanyExclusionListResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.delete_company_exclusion_list_response_200_output import (
-            DeleteCompanyExclusionListResponse200Output,
+            DeleteCompanyExclusionListResponse200Output,  # noqa: PLC0415
         )
         from ..models.delete_company_exclusion_list_response_200_warnings_type_0_item import (
-            DeleteCompanyExclusionListResponse200WarningsType0Item,
+            DeleteCompanyExclusionListResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

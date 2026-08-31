@@ -29,7 +29,7 @@ class PeopleSearchBodySearchParamsPublicationsType0AnyOfType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_body_search_params_publications_type_0_any_of_type_0_item_keywords_type_0 import (
-            PeopleSearchBodySearchParamsPublicationsType0AnyOfType0ItemKeywordsType0,
+            PeopleSearchBodySearchParamsPublicationsType0AnyOfType0ItemKeywordsType0,  # noqa: PLC0415
         )
 
         keywords: dict[str, Any] | None | Unset
@@ -51,7 +51,7 @@ class PeopleSearchBodySearchParamsPublicationsType0AnyOfType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_publications_type_0_any_of_type_0_item_keywords_type_0 import (
-            PeopleSearchBodySearchParamsPublicationsType0AnyOfType0ItemKeywordsType0,
+            PeopleSearchBodySearchParamsPublicationsType0AnyOfType0ItemKeywordsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

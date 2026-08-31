@@ -1,9 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0NoneOfType0ItemType1CountryCode(
-    str, Enum
-):
+class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0NoneOfType0ItemType1CountryCode(StrEnum):
     ABW = "ABW"
     AFG = "AFG"
     AGO = "AGO"

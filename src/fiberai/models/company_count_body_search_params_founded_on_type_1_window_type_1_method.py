@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanyCountBodySearchParamsFoundedOnType1WindowType1Method(str, Enum):
+class CompanyCountBodySearchParamsFoundedOnType1WindowType1Method(StrEnum):
     WITHIN = "within"
 
     def __str__(self) -> str:

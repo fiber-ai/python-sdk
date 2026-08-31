@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileDetailedWorkExperiencesType0ItemJobFunctionType0Item(
-    str, Enum
+    StrEnum
 ):
     ACCOUNTING = "Accounting"
     ADMINISTRATIVE = "Administrative"

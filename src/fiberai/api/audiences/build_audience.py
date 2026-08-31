@@ -152,7 +152,7 @@ def sync_detailed(
     | BuildAudienceResponse500
     | BuildAudienceResponse503
 ]:
-    r"""Build audience from search parameters
+    """Build audience from search parameters
 
      Triggers the audience building process. This runs a company and prospect search based on the
     configured search parameters and saves results to the database. The build runs asynchronously - use
@@ -162,9 +162,9 @@ def sync_detailed(
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the build completes based on results: 1
-    credits per company and 1 credits per profile found.&nbsp;<span title=\"Pricing shown is default
+    credits per company and 1 credits per profile found.&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary. Your total charge will vary based on the number of companies and
-    profiles in your audience.\">ⓘ</span></span>
+    profiles in your audience.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -208,7 +208,7 @@ def sync(
     | BuildAudienceResponse503
     | None
 ):
-    r"""Build audience from search parameters
+    """Build audience from search parameters
 
      Triggers the audience building process. This runs a company and prospect search based on the
     configured search parameters and saves results to the database. The build runs asynchronously - use
@@ -218,9 +218,9 @@ def sync(
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the build completes based on results: 1
-    credits per company and 1 credits per profile found.&nbsp;<span title=\"Pricing shown is default
+    credits per company and 1 credits per profile found.&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary. Your total charge will vary based on the number of companies and
-    profiles in your audience.\">ⓘ</span></span>
+    profiles in your audience.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -258,7 +258,7 @@ async def asyncio_detailed(
     | BuildAudienceResponse500
     | BuildAudienceResponse503
 ]:
-    r"""Build audience from search parameters
+    """Build audience from search parameters
 
      Triggers the audience building process. This runs a company and prospect search based on the
     configured search parameters and saves results to the database. The build runs asynchronously - use
@@ -268,9 +268,9 @@ async def asyncio_detailed(
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the build completes based on results: 1
-    credits per company and 1 credits per profile found.&nbsp;<span title=\"Pricing shown is default
+    credits per company and 1 credits per profile found.&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary. Your total charge will vary based on the number of companies and
-    profiles in your audience.\">ⓘ</span></span>
+    profiles in your audience.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -312,7 +312,7 @@ async def asyncio(
     | BuildAudienceResponse503
     | None
 ):
-    r"""Build audience from search parameters
+    """Build audience from search parameters
 
      Triggers the audience building process. This runs a company and prospect search based on the
     configured search parameters and saves results to the database. The build runs asynchronously - use
@@ -322,9 +322,9 @@ async def asyncio(
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits are charged after the build completes based on results: 1
-    credits per company and 1 credits per profile found.&nbsp;<span title=\"Pricing shown is default
+    credits per company and 1 credits per profile found.&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary. Your total charge will vary based on the number of companies and
-    profiles in your audience.\">ⓘ</span></span>
+    profiles in your audience.">ⓘ</span></span>
 
     Args:
         audience_id (str):

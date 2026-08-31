@@ -151,15 +151,15 @@ def sync_detailed(
     | GetSubdivisionsResponse500
     | GetSubdivisionsResponse503
 ]:
-    r"""List subdivisions by country
+    """List subdivisions by country
 
      Get a list of subdivisions (states, provinces, Länder, etc.) for a given country, identified by ISO
     3166-1 alpha-2 or alpha-3 code.
 
     <span>⚡ <strong>Rate limit:</strong> 250 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -203,15 +203,15 @@ def sync(
     | GetSubdivisionsResponse503
     | None
 ):
-    r"""List subdivisions by country
+    """List subdivisions by country
 
      Get a list of subdivisions (states, provinces, Länder, etc.) for a given country, identified by ISO
     3166-1 alpha-2 or alpha-3 code.
 
     <span>⚡ <strong>Rate limit:</strong> 250 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -249,15 +249,15 @@ async def asyncio_detailed(
     | GetSubdivisionsResponse500
     | GetSubdivisionsResponse503
 ]:
-    r"""List subdivisions by country
+    """List subdivisions by country
 
      Get a list of subdivisions (states, provinces, Länder, etc.) for a given country, identified by ISO
     3166-1 alpha-2 or alpha-3 code.
 
     <span>⚡ <strong>Rate limit:</strong> 250 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -299,15 +299,15 @@ async def asyncio(
     | GetSubdivisionsResponse503
     | None
 ):
-    r"""List subdivisions by country
+    """List subdivisions by country
 
      Get a list of subdivisions (states, provinces, Länder, etc.) for a given country, identified by ISO
     3166-1 alpha-2 or alpha-3 code.
 
     <span>⚡ <strong>Rate limit:</strong> 250 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):

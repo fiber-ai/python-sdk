@@ -36,7 +36,7 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCurrentJobsType0A
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_current_jobs_type_0_all_of_type_0_item_company_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCurrentJobsType0AllOfType0ItemCompanyType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCurrentJobsType0AllOfType0ItemCompanyType0,  # noqa: PLC0415
         )
 
         job_title: list[str] | None | Unset
@@ -72,7 +72,7 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCurrentJobsType0A
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_current_jobs_type_0_all_of_type_0_item_company_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCurrentJobsType0AllOfType0ItemCompanyType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCurrentJobsType0AllOfType0ItemCompanyType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

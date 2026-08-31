@@ -70,10 +70,10 @@ class CompanySearchBodySearchParamsExactCompanyType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_body_search_params_exact_company_type_0_any_of_type_0_item import (
-            CompanySearchBodySearchParamsExactCompanyType0AnyOfType0Item,
+            CompanySearchBodySearchParamsExactCompanyType0AnyOfType0Item,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_exact_company_type_0_none_of_type_0_item import (
-            CompanySearchBodySearchParamsExactCompanyType0NoneOfType0Item,
+            CompanySearchBodySearchParamsExactCompanyType0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

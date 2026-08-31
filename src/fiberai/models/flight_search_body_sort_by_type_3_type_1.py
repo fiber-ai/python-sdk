@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FlightSearchBodySortByType3Type1(str, Enum):
+class FlightSearchBodySortByType3Type1(StrEnum):
     ARRIVALTIME = "arrivalTime"
     DEPARTURETIME = "departureTime"
     DURATION = "duration"

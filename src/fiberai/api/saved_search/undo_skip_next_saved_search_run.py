@@ -147,15 +147,15 @@ def sync_detailed(
     | UndoSkipNextSavedSearchRunResponse500
     | UndoSkipNextSavedSearchRunResponse503
 ]:
-    r"""Undo skip next saved search auto-run
+    """Undo skip next saved search auto-run
 
      Undo a pending skip-next-run on a saved search. The auto-spawn cron will resume considering this
     search for automatic runs. Idempotent: calling this when no skip is active succeeds.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UndoSkipNextSavedSearchRunBody):
@@ -196,15 +196,15 @@ def sync(
     | UndoSkipNextSavedSearchRunResponse503
     | None
 ):
-    r"""Undo skip next saved search auto-run
+    """Undo skip next saved search auto-run
 
      Undo a pending skip-next-run on a saved search. The auto-spawn cron will resume considering this
     search for automatic runs. Idempotent: calling this when no skip is active succeeds.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UndoSkipNextSavedSearchRunBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | UndoSkipNextSavedSearchRunResponse500
     | UndoSkipNextSavedSearchRunResponse503
 ]:
-    r"""Undo skip next saved search auto-run
+    """Undo skip next saved search auto-run
 
      Undo a pending skip-next-run on a saved search. The auto-spawn cron will resume considering this
     search for automatic runs. Idempotent: calling this when no skip is active succeeds.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UndoSkipNextSavedSearchRunBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | UndoSkipNextSavedSearchRunResponse503
     | None
 ):
-    r"""Undo skip next saved search auto-run
+    """Undo skip next saved search auto-run
 
      Undo a pending skip-next-run on a saved search. The auto-spawn cron will resume considering this
     search for automatic runs. Idempotent: calling this when no skip is active succeeds.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UndoSkipNextSavedSearchRunBody):

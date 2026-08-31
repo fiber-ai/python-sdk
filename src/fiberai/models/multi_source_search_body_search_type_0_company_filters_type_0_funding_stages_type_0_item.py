@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class MultiSourceSearchBodySearchType0CompanyFiltersType0FundingStagesType0Item(str, Enum):
+class MultiSourceSearchBodySearchType0CompanyFiltersType0FundingStagesType0Item(StrEnum):
     NO_FUNDING_YET = "no_funding_yet"
     PRE_SEED = "pre_seed"
     PRIVATE_EQUITY = "private_equity"

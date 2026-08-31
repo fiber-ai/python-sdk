@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemJobStatusType1LeftAtType0Strategy(
-    str, Enum
+    StrEnum
 ):
     ABSOLUTE = "absolute"
 

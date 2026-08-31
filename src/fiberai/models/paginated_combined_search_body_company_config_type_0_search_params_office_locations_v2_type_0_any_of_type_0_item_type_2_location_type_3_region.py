@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType3Region(
-    str, Enum
+    StrEnum
 ):
     BOSTON_ROUTE_128 = "boston-route-128"
     CHICAGOLAND = "chicagoland"

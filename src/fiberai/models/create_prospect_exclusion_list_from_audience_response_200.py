@@ -62,16 +62,16 @@ class CreateProspectExclusionListFromAudienceResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_prospect_exclusion_list_from_audience_response_200_charge_info_type_0 import (
-            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType0,
+            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.create_prospect_exclusion_list_from_audience_response_200_charge_info_type_1 import (
-            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType1,
+            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.create_prospect_exclusion_list_from_audience_response_200_charge_info_type_2 import (
-            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType2,
+            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.create_prospect_exclusion_list_from_audience_response_200_charge_info_type_3 import (
-            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType3,
+            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -127,25 +127,25 @@ class CreateProspectExclusionListFromAudienceResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_prospect_exclusion_list_from_audience_response_200_charge_info_type_0 import (
-            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType0,
+            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.create_prospect_exclusion_list_from_audience_response_200_charge_info_type_1 import (
-            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType1,
+            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.create_prospect_exclusion_list_from_audience_response_200_charge_info_type_2 import (
-            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType2,
+            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.create_prospect_exclusion_list_from_audience_response_200_charge_info_type_3 import (
-            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType3,
+            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.create_prospect_exclusion_list_from_audience_response_200_charge_info_type_4 import (
-            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType4,
+            CreateProspectExclusionListFromAudienceResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.create_prospect_exclusion_list_from_audience_response_200_output import (
-            CreateProspectExclusionListFromAudienceResponse200Output,
+            CreateProspectExclusionListFromAudienceResponse200Output,  # noqa: PLC0415
         )
         from ..models.create_prospect_exclusion_list_from_audience_response_200_warnings_type_0_item import (
-            CreateProspectExclusionListFromAudienceResponse200WarningsType0Item,
+            CreateProspectExclusionListFromAudienceResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

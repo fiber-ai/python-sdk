@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0Joiner(str, Enum):
+class CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0Joiner(StrEnum):
     AND = "AND"
     OR = "OR"
 

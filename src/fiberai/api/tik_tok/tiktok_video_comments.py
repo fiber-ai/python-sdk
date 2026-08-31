@@ -147,15 +147,15 @@ def sync_detailed(
     | TiktokVideoCommentsResponse500
     | TiktokVideoCommentsResponse503
 ]:
-    r"""Fetch TikTok video comments
+    """Fetch TikTok video comments
 
      Fetches comments for a TikTok video. Returns a paginated list of comments. Use the `nextPageToken`
     field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokVideoCommentsBody):
@@ -196,15 +196,15 @@ def sync(
     | TiktokVideoCommentsResponse503
     | None
 ):
-    r"""Fetch TikTok video comments
+    """Fetch TikTok video comments
 
      Fetches comments for a TikTok video. Returns a paginated list of comments. Use the `nextPageToken`
     field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokVideoCommentsBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TiktokVideoCommentsResponse500
     | TiktokVideoCommentsResponse503
 ]:
-    r"""Fetch TikTok video comments
+    """Fetch TikTok video comments
 
      Fetches comments for a TikTok video. Returns a paginated list of comments. Use the `nextPageToken`
     field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokVideoCommentsBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TiktokVideoCommentsResponse503
     | None
 ):
-    r"""Fetch TikTok video comments
+    """Fetch TikTok video comments
 
      Fetches comments for a TikTok video. Returns a paginated list of comments. Use the `nextPageToken`
     field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokVideoCommentsBody):

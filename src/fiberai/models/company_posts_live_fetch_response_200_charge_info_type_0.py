@@ -38,7 +38,7 @@ class CompanyPostsLiveFetchResponse200ChargeInfoType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_posts_live_fetch_response_200_charge_info_type_0_low_credit_alert_type_0 import (
-            CompanyPostsLiveFetchResponse200ChargeInfoType0LowCreditAlertType0,
+            CompanyPostsLiveFetchResponse200ChargeInfoType0LowCreditAlertType0,  # noqa: PLC0415
         )
 
         method = self.method.value
@@ -69,7 +69,7 @@ class CompanyPostsLiveFetchResponse200ChargeInfoType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_posts_live_fetch_response_200_charge_info_type_0_low_credit_alert_type_0 import (
-            CompanyPostsLiveFetchResponse200ChargeInfoType0LowCreditAlertType0,
+            CompanyPostsLiveFetchResponse200ChargeInfoType0LowCreditAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

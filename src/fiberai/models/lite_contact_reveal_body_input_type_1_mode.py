@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class LiteContactRevealBodyInputType1Mode(str, Enum):
+class LiteContactRevealBodyInputType1Mode(StrEnum):
     NAME_DOMAIN = "name-domain"
 
     def __str__(self) -> str:

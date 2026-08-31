@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyProfileParamsUnemploymentType0BecameUnemployedAtType1WindowType0Method(str, Enum):
+class CombinedSearchCountBodyProfileParamsUnemploymentType0BecameUnemployedAtType1WindowType0Method(StrEnum):
     WITHIN = "within"
 
     def __str__(self) -> str:

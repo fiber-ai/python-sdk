@@ -37,7 +37,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationV2Type0A
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_properties_type_0_country_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationV2Type0AllOfType0ItemSchoolType0PropertiesType0CountryType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationV2Type0AllOfType0ItemSchoolType0PropertiesType0CountryType0,  # noqa: PLC0415
         )
 
         country: dict[str, Any] | None | Unset
@@ -62,7 +62,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationV2Type0A
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_properties_type_0_country_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationV2Type0AllOfType0ItemSchoolType0PropertiesType0CountryType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationV2Type0AllOfType0ItemSchoolType0PropertiesType0CountryType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

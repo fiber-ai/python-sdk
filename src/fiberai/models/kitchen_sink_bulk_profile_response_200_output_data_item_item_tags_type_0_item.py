@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class KitchenSinkBulkProfileResponse200OutputDataItemItemTagsType0Item(str, Enum):
+class KitchenSinkBulkProfileResponse200OutputDataItemItemTagsType0Item(StrEnum):
     ATTENDED_TOP_GLOBAL_UNIVERSITY = "attended-top-global-university"
     ATTENDED_TOP_US_UNIVERSITY = "attended-top-us-university"
     BOARD_MEMBER = "board-member"

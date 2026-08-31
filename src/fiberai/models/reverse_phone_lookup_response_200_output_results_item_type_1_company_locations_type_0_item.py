@@ -36,7 +36,7 @@ class ReversePhoneLookupResponse200OutputResultsItemType1CompanyLocationsType0It
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_locations_type_0_item_location_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyLocationsType0ItemLocationType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyLocationsType0ItemLocationType0,  # noqa: PLC0415
         )
 
         address: None | str | Unset
@@ -76,7 +76,7 @@ class ReversePhoneLookupResponse200OutputResultsItemType1CompanyLocationsType0It
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_locations_type_0_item_location_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyLocationsType0ItemLocationType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyLocationsType0ItemLocationType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

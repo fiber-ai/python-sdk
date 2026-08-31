@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType1Type(
-    str, Enum
+    StrEnum
 ):
     LINKEDIN_URL = "linkedin-url"
 

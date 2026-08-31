@@ -78,13 +78,13 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2T
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_employee_trends_v2_type_0_obeys_all_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_employee_trends_v2_type_0_obeys_any_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_employee_trends_v2_type_0_obeys_none_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,  # noqa: PLC0415
         )
 
         obeys_all: list[dict[str, Any]] | None | Unset
@@ -162,22 +162,22 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2T
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_employee_trends_v2_type_0_obeys_all_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_employee_trends_v2_type_0_obeys_all_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType1,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_employee_trends_v2_type_0_obeys_any_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_employee_trends_v2_type_0_obeys_any_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType1,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_employee_trends_v2_type_0_obeys_none_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_employee_trends_v2_type_0_obeys_none_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType1,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

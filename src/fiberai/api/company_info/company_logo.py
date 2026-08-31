@@ -147,18 +147,18 @@ def sync_detailed(
     | CompanyLogoResponse500
     | CompanyLogoResponse503
 ]:
-    r"""Company logo
+    """Company logo
 
      Get the logo for a single company. Accepts a LinkedIn company URL, slug, numeric organization ID, or
     domain — the format is auto-detected.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (CompanyLogoBody):
@@ -199,18 +199,18 @@ def sync(
     | CompanyLogoResponse503
     | None
 ):
-    r"""Company logo
+    """Company logo
 
      Get the logo for a single company. Accepts a LinkedIn company URL, slug, numeric organization ID, or
     domain — the format is auto-detected.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (CompanyLogoBody):
@@ -245,18 +245,18 @@ async def asyncio_detailed(
     | CompanyLogoResponse500
     | CompanyLogoResponse503
 ]:
-    r"""Company logo
+    """Company logo
 
      Get the logo for a single company. Accepts a LinkedIn company URL, slug, numeric organization ID, or
     domain — the format is auto-detected.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (CompanyLogoBody):
@@ -295,18 +295,18 @@ async def asyncio(
     | CompanyLogoResponse503
     | None
 ):
-    r"""Company logo
+    """Company logo
 
      Get the logo for a single company. Accepts a LinkedIn company URL, slug, numeric organization ID, or
     domain — the format is auto-detected.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (CompanyLogoBody):

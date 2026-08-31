@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileCurrentJobType0AcademicQualificationType0Item(
-    str, Enum
+    StrEnum
 ):
     ASSOCIATE_DEGREE = "Associate Degree"
     BACHELOR_DEGREE = "Bachelor Degree"

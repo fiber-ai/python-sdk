@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AllOfType0ItemType6RangeType0Type(
-    str, Enum
+    StrEnum
 ):
     COUNT_RANGE = "count-range"
 

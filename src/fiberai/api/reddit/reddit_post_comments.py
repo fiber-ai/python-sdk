@@ -147,7 +147,7 @@ def sync_detailed(
     | RedditPostCommentsResponse500
     | RedditPostCommentsResponse503
 ]:
-    r"""Fetch post comments
+    """Fetch post comments
 
      Fetch comments for a Reddit post by URL or `t3_<id>` identifier. Returns the parent post (when
     available) and a paginated, depth-first flat list of comments that includes nested replies. Each
@@ -158,8 +158,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (RedditPostCommentsBody):
@@ -200,7 +200,7 @@ def sync(
     | RedditPostCommentsResponse503
     | None
 ):
-    r"""Fetch post comments
+    """Fetch post comments
 
      Fetch comments for a Reddit post by URL or `t3_<id>` identifier. Returns the parent post (when
     available) and a paginated, depth-first flat list of comments that includes nested replies. Each
@@ -211,8 +211,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (RedditPostCommentsBody):
@@ -247,7 +247,7 @@ async def asyncio_detailed(
     | RedditPostCommentsResponse500
     | RedditPostCommentsResponse503
 ]:
-    r"""Fetch post comments
+    """Fetch post comments
 
      Fetch comments for a Reddit post by URL or `t3_<id>` identifier. Returns the parent post (when
     available) and a paginated, depth-first flat list of comments that includes nested replies. Each
@@ -258,8 +258,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (RedditPostCommentsBody):
@@ -298,7 +298,7 @@ async def asyncio(
     | RedditPostCommentsResponse503
     | None
 ):
-    r"""Fetch post comments
+    """Fetch post comments
 
      Fetch comments for a Reddit post by URL or `t3_<id>` identifier. Returns the parent post (when
     available) and a paginated, depth-first flat list of comments that includes nested replies. Each
@@ -309,8 +309,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (RedditPostCommentsBody):

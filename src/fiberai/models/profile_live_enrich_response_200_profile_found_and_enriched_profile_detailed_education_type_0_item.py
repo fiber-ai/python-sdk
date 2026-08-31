@@ -54,7 +54,7 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileDetailedEducatio
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_detailed_education_type_0_item_school_details_type_0 import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileDetailedEducationType0ItemSchoolDetailsType0,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileDetailedEducationType0ItemSchoolDetailsType0,  # noqa: PLC0415
         )
 
         school_details: dict[str, Any] | None | Unset
@@ -159,7 +159,7 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileDetailedEducatio
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_detailed_education_type_0_item_school_details_type_0 import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileDetailedEducationType0ItemSchoolDetailsType0,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileDetailedEducationType0ItemSchoolDetailsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

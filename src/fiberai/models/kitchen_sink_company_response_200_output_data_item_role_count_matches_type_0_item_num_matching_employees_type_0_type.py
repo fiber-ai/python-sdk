@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType0Type(str, Enum):
+class KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType0Type(StrEnum):
     EXACT = "exact"
 
     def __str__(self) -> str:

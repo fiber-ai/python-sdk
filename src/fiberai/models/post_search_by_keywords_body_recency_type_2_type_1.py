@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PostSearchByKeywordsBodyRecencyType2Type1(str, Enum):
+class PostSearchByKeywordsBodyRecencyType2Type1(StrEnum):
     DAY = "Day"
     HALFYEAR = "HalfYear"
     MONTH = "Month"

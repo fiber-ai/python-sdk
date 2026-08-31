@@ -142,25 +142,25 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0E
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0_contract import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0_full_time import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0_internship import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0_other import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Other,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Other,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0_part_time import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0_temporary import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0_volunteer import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -41,10 +41,10 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_unemployment_type_0_became_unemployed_at_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0BecameUnemployedAtType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0BecameUnemployedAtType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_unemployment_type_0_became_unemployed_at_type_1 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0BecameUnemployedAtType1,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0BecameUnemployedAtType1,  # noqa: PLC0415
         )
 
         is_unemployed = self.is_unemployed
@@ -80,10 +80,10 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_unemployment_type_0_became_unemployed_at_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0BecameUnemployedAtType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0BecameUnemployedAtType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_unemployment_type_0_became_unemployed_at_type_1 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0BecameUnemployedAtType1,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0BecameUnemployedAtType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

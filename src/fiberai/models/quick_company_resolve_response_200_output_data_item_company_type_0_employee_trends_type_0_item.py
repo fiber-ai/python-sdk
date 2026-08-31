@@ -108,7 +108,7 @@ class QuickCompanyResolveResponse200OutputDataItemCompanyType0EmployeeTrendsType
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_employee_trends_type_0_item_changes_type_0_item import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0EmployeeTrendsType0ItemChangesType0Item,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0EmployeeTrendsType0ItemChangesType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

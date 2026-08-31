@@ -38,10 +38,10 @@ class FlightSearchBodyOutboundTimeWindowType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.flight_search_body_outbound_time_window_type_0_arrival_type_0 import (
-            FlightSearchBodyOutboundTimeWindowType0ArrivalType0,
+            FlightSearchBodyOutboundTimeWindowType0ArrivalType0,  # noqa: PLC0415
         )
         from ..models.flight_search_body_outbound_time_window_type_0_departure_type_0 import (
-            FlightSearchBodyOutboundTimeWindowType0DepartureType0,
+            FlightSearchBodyOutboundTimeWindowType0DepartureType0,  # noqa: PLC0415
         )
 
         departure: dict[str, Any] | None | Unset
@@ -73,10 +73,10 @@ class FlightSearchBodyOutboundTimeWindowType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.flight_search_body_outbound_time_window_type_0_arrival_type_0 import (
-            FlightSearchBodyOutboundTimeWindowType0ArrivalType0,
+            FlightSearchBodyOutboundTimeWindowType0ArrivalType0,  # noqa: PLC0415
         )
         from ..models.flight_search_body_outbound_time_window_type_0_departure_type_0 import (
-            FlightSearchBodyOutboundTimeWindowType0DepartureType0,
+            FlightSearchBodyOutboundTimeWindowType0DepartureType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

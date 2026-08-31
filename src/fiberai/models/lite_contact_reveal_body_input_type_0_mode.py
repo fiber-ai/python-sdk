@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class LiteContactRevealBodyInputType0Mode(str, Enum):
+class LiteContactRevealBodyInputType0Mode(StrEnum):
     LINKEDIN = "linkedin"
 
     def __str__(self) -> str:

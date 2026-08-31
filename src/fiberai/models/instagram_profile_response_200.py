@@ -48,16 +48,16 @@ class InstagramProfileResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.instagram_profile_response_200_charge_info_type_0 import (
-            InstagramProfileResponse200ChargeInfoType0,
+            InstagramProfileResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.instagram_profile_response_200_charge_info_type_1 import (
-            InstagramProfileResponse200ChargeInfoType1,
+            InstagramProfileResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.instagram_profile_response_200_charge_info_type_2 import (
-            InstagramProfileResponse200ChargeInfoType2,
+            InstagramProfileResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.instagram_profile_response_200_charge_info_type_3 import (
-            InstagramProfileResponse200ChargeInfoType3,
+            InstagramProfileResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class InstagramProfileResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.instagram_profile_response_200_charge_info_type_0 import (
-            InstagramProfileResponse200ChargeInfoType0,
+            InstagramProfileResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.instagram_profile_response_200_charge_info_type_1 import (
-            InstagramProfileResponse200ChargeInfoType1,
+            InstagramProfileResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.instagram_profile_response_200_charge_info_type_2 import (
-            InstagramProfileResponse200ChargeInfoType2,
+            InstagramProfileResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.instagram_profile_response_200_charge_info_type_3 import (
-            InstagramProfileResponse200ChargeInfoType3,
+            InstagramProfileResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.instagram_profile_response_200_charge_info_type_4 import (
-            InstagramProfileResponse200ChargeInfoType4,
+            InstagramProfileResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.instagram_profile_response_200_output import InstagramProfileResponse200Output
+        from ..models.instagram_profile_response_200_output import InstagramProfileResponse200Output  # noqa: PLC0415
         from ..models.instagram_profile_response_200_warnings_type_0_item import (
-            InstagramProfileResponse200WarningsType0Item,
+            InstagramProfileResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

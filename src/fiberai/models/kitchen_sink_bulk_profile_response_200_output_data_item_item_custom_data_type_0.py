@@ -11,8 +11,6 @@ T = TypeVar("T", bound="KitchenSinkBulkProfileResponse200OutputDataItemItemCusto
 
 @_attrs_define
 class KitchenSinkBulkProfileResponse200OutputDataItemItemCustomDataType0:
-    """ """
-
     additional_properties: dict[str, str] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

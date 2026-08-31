@@ -147,7 +147,7 @@ def sync_detailed(
     | AddProfilesToListResponse500
     | AddProfilesToListResponse503
 ]:
-    r"""Add profiles to the job change list
+    """Add profiles to the job change list
 
      Add profiles to the job change list whose job changes you want to track. Note: we automatically
     remove 404 profiles from the list. Once the upload starts, you can use /job-changes/get-list to
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per per profile tracked&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per per profile tracked&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (AddProfilesToListBody):
@@ -197,7 +197,7 @@ def sync(
     | AddProfilesToListResponse503
     | None
 ):
-    r"""Add profiles to the job change list
+    """Add profiles to the job change list
 
      Add profiles to the job change list whose job changes you want to track. Note: we automatically
     remove 404 profiles from the list. Once the upload starts, you can use /job-changes/get-list to
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per per profile tracked&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per per profile tracked&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (AddProfilesToListBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | AddProfilesToListResponse500
     | AddProfilesToListResponse503
 ]:
-    r"""Add profiles to the job change list
+    """Add profiles to the job change list
 
      Add profiles to the job change list whose job changes you want to track. Note: we automatically
     remove 404 profiles from the list. Once the upload starts, you can use /job-changes/get-list to
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per per profile tracked&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per per profile tracked&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (AddProfilesToListBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | AddProfilesToListResponse503
     | None
 ):
-    r"""Add profiles to the job change list
+    """Add profiles to the job change list
 
      Add profiles to the job change list whose job changes you want to track. Note: we automatically
     remove 404 profiles from the list. Once the upload starts, you can use /job-changes/get-list to
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per per profile tracked&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per per profile tracked&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (AddProfilesToListBody):

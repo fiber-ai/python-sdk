@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType3EmploymentType(str, Enum):
+class CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType3EmploymentType(StrEnum):
     CONTRACT = "Contract"
     FULL_TIME = "Full-time"
     INTERNSHIP = "Internship"

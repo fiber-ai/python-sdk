@@ -83,7 +83,7 @@ class ReverseEmailLookupResponse200OutputDataItemTenuresType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.reverse_email_lookup_response_200_output_data_item_tenures_type_0_item_date_range import (
-            ReverseEmailLookupResponse200OutputDataItemTenuresType0ItemDateRange,
+            ReverseEmailLookupResponse200OutputDataItemTenuresType0ItemDateRange,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

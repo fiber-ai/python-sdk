@@ -52,7 +52,7 @@ class PaginatedCombinedSearchResponse200OutputProfilesItemDetailedEducationType0
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_response_200_output_profiles_item_detailed_education_type_0_item_school_details_type_0 import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemDetailedEducationType0ItemSchoolDetailsType0,
+            PaginatedCombinedSearchResponse200OutputProfilesItemDetailedEducationType0ItemSchoolDetailsType0,  # noqa: PLC0415
         )
 
         school_details: dict[str, Any] | None | Unset
@@ -157,7 +157,7 @@ class PaginatedCombinedSearchResponse200OutputProfilesItemDetailedEducationType0
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_output_profiles_item_detailed_education_type_0_item_school_details_type_0 import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemDetailedEducationType0ItemSchoolDetailsType0,
+            PaginatedCombinedSearchResponse200OutputProfilesItemDetailedEducationType0ItemSchoolDetailsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

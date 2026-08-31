@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0NoneOfType0ItemType0Type(str, Enum):
+class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0NoneOfType0ItemType0Type(StrEnum):
     TERM = "term"
 
     def __str__(self) -> str:

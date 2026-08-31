@@ -90,13 +90,13 @@ class PeopleSearchBodySearchParamsPastJobsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_past_jobs_type_0_all_of_type_0_item import (
-            PeopleSearchBodySearchParamsPastJobsType0AllOfType0Item,
+            PeopleSearchBodySearchParamsPastJobsType0AllOfType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_past_jobs_type_0_any_of_type_0_item import (
-            PeopleSearchBodySearchParamsPastJobsType0AnyOfType0Item,
+            PeopleSearchBodySearchParamsPastJobsType0AnyOfType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_past_jobs_type_0_none_of_type_0_item import (
-            PeopleSearchBodySearchParamsPastJobsType0NoneOfType0Item,
+            PeopleSearchBodySearchParamsPastJobsType0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -58,16 +58,16 @@ class EstimateEnrichmentCostResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.estimate_enrichment_cost_response_200_charge_info_type_0 import (
-            EstimateEnrichmentCostResponse200ChargeInfoType0,
+            EstimateEnrichmentCostResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.estimate_enrichment_cost_response_200_charge_info_type_1 import (
-            EstimateEnrichmentCostResponse200ChargeInfoType1,
+            EstimateEnrichmentCostResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.estimate_enrichment_cost_response_200_charge_info_type_2 import (
-            EstimateEnrichmentCostResponse200ChargeInfoType2,
+            EstimateEnrichmentCostResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.estimate_enrichment_cost_response_200_charge_info_type_3 import (
-            EstimateEnrichmentCostResponse200ChargeInfoType3,
+            EstimateEnrichmentCostResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class EstimateEnrichmentCostResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.estimate_enrichment_cost_response_200_charge_info_type_0 import (
-            EstimateEnrichmentCostResponse200ChargeInfoType0,
+            EstimateEnrichmentCostResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.estimate_enrichment_cost_response_200_charge_info_type_1 import (
-            EstimateEnrichmentCostResponse200ChargeInfoType1,
+            EstimateEnrichmentCostResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.estimate_enrichment_cost_response_200_charge_info_type_2 import (
-            EstimateEnrichmentCostResponse200ChargeInfoType2,
+            EstimateEnrichmentCostResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.estimate_enrichment_cost_response_200_charge_info_type_3 import (
-            EstimateEnrichmentCostResponse200ChargeInfoType3,
+            EstimateEnrichmentCostResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.estimate_enrichment_cost_response_200_charge_info_type_4 import (
-            EstimateEnrichmentCostResponse200ChargeInfoType4,
+            EstimateEnrichmentCostResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.estimate_enrichment_cost_response_200_output import EstimateEnrichmentCostResponse200Output
+        from ..models.estimate_enrichment_cost_response_200_output import (
+            EstimateEnrichmentCostResponse200Output,  # noqa: PLC0415
+        )
         from ..models.estimate_enrichment_cost_response_200_warnings_type_0_item import (
-            EstimateEnrichmentCostResponse200WarningsType0Item,
+            EstimateEnrichmentCostResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

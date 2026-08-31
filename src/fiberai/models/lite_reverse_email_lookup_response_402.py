@@ -32,7 +32,7 @@ class LiteReverseEmailLookupResponse402:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.lite_reverse_email_lookup_response_402_out_of_credits_alert_type_0 import (
-            LiteReverseEmailLookupResponse402OutOfCreditsAlertType0,
+            LiteReverseEmailLookupResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         message = self.message
@@ -60,7 +60,7 @@ class LiteReverseEmailLookupResponse402:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.lite_reverse_email_lookup_response_402_out_of_credits_alert_type_0 import (
-            LiteReverseEmailLookupResponse402OutOfCreditsAlertType0,
+            LiteReverseEmailLookupResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

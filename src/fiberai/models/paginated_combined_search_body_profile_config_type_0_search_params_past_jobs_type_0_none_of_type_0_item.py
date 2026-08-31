@@ -34,7 +34,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPastJobsType0None
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_past_jobs_type_0_none_of_type_0_item_company_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPastJobsType0NoneOfType0ItemCompanyType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPastJobsType0NoneOfType0ItemCompanyType0,  # noqa: PLC0415
         )
 
         job_title: list[str] | None | Unset
@@ -70,7 +70,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPastJobsType0None
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_past_jobs_type_0_none_of_type_0_item_company_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPastJobsType0NoneOfType0ItemCompanyType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPastJobsType0NoneOfType0ItemCompanyType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

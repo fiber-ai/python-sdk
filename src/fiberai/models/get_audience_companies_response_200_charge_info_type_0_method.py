@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetAudienceCompaniesResponse200ChargeInfoType0Method(str, Enum):
+class GetAudienceCompaniesResponse200ChargeInfoType0Method(StrEnum):
     CHARGED_NOW = "charged-now"
 
     def __str__(self) -> str:

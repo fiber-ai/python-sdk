@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0AllOfType0ItemType6RangeType1Type(
-    str, Enum
+    StrEnum
 ):
     PERCENT_RANGE = "percent-range"
 

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetEnrichmentStatusResponse200OutputCurrentStage(str, Enum):
+class GetEnrichmentStatusResponse200OutputCurrentStage(StrEnum):
     CLEANING_NAMES = "CLEANING_NAMES"
     DONE = "DONE"
     EXPORTING_CSV = "EXPORTING_CSV"

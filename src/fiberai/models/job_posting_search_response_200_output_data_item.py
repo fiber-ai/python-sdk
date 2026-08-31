@@ -112,19 +112,19 @@ class JobPostingSearchResponse200OutputDataItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.job_posting_search_response_200_output_data_item_annual_salary_usd_type_0 import (
-            JobPostingSearchResponse200OutputDataItemAnnualSalaryUsdType0,
+            JobPostingSearchResponse200OutputDataItemAnnualSalaryUsdType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_output_data_item_applicant_range_type_0 import (
-            JobPostingSearchResponse200OutputDataItemApplicantRangeType0,
+            JobPostingSearchResponse200OutputDataItemApplicantRangeType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_output_data_item_compensation_range_type_0 import (
-            JobPostingSearchResponse200OutputDataItemCompensationRangeType0,
+            JobPostingSearchResponse200OutputDataItemCompensationRangeType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_output_data_item_standardized_location_type_0 import (
-            JobPostingSearchResponse200OutputDataItemStandardizedLocationType0,
+            JobPostingSearchResponse200OutputDataItemStandardizedLocationType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_output_data_item_years_of_experience_type_0 import (
-            JobPostingSearchResponse200OutputDataItemYearsOfExperienceType0,
+            JobPostingSearchResponse200OutputDataItemYearsOfExperienceType0,  # noqa: PLC0415
         )
 
         job_id = self.job_id
@@ -309,19 +309,19 @@ class JobPostingSearchResponse200OutputDataItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.job_posting_search_response_200_output_data_item_annual_salary_usd_type_0 import (
-            JobPostingSearchResponse200OutputDataItemAnnualSalaryUsdType0,
+            JobPostingSearchResponse200OutputDataItemAnnualSalaryUsdType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_output_data_item_applicant_range_type_0 import (
-            JobPostingSearchResponse200OutputDataItemApplicantRangeType0,
+            JobPostingSearchResponse200OutputDataItemApplicantRangeType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_output_data_item_compensation_range_type_0 import (
-            JobPostingSearchResponse200OutputDataItemCompensationRangeType0,
+            JobPostingSearchResponse200OutputDataItemCompensationRangeType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_output_data_item_standardized_location_type_0 import (
-            JobPostingSearchResponse200OutputDataItemStandardizedLocationType0,
+            JobPostingSearchResponse200OutputDataItemStandardizedLocationType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_output_data_item_years_of_experience_type_0 import (
-            JobPostingSearchResponse200OutputDataItemYearsOfExperienceType0,
+            JobPostingSearchResponse200OutputDataItemYearsOfExperienceType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

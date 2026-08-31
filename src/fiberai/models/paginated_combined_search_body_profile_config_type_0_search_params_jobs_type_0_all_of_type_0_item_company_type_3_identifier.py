@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AllOfType0ItemCompanyType3Identifier(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0AllOfType0ItemCompanyType3Identifier(StrEnum):
     DOMAIN = "domain"
 
     def __str__(self) -> str:

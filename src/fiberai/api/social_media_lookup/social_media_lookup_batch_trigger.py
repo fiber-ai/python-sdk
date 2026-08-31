@@ -147,7 +147,7 @@ def sync_detailed(
     | SocialMediaLookupBatchTriggerResponse500
     | SocialMediaLookupBatchTriggerResponse503
 ]:
-    r"""Start batch social media lookup (X, Instagram)
+    """Start batch social media lookup (X, Instagram)
 
      Start a batch social media lookup for multiple people. Find X (Twitter) and Instagram profiles using
     LinkedIn URLs, user IDs, or manual name+context. Results are available via the batch polling
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per platform searched per person&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per platform searched per person&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SocialMediaLookupBatchTriggerBody):
@@ -197,7 +197,7 @@ def sync(
     | SocialMediaLookupBatchTriggerResponse503
     | None
 ):
-    r"""Start batch social media lookup (X, Instagram)
+    """Start batch social media lookup (X, Instagram)
 
      Start a batch social media lookup for multiple people. Find X (Twitter) and Instagram profiles using
     LinkedIn URLs, user IDs, or manual name+context. Results are available via the batch polling
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per platform searched per person&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per platform searched per person&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SocialMediaLookupBatchTriggerBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | SocialMediaLookupBatchTriggerResponse500
     | SocialMediaLookupBatchTriggerResponse503
 ]:
-    r"""Start batch social media lookup (X, Instagram)
+    """Start batch social media lookup (X, Instagram)
 
      Start a batch social media lookup for multiple people. Find X (Twitter) and Instagram profiles using
     LinkedIn URLs, user IDs, or manual name+context. Results are available via the batch polling
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per platform searched per person&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per platform searched per person&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SocialMediaLookupBatchTriggerBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | SocialMediaLookupBatchTriggerResponse503
     | None
 ):
-    r"""Start batch social media lookup (X, Instagram)
+    """Start batch social media lookup (X, Instagram)
 
      Start a batch social media lookup for multiple people. Find X (Twitter) and Instagram profiles using
     LinkedIn URLs, user IDs, or manual name+context. Results are available via the batch polling
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per platform searched per person&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per platform searched per person&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SocialMediaLookupBatchTriggerBody):

@@ -36,7 +36,7 @@ class StartMosaicResponse200ChargeInfoType3:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.start_mosaic_response_200_charge_info_type_3_low_credit_alert_type_0 import (
-            StartMosaicResponse200ChargeInfoType3LowCreditAlertType0,
+            StartMosaicResponse200ChargeInfoType3LowCreditAlertType0,  # noqa: PLC0415
         )
 
         method = self.method.value
@@ -67,7 +67,7 @@ class StartMosaicResponse200ChargeInfoType3:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.start_mosaic_response_200_charge_info_type_3_low_credit_alert_type_0 import (
-            StartMosaicResponse200ChargeInfoType3LowCreditAlertType0,
+            StartMosaicResponse200ChargeInfoType3LowCreditAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0ClausesItemOperator(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0ClausesItemOperator(StrEnum):
     AND = "AND"
     OR = "OR"
 

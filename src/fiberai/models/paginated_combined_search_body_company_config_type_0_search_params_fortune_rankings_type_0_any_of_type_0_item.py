@@ -55,7 +55,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsTy
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_fortune_rankings_type_0_any_of_type_0_item_range import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0AnyOfType0ItemRange,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0AnyOfType0ItemRange,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

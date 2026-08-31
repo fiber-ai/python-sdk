@@ -45,7 +45,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0Unio
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_union_all_type_0_item_type_0_radius_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType0RadiusType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType0RadiusType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -76,13 +76,13 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0Unio
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_union_all_type_0_item_type_0_center import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType0Center,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType0Center,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_union_all_type_0_item_type_0_radius_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType0RadiusType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType0RadiusType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_union_all_type_0_item_type_0_radius_type_1 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType0RadiusType1,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType0RadiusType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

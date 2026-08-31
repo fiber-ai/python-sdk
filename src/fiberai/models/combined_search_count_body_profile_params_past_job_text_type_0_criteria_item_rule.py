@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyProfileParamsPastJobTextType0CriteriaItemRule(str, Enum):
+class CombinedSearchCountBodyProfileParamsPastJobTextType0CriteriaItemRule(StrEnum):
     EXCLUDES = "excludes"
     INCLUDES = "includes"
 

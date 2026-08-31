@@ -58,16 +58,16 @@ class StealthFoundersCountResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.stealth_founders_count_response_200_charge_info_type_0 import (
-            StealthFoundersCountResponse200ChargeInfoType0,
+            StealthFoundersCountResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.stealth_founders_count_response_200_charge_info_type_1 import (
-            StealthFoundersCountResponse200ChargeInfoType1,
+            StealthFoundersCountResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.stealth_founders_count_response_200_charge_info_type_2 import (
-            StealthFoundersCountResponse200ChargeInfoType2,
+            StealthFoundersCountResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.stealth_founders_count_response_200_charge_info_type_3 import (
-            StealthFoundersCountResponse200ChargeInfoType3,
+            StealthFoundersCountResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class StealthFoundersCountResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.stealth_founders_count_response_200_charge_info_type_0 import (
-            StealthFoundersCountResponse200ChargeInfoType0,
+            StealthFoundersCountResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.stealth_founders_count_response_200_charge_info_type_1 import (
-            StealthFoundersCountResponse200ChargeInfoType1,
+            StealthFoundersCountResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.stealth_founders_count_response_200_charge_info_type_2 import (
-            StealthFoundersCountResponse200ChargeInfoType2,
+            StealthFoundersCountResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.stealth_founders_count_response_200_charge_info_type_3 import (
-            StealthFoundersCountResponse200ChargeInfoType3,
+            StealthFoundersCountResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.stealth_founders_count_response_200_charge_info_type_4 import (
-            StealthFoundersCountResponse200ChargeInfoType4,
+            StealthFoundersCountResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.stealth_founders_count_response_200_output import StealthFoundersCountResponse200Output
+        from ..models.stealth_founders_count_response_200_output import (
+            StealthFoundersCountResponse200Output,  # noqa: PLC0415
+        )
         from ..models.stealth_founders_count_response_200_warnings_type_0_item import (
-            StealthFoundersCountResponse200WarningsType0Item,
+            StealthFoundersCountResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

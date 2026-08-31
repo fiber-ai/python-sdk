@@ -167,7 +167,7 @@ class KitchenSinkCompanyResponse200OutputDataItemAcceleratorsType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_company_response_200_output_data_item_accelerators_type_0_item_founders_type_0_item import (
-            KitchenSinkCompanyResponse200OutputDataItemAcceleratorsType0ItemFoundersType0Item,
+            KitchenSinkCompanyResponse200OutputDataItemAcceleratorsType0ItemFoundersType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

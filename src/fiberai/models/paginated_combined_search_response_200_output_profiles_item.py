@@ -190,16 +190,16 @@ class PaginatedCombinedSearchResponse200OutputProfilesItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_response_200_output_profiles_item_current_job_type_0 import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemCurrentJobType0,
+            PaginatedCombinedSearchResponse200OutputProfilesItemCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_custom_data_type_0 import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemCustomDataType0,
+            PaginatedCombinedSearchResponse200OutputProfilesItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_inferred_location_type_0 import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemInferredLocationType0,
+            PaginatedCombinedSearchResponse200OutputProfilesItemInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_verifications_type_0 import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemVerificationsType0,
+            PaginatedCombinedSearchResponse200OutputProfilesItemVerificationsType0,  # noqa: PLC0415
         )
 
         primary_slug = self.primary_slug
@@ -716,58 +716,58 @@ class PaginatedCombinedSearchResponse200OutputProfilesItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_output_profiles_item_articles_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemArticlesType0Item,
+            PaginatedCombinedSearchResponse200OutputProfilesItemArticlesType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_certifications_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemCertificationsType0Item,
+            PaginatedCombinedSearchResponse200OutputProfilesItemCertificationsType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_courses_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemCoursesType0Item,
+            PaginatedCombinedSearchResponse200OutputProfilesItemCoursesType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_current_job_type_0 import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemCurrentJobType0,
+            PaginatedCombinedSearchResponse200OutputProfilesItemCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_custom_data_type_0 import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemCustomDataType0,
+            PaginatedCombinedSearchResponse200OutputProfilesItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_detailed_education_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemDetailedEducationType0Item,
+            PaginatedCombinedSearchResponse200OutputProfilesItemDetailedEducationType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_detailed_work_experiences_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType0Item,
+            PaginatedCombinedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_education_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemEducationType0Item,
+            PaginatedCombinedSearchResponse200OutputProfilesItemEducationType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_experiences_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemExperiencesType0Item,
+            PaginatedCombinedSearchResponse200OutputProfilesItemExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_inferred_location_type_0 import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemInferredLocationType0,
+            PaginatedCombinedSearchResponse200OutputProfilesItemInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_languages_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemLanguagesType0Item,
+            PaginatedCombinedSearchResponse200OutputProfilesItemLanguagesType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_organizations_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemOrganizationsType0Item,
+            PaginatedCombinedSearchResponse200OutputProfilesItemOrganizationsType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_patents_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemPatentsType0Item,
+            PaginatedCombinedSearchResponse200OutputProfilesItemPatentsType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_projects_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemProjectsType0Item,
+            PaginatedCombinedSearchResponse200OutputProfilesItemProjectsType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_publications_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemPublicationsType0Item,
+            PaginatedCombinedSearchResponse200OutputProfilesItemPublicationsType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_tenures_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemTenuresType0Item,
+            PaginatedCombinedSearchResponse200OutputProfilesItemTenuresType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_verifications_type_0 import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemVerificationsType0,
+            PaginatedCombinedSearchResponse200OutputProfilesItemVerificationsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_profiles_item_volunteering_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemVolunteeringType0Item,
+            PaginatedCombinedSearchResponse200OutputProfilesItemVolunteeringType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

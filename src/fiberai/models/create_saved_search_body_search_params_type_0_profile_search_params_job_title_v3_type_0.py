@@ -87,22 +87,22 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0_all_of_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AllOfType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AllOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0_all_of_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AllOfType0ItemType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AllOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0_any_of_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AnyOfType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AnyOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0_any_of_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AnyOfType0ItemType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AnyOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0_none_of_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0NoneOfType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0NoneOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0_none_of_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0NoneOfType0ItemType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0NoneOfType0ItemType1,  # noqa: PLC0415
         )
 
         any_of: list[dict[str, Any]] | None | Unset
@@ -195,31 +195,31 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0_all_of_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AllOfType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AllOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0_all_of_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AllOfType0ItemType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AllOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0_all_of_type_0_item_type_2 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AllOfType0ItemType2,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AllOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0_any_of_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AnyOfType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AnyOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0_any_of_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AnyOfType0ItemType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AnyOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0_any_of_type_0_item_type_2 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AnyOfType0ItemType2,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0AnyOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0_none_of_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0NoneOfType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0NoneOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0_none_of_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0NoneOfType0ItemType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0NoneOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0_none_of_type_0_item_type_2 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0NoneOfType0ItemType2,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0NoneOfType0ItemType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

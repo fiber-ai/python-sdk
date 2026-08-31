@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1WindowType0Period(
-    str, Enum
+    StrEnum
 ):
     DAY = "day"
     MONTH = "month"

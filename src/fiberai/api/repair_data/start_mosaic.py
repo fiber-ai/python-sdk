@@ -147,7 +147,7 @@ def sync_detailed(
     | StartMosaicResponse500
     | StartMosaicResponse503
 ]:
-    r"""Start Mosaic CSV healing
+    """Start Mosaic CSV healing
 
      Starts an asynchronous Mosaic job that heals and enriches an arbitrary CSV, TXT, XLSX, or public
     Google Sheet. Pass a public HTTPS URL (Google Drive / Sheets, Dropbox, OneDrive, or a direct file
@@ -161,9 +161,9 @@ def sync_detailed(
     <span>💰 <strong>Cost:</strong> Credits are charged after the file is parsed inside the background
     job. Cost is based on the number of billable rows plus any optional enrichments (contact details,
     company details) you enable. The first Mosaic run for an organization may be a free trial (first
-    1,000 rows free; overage billed against normal credits).&nbsp;<span title=\"Pricing shown is default
+    1,000 rows free; overage billed against normal credits).&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary. Final charge depends on parsed row count and the options you
-    select.\">ⓘ</span></span>
+    select.">ⓘ</span></span>
 
     Args:
         body (StartMosaicBody):
@@ -204,7 +204,7 @@ def sync(
     | StartMosaicResponse503
     | None
 ):
-    r"""Start Mosaic CSV healing
+    """Start Mosaic CSV healing
 
      Starts an asynchronous Mosaic job that heals and enriches an arbitrary CSV, TXT, XLSX, or public
     Google Sheet. Pass a public HTTPS URL (Google Drive / Sheets, Dropbox, OneDrive, or a direct file
@@ -218,9 +218,9 @@ def sync(
     <span>💰 <strong>Cost:</strong> Credits are charged after the file is parsed inside the background
     job. Cost is based on the number of billable rows plus any optional enrichments (contact details,
     company details) you enable. The first Mosaic run for an organization may be a free trial (first
-    1,000 rows free; overage billed against normal credits).&nbsp;<span title=\"Pricing shown is default
+    1,000 rows free; overage billed against normal credits).&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary. Final charge depends on parsed row count and the options you
-    select.\">ⓘ</span></span>
+    select.">ⓘ</span></span>
 
     Args:
         body (StartMosaicBody):
@@ -255,7 +255,7 @@ async def asyncio_detailed(
     | StartMosaicResponse500
     | StartMosaicResponse503
 ]:
-    r"""Start Mosaic CSV healing
+    """Start Mosaic CSV healing
 
      Starts an asynchronous Mosaic job that heals and enriches an arbitrary CSV, TXT, XLSX, or public
     Google Sheet. Pass a public HTTPS URL (Google Drive / Sheets, Dropbox, OneDrive, or a direct file
@@ -269,9 +269,9 @@ async def asyncio_detailed(
     <span>💰 <strong>Cost:</strong> Credits are charged after the file is parsed inside the background
     job. Cost is based on the number of billable rows plus any optional enrichments (contact details,
     company details) you enable. The first Mosaic run for an organization may be a free trial (first
-    1,000 rows free; overage billed against normal credits).&nbsp;<span title=\"Pricing shown is default
+    1,000 rows free; overage billed against normal credits).&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary. Final charge depends on parsed row count and the options you
-    select.\">ⓘ</span></span>
+    select.">ⓘ</span></span>
 
     Args:
         body (StartMosaicBody):
@@ -310,7 +310,7 @@ async def asyncio(
     | StartMosaicResponse503
     | None
 ):
-    r"""Start Mosaic CSV healing
+    """Start Mosaic CSV healing
 
      Starts an asynchronous Mosaic job that heals and enriches an arbitrary CSV, TXT, XLSX, or public
     Google Sheet. Pass a public HTTPS URL (Google Drive / Sheets, Dropbox, OneDrive, or a direct file
@@ -324,9 +324,9 @@ async def asyncio(
     <span>💰 <strong>Cost:</strong> Credits are charged after the file is parsed inside the background
     job. Cost is based on the number of billable rows plus any optional enrichments (contact details,
     company details) you enable. The first Mosaic run for an organization may be a free trial (first
-    1,000 rows free; overage billed against normal credits).&nbsp;<span title=\"Pricing shown is default
+    1,000 rows free; overage billed against normal credits).&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary. Final charge depends on parsed row count and the options you
-    select.\">ⓘ</span></span>
+    select.">ⓘ</span></span>
 
     Args:
         body (StartMosaicBody):

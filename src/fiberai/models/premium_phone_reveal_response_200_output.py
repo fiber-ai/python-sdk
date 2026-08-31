@@ -50,7 +50,7 @@ class PremiumPhoneRevealResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.premium_phone_reveal_response_200_output_phone_numbers_item import (
-            PremiumPhoneRevealResponse200OutputPhoneNumbersItem,
+            PremiumPhoneRevealResponse200OutputPhoneNumbersItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

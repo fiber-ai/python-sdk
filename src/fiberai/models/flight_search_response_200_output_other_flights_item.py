@@ -75,7 +75,7 @@ class FlightSearchResponse200OutputOtherFlightsItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.flight_search_response_200_output_other_flights_item_carbon_emissions_type_0 import (
-            FlightSearchResponse200OutputOtherFlightsItemCarbonEmissionsType0,
+            FlightSearchResponse200OutputOtherFlightsItemCarbonEmissionsType0,  # noqa: PLC0415
         )
 
         segments = []
@@ -177,13 +177,13 @@ class FlightSearchResponse200OutputOtherFlightsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.flight_search_response_200_output_other_flights_item_carbon_emissions_type_0 import (
-            FlightSearchResponse200OutputOtherFlightsItemCarbonEmissionsType0,
+            FlightSearchResponse200OutputOtherFlightsItemCarbonEmissionsType0,  # noqa: PLC0415
         )
         from ..models.flight_search_response_200_output_other_flights_item_layovers_item import (
-            FlightSearchResponse200OutputOtherFlightsItemLayoversItem,
+            FlightSearchResponse200OutputOtherFlightsItemLayoversItem,  # noqa: PLC0415
         )
         from ..models.flight_search_response_200_output_other_flights_item_segments_item import (
-            FlightSearchResponse200OutputOtherFlightsItemSegmentsItem,
+            FlightSearchResponse200OutputOtherFlightsItemSegmentsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

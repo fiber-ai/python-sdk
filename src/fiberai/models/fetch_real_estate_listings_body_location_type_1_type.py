@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FetchRealEstateListingsBodyLocationType1Type(str, Enum):
+class FetchRealEstateListingsBodyLocationType1Type(StrEnum):
     STRUCTURED = "structured"
 
     def __str__(self) -> str:

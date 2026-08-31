@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PollDepthChartResponse200OutputType2Status(str, Enum):
+class PollDepthChartResponse200OutputType2Status(StrEnum):
     FAILED = "failed"
 
     def __str__(self) -> str:

@@ -147,14 +147,14 @@ def sync_detailed(
     | GetLanguagesResponse500
     | GetLanguagesResponse503
 ]:
-    r"""List languages
+    """List languages
 
      Get a list of all languages that you can pass to our API
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -195,14 +195,14 @@ def sync(
     | GetLanguagesResponse503
     | None
 ):
-    r"""List languages
+    """List languages
 
      Get a list of all languages that you can pass to our API
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | GetLanguagesResponse500
     | GetLanguagesResponse503
 ]:
-    r"""List languages
+    """List languages
 
      Get a list of all languages that you can pass to our API
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -283,14 +283,14 @@ async def asyncio(
     | GetLanguagesResponse503
     | None
 ):
-    r"""List languages
+    """List languages
 
      Get a list of all languages that you can pass to our API
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):

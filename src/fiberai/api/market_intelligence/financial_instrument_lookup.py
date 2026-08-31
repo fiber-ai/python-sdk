@@ -147,15 +147,15 @@ def sync_detailed(
     | FinancialInstrumentLookupResponse500
     | FinancialInstrumentLookupResponse503
 ]:
-    r"""Look up a financial instrument
+    """Look up a financial instrument
 
      Returns live market data for a stock, index, currency pair, or fund, including the headline quote,
     price movement, company facts, financial statements, related news, and a price history series.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per financial instrument lookup&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per financial instrument lookup&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (FinancialInstrumentLookupBody):
@@ -196,15 +196,15 @@ def sync(
     | FinancialInstrumentLookupResponse503
     | None
 ):
-    r"""Look up a financial instrument
+    """Look up a financial instrument
 
      Returns live market data for a stock, index, currency pair, or fund, including the headline quote,
     price movement, company facts, financial statements, related news, and a price history series.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per financial instrument lookup&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per financial instrument lookup&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (FinancialInstrumentLookupBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | FinancialInstrumentLookupResponse500
     | FinancialInstrumentLookupResponse503
 ]:
-    r"""Look up a financial instrument
+    """Look up a financial instrument
 
      Returns live market data for a stock, index, currency pair, or fund, including the headline quote,
     price movement, company facts, financial statements, related news, and a price history series.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per financial instrument lookup&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per financial instrument lookup&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (FinancialInstrumentLookupBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | FinancialInstrumentLookupResponse503
     | None
 ):
-    r"""Look up a financial instrument
+    """Look up a financial instrument
 
      Returns live market data for a stock, index, currency pair, or fund, including the headline quote,
     price movement, company facts, financial statements, related news, and a price history series.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per financial instrument lookup&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per financial instrument lookup&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (FinancialInstrumentLookupBody):

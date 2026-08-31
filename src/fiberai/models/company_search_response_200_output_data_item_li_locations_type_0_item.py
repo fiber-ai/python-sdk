@@ -33,7 +33,7 @@ class CompanySearchResponse200OutputDataItemLiLocationsType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_search_response_200_output_data_item_li_locations_type_0_item_location_type_0 import (
-            CompanySearchResponse200OutputDataItemLiLocationsType0ItemLocationType0,
+            CompanySearchResponse200OutputDataItemLiLocationsType0ItemLocationType0,  # noqa: PLC0415
         )
 
         address: None | str | Unset
@@ -71,7 +71,7 @@ class CompanySearchResponse200OutputDataItemLiLocationsType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_response_200_output_data_item_li_locations_type_0_item_location_type_0 import (
-            CompanySearchResponse200OutputDataItemLiLocationsType0ItemLocationType0,
+            CompanySearchResponse200OutputDataItemLiLocationsType0ItemLocationType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

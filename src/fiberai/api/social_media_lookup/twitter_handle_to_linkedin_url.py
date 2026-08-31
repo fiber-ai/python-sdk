@@ -147,18 +147,18 @@ def sync_detailed(
     | TwitterHandleToLinkedinUrlResponse500
     | TwitterHandleToLinkedinUrlResponse503
 ]:
-    r"""Find LinkedIn URL from X (Twitter) handle
+    """Find LinkedIn URL from X (Twitter) handle
 
      Given an X (Twitter) handle, find the person's LinkedIn profile URL. Accepts bare handles (with or
     without '@') and full X / Twitter profile URLs.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per X→LinkedIn lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per X→LinkedIn lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (TwitterHandleToLinkedinUrlBody):
@@ -199,18 +199,18 @@ def sync(
     | TwitterHandleToLinkedinUrlResponse503
     | None
 ):
-    r"""Find LinkedIn URL from X (Twitter) handle
+    """Find LinkedIn URL from X (Twitter) handle
 
      Given an X (Twitter) handle, find the person's LinkedIn profile URL. Accepts bare handles (with or
     without '@') and full X / Twitter profile URLs.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per X→LinkedIn lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per X→LinkedIn lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (TwitterHandleToLinkedinUrlBody):
@@ -245,18 +245,18 @@ async def asyncio_detailed(
     | TwitterHandleToLinkedinUrlResponse500
     | TwitterHandleToLinkedinUrlResponse503
 ]:
-    r"""Find LinkedIn URL from X (Twitter) handle
+    """Find LinkedIn URL from X (Twitter) handle
 
      Given an X (Twitter) handle, find the person's LinkedIn profile URL. Accepts bare handles (with or
     without '@') and full X / Twitter profile URLs.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per X→LinkedIn lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per X→LinkedIn lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (TwitterHandleToLinkedinUrlBody):
@@ -295,18 +295,18 @@ async def asyncio(
     | TwitterHandleToLinkedinUrlResponse503
     | None
 ):
-    r"""Find LinkedIn URL from X (Twitter) handle
+    """Find LinkedIn URL from X (Twitter) handle
 
      Given an X (Twitter) handle, find the person's LinkedIn profile URL. Accepts bare handles (with or
     without '@') and full X / Twitter profile URLs.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per X→LinkedIn lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per X→LinkedIn lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (TwitterHandleToLinkedinUrlBody):

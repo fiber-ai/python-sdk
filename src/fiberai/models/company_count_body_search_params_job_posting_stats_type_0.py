@@ -147,58 +147,58 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_0 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType0,
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_1 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType1,
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_2 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType2,
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_3 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType3,
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType3,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_4 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType4,
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType4,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_5 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType5,
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType5,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_0 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType0,
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_1 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType1,
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_2 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType2,
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_3 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType3,
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType3,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4,
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_5 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType5,
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType5,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_0 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType0,
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_1 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType1,
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_2 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType2,
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_3 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType3,
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType3,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_4 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType4,
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType4,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_5 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType5,
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType5,  # noqa: PLC0415
         )
 
         any_of: list[dict[str, Any]] | None | Unset
@@ -333,67 +333,67 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_0 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType0,
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_1 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType1,
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_2 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType2,
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_3 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType3,
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType3,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_4 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType4,
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType4,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_5 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType5,
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType5,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_6 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType6,
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType6,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_0 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType0,
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_1 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType1,
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_2 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType2,
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_3 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType3,
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType3,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4,
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_5 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType5,
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType5,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_6 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType6,
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType6,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_0 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType0,
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_1 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType1,
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_2 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType2,
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_3 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType3,
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType3,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_4 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType4,
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType4,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_5 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType5,
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType5,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_6 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6,
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

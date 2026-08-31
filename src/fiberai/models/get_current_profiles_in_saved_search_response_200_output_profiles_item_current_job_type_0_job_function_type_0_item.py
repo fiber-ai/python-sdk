@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCurrentJobType0JobFunctionType0Item(str, Enum):
+class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCurrentJobType0JobFunctionType0Item(StrEnum):
     ACCOUNTING = "Accounting"
     ADMINISTRATIVE = "Administrative"
     ADVERTISING = "Advertising"

@@ -48,16 +48,16 @@ class JobPostingSearchResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.job_posting_search_response_200_charge_info_type_0 import (
-            JobPostingSearchResponse200ChargeInfoType0,
+            JobPostingSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_charge_info_type_1 import (
-            JobPostingSearchResponse200ChargeInfoType1,
+            JobPostingSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_charge_info_type_2 import (
-            JobPostingSearchResponse200ChargeInfoType2,
+            JobPostingSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_charge_info_type_3 import (
-            JobPostingSearchResponse200ChargeInfoType3,
+            JobPostingSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class JobPostingSearchResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.job_posting_search_response_200_charge_info_type_0 import (
-            JobPostingSearchResponse200ChargeInfoType0,
+            JobPostingSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_charge_info_type_1 import (
-            JobPostingSearchResponse200ChargeInfoType1,
+            JobPostingSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_charge_info_type_2 import (
-            JobPostingSearchResponse200ChargeInfoType2,
+            JobPostingSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_charge_info_type_3 import (
-            JobPostingSearchResponse200ChargeInfoType3,
+            JobPostingSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_charge_info_type_4 import (
-            JobPostingSearchResponse200ChargeInfoType4,
+            JobPostingSearchResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.job_posting_search_response_200_output import JobPostingSearchResponse200Output
+        from ..models.job_posting_search_response_200_output import JobPostingSearchResponse200Output  # noqa: PLC0415
         from ..models.job_posting_search_response_200_warnings_type_0_item import (
-            JobPostingSearchResponse200WarningsType0Item,
+            JobPostingSearchResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -58,16 +58,16 @@ class TiktokUserFollowingResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.tiktok_user_following_response_200_charge_info_type_0 import (
-            TiktokUserFollowingResponse200ChargeInfoType0,
+            TiktokUserFollowingResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.tiktok_user_following_response_200_charge_info_type_1 import (
-            TiktokUserFollowingResponse200ChargeInfoType1,
+            TiktokUserFollowingResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.tiktok_user_following_response_200_charge_info_type_2 import (
-            TiktokUserFollowingResponse200ChargeInfoType2,
+            TiktokUserFollowingResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.tiktok_user_following_response_200_charge_info_type_3 import (
-            TiktokUserFollowingResponse200ChargeInfoType3,
+            TiktokUserFollowingResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class TiktokUserFollowingResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.tiktok_user_following_response_200_charge_info_type_0 import (
-            TiktokUserFollowingResponse200ChargeInfoType0,
+            TiktokUserFollowingResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.tiktok_user_following_response_200_charge_info_type_1 import (
-            TiktokUserFollowingResponse200ChargeInfoType1,
+            TiktokUserFollowingResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.tiktok_user_following_response_200_charge_info_type_2 import (
-            TiktokUserFollowingResponse200ChargeInfoType2,
+            TiktokUserFollowingResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.tiktok_user_following_response_200_charge_info_type_3 import (
-            TiktokUserFollowingResponse200ChargeInfoType3,
+            TiktokUserFollowingResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.tiktok_user_following_response_200_charge_info_type_4 import (
-            TiktokUserFollowingResponse200ChargeInfoType4,
+            TiktokUserFollowingResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.tiktok_user_following_response_200_output import TiktokUserFollowingResponse200Output
+        from ..models.tiktok_user_following_response_200_output import (
+            TiktokUserFollowingResponse200Output,  # noqa: PLC0415
+        )
         from ..models.tiktok_user_following_response_200_warnings_type_0_item import (
-            TiktokUserFollowingResponse200WarningsType0Item,
+            TiktokUserFollowingResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class SyncTurboContactEnrichmentResponse200OutputProfileEmailsItemStatusType1(str, Enum):
+class SyncTurboContactEnrichmentResponse200OutputProfileEmailsItemStatusType1(StrEnum):
     INVALID = "invalid"
     RISKY = "risky"
     UNKNOWN = "unknown"

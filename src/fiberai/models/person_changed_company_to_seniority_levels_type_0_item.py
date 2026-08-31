@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PersonChangedCompanyToSeniorityLevelsType0Item(str, Enum):
+class PersonChangedCompanyToSeniorityLevelsType0Item(StrEnum):
     ASSOCIATE = "Associate"
     DIRECTOR = "Director"
     ENTRY_LEVEL = "Entry level"

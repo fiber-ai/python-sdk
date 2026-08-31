@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class MultiSourceSearchBodySearchType1Request(str, Enum):
+class MultiSourceSearchBodySearchType1Request(StrEnum):
     SUBSEQUENT = "subsequent"
 
     def __str__(self) -> str:

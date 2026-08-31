@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType2Method(
-    str, Enum
+    StrEnum
 ):
     CALENDAR = "calendar"
 

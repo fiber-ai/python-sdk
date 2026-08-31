@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PersonFollowerMilestoneDirection(str, Enum):
+class PersonFollowerMilestoneDirection(StrEnum):
     ABOVE = "above"
     BELOW = "below"
 

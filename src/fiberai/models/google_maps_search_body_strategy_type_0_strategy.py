@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GoogleMapsSearchBodyStrategyType0Strategy(str, Enum):
+class GoogleMapsSearchBodyStrategyType0Strategy(StrEnum):
     WHOLE_USA = "whole-usa"
 
     def __str__(self) -> str:

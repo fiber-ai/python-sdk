@@ -50,7 +50,7 @@ class ReversePhoneLookupResponse200OutputResultsItemType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company import (
-            ReversePhoneLookupResponse200OutputResultsItemType1Company,
+            ReversePhoneLookupResponse200OutputResultsItemType1Company,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

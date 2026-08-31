@@ -58,16 +58,16 @@ class StartBatchContactDetailsResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.start_batch_contact_details_response_200_charge_info_type_0 import (
-            StartBatchContactDetailsResponse200ChargeInfoType0,
+            StartBatchContactDetailsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.start_batch_contact_details_response_200_charge_info_type_1 import (
-            StartBatchContactDetailsResponse200ChargeInfoType1,
+            StartBatchContactDetailsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.start_batch_contact_details_response_200_charge_info_type_2 import (
-            StartBatchContactDetailsResponse200ChargeInfoType2,
+            StartBatchContactDetailsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.start_batch_contact_details_response_200_charge_info_type_3 import (
-            StartBatchContactDetailsResponse200ChargeInfoType3,
+            StartBatchContactDetailsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class StartBatchContactDetailsResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.start_batch_contact_details_response_200_charge_info_type_0 import (
-            StartBatchContactDetailsResponse200ChargeInfoType0,
+            StartBatchContactDetailsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.start_batch_contact_details_response_200_charge_info_type_1 import (
-            StartBatchContactDetailsResponse200ChargeInfoType1,
+            StartBatchContactDetailsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.start_batch_contact_details_response_200_charge_info_type_2 import (
-            StartBatchContactDetailsResponse200ChargeInfoType2,
+            StartBatchContactDetailsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.start_batch_contact_details_response_200_charge_info_type_3 import (
-            StartBatchContactDetailsResponse200ChargeInfoType3,
+            StartBatchContactDetailsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.start_batch_contact_details_response_200_charge_info_type_4 import (
-            StartBatchContactDetailsResponse200ChargeInfoType4,
+            StartBatchContactDetailsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.start_batch_contact_details_response_200_output import StartBatchContactDetailsResponse200Output
+        from ..models.start_batch_contact_details_response_200_output import (
+            StartBatchContactDetailsResponse200Output,  # noqa: PLC0415
+        )
         from ..models.start_batch_contact_details_response_200_warnings_type_0_item import (
-            StartBatchContactDetailsResponse200WarningsType0Item,
+            StartBatchContactDetailsResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSortType0ItemField(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSortType0ItemField(StrEnum):
     CAREERSTARTEDAT = "careerStartedAt"
     CONNECTIONCOUNT = "connectionCount"
     CURRENTCOMPANYSTARTEDAT = "currentCompanyStartedAt"

@@ -107,13 +107,13 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategor
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_category_groups_type_0_all_of_type_0_item import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0AllOfType0Item,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0AllOfType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_category_groups_type_0_any_of_type_0_item import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0AnyOfType0Item,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0AnyOfType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_category_groups_type_0_none_of_type_0_item import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0NoneOfType0Item,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

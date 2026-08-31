@@ -58,16 +58,16 @@ class GithubToLinkedinSingleResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.github_to_linkedin_single_response_200_charge_info_type_0 import (
-            GithubToLinkedinSingleResponse200ChargeInfoType0,
+            GithubToLinkedinSingleResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.github_to_linkedin_single_response_200_charge_info_type_1 import (
-            GithubToLinkedinSingleResponse200ChargeInfoType1,
+            GithubToLinkedinSingleResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.github_to_linkedin_single_response_200_charge_info_type_2 import (
-            GithubToLinkedinSingleResponse200ChargeInfoType2,
+            GithubToLinkedinSingleResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.github_to_linkedin_single_response_200_charge_info_type_3 import (
-            GithubToLinkedinSingleResponse200ChargeInfoType3,
+            GithubToLinkedinSingleResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class GithubToLinkedinSingleResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.github_to_linkedin_single_response_200_charge_info_type_0 import (
-            GithubToLinkedinSingleResponse200ChargeInfoType0,
+            GithubToLinkedinSingleResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.github_to_linkedin_single_response_200_charge_info_type_1 import (
-            GithubToLinkedinSingleResponse200ChargeInfoType1,
+            GithubToLinkedinSingleResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.github_to_linkedin_single_response_200_charge_info_type_2 import (
-            GithubToLinkedinSingleResponse200ChargeInfoType2,
+            GithubToLinkedinSingleResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.github_to_linkedin_single_response_200_charge_info_type_3 import (
-            GithubToLinkedinSingleResponse200ChargeInfoType3,
+            GithubToLinkedinSingleResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.github_to_linkedin_single_response_200_charge_info_type_4 import (
-            GithubToLinkedinSingleResponse200ChargeInfoType4,
+            GithubToLinkedinSingleResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.github_to_linkedin_single_response_200_output import GithubToLinkedinSingleResponse200Output
+        from ..models.github_to_linkedin_single_response_200_output import (
+            GithubToLinkedinSingleResponse200Output,  # noqa: PLC0415
+        )
         from ..models.github_to_linkedin_single_response_200_warnings_type_0_item import (
-            GithubToLinkedinSingleResponse200WarningsType0Item,
+            GithubToLinkedinSingleResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

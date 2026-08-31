@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FinancialInstrumentLookupResponse200OutputQuoteType0PriceChangeType0DirectionType3Type1(str, Enum):
+class FinancialInstrumentLookupResponse200OutputQuoteType0PriceChangeType0DirectionType3Type1(StrEnum):
     DOWN = "down"
     UP = "up"
 

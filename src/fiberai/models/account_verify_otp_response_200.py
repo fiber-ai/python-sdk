@@ -48,16 +48,16 @@ class AccountVerifyOtpResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.account_verify_otp_response_200_charge_info_type_0 import (
-            AccountVerifyOtpResponse200ChargeInfoType0,
+            AccountVerifyOtpResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.account_verify_otp_response_200_charge_info_type_1 import (
-            AccountVerifyOtpResponse200ChargeInfoType1,
+            AccountVerifyOtpResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.account_verify_otp_response_200_charge_info_type_2 import (
-            AccountVerifyOtpResponse200ChargeInfoType2,
+            AccountVerifyOtpResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.account_verify_otp_response_200_charge_info_type_3 import (
-            AccountVerifyOtpResponse200ChargeInfoType3,
+            AccountVerifyOtpResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class AccountVerifyOtpResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.account_verify_otp_response_200_charge_info_type_0 import (
-            AccountVerifyOtpResponse200ChargeInfoType0,
+            AccountVerifyOtpResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.account_verify_otp_response_200_charge_info_type_1 import (
-            AccountVerifyOtpResponse200ChargeInfoType1,
+            AccountVerifyOtpResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.account_verify_otp_response_200_charge_info_type_2 import (
-            AccountVerifyOtpResponse200ChargeInfoType2,
+            AccountVerifyOtpResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.account_verify_otp_response_200_charge_info_type_3 import (
-            AccountVerifyOtpResponse200ChargeInfoType3,
+            AccountVerifyOtpResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.account_verify_otp_response_200_charge_info_type_4 import (
-            AccountVerifyOtpResponse200ChargeInfoType4,
+            AccountVerifyOtpResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.account_verify_otp_response_200_output import AccountVerifyOtpResponse200Output
+        from ..models.account_verify_otp_response_200_output import AccountVerifyOtpResponse200Output  # noqa: PLC0415
         from ..models.account_verify_otp_response_200_warnings_type_0_item import (
-            AccountVerifyOtpResponse200WarningsType0Item,
+            AccountVerifyOtpResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

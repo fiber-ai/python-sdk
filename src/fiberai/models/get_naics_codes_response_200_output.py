@@ -45,7 +45,7 @@ class GetNaicsCodesResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_naics_codes_response_200_output_naics_codes_item import (
-            GetNaicsCodesResponse200OutputNaicsCodesItem,
+            GetNaicsCodesResponse200OutputNaicsCodesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

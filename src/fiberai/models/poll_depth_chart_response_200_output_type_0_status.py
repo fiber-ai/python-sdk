@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PollDepthChartResponse200OutputType0Status(str, Enum):
+class PollDepthChartResponse200OutputType0Status(StrEnum):
     PENDING = "pending"
 
     def __str__(self) -> str:

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ReversePhoneLookupResponse200OutputResultsItemType1Type(str, Enum):
+class ReversePhoneLookupResponse200OutputResultsItemType1Type(StrEnum):
     COMPANY = "company"
 
     def __str__(self) -> str:

@@ -58,16 +58,16 @@ class BlueCollarJobsSearchResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.blue_collar_jobs_search_response_200_charge_info_type_0 import (
-            BlueCollarJobsSearchResponse200ChargeInfoType0,
+            BlueCollarJobsSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.blue_collar_jobs_search_response_200_charge_info_type_1 import (
-            BlueCollarJobsSearchResponse200ChargeInfoType1,
+            BlueCollarJobsSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.blue_collar_jobs_search_response_200_charge_info_type_2 import (
-            BlueCollarJobsSearchResponse200ChargeInfoType2,
+            BlueCollarJobsSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.blue_collar_jobs_search_response_200_charge_info_type_3 import (
-            BlueCollarJobsSearchResponse200ChargeInfoType3,
+            BlueCollarJobsSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class BlueCollarJobsSearchResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.blue_collar_jobs_search_response_200_charge_info_type_0 import (
-            BlueCollarJobsSearchResponse200ChargeInfoType0,
+            BlueCollarJobsSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.blue_collar_jobs_search_response_200_charge_info_type_1 import (
-            BlueCollarJobsSearchResponse200ChargeInfoType1,
+            BlueCollarJobsSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.blue_collar_jobs_search_response_200_charge_info_type_2 import (
-            BlueCollarJobsSearchResponse200ChargeInfoType2,
+            BlueCollarJobsSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.blue_collar_jobs_search_response_200_charge_info_type_3 import (
-            BlueCollarJobsSearchResponse200ChargeInfoType3,
+            BlueCollarJobsSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.blue_collar_jobs_search_response_200_charge_info_type_4 import (
-            BlueCollarJobsSearchResponse200ChargeInfoType4,
+            BlueCollarJobsSearchResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.blue_collar_jobs_search_response_200_output import BlueCollarJobsSearchResponse200Output
+        from ..models.blue_collar_jobs_search_response_200_output import (
+            BlueCollarJobsSearchResponse200Output,  # noqa: PLC0415
+        )
         from ..models.blue_collar_jobs_search_response_200_warnings_type_0_item import (
-            BlueCollarJobsSearchResponse200WarningsType0Item,
+            BlueCollarJobsSearchResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

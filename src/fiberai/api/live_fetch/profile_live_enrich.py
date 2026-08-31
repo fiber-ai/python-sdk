@@ -147,7 +147,7 @@ def sync_detailed(
     | ProfileLiveEnrichResponse500
     | ProfileLiveEnrichResponse503
 ]:
-    r"""Live fetch LinkedIn profile
+    """Live fetch LinkedIn profile
 
      Returns an enriched profile with details (work experience, education, skills, location, etc.) for a
     given LinkedIn profile identifier. **Note:** This endpoint does NOT return emails or phone numbers.
@@ -158,11 +158,11 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (ProfileLiveEnrichBody):
@@ -203,7 +203,7 @@ def sync(
     | ProfileLiveEnrichResponse503
     | None
 ):
-    r"""Live fetch LinkedIn profile
+    """Live fetch LinkedIn profile
 
      Returns an enriched profile with details (work experience, education, skills, location, etc.) for a
     given LinkedIn profile identifier. **Note:** This endpoint does NOT return emails or phone numbers.
@@ -214,11 +214,11 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (ProfileLiveEnrichBody):
@@ -253,7 +253,7 @@ async def asyncio_detailed(
     | ProfileLiveEnrichResponse500
     | ProfileLiveEnrichResponse503
 ]:
-    r"""Live fetch LinkedIn profile
+    """Live fetch LinkedIn profile
 
      Returns an enriched profile with details (work experience, education, skills, location, etc.) for a
     given LinkedIn profile identifier. **Note:** This endpoint does NOT return emails or phone numbers.
@@ -264,11 +264,11 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (ProfileLiveEnrichBody):
@@ -307,7 +307,7 @@ async def asyncio(
     | ProfileLiveEnrichResponse503
     | None
 ):
-    r"""Live fetch LinkedIn profile
+    """Live fetch LinkedIn profile
 
      Returns an enriched profile with details (work experience, education, skills, location, etc.) for a
     given LinkedIn profile identifier. **Note:** This endpoint does NOT return emails or phone numbers.
@@ -318,11 +318,11 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per profile live fetch&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (ProfileLiveEnrichBody):

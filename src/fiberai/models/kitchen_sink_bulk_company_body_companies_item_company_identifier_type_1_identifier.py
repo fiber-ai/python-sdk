@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType1Identifier(str, Enum):
+class KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType1Identifier(StrEnum):
     LINKEDINURL = "linkedinUrl"
 
     def __str__(self) -> str:

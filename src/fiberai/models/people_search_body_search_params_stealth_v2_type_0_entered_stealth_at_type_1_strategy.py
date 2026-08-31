@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchBodySearchParamsStealthV2Type0EnteredStealthAtType1Strategy(str, Enum):
+class PeopleSearchBodySearchParamsStealthV2Type0EnteredStealthAtType1Strategy(StrEnum):
     RELATIVE = "relative"
 
     def __str__(self) -> str:

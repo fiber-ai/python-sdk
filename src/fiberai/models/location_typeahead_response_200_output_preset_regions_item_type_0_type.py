@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class LocationTypeaheadResponse200OutputPresetRegionsItemType0Type(str, Enum):
+class LocationTypeaheadResponse200OutputPresetRegionsItemType0Type(StrEnum):
     CIRCLE = "circle"
 
     def __str__(self) -> str:

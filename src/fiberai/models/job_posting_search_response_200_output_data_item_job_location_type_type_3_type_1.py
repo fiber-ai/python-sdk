@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class JobPostingSearchResponse200OutputDataItemJobLocationTypeType3Type1(str, Enum):
+class JobPostingSearchResponse200OutputDataItemJobLocationTypeType3Type1(StrEnum):
     HYBRID = "Hybrid"
     ON_SITE = "On-site"
     REMOTE = "Remote"

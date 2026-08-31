@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemYearsType0StartedSchoolAtType1WindowType1Method(
-    str, Enum
+    StrEnum
 ):
     WITHIN = "within"
 

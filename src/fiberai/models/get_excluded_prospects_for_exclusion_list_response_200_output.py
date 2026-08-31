@@ -60,7 +60,7 @@ class GetExcludedProspectsForExclusionListResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_excluded_prospects_for_exclusion_list_response_200_output_prospects_item import (
-            GetExcludedProspectsForExclusionListResponse200OutputProspectsItem,
+            GetExcludedProspectsForExclusionListResponse200OutputProspectsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

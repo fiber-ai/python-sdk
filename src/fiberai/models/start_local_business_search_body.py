@@ -81,9 +81,11 @@ class StartLocalBusinessSearchBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.start_local_business_search_body_companies_item import StartLocalBusinessSearchBodyCompaniesItem
+        from ..models.start_local_business_search_body_companies_item import (
+            StartLocalBusinessSearchBodyCompaniesItem,  # noqa: PLC0415
+        )
         from ..models.start_local_business_search_body_contact_preferences import (
-            StartLocalBusinessSearchBodyContactPreferences,
+            StartLocalBusinessSearchBodyContactPreferences,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

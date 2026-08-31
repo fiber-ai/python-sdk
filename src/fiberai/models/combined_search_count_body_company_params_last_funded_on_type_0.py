@@ -34,7 +34,7 @@ class CombinedSearchCountBodyCompanyParamsLastFundedOnType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_company_params_last_funded_on_type_0_range_type_0 import (
-            CombinedSearchCountBodyCompanyParamsLastFundedOnType0RangeType0,
+            CombinedSearchCountBodyCompanyParamsLastFundedOnType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -62,7 +62,7 @@ class CombinedSearchCountBodyCompanyParamsLastFundedOnType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_company_params_last_funded_on_type_0_range_type_0 import (
-            CombinedSearchCountBodyCompanyParamsLastFundedOnType0RangeType0,
+            CombinedSearchCountBodyCompanyParamsLastFundedOnType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

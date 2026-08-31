@@ -32,7 +32,7 @@ class GetCurrentProfilesInSavedSearchResponse402:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_current_profiles_in_saved_search_response_402_out_of_credits_alert_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse402OutOfCreditsAlertType0,
+            GetCurrentProfilesInSavedSearchResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         message = self.message
@@ -60,7 +60,7 @@ class GetCurrentProfilesInSavedSearchResponse402:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_profiles_in_saved_search_response_402_out_of_credits_alert_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse402OutOfCreditsAlertType0,
+            GetCurrentProfilesInSavedSearchResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

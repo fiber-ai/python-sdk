@@ -57,7 +57,7 @@ class ListWebhookEventTypesResponse200OutputEventTypesItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.list_webhook_event_types_response_200_output_event_types_item_example_payload import (
-            ListWebhookEventTypesResponse200OutputEventTypesItemExamplePayload,
+            ListWebhookEventTypesResponse200OutputEventTypesItemExamplePayload,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

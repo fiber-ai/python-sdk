@@ -147,15 +147,15 @@ def sync_detailed(
     | SkipNextSavedSearchRunResponse500
     | SkipNextSavedSearchRunResponse503
 ]:
-    r"""Skip next saved search auto-run
+    """Skip next saved search auto-run
 
      Skip the next scheduled auto-run for a saved search. The search will resume its normal schedule
     after one skipped cycle. Manual runs are not affected.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SkipNextSavedSearchRunBody):
@@ -196,15 +196,15 @@ def sync(
     | SkipNextSavedSearchRunResponse503
     | None
 ):
-    r"""Skip next saved search auto-run
+    """Skip next saved search auto-run
 
      Skip the next scheduled auto-run for a saved search. The search will resume its normal schedule
     after one skipped cycle. Manual runs are not affected.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SkipNextSavedSearchRunBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | SkipNextSavedSearchRunResponse500
     | SkipNextSavedSearchRunResponse503
 ]:
-    r"""Skip next saved search auto-run
+    """Skip next saved search auto-run
 
      Skip the next scheduled auto-run for a saved search. The search will resume its normal schedule
     after one skipped cycle. Manual runs are not affected.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SkipNextSavedSearchRunBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | SkipNextSavedSearchRunResponse503
     | None
 ):
-    r"""Skip next saved search auto-run
+    """Skip next saved search auto-run
 
      Skip the next scheduled auto-run for a saved search. The search will resume its normal schedule
     after one skipped cycle. Manual runs are not affected.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SkipNextSavedSearchRunBody):

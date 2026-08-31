@@ -152,7 +152,7 @@ def sync_detailed(
     | RefreshTrackerCompanyListResponse500
     | RefreshTrackerCompanyListResponse503
 ]:
-    r"""Refresh company tracker list
+    """Refresh company tracker list
 
      Initiate an immediate refresh of all tracked companies in this list. Each entity is checked for
     changes against its current monitoring rules. Credits are charged per entity processed.
@@ -160,8 +160,8 @@ def sync_detailed(
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits charged per entity processed (silver/gold tier based on org
-    volume).&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary.\">ⓘ</span></span>
+    volume).&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -205,7 +205,7 @@ def sync(
     | RefreshTrackerCompanyListResponse503
     | None
 ):
-    r"""Refresh company tracker list
+    """Refresh company tracker list
 
      Initiate an immediate refresh of all tracked companies in this list. Each entity is checked for
     changes against its current monitoring rules. Credits are charged per entity processed.
@@ -213,8 +213,8 @@ def sync(
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits charged per entity processed (silver/gold tier based on org
-    volume).&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary.\">ⓘ</span></span>
+    volume).&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -252,7 +252,7 @@ async def asyncio_detailed(
     | RefreshTrackerCompanyListResponse500
     | RefreshTrackerCompanyListResponse503
 ]:
-    r"""Refresh company tracker list
+    """Refresh company tracker list
 
      Initiate an immediate refresh of all tracked companies in this list. Each entity is checked for
     changes against its current monitoring rules. Credits are charged per entity processed.
@@ -260,8 +260,8 @@ async def asyncio_detailed(
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits charged per entity processed (silver/gold tier based on org
-    volume).&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary.\">ⓘ</span></span>
+    volume).&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -303,7 +303,7 @@ async def asyncio(
     | RefreshTrackerCompanyListResponse503
     | None
 ):
-    r"""Refresh company tracker list
+    """Refresh company tracker list
 
      Initiate an immediate refresh of all tracked companies in this list. Each entity is checked for
     changes against its current monitoring rules. Credits are charged per entity processed.
@@ -311,8 +311,8 @@ async def asyncio(
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Credits charged per entity processed (silver/gold tier based on org
-    volume).&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary.\">ⓘ</span></span>
+    volume).&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary.">ⓘ</span></span>
 
     Args:
         list_id (str):

@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType2Method(
-    str, Enum
+    StrEnum
 ):
     CALENDAR = "calendar"
 

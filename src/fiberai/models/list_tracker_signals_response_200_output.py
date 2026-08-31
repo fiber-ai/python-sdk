@@ -47,7 +47,7 @@ class ListTrackerSignalsResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.tracker_signal_output import TrackerSignalOutput
+        from ..models.tracker_signal_output import TrackerSignalOutput  # noqa: PLC0415
 
         d = dict(src_dict)
         signals = []

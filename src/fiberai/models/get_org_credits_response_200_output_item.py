@@ -41,7 +41,7 @@ class GetOrgCreditsResponse200OutputItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0 import (
-            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0,
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0,  # noqa: PLC0415
         )
 
         organization_id = self.organization_id
@@ -84,7 +84,7 @@ class GetOrgCreditsResponse200OutputItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0 import (
-            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0,
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

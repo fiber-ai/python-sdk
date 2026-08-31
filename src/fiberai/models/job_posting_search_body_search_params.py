@@ -131,31 +131,31 @@ class JobPostingSearchBodySearchParams:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.job_posting_search_body_search_params_annual_salary_usd_type_0 import (
-            JobPostingSearchBodySearchParamsAnnualSalaryUsdType0,
+            JobPostingSearchBodySearchParamsAnnualSalaryUsdType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_companies_type_0 import (
-            JobPostingSearchBodySearchParamsCompaniesType0,
+            JobPostingSearchBodySearchParamsCompaniesType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_companies_type_1 import (
-            JobPostingSearchBodySearchParamsCompaniesType1,
+            JobPostingSearchBodySearchParamsCompaniesType1,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_companies_type_2 import (
-            JobPostingSearchBodySearchParamsCompaniesType2,
+            JobPostingSearchBodySearchParamsCompaniesType2,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_companies_type_3 import (
-            JobPostingSearchBodySearchParamsCompaniesType3,
+            JobPostingSearchBodySearchParamsCompaniesType3,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_num_applicants_type_0 import (
-            JobPostingSearchBodySearchParamsNumApplicantsType0,
+            JobPostingSearchBodySearchParamsNumApplicantsType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_posted_at_type_0 import (
-            JobPostingSearchBodySearchParamsPostedAtType0,
+            JobPostingSearchBodySearchParamsPostedAtType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_posted_at_type_1 import (
-            JobPostingSearchBodySearchParamsPostedAtType1,
+            JobPostingSearchBodySearchParamsPostedAtType1,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_years_of_experience_type_0 import (
-            JobPostingSearchBodySearchParamsYearsOfExperienceType0,
+            JobPostingSearchBodySearchParamsYearsOfExperienceType0,  # noqa: PLC0415
         )
 
         companies: dict[str, Any] | None | Unset
@@ -334,31 +334,31 @@ class JobPostingSearchBodySearchParams:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.job_posting_search_body_search_params_annual_salary_usd_type_0 import (
-            JobPostingSearchBodySearchParamsAnnualSalaryUsdType0,
+            JobPostingSearchBodySearchParamsAnnualSalaryUsdType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_companies_type_0 import (
-            JobPostingSearchBodySearchParamsCompaniesType0,
+            JobPostingSearchBodySearchParamsCompaniesType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_companies_type_1 import (
-            JobPostingSearchBodySearchParamsCompaniesType1,
+            JobPostingSearchBodySearchParamsCompaniesType1,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_companies_type_2 import (
-            JobPostingSearchBodySearchParamsCompaniesType2,
+            JobPostingSearchBodySearchParamsCompaniesType2,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_companies_type_3 import (
-            JobPostingSearchBodySearchParamsCompaniesType3,
+            JobPostingSearchBodySearchParamsCompaniesType3,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_num_applicants_type_0 import (
-            JobPostingSearchBodySearchParamsNumApplicantsType0,
+            JobPostingSearchBodySearchParamsNumApplicantsType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_posted_at_type_0 import (
-            JobPostingSearchBodySearchParamsPostedAtType0,
+            JobPostingSearchBodySearchParamsPostedAtType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_posted_at_type_1 import (
-            JobPostingSearchBodySearchParamsPostedAtType1,
+            JobPostingSearchBodySearchParamsPostedAtType1,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_years_of_experience_type_0 import (
-            JobPostingSearchBodySearchParamsYearsOfExperienceType0,
+            JobPostingSearchBodySearchParamsYearsOfExperienceType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

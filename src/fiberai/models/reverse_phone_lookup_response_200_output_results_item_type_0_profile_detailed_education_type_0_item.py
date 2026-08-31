@@ -54,7 +54,7 @@ class ReversePhoneLookupResponse200OutputResultsItemType0ProfileDetailedEducatio
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_detailed_education_type_0_item_school_details_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileDetailedEducationType0ItemSchoolDetailsType0,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileDetailedEducationType0ItemSchoolDetailsType0,  # noqa: PLC0415
         )
 
         school_details: dict[str, Any] | None | Unset
@@ -159,7 +159,7 @@ class ReversePhoneLookupResponse200OutputResultsItemType0ProfileDetailedEducatio
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_detailed_education_type_0_item_school_details_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileDetailedEducationType0ItemSchoolDetailsType0,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileDetailedEducationType0ItemSchoolDetailsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

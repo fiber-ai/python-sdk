@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanySearchBodySearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType3Strategy(str, Enum):
+class CompanySearchBodySearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType3Strategy(StrEnum):
     PRESET_REGION = "preset-region"
 
     def __str__(self) -> str:

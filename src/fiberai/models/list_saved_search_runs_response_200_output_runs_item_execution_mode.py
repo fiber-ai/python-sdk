@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ListSavedSearchRunsResponse200OutputRunsItemExecutionMode(str, Enum):
+class ListSavedSearchRunsResponse200OutputRunsItemExecutionMode(StrEnum):
     AUTOMATICALLY_TRIGGERED = "automatically_triggered"
     MANUALLY_TRIGGERED = "manually_triggered"
 

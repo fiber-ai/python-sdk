@@ -34,7 +34,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_started_in_role_type_0_range_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0RangeType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -64,7 +64,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_started_in_role_type_0_range_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0RangeType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

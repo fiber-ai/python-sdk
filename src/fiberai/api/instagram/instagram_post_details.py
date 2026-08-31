@@ -147,7 +147,7 @@ def sync_detailed(
     | InstagramPostDetailsResponse500
     | InstagramPostDetailsResponse503
 ]:
-    r"""Fetch Instagram post details
+    """Fetch Instagram post details
 
      Fetches details for a single Instagram post including caption, like count, and media URL. Accepts a
     full post URL (e.g. 'https://www.instagram.com/p/DVoDVg5DkXM/') or a bare shortcode (e.g.
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramPostDetailsBody):
@@ -197,7 +197,7 @@ def sync(
     | InstagramPostDetailsResponse503
     | None
 ):
-    r"""Fetch Instagram post details
+    """Fetch Instagram post details
 
      Fetches details for a single Instagram post including caption, like count, and media URL. Accepts a
     full post URL (e.g. 'https://www.instagram.com/p/DVoDVg5DkXM/') or a bare shortcode (e.g.
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramPostDetailsBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | InstagramPostDetailsResponse500
     | InstagramPostDetailsResponse503
 ]:
-    r"""Fetch Instagram post details
+    """Fetch Instagram post details
 
      Fetches details for a single Instagram post including caption, like count, and media URL. Accepts a
     full post URL (e.g. 'https://www.instagram.com/p/DVoDVg5DkXM/') or a bare shortcode (e.g.
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramPostDetailsBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | InstagramPostDetailsResponse503
     | None
 ):
-    r"""Fetch Instagram post details
+    """Fetch Instagram post details
 
      Fetches details for a single Instagram post including caption, like count, and media URL. Accepts a
     full post URL (e.g. 'https://www.instagram.com/p/DVoDVg5DkXM/') or a bare shortcode (e.g.
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramPostDetailsBody):

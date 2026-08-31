@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyProfileParamsLeftStealthAtType0Strategy(str, Enum):
+class CombinedSearchCountBodyProfileParamsLeftStealthAtType0Strategy(StrEnum):
     ABSOLUTE = "absolute"
 
     def __str__(self) -> str:

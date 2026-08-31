@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class SocialMediaLookupTriggerBodyPlatformsItem(str, Enum):
+class SocialMediaLookupTriggerBodyPlatformsItem(StrEnum):
     INSTAGRAM = "INSTAGRAM"
     TWITTER = "TWITTER"
 

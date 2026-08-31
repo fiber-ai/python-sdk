@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType0Identifier(str, Enum):
+class CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType0Identifier(StrEnum):
     DOMAIN = "domain"
 
     def __str__(self) -> str:

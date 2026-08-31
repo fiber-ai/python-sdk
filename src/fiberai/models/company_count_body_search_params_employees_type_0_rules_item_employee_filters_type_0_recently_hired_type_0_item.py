@@ -42,10 +42,10 @@ class CompanyCountBodySearchParamsEmployeesType0RulesItemEmployeeFiltersType0Rec
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_count_body_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_0 import (
-            CompanyCountBodySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType0,
+            CompanyCountBodySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1 import (
-            CompanyCountBodySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1,
+            CompanyCountBodySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1,  # noqa: PLC0415
         )
 
         hired_at: dict[str, Any] | None | Unset
@@ -86,10 +86,10 @@ class CompanyCountBodySearchParamsEmployeesType0RulesItemEmployeeFiltersType0Rec
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_count_body_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_0 import (
-            CompanyCountBodySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType0,
+            CompanyCountBodySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_1 import (
-            CompanyCountBodySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1,
+            CompanyCountBodySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

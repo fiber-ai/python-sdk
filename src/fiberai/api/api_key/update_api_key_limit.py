@@ -147,7 +147,7 @@ def sync_detailed(
     | UpdateApiKeyLimitResponse500
     | UpdateApiKeyLimitResponse503
 ]:
-    r"""Update API key credit limit
+    """Update API key credit limit
 
      Change the lifetime credit ceiling of an API key. Acts on the key that authenticates this request
     unless target is OTHER. Use set to pin an absolute limit, increase or decrease to adjust it by a
@@ -156,8 +156,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateApiKeyLimitBody):
@@ -198,7 +198,7 @@ def sync(
     | UpdateApiKeyLimitResponse503
     | None
 ):
-    r"""Update API key credit limit
+    """Update API key credit limit
 
      Change the lifetime credit ceiling of an API key. Acts on the key that authenticates this request
     unless target is OTHER. Use set to pin an absolute limit, increase or decrease to adjust it by a
@@ -207,8 +207,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateApiKeyLimitBody):
@@ -243,7 +243,7 @@ async def asyncio_detailed(
     | UpdateApiKeyLimitResponse500
     | UpdateApiKeyLimitResponse503
 ]:
-    r"""Update API key credit limit
+    """Update API key credit limit
 
      Change the lifetime credit ceiling of an API key. Acts on the key that authenticates this request
     unless target is OTHER. Use set to pin an absolute limit, increase or decrease to adjust it by a
@@ -252,8 +252,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateApiKeyLimitBody):
@@ -292,7 +292,7 @@ async def asyncio(
     | UpdateApiKeyLimitResponse503
     | None
 ):
-    r"""Update API key credit limit
+    """Update API key credit limit
 
      Change the lifetime credit ceiling of an API key. Acts on the key that authenticates this request
     unless target is OTHER. Use set to pin an absolute limit, increase or decrease to adjust it by a
@@ -301,8 +301,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateApiKeyLimitBody):

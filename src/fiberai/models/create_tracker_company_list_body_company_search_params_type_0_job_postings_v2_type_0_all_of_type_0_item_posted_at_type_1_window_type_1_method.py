@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType1Method(
-    str, Enum
+    StrEnum
 ):
     WITHIN = "within"
 

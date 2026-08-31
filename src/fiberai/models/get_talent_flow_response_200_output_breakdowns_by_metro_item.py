@@ -39,7 +39,7 @@ class GetTalentFlowResponse200OutputBreakdownsByMetroItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_talent_flow_response_200_output_breakdowns_by_metro_item_centroid_type_0 import (
-            GetTalentFlowResponse200OutputBreakdownsByMetroItemCentroidType0,
+            GetTalentFlowResponse200OutputBreakdownsByMetroItemCentroidType0,  # noqa: PLC0415
         )
 
         slug = self.slug
@@ -76,7 +76,7 @@ class GetTalentFlowResponse200OutputBreakdownsByMetroItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_talent_flow_response_200_output_breakdowns_by_metro_item_centroid_type_0 import (
-            GetTalentFlowResponse200OutputBreakdownsByMetroItemCentroidType0,
+            GetTalentFlowResponse200OutputBreakdownsByMetroItemCentroidType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

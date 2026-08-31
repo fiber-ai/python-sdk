@@ -152,15 +152,15 @@ def sync_detailed(
     | GetWebhookEndpointResponse500
     | GetWebhookEndpointResponse503
 ]:
-    r"""Get webhook endpoint
+    """Get webhook endpoint
 
      Return a single webhook endpoint's configuration: its delivery URL, the event types it is subscribed
     to, and whether delivery is currently paused. Reading webhook endpoints is free.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):
@@ -204,15 +204,15 @@ def sync(
     | GetWebhookEndpointResponse503
     | None
 ):
-    r"""Get webhook endpoint
+    """Get webhook endpoint
 
      Return a single webhook endpoint's configuration: its delivery URL, the event types it is subscribed
     to, and whether delivery is currently paused. Reading webhook endpoints is free.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):
@@ -250,15 +250,15 @@ async def asyncio_detailed(
     | GetWebhookEndpointResponse500
     | GetWebhookEndpointResponse503
 ]:
-    r"""Get webhook endpoint
+    """Get webhook endpoint
 
      Return a single webhook endpoint's configuration: its delivery URL, the event types it is subscribed
     to, and whether delivery is currently paused. Reading webhook endpoints is free.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):
@@ -300,15 +300,15 @@ async def asyncio(
     | GetWebhookEndpointResponse503
     | None
 ):
-    r"""Get webhook endpoint
+    """Get webhook endpoint
 
      Return a single webhook endpoint's configuration: its delivery URL, the event types it is subscribed
     to, and whether delivery is currently paused. Reading webhook endpoints is free.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):

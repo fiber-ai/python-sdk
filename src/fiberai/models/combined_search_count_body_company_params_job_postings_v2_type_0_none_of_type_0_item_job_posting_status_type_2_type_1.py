@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType2Type1(str, Enum):
+class CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType2Type1(StrEnum):
     ACTIVE = "active"
     CLOSED = "closed"
     EITHER = "either"

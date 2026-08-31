@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanySearchBodySearchParamsCrunchbaseCategoryGroupsType0NoneOfType0ItemType(str, Enum):
+class CompanySearchBodySearchParamsCrunchbaseCategoryGroupsType0NoneOfType0ItemType(StrEnum):
     GROUP = "group"
 
     def __str__(self) -> str:

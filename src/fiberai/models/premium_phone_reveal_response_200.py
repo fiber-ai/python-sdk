@@ -58,16 +58,16 @@ class PremiumPhoneRevealResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.premium_phone_reveal_response_200_charge_info_type_0 import (
-            PremiumPhoneRevealResponse200ChargeInfoType0,
+            PremiumPhoneRevealResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.premium_phone_reveal_response_200_charge_info_type_1 import (
-            PremiumPhoneRevealResponse200ChargeInfoType1,
+            PremiumPhoneRevealResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.premium_phone_reveal_response_200_charge_info_type_2 import (
-            PremiumPhoneRevealResponse200ChargeInfoType2,
+            PremiumPhoneRevealResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.premium_phone_reveal_response_200_charge_info_type_3 import (
-            PremiumPhoneRevealResponse200ChargeInfoType3,
+            PremiumPhoneRevealResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class PremiumPhoneRevealResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.premium_phone_reveal_response_200_charge_info_type_0 import (
-            PremiumPhoneRevealResponse200ChargeInfoType0,
+            PremiumPhoneRevealResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.premium_phone_reveal_response_200_charge_info_type_1 import (
-            PremiumPhoneRevealResponse200ChargeInfoType1,
+            PremiumPhoneRevealResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.premium_phone_reveal_response_200_charge_info_type_2 import (
-            PremiumPhoneRevealResponse200ChargeInfoType2,
+            PremiumPhoneRevealResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.premium_phone_reveal_response_200_charge_info_type_3 import (
-            PremiumPhoneRevealResponse200ChargeInfoType3,
+            PremiumPhoneRevealResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.premium_phone_reveal_response_200_charge_info_type_4 import (
-            PremiumPhoneRevealResponse200ChargeInfoType4,
+            PremiumPhoneRevealResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.premium_phone_reveal_response_200_output import PremiumPhoneRevealResponse200Output
+        from ..models.premium_phone_reveal_response_200_output import (
+            PremiumPhoneRevealResponse200Output,  # noqa: PLC0415
+        )
         from ..models.premium_phone_reveal_response_200_warnings_type_0_item import (
-            PremiumPhoneRevealResponse200WarningsType0Item,
+            PremiumPhoneRevealResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

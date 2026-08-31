@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyProfileParamsLanguagesType0AnyOfType0Item(str, Enum):
+class CombinedSearchCountBodyProfileParamsLanguagesType0AnyOfType0Item(StrEnum):
     AFRIKAANS = "Afrikaans"
     AKAN = "Akan"
     ALBANIAN = "Albanian"

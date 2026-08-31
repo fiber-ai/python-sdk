@@ -1,9 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsExactCompanyType0AnyOfType0ItemSourceType2Type1(
-    str, Enum
-):
+class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsExactCompanyType0AnyOfType0ItemSourceType2Type1(StrEnum):
     CSV = "csv"
 
     def __str__(self) -> str:

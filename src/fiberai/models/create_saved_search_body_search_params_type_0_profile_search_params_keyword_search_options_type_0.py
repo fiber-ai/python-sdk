@@ -35,7 +35,7 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOpti
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,  # noqa: PLC0415
         )
 
         fields_to_search_over: dict[str, Any] | None | Unset
@@ -60,7 +60,7 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOpti
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

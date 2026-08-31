@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PollGoogleMapsResultsResponse200ChargeInfoType2Method(str, Enum):
+class PollGoogleMapsResultsResponse200ChargeInfoType2Method(StrEnum):
     CHARGED_FOR_ASYNC_PROCESS = "charged-for-async-process"
 
     def __str__(self) -> str:

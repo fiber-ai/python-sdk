@@ -147,15 +147,15 @@ def sync_detailed(
     | YoutubeTranscriptResponse500
     | YoutubeTranscriptResponse503
 ]:
-    r"""Fetch YouTube video transcript
+    """Fetch YouTube video transcript
 
      Fetches the timestamped transcript for a YouTube video. Returns all transcript segments and the list
     of languages available. Provide a full YouTube URL or a bare 11-character video ID.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeTranscriptBody):
@@ -196,15 +196,15 @@ def sync(
     | YoutubeTranscriptResponse503
     | None
 ):
-    r"""Fetch YouTube video transcript
+    """Fetch YouTube video transcript
 
      Fetches the timestamped transcript for a YouTube video. Returns all transcript segments and the list
     of languages available. Provide a full YouTube URL or a bare 11-character video ID.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeTranscriptBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | YoutubeTranscriptResponse500
     | YoutubeTranscriptResponse503
 ]:
-    r"""Fetch YouTube video transcript
+    """Fetch YouTube video transcript
 
      Fetches the timestamped transcript for a YouTube video. Returns all transcript segments and the list
     of languages available. Provide a full YouTube URL or a bare 11-character video ID.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeTranscriptBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | YoutubeTranscriptResponse503
     | None
 ):
-    r"""Fetch YouTube video transcript
+    """Fetch YouTube video transcript
 
      Fetches the timestamped transcript for a YouTube video. Returns all transcript segments and the list
     of languages available. Provide a full YouTube URL or a bare 11-character video ID.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeTranscriptBody):

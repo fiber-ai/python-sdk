@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationV2Type0AnyOfType0ItemSchoolType0ExactType0NoneOfType0ItemType1Identifier(
-    str, Enum
+    StrEnum
 ):
     LINKEDIN_URL = "linkedin-url"
 

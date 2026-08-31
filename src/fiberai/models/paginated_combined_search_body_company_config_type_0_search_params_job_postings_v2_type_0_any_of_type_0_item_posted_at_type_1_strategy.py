@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1Strategy(
-    str, Enum
+    StrEnum
 ):
     RELATIVE = "relative"
 

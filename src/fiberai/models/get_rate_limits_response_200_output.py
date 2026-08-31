@@ -44,7 +44,7 @@ class GetRateLimitsResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_rate_limits_response_200_output_rate_limits_item import (
-            GetRateLimitsResponse200OutputRateLimitsItem,
+            GetRateLimitsResponse200OutputRateLimitsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

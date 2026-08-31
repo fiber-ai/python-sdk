@@ -48,13 +48,13 @@ class CombinedSearchCountBodyProfileParamsEducationType0AllOfType0ItemStartedSch
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0,
+            CombinedSearchCountBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_1 import (
-            CombinedSearchCountBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType1,
+            CombinedSearchCountBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_2 import (
-            CombinedSearchCountBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2,
+            CombinedSearchCountBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -92,13 +92,13 @@ class CombinedSearchCountBodyProfileParamsEducationType0AllOfType0ItemStartedSch
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0,
+            CombinedSearchCountBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_1 import (
-            CombinedSearchCountBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType1,
+            CombinedSearchCountBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_type_0_all_of_type_0_item_started_school_at_type_1_window_type_2 import (
-            CombinedSearchCountBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2,
+            CombinedSearchCountBodyProfileParamsEducationType0AllOfType0ItemStartedSchoolAtType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

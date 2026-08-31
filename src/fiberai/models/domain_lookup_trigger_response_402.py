@@ -32,7 +32,7 @@ class DomainLookupTriggerResponse402:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.domain_lookup_trigger_response_402_out_of_credits_alert_type_0 import (
-            DomainLookupTriggerResponse402OutOfCreditsAlertType0,
+            DomainLookupTriggerResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         message = self.message
@@ -60,7 +60,7 @@ class DomainLookupTriggerResponse402:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.domain_lookup_trigger_response_402_out_of_credits_alert_type_0 import (
-            DomainLookupTriggerResponse402OutOfCreditsAlertType0,
+            DomainLookupTriggerResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

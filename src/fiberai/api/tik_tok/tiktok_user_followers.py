@@ -147,15 +147,15 @@ def sync_detailed(
     | TiktokUserFollowersResponse500
     | TiktokUserFollowersResponse503
 ]:
-    r"""Fetch TikTok user followers
+    """Fetch TikTok user followers
 
      Fetches the followers of a TikTok user. Returns a paginated list. Use the `nextPageToken` field from
     the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokUserFollowersBody):
@@ -196,15 +196,15 @@ def sync(
     | TiktokUserFollowersResponse503
     | None
 ):
-    r"""Fetch TikTok user followers
+    """Fetch TikTok user followers
 
      Fetches the followers of a TikTok user. Returns a paginated list. Use the `nextPageToken` field from
     the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokUserFollowersBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TiktokUserFollowersResponse500
     | TiktokUserFollowersResponse503
 ]:
-    r"""Fetch TikTok user followers
+    """Fetch TikTok user followers
 
      Fetches the followers of a TikTok user. Returns a paginated list. Use the `nextPageToken` field from
     the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokUserFollowersBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TiktokUserFollowersResponse503
     | None
 ):
-    r"""Fetch TikTok user followers
+    """Fetch TikTok user followers
 
      Fetches the followers of a TikTok user. Returns a paginated list. Use the `nextPageToken` field from
     the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokUserFollowersBody):

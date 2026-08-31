@@ -58,10 +58,10 @@ class GetScoutingReportResponse200OutputReportHistoricalHeadcountType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_scouting_report_response_200_output_report_historical_headcount_type_0_growth import (
-            GetScoutingReportResponse200OutputReportHistoricalHeadcountType0Growth,
+            GetScoutingReportResponse200OutputReportHistoricalHeadcountType0Growth,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_output_report_historical_headcount_type_0_snapshots_item import (
-            GetScoutingReportResponse200OutputReportHistoricalHeadcountType0SnapshotsItem,
+            GetScoutingReportResponse200OutputReportHistoricalHeadcountType0SnapshotsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

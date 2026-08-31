@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class KitchenSinkCompanyResponse200OutputDataItemEmployeeTrendsType0ItemFunctionsType3Type1(str, Enum):
+class KitchenSinkCompanyResponse200OutputDataItemEmployeeTrendsType0ItemFunctionsType3Type1(StrEnum):
     ACCOUNTING = "accounting"
     ADMINISTRATIVE = "administrative"
     ARTS_AND_DESIGN = "arts_and_design"

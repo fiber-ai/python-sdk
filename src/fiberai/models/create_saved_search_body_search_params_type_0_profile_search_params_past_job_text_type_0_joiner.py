@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsPastJobTextType0Joiner(str, Enum):
+class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsPastJobTextType0Joiner(StrEnum):
     AND = "and"
     OR = "or"
 

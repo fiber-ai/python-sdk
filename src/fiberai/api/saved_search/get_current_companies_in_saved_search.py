@@ -147,14 +147,14 @@ def sync_detailed(
     | GetCurrentCompaniesInSavedSearchResponse500
     | GetCurrentCompaniesInSavedSearchResponse503
 ]:
-    r"""Get current companies in saved search
+    """Get current companies in saved search
 
      Get current companies found for a specific saved search
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCurrentCompaniesInSavedSearchBody):
@@ -195,14 +195,14 @@ def sync(
     | GetCurrentCompaniesInSavedSearchResponse503
     | None
 ):
-    r"""Get current companies in saved search
+    """Get current companies in saved search
 
      Get current companies found for a specific saved search
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCurrentCompaniesInSavedSearchBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | GetCurrentCompaniesInSavedSearchResponse500
     | GetCurrentCompaniesInSavedSearchResponse503
 ]:
-    r"""Get current companies in saved search
+    """Get current companies in saved search
 
      Get current companies found for a specific saved search
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCurrentCompaniesInSavedSearchBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | GetCurrentCompaniesInSavedSearchResponse503
     | None
 ):
-    r"""Get current companies in saved search
+    """Get current companies in saved search
 
      Get current companies found for a specific saved search
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCurrentCompaniesInSavedSearchBody):

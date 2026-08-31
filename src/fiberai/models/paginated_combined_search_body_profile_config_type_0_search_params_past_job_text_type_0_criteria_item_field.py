@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPastJobTextType0CriteriaItemField(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPastJobTextType0CriteriaItemField(StrEnum):
     ANYWHERE = "anywhere"
     SUMMARY = "summary"
     TITLE = "title"

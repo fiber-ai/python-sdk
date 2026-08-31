@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FetchRealEstateListingsBodyHomeTypesType0Item(str, Enum):
+class FetchRealEstateListingsBodyHomeTypesType0Item(StrEnum):
     APARTMENT = "apartment"
     CONDO = "condo"
     HOUSE = "house"

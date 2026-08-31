@@ -82,22 +82,22 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_job_location_type_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_seniority_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0,  # noqa: PLC0415
         )
 
         total_count = self.total_count
@@ -193,22 +193,22 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_job_location_type_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0JobLocationTypeStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_seniority_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

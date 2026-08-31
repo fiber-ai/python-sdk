@@ -60,16 +60,16 @@ class ManuallySpawnSavedSearchRunResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.manually_spawn_saved_search_run_response_200_charge_info_type_0 import (
-            ManuallySpawnSavedSearchRunResponse200ChargeInfoType0,
+            ManuallySpawnSavedSearchRunResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.manually_spawn_saved_search_run_response_200_charge_info_type_1 import (
-            ManuallySpawnSavedSearchRunResponse200ChargeInfoType1,
+            ManuallySpawnSavedSearchRunResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.manually_spawn_saved_search_run_response_200_charge_info_type_2 import (
-            ManuallySpawnSavedSearchRunResponse200ChargeInfoType2,
+            ManuallySpawnSavedSearchRunResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.manually_spawn_saved_search_run_response_200_charge_info_type_3 import (
-            ManuallySpawnSavedSearchRunResponse200ChargeInfoType3,
+            ManuallySpawnSavedSearchRunResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -125,25 +125,25 @@ class ManuallySpawnSavedSearchRunResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.manually_spawn_saved_search_run_response_200_charge_info_type_0 import (
-            ManuallySpawnSavedSearchRunResponse200ChargeInfoType0,
+            ManuallySpawnSavedSearchRunResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.manually_spawn_saved_search_run_response_200_charge_info_type_1 import (
-            ManuallySpawnSavedSearchRunResponse200ChargeInfoType1,
+            ManuallySpawnSavedSearchRunResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.manually_spawn_saved_search_run_response_200_charge_info_type_2 import (
-            ManuallySpawnSavedSearchRunResponse200ChargeInfoType2,
+            ManuallySpawnSavedSearchRunResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.manually_spawn_saved_search_run_response_200_charge_info_type_3 import (
-            ManuallySpawnSavedSearchRunResponse200ChargeInfoType3,
+            ManuallySpawnSavedSearchRunResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.manually_spawn_saved_search_run_response_200_charge_info_type_4 import (
-            ManuallySpawnSavedSearchRunResponse200ChargeInfoType4,
+            ManuallySpawnSavedSearchRunResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.manually_spawn_saved_search_run_response_200_output import (
-            ManuallySpawnSavedSearchRunResponse200Output,
+            ManuallySpawnSavedSearchRunResponse200Output,  # noqa: PLC0415
         )
         from ..models.manually_spawn_saved_search_run_response_200_warnings_type_0_item import (
-            ManuallySpawnSavedSearchRunResponse200WarningsType0Item,
+            ManuallySpawnSavedSearchRunResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

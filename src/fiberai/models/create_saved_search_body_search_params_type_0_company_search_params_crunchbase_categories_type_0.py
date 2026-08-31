@@ -104,13 +104,13 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsCrunchbaseCategor
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_crunchbase_categories_type_0_all_of_type_0_item import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsCrunchbaseCategoriesType0AllOfType0Item,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsCrunchbaseCategoriesType0AllOfType0Item,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_crunchbase_categories_type_0_any_of_type_0_item import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsCrunchbaseCategoriesType0AnyOfType0Item,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsCrunchbaseCategoriesType0AnyOfType0Item,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_crunchbase_categories_type_0_none_of_type_0_item import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsCrunchbaseCategoriesType0NoneOfType0Item,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsCrunchbaseCategoriesType0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

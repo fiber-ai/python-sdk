@@ -133,7 +133,7 @@ class FinancialInstrumentLookupResponse200OutputFinancialsType0ItemPeriodsType0I
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.financial_instrument_lookup_response_200_output_financials_type_0_item_periods_type_0_item_line_items_type_0_item import (
-            FinancialInstrumentLookupResponse200OutputFinancialsType0ItemPeriodsType0ItemLineItemsType0Item,
+            FinancialInstrumentLookupResponse200OutputFinancialsType0ItemPeriodsType0ItemLineItemsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

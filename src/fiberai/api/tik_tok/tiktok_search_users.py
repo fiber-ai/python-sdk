@@ -147,15 +147,15 @@ def sync_detailed(
     | TiktokSearchUsersResponse500
     | TiktokSearchUsersResponse503
 ]:
-    r"""Search TikTok users
+    """Search TikTok users
 
      Searches for TikTok users by name or keyword. Returns a paginated list of matching accounts. Use the
     `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSearchUsersBody):
@@ -196,15 +196,15 @@ def sync(
     | TiktokSearchUsersResponse503
     | None
 ):
-    r"""Search TikTok users
+    """Search TikTok users
 
      Searches for TikTok users by name or keyword. Returns a paginated list of matching accounts. Use the
     `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSearchUsersBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TiktokSearchUsersResponse500
     | TiktokSearchUsersResponse503
 ]:
-    r"""Search TikTok users
+    """Search TikTok users
 
      Searches for TikTok users by name or keyword. Returns a paginated list of matching accounts. Use the
     `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSearchUsersBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TiktokSearchUsersResponse503
     | None
 ):
-    r"""Search TikTok users
+    """Search TikTok users
 
      Searches for TikTok users by name or keyword. Returns a paginated list of matching accounts. Use the
     `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSearchUsersBody):

@@ -63,19 +63,19 @@ class CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_company_params_employees_type_0_rules_item_employee_filters_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0,
+            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employees_type_0_rules_item_employees_to_match_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0,
+            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employees_type_0_rules_item_job_status_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType0,
+            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employees_type_0_rules_item_job_status_type_1 import (
-            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType1,
+            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employees_type_0_rules_item_job_status_type_2 import (
-            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType2,
+            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType2,  # noqa: PLC0415
         )
 
         employees_to_match: dict[str, Any]
@@ -125,22 +125,22 @@ class CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_company_params_employees_type_0_rules_item_employee_filters_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0,
+            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemEmployeeFiltersType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employees_type_0_rules_item_employees_to_match_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0,
+            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employees_type_0_rules_item_employees_to_match_type_1 import (
-            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1,
+            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemEmployeesToMatchType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employees_type_0_rules_item_job_status_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType0,
+            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employees_type_0_rules_item_job_status_type_1 import (
-            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType1,
+            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employees_type_0_rules_item_job_status_type_2 import (
-            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType2,
+            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

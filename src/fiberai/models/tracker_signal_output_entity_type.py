@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class TrackerSignalOutputEntityType(str, Enum):
+class TrackerSignalOutputEntityType(StrEnum):
     COMPANY = "company"
     PERSON = "person"
 

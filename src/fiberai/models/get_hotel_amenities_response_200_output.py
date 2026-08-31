@@ -44,7 +44,7 @@ class GetHotelAmenitiesResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_hotel_amenities_response_200_output_amenities_item import (
-            GetHotelAmenitiesResponse200OutputAmenitiesItem,
+            GetHotelAmenitiesResponse200OutputAmenitiesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

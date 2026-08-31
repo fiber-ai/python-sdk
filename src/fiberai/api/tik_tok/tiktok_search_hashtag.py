@@ -147,15 +147,15 @@ def sync_detailed(
     | TiktokSearchHashtagResponse500
     | TiktokSearchHashtagResponse503
 ]:
-    r"""Search TikTok hashtag videos
+    """Search TikTok hashtag videos
 
      Fetches videos for a TikTok hashtag along with hashtag metadata. Returns a paginated list of videos.
     Use the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSearchHashtagBody):
@@ -196,15 +196,15 @@ def sync(
     | TiktokSearchHashtagResponse503
     | None
 ):
-    r"""Search TikTok hashtag videos
+    """Search TikTok hashtag videos
 
      Fetches videos for a TikTok hashtag along with hashtag metadata. Returns a paginated list of videos.
     Use the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSearchHashtagBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TiktokSearchHashtagResponse500
     | TiktokSearchHashtagResponse503
 ]:
-    r"""Search TikTok hashtag videos
+    """Search TikTok hashtag videos
 
      Fetches videos for a TikTok hashtag along with hashtag metadata. Returns a paginated list of videos.
     Use the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSearchHashtagBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TiktokSearchHashtagResponse503
     | None
 ):
-    r"""Search TikTok hashtag videos
+    """Search TikTok hashtag videos
 
      Fetches videos for a TikTok hashtag along with hashtag metadata. Returns a paginated list of videos.
     Use the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSearchHashtagBody):

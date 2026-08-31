@@ -147,7 +147,7 @@ def sync_detailed(
     | BlueCollarResolveCompanyResponse500
     | BlueCollarResolveCompanyResponse503
 ]:
-    r"""Resolve company to blue collar job board identifier
+    """Resolve company to blue collar job board identifier
 
      Resolve a company to the identifier used for searching their blue collar job listings on boards such
     as Indeed. Provide a company name, a website domain or URL, or both for best results. Use the
@@ -155,11 +155,11 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per resolution attempt&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per resolution attempt&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (BlueCollarResolveCompanyBody):
@@ -200,7 +200,7 @@ def sync(
     | BlueCollarResolveCompanyResponse503
     | None
 ):
-    r"""Resolve company to blue collar job board identifier
+    """Resolve company to blue collar job board identifier
 
      Resolve a company to the identifier used for searching their blue collar job listings on boards such
     as Indeed. Provide a company name, a website domain or URL, or both for best results. Use the
@@ -208,11 +208,11 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per resolution attempt&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per resolution attempt&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (BlueCollarResolveCompanyBody):
@@ -247,7 +247,7 @@ async def asyncio_detailed(
     | BlueCollarResolveCompanyResponse500
     | BlueCollarResolveCompanyResponse503
 ]:
-    r"""Resolve company to blue collar job board identifier
+    """Resolve company to blue collar job board identifier
 
      Resolve a company to the identifier used for searching their blue collar job listings on boards such
     as Indeed. Provide a company name, a website domain or URL, or both for best results. Use the
@@ -255,11 +255,11 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per resolution attempt&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per resolution attempt&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (BlueCollarResolveCompanyBody):
@@ -298,7 +298,7 @@ async def asyncio(
     | BlueCollarResolveCompanyResponse503
     | None
 ):
-    r"""Resolve company to blue collar job board identifier
+    """Resolve company to blue collar job board identifier
 
      Resolve a company to the identifier used for searching their blue collar job listings on boards such
     as Indeed. Provide a company name, a website domain or URL, or both for best results. Use the
@@ -306,11 +306,11 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per resolution attempt&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per resolution attempt&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (BlueCollarResolveCompanyBody):

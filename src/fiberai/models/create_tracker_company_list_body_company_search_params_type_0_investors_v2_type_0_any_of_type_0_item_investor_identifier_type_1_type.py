@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AnyOfType0ItemInvestorIdentifierType1Type(
-    str, Enum
+    StrEnum
 ):
     LINKEDIN_URL = "linkedin-url"
 

@@ -56,7 +56,7 @@ class JobPostingSearchResponse200OutputDataItemStandardizedLocationType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.job_posting_search_response_200_output_data_item_standardized_location_type_0_coordinates_type_0 import (
-            JobPostingSearchResponse200OutputDataItemStandardizedLocationType0CoordinatesType0,
+            JobPostingSearchResponse200OutputDataItemStandardizedLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         street_address: None | str | Unset
@@ -176,7 +176,7 @@ class JobPostingSearchResponse200OutputDataItemStandardizedLocationType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.job_posting_search_response_200_output_data_item_standardized_location_type_0_coordinates_type_0 import (
-            JobPostingSearchResponse200OutputDataItemStandardizedLocationType0CoordinatesType0,
+            JobPostingSearchResponse200OutputDataItemStandardizedLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

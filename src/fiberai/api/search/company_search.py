@@ -147,14 +147,14 @@ def sync_detailed(
     | CompanySearchResponse500
     | CompanySearchResponse503
 ]:
-    r"""Company search
+    """Company search
 
      Search for companies using filters
 
     <span>⚡ <strong>Rate limit:</strong> 180 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company found&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company found&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanySearchBody):
@@ -195,14 +195,14 @@ def sync(
     | CompanySearchResponse503
     | None
 ):
-    r"""Company search
+    """Company search
 
      Search for companies using filters
 
     <span>⚡ <strong>Rate limit:</strong> 180 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company found&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company found&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanySearchBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | CompanySearchResponse500
     | CompanySearchResponse503
 ]:
-    r"""Company search
+    """Company search
 
      Search for companies using filters
 
     <span>⚡ <strong>Rate limit:</strong> 180 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company found&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company found&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanySearchBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | CompanySearchResponse503
     | None
 ):
-    r"""Company search
+    """Company search
 
      Search for companies using filters
 
     <span>⚡ <strong>Rate limit:</strong> 180 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company found&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company found&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanySearchBody):

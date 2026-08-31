@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class YoutubeChannelResponse200ChargeInfoType0Method(str, Enum):
+class YoutubeChannelResponse200ChargeInfoType0Method(StrEnum):
     CHARGED_NOW = "charged-now"
 
     def __str__(self) -> str:

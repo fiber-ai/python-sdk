@@ -125,25 +125,25 @@ class KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0EmploymentT
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_employment_type_stats_type_0_contract import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_employment_type_stats_type_0_full_time import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_employment_type_stats_type_0_internship import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_employment_type_stats_type_0_other import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Other,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Other,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_employment_type_stats_type_0_part_time import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_employment_type_stats_type_0_temporary import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_employment_type_stats_type_0_volunteer import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

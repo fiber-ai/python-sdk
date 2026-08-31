@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class QuickPersonResolveBodyPeopleItemType2Identifier(str, Enum):
+class QuickPersonResolveBodyPeopleItemType2Identifier(StrEnum):
     LINKEDINUSERID = "linkedinUserId"
 
     def __str__(self) -> str:

@@ -44,7 +44,7 @@ class PeopleSearchBodySearchParamsFuzzyNameType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_fuzzy_name_type_0_any_of_item import (
-            PeopleSearchBodySearchParamsFuzzyNameType0AnyOfItem,
+            PeopleSearchBodySearchParamsFuzzyNameType0AnyOfItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

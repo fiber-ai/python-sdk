@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CombinedSearchCountBodyProfileParamsEducationV2Type0AllOfType0ItemYearsType0FinishedSchoolAtType0Strategy(
-    str, Enum
+    StrEnum
 ):
     ABSOLUTE = "absolute"
 

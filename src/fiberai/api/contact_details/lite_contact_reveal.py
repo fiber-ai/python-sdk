@@ -147,7 +147,7 @@ def sync_detailed(
     | LiteContactRevealResponse500
     | LiteContactRevealResponse503
 ]:
-    r"""Reveal contact details (lite)
+    """Reveal contact details (lite)
 
      Low-cost contact reveal path that searches for emails and phone numbers. Compared with other contact
     reveal endpoints, this endpoint is priced lower but has lower yield (it may miss contacts that other
@@ -156,11 +156,10 @@ def sync_detailed(
     <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per lite email reveal + 2 credits per lite phone
-    reveal&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary.\">ⓘ</span></span>
+    reveal&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (LiteContactRevealBody):
@@ -201,7 +200,7 @@ def sync(
     | LiteContactRevealResponse503
     | None
 ):
-    r"""Reveal contact details (lite)
+    """Reveal contact details (lite)
 
      Low-cost contact reveal path that searches for emails and phone numbers. Compared with other contact
     reveal endpoints, this endpoint is priced lower but has lower yield (it may miss contacts that other
@@ -210,11 +209,10 @@ def sync(
     <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per lite email reveal + 2 credits per lite phone
-    reveal&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary.\">ⓘ</span></span>
+    reveal&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (LiteContactRevealBody):
@@ -249,7 +247,7 @@ async def asyncio_detailed(
     | LiteContactRevealResponse500
     | LiteContactRevealResponse503
 ]:
-    r"""Reveal contact details (lite)
+    """Reveal contact details (lite)
 
      Low-cost contact reveal path that searches for emails and phone numbers. Compared with other contact
     reveal endpoints, this endpoint is priced lower but has lower yield (it may miss contacts that other
@@ -258,11 +256,10 @@ async def asyncio_detailed(
     <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per lite email reveal + 2 credits per lite phone
-    reveal&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary.\">ⓘ</span></span>
+    reveal&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (LiteContactRevealBody):
@@ -301,7 +298,7 @@ async def asyncio(
     | LiteContactRevealResponse503
     | None
 ):
-    r"""Reveal contact details (lite)
+    """Reveal contact details (lite)
 
      Low-cost contact reveal path that searches for emails and phone numbers. Compared with other contact
     reveal endpoints, this endpoint is priced lower but has lower yield (it may miss contacts that other
@@ -310,11 +307,10 @@ async def asyncio(
     <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per lite email reveal + 2 credits per lite phone
-    reveal&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may
-    vary.\">ⓘ</span></span>
+    reveal&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (LiteContactRevealBody):

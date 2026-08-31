@@ -147,14 +147,14 @@ def sync_detailed(
     | GetProspectExclusionListsResponse500
     | GetProspectExclusionListsResponse503
 ]:
-    r"""Get prospect exclusion lists
+    """Get prospect exclusion lists
 
      Get prospect exclusion lists
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetProspectExclusionListsBody):
@@ -195,14 +195,14 @@ def sync(
     | GetProspectExclusionListsResponse503
     | None
 ):
-    r"""Get prospect exclusion lists
+    """Get prospect exclusion lists
 
      Get prospect exclusion lists
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetProspectExclusionListsBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | GetProspectExclusionListsResponse500
     | GetProspectExclusionListsResponse503
 ]:
-    r"""Get prospect exclusion lists
+    """Get prospect exclusion lists
 
      Get prospect exclusion lists
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetProspectExclusionListsBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | GetProspectExclusionListsResponse503
     | None
 ):
-    r"""Get prospect exclusion lists
+    """Get prospect exclusion lists
 
      Get prospect exclusion lists
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetProspectExclusionListsBody):

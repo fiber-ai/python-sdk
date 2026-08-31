@@ -90,10 +90,10 @@ class PollBatchLiveEnrichResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_batch_live_enrich_response_200_output_progress import (
-            PollBatchLiveEnrichResponse200OutputProgress,
+            PollBatchLiveEnrichResponse200OutputProgress,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItem,
+            PollBatchLiveEnrichResponse200OutputResultsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

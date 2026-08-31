@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanyCountBodySearchParamsTechnologiesType0AnyOfType0ItemType0Technology(str, Enum):
+class CompanyCountBodySearchParamsTechnologiesType0AnyOfType0ItemType0Technology(StrEnum):
     AIRFLOW = "Airflow"
     ALGOLIA = "Algolia"
     AMPLITUDE = "Amplitude"

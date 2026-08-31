@@ -58,16 +58,16 @@ class DeleteJobChangeListResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.delete_job_change_list_response_200_charge_info_type_0 import (
-            DeleteJobChangeListResponse200ChargeInfoType0,
+            DeleteJobChangeListResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.delete_job_change_list_response_200_charge_info_type_1 import (
-            DeleteJobChangeListResponse200ChargeInfoType1,
+            DeleteJobChangeListResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.delete_job_change_list_response_200_charge_info_type_2 import (
-            DeleteJobChangeListResponse200ChargeInfoType2,
+            DeleteJobChangeListResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.delete_job_change_list_response_200_charge_info_type_3 import (
-            DeleteJobChangeListResponse200ChargeInfoType3,
+            DeleteJobChangeListResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class DeleteJobChangeListResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.delete_job_change_list_response_200_charge_info_type_0 import (
-            DeleteJobChangeListResponse200ChargeInfoType0,
+            DeleteJobChangeListResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.delete_job_change_list_response_200_charge_info_type_1 import (
-            DeleteJobChangeListResponse200ChargeInfoType1,
+            DeleteJobChangeListResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.delete_job_change_list_response_200_charge_info_type_2 import (
-            DeleteJobChangeListResponse200ChargeInfoType2,
+            DeleteJobChangeListResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.delete_job_change_list_response_200_charge_info_type_3 import (
-            DeleteJobChangeListResponse200ChargeInfoType3,
+            DeleteJobChangeListResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.delete_job_change_list_response_200_charge_info_type_4 import (
-            DeleteJobChangeListResponse200ChargeInfoType4,
+            DeleteJobChangeListResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.delete_job_change_list_response_200_output import DeleteJobChangeListResponse200Output
+        from ..models.delete_job_change_list_response_200_output import (
+            DeleteJobChangeListResponse200Output,  # noqa: PLC0415
+        )
         from ..models.delete_job_change_list_response_200_warnings_type_0_item import (
-            DeleteJobChangeListResponse200WarningsType0Item,
+            DeleteJobChangeListResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

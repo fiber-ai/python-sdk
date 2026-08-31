@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchBodySearchParamsEducationType0AllOfType0ItemDegreeV2Type1CriteriaNoneOfType0Item(str, Enum):
+class PeopleSearchBodySearchParamsEducationType0AllOfType0ItemDegreeV2Type1CriteriaNoneOfType0Item(StrEnum):
     ARCHITECTURE = "Architecture"
     ASSOCIATE = "Associate"
     BACHELOR = "Bachelor"

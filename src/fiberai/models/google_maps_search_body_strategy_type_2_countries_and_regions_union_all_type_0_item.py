@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GoogleMapsSearchBodyStrategyType2CountriesAndRegionsUnionAllType0Item(str, Enum):
+class GoogleMapsSearchBodyStrategyType2CountriesAndRegionsUnionAllType0Item(StrEnum):
     ABW = "ABW"
     AFG = "AFG"
     AGO = "AGO"

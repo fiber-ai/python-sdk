@@ -795,151 +795,151 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0S
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_administrative_services import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_aerospace_military import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_artificial_intelligence import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_arts_music import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_automotive import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Automotive,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_business_services import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_cloud import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Cloud,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_construction import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Construction,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consulting import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Consulting,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_goods import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_services import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_design import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Design,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Design,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_education import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Education,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Education,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_energy import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Energy,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_entertainment import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Entertainment,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_environmental import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Environmental,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_events import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Events,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Events,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_farming_agriculture import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_finance import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Finance,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_food_beverage import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_gaming import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Gaming,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_government import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Government,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Government,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_hardware import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hardware,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_healthcare import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Healthcare,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_hospitality import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Hospitality,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_industrials import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Industrials,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_information_technology import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_insurance import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Insurance,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_legal import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Legal,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_life_sciences import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_logistics import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Logistics,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_manufacturing import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_marketing_advertising import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_media import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Media,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Media,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_mining import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Mining,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_nonprofit import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_publishing import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Publishing,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_real_estate import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0RealEstate,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_retail import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Retail,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_science_engineering import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_security import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Security,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Security,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_software import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Software,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Software,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_sports import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Sports,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_telecom import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Telecom,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_trade import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Trade,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_transportation import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Transportation,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_travel_tourism import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_utilities import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0Utilities,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_standard_industries_stats_type_0_venture_capital import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

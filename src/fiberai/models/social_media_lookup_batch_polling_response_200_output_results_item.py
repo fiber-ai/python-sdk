@@ -108,7 +108,7 @@ class SocialMediaLookupBatchPollingResponse200OutputResultsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.social_media_lookup_batch_polling_response_200_output_results_item_candidates_item import (
-            SocialMediaLookupBatchPollingResponse200OutputResultsItemCandidatesItem,
+            SocialMediaLookupBatchPollingResponse200OutputResultsItemCandidatesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

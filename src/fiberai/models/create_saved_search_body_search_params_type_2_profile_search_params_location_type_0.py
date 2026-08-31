@@ -78,22 +78,22 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_subtract_all_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0SubtractAllType0ItemType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0SubtractAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_subtract_all_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0SubtractAllType0ItemType1,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0SubtractAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_subtract_all_type_0_item_type_2 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0SubtractAllType0ItemType2,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0SubtractAllType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_union_all_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_union_all_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType1,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_union_all_type_0_item_type_2 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType2,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType2,  # noqa: PLC0415
         )
 
         union_all: list[dict[str, Any]] | None | Unset
@@ -169,28 +169,28 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_subtract_all_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0SubtractAllType0ItemType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0SubtractAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_subtract_all_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0SubtractAllType0ItemType1,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0SubtractAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_subtract_all_type_0_item_type_2 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0SubtractAllType0ItemType2,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0SubtractAllType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_subtract_all_type_0_item_type_3 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0SubtractAllType0ItemType3,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0SubtractAllType0ItemType3,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_union_all_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_union_all_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType1,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_union_all_type_0_item_type_2 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType2,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_location_type_0_union_all_type_0_item_type_3 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType3,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLocationType0UnionAllType0ItemType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

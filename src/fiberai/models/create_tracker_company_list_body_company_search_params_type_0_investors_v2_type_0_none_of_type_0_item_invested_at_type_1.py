@@ -53,13 +53,13 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0NoneOf
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_none_of_type_0_item_invested_at_type_1_window_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_none_of_type_0_item_invested_at_type_1_window_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_none_of_type_0_item_invested_at_type_1_window_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -100,13 +100,13 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0NoneOf
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_none_of_type_0_item_invested_at_type_1_window_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_none_of_type_0_item_invested_at_type_1_window_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_none_of_type_0_item_invested_at_type_1_window_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

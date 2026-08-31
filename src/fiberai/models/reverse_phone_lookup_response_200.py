@@ -58,16 +58,16 @@ class ReversePhoneLookupResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.reverse_phone_lookup_response_200_charge_info_type_0 import (
-            ReversePhoneLookupResponse200ChargeInfoType0,
+            ReversePhoneLookupResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_charge_info_type_1 import (
-            ReversePhoneLookupResponse200ChargeInfoType1,
+            ReversePhoneLookupResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_charge_info_type_2 import (
-            ReversePhoneLookupResponse200ChargeInfoType2,
+            ReversePhoneLookupResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_charge_info_type_3 import (
-            ReversePhoneLookupResponse200ChargeInfoType3,
+            ReversePhoneLookupResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class ReversePhoneLookupResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.reverse_phone_lookup_response_200_charge_info_type_0 import (
-            ReversePhoneLookupResponse200ChargeInfoType0,
+            ReversePhoneLookupResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_charge_info_type_1 import (
-            ReversePhoneLookupResponse200ChargeInfoType1,
+            ReversePhoneLookupResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_charge_info_type_2 import (
-            ReversePhoneLookupResponse200ChargeInfoType2,
+            ReversePhoneLookupResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_charge_info_type_3 import (
-            ReversePhoneLookupResponse200ChargeInfoType3,
+            ReversePhoneLookupResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_charge_info_type_4 import (
-            ReversePhoneLookupResponse200ChargeInfoType4,
+            ReversePhoneLookupResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.reverse_phone_lookup_response_200_output import ReversePhoneLookupResponse200Output
+        from ..models.reverse_phone_lookup_response_200_output import (
+            ReversePhoneLookupResponse200Output,  # noqa: PLC0415
+        )
         from ..models.reverse_phone_lookup_response_200_warnings_type_0_item import (
-            ReversePhoneLookupResponse200WarningsType0Item,
+            ReversePhoneLookupResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

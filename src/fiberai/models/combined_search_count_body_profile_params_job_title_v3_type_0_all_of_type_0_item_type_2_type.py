@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyProfileParamsJobTitleV3Type0AllOfType0ItemType2Type(str, Enum):
+class CombinedSearchCountBodyProfileParamsJobTitleV3Type0AllOfType0ItemType2Type(StrEnum):
     CARTESIAN = "cartesian"
 
     def __str__(self) -> str:

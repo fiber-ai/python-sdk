@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0RadiusType0Unit(
-    str, Enum
+    StrEnum
 ):
     MILES = "miles"
 

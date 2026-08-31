@@ -54,7 +54,7 @@ class CompanyCountBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.company_count_body_search_params import CompanyCountBodySearchParams
+        from ..models.company_count_body_search_params import CompanyCountBodySearchParams  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

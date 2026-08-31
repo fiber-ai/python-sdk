@@ -115,7 +115,7 @@ class GoogleMapsSearchBodyStrategyType2:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.google_maps_search_body_strategy_type_2_countries_and_regions import (
-            GoogleMapsSearchBodyStrategyType2CountriesAndRegions,
+            GoogleMapsSearchBodyStrategyType2CountriesAndRegions,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

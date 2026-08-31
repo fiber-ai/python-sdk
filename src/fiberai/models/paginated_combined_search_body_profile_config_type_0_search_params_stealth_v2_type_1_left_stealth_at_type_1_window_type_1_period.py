@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1LeftStealthAtType1WindowType1Period(
-    str, Enum
+    StrEnum
 ):
     DAY = "day"
     MONTH = "month"

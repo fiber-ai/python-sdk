@@ -56,7 +56,7 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileInferredLocation
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_inferred_location_type_0_coordinates_type_0 import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileInferredLocationType0CoordinatesType0,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileInferredLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         street_address: None | str | Unset
@@ -177,7 +177,7 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileInferredLocation
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_inferred_location_type_0_coordinates_type_0 import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileInferredLocationType0CoordinatesType0,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileInferredLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -48,13 +48,13 @@ class CombinedSearchCountBodyCompanyParamsFoundedOnType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_company_params_founded_on_type_1_window_type_0 import (
-            CombinedSearchCountBodyCompanyParamsFoundedOnType1WindowType0,
+            CombinedSearchCountBodyCompanyParamsFoundedOnType1WindowType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_founded_on_type_1_window_type_1 import (
-            CombinedSearchCountBodyCompanyParamsFoundedOnType1WindowType1,
+            CombinedSearchCountBodyCompanyParamsFoundedOnType1WindowType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_founded_on_type_1_window_type_2 import (
-            CombinedSearchCountBodyCompanyParamsFoundedOnType1WindowType2,
+            CombinedSearchCountBodyCompanyParamsFoundedOnType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -86,13 +86,13 @@ class CombinedSearchCountBodyCompanyParamsFoundedOnType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_company_params_founded_on_type_1_window_type_0 import (
-            CombinedSearchCountBodyCompanyParamsFoundedOnType1WindowType0,
+            CombinedSearchCountBodyCompanyParamsFoundedOnType1WindowType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_founded_on_type_1_window_type_1 import (
-            CombinedSearchCountBodyCompanyParamsFoundedOnType1WindowType1,
+            CombinedSearchCountBodyCompanyParamsFoundedOnType1WindowType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_founded_on_type_1_window_type_2 import (
-            CombinedSearchCountBodyCompanyParamsFoundedOnType1WindowType2,
+            CombinedSearchCountBodyCompanyParamsFoundedOnType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

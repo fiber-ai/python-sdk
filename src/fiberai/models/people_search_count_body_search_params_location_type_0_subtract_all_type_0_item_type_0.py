@@ -45,7 +45,7 @@ class PeopleSearchCountBodySearchParamsLocationType0SubtractAllType0ItemType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_count_body_search_params_location_type_0_subtract_all_type_0_item_type_0_radius_type_0 import (
-            PeopleSearchCountBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusType0,
+            PeopleSearchCountBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -73,13 +73,13 @@ class PeopleSearchCountBodySearchParamsLocationType0SubtractAllType0ItemType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_body_search_params_location_type_0_subtract_all_type_0_item_type_0_center import (
-            PeopleSearchCountBodySearchParamsLocationType0SubtractAllType0ItemType0Center,
+            PeopleSearchCountBodySearchParamsLocationType0SubtractAllType0ItemType0Center,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_location_type_0_subtract_all_type_0_item_type_0_radius_type_0 import (
-            PeopleSearchCountBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusType0,
+            PeopleSearchCountBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_location_type_0_subtract_all_type_0_item_type_0_radius_type_1 import (
-            PeopleSearchCountBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusType1,
+            PeopleSearchCountBodySearchParamsLocationType0SubtractAllType0ItemType0RadiusType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

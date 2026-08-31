@@ -147,7 +147,7 @@ def sync_detailed(
     | GetScoutingReportResponse500
     | GetScoutingReportResponse503
 ]:
-    r"""Get company scouting report
+    """Get company scouting report
 
      Generates a comprehensive scouting report for a company including news, founders, funding, media
     links, and historical headcount. This endpoint may take 1-2 minutes to respond as it gathers data
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 6 credits per scouting report&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 6 credits per scouting report&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetScoutingReportBody):
@@ -197,7 +197,7 @@ def sync(
     | GetScoutingReportResponse503
     | None
 ):
-    r"""Get company scouting report
+    """Get company scouting report
 
      Generates a comprehensive scouting report for a company including news, founders, funding, media
     links, and historical headcount. This endpoint may take 1-2 minutes to respond as it gathers data
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 6 credits per scouting report&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 6 credits per scouting report&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetScoutingReportBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | GetScoutingReportResponse500
     | GetScoutingReportResponse503
 ]:
-    r"""Get company scouting report
+    """Get company scouting report
 
      Generates a comprehensive scouting report for a company including news, founders, funding, media
     links, and historical headcount. This endpoint may take 1-2 minutes to respond as it gathers data
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 6 credits per scouting report&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 6 credits per scouting report&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetScoutingReportBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | GetScoutingReportResponse503
     | None
 ):
-    r"""Get company scouting report
+    """Get company scouting report
 
      Generates a comprehensive scouting report for a company including news, founders, funding, media
     links, and historical headcount. This endpoint may take 1-2 minutes to respond as it gathers data
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 6 credits per scouting report&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 6 credits per scouting report&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetScoutingReportBody):

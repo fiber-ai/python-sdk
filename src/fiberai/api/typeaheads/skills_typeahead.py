@@ -147,15 +147,15 @@ def sync_detailed(
     | SkillsTypeaheadResponse500
     | SkillsTypeaheadResponse503
 ]:
-    r"""Skills Typeahead
+    """Skills Typeahead
 
      Search for professional skills by name. Supports prefix and partial matches with relevance-based
     ranking. Useful for building autocomplete in search UIs.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SkillsTypeaheadBody):
@@ -196,15 +196,15 @@ def sync(
     | SkillsTypeaheadResponse503
     | None
 ):
-    r"""Skills Typeahead
+    """Skills Typeahead
 
      Search for professional skills by name. Supports prefix and partial matches with relevance-based
     ranking. Useful for building autocomplete in search UIs.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SkillsTypeaheadBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | SkillsTypeaheadResponse500
     | SkillsTypeaheadResponse503
 ]:
-    r"""Skills Typeahead
+    """Skills Typeahead
 
      Search for professional skills by name. Supports prefix and partial matches with relevance-based
     ranking. Useful for building autocomplete in search UIs.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SkillsTypeaheadBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | SkillsTypeaheadResponse503
     | None
 ):
-    r"""Skills Typeahead
+    """Skills Typeahead
 
      Search for professional skills by name. Supports prefix and partial matches with relevance-based
     ranking. Useful for building autocomplete in search UIs.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SkillsTypeaheadBody):

@@ -147,14 +147,14 @@ def sync_detailed(
     | ListAllJobChangeListsResponse500
     | ListAllJobChangeListsResponse503
 ]:
-    r"""List all job changes lists
+    """List all job changes lists
 
      Lists all job changes lists for your organization. Returns basic info for each list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ListAllJobChangeListsBody):
@@ -195,14 +195,14 @@ def sync(
     | ListAllJobChangeListsResponse503
     | None
 ):
-    r"""List all job changes lists
+    """List all job changes lists
 
      Lists all job changes lists for your organization. Returns basic info for each list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ListAllJobChangeListsBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | ListAllJobChangeListsResponse500
     | ListAllJobChangeListsResponse503
 ]:
-    r"""List all job changes lists
+    """List all job changes lists
 
      Lists all job changes lists for your organization. Returns basic info for each list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ListAllJobChangeListsBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | ListAllJobChangeListsResponse503
     | None
 ):
-    r"""List all job changes lists
+    """List all job changes lists
 
      Lists all job changes lists for your organization. Returns basic info for each list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ListAllJobChangeListsBody):

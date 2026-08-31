@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class LiteContactRevealResponse200OutputProfilePhoneNumbersItemTypeType2Type1(str, Enum):
+class LiteContactRevealResponse200OutputProfilePhoneNumbersItemTypeType2Type1(StrEnum):
     MOBILE = "mobile"
     OTHER = "other"
     UNKNOWN = "unknown"

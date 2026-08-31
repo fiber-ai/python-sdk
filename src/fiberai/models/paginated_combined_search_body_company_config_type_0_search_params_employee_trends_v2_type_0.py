@@ -78,13 +78,13 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2T
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_trends_v2_type_0_obeys_all_type_0_item_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_trends_v2_type_0_obeys_any_type_0_item_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_trends_v2_type_0_obeys_none_type_0_item_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,  # noqa: PLC0415
         )
 
         obeys_all: list[dict[str, Any]] | None | Unset
@@ -162,22 +162,22 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2T
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_trends_v2_type_0_obeys_all_type_0_item_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_trends_v2_type_0_obeys_all_type_0_item_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_trends_v2_type_0_obeys_any_type_0_item_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_trends_v2_type_0_obeys_any_type_0_item_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_trends_v2_type_0_obeys_none_type_0_item_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_trends_v2_type_0_obeys_none_type_0_item_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

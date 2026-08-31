@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ExportCompaniesBodyExcludeFieldsItem(str, Enum):
+class ExportCompaniesBodyExcludeFieldsItem(StrEnum):
     ACCELERATORS = "accelerators"
     ACQUISITIONS = "acquisitions"
     ALL_NAMES = "all_names"

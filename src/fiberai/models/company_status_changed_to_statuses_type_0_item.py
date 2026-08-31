@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanyStatusChangedToStatusesType0Item(str, Enum):
+class CompanyStatusChangedToStatusesType0Item(StrEnum):
     ACQUIRED = "acquired"
     CLOSED = "closed"
     IPO = "ipo"

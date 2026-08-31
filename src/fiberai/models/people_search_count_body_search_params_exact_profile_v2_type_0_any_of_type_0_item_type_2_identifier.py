@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchCountBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2Identifier(str, Enum):
+class PeopleSearchCountBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2Identifier(StrEnum):
     LINKEDIN_USER_ID = "linkedin-user-id"
 
     def __str__(self) -> str:

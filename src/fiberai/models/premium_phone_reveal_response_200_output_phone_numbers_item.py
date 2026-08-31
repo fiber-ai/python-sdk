@@ -39,7 +39,7 @@ class PremiumPhoneRevealResponse200OutputPhoneNumbersItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.premium_phone_reveal_response_200_output_phone_numbers_item_caller_id_validation_type_0 import (
-            PremiumPhoneRevealResponse200OutputPhoneNumbersItemCallerIdValidationType0,
+            PremiumPhoneRevealResponse200OutputPhoneNumbersItemCallerIdValidationType0,  # noqa: PLC0415
         )
 
         number = self.number
@@ -72,7 +72,7 @@ class PremiumPhoneRevealResponse200OutputPhoneNumbersItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.premium_phone_reveal_response_200_output_phone_numbers_item_caller_id_validation_type_0 import (
-            PremiumPhoneRevealResponse200OutputPhoneNumbersItemCallerIdValidationType0,
+            PremiumPhoneRevealResponse200OutputPhoneNumbersItemCallerIdValidationType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

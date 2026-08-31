@@ -58,16 +58,16 @@ class KitchenSinkBulkProfileResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.kitchen_sink_bulk_profile_response_200_charge_info_type_0 import (
-            KitchenSinkBulkProfileResponse200ChargeInfoType0,
+            KitchenSinkBulkProfileResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_charge_info_type_1 import (
-            KitchenSinkBulkProfileResponse200ChargeInfoType1,
+            KitchenSinkBulkProfileResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_charge_info_type_2 import (
-            KitchenSinkBulkProfileResponse200ChargeInfoType2,
+            KitchenSinkBulkProfileResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_charge_info_type_3 import (
-            KitchenSinkBulkProfileResponse200ChargeInfoType3,
+            KitchenSinkBulkProfileResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class KitchenSinkBulkProfileResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_bulk_profile_response_200_charge_info_type_0 import (
-            KitchenSinkBulkProfileResponse200ChargeInfoType0,
+            KitchenSinkBulkProfileResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_charge_info_type_1 import (
-            KitchenSinkBulkProfileResponse200ChargeInfoType1,
+            KitchenSinkBulkProfileResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_charge_info_type_2 import (
-            KitchenSinkBulkProfileResponse200ChargeInfoType2,
+            KitchenSinkBulkProfileResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_charge_info_type_3 import (
-            KitchenSinkBulkProfileResponse200ChargeInfoType3,
+            KitchenSinkBulkProfileResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_response_200_charge_info_type_4 import (
-            KitchenSinkBulkProfileResponse200ChargeInfoType4,
+            KitchenSinkBulkProfileResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.kitchen_sink_bulk_profile_response_200_output import KitchenSinkBulkProfileResponse200Output
+        from ..models.kitchen_sink_bulk_profile_response_200_output import (
+            KitchenSinkBulkProfileResponse200Output,  # noqa: PLC0415
+        )
         from ..models.kitchen_sink_bulk_profile_response_200_warnings_type_0_item import (
-            KitchenSinkBulkProfileResponse200WarningsType0Item,
+            KitchenSinkBulkProfileResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

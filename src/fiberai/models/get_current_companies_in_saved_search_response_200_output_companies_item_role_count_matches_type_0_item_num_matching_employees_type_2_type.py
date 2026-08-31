@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType2Type(
-    str, Enum
+    StrEnum
 ):
     NONE = "none"
 

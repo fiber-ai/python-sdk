@@ -216,7 +216,7 @@ def sync_detailed(
     | CardsAttachResponse500Type1
     | CardsAttachResponse503
 ]:
-    r"""Attach card to trial account
+    """Attach card to trial account
 
      Attach a payment card to a cardless trial organization using a single-use Stripe shared payment
     token. The card is verified with a temporary $1 authorization that is refunded immediately (net cost
@@ -225,8 +225,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 3 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CardsAttachBody):
@@ -271,7 +271,7 @@ def sync(
     | CardsAttachResponse503
     | None
 ):
-    r"""Attach card to trial account
+    """Attach card to trial account
 
      Attach a payment card to a cardless trial organization using a single-use Stripe shared payment
     token. The card is verified with a temporary $1 authorization that is refunded immediately (net cost
@@ -280,8 +280,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 3 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CardsAttachBody):
@@ -320,7 +320,7 @@ async def asyncio_detailed(
     | CardsAttachResponse500Type1
     | CardsAttachResponse503
 ]:
-    r"""Attach card to trial account
+    """Attach card to trial account
 
      Attach a payment card to a cardless trial organization using a single-use Stripe shared payment
     token. The card is verified with a temporary $1 authorization that is refunded immediately (net cost
@@ -329,8 +329,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 3 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CardsAttachBody):
@@ -373,7 +373,7 @@ async def asyncio(
     | CardsAttachResponse503
     | None
 ):
-    r"""Attach card to trial account
+    """Attach card to trial account
 
      Attach a payment card to a cardless trial organization using a single-use Stripe shared payment
     token. The card is verified with a temporary $1 authorization that is refunded immediately (net cost
@@ -382,8 +382,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 3 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CardsAttachBody):

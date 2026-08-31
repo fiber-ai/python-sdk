@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0Strategy(str, Enum):
+class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0Strategy(StrEnum):
     ABSOLUTE = "absolute"
 
     def __str__(self) -> str:

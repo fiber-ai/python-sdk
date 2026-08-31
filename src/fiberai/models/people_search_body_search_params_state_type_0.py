@@ -70,10 +70,10 @@ class PeopleSearchBodySearchParamsStateType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_state_type_0_any_of_type_0_item import (
-            PeopleSearchBodySearchParamsStateType0AnyOfType0Item,
+            PeopleSearchBodySearchParamsStateType0AnyOfType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_state_type_0_none_of_type_0_item import (
-            PeopleSearchBodySearchParamsStateType0NoneOfType0Item,
+            PeopleSearchBodySearchParamsStateType0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

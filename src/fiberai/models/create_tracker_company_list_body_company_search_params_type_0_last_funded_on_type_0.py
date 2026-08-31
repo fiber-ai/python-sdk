@@ -34,7 +34,7 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundedOnType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_last_funded_on_type_0_range_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundedOnType0RangeType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundedOnType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -62,7 +62,7 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundedOnType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_last_funded_on_type_0_range_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundedOnType0RangeType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundedOnType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

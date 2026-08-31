@@ -147,15 +147,15 @@ def sync_detailed(
     | GetSavedSearchRunStatusResponse500
     | GetSavedSearchRunStatusResponse503
 ]:
-    r"""Get saved search run status
+    """Get saved search run status
 
      Returns the execution status and metadata for a saved search run, including start time, completion
     time (if finished), and current status (NOT_STARTED, PROCESSING, COMPLETED, or FAILED)
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetSavedSearchRunStatusBody):
@@ -196,15 +196,15 @@ def sync(
     | GetSavedSearchRunStatusResponse503
     | None
 ):
-    r"""Get saved search run status
+    """Get saved search run status
 
      Returns the execution status and metadata for a saved search run, including start time, completion
     time (if finished), and current status (NOT_STARTED, PROCESSING, COMPLETED, or FAILED)
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetSavedSearchRunStatusBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | GetSavedSearchRunStatusResponse500
     | GetSavedSearchRunStatusResponse503
 ]:
-    r"""Get saved search run status
+    """Get saved search run status
 
      Returns the execution status and metadata for a saved search run, including start time, completion
     time (if finished), and current status (NOT_STARTED, PROCESSING, COMPLETED, or FAILED)
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetSavedSearchRunStatusBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | GetSavedSearchRunStatusResponse503
     | None
 ):
-    r"""Get saved search run status
+    """Get saved search run status
 
      Returns the execution status and metadata for a saved search run, including start time, completion
     time (if finished), and current status (NOT_STARTED, PROCESSING, COMPLETED, or FAILED)
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetSavedSearchRunStatusBody):

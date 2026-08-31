@@ -139,25 +139,25 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsSt
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0_contract import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0_full_time import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0_internship import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0_other import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Other,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Other,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0_part_time import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0_temporary import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_employment_type_stats_type_0_volunteer import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

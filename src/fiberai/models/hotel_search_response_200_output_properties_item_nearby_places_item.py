@@ -57,7 +57,7 @@ class HotelSearchResponse200OutputPropertiesItemNearbyPlacesItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.hotel_search_response_200_output_properties_item_nearby_places_item_transportations_item import (
-            HotelSearchResponse200OutputPropertiesItemNearbyPlacesItemTransportationsItem,
+            HotelSearchResponse200OutputPropertiesItemNearbyPlacesItemTransportationsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

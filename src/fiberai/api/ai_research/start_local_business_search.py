@@ -147,7 +147,7 @@ def sync_detailed(
     | StartLocalBusinessSearchResponse500
     | StartLocalBusinessSearchResponse503
 ]:
-    r"""Start Local business AI search
+    """Start Local business AI search
 
      Use our AI agent to search for local businesses and grab contact details. Results are polled
     asynchronously via the returned researchRunId. Max 500 companies per request. Estimated completion:
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 4 credits per company&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 4 credits per company&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StartLocalBusinessSearchBody):
@@ -197,7 +197,7 @@ def sync(
     | StartLocalBusinessSearchResponse503
     | None
 ):
-    r"""Start Local business AI search
+    """Start Local business AI search
 
      Use our AI agent to search for local businesses and grab contact details. Results are polled
     asynchronously via the returned researchRunId. Max 500 companies per request. Estimated completion:
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 4 credits per company&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 4 credits per company&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StartLocalBusinessSearchBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | StartLocalBusinessSearchResponse500
     | StartLocalBusinessSearchResponse503
 ]:
-    r"""Start Local business AI search
+    """Start Local business AI search
 
      Use our AI agent to search for local businesses and grab contact details. Results are polled
     asynchronously via the returned researchRunId. Max 500 companies per request. Estimated completion:
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 4 credits per company&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 4 credits per company&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StartLocalBusinessSearchBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | StartLocalBusinessSearchResponse503
     | None
 ):
-    r"""Start Local business AI search
+    """Start Local business AI search
 
      Use our AI agent to search for local businesses and grab contact details. Results are polled
     asynchronously via the returned researchRunId. Max 500 companies per request. Estimated completion:
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 4 credits per company&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 4 credits per company&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StartLocalBusinessSearchBody):

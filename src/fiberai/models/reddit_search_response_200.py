@@ -45,10 +45,18 @@ class RedditSearchResponse200:
     advice: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.reddit_search_response_200_charge_info_type_0 import RedditSearchResponse200ChargeInfoType0
-        from ..models.reddit_search_response_200_charge_info_type_1 import RedditSearchResponse200ChargeInfoType1
-        from ..models.reddit_search_response_200_charge_info_type_2 import RedditSearchResponse200ChargeInfoType2
-        from ..models.reddit_search_response_200_charge_info_type_3 import RedditSearchResponse200ChargeInfoType3
+        from ..models.reddit_search_response_200_charge_info_type_0 import (
+            RedditSearchResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.reddit_search_response_200_charge_info_type_1 import (
+            RedditSearchResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.reddit_search_response_200_charge_info_type_2 import (
+            RedditSearchResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.reddit_search_response_200_charge_info_type_3 import (
+            RedditSearchResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
 
         output = self.output.to_dict()
 
@@ -102,13 +110,25 @@ class RedditSearchResponse200:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.reddit_search_response_200_charge_info_type_0 import RedditSearchResponse200ChargeInfoType0
-        from ..models.reddit_search_response_200_charge_info_type_1 import RedditSearchResponse200ChargeInfoType1
-        from ..models.reddit_search_response_200_charge_info_type_2 import RedditSearchResponse200ChargeInfoType2
-        from ..models.reddit_search_response_200_charge_info_type_3 import RedditSearchResponse200ChargeInfoType3
-        from ..models.reddit_search_response_200_charge_info_type_4 import RedditSearchResponse200ChargeInfoType4
-        from ..models.reddit_search_response_200_output import RedditSearchResponse200Output
-        from ..models.reddit_search_response_200_warnings_type_0_item import RedditSearchResponse200WarningsType0Item
+        from ..models.reddit_search_response_200_charge_info_type_0 import (
+            RedditSearchResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.reddit_search_response_200_charge_info_type_1 import (
+            RedditSearchResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.reddit_search_response_200_charge_info_type_2 import (
+            RedditSearchResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.reddit_search_response_200_charge_info_type_3 import (
+            RedditSearchResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
+        from ..models.reddit_search_response_200_charge_info_type_4 import (
+            RedditSearchResponse200ChargeInfoType4,  # noqa: PLC0415
+        )
+        from ..models.reddit_search_response_200_output import RedditSearchResponse200Output  # noqa: PLC0415
+        from ..models.reddit_search_response_200_warnings_type_0_item import (
+            RedditSearchResponse200WarningsType0Item,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         output = RedditSearchResponse200Output.from_dict(d.pop("output"))

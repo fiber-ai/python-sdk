@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class HotelPropertyResponse200OutputPropertyTypeType1(str, Enum):
+class HotelPropertyResponse200OutputPropertyTypeType1(StrEnum):
     HOTEL = "hotel"
     VACATIONRENTAL = "vacationRental"
 

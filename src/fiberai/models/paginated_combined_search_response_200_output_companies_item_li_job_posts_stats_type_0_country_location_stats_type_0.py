@@ -2033,457 +2033,457 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0C
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hrv import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HRV,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hti import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HTI,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hun import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HUN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0idn import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IDN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0imn import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IMN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ind import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IND,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0iot import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IOT,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irl import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRL,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irn import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irq import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRQ,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0isl import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISL,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0isr import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISR,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ita import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ITA,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jam import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JAM,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jey import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JEY,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jor import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JOR,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jpn import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JPN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kaz import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KAZ,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ken import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KEN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kgz import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KGZ,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0khm import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KHM,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kir import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KIR,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kna import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KNA,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kor import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KOR,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kwt import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KWT,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lao import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LAO,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lbn import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lbr import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBR,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lby import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBY,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lca import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LCA,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lie import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LIE,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lka import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LKA,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lso import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LSO,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ltu import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LTU,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lux import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LUX,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lva import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LVA,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mac import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAC,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0maf import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAF,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mar import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAR,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mco import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MCO,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mda import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDA,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mdg import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDG,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mdv import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDV,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mex import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MEX,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mhl import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MHL,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mkd import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MKD,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mli import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLI,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mlt import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLT,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mmr import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MMR,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mne import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNE,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mng import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNG,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mnp import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNP,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0moz import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MOZ,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mrt import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MRT,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0msr import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MSR,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mtq import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MTQ,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mus import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mwi import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MWI,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mys import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYS,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0myt import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYT,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nam import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NAM,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ncl import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NCL,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ner import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NER,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nfk import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NFK,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nga import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NGA,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nic import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIC,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0niu import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIU,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nld import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NLD,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nor import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NOR,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0npl import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NPL,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nru import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NRU,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nzl import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NZL,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0omn import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0OMN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pak import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAK,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pan import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pcn import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PCN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0per import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PER,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0phl import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PHL,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0plw import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PLW,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0png import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PNG,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pol import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0POL,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pri import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRI,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0prk import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRK,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0prt import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRT,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pry import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRY,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pse import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PSE,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pyf import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PYF,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0qat import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0QAT,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0reu import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0REU,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rou import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ROU,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rus import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RUS,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rwa import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RWA,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sau import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SAU,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sdn import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SDN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sen import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SEN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sgp import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGP,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sgs import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGS,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0shn import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SHN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sjm import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SJM,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0slb import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLB,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sle import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLE,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0slv import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLV,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0smr import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SMR,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0som import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SOM,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0spm import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SPM,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0srb import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SRB,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ssd import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SSD,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0stp import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0STP,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sur import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SUR,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0svk import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVK,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0svn import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0swe import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWE,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0swz import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWZ,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sxm import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SXM,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0syc import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYC,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0syr import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYR,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tca import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCA,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tcd import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCD,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tgo import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TGO,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tha import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0THA,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tjk import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TJK,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tkl import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKL,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tkm import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKM,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tls import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TLS,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ton import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TON,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tto import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TTO,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tun import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tur import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUR,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tuv import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUV,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0twn import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TWN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tza import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TZA,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0uga import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UGA,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ukr import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UKR,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0umi import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UMI,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ury import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0URY,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0usa import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0USA,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0uzb import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UZB,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vat import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VAT,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vct import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VCT,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ven import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VEN,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vgb import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VGB,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vir import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VIR,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vnm import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VNM,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vut import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VUT,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0wlf import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WLF,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0wsm import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WSM,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0xkx import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0XKX,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0yem import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0YEM,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zaf import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZAF,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zmb import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZMB,
-        )
+        )  # noqa: PLC0415
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zwe import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZWE,
-        )
+        )  # noqa: PLC0415
 
         usa: dict[str, Any] | Unset = UNSET
         if not isinstance(self.usa, Unset):
@@ -4000,757 +4000,757 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0C
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0abw import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ABW,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ABW,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0afg import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AFG,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AFG,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ago import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AGO,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AGO,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aia import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AIA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AIA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ala import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0alb import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALB,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALB,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0and import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AND,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AND,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ant import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ANT,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ANT,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0are import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARE,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARE,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0arg import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARG,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARG,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0arm import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0asm import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ASM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ASM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ata import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0atf import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATF,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATF,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0atg import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATG,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATG,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aus import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUS,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUS,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aut import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUT,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUT,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aze import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AZE,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AZE,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bdi import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BDI,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BDI,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bel import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEL,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEL,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ben import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bes import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BES,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BES,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bfa import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BFA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BFA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bgd import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGD,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGD,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bgr import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bhr import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bhs import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHS,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHS,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bih import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BIH,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BIH,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0blm import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0blr import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0blz import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLZ,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLZ,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bmu import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BMU,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BMU,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bol import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BOL,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BOL,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bra import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0brb import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRB,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRB,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0brn import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0btn import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BTN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BTN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bvt import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BVT,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BVT,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bwa import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BWA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BWA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0caf import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAF,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAF,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0can import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cck import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CCK,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CCK,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0che import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHE,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHE,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0chl import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHL,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHL,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0chn import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0civ import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CIV,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CIV,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cmr import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CMR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CMR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cod import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COD,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COD,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cog import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COG,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COG,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cok import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COK,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COK,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0col import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COL,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COL,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0com import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cpv import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CPV,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CPV,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cri import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CRI,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CRI,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cub import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUB,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUB,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cuw import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUW,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUW,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cxr import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CXR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CXR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cym import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cyp import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYP,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYP,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cze import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CZE,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CZE,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0deu import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DEU,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DEU,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dji import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DJI,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DJI,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dma import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DMA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DMA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dnk import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DNK,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DNK,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dom import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DOM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DOM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dza import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DZA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DZA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ecu import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ECU,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ECU,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0egy import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EGY,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EGY,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0eri import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ERI,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ERI,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0esh import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESH,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESH,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0esp import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESP,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESP,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0est import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EST,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EST,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0eth import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ETH,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ETH,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fin import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FIN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FIN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fji import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FJI,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FJI,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0flk import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FLK,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FLK,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fra import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fro import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRO,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRO,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fsm import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FSM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FSM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gab import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GAB,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GAB,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gbr import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GBR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GBR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0geo import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GEO,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GEO,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ggy import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GGY,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GGY,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gha import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GHA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GHA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gib import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIB,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIB,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gin import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0glp import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GLP,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GLP,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gmb import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GMB,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GMB,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gnb import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNB,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNB,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gnq import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNQ,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNQ,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0grc import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRC,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRC,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0grd import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRD,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRD,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0grl import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRL,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRL,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gtm import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GTM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GTM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0guf import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUF,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUF,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gum import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0guy import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUY,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUY,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hkg import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HKG,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HKG,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hmd import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HMD,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HMD,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hnd import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HND,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HND,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hrv import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HRV,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HRV,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hti import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HTI,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HTI,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hun import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HUN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HUN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0idn import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IDN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IDN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0imn import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IMN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IMN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ind import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IND,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IND,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0iot import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IOT,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IOT,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irl import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRL,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRL,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irn import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irq import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRQ,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRQ,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0isl import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISL,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISL,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0isr import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ita import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ITA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ITA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jam import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JAM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JAM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jey import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JEY,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JEY,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jor import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JOR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JOR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jpn import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JPN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JPN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kaz import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KAZ,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KAZ,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ken import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KEN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KEN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kgz import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KGZ,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KGZ,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0khm import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KHM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KHM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kir import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KIR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KIR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kna import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KNA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KNA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kor import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KOR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KOR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kwt import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KWT,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KWT,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lao import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LAO,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LAO,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lbn import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lbr import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lby import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBY,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBY,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lca import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LCA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LCA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lie import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LIE,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LIE,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lka import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LKA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LKA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lso import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LSO,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LSO,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ltu import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LTU,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LTU,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lux import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LUX,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LUX,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lva import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LVA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LVA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mac import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAC,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAC,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0maf import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAF,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAF,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mar import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mco import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MCO,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MCO,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mda import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mdg import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDG,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDG,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mdv import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDV,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDV,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mex import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MEX,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MEX,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mhl import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MHL,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MHL,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mkd import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MKD,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MKD,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mli import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLI,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLI,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mlt import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLT,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLT,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mmr import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MMR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MMR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mne import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNE,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNE,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mng import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNG,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNG,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mnp import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNP,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNP,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0moz import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MOZ,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MOZ,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mrt import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MRT,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MRT,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0msr import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MSR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MSR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mtq import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MTQ,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MTQ,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mus import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mwi import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MWI,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MWI,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mys import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYS,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYS,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0myt import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYT,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYT,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nam import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NAM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NAM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ncl import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NCL,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NCL,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ner import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NER,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NER,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nfk import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NFK,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NFK,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nga import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NGA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NGA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nic import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIC,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIC,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0niu import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIU,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIU,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nld import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NLD,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NLD,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nor import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NOR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NOR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0npl import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NPL,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NPL,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nru import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NRU,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NRU,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nzl import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NZL,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NZL,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0omn import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0OMN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0OMN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pak import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAK,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAK,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pan import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pcn import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PCN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PCN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0per import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PER,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PER,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0phl import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PHL,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PHL,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0plw import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PLW,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PLW,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0png import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PNG,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PNG,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pol import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0POL,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0POL,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pri import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRI,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRI,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0prk import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRK,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRK,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0prt import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRT,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRT,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pry import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRY,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRY,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pse import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PSE,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PSE,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pyf import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PYF,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PYF,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0qat import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0QAT,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0QAT,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0reu import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0REU,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0REU,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rou import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ROU,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ROU,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rus import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RUS,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RUS,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rwa import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RWA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RWA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sau import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SAU,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SAU,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sdn import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SDN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SDN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sen import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SEN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SEN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sgp import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGP,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGP,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sgs import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGS,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGS,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0shn import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SHN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SHN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sjm import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SJM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SJM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0slb import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLB,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLB,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sle import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLE,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLE,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0slv import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLV,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLV,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0smr import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SMR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SMR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0som import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SOM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SOM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0spm import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SPM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SPM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0srb import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SRB,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SRB,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ssd import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SSD,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SSD,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0stp import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0STP,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0STP,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sur import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SUR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SUR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0svk import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVK,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVK,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0svn import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0swe import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWE,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWE,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0swz import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWZ,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWZ,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sxm import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SXM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SXM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0syc import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYC,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYC,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0syr import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tca import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tcd import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCD,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCD,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tgo import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TGO,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TGO,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tha import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0THA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0THA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tjk import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TJK,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TJK,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tkl import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKL,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKL,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tkm import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tls import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TLS,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TLS,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ton import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TON,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TON,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tto import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TTO,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TTO,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tun import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tur import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tuv import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUV,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUV,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0twn import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TWN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TWN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tza import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TZA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TZA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0uga import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UGA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UGA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ukr import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UKR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UKR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0umi import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UMI,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UMI,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ury import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0URY,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0URY,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0usa import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0USA,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0USA,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0uzb import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UZB,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UZB,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vat import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VAT,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VAT,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vct import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VCT,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VCT,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ven import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VEN,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VEN,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vgb import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VGB,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VGB,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vir import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VIR,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VIR,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vnm import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VNM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VNM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vut import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VUT,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VUT,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0wlf import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WLF,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WLF,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0wsm import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WSM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WSM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0xkx import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0XKX,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0XKX,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0yem import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0YEM,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0YEM,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zaf import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZAF,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZAF,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zmb import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZMB,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZMB,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zwe import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZWE,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZWE,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -53,10 +53,10 @@ class ListAvailableTrackerRulesResponse200OutputCompanyRulesItemSignal:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.list_available_tracker_rules_response_200_output_company_rules_item_signal_example import (
-            ListAvailableTrackerRulesResponse200OutputCompanyRulesItemSignalExample,
+            ListAvailableTrackerRulesResponse200OutputCompanyRulesItemSignalExample,  # noqa: PLC0415
         )
         from ..models.list_available_tracker_rules_response_200_output_company_rules_item_signal_schema import (
-            ListAvailableTrackerRulesResponse200OutputCompanyRulesItemSignalSchema,
+            ListAvailableTrackerRulesResponse200OutputCompanyRulesItemSignalSchema,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

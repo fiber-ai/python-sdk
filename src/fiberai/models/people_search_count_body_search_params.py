@@ -299,136 +299,136 @@ class PeopleSearchCountBodySearchParams:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_count_body_search_params_approx_age_type_0 import (
-            PeopleSearchCountBodySearchParamsApproxAgeType0,
+            PeopleSearchCountBodySearchParamsApproxAgeType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_certifications_type_0 import (
-            PeopleSearchCountBodySearchParamsCertificationsType0,
+            PeopleSearchCountBodySearchParamsCertificationsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_company_match_mode_type_0 import (
-            PeopleSearchCountBodySearchParamsCompanyMatchModeType0,
+            PeopleSearchCountBodySearchParamsCompanyMatchModeType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_company_match_mode_type_1 import (
-            PeopleSearchCountBodySearchParamsCompanyMatchModeType1,
+            PeopleSearchCountBodySearchParamsCompanyMatchModeType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_country_3_letter_code_type_0 import (
-            PeopleSearchCountBodySearchParamsCountry3LetterCodeType0,
+            PeopleSearchCountBodySearchParamsCountry3LetterCodeType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_current_jobs_type_0 import (
-            PeopleSearchCountBodySearchParamsCurrentJobsType0,
+            PeopleSearchCountBodySearchParamsCurrentJobsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0,
+            PeopleSearchCountBodySearchParamsEducationType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_employment_type_type_0 import (
-            PeopleSearchCountBodySearchParamsEmploymentTypeType0,
+            PeopleSearchCountBodySearchParamsEmploymentTypeType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_exact_profile_type_0 import (
-            PeopleSearchCountBodySearchParamsExactProfileType0,
+            PeopleSearchCountBodySearchParamsExactProfileType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_exact_profile_v2_type_0 import (
-            PeopleSearchCountBodySearchParamsExactProfileV2Type0,
+            PeopleSearchCountBodySearchParamsExactProfileV2Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_fuzzy_name_type_0 import (
-            PeopleSearchCountBodySearchParamsFuzzyNameType0,
+            PeopleSearchCountBodySearchParamsFuzzyNameType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_industry_type_0 import (
-            PeopleSearchCountBodySearchParamsIndustryType0,
+            PeopleSearchCountBodySearchParamsIndustryType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_job_status_type_0 import (
-            PeopleSearchCountBodySearchParamsJobStatusType0,
+            PeopleSearchCountBodySearchParamsJobStatusType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_job_status_type_1 import (
-            PeopleSearchCountBodySearchParamsJobStatusType1,
+            PeopleSearchCountBodySearchParamsJobStatusType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_job_status_type_2 import (
-            PeopleSearchCountBodySearchParamsJobStatusType2,
+            PeopleSearchCountBodySearchParamsJobStatusType2,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_job_title_v2_type_0 import (
-            PeopleSearchCountBodySearchParamsJobTitleV2Type0,
+            PeopleSearchCountBodySearchParamsJobTitleV2Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_job_title_v3_type_0 import (
-            PeopleSearchCountBodySearchParamsJobTitleV3Type0,
+            PeopleSearchCountBodySearchParamsJobTitleV3Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_jobs_type_0 import (
-            PeopleSearchCountBodySearchParamsJobsType0,
+            PeopleSearchCountBodySearchParamsJobsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_joined_linked_in_at_type_0 import (
-            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType0,
+            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_joined_linked_in_at_type_1 import (
-            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1,
+            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_keyword_search_options_type_0 import (
-            PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0,
+            PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_keywords_type_0 import (
-            PeopleSearchCountBodySearchParamsKeywordsType0,
+            PeopleSearchCountBodySearchParamsKeywordsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_keywords_v2_type_0 import (
-            PeopleSearchCountBodySearchParamsKeywordsV2Type0,
+            PeopleSearchCountBodySearchParamsKeywordsV2Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_languages_type_0 import (
-            PeopleSearchCountBodySearchParamsLanguagesType0,
+            PeopleSearchCountBodySearchParamsLanguagesType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_left_stealth_at_type_0 import (
-            PeopleSearchCountBodySearchParamsLeftStealthAtType0,
+            PeopleSearchCountBodySearchParamsLeftStealthAtType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_left_stealth_at_type_1 import (
-            PeopleSearchCountBodySearchParamsLeftStealthAtType1,
+            PeopleSearchCountBodySearchParamsLeftStealthAtType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_location_type_0 import (
-            PeopleSearchCountBodySearchParamsLocationType0,
+            PeopleSearchCountBodySearchParamsLocationType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_num_connections_type_0 import (
-            PeopleSearchCountBodySearchParamsNumConnectionsType0,
+            PeopleSearchCountBodySearchParamsNumConnectionsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_num_followers_type_0 import (
-            PeopleSearchCountBodySearchParamsNumFollowersType0,
+            PeopleSearchCountBodySearchParamsNumFollowersType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_past_job_text_type_0 import (
-            PeopleSearchCountBodySearchParamsPastJobTextType0,
+            PeopleSearchCountBodySearchParamsPastJobTextType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_past_jobs_type_0 import (
-            PeopleSearchCountBodySearchParamsPastJobsType0,
+            PeopleSearchCountBodySearchParamsPastJobsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_publications_type_0 import (
-            PeopleSearchCountBodySearchParamsPublicationsType0,
+            PeopleSearchCountBodySearchParamsPublicationsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_at_company_type_0 import (
-            PeopleSearchCountBodySearchParamsStartedAtCompanyType0,
+            PeopleSearchCountBodySearchParamsStartedAtCompanyType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_at_company_type_1 import (
-            PeopleSearchCountBodySearchParamsStartedAtCompanyType1,
+            PeopleSearchCountBodySearchParamsStartedAtCompanyType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_in_role_type_0 import (
-            PeopleSearchCountBodySearchParamsStartedInRoleType0,
+            PeopleSearchCountBodySearchParamsStartedInRoleType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_in_role_type_1 import (
-            PeopleSearchCountBodySearchParamsStartedInRoleType1,
+            PeopleSearchCountBodySearchParamsStartedInRoleType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_state_type_0 import (
-            PeopleSearchCountBodySearchParamsStateType0,
+            PeopleSearchCountBodySearchParamsStateType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_stealth_v2_type_0 import (
-            PeopleSearchCountBodySearchParamsStealthV2Type0,
+            PeopleSearchCountBodySearchParamsStealthV2Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_stealth_v2_type_1 import (
-            PeopleSearchCountBodySearchParamsStealthV2Type1,
+            PeopleSearchCountBodySearchParamsStealthV2Type1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_tags_type_0 import (
-            PeopleSearchCountBodySearchParamsTagsType0,
+            PeopleSearchCountBodySearchParamsTagsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_time_zone_type_0 import (
-            PeopleSearchCountBodySearchParamsTimeZoneType0,
+            PeopleSearchCountBodySearchParamsTimeZoneType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_unemployment_type_0 import (
-            PeopleSearchCountBodySearchParamsUnemploymentType0,
+            PeopleSearchCountBodySearchParamsUnemploymentType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_years_of_experience_type_0 import (
-            PeopleSearchCountBodySearchParamsYearsOfExperienceType0,
+            PeopleSearchCountBodySearchParamsYearsOfExperienceType0,  # noqa: PLC0415
         )
 
         country_3_letter_code: dict[str, Any] | None | Unset
@@ -918,139 +918,139 @@ class PeopleSearchCountBodySearchParams:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_body_search_params_approx_age_type_0 import (
-            PeopleSearchCountBodySearchParamsApproxAgeType0,
+            PeopleSearchCountBodySearchParamsApproxAgeType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_certifications_type_0 import (
-            PeopleSearchCountBodySearchParamsCertificationsType0,
+            PeopleSearchCountBodySearchParamsCertificationsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_company_match_mode_type_0 import (
-            PeopleSearchCountBodySearchParamsCompanyMatchModeType0,
+            PeopleSearchCountBodySearchParamsCompanyMatchModeType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_company_match_mode_type_1 import (
-            PeopleSearchCountBodySearchParamsCompanyMatchModeType1,
+            PeopleSearchCountBodySearchParamsCompanyMatchModeType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_country_3_letter_code_type_0 import (
-            PeopleSearchCountBodySearchParamsCountry3LetterCodeType0,
+            PeopleSearchCountBodySearchParamsCountry3LetterCodeType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_current_jobs_type_0 import (
-            PeopleSearchCountBodySearchParamsCurrentJobsType0,
+            PeopleSearchCountBodySearchParamsCurrentJobsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0,
+            PeopleSearchCountBodySearchParamsEducationType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_employment_type_type_0 import (
-            PeopleSearchCountBodySearchParamsEmploymentTypeType0,
+            PeopleSearchCountBodySearchParamsEmploymentTypeType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_exact_profile_type_0 import (
-            PeopleSearchCountBodySearchParamsExactProfileType0,
+            PeopleSearchCountBodySearchParamsExactProfileType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_exact_profile_v2_type_0 import (
-            PeopleSearchCountBodySearchParamsExactProfileV2Type0,
+            PeopleSearchCountBodySearchParamsExactProfileV2Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_fuzzy_name_type_0 import (
-            PeopleSearchCountBodySearchParamsFuzzyNameType0,
+            PeopleSearchCountBodySearchParamsFuzzyNameType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_industry_type_0 import (
-            PeopleSearchCountBodySearchParamsIndustryType0,
+            PeopleSearchCountBodySearchParamsIndustryType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_job_status_type_0 import (
-            PeopleSearchCountBodySearchParamsJobStatusType0,
+            PeopleSearchCountBodySearchParamsJobStatusType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_job_status_type_1 import (
-            PeopleSearchCountBodySearchParamsJobStatusType1,
+            PeopleSearchCountBodySearchParamsJobStatusType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_job_status_type_2 import (
-            PeopleSearchCountBodySearchParamsJobStatusType2,
+            PeopleSearchCountBodySearchParamsJobStatusType2,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_job_title_v2_type_0 import (
-            PeopleSearchCountBodySearchParamsJobTitleV2Type0,
+            PeopleSearchCountBodySearchParamsJobTitleV2Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_job_title_v3_type_0 import (
-            PeopleSearchCountBodySearchParamsJobTitleV3Type0,
+            PeopleSearchCountBodySearchParamsJobTitleV3Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_jobs_type_0 import (
-            PeopleSearchCountBodySearchParamsJobsType0,
+            PeopleSearchCountBodySearchParamsJobsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_joined_linked_in_at_type_0 import (
-            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType0,
+            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_joined_linked_in_at_type_1 import (
-            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1,
+            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_keyword_search_options_type_0 import (
-            PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0,
+            PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_keywords_type_0 import (
-            PeopleSearchCountBodySearchParamsKeywordsType0,
+            PeopleSearchCountBodySearchParamsKeywordsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_keywords_v2_type_0 import (
-            PeopleSearchCountBodySearchParamsKeywordsV2Type0,
+            PeopleSearchCountBodySearchParamsKeywordsV2Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_languages_type_0 import (
-            PeopleSearchCountBodySearchParamsLanguagesType0,
+            PeopleSearchCountBodySearchParamsLanguagesType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_left_stealth_at_type_0 import (
-            PeopleSearchCountBodySearchParamsLeftStealthAtType0,
+            PeopleSearchCountBodySearchParamsLeftStealthAtType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_left_stealth_at_type_1 import (
-            PeopleSearchCountBodySearchParamsLeftStealthAtType1,
+            PeopleSearchCountBodySearchParamsLeftStealthAtType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_location_type_0 import (
-            PeopleSearchCountBodySearchParamsLocationType0,
+            PeopleSearchCountBodySearchParamsLocationType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_num_connections_type_0 import (
-            PeopleSearchCountBodySearchParamsNumConnectionsType0,
+            PeopleSearchCountBodySearchParamsNumConnectionsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_num_followers_type_0 import (
-            PeopleSearchCountBodySearchParamsNumFollowersType0,
+            PeopleSearchCountBodySearchParamsNumFollowersType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_past_job_text_type_0 import (
-            PeopleSearchCountBodySearchParamsPastJobTextType0,
+            PeopleSearchCountBodySearchParamsPastJobTextType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_past_jobs_type_0 import (
-            PeopleSearchCountBodySearchParamsPastJobsType0,
+            PeopleSearchCountBodySearchParamsPastJobsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_publications_type_0 import (
-            PeopleSearchCountBodySearchParamsPublicationsType0,
+            PeopleSearchCountBodySearchParamsPublicationsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_sort_type_0_item import (
-            PeopleSearchCountBodySearchParamsSortType0Item,
+            PeopleSearchCountBodySearchParamsSortType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_at_company_type_0 import (
-            PeopleSearchCountBodySearchParamsStartedAtCompanyType0,
+            PeopleSearchCountBodySearchParamsStartedAtCompanyType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_at_company_type_1 import (
-            PeopleSearchCountBodySearchParamsStartedAtCompanyType1,
+            PeopleSearchCountBodySearchParamsStartedAtCompanyType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_in_role_type_0 import (
-            PeopleSearchCountBodySearchParamsStartedInRoleType0,
+            PeopleSearchCountBodySearchParamsStartedInRoleType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_in_role_type_1 import (
-            PeopleSearchCountBodySearchParamsStartedInRoleType1,
+            PeopleSearchCountBodySearchParamsStartedInRoleType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_state_type_0 import (
-            PeopleSearchCountBodySearchParamsStateType0,
+            PeopleSearchCountBodySearchParamsStateType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_stealth_v2_type_0 import (
-            PeopleSearchCountBodySearchParamsStealthV2Type0,
+            PeopleSearchCountBodySearchParamsStealthV2Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_stealth_v2_type_1 import (
-            PeopleSearchCountBodySearchParamsStealthV2Type1,
+            PeopleSearchCountBodySearchParamsStealthV2Type1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_tags_type_0 import (
-            PeopleSearchCountBodySearchParamsTagsType0,
+            PeopleSearchCountBodySearchParamsTagsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_time_zone_type_0 import (
-            PeopleSearchCountBodySearchParamsTimeZoneType0,
+            PeopleSearchCountBodySearchParamsTimeZoneType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_unemployment_type_0 import (
-            PeopleSearchCountBodySearchParamsUnemploymentType0,
+            PeopleSearchCountBodySearchParamsUnemploymentType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_years_of_experience_type_0 import (
-            PeopleSearchCountBodySearchParamsYearsOfExperienceType0,
+            PeopleSearchCountBodySearchParamsYearsOfExperienceType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

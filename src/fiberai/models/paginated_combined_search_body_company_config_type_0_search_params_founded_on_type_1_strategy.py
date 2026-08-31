@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFoundedOnType1Strategy(str, Enum):
+class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFoundedOnType1Strategy(StrEnum):
     RELATIVE = "relative"
 
     def __str__(self) -> str:

@@ -185,16 +185,16 @@ class LiteReverseEmailLookupResponse200OutputDataItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_current_job_type_0 import (
-            LiteReverseEmailLookupResponse200OutputDataItemCurrentJobType0,
+            LiteReverseEmailLookupResponse200OutputDataItemCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_custom_data_type_0 import (
-            LiteReverseEmailLookupResponse200OutputDataItemCustomDataType0,
+            LiteReverseEmailLookupResponse200OutputDataItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_inferred_location_type_0 import (
-            LiteReverseEmailLookupResponse200OutputDataItemInferredLocationType0,
+            LiteReverseEmailLookupResponse200OutputDataItemInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_verifications_type_0 import (
-            LiteReverseEmailLookupResponse200OutputDataItemVerificationsType0,
+            LiteReverseEmailLookupResponse200OutputDataItemVerificationsType0,  # noqa: PLC0415
         )
 
         primary_slug = self.primary_slug
@@ -709,58 +709,58 @@ class LiteReverseEmailLookupResponse200OutputDataItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_articles_type_0_item import (
-            LiteReverseEmailLookupResponse200OutputDataItemArticlesType0Item,
+            LiteReverseEmailLookupResponse200OutputDataItemArticlesType0Item,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_certifications_type_0_item import (
-            LiteReverseEmailLookupResponse200OutputDataItemCertificationsType0Item,
+            LiteReverseEmailLookupResponse200OutputDataItemCertificationsType0Item,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_courses_type_0_item import (
-            LiteReverseEmailLookupResponse200OutputDataItemCoursesType0Item,
+            LiteReverseEmailLookupResponse200OutputDataItemCoursesType0Item,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_current_job_type_0 import (
-            LiteReverseEmailLookupResponse200OutputDataItemCurrentJobType0,
+            LiteReverseEmailLookupResponse200OutputDataItemCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_custom_data_type_0 import (
-            LiteReverseEmailLookupResponse200OutputDataItemCustomDataType0,
+            LiteReverseEmailLookupResponse200OutputDataItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_detailed_education_type_0_item import (
-            LiteReverseEmailLookupResponse200OutputDataItemDetailedEducationType0Item,
+            LiteReverseEmailLookupResponse200OutputDataItemDetailedEducationType0Item,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_detailed_work_experiences_type_0_item import (
-            LiteReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0Item,
+            LiteReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_education_type_0_item import (
-            LiteReverseEmailLookupResponse200OutputDataItemEducationType0Item,
+            LiteReverseEmailLookupResponse200OutputDataItemEducationType0Item,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_experiences_type_0_item import (
-            LiteReverseEmailLookupResponse200OutputDataItemExperiencesType0Item,
+            LiteReverseEmailLookupResponse200OutputDataItemExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_inferred_location_type_0 import (
-            LiteReverseEmailLookupResponse200OutputDataItemInferredLocationType0,
+            LiteReverseEmailLookupResponse200OutputDataItemInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_languages_type_0_item import (
-            LiteReverseEmailLookupResponse200OutputDataItemLanguagesType0Item,
+            LiteReverseEmailLookupResponse200OutputDataItemLanguagesType0Item,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_organizations_type_0_item import (
-            LiteReverseEmailLookupResponse200OutputDataItemOrganizationsType0Item,
+            LiteReverseEmailLookupResponse200OutputDataItemOrganizationsType0Item,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_patents_type_0_item import (
-            LiteReverseEmailLookupResponse200OutputDataItemPatentsType0Item,
+            LiteReverseEmailLookupResponse200OutputDataItemPatentsType0Item,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_projects_type_0_item import (
-            LiteReverseEmailLookupResponse200OutputDataItemProjectsType0Item,
+            LiteReverseEmailLookupResponse200OutputDataItemProjectsType0Item,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_publications_type_0_item import (
-            LiteReverseEmailLookupResponse200OutputDataItemPublicationsType0Item,
+            LiteReverseEmailLookupResponse200OutputDataItemPublicationsType0Item,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_tenures_type_0_item import (
-            LiteReverseEmailLookupResponse200OutputDataItemTenuresType0Item,
+            LiteReverseEmailLookupResponse200OutputDataItemTenuresType0Item,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_verifications_type_0 import (
-            LiteReverseEmailLookupResponse200OutputDataItemVerificationsType0,
+            LiteReverseEmailLookupResponse200OutputDataItemVerificationsType0,  # noqa: PLC0415
         )
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_volunteering_type_0_item import (
-            LiteReverseEmailLookupResponse200OutputDataItemVolunteeringType0Item,
+            LiteReverseEmailLookupResponse200OutputDataItemVolunteeringType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

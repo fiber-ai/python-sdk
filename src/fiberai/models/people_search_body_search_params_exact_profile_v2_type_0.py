@@ -66,16 +66,16 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_any_of_type_0_item_type_0 import (
-            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType0,
+            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_any_of_type_0_item_type_1 import (
-            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType1,
+            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_none_of_type_0_item_type_0 import (
-            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType0,
+            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_none_of_type_0_item_type_1 import (
-            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType1,
+            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType1,  # noqa: PLC0415
         )
 
         any_of: list[dict[str, Any]] | None | Unset
@@ -137,22 +137,22 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_any_of_type_0_item_type_0 import (
-            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType0,
+            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_any_of_type_0_item_type_1 import (
-            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType1,
+            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_any_of_type_0_item_type_2 import (
-            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2,
+            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_none_of_type_0_item_type_0 import (
-            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType0,
+            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_none_of_type_0_item_type_1 import (
-            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType1,
+            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_none_of_type_0_item_type_2 import (
-            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType2,
+            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

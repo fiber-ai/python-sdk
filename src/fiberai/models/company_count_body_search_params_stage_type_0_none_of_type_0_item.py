@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanyCountBodySearchParamsStageType0NoneOfType0Item(str, Enum):
+class CompanyCountBodySearchParamsStageType0NoneOfType0Item(StrEnum):
     ACQUIRED = "acquired"
     CLOSED = "closed"
     NO_FUNDING_YET = "no_funding_yet"

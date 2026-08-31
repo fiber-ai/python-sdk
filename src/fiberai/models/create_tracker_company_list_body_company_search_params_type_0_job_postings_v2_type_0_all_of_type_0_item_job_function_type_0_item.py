@@ -1,9 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AllOfType0ItemJobFunctionType0Item(
-    str, Enum
-):
+class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AllOfType0ItemJobFunctionType0Item(StrEnum):
     ACCOUNTING = "Accounting"
     ADMINISTRATIVE = "Administrative"
     ADVERTISING = "Advertising"

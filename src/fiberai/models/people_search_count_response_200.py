@@ -48,16 +48,16 @@ class PeopleSearchCountResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_count_response_200_charge_info_type_0 import (
-            PeopleSearchCountResponse200ChargeInfoType0,
+            PeopleSearchCountResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_response_200_charge_info_type_1 import (
-            PeopleSearchCountResponse200ChargeInfoType1,
+            PeopleSearchCountResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_response_200_charge_info_type_2 import (
-            PeopleSearchCountResponse200ChargeInfoType2,
+            PeopleSearchCountResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.people_search_count_response_200_charge_info_type_3 import (
-            PeopleSearchCountResponse200ChargeInfoType3,
+            PeopleSearchCountResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class PeopleSearchCountResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_response_200_charge_info_type_0 import (
-            PeopleSearchCountResponse200ChargeInfoType0,
+            PeopleSearchCountResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_response_200_charge_info_type_1 import (
-            PeopleSearchCountResponse200ChargeInfoType1,
+            PeopleSearchCountResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_response_200_charge_info_type_2 import (
-            PeopleSearchCountResponse200ChargeInfoType2,
+            PeopleSearchCountResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.people_search_count_response_200_charge_info_type_3 import (
-            PeopleSearchCountResponse200ChargeInfoType3,
+            PeopleSearchCountResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.people_search_count_response_200_charge_info_type_4 import (
-            PeopleSearchCountResponse200ChargeInfoType4,
+            PeopleSearchCountResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.people_search_count_response_200_output import PeopleSearchCountResponse200Output
+        from ..models.people_search_count_response_200_output import PeopleSearchCountResponse200Output  # noqa: PLC0415
         from ..models.people_search_count_response_200_warnings_type_0_item import (
-            PeopleSearchCountResponse200WarningsType0Item,
+            PeopleSearchCountResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

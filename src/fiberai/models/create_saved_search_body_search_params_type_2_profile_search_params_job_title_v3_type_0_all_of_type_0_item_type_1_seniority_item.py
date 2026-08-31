@@ -1,9 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0AllOfType0ItemType1SeniorityItem(
-    str, Enum
-):
+class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0AllOfType0ItemType1SeniorityItem(StrEnum):
     C_SUITE = "c-suite"
     DIRECTOR = "director"
     HEAD = "head"

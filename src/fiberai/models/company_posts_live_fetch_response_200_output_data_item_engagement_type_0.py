@@ -84,7 +84,7 @@ class CompanyPostsLiveFetchResponse200OutputDataItemEngagementType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_posts_live_fetch_response_200_output_data_item_engagement_type_0_reactions_by_type_type_0_item import (
-            CompanyPostsLiveFetchResponse200OutputDataItemEngagementType0ReactionsByTypeType0Item,
+            CompanyPostsLiveFetchResponse200OutputDataItemEngagementType0ReactionsByTypeType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

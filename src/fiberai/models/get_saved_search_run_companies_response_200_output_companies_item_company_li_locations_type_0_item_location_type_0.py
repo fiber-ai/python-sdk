@@ -60,7 +60,7 @@ class GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiLocations
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_locations_type_0_item_location_type_0_coordinates_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiLocationsType0ItemLocationType0CoordinatesType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiLocationsType0ItemLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         street_address: None | str | Unset
@@ -181,7 +181,7 @@ class GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiLocations
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_locations_type_0_item_location_type_0_coordinates_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiLocationsType0ItemLocationType0CoordinatesType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiLocationsType0ItemLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

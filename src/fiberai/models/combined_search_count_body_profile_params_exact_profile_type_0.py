@@ -70,10 +70,10 @@ class CombinedSearchCountBodyProfileParamsExactProfileType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_exact_profile_type_0_any_of_type_0_item import (
-            CombinedSearchCountBodyProfileParamsExactProfileType0AnyOfType0Item,
+            CombinedSearchCountBodyProfileParamsExactProfileType0AnyOfType0Item,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_exact_profile_type_0_none_of_type_0_item import (
-            CombinedSearchCountBodyProfileParamsExactProfileType0NoneOfType0Item,
+            CombinedSearchCountBodyProfileParamsExactProfileType0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

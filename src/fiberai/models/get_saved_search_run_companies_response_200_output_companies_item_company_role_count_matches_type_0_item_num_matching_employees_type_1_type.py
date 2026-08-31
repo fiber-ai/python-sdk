@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyRoleCountMatchesType0ItemNumMatchingEmployeesType1Type(
-    str, Enum
+    StrEnum
 ):
     ALL = "all"
 

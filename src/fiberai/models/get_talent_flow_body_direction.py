@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetTalentFlowBodyDirection(str, Enum):
+class GetTalentFlowBodyDirection(StrEnum):
     JOINERS = "joiners"
     LEAVERS = "leavers"
 

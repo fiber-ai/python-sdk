@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchCountBodySearchParamsStartedInRoleType1WindowType0Method(str, Enum):
+class PeopleSearchCountBodySearchParamsStartedInRoleType1WindowType0Method(StrEnum):
     LASTN = "lastN"
 
     def __str__(self) -> str:

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class TenureChangeDirection(str, Enum):
+class TenureChangeDirection(StrEnum):
     DECREASED = "decreased"
     INCREASED = "increased"
 

@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType3Type(
-    str, Enum
+    StrEnum
 ):
     NOT_MATCHED = "not-matched"
 

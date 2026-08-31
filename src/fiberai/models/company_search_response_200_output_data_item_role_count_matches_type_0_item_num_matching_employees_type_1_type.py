@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType1Type(str, Enum):
+class CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType1Type(StrEnum):
     ALL = "all"
 
     def __str__(self) -> str:

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0AllOfType0ItemType3Rule(str, Enum):
+class CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0AllOfType0ItemType3Rule(StrEnum):
     EMPLOYMENT_TYPE = "employment-type"
 
     def __str__(self) -> str:

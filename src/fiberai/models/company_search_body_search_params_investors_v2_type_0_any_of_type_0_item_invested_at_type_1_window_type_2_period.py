@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanySearchBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType2Period(str, Enum):
+class CompanySearchBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1WindowType2Period(StrEnum):
     DAY = "day"
     MONTH = "month"
     QUARTER = "quarter"

@@ -147,15 +147,15 @@ def sync_detailed(
     | GetAcceleratorsResponse500
     | GetAcceleratorsResponse503
 ]:
-    r"""List accelerators
+    """List accelerators
 
      Get a list of all accelerators with their metadata, total company counts, and statistics broken down
     by batch and year. Useful for filtering accelerator data in search APIs.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -196,15 +196,15 @@ def sync(
     | GetAcceleratorsResponse503
     | None
 ):
-    r"""List accelerators
+    """List accelerators
 
      Get a list of all accelerators with their metadata, total company counts, and statistics broken down
     by batch and year. Useful for filtering accelerator data in search APIs.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | GetAcceleratorsResponse500
     | GetAcceleratorsResponse503
 ]:
-    r"""List accelerators
+    """List accelerators
 
      Get a list of all accelerators with their metadata, total company counts, and statistics broken down
     by batch and year. Useful for filtering accelerator data in search APIs.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -286,15 +286,15 @@ async def asyncio(
     | GetAcceleratorsResponse503
     | None
 ):
-    r"""List accelerators
+    """List accelerators
 
      Get a list of all accelerators with their metadata, total company counts, and statistics broken down
     by batch and year. Useful for filtering accelerator data in search APIs.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):

@@ -52,7 +52,7 @@ class RemoveCompanyFromExclusionListBody:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.remove_company_from_exclusion_list_body_excluded_company_details import (
-            RemoveCompanyFromExclusionListBodyExcludedCompanyDetails,
+            RemoveCompanyFromExclusionListBodyExcludedCompanyDetails,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

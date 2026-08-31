@@ -42,8 +42,12 @@ class SocialMediaLookupTriggerBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.social_media_lookup_trigger_body_person_type_0 import SocialMediaLookupTriggerBodyPersonType0
-        from ..models.social_media_lookup_trigger_body_person_type_1 import SocialMediaLookupTriggerBodyPersonType1
+        from ..models.social_media_lookup_trigger_body_person_type_0 import (
+            SocialMediaLookupTriggerBodyPersonType0,  # noqa: PLC0415
+        )
+        from ..models.social_media_lookup_trigger_body_person_type_1 import (
+            SocialMediaLookupTriggerBodyPersonType1,  # noqa: PLC0415
+        )
 
         api_key = self.api_key
 
@@ -85,9 +89,15 @@ class SocialMediaLookupTriggerBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.social_media_lookup_trigger_body_person_type_0 import SocialMediaLookupTriggerBodyPersonType0
-        from ..models.social_media_lookup_trigger_body_person_type_1 import SocialMediaLookupTriggerBodyPersonType1
-        from ..models.social_media_lookup_trigger_body_person_type_2 import SocialMediaLookupTriggerBodyPersonType2
+        from ..models.social_media_lookup_trigger_body_person_type_0 import (
+            SocialMediaLookupTriggerBodyPersonType0,  # noqa: PLC0415
+        )
+        from ..models.social_media_lookup_trigger_body_person_type_1 import (
+            SocialMediaLookupTriggerBodyPersonType1,  # noqa: PLC0415
+        )
+        from ..models.social_media_lookup_trigger_body_person_type_2 import (
+            SocialMediaLookupTriggerBodyPersonType2,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

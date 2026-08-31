@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class RemoveTrackerCompaniesResponse200ChargeInfoType4Method(str, Enum):
+class RemoveTrackerCompaniesResponse200ChargeInfoType4Method(StrEnum):
     CREDITS_REFUNDED = "credits-refunded"
 
     def __str__(self) -> str:

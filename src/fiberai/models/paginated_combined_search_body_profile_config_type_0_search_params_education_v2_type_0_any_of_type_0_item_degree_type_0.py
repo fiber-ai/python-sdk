@@ -54,7 +54,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationV2Type0A
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_education_v2_type_0_any_of_type_0_item_degree_type_0_criteria import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationV2Type0AnyOfType0ItemDegreeType0Criteria,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationV2Type0AnyOfType0ItemDegreeType0Criteria,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

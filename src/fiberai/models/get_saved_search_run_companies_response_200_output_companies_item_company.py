@@ -362,43 +362,43 @@ class GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompany:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_best_funding_round_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyBestFundingRoundType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyBestFundingRoundType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_custom_data_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyCustomDataType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyCustomDataType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_employee_count_consensus_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyEmployeeCountConsensusType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyEmployeeCountConsensusType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_funding_round_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyFundingRoundStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyFundingRoundStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_historical_headcount_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyHistoricalHeadcountType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyHistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_investment_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyInvestmentStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyInvestmentStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_job_posts_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_location_consensus_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLocationConsensusType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLocationConsensusType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_locations_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLocationsStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLocationsStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_num_matching_locations_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyNumMatchingLocationsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyNumMatchingLocationsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_platforms_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyPlatformsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyPlatformsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_revenue_estimate_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyRevenueEstimateType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyRevenueEstimateType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_stock_info_consensus_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyStockInfoConsensusType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyStockInfoConsensusType0,  # noqa: PLC0415
         )
 
         linkedin_id: None | str | Unset
@@ -1299,79 +1299,79 @@ class GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompany:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_accelerators_type_0_item import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyAcceleratorsType0Item,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyAcceleratorsType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_acquisitions_type_0_item import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyAcquisitionsType0Item,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyAcquisitionsType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_best_funding_round_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyBestFundingRoundType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyBestFundingRoundType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_custom_data_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyCustomDataType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyCustomDataType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_employee_count_consensus_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyEmployeeCountConsensusType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyEmployeeCountConsensusType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_employee_trends_type_0_item import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyEmployeeTrendsType0Item,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyEmployeeTrendsType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_fortune_rankings_type_0_item import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyFortuneRankingsType0Item,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyFortuneRankingsType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_full_funding_rounds_type_0_item import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyFullFundingRoundsType0Item,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyFullFundingRoundsType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_funding_round_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyFundingRoundStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyFundingRoundStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_funding_rounds_type_0_item import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyFundingRoundsType0Item,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyFundingRoundsType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_historical_headcount_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyHistoricalHeadcountType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyHistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_investment_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyInvestmentStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyInvestmentStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_investors_type_0_item import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyInvestorsType0Item,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyInvestorsType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_industries_type_0_item import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiIndustriesType0Item,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiIndustriesType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_job_posts_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_locations_type_0_item import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiLocationsType0Item,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiLocationsType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_location_consensus_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLocationConsensusType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLocationConsensusType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_locations_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLocationsStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLocationsStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_num_matching_locations_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyNumMatchingLocationsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyNumMatchingLocationsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_platforms_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyPlatformsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyPlatformsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_revenue_estimate_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyRevenueEstimateType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyRevenueEstimateType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_role_count_matches_type_0_item import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyRoleCountMatchesType0Item,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyRoleCountMatchesType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_similar_companies_type_0_item import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanySimilarCompaniesType0Item,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanySimilarCompaniesType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_stock_info_consensus_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyStockInfoConsensusType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyStockInfoConsensusType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_technologies_used_type_0_item import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyTechnologiesUsedType0Item,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyTechnologiesUsedType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

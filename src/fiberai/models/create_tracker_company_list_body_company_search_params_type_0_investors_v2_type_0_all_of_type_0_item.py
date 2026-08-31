@@ -73,22 +73,22 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfT
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_all_of_type_0_item_invested_at_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestedAtType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestedAtType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_all_of_type_0_item_invested_at_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestedAtType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestedAtType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_all_of_type_0_item_investment_rounds_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestmentRoundsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestmentRoundsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_all_of_type_0_item_investor_identifier_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestorIdentifierType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestorIdentifierType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_all_of_type_0_item_investor_identifier_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestorIdentifierType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestorIdentifierType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_all_of_type_0_item_investor_identifier_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestorIdentifierType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestorIdentifierType2,  # noqa: PLC0415
         )
 
         investor_identifier: dict[str, Any]
@@ -154,25 +154,25 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfT
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_all_of_type_0_item_invested_at_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestedAtType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestedAtType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_all_of_type_0_item_invested_at_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestedAtType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestedAtType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_all_of_type_0_item_investment_rounds_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestmentRoundsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestmentRoundsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_all_of_type_0_item_investor_identifier_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestorIdentifierType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestorIdentifierType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_all_of_type_0_item_investor_identifier_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestorIdentifierType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestorIdentifierType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_all_of_type_0_item_investor_identifier_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestorIdentifierType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestorIdentifierType2,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0_all_of_type_0_item_investor_identifier_type_3 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestorIdentifierType3,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestorIdentifierType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

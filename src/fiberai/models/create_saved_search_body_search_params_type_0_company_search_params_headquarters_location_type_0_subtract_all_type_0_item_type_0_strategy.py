@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0Strategy(
-    str, Enum
+    StrEnum
 ):
     RADIAL_DISTANCE = "radial-distance"
 

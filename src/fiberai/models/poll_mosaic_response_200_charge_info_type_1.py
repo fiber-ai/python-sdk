@@ -36,7 +36,7 @@ class PollMosaicResponse200ChargeInfoType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.poll_mosaic_response_200_charge_info_type_1_low_credit_alert_type_0 import (
-            PollMosaicResponse200ChargeInfoType1LowCreditAlertType0,
+            PollMosaicResponse200ChargeInfoType1LowCreditAlertType0,  # noqa: PLC0415
         )
 
         method = self.method.value
@@ -67,7 +67,7 @@ class PollMosaicResponse200ChargeInfoType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_mosaic_response_200_charge_info_type_1_low_credit_alert_type_0 import (
-            PollMosaicResponse200ChargeInfoType1LowCreditAlertType0,
+            PollMosaicResponse200ChargeInfoType1LowCreditAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -105,13 +105,13 @@ class PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.poll_batch_live_enrich_response_200_output_results_item_company_type_0_historical_headcount_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0HistoricalHeadcountType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0HistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_company_type_0_inferred_location_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0InferredLocationType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0InferredLocationType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_company_type_0_locations_stats_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0LocationsStatsType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0LocationsStatsType0,  # noqa: PLC0415
         )
 
         slug = self.slug
@@ -363,19 +363,19 @@ class PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_batch_live_enrich_response_200_output_results_item_company_type_0_historical_headcount_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0HistoricalHeadcountType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0HistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_company_type_0_industries_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0IndustriesType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0IndustriesType0Item,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_company_type_0_inferred_location_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0InferredLocationType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0InferredLocationType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_company_type_0_locations_stats_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0LocationsStatsType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0LocationsStatsType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_company_type_0_locations_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0LocationsType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0LocationsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

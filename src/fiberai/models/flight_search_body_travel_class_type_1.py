@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FlightSearchBodyTravelClassType1(str, Enum):
+class FlightSearchBodyTravelClassType1(StrEnum):
     BUSINESS = "business"
     ECONOMY = "economy"
     FIRST = "first"

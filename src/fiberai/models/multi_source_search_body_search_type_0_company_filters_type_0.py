@@ -106,13 +106,13 @@ class MultiSourceSearchBodySearchType0CompanyFiltersType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.multi_source_search_body_search_type_0_company_filters_type_0_employee_count_type_0 import (
-            MultiSourceSearchBodySearchType0CompanyFiltersType0EmployeeCountType0,
+            MultiSourceSearchBodySearchType0CompanyFiltersType0EmployeeCountType0,  # noqa: PLC0415
         )
         from ..models.multi_source_search_body_search_type_0_company_filters_type_0_founded_year_type_0 import (
-            MultiSourceSearchBodySearchType0CompanyFiltersType0FoundedYearType0,
+            MultiSourceSearchBodySearchType0CompanyFiltersType0FoundedYearType0,  # noqa: PLC0415
         )
         from ..models.multi_source_search_body_search_type_0_company_filters_type_0_revenue_type_0 import (
-            MultiSourceSearchBodySearchType0CompanyFiltersType0RevenueType0,
+            MultiSourceSearchBodySearchType0CompanyFiltersType0RevenueType0,  # noqa: PLC0415
         )
 
         country_codes: list[str] | None | Unset
@@ -309,13 +309,13 @@ class MultiSourceSearchBodySearchType0CompanyFiltersType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.multi_source_search_body_search_type_0_company_filters_type_0_employee_count_type_0 import (
-            MultiSourceSearchBodySearchType0CompanyFiltersType0EmployeeCountType0,
+            MultiSourceSearchBodySearchType0CompanyFiltersType0EmployeeCountType0,  # noqa: PLC0415
         )
         from ..models.multi_source_search_body_search_type_0_company_filters_type_0_founded_year_type_0 import (
-            MultiSourceSearchBodySearchType0CompanyFiltersType0FoundedYearType0,
+            MultiSourceSearchBodySearchType0CompanyFiltersType0FoundedYearType0,  # noqa: PLC0415
         )
         from ..models.multi_source_search_body_search_type_0_company_filters_type_0_revenue_type_0 import (
-            MultiSourceSearchBodySearchType0CompanyFiltersType0RevenueType0,
+            MultiSourceSearchBodySearchType0CompanyFiltersType0RevenueType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

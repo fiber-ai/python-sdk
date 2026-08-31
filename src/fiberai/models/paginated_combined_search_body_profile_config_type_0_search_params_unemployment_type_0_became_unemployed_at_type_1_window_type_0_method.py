@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0BecameUnemployedAtType1WindowType0Method(
-    str, Enum
+    StrEnum
 ):
     WITHIN = "within"
 

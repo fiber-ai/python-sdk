@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyCompanyParamsStatusType0NoneOfType0Item(str, Enum):
+class CombinedSearchCountBodyCompanyParamsStatusType0NoneOfType0Item(StrEnum):
     ACQUIRED = "acquired"
     ACTIVE = "active"
     CLOSED = "closed"

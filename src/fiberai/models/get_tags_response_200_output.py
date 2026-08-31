@@ -50,8 +50,12 @@ class GetTagsResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_tags_response_200_output_company_tags_item import GetTagsResponse200OutputCompanyTagsItem
-        from ..models.get_tags_response_200_output_profile_tags_item import GetTagsResponse200OutputProfileTagsItem
+        from ..models.get_tags_response_200_output_company_tags_item import (
+            GetTagsResponse200OutputCompanyTagsItem,  # noqa: PLC0415
+        )
+        from ..models.get_tags_response_200_output_profile_tags_item import (
+            GetTagsResponse200OutputProfileTagsItem,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         profile_tags = []

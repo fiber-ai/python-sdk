@@ -147,7 +147,7 @@ def sync_detailed(
     | GetFlightRegionsResponse500
     | GetFlightRegionsResponse503
 ]:
-    r"""List flight region aliases
+    """List flight region aliases
 
      List every supported `X-` flight region alias along with its metro name and the IATA airport codes
     it covers. Pass `apiCode` as `departureAirports` / `arrivalAirports` in `POST /v1/flights/search` to
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -197,7 +197,7 @@ def sync(
     | GetFlightRegionsResponse503
     | None
 ):
-    r"""List flight region aliases
+    """List flight region aliases
 
      List every supported `X-` flight region alias along with its metro name and the IATA airport codes
     it covers. Pass `apiCode` as `departureAirports` / `arrivalAirports` in `POST /v1/flights/search` to
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | GetFlightRegionsResponse500
     | GetFlightRegionsResponse503
 ]:
-    r"""List flight region aliases
+    """List flight region aliases
 
      List every supported `X-` flight region alias along with its metro name and the IATA airport codes
     it covers. Pass `apiCode` as `departureAirports` / `arrivalAirports` in `POST /v1/flights/search` to
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -289,7 +289,7 @@ async def asyncio(
     | GetFlightRegionsResponse503
     | None
 ):
-    r"""List flight region aliases
+    """List flight region aliases
 
      List every supported `X-` flight region alias along with its metro name and the IATA airport codes
     it covers. Pass `apiCode` as `departureAirports` / `arrivalAirports` in `POST /v1/flights/search` to
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetDepartmentSizeBodyDepartmentsItemTitlesType0Type(str, Enum):
+class GetDepartmentSizeBodyDepartmentsItemTitlesType0Type(StrEnum):
     MANUAL = "manual"
 
     def __str__(self) -> str:

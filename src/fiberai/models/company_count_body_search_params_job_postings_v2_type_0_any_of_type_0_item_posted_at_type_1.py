@@ -48,13 +48,13 @@ class CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_count_body_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_0 import (
-            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0,
+            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_1 import (
-            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1,
+            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_2 import (
-            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2,
+            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -92,13 +92,13 @@ class CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_count_body_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_0 import (
-            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0,
+            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_1 import (
-            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1,
+            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_2 import (
-            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2,
+            CompanyCountBodySearchParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -58,10 +58,10 @@ class KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_company_response_200_output_data_item_historical_headcount_type_0_growth import (
-            KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0Growth,
+            KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0Growth,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_historical_headcount_type_0_snapshots_item import (
-            KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0SnapshotsItem,
+            KitchenSinkCompanyResponse200OutputDataItemHistoricalHeadcountType0SnapshotsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

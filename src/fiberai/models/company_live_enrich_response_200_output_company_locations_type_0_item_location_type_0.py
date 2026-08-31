@@ -56,7 +56,7 @@ class CompanyLiveEnrichResponse200OutputCompanyLocationsType0ItemLocationType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_live_enrich_response_200_output_company_locations_type_0_item_location_type_0_coordinates_type_0 import (
-            CompanyLiveEnrichResponse200OutputCompanyLocationsType0ItemLocationType0CoordinatesType0,
+            CompanyLiveEnrichResponse200OutputCompanyLocationsType0ItemLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         street_address: None | str | Unset
@@ -176,7 +176,7 @@ class CompanyLiveEnrichResponse200OutputCompanyLocationsType0ItemLocationType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_live_enrich_response_200_output_company_locations_type_0_item_location_type_0_coordinates_type_0 import (
-            CompanyLiveEnrichResponse200OutputCompanyLocationsType0ItemLocationType0CoordinatesType0,
+            CompanyLiveEnrichResponse200OutputCompanyLocationsType0ItemLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

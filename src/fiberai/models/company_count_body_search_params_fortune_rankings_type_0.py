@@ -51,7 +51,7 @@ class CompanyCountBodySearchParamsFortuneRankingsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_count_body_search_params_fortune_rankings_type_0_any_of_type_0_item import (
-            CompanyCountBodySearchParamsFortuneRankingsType0AnyOfType0Item,
+            CompanyCountBodySearchParamsFortuneRankingsType0AnyOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

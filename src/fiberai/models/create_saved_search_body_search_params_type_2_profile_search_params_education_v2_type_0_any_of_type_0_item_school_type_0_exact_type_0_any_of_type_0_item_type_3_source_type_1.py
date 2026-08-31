@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0AnyOfType0ItemSchoolType0ExactType0AnyOfType0ItemType3SourceType1(
-    str, Enum
+    StrEnum
 ):
     CSV = "csv"
 

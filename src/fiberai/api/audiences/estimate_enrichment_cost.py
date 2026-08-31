@@ -152,7 +152,7 @@ def sync_detailed(
     | EstimateEnrichmentCostResponse500
     | EstimateEnrichmentCostResponse503
 ]:
-    r"""Estimate enrichment cost
+    """Estimate enrichment cost
 
      Estimates the credit cost for an audience enrichment run before triggering it. Returns detailed
     breakdown by operation type (Sales Navigator, live enrichment, contact enrichment, validation) and
@@ -160,8 +160,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -205,7 +205,7 @@ def sync(
     | EstimateEnrichmentCostResponse503
     | None
 ):
-    r"""Estimate enrichment cost
+    """Estimate enrichment cost
 
      Estimates the credit cost for an audience enrichment run before triggering it. Returns detailed
     breakdown by operation type (Sales Navigator, live enrichment, contact enrichment, validation) and
@@ -213,8 +213,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -252,7 +252,7 @@ async def asyncio_detailed(
     | EstimateEnrichmentCostResponse500
     | EstimateEnrichmentCostResponse503
 ]:
-    r"""Estimate enrichment cost
+    """Estimate enrichment cost
 
      Estimates the credit cost for an audience enrichment run before triggering it. Returns detailed
     breakdown by operation type (Sales Navigator, live enrichment, contact enrichment, validation) and
@@ -260,8 +260,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -303,7 +303,7 @@ async def asyncio(
     | EstimateEnrichmentCostResponse503
     | None
 ):
-    r"""Estimate enrichment cost
+    """Estimate enrichment cost
 
      Estimates the credit cost for an audience enrichment run before triggering it. Returns detailed
     breakdown by operation type (Sales Navigator, live enrichment, contact enrichment, validation) and
@@ -311,8 +311,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):

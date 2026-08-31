@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchBodySearchParamsStartedInRoleType1WindowType2Method(str, Enum):
+class PeopleSearchBodySearchParamsStartedInRoleType1WindowType2Method(StrEnum):
     CALENDAR = "calendar"
 
     def __str__(self) -> str:

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType1CompanySearchParamsFoundedOnType1Strategy(str, Enum):
+class CreateSavedSearchBodySearchParamsType1CompanySearchParamsFoundedOnType1Strategy(StrEnum):
     RELATIVE = "relative"
 
     def __str__(self) -> str:

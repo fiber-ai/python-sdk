@@ -1278,457 +1278,457 @@ class KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLoca
     def to_dict(self) -> dict[str, Any]:
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hrv import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HRV,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hti import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HTI,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hun import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HUN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0idn import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IDN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0imn import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IMN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ind import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IND,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0iot import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IOT,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0irl import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRL,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0irn import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0irq import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRQ,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0isl import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ISL,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0isr import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ISR,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ita import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ITA,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jam import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JAM,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jey import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JEY,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jor import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JOR,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jpn import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JPN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kaz import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KAZ,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ken import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KEN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kgz import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KGZ,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0khm import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KHM,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kir import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KIR,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kna import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KNA,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kor import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KOR,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kwt import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KWT,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lao import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LAO,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lbn import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lbr import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBR,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lby import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBY,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lca import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LCA,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lie import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LIE,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lka import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LKA,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lso import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LSO,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ltu import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LTU,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lux import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LUX,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lva import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LVA,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mac import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAC,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0maf import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAF,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mar import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAR,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mco import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MCO,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mda import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDA,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mdg import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDG,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mdv import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDV,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mex import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MEX,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mhl import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MHL,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mkd import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MKD,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mli import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MLI,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mlt import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MLT,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mmr import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MMR,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mne import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNE,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mng import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNG,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mnp import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNP,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0moz import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MOZ,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mrt import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MRT,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0msr import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MSR,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mtq import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MTQ,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mus import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MUS,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mwi import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MWI,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mys import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MYS,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0myt import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MYT,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nam import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NAM,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ncl import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NCL,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ner import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NER,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nfk import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NFK,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nga import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NGA,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nic import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NIC,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0niu import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NIU,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nld import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NLD,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nor import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NOR,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0npl import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NPL,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nru import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NRU,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nzl import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NZL,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0omn import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0OMN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pak import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PAK,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pan import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PAN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pcn import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PCN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0per import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PER,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0phl import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PHL,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0plw import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PLW,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0png import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PNG,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pol import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0POL,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pri import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRI,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0prk import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRK,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0prt import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRT,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pry import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRY,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pse import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PSE,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pyf import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PYF,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0qat import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0QAT,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0reu import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0REU,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0rou import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ROU,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0rus import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0RUS,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0rwa import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0RWA,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sau import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SAU,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sdn import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SDN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sen import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SEN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sgp import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SGP,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sgs import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SGS,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0shn import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SHN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sjm import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SJM,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0slb import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLB,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sle import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLE,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0slv import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLV,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0smr import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SMR,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0som import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SOM,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0spm import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SPM,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0srb import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SRB,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ssd import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SSD,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0stp import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0STP,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sur import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SUR,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0svk import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SVK,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0svn import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SVN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0swe import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SWE,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0swz import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SWZ,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sxm import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SXM,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0syc import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SYC,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0syr import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SYR,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tca import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TCA,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tcd import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TCD,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tgo import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TGO,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tha import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0THA,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tjk import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TJK,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tkl import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TKL,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tkm import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TKM,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tls import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TLS,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ton import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TON,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tto import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TTO,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tun import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tur import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUR,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tuv import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUV,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0twn import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TWN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tza import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TZA,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0uga import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UGA,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ukr import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UKR,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0umi import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UMI,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ury import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0URY,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0usa import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0USA,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0uzb import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UZB,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vat import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VAT,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vct import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VCT,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ven import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VEN,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vgb import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VGB,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vir import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VIR,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vnm import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VNM,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vut import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VUT,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0wlf import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0WLF,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0wsm import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0WSM,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0xkx import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0XKX,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0yem import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0YEM,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0zaf import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZAF,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0zmb import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZMB,
-        )
+        )  # noqa: PLC0415
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0zwe import (
             KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZWE,
-        )
+        )  # noqa: PLC0415
 
         usa: dict[str, Any] | Unset = UNSET
         if not isinstance(self.usa, Unset):
@@ -3245,757 +3245,757 @@ class KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLoca
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0abw import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ABW,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ABW,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0afg import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AFG,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AFG,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ago import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AGO,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AGO,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0aia import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AIA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AIA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ala import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ALA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ALA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0alb import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ALB,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ALB,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0and import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AND,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AND,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ant import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ANT,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ANT,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0are import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ARE,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ARE,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0arg import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ARG,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ARG,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0arm import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ARM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ARM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0asm import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ASM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ASM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ata import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ATA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ATA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0atf import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ATF,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ATF,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0atg import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ATG,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ATG,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0aus import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AUS,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AUS,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0aut import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AUT,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AUT,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0aze import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AZE,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AZE,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bdi import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BDI,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BDI,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bel import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BEL,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BEL,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ben import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BEN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BEN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bes import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BES,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BES,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bfa import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BFA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BFA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bgd import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BGD,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BGD,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bgr import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BGR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BGR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bhr import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BHR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BHR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bhs import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BHS,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BHS,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bih import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BIH,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BIH,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0blm import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BLM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BLM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0blr import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BLR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BLR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0blz import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BLZ,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BLZ,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bmu import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BMU,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BMU,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bol import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BOL,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BOL,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bra import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BRA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BRA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0brb import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BRB,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BRB,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0brn import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BRN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BRN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0btn import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BTN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BTN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bvt import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BVT,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BVT,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bwa import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BWA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BWA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0caf import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CAF,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CAF,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0can import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CAN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CAN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cck import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CCK,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CCK,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0che import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CHE,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CHE,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0chl import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CHL,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CHL,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0chn import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CHN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CHN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0civ import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CIV,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CIV,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cmr import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CMR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CMR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cod import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COD,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COD,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cog import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COG,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COG,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cok import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COK,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COK,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0col import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COL,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COL,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0com import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cpv import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CPV,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CPV,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cri import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CRI,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CRI,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cub import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CUB,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CUB,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cuw import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CUW,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CUW,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cxr import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CXR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CXR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cym import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CYM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CYM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cyp import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CYP,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CYP,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cze import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CZE,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CZE,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0deu import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DEU,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DEU,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0dji import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DJI,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DJI,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0dma import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DMA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DMA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0dnk import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DNK,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DNK,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0dom import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DOM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DOM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0dza import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DZA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DZA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ecu import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ECU,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ECU,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0egy import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0EGY,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0EGY,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0eri import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ERI,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ERI,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0esh import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ESH,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ESH,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0esp import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ESP,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ESP,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0est import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0EST,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0EST,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0eth import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ETH,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ETH,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0fin import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FIN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FIN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0fji import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FJI,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FJI,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0flk import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FLK,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FLK,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0fra import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FRA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FRA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0fro import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FRO,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FRO,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0fsm import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FSM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FSM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gab import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GAB,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GAB,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gbr import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GBR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GBR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0geo import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GEO,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GEO,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ggy import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GGY,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GGY,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gha import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GHA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GHA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gib import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GIB,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GIB,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gin import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GIN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GIN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0glp import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GLP,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GLP,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gmb import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GMB,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GMB,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gnb import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GNB,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GNB,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gnq import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GNQ,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GNQ,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0grc import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GRC,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GRC,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0grd import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GRD,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GRD,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0grl import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GRL,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GRL,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gtm import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GTM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GTM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0guf import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GUF,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GUF,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gum import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GUM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GUM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0guy import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GUY,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GUY,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hkg import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HKG,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HKG,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hmd import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HMD,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HMD,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hnd import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HND,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HND,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hrv import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HRV,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HRV,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hti import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HTI,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HTI,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hun import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HUN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HUN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0idn import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IDN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IDN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0imn import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IMN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IMN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ind import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IND,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IND,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0iot import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IOT,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IOT,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0irl import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRL,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRL,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0irn import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0irq import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRQ,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRQ,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0isl import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ISL,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ISL,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0isr import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ISR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ISR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ita import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ITA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ITA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jam import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JAM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JAM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jey import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JEY,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JEY,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jor import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JOR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JOR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jpn import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JPN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JPN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kaz import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KAZ,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KAZ,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ken import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KEN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KEN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kgz import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KGZ,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KGZ,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0khm import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KHM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KHM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kir import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KIR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KIR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kna import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KNA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KNA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kor import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KOR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KOR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kwt import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KWT,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KWT,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lao import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LAO,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LAO,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lbn import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lbr import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lby import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBY,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBY,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lca import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LCA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LCA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lie import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LIE,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LIE,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lka import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LKA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LKA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lso import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LSO,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LSO,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ltu import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LTU,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LTU,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lux import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LUX,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LUX,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lva import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LVA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LVA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mac import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAC,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAC,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0maf import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAF,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAF,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mar import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mco import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MCO,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MCO,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mda import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mdg import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDG,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDG,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mdv import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDV,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDV,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mex import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MEX,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MEX,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mhl import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MHL,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MHL,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mkd import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MKD,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MKD,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mli import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MLI,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MLI,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mlt import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MLT,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MLT,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mmr import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MMR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MMR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mne import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNE,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNE,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mng import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNG,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNG,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mnp import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNP,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNP,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0moz import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MOZ,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MOZ,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mrt import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MRT,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MRT,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0msr import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MSR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MSR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mtq import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MTQ,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MTQ,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mus import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MUS,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MUS,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mwi import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MWI,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MWI,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mys import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MYS,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MYS,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0myt import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MYT,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MYT,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nam import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NAM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NAM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ncl import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NCL,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NCL,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ner import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NER,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NER,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nfk import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NFK,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NFK,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nga import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NGA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NGA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nic import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NIC,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NIC,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0niu import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NIU,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NIU,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nld import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NLD,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NLD,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nor import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NOR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NOR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0npl import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NPL,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NPL,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nru import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NRU,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NRU,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nzl import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NZL,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NZL,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0omn import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0OMN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0OMN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pak import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PAK,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PAK,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pan import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PAN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PAN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pcn import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PCN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PCN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0per import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PER,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PER,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0phl import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PHL,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PHL,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0plw import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PLW,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PLW,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0png import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PNG,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PNG,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pol import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0POL,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0POL,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pri import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRI,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRI,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0prk import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRK,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRK,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0prt import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRT,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRT,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pry import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRY,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRY,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pse import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PSE,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PSE,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pyf import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PYF,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PYF,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0qat import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0QAT,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0QAT,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0reu import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0REU,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0REU,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0rou import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ROU,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ROU,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0rus import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0RUS,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0RUS,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0rwa import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0RWA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0RWA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sau import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SAU,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SAU,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sdn import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SDN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SDN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sen import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SEN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SEN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sgp import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SGP,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SGP,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sgs import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SGS,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SGS,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0shn import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SHN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SHN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sjm import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SJM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SJM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0slb import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLB,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLB,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sle import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLE,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLE,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0slv import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLV,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLV,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0smr import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SMR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SMR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0som import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SOM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SOM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0spm import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SPM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SPM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0srb import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SRB,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SRB,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ssd import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SSD,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SSD,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0stp import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0STP,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0STP,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sur import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SUR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SUR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0svk import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SVK,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SVK,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0svn import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SVN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SVN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0swe import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SWE,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SWE,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0swz import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SWZ,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SWZ,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sxm import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SXM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SXM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0syc import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SYC,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SYC,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0syr import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SYR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SYR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tca import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TCA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TCA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tcd import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TCD,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TCD,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tgo import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TGO,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TGO,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tha import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0THA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0THA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tjk import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TJK,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TJK,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tkl import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TKL,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TKL,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tkm import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TKM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TKM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tls import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TLS,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TLS,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ton import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TON,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TON,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tto import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TTO,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TTO,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tun import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tur import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tuv import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUV,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUV,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0twn import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TWN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TWN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tza import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TZA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TZA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0uga import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UGA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UGA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ukr import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UKR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UKR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0umi import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UMI,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UMI,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ury import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0URY,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0URY,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0usa import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0USA,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0USA,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0uzb import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UZB,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UZB,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vat import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VAT,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VAT,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vct import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VCT,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VCT,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ven import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VEN,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VEN,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vgb import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VGB,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VGB,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vir import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VIR,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VIR,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vnm import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VNM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VNM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vut import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VUT,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VUT,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0wlf import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0WLF,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0WLF,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0wsm import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0WSM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0WSM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0xkx import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0XKX,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0XKX,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0yem import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0YEM,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0YEM,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0zaf import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZAF,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZAF,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0zmb import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZMB,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZMB,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0zwe import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZWE,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZWE,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

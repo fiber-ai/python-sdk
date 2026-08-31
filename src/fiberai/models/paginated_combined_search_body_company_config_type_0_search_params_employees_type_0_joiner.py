@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0Joiner(str, Enum):
+class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0Joiner(StrEnum):
     AND = "AND"
     OR = "OR"
 

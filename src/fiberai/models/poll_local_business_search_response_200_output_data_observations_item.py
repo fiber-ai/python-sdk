@@ -103,19 +103,19 @@ class PollLocalBusinessSearchResponse200OutputDataObservationsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_local_business_search_response_200_output_data_observations_item_business_emails_item import (
-            PollLocalBusinessSearchResponse200OutputDataObservationsItemBusinessEmailsItem,
+            PollLocalBusinessSearchResponse200OutputDataObservationsItemBusinessEmailsItem,  # noqa: PLC0415
         )
         from ..models.poll_local_business_search_response_200_output_data_observations_item_business_phones_item import (
-            PollLocalBusinessSearchResponse200OutputDataObservationsItemBusinessPhonesItem,
+            PollLocalBusinessSearchResponse200OutputDataObservationsItemBusinessPhonesItem,  # noqa: PLC0415
         )
         from ..models.poll_local_business_search_response_200_output_data_observations_item_employees_item import (
-            PollLocalBusinessSearchResponse200OutputDataObservationsItemEmployeesItem,
+            PollLocalBusinessSearchResponse200OutputDataObservationsItemEmployeesItem,  # noqa: PLC0415
         )
         from ..models.poll_local_business_search_response_200_output_data_observations_item_local_business import (
-            PollLocalBusinessSearchResponse200OutputDataObservationsItemLocalBusiness,
+            PollLocalBusinessSearchResponse200OutputDataObservationsItemLocalBusiness,  # noqa: PLC0415
         )
         from ..models.poll_local_business_search_response_200_output_data_observations_item_social_media_links_item import (
-            PollLocalBusinessSearchResponse200OutputDataObservationsItemSocialMediaLinksItem,
+            PollLocalBusinessSearchResponse200OutputDataObservationsItemSocialMediaLinksItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

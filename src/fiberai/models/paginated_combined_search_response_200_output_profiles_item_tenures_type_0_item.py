@@ -83,7 +83,7 @@ class PaginatedCombinedSearchResponse200OutputProfilesItemTenuresType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_output_profiles_item_tenures_type_0_item_date_range import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemTenuresType0ItemDateRange,
+            PaginatedCombinedSearchResponse200OutputProfilesItemTenuresType0ItemDateRange,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

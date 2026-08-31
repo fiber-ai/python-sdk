@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobTitleV3Type0NoneOfType0ItemType1Type(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobTitleV3Type0NoneOfType0ItemType1Type(StrEnum):
     FUNCTIONAL = "functional"
 
     def __str__(self) -> str:

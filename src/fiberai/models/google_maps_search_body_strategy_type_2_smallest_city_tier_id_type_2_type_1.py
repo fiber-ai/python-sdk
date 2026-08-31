@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GoogleMapsSearchBodyStrategyType2SmallestCityTierIDType2Type1(str, Enum):
+class GoogleMapsSearchBodyStrategyType2SmallestCityTierIDType2Type1(StrEnum):
     LARGE = "large"
     MAJOR = "major"
     MEDIUM = "medium"

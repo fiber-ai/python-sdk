@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class SyncQuickContactRevealResponse200OutputProfileStatus(str, Enum):
+class SyncQuickContactRevealResponse200OutputProfileStatus(StrEnum):
     COMPLETED = "completed"
 
     def __str__(self) -> str:

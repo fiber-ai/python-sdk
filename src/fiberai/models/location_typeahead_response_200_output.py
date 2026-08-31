@@ -39,7 +39,7 @@ class LocationTypeaheadResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.location_typeahead_response_200_output_preset_regions_item_type_0 import (
-            LocationTypeaheadResponse200OutputPresetRegionsItemType0,
+            LocationTypeaheadResponse200OutputPresetRegionsItemType0,  # noqa: PLC0415
         )
 
         data = []
@@ -70,12 +70,14 @@ class LocationTypeaheadResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.location_typeahead_response_200_output_data_item import LocationTypeaheadResponse200OutputDataItem
+        from ..models.location_typeahead_response_200_output_data_item import (
+            LocationTypeaheadResponse200OutputDataItem,  # noqa: PLC0415
+        )
         from ..models.location_typeahead_response_200_output_preset_regions_item_type_0 import (
-            LocationTypeaheadResponse200OutputPresetRegionsItemType0,
+            LocationTypeaheadResponse200OutputPresetRegionsItemType0,  # noqa: PLC0415
         )
         from ..models.location_typeahead_response_200_output_preset_regions_item_type_1 import (
-            LocationTypeaheadResponse200OutputPresetRegionsItemType1,
+            LocationTypeaheadResponse200OutputPresetRegionsItemType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

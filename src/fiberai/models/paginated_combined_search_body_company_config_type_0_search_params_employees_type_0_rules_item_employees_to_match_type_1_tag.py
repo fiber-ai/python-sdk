@@ -1,9 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0RulesItemEmployeesToMatchType1Tag(
-    str, Enum
-):
+class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0RulesItemEmployeesToMatchType1Tag(StrEnum):
     FINITERANGE = "finiteRange"
 
     def __str__(self) -> str:

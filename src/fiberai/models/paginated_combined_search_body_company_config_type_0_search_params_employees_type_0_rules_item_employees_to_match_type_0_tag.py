@@ -1,9 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0RulesItemEmployeesToMatchType0Tag(
-    str, Enum
-):
+class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0RulesItemEmployeesToMatchType0Tag(StrEnum):
     ALL = "all"
 
     def __str__(self) -> str:

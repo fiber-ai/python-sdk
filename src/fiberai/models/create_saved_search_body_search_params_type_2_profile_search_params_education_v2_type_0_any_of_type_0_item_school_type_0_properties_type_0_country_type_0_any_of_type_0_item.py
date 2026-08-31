@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0AnyOfType0ItemSchoolType0PropertiesType0CountryType0AnyOfType0Item(
-    str, Enum
+    StrEnum
 ):
     ABW = "ABW"
     AFG = "AFG"

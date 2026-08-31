@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchCountBodySearchParamsUnemploymentType0BecameUnemployedAtType1WindowType1Method(str, Enum):
+class PeopleSearchCountBodySearchParamsUnemploymentType0BecameUnemployedAtType1WindowType1Method(StrEnum):
     CALENDAR = "calendar"
 
     def __str__(self) -> str:

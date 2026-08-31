@@ -62,16 +62,16 @@ class PollExhaustiveContactEnrichmentResultResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_charge_info_type_0 import (
-            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType0,
+            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_charge_info_type_1 import (
-            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType1,
+            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_charge_info_type_2 import (
-            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType2,
+            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_charge_info_type_3 import (
-            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType3,
+            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -127,25 +127,25 @@ class PollExhaustiveContactEnrichmentResultResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_charge_info_type_0 import (
-            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType0,
+            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_charge_info_type_1 import (
-            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType1,
+            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_charge_info_type_2 import (
-            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType2,
+            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_charge_info_type_3 import (
-            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType3,
+            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_charge_info_type_4 import (
-            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType4,
+            PollExhaustiveContactEnrichmentResultResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_output import (
-            PollExhaustiveContactEnrichmentResultResponse200Output,
+            PollExhaustiveContactEnrichmentResultResponse200Output,  # noqa: PLC0415
         )
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_warnings_type_0_item import (
-            PollExhaustiveContactEnrichmentResultResponse200WarningsType0Item,
+            PollExhaustiveContactEnrichmentResultResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

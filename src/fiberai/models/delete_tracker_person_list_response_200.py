@@ -58,16 +58,16 @@ class DeleteTrackerPersonListResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.delete_tracker_person_list_response_200_charge_info_type_0 import (
-            DeleteTrackerPersonListResponse200ChargeInfoType0,
+            DeleteTrackerPersonListResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.delete_tracker_person_list_response_200_charge_info_type_1 import (
-            DeleteTrackerPersonListResponse200ChargeInfoType1,
+            DeleteTrackerPersonListResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.delete_tracker_person_list_response_200_charge_info_type_2 import (
-            DeleteTrackerPersonListResponse200ChargeInfoType2,
+            DeleteTrackerPersonListResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.delete_tracker_person_list_response_200_charge_info_type_3 import (
-            DeleteTrackerPersonListResponse200ChargeInfoType3,
+            DeleteTrackerPersonListResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class DeleteTrackerPersonListResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.delete_tracker_person_list_response_200_charge_info_type_0 import (
-            DeleteTrackerPersonListResponse200ChargeInfoType0,
+            DeleteTrackerPersonListResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.delete_tracker_person_list_response_200_charge_info_type_1 import (
-            DeleteTrackerPersonListResponse200ChargeInfoType1,
+            DeleteTrackerPersonListResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.delete_tracker_person_list_response_200_charge_info_type_2 import (
-            DeleteTrackerPersonListResponse200ChargeInfoType2,
+            DeleteTrackerPersonListResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.delete_tracker_person_list_response_200_charge_info_type_3 import (
-            DeleteTrackerPersonListResponse200ChargeInfoType3,
+            DeleteTrackerPersonListResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.delete_tracker_person_list_response_200_charge_info_type_4 import (
-            DeleteTrackerPersonListResponse200ChargeInfoType4,
+            DeleteTrackerPersonListResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.delete_tracker_person_list_response_200_output import DeleteTrackerPersonListResponse200Output
+        from ..models.delete_tracker_person_list_response_200_output import (
+            DeleteTrackerPersonListResponse200Output,  # noqa: PLC0415
+        )
         from ..models.delete_tracker_person_list_response_200_warnings_type_0_item import (
-            DeleteTrackerPersonListResponse200WarningsType0Item,
+            DeleteTrackerPersonListResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

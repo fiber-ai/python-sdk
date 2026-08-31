@@ -51,7 +51,7 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsHeadquartersLocat
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_0_radius_type_0 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusType0,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -82,13 +82,13 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsHeadquartersLocat
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_0_center import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0Center,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0Center,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_0_radius_type_0 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusType0,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_0_radius_type_1 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusType1,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0RadiusType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

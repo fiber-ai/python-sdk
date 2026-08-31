@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PostSearchByKeywordsResponse200OutputPostsItemEngagementType0ReactionsByTypeType0ItemReactionTypeType3Type1(
-    str, Enum
+    StrEnum
 ):
     CELEBRATE = "CELEBRATE"
     FUNNY = "FUNNY"

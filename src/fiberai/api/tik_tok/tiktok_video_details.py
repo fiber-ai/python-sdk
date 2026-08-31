@@ -147,14 +147,14 @@ def sync_detailed(
     | TiktokVideoDetailsResponse500
     | TiktokVideoDetailsResponse503
 ]:
-    r"""Fetch TikTok video details
+    """Fetch TikTok video details
 
      Fetches detailed information about a TikTok video including engagement metrics and video metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokVideoDetailsBody):
@@ -195,14 +195,14 @@ def sync(
     | TiktokVideoDetailsResponse503
     | None
 ):
-    r"""Fetch TikTok video details
+    """Fetch TikTok video details
 
      Fetches detailed information about a TikTok video including engagement metrics and video metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokVideoDetailsBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | TiktokVideoDetailsResponse500
     | TiktokVideoDetailsResponse503
 ]:
-    r"""Fetch TikTok video details
+    """Fetch TikTok video details
 
      Fetches detailed information about a TikTok video including engagement metrics and video metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokVideoDetailsBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | TiktokVideoDetailsResponse503
     | None
 ):
-    r"""Fetch TikTok video details
+    """Fetch TikTok video details
 
      Fetches detailed information about a TikTok video including engagement metrics and video metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokVideoDetailsBody):

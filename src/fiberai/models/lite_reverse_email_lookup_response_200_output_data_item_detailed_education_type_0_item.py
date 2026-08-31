@@ -52,7 +52,7 @@ class LiteReverseEmailLookupResponse200OutputDataItemDetailedEducationType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_detailed_education_type_0_item_school_details_type_0 import (
-            LiteReverseEmailLookupResponse200OutputDataItemDetailedEducationType0ItemSchoolDetailsType0,
+            LiteReverseEmailLookupResponse200OutputDataItemDetailedEducationType0ItemSchoolDetailsType0,  # noqa: PLC0415
         )
 
         school_details: dict[str, Any] | None | Unset
@@ -157,7 +157,7 @@ class LiteReverseEmailLookupResponse200OutputDataItemDetailedEducationType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_detailed_education_type_0_item_school_details_type_0 import (
-            LiteReverseEmailLookupResponse200OutputDataItemDetailedEducationType0ItemSchoolDetailsType0,
+            LiteReverseEmailLookupResponse200OutputDataItemDetailedEducationType0ItemSchoolDetailsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

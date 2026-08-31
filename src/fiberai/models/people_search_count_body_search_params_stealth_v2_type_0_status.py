@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchCountBodySearchParamsStealthV2Type0Status(str, Enum):
+class PeopleSearchCountBodySearchParamsStealthV2Type0Status(StrEnum):
     CURRENTLY_IN_STEALTH = "currently-in-stealth"
 
     def __str__(self) -> str:

@@ -59,7 +59,9 @@ class CardsAttachResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.cards_attach_response_200_output_payment_method import CardsAttachResponse200OutputPaymentMethod
+        from ..models.cards_attach_response_200_output_payment_method import (
+            CardsAttachResponse200OutputPaymentMethod,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         status = CardsAttachResponse200OutputStatus(d.pop("status"))

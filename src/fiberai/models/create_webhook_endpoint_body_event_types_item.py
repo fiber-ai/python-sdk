@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateWebhookEndpointBodyEventTypesItem(str, Enum):
+class CreateWebhookEndpointBodyEventTypesItem(StrEnum):
     AUDIENCE_BUILD_COMPLETED = "audience.build_completed"
     AUDIENCE_COMPANY_EXPORT_COMPLETED = "audience.company_export_completed"
     AUDIENCE_ENRICHMENT_COMPLETED = "audience.enrichment_completed"

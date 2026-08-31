@@ -90,10 +90,10 @@ class SyncQuickContactRevealResponse200OutputProfile:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.sync_quick_contact_reveal_response_200_output_profile_emails_item import (
-            SyncQuickContactRevealResponse200OutputProfileEmailsItem,
+            SyncQuickContactRevealResponse200OutputProfileEmailsItem,  # noqa: PLC0415
         )
         from ..models.sync_quick_contact_reveal_response_200_output_profile_phone_numbers_item import (
-            SyncQuickContactRevealResponse200OutputProfilePhoneNumbersItem,
+            SyncQuickContactRevealResponse200OutputProfilePhoneNumbersItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

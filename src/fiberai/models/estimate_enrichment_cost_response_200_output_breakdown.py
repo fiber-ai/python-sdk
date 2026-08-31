@@ -74,19 +74,19 @@ class EstimateEnrichmentCostResponse200OutputBreakdown:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.estimate_enrichment_cost_response_200_output_breakdown_live_company import (
-            EstimateEnrichmentCostResponse200OutputBreakdownLiveCompany,
+            EstimateEnrichmentCostResponse200OutputBreakdownLiveCompany,  # noqa: PLC0415
         )
         from ..models.estimate_enrichment_cost_response_200_output_breakdown_live_prospect import (
-            EstimateEnrichmentCostResponse200OutputBreakdownLiveProspect,
+            EstimateEnrichmentCostResponse200OutputBreakdownLiveProspect,  # noqa: PLC0415
         )
         from ..models.estimate_enrichment_cost_response_200_output_breakdown_sales_nav import (
-            EstimateEnrichmentCostResponse200OutputBreakdownSalesNav,
+            EstimateEnrichmentCostResponse200OutputBreakdownSalesNav,  # noqa: PLC0415
         )
         from ..models.estimate_enrichment_cost_response_200_output_breakdown_validation import (
-            EstimateEnrichmentCostResponse200OutputBreakdownValidation,
+            EstimateEnrichmentCostResponse200OutputBreakdownValidation,  # noqa: PLC0415
         )
         from ..models.estimate_enrichment_cost_response_200_output_breakdown_waterfall import (
-            EstimateEnrichmentCostResponse200OutputBreakdownWaterfall,
+            EstimateEnrichmentCostResponse200OutputBreakdownWaterfall,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

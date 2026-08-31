@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PollLocalBusinessSearchResponse200OutputStatus(str, Enum):
+class PollLocalBusinessSearchResponse200OutputStatus(StrEnum):
     COMPLETED = "COMPLETED"
     FAILED = "FAILED"
     PENDING = "PENDING"

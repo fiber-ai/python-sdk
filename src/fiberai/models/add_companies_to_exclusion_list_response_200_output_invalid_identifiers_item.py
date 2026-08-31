@@ -47,7 +47,7 @@ class AddCompaniesToExclusionListResponse200OutputInvalidIdentifiersItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.add_companies_to_exclusion_list_response_200_output_invalid_identifiers_item_input import (
-            AddCompaniesToExclusionListResponse200OutputInvalidIdentifiersItemInput,
+            AddCompaniesToExclusionListResponse200OutputInvalidIdentifiersItemInput,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

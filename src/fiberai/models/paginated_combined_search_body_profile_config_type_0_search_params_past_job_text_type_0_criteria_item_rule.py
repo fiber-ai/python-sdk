@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPastJobTextType0CriteriaItemRule(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPastJobTextType0CriteriaItemRule(StrEnum):
     EXCLUDES = "excludes"
     INCLUDES = "includes"
 

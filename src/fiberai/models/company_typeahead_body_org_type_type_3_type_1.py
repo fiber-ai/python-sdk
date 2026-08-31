@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanyTypeaheadBodyOrgTypeType3Type1(str, Enum):
+class CompanyTypeaheadBodyOrgTypeType3Type1(StrEnum):
     INVESTOR = "investor"
     SCHOOL = "school"
 

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType1CompanySearchParamsFortuneRankingsType0AnyOfType0ItemList(str, Enum):
+class CreateSavedSearchBodySearchParamsType1CompanySearchParamsFortuneRankingsType0AnyOfType0ItemList(StrEnum):
     FORTUNE_500_USA = "fortune-500-usa"
 
     def __str__(self) -> str:

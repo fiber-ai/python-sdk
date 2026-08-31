@@ -147,7 +147,7 @@ def sync_detailed(
     | YoutubeChannelResponse500
     | YoutubeChannelResponse503
 ]:
-    r"""Fetch YouTube channel info and videos
+    """Fetch YouTube channel info and videos
 
      Fetches metadata and videos for a YouTube channel. Returns subscriber count, description, video
     count, total views, and a paginated list of videos. Use `nextPageToken` from the response to
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeChannelBody):
@@ -197,7 +197,7 @@ def sync(
     | YoutubeChannelResponse503
     | None
 ):
-    r"""Fetch YouTube channel info and videos
+    """Fetch YouTube channel info and videos
 
      Fetches metadata and videos for a YouTube channel. Returns subscriber count, description, video
     count, total views, and a paginated list of videos. Use `nextPageToken` from the response to
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeChannelBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | YoutubeChannelResponse500
     | YoutubeChannelResponse503
 ]:
-    r"""Fetch YouTube channel info and videos
+    """Fetch YouTube channel info and videos
 
      Fetches metadata and videos for a YouTube channel. Returns subscriber count, description, video
     count, total views, and a paginated list of videos. Use `nextPageToken` from the response to
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeChannelBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | YoutubeChannelResponse503
     | None
 ):
-    r"""Fetch YouTube channel info and videos
+    """Fetch YouTube channel info and videos
 
      Fetches metadata and videos for a YouTube channel. Returns subscriber count, description, video
     count, total views, and a paginated list of videos. Use `nextPageToken` from the response to
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeChannelBody):

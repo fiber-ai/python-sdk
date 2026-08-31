@@ -76,10 +76,10 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Typ
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_accelerators_v2_type_0_any_of_type_0_item import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0AnyOfType0Item,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0AnyOfType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_accelerators_v2_type_0_none_of_type_0_item import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0NoneOfType0Item,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

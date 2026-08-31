@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class JobPostingChangeLocationTypeType3Type1(str, Enum):
+class JobPostingChangeLocationTypeType3Type1(StrEnum):
     HYBRID = "hybrid"
     ON_SITE = "on_site"
     REMOTE = "remote"

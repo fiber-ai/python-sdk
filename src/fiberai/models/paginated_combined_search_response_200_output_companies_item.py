@@ -337,43 +337,43 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_response_200_output_companies_item_best_funding_round_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemBestFundingRoundType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemBestFundingRoundType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_custom_data_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemCustomDataType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_employee_count_consensus_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemEmployeeCountConsensusType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemEmployeeCountConsensusType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_funding_round_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemFundingRoundStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemFundingRoundStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_historical_headcount_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_investment_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemInvestmentStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemInvestmentStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_location_consensus_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLocationConsensusType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLocationConsensusType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_locations_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLocationsStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLocationsStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_num_matching_locations_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemNumMatchingLocationsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemNumMatchingLocationsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_platforms_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemPlatformsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemPlatformsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_revenue_estimate_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemRevenueEstimateType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemRevenueEstimateType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_stock_info_consensus_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemStockInfoConsensusType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemStockInfoConsensusType0,  # noqa: PLC0415
         )
 
         linkedin_id: None | str | Unset
@@ -1258,79 +1258,79 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_output_companies_item_accelerators_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemAcceleratorsType0Item,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemAcceleratorsType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_acquisitions_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemAcquisitionsType0Item,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemAcquisitionsType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_best_funding_round_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemBestFundingRoundType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemBestFundingRoundType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_custom_data_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemCustomDataType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_employee_count_consensus_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemEmployeeCountConsensusType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemEmployeeCountConsensusType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_employee_trends_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemEmployeeTrendsType0Item,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemEmployeeTrendsType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_fortune_rankings_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemFortuneRankingsType0Item,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemFortuneRankingsType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_full_funding_rounds_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemFullFundingRoundsType0Item,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemFullFundingRoundsType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_funding_round_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemFundingRoundStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemFundingRoundStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_funding_rounds_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemFundingRoundsType0Item,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemFundingRoundsType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_historical_headcount_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_investment_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemInvestmentStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemInvestmentStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_investors_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemInvestorsType0Item,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemInvestorsType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_industries_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiIndustriesType0Item,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiIndustriesType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_locations_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiLocationsType0Item,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiLocationsType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_location_consensus_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLocationConsensusType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLocationConsensusType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_locations_stats_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLocationsStatsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLocationsStatsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_num_matching_locations_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemNumMatchingLocationsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemNumMatchingLocationsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_platforms_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemPlatformsType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemPlatformsType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_revenue_estimate_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemRevenueEstimateType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemRevenueEstimateType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_role_count_matches_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0Item,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_similar_companies_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemSimilarCompaniesType0Item,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemSimilarCompaniesType0Item,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_stock_info_consensus_type_0 import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemStockInfoConsensusType0,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemStockInfoConsensusType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_technologies_used_type_0_item import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemTechnologiesUsedType0Item,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemTechnologiesUsedType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

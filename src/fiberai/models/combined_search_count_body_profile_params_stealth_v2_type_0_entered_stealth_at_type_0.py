@@ -34,7 +34,7 @@ class CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_stealth_v2_type_0_entered_stealth_at_type_0_range_type_0 import (
-            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType0RangeType0,
+            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -62,7 +62,7 @@ class CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_stealth_v2_type_0_entered_stealth_at_type_0_range_type_0 import (
-            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType0RangeType0,
+            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -67,19 +67,19 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_stealth_v2_type_1_entered_stealth_at_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1EnteredStealthAtType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1EnteredStealthAtType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_stealth_v2_type_1_entered_stealth_at_type_1 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1EnteredStealthAtType1,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1EnteredStealthAtType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_stealth_v2_type_1_left_stealth_at_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1LeftStealthAtType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1LeftStealthAtType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_stealth_v2_type_1_left_stealth_at_type_1 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1LeftStealthAtType1,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1LeftStealthAtType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_stealth_v2_type_1_stealth_duration_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1StealthDurationType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1StealthDurationType0,  # noqa: PLC0415
         )
 
         status = self.status.value
@@ -146,19 +146,19 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_stealth_v2_type_1_entered_stealth_at_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1EnteredStealthAtType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1EnteredStealthAtType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_stealth_v2_type_1_entered_stealth_at_type_1 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1EnteredStealthAtType1,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1EnteredStealthAtType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_stealth_v2_type_1_left_stealth_at_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1LeftStealthAtType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1LeftStealthAtType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_stealth_v2_type_1_left_stealth_at_type_1 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1LeftStealthAtType1,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1LeftStealthAtType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_stealth_v2_type_1_stealth_duration_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1StealthDurationType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1StealthDurationType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

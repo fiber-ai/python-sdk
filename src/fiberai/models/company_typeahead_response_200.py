@@ -48,16 +48,16 @@ class CompanyTypeaheadResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_typeahead_response_200_charge_info_type_0 import (
-            CompanyTypeaheadResponse200ChargeInfoType0,
+            CompanyTypeaheadResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.company_typeahead_response_200_charge_info_type_1 import (
-            CompanyTypeaheadResponse200ChargeInfoType1,
+            CompanyTypeaheadResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.company_typeahead_response_200_charge_info_type_2 import (
-            CompanyTypeaheadResponse200ChargeInfoType2,
+            CompanyTypeaheadResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.company_typeahead_response_200_charge_info_type_3 import (
-            CompanyTypeaheadResponse200ChargeInfoType3,
+            CompanyTypeaheadResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = []
@@ -116,23 +116,25 @@ class CompanyTypeaheadResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_typeahead_response_200_charge_info_type_0 import (
-            CompanyTypeaheadResponse200ChargeInfoType0,
+            CompanyTypeaheadResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.company_typeahead_response_200_charge_info_type_1 import (
-            CompanyTypeaheadResponse200ChargeInfoType1,
+            CompanyTypeaheadResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.company_typeahead_response_200_charge_info_type_2 import (
-            CompanyTypeaheadResponse200ChargeInfoType2,
+            CompanyTypeaheadResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.company_typeahead_response_200_charge_info_type_3 import (
-            CompanyTypeaheadResponse200ChargeInfoType3,
+            CompanyTypeaheadResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.company_typeahead_response_200_charge_info_type_4 import (
-            CompanyTypeaheadResponse200ChargeInfoType4,
+            CompanyTypeaheadResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.company_typeahead_response_200_output_item import CompanyTypeaheadResponse200OutputItem
+        from ..models.company_typeahead_response_200_output_item import (
+            CompanyTypeaheadResponse200OutputItem,  # noqa: PLC0415
+        )
         from ..models.company_typeahead_response_200_warnings_type_0_item import (
-            CompanyTypeaheadResponse200WarningsType0Item,
+            CompanyTypeaheadResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

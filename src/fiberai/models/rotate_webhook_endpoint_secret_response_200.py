@@ -58,16 +58,16 @@ class RotateWebhookEndpointSecretResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.rotate_webhook_endpoint_secret_response_200_charge_info_type_0 import (
-            RotateWebhookEndpointSecretResponse200ChargeInfoType0,
+            RotateWebhookEndpointSecretResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.rotate_webhook_endpoint_secret_response_200_charge_info_type_1 import (
-            RotateWebhookEndpointSecretResponse200ChargeInfoType1,
+            RotateWebhookEndpointSecretResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.rotate_webhook_endpoint_secret_response_200_charge_info_type_2 import (
-            RotateWebhookEndpointSecretResponse200ChargeInfoType2,
+            RotateWebhookEndpointSecretResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.rotate_webhook_endpoint_secret_response_200_charge_info_type_3 import (
-            RotateWebhookEndpointSecretResponse200ChargeInfoType3,
+            RotateWebhookEndpointSecretResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,25 +123,25 @@ class RotateWebhookEndpointSecretResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.rotate_webhook_endpoint_secret_response_200_charge_info_type_0 import (
-            RotateWebhookEndpointSecretResponse200ChargeInfoType0,
+            RotateWebhookEndpointSecretResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.rotate_webhook_endpoint_secret_response_200_charge_info_type_1 import (
-            RotateWebhookEndpointSecretResponse200ChargeInfoType1,
+            RotateWebhookEndpointSecretResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.rotate_webhook_endpoint_secret_response_200_charge_info_type_2 import (
-            RotateWebhookEndpointSecretResponse200ChargeInfoType2,
+            RotateWebhookEndpointSecretResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.rotate_webhook_endpoint_secret_response_200_charge_info_type_3 import (
-            RotateWebhookEndpointSecretResponse200ChargeInfoType3,
+            RotateWebhookEndpointSecretResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.rotate_webhook_endpoint_secret_response_200_charge_info_type_4 import (
-            RotateWebhookEndpointSecretResponse200ChargeInfoType4,
+            RotateWebhookEndpointSecretResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.rotate_webhook_endpoint_secret_response_200_output import (
-            RotateWebhookEndpointSecretResponse200Output,
+            RotateWebhookEndpointSecretResponse200Output,  # noqa: PLC0415
         )
         from ..models.rotate_webhook_endpoint_secret_response_200_warnings_type_0_item import (
-            RotateWebhookEndpointSecretResponse200WarningsType0Item,
+            RotateWebhookEndpointSecretResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

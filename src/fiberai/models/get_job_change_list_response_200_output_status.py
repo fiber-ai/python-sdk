@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetJobChangeListResponse200OutputStatus(str, Enum):
+class GetJobChangeListResponse200OutputStatus(StrEnum):
     BUILDING = "BUILDING"
     DRAFT = "DRAFT"
     ERROR = "ERROR"

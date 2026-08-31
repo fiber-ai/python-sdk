@@ -147,15 +147,15 @@ def sync_detailed(
     | PreviewTrackerSignalResponse500
     | PreviewTrackerSignalResponse503
 ]:
-    r"""Preview a signal
+    """Preview a signal
 
      Returns an example signal payload for a given rule configuration. No side effects — nothing is
     created or dispatched. Free to call. Useful for understanding signal shapes before creating rules.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (PreviewTrackerSignalBody):
@@ -196,15 +196,15 @@ def sync(
     | PreviewTrackerSignalResponse503
     | None
 ):
-    r"""Preview a signal
+    """Preview a signal
 
      Returns an example signal payload for a given rule configuration. No side effects — nothing is
     created or dispatched. Free to call. Useful for understanding signal shapes before creating rules.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (PreviewTrackerSignalBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | PreviewTrackerSignalResponse500
     | PreviewTrackerSignalResponse503
 ]:
-    r"""Preview a signal
+    """Preview a signal
 
      Returns an example signal payload for a given rule configuration. No side effects — nothing is
     created or dispatched. Free to call. Useful for understanding signal shapes before creating rules.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (PreviewTrackerSignalBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | PreviewTrackerSignalResponse503
     | None
 ):
-    r"""Preview a signal
+    """Preview a signal
 
      Returns an example signal payload for a given rule configuration. No side effects — nothing is
     created or dispatched. Free to call. Useful for understanding signal shapes before creating rules.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (PreviewTrackerSignalBody):

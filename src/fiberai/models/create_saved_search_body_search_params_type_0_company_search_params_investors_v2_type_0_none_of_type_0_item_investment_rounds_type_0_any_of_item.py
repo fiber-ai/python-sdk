@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsInvestorsV2Type0NoneOfType0ItemInvestmentRoundsType0AnyOfItem(
-    str, Enum
+    StrEnum
 ):
     PRE_SEED = "pre_seed"
     PRIVATE_EQUITY = "private_equity"

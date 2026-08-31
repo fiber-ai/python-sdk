@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CardsAttachResponse409Status(str, Enum):
+class CardsAttachResponse409Status(StrEnum):
     REJECTED = "rejected"
 
     def __str__(self) -> str:

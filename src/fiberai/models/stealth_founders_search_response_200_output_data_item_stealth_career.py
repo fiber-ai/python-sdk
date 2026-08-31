@@ -92,7 +92,7 @@ class StealthFoundersSearchResponse200OutputDataItemStealthCareer:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.stealth_founders_search_response_200_output_data_item_stealth_career_transitions_item import (
-            StealthFoundersSearchResponse200OutputDataItemStealthCareerTransitionsItem,
+            StealthFoundersSearchResponse200OutputDataItemStealthCareerTransitionsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

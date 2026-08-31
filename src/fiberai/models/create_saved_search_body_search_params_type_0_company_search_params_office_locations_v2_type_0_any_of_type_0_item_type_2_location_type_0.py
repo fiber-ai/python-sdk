@@ -51,7 +51,7 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_0_radius_type_0 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0RadiusType0,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0RadiusType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -82,13 +82,13 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_0_center import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0Center,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0Center,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_0_radius_type_0 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0RadiusType0,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0RadiusType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_0_radius_type_1 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0RadiusType1,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0RadiusType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

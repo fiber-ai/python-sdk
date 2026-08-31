@@ -76,10 +76,10 @@ class CombinedSearchCountBodyProfileParamsEducationType0AnyOfType0ItemSchoolType
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_education_type_0_any_of_type_0_item_school_type_0_any_of_type_0_item import (
-            CombinedSearchCountBodyProfileParamsEducationType0AnyOfType0ItemSchoolType0AnyOfType0Item,
+            CombinedSearchCountBodyProfileParamsEducationType0AnyOfType0ItemSchoolType0AnyOfType0Item,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_type_0_any_of_type_0_item_school_type_0_none_of_type_0_item import (
-            CombinedSearchCountBodyProfileParamsEducationType0AnyOfType0ItemSchoolType0NoneOfType0Item,
+            CombinedSearchCountBodyProfileParamsEducationType0AnyOfType0ItemSchoolType0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

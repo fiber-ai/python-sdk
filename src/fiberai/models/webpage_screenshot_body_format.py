@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class WebpageScreenshotBodyFormat(str, Enum):
+class WebpageScreenshotBodyFormat(StrEnum):
     DESKTOP = "desktop"
     MOBILE = "mobile"
 

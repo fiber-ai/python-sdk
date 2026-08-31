@@ -32,7 +32,7 @@ class UpdateWebhookEndpointResponse402:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.update_webhook_endpoint_response_402_out_of_credits_alert_type_0 import (
-            UpdateWebhookEndpointResponse402OutOfCreditsAlertType0,
+            UpdateWebhookEndpointResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         message = self.message
@@ -60,7 +60,7 @@ class UpdateWebhookEndpointResponse402:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.update_webhook_endpoint_response_402_out_of_credits_alert_type_0 import (
-            UpdateWebhookEndpointResponse402OutOfCreditsAlertType0,
+            UpdateWebhookEndpointResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

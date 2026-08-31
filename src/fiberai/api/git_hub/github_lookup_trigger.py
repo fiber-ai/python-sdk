@@ -147,15 +147,15 @@ def sync_detailed(
     | GithubLookupTriggerResponse500
     | GithubLookupTriggerResponse503
 ]:
-    r"""Start GitHub lookup
+    """Start GitHub lookup
 
      Use our AI agent to find GitHub profiles for a list of people using name and optional context like
     LinkedIn URL, work email, company, and job title.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per person&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per person&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GithubLookupTriggerBody):
@@ -196,15 +196,15 @@ def sync(
     | GithubLookupTriggerResponse503
     | None
 ):
-    r"""Start GitHub lookup
+    """Start GitHub lookup
 
      Use our AI agent to find GitHub profiles for a list of people using name and optional context like
     LinkedIn URL, work email, company, and job title.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per person&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per person&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GithubLookupTriggerBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | GithubLookupTriggerResponse500
     | GithubLookupTriggerResponse503
 ]:
-    r"""Start GitHub lookup
+    """Start GitHub lookup
 
      Use our AI agent to find GitHub profiles for a list of people using name and optional context like
     LinkedIn URL, work email, company, and job title.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per person&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per person&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GithubLookupTriggerBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | GithubLookupTriggerResponse503
     | None
 ):
-    r"""Start GitHub lookup
+    """Start GitHub lookup
 
      Use our AI agent to find GitHub profiles for a list of people using name and optional context like
     LinkedIn URL, work email, company, and job title.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per person&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per person&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GithubLookupTriggerBody):

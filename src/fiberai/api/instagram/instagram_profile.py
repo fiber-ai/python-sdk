@@ -147,14 +147,14 @@ def sync_detailed(
     | InstagramProfileResponse500
     | InstagramProfileResponse503
 ]:
-    r"""Fetch Instagram user profile
+    """Fetch Instagram user profile
 
      Fetches profile information for an Instagram user including follower counts, bio, and account type.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramProfileBody):
@@ -195,14 +195,14 @@ def sync(
     | InstagramProfileResponse503
     | None
 ):
-    r"""Fetch Instagram user profile
+    """Fetch Instagram user profile
 
      Fetches profile information for an Instagram user including follower counts, bio, and account type.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramProfileBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | InstagramProfileResponse500
     | InstagramProfileResponse503
 ]:
-    r"""Fetch Instagram user profile
+    """Fetch Instagram user profile
 
      Fetches profile information for an Instagram user including follower counts, bio, and account type.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramProfileBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | InstagramProfileResponse503
     | None
 ):
-    r"""Fetch Instagram user profile
+    """Fetch Instagram user profile
 
      Fetches profile information for an Instagram user including follower counts, bio, and account type.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramProfileBody):

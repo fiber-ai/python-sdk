@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class BuildAudienceResponse200OutputStatus(str, Enum):
+class BuildAudienceResponse200OutputStatus(StrEnum):
     BUILDING = "BUILDING"
 
     def __str__(self) -> str:

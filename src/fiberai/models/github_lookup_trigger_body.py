@@ -37,8 +37,12 @@ class GithubLookupTriggerBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.github_lookup_trigger_body_people_item_type_0 import GithubLookupTriggerBodyPeopleItemType0
-        from ..models.github_lookup_trigger_body_people_item_type_1 import GithubLookupTriggerBodyPeopleItemType1
+        from ..models.github_lookup_trigger_body_people_item_type_0 import (
+            GithubLookupTriggerBodyPeopleItemType0,  # noqa: PLC0415
+        )
+        from ..models.github_lookup_trigger_body_people_item_type_1 import (
+            GithubLookupTriggerBodyPeopleItemType1,  # noqa: PLC0415
+        )
 
         api_key = self.api_key
 
@@ -70,9 +74,15 @@ class GithubLookupTriggerBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.github_lookup_trigger_body_people_item_type_0 import GithubLookupTriggerBodyPeopleItemType0
-        from ..models.github_lookup_trigger_body_people_item_type_1 import GithubLookupTriggerBodyPeopleItemType1
-        from ..models.github_lookup_trigger_body_people_item_type_2 import GithubLookupTriggerBodyPeopleItemType2
+        from ..models.github_lookup_trigger_body_people_item_type_0 import (
+            GithubLookupTriggerBodyPeopleItemType0,  # noqa: PLC0415
+        )
+        from ..models.github_lookup_trigger_body_people_item_type_1 import (
+            GithubLookupTriggerBodyPeopleItemType1,  # noqa: PLC0415
+        )
+        from ..models.github_lookup_trigger_body_people_item_type_2 import (
+            GithubLookupTriggerBodyPeopleItemType2,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

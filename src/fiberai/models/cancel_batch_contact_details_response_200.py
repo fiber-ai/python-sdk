@@ -58,16 +58,16 @@ class CancelBatchContactDetailsResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.cancel_batch_contact_details_response_200_charge_info_type_0 import (
-            CancelBatchContactDetailsResponse200ChargeInfoType0,
+            CancelBatchContactDetailsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.cancel_batch_contact_details_response_200_charge_info_type_1 import (
-            CancelBatchContactDetailsResponse200ChargeInfoType1,
+            CancelBatchContactDetailsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.cancel_batch_contact_details_response_200_charge_info_type_2 import (
-            CancelBatchContactDetailsResponse200ChargeInfoType2,
+            CancelBatchContactDetailsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.cancel_batch_contact_details_response_200_charge_info_type_3 import (
-            CancelBatchContactDetailsResponse200ChargeInfoType3,
+            CancelBatchContactDetailsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class CancelBatchContactDetailsResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.cancel_batch_contact_details_response_200_charge_info_type_0 import (
-            CancelBatchContactDetailsResponse200ChargeInfoType0,
+            CancelBatchContactDetailsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.cancel_batch_contact_details_response_200_charge_info_type_1 import (
-            CancelBatchContactDetailsResponse200ChargeInfoType1,
+            CancelBatchContactDetailsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.cancel_batch_contact_details_response_200_charge_info_type_2 import (
-            CancelBatchContactDetailsResponse200ChargeInfoType2,
+            CancelBatchContactDetailsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.cancel_batch_contact_details_response_200_charge_info_type_3 import (
-            CancelBatchContactDetailsResponse200ChargeInfoType3,
+            CancelBatchContactDetailsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.cancel_batch_contact_details_response_200_charge_info_type_4 import (
-            CancelBatchContactDetailsResponse200ChargeInfoType4,
+            CancelBatchContactDetailsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.cancel_batch_contact_details_response_200_output import CancelBatchContactDetailsResponse200Output
+        from ..models.cancel_batch_contact_details_response_200_output import (
+            CancelBatchContactDetailsResponse200Output,  # noqa: PLC0415
+        )
         from ..models.cancel_batch_contact_details_response_200_warnings_type_0_item import (
-            CancelBatchContactDetailsResponse200WarningsType0Item,
+            CancelBatchContactDetailsResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

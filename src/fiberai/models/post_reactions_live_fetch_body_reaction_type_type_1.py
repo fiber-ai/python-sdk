@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PostReactionsLiveFetchBodyReactionTypeType1(str, Enum):
+class PostReactionsLiveFetchBodyReactionTypeType1(StrEnum):
     CELEBRATE = "CELEBRATE"
     FUNNY = "FUNNY"
     INSIGHTFUL = "INSIGHTFUL"

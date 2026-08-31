@@ -60,7 +60,7 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnriched:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

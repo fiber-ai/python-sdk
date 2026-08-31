@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchBodySearchParamsKeywordsV2Type0ClausesItemOperator(str, Enum):
+class PeopleSearchBodySearchParamsKeywordsV2Type0ClausesItemOperator(StrEnum):
     AND = "AND"
     OR = "OR"
 

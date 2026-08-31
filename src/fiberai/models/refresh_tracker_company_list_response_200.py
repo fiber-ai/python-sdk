@@ -58,16 +58,16 @@ class RefreshTrackerCompanyListResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.refresh_tracker_company_list_response_200_charge_info_type_0 import (
-            RefreshTrackerCompanyListResponse200ChargeInfoType0,
+            RefreshTrackerCompanyListResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.refresh_tracker_company_list_response_200_charge_info_type_1 import (
-            RefreshTrackerCompanyListResponse200ChargeInfoType1,
+            RefreshTrackerCompanyListResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.refresh_tracker_company_list_response_200_charge_info_type_2 import (
-            RefreshTrackerCompanyListResponse200ChargeInfoType2,
+            RefreshTrackerCompanyListResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.refresh_tracker_company_list_response_200_charge_info_type_3 import (
-            RefreshTrackerCompanyListResponse200ChargeInfoType3,
+            RefreshTrackerCompanyListResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class RefreshTrackerCompanyListResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.refresh_tracker_company_list_response_200_charge_info_type_0 import (
-            RefreshTrackerCompanyListResponse200ChargeInfoType0,
+            RefreshTrackerCompanyListResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.refresh_tracker_company_list_response_200_charge_info_type_1 import (
-            RefreshTrackerCompanyListResponse200ChargeInfoType1,
+            RefreshTrackerCompanyListResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.refresh_tracker_company_list_response_200_charge_info_type_2 import (
-            RefreshTrackerCompanyListResponse200ChargeInfoType2,
+            RefreshTrackerCompanyListResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.refresh_tracker_company_list_response_200_charge_info_type_3 import (
-            RefreshTrackerCompanyListResponse200ChargeInfoType3,
+            RefreshTrackerCompanyListResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.refresh_tracker_company_list_response_200_charge_info_type_4 import (
-            RefreshTrackerCompanyListResponse200ChargeInfoType4,
+            RefreshTrackerCompanyListResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.refresh_tracker_company_list_response_200_output import RefreshTrackerCompanyListResponse200Output
+        from ..models.refresh_tracker_company_list_response_200_output import (
+            RefreshTrackerCompanyListResponse200Output,  # noqa: PLC0415
+        )
         from ..models.refresh_tracker_company_list_response_200_warnings_type_0_item import (
-            RefreshTrackerCompanyListResponse200WarningsType0Item,
+            RefreshTrackerCompanyListResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

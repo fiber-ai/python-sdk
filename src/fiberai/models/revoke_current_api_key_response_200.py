@@ -58,16 +58,16 @@ class RevokeCurrentApiKeyResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.revoke_current_api_key_response_200_charge_info_type_0 import (
-            RevokeCurrentApiKeyResponse200ChargeInfoType0,
+            RevokeCurrentApiKeyResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.revoke_current_api_key_response_200_charge_info_type_1 import (
-            RevokeCurrentApiKeyResponse200ChargeInfoType1,
+            RevokeCurrentApiKeyResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.revoke_current_api_key_response_200_charge_info_type_2 import (
-            RevokeCurrentApiKeyResponse200ChargeInfoType2,
+            RevokeCurrentApiKeyResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.revoke_current_api_key_response_200_charge_info_type_3 import (
-            RevokeCurrentApiKeyResponse200ChargeInfoType3,
+            RevokeCurrentApiKeyResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class RevokeCurrentApiKeyResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.revoke_current_api_key_response_200_charge_info_type_0 import (
-            RevokeCurrentApiKeyResponse200ChargeInfoType0,
+            RevokeCurrentApiKeyResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.revoke_current_api_key_response_200_charge_info_type_1 import (
-            RevokeCurrentApiKeyResponse200ChargeInfoType1,
+            RevokeCurrentApiKeyResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.revoke_current_api_key_response_200_charge_info_type_2 import (
-            RevokeCurrentApiKeyResponse200ChargeInfoType2,
+            RevokeCurrentApiKeyResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.revoke_current_api_key_response_200_charge_info_type_3 import (
-            RevokeCurrentApiKeyResponse200ChargeInfoType3,
+            RevokeCurrentApiKeyResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.revoke_current_api_key_response_200_charge_info_type_4 import (
-            RevokeCurrentApiKeyResponse200ChargeInfoType4,
+            RevokeCurrentApiKeyResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.revoke_current_api_key_response_200_output import RevokeCurrentApiKeyResponse200Output
+        from ..models.revoke_current_api_key_response_200_output import (
+            RevokeCurrentApiKeyResponse200Output,  # noqa: PLC0415
+        )
         from ..models.revoke_current_api_key_response_200_warnings_type_0_item import (
-            RevokeCurrentApiKeyResponse200WarningsType0Item,
+            RevokeCurrentApiKeyResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -73,10 +73,10 @@ class SocialMediaLookupBatchPollingResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.social_media_lookup_batch_polling_response_200_output_overall_stats import (
-            SocialMediaLookupBatchPollingResponse200OutputOverallStats,
+            SocialMediaLookupBatchPollingResponse200OutputOverallStats,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_batch_polling_response_200_output_results_item import (
-            SocialMediaLookupBatchPollingResponse200OutputResultsItem,
+            SocialMediaLookupBatchPollingResponse200OutputResultsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

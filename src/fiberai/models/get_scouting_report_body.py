@@ -36,9 +36,9 @@ class GetScoutingReportBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_scouting_report_body_company_type_0 import GetScoutingReportBodyCompanyType0
-        from ..models.get_scouting_report_body_company_type_1 import GetScoutingReportBodyCompanyType1
-        from ..models.get_scouting_report_body_company_type_2 import GetScoutingReportBodyCompanyType2
+        from ..models.get_scouting_report_body_company_type_0 import GetScoutingReportBodyCompanyType0  # noqa: PLC0415
+        from ..models.get_scouting_report_body_company_type_1 import GetScoutingReportBodyCompanyType1  # noqa: PLC0415
+        from ..models.get_scouting_report_body_company_type_2 import GetScoutingReportBodyCompanyType2  # noqa: PLC0415
 
         api_key = self.api_key
 
@@ -65,10 +65,10 @@ class GetScoutingReportBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_scouting_report_body_company_type_0 import GetScoutingReportBodyCompanyType0
-        from ..models.get_scouting_report_body_company_type_1 import GetScoutingReportBodyCompanyType1
-        from ..models.get_scouting_report_body_company_type_2 import GetScoutingReportBodyCompanyType2
-        from ..models.get_scouting_report_body_company_type_3 import GetScoutingReportBodyCompanyType3
+        from ..models.get_scouting_report_body_company_type_0 import GetScoutingReportBodyCompanyType0  # noqa: PLC0415
+        from ..models.get_scouting_report_body_company_type_1 import GetScoutingReportBodyCompanyType1  # noqa: PLC0415
+        from ..models.get_scouting_report_body_company_type_2 import GetScoutingReportBodyCompanyType2  # noqa: PLC0415
+        from ..models.get_scouting_report_body_company_type_3 import GetScoutingReportBodyCompanyType3  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

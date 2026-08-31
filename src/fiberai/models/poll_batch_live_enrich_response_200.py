@@ -58,16 +58,16 @@ class PollBatchLiveEnrichResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.poll_batch_live_enrich_response_200_charge_info_type_0 import (
-            PollBatchLiveEnrichResponse200ChargeInfoType0,
+            PollBatchLiveEnrichResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_charge_info_type_1 import (
-            PollBatchLiveEnrichResponse200ChargeInfoType1,
+            PollBatchLiveEnrichResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_charge_info_type_2 import (
-            PollBatchLiveEnrichResponse200ChargeInfoType2,
+            PollBatchLiveEnrichResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_charge_info_type_3 import (
-            PollBatchLiveEnrichResponse200ChargeInfoType3,
+            PollBatchLiveEnrichResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class PollBatchLiveEnrichResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_batch_live_enrich_response_200_charge_info_type_0 import (
-            PollBatchLiveEnrichResponse200ChargeInfoType0,
+            PollBatchLiveEnrichResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_charge_info_type_1 import (
-            PollBatchLiveEnrichResponse200ChargeInfoType1,
+            PollBatchLiveEnrichResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_charge_info_type_2 import (
-            PollBatchLiveEnrichResponse200ChargeInfoType2,
+            PollBatchLiveEnrichResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_charge_info_type_3 import (
-            PollBatchLiveEnrichResponse200ChargeInfoType3,
+            PollBatchLiveEnrichResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_charge_info_type_4 import (
-            PollBatchLiveEnrichResponse200ChargeInfoType4,
+            PollBatchLiveEnrichResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.poll_batch_live_enrich_response_200_output import PollBatchLiveEnrichResponse200Output
+        from ..models.poll_batch_live_enrich_response_200_output import (
+            PollBatchLiveEnrichResponse200Output,  # noqa: PLC0415
+        )
         from ..models.poll_batch_live_enrich_response_200_warnings_type_0_item import (
-            PollBatchLiveEnrichResponse200WarningsType0Item,
+            PollBatchLiveEnrichResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

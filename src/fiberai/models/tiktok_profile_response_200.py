@@ -45,10 +45,18 @@ class TiktokProfileResponse200:
     advice: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.tiktok_profile_response_200_charge_info_type_0 import TiktokProfileResponse200ChargeInfoType0
-        from ..models.tiktok_profile_response_200_charge_info_type_1 import TiktokProfileResponse200ChargeInfoType1
-        from ..models.tiktok_profile_response_200_charge_info_type_2 import TiktokProfileResponse200ChargeInfoType2
-        from ..models.tiktok_profile_response_200_charge_info_type_3 import TiktokProfileResponse200ChargeInfoType3
+        from ..models.tiktok_profile_response_200_charge_info_type_0 import (
+            TiktokProfileResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.tiktok_profile_response_200_charge_info_type_1 import (
+            TiktokProfileResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.tiktok_profile_response_200_charge_info_type_2 import (
+            TiktokProfileResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.tiktok_profile_response_200_charge_info_type_3 import (
+            TiktokProfileResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
 
         output = self.output.to_dict()
 
@@ -102,13 +110,25 @@ class TiktokProfileResponse200:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.tiktok_profile_response_200_charge_info_type_0 import TiktokProfileResponse200ChargeInfoType0
-        from ..models.tiktok_profile_response_200_charge_info_type_1 import TiktokProfileResponse200ChargeInfoType1
-        from ..models.tiktok_profile_response_200_charge_info_type_2 import TiktokProfileResponse200ChargeInfoType2
-        from ..models.tiktok_profile_response_200_charge_info_type_3 import TiktokProfileResponse200ChargeInfoType3
-        from ..models.tiktok_profile_response_200_charge_info_type_4 import TiktokProfileResponse200ChargeInfoType4
-        from ..models.tiktok_profile_response_200_output import TiktokProfileResponse200Output
-        from ..models.tiktok_profile_response_200_warnings_type_0_item import TiktokProfileResponse200WarningsType0Item
+        from ..models.tiktok_profile_response_200_charge_info_type_0 import (
+            TiktokProfileResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.tiktok_profile_response_200_charge_info_type_1 import (
+            TiktokProfileResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.tiktok_profile_response_200_charge_info_type_2 import (
+            TiktokProfileResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.tiktok_profile_response_200_charge_info_type_3 import (
+            TiktokProfileResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
+        from ..models.tiktok_profile_response_200_charge_info_type_4 import (
+            TiktokProfileResponse200ChargeInfoType4,  # noqa: PLC0415
+        )
+        from ..models.tiktok_profile_response_200_output import TiktokProfileResponse200Output  # noqa: PLC0415
+        from ..models.tiktok_profile_response_200_warnings_type_0_item import (
+            TiktokProfileResponse200WarningsType0Item,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         output = TiktokProfileResponse200Output.from_dict(d.pop("output"))

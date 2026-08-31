@@ -781,151 +781,151 @@ class QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsTyp
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_administrative_services import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0AdministrativeServices,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_aerospace_military import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0AerospaceMilitary,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_artificial_intelligence import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0ArtificialIntelligence,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_arts_music import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0ArtsMusic,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_automotive import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Automotive,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Automotive,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_business_services import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0BusinessServices,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_cloud import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Cloud,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Cloud,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_construction import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Construction,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Construction,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_consulting import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Consulting,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Consulting,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_goods import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0ConsumerGoods,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_consumer_services import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0ConsumerServices,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_design import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Design,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Design,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_education import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Education,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Education,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_energy import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Energy,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Energy,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_entertainment import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Entertainment,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Entertainment,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_environmental import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Environmental,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Environmental,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_events import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Events,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Events,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_farming_agriculture import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0FarmingAgriculture,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_finance import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Finance,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Finance,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_food_beverage import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0FoodBeverage,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_gaming import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Gaming,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Gaming,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_government import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Government,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Government,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_hardware import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Hardware,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Hardware,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_healthcare import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Healthcare,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Healthcare,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_hospitality import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Hospitality,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Hospitality,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_industrials import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Industrials,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Industrials,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_information_technology import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0InformationTechnology,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_insurance import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Insurance,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Insurance,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_legal import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Legal,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Legal,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_life_sciences import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0LifeSciences,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_logistics import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Logistics,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Logistics,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_manufacturing import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Manufacturing,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_marketing_advertising import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0MarketingAdvertising,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_media import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Media,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Media,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_mining import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Mining,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Mining,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_nonprofit import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Nonprofit,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_publishing import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Publishing,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Publishing,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_real_estate import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0RealEstate,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0RealEstate,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_retail import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Retail,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Retail,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_science_engineering import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0ScienceEngineering,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_security import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Security,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Security,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_software import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Software,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Software,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_sports import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Sports,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Sports,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_telecom import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Telecom,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Telecom,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_trade import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Trade,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Trade,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_transportation import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Transportation,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Transportation,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_travel_tourism import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0TravelTourism,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_utilities import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Utilities,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0Utilities,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_standard_industries_stats_type_0_venture_capital import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0StandardIndustriesStatsType0VentureCapital,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

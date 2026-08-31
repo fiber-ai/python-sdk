@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchBodySearchParamsJobTitleV2Type0AllOfType0ItemType2GroupsItem(str, Enum):
+class PeopleSearchBodySearchParamsJobTitleV2Type0AllOfType0ItemType2GroupsItem(StrEnum):
     ASSISTANT = "assistant"
     DIRECTOR = "director"
     ENTRY_LEVEL = "entry-level"

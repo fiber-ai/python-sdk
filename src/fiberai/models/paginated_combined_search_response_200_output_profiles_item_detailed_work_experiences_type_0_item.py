@@ -113,7 +113,7 @@ class PaginatedCombinedSearchResponse200OutputProfilesItemDetailedWorkExperience
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_response_200_output_profiles_item_detailed_work_experiences_type_0_item_company_details_type_0 import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,
+            PaginatedCombinedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,  # noqa: PLC0415
         )
 
         company_details: dict[str, Any] | None | Unset
@@ -291,7 +291,7 @@ class PaginatedCombinedSearchResponse200OutputProfilesItemDetailedWorkExperience
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_output_profiles_item_detailed_work_experiences_type_0_item_company_details_type_0 import (
-            PaginatedCombinedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,
+            PaginatedCombinedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

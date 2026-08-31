@@ -50,13 +50,13 @@ class CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemT
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_company_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_0 import (
-            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0,
+            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_1 import (
-            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1,
+            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_2 import (
-            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2,
+            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2,  # noqa: PLC0415
         )
 
         type_ = self.type_.value
@@ -91,16 +91,16 @@ class CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemT
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_company_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_0 import (
-            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0,
+            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_1 import (
-            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1,
+            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_2 import (
-            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2,
+            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_3 import (
-            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType3,
+            CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

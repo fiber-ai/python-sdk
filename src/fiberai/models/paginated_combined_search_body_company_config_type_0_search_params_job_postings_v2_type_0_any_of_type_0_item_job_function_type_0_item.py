@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AnyOfType0ItemJobFunctionType0Item(
-    str, Enum
+    StrEnum
 ):
     ACCOUNTING = "Accounting"
     ADMINISTRATIVE = "Administrative"

@@ -310,136 +310,136 @@ class CombinedSearchCountBodyProfileParams:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_approx_age_type_0 import (
-            CombinedSearchCountBodyProfileParamsApproxAgeType0,
+            CombinedSearchCountBodyProfileParamsApproxAgeType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_certifications_type_0 import (
-            CombinedSearchCountBodyProfileParamsCertificationsType0,
+            CombinedSearchCountBodyProfileParamsCertificationsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_company_match_mode_type_0 import (
-            CombinedSearchCountBodyProfileParamsCompanyMatchModeType0,
+            CombinedSearchCountBodyProfileParamsCompanyMatchModeType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_company_match_mode_type_1 import (
-            CombinedSearchCountBodyProfileParamsCompanyMatchModeType1,
+            CombinedSearchCountBodyProfileParamsCompanyMatchModeType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_country_3_letter_code_type_0 import (
-            CombinedSearchCountBodyProfileParamsCountry3LetterCodeType0,
+            CombinedSearchCountBodyProfileParamsCountry3LetterCodeType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_current_jobs_type_0 import (
-            CombinedSearchCountBodyProfileParamsCurrentJobsType0,
+            CombinedSearchCountBodyProfileParamsCurrentJobsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationType0,
+            CombinedSearchCountBodyProfileParamsEducationType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_employment_type_type_0 import (
-            CombinedSearchCountBodyProfileParamsEmploymentTypeType0,
+            CombinedSearchCountBodyProfileParamsEmploymentTypeType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_exact_profile_type_0 import (
-            CombinedSearchCountBodyProfileParamsExactProfileType0,
+            CombinedSearchCountBodyProfileParamsExactProfileType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_exact_profile_v2_type_0 import (
-            CombinedSearchCountBodyProfileParamsExactProfileV2Type0,
+            CombinedSearchCountBodyProfileParamsExactProfileV2Type0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_fuzzy_name_type_0 import (
-            CombinedSearchCountBodyProfileParamsFuzzyNameType0,
+            CombinedSearchCountBodyProfileParamsFuzzyNameType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_industry_type_0 import (
-            CombinedSearchCountBodyProfileParamsIndustryType0,
+            CombinedSearchCountBodyProfileParamsIndustryType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_job_status_type_0 import (
-            CombinedSearchCountBodyProfileParamsJobStatusType0,
+            CombinedSearchCountBodyProfileParamsJobStatusType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_job_status_type_1 import (
-            CombinedSearchCountBodyProfileParamsJobStatusType1,
+            CombinedSearchCountBodyProfileParamsJobStatusType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_job_status_type_2 import (
-            CombinedSearchCountBodyProfileParamsJobStatusType2,
+            CombinedSearchCountBodyProfileParamsJobStatusType2,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_job_title_v2_type_0 import (
-            CombinedSearchCountBodyProfileParamsJobTitleV2Type0,
+            CombinedSearchCountBodyProfileParamsJobTitleV2Type0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_job_title_v3_type_0 import (
-            CombinedSearchCountBodyProfileParamsJobTitleV3Type0,
+            CombinedSearchCountBodyProfileParamsJobTitleV3Type0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_jobs_type_0 import (
-            CombinedSearchCountBodyProfileParamsJobsType0,
+            CombinedSearchCountBodyProfileParamsJobsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_joined_linked_in_at_type_0 import (
-            CombinedSearchCountBodyProfileParamsJoinedLinkedInAtType0,
+            CombinedSearchCountBodyProfileParamsJoinedLinkedInAtType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_joined_linked_in_at_type_1 import (
-            CombinedSearchCountBodyProfileParamsJoinedLinkedInAtType1,
+            CombinedSearchCountBodyProfileParamsJoinedLinkedInAtType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_keyword_search_options_type_0 import (
-            CombinedSearchCountBodyProfileParamsKeywordSearchOptionsType0,
+            CombinedSearchCountBodyProfileParamsKeywordSearchOptionsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_keywords_type_0 import (
-            CombinedSearchCountBodyProfileParamsKeywordsType0,
+            CombinedSearchCountBodyProfileParamsKeywordsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_keywords_v2_type_0 import (
-            CombinedSearchCountBodyProfileParamsKeywordsV2Type0,
+            CombinedSearchCountBodyProfileParamsKeywordsV2Type0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_languages_type_0 import (
-            CombinedSearchCountBodyProfileParamsLanguagesType0,
+            CombinedSearchCountBodyProfileParamsLanguagesType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_left_stealth_at_type_0 import (
-            CombinedSearchCountBodyProfileParamsLeftStealthAtType0,
+            CombinedSearchCountBodyProfileParamsLeftStealthAtType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_left_stealth_at_type_1 import (
-            CombinedSearchCountBodyProfileParamsLeftStealthAtType1,
+            CombinedSearchCountBodyProfileParamsLeftStealthAtType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_location_type_0 import (
-            CombinedSearchCountBodyProfileParamsLocationType0,
+            CombinedSearchCountBodyProfileParamsLocationType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_num_connections_type_0 import (
-            CombinedSearchCountBodyProfileParamsNumConnectionsType0,
+            CombinedSearchCountBodyProfileParamsNumConnectionsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_num_followers_type_0 import (
-            CombinedSearchCountBodyProfileParamsNumFollowersType0,
+            CombinedSearchCountBodyProfileParamsNumFollowersType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_past_job_text_type_0 import (
-            CombinedSearchCountBodyProfileParamsPastJobTextType0,
+            CombinedSearchCountBodyProfileParamsPastJobTextType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_past_jobs_type_0 import (
-            CombinedSearchCountBodyProfileParamsPastJobsType0,
+            CombinedSearchCountBodyProfileParamsPastJobsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_publications_type_0 import (
-            CombinedSearchCountBodyProfileParamsPublicationsType0,
+            CombinedSearchCountBodyProfileParamsPublicationsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_started_at_company_type_0 import (
-            CombinedSearchCountBodyProfileParamsStartedAtCompanyType0,
+            CombinedSearchCountBodyProfileParamsStartedAtCompanyType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_started_at_company_type_1 import (
-            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1,
+            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_started_in_role_type_0 import (
-            CombinedSearchCountBodyProfileParamsStartedInRoleType0,
+            CombinedSearchCountBodyProfileParamsStartedInRoleType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_started_in_role_type_1 import (
-            CombinedSearchCountBodyProfileParamsStartedInRoleType1,
+            CombinedSearchCountBodyProfileParamsStartedInRoleType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_state_type_0 import (
-            CombinedSearchCountBodyProfileParamsStateType0,
+            CombinedSearchCountBodyProfileParamsStateType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_stealth_v2_type_0 import (
-            CombinedSearchCountBodyProfileParamsStealthV2Type0,
+            CombinedSearchCountBodyProfileParamsStealthV2Type0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_stealth_v2_type_1 import (
-            CombinedSearchCountBodyProfileParamsStealthV2Type1,
+            CombinedSearchCountBodyProfileParamsStealthV2Type1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_tags_type_0 import (
-            CombinedSearchCountBodyProfileParamsTagsType0,
+            CombinedSearchCountBodyProfileParamsTagsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_time_zone_type_0 import (
-            CombinedSearchCountBodyProfileParamsTimeZoneType0,
+            CombinedSearchCountBodyProfileParamsTimeZoneType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_unemployment_type_0 import (
-            CombinedSearchCountBodyProfileParamsUnemploymentType0,
+            CombinedSearchCountBodyProfileParamsUnemploymentType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_years_of_experience_type_0 import (
-            CombinedSearchCountBodyProfileParamsYearsOfExperienceType0,
+            CombinedSearchCountBodyProfileParamsYearsOfExperienceType0,  # noqa: PLC0415
         )
 
         country_3_letter_code: dict[str, Any] | None | Unset
@@ -929,139 +929,139 @@ class CombinedSearchCountBodyProfileParams:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_approx_age_type_0 import (
-            CombinedSearchCountBodyProfileParamsApproxAgeType0,
+            CombinedSearchCountBodyProfileParamsApproxAgeType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_certifications_type_0 import (
-            CombinedSearchCountBodyProfileParamsCertificationsType0,
+            CombinedSearchCountBodyProfileParamsCertificationsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_company_match_mode_type_0 import (
-            CombinedSearchCountBodyProfileParamsCompanyMatchModeType0,
+            CombinedSearchCountBodyProfileParamsCompanyMatchModeType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_company_match_mode_type_1 import (
-            CombinedSearchCountBodyProfileParamsCompanyMatchModeType1,
+            CombinedSearchCountBodyProfileParamsCompanyMatchModeType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_country_3_letter_code_type_0 import (
-            CombinedSearchCountBodyProfileParamsCountry3LetterCodeType0,
+            CombinedSearchCountBodyProfileParamsCountry3LetterCodeType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_current_jobs_type_0 import (
-            CombinedSearchCountBodyProfileParamsCurrentJobsType0,
+            CombinedSearchCountBodyProfileParamsCurrentJobsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationType0,
+            CombinedSearchCountBodyProfileParamsEducationType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_employment_type_type_0 import (
-            CombinedSearchCountBodyProfileParamsEmploymentTypeType0,
+            CombinedSearchCountBodyProfileParamsEmploymentTypeType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_exact_profile_type_0 import (
-            CombinedSearchCountBodyProfileParamsExactProfileType0,
+            CombinedSearchCountBodyProfileParamsExactProfileType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_exact_profile_v2_type_0 import (
-            CombinedSearchCountBodyProfileParamsExactProfileV2Type0,
+            CombinedSearchCountBodyProfileParamsExactProfileV2Type0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_fuzzy_name_type_0 import (
-            CombinedSearchCountBodyProfileParamsFuzzyNameType0,
+            CombinedSearchCountBodyProfileParamsFuzzyNameType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_industry_type_0 import (
-            CombinedSearchCountBodyProfileParamsIndustryType0,
+            CombinedSearchCountBodyProfileParamsIndustryType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_job_status_type_0 import (
-            CombinedSearchCountBodyProfileParamsJobStatusType0,
+            CombinedSearchCountBodyProfileParamsJobStatusType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_job_status_type_1 import (
-            CombinedSearchCountBodyProfileParamsJobStatusType1,
+            CombinedSearchCountBodyProfileParamsJobStatusType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_job_status_type_2 import (
-            CombinedSearchCountBodyProfileParamsJobStatusType2,
+            CombinedSearchCountBodyProfileParamsJobStatusType2,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_job_title_v2_type_0 import (
-            CombinedSearchCountBodyProfileParamsJobTitleV2Type0,
+            CombinedSearchCountBodyProfileParamsJobTitleV2Type0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_job_title_v3_type_0 import (
-            CombinedSearchCountBodyProfileParamsJobTitleV3Type0,
+            CombinedSearchCountBodyProfileParamsJobTitleV3Type0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_jobs_type_0 import (
-            CombinedSearchCountBodyProfileParamsJobsType0,
+            CombinedSearchCountBodyProfileParamsJobsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_joined_linked_in_at_type_0 import (
-            CombinedSearchCountBodyProfileParamsJoinedLinkedInAtType0,
+            CombinedSearchCountBodyProfileParamsJoinedLinkedInAtType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_joined_linked_in_at_type_1 import (
-            CombinedSearchCountBodyProfileParamsJoinedLinkedInAtType1,
+            CombinedSearchCountBodyProfileParamsJoinedLinkedInAtType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_keyword_search_options_type_0 import (
-            CombinedSearchCountBodyProfileParamsKeywordSearchOptionsType0,
+            CombinedSearchCountBodyProfileParamsKeywordSearchOptionsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_keywords_type_0 import (
-            CombinedSearchCountBodyProfileParamsKeywordsType0,
+            CombinedSearchCountBodyProfileParamsKeywordsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_keywords_v2_type_0 import (
-            CombinedSearchCountBodyProfileParamsKeywordsV2Type0,
+            CombinedSearchCountBodyProfileParamsKeywordsV2Type0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_languages_type_0 import (
-            CombinedSearchCountBodyProfileParamsLanguagesType0,
+            CombinedSearchCountBodyProfileParamsLanguagesType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_left_stealth_at_type_0 import (
-            CombinedSearchCountBodyProfileParamsLeftStealthAtType0,
+            CombinedSearchCountBodyProfileParamsLeftStealthAtType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_left_stealth_at_type_1 import (
-            CombinedSearchCountBodyProfileParamsLeftStealthAtType1,
+            CombinedSearchCountBodyProfileParamsLeftStealthAtType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_location_type_0 import (
-            CombinedSearchCountBodyProfileParamsLocationType0,
+            CombinedSearchCountBodyProfileParamsLocationType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_num_connections_type_0 import (
-            CombinedSearchCountBodyProfileParamsNumConnectionsType0,
+            CombinedSearchCountBodyProfileParamsNumConnectionsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_num_followers_type_0 import (
-            CombinedSearchCountBodyProfileParamsNumFollowersType0,
+            CombinedSearchCountBodyProfileParamsNumFollowersType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_past_job_text_type_0 import (
-            CombinedSearchCountBodyProfileParamsPastJobTextType0,
+            CombinedSearchCountBodyProfileParamsPastJobTextType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_past_jobs_type_0 import (
-            CombinedSearchCountBodyProfileParamsPastJobsType0,
+            CombinedSearchCountBodyProfileParamsPastJobsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_publications_type_0 import (
-            CombinedSearchCountBodyProfileParamsPublicationsType0,
+            CombinedSearchCountBodyProfileParamsPublicationsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_sort_type_0_item import (
-            CombinedSearchCountBodyProfileParamsSortType0Item,
+            CombinedSearchCountBodyProfileParamsSortType0Item,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_started_at_company_type_0 import (
-            CombinedSearchCountBodyProfileParamsStartedAtCompanyType0,
+            CombinedSearchCountBodyProfileParamsStartedAtCompanyType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_started_at_company_type_1 import (
-            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1,
+            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_started_in_role_type_0 import (
-            CombinedSearchCountBodyProfileParamsStartedInRoleType0,
+            CombinedSearchCountBodyProfileParamsStartedInRoleType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_started_in_role_type_1 import (
-            CombinedSearchCountBodyProfileParamsStartedInRoleType1,
+            CombinedSearchCountBodyProfileParamsStartedInRoleType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_state_type_0 import (
-            CombinedSearchCountBodyProfileParamsStateType0,
+            CombinedSearchCountBodyProfileParamsStateType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_stealth_v2_type_0 import (
-            CombinedSearchCountBodyProfileParamsStealthV2Type0,
+            CombinedSearchCountBodyProfileParamsStealthV2Type0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_stealth_v2_type_1 import (
-            CombinedSearchCountBodyProfileParamsStealthV2Type1,
+            CombinedSearchCountBodyProfileParamsStealthV2Type1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_tags_type_0 import (
-            CombinedSearchCountBodyProfileParamsTagsType0,
+            CombinedSearchCountBodyProfileParamsTagsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_time_zone_type_0 import (
-            CombinedSearchCountBodyProfileParamsTimeZoneType0,
+            CombinedSearchCountBodyProfileParamsTimeZoneType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_unemployment_type_0 import (
-            CombinedSearchCountBodyProfileParamsUnemploymentType0,
+            CombinedSearchCountBodyProfileParamsUnemploymentType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_years_of_experience_type_0 import (
-            CombinedSearchCountBodyProfileParamsYearsOfExperienceType0,
+            CombinedSearchCountBodyProfileParamsYearsOfExperienceType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

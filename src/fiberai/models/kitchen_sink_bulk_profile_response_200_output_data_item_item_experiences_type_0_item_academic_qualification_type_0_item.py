@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class KitchenSinkBulkProfileResponse200OutputDataItemItemExperiencesType0ItemAcademicQualificationType0Item(str, Enum):
+class KitchenSinkBulkProfileResponse200OutputDataItemItemExperiencesType0ItemAcademicQualificationType0Item(StrEnum):
     ASSOCIATE_DEGREE = "Associate Degree"
     BACHELOR_DEGREE = "Bachelor Degree"
     HIGH_SCHOOL = "High School"

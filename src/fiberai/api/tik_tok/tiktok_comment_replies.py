@@ -147,15 +147,15 @@ def sync_detailed(
     | TiktokCommentRepliesResponse500
     | TiktokCommentRepliesResponse503
 ]:
-    r"""Fetch TikTok comment replies
+    """Fetch TikTok comment replies
 
      Fetches replies to a TikTok comment. Returns a paginated list of replies. Use the `nextPageToken`
     field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokCommentRepliesBody):
@@ -196,15 +196,15 @@ def sync(
     | TiktokCommentRepliesResponse503
     | None
 ):
-    r"""Fetch TikTok comment replies
+    """Fetch TikTok comment replies
 
      Fetches replies to a TikTok comment. Returns a paginated list of replies. Use the `nextPageToken`
     field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokCommentRepliesBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TiktokCommentRepliesResponse500
     | TiktokCommentRepliesResponse503
 ]:
-    r"""Fetch TikTok comment replies
+    """Fetch TikTok comment replies
 
      Fetches replies to a TikTok comment. Returns a paginated list of replies. Use the `nextPageToken`
     field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokCommentRepliesBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TiktokCommentRepliesResponse503
     | None
 ):
-    r"""Fetch TikTok comment replies
+    """Fetch TikTok comment replies
 
      Fetches replies to a TikTok comment. Returns a paginated list of replies. Use the `nextPageToken`
     field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokCommentRepliesBody):

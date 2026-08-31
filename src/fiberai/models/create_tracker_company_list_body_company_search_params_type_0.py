@@ -248,112 +248,112 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_accelerators_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_crunchbase_categories_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0CrunchbaseCategoriesType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0CrunchbaseCategoriesType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_crunchbase_category_groups_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0CrunchbaseCategoryGroupsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0CrunchbaseCategoryGroupsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employee_count_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeeCountV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeeCountV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employee_trends_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeeTrendsV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeeTrendsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_fortune_rankings_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0FortuneRankingsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0FortuneRankingsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_founded_on_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0FoundedOnType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0FoundedOnType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_founded_on_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0FoundedOnType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0FoundedOnType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_country_code_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersCountryCodeType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersCountryCodeType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_state_name_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersStateNameType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersStateNameType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_industries_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0IndustriesV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0IndustriesV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_posting_stats_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_keywords_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0KeywordsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0KeywordsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_last_funded_on_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundedOnType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundedOnType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_last_funded_on_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundedOnType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundedOnType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_last_funding_usd_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundingUSDType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundingUSDType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_linkedin_industries_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0LinkedinIndustriesType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0LinkedinIndustriesType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_naics_codes_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0NaicsCodesType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0NaicsCodesType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_name_like_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0NameLikeType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0NameLikeType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_num_words_in_name_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0NumWordsInNameType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0NumWordsInNameType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_office_locations_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_revenue_range_usd_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0RevenueRangeUSDType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0RevenueRangeUSDType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_special_flags_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0SpecialFlagsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0SpecialFlagsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_stage_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0StageType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0StageType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_status_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0StatusType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0StatusType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_tags_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0TagsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0TagsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_technologies_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0TechnologiesType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0TechnologiesType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_technologies_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0TechnologiesV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0TechnologiesV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_tlds_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0TldsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0TldsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_total_funding_usd_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0TotalFundingUSDType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0TotalFundingUSDType0,  # noqa: PLC0415
         )
 
         exact_company_v2: dict[str, Any] | None | Unset
@@ -786,115 +786,115 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_accelerators_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_crunchbase_categories_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0CrunchbaseCategoriesType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0CrunchbaseCategoriesType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_crunchbase_category_groups_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0CrunchbaseCategoryGroupsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0CrunchbaseCategoryGroupsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employee_count_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeeCountV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeeCountV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employee_trends_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeeTrendsV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeeTrendsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_exact_company_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_fortune_rankings_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0FortuneRankingsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0FortuneRankingsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_founded_on_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0FoundedOnType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0FoundedOnType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_founded_on_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0FoundedOnType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0FoundedOnType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_country_code_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersCountryCodeType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersCountryCodeType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_state_name_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersStateNameType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersStateNameType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_industries_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0IndustriesV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0IndustriesV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_investors_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_posting_stats_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_keywords_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0KeywordsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0KeywordsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_last_funded_on_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundedOnType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundedOnType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_last_funded_on_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundedOnType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundedOnType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_last_funding_usd_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundingUSDType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0LastFundingUSDType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_linkedin_industries_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0LinkedinIndustriesType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0LinkedinIndustriesType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_naics_codes_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0NaicsCodesType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0NaicsCodesType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_name_like_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0NameLikeType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0NameLikeType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_num_words_in_name_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0NumWordsInNameType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0NumWordsInNameType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_office_locations_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_revenue_range_usd_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0RevenueRangeUSDType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0RevenueRangeUSDType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_sort_type_0_item import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0SortType0Item,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0SortType0Item,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_special_flags_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0SpecialFlagsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0SpecialFlagsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_stage_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0StageType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0StageType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_status_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0StatusType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0StatusType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_tags_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0TagsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0TagsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_technologies_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0TechnologiesType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0TechnologiesType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_technologies_v2_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0TechnologiesV2Type0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0TechnologiesV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_tlds_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0TldsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0TldsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_total_funding_usd_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0TotalFundingUSDType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0TotalFundingUSDType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

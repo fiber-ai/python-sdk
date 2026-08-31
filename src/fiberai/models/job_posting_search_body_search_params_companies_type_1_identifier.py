@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class JobPostingSearchBodySearchParamsCompaniesType1Identifier(str, Enum):
+class JobPostingSearchBodySearchParamsCompaniesType1Identifier(StrEnum):
     DOMAIN = "domain"
 
     def __str__(self) -> str:

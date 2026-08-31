@@ -53,7 +53,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employees_type_0_rules_item import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0RulesItem,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeesType0RulesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

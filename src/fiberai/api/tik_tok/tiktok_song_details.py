@@ -147,14 +147,14 @@ def sync_detailed(
     | TiktokSongDetailsResponse500
     | TiktokSongDetailsResponse503
 ]:
-    r"""Fetch TikTok song details
+    """Fetch TikTok song details
 
      Fetches details about a TikTok song/sound including title, artist, and usage statistics.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSongDetailsBody):
@@ -195,14 +195,14 @@ def sync(
     | TiktokSongDetailsResponse503
     | None
 ):
-    r"""Fetch TikTok song details
+    """Fetch TikTok song details
 
      Fetches details about a TikTok song/sound including title, artist, and usage statistics.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSongDetailsBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | TiktokSongDetailsResponse500
     | TiktokSongDetailsResponse503
 ]:
-    r"""Fetch TikTok song details
+    """Fetch TikTok song details
 
      Fetches details about a TikTok song/sound including title, artist, and usage statistics.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSongDetailsBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | TiktokSongDetailsResponse503
     | None
 ):
-    r"""Fetch TikTok song details
+    """Fetch TikTok song details
 
      Fetches details about a TikTok song/sound including title, artist, and usage statistics.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSongDetailsBody):

@@ -100,17 +100,23 @@ class GetTalentFlowResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_talent_flow_response_200_output_breakdowns import GetTalentFlowResponse200OutputBreakdowns
-        from ..models.get_talent_flow_response_200_output_company import GetTalentFlowResponse200OutputCompany
+        from ..models.get_talent_flow_response_200_output_breakdowns import (
+            GetTalentFlowResponse200OutputBreakdowns,  # noqa: PLC0415
+        )
+        from ..models.get_talent_flow_response_200_output_company import (
+            GetTalentFlowResponse200OutputCompany,  # noqa: PLC0415
+        )
         from ..models.get_talent_flow_response_200_output_company_buckets_item import (
-            GetTalentFlowResponse200OutputCompanyBucketsItem,
+            GetTalentFlowResponse200OutputCompanyBucketsItem,  # noqa: PLC0415
         )
         from ..models.get_talent_flow_response_200_output_tenure_months import (
-            GetTalentFlowResponse200OutputTenureMonths,
+            GetTalentFlowResponse200OutputTenureMonths,  # noqa: PLC0415
         )
-        from ..models.get_talent_flow_response_200_output_window import GetTalentFlowResponse200OutputWindow
+        from ..models.get_talent_flow_response_200_output_window import (
+            GetTalentFlowResponse200OutputWindow,  # noqa: PLC0415
+        )
         from ..models.get_talent_flow_response_200_output_years_of_experience import (
-            GetTalentFlowResponse200OutputYearsOfExperience,
+            GetTalentFlowResponse200OutputYearsOfExperience,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -66,16 +66,16 @@ class GetIndustriesResponse200OutputCompanyCountsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_industries_response_200_output_company_counts_type_0_crunchbase_industries import (
-            GetIndustriesResponse200OutputCompanyCountsType0CrunchbaseIndustries,
+            GetIndustriesResponse200OutputCompanyCountsType0CrunchbaseIndustries,  # noqa: PLC0415
         )
         from ..models.get_industries_response_200_output_company_counts_type_0_crunchbase_industry_groups import (
-            GetIndustriesResponse200OutputCompanyCountsType0CrunchbaseIndustryGroups,
+            GetIndustriesResponse200OutputCompanyCountsType0CrunchbaseIndustryGroups,  # noqa: PLC0415
         )
         from ..models.get_industries_response_200_output_company_counts_type_0_fiber_industries import (
-            GetIndustriesResponse200OutputCompanyCountsType0FiberIndustries,
+            GetIndustriesResponse200OutputCompanyCountsType0FiberIndustries,  # noqa: PLC0415
         )
         from ..models.get_industries_response_200_output_company_counts_type_0_linkedin_industries import (
-            GetIndustriesResponse200OutputCompanyCountsType0LinkedinIndustries,
+            GetIndustriesResponse200OutputCompanyCountsType0LinkedinIndustries,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

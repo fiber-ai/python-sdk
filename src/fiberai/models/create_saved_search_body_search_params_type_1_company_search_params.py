@@ -270,112 +270,112 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_accelerators_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsAcceleratorsV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsAcceleratorsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_crunchbase_categories_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsCrunchbaseCategoriesType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsCrunchbaseCategoriesType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_crunchbase_category_groups_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsCrunchbaseCategoryGroupsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsCrunchbaseCategoryGroupsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_count_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_trends_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_exact_company_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsExactCompanyType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsExactCompanyType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_exact_company_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsExactCompanyV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsExactCompanyV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_fortune_rankings_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsFortuneRankingsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsFortuneRankingsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_founded_on_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsFoundedOnType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsFoundedOnType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_founded_on_type_1 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsFoundedOnType1,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsFoundedOnType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_country_code_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersCountryCodeType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersCountryCodeType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_state_name_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersStateNameType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersStateNameType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_industries_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsIndustriesV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsIndustriesV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_investors_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_job_posting_stats_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_job_postings_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingsV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_keywords_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsKeywordsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsKeywordsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_last_funded_on_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLastFundedOnType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLastFundedOnType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_last_funded_on_type_1 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLastFundedOnType1,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLastFundedOnType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_last_funding_usd_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLastFundingUSDType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLastFundingUSDType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_linkedin_industries_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLinkedinIndustriesType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLinkedinIndustriesType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_naics_codes_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsNaicsCodesType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsNaicsCodesType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_name_like_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsNameLikeType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsNameLikeType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_num_words_in_name_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsNumWordsInNameType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsNumWordsInNameType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_office_locations_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsOfficeLocationsV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsOfficeLocationsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_revenue_range_usd_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangeUSDType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangeUSDType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_special_flags_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsSpecialFlagsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsSpecialFlagsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_stage_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsStageType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsStageType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_status_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsStatusType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsStatusType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_tags_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTagsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTagsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_technologies_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_technologies_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_tlds_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTldsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTldsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_total_funding_usd_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTotalFundingUSDType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTotalFundingUSDType0,  # noqa: PLC0415
         )
 
         exact_company_v2: dict[str, Any] | None | Unset
@@ -825,115 +825,115 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_accelerators_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsAcceleratorsV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsAcceleratorsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_crunchbase_categories_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsCrunchbaseCategoriesType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsCrunchbaseCategoriesType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_crunchbase_category_groups_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsCrunchbaseCategoryGroupsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsCrunchbaseCategoryGroupsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_count_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_trends_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_employees_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeesType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_exact_company_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsExactCompanyType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsExactCompanyType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_exact_company_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsExactCompanyV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsExactCompanyV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_fortune_rankings_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsFortuneRankingsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsFortuneRankingsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_founded_on_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsFoundedOnType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsFoundedOnType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_founded_on_type_1 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsFoundedOnType1,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsFoundedOnType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_country_code_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersCountryCodeType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersCountryCodeType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_state_name_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersStateNameType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersStateNameType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_industries_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsIndustriesV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsIndustriesV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_investors_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsInvestorsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_job_posting_stats_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_job_postings_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingsV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_keywords_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsKeywordsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsKeywordsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_last_funded_on_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLastFundedOnType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLastFundedOnType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_last_funded_on_type_1 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLastFundedOnType1,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLastFundedOnType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_last_funding_usd_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLastFundingUSDType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLastFundingUSDType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_linkedin_industries_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLinkedinIndustriesType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsLinkedinIndustriesType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_naics_codes_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsNaicsCodesType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsNaicsCodesType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_name_like_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsNameLikeType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsNameLikeType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_num_words_in_name_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsNumWordsInNameType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsNumWordsInNameType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_office_locations_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsOfficeLocationsV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsOfficeLocationsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_revenue_range_usd_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangeUSDType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangeUSDType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_sort_type_0_item import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsSortType0Item,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsSortType0Item,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_special_flags_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsSpecialFlagsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsSpecialFlagsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_stage_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsStageType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsStageType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_status_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsStatusType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsStatusType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_tags_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTagsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTagsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_technologies_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_technologies_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesV2Type0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_tlds_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTldsType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTldsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_total_funding_usd_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTotalFundingUSDType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsTotalFundingUSDType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

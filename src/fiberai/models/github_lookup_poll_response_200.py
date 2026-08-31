@@ -48,16 +48,16 @@ class GithubLookupPollResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.github_lookup_poll_response_200_charge_info_type_0 import (
-            GithubLookupPollResponse200ChargeInfoType0,
+            GithubLookupPollResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.github_lookup_poll_response_200_charge_info_type_1 import (
-            GithubLookupPollResponse200ChargeInfoType1,
+            GithubLookupPollResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.github_lookup_poll_response_200_charge_info_type_2 import (
-            GithubLookupPollResponse200ChargeInfoType2,
+            GithubLookupPollResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.github_lookup_poll_response_200_charge_info_type_3 import (
-            GithubLookupPollResponse200ChargeInfoType3,
+            GithubLookupPollResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class GithubLookupPollResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.github_lookup_poll_response_200_charge_info_type_0 import (
-            GithubLookupPollResponse200ChargeInfoType0,
+            GithubLookupPollResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.github_lookup_poll_response_200_charge_info_type_1 import (
-            GithubLookupPollResponse200ChargeInfoType1,
+            GithubLookupPollResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.github_lookup_poll_response_200_charge_info_type_2 import (
-            GithubLookupPollResponse200ChargeInfoType2,
+            GithubLookupPollResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.github_lookup_poll_response_200_charge_info_type_3 import (
-            GithubLookupPollResponse200ChargeInfoType3,
+            GithubLookupPollResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.github_lookup_poll_response_200_charge_info_type_4 import (
-            GithubLookupPollResponse200ChargeInfoType4,
+            GithubLookupPollResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.github_lookup_poll_response_200_output import GithubLookupPollResponse200Output
+        from ..models.github_lookup_poll_response_200_output import GithubLookupPollResponse200Output  # noqa: PLC0415
         from ..models.github_lookup_poll_response_200_warnings_type_0_item import (
-            GithubLookupPollResponse200WarningsType0Item,
+            GithubLookupPollResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

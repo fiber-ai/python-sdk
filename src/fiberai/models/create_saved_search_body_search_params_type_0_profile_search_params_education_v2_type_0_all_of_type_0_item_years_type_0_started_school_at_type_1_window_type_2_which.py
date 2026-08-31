@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0StartedSchoolAtType1WindowType2Which(
-    str, Enum
+    StrEnum
 ):
     CURRENT = "current"
     PREVIOUS = "previous"

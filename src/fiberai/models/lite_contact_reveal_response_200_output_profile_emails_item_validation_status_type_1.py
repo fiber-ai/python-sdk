@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class LiteContactRevealResponse200OutputProfileEmailsItemValidationStatusType1(str, Enum):
+class LiteContactRevealResponse200OutputProfileEmailsItemValidationStatusType1(StrEnum):
     INVALID = "invalid"
     RISKY = "risky"
     UNKNOWN = "unknown"

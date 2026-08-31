@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType1Rule(str, Enum):
+class CombinedSearchCountBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType1Rule(StrEnum):
     COUNTRY = "country"
 
     def __str__(self) -> str:

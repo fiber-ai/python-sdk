@@ -147,15 +147,15 @@ def sync_detailed(
     | InstagramUserPostsResponse500
     | InstagramUserPostsResponse503
 ]:
-    r"""Fetch Instagram user posts
+    """Fetch Instagram user posts
 
      Fetches the latest posts for an Instagram user. Returns a paginated list of posts with engagement
     metrics. Use the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramUserPostsBody):
@@ -196,15 +196,15 @@ def sync(
     | InstagramUserPostsResponse503
     | None
 ):
-    r"""Fetch Instagram user posts
+    """Fetch Instagram user posts
 
      Fetches the latest posts for an Instagram user. Returns a paginated list of posts with engagement
     metrics. Use the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramUserPostsBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | InstagramUserPostsResponse500
     | InstagramUserPostsResponse503
 ]:
-    r"""Fetch Instagram user posts
+    """Fetch Instagram user posts
 
      Fetches the latest posts for an Instagram user. Returns a paginated list of posts with engagement
     metrics. Use the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramUserPostsBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | InstagramUserPostsResponse503
     | None
 ):
-    r"""Fetch Instagram user posts
+    """Fetch Instagram user posts
 
      Fetches the latest posts for an Instagram user. Returns a paginated list of posts with engagement
     metrics. Use the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (InstagramUserPostsBody):

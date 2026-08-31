@@ -52,10 +52,10 @@ class FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MaxType
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_base_rent_type_0_max_type_0_local import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MaxType0Local,
+            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MaxType0Local,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_base_rent_type_0_max_type_0_usd import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MaxType0Usd,
+            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MaxType0Usd,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

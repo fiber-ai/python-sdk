@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCountry3LetterCodeType0AnyOfType0Item(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCountry3LetterCodeType0AnyOfType0Item(StrEnum):
     ABW = "ABW"
     AFG = "AFG"
     AGO = "AGO"

@@ -58,16 +58,16 @@ class CreateWebhookEndpointResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_webhook_endpoint_response_200_charge_info_type_0 import (
-            CreateWebhookEndpointResponse200ChargeInfoType0,
+            CreateWebhookEndpointResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.create_webhook_endpoint_response_200_charge_info_type_1 import (
-            CreateWebhookEndpointResponse200ChargeInfoType1,
+            CreateWebhookEndpointResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.create_webhook_endpoint_response_200_charge_info_type_2 import (
-            CreateWebhookEndpointResponse200ChargeInfoType2,
+            CreateWebhookEndpointResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.create_webhook_endpoint_response_200_charge_info_type_3 import (
-            CreateWebhookEndpointResponse200ChargeInfoType3,
+            CreateWebhookEndpointResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class CreateWebhookEndpointResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_webhook_endpoint_response_200_charge_info_type_0 import (
-            CreateWebhookEndpointResponse200ChargeInfoType0,
+            CreateWebhookEndpointResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.create_webhook_endpoint_response_200_charge_info_type_1 import (
-            CreateWebhookEndpointResponse200ChargeInfoType1,
+            CreateWebhookEndpointResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.create_webhook_endpoint_response_200_charge_info_type_2 import (
-            CreateWebhookEndpointResponse200ChargeInfoType2,
+            CreateWebhookEndpointResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.create_webhook_endpoint_response_200_charge_info_type_3 import (
-            CreateWebhookEndpointResponse200ChargeInfoType3,
+            CreateWebhookEndpointResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.create_webhook_endpoint_response_200_charge_info_type_4 import (
-            CreateWebhookEndpointResponse200ChargeInfoType4,
+            CreateWebhookEndpointResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.create_webhook_endpoint_response_200_output import CreateWebhookEndpointResponse200Output
+        from ..models.create_webhook_endpoint_response_200_output import (
+            CreateWebhookEndpointResponse200Output,  # noqa: PLC0415
+        )
         from ..models.create_webhook_endpoint_response_200_warnings_type_0_item import (
-            CreateWebhookEndpointResponse200WarningsType0Item,
+            CreateWebhookEndpointResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

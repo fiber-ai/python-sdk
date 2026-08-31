@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyCompanyParamsTechnologiesType0AnyOfType0ItemType1Type(str, Enum):
+class CombinedSearchCountBodyCompanyParamsTechnologiesType0AnyOfType0ItemType1Type(StrEnum):
     CUSTOM = "custom"
 
     def __str__(self) -> str:

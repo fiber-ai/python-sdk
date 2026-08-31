@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchCountBodySearchParamsStealthV2Type1LeftStealthAtType1WindowType2Period(str, Enum):
+class PeopleSearchCountBodySearchParamsStealthV2Type1LeftStealthAtType1WindowType2Period(StrEnum):
     DAY = "day"
     MONTH = "month"
     QUARTER = "quarter"

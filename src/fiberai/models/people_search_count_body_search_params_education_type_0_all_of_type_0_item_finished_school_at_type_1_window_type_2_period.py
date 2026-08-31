@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType2Period(str, Enum):
+class PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType2Period(StrEnum):
     DAY = "day"
     MONTH = "month"
     QUARTER = "quarter"

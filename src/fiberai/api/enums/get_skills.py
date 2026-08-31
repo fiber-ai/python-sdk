@@ -147,15 +147,15 @@ def sync_detailed(
     | GetSkillsResponse500
     | GetSkillsResponse503
 ]:
-    r"""List skills
+    """List skills
 
      Get the most common professional skills across profiles. Returns up to 1,000 skill names sorted by
     popularity. Useful for building skill-based search filters.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -196,15 +196,15 @@ def sync(
     | GetSkillsResponse503
     | None
 ):
-    r"""List skills
+    """List skills
 
      Get the most common professional skills across profiles. Returns up to 1,000 skill names sorted by
     popularity. Useful for building skill-based search filters.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | GetSkillsResponse500
     | GetSkillsResponse503
 ]:
-    r"""List skills
+    """List skills
 
      Get the most common professional skills across profiles. Returns up to 1,000 skill names sorted by
     popularity. Useful for building skill-based search filters.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -286,15 +286,15 @@ async def asyncio(
     | GetSkillsResponse503
     | None
 ):
-    r"""List skills
+    """List skills
 
      Get the most common professional skills across profiles. Returns up to 1,000 skill names sorted by
     popularity. Useful for building skill-based search filters.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):

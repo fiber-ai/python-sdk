@@ -147,15 +147,15 @@ def sync_detailed(
     | GetAllApiKeysResponse500
     | GetAllApiKeysResponse503
 ]:
-    r"""List API keys
+    """List API keys
 
      List all API keys for your organization, including each key's name, prefix, expiration, and per-key
     credit usage. The secret value of a key is only shown once at creation and is never returned here.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetAllApiKeysBody):
@@ -196,15 +196,15 @@ def sync(
     | GetAllApiKeysResponse503
     | None
 ):
-    r"""List API keys
+    """List API keys
 
      List all API keys for your organization, including each key's name, prefix, expiration, and per-key
     credit usage. The secret value of a key is only shown once at creation and is never returned here.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetAllApiKeysBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | GetAllApiKeysResponse500
     | GetAllApiKeysResponse503
 ]:
-    r"""List API keys
+    """List API keys
 
      List all API keys for your organization, including each key's name, prefix, expiration, and per-key
     credit usage. The secret value of a key is only shown once at creation and is never returned here.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetAllApiKeysBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | GetAllApiKeysResponse503
     | None
 ):
-    r"""List API keys
+    """List API keys
 
      List all API keys for your organization, including each key's name, prefix, expiration, and per-key
     credit usage. The secret value of a key is only shown once at creation and is never returned here.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetAllApiKeysBody):

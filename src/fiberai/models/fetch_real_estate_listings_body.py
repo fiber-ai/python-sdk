@@ -109,22 +109,36 @@ class FetchRealEstateListingsBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.fetch_real_estate_listings_body_bathrooms_type_0 import FetchRealEstateListingsBodyBathroomsType0
-        from ..models.fetch_real_estate_listings_body_bedrooms_type_0 import FetchRealEstateListingsBodyBedroomsType0
-        from ..models.fetch_real_estate_listings_body_features_type_0 import FetchRealEstateListingsBodyFeaturesType0
-        from ..models.fetch_real_estate_listings_body_floor_area_sq_ft_type_0 import (
-            FetchRealEstateListingsBodyFloorAreaSqFtType0,
+        from ..models.fetch_real_estate_listings_body_bathrooms_type_0 import (
+            FetchRealEstateListingsBodyBathroomsType0,  # noqa: PLC0415
         )
-        from ..models.fetch_real_estate_listings_body_location_type_0 import FetchRealEstateListingsBodyLocationType0
+        from ..models.fetch_real_estate_listings_body_bedrooms_type_0 import (
+            FetchRealEstateListingsBodyBedroomsType0,  # noqa: PLC0415
+        )
+        from ..models.fetch_real_estate_listings_body_features_type_0 import (
+            FetchRealEstateListingsBodyFeaturesType0,  # noqa: PLC0415
+        )
+        from ..models.fetch_real_estate_listings_body_floor_area_sq_ft_type_0 import (
+            FetchRealEstateListingsBodyFloorAreaSqFtType0,  # noqa: PLC0415
+        )
+        from ..models.fetch_real_estate_listings_body_location_type_0 import (
+            FetchRealEstateListingsBodyLocationType0,  # noqa: PLC0415
+        )
         from ..models.fetch_real_estate_listings_body_lot_area_sq_ft_type_0 import (
-            FetchRealEstateListingsBodyLotAreaSqFtType0,
+            FetchRealEstateListingsBodyLotAreaSqFtType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_body_parking_spots_type_0 import (
-            FetchRealEstateListingsBodyParkingSpotsType0,
+            FetchRealEstateListingsBodyParkingSpotsType0,  # noqa: PLC0415
         )
-        from ..models.fetch_real_estate_listings_body_price_type_0 import FetchRealEstateListingsBodyPriceType0
-        from ..models.fetch_real_estate_listings_body_rent_type_0 import FetchRealEstateListingsBodyRentType0
-        from ..models.fetch_real_estate_listings_body_year_built_type_0 import FetchRealEstateListingsBodyYearBuiltType0
+        from ..models.fetch_real_estate_listings_body_price_type_0 import (
+            FetchRealEstateListingsBodyPriceType0,  # noqa: PLC0415
+        )
+        from ..models.fetch_real_estate_listings_body_rent_type_0 import (
+            FetchRealEstateListingsBodyRentType0,  # noqa: PLC0415
+        )
+        from ..models.fetch_real_estate_listings_body_year_built_type_0 import (
+            FetchRealEstateListingsBodyYearBuiltType0,  # noqa: PLC0415
+        )
 
         api_key = self.api_key
 
@@ -295,23 +309,39 @@ class FetchRealEstateListingsBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.fetch_real_estate_listings_body_bathrooms_type_0 import FetchRealEstateListingsBodyBathroomsType0
-        from ..models.fetch_real_estate_listings_body_bedrooms_type_0 import FetchRealEstateListingsBodyBedroomsType0
-        from ..models.fetch_real_estate_listings_body_features_type_0 import FetchRealEstateListingsBodyFeaturesType0
-        from ..models.fetch_real_estate_listings_body_floor_area_sq_ft_type_0 import (
-            FetchRealEstateListingsBodyFloorAreaSqFtType0,
+        from ..models.fetch_real_estate_listings_body_bathrooms_type_0 import (
+            FetchRealEstateListingsBodyBathroomsType0,  # noqa: PLC0415
         )
-        from ..models.fetch_real_estate_listings_body_location_type_0 import FetchRealEstateListingsBodyLocationType0
-        from ..models.fetch_real_estate_listings_body_location_type_1 import FetchRealEstateListingsBodyLocationType1
+        from ..models.fetch_real_estate_listings_body_bedrooms_type_0 import (
+            FetchRealEstateListingsBodyBedroomsType0,  # noqa: PLC0415
+        )
+        from ..models.fetch_real_estate_listings_body_features_type_0 import (
+            FetchRealEstateListingsBodyFeaturesType0,  # noqa: PLC0415
+        )
+        from ..models.fetch_real_estate_listings_body_floor_area_sq_ft_type_0 import (
+            FetchRealEstateListingsBodyFloorAreaSqFtType0,  # noqa: PLC0415
+        )
+        from ..models.fetch_real_estate_listings_body_location_type_0 import (
+            FetchRealEstateListingsBodyLocationType0,  # noqa: PLC0415
+        )
+        from ..models.fetch_real_estate_listings_body_location_type_1 import (
+            FetchRealEstateListingsBodyLocationType1,  # noqa: PLC0415
+        )
         from ..models.fetch_real_estate_listings_body_lot_area_sq_ft_type_0 import (
-            FetchRealEstateListingsBodyLotAreaSqFtType0,
+            FetchRealEstateListingsBodyLotAreaSqFtType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_body_parking_spots_type_0 import (
-            FetchRealEstateListingsBodyParkingSpotsType0,
+            FetchRealEstateListingsBodyParkingSpotsType0,  # noqa: PLC0415
         )
-        from ..models.fetch_real_estate_listings_body_price_type_0 import FetchRealEstateListingsBodyPriceType0
-        from ..models.fetch_real_estate_listings_body_rent_type_0 import FetchRealEstateListingsBodyRentType0
-        from ..models.fetch_real_estate_listings_body_year_built_type_0 import FetchRealEstateListingsBodyYearBuiltType0
+        from ..models.fetch_real_estate_listings_body_price_type_0 import (
+            FetchRealEstateListingsBodyPriceType0,  # noqa: PLC0415
+        )
+        from ..models.fetch_real_estate_listings_body_rent_type_0 import (
+            FetchRealEstateListingsBodyRentType0,  # noqa: PLC0415
+        )
+        from ..models.fetch_real_estate_listings_body_year_built_type_0 import (
+            FetchRealEstateListingsBodyYearBuiltType0,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

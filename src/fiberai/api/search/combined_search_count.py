@@ -147,7 +147,7 @@ def sync_detailed(
     | CombinedSearchCountResponse500
     | CombinedSearchCountResponse503
 ]:
-    r"""Combined search count
+    """Combined search count
 
      Get the total count of companies and people matching the provided search filters. People counts are
     scoped to those currently or previously working (based on the job status filter) at companies that
@@ -156,8 +156,8 @@ def sync_detailed(
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Flat charge for the company count (1 credit) and profile count (1
-    credit)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Flat
-    charge\">ⓘ</span></span>
+    credit)&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary. Flat
+    charge">ⓘ</span></span>
 
     Args:
         body (CombinedSearchCountBody):
@@ -198,7 +198,7 @@ def sync(
     | CombinedSearchCountResponse503
     | None
 ):
-    r"""Combined search count
+    """Combined search count
 
      Get the total count of companies and people matching the provided search filters. People counts are
     scoped to those currently or previously working (based on the job status filter) at companies that
@@ -207,8 +207,8 @@ def sync(
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Flat charge for the company count (1 credit) and profile count (1
-    credit)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Flat
-    charge\">ⓘ</span></span>
+    credit)&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary. Flat
+    charge">ⓘ</span></span>
 
     Args:
         body (CombinedSearchCountBody):
@@ -243,7 +243,7 @@ async def asyncio_detailed(
     | CombinedSearchCountResponse500
     | CombinedSearchCountResponse503
 ]:
-    r"""Combined search count
+    """Combined search count
 
      Get the total count of companies and people matching the provided search filters. People counts are
     scoped to those currently or previously working (based on the job status filter) at companies that
@@ -252,8 +252,8 @@ async def asyncio_detailed(
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Flat charge for the company count (1 credit) and profile count (1
-    credit)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Flat
-    charge\">ⓘ</span></span>
+    credit)&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary. Flat
+    charge">ⓘ</span></span>
 
     Args:
         body (CombinedSearchCountBody):
@@ -292,7 +292,7 @@ async def asyncio(
     | CombinedSearchCountResponse503
     | None
 ):
-    r"""Combined search count
+    """Combined search count
 
      Get the total count of companies and people matching the provided search filters. People counts are
     scoped to those currently or previously working (based on the job status filter) at companies that
@@ -301,8 +301,8 @@ async def asyncio(
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> Flat charge for the company count (1 credit) and profile count (1
-    credit)&nbsp;<span title=\"Pricing shown is default pricing. Actual pricing may vary. Flat
-    charge\">ⓘ</span></span>
+    credit)&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary. Flat
+    charge">ⓘ</span></span>
 
     Args:
         body (CombinedSearchCountBody):

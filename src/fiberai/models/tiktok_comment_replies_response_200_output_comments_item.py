@@ -40,7 +40,7 @@ class TiktokCommentRepliesResponse200OutputCommentsItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.tiktok_comment_replies_response_200_output_comments_item_user_type_0 import (
-            TiktokCommentRepliesResponse200OutputCommentsItemUserType0,
+            TiktokCommentRepliesResponse200OutputCommentsItemUserType0,  # noqa: PLC0415
         )
 
         id: None | str | Unset
@@ -102,7 +102,7 @@ class TiktokCommentRepliesResponse200OutputCommentsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.tiktok_comment_replies_response_200_output_comments_item_user_type_0 import (
-            TiktokCommentRepliesResponse200OutputCommentsItemUserType0,
+            TiktokCommentRepliesResponse200OutputCommentsItemUserType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

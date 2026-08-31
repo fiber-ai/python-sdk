@@ -58,16 +58,16 @@ class TwitterUserFollowersResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.twitter_user_followers_response_200_charge_info_type_0 import (
-            TwitterUserFollowersResponse200ChargeInfoType0,
+            TwitterUserFollowersResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.twitter_user_followers_response_200_charge_info_type_1 import (
-            TwitterUserFollowersResponse200ChargeInfoType1,
+            TwitterUserFollowersResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.twitter_user_followers_response_200_charge_info_type_2 import (
-            TwitterUserFollowersResponse200ChargeInfoType2,
+            TwitterUserFollowersResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.twitter_user_followers_response_200_charge_info_type_3 import (
-            TwitterUserFollowersResponse200ChargeInfoType3,
+            TwitterUserFollowersResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class TwitterUserFollowersResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.twitter_user_followers_response_200_charge_info_type_0 import (
-            TwitterUserFollowersResponse200ChargeInfoType0,
+            TwitterUserFollowersResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.twitter_user_followers_response_200_charge_info_type_1 import (
-            TwitterUserFollowersResponse200ChargeInfoType1,
+            TwitterUserFollowersResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.twitter_user_followers_response_200_charge_info_type_2 import (
-            TwitterUserFollowersResponse200ChargeInfoType2,
+            TwitterUserFollowersResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.twitter_user_followers_response_200_charge_info_type_3 import (
-            TwitterUserFollowersResponse200ChargeInfoType3,
+            TwitterUserFollowersResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.twitter_user_followers_response_200_charge_info_type_4 import (
-            TwitterUserFollowersResponse200ChargeInfoType4,
+            TwitterUserFollowersResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.twitter_user_followers_response_200_output import TwitterUserFollowersResponse200Output
+        from ..models.twitter_user_followers_response_200_output import (
+            TwitterUserFollowersResponse200Output,  # noqa: PLC0415
+        )
         from ..models.twitter_user_followers_response_200_warnings_type_0_item import (
-            TwitterUserFollowersResponse200WarningsType0Item,
+            TwitterUserFollowersResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

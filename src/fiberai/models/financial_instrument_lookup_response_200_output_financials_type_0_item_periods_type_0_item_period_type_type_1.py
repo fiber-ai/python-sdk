@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FinancialInstrumentLookupResponse200OutputFinancialsType0ItemPeriodsType0ItemPeriodTypeType1(str, Enum):
+class FinancialInstrumentLookupResponse200OutputFinancialsType0ItemPeriodsType0ItemPeriodTypeType1(StrEnum):
     ANNUAL = "annual"
     QUARTERLY = "quarterly"
 

@@ -46,7 +46,7 @@ class StartMosaicBodyOptionsType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.start_mosaic_body_options_type_0_contact_info_type_0 import (
-            StartMosaicBodyOptionsType0ContactInfoType0,
+            StartMosaicBodyOptionsType0ContactInfoType0,  # noqa: PLC0415
         )
 
         contact_info: dict[str, Any] | None | Unset
@@ -88,7 +88,7 @@ class StartMosaicBodyOptionsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.start_mosaic_body_options_type_0_contact_info_type_0 import (
-            StartMosaicBodyOptionsType0ContactInfoType0,
+            StartMosaicBodyOptionsType0ContactInfoType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

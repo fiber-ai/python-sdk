@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFoundedOnType0Strategy(str, Enum):
+class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFoundedOnType0Strategy(StrEnum):
     ABSOLUTE = "absolute"
 
     def __str__(self) -> str:

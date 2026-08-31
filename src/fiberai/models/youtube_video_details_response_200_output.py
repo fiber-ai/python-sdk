@@ -74,10 +74,10 @@ class YoutubeVideoDetailsResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.youtube_video_details_response_200_output_channel_type_0 import (
-            YoutubeVideoDetailsResponse200OutputChannelType0,
+            YoutubeVideoDetailsResponse200OutputChannelType0,  # noqa: PLC0415
         )
         from ..models.youtube_video_details_response_200_output_published_at_type_0 import (
-            YoutubeVideoDetailsResponse200OutputPublishedAtType0,
+            YoutubeVideoDetailsResponse200OutputPublishedAtType0,  # noqa: PLC0415
         )
 
         id = self.id
@@ -200,19 +200,19 @@ class YoutubeVideoDetailsResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.youtube_video_details_response_200_output_available_transcript_languages_item import (
-            YoutubeVideoDetailsResponse200OutputAvailableTranscriptLanguagesItem,
+            YoutubeVideoDetailsResponse200OutputAvailableTranscriptLanguagesItem,  # noqa: PLC0415
         )
         from ..models.youtube_video_details_response_200_output_channel_type_0 import (
-            YoutubeVideoDetailsResponse200OutputChannelType0,
+            YoutubeVideoDetailsResponse200OutputChannelType0,  # noqa: PLC0415
         )
         from ..models.youtube_video_details_response_200_output_chapters_item import (
-            YoutubeVideoDetailsResponse200OutputChaptersItem,
+            YoutubeVideoDetailsResponse200OutputChaptersItem,  # noqa: PLC0415
         )
         from ..models.youtube_video_details_response_200_output_key_moments_item import (
-            YoutubeVideoDetailsResponse200OutputKeyMomentsItem,
+            YoutubeVideoDetailsResponse200OutputKeyMomentsItem,  # noqa: PLC0415
         )
         from ..models.youtube_video_details_response_200_output_published_at_type_0 import (
-            YoutubeVideoDetailsResponse200OutputPublishedAtType0,
+            YoutubeVideoDetailsResponse200OutputPublishedAtType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

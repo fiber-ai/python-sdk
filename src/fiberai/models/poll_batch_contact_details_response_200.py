@@ -58,16 +58,16 @@ class PollBatchContactDetailsResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.poll_batch_contact_details_response_200_charge_info_type_0 import (
-            PollBatchContactDetailsResponse200ChargeInfoType0,
+            PollBatchContactDetailsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_contact_details_response_200_charge_info_type_1 import (
-            PollBatchContactDetailsResponse200ChargeInfoType1,
+            PollBatchContactDetailsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.poll_batch_contact_details_response_200_charge_info_type_2 import (
-            PollBatchContactDetailsResponse200ChargeInfoType2,
+            PollBatchContactDetailsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.poll_batch_contact_details_response_200_charge_info_type_3 import (
-            PollBatchContactDetailsResponse200ChargeInfoType3,
+            PollBatchContactDetailsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class PollBatchContactDetailsResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_batch_contact_details_response_200_charge_info_type_0 import (
-            PollBatchContactDetailsResponse200ChargeInfoType0,
+            PollBatchContactDetailsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_contact_details_response_200_charge_info_type_1 import (
-            PollBatchContactDetailsResponse200ChargeInfoType1,
+            PollBatchContactDetailsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.poll_batch_contact_details_response_200_charge_info_type_2 import (
-            PollBatchContactDetailsResponse200ChargeInfoType2,
+            PollBatchContactDetailsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.poll_batch_contact_details_response_200_charge_info_type_3 import (
-            PollBatchContactDetailsResponse200ChargeInfoType3,
+            PollBatchContactDetailsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.poll_batch_contact_details_response_200_charge_info_type_4 import (
-            PollBatchContactDetailsResponse200ChargeInfoType4,
+            PollBatchContactDetailsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.poll_batch_contact_details_response_200_output import PollBatchContactDetailsResponse200Output
+        from ..models.poll_batch_contact_details_response_200_output import (
+            PollBatchContactDetailsResponse200Output,  # noqa: PLC0415
+        )
         from ..models.poll_batch_contact_details_response_200_warnings_type_0_item import (
-            PollBatchContactDetailsResponse200WarningsType0Item,
+            PollBatchContactDetailsResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

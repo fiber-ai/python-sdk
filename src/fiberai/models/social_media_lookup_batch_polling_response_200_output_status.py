@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class SocialMediaLookupBatchPollingResponse200OutputStatus(str, Enum):
+class SocialMediaLookupBatchPollingResponse200OutputStatus(StrEnum):
     COMPLETED = "completed"
     FAILED = "failed"
     IN_PROGRESS = "in_progress"

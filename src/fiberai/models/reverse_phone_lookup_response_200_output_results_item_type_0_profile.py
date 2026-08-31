@@ -204,16 +204,16 @@ class ReversePhoneLookupResponse200OutputResultsItemType0Profile:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_current_job_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileCurrentJobType0,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_custom_data_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileCustomDataType0,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileCustomDataType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_inferred_location_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileInferredLocationType0,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_verifications_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileVerificationsType0,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileVerificationsType0,  # noqa: PLC0415
         )
 
         primary_slug = self.primary_slug
@@ -732,58 +732,58 @@ class ReversePhoneLookupResponse200OutputResultsItemType0Profile:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_articles_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileArticlesType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileArticlesType0Item,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_certifications_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileCertificationsType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileCertificationsType0Item,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_courses_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileCoursesType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileCoursesType0Item,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_current_job_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileCurrentJobType0,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_custom_data_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileCustomDataType0,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileCustomDataType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_detailed_education_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileDetailedEducationType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileDetailedEducationType0Item,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_detailed_work_experiences_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileDetailedWorkExperiencesType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileDetailedWorkExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_education_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileEducationType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileEducationType0Item,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_experiences_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileExperiencesType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_inferred_location_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileInferredLocationType0,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_languages_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileLanguagesType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileLanguagesType0Item,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_organizations_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileOrganizationsType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileOrganizationsType0Item,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_patents_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfilePatentsType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfilePatentsType0Item,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_projects_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileProjectsType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileProjectsType0Item,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_publications_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfilePublicationsType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfilePublicationsType0Item,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_tenures_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileTenuresType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileTenuresType0Item,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_verifications_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileVerificationsType0,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileVerificationsType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0_profile_volunteering_type_0_item import (
-            ReversePhoneLookupResponse200OutputResultsItemType0ProfileVolunteeringType0Item,
+            ReversePhoneLookupResponse200OutputResultsItemType0ProfileVolunteeringType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

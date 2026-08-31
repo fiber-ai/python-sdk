@@ -61,10 +61,10 @@ class BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.blue_collar_jobs_search_response_200_output_jobs_item_salary_type_0_local_type_0 import (
-            BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0LocalType0,
+            BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0LocalType0,  # noqa: PLC0415
         )
         from ..models.blue_collar_jobs_search_response_200_output_jobs_item_salary_type_0_usd_type_0 import (
-            BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0UsdType0,
+            BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0UsdType0,  # noqa: PLC0415
         )
 
         text = self.text
@@ -116,10 +116,10 @@ class BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.blue_collar_jobs_search_response_200_output_jobs_item_salary_type_0_local_type_0 import (
-            BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0LocalType0,
+            BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0LocalType0,  # noqa: PLC0415
         )
         from ..models.blue_collar_jobs_search_response_200_output_jobs_item_salary_type_0_usd_type_0 import (
-            BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0UsdType0,
+            BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0UsdType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

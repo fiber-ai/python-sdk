@@ -48,13 +48,13 @@ class CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0 import (
-            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0,
+            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1 import (
-            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1,
+            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_years_type_0 import (
-            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0,
+            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0,  # noqa: PLC0415
         )
 
         accelerator_name = self.accelerator_name.value
@@ -98,13 +98,13 @@ class CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0 import (
-            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0,
+            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1 import (
-            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1,
+            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_accelerators_v2_type_0_any_of_type_0_item_years_type_0 import (
-            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0,
+            CompanyCountBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

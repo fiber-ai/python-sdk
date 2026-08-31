@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsInvestorsV2Type0AllOfType0ItemInvestedAtType1Strategy(
-    str, Enum
+    StrEnum
 ):
     RELATIVE = "relative"
 

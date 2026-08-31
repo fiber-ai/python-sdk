@@ -56,13 +56,13 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_2 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2,  # noqa: PLC0415
         )
 
         type_ = self.type_.value
@@ -100,16 +100,16 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_2 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_3 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType3,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

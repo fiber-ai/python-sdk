@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0Period(str, Enum):
+class JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0Period(StrEnum):
     DAILY = "daily"
     HR = "hr"
     M = "m"

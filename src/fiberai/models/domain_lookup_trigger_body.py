@@ -53,7 +53,9 @@ class DomainLookupTriggerBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.domain_lookup_trigger_body_company_info_item import DomainLookupTriggerBodyCompanyInfoItem
+        from ..models.domain_lookup_trigger_body_company_info_item import (
+            DomainLookupTriggerBodyCompanyInfoItem,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

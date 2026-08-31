@@ -147,7 +147,7 @@ def sync_detailed(
     | SyncTurboContactEnrichmentResponse500
     | SyncTurboContactEnrichmentResponse503
 ]:
-    r"""Reveal contact details (turbo)
+    """Reveal contact details (turbo)
 
      Fastest synchronous contact reveal — optimized for speed at a higher credit cost. Uses a premium
     enrichment stack for the lowest possible latency. For a cheaper option with slightly longer response
@@ -158,12 +158,12 @@ def sync_detailed(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 7 credits for all phone
     numbers AND all emails<br />• 3 credits for work email only<br />• 3 credits for personal email
-    only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
-    data.\">ⓘ</span></span>
+    only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
+    data.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 90 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 90 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SyncTurboContactEnrichmentBody):
@@ -204,7 +204,7 @@ def sync(
     | SyncTurboContactEnrichmentResponse503
     | None
 ):
-    r"""Reveal contact details (turbo)
+    """Reveal contact details (turbo)
 
      Fastest synchronous contact reveal — optimized for speed at a higher credit cost. Uses a premium
     enrichment stack for the lowest possible latency. For a cheaper option with slightly longer response
@@ -215,12 +215,12 @@ def sync(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 7 credits for all phone
     numbers AND all emails<br />• 3 credits for work email only<br />• 3 credits for personal email
-    only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
-    data.\">ⓘ</span></span>
+    only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
+    data.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 90 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 90 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SyncTurboContactEnrichmentBody):
@@ -255,7 +255,7 @@ async def asyncio_detailed(
     | SyncTurboContactEnrichmentResponse500
     | SyncTurboContactEnrichmentResponse503
 ]:
-    r"""Reveal contact details (turbo)
+    """Reveal contact details (turbo)
 
      Fastest synchronous contact reveal — optimized for speed at a higher credit cost. Uses a premium
     enrichment stack for the lowest possible latency. For a cheaper option with slightly longer response
@@ -266,12 +266,12 @@ async def asyncio_detailed(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 7 credits for all phone
     numbers AND all emails<br />• 3 credits for work email only<br />• 3 credits for personal email
-    only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
-    data.\">ⓘ</span></span>
+    only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
+    data.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 90 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 90 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SyncTurboContactEnrichmentBody):
@@ -310,7 +310,7 @@ async def asyncio(
     | SyncTurboContactEnrichmentResponse503
     | None
 ):
-    r"""Reveal contact details (turbo)
+    """Reveal contact details (turbo)
 
      Fastest synchronous contact reveal — optimized for speed at a higher credit cost. Uses a premium
     enrichment stack for the lowest possible latency. For a cheaper option with slightly longer response
@@ -321,12 +321,12 @@ async def asyncio(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 7 credits for all phone
     numbers AND all emails<br />• 3 credits for work email only<br />• 3 credits for personal email
-    only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
-    data.\">ⓘ</span></span>
+    only<br />• 5 credits for phone only<br />• 5 credits for all emails&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
+    data.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 90 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 90 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SyncTurboContactEnrichmentBody):

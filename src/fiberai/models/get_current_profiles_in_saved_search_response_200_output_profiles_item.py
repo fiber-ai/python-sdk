@@ -210,16 +210,16 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_current_job_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCurrentJobType0,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_custom_data_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCustomDataType0,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_inferred_location_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemInferredLocationType0,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_verifications_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemVerificationsType0,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemVerificationsType0,  # noqa: PLC0415
         )
 
         primary_slug = self.primary_slug
@@ -738,58 +738,58 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_articles_type_0_item import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemArticlesType0Item,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemArticlesType0Item,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_certifications_type_0_item import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCertificationsType0Item,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCertificationsType0Item,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_courses_type_0_item import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCoursesType0Item,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCoursesType0Item,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_current_job_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCurrentJobType0,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_custom_data_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCustomDataType0,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_detailed_education_type_0_item import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemDetailedEducationType0Item,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemDetailedEducationType0Item,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_detailed_work_experiences_type_0_item import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType0Item,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemDetailedWorkExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_education_type_0_item import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemEducationType0Item,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemEducationType0Item,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_experiences_type_0_item import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemExperiencesType0Item,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_inferred_location_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemInferredLocationType0,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_languages_type_0_item import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemLanguagesType0Item,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemLanguagesType0Item,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_organizations_type_0_item import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemOrganizationsType0Item,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemOrganizationsType0Item,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_patents_type_0_item import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemPatentsType0Item,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemPatentsType0Item,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_projects_type_0_item import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemProjectsType0Item,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemProjectsType0Item,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_publications_type_0_item import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemPublicationsType0Item,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemPublicationsType0Item,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_tenures_type_0_item import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemTenuresType0Item,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemTenuresType0Item,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_verifications_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemVerificationsType0,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemVerificationsType0,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_volunteering_type_0_item import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemVolunteeringType0Item,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemVolunteeringType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

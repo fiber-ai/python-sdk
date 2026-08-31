@@ -152,7 +152,7 @@ def sync_detailed(
     | DeleteAudienceResponse500
     | DeleteAudienceResponse503
 ]:
-    r"""Archive an audience
+    """Archive an audience
 
      Archives an audience by hiding it from the user. The audience and its data are preserved for audit
     trail and enrichment history. Audiences that are currently BUILDING cannot be archived. Pass your
@@ -160,8 +160,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -205,7 +205,7 @@ def sync(
     | DeleteAudienceResponse503
     | None
 ):
-    r"""Archive an audience
+    """Archive an audience
 
      Archives an audience by hiding it from the user. The audience and its data are preserved for audit
     trail and enrichment history. Audiences that are currently BUILDING cannot be archived. Pass your
@@ -213,8 +213,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -252,7 +252,7 @@ async def asyncio_detailed(
     | DeleteAudienceResponse500
     | DeleteAudienceResponse503
 ]:
-    r"""Archive an audience
+    """Archive an audience
 
      Archives an audience by hiding it from the user. The audience and its data are preserved for audit
     trail and enrichment history. Audiences that are currently BUILDING cannot be archived. Pass your
@@ -260,8 +260,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -303,7 +303,7 @@ async def asyncio(
     | DeleteAudienceResponse503
     | None
 ):
-    r"""Archive an audience
+    """Archive an audience
 
      Archives an audience by hiding it from the user. The audience and its data are preserved for audit
     trail and enrichment history. Audiences that are currently BUILDING cannot be archived. Pass your
@@ -311,8 +311,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):

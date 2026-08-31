@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchBodySearchParamsEducationType0AnyOfType0ItemDegreeV2Type0Method(str, Enum):
+class PeopleSearchBodySearchParamsEducationType0AnyOfType0ItemDegreeV2Type0Method(StrEnum):
     TEXT = "text"
 
     def __str__(self) -> str:

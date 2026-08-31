@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanyCountBodySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType3Type(str, Enum):
+class CompanyCountBodySearchParamsInvestorsV2Type0NoneOfType0ItemInvestorIdentifierType3Type(StrEnum):
     LINKEDIN_ORG_ID = "linkedin-org-id"
 
     def __str__(self) -> str:

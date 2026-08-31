@@ -66,7 +66,7 @@ class CompanySearchResponse200OutputDataItemRevenueEstimateType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_response_200_output_data_item_revenue_estimate_type_0_value_usd import (
-            CompanySearchResponse200OutputDataItemRevenueEstimateType0ValueUsd,
+            CompanySearchResponse200OutputDataItemRevenueEstimateType0ValueUsd,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

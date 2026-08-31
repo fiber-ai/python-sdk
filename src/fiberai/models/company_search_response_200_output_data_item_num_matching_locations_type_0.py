@@ -49,7 +49,7 @@ class CompanySearchResponse200OutputDataItemNumMatchingLocationsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_response_200_output_data_item_num_matching_locations_type_0_matched_offices_item import (
-            CompanySearchResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItem,
+            CompanySearchResponse200OutputDataItemNumMatchingLocationsType0MatchedOfficesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

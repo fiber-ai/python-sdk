@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class MultiSourceSearchBodySearchType0CompanyFiltersType0WebsiteTrafficGrowthType0Item(str, Enum):
+class MultiSourceSearchBodySearchType0CompanyFiltersType0WebsiteTrafficGrowthType0Item(StrEnum):
     DECLINING = "declining"
     GROWING = "growing"
     HIGH = "high"

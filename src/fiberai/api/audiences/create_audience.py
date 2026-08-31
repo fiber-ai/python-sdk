@@ -147,15 +147,15 @@ def sync_detailed(
     | CreateAudienceResponse500
     | CreateAudienceResponse503
 ]:
-    r"""Create a new audience
+    """Create a new audience
 
      Creates a new audience in DRAFT status. After creation, use the update-search-params endpoint to set
     filters, then use the build endpoint to populate the audience with companies and prospects.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateAudienceBody):
@@ -196,15 +196,15 @@ def sync(
     | CreateAudienceResponse503
     | None
 ):
-    r"""Create a new audience
+    """Create a new audience
 
      Creates a new audience in DRAFT status. After creation, use the update-search-params endpoint to set
     filters, then use the build endpoint to populate the audience with companies and prospects.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateAudienceBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | CreateAudienceResponse500
     | CreateAudienceResponse503
 ]:
-    r"""Create a new audience
+    """Create a new audience
 
      Creates a new audience in DRAFT status. After creation, use the update-search-params endpoint to set
     filters, then use the build endpoint to populate the audience with companies and prospects.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateAudienceBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | CreateAudienceResponse503
     | None
 ):
-    r"""Create a new audience
+    """Create a new audience
 
      Creates a new audience in DRAFT status. After creation, use the update-search-params endpoint to set
     filters, then use the build endpoint to populate the audience with companies and prospects.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateAudienceBody):

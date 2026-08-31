@@ -44,13 +44,13 @@ class CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_search_response_200_output_data_item_role_count_matches_type_0_item_num_matching_employees_type_0 import (
-            CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,
+            CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_role_count_matches_type_0_item_num_matching_employees_type_1 import (
-            CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,
+            CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_role_count_matches_type_0_item_num_matching_employees_type_2 import (
-            CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,
+            CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,  # noqa: PLC0415
         )
 
         num_matching_employees: dict[str, Any]
@@ -85,16 +85,16 @@ class CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_response_200_output_data_item_role_count_matches_type_0_item_num_matching_employees_type_0 import (
-            CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,
+            CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_role_count_matches_type_0_item_num_matching_employees_type_1 import (
-            CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,
+            CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_role_count_matches_type_0_item_num_matching_employees_type_2 import (
-            CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,
+            CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_role_count_matches_type_0_item_num_matching_employees_type_3 import (
-            CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType3,
+            CompanySearchResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

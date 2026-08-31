@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class StartBatchLiveEnrichResponse200OutputType(str, Enum):
+class StartBatchLiveEnrichResponse200OutputType(StrEnum):
     COMPANY = "COMPANY"
     PROFILE = "PROFILE"
 

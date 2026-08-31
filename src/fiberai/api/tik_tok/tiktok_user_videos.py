@@ -147,15 +147,15 @@ def sync_detailed(
     | TiktokUserVideosResponse500
     | TiktokUserVideosResponse503
 ]:
-    r"""Fetch TikTok user videos
+    """Fetch TikTok user videos
 
      Fetches the latest videos for a TikTok user. Returns a paginated list of videos with engagement
     metrics. Use the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokUserVideosBody):
@@ -196,15 +196,15 @@ def sync(
     | TiktokUserVideosResponse503
     | None
 ):
-    r"""Fetch TikTok user videos
+    """Fetch TikTok user videos
 
      Fetches the latest videos for a TikTok user. Returns a paginated list of videos with engagement
     metrics. Use the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokUserVideosBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TiktokUserVideosResponse500
     | TiktokUserVideosResponse503
 ]:
-    r"""Fetch TikTok user videos
+    """Fetch TikTok user videos
 
      Fetches the latest videos for a TikTok user. Returns a paginated list of videos with engagement
     metrics. Use the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokUserVideosBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TiktokUserVideosResponse503
     | None
 ):
-    r"""Fetch TikTok user videos
+    """Fetch TikTok user videos
 
      Fetches the latest videos for a TikTok user. Returns a paginated list of videos with engagement
     metrics. Use the `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokUserVideosBody):

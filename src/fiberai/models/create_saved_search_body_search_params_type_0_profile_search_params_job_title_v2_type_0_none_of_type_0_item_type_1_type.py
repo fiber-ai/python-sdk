@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0NoneOfType0ItemType1Type(str, Enum):
+class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0NoneOfType0ItemType1Type(StrEnum):
     STATIC_GROUPS = "static-groups"
 
     def __str__(self) -> str:

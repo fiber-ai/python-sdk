@@ -48,13 +48,13 @@ class CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_stealth_v2_type_0_entered_stealth_at_type_1_window_type_0 import (
-            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType0,
+            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_stealth_v2_type_0_entered_stealth_at_type_1_window_type_1 import (
-            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType1,
+            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_stealth_v2_type_0_entered_stealth_at_type_1_window_type_2 import (
-            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType2,
+            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -92,13 +92,13 @@ class CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_stealth_v2_type_0_entered_stealth_at_type_1_window_type_0 import (
-            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType0,
+            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_stealth_v2_type_0_entered_stealth_at_type_1_window_type_1 import (
-            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType1,
+            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_stealth_v2_type_0_entered_stealth_at_type_1_window_type_2 import (
-            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType2,
+            CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

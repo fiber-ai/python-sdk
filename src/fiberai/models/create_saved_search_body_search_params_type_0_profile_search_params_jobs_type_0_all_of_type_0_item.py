@@ -62,19 +62,19 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfTyp
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_jobs_type_0_all_of_type_0_item_company_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_jobs_type_0_all_of_type_0_item_company_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_jobs_type_0_all_of_type_0_item_company_type_2 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType2,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_jobs_type_0_all_of_type_0_item_company_type_3 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType3,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType3,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_jobs_type_0_all_of_type_0_item_job_title_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemJobTitleType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemJobTitleType0,  # noqa: PLC0415
         )
 
         status = self.status.value
@@ -129,19 +129,19 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfTyp
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_jobs_type_0_all_of_type_0_item_company_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_jobs_type_0_all_of_type_0_item_company_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_jobs_type_0_all_of_type_0_item_company_type_2 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType2,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_jobs_type_0_all_of_type_0_item_company_type_3 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType3,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemCompanyType3,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_jobs_type_0_all_of_type_0_item_job_title_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemJobTitleType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0AllOfType0ItemJobTitleType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

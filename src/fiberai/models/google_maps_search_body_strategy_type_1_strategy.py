@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GoogleMapsSearchBodyStrategyType1Strategy(str, Enum):
+class GoogleMapsSearchBodyStrategyType1Strategy(StrEnum):
     SPECIFIC_AREAS = "specific-areas"
 
     def __str__(self) -> str:

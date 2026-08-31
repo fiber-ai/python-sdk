@@ -45,7 +45,7 @@ class CompanySearchBodySearchParamsJobPostingStatsType0AllOfType0ItemType3:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_search_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_3_range_type_0 import (
-            CompanySearchBodySearchParamsJobPostingStatsType0AllOfType0ItemType3RangeType0,
+            CompanySearchBodySearchParamsJobPostingStatsType0AllOfType0ItemType3RangeType0,  # noqa: PLC0415
         )
 
         rule = self.rule.value
@@ -73,10 +73,10 @@ class CompanySearchBodySearchParamsJobPostingStatsType0AllOfType0ItemType3:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_3_range_type_0 import (
-            CompanySearchBodySearchParamsJobPostingStatsType0AllOfType0ItemType3RangeType0,
+            CompanySearchBodySearchParamsJobPostingStatsType0AllOfType0ItemType3RangeType0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_3_range_type_1 import (
-            CompanySearchBodySearchParamsJobPostingStatsType0AllOfType0ItemType3RangeType1,
+            CompanySearchBodySearchParamsJobPostingStatsType0AllOfType0ItemType3RangeType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

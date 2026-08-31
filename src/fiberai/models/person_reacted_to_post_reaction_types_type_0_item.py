@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PersonReactedToPostReactionTypesType0Item(str, Enum):
+class PersonReactedToPostReactionTypesType0Item(StrEnum):
     CELEBRATE = "CELEBRATE"
     FUNNY = "FUNNY"
     INSIGHTFUL = "INSIGHTFUL"

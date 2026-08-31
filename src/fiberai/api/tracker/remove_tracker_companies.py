@@ -161,15 +161,15 @@ def sync_detailed(
     | RemoveTrackerCompaniesResponse500
     | RemoveTrackerCompaniesResponse503
 ]:
-    r"""Remove companies from tracker list
+    """Remove companies from tracker list
 
      Remove companies from a company tracker list. Deactivates them so they are no longer monitored, but
     preserves their signal history. Uses the same identifier format as add-companies.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -216,15 +216,15 @@ def sync(
     | RemoveTrackerCompaniesResponse503
     | None
 ):
-    r"""Remove companies from tracker list
+    """Remove companies from tracker list
 
      Remove companies from a company tracker list. Deactivates them so they are no longer monitored, but
     preserves their signal history. Uses the same identifier format as add-companies.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -265,15 +265,15 @@ async def asyncio_detailed(
     | RemoveTrackerCompaniesResponse500
     | RemoveTrackerCompaniesResponse503
 ]:
-    r"""Remove companies from tracker list
+    """Remove companies from tracker list
 
      Remove companies from a company tracker list. Deactivates them so they are no longer monitored, but
     preserves their signal history. Uses the same identifier format as add-companies.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -318,15 +318,15 @@ async def asyncio(
     | RemoveTrackerCompaniesResponse503
     | None
 ):
-    r"""Remove companies from tracker list
+    """Remove companies from tracker list
 
      Remove companies from a company tracker list. Deactivates them so they are no longer monitored, but
     preserves their signal history. Uses the same identifier format as add-companies.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):

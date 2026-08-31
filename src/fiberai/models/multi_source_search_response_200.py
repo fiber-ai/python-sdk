@@ -48,16 +48,16 @@ class MultiSourceSearchResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.multi_source_search_response_200_charge_info_type_0 import (
-            MultiSourceSearchResponse200ChargeInfoType0,
+            MultiSourceSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.multi_source_search_response_200_charge_info_type_1 import (
-            MultiSourceSearchResponse200ChargeInfoType1,
+            MultiSourceSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.multi_source_search_response_200_charge_info_type_2 import (
-            MultiSourceSearchResponse200ChargeInfoType2,
+            MultiSourceSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.multi_source_search_response_200_charge_info_type_3 import (
-            MultiSourceSearchResponse200ChargeInfoType3,
+            MultiSourceSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class MultiSourceSearchResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.multi_source_search_response_200_charge_info_type_0 import (
-            MultiSourceSearchResponse200ChargeInfoType0,
+            MultiSourceSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.multi_source_search_response_200_charge_info_type_1 import (
-            MultiSourceSearchResponse200ChargeInfoType1,
+            MultiSourceSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.multi_source_search_response_200_charge_info_type_2 import (
-            MultiSourceSearchResponse200ChargeInfoType2,
+            MultiSourceSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.multi_source_search_response_200_charge_info_type_3 import (
-            MultiSourceSearchResponse200ChargeInfoType3,
+            MultiSourceSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.multi_source_search_response_200_charge_info_type_4 import (
-            MultiSourceSearchResponse200ChargeInfoType4,
+            MultiSourceSearchResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.multi_source_search_response_200_output import MultiSourceSearchResponse200Output
+        from ..models.multi_source_search_response_200_output import MultiSourceSearchResponse200Output  # noqa: PLC0415
         from ..models.multi_source_search_response_200_warnings_type_0_item import (
-            MultiSourceSearchResponse200WarningsType0Item,
+            MultiSourceSearchResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PollMosaicResponse200OutputRunStatus(str, Enum):
+class PollMosaicResponse200OutputRunStatus(StrEnum):
     DONE = "done"
     FAILED = "failed"
     PENDING = "pending"

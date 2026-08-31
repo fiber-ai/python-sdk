@@ -58,16 +58,16 @@ class RemoveTrackerPeopleResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.remove_tracker_people_response_200_charge_info_type_0 import (
-            RemoveTrackerPeopleResponse200ChargeInfoType0,
+            RemoveTrackerPeopleResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.remove_tracker_people_response_200_charge_info_type_1 import (
-            RemoveTrackerPeopleResponse200ChargeInfoType1,
+            RemoveTrackerPeopleResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.remove_tracker_people_response_200_charge_info_type_2 import (
-            RemoveTrackerPeopleResponse200ChargeInfoType2,
+            RemoveTrackerPeopleResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.remove_tracker_people_response_200_charge_info_type_3 import (
-            RemoveTrackerPeopleResponse200ChargeInfoType3,
+            RemoveTrackerPeopleResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class RemoveTrackerPeopleResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.remove_tracker_people_response_200_charge_info_type_0 import (
-            RemoveTrackerPeopleResponse200ChargeInfoType0,
+            RemoveTrackerPeopleResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.remove_tracker_people_response_200_charge_info_type_1 import (
-            RemoveTrackerPeopleResponse200ChargeInfoType1,
+            RemoveTrackerPeopleResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.remove_tracker_people_response_200_charge_info_type_2 import (
-            RemoveTrackerPeopleResponse200ChargeInfoType2,
+            RemoveTrackerPeopleResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.remove_tracker_people_response_200_charge_info_type_3 import (
-            RemoveTrackerPeopleResponse200ChargeInfoType3,
+            RemoveTrackerPeopleResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.remove_tracker_people_response_200_charge_info_type_4 import (
-            RemoveTrackerPeopleResponse200ChargeInfoType4,
+            RemoveTrackerPeopleResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.remove_tracker_people_response_200_output import RemoveTrackerPeopleResponse200Output
+        from ..models.remove_tracker_people_response_200_output import (
+            RemoveTrackerPeopleResponse200Output,  # noqa: PLC0415
+        )
         from ..models.remove_tracker_people_response_200_warnings_type_0_item import (
-            RemoveTrackerPeopleResponse200WarningsType0Item,
+            RemoveTrackerPeopleResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

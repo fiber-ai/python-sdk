@@ -43,10 +43,10 @@ class PollBatchLiveEnrichResponse200OutputResultsItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.poll_batch_live_enrich_response_200_output_results_item_company_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0,  # noqa: PLC0415
         )
 
         identifier = self.identifier
@@ -87,10 +87,10 @@ class PollBatchLiveEnrichResponse200OutputResultsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_batch_live_enrich_response_200_output_results_item_company_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemCompanyType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -147,14 +147,14 @@ def sync_detailed(
     | JobPostingSearchCountResponse500
     | JobPostingSearchCountResponse503
 ]:
-    r"""Job postings count
+    """Job postings count
 
      Get count of job postings matching search filters
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (JobPostingSearchCountBody):
@@ -195,14 +195,14 @@ def sync(
     | JobPostingSearchCountResponse503
     | None
 ):
-    r"""Job postings count
+    """Job postings count
 
      Get count of job postings matching search filters
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (JobPostingSearchCountBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | JobPostingSearchCountResponse500
     | JobPostingSearchCountResponse503
 ]:
-    r"""Job postings count
+    """Job postings count
 
      Get count of job postings matching search filters
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (JobPostingSearchCountBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | JobPostingSearchCountResponse503
     | None
 ):
-    r"""Job postings count
+    """Job postings count
 
      Get count of job postings matching search filters
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (JobPostingSearchCountBody):

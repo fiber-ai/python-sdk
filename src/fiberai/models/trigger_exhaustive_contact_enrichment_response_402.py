@@ -32,7 +32,7 @@ class TriggerExhaustiveContactEnrichmentResponse402:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.trigger_exhaustive_contact_enrichment_response_402_out_of_credits_alert_type_0 import (
-            TriggerExhaustiveContactEnrichmentResponse402OutOfCreditsAlertType0,
+            TriggerExhaustiveContactEnrichmentResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         message = self.message
@@ -60,7 +60,7 @@ class TriggerExhaustiveContactEnrichmentResponse402:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.trigger_exhaustive_contact_enrichment_response_402_out_of_credits_alert_type_0 import (
-            TriggerExhaustiveContactEnrichmentResponse402OutOfCreditsAlertType0,
+            TriggerExhaustiveContactEnrichmentResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -147,14 +147,14 @@ def sync_detailed(
     | GetCurrentProfilesInSavedSearchResponse500
     | GetCurrentProfilesInSavedSearchResponse503
 ]:
-    r"""Get current profiles in saved search
+    """Get current profiles in saved search
 
      Get current profiles found for a specific saved search
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCurrentProfilesInSavedSearchBody):
@@ -195,14 +195,14 @@ def sync(
     | GetCurrentProfilesInSavedSearchResponse503
     | None
 ):
-    r"""Get current profiles in saved search
+    """Get current profiles in saved search
 
      Get current profiles found for a specific saved search
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCurrentProfilesInSavedSearchBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | GetCurrentProfilesInSavedSearchResponse500
     | GetCurrentProfilesInSavedSearchResponse503
 ]:
-    r"""Get current profiles in saved search
+    """Get current profiles in saved search
 
      Get current profiles found for a specific saved search
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCurrentProfilesInSavedSearchBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | GetCurrentProfilesInSavedSearchResponse503
     | None
 ):
-    r"""Get current profiles in saved search
+    """Get current profiles in saved search
 
      Get current profiles found for a specific saved search
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCurrentProfilesInSavedSearchBody):

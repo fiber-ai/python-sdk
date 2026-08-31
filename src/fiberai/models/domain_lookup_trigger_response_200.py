@@ -58,16 +58,16 @@ class DomainLookupTriggerResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.domain_lookup_trigger_response_200_charge_info_type_0 import (
-            DomainLookupTriggerResponse200ChargeInfoType0,
+            DomainLookupTriggerResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.domain_lookup_trigger_response_200_charge_info_type_1 import (
-            DomainLookupTriggerResponse200ChargeInfoType1,
+            DomainLookupTriggerResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.domain_lookup_trigger_response_200_charge_info_type_2 import (
-            DomainLookupTriggerResponse200ChargeInfoType2,
+            DomainLookupTriggerResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.domain_lookup_trigger_response_200_charge_info_type_3 import (
-            DomainLookupTriggerResponse200ChargeInfoType3,
+            DomainLookupTriggerResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class DomainLookupTriggerResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.domain_lookup_trigger_response_200_charge_info_type_0 import (
-            DomainLookupTriggerResponse200ChargeInfoType0,
+            DomainLookupTriggerResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.domain_lookup_trigger_response_200_charge_info_type_1 import (
-            DomainLookupTriggerResponse200ChargeInfoType1,
+            DomainLookupTriggerResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.domain_lookup_trigger_response_200_charge_info_type_2 import (
-            DomainLookupTriggerResponse200ChargeInfoType2,
+            DomainLookupTriggerResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.domain_lookup_trigger_response_200_charge_info_type_3 import (
-            DomainLookupTriggerResponse200ChargeInfoType3,
+            DomainLookupTriggerResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.domain_lookup_trigger_response_200_charge_info_type_4 import (
-            DomainLookupTriggerResponse200ChargeInfoType4,
+            DomainLookupTriggerResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.domain_lookup_trigger_response_200_output import DomainLookupTriggerResponse200Output
+        from ..models.domain_lookup_trigger_response_200_output import (
+            DomainLookupTriggerResponse200Output,  # noqa: PLC0415
+        )
         from ..models.domain_lookup_trigger_response_200_warnings_type_0_item import (
-            DomainLookupTriggerResponse200WarningsType0Item,
+            DomainLookupTriggerResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -38,7 +38,7 @@ class GetCurrentApiKeyResponse200ChargeInfoType3:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_current_api_key_response_200_charge_info_type_3_low_credit_alert_type_0 import (
-            GetCurrentApiKeyResponse200ChargeInfoType3LowCreditAlertType0,
+            GetCurrentApiKeyResponse200ChargeInfoType3LowCreditAlertType0,  # noqa: PLC0415
         )
 
         method = self.method.value
@@ -69,7 +69,7 @@ class GetCurrentApiKeyResponse200ChargeInfoType3:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_api_key_response_200_charge_info_type_3_low_credit_alert_type_0 import (
-            GetCurrentApiKeyResponse200ChargeInfoType3LowCreditAlertType0,
+            GetCurrentApiKeyResponse200ChargeInfoType3LowCreditAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

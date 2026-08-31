@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0NoneOfType0ItemGeoLocationType0Strategy(
-    str, Enum
+    StrEnum
 ):
     RADIAL_DISTANCE = "radial-distance"
 

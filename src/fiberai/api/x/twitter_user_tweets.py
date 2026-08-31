@@ -147,15 +147,15 @@ def sync_detailed(
     | TwitterUserTweetsResponse500
     | TwitterUserTweetsResponse503
 ]:
-    r"""Fetch Twitter/X user tweets
+    """Fetch Twitter/X user tweets
 
      Fetches the latest tweets for a Twitter/X user. Returns a paginated list of tweets with engagement
     metrics. Use the `cursor` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterUserTweetsBody):
@@ -196,15 +196,15 @@ def sync(
     | TwitterUserTweetsResponse503
     | None
 ):
-    r"""Fetch Twitter/X user tweets
+    """Fetch Twitter/X user tweets
 
      Fetches the latest tweets for a Twitter/X user. Returns a paginated list of tweets with engagement
     metrics. Use the `cursor` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterUserTweetsBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TwitterUserTweetsResponse500
     | TwitterUserTweetsResponse503
 ]:
-    r"""Fetch Twitter/X user tweets
+    """Fetch Twitter/X user tweets
 
      Fetches the latest tweets for a Twitter/X user. Returns a paginated list of tweets with engagement
     metrics. Use the `cursor` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterUserTweetsBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TwitterUserTweetsResponse503
     | None
 ):
-    r"""Fetch Twitter/X user tweets
+    """Fetch Twitter/X user tweets
 
      Fetches the latest tweets for a Twitter/X user. Returns a paginated list of tweets with engagement
     metrics. Use the `cursor` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterUserTweetsBody):

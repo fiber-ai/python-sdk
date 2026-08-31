@@ -152,15 +152,15 @@ def sync_detailed(
     | AddTrackerPeopleResponse500
     | AddTrackerPeopleResponse503
 ]:
-    r"""Add people to tracker list
+    """Add people to tracker list
 
      Add people to a person tracker list. Identify people by LinkedIn URL, user ID, or slug. At least one
     identifier is required per person.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -204,15 +204,15 @@ def sync(
     | AddTrackerPeopleResponse503
     | None
 ):
-    r"""Add people to tracker list
+    """Add people to tracker list
 
      Add people to a person tracker list. Identify people by LinkedIn URL, user ID, or slug. At least one
     identifier is required per person.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -250,15 +250,15 @@ async def asyncio_detailed(
     | AddTrackerPeopleResponse500
     | AddTrackerPeopleResponse503
 ]:
-    r"""Add people to tracker list
+    """Add people to tracker list
 
      Add people to a person tracker list. Identify people by LinkedIn URL, user ID, or slug. At least one
     identifier is required per person.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -300,15 +300,15 @@ async def asyncio(
     | AddTrackerPeopleResponse503
     | None
 ):
-    r"""Add people to tracker list
+    """Add people to tracker list
 
      Add people to a person tracker list. Identify people by LinkedIn URL, user ID, or slug. At least one
     identifier is required per person.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):

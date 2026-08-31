@@ -147,15 +147,15 @@ def sync_detailed(
     | GetCurrentApiKeyResponse500
     | GetCurrentApiKeyResponse503
 ]:
-    r"""Get API key
+    """Get API key
 
      Return details about an API key, including its name, prefix, expiration, and per-key credit usage.
     Acts on the key that authenticates this request unless target is OTHER.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCurrentApiKeyBody):
@@ -196,15 +196,15 @@ def sync(
     | GetCurrentApiKeyResponse503
     | None
 ):
-    r"""Get API key
+    """Get API key
 
      Return details about an API key, including its name, prefix, expiration, and per-key credit usage.
     Acts on the key that authenticates this request unless target is OTHER.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCurrentApiKeyBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | GetCurrentApiKeyResponse500
     | GetCurrentApiKeyResponse503
 ]:
-    r"""Get API key
+    """Get API key
 
      Return details about an API key, including its name, prefix, expiration, and per-key credit usage.
     Acts on the key that authenticates this request unless target is OTHER.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCurrentApiKeyBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | GetCurrentApiKeyResponse503
     | None
 ):
-    r"""Get API key
+    """Get API key
 
      Return details about an API key, including its name, prefix, expiration, and per-key credit usage.
     Acts on the key that authenticates this request unless target is OTHER.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCurrentApiKeyBody):

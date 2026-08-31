@@ -86,7 +86,7 @@ class LocationTypeaheadResponse200OutputPresetRegionsItemType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.location_typeahead_response_200_output_preset_regions_item_type_1_vertices_item import (
-            LocationTypeaheadResponse200OutputPresetRegionsItemType1VerticesItem,
+            LocationTypeaheadResponse200OutputPresetRegionsItemType1VerticesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

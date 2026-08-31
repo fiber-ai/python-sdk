@@ -53,7 +53,7 @@ class MultiSourceSearchResponse200OutputDataType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.multi_source_search_response_200_output_data_type_1_results_item import (
-            MultiSourceSearchResponse200OutputDataType1ResultsItem,
+            MultiSourceSearchResponse200OutputDataType1ResultsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

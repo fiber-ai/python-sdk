@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0AnyOfType0ItemType4Rule(str, Enum):
+class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0AnyOfType0ItemType4Rule(StrEnum):
     JOB_FUNCTION = "job-function"
 
     def __str__(self) -> str:

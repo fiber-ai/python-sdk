@@ -147,7 +147,7 @@ def sync_detailed(
     | FetchRealEstateListingsResponse500
     | FetchRealEstateListingsResponse503
 ]:
-    r"""Fetch real estate listings
+    """Fetch real estate listings
 
      Fetches real estate listings by location and optional filters such as listing status, price ranges,
     home types, and property features. Data is available for all 50 US states, D.C., Puerto Rico, and
@@ -155,11 +155,11 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (FetchRealEstateListingsBody):
@@ -200,7 +200,7 @@ def sync(
     | FetchRealEstateListingsResponse503
     | None
 ):
-    r"""Fetch real estate listings
+    """Fetch real estate listings
 
      Fetches real estate listings by location and optional filters such as listing status, price ranges,
     home types, and property features. Data is available for all 50 US states, D.C., Puerto Rico, and
@@ -208,11 +208,11 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (FetchRealEstateListingsBody):
@@ -247,7 +247,7 @@ async def asyncio_detailed(
     | FetchRealEstateListingsResponse500
     | FetchRealEstateListingsResponse503
 ]:
-    r"""Fetch real estate listings
+    """Fetch real estate listings
 
      Fetches real estate listings by location and optional filters such as listing status, price ranges,
     home types, and property features. Data is available for all 50 US states, D.C., Puerto Rico, and
@@ -255,11 +255,11 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (FetchRealEstateListingsBody):
@@ -298,7 +298,7 @@ async def asyncio(
     | FetchRealEstateListingsResponse503
     | None
 ):
-    r"""Fetch real estate listings
+    """Fetch real estate listings
 
      Fetches real estate listings by location and optional filters such as listing status, price ranges,
     home types, and property features. Data is available for all 50 US states, D.C., Puerto Rico, and
@@ -306,11 +306,11 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (FetchRealEstateListingsBody):

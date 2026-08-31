@@ -114,7 +114,7 @@ class KitchenSinkProfileResponse200OutputDataItemPublicationsType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_profile_response_200_output_data_item_publications_type_0_item_collaborators_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item,
+            KitchenSinkProfileResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

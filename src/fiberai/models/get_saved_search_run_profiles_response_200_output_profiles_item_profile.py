@@ -218,16 +218,16 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_current_job_type_0 import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileCurrentJobType0,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_custom_data_type_0 import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileCustomDataType0,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileCustomDataType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_inferred_location_type_0 import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileInferredLocationType0,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_verifications_type_0 import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileVerificationsType0,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileVerificationsType0,  # noqa: PLC0415
         )
 
         primary_slug = self.primary_slug
@@ -746,58 +746,58 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfile:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_articles_type_0_item import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileArticlesType0Item,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileArticlesType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_certifications_type_0_item import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileCertificationsType0Item,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileCertificationsType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_courses_type_0_item import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileCoursesType0Item,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileCoursesType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_current_job_type_0 import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileCurrentJobType0,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_custom_data_type_0 import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileCustomDataType0,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileCustomDataType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_detailed_education_type_0_item import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0Item,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_detailed_work_experiences_type_0_item import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedWorkExperiencesType0Item,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedWorkExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_education_type_0_item import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileEducationType0Item,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileEducationType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_experiences_type_0_item import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileExperiencesType0Item,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_inferred_location_type_0 import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileInferredLocationType0,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_languages_type_0_item import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileLanguagesType0Item,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileLanguagesType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_organizations_type_0_item import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileOrganizationsType0Item,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileOrganizationsType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_patents_type_0_item import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfilePatentsType0Item,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfilePatentsType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_projects_type_0_item import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileProjectsType0Item,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileProjectsType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_publications_type_0_item import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfilePublicationsType0Item,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfilePublicationsType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_tenures_type_0_item import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileTenuresType0Item,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileTenuresType0Item,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_verifications_type_0 import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileVerificationsType0,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileVerificationsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_volunteering_type_0_item import (
-            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileVolunteeringType0Item,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileVolunteeringType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

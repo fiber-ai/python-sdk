@@ -39,7 +39,7 @@ class GetSavedSearchRunStatusResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_saved_search_run_status_response_200_output_run import (
-            GetSavedSearchRunStatusResponse200OutputRun,
+            GetSavedSearchRunStatusResponse200OutputRun,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -58,16 +58,16 @@ class SocialMediaLookupPollingResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.social_media_lookup_polling_response_200_charge_info_type_0 import (
-            SocialMediaLookupPollingResponse200ChargeInfoType0,
+            SocialMediaLookupPollingResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_polling_response_200_charge_info_type_1 import (
-            SocialMediaLookupPollingResponse200ChargeInfoType1,
+            SocialMediaLookupPollingResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_polling_response_200_charge_info_type_2 import (
-            SocialMediaLookupPollingResponse200ChargeInfoType2,
+            SocialMediaLookupPollingResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_polling_response_200_charge_info_type_3 import (
-            SocialMediaLookupPollingResponse200ChargeInfoType3,
+            SocialMediaLookupPollingResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class SocialMediaLookupPollingResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.social_media_lookup_polling_response_200_charge_info_type_0 import (
-            SocialMediaLookupPollingResponse200ChargeInfoType0,
+            SocialMediaLookupPollingResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_polling_response_200_charge_info_type_1 import (
-            SocialMediaLookupPollingResponse200ChargeInfoType1,
+            SocialMediaLookupPollingResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_polling_response_200_charge_info_type_2 import (
-            SocialMediaLookupPollingResponse200ChargeInfoType2,
+            SocialMediaLookupPollingResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_polling_response_200_charge_info_type_3 import (
-            SocialMediaLookupPollingResponse200ChargeInfoType3,
+            SocialMediaLookupPollingResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_polling_response_200_charge_info_type_4 import (
-            SocialMediaLookupPollingResponse200ChargeInfoType4,
+            SocialMediaLookupPollingResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.social_media_lookup_polling_response_200_output import SocialMediaLookupPollingResponse200Output
+        from ..models.social_media_lookup_polling_response_200_output import (
+            SocialMediaLookupPollingResponse200Output,  # noqa: PLC0415
+        )
         from ..models.social_media_lookup_polling_response_200_warnings_type_0_item import (
-            SocialMediaLookupPollingResponse200WarningsType0Item,
+            SocialMediaLookupPollingResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -147,7 +147,7 @@ def sync_detailed(
     | ReverseEmailLookupResponse500
     | ReverseEmailLookupResponse503
 ]:
-    r"""Find person by email (single)
+    """Find person by email (single)
 
      Given an email address, find the person's LinkedIn profile and personal details.
     If the person's name, company, or other identifiers are also available, use the Kitchen Sink
@@ -157,11 +157,11 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (ReverseEmailLookupBody):
@@ -202,7 +202,7 @@ def sync(
     | ReverseEmailLookupResponse503
     | None
 ):
-    r"""Find person by email (single)
+    """Find person by email (single)
 
      Given an email address, find the person's LinkedIn profile and personal details.
     If the person's name, company, or other identifiers are also available, use the Kitchen Sink
@@ -212,11 +212,11 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (ReverseEmailLookupBody):
@@ -251,7 +251,7 @@ async def asyncio_detailed(
     | ReverseEmailLookupResponse500
     | ReverseEmailLookupResponse503
 ]:
-    r"""Find person by email (single)
+    """Find person by email (single)
 
      Given an email address, find the person's LinkedIn profile and personal details.
     If the person's name, company, or other identifiers are also available, use the Kitchen Sink
@@ -261,11 +261,11 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (ReverseEmailLookupBody):
@@ -304,7 +304,7 @@ async def asyncio(
     | ReverseEmailLookupResponse503
     | None
 ):
-    r"""Find person by email (single)
+    """Find person by email (single)
 
      Given an email address, find the person's LinkedIn profile and personal details.
     If the person's name, company, or other identifiers are also available, use the Kitchen Sink
@@ -314,11 +314,11 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (ReverseEmailLookupBody):

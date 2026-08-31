@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class QuickPersonResolveBodyPeopleItemType3Identifier(str, Enum):
+class QuickPersonResolveBodyPeopleItemType3Identifier(StrEnum):
     ENTITYURN = "entityUrn"
 
     def __str__(self) -> str:

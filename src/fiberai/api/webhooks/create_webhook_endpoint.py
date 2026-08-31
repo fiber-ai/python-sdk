@@ -147,7 +147,7 @@ def sync_detailed(
     | CreateWebhookEndpointResponse500
     | CreateWebhookEndpointResponse503
 ]:
-    r"""Create webhook endpoint
+    """Create webhook endpoint
 
      Create a webhook endpoint that receives event payloads at the URL you provide. Returns the endpoint
     along with its signing secret — store the secret securely, as it is only shown here and when
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateWebhookEndpointBody):
@@ -197,7 +197,7 @@ def sync(
     | CreateWebhookEndpointResponse503
     | None
 ):
-    r"""Create webhook endpoint
+    """Create webhook endpoint
 
      Create a webhook endpoint that receives event payloads at the URL you provide. Returns the endpoint
     along with its signing secret — store the secret securely, as it is only shown here and when
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateWebhookEndpointBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | CreateWebhookEndpointResponse500
     | CreateWebhookEndpointResponse503
 ]:
-    r"""Create webhook endpoint
+    """Create webhook endpoint
 
      Create a webhook endpoint that receives event payloads at the URL you provide. Returns the endpoint
     along with its signing secret — store the secret securely, as it is only shown here and when
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateWebhookEndpointBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | CreateWebhookEndpointResponse503
     | None
 ):
-    r"""Create webhook endpoint
+    """Create webhook endpoint
 
      Create a webhook endpoint that receives event payloads at the URL you provide. Returns the endpoint
     along with its signing secret — store the secret securely, as it is only shown here and when
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateWebhookEndpointBody):

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class RedditSubredditSearchBodySort(str, Enum):
+class RedditSubredditSearchBodySort(StrEnum):
     COMMENT_COUNT = "comment_count"
     HOT = "hot"
     NEW = "new"

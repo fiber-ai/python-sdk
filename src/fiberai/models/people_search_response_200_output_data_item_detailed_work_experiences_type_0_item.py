@@ -103,7 +103,7 @@ class PeopleSearchResponse200OutputDataItemDetailedWorkExperiencesType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0 import (
-            PeopleSearchResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,
+            PeopleSearchResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,  # noqa: PLC0415
         )
 
         company_details: dict[str, Any] | None | Unset
@@ -278,7 +278,7 @@ class PeopleSearchResponse200OutputDataItemDetailedWorkExperiencesType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0 import (
-            PeopleSearchResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,
+            PeopleSearchResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

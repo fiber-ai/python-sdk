@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class KitchenSinkBulkCompanyResponse200OutputDataItemItemRoleCountMatchesType0ItemNumMatchingEmployeesType0Type(
-    str, Enum
+    StrEnum
 ):
     EXACT = "exact"
 

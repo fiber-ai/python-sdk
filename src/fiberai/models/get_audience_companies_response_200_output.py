@@ -71,7 +71,7 @@ class GetAudienceCompaniesResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_audience_companies_response_200_output_companies_item import (
-            GetAudienceCompaniesResponse200OutputCompaniesItem,
+            GetAudienceCompaniesResponse200OutputCompaniesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

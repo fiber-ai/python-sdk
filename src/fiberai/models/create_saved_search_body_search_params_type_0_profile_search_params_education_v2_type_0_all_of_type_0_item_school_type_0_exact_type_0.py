@@ -81,22 +81,22 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0A
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_any_of_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_any_of_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_any_of_type_0_item_type_2 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType2,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_none_of_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_none_of_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_none_of_type_0_item_type_2 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType2,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType2,  # noqa: PLC0415
         )
 
         any_of: list[dict[str, Any]] | None | Unset
@@ -172,28 +172,28 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0A
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_any_of_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_any_of_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_any_of_type_0_item_type_2 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType2,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_any_of_type_0_item_type_3 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType3,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0AnyOfType0ItemType3,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_none_of_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_none_of_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_none_of_type_0_item_type_2 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType2,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0_none_of_type_0_item_type_3 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType3,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0NoneOfType0ItemType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

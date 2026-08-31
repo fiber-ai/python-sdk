@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchBodySearchParamsJobStatusType0Status(str, Enum):
+class PeopleSearchBodySearchParamsJobStatusType0Status(StrEnum):
     CURRENTLY_EMPLOYED = "currently-employed"
 
     def __str__(self) -> str:

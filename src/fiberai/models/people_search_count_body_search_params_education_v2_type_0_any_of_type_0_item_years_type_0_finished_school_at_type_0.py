@@ -41,7 +41,7 @@ class PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0F
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_count_body_search_params_education_v2_type_0_any_of_type_0_item_years_type_0_finished_school_at_type_0_range_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0FinishedSchoolAtType0RangeType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0FinishedSchoolAtType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -72,7 +72,7 @@ class PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0F
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_body_search_params_education_v2_type_0_any_of_type_0_item_years_type_0_finished_school_at_type_0_range_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0FinishedSchoolAtType0RangeType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0FinishedSchoolAtType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

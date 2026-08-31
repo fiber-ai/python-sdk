@@ -70,10 +70,10 @@ class PeopleSearchCountBodySearchParamsEducationType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0Item,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_any_of_type_0_item import (
-            PeopleSearchCountBodySearchParamsEducationType0AnyOfType0Item,
+            PeopleSearchCountBodySearchParamsEducationType0AnyOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class DepartmentSizeThresholdDepartment(str, Enum):
+class DepartmentSizeThresholdDepartment(StrEnum):
     ACCOUNTING = "Accounting"
     ADMINISTRATIVE = "Administrative"
     ADVERTISING = "Advertising"

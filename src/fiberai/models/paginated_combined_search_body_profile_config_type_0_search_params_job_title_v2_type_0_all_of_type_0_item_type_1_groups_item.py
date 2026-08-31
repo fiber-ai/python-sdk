@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobTitleV2Type0AllOfType0ItemType1GroupsItem(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobTitleV2Type0AllOfType0ItemType1GroupsItem(StrEnum):
     BOARD_MEMBER = "board-member"
     C_SUITE = "c-suite"
     FOUNDER = "founder"

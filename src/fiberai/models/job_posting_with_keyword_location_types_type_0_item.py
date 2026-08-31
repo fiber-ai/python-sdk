@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class JobPostingWithKeywordLocationTypesType0Item(str, Enum):
+class JobPostingWithKeywordLocationTypesType0Item(StrEnum):
     HYBRID = "hybrid"
     ON_SITE = "on_site"
     REMOTE = "remote"

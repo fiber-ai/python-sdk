@@ -45,13 +45,13 @@ class KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.kitchen_sink_company_response_200_output_data_item_role_count_matches_type_0_item_num_matching_employees_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,
+            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_role_count_matches_type_0_item_num_matching_employees_type_1 import (
-            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,
+            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_role_count_matches_type_0_item_num_matching_employees_type_2 import (
-            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,
+            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,  # noqa: PLC0415
         )
 
         num_matching_employees: dict[str, Any]
@@ -86,16 +86,16 @@ class KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_company_response_200_output_data_item_role_count_matches_type_0_item_num_matching_employees_type_0 import (
-            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,
+            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_role_count_matches_type_0_item_num_matching_employees_type_1 import (
-            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,
+            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_role_count_matches_type_0_item_num_matching_employees_type_2 import (
-            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,
+            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_role_count_matches_type_0_item_num_matching_employees_type_3 import (
-            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType3,
+            KitchenSinkCompanyResponse200OutputDataItemRoleCountMatchesType0ItemNumMatchingEmployeesType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

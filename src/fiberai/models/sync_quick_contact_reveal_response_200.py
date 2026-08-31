@@ -58,16 +58,16 @@ class SyncQuickContactRevealResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.sync_quick_contact_reveal_response_200_charge_info_type_0 import (
-            SyncQuickContactRevealResponse200ChargeInfoType0,
+            SyncQuickContactRevealResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.sync_quick_contact_reveal_response_200_charge_info_type_1 import (
-            SyncQuickContactRevealResponse200ChargeInfoType1,
+            SyncQuickContactRevealResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.sync_quick_contact_reveal_response_200_charge_info_type_2 import (
-            SyncQuickContactRevealResponse200ChargeInfoType2,
+            SyncQuickContactRevealResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.sync_quick_contact_reveal_response_200_charge_info_type_3 import (
-            SyncQuickContactRevealResponse200ChargeInfoType3,
+            SyncQuickContactRevealResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class SyncQuickContactRevealResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.sync_quick_contact_reveal_response_200_charge_info_type_0 import (
-            SyncQuickContactRevealResponse200ChargeInfoType0,
+            SyncQuickContactRevealResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.sync_quick_contact_reveal_response_200_charge_info_type_1 import (
-            SyncQuickContactRevealResponse200ChargeInfoType1,
+            SyncQuickContactRevealResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.sync_quick_contact_reveal_response_200_charge_info_type_2 import (
-            SyncQuickContactRevealResponse200ChargeInfoType2,
+            SyncQuickContactRevealResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.sync_quick_contact_reveal_response_200_charge_info_type_3 import (
-            SyncQuickContactRevealResponse200ChargeInfoType3,
+            SyncQuickContactRevealResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.sync_quick_contact_reveal_response_200_charge_info_type_4 import (
-            SyncQuickContactRevealResponse200ChargeInfoType4,
+            SyncQuickContactRevealResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.sync_quick_contact_reveal_response_200_output import SyncQuickContactRevealResponse200Output
+        from ..models.sync_quick_contact_reveal_response_200_output import (
+            SyncQuickContactRevealResponse200Output,  # noqa: PLC0415
+        )
         from ..models.sync_quick_contact_reveal_response_200_warnings_type_0_item import (
-            SyncQuickContactRevealResponse200WarningsType0Item,
+            SyncQuickContactRevealResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

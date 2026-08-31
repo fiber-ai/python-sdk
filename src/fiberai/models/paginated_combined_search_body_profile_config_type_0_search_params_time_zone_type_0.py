@@ -44,7 +44,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsTimeZoneType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_time_zone_type_0_any_of_item import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsTimeZoneType0AnyOfItem,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsTimeZoneType0AnyOfItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

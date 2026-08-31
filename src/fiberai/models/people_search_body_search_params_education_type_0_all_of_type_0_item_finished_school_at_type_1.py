@@ -48,13 +48,13 @@ class PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtTy
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_finished_school_at_type_1_window_type_0 import (
-            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType0,
+            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_finished_school_at_type_1_window_type_1 import (
-            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType1,
+            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_finished_school_at_type_1_window_type_2 import (
-            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType2,
+            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -92,13 +92,13 @@ class PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtTy
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_finished_school_at_type_1_window_type_0 import (
-            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType0,
+            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_finished_school_at_type_1_window_type_1 import (
-            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType1,
+            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_finished_school_at_type_1_window_type_2 import (
-            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType2,
+            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

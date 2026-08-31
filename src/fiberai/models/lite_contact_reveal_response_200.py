@@ -48,16 +48,16 @@ class LiteContactRevealResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.lite_contact_reveal_response_200_charge_info_type_0 import (
-            LiteContactRevealResponse200ChargeInfoType0,
+            LiteContactRevealResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.lite_contact_reveal_response_200_charge_info_type_1 import (
-            LiteContactRevealResponse200ChargeInfoType1,
+            LiteContactRevealResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.lite_contact_reveal_response_200_charge_info_type_2 import (
-            LiteContactRevealResponse200ChargeInfoType2,
+            LiteContactRevealResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.lite_contact_reveal_response_200_charge_info_type_3 import (
-            LiteContactRevealResponse200ChargeInfoType3,
+            LiteContactRevealResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class LiteContactRevealResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.lite_contact_reveal_response_200_charge_info_type_0 import (
-            LiteContactRevealResponse200ChargeInfoType0,
+            LiteContactRevealResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.lite_contact_reveal_response_200_charge_info_type_1 import (
-            LiteContactRevealResponse200ChargeInfoType1,
+            LiteContactRevealResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.lite_contact_reveal_response_200_charge_info_type_2 import (
-            LiteContactRevealResponse200ChargeInfoType2,
+            LiteContactRevealResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.lite_contact_reveal_response_200_charge_info_type_3 import (
-            LiteContactRevealResponse200ChargeInfoType3,
+            LiteContactRevealResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.lite_contact_reveal_response_200_charge_info_type_4 import (
-            LiteContactRevealResponse200ChargeInfoType4,
+            LiteContactRevealResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.lite_contact_reveal_response_200_output import LiteContactRevealResponse200Output
+        from ..models.lite_contact_reveal_response_200_output import LiteContactRevealResponse200Output  # noqa: PLC0415
         from ..models.lite_contact_reveal_response_200_warnings_type_0_item import (
-            LiteContactRevealResponse200WarningsType0Item,
+            LiteContactRevealResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

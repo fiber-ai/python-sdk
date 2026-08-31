@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class AccountSendOtpBodyPurpose(str, Enum):
+class AccountSendOtpBodyPurpose(StrEnum):
     AGENT_API = "agent-api"
     SLUSHIE = "slushie"
 

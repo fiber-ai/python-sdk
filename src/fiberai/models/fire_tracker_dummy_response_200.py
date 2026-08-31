@@ -48,16 +48,16 @@ class FireTrackerDummyResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.fire_tracker_dummy_response_200_charge_info_type_0 import (
-            FireTrackerDummyResponse200ChargeInfoType0,
+            FireTrackerDummyResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.fire_tracker_dummy_response_200_charge_info_type_1 import (
-            FireTrackerDummyResponse200ChargeInfoType1,
+            FireTrackerDummyResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.fire_tracker_dummy_response_200_charge_info_type_2 import (
-            FireTrackerDummyResponse200ChargeInfoType2,
+            FireTrackerDummyResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.fire_tracker_dummy_response_200_charge_info_type_3 import (
-            FireTrackerDummyResponse200ChargeInfoType3,
+            FireTrackerDummyResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class FireTrackerDummyResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.fire_tracker_dummy_response_200_charge_info_type_0 import (
-            FireTrackerDummyResponse200ChargeInfoType0,
+            FireTrackerDummyResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.fire_tracker_dummy_response_200_charge_info_type_1 import (
-            FireTrackerDummyResponse200ChargeInfoType1,
+            FireTrackerDummyResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.fire_tracker_dummy_response_200_charge_info_type_2 import (
-            FireTrackerDummyResponse200ChargeInfoType2,
+            FireTrackerDummyResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.fire_tracker_dummy_response_200_charge_info_type_3 import (
-            FireTrackerDummyResponse200ChargeInfoType3,
+            FireTrackerDummyResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.fire_tracker_dummy_response_200_charge_info_type_4 import (
-            FireTrackerDummyResponse200ChargeInfoType4,
+            FireTrackerDummyResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.fire_tracker_dummy_response_200_output import FireTrackerDummyResponse200Output
+        from ..models.fire_tracker_dummy_response_200_output import FireTrackerDummyResponse200Output  # noqa: PLC0415
         from ..models.fire_tracker_dummy_response_200_warnings_type_0_item import (
-            FireTrackerDummyResponse200WarningsType0Item,
+            FireTrackerDummyResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

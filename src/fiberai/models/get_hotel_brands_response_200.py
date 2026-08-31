@@ -45,10 +45,18 @@ class GetHotelBrandsResponse200:
     advice: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_hotel_brands_response_200_charge_info_type_0 import GetHotelBrandsResponse200ChargeInfoType0
-        from ..models.get_hotel_brands_response_200_charge_info_type_1 import GetHotelBrandsResponse200ChargeInfoType1
-        from ..models.get_hotel_brands_response_200_charge_info_type_2 import GetHotelBrandsResponse200ChargeInfoType2
-        from ..models.get_hotel_brands_response_200_charge_info_type_3 import GetHotelBrandsResponse200ChargeInfoType3
+        from ..models.get_hotel_brands_response_200_charge_info_type_0 import (
+            GetHotelBrandsResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.get_hotel_brands_response_200_charge_info_type_1 import (
+            GetHotelBrandsResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.get_hotel_brands_response_200_charge_info_type_2 import (
+            GetHotelBrandsResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.get_hotel_brands_response_200_charge_info_type_3 import (
+            GetHotelBrandsResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
 
         output = self.output.to_dict()
 
@@ -102,14 +110,24 @@ class GetHotelBrandsResponse200:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_hotel_brands_response_200_charge_info_type_0 import GetHotelBrandsResponse200ChargeInfoType0
-        from ..models.get_hotel_brands_response_200_charge_info_type_1 import GetHotelBrandsResponse200ChargeInfoType1
-        from ..models.get_hotel_brands_response_200_charge_info_type_2 import GetHotelBrandsResponse200ChargeInfoType2
-        from ..models.get_hotel_brands_response_200_charge_info_type_3 import GetHotelBrandsResponse200ChargeInfoType3
-        from ..models.get_hotel_brands_response_200_charge_info_type_4 import GetHotelBrandsResponse200ChargeInfoType4
-        from ..models.get_hotel_brands_response_200_output import GetHotelBrandsResponse200Output
+        from ..models.get_hotel_brands_response_200_charge_info_type_0 import (
+            GetHotelBrandsResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.get_hotel_brands_response_200_charge_info_type_1 import (
+            GetHotelBrandsResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.get_hotel_brands_response_200_charge_info_type_2 import (
+            GetHotelBrandsResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.get_hotel_brands_response_200_charge_info_type_3 import (
+            GetHotelBrandsResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
+        from ..models.get_hotel_brands_response_200_charge_info_type_4 import (
+            GetHotelBrandsResponse200ChargeInfoType4,  # noqa: PLC0415
+        )
+        from ..models.get_hotel_brands_response_200_output import GetHotelBrandsResponse200Output  # noqa: PLC0415
         from ..models.get_hotel_brands_response_200_warnings_type_0_item import (
-            GetHotelBrandsResponse200WarningsType0Item,
+            GetHotelBrandsResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

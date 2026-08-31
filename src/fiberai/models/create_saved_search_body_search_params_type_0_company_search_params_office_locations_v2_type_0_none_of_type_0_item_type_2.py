@@ -55,13 +55,13 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_0 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_1 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_2 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2,  # noqa: PLC0415
         )
 
         type_ = self.type_.value
@@ -99,16 +99,16 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_0 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_1 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_2 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_3 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType3,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

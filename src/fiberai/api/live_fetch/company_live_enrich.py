@@ -147,14 +147,14 @@ def sync_detailed(
     | CompanyLiveEnrichResponse500
     | CompanyLiveEnrichResponse503
 ]:
-    r"""Live fetch LinkedIn company
+    """Live fetch LinkedIn company
 
      Returns an enriched company with details for a given LinkedIn company identifier
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per company live fetch&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per company live fetch&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanyLiveEnrichBody):
@@ -195,14 +195,14 @@ def sync(
     | CompanyLiveEnrichResponse503
     | None
 ):
-    r"""Live fetch LinkedIn company
+    """Live fetch LinkedIn company
 
      Returns an enriched company with details for a given LinkedIn company identifier
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per company live fetch&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per company live fetch&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanyLiveEnrichBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | CompanyLiveEnrichResponse500
     | CompanyLiveEnrichResponse503
 ]:
-    r"""Live fetch LinkedIn company
+    """Live fetch LinkedIn company
 
      Returns an enriched company with details for a given LinkedIn company identifier
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per company live fetch&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per company live fetch&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanyLiveEnrichBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | CompanyLiveEnrichResponse503
     | None
 ):
-    r"""Live fetch LinkedIn company
+    """Live fetch LinkedIn company
 
      Returns an enriched company with details for a given LinkedIn company identifier
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per company live fetch&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per company live fetch&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanyLiveEnrichBody):

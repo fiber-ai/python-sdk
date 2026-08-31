@@ -52,7 +52,7 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemNumMatchingL
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_num_matching_locations_type_0_matched_offices_item import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemNumMatchingLocationsType0MatchedOfficesItem,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemNumMatchingLocationsType0MatchedOfficesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -48,13 +48,13 @@ class CompanyCountBodySearchParamsFoundedOnType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_count_body_search_params_founded_on_type_1_window_type_0 import (
-            CompanyCountBodySearchParamsFoundedOnType1WindowType0,
+            CompanyCountBodySearchParamsFoundedOnType1WindowType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_founded_on_type_1_window_type_1 import (
-            CompanyCountBodySearchParamsFoundedOnType1WindowType1,
+            CompanyCountBodySearchParamsFoundedOnType1WindowType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_founded_on_type_1_window_type_2 import (
-            CompanyCountBodySearchParamsFoundedOnType1WindowType2,
+            CompanyCountBodySearchParamsFoundedOnType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -86,13 +86,13 @@ class CompanyCountBodySearchParamsFoundedOnType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_count_body_search_params_founded_on_type_1_window_type_0 import (
-            CompanyCountBodySearchParamsFoundedOnType1WindowType0,
+            CompanyCountBodySearchParamsFoundedOnType1WindowType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_founded_on_type_1_window_type_1 import (
-            CompanyCountBodySearchParamsFoundedOnType1WindowType1,
+            CompanyCountBodySearchParamsFoundedOnType1WindowType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_founded_on_type_1_window_type_2 import (
-            CompanyCountBodySearchParamsFoundedOnType1WindowType2,
+            CompanyCountBodySearchParamsFoundedOnType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

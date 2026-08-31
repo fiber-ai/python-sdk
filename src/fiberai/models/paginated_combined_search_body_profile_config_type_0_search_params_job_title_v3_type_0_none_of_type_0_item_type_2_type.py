@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobTitleV3Type0NoneOfType0ItemType2Type(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobTitleV3Type0NoneOfType0ItemType2Type(StrEnum):
     CARTESIAN = "cartesian"
 
     def __str__(self) -> str:

@@ -147,7 +147,7 @@ def sync_detailed(
     | ReversePhoneLookupResponse500
     | ReversePhoneLookupResponse503
 ]:
-    r"""Find person or company by phone (single)
+    """Find person or company by phone (single)
 
      Given a phone number, find the associated LinkedIn profile or company.
 
@@ -161,11 +161,11 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per phone lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per phone lookup&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (ReversePhoneLookupBody):
@@ -206,7 +206,7 @@ def sync(
     | ReversePhoneLookupResponse503
     | None
 ):
-    r"""Find person or company by phone (single)
+    """Find person or company by phone (single)
 
      Given a phone number, find the associated LinkedIn profile or company.
 
@@ -220,11 +220,11 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per phone lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per phone lookup&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (ReversePhoneLookupBody):
@@ -259,7 +259,7 @@ async def asyncio_detailed(
     | ReversePhoneLookupResponse500
     | ReversePhoneLookupResponse503
 ]:
-    r"""Find person or company by phone (single)
+    """Find person or company by phone (single)
 
      Given a phone number, find the associated LinkedIn profile or company.
 
@@ -273,11 +273,11 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per phone lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per phone lookup&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (ReversePhoneLookupBody):
@@ -316,7 +316,7 @@ async def asyncio(
     | ReversePhoneLookupResponse503
     | None
 ):
-    r"""Find person or company by phone (single)
+    """Find person or company by phone (single)
 
      Given a phone number, find the associated LinkedIn profile or company.
 
@@ -330,11 +330,11 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per phone lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per phone lookup&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (ReversePhoneLookupBody):

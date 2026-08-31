@@ -147,15 +147,15 @@ def sync_detailed(
     | CompanyTypeaheadResponse500
     | CompanyTypeaheadResponse503
 ]:
-    r"""Company/School/Investor Typeahead
+    """Company/School/Investor Typeahead
 
      Search for companies, schools/universities, and investors by name. Supports partial inputs, which
     can enable typeaheads in your UI.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanyTypeaheadBody):
@@ -196,15 +196,15 @@ def sync(
     | CompanyTypeaheadResponse503
     | None
 ):
-    r"""Company/School/Investor Typeahead
+    """Company/School/Investor Typeahead
 
      Search for companies, schools/universities, and investors by name. Supports partial inputs, which
     can enable typeaheads in your UI.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanyTypeaheadBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | CompanyTypeaheadResponse500
     | CompanyTypeaheadResponse503
 ]:
-    r"""Company/School/Investor Typeahead
+    """Company/School/Investor Typeahead
 
      Search for companies, schools/universities, and investors by name. Supports partial inputs, which
     can enable typeaheads in your UI.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanyTypeaheadBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | CompanyTypeaheadResponse503
     | None
 ):
-    r"""Company/School/Investor Typeahead
+    """Company/School/Investor Typeahead
 
      Search for companies, schools/universities, and investors by name. Supports partial inputs, which
     can enable typeaheads in your UI.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CompanyTypeaheadBody):

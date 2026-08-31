@@ -48,13 +48,13 @@ class CombinedSearchCountBodyCompanyParamsInvestorsV2Type0NoneOfType0ItemInveste
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_company_params_investors_v2_type_0_none_of_type_0_item_invested_at_type_1_window_type_0 import (
-            CombinedSearchCountBodyCompanyParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType0,
+            CombinedSearchCountBodyCompanyParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_investors_v2_type_0_none_of_type_0_item_invested_at_type_1_window_type_1 import (
-            CombinedSearchCountBodyCompanyParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType1,
+            CombinedSearchCountBodyCompanyParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_investors_v2_type_0_none_of_type_0_item_invested_at_type_1_window_type_2 import (
-            CombinedSearchCountBodyCompanyParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType2,
+            CombinedSearchCountBodyCompanyParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -92,13 +92,13 @@ class CombinedSearchCountBodyCompanyParamsInvestorsV2Type0NoneOfType0ItemInveste
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_company_params_investors_v2_type_0_none_of_type_0_item_invested_at_type_1_window_type_0 import (
-            CombinedSearchCountBodyCompanyParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType0,
+            CombinedSearchCountBodyCompanyParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_investors_v2_type_0_none_of_type_0_item_invested_at_type_1_window_type_1 import (
-            CombinedSearchCountBodyCompanyParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType1,
+            CombinedSearchCountBodyCompanyParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_investors_v2_type_0_none_of_type_0_item_invested_at_type_1_window_type_2 import (
-            CombinedSearchCountBodyCompanyParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType2,
+            CombinedSearchCountBodyCompanyParamsInvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

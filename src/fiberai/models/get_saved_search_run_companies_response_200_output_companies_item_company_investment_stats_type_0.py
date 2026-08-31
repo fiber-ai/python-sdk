@@ -98,7 +98,7 @@ class GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyInvestmentS
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_investment_stats_type_0_investments_by_stage_type_0_item import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyInvestmentStatsType0InvestmentsByStageType0Item,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyInvestmentStatsType0InvestmentsByStageType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

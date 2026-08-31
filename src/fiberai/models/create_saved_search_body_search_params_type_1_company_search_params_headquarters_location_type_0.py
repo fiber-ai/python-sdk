@@ -80,22 +80,22 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocat
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_2 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType2,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_union_all_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_union_all_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType1,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_union_all_type_0_item_type_2 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType2,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType2,  # noqa: PLC0415
         )
 
         union_all: list[dict[str, Any]] | None | Unset
@@ -171,28 +171,28 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocat
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_2 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType2,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_3 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType3,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0SubtractAllType0ItemType3,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_union_all_type_0_item_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_union_all_type_0_item_type_1 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType1,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_union_all_type_0_item_type_2 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType2,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_union_all_type_0_item_type_3 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType3,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FetchRealEstateListingsBodySortByType1(str, Enum):
+class FetchRealEstateListingsBodySortByType1(StrEnum):
     BATHROOMCOUNTDESCENDING = "bathroomCountDescending"
     BEDROOMCOUNTDESCENDING = "bedroomCountDescending"
     ESTIMATEDPRICEASCENDING = "estimatedPriceAscending"

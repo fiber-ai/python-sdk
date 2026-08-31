@@ -48,16 +48,16 @@ class GetHotelAmenitiesResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_hotel_amenities_response_200_charge_info_type_0 import (
-            GetHotelAmenitiesResponse200ChargeInfoType0,
+            GetHotelAmenitiesResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_hotel_amenities_response_200_charge_info_type_1 import (
-            GetHotelAmenitiesResponse200ChargeInfoType1,
+            GetHotelAmenitiesResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_hotel_amenities_response_200_charge_info_type_2 import (
-            GetHotelAmenitiesResponse200ChargeInfoType2,
+            GetHotelAmenitiesResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_hotel_amenities_response_200_charge_info_type_3 import (
-            GetHotelAmenitiesResponse200ChargeInfoType3,
+            GetHotelAmenitiesResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class GetHotelAmenitiesResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_hotel_amenities_response_200_charge_info_type_0 import (
-            GetHotelAmenitiesResponse200ChargeInfoType0,
+            GetHotelAmenitiesResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_hotel_amenities_response_200_charge_info_type_1 import (
-            GetHotelAmenitiesResponse200ChargeInfoType1,
+            GetHotelAmenitiesResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_hotel_amenities_response_200_charge_info_type_2 import (
-            GetHotelAmenitiesResponse200ChargeInfoType2,
+            GetHotelAmenitiesResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_hotel_amenities_response_200_charge_info_type_3 import (
-            GetHotelAmenitiesResponse200ChargeInfoType3,
+            GetHotelAmenitiesResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.get_hotel_amenities_response_200_charge_info_type_4 import (
-            GetHotelAmenitiesResponse200ChargeInfoType4,
+            GetHotelAmenitiesResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.get_hotel_amenities_response_200_output import GetHotelAmenitiesResponse200Output
+        from ..models.get_hotel_amenities_response_200_output import GetHotelAmenitiesResponse200Output  # noqa: PLC0415
         from ..models.get_hotel_amenities_response_200_warnings_type_0_item import (
-            GetHotelAmenitiesResponse200WarningsType0Item,
+            GetHotelAmenitiesResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

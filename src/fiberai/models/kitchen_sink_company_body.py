@@ -58,20 +58,24 @@ class KitchenSinkCompanyBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.kitchen_sink_company_body_company_domain_type_0 import KitchenSinkCompanyBodyCompanyDomainType0
+        from ..models.kitchen_sink_company_body_company_domain_type_0 import (
+            KitchenSinkCompanyBodyCompanyDomainType0,  # noqa: PLC0415
+        )
         from ..models.kitchen_sink_company_body_company_identifier_type_0 import (
-            KitchenSinkCompanyBodyCompanyIdentifierType0,
+            KitchenSinkCompanyBodyCompanyIdentifierType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_body_company_identifier_type_1 import (
-            KitchenSinkCompanyBodyCompanyIdentifierType1,
+            KitchenSinkCompanyBodyCompanyIdentifierType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_body_company_identifier_type_2 import (
-            KitchenSinkCompanyBodyCompanyIdentifierType2,
+            KitchenSinkCompanyBodyCompanyIdentifierType2,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_body_company_location_type_0 import (
-            KitchenSinkCompanyBodyCompanyLocationType0,
+            KitchenSinkCompanyBodyCompanyLocationType0,  # noqa: PLC0415
         )
-        from ..models.kitchen_sink_company_body_company_name_type_0 import KitchenSinkCompanyBodyCompanyNameType0
+        from ..models.kitchen_sink_company_body_company_name_type_0 import (
+            KitchenSinkCompanyBodyCompanyNameType0,  # noqa: PLC0415
+        )
 
         api_key = self.api_key
 
@@ -135,20 +139,24 @@ class KitchenSinkCompanyBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.kitchen_sink_company_body_company_domain_type_0 import KitchenSinkCompanyBodyCompanyDomainType0
+        from ..models.kitchen_sink_company_body_company_domain_type_0 import (
+            KitchenSinkCompanyBodyCompanyDomainType0,  # noqa: PLC0415
+        )
         from ..models.kitchen_sink_company_body_company_identifier_type_0 import (
-            KitchenSinkCompanyBodyCompanyIdentifierType0,
+            KitchenSinkCompanyBodyCompanyIdentifierType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_body_company_identifier_type_1 import (
-            KitchenSinkCompanyBodyCompanyIdentifierType1,
+            KitchenSinkCompanyBodyCompanyIdentifierType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_body_company_identifier_type_2 import (
-            KitchenSinkCompanyBodyCompanyIdentifierType2,
+            KitchenSinkCompanyBodyCompanyIdentifierType2,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_body_company_location_type_0 import (
-            KitchenSinkCompanyBodyCompanyLocationType0,
+            KitchenSinkCompanyBodyCompanyLocationType0,  # noqa: PLC0415
         )
-        from ..models.kitchen_sink_company_body_company_name_type_0 import KitchenSinkCompanyBodyCompanyNameType0
+        from ..models.kitchen_sink_company_body_company_name_type_0 import (
+            KitchenSinkCompanyBodyCompanyNameType0,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchBodySearchParamsJobTitleV2Type0NoneOfType0ItemType2Type(str, Enum):
+class PeopleSearchBodySearchParamsJobTitleV2Type0NoneOfType0ItemType2Type(StrEnum):
     DYNAMIC_GROUPS = "dynamic-groups"
 
     def __str__(self) -> str:

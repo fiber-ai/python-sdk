@@ -40,7 +40,7 @@ class UpdateApiKeyLimitResponse200ChargeInfoType4:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.update_api_key_limit_response_200_charge_info_type_4_low_credit_alert_type_0 import (
-            UpdateApiKeyLimitResponse200ChargeInfoType4LowCreditAlertType0,
+            UpdateApiKeyLimitResponse200ChargeInfoType4LowCreditAlertType0,  # noqa: PLC0415
         )
 
         method = self.method.value
@@ -74,7 +74,7 @@ class UpdateApiKeyLimitResponse200ChargeInfoType4:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.update_api_key_limit_response_200_charge_info_type_4_low_credit_alert_type_0 import (
-            UpdateApiKeyLimitResponse200ChargeInfoType4LowCreditAlertType0,
+            UpdateApiKeyLimitResponse200ChargeInfoType4LowCreditAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

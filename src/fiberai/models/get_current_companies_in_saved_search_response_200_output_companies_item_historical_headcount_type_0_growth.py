@@ -104,28 +104,28 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHe
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_1m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth1MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth1MType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_2m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth2MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth2MType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_3m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth3MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth3MType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_6m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth6MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth6MType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_12m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth12MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth12MType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_18m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth18MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth18MType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_24m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth24MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth24MType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_36m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth36MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth36MType0,  # noqa: PLC0415
         )
 
         field_1m: dict[str, Any] | None | Unset
@@ -241,28 +241,28 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHe
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_1m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth1MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth1MType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_2m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth2MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth2MType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_3m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth3MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth3MType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_6m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth6MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth6MType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_12m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth12MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth12MType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_18m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth18MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth18MType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_24m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth24MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth24MType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_historical_headcount_type_0_growth_36m_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth36MType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemHistoricalHeadcountType0Growth36MType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

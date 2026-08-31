@@ -60,16 +60,16 @@ class GetCompanyExclusionListsResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_company_exclusion_lists_response_200_charge_info_type_0 import (
-            GetCompanyExclusionListsResponse200ChargeInfoType0,
+            GetCompanyExclusionListsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_company_exclusion_lists_response_200_charge_info_type_1 import (
-            GetCompanyExclusionListsResponse200ChargeInfoType1,
+            GetCompanyExclusionListsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_company_exclusion_lists_response_200_charge_info_type_2 import (
-            GetCompanyExclusionListsResponse200ChargeInfoType2,
+            GetCompanyExclusionListsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_company_exclusion_lists_response_200_charge_info_type_3 import (
-            GetCompanyExclusionListsResponse200ChargeInfoType3,
+            GetCompanyExclusionListsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = []
@@ -128,25 +128,25 @@ class GetCompanyExclusionListsResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_company_exclusion_lists_response_200_charge_info_type_0 import (
-            GetCompanyExclusionListsResponse200ChargeInfoType0,
+            GetCompanyExclusionListsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_company_exclusion_lists_response_200_charge_info_type_1 import (
-            GetCompanyExclusionListsResponse200ChargeInfoType1,
+            GetCompanyExclusionListsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_company_exclusion_lists_response_200_charge_info_type_2 import (
-            GetCompanyExclusionListsResponse200ChargeInfoType2,
+            GetCompanyExclusionListsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_company_exclusion_lists_response_200_charge_info_type_3 import (
-            GetCompanyExclusionListsResponse200ChargeInfoType3,
+            GetCompanyExclusionListsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.get_company_exclusion_lists_response_200_charge_info_type_4 import (
-            GetCompanyExclusionListsResponse200ChargeInfoType4,
+            GetCompanyExclusionListsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.get_company_exclusion_lists_response_200_output_item import (
-            GetCompanyExclusionListsResponse200OutputItem,
+            GetCompanyExclusionListsResponse200OutputItem,  # noqa: PLC0415
         )
         from ..models.get_company_exclusion_lists_response_200_warnings_type_0_item import (
-            GetCompanyExclusionListsResponse200WarningsType0Item,
+            GetCompanyExclusionListsResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

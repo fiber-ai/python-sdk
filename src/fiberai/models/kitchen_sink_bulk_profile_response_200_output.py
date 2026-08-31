@@ -61,7 +61,7 @@ class KitchenSinkBulkProfileResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_bulk_profile_response_200_output_data_item_item import (
-            KitchenSinkBulkProfileResponse200OutputDataItemItem,
+            KitchenSinkBulkProfileResponse200OutputDataItemItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -85,13 +85,13 @@ class GetScoutingReportResponse200OutputReport:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_scouting_report_response_200_output_report_company_profile_type_0 import (
-            GetScoutingReportResponse200OutputReportCompanyProfileType0,
+            GetScoutingReportResponse200OutputReportCompanyProfileType0,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_output_report_funding_info_type_0 import (
-            GetScoutingReportResponse200OutputReportFundingInfoType0,
+            GetScoutingReportResponse200OutputReportFundingInfoType0,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_output_report_historical_headcount_type_0 import (
-            GetScoutingReportResponse200OutputReportHistoricalHeadcountType0,
+            GetScoutingReportResponse200OutputReportHistoricalHeadcountType0,  # noqa: PLC0415
         )
 
         news = []
@@ -190,37 +190,37 @@ class GetScoutingReportResponse200OutputReport:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_scouting_report_response_200_output_report_blog_posts_item import (
-            GetScoutingReportResponse200OutputReportBlogPostsItem,
+            GetScoutingReportResponse200OutputReportBlogPostsItem,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_output_report_company_photos_item import (
-            GetScoutingReportResponse200OutputReportCompanyPhotosItem,
+            GetScoutingReportResponse200OutputReportCompanyPhotosItem,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_output_report_company_profile_type_0 import (
-            GetScoutingReportResponse200OutputReportCompanyProfileType0,
+            GetScoutingReportResponse200OutputReportCompanyProfileType0,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_output_report_founders_item import (
-            GetScoutingReportResponse200OutputReportFoundersItem,
+            GetScoutingReportResponse200OutputReportFoundersItem,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_output_report_funding_info_type_0 import (
-            GetScoutingReportResponse200OutputReportFundingInfoType0,
+            GetScoutingReportResponse200OutputReportFundingInfoType0,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_output_report_historical_headcount_type_0 import (
-            GetScoutingReportResponse200OutputReportHistoricalHeadcountType0,
+            GetScoutingReportResponse200OutputReportHistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_output_report_job_posts_item import (
-            GetScoutingReportResponse200OutputReportJobPostsItem,
+            GetScoutingReportResponse200OutputReportJobPostsItem,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_output_report_media_links_item import (
-            GetScoutingReportResponse200OutputReportMediaLinksItem,
+            GetScoutingReportResponse200OutputReportMediaLinksItem,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_output_report_milestones_item import (
-            GetScoutingReportResponse200OutputReportMilestonesItem,
+            GetScoutingReportResponse200OutputReportMilestonesItem,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_output_report_news_item import (
-            GetScoutingReportResponse200OutputReportNewsItem,
+            GetScoutingReportResponse200OutputReportNewsItem,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_output_report_office_locations_item import (
-            GetScoutingReportResponse200OutputReportOfficeLocationsItem,
+            GetScoutingReportResponse200OutputReportOfficeLocationsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

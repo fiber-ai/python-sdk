@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemJobFunctionType0Item(str, Enum):
+class CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0NoneOfType0ItemJobFunctionType0Item(StrEnum):
     ACCOUNTING = "Accounting"
     ADMINISTRATIVE = "Administrative"
     ADVERTISING = "Advertising"

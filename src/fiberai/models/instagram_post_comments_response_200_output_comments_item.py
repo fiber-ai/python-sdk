@@ -36,7 +36,7 @@ class InstagramPostCommentsResponse200OutputCommentsItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.instagram_post_comments_response_200_output_comments_item_user_type_0 import (
-            InstagramPostCommentsResponse200OutputCommentsItemUserType0,
+            InstagramPostCommentsResponse200OutputCommentsItemUserType0,  # noqa: PLC0415
         )
 
         id = self.id
@@ -80,7 +80,7 @@ class InstagramPostCommentsResponse200OutputCommentsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.instagram_post_comments_response_200_output_comments_item_user_type_0 import (
-            InstagramPostCommentsResponse200OutputCommentsItemUserType0,
+            InstagramPostCommentsResponse200OutputCommentsItemUserType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

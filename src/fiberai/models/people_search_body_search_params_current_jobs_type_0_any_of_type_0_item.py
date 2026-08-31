@@ -31,7 +31,7 @@ class PeopleSearchBodySearchParamsCurrentJobsType0AnyOfType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_body_search_params_current_jobs_type_0_any_of_type_0_item_company_type_0 import (
-            PeopleSearchBodySearchParamsCurrentJobsType0AnyOfType0ItemCompanyType0,
+            PeopleSearchBodySearchParamsCurrentJobsType0AnyOfType0ItemCompanyType0,  # noqa: PLC0415
         )
 
         job_title: list[str] | None | Unset
@@ -64,7 +64,7 @@ class PeopleSearchBodySearchParamsCurrentJobsType0AnyOfType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_current_jobs_type_0_any_of_type_0_item_company_type_0 import (
-            PeopleSearchBodySearchParamsCurrentJobsType0AnyOfType0ItemCompanyType0,
+            PeopleSearchBodySearchParamsCurrentJobsType0AnyOfType0ItemCompanyType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

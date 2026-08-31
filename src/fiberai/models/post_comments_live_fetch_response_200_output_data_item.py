@@ -54,7 +54,7 @@ class PostCommentsLiveFetchResponse200OutputDataItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.post_comments_live_fetch_response_200_output_data_item_commenter_type_0 import (
-            PostCommentsLiveFetchResponse200OutputDataItemCommenterType0,
+            PostCommentsLiveFetchResponse200OutputDataItemCommenterType0,  # noqa: PLC0415
         )
 
         commentary: None | str | Unset
@@ -150,16 +150,16 @@ class PostCommentsLiveFetchResponse200OutputDataItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.post_comments_live_fetch_response_200_output_data_item_commenter_type_0 import (
-            PostCommentsLiveFetchResponse200OutputDataItemCommenterType0,
+            PostCommentsLiveFetchResponse200OutputDataItemCommenterType0,  # noqa: PLC0415
         )
         from ..models.post_comments_live_fetch_response_200_output_data_item_comments_type_0_item import (
-            PostCommentsLiveFetchResponse200OutputDataItemCommentsType0Item,
+            PostCommentsLiveFetchResponse200OutputDataItemCommentsType0Item,  # noqa: PLC0415
         )
         from ..models.post_comments_live_fetch_response_200_output_data_item_reactions_by_type_type_0_item import (
-            PostCommentsLiveFetchResponse200OutputDataItemReactionsByTypeType0Item,
+            PostCommentsLiveFetchResponse200OutputDataItemReactionsByTypeType0Item,  # noqa: PLC0415
         )
         from ..models.post_comments_live_fetch_response_200_output_data_item_tagged_users_type_0_item import (
-            PostCommentsLiveFetchResponse200OutputDataItemTaggedUsersType0Item,
+            PostCommentsLiveFetchResponse200OutputDataItemTaggedUsersType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

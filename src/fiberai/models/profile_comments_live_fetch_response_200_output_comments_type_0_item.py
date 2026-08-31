@@ -42,10 +42,10 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_commenter_type_0 import (
-            ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0,
+            ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0,  # noqa: PLC0415
         )
         from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_post_type_0 import (
-            ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0,
+            ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0,  # noqa: PLC0415
         )
 
         comment_id: None | str | Unset
@@ -109,10 +109,10 @@ class ProfileCommentsLiveFetchResponse200OutputCommentsType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_commenter_type_0 import (
-            ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0,
+            ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemCommenterType0,  # noqa: PLC0415
         )
         from ..models.profile_comments_live_fetch_response_200_output_comments_type_0_item_post_type_0 import (
-            ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0,
+            ProfileCommentsLiveFetchResponse200OutputCommentsType0ItemPostType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

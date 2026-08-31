@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanySearchBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6Industry(str, Enum):
+class CompanySearchBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6Industry(StrEnum):
     ADMINISTRATIVE_SERVICES = "Administrative Services"
     AEROSPACE_MILITARY = "Aerospace & Military"
     ARTIFICIAL_INTELLIGENCE = "Artificial Intelligence"

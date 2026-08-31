@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyProfileParamsCurrentJobsType0AnyOfType0ItemCompanyType0SourceType2Type1(str, Enum):
+class CombinedSearchCountBodyProfileParamsCurrentJobsType0AnyOfType0ItemCompanyType0SourceType2Type1(StrEnum):
     CSV = "csv"
 
     def __str__(self) -> str:

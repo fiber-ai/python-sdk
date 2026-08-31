@@ -165,15 +165,15 @@ def sync_detailed(
     | GetAudienceCompaniesResponse500
     | GetAudienceCompaniesResponse503
 ]:
-    r"""Get companies in an audience
+    """Get companies in an audience
 
      Gets the companies in an audience with pagination. Use the nextCursor from the response to fetch the
     next page. Pass your apiKey in the query string.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -223,15 +223,15 @@ def sync(
     | GetAudienceCompaniesResponse503
     | None
 ):
-    r"""Get companies in an audience
+    """Get companies in an audience
 
      Gets the companies in an audience with pagination. Use the nextCursor from the response to fetch the
     next page. Pass your apiKey in the query string.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -275,15 +275,15 @@ async def asyncio_detailed(
     | GetAudienceCompaniesResponse500
     | GetAudienceCompaniesResponse503
 ]:
-    r"""Get companies in an audience
+    """Get companies in an audience
 
      Gets the companies in an audience with pagination. Use the nextCursor from the response to fetch the
     next page. Pass your apiKey in the query string.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -331,15 +331,15 @@ async def asyncio(
     | GetAudienceCompaniesResponse503
     | None
 ):
-    r"""Get companies in an audience
+    """Get companies in an audience
 
      Gets the companies in an audience with pagination. Use the nextCursor from the response to fetch the
     next page. Pass your apiKey in the query string.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):

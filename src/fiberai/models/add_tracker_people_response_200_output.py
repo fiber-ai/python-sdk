@@ -48,7 +48,7 @@ class AddTrackerPeopleResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.add_tracker_people_response_200_output_initial_signals_type_0 import (
-            AddTrackerPeopleResponse200OutputInitialSignalsType0,
+            AddTrackerPeopleResponse200OutputInitialSignalsType0,  # noqa: PLC0415
         )
 
         added = self.added
@@ -85,13 +85,13 @@ class AddTrackerPeopleResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.add_tracker_people_response_200_output_initial_signals_type_0 import (
-            AddTrackerPeopleResponse200OutputInitialSignalsType0,
+            AddTrackerPeopleResponse200OutputInitialSignalsType0,  # noqa: PLC0415
         )
         from ..models.add_tracker_people_response_200_output_initial_signals_type_1 import (
-            AddTrackerPeopleResponse200OutputInitialSignalsType1,
+            AddTrackerPeopleResponse200OutputInitialSignalsType1,  # noqa: PLC0415
         )
         from ..models.add_tracker_people_response_200_output_invalid_people_item import (
-            AddTrackerPeopleResponse200OutputInvalidPeopleItem,
+            AddTrackerPeopleResponse200OutputInvalidPeopleItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

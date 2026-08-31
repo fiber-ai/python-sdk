@@ -44,7 +44,7 @@ class PeopleSearchCountBodySearchParamsTimeZoneType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_body_search_params_time_zone_type_0_any_of_item import (
-            PeopleSearchCountBodySearchParamsTimeZoneType0AnyOfItem,
+            PeopleSearchCountBodySearchParamsTimeZoneType0AnyOfItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

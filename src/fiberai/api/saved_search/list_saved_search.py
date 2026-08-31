@@ -147,14 +147,14 @@ def sync_detailed(
     | ListSavedSearchResponse500
     | ListSavedSearchResponse503
 ]:
-    r"""List saved searches
+    """List saved searches
 
      List saved searches
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ListSavedSearchBody):
@@ -195,14 +195,14 @@ def sync(
     | ListSavedSearchResponse503
     | None
 ):
-    r"""List saved searches
+    """List saved searches
 
      List saved searches
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ListSavedSearchBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | ListSavedSearchResponse500
     | ListSavedSearchResponse503
 ]:
-    r"""List saved searches
+    """List saved searches
 
      List saved searches
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ListSavedSearchBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | ListSavedSearchResponse503
     | None
 ):
-    r"""List saved searches
+    """List saved searches
 
      List saved searches
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ListSavedSearchBody):

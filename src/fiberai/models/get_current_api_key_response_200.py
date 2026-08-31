@@ -48,16 +48,16 @@ class GetCurrentApiKeyResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_current_api_key_response_200_charge_info_type_0 import (
-            GetCurrentApiKeyResponse200ChargeInfoType0,
+            GetCurrentApiKeyResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_current_api_key_response_200_charge_info_type_1 import (
-            GetCurrentApiKeyResponse200ChargeInfoType1,
+            GetCurrentApiKeyResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_current_api_key_response_200_charge_info_type_2 import (
-            GetCurrentApiKeyResponse200ChargeInfoType2,
+            GetCurrentApiKeyResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_current_api_key_response_200_charge_info_type_3 import (
-            GetCurrentApiKeyResponse200ChargeInfoType3,
+            GetCurrentApiKeyResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class GetCurrentApiKeyResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_api_key_response_200_charge_info_type_0 import (
-            GetCurrentApiKeyResponse200ChargeInfoType0,
+            GetCurrentApiKeyResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_current_api_key_response_200_charge_info_type_1 import (
-            GetCurrentApiKeyResponse200ChargeInfoType1,
+            GetCurrentApiKeyResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_current_api_key_response_200_charge_info_type_2 import (
-            GetCurrentApiKeyResponse200ChargeInfoType2,
+            GetCurrentApiKeyResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_current_api_key_response_200_charge_info_type_3 import (
-            GetCurrentApiKeyResponse200ChargeInfoType3,
+            GetCurrentApiKeyResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.get_current_api_key_response_200_charge_info_type_4 import (
-            GetCurrentApiKeyResponse200ChargeInfoType4,
+            GetCurrentApiKeyResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.get_current_api_key_response_200_output import GetCurrentApiKeyResponse200Output
+        from ..models.get_current_api_key_response_200_output import GetCurrentApiKeyResponse200Output  # noqa: PLC0415
         from ..models.get_current_api_key_response_200_warnings_type_0_item import (
-            GetCurrentApiKeyResponse200WarningsType0Item,
+            GetCurrentApiKeyResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

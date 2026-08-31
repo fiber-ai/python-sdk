@@ -147,26 +147,25 @@ def sync_detailed(
     | PostSearchByKeywordsResponse500
     | PostSearchByKeywordsResponse503
 ]:
-    r"""Search LinkedIn posts by keywords
+    """Search LinkedIn posts by keywords
 
      Search LinkedIn posts using keyword-based queries. Returns a paginated list of posts matching the
     search criteria, up to 50 per page.
 
     **Keyword Search Syntax:**
-    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. \"head of sales\" matches the
+    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. "head of sales" matches the
     exact phrase, not the individual words.
     - **AND:** Use **AND** between keywords to require both terms. sales **AND** engineering matches
     posts containing both words.
     - **OR:** Use **OR** between keywords to match posts containing any of the terms. sales **OR**
     marketing matches posts with either word.
     - **NOT:** Use **NOT** before a keyword to exclude posts containing that term. sales **NOT**
-    recruiter matches posts with \"sales\" but without \"recruiter\".
+    recruiter matches posts with "sales" but without "recruiter".
     - **Parentheses:** Group terms to control operator precedence. (sales **OR** marketing) **AND**
-    \"series A\" finds posts about either sales or marketing that also mention \"series A\".
+    "series A" finds posts about either sales or marketing that also mention "series A".
 
     **Order of precedence:**
-    1. **Quotes (\" \"):** Exact phrase match. Phrase matching occurs before any Boolean logic is
-    applied.
+    1. **Quotes (" "):** Exact phrase match. Phrase matching occurs before any Boolean logic is applied.
     2. **Parentheses (()):** Used to explicitly group Boolean logic. Grouped expressions are evaluated
     before ungrouped logic.
     3. **NOT:** Applied after any parentheses or quoted phrases are resolved.
@@ -175,11 +174,11 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (PostSearchByKeywordsBody):
@@ -220,26 +219,25 @@ def sync(
     | PostSearchByKeywordsResponse503
     | None
 ):
-    r"""Search LinkedIn posts by keywords
+    """Search LinkedIn posts by keywords
 
      Search LinkedIn posts using keyword-based queries. Returns a paginated list of posts matching the
     search criteria, up to 50 per page.
 
     **Keyword Search Syntax:**
-    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. \"head of sales\" matches the
+    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. "head of sales" matches the
     exact phrase, not the individual words.
     - **AND:** Use **AND** between keywords to require both terms. sales **AND** engineering matches
     posts containing both words.
     - **OR:** Use **OR** between keywords to match posts containing any of the terms. sales **OR**
     marketing matches posts with either word.
     - **NOT:** Use **NOT** before a keyword to exclude posts containing that term. sales **NOT**
-    recruiter matches posts with \"sales\" but without \"recruiter\".
+    recruiter matches posts with "sales" but without "recruiter".
     - **Parentheses:** Group terms to control operator precedence. (sales **OR** marketing) **AND**
-    \"series A\" finds posts about either sales or marketing that also mention \"series A\".
+    "series A" finds posts about either sales or marketing that also mention "series A".
 
     **Order of precedence:**
-    1. **Quotes (\" \"):** Exact phrase match. Phrase matching occurs before any Boolean logic is
-    applied.
+    1. **Quotes (" "):** Exact phrase match. Phrase matching occurs before any Boolean logic is applied.
     2. **Parentheses (()):** Used to explicitly group Boolean logic. Grouped expressions are evaluated
     before ungrouped logic.
     3. **NOT:** Applied after any parentheses or quoted phrases are resolved.
@@ -248,11 +246,11 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (PostSearchByKeywordsBody):
@@ -287,26 +285,25 @@ async def asyncio_detailed(
     | PostSearchByKeywordsResponse500
     | PostSearchByKeywordsResponse503
 ]:
-    r"""Search LinkedIn posts by keywords
+    """Search LinkedIn posts by keywords
 
      Search LinkedIn posts using keyword-based queries. Returns a paginated list of posts matching the
     search criteria, up to 50 per page.
 
     **Keyword Search Syntax:**
-    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. \"head of sales\" matches the
+    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. "head of sales" matches the
     exact phrase, not the individual words.
     - **AND:** Use **AND** between keywords to require both terms. sales **AND** engineering matches
     posts containing both words.
     - **OR:** Use **OR** between keywords to match posts containing any of the terms. sales **OR**
     marketing matches posts with either word.
     - **NOT:** Use **NOT** before a keyword to exclude posts containing that term. sales **NOT**
-    recruiter matches posts with \"sales\" but without \"recruiter\".
+    recruiter matches posts with "sales" but without "recruiter".
     - **Parentheses:** Group terms to control operator precedence. (sales **OR** marketing) **AND**
-    \"series A\" finds posts about either sales or marketing that also mention \"series A\".
+    "series A" finds posts about either sales or marketing that also mention "series A".
 
     **Order of precedence:**
-    1. **Quotes (\" \"):** Exact phrase match. Phrase matching occurs before any Boolean logic is
-    applied.
+    1. **Quotes (" "):** Exact phrase match. Phrase matching occurs before any Boolean logic is applied.
     2. **Parentheses (()):** Used to explicitly group Boolean logic. Grouped expressions are evaluated
     before ungrouped logic.
     3. **NOT:** Applied after any parentheses or quoted phrases are resolved.
@@ -315,11 +312,11 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (PostSearchByKeywordsBody):
@@ -358,26 +355,25 @@ async def asyncio(
     | PostSearchByKeywordsResponse503
     | None
 ):
-    r"""Search LinkedIn posts by keywords
+    """Search LinkedIn posts by keywords
 
      Search LinkedIn posts using keyword-based queries. Returns a paginated list of posts matching the
     search criteria, up to 50 per page.
 
     **Keyword Search Syntax:**
-    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. \"head of sales\" matches the
+    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. "head of sales" matches the
     exact phrase, not the individual words.
     - **AND:** Use **AND** between keywords to require both terms. sales **AND** engineering matches
     posts containing both words.
     - **OR:** Use **OR** between keywords to match posts containing any of the terms. sales **OR**
     marketing matches posts with either word.
     - **NOT:** Use **NOT** before a keyword to exclude posts containing that term. sales **NOT**
-    recruiter matches posts with \"sales\" but without \"recruiter\".
+    recruiter matches posts with "sales" but without "recruiter".
     - **Parentheses:** Group terms to control operator precedence. (sales **OR** marketing) **AND**
-    \"series A\" finds posts about either sales or marketing that also mention \"series A\".
+    "series A" finds posts about either sales or marketing that also mention "series A".
 
     **Order of precedence:**
-    1. **Quotes (\" \"):** Exact phrase match. Phrase matching occurs before any Boolean logic is
-    applied.
+    1. **Quotes (" "):** Exact phrase match. Phrase matching occurs before any Boolean logic is applied.
     2. **Parentheses (()):** Used to explicitly group Boolean logic. Grouped expressions are evaluated
     before ungrouped logic.
     3. **NOT:** Applied after any parentheses or quoted phrases are resolved.
@@ -386,11 +382,11 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (PostSearchByKeywordsBody):

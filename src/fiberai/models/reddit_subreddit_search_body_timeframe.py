@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class RedditSubredditSearchBodyTimeframe(str, Enum):
+class RedditSubredditSearchBodyTimeframe(StrEnum):
     ALL = "all"
     DAY = "day"
     MONTH = "month"

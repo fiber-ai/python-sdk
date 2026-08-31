@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType0Type(str, Enum):
+class CreateSavedSearchBodySearchParamsType0Type(StrEnum):
     COMBINED = "combined"
 
     def __str__(self) -> str:

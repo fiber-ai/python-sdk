@@ -38,10 +38,10 @@ class UpdateAudienceSearchParamsResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.update_audience_search_params_response_200_output_company_search_params_type_0 import (
-            UpdateAudienceSearchParamsResponse200OutputCompanySearchParamsType0,
+            UpdateAudienceSearchParamsResponse200OutputCompanySearchParamsType0,  # noqa: PLC0415
         )
         from ..models.update_audience_search_params_response_200_output_prospect_search_params_type_0 import (
-            UpdateAudienceSearchParamsResponse200OutputProspectSearchParamsType0,
+            UpdateAudienceSearchParamsResponse200OutputProspectSearchParamsType0,  # noqa: PLC0415
         )
 
         audience_id = self.audience_id
@@ -83,10 +83,10 @@ class UpdateAudienceSearchParamsResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.update_audience_search_params_response_200_output_company_search_params_type_0 import (
-            UpdateAudienceSearchParamsResponse200OutputCompanySearchParamsType0,
+            UpdateAudienceSearchParamsResponse200OutputCompanySearchParamsType0,  # noqa: PLC0415
         )
         from ..models.update_audience_search_params_response_200_output_prospect_search_params_type_0 import (
-            UpdateAudienceSearchParamsResponse200OutputProspectSearchParamsType0,
+            UpdateAudienceSearchParamsResponse200OutputProspectSearchParamsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

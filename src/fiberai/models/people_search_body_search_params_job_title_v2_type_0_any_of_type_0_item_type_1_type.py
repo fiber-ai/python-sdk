@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchBodySearchParamsJobTitleV2Type0AnyOfType0ItemType1Type(str, Enum):
+class PeopleSearchBodySearchParamsJobTitleV2Type0AnyOfType0ItemType1Type(StrEnum):
     STATIC_GROUPS = "static-groups"
 
     def __str__(self) -> str:

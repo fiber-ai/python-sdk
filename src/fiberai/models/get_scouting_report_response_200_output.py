@@ -44,8 +44,12 @@ class GetScoutingReportResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_scouting_report_response_200_output_company import GetScoutingReportResponse200OutputCompany
-        from ..models.get_scouting_report_response_200_output_report import GetScoutingReportResponse200OutputReport
+        from ..models.get_scouting_report_response_200_output_company import (
+            GetScoutingReportResponse200OutputCompany,  # noqa: PLC0415
+        )
+        from ..models.get_scouting_report_response_200_output_report import (
+            GetScoutingReportResponse200OutputReport,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         company = GetScoutingReportResponse200OutputCompany.from_dict(d.pop("company"))

@@ -48,13 +48,13 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_started_in_role_type_1_window_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1WindowType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1WindowType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_started_in_role_type_1_window_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1WindowType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1WindowType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_started_in_role_type_1_window_type_2 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1WindowType2,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -92,13 +92,13 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_started_in_role_type_1_window_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1WindowType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1WindowType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_started_in_role_type_1_window_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1WindowType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1WindowType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_started_in_role_type_1_window_type_2 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1WindowType2,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

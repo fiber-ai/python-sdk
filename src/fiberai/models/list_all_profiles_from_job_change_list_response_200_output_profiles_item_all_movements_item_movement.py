@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ListAllProfilesFromJobChangeListResponse200OutputProfilesItemAllMovementsItemMovement(str, Enum):
+class ListAllProfilesFromJobChangeListResponse200OutputProfilesItemAllMovementsItemMovement(StrEnum):
     CHANGED = "changed"
     LATERAL_MOVE = "lateral-move"
     NEW_ROLE = "new-role"

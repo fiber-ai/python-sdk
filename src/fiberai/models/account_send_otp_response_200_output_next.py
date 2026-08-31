@@ -52,7 +52,9 @@ class AccountSendOtpResponse200OutputNext:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.account_send_otp_response_200_output_next_body import AccountSendOtpResponse200OutputNextBody
+        from ..models.account_send_otp_response_200_output_next_body import (
+            AccountSendOtpResponse200OutputNextBody,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         method = AccountSendOtpResponse200OutputNextMethod(d.pop("method"))

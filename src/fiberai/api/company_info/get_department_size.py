@@ -147,7 +147,7 @@ def sync_detailed(
     | GetDepartmentSizeResponse500
     | GetDepartmentSizeResponse503
 ]:
-    r"""Count employees per department
+    """Count employees per department
 
      Counts how many current employees at a company fall into each department you define. Unlike the
     depth-chart endpoint, this Synchronous endpoint provides immediate results without waiting for
@@ -157,11 +157,11 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per company&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per company&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (GetDepartmentSizeBody):
@@ -202,7 +202,7 @@ def sync(
     | GetDepartmentSizeResponse503
     | None
 ):
-    r"""Count employees per department
+    """Count employees per department
 
      Counts how many current employees at a company fall into each department you define. Unlike the
     depth-chart endpoint, this Synchronous endpoint provides immediate results without waiting for
@@ -212,11 +212,11 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per company&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per company&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (GetDepartmentSizeBody):
@@ -251,7 +251,7 @@ async def asyncio_detailed(
     | GetDepartmentSizeResponse500
     | GetDepartmentSizeResponse503
 ]:
-    r"""Count employees per department
+    """Count employees per department
 
      Counts how many current employees at a company fall into each department you define. Unlike the
     depth-chart endpoint, this Synchronous endpoint provides immediate results without waiting for
@@ -261,11 +261,11 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per company&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per company&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (GetDepartmentSizeBody):
@@ -304,7 +304,7 @@ async def asyncio(
     | GetDepartmentSizeResponse503
     | None
 ):
-    r"""Count employees per department
+    """Count employees per department
 
      Counts how many current employees at a company fall into each department you define. Unlike the
     depth-chart endpoint, this Synchronous endpoint provides immediate results without waiting for
@@ -314,11 +314,11 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per company&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per company&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (GetDepartmentSizeBody):

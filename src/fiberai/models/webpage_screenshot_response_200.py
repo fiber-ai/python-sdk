@@ -48,16 +48,16 @@ class WebpageScreenshotResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.webpage_screenshot_response_200_charge_info_type_0 import (
-            WebpageScreenshotResponse200ChargeInfoType0,
+            WebpageScreenshotResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.webpage_screenshot_response_200_charge_info_type_1 import (
-            WebpageScreenshotResponse200ChargeInfoType1,
+            WebpageScreenshotResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.webpage_screenshot_response_200_charge_info_type_2 import (
-            WebpageScreenshotResponse200ChargeInfoType2,
+            WebpageScreenshotResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.webpage_screenshot_response_200_charge_info_type_3 import (
-            WebpageScreenshotResponse200ChargeInfoType3,
+            WebpageScreenshotResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class WebpageScreenshotResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.webpage_screenshot_response_200_charge_info_type_0 import (
-            WebpageScreenshotResponse200ChargeInfoType0,
+            WebpageScreenshotResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.webpage_screenshot_response_200_charge_info_type_1 import (
-            WebpageScreenshotResponse200ChargeInfoType1,
+            WebpageScreenshotResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.webpage_screenshot_response_200_charge_info_type_2 import (
-            WebpageScreenshotResponse200ChargeInfoType2,
+            WebpageScreenshotResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.webpage_screenshot_response_200_charge_info_type_3 import (
-            WebpageScreenshotResponse200ChargeInfoType3,
+            WebpageScreenshotResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.webpage_screenshot_response_200_charge_info_type_4 import (
-            WebpageScreenshotResponse200ChargeInfoType4,
+            WebpageScreenshotResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.webpage_screenshot_response_200_output import WebpageScreenshotResponse200Output
+        from ..models.webpage_screenshot_response_200_output import WebpageScreenshotResponse200Output  # noqa: PLC0415
         from ..models.webpage_screenshot_response_200_warnings_type_0_item import (
-            WebpageScreenshotResponse200WarningsType0Item,
+            WebpageScreenshotResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

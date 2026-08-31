@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyCompanyParamsInvestorsV2Type0AllOfType0ItemInvestmentRoundsType0AnyOfItem(str, Enum):
+class CombinedSearchCountBodyCompanyParamsInvestorsV2Type0AllOfType0ItemInvestmentRoundsType0AnyOfItem(StrEnum):
     PRE_SEED = "pre_seed"
     PRIVATE_EQUITY = "private_equity"
     SEED = "seed"

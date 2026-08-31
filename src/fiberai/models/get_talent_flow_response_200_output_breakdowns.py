@@ -101,22 +101,22 @@ class GetTalentFlowResponse200OutputBreakdowns:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_talent_flow_response_200_output_breakdowns_by_country_item import (
-            GetTalentFlowResponse200OutputBreakdownsByCountryItem,
+            GetTalentFlowResponse200OutputBreakdownsByCountryItem,  # noqa: PLC0415
         )
         from ..models.get_talent_flow_response_200_output_breakdowns_by_job_function_item import (
-            GetTalentFlowResponse200OutputBreakdownsByJobFunctionItem,
+            GetTalentFlowResponse200OutputBreakdownsByJobFunctionItem,  # noqa: PLC0415
         )
         from ..models.get_talent_flow_response_200_output_breakdowns_by_metro_item import (
-            GetTalentFlowResponse200OutputBreakdownsByMetroItem,
+            GetTalentFlowResponse200OutputBreakdownsByMetroItem,  # noqa: PLC0415
         )
         from ..models.get_talent_flow_response_200_output_breakdowns_by_school_item import (
-            GetTalentFlowResponse200OutputBreakdownsBySchoolItem,
+            GetTalentFlowResponse200OutputBreakdownsBySchoolItem,  # noqa: PLC0415
         )
         from ..models.get_talent_flow_response_200_output_breakdowns_by_seniority_item import (
-            GetTalentFlowResponse200OutputBreakdownsBySeniorityItem,
+            GetTalentFlowResponse200OutputBreakdownsBySeniorityItem,  # noqa: PLC0415
         )
         from ..models.get_talent_flow_response_200_output_breakdowns_by_years_of_experience_item import (
-            GetTalentFlowResponse200OutputBreakdownsByYearsOfExperienceItem,
+            GetTalentFlowResponse200OutputBreakdownsByYearsOfExperienceItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

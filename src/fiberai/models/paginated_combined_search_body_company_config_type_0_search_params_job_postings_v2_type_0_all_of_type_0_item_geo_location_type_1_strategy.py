@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType1Strategy(
-    str, Enum
+    StrEnum
 ):
     FREE_FORM_CITY = "free-form-city"
 

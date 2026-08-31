@@ -45,10 +45,18 @@ class PollMosaicResponse200:
     advice: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.poll_mosaic_response_200_charge_info_type_0 import PollMosaicResponse200ChargeInfoType0
-        from ..models.poll_mosaic_response_200_charge_info_type_1 import PollMosaicResponse200ChargeInfoType1
-        from ..models.poll_mosaic_response_200_charge_info_type_2 import PollMosaicResponse200ChargeInfoType2
-        from ..models.poll_mosaic_response_200_charge_info_type_3 import PollMosaicResponse200ChargeInfoType3
+        from ..models.poll_mosaic_response_200_charge_info_type_0 import (
+            PollMosaicResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.poll_mosaic_response_200_charge_info_type_1 import (
+            PollMosaicResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.poll_mosaic_response_200_charge_info_type_2 import (
+            PollMosaicResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.poll_mosaic_response_200_charge_info_type_3 import (
+            PollMosaicResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
 
         output = self.output.to_dict()
 
@@ -102,13 +110,25 @@ class PollMosaicResponse200:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.poll_mosaic_response_200_charge_info_type_0 import PollMosaicResponse200ChargeInfoType0
-        from ..models.poll_mosaic_response_200_charge_info_type_1 import PollMosaicResponse200ChargeInfoType1
-        from ..models.poll_mosaic_response_200_charge_info_type_2 import PollMosaicResponse200ChargeInfoType2
-        from ..models.poll_mosaic_response_200_charge_info_type_3 import PollMosaicResponse200ChargeInfoType3
-        from ..models.poll_mosaic_response_200_charge_info_type_4 import PollMosaicResponse200ChargeInfoType4
-        from ..models.poll_mosaic_response_200_output import PollMosaicResponse200Output
-        from ..models.poll_mosaic_response_200_warnings_type_0_item import PollMosaicResponse200WarningsType0Item
+        from ..models.poll_mosaic_response_200_charge_info_type_0 import (
+            PollMosaicResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.poll_mosaic_response_200_charge_info_type_1 import (
+            PollMosaicResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.poll_mosaic_response_200_charge_info_type_2 import (
+            PollMosaicResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.poll_mosaic_response_200_charge_info_type_3 import (
+            PollMosaicResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
+        from ..models.poll_mosaic_response_200_charge_info_type_4 import (
+            PollMosaicResponse200ChargeInfoType4,  # noqa: PLC0415
+        )
+        from ..models.poll_mosaic_response_200_output import PollMosaicResponse200Output  # noqa: PLC0415
+        from ..models.poll_mosaic_response_200_warnings_type_0_item import (
+            PollMosaicResponse200WarningsType0Item,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         output = PollMosaicResponse200Output.from_dict(d.pop("output"))

@@ -40,7 +40,7 @@ class KitchenSinkProfileResponse200ChargeInfoType2:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.kitchen_sink_profile_response_200_charge_info_type_2_low_credit_alert_type_0 import (
-            KitchenSinkProfileResponse200ChargeInfoType2LowCreditAlertType0,
+            KitchenSinkProfileResponse200ChargeInfoType2LowCreditAlertType0,  # noqa: PLC0415
         )
 
         method = self.method.value
@@ -74,7 +74,7 @@ class KitchenSinkProfileResponse200ChargeInfoType2:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_profile_response_200_charge_info_type_2_low_credit_alert_type_0 import (
-            KitchenSinkProfileResponse200ChargeInfoType2LowCreditAlertType0,
+            KitchenSinkProfileResponse200ChargeInfoType2LowCreditAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

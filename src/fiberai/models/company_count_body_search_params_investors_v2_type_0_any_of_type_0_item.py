@@ -68,22 +68,22 @@ class CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_count_body_search_params_investors_v2_type_0_any_of_type_0_item_invested_at_type_0 import (
-            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType0,
+            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_investors_v2_type_0_any_of_type_0_item_invested_at_type_1 import (
-            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1,
+            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_investors_v2_type_0_any_of_type_0_item_investment_rounds_type_0 import (
-            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestmentRoundsType0,
+            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestmentRoundsType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_investors_v2_type_0_any_of_type_0_item_investor_identifier_type_0 import (
-            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestorIdentifierType0,
+            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestorIdentifierType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_investors_v2_type_0_any_of_type_0_item_investor_identifier_type_1 import (
-            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestorIdentifierType1,
+            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestorIdentifierType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_investors_v2_type_0_any_of_type_0_item_investor_identifier_type_2 import (
-            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestorIdentifierType2,
+            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestorIdentifierType2,  # noqa: PLC0415
         )
 
         investor_identifier: dict[str, Any]
@@ -139,25 +139,25 @@ class CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_count_body_search_params_investors_v2_type_0_any_of_type_0_item_invested_at_type_0 import (
-            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType0,
+            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_investors_v2_type_0_any_of_type_0_item_invested_at_type_1 import (
-            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1,
+            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestedAtType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_investors_v2_type_0_any_of_type_0_item_investment_rounds_type_0 import (
-            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestmentRoundsType0,
+            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestmentRoundsType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_investors_v2_type_0_any_of_type_0_item_investor_identifier_type_0 import (
-            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestorIdentifierType0,
+            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestorIdentifierType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_investors_v2_type_0_any_of_type_0_item_investor_identifier_type_1 import (
-            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestorIdentifierType1,
+            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestorIdentifierType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_investors_v2_type_0_any_of_type_0_item_investor_identifier_type_2 import (
-            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestorIdentifierType2,
+            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestorIdentifierType2,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_investors_v2_type_0_any_of_type_0_item_investor_identifier_type_3 import (
-            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestorIdentifierType3,
+            CompanyCountBodySearchParamsInvestorsV2Type0AnyOfType0ItemInvestorIdentifierType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

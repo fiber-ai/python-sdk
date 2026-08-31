@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetScoutingReportBodyCompanyType0Identifier(str, Enum):
+class GetScoutingReportBodyCompanyType0Identifier(StrEnum):
     LINKEDINURL = "linkedinUrl"
 
     def __str__(self) -> str:

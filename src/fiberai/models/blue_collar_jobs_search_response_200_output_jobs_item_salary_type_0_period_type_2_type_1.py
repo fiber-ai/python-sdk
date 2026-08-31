@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0PeriodType2Type1(str, Enum):
+class BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0PeriodType2Type1(StrEnum):
     DAILY = "daily"
     HOURLY = "hourly"
     MONTHLY = "monthly"

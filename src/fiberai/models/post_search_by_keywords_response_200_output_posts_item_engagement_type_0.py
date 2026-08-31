@@ -84,7 +84,7 @@ class PostSearchByKeywordsResponse200OutputPostsItemEngagementType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.post_search_by_keywords_response_200_output_posts_item_engagement_type_0_reactions_by_type_type_0_item import (
-            PostSearchByKeywordsResponse200OutputPostsItemEngagementType0ReactionsByTypeType0Item,
+            PostSearchByKeywordsResponse200OutputPostsItemEngagementType0ReactionsByTypeType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

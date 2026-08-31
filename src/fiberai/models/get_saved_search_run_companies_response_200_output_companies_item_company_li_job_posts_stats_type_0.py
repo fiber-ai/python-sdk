@@ -92,22 +92,22 @@ class GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsS
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_job_posts_stats_type_0_country_location_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0CountryLocationStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0CountryLocationStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_job_posts_stats_type_0_employment_type_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0EmploymentTypeStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0EmploymentTypeStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_job_posts_stats_type_0_job_location_type_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0JobLocationTypeStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0JobLocationTypeStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_job_posts_stats_type_0_puree_job_functions_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0PureeJobFunctionsStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0PureeJobFunctionsStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_job_posts_stats_type_0_seniority_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0SeniorityStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0SeniorityStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_job_posts_stats_type_0_standard_industries_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0StandardIndustriesStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0StandardIndustriesStatsType0,  # noqa: PLC0415
         )
 
         total_count = self.total_count
@@ -203,22 +203,22 @@ class GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsS
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_job_posts_stats_type_0_country_location_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0CountryLocationStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0CountryLocationStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_job_posts_stats_type_0_employment_type_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0EmploymentTypeStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0EmploymentTypeStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_job_posts_stats_type_0_job_location_type_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0JobLocationTypeStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0JobLocationTypeStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_job_posts_stats_type_0_puree_job_functions_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0PureeJobFunctionsStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0PureeJobFunctionsStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_job_posts_stats_type_0_seniority_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0SeniorityStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0SeniorityStatsType0,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_companies_response_200_output_companies_item_company_li_job_posts_stats_type_0_standard_industries_stats_type_0 import (
-            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0StandardIndustriesStatsType0,
+            GetSavedSearchRunCompaniesResponse200OutputCompaniesItemCompanyLiJobPostsStatsType0StandardIndustriesStatsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

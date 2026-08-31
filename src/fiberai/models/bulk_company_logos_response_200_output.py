@@ -32,10 +32,10 @@ class BulkCompanyLogosResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.bulk_company_logos_response_200_output_data_type_0 import (
-            BulkCompanyLogosResponse200OutputDataType0,
+            BulkCompanyLogosResponse200OutputDataType0,  # noqa: PLC0415
         )
         from ..models.bulk_company_logos_response_200_output_data_type_1 import (
-            BulkCompanyLogosResponse200OutputDataType1,
+            BulkCompanyLogosResponse200OutputDataType1,  # noqa: PLC0415
         )
 
         data: dict[str, Any]
@@ -59,13 +59,13 @@ class BulkCompanyLogosResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.bulk_company_logos_response_200_output_data_type_0 import (
-            BulkCompanyLogosResponse200OutputDataType0,
+            BulkCompanyLogosResponse200OutputDataType0,  # noqa: PLC0415
         )
         from ..models.bulk_company_logos_response_200_output_data_type_1 import (
-            BulkCompanyLogosResponse200OutputDataType1,
+            BulkCompanyLogosResponse200OutputDataType1,  # noqa: PLC0415
         )
         from ..models.bulk_company_logos_response_200_output_data_type_2 import (
-            BulkCompanyLogosResponse200OutputDataType2,
+            BulkCompanyLogosResponse200OutputDataType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

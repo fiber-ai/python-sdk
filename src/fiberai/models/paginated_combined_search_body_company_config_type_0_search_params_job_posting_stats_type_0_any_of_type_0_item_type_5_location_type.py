@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0AnyOfType0ItemType5LocationType(
-    str, Enum
+    StrEnum
 ):
     HYBRID = "Hybrid"
     ON_SITE = "On-site"

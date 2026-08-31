@@ -58,16 +58,16 @@ class GetHotelPropertyTypesResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_hotel_property_types_response_200_charge_info_type_0 import (
-            GetHotelPropertyTypesResponse200ChargeInfoType0,
+            GetHotelPropertyTypesResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_hotel_property_types_response_200_charge_info_type_1 import (
-            GetHotelPropertyTypesResponse200ChargeInfoType1,
+            GetHotelPropertyTypesResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_hotel_property_types_response_200_charge_info_type_2 import (
-            GetHotelPropertyTypesResponse200ChargeInfoType2,
+            GetHotelPropertyTypesResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_hotel_property_types_response_200_charge_info_type_3 import (
-            GetHotelPropertyTypesResponse200ChargeInfoType3,
+            GetHotelPropertyTypesResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class GetHotelPropertyTypesResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_hotel_property_types_response_200_charge_info_type_0 import (
-            GetHotelPropertyTypesResponse200ChargeInfoType0,
+            GetHotelPropertyTypesResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_hotel_property_types_response_200_charge_info_type_1 import (
-            GetHotelPropertyTypesResponse200ChargeInfoType1,
+            GetHotelPropertyTypesResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_hotel_property_types_response_200_charge_info_type_2 import (
-            GetHotelPropertyTypesResponse200ChargeInfoType2,
+            GetHotelPropertyTypesResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_hotel_property_types_response_200_charge_info_type_3 import (
-            GetHotelPropertyTypesResponse200ChargeInfoType3,
+            GetHotelPropertyTypesResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.get_hotel_property_types_response_200_charge_info_type_4 import (
-            GetHotelPropertyTypesResponse200ChargeInfoType4,
+            GetHotelPropertyTypesResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.get_hotel_property_types_response_200_output import GetHotelPropertyTypesResponse200Output
+        from ..models.get_hotel_property_types_response_200_output import (
+            GetHotelPropertyTypesResponse200Output,  # noqa: PLC0415
+        )
         from ..models.get_hotel_property_types_response_200_warnings_type_0_item import (
-            GetHotelPropertyTypesResponse200WarningsType0Item,
+            GetHotelPropertyTypesResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

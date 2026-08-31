@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0ItemType(str, Enum):
+class PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0ItemType(StrEnum):
     GENERIC = "generic"
     OTHER = "other"
     PERSONAL = "personal"

@@ -138,7 +138,7 @@ def sync_detailed(
     | CreateTrackerCompanyListResponse500
     | CreateTrackerCompanyListResponse503
 ]:
-    r"""Create company tracker list
+    """Create company tracker list
 
      Create a new company tracker list. By default you add companies manually and we periodically check
     them for changes matching your tracking rules. Provide `companySearchParams` to instead create a
@@ -148,8 +148,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateTrackerCompanyListBody):
@@ -189,7 +189,7 @@ def sync(
     | CreateTrackerCompanyListResponse503
     | None
 ):
-    r"""Create company tracker list
+    """Create company tracker list
 
      Create a new company tracker list. By default you add companies manually and we periodically check
     them for changes matching your tracking rules. Provide `companySearchParams` to instead create a
@@ -199,8 +199,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateTrackerCompanyListBody):
@@ -234,7 +234,7 @@ async def asyncio_detailed(
     | CreateTrackerCompanyListResponse500
     | CreateTrackerCompanyListResponse503
 ]:
-    r"""Create company tracker list
+    """Create company tracker list
 
      Create a new company tracker list. By default you add companies manually and we periodically check
     them for changes matching your tracking rules. Provide `companySearchParams` to instead create a
@@ -244,8 +244,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateTrackerCompanyListBody):
@@ -283,7 +283,7 @@ async def asyncio(
     | CreateTrackerCompanyListResponse503
     | None
 ):
-    r"""Create company tracker list
+    """Create company tracker list
 
      Create a new company tracker list. By default you add companies manually and we periodically check
     them for changes matching your tracking rules. Provide `companySearchParams` to instead create a
@@ -293,8 +293,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateTrackerCompanyListBody):

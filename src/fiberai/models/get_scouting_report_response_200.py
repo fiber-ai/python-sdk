@@ -48,16 +48,16 @@ class GetScoutingReportResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_scouting_report_response_200_charge_info_type_0 import (
-            GetScoutingReportResponse200ChargeInfoType0,
+            GetScoutingReportResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_charge_info_type_1 import (
-            GetScoutingReportResponse200ChargeInfoType1,
+            GetScoutingReportResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_charge_info_type_2 import (
-            GetScoutingReportResponse200ChargeInfoType2,
+            GetScoutingReportResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_charge_info_type_3 import (
-            GetScoutingReportResponse200ChargeInfoType3,
+            GetScoutingReportResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class GetScoutingReportResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_scouting_report_response_200_charge_info_type_0 import (
-            GetScoutingReportResponse200ChargeInfoType0,
+            GetScoutingReportResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_charge_info_type_1 import (
-            GetScoutingReportResponse200ChargeInfoType1,
+            GetScoutingReportResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_charge_info_type_2 import (
-            GetScoutingReportResponse200ChargeInfoType2,
+            GetScoutingReportResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_charge_info_type_3 import (
-            GetScoutingReportResponse200ChargeInfoType3,
+            GetScoutingReportResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_charge_info_type_4 import (
-            GetScoutingReportResponse200ChargeInfoType4,
+            GetScoutingReportResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.get_scouting_report_response_200_output import GetScoutingReportResponse200Output
+        from ..models.get_scouting_report_response_200_output import GetScoutingReportResponse200Output  # noqa: PLC0415
         from ..models.get_scouting_report_response_200_warnings_type_0_item import (
-            GetScoutingReportResponse200WarningsType0Item,
+            GetScoutingReportResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

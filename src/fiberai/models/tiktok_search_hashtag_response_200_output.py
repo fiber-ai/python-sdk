@@ -37,7 +37,7 @@ class TiktokSearchHashtagResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.tiktok_search_hashtag_response_200_output_hashtag_type_0 import (
-            TiktokSearchHashtagResponse200OutputHashtagType0,
+            TiktokSearchHashtagResponse200OutputHashtagType0,  # noqa: PLC0415
         )
 
         videos = []
@@ -76,10 +76,10 @@ class TiktokSearchHashtagResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.tiktok_search_hashtag_response_200_output_hashtag_type_0 import (
-            TiktokSearchHashtagResponse200OutputHashtagType0,
+            TiktokSearchHashtagResponse200OutputHashtagType0,  # noqa: PLC0415
         )
         from ..models.tiktok_search_hashtag_response_200_output_videos_item import (
-            TiktokSearchHashtagResponse200OutputVideosItem,
+            TiktokSearchHashtagResponse200OutputVideosItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

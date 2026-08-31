@@ -47,13 +47,13 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMat
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_role_count_matches_type_0_item_num_matching_employees_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_role_count_matches_type_0_item_num_matching_employees_type_1 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_role_count_matches_type_0_item_num_matching_employees_type_2 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,  # noqa: PLC0415
         )
 
         num_matching_employees: dict[str, Any]
@@ -88,16 +88,16 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMat
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_role_count_matches_type_0_item_num_matching_employees_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType0,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_role_count_matches_type_0_item_num_matching_employees_type_1 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType1,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_role_count_matches_type_0_item_num_matching_employees_type_2 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType2,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_role_count_matches_type_0_item_num_matching_employees_type_3 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType3,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRoleCountMatchesType0ItemNumMatchingEmployeesType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

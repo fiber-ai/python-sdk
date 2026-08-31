@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FinancialInstrumentLookupBodyInstrumentType2Type(str, Enum):
+class FinancialInstrumentLookupBodyInstrumentType2Type(StrEnum):
     STOCKORETF = "stockOrEtf"
 
     def __str__(self) -> str:

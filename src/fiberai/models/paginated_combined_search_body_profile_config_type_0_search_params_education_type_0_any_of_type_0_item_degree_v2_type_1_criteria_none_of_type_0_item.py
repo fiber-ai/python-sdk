@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationType0AnyOfType0ItemDegreeV2Type1CriteriaNoneOfType0Item(
-    str, Enum
+    StrEnum
 ):
     ARCHITECTURE = "Architecture"
     ASSOCIATE = "Associate"

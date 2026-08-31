@@ -147,7 +147,7 @@ def sync_detailed(
     | PollDepthChartResponse500
     | PollDepthChartResponse503
 ]:
-    r"""Poll depth chart generation result
+    """Poll depth chart generation result
 
      Retrieves the employee breakdown started by the `depth-chart/start` endpoint. Pass the report ID you
     received when you started the report. Returns the current status and, once complete, numerical
@@ -157,8 +157,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (PollDepthChartBody):
@@ -199,7 +199,7 @@ def sync(
     | PollDepthChartResponse503
     | None
 ):
-    r"""Poll depth chart generation result
+    """Poll depth chart generation result
 
      Retrieves the employee breakdown started by the `depth-chart/start` endpoint. Pass the report ID you
     received when you started the report. Returns the current status and, once complete, numerical
@@ -209,8 +209,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (PollDepthChartBody):
@@ -245,7 +245,7 @@ async def asyncio_detailed(
     | PollDepthChartResponse500
     | PollDepthChartResponse503
 ]:
-    r"""Poll depth chart generation result
+    """Poll depth chart generation result
 
      Retrieves the employee breakdown started by the `depth-chart/start` endpoint. Pass the report ID you
     received when you started the report. Returns the current status and, once complete, numerical
@@ -255,8 +255,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (PollDepthChartBody):
@@ -295,7 +295,7 @@ async def asyncio(
     | PollDepthChartResponse503
     | None
 ):
-    r"""Poll depth chart generation result
+    """Poll depth chart generation result
 
      Retrieves the employee breakdown started by the `depth-chart/start` endpoint. Pass the report ID you
     received when you started the report. Returns the current status and, once complete, numerical
@@ -305,8 +305,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (PollDepthChartBody):

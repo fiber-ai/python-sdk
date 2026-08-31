@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ReverseEmailLookupResponse200OutputDataItemCurrentJobType0SeniorityType1(str, Enum):
+class ReverseEmailLookupResponse200OutputDataItemCurrentJobType0SeniorityType1(StrEnum):
     ASSOCIATE = "Associate"
     DIRECTOR = "Director"
     ENTRY_LEVEL = "Entry level"

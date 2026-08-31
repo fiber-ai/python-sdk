@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetTrackerOverviewResponse200OutputPersonListsItemEntityType(str, Enum):
+class GetTrackerOverviewResponse200OutputPersonListsItemEntityType(StrEnum):
     COMPANY = "company"
     PERSON = "person"
 

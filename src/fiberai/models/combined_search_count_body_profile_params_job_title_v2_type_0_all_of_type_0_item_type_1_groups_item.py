@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyProfileParamsJobTitleV2Type0AllOfType0ItemType1GroupsItem(str, Enum):
+class CombinedSearchCountBodyProfileParamsJobTitleV2Type0AllOfType0ItemType1GroupsItem(StrEnum):
     BOARD_MEMBER = "board-member"
     C_SUITE = "c-suite"
     FOUNDER = "founder"

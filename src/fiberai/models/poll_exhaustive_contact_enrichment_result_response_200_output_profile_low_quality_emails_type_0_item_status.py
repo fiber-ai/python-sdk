@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0ItemStatus(str, Enum):
+class PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0ItemStatus(StrEnum):
     INVALID = "invalid"
     RISKY = "risky"
     UNKNOWN = "unknown"

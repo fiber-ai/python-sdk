@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class KitchenSinkProfileBodyProfileIdentifierType1Identifier(str, Enum):
+class KitchenSinkProfileBodyProfileIdentifierType1Identifier(StrEnum):
     LINKEDINURL = "linkedinUrl"
 
     def __str__(self) -> str:

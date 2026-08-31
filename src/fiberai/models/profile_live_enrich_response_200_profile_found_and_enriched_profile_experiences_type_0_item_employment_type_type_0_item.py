@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileExperiencesType0ItemEmploymentTypeType0Item(str, Enum):
+class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileExperiencesType0ItemEmploymentTypeType0Item(StrEnum):
     CONTRACT = "Contract"
     FULL_TIME = "Full-time"
     INTERNSHIP = "Internship"

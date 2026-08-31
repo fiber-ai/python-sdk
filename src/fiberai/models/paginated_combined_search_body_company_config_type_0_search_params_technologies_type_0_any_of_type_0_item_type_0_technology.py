@@ -1,9 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesType0AnyOfType0ItemType0Technology(
-    str, Enum
-):
+class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesType0AnyOfType0ItemType0Technology(StrEnum):
     AIRFLOW = "Airflow"
     ALGOLIA = "Algolia"
     AMPLITUDE = "Amplitude"

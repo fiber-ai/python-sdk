@@ -48,13 +48,13 @@ class PeopleSearchCountBodySearchParamsStartedInRoleType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_count_body_search_params_started_in_role_type_1_window_type_0 import (
-            PeopleSearchCountBodySearchParamsStartedInRoleType1WindowType0,
+            PeopleSearchCountBodySearchParamsStartedInRoleType1WindowType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_in_role_type_1_window_type_1 import (
-            PeopleSearchCountBodySearchParamsStartedInRoleType1WindowType1,
+            PeopleSearchCountBodySearchParamsStartedInRoleType1WindowType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_in_role_type_1_window_type_2 import (
-            PeopleSearchCountBodySearchParamsStartedInRoleType1WindowType2,
+            PeopleSearchCountBodySearchParamsStartedInRoleType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -86,13 +86,13 @@ class PeopleSearchCountBodySearchParamsStartedInRoleType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_body_search_params_started_in_role_type_1_window_type_0 import (
-            PeopleSearchCountBodySearchParamsStartedInRoleType1WindowType0,
+            PeopleSearchCountBodySearchParamsStartedInRoleType1WindowType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_in_role_type_1_window_type_1 import (
-            PeopleSearchCountBodySearchParamsStartedInRoleType1WindowType1,
+            PeopleSearchCountBodySearchParamsStartedInRoleType1WindowType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_in_role_type_1_window_type_2 import (
-            PeopleSearchCountBodySearchParamsStartedInRoleType1WindowType2,
+            PeopleSearchCountBodySearchParamsStartedInRoleType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

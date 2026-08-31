@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateTrackerCompanyListBodyCompanySearchParamsType0ExactCompanyV2Type0AnyOfType0ItemType3SourceType3Type1(
-    str, Enum
+    StrEnum
 ):
     CSV = "csv"
 

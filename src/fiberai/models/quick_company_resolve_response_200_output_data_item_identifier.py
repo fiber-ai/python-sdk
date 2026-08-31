@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class QuickCompanyResolveResponse200OutputDataItemIdentifier(str, Enum):
+class QuickCompanyResolveResponse200OutputDataItemIdentifier(StrEnum):
     DOMAIN = "domain"
     LINKEDINORGID = "linkedinOrgId"
     LINKEDINSLUG = "linkedinSlug"

@@ -31,7 +31,7 @@ class CombinedSearchCountBodyProfileParamsCurrentJobsType0AllOfType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_current_jobs_type_0_all_of_type_0_item_company_type_0 import (
-            CombinedSearchCountBodyProfileParamsCurrentJobsType0AllOfType0ItemCompanyType0,
+            CombinedSearchCountBodyProfileParamsCurrentJobsType0AllOfType0ItemCompanyType0,  # noqa: PLC0415
         )
 
         job_title: list[str] | None | Unset
@@ -64,7 +64,7 @@ class CombinedSearchCountBodyProfileParamsCurrentJobsType0AllOfType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_current_jobs_type_0_all_of_type_0_item_company_type_0 import (
-            CombinedSearchCountBodyProfileParamsCurrentJobsType0AllOfType0ItemCompanyType0,
+            CombinedSearchCountBodyProfileParamsCurrentJobsType0AllOfType0ItemCompanyType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

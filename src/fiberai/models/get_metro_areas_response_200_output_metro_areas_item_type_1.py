@@ -86,7 +86,7 @@ class GetMetroAreasResponse200OutputMetroAreasItemType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_metro_areas_response_200_output_metro_areas_item_type_1_vertices_item import (
-            GetMetroAreasResponse200OutputMetroAreasItemType1VerticesItem,
+            GetMetroAreasResponse200OutputMetroAreasItemType1VerticesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

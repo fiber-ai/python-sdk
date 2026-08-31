@@ -48,7 +48,9 @@ class PollMosaicResponse200OutputRun:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.poll_mosaic_response_200_output_run_stats_type_0 import PollMosaicResponse200OutputRunStatsType0
+        from ..models.poll_mosaic_response_200_output_run_stats_type_0 import (
+            PollMosaicResponse200OutputRunStatsType0,  # noqa: PLC0415
+        )
 
         run_id = self.run_id
 
@@ -93,7 +95,9 @@ class PollMosaicResponse200OutputRun:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.poll_mosaic_response_200_output_run_stats_type_0 import PollMosaicResponse200OutputRunStatsType0
+        from ..models.poll_mosaic_response_200_output_run_stats_type_0 import (
+            PollMosaicResponse200OutputRunStatsType0,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         run_id = d.pop("runId")

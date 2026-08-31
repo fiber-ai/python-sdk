@@ -147,7 +147,7 @@ def sync_detailed(
     | TwitterSearchResponse500
     | TwitterSearchResponse503
 ]:
-    r"""Search Twitter/X tweets
+    """Search Twitter/X tweets
 
      Searches for tweets matching a query. Supports standard Twitter search operators (e.g. 'TypeScript
     from:elonmusk lang:en'). Returns a paginated list of matching tweets. Use the `cursor` field from
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterSearchBody):
@@ -197,7 +197,7 @@ def sync(
     | TwitterSearchResponse503
     | None
 ):
-    r"""Search Twitter/X tweets
+    """Search Twitter/X tweets
 
      Searches for tweets matching a query. Supports standard Twitter search operators (e.g. 'TypeScript
     from:elonmusk lang:en'). Returns a paginated list of matching tweets. Use the `cursor` field from
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterSearchBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | TwitterSearchResponse500
     | TwitterSearchResponse503
 ]:
-    r"""Search Twitter/X tweets
+    """Search Twitter/X tweets
 
      Searches for tweets matching a query. Supports standard Twitter search operators (e.g. 'TypeScript
     from:elonmusk lang:en'). Returns a paginated list of matching tweets. Use the `cursor` field from
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterSearchBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | TwitterSearchResponse503
     | None
 ):
-    r"""Search Twitter/X tweets
+    """Search Twitter/X tweets
 
      Searches for tweets matching a query. Supports standard Twitter search operators (e.g. 'TypeScript
     from:elonmusk lang:en'). Returns a paginated list of matching tweets. Use the `cursor` field from
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterSearchBody):

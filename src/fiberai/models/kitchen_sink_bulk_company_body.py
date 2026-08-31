@@ -46,7 +46,9 @@ class KitchenSinkBulkCompanyBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.kitchen_sink_bulk_company_body_companies_item import KitchenSinkBulkCompanyBodyCompaniesItem
+        from ..models.kitchen_sink_bulk_company_body_companies_item import (
+            KitchenSinkBulkCompanyBodyCompaniesItem,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

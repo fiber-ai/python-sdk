@@ -103,26 +103,26 @@ class TrackerSignalOutput:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.acquisition_change import AcquisitionChange
-        from ..models.certification_change import CertificationChange
-        from ..models.company_location_change import CompanyLocationChange
-        from ..models.departed_from_list_change import DepartedFromListChange
-        from ..models.department_size_change import DepartmentSizeChange
-        from ..models.funding_round_change import FundingRoundChange
-        from ..models.funding_stage_change import FundingStageChange
-        from ..models.investor_change import InvestorChange
-        from ..models.job_posting_change import JobPostingChange
-        from ..models.layoff_event_change import LayoffEventChange
-        from ..models.linked_in_post_change import LinkedInPostChange
-        from ..models.location_delta_change import LocationDeltaChange
-        from ..models.news_article_change import NewsArticleChange
-        from ..models.numeric_delta_change import NumericDeltaChange
-        from ..models.person_comment_change import PersonCommentChange
-        from ..models.person_experience_change import PersonExperienceChange
-        from ..models.person_reaction_change import PersonReactionChange
-        from ..models.scalar_delta_change import ScalarDeltaChange
-        from ..models.tenure_change import TenureChange
-        from ..models.tracked_employee_change import TrackedEmployeeChange
+        from ..models.acquisition_change import AcquisitionChange  # noqa: PLC0415
+        from ..models.certification_change import CertificationChange  # noqa: PLC0415
+        from ..models.company_location_change import CompanyLocationChange  # noqa: PLC0415
+        from ..models.departed_from_list_change import DepartedFromListChange  # noqa: PLC0415
+        from ..models.department_size_change import DepartmentSizeChange  # noqa: PLC0415
+        from ..models.funding_round_change import FundingRoundChange  # noqa: PLC0415
+        from ..models.funding_stage_change import FundingStageChange  # noqa: PLC0415
+        from ..models.investor_change import InvestorChange  # noqa: PLC0415
+        from ..models.job_posting_change import JobPostingChange  # noqa: PLC0415
+        from ..models.layoff_event_change import LayoffEventChange  # noqa: PLC0415
+        from ..models.linked_in_post_change import LinkedInPostChange  # noqa: PLC0415
+        from ..models.location_delta_change import LocationDeltaChange  # noqa: PLC0415
+        from ..models.news_article_change import NewsArticleChange  # noqa: PLC0415
+        from ..models.numeric_delta_change import NumericDeltaChange  # noqa: PLC0415
+        from ..models.person_comment_change import PersonCommentChange  # noqa: PLC0415
+        from ..models.person_experience_change import PersonExperienceChange  # noqa: PLC0415
+        from ..models.person_reaction_change import PersonReactionChange  # noqa: PLC0415
+        from ..models.scalar_delta_change import ScalarDeltaChange  # noqa: PLC0415
+        from ..models.tenure_change import TenureChange  # noqa: PLC0415
+        from ..models.tracked_employee_change import TrackedEmployeeChange  # noqa: PLC0415
 
         id = self.id
 
@@ -226,27 +226,27 @@ class TrackerSignalOutput:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.acquisition_change import AcquisitionChange
-        from ..models.certification_change import CertificationChange
-        from ..models.company_location_change import CompanyLocationChange
-        from ..models.departed_from_list_change import DepartedFromListChange
-        from ..models.department_size_change import DepartmentSizeChange
-        from ..models.funding_round_change import FundingRoundChange
-        from ..models.funding_stage_change import FundingStageChange
-        from ..models.investor_change import InvestorChange
-        from ..models.job_posting_change import JobPostingChange
-        from ..models.layoff_event_change import LayoffEventChange
-        from ..models.linked_in_post_change import LinkedInPostChange
-        from ..models.location_delta_change import LocationDeltaChange
-        from ..models.named_item_change import NamedItemChange
-        from ..models.news_article_change import NewsArticleChange
-        from ..models.numeric_delta_change import NumericDeltaChange
-        from ..models.person_comment_change import PersonCommentChange
-        from ..models.person_experience_change import PersonExperienceChange
-        from ..models.person_reaction_change import PersonReactionChange
-        from ..models.scalar_delta_change import ScalarDeltaChange
-        from ..models.tenure_change import TenureChange
-        from ..models.tracked_employee_change import TrackedEmployeeChange
+        from ..models.acquisition_change import AcquisitionChange  # noqa: PLC0415
+        from ..models.certification_change import CertificationChange  # noqa: PLC0415
+        from ..models.company_location_change import CompanyLocationChange  # noqa: PLC0415
+        from ..models.departed_from_list_change import DepartedFromListChange  # noqa: PLC0415
+        from ..models.department_size_change import DepartmentSizeChange  # noqa: PLC0415
+        from ..models.funding_round_change import FundingRoundChange  # noqa: PLC0415
+        from ..models.funding_stage_change import FundingStageChange  # noqa: PLC0415
+        from ..models.investor_change import InvestorChange  # noqa: PLC0415
+        from ..models.job_posting_change import JobPostingChange  # noqa: PLC0415
+        from ..models.layoff_event_change import LayoffEventChange  # noqa: PLC0415
+        from ..models.linked_in_post_change import LinkedInPostChange  # noqa: PLC0415
+        from ..models.location_delta_change import LocationDeltaChange  # noqa: PLC0415
+        from ..models.named_item_change import NamedItemChange  # noqa: PLC0415
+        from ..models.news_article_change import NewsArticleChange  # noqa: PLC0415
+        from ..models.numeric_delta_change import NumericDeltaChange  # noqa: PLC0415
+        from ..models.person_comment_change import PersonCommentChange  # noqa: PLC0415
+        from ..models.person_experience_change import PersonExperienceChange  # noqa: PLC0415
+        from ..models.person_reaction_change import PersonReactionChange  # noqa: PLC0415
+        from ..models.scalar_delta_change import ScalarDeltaChange  # noqa: PLC0415
+        from ..models.tenure_change import TenureChange  # noqa: PLC0415
+        from ..models.tracked_employee_change import TrackedEmployeeChange  # noqa: PLC0415
 
         d = dict(src_dict)
         id = d.pop("id")

@@ -48,13 +48,13 @@ class PeopleSearchCountBodySearchParamsJobStatusType1LeftAtType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_count_body_search_params_job_status_type_1_left_at_type_1_window_type_0 import (
-            PeopleSearchCountBodySearchParamsJobStatusType1LeftAtType1WindowType0,
+            PeopleSearchCountBodySearchParamsJobStatusType1LeftAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_job_status_type_1_left_at_type_1_window_type_1 import (
-            PeopleSearchCountBodySearchParamsJobStatusType1LeftAtType1WindowType1,
+            PeopleSearchCountBodySearchParamsJobStatusType1LeftAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_job_status_type_1_left_at_type_1_window_type_2 import (
-            PeopleSearchCountBodySearchParamsJobStatusType1LeftAtType1WindowType2,
+            PeopleSearchCountBodySearchParamsJobStatusType1LeftAtType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -86,13 +86,13 @@ class PeopleSearchCountBodySearchParamsJobStatusType1LeftAtType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_body_search_params_job_status_type_1_left_at_type_1_window_type_0 import (
-            PeopleSearchCountBodySearchParamsJobStatusType1LeftAtType1WindowType0,
+            PeopleSearchCountBodySearchParamsJobStatusType1LeftAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_job_status_type_1_left_at_type_1_window_type_1 import (
-            PeopleSearchCountBodySearchParamsJobStatusType1LeftAtType1WindowType1,
+            PeopleSearchCountBodySearchParamsJobStatusType1LeftAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_job_status_type_1_left_at_type_1_window_type_2 import (
-            PeopleSearchCountBodySearchParamsJobStatusType1LeftAtType1WindowType2,
+            PeopleSearchCountBodySearchParamsJobStatusType1LeftAtType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

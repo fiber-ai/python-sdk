@@ -147,7 +147,7 @@ def sync_detailed(
     | StandardizeCompanyBulkResponse500
     | StandardizeCompanyBulkResponse503
 ]:
-    r"""Bulk standardize LinkedIn company identifiers
+    """Bulk standardize LinkedIn company identifiers
 
      Resolves many company LinkedIn identifiers (slug, organization ID, or URL) to standardized LinkedIn
     company URLs with metadata. Unresolved identifiers are listed separately and are not charged. If you
@@ -156,11 +156,11 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (StandardizeCompanyBulkBody):
@@ -201,7 +201,7 @@ def sync(
     | StandardizeCompanyBulkResponse503
     | None
 ):
-    r"""Bulk standardize LinkedIn company identifiers
+    """Bulk standardize LinkedIn company identifiers
 
      Resolves many company LinkedIn identifiers (slug, organization ID, or URL) to standardized LinkedIn
     company URLs with metadata. Unresolved identifiers are listed separately and are not charged. If you
@@ -210,11 +210,11 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (StandardizeCompanyBulkBody):
@@ -249,7 +249,7 @@ async def asyncio_detailed(
     | StandardizeCompanyBulkResponse500
     | StandardizeCompanyBulkResponse503
 ]:
-    r"""Bulk standardize LinkedIn company identifiers
+    """Bulk standardize LinkedIn company identifiers
 
      Resolves many company LinkedIn identifiers (slug, organization ID, or URL) to standardized LinkedIn
     company URLs with metadata. Unresolved identifiers are listed separately and are not charged. If you
@@ -258,11 +258,11 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (StandardizeCompanyBulkBody):
@@ -301,7 +301,7 @@ async def asyncio(
     | StandardizeCompanyBulkResponse503
     | None
 ):
-    r"""Bulk standardize LinkedIn company identifiers
+    """Bulk standardize LinkedIn company identifiers
 
      Resolves many company LinkedIn identifiers (slug, organization ID, or URL) to standardized LinkedIn
     company URLs with metadata. Unresolved identifiers are listed separately and are not charged. If you
@@ -310,11 +310,11 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company standardized&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (StandardizeCompanyBulkBody):

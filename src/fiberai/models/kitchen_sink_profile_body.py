@@ -137,45 +137,57 @@ class KitchenSinkProfileBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.kitchen_sink_profile_body_company_domain_type_0 import KitchenSinkProfileBodyCompanyDomainType0
+        from ..models.kitchen_sink_profile_body_company_domain_type_0 import (
+            KitchenSinkProfileBodyCompanyDomainType0,  # noqa: PLC0415
+        )
         from ..models.kitchen_sink_profile_body_company_identifier_type_0 import (
-            KitchenSinkProfileBodyCompanyIdentifierType0,
+            KitchenSinkProfileBodyCompanyIdentifierType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_body_company_identifier_type_1 import (
-            KitchenSinkProfileBodyCompanyIdentifierType1,
+            KitchenSinkProfileBodyCompanyIdentifierType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_body_company_identifier_type_2 import (
-            KitchenSinkProfileBodyCompanyIdentifierType2,
+            KitchenSinkProfileBodyCompanyIdentifierType2,  # noqa: PLC0415
         )
-        from ..models.kitchen_sink_profile_body_company_name_type_0 import KitchenSinkProfileBodyCompanyNameType0
-        from ..models.kitchen_sink_profile_body_job_title_type_0 import KitchenSinkProfileBodyJobTitleType0
+        from ..models.kitchen_sink_profile_body_company_name_type_0 import (
+            KitchenSinkProfileBodyCompanyNameType0,  # noqa: PLC0415
+        )
+        from ..models.kitchen_sink_profile_body_job_title_type_0 import (
+            KitchenSinkProfileBodyJobTitleType0,  # noqa: PLC0415
+        )
         from ..models.kitchen_sink_profile_body_linkedin_headline_type_0 import (
-            KitchenSinkProfileBodyLinkedinHeadlineType0,
+            KitchenSinkProfileBodyLinkedinHeadlineType0,  # noqa: PLC0415
         )
-        from ..models.kitchen_sink_profile_body_person_name_type_0 import KitchenSinkProfileBodyPersonNameType0
+        from ..models.kitchen_sink_profile_body_person_name_type_0 import (
+            KitchenSinkProfileBodyPersonNameType0,  # noqa: PLC0415
+        )
         from ..models.kitchen_sink_profile_body_profile_identifier_type_0 import (
-            KitchenSinkProfileBodyProfileIdentifierType0,
+            KitchenSinkProfileBodyProfileIdentifierType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_body_profile_identifier_type_1 import (
-            KitchenSinkProfileBodyProfileIdentifierType1,
+            KitchenSinkProfileBodyProfileIdentifierType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_body_profile_identifier_type_2 import (
-            KitchenSinkProfileBodyProfileIdentifierType2,
+            KitchenSinkProfileBodyProfileIdentifierType2,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_body_profile_location_type_0 import (
-            KitchenSinkProfileBodyProfileLocationType0,
+            KitchenSinkProfileBodyProfileLocationType0,  # noqa: PLC0415
         )
-        from ..models.kitchen_sink_profile_body_school_domain_type_0 import KitchenSinkProfileBodySchoolDomainType0
+        from ..models.kitchen_sink_profile_body_school_domain_type_0 import (
+            KitchenSinkProfileBodySchoolDomainType0,  # noqa: PLC0415
+        )
         from ..models.kitchen_sink_profile_body_school_identifier_type_0 import (
-            KitchenSinkProfileBodySchoolIdentifierType0,
+            KitchenSinkProfileBodySchoolIdentifierType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_body_school_identifier_type_1 import (
-            KitchenSinkProfileBodySchoolIdentifierType1,
+            KitchenSinkProfileBodySchoolIdentifierType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_body_school_identifier_type_2 import (
-            KitchenSinkProfileBodySchoolIdentifierType2,
+            KitchenSinkProfileBodySchoolIdentifierType2,  # noqa: PLC0415
         )
-        from ..models.kitchen_sink_profile_body_school_name_type_0 import KitchenSinkProfileBodySchoolNameType0
+        from ..models.kitchen_sink_profile_body_school_name_type_0 import (
+            KitchenSinkProfileBodySchoolNameType0,  # noqa: PLC0415
+        )
 
         api_key = self.api_key
 
@@ -379,45 +391,57 @@ class KitchenSinkProfileBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.kitchen_sink_profile_body_company_domain_type_0 import KitchenSinkProfileBodyCompanyDomainType0
+        from ..models.kitchen_sink_profile_body_company_domain_type_0 import (
+            KitchenSinkProfileBodyCompanyDomainType0,  # noqa: PLC0415
+        )
         from ..models.kitchen_sink_profile_body_company_identifier_type_0 import (
-            KitchenSinkProfileBodyCompanyIdentifierType0,
+            KitchenSinkProfileBodyCompanyIdentifierType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_body_company_identifier_type_1 import (
-            KitchenSinkProfileBodyCompanyIdentifierType1,
+            KitchenSinkProfileBodyCompanyIdentifierType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_body_company_identifier_type_2 import (
-            KitchenSinkProfileBodyCompanyIdentifierType2,
+            KitchenSinkProfileBodyCompanyIdentifierType2,  # noqa: PLC0415
         )
-        from ..models.kitchen_sink_profile_body_company_name_type_0 import KitchenSinkProfileBodyCompanyNameType0
-        from ..models.kitchen_sink_profile_body_job_title_type_0 import KitchenSinkProfileBodyJobTitleType0
+        from ..models.kitchen_sink_profile_body_company_name_type_0 import (
+            KitchenSinkProfileBodyCompanyNameType0,  # noqa: PLC0415
+        )
+        from ..models.kitchen_sink_profile_body_job_title_type_0 import (
+            KitchenSinkProfileBodyJobTitleType0,  # noqa: PLC0415
+        )
         from ..models.kitchen_sink_profile_body_linkedin_headline_type_0 import (
-            KitchenSinkProfileBodyLinkedinHeadlineType0,
+            KitchenSinkProfileBodyLinkedinHeadlineType0,  # noqa: PLC0415
         )
-        from ..models.kitchen_sink_profile_body_person_name_type_0 import KitchenSinkProfileBodyPersonNameType0
+        from ..models.kitchen_sink_profile_body_person_name_type_0 import (
+            KitchenSinkProfileBodyPersonNameType0,  # noqa: PLC0415
+        )
         from ..models.kitchen_sink_profile_body_profile_identifier_type_0 import (
-            KitchenSinkProfileBodyProfileIdentifierType0,
+            KitchenSinkProfileBodyProfileIdentifierType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_body_profile_identifier_type_1 import (
-            KitchenSinkProfileBodyProfileIdentifierType1,
+            KitchenSinkProfileBodyProfileIdentifierType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_body_profile_identifier_type_2 import (
-            KitchenSinkProfileBodyProfileIdentifierType2,
+            KitchenSinkProfileBodyProfileIdentifierType2,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_body_profile_location_type_0 import (
-            KitchenSinkProfileBodyProfileLocationType0,
+            KitchenSinkProfileBodyProfileLocationType0,  # noqa: PLC0415
         )
-        from ..models.kitchen_sink_profile_body_school_domain_type_0 import KitchenSinkProfileBodySchoolDomainType0
+        from ..models.kitchen_sink_profile_body_school_domain_type_0 import (
+            KitchenSinkProfileBodySchoolDomainType0,  # noqa: PLC0415
+        )
         from ..models.kitchen_sink_profile_body_school_identifier_type_0 import (
-            KitchenSinkProfileBodySchoolIdentifierType0,
+            KitchenSinkProfileBodySchoolIdentifierType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_body_school_identifier_type_1 import (
-            KitchenSinkProfileBodySchoolIdentifierType1,
+            KitchenSinkProfileBodySchoolIdentifierType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_body_school_identifier_type_2 import (
-            KitchenSinkProfileBodySchoolIdentifierType2,
+            KitchenSinkProfileBodySchoolIdentifierType2,  # noqa: PLC0415
         )
-        from ..models.kitchen_sink_profile_body_school_name_type_0 import KitchenSinkProfileBodySchoolNameType0
+        from ..models.kitchen_sink_profile_body_school_name_type_0 import (
+            KitchenSinkProfileBodySchoolNameType0,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

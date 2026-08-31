@@ -183,7 +183,7 @@ def sync_detailed(
     | ListTrackerSignalsResponse500
     | ListTrackerSignalsResponse503
 ]:
-    r"""List signals
+    """List signals
 
      Retrieve signals for a tracker list. Each signal represents a detected change that matched one of
     your tracking rules (e.g., a person changed jobs, a company raised funding). Use the `filter` query
@@ -194,8 +194,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -251,7 +251,7 @@ def sync(
     | ListTrackerSignalsResponse503
     | None
 ):
-    r"""List signals
+    """List signals
 
      Retrieve signals for a tracker list. Each signal represents a detected change that matched one of
     your tracking rules (e.g., a person changed jobs, a company raised funding). Use the `filter` query
@@ -262,8 +262,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -313,7 +313,7 @@ async def asyncio_detailed(
     | ListTrackerSignalsResponse500
     | ListTrackerSignalsResponse503
 ]:
-    r"""List signals
+    """List signals
 
      Retrieve signals for a tracker list. Each signal represents a detected change that matched one of
     your tracking rules (e.g., a person changed jobs, a company raised funding). Use the `filter` query
@@ -324,8 +324,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -379,7 +379,7 @@ async def asyncio(
     | ListTrackerSignalsResponse503
     | None
 ):
-    r"""List signals
+    """List signals
 
      Retrieve signals for a tracker list. Each signal represents a detected change that matched one of
     your tracking rules (e.g., a person changed jobs, a company raised funding). Use the `filter` query
@@ -390,8 +390,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):

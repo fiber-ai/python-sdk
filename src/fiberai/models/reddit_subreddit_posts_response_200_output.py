@@ -57,7 +57,7 @@ class RedditSubredditPostsResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.reddit_subreddit_posts_response_200_output_posts_item import (
-            RedditSubredditPostsResponse200OutputPostsItem,
+            RedditSubredditPostsResponse200OutputPostsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

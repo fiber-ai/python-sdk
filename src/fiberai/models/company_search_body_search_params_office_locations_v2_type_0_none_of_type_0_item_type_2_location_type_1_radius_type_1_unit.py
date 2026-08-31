@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanySearchBodySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1RadiusType1Unit(str, Enum):
+class CompanySearchBodySearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType1RadiusType1Unit(StrEnum):
     KILOMETERS = "kilometers"
 
     def __str__(self) -> str:

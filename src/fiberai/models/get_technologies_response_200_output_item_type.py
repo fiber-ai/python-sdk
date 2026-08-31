@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetTechnologiesResponse200OutputItemType(str, Enum):
+class GetTechnologiesResponse200OutputItemType(StrEnum):
     PLATFORM = "platform"
     TECHNOLOGY = "technology"
 

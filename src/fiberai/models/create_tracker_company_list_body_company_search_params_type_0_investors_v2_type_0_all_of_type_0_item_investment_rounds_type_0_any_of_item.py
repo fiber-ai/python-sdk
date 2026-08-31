@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0AllOfType0ItemInvestmentRoundsType0AnyOfItem(
-    str, Enum
+    StrEnum
 ):
     PRE_SEED = "pre_seed"
     PRIVATE_EQUITY = "private_equity"

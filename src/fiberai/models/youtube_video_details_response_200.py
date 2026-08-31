@@ -58,16 +58,16 @@ class YoutubeVideoDetailsResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.youtube_video_details_response_200_charge_info_type_0 import (
-            YoutubeVideoDetailsResponse200ChargeInfoType0,
+            YoutubeVideoDetailsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.youtube_video_details_response_200_charge_info_type_1 import (
-            YoutubeVideoDetailsResponse200ChargeInfoType1,
+            YoutubeVideoDetailsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.youtube_video_details_response_200_charge_info_type_2 import (
-            YoutubeVideoDetailsResponse200ChargeInfoType2,
+            YoutubeVideoDetailsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.youtube_video_details_response_200_charge_info_type_3 import (
-            YoutubeVideoDetailsResponse200ChargeInfoType3,
+            YoutubeVideoDetailsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class YoutubeVideoDetailsResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.youtube_video_details_response_200_charge_info_type_0 import (
-            YoutubeVideoDetailsResponse200ChargeInfoType0,
+            YoutubeVideoDetailsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.youtube_video_details_response_200_charge_info_type_1 import (
-            YoutubeVideoDetailsResponse200ChargeInfoType1,
+            YoutubeVideoDetailsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.youtube_video_details_response_200_charge_info_type_2 import (
-            YoutubeVideoDetailsResponse200ChargeInfoType2,
+            YoutubeVideoDetailsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.youtube_video_details_response_200_charge_info_type_3 import (
-            YoutubeVideoDetailsResponse200ChargeInfoType3,
+            YoutubeVideoDetailsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.youtube_video_details_response_200_charge_info_type_4 import (
-            YoutubeVideoDetailsResponse200ChargeInfoType4,
+            YoutubeVideoDetailsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.youtube_video_details_response_200_output import YoutubeVideoDetailsResponse200Output
+        from ..models.youtube_video_details_response_200_output import (
+            YoutubeVideoDetailsResponse200Output,  # noqa: PLC0415
+        )
         from ..models.youtube_video_details_response_200_warnings_type_0_item import (
-            YoutubeVideoDetailsResponse200WarningsType0Item,
+            YoutubeVideoDetailsResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

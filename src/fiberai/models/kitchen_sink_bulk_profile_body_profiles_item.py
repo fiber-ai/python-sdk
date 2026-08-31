@@ -91,34 +91,34 @@ class KitchenSinkBulkProfileBodyProfilesItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_domain_type_0 import (
-            KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0,
+            KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_0 import (
-            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0,
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_1 import (
-            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1,
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_2 import (
-            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2,
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_name_type_0 import (
-            KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0,
+            KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_job_title_type_0 import (
-            KitchenSinkBulkProfileBodyProfilesItemJobTitleType0,
+            KitchenSinkBulkProfileBodyProfilesItemJobTitleType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_person_name_type_0 import (
-            KitchenSinkBulkProfileBodyProfilesItemPersonNameType0,
+            KitchenSinkBulkProfileBodyProfilesItemPersonNameType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_0 import (
-            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0,
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_1 import (
-            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1,
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_2 import (
-            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2,
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2,  # noqa: PLC0415
         )
 
         company_domain: dict[str, Any] | None | Unset
@@ -210,34 +210,34 @@ class KitchenSinkBulkProfileBodyProfilesItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_domain_type_0 import (
-            KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0,
+            KitchenSinkBulkProfileBodyProfilesItemCompanyDomainType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_0 import (
-            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0,
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_1 import (
-            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1,
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_identifier_type_2 import (
-            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2,
+            KitchenSinkBulkProfileBodyProfilesItemCompanyIdentifierType2,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_company_name_type_0 import (
-            KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0,
+            KitchenSinkBulkProfileBodyProfilesItemCompanyNameType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_job_title_type_0 import (
-            KitchenSinkBulkProfileBodyProfilesItemJobTitleType0,
+            KitchenSinkBulkProfileBodyProfilesItemJobTitleType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_person_name_type_0 import (
-            KitchenSinkBulkProfileBodyProfilesItemPersonNameType0,
+            KitchenSinkBulkProfileBodyProfilesItemPersonNameType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_0 import (
-            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0,
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_1 import (
-            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1,
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_profile_body_profiles_item_profile_identifier_type_2 import (
-            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2,
+            KitchenSinkBulkProfileBodyProfilesItemProfileIdentifierType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

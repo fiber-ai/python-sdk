@@ -43,7 +43,7 @@ class HotelSearchResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.hotel_search_response_200_output_search_information_type_0 import (
-            HotelSearchResponse200OutputSearchInformationType0,
+            HotelSearchResponse200OutputSearchInformationType0,  # noqa: PLC0415
         )
 
         properties = []
@@ -95,10 +95,14 @@ class HotelSearchResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.hotel_search_response_200_output_brands_item import HotelSearchResponse200OutputBrandsItem
-        from ..models.hotel_search_response_200_output_properties_item import HotelSearchResponse200OutputPropertiesItem
+        from ..models.hotel_search_response_200_output_brands_item import (
+            HotelSearchResponse200OutputBrandsItem,  # noqa: PLC0415
+        )
+        from ..models.hotel_search_response_200_output_properties_item import (
+            HotelSearchResponse200OutputPropertiesItem,  # noqa: PLC0415
+        )
         from ..models.hotel_search_response_200_output_search_information_type_0 import (
-            HotelSearchResponse200OutputSearchInformationType0,
+            HotelSearchResponse200OutputSearchInformationType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

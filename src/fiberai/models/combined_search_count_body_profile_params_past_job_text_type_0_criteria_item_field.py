@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyProfileParamsPastJobTextType0CriteriaItemField(str, Enum):
+class CombinedSearchCountBodyProfileParamsPastJobTextType0CriteriaItemField(StrEnum):
     ANYWHERE = "anywhere"
     SUMMARY = "summary"
     TITLE = "title"

@@ -109,9 +109,9 @@ class PeopleSearchCountBody:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_body_current_companies_type_0_item import (
-            PeopleSearchCountBodyCurrentCompaniesType0Item,
+            PeopleSearchCountBodyCurrentCompaniesType0Item,  # noqa: PLC0415
         )
-        from ..models.people_search_count_body_search_params import PeopleSearchCountBodySearchParams
+        from ..models.people_search_count_body_search_params import PeopleSearchCountBodySearchParams  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

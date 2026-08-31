@@ -73,7 +73,7 @@ class GetRegionsResponse200OutputRegionsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_regions_response_200_output_regions_item_countries_item import (
-            GetRegionsResponse200OutputRegionsItemCountriesItem,
+            GetRegionsResponse200OutputRegionsItemCountriesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -50,7 +50,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_1_radius_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1RadiusType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1RadiusType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -89,10 +89,10 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_1_radius_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1RadiusType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1RadiusType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_1_radius_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1RadiusType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AnyOfType0ItemGeoLocationType1RadiusType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -52,7 +52,7 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocat
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_union_all_type_0_item_type_1_radius_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType1RadiusType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType1RadiusType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -91,10 +91,10 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocat
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_union_all_type_0_item_type_1_radius_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType1RadiusType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType1RadiusType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_headquarters_location_type_0_union_all_type_0_item_type_1_radius_type_1 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType1RadiusType1,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsHeadquartersLocationType0UnionAllType0ItemType1RadiusType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

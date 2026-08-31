@@ -83,7 +83,7 @@ class KitchenSinkProfileResponse200OutputDataItemTenuresType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_profile_response_200_output_data_item_tenures_type_0_item_date_range import (
-            KitchenSinkProfileResponse200OutputDataItemTenuresType0ItemDateRange,
+            KitchenSinkProfileResponse200OutputDataItemTenuresType0ItemDateRange,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

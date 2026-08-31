@@ -52,7 +52,7 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsTy
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_posting_stats_type_0_any_of_type_0_item_type_0_count import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0AnyOfType0ItemType0Count,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0AnyOfType0ItemType0Count,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

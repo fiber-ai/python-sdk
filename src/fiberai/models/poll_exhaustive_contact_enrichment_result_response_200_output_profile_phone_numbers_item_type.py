@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PollExhaustiveContactEnrichmentResultResponse200OutputProfilePhoneNumbersItemType(str, Enum):
+class PollExhaustiveContactEnrichmentResultResponse200OutputProfilePhoneNumbersItemType(StrEnum):
     MOBILE = "mobile"
     OTHER = "other"
     UNKNOWN = "unknown"

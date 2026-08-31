@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanySearchBodySearchParamsJobPostingStatsType0AllOfType0ItemType1RangeType1Type(str, Enum):
+class CompanySearchBodySearchParamsJobPostingStatsType0AllOfType0ItemType1RangeType1Type(StrEnum):
     PERCENT_RANGE = "percent-range"
 
     def __str__(self) -> str:

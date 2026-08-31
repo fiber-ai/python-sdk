@@ -56,16 +56,16 @@ class PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_count_body_search_params_education_v2_type_0_any_of_type_0_item_years_type_0_finished_school_at_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0FinishedSchoolAtType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0FinishedSchoolAtType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_any_of_type_0_item_years_type_0_finished_school_at_type_1 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0FinishedSchoolAtType1,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0FinishedSchoolAtType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_any_of_type_0_item_years_type_0_started_school_at_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0StartedSchoolAtType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0StartedSchoolAtType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_any_of_type_0_item_years_type_0_started_school_at_type_1 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0StartedSchoolAtType1,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0StartedSchoolAtType1,  # noqa: PLC0415
         )
 
         started_school_at: dict[str, Any] | None | Unset
@@ -121,16 +121,16 @@ class PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_body_search_params_education_v2_type_0_any_of_type_0_item_years_type_0_finished_school_at_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0FinishedSchoolAtType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0FinishedSchoolAtType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_any_of_type_0_item_years_type_0_finished_school_at_type_1 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0FinishedSchoolAtType1,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0FinishedSchoolAtType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_any_of_type_0_item_years_type_0_started_school_at_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0StartedSchoolAtType0,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0StartedSchoolAtType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_v2_type_0_any_of_type_0_item_years_type_0_started_school_at_type_1 import (
-            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0StartedSchoolAtType1,
+            PeopleSearchCountBodySearchParamsEducationV2Type0AnyOfType0ItemYearsType0StartedSchoolAtType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

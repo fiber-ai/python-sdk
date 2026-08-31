@@ -38,7 +38,7 @@ class LocationDeltaChange:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.company_location_change import CompanyLocationChange
+        from ..models.company_location_change import CompanyLocationChange  # noqa: PLC0415
 
         kind = self.kind
 
@@ -85,7 +85,7 @@ class LocationDeltaChange:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.company_location_change import CompanyLocationChange
+        from ..models.company_location_change import CompanyLocationChange  # noqa: PLC0415
 
         d = dict(src_dict)
         kind = cast(Literal["location"], d.pop("kind"))

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanyLocationChangeChangeTypeType1(str, Enum):
+class CompanyLocationChangeChangeTypeType1(StrEnum):
     ADDED = "added"
 
     def __str__(self) -> str:

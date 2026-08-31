@@ -75,14 +75,16 @@ class GetTrackerOverviewResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_tracker_overview_response_200_output_company_lists_item import (
-            GetTrackerOverviewResponse200OutputCompanyListsItem,
+            GetTrackerOverviewResponse200OutputCompanyListsItem,  # noqa: PLC0415
         )
         from ..models.get_tracker_overview_response_200_output_person_lists_item import (
-            GetTrackerOverviewResponse200OutputPersonListsItem,
+            GetTrackerOverviewResponse200OutputPersonListsItem,  # noqa: PLC0415
         )
-        from ..models.get_tracker_overview_response_200_output_summary import GetTrackerOverviewResponse200OutputSummary
+        from ..models.get_tracker_overview_response_200_output_summary import (
+            GetTrackerOverviewResponse200OutputSummary,  # noqa: PLC0415
+        )
         from ..models.get_tracker_overview_response_200_output_upcoming_refreshes_item import (
-            GetTrackerOverviewResponse200OutputUpcomingRefreshesItem,
+            GetTrackerOverviewResponse200OutputUpcomingRefreshesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

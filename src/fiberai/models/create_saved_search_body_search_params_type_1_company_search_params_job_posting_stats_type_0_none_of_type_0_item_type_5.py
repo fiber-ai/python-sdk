@@ -51,7 +51,7 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsTy
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_job_posting_stats_type_0_none_of_type_0_item_type_5_range_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType5RangeType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType5RangeType0,  # noqa: PLC0415
         )
 
         rule = self.rule.value
@@ -82,10 +82,10 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsTy
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_job_posting_stats_type_0_none_of_type_0_item_type_5_range_type_0 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType5RangeType0,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType5RangeType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_job_posting_stats_type_0_none_of_type_0_item_type_5_range_type_1 import (
-            CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType5RangeType1,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType5RangeType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

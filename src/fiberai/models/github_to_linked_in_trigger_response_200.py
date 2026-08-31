@@ -58,16 +58,16 @@ class GithubToLinkedInTriggerResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.github_to_linked_in_trigger_response_200_charge_info_type_0 import (
-            GithubToLinkedInTriggerResponse200ChargeInfoType0,
+            GithubToLinkedInTriggerResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.github_to_linked_in_trigger_response_200_charge_info_type_1 import (
-            GithubToLinkedInTriggerResponse200ChargeInfoType1,
+            GithubToLinkedInTriggerResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.github_to_linked_in_trigger_response_200_charge_info_type_2 import (
-            GithubToLinkedInTriggerResponse200ChargeInfoType2,
+            GithubToLinkedInTriggerResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.github_to_linked_in_trigger_response_200_charge_info_type_3 import (
-            GithubToLinkedInTriggerResponse200ChargeInfoType3,
+            GithubToLinkedInTriggerResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class GithubToLinkedInTriggerResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.github_to_linked_in_trigger_response_200_charge_info_type_0 import (
-            GithubToLinkedInTriggerResponse200ChargeInfoType0,
+            GithubToLinkedInTriggerResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.github_to_linked_in_trigger_response_200_charge_info_type_1 import (
-            GithubToLinkedInTriggerResponse200ChargeInfoType1,
+            GithubToLinkedInTriggerResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.github_to_linked_in_trigger_response_200_charge_info_type_2 import (
-            GithubToLinkedInTriggerResponse200ChargeInfoType2,
+            GithubToLinkedInTriggerResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.github_to_linked_in_trigger_response_200_charge_info_type_3 import (
-            GithubToLinkedInTriggerResponse200ChargeInfoType3,
+            GithubToLinkedInTriggerResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.github_to_linked_in_trigger_response_200_charge_info_type_4 import (
-            GithubToLinkedInTriggerResponse200ChargeInfoType4,
+            GithubToLinkedInTriggerResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.github_to_linked_in_trigger_response_200_output import GithubToLinkedInTriggerResponse200Output
+        from ..models.github_to_linked_in_trigger_response_200_output import (
+            GithubToLinkedInTriggerResponse200Output,  # noqa: PLC0415
+        )
         from ..models.github_to_linked_in_trigger_response_200_warnings_type_0_item import (
-            GithubToLinkedInTriggerResponse200WarningsType0Item,
+            GithubToLinkedInTriggerResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -57,16 +57,16 @@ class FinancialInstrumentLookupBody:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.financial_instrument_lookup_body_instrument_type_0 import (
-            FinancialInstrumentLookupBodyInstrumentType0,
+            FinancialInstrumentLookupBodyInstrumentType0,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_body_instrument_type_1 import (
-            FinancialInstrumentLookupBodyInstrumentType1,
+            FinancialInstrumentLookupBodyInstrumentType1,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_body_instrument_type_2 import (
-            FinancialInstrumentLookupBodyInstrumentType2,
+            FinancialInstrumentLookupBodyInstrumentType2,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_body_instrument_type_3 import (
-            FinancialInstrumentLookupBodyInstrumentType3,
+            FinancialInstrumentLookupBodyInstrumentType3,  # noqa: PLC0415
         )
 
         api_key = self.api_key
@@ -111,19 +111,19 @@ class FinancialInstrumentLookupBody:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.financial_instrument_lookup_body_instrument_type_0 import (
-            FinancialInstrumentLookupBodyInstrumentType0,
+            FinancialInstrumentLookupBodyInstrumentType0,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_body_instrument_type_1 import (
-            FinancialInstrumentLookupBodyInstrumentType1,
+            FinancialInstrumentLookupBodyInstrumentType1,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_body_instrument_type_2 import (
-            FinancialInstrumentLookupBodyInstrumentType2,
+            FinancialInstrumentLookupBodyInstrumentType2,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_body_instrument_type_3 import (
-            FinancialInstrumentLookupBodyInstrumentType3,
+            FinancialInstrumentLookupBodyInstrumentType3,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_body_instrument_type_4 import (
-            FinancialInstrumentLookupBodyInstrumentType4,
+            FinancialInstrumentLookupBodyInstrumentType4,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

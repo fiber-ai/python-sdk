@@ -51,7 +51,7 @@ class FlightSearchResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.flight_search_response_200_output_price_insights_type_0 import (
-            FlightSearchResponse200OutputPriceInsightsType0,
+            FlightSearchResponse200OutputPriceInsightsType0,  # noqa: PLC0415
         )
 
         best_flights = []
@@ -109,15 +109,17 @@ class FlightSearchResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.flight_search_response_200_output_airports_item import FlightSearchResponse200OutputAirportsItem
+        from ..models.flight_search_response_200_output_airports_item import (
+            FlightSearchResponse200OutputAirportsItem,  # noqa: PLC0415
+        )
         from ..models.flight_search_response_200_output_best_flights_item import (
-            FlightSearchResponse200OutputBestFlightsItem,
+            FlightSearchResponse200OutputBestFlightsItem,  # noqa: PLC0415
         )
         from ..models.flight_search_response_200_output_other_flights_item import (
-            FlightSearchResponse200OutputOtherFlightsItem,
+            FlightSearchResponse200OutputOtherFlightsItem,  # noqa: PLC0415
         )
         from ..models.flight_search_response_200_output_price_insights_type_0 import (
-            FlightSearchResponse200OutputPriceInsightsType0,
+            FlightSearchResponse200OutputPriceInsightsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

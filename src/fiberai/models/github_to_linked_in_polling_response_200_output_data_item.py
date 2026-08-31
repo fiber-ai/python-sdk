@@ -50,7 +50,7 @@ class GithubToLinkedInPollingResponse200OutputDataItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.github_to_linked_in_polling_response_200_output_data_item_github_profile_type_0 import (
-            GithubToLinkedInPollingResponse200OutputDataItemGithubProfileType0,
+            GithubToLinkedInPollingResponse200OutputDataItemGithubProfileType0,  # noqa: PLC0415
         )
 
         github_username = self.github_username
@@ -127,7 +127,7 @@ class GithubToLinkedInPollingResponse200OutputDataItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.github_to_linked_in_polling_response_200_output_data_item_github_profile_type_0 import (
-            GithubToLinkedInPollingResponse200OutputDataItemGithubProfileType0,
+            GithubToLinkedInPollingResponse200OutputDataItemGithubProfileType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

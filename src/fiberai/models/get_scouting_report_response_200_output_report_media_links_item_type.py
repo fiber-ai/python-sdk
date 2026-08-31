@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetScoutingReportResponse200OutputReportMediaLinksItemType(str, Enum):
+class GetScoutingReportResponse200OutputReportMediaLinksItemType(StrEnum):
     PODCAST = "podcast"
     YOUTUBE = "youtube"
 

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GoogleMapsSearchBodyStrategyType2Strategy(str, Enum):
+class GoogleMapsSearchBodyStrategyType2Strategy(StrEnum):
     WORLD_CITIES = "world-cities"
 
     def __str__(self) -> str:

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanyCountBodySearchParamsCrunchbaseCategoriesType0AnyOfType0ItemType(str, Enum):
+class CompanyCountBodySearchParamsCrunchbaseCategoriesType0AnyOfType0ItemType(StrEnum):
     CATEGORY = "category"
 
     def __str__(self) -> str:

@@ -39,7 +39,7 @@ class GoogleMapsSearchBodyStrategyType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.google_maps_search_body_strategy_type_1_union_all_item_type_0 import (
-            GoogleMapsSearchBodyStrategyType1UnionAllItemType0,
+            GoogleMapsSearchBodyStrategyType1UnionAllItemType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -68,10 +68,10 @@ class GoogleMapsSearchBodyStrategyType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.google_maps_search_body_strategy_type_1_union_all_item_type_0 import (
-            GoogleMapsSearchBodyStrategyType1UnionAllItemType0,
+            GoogleMapsSearchBodyStrategyType1UnionAllItemType0,  # noqa: PLC0415
         )
         from ..models.google_maps_search_body_strategy_type_1_union_all_item_type_1 import (
-            GoogleMapsSearchBodyStrategyType1UnionAllItemType1,
+            GoogleMapsSearchBodyStrategyType1UnionAllItemType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class JobPostingSearchResponse200OutputDataItemStatus(str, Enum):
+class JobPostingSearchResponse200OutputDataItemStatus(StrEnum):
     ACTIVE = "active"
     CLOSED = "closed"
 

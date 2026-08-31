@@ -27,7 +27,7 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyO
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_time_zone_type_0_any_of_item_strategy_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyOfItemStrategyType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyOfItemStrategyType0,  # noqa: PLC0415
         )
 
         strategy: dict[str, Any]
@@ -49,7 +49,7 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyO
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_time_zone_type_0_any_of_item_strategy_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyOfItemStrategyType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0AnyOfItemStrategyType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

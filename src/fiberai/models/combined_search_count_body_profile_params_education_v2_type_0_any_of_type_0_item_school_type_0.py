@@ -47,13 +47,13 @@ class CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemSchoolTy
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_any_of_type_0_item_school_type_0_exact_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemSchoolType0ExactType0,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemSchoolType0ExactType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_any_of_type_0_item_school_type_0_name_keywords_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemSchoolType0NameKeywordsType0,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemSchoolType0NameKeywordsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_any_of_type_0_item_school_type_0_properties_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemSchoolType0PropertiesType0,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemSchoolType0PropertiesType0,  # noqa: PLC0415
         )
 
         exact: dict[str, Any] | None | Unset
@@ -103,13 +103,13 @@ class CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemSchoolTy
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_any_of_type_0_item_school_type_0_exact_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemSchoolType0ExactType0,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemSchoolType0ExactType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_any_of_type_0_item_school_type_0_name_keywords_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemSchoolType0NameKeywordsType0,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemSchoolType0NameKeywordsType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_education_v2_type_0_any_of_type_0_item_school_type_0_properties_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemSchoolType0PropertiesType0,
+            CombinedSearchCountBodyProfileParamsEducationV2Type0AnyOfType0ItemSchoolType0PropertiesType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

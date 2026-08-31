@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetDepartmentSizeBodyCompanyType2Identifier(str, Enum):
+class GetDepartmentSizeBodyCompanyType2Identifier(StrEnum):
     LINKEDINORGID = "linkedinOrgId"
 
     def __str__(self) -> str:

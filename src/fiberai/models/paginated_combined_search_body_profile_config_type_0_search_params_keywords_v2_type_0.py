@@ -42,7 +42,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_keywords_v2_type_0_options_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0OptionsType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0OptionsType0,  # noqa: PLC0415
         )
 
         clauses = []
@@ -81,10 +81,10 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_keywords_v2_type_0_clauses_item import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0ClausesItem,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0ClausesItem,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_keywords_v2_type_0_options_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0OptionsType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0OptionsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

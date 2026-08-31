@@ -71,7 +71,9 @@ class GithubToLinkedInTriggerBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.github_to_linked_in_trigger_body_people_item import GithubToLinkedInTriggerBodyPeopleItem
+        from ..models.github_to_linked_in_trigger_body_people_item import (
+            GithubToLinkedInTriggerBodyPeopleItem,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

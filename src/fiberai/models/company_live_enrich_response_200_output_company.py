@@ -92,13 +92,13 @@ class CompanyLiveEnrichResponse200OutputCompany:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_live_enrich_response_200_output_company_historical_headcount_type_0 import (
-            CompanyLiveEnrichResponse200OutputCompanyHistoricalHeadcountType0,
+            CompanyLiveEnrichResponse200OutputCompanyHistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.company_live_enrich_response_200_output_company_inferred_location_type_0 import (
-            CompanyLiveEnrichResponse200OutputCompanyInferredLocationType0,
+            CompanyLiveEnrichResponse200OutputCompanyInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.company_live_enrich_response_200_output_company_locations_stats_type_0 import (
-            CompanyLiveEnrichResponse200OutputCompanyLocationsStatsType0,
+            CompanyLiveEnrichResponse200OutputCompanyLocationsStatsType0,  # noqa: PLC0415
         )
 
         slug = self.slug
@@ -343,19 +343,19 @@ class CompanyLiveEnrichResponse200OutputCompany:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_live_enrich_response_200_output_company_historical_headcount_type_0 import (
-            CompanyLiveEnrichResponse200OutputCompanyHistoricalHeadcountType0,
+            CompanyLiveEnrichResponse200OutputCompanyHistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.company_live_enrich_response_200_output_company_industries_type_0_item import (
-            CompanyLiveEnrichResponse200OutputCompanyIndustriesType0Item,
+            CompanyLiveEnrichResponse200OutputCompanyIndustriesType0Item,  # noqa: PLC0415
         )
         from ..models.company_live_enrich_response_200_output_company_inferred_location_type_0 import (
-            CompanyLiveEnrichResponse200OutputCompanyInferredLocationType0,
+            CompanyLiveEnrichResponse200OutputCompanyInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.company_live_enrich_response_200_output_company_locations_stats_type_0 import (
-            CompanyLiveEnrichResponse200OutputCompanyLocationsStatsType0,
+            CompanyLiveEnrichResponse200OutputCompanyLocationsStatsType0,  # noqa: PLC0415
         )
         from ..models.company_live_enrich_response_200_output_company_locations_type_0_item import (
-            CompanyLiveEnrichResponse200OutputCompanyLocationsType0Item,
+            CompanyLiveEnrichResponse200OutputCompanyLocationsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

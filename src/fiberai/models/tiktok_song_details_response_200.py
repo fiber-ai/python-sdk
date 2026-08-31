@@ -48,16 +48,16 @@ class TiktokSongDetailsResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.tiktok_song_details_response_200_charge_info_type_0 import (
-            TiktokSongDetailsResponse200ChargeInfoType0,
+            TiktokSongDetailsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.tiktok_song_details_response_200_charge_info_type_1 import (
-            TiktokSongDetailsResponse200ChargeInfoType1,
+            TiktokSongDetailsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.tiktok_song_details_response_200_charge_info_type_2 import (
-            TiktokSongDetailsResponse200ChargeInfoType2,
+            TiktokSongDetailsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.tiktok_song_details_response_200_charge_info_type_3 import (
-            TiktokSongDetailsResponse200ChargeInfoType3,
+            TiktokSongDetailsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class TiktokSongDetailsResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.tiktok_song_details_response_200_charge_info_type_0 import (
-            TiktokSongDetailsResponse200ChargeInfoType0,
+            TiktokSongDetailsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.tiktok_song_details_response_200_charge_info_type_1 import (
-            TiktokSongDetailsResponse200ChargeInfoType1,
+            TiktokSongDetailsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.tiktok_song_details_response_200_charge_info_type_2 import (
-            TiktokSongDetailsResponse200ChargeInfoType2,
+            TiktokSongDetailsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.tiktok_song_details_response_200_charge_info_type_3 import (
-            TiktokSongDetailsResponse200ChargeInfoType3,
+            TiktokSongDetailsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.tiktok_song_details_response_200_charge_info_type_4 import (
-            TiktokSongDetailsResponse200ChargeInfoType4,
+            TiktokSongDetailsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.tiktok_song_details_response_200_output import TiktokSongDetailsResponse200Output
+        from ..models.tiktok_song_details_response_200_output import TiktokSongDetailsResponse200Output  # noqa: PLC0415
         from ..models.tiktok_song_details_response_200_warnings_type_0_item import (
-            TiktokSongDetailsResponse200WarningsType0Item,
+            TiktokSongDetailsResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

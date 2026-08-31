@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetTalentFlowResponse200OutputDirection(str, Enum):
+class GetTalentFlowResponse200OutputDirection(StrEnum):
     JOINERS = "joiners"
     LEAVERS = "leavers"
 

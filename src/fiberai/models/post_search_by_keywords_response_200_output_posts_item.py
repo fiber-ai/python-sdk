@@ -70,22 +70,22 @@ class PostSearchByKeywordsResponse200OutputPostsItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.post_search_by_keywords_response_200_output_posts_item_article_type_0 import (
-            PostSearchByKeywordsResponse200OutputPostsItemArticleType0,
+            PostSearchByKeywordsResponse200OutputPostsItemArticleType0,  # noqa: PLC0415
         )
         from ..models.post_search_by_keywords_response_200_output_posts_item_author_type_0 import (
-            PostSearchByKeywordsResponse200OutputPostsItemAuthorType0,
+            PostSearchByKeywordsResponse200OutputPostsItemAuthorType0,  # noqa: PLC0415
         )
         from ..models.post_search_by_keywords_response_200_output_posts_item_engagement_type_0 import (
-            PostSearchByKeywordsResponse200OutputPostsItemEngagementType0,
+            PostSearchByKeywordsResponse200OutputPostsItemEngagementType0,  # noqa: PLC0415
         )
         from ..models.post_search_by_keywords_response_200_output_posts_item_original_post_type_0 import (
-            PostSearchByKeywordsResponse200OutputPostsItemOriginalPostType0,
+            PostSearchByKeywordsResponse200OutputPostsItemOriginalPostType0,  # noqa: PLC0415
         )
         from ..models.post_search_by_keywords_response_200_output_posts_item_reshared_by_type_0 import (
-            PostSearchByKeywordsResponse200OutputPostsItemResharedByType0,
+            PostSearchByKeywordsResponse200OutputPostsItemResharedByType0,  # noqa: PLC0415
         )
         from ..models.post_search_by_keywords_response_200_output_posts_item_video_type_0 import (
-            PostSearchByKeywordsResponse200OutputPostsItemVideoType0,
+            PostSearchByKeywordsResponse200OutputPostsItemVideoType0,  # noqa: PLC0415
         )
 
         post_id = self.post_id
@@ -222,22 +222,22 @@ class PostSearchByKeywordsResponse200OutputPostsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.post_search_by_keywords_response_200_output_posts_item_article_type_0 import (
-            PostSearchByKeywordsResponse200OutputPostsItemArticleType0,
+            PostSearchByKeywordsResponse200OutputPostsItemArticleType0,  # noqa: PLC0415
         )
         from ..models.post_search_by_keywords_response_200_output_posts_item_author_type_0 import (
-            PostSearchByKeywordsResponse200OutputPostsItemAuthorType0,
+            PostSearchByKeywordsResponse200OutputPostsItemAuthorType0,  # noqa: PLC0415
         )
         from ..models.post_search_by_keywords_response_200_output_posts_item_engagement_type_0 import (
-            PostSearchByKeywordsResponse200OutputPostsItemEngagementType0,
+            PostSearchByKeywordsResponse200OutputPostsItemEngagementType0,  # noqa: PLC0415
         )
         from ..models.post_search_by_keywords_response_200_output_posts_item_original_post_type_0 import (
-            PostSearchByKeywordsResponse200OutputPostsItemOriginalPostType0,
+            PostSearchByKeywordsResponse200OutputPostsItemOriginalPostType0,  # noqa: PLC0415
         )
         from ..models.post_search_by_keywords_response_200_output_posts_item_reshared_by_type_0 import (
-            PostSearchByKeywordsResponse200OutputPostsItemResharedByType0,
+            PostSearchByKeywordsResponse200OutputPostsItemResharedByType0,  # noqa: PLC0415
         )
         from ..models.post_search_by_keywords_response_200_output_posts_item_video_type_0 import (
-            PostSearchByKeywordsResponse200OutputPostsItemVideoType0,
+            PostSearchByKeywordsResponse200OutputPostsItemVideoType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

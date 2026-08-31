@@ -83,7 +83,7 @@ class PollBatchLiveEnrichResponse200OutputResultsItemProfileType0TenuresType0Ite
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_tenures_type_0_item_date_range import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0TenuresType0ItemDateRange,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0TenuresType0ItemDateRange,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

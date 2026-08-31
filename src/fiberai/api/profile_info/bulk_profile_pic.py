@@ -147,14 +147,14 @@ def sync_detailed(
     | BulkProfilePicResponse500
     | BulkProfilePicResponse503
 ]:
-    r"""Bulk profile pics
+    """Bulk profile pics
 
      Get profile pics for a list of profiles. Max 10,000 profiles can be looked up at a time.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per profile pic lookup&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 0.33 credits per profile pic lookup&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (BulkProfilePicBody):
@@ -195,14 +195,14 @@ def sync(
     | BulkProfilePicResponse503
     | None
 ):
-    r"""Bulk profile pics
+    """Bulk profile pics
 
      Get profile pics for a list of profiles. Max 10,000 profiles can be looked up at a time.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per profile pic lookup&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 0.33 credits per profile pic lookup&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (BulkProfilePicBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | BulkProfilePicResponse500
     | BulkProfilePicResponse503
 ]:
-    r"""Bulk profile pics
+    """Bulk profile pics
 
      Get profile pics for a list of profiles. Max 10,000 profiles can be looked up at a time.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per profile pic lookup&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 0.33 credits per profile pic lookup&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (BulkProfilePicBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | BulkProfilePicResponse503
     | None
 ):
-    r"""Bulk profile pics
+    """Bulk profile pics
 
      Get profile pics for a list of profiles. Max 10,000 profiles can be looked up at a time.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per profile pic lookup&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 0.33 credits per profile pic lookup&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (BulkProfilePicBody):

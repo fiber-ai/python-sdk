@@ -147,15 +147,15 @@ def sync_detailed(
     | YoutubeVideoCommentsResponse500
     | YoutubeVideoCommentsResponse503
 ]:
-    r"""Fetch YouTube video comments
+    """Fetch YouTube video comments
 
      Fetches a page of comments for a YouTube video. Returns comment text, author, like count, and reply
     count. Use `nextPageToken` from the response to paginate through additional pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeVideoCommentsBody):
@@ -196,15 +196,15 @@ def sync(
     | YoutubeVideoCommentsResponse503
     | None
 ):
-    r"""Fetch YouTube video comments
+    """Fetch YouTube video comments
 
      Fetches a page of comments for a YouTube video. Returns comment text, author, like count, and reply
     count. Use `nextPageToken` from the response to paginate through additional pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeVideoCommentsBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | YoutubeVideoCommentsResponse500
     | YoutubeVideoCommentsResponse503
 ]:
-    r"""Fetch YouTube video comments
+    """Fetch YouTube video comments
 
      Fetches a page of comments for a YouTube video. Returns comment text, author, like count, and reply
     count. Use `nextPageToken` from the response to paginate through additional pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeVideoCommentsBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | YoutubeVideoCommentsResponse503
     | None
 ):
-    r"""Fetch YouTube video comments
+    """Fetch YouTube video comments
 
      Fetches a page of comments for a YouTube video. Returns comment text, author, like count, and reply
     count. Use `nextPageToken` from the response to paginate through additional pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeVideoCommentsBody):

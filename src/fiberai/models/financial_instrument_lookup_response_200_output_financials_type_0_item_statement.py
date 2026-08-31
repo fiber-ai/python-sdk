@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FinancialInstrumentLookupResponse200OutputFinancialsType0ItemStatement(str, Enum):
+class FinancialInstrumentLookupResponse200OutputFinancialsType0ItemStatement(StrEnum):
     BALANCESHEET = "balanceSheet"
     CASHFLOW = "cashFlow"
     INCOMESTATEMENT = "incomeStatement"

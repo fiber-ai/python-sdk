@@ -34,7 +34,7 @@ class MultiSourceSearchResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.multi_source_search_response_200_output_data_type_0 import (
-            MultiSourceSearchResponse200OutputDataType0,
+            MultiSourceSearchResponse200OutputDataType0,  # noqa: PLC0415
         )
 
         data: dict[str, Any]
@@ -67,10 +67,10 @@ class MultiSourceSearchResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.multi_source_search_response_200_output_data_type_0 import (
-            MultiSourceSearchResponse200OutputDataType0,
+            MultiSourceSearchResponse200OutputDataType0,  # noqa: PLC0415
         )
         from ..models.multi_source_search_response_200_output_data_type_1 import (
-            MultiSourceSearchResponse200OutputDataType1,
+            MultiSourceSearchResponse200OutputDataType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

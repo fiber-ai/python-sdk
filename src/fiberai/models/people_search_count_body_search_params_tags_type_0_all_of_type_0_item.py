@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchCountBodySearchParamsTagsType0AllOfType0Item(str, Enum):
+class PeopleSearchCountBodySearchParamsTagsType0AllOfType0Item(StrEnum):
     ATTENDED_TOP_GLOBAL_UNIVERSITY = "attended-top-global-university"
     ATTENDED_TOP_US_UNIVERSITY = "attended-top-us-university"
     BOARD_MEMBER = "board-member"

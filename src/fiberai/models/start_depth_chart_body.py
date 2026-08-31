@@ -43,9 +43,9 @@ class StartDepthChartBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.start_depth_chart_body_company_type_0 import StartDepthChartBodyCompanyType0
-        from ..models.start_depth_chart_body_company_type_1 import StartDepthChartBodyCompanyType1
-        from ..models.start_depth_chart_body_company_type_2 import StartDepthChartBodyCompanyType2
+        from ..models.start_depth_chart_body_company_type_0 import StartDepthChartBodyCompanyType0  # noqa: PLC0415
+        from ..models.start_depth_chart_body_company_type_1 import StartDepthChartBodyCompanyType1  # noqa: PLC0415
+        from ..models.start_depth_chart_body_company_type_2 import StartDepthChartBodyCompanyType2  # noqa: PLC0415
 
         api_key = self.api_key
 
@@ -83,10 +83,10 @@ class StartDepthChartBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.start_depth_chart_body_company_type_0 import StartDepthChartBodyCompanyType0
-        from ..models.start_depth_chart_body_company_type_1 import StartDepthChartBodyCompanyType1
-        from ..models.start_depth_chart_body_company_type_2 import StartDepthChartBodyCompanyType2
-        from ..models.start_depth_chart_body_company_type_3 import StartDepthChartBodyCompanyType3
+        from ..models.start_depth_chart_body_company_type_0 import StartDepthChartBodyCompanyType0  # noqa: PLC0415
+        from ..models.start_depth_chart_body_company_type_1 import StartDepthChartBodyCompanyType1  # noqa: PLC0415
+        from ..models.start_depth_chart_body_company_type_2 import StartDepthChartBodyCompanyType2  # noqa: PLC0415
+        from ..models.start_depth_chart_body_company_type_3 import StartDepthChartBodyCompanyType3  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

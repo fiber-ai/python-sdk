@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GithubLookupTriggerBodyPeopleItemType2InputType(str, Enum):
+class GithubLookupTriggerBodyPeopleItemType2InputType(StrEnum):
     MANUAL = "manual"
 
     def __str__(self) -> str:

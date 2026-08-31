@@ -147,14 +147,14 @@ def sync_detailed(
     | CreateJobChangeListResponse500
     | CreateJobChangeListResponse503
 ]:
-    r"""Create job change list
+    """Create job change list
 
      Create a new job changes list to monitor when tracked prospects change jobs.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateJobChangeListBody):
@@ -195,14 +195,14 @@ def sync(
     | CreateJobChangeListResponse503
     | None
 ):
-    r"""Create job change list
+    """Create job change list
 
      Create a new job changes list to monitor when tracked prospects change jobs.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateJobChangeListBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | CreateJobChangeListResponse500
     | CreateJobChangeListResponse503
 ]:
-    r"""Create job change list
+    """Create job change list
 
      Create a new job changes list to monitor when tracked prospects change jobs.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateJobChangeListBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | CreateJobChangeListResponse503
     | None
 ):
-    r"""Create job change list
+    """Create job change list
 
      Create a new job changes list to monitor when tracked prospects change jobs.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateJobChangeListBody):

@@ -80,22 +80,22 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationTy
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_subtract_all_type_0_item_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0SubtractAllType0ItemType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0SubtractAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_subtract_all_type_0_item_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0SubtractAllType0ItemType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0SubtractAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_subtract_all_type_0_item_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0SubtractAllType0ItemType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0SubtractAllType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_union_all_type_0_item_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_union_all_type_0_item_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_union_all_type_0_item_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType2,  # noqa: PLC0415
         )
 
         union_all: list[dict[str, Any]] | None | Unset
@@ -171,28 +171,28 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationTy
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_subtract_all_type_0_item_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0SubtractAllType0ItemType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0SubtractAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_subtract_all_type_0_item_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0SubtractAllType0ItemType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0SubtractAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_subtract_all_type_0_item_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0SubtractAllType0ItemType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0SubtractAllType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_subtract_all_type_0_item_type_3 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0SubtractAllType0ItemType3,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0SubtractAllType0ItemType3,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_union_all_type_0_item_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_union_all_type_0_item_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_union_all_type_0_item_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType2,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_union_all_type_0_item_type_3 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType3,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

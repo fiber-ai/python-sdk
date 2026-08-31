@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType3Strategy(
-    str, Enum
+    StrEnum
 ):
     PRESET_REGION = "preset-region"
 

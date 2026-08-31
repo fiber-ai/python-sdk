@@ -45,7 +45,7 @@ class CompanyCountBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemT
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_count_body_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_1_radius_type_0 import (
-            CompanyCountBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1RadiusType0,
+            CompanyCountBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1RadiusType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -83,10 +83,10 @@ class CompanyCountBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemT
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_count_body_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_1_radius_type_0 import (
-            CompanyCountBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1RadiusType0,
+            CompanyCountBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1RadiusType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_1_radius_type_1 import (
-            CompanyCountBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1RadiusType1,
+            CompanyCountBodySearchParamsHeadquartersLocationType0SubtractAllType0ItemType1RadiusType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

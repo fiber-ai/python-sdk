@@ -77,7 +77,7 @@ class QuickPersonResolveResponse200OutputDataItemPersonType0VerificationsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_verifications_type_0_verification_types_type_0_item import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0VerificationsType0VerificationTypesType0Item,
+            QuickPersonResolveResponse200OutputDataItemPersonType0VerificationsType0VerificationTypesType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

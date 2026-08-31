@@ -57,7 +57,7 @@ class YoutubeVideoCommentsResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.youtube_video_comments_response_200_output_comments_item import (
-            YoutubeVideoCommentsResponse200OutputCommentsItem,
+            YoutubeVideoCommentsResponse200OutputCommentsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -147,15 +147,15 @@ def sync_detailed(
     | GetRateLimitsResponse500
     | GetRateLimitsResponse503
 ]:
-    r"""Get organization rate limits
+    """Get organization rate limits
 
      Returns the effective rate limits for all API endpoints for your organization. If your organization
     has custom rate limits on any endpoint, those are reflected here.
 
     <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -196,15 +196,15 @@ def sync(
     | GetRateLimitsResponse503
     | None
 ):
-    r"""Get organization rate limits
+    """Get organization rate limits
 
      Returns the effective rate limits for all API endpoints for your organization. If your organization
     has custom rate limits on any endpoint, those are reflected here.
 
     <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | GetRateLimitsResponse500
     | GetRateLimitsResponse503
 ]:
-    r"""Get organization rate limits
+    """Get organization rate limits
 
      Returns the effective rate limits for all API endpoints for your organization. If your organization
     has custom rate limits on any endpoint, those are reflected here.
 
     <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -286,15 +286,15 @@ async def asyncio(
     | GetRateLimitsResponse503
     | None
 ):
-    r"""Get organization rate limits
+    """Get organization rate limits
 
      Returns the effective rate limits for all API endpoints for your organization. If your organization
     has custom rate limits on any endpoint, those are reflected here.
 
     <span>⚡ <strong>Rate limit:</strong> 20 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):

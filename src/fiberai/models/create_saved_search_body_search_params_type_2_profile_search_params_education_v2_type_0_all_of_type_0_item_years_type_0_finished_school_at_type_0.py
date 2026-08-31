@@ -43,7 +43,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0A
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_v2_type_0_all_of_type_0_item_years_type_0_finished_school_at_type_0_range_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0FinishedSchoolAtType0RangeType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0FinishedSchoolAtType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -74,7 +74,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0A
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_v2_type_0_all_of_type_0_item_years_type_0_finished_school_at_type_0_range_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0FinishedSchoolAtType0RangeType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0FinishedSchoolAtType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -77,7 +77,7 @@ class PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsTy
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_verifications_type_0_verification_types_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsType0VerificationTypesType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsType0VerificationTypesType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

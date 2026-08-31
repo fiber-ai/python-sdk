@@ -147,15 +147,15 @@ def sync_detailed(
     | GetTimeZonesResponse500
     | GetTimeZonesResponse503
 ]:
-    r"""List time zones
+    """List time zones
 
      Get a comprehensive list of all available time zones with geographic information, current time data,
     and UTC offset ranges. Useful for populating time zone filters in search requests.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -196,15 +196,15 @@ def sync(
     | GetTimeZonesResponse503
     | None
 ):
-    r"""List time zones
+    """List time zones
 
      Get a comprehensive list of all available time zones with geographic information, current time data,
     and UTC offset ranges. Useful for populating time zone filters in search requests.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | GetTimeZonesResponse500
     | GetTimeZonesResponse503
 ]:
-    r"""List time zones
+    """List time zones
 
      Get a comprehensive list of all available time zones with geographic information, current time data,
     and UTC offset ranges. Useful for populating time zone filters in search requests.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -286,15 +286,15 @@ async def asyncio(
     | GetTimeZonesResponse503
     | None
 ):
-    r"""List time zones
+    """List time zones
 
      Get a comprehensive list of all available time zones with geographic information, current time data,
     and UTC offset ranges. Useful for populating time zone filters in search requests.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PollExhaustiveContactEnrichmentResultResponse200OutputProfileStatus(str, Enum):
+class PollExhaustiveContactEnrichmentResultResponse200OutputProfileStatus(StrEnum):
     COMPLETED = "completed"
     FAILED = "failed"
     GRABBING_CONTACT_INFO = "grabbing-contact-info"

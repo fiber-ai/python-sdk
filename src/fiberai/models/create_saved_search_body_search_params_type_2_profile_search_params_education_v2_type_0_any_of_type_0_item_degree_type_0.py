@@ -54,7 +54,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0A
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_education_v2_type_0_any_of_type_0_item_degree_type_0_criteria import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0AnyOfType0ItemDegreeType0Criteria,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationV2Type0AnyOfType0ItemDegreeType0Criteria,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

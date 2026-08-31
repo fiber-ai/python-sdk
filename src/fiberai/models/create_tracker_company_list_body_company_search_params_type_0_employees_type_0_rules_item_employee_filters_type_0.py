@@ -86,7 +86,7 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesIte
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0Item,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

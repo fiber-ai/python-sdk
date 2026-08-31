@@ -147,15 +147,15 @@ def sync_detailed(
     | TwitterTweetRepliesResponse500
     | TwitterTweetRepliesResponse503
 ]:
-    r"""Fetch Twitter/X tweet replies
+    """Fetch Twitter/X tweet replies
 
      Fetches a page of replies to a tweet. Use the `cursor` field from the response to retrieve
     subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterTweetRepliesBody):
@@ -196,15 +196,15 @@ def sync(
     | TwitterTweetRepliesResponse503
     | None
 ):
-    r"""Fetch Twitter/X tweet replies
+    """Fetch Twitter/X tweet replies
 
      Fetches a page of replies to a tweet. Use the `cursor` field from the response to retrieve
     subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterTweetRepliesBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TwitterTweetRepliesResponse500
     | TwitterTweetRepliesResponse503
 ]:
-    r"""Fetch Twitter/X tweet replies
+    """Fetch Twitter/X tweet replies
 
      Fetches a page of replies to a tweet. Use the `cursor` field from the response to retrieve
     subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterTweetRepliesBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TwitterTweetRepliesResponse503
     | None
 ):
-    r"""Fetch Twitter/X tweet replies
+    """Fetch Twitter/X tweet replies
 
      Fetches a page of replies to a tweet. Use the `cursor` field from the response to retrieve
     subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterTweetRepliesBody):

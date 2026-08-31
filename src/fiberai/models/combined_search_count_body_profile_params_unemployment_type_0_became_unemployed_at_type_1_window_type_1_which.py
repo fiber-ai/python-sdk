@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyProfileParamsUnemploymentType0BecameUnemployedAtType1WindowType1Which(str, Enum):
+class CombinedSearchCountBodyProfileParamsUnemploymentType0BecameUnemployedAtType1WindowType1Which(StrEnum):
     CURRENT = "current"
     PREVIOUS = "previous"
 

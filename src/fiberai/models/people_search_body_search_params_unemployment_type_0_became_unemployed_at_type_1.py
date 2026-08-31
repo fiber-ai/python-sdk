@@ -43,10 +43,10 @@ class PeopleSearchBodySearchParamsUnemploymentType0BecameUnemployedAtType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_body_search_params_unemployment_type_0_became_unemployed_at_type_1_window_type_0 import (
-            PeopleSearchBodySearchParamsUnemploymentType0BecameUnemployedAtType1WindowType0,
+            PeopleSearchBodySearchParamsUnemploymentType0BecameUnemployedAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_unemployment_type_0_became_unemployed_at_type_1_window_type_1 import (
-            PeopleSearchBodySearchParamsUnemploymentType0BecameUnemployedAtType1WindowType1,
+            PeopleSearchBodySearchParamsUnemploymentType0BecameUnemployedAtType1WindowType1,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -76,10 +76,10 @@ class PeopleSearchBodySearchParamsUnemploymentType0BecameUnemployedAtType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_unemployment_type_0_became_unemployed_at_type_1_window_type_0 import (
-            PeopleSearchBodySearchParamsUnemploymentType0BecameUnemployedAtType1WindowType0,
+            PeopleSearchBodySearchParamsUnemploymentType0BecameUnemployedAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_unemployment_type_0_became_unemployed_at_type_1_window_type_1 import (
-            PeopleSearchBodySearchParamsUnemploymentType0BecameUnemployedAtType1WindowType1,
+            PeopleSearchBodySearchParamsUnemploymentType0BecameUnemployedAtType1WindowType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

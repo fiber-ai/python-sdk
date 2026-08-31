@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0SubtractAllType0ItemType2Strategy(
-    str, Enum
+    StrEnum
 ):
     POLYGON = "polygon"
 

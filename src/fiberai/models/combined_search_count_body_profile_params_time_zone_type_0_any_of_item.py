@@ -27,7 +27,7 @@ class CombinedSearchCountBodyProfileParamsTimeZoneType0AnyOfItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_time_zone_type_0_any_of_item_strategy_type_0 import (
-            CombinedSearchCountBodyProfileParamsTimeZoneType0AnyOfItemStrategyType0,
+            CombinedSearchCountBodyProfileParamsTimeZoneType0AnyOfItemStrategyType0,  # noqa: PLC0415
         )
 
         strategy: dict[str, Any]
@@ -47,7 +47,7 @@ class CombinedSearchCountBodyProfileParamsTimeZoneType0AnyOfItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_time_zone_type_0_any_of_item_strategy_type_0 import (
-            CombinedSearchCountBodyProfileParamsTimeZoneType0AnyOfItemStrategyType0,
+            CombinedSearchCountBodyProfileParamsTimeZoneType0AnyOfItemStrategyType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

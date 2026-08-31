@@ -45,7 +45,7 @@ class CompanySearchBodySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationT
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_search_body_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_radius_type_0 import (
-            CompanySearchBodySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0,
+            CompanySearchBodySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -75,13 +75,13 @@ class CompanySearchBodySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationT
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_body_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_center import (
-            CompanySearchBodySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Center,
+            CompanySearchBodySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0Center,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_radius_type_0 import (
-            CompanySearchBodySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0,
+            CompanySearchBodySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_job_postings_v2_type_0_none_of_type_0_item_geo_location_type_0_radius_type_1 import (
-            CompanySearchBodySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType1,
+            CompanySearchBodySearchParamsJobPostingsV2Type0NoneOfType0ItemGeoLocationType0RadiusType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

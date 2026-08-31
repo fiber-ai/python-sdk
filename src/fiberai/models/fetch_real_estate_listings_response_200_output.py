@@ -19,7 +19,7 @@ T = TypeVar("T", bound="FetchRealEstateListingsResponse200Output")
 
 @_attrs_define
 class FetchRealEstateListingsResponse200Output:
-    r"""
+    """
     Attributes:
         run_id (str): Unique identifier for this search request.
         properties (list[FetchRealEstateListingsResponse200OutputPropertiesItem]): Properties returned for this page.
@@ -28,8 +28,8 @@ class FetchRealEstateListingsResponse200Output:
         next_page_token (None | str | Unset): Token for retrieving the next page. Pass this exact value as
             `nextPageToken` in the next request. Null if no more pages.
         warnings (list[str] | None | Unset): Non-fatal advisories about how this page was served. For example, 'Sort
-            \'priceAscending\' is applied from page 2 onwards.' when the requested sort cannot be honored on page 1. Omitted
-            or null when there's nothing to flag.
+            \\'priceAscending\\' is applied from page 2 onwards.' when the requested sort cannot be honored on page 1.
+            Omitted or null when there's nothing to flag.
     """
 
     run_id: str
@@ -97,7 +97,7 @@ class FetchRealEstateListingsResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.fetch_real_estate_listings_response_200_output_properties_item import (
-            FetchRealEstateListingsResponse200OutputPropertiesItem,
+            FetchRealEstateListingsResponse200OutputPropertiesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

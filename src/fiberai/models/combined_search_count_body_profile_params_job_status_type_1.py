@@ -43,10 +43,10 @@ class CombinedSearchCountBodyProfileParamsJobStatusType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_job_status_type_1_left_at_type_0 import (
-            CombinedSearchCountBodyProfileParamsJobStatusType1LeftAtType0,
+            CombinedSearchCountBodyProfileParamsJobStatusType1LeftAtType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_job_status_type_1_left_at_type_1 import (
-            CombinedSearchCountBodyProfileParamsJobStatusType1LeftAtType1,
+            CombinedSearchCountBodyProfileParamsJobStatusType1LeftAtType1,  # noqa: PLC0415
         )
 
         status = self.status.value
@@ -76,10 +76,10 @@ class CombinedSearchCountBodyProfileParamsJobStatusType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_job_status_type_1_left_at_type_0 import (
-            CombinedSearchCountBodyProfileParamsJobStatusType1LeftAtType0,
+            CombinedSearchCountBodyProfileParamsJobStatusType1LeftAtType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_job_status_type_1_left_at_type_1 import (
-            CombinedSearchCountBodyProfileParamsJobStatusType1LeftAtType1,
+            CombinedSearchCountBodyProfileParamsJobStatusType1LeftAtType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

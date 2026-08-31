@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ExportCompaniesBodyFormat(str, Enum):
+class ExportCompaniesBodyFormat(StrEnum):
     COMPANY_GENERIC_CSV = "COMPANY_GENERIC_CSV"
     COMPANY_LI_ADS_CSV = "COMPANY_LI_ADS_CSV"
     DOMAIN_AGENT_CSV = "DOMAIN_AGENT_CSV"

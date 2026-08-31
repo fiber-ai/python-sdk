@@ -152,15 +152,15 @@ def sync_detailed(
     | DeleteTrackerCompanyListResponse500
     | DeleteTrackerCompanyListResponse503
 ]:
-    r"""Archive company tracker list
+    """Archive company tracker list
 
      Archive a company tracker list. Stops all monitoring and deactivates all tracked companies and rules
     on the list. Signal history is preserved for audit purposes.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -204,15 +204,15 @@ def sync(
     | DeleteTrackerCompanyListResponse503
     | None
 ):
-    r"""Archive company tracker list
+    """Archive company tracker list
 
      Archive a company tracker list. Stops all monitoring and deactivates all tracked companies and rules
     on the list. Signal history is preserved for audit purposes.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -250,15 +250,15 @@ async def asyncio_detailed(
     | DeleteTrackerCompanyListResponse500
     | DeleteTrackerCompanyListResponse503
 ]:
-    r"""Archive company tracker list
+    """Archive company tracker list
 
      Archive a company tracker list. Stops all monitoring and deactivates all tracked companies and rules
     on the list. Signal history is preserved for audit purposes.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -300,15 +300,15 @@ async def asyncio(
     | DeleteTrackerCompanyListResponse503
     | None
 ):
-    r"""Archive company tracker list
+    """Archive company tracker list
 
      Archive a company tracker list. Stops all monitoring and deactivates all tracked companies and rules
     on the list. Signal history is preserved for audit purposes.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):

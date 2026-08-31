@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType0Strategy(str, Enum):
+class CombinedSearchCountBodyCompanyParamsJobPostingsV2Type0AnyOfType0ItemPostedAtType0Strategy(StrEnum):
     ABSOLUTE = "absolute"
 
     def __str__(self) -> str:

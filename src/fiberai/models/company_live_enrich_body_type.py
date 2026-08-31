@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanyLiveEnrichBodyType(str, Enum):
+class CompanyLiveEnrichBodyType(StrEnum):
     LIURL = "liUrl"
     ORGID = "orgId"
     SLUG = "slug"

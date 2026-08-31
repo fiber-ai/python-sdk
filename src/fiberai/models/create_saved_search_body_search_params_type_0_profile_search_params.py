@@ -320,136 +320,136 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParams:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_approx_age_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsApproxAgeType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsApproxAgeType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_certifications_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCertificationsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCertificationsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_company_match_mode_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCompanyMatchModeType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCompanyMatchModeType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_company_match_mode_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCompanyMatchModeType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCompanyMatchModeType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_country_3_letter_code_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCountry3LetterCodeType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCountry3LetterCodeType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_current_jobs_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCurrentJobsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCurrentJobsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_employment_type_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEmploymentTypeType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEmploymentTypeType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_exact_profile_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsExactProfileType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsExactProfileType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_exact_profile_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsExactProfileV2Type0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsExactProfileV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_fuzzy_name_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsFuzzyNameType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsFuzzyNameType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_industry_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsIndustryType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsIndustryType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_status_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_status_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_status_type_2 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType2,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_jobs_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_joined_linked_in_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJoinedLinkedInAtType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJoinedLinkedInAtType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_joined_linked_in_at_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJoinedLinkedInAtType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJoinedLinkedInAtType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_keyword_search_options_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOptionsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOptionsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_keywords_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_keywords_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsV2Type0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_languages_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLanguagesType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLanguagesType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_left_stealth_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLeftStealthAtType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLeftStealthAtType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_left_stealth_at_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLeftStealthAtType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLeftStealthAtType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_location_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLocationType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLocationType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_num_connections_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsNumConnectionsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsNumConnectionsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_num_followers_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsNumFollowersType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsNumFollowersType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_past_job_text_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsPastJobTextType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsPastJobTextType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_past_jobs_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsPastJobsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsPastJobsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_publications_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsPublicationsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsPublicationsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_started_at_company_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedAtCompanyType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedAtCompanyType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_started_at_company_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedAtCompanyType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedAtCompanyType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_started_in_role_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_started_in_role_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_state_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStateType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStateType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_stealth_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_stealth_v2_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_tags_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTagsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTagsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_time_zone_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_unemployment_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsUnemploymentType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsUnemploymentType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_years_of_experience_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsYearsOfExperienceType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsYearsOfExperienceType0,  # noqa: PLC0415
         )
 
         country_3_letter_code: dict[str, Any] | None | Unset
@@ -974,139 +974,139 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParams:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_approx_age_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsApproxAgeType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsApproxAgeType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_certifications_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCertificationsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCertificationsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_company_match_mode_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCompanyMatchModeType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCompanyMatchModeType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_company_match_mode_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCompanyMatchModeType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCompanyMatchModeType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_country_3_letter_code_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCountry3LetterCodeType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCountry3LetterCodeType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_current_jobs_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCurrentJobsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCurrentJobsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_employment_type_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEmploymentTypeType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEmploymentTypeType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_exact_profile_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsExactProfileType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsExactProfileType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_exact_profile_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsExactProfileV2Type0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsExactProfileV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_fuzzy_name_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsFuzzyNameType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsFuzzyNameType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_industry_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsIndustryType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsIndustryType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_status_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_status_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_status_type_2 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType2,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType2,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_title_v3_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobTitleV3Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_jobs_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_joined_linked_in_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJoinedLinkedInAtType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJoinedLinkedInAtType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_joined_linked_in_at_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJoinedLinkedInAtType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJoinedLinkedInAtType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_keyword_search_options_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOptionsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOptionsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_keywords_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_keywords_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsV2Type0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_languages_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLanguagesType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLanguagesType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_left_stealth_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLeftStealthAtType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLeftStealthAtType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_left_stealth_at_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLeftStealthAtType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLeftStealthAtType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_location_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLocationType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLocationType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_num_connections_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsNumConnectionsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsNumConnectionsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_num_followers_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsNumFollowersType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsNumFollowersType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_past_job_text_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsPastJobTextType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsPastJobTextType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_past_jobs_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsPastJobsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsPastJobsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_publications_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsPublicationsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsPublicationsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_sort_type_0_item import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsSortType0Item,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsSortType0Item,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_started_at_company_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedAtCompanyType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedAtCompanyType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_started_at_company_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedAtCompanyType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedAtCompanyType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_started_in_role_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_started_in_role_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStartedInRoleType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_state_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStateType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStateType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_stealth_v2_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_stealth_v2_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_tags_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTagsType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTagsType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_time_zone_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsTimeZoneType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_unemployment_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsUnemploymentType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsUnemploymentType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_years_of_experience_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsYearsOfExperienceType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsYearsOfExperienceType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

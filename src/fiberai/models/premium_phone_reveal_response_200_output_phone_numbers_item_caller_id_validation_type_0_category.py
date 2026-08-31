@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PremiumPhoneRevealResponse200OutputPhoneNumbersItemCallerIdValidationType0Category(str, Enum):
+class PremiumPhoneRevealResponse200OutputPhoneNumbersItemCallerIdValidationType0Category(StrEnum):
     BUSINESS_LINE = "BUSINESS_LINE"
     EXACT_MATCH = "EXACT_MATCH"
     FAMILY_MEMBER = "FAMILY_MEMBER"

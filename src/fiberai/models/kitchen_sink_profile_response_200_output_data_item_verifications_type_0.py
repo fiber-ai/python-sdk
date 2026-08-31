@@ -74,7 +74,7 @@ class KitchenSinkProfileResponse200OutputDataItemVerificationsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_profile_response_200_output_data_item_verifications_type_0_verification_types_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemVerificationsType0VerificationTypesType0Item,
+            KitchenSinkProfileResponse200OutputDataItemVerificationsType0VerificationTypesType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

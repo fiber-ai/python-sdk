@@ -167,15 +167,15 @@ def sync_detailed(
     | CreateCompanyExclusionListFromAudienceResponse500
     | CreateCompanyExclusionListFromAudienceResponse503
 ]:
-    r"""Create company exclusion list from audience
+    """Create company exclusion list from audience
 
      This endpoint creates a new company exclusion list by extracting all companies from a specified
     audience.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateCompanyExclusionListFromAudienceBody):
@@ -216,15 +216,15 @@ def sync(
     | CreateCompanyExclusionListFromAudienceResponse503
     | None
 ):
-    r"""Create company exclusion list from audience
+    """Create company exclusion list from audience
 
      This endpoint creates a new company exclusion list by extracting all companies from a specified
     audience.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateCompanyExclusionListFromAudienceBody):
@@ -259,15 +259,15 @@ async def asyncio_detailed(
     | CreateCompanyExclusionListFromAudienceResponse500
     | CreateCompanyExclusionListFromAudienceResponse503
 ]:
-    r"""Create company exclusion list from audience
+    """Create company exclusion list from audience
 
      This endpoint creates a new company exclusion list by extracting all companies from a specified
     audience.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateCompanyExclusionListFromAudienceBody):
@@ -306,15 +306,15 @@ async def asyncio(
     | CreateCompanyExclusionListFromAudienceResponse503
     | None
 ):
-    r"""Create company exclusion list from audience
+    """Create company exclusion list from audience
 
      This endpoint creates a new company exclusion list by extracting all companies from a specified
     audience.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateCompanyExclusionListFromAudienceBody):

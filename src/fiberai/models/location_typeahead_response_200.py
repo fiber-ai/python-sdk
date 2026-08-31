@@ -48,16 +48,16 @@ class LocationTypeaheadResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.location_typeahead_response_200_charge_info_type_0 import (
-            LocationTypeaheadResponse200ChargeInfoType0,
+            LocationTypeaheadResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.location_typeahead_response_200_charge_info_type_1 import (
-            LocationTypeaheadResponse200ChargeInfoType1,
+            LocationTypeaheadResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.location_typeahead_response_200_charge_info_type_2 import (
-            LocationTypeaheadResponse200ChargeInfoType2,
+            LocationTypeaheadResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.location_typeahead_response_200_charge_info_type_3 import (
-            LocationTypeaheadResponse200ChargeInfoType3,
+            LocationTypeaheadResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class LocationTypeaheadResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.location_typeahead_response_200_charge_info_type_0 import (
-            LocationTypeaheadResponse200ChargeInfoType0,
+            LocationTypeaheadResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.location_typeahead_response_200_charge_info_type_1 import (
-            LocationTypeaheadResponse200ChargeInfoType1,
+            LocationTypeaheadResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.location_typeahead_response_200_charge_info_type_2 import (
-            LocationTypeaheadResponse200ChargeInfoType2,
+            LocationTypeaheadResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.location_typeahead_response_200_charge_info_type_3 import (
-            LocationTypeaheadResponse200ChargeInfoType3,
+            LocationTypeaheadResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.location_typeahead_response_200_charge_info_type_4 import (
-            LocationTypeaheadResponse200ChargeInfoType4,
+            LocationTypeaheadResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.location_typeahead_response_200_output import LocationTypeaheadResponse200Output
+        from ..models.location_typeahead_response_200_output import LocationTypeaheadResponse200Output  # noqa: PLC0415
         from ..models.location_typeahead_response_200_warnings_type_0_item import (
-            LocationTypeaheadResponse200WarningsType0Item,
+            LocationTypeaheadResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

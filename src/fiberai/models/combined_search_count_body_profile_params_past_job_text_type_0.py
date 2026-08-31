@@ -53,7 +53,7 @@ class CombinedSearchCountBodyProfileParamsPastJobTextType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_past_job_text_type_0_criteria_item import (
-            CombinedSearchCountBodyProfileParamsPastJobTextType0CriteriaItem,
+            CombinedSearchCountBodyProfileParamsPastJobTextType0CriteriaItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

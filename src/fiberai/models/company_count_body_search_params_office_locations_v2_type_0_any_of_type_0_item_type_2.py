@@ -50,13 +50,13 @@ class CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_count_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_0 import (
-            CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0,
+            CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_1 import (
-            CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1,
+            CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_2 import (
-            CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2,
+            CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2,  # noqa: PLC0415
         )
 
         type_ = self.type_.value
@@ -91,16 +91,16 @@ class CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_count_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_0 import (
-            CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0,
+            CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_1 import (
-            CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1,
+            CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_2 import (
-            CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2,
+            CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType2,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_office_locations_v2_type_0_any_of_type_0_item_type_2_location_type_3 import (
-            CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType3,
+            CompanyCountBodySearchParamsOfficeLocationsV2Type0AnyOfType0ItemType2LocationType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

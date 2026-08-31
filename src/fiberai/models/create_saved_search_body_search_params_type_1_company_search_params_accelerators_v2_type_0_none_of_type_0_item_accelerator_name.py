@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsAcceleratorsV2Type0NoneOfType0ItemAcceleratorName(
-    str, Enum
+    StrEnum
 ):
     A16Z_SPEEDRUN = "a16z_speedrun"
     ACCEL_ATOMS = "accel_atoms"

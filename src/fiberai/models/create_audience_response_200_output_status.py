@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateAudienceResponse200OutputStatus(str, Enum):
+class CreateAudienceResponse200OutputStatus(StrEnum):
     BUILDING = "BUILDING"
     DRAFT = "DRAFT"
     FAILED = "FAILED"

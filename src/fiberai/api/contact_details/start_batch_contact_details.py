@@ -147,7 +147,7 @@ def sync_detailed(
     | StartBatchContactDetailsResponse500
     | StartBatchContactDetailsResponse503
 ]:
-    r"""Start batch contact details
+    """Start batch contact details
 
      Starts fetching contact details for multiple people (up to 2000) in batch. This is an asynchronous
     task; use the polling endpoint to check progress and get results.
@@ -156,9 +156,9 @@ def sync_detailed(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails<br />• 2 credits for work email only<br />• 2 credits for personal email
-    only<br />• 3 credits for phone only&nbsp;<span title=\"Pricing shown is default pricing. Actual
+    only<br />• 3 credits for phone only&nbsp;<span title="Pricing shown is default pricing. Actual
     pricing may vary. Credits are charged upfront for all unique people queued (after deduping).
-    Undelivered data is refunded per operation.\">ⓘ</span></span>
+    Undelivered data is refunded per operation.">ⓘ</span></span>
 
     Args:
         body (StartBatchContactDetailsBody):
@@ -199,7 +199,7 @@ def sync(
     | StartBatchContactDetailsResponse503
     | None
 ):
-    r"""Start batch contact details
+    """Start batch contact details
 
      Starts fetching contact details for multiple people (up to 2000) in batch. This is an asynchronous
     task; use the polling endpoint to check progress and get results.
@@ -208,9 +208,9 @@ def sync(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails<br />• 2 credits for work email only<br />• 2 credits for personal email
-    only<br />• 3 credits for phone only&nbsp;<span title=\"Pricing shown is default pricing. Actual
+    only<br />• 3 credits for phone only&nbsp;<span title="Pricing shown is default pricing. Actual
     pricing may vary. Credits are charged upfront for all unique people queued (after deduping).
-    Undelivered data is refunded per operation.\">ⓘ</span></span>
+    Undelivered data is refunded per operation.">ⓘ</span></span>
 
     Args:
         body (StartBatchContactDetailsBody):
@@ -245,7 +245,7 @@ async def asyncio_detailed(
     | StartBatchContactDetailsResponse500
     | StartBatchContactDetailsResponse503
 ]:
-    r"""Start batch contact details
+    """Start batch contact details
 
      Starts fetching contact details for multiple people (up to 2000) in batch. This is an asynchronous
     task; use the polling endpoint to check progress and get results.
@@ -254,9 +254,9 @@ async def asyncio_detailed(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails<br />• 2 credits for work email only<br />• 2 credits for personal email
-    only<br />• 3 credits for phone only&nbsp;<span title=\"Pricing shown is default pricing. Actual
+    only<br />• 3 credits for phone only&nbsp;<span title="Pricing shown is default pricing. Actual
     pricing may vary. Credits are charged upfront for all unique people queued (after deduping).
-    Undelivered data is refunded per operation.\">ⓘ</span></span>
+    Undelivered data is refunded per operation.">ⓘ</span></span>
 
     Args:
         body (StartBatchContactDetailsBody):
@@ -295,7 +295,7 @@ async def asyncio(
     | StartBatchContactDetailsResponse503
     | None
 ):
-    r"""Start batch contact details
+    """Start batch contact details
 
      Starts fetching contact details for multiple people (up to 2000) in batch. This is an asynchronous
     task; use the polling endpoint to check progress and get results.
@@ -304,9 +304,9 @@ async def asyncio(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails<br />• 2 credits for work email only<br />• 2 credits for personal email
-    only<br />• 3 credits for phone only&nbsp;<span title=\"Pricing shown is default pricing. Actual
+    only<br />• 3 credits for phone only&nbsp;<span title="Pricing shown is default pricing. Actual
     pricing may vary. Credits are charged upfront for all unique people queued (after deduping).
-    Undelivered data is refunded per operation.\">ⓘ</span></span>
+    Undelivered data is refunded per operation.">ⓘ</span></span>
 
     Args:
         body (StartBatchContactDetailsBody):

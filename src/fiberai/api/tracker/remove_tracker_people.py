@@ -161,15 +161,15 @@ def sync_detailed(
     | RemoveTrackerPeopleResponse500
     | RemoveTrackerPeopleResponse503
 ]:
-    r"""Remove people from tracker list
+    """Remove people from tracker list
 
      Remove people from a person tracker list. Deactivates them so they are no longer monitored, but
     preserves their signal history. Uses the same identifier format as add-people.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -216,15 +216,15 @@ def sync(
     | RemoveTrackerPeopleResponse503
     | None
 ):
-    r"""Remove people from tracker list
+    """Remove people from tracker list
 
      Remove people from a person tracker list. Deactivates them so they are no longer monitored, but
     preserves their signal history. Uses the same identifier format as add-people.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -265,15 +265,15 @@ async def asyncio_detailed(
     | RemoveTrackerPeopleResponse500
     | RemoveTrackerPeopleResponse503
 ]:
-    r"""Remove people from tracker list
+    """Remove people from tracker list
 
      Remove people from a person tracker list. Deactivates them so they are no longer monitored, but
     preserves their signal history. Uses the same identifier format as add-people.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -318,15 +318,15 @@ async def asyncio(
     | RemoveTrackerPeopleResponse503
     | None
 ):
-    r"""Remove people from tracker list
+    """Remove people from tracker list
 
      Remove people from a person tracker list. Deactivates them so they are no longer monitored, but
     preserves their signal history. Uses the same identifier format as add-people.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):

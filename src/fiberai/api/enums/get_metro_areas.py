@@ -147,7 +147,7 @@ def sync_detailed(
     | GetMetroAreasResponse500
     | GetMetroAreasResponse503
 ]:
-    r"""List preset metro areas
+    """List preset metro areas
 
      List all preset metro area regions available for geographic filtering. Each region includes a slug
     (usable with the `preset-region` strategy in location-based search endpoints), geometry (center +
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -197,7 +197,7 @@ def sync(
     | GetMetroAreasResponse503
     | None
 ):
-    r"""List preset metro areas
+    """List preset metro areas
 
      List all preset metro area regions available for geographic filtering. Each region includes a slug
     (usable with the `preset-region` strategy in location-based search endpoints), geometry (center +
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | GetMetroAreasResponse500
     | GetMetroAreasResponse503
 ]:
-    r"""List preset metro areas
+    """List preset metro areas
 
      List all preset metro area regions available for geographic filtering. Each region includes a slug
     (usable with the `preset-region` strategy in location-based search endpoints), geometry (center +
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -289,7 +289,7 @@ async def asyncio(
     | GetMetroAreasResponse503
     | None
 ):
-    r"""List preset metro areas
+    """List preset metro areas
 
      List all preset metro area regions available for geographic filtering. Each region includes a slug
     (usable with the `preset-region` strategy in location-based search endpoints), geometry (center +
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):

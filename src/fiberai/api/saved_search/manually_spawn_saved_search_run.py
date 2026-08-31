@@ -147,14 +147,14 @@ def sync_detailed(
     | ManuallySpawnSavedSearchRunResponse500
     | ManuallySpawnSavedSearchRunResponse503
 ]:
-    r"""Manually spawn saved search run
+    """Manually spawn saved search run
 
      Manually spawn a new saved search run
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per prospect/company found in search&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ManuallySpawnSavedSearchRunBody):
@@ -195,14 +195,14 @@ def sync(
     | ManuallySpawnSavedSearchRunResponse503
     | None
 ):
-    r"""Manually spawn saved search run
+    """Manually spawn saved search run
 
      Manually spawn a new saved search run
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per prospect/company found in search&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ManuallySpawnSavedSearchRunBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | ManuallySpawnSavedSearchRunResponse500
     | ManuallySpawnSavedSearchRunResponse503
 ]:
-    r"""Manually spawn saved search run
+    """Manually spawn saved search run
 
      Manually spawn a new saved search run
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per prospect/company found in search&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ManuallySpawnSavedSearchRunBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | ManuallySpawnSavedSearchRunResponse503
     | None
 ):
-    r"""Manually spawn saved search run
+    """Manually spawn saved search run
 
      Manually spawn a new saved search run
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per prospect/company found in search&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ManuallySpawnSavedSearchRunBody):

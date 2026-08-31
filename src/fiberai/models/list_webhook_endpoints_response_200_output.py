@@ -44,7 +44,7 @@ class ListWebhookEndpointsResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.list_webhook_endpoints_response_200_output_endpoints_item import (
-            ListWebhookEndpointsResponse200OutputEndpointsItem,
+            ListWebhookEndpointsResponse200OutputEndpointsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

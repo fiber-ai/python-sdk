@@ -147,15 +147,15 @@ def sync_detailed(
     | QuickPersonResolveResponse500
     | QuickPersonResolveResponse503
 ]:
-    r"""Quickly resolve person identifiers
+    """Quickly resolve person identifiers
 
      Resolves many person identifiers — LinkedIn slug, numeric LinkedIn user ID, LinkedIn profile URL, or
     LinkedIn entity URN — to full profile records in a single request.
 
     <span>⚡ <strong>Rate limit:</strong> 1500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per person resolved&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per person resolved&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (QuickPersonResolveBody):
@@ -196,15 +196,15 @@ def sync(
     | QuickPersonResolveResponse503
     | None
 ):
-    r"""Quickly resolve person identifiers
+    """Quickly resolve person identifiers
 
      Resolves many person identifiers — LinkedIn slug, numeric LinkedIn user ID, LinkedIn profile URL, or
     LinkedIn entity URN — to full profile records in a single request.
 
     <span>⚡ <strong>Rate limit:</strong> 1500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per person resolved&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per person resolved&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (QuickPersonResolveBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | QuickPersonResolveResponse500
     | QuickPersonResolveResponse503
 ]:
-    r"""Quickly resolve person identifiers
+    """Quickly resolve person identifiers
 
      Resolves many person identifiers — LinkedIn slug, numeric LinkedIn user ID, LinkedIn profile URL, or
     LinkedIn entity URN — to full profile records in a single request.
 
     <span>⚡ <strong>Rate limit:</strong> 1500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per person resolved&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per person resolved&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (QuickPersonResolveBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | QuickPersonResolveResponse503
     | None
 ):
-    r"""Quickly resolve person identifiers
+    """Quickly resolve person identifiers
 
      Resolves many person identifiers — LinkedIn slug, numeric LinkedIn user ID, LinkedIn profile URL, or
     LinkedIn entity URN — to full profile records in a single request.
 
     <span>⚡ <strong>Rate limit:</strong> 1500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per person resolved&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per person resolved&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (QuickPersonResolveBody):

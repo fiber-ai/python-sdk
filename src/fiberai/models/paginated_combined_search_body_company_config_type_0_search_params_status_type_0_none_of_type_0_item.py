@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStatusType0NoneOfType0Item(str, Enum):
+class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStatusType0NoneOfType0Item(StrEnum):
     ACQUIRED = "acquired"
     ACTIVE = "active"
     CLOSED = "closed"

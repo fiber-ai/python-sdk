@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class KitchenSinkProfileResponse200OutputDataItemCurrentJobType0SeniorityType2Type1(str, Enum):
+class KitchenSinkProfileResponse200OutputDataItemCurrentJobType0SeniorityType2Type1(StrEnum):
     ASSOCIATE = "Associate"
     DIRECTOR = "Director"
     ENTRY_LEVEL = "Entry level"

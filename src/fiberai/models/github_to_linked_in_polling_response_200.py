@@ -58,16 +58,16 @@ class GithubToLinkedInPollingResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.github_to_linked_in_polling_response_200_charge_info_type_0 import (
-            GithubToLinkedInPollingResponse200ChargeInfoType0,
+            GithubToLinkedInPollingResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.github_to_linked_in_polling_response_200_charge_info_type_1 import (
-            GithubToLinkedInPollingResponse200ChargeInfoType1,
+            GithubToLinkedInPollingResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.github_to_linked_in_polling_response_200_charge_info_type_2 import (
-            GithubToLinkedInPollingResponse200ChargeInfoType2,
+            GithubToLinkedInPollingResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.github_to_linked_in_polling_response_200_charge_info_type_3 import (
-            GithubToLinkedInPollingResponse200ChargeInfoType3,
+            GithubToLinkedInPollingResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class GithubToLinkedInPollingResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.github_to_linked_in_polling_response_200_charge_info_type_0 import (
-            GithubToLinkedInPollingResponse200ChargeInfoType0,
+            GithubToLinkedInPollingResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.github_to_linked_in_polling_response_200_charge_info_type_1 import (
-            GithubToLinkedInPollingResponse200ChargeInfoType1,
+            GithubToLinkedInPollingResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.github_to_linked_in_polling_response_200_charge_info_type_2 import (
-            GithubToLinkedInPollingResponse200ChargeInfoType2,
+            GithubToLinkedInPollingResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.github_to_linked_in_polling_response_200_charge_info_type_3 import (
-            GithubToLinkedInPollingResponse200ChargeInfoType3,
+            GithubToLinkedInPollingResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.github_to_linked_in_polling_response_200_charge_info_type_4 import (
-            GithubToLinkedInPollingResponse200ChargeInfoType4,
+            GithubToLinkedInPollingResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.github_to_linked_in_polling_response_200_output import GithubToLinkedInPollingResponse200Output
+        from ..models.github_to_linked_in_polling_response_200_output import (
+            GithubToLinkedInPollingResponse200Output,  # noqa: PLC0415
+        )
         from ..models.github_to_linked_in_polling_response_200_warnings_type_0_item import (
-            GithubToLinkedInPollingResponse200WarningsType0Item,
+            GithubToLinkedInPollingResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

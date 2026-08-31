@@ -204,16 +204,16 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_current_job_type_0 import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCurrentJobType0,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_custom_data_type_0 import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCustomDataType0,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCustomDataType0,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_inferred_location_type_0 import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileInferredLocationType0,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_verifications_type_0 import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileVerificationsType0,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileVerificationsType0,  # noqa: PLC0415
         )
 
         primary_slug = self.primary_slug
@@ -732,58 +732,58 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_articles_type_0_item import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileArticlesType0Item,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileArticlesType0Item,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_certifications_type_0_item import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCertificationsType0Item,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCertificationsType0Item,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_courses_type_0_item import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCoursesType0Item,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCoursesType0Item,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_current_job_type_0 import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCurrentJobType0,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_custom_data_type_0 import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCustomDataType0,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCustomDataType0,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_detailed_education_type_0_item import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileDetailedEducationType0Item,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileDetailedEducationType0Item,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_detailed_work_experiences_type_0_item import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileDetailedWorkExperiencesType0Item,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileDetailedWorkExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_education_type_0_item import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileEducationType0Item,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileEducationType0Item,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_experiences_type_0_item import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileExperiencesType0Item,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_inferred_location_type_0 import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileInferredLocationType0,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_languages_type_0_item import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileLanguagesType0Item,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileLanguagesType0Item,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_organizations_type_0_item import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileOrganizationsType0Item,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileOrganizationsType0Item,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_patents_type_0_item import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfilePatentsType0Item,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfilePatentsType0Item,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_projects_type_0_item import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileProjectsType0Item,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileProjectsType0Item,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_publications_type_0_item import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfilePublicationsType0Item,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfilePublicationsType0Item,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_tenures_type_0_item import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileTenuresType0Item,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileTenuresType0Item,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_verifications_type_0 import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileVerificationsType0,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileVerificationsType0,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_volunteering_type_0_item import (
-            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileVolunteeringType0Item,
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileVolunteeringType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

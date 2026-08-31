@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class MultiSourceSearchResponse200OutputDataType0Type(str, Enum):
+class MultiSourceSearchResponse200OutputDataType0Type(StrEnum):
     COMPANIES = "companies"
 
     def __str__(self) -> str:

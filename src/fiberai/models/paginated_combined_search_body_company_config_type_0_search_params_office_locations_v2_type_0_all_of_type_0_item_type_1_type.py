@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType1Type(str, Enum):
+class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0AllOfType0ItemType1Type(StrEnum):
     COUNTRY_OR_REGION = "country-or-region"
 
     def __str__(self) -> str:

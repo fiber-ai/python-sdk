@@ -147,14 +147,14 @@ def sync_detailed(
     | GetCompanyExclusionListsResponse500
     | GetCompanyExclusionListsResponse503
 ]:
-    r"""Get company exclusion list
+    """Get company exclusion list
 
      Get company exclusion list
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCompanyExclusionListsBody):
@@ -195,14 +195,14 @@ def sync(
     | GetCompanyExclusionListsResponse503
     | None
 ):
-    r"""Get company exclusion list
+    """Get company exclusion list
 
      Get company exclusion list
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCompanyExclusionListsBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | GetCompanyExclusionListsResponse500
     | GetCompanyExclusionListsResponse503
 ]:
-    r"""Get company exclusion list
+    """Get company exclusion list
 
      Get company exclusion list
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCompanyExclusionListsBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | GetCompanyExclusionListsResponse503
     | None
 ):
-    r"""Get company exclusion list
+    """Get company exclusion list
 
      Get company exclusion list
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCompanyExclusionListsBody):

@@ -37,7 +37,7 @@ class CombinedSearchCountBodyProfileParamsEducationType0AnyOfType0ItemStartedSch
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_education_type_0_any_of_type_0_item_started_school_at_type_0_range_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationType0AnyOfType0ItemStartedSchoolAtType0RangeType0,
+            CombinedSearchCountBodyProfileParamsEducationType0AnyOfType0ItemStartedSchoolAtType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -67,7 +67,7 @@ class CombinedSearchCountBodyProfileParamsEducationType0AnyOfType0ItemStartedSch
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_education_type_0_any_of_type_0_item_started_school_at_type_0_range_type_0 import (
-            CombinedSearchCountBodyProfileParamsEducationType0AnyOfType0ItemStartedSchoolAtType0RangeType0,
+            CombinedSearchCountBodyProfileParamsEducationType0AnyOfType0ItemStartedSchoolAtType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

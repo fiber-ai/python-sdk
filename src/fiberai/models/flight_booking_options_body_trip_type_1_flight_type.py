@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FlightBookingOptionsBodyTripType1FlightType(str, Enum):
+class FlightBookingOptionsBodyTripType1FlightType(StrEnum):
     ROUND_TRIP = "round_trip"
 
     def __str__(self) -> str:

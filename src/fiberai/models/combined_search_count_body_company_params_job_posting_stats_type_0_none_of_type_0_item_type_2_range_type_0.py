@@ -50,7 +50,7 @@ class CombinedSearchCountBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemTyp
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_company_params_job_posting_stats_type_0_none_of_type_0_item_type_2_range_type_0_range import (
-            CombinedSearchCountBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Range,
+            CombinedSearchCountBodyCompanyParamsJobPostingStatsType0NoneOfType0ItemType2RangeType0Range,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

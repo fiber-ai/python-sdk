@@ -52,7 +52,7 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItemNumMatchingLocationsTyp
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_num_matching_locations_type_0_matched_offices_item import (
-            KitchenSinkBulkCompanyResponse200OutputDataItemItemNumMatchingLocationsType0MatchedOfficesItem,
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemNumMatchingLocationsType0MatchedOfficesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

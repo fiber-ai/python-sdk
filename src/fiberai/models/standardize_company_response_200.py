@@ -58,16 +58,16 @@ class StandardizeCompanyResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.standardize_company_response_200_charge_info_type_0 import (
-            StandardizeCompanyResponse200ChargeInfoType0,
+            StandardizeCompanyResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.standardize_company_response_200_charge_info_type_1 import (
-            StandardizeCompanyResponse200ChargeInfoType1,
+            StandardizeCompanyResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.standardize_company_response_200_charge_info_type_2 import (
-            StandardizeCompanyResponse200ChargeInfoType2,
+            StandardizeCompanyResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.standardize_company_response_200_charge_info_type_3 import (
-            StandardizeCompanyResponse200ChargeInfoType3,
+            StandardizeCompanyResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class StandardizeCompanyResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.standardize_company_response_200_charge_info_type_0 import (
-            StandardizeCompanyResponse200ChargeInfoType0,
+            StandardizeCompanyResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.standardize_company_response_200_charge_info_type_1 import (
-            StandardizeCompanyResponse200ChargeInfoType1,
+            StandardizeCompanyResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.standardize_company_response_200_charge_info_type_2 import (
-            StandardizeCompanyResponse200ChargeInfoType2,
+            StandardizeCompanyResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.standardize_company_response_200_charge_info_type_3 import (
-            StandardizeCompanyResponse200ChargeInfoType3,
+            StandardizeCompanyResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.standardize_company_response_200_charge_info_type_4 import (
-            StandardizeCompanyResponse200ChargeInfoType4,
+            StandardizeCompanyResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.standardize_company_response_200_output import StandardizeCompanyResponse200Output
+        from ..models.standardize_company_response_200_output import (
+            StandardizeCompanyResponse200Output,  # noqa: PLC0415
+        )
         from ..models.standardize_company_response_200_warnings_type_0_item import (
-            StandardizeCompanyResponse200WarningsType0Item,
+            StandardizeCompanyResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

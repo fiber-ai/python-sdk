@@ -56,9 +56,11 @@ class GetDepartmentSizeResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_department_size_response_200_output_company import GetDepartmentSizeResponse200OutputCompany
+        from ..models.get_department_size_response_200_output_company import (
+            GetDepartmentSizeResponse200OutputCompany,  # noqa: PLC0415
+        )
         from ..models.get_department_size_response_200_output_departments_item import (
-            GetDepartmentSizeResponse200OutputDepartmentsItem,
+            GetDepartmentSizeResponse200OutputDepartmentsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

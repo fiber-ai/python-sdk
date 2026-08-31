@@ -58,16 +58,16 @@ class BlueCollarResolveCompanyResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.blue_collar_resolve_company_response_200_charge_info_type_0 import (
-            BlueCollarResolveCompanyResponse200ChargeInfoType0,
+            BlueCollarResolveCompanyResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.blue_collar_resolve_company_response_200_charge_info_type_1 import (
-            BlueCollarResolveCompanyResponse200ChargeInfoType1,
+            BlueCollarResolveCompanyResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.blue_collar_resolve_company_response_200_charge_info_type_2 import (
-            BlueCollarResolveCompanyResponse200ChargeInfoType2,
+            BlueCollarResolveCompanyResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.blue_collar_resolve_company_response_200_charge_info_type_3 import (
-            BlueCollarResolveCompanyResponse200ChargeInfoType3,
+            BlueCollarResolveCompanyResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class BlueCollarResolveCompanyResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.blue_collar_resolve_company_response_200_charge_info_type_0 import (
-            BlueCollarResolveCompanyResponse200ChargeInfoType0,
+            BlueCollarResolveCompanyResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.blue_collar_resolve_company_response_200_charge_info_type_1 import (
-            BlueCollarResolveCompanyResponse200ChargeInfoType1,
+            BlueCollarResolveCompanyResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.blue_collar_resolve_company_response_200_charge_info_type_2 import (
-            BlueCollarResolveCompanyResponse200ChargeInfoType2,
+            BlueCollarResolveCompanyResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.blue_collar_resolve_company_response_200_charge_info_type_3 import (
-            BlueCollarResolveCompanyResponse200ChargeInfoType3,
+            BlueCollarResolveCompanyResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.blue_collar_resolve_company_response_200_charge_info_type_4 import (
-            BlueCollarResolveCompanyResponse200ChargeInfoType4,
+            BlueCollarResolveCompanyResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.blue_collar_resolve_company_response_200_output import BlueCollarResolveCompanyResponse200Output
+        from ..models.blue_collar_resolve_company_response_200_output import (
+            BlueCollarResolveCompanyResponse200Output,  # noqa: PLC0415
+        )
         from ..models.blue_collar_resolve_company_response_200_warnings_type_0_item import (
-            BlueCollarResolveCompanyResponse200WarningsType0Item,
+            BlueCollarResolveCompanyResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

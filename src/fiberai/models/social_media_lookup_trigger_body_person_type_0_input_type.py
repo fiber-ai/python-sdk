@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class SocialMediaLookupTriggerBodyPersonType0InputType(str, Enum):
+class SocialMediaLookupTriggerBodyPersonType0InputType(StrEnum):
     LINKEDINURL = "linkedinUrl"
 
     def __str__(self) -> str:

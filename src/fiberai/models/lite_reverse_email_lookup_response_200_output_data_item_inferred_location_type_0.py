@@ -56,7 +56,7 @@ class LiteReverseEmailLookupResponse200OutputDataItemInferredLocationType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_inferred_location_type_0_coordinates_type_0 import (
-            LiteReverseEmailLookupResponse200OutputDataItemInferredLocationType0CoordinatesType0,
+            LiteReverseEmailLookupResponse200OutputDataItemInferredLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         street_address: None | str | Unset
@@ -176,7 +176,7 @@ class LiteReverseEmailLookupResponse200OutputDataItemInferredLocationType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_inferred_location_type_0_coordinates_type_0 import (
-            LiteReverseEmailLookupResponse200OutputDataItemInferredLocationType0CoordinatesType0,
+            LiteReverseEmailLookupResponse200OutputDataItemInferredLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

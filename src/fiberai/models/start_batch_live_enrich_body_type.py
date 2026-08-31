@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class StartBatchLiveEnrichBodyType(str, Enum):
+class StartBatchLiveEnrichBodyType(StrEnum):
     COMPANY = "COMPANY"
     PROFILE = "PROFILE"
 

@@ -123,10 +123,10 @@ class GetAcceleratorsResponse200OutputItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_accelerators_response_200_output_item_batches_type_0_item import (
-            GetAcceleratorsResponse200OutputItemBatchesType0Item,
+            GetAcceleratorsResponse200OutputItemBatchesType0Item,  # noqa: PLC0415
         )
         from ..models.get_accelerators_response_200_output_item_years_type_0_item import (
-            GetAcceleratorsResponse200OutputItemYearsType0Item,
+            GetAcceleratorsResponse200OutputItemYearsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -147,14 +147,14 @@ def sync_detailed(
     | GetJobChangeListResponse500
     | GetJobChangeListResponse503
 ]:
-    r"""Get a job changes list
+    """Get a job changes list
 
      Get a job changes list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetJobChangeListBody):
@@ -195,14 +195,14 @@ def sync(
     | GetJobChangeListResponse503
     | None
 ):
-    r"""Get a job changes list
+    """Get a job changes list
 
      Get a job changes list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetJobChangeListBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | GetJobChangeListResponse500
     | GetJobChangeListResponse503
 ]:
-    r"""Get a job changes list
+    """Get a job changes list
 
      Get a job changes list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetJobChangeListBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | GetJobChangeListResponse503
     | None
 ):
-    r"""Get a job changes list
+    """Get a job changes list
 
      Get a job changes list.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetJobChangeListBody):

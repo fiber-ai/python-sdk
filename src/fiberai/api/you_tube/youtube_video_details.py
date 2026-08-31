@@ -147,15 +147,15 @@ def sync_detailed(
     | YoutubeVideoDetailsResponse500
     | YoutubeVideoDetailsResponse503
 ]:
-    r"""Fetch YouTube video details
+    """Fetch YouTube video details
 
      Fetches detailed metadata for a YouTube video including title, view count, like count, channel
     information, chapters, key moments, and available transcript languages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeVideoDetailsBody):
@@ -196,15 +196,15 @@ def sync(
     | YoutubeVideoDetailsResponse503
     | None
 ):
-    r"""Fetch YouTube video details
+    """Fetch YouTube video details
 
      Fetches detailed metadata for a YouTube video including title, view count, like count, channel
     information, chapters, key moments, and available transcript languages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeVideoDetailsBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | YoutubeVideoDetailsResponse500
     | YoutubeVideoDetailsResponse503
 ]:
-    r"""Fetch YouTube video details
+    """Fetch YouTube video details
 
      Fetches detailed metadata for a YouTube video including title, view count, like count, channel
     information, chapters, key moments, and available transcript languages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeVideoDetailsBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | YoutubeVideoDetailsResponse503
     | None
 ):
-    r"""Fetch YouTube video details
+    """Fetch YouTube video details
 
      Fetches detailed metadata for a YouTube video including title, view count, like count, channel
     information, chapters, key moments, and available transcript languages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeVideoDetailsBody):

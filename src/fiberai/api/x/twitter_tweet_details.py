@@ -147,15 +147,15 @@ def sync_detailed(
     | TwitterTweetDetailsResponse500
     | TwitterTweetDetailsResponse503
 ]:
-    r"""Fetch Twitter/X tweet details
+    """Fetch Twitter/X tweet details
 
      Fetches details for a single tweet by its numeric ID. Returns full text, engagement metrics (likes,
     retweets, replies, views), and metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterTweetDetailsBody):
@@ -196,15 +196,15 @@ def sync(
     | TwitterTweetDetailsResponse503
     | None
 ):
-    r"""Fetch Twitter/X tweet details
+    """Fetch Twitter/X tweet details
 
      Fetches details for a single tweet by its numeric ID. Returns full text, engagement metrics (likes,
     retweets, replies, views), and metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterTweetDetailsBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TwitterTweetDetailsResponse500
     | TwitterTweetDetailsResponse503
 ]:
-    r"""Fetch Twitter/X tweet details
+    """Fetch Twitter/X tweet details
 
      Fetches details for a single tweet by its numeric ID. Returns full text, engagement metrics (likes,
     retweets, replies, views), and metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterTweetDetailsBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TwitterTweetDetailsResponse503
     | None
 ):
-    r"""Fetch Twitter/X tweet details
+    """Fetch Twitter/X tweet details
 
      Fetches details for a single tweet by its numeric ID. Returns full text, engagement metrics (likes,
     retweets, replies, views), and metadata.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterTweetDetailsBody):

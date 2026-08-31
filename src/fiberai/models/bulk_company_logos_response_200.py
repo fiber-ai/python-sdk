@@ -48,16 +48,16 @@ class BulkCompanyLogosResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.bulk_company_logos_response_200_charge_info_type_0 import (
-            BulkCompanyLogosResponse200ChargeInfoType0,
+            BulkCompanyLogosResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.bulk_company_logos_response_200_charge_info_type_1 import (
-            BulkCompanyLogosResponse200ChargeInfoType1,
+            BulkCompanyLogosResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.bulk_company_logos_response_200_charge_info_type_2 import (
-            BulkCompanyLogosResponse200ChargeInfoType2,
+            BulkCompanyLogosResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.bulk_company_logos_response_200_charge_info_type_3 import (
-            BulkCompanyLogosResponse200ChargeInfoType3,
+            BulkCompanyLogosResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class BulkCompanyLogosResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.bulk_company_logos_response_200_charge_info_type_0 import (
-            BulkCompanyLogosResponse200ChargeInfoType0,
+            BulkCompanyLogosResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.bulk_company_logos_response_200_charge_info_type_1 import (
-            BulkCompanyLogosResponse200ChargeInfoType1,
+            BulkCompanyLogosResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.bulk_company_logos_response_200_charge_info_type_2 import (
-            BulkCompanyLogosResponse200ChargeInfoType2,
+            BulkCompanyLogosResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.bulk_company_logos_response_200_charge_info_type_3 import (
-            BulkCompanyLogosResponse200ChargeInfoType3,
+            BulkCompanyLogosResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.bulk_company_logos_response_200_charge_info_type_4 import (
-            BulkCompanyLogosResponse200ChargeInfoType4,
+            BulkCompanyLogosResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.bulk_company_logos_response_200_output import BulkCompanyLogosResponse200Output
+        from ..models.bulk_company_logos_response_200_output import BulkCompanyLogosResponse200Output  # noqa: PLC0415
         from ..models.bulk_company_logos_response_200_warnings_type_0_item import (
-            BulkCompanyLogosResponse200WarningsType0Item,
+            BulkCompanyLogosResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

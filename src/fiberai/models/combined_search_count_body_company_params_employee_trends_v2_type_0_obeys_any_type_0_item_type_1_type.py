@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType1Type(str, Enum):
+class CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType1Type(StrEnum):
     NUMERIC_CHANGE = "numeric_change"
 
     def __str__(self) -> str:

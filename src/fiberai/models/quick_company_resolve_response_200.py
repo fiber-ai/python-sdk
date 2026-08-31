@@ -58,16 +58,16 @@ class QuickCompanyResolveResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.quick_company_resolve_response_200_charge_info_type_0 import (
-            QuickCompanyResolveResponse200ChargeInfoType0,
+            QuickCompanyResolveResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_charge_info_type_1 import (
-            QuickCompanyResolveResponse200ChargeInfoType1,
+            QuickCompanyResolveResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_charge_info_type_2 import (
-            QuickCompanyResolveResponse200ChargeInfoType2,
+            QuickCompanyResolveResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_charge_info_type_3 import (
-            QuickCompanyResolveResponse200ChargeInfoType3,
+            QuickCompanyResolveResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class QuickCompanyResolveResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.quick_company_resolve_response_200_charge_info_type_0 import (
-            QuickCompanyResolveResponse200ChargeInfoType0,
+            QuickCompanyResolveResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_charge_info_type_1 import (
-            QuickCompanyResolveResponse200ChargeInfoType1,
+            QuickCompanyResolveResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_charge_info_type_2 import (
-            QuickCompanyResolveResponse200ChargeInfoType2,
+            QuickCompanyResolveResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_charge_info_type_3 import (
-            QuickCompanyResolveResponse200ChargeInfoType3,
+            QuickCompanyResolveResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_charge_info_type_4 import (
-            QuickCompanyResolveResponse200ChargeInfoType4,
+            QuickCompanyResolveResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.quick_company_resolve_response_200_output import QuickCompanyResolveResponse200Output
+        from ..models.quick_company_resolve_response_200_output import (
+            QuickCompanyResolveResponse200Output,  # noqa: PLC0415
+        )
         from ..models.quick_company_resolve_response_200_warnings_type_0_item import (
-            QuickCompanyResolveResponse200WarningsType0Item,
+            QuickCompanyResolveResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

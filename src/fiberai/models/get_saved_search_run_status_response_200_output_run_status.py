@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetSavedSearchRunStatusResponse200OutputRunStatus(str, Enum):
+class GetSavedSearchRunStatusResponse200OutputRunStatus(StrEnum):
     COMPLETED = "COMPLETED"
     FAILED = "FAILED"
     NOT_STARTED = "NOT_STARTED"

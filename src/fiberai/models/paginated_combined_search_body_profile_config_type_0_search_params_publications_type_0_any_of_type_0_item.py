@@ -34,7 +34,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPublicationsType0
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_publications_type_0_any_of_type_0_item_keywords_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPublicationsType0AnyOfType0ItemKeywordsType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPublicationsType0AnyOfType0ItemKeywordsType0,  # noqa: PLC0415
         )
 
         keywords: dict[str, Any] | None | Unset
@@ -59,7 +59,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPublicationsType0
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_publications_type_0_any_of_type_0_item_keywords_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPublicationsType0AnyOfType0ItemKeywordsType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPublicationsType0AnyOfType0ItemKeywordsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

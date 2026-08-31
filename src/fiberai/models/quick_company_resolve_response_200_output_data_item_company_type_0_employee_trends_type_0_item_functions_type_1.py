@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class QuickCompanyResolveResponse200OutputDataItemCompanyType0EmployeeTrendsType0ItemFunctionsType1(str, Enum):
+class QuickCompanyResolveResponse200OutputDataItemCompanyType0EmployeeTrendsType0ItemFunctionsType1(StrEnum):
     ACCOUNTING = "accounting"
     ADMINISTRATIVE = "administrative"
     ARTS_AND_DESIGN = "arts_and_design"

@@ -32,7 +32,7 @@ class CreateTrackerCompanyListResponse402:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_tracker_company_list_response_402_out_of_credits_alert_type_0 import (
-            CreateTrackerCompanyListResponse402OutOfCreditsAlertType0,
+            CreateTrackerCompanyListResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         message = self.message
@@ -60,7 +60,7 @@ class CreateTrackerCompanyListResponse402:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_response_402_out_of_credits_alert_type_0 import (
-            CreateTrackerCompanyListResponse402OutOfCreditsAlertType0,
+            CreateTrackerCompanyListResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

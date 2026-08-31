@@ -125,7 +125,7 @@ class CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_count_body_search_params_employee_trends_v2_type_0_obeys_all_type_0_item_type_1_change import (
-            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType1Change,
+            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType1Change,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -61,7 +61,7 @@ class JobPostingSearchBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.job_posting_search_body_search_params import JobPostingSearchBodySearchParams
+        from ..models.job_posting_search_body_search_params import JobPostingSearchBodySearchParams  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

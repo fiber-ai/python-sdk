@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CardsAttachResponse429Type0Reason(str, Enum):
+class CardsAttachResponse429Type0Reason(StrEnum):
     ALREADY_ATTACHED = "already_attached"
     ATTACH_IN_PROGRESS = "attach_in_progress"
     BILLING_PROFILE_CONFLICT = "billing_profile_conflict"

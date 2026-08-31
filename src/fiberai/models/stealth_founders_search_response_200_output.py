@@ -52,10 +52,10 @@ class StealthFoundersSearchResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.stealth_founders_search_response_200_output_data_item import (
-            StealthFoundersSearchResponse200OutputDataItem,
+            StealthFoundersSearchResponse200OutputDataItem,  # noqa: PLC0415
         )
         from ..models.stealth_founders_search_response_200_output_pagination import (
-            StealthFoundersSearchResponse200OutputPagination,
+            StealthFoundersSearchResponse200OutputPagination,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

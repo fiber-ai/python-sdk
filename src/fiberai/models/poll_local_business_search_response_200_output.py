@@ -75,10 +75,10 @@ class PollLocalBusinessSearchResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_local_business_search_response_200_output_data import (
-            PollLocalBusinessSearchResponse200OutputData,
+            PollLocalBusinessSearchResponse200OutputData,  # noqa: PLC0415
         )
         from ..models.poll_local_business_search_response_200_output_progress import (
-            PollLocalBusinessSearchResponse200OutputProgress,
+            PollLocalBusinessSearchResponse200OutputProgress,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

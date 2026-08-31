@@ -66,7 +66,7 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRevenueEstim
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_revenue_estimate_type_0_value_usd import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRevenueEstimateType0ValueUsd,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemRevenueEstimateType0ValueUsd,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

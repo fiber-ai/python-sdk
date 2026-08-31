@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class AddCompaniesToExclusionListResponse200ChargeInfoType4Method(str, Enum):
+class AddCompaniesToExclusionListResponse200ChargeInfoType4Method(StrEnum):
     CREDITS_REFUNDED = "credits-refunded"
 
     def __str__(self) -> str:

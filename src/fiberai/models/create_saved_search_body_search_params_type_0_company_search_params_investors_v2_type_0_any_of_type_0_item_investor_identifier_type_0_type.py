@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsInvestorsV2Type0AnyOfType0ItemInvestorIdentifierType0Type(
-    str, Enum
+    StrEnum
 ):
     DOMAIN = "domain"
 

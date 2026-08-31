@@ -152,7 +152,7 @@ def sync_detailed(
     | SendTestWebhookEventResponse500
     | SendTestWebhookEventResponse503
 ]:
-    r"""Send test webhook event
+    """Send test webhook event
 
      Send an example payload of the given event type to a single webhook endpoint. Use this to verify
     your receiver accepts deliveries and parses payloads correctly before relying on real events.
@@ -160,8 +160,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):
@@ -205,7 +205,7 @@ def sync(
     | SendTestWebhookEventResponse503
     | None
 ):
-    r"""Send test webhook event
+    """Send test webhook event
 
      Send an example payload of the given event type to a single webhook endpoint. Use this to verify
     your receiver accepts deliveries and parses payloads correctly before relying on real events.
@@ -213,8 +213,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):
@@ -252,7 +252,7 @@ async def asyncio_detailed(
     | SendTestWebhookEventResponse500
     | SendTestWebhookEventResponse503
 ]:
-    r"""Send test webhook event
+    """Send test webhook event
 
      Send an example payload of the given event type to a single webhook endpoint. Use this to verify
     your receiver accepts deliveries and parses payloads correctly before relying on real events.
@@ -260,8 +260,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):
@@ -303,7 +303,7 @@ async def asyncio(
     | SendTestWebhookEventResponse503
     | None
 ):
-    r"""Send test webhook event
+    """Send test webhook event
 
      Send an example payload of the given event type to a single webhook endpoint. Use this to verify
     your receiver accepts deliveries and parses payloads correctly before relying on real events.
@@ -311,8 +311,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):

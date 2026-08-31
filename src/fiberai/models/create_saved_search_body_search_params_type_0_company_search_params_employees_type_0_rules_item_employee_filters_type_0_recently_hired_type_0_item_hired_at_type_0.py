@@ -43,7 +43,7 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0Rul
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_0_range_type_0 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType0RangeType0,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -74,7 +74,7 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0Rul
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item_hired_at_type_0_range_type_0 import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType0RangeType0,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0ItemHiredAtType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

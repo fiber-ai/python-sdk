@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ValidatePhoneNumberResponse200OutputIsReachable(str, Enum):
+class ValidatePhoneNumberResponse200OutputIsReachable(StrEnum):
     BAD_NUMBER = "bad_number"
     NOT_REACHABLE = "not_reachable"
     REACHABLE = "reachable"

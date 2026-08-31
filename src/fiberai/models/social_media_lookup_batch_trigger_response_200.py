@@ -62,16 +62,16 @@ class SocialMediaLookupBatchTriggerResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.social_media_lookup_batch_trigger_response_200_charge_info_type_0 import (
-            SocialMediaLookupBatchTriggerResponse200ChargeInfoType0,
+            SocialMediaLookupBatchTriggerResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_batch_trigger_response_200_charge_info_type_1 import (
-            SocialMediaLookupBatchTriggerResponse200ChargeInfoType1,
+            SocialMediaLookupBatchTriggerResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_batch_trigger_response_200_charge_info_type_2 import (
-            SocialMediaLookupBatchTriggerResponse200ChargeInfoType2,
+            SocialMediaLookupBatchTriggerResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_batch_trigger_response_200_charge_info_type_3 import (
-            SocialMediaLookupBatchTriggerResponse200ChargeInfoType3,
+            SocialMediaLookupBatchTriggerResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -127,25 +127,25 @@ class SocialMediaLookupBatchTriggerResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.social_media_lookup_batch_trigger_response_200_charge_info_type_0 import (
-            SocialMediaLookupBatchTriggerResponse200ChargeInfoType0,
+            SocialMediaLookupBatchTriggerResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_batch_trigger_response_200_charge_info_type_1 import (
-            SocialMediaLookupBatchTriggerResponse200ChargeInfoType1,
+            SocialMediaLookupBatchTriggerResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_batch_trigger_response_200_charge_info_type_2 import (
-            SocialMediaLookupBatchTriggerResponse200ChargeInfoType2,
+            SocialMediaLookupBatchTriggerResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_batch_trigger_response_200_charge_info_type_3 import (
-            SocialMediaLookupBatchTriggerResponse200ChargeInfoType3,
+            SocialMediaLookupBatchTriggerResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_batch_trigger_response_200_charge_info_type_4 import (
-            SocialMediaLookupBatchTriggerResponse200ChargeInfoType4,
+            SocialMediaLookupBatchTriggerResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_batch_trigger_response_200_output import (
-            SocialMediaLookupBatchTriggerResponse200Output,
+            SocialMediaLookupBatchTriggerResponse200Output,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_batch_trigger_response_200_warnings_type_0_item import (
-            SocialMediaLookupBatchTriggerResponse200WarningsType0Item,
+            SocialMediaLookupBatchTriggerResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

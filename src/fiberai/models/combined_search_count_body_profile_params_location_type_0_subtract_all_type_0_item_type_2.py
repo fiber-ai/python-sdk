@@ -53,7 +53,7 @@ class CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_location_type_0_subtract_all_type_0_item_type_2_vertices_item import (
-            CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2VerticesItem,
+            CombinedSearchCountBodyProfileParamsLocationType0SubtractAllType0ItemType2VerticesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

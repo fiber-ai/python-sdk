@@ -40,10 +40,10 @@ class CombinedSearchCountBodyProfileParamsUnemploymentType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_unemployment_type_0_became_unemployed_at_type_0 import (
-            CombinedSearchCountBodyProfileParamsUnemploymentType0BecameUnemployedAtType0,
+            CombinedSearchCountBodyProfileParamsUnemploymentType0BecameUnemployedAtType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_unemployment_type_0_became_unemployed_at_type_1 import (
-            CombinedSearchCountBodyProfileParamsUnemploymentType0BecameUnemployedAtType1,
+            CombinedSearchCountBodyProfileParamsUnemploymentType0BecameUnemployedAtType1,  # noqa: PLC0415
         )
 
         is_unemployed = self.is_unemployed
@@ -77,10 +77,10 @@ class CombinedSearchCountBodyProfileParamsUnemploymentType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_unemployment_type_0_became_unemployed_at_type_0 import (
-            CombinedSearchCountBodyProfileParamsUnemploymentType0BecameUnemployedAtType0,
+            CombinedSearchCountBodyProfileParamsUnemploymentType0BecameUnemployedAtType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_unemployment_type_0_became_unemployed_at_type_1 import (
-            CombinedSearchCountBodyProfileParamsUnemploymentType0BecameUnemployedAtType1,
+            CombinedSearchCountBodyProfileParamsUnemploymentType0BecameUnemployedAtType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

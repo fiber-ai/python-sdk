@@ -153,32 +153,32 @@ class UpdateTrackerCompanyListBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.acquired_company import AcquiredCompany
-        from ..models.company_description_changed import CompanyDescriptionChanged
-        from ..models.company_logo_changed import CompanyLogoChanged
-        from ..models.company_name_changed import CompanyNameChanged
-        from ..models.company_news import CompanyNews
-        from ..models.company_posted import CompanyPosted
-        from ..models.company_posted_with_keyword import CompanyPostedWithKeyword
-        from ..models.company_status_changed import CompanyStatusChanged
-        from ..models.company_went_inactive import CompanyWentInactive
-        from ..models.department_size_threshold import DepartmentSizeThreshold
-        from ..models.employee_count_milestone import EmployeeCountMilestone
-        from ..models.follower_count_growth import FollowerCountGrowth
-        from ..models.funding_stage_changed import FundingStageChanged
-        from ..models.headcount_crossed_threshold import HeadcountCrossedThreshold
-        from ..models.headcount_growth_percent import HeadcountGrowthPercent
-        from ..models.hq_location_changed import HQLocationChanged
-        from ..models.job_posting_in_function import JobPostingInFunction
-        from ..models.job_posting_with_keyword import JobPostingWithKeyword
-        from ..models.new_funding_round import NewFundingRound
-        from ..models.new_investor import NewInvestor
-        from ..models.new_office_location import NewOfficeLocation
-        from ..models.news_with_keyword import NewsWithKeyword
-        from ..models.recently_hired_with_title import RecentlyHiredWithTitle
-        from ..models.technology_added import TechnologyAdded
+        from ..models.acquired_company import AcquiredCompany  # noqa: PLC0415
+        from ..models.company_description_changed import CompanyDescriptionChanged  # noqa: PLC0415
+        from ..models.company_logo_changed import CompanyLogoChanged  # noqa: PLC0415
+        from ..models.company_name_changed import CompanyNameChanged  # noqa: PLC0415
+        from ..models.company_news import CompanyNews  # noqa: PLC0415
+        from ..models.company_posted import CompanyPosted  # noqa: PLC0415
+        from ..models.company_posted_with_keyword import CompanyPostedWithKeyword  # noqa: PLC0415
+        from ..models.company_status_changed import CompanyStatusChanged  # noqa: PLC0415
+        from ..models.company_went_inactive import CompanyWentInactive  # noqa: PLC0415
+        from ..models.department_size_threshold import DepartmentSizeThreshold  # noqa: PLC0415
+        from ..models.employee_count_milestone import EmployeeCountMilestone  # noqa: PLC0415
+        from ..models.follower_count_growth import FollowerCountGrowth  # noqa: PLC0415
+        from ..models.funding_stage_changed import FundingStageChanged  # noqa: PLC0415
+        from ..models.headcount_crossed_threshold import HeadcountCrossedThreshold  # noqa: PLC0415
+        from ..models.headcount_growth_percent import HeadcountGrowthPercent  # noqa: PLC0415
+        from ..models.hq_location_changed import HQLocationChanged  # noqa: PLC0415
+        from ..models.job_posting_in_function import JobPostingInFunction  # noqa: PLC0415
+        from ..models.job_posting_with_keyword import JobPostingWithKeyword  # noqa: PLC0415
+        from ..models.new_funding_round import NewFundingRound  # noqa: PLC0415
+        from ..models.new_investor import NewInvestor  # noqa: PLC0415
+        from ..models.new_office_location import NewOfficeLocation  # noqa: PLC0415
+        from ..models.news_with_keyword import NewsWithKeyword  # noqa: PLC0415
+        from ..models.recently_hired_with_title import RecentlyHiredWithTitle  # noqa: PLC0415
+        from ..models.technology_added import TechnologyAdded  # noqa: PLC0415
         from ..models.update_tracker_company_list_body_initial_signals_type_0 import (
-            UpdateTrackerCompanyListBodyInitialSignalsType0,
+            UpdateTrackerCompanyListBodyInitialSignalsType0,  # noqa: PLC0415
         )
 
         api_key = self.api_key
@@ -392,36 +392,36 @@ class UpdateTrackerCompanyListBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.acquired_company import AcquiredCompany
-        from ..models.company_description_changed import CompanyDescriptionChanged
-        from ..models.company_logo_changed import CompanyLogoChanged
-        from ..models.company_name_changed import CompanyNameChanged
-        from ..models.company_news import CompanyNews
-        from ..models.company_posted import CompanyPosted
-        from ..models.company_posted_with_keyword import CompanyPostedWithKeyword
-        from ..models.company_status_changed import CompanyStatusChanged
-        from ..models.company_went_inactive import CompanyWentInactive
-        from ..models.department_size_threshold import DepartmentSizeThreshold
-        from ..models.employee_count_milestone import EmployeeCountMilestone
-        from ..models.follower_count_growth import FollowerCountGrowth
-        from ..models.funding_stage_changed import FundingStageChanged
-        from ..models.headcount_crossed_threshold import HeadcountCrossedThreshold
-        from ..models.headcount_growth_percent import HeadcountGrowthPercent
-        from ..models.hq_location_changed import HQLocationChanged
-        from ..models.job_posting_in_function import JobPostingInFunction
-        from ..models.job_posting_with_keyword import JobPostingWithKeyword
-        from ..models.new_funding_round import NewFundingRound
-        from ..models.new_investor import NewInvestor
-        from ..models.new_office_location import NewOfficeLocation
-        from ..models.news_with_keyword import NewsWithKeyword
-        from ..models.recent_layoffs import RecentLayoffs
-        from ..models.recently_hired_with_title import RecentlyHiredWithTitle
-        from ..models.technology_added import TechnologyAdded
+        from ..models.acquired_company import AcquiredCompany  # noqa: PLC0415
+        from ..models.company_description_changed import CompanyDescriptionChanged  # noqa: PLC0415
+        from ..models.company_logo_changed import CompanyLogoChanged  # noqa: PLC0415
+        from ..models.company_name_changed import CompanyNameChanged  # noqa: PLC0415
+        from ..models.company_news import CompanyNews  # noqa: PLC0415
+        from ..models.company_posted import CompanyPosted  # noqa: PLC0415
+        from ..models.company_posted_with_keyword import CompanyPostedWithKeyword  # noqa: PLC0415
+        from ..models.company_status_changed import CompanyStatusChanged  # noqa: PLC0415
+        from ..models.company_went_inactive import CompanyWentInactive  # noqa: PLC0415
+        from ..models.department_size_threshold import DepartmentSizeThreshold  # noqa: PLC0415
+        from ..models.employee_count_milestone import EmployeeCountMilestone  # noqa: PLC0415
+        from ..models.follower_count_growth import FollowerCountGrowth  # noqa: PLC0415
+        from ..models.funding_stage_changed import FundingStageChanged  # noqa: PLC0415
+        from ..models.headcount_crossed_threshold import HeadcountCrossedThreshold  # noqa: PLC0415
+        from ..models.headcount_growth_percent import HeadcountGrowthPercent  # noqa: PLC0415
+        from ..models.hq_location_changed import HQLocationChanged  # noqa: PLC0415
+        from ..models.job_posting_in_function import JobPostingInFunction  # noqa: PLC0415
+        from ..models.job_posting_with_keyword import JobPostingWithKeyword  # noqa: PLC0415
+        from ..models.new_funding_round import NewFundingRound  # noqa: PLC0415
+        from ..models.new_investor import NewInvestor  # noqa: PLC0415
+        from ..models.new_office_location import NewOfficeLocation  # noqa: PLC0415
+        from ..models.news_with_keyword import NewsWithKeyword  # noqa: PLC0415
+        from ..models.recent_layoffs import RecentLayoffs  # noqa: PLC0415
+        from ..models.recently_hired_with_title import RecentlyHiredWithTitle  # noqa: PLC0415
+        from ..models.technology_added import TechnologyAdded  # noqa: PLC0415
         from ..models.update_tracker_company_list_body_initial_signals_type_0 import (
-            UpdateTrackerCompanyListBodyInitialSignalsType0,
+            UpdateTrackerCompanyListBodyInitialSignalsType0,  # noqa: PLC0415
         )
         from ..models.update_tracker_company_list_body_update_rule_flags_type_0_item import (
-            UpdateTrackerCompanyListBodyUpdateRuleFlagsType0Item,
+            UpdateTrackerCompanyListBodyUpdateRuleFlagsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

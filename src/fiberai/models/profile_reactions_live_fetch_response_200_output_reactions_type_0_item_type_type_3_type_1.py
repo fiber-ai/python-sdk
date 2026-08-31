@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType3Type1(str, Enum):
+class ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType3Type1(StrEnum):
     CELEBRATE = "CELEBRATE"
     FUNNY = "FUNNY"
     INSIGHTFUL = "INSIGHTFUL"

@@ -35,7 +35,7 @@ class AddTrackerCompaniesBody:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.add_tracker_companies_body_initial_signals_type_0 import (
-            AddTrackerCompaniesBodyInitialSignalsType0,
+            AddTrackerCompaniesBodyInitialSignalsType0,  # noqa: PLC0415
         )
 
         api_key = self.api_key
@@ -68,9 +68,11 @@ class AddTrackerCompaniesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.add_tracker_companies_body_companies_item import AddTrackerCompaniesBodyCompaniesItem
+        from ..models.add_tracker_companies_body_companies_item import (
+            AddTrackerCompaniesBodyCompaniesItem,  # noqa: PLC0415
+        )
         from ..models.add_tracker_companies_body_initial_signals_type_0 import (
-            AddTrackerCompaniesBodyInitialSignalsType0,
+            AddTrackerCompaniesBodyInitialSignalsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

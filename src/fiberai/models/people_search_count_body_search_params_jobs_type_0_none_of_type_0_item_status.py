@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchCountBodySearchParamsJobsType0NoneOfType0ItemStatus(str, Enum):
+class PeopleSearchCountBodySearchParamsJobsType0NoneOfType0ItemStatus(StrEnum):
     ANY = "any"
     CURRENT = "current"
     PAST = "past"

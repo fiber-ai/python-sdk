@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetSavedSearchRunCompaniesResponse200OutputCompaniesItemMovementType(str, Enum):
+class GetSavedSearchRunCompaniesResponse200OutputCompaniesItemMovementType(StrEnum):
     DEPARTED = "departed"
     JOINED = "joined"
     RETURNED = "returned"

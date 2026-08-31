@@ -209,16 +209,16 @@ class PollBatchLiveEnrichResponse200OutputResultsItemProfileType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_current_job_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CurrentJobType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CurrentJobType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_custom_data_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CustomDataType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CustomDataType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_inferred_location_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0InferredLocationType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0InferredLocationType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_verifications_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsType0,  # noqa: PLC0415
         )
 
         primary_slug = self.primary_slug
@@ -737,58 +737,58 @@ class PollBatchLiveEnrichResponse200OutputResultsItemProfileType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_articles_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0ArticlesType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0ArticlesType0Item,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_certifications_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CertificationsType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CertificationsType0Item,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_courses_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CoursesType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CoursesType0Item,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_current_job_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CurrentJobType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CurrentJobType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_custom_data_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CustomDataType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0CustomDataType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_detailed_education_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0DetailedEducationType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0DetailedEducationType0Item,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_detailed_work_experiences_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0DetailedWorkExperiencesType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0DetailedWorkExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_education_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0EducationType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0EducationType0Item,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_experiences_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0ExperiencesType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0ExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_inferred_location_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0InferredLocationType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0InferredLocationType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_languages_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0LanguagesType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0LanguagesType0Item,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_organizations_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0OrganizationsType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0OrganizationsType0Item,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_patents_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0PatentsType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0PatentsType0Item,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_projects_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0ProjectsType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0ProjectsType0Item,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_publications_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0PublicationsType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0PublicationsType0Item,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_tenures_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0TenuresType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0TenuresType0Item,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_verifications_type_0 import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsType0,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VerificationsType0,  # noqa: PLC0415
         )
         from ..models.poll_batch_live_enrich_response_200_output_results_item_profile_type_0_volunteering_type_0_item import (
-            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VolunteeringType0Item,
+            PollBatchLiveEnrichResponse200OutputResultsItemProfileType0VolunteeringType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

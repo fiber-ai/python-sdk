@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class EmailBounceDetectionResponse200OutputVerdict(str, Enum):
+class EmailBounceDetectionResponse200OutputVerdict(StrEnum):
     INCONCLUSIVE = "inconclusive"
     OK = "ok"
     RISKY = "risky"

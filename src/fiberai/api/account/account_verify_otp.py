@@ -165,14 +165,14 @@ def sync_detailed(
     | AccountVerifyOtpResponse500
     | AccountVerifyOtpResponse503
 ]:
-    r"""Verify OTP and complete signup
+    """Verify OTP and complete signup
 
      Verify the one-time code from send-otp and create a cardless API trial account.
 
     <span>⚡ <strong>Rate limit:</strong> 12 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (AccountVerifyOtpBody):
@@ -215,14 +215,14 @@ def sync(
     | AccountVerifyOtpResponse503
     | None
 ):
-    r"""Verify OTP and complete signup
+    """Verify OTP and complete signup
 
      Verify the one-time code from send-otp and create a cardless API trial account.
 
     <span>⚡ <strong>Rate limit:</strong> 12 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (AccountVerifyOtpBody):
@@ -259,14 +259,14 @@ async def asyncio_detailed(
     | AccountVerifyOtpResponse500
     | AccountVerifyOtpResponse503
 ]:
-    r"""Verify OTP and complete signup
+    """Verify OTP and complete signup
 
      Verify the one-time code from send-otp and create a cardless API trial account.
 
     <span>⚡ <strong>Rate limit:</strong> 12 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (AccountVerifyOtpBody):
@@ -307,14 +307,14 @@ async def asyncio(
     | AccountVerifyOtpResponse503
     | None
 ):
-    r"""Verify OTP and complete signup
+    """Verify OTP and complete signup
 
      Verify the one-time code from send-otp and create a cardless API trial account.
 
     <span>⚡ <strong>Rate limit:</strong> 12 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (AccountVerifyOtpBody):

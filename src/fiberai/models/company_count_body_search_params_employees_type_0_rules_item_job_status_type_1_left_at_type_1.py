@@ -48,13 +48,13 @@ class CompanyCountBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtTyp
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_count_body_search_params_employees_type_0_rules_item_job_status_type_1_left_at_type_1_window_type_0 import (
-            CompanyCountBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1WindowType0,
+            CompanyCountBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employees_type_0_rules_item_job_status_type_1_left_at_type_1_window_type_1 import (
-            CompanyCountBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1WindowType1,
+            CompanyCountBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employees_type_0_rules_item_job_status_type_1_left_at_type_1_window_type_2 import (
-            CompanyCountBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1WindowType2,
+            CompanyCountBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -92,13 +92,13 @@ class CompanyCountBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtTyp
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_count_body_search_params_employees_type_0_rules_item_job_status_type_1_left_at_type_1_window_type_0 import (
-            CompanyCountBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1WindowType0,
+            CompanyCountBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employees_type_0_rules_item_job_status_type_1_left_at_type_1_window_type_1 import (
-            CompanyCountBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1WindowType1,
+            CompanyCountBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employees_type_0_rules_item_job_status_type_1_left_at_type_1_window_type_2 import (
-            CompanyCountBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1WindowType2,
+            CompanyCountBodySearchParamsEmployeesType0RulesItemJobStatusType1LeftAtType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -48,13 +48,13 @@ class CombinedSearchCountBodyProfileParamsLeftStealthAtType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_left_stealth_at_type_1_window_type_0 import (
-            CombinedSearchCountBodyProfileParamsLeftStealthAtType1WindowType0,
+            CombinedSearchCountBodyProfileParamsLeftStealthAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_left_stealth_at_type_1_window_type_1 import (
-            CombinedSearchCountBodyProfileParamsLeftStealthAtType1WindowType1,
+            CombinedSearchCountBodyProfileParamsLeftStealthAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_left_stealth_at_type_1_window_type_2 import (
-            CombinedSearchCountBodyProfileParamsLeftStealthAtType1WindowType2,
+            CombinedSearchCountBodyProfileParamsLeftStealthAtType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -86,13 +86,13 @@ class CombinedSearchCountBodyProfileParamsLeftStealthAtType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_left_stealth_at_type_1_window_type_0 import (
-            CombinedSearchCountBodyProfileParamsLeftStealthAtType1WindowType0,
+            CombinedSearchCountBodyProfileParamsLeftStealthAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_left_stealth_at_type_1_window_type_1 import (
-            CombinedSearchCountBodyProfileParamsLeftStealthAtType1WindowType1,
+            CombinedSearchCountBodyProfileParamsLeftStealthAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_left_stealth_at_type_1_window_type_2 import (
-            CombinedSearchCountBodyProfileParamsLeftStealthAtType1WindowType2,
+            CombinedSearchCountBodyProfileParamsLeftStealthAtType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

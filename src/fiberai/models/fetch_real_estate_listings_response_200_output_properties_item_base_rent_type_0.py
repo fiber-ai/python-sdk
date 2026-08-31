@@ -37,10 +37,10 @@ class FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_base_rent_type_0_max_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MaxType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MaxType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_base_rent_type_0_min_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0,  # noqa: PLC0415
         )
 
         min_: dict[str, Any] | None | Unset
@@ -72,10 +72,10 @@ class FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_base_rent_type_0_max_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MaxType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MaxType0,  # noqa: PLC0415
         )
         from ..models.fetch_real_estate_listings_response_200_output_properties_item_base_rent_type_0_min_type_0 import (
-            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0,
+            FetchRealEstateListingsResponse200OutputPropertiesItemBaseRentType0MinType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

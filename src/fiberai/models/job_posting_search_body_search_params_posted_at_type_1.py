@@ -48,13 +48,13 @@ class JobPostingSearchBodySearchParamsPostedAtType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.job_posting_search_body_search_params_posted_at_type_1_window_type_0 import (
-            JobPostingSearchBodySearchParamsPostedAtType1WindowType0,
+            JobPostingSearchBodySearchParamsPostedAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_posted_at_type_1_window_type_1 import (
-            JobPostingSearchBodySearchParamsPostedAtType1WindowType1,
+            JobPostingSearchBodySearchParamsPostedAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_posted_at_type_1_window_type_2 import (
-            JobPostingSearchBodySearchParamsPostedAtType1WindowType2,
+            JobPostingSearchBodySearchParamsPostedAtType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -86,13 +86,13 @@ class JobPostingSearchBodySearchParamsPostedAtType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.job_posting_search_body_search_params_posted_at_type_1_window_type_0 import (
-            JobPostingSearchBodySearchParamsPostedAtType1WindowType0,
+            JobPostingSearchBodySearchParamsPostedAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_posted_at_type_1_window_type_1 import (
-            JobPostingSearchBodySearchParamsPostedAtType1WindowType1,
+            JobPostingSearchBodySearchParamsPostedAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.job_posting_search_body_search_params_posted_at_type_1_window_type_2 import (
-            JobPostingSearchBodySearchParamsPostedAtType1WindowType2,
+            JobPostingSearchBodySearchParamsPostedAtType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

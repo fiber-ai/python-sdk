@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsJobPostingStatsType0AllOfType0ItemType5RangeType0Type(
-    str, Enum
+    StrEnum
 ):
     COUNT_RANGE = "count-range"
 

@@ -87,10 +87,10 @@ class GetSavedSearchRunStatusResponse200OutputRun:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_saved_search_run_status_response_200_output_run_companies_stats import (
-            GetSavedSearchRunStatusResponse200OutputRunCompaniesStats,
+            GetSavedSearchRunStatusResponse200OutputRunCompaniesStats,  # noqa: PLC0415
         )
         from ..models.get_saved_search_run_status_response_200_output_run_people_stats import (
-            GetSavedSearchRunStatusResponse200OutputRunPeopleStats,
+            GetSavedSearchRunStatusResponse200OutputRunPeopleStats,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

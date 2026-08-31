@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class AccountSendOtpResponse200OutputStatus(str, Enum):
+class AccountSendOtpResponse200OutputStatus(StrEnum):
     OTP_SENT = "otp_sent"
 
     def __str__(self) -> str:

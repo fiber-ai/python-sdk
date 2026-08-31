@@ -36,7 +36,7 @@ class PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtTyp
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_0_range_type_0 import (
-            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType0RangeType0,
+            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -66,7 +66,7 @@ class PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtTyp
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_0_range_type_0 import (
-            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType0RangeType0,
+            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

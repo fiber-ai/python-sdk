@@ -32,7 +32,7 @@ class UndoSkipNextSavedSearchRunResponse402:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.undo_skip_next_saved_search_run_response_402_out_of_credits_alert_type_0 import (
-            UndoSkipNextSavedSearchRunResponse402OutOfCreditsAlertType0,
+            UndoSkipNextSavedSearchRunResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         message = self.message
@@ -60,7 +60,7 @@ class UndoSkipNextSavedSearchRunResponse402:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.undo_skip_next_saved_search_run_response_402_out_of_credits_alert_type_0 import (
-            UndoSkipNextSavedSearchRunResponse402OutOfCreditsAlertType0,
+            UndoSkipNextSavedSearchRunResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

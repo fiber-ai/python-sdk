@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ReversePhoneLookupResponse200OutputResultsItemType0ProfileExperiencesType0ItemJobFunctionType0Item(str, Enum):
+class ReversePhoneLookupResponse200OutputResultsItemType0ProfileExperiencesType0ItemJobFunctionType0Item(StrEnum):
     ACCOUNTING = "Accounting"
     ADMINISTRATIVE = "Administrative"
     ADVERTISING = "Advertising"

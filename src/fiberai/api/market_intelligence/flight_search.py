@@ -147,14 +147,14 @@ def sync_detailed(
     | FlightSearchResponse500
     | FlightSearchResponse503
 ]:
-    r"""Search flights
+    """Search flights
 
      Searches flight itineraries between cities of interest and returns trips, fares, timing, etc.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (FlightSearchBody):
@@ -195,14 +195,14 @@ def sync(
     | FlightSearchResponse503
     | None
 ):
-    r"""Search flights
+    """Search flights
 
      Searches flight itineraries between cities of interest and returns trips, fares, timing, etc.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (FlightSearchBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | FlightSearchResponse500
     | FlightSearchResponse503
 ]:
-    r"""Search flights
+    """Search flights
 
      Searches flight itineraries between cities of interest and returns trips, fares, timing, etc.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (FlightSearchBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | FlightSearchResponse503
     | None
 ):
-    r"""Search flights
+    """Search flights
 
      Searches flight itineraries between cities of interest and returns trips, fares, timing, etc.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (FlightSearchBody):

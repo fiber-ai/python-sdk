@@ -198,100 +198,112 @@ class CompanyCountBodySearchParams:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_count_body_search_params_accelerators_v2_type_0 import (
-            CompanyCountBodySearchParamsAcceleratorsV2Type0,
+            CompanyCountBodySearchParamsAcceleratorsV2Type0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_crunchbase_categories_type_0 import (
-            CompanyCountBodySearchParamsCrunchbaseCategoriesType0,
+            CompanyCountBodySearchParamsCrunchbaseCategoriesType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_crunchbase_category_groups_type_0 import (
-            CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0,
+            CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employee_count_v2_type_0 import (
-            CompanyCountBodySearchParamsEmployeeCountV2Type0,
+            CompanyCountBodySearchParamsEmployeeCountV2Type0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employee_trends_v2_type_0 import (
-            CompanyCountBodySearchParamsEmployeeTrendsV2Type0,
+            CompanyCountBodySearchParamsEmployeeTrendsV2Type0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employees_type_0 import (
-            CompanyCountBodySearchParamsEmployeesType0,
+            CompanyCountBodySearchParamsEmployeesType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_exact_company_type_0 import (
-            CompanyCountBodySearchParamsExactCompanyType0,
+            CompanyCountBodySearchParamsExactCompanyType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_exact_company_v2_type_0 import (
-            CompanyCountBodySearchParamsExactCompanyV2Type0,
+            CompanyCountBodySearchParamsExactCompanyV2Type0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_fortune_rankings_type_0 import (
-            CompanyCountBodySearchParamsFortuneRankingsType0,
+            CompanyCountBodySearchParamsFortuneRankingsType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_founded_on_type_0 import (
-            CompanyCountBodySearchParamsFoundedOnType0,
+            CompanyCountBodySearchParamsFoundedOnType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_founded_on_type_1 import (
-            CompanyCountBodySearchParamsFoundedOnType1,
+            CompanyCountBodySearchParamsFoundedOnType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_headquarters_country_code_type_0 import (
-            CompanyCountBodySearchParamsHeadquartersCountryCodeType0,
+            CompanyCountBodySearchParamsHeadquartersCountryCodeType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_headquarters_location_type_0 import (
-            CompanyCountBodySearchParamsHeadquartersLocationType0,
+            CompanyCountBodySearchParamsHeadquartersLocationType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_headquarters_state_name_type_0 import (
-            CompanyCountBodySearchParamsHeadquartersStateNameType0,
+            CompanyCountBodySearchParamsHeadquartersStateNameType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_industries_v2_type_0 import (
-            CompanyCountBodySearchParamsIndustriesV2Type0,
+            CompanyCountBodySearchParamsIndustriesV2Type0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_investors_v2_type_0 import (
-            CompanyCountBodySearchParamsInvestorsV2Type0,
+            CompanyCountBodySearchParamsInvestorsV2Type0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0,
+            CompanyCountBodySearchParamsJobPostingStatsType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_postings_v2_type_0 import (
-            CompanyCountBodySearchParamsJobPostingsV2Type0,
+            CompanyCountBodySearchParamsJobPostingsV2Type0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_keywords_type_0 import CompanyCountBodySearchParamsKeywordsType0
+        from ..models.company_count_body_search_params_keywords_type_0 import (
+            CompanyCountBodySearchParamsKeywordsType0,  # noqa: PLC0415
+        )
         from ..models.company_count_body_search_params_last_funded_on_type_0 import (
-            CompanyCountBodySearchParamsLastFundedOnType0,
+            CompanyCountBodySearchParamsLastFundedOnType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_last_funded_on_type_1 import (
-            CompanyCountBodySearchParamsLastFundedOnType1,
+            CompanyCountBodySearchParamsLastFundedOnType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_last_funding_usd_type_0 import (
-            CompanyCountBodySearchParamsLastFundingUSDType0,
+            CompanyCountBodySearchParamsLastFundingUSDType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_linkedin_industries_type_0 import (
-            CompanyCountBodySearchParamsLinkedinIndustriesType0,
+            CompanyCountBodySearchParamsLinkedinIndustriesType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_naics_codes_type_0 import (
-            CompanyCountBodySearchParamsNaicsCodesType0,
+            CompanyCountBodySearchParamsNaicsCodesType0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_name_like_type_0 import CompanyCountBodySearchParamsNameLikeType0
+        from ..models.company_count_body_search_params_name_like_type_0 import (
+            CompanyCountBodySearchParamsNameLikeType0,  # noqa: PLC0415
+        )
         from ..models.company_count_body_search_params_num_words_in_name_type_0 import (
-            CompanyCountBodySearchParamsNumWordsInNameType0,
+            CompanyCountBodySearchParamsNumWordsInNameType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_office_locations_v2_type_0 import (
-            CompanyCountBodySearchParamsOfficeLocationsV2Type0,
+            CompanyCountBodySearchParamsOfficeLocationsV2Type0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_revenue_range_usd_type_0 import (
-            CompanyCountBodySearchParamsRevenueRangeUSDType0,
+            CompanyCountBodySearchParamsRevenueRangeUSDType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_special_flags_type_0 import (
-            CompanyCountBodySearchParamsSpecialFlagsType0,
+            CompanyCountBodySearchParamsSpecialFlagsType0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_stage_type_0 import CompanyCountBodySearchParamsStageType0
-        from ..models.company_count_body_search_params_status_type_0 import CompanyCountBodySearchParamsStatusType0
-        from ..models.company_count_body_search_params_tags_type_0 import CompanyCountBodySearchParamsTagsType0
+        from ..models.company_count_body_search_params_stage_type_0 import (
+            CompanyCountBodySearchParamsStageType0,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_status_type_0 import (
+            CompanyCountBodySearchParamsStatusType0,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_tags_type_0 import (
+            CompanyCountBodySearchParamsTagsType0,  # noqa: PLC0415
+        )
         from ..models.company_count_body_search_params_technologies_type_0 import (
-            CompanyCountBodySearchParamsTechnologiesType0,
+            CompanyCountBodySearchParamsTechnologiesType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_technologies_v2_type_0 import (
-            CompanyCountBodySearchParamsTechnologiesV2Type0,
+            CompanyCountBodySearchParamsTechnologiesV2Type0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_tlds_type_0 import CompanyCountBodySearchParamsTldsType0
+        from ..models.company_count_body_search_params_tlds_type_0 import (
+            CompanyCountBodySearchParamsTldsType0,  # noqa: PLC0415
+        )
         from ..models.company_count_body_search_params_total_funding_usd_type_0 import (
-            CompanyCountBodySearchParamsTotalFundingUSDType0,
+            CompanyCountBodySearchParamsTotalFundingUSDType0,  # noqa: PLC0415
         )
 
         exact_company_v2: dict[str, Any] | None | Unset
@@ -694,101 +706,115 @@ class CompanyCountBodySearchParams:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_count_body_search_params_accelerators_v2_type_0 import (
-            CompanyCountBodySearchParamsAcceleratorsV2Type0,
+            CompanyCountBodySearchParamsAcceleratorsV2Type0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_crunchbase_categories_type_0 import (
-            CompanyCountBodySearchParamsCrunchbaseCategoriesType0,
+            CompanyCountBodySearchParamsCrunchbaseCategoriesType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_crunchbase_category_groups_type_0 import (
-            CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0,
+            CompanyCountBodySearchParamsCrunchbaseCategoryGroupsType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employee_count_v2_type_0 import (
-            CompanyCountBodySearchParamsEmployeeCountV2Type0,
+            CompanyCountBodySearchParamsEmployeeCountV2Type0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employee_trends_v2_type_0 import (
-            CompanyCountBodySearchParamsEmployeeTrendsV2Type0,
+            CompanyCountBodySearchParamsEmployeeTrendsV2Type0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employees_type_0 import (
-            CompanyCountBodySearchParamsEmployeesType0,
+            CompanyCountBodySearchParamsEmployeesType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_exact_company_type_0 import (
-            CompanyCountBodySearchParamsExactCompanyType0,
+            CompanyCountBodySearchParamsExactCompanyType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_exact_company_v2_type_0 import (
-            CompanyCountBodySearchParamsExactCompanyV2Type0,
+            CompanyCountBodySearchParamsExactCompanyV2Type0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_fortune_rankings_type_0 import (
-            CompanyCountBodySearchParamsFortuneRankingsType0,
+            CompanyCountBodySearchParamsFortuneRankingsType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_founded_on_type_0 import (
-            CompanyCountBodySearchParamsFoundedOnType0,
+            CompanyCountBodySearchParamsFoundedOnType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_founded_on_type_1 import (
-            CompanyCountBodySearchParamsFoundedOnType1,
+            CompanyCountBodySearchParamsFoundedOnType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_headquarters_country_code_type_0 import (
-            CompanyCountBodySearchParamsHeadquartersCountryCodeType0,
+            CompanyCountBodySearchParamsHeadquartersCountryCodeType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_headquarters_location_type_0 import (
-            CompanyCountBodySearchParamsHeadquartersLocationType0,
+            CompanyCountBodySearchParamsHeadquartersLocationType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_headquarters_state_name_type_0 import (
-            CompanyCountBodySearchParamsHeadquartersStateNameType0,
+            CompanyCountBodySearchParamsHeadquartersStateNameType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_industries_v2_type_0 import (
-            CompanyCountBodySearchParamsIndustriesV2Type0,
+            CompanyCountBodySearchParamsIndustriesV2Type0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_investors_v2_type_0 import (
-            CompanyCountBodySearchParamsInvestorsV2Type0,
+            CompanyCountBodySearchParamsInvestorsV2Type0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_posting_stats_type_0 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0,
+            CompanyCountBodySearchParamsJobPostingStatsType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_job_postings_v2_type_0 import (
-            CompanyCountBodySearchParamsJobPostingsV2Type0,
+            CompanyCountBodySearchParamsJobPostingsV2Type0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_keywords_type_0 import CompanyCountBodySearchParamsKeywordsType0
+        from ..models.company_count_body_search_params_keywords_type_0 import (
+            CompanyCountBodySearchParamsKeywordsType0,  # noqa: PLC0415
+        )
         from ..models.company_count_body_search_params_last_funded_on_type_0 import (
-            CompanyCountBodySearchParamsLastFundedOnType0,
+            CompanyCountBodySearchParamsLastFundedOnType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_last_funded_on_type_1 import (
-            CompanyCountBodySearchParamsLastFundedOnType1,
+            CompanyCountBodySearchParamsLastFundedOnType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_last_funding_usd_type_0 import (
-            CompanyCountBodySearchParamsLastFundingUSDType0,
+            CompanyCountBodySearchParamsLastFundingUSDType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_linkedin_industries_type_0 import (
-            CompanyCountBodySearchParamsLinkedinIndustriesType0,
+            CompanyCountBodySearchParamsLinkedinIndustriesType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_naics_codes_type_0 import (
-            CompanyCountBodySearchParamsNaicsCodesType0,
+            CompanyCountBodySearchParamsNaicsCodesType0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_name_like_type_0 import CompanyCountBodySearchParamsNameLikeType0
+        from ..models.company_count_body_search_params_name_like_type_0 import (
+            CompanyCountBodySearchParamsNameLikeType0,  # noqa: PLC0415
+        )
         from ..models.company_count_body_search_params_num_words_in_name_type_0 import (
-            CompanyCountBodySearchParamsNumWordsInNameType0,
+            CompanyCountBodySearchParamsNumWordsInNameType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_office_locations_v2_type_0 import (
-            CompanyCountBodySearchParamsOfficeLocationsV2Type0,
+            CompanyCountBodySearchParamsOfficeLocationsV2Type0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_revenue_range_usd_type_0 import (
-            CompanyCountBodySearchParamsRevenueRangeUSDType0,
+            CompanyCountBodySearchParamsRevenueRangeUSDType0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_sort_type_0_item import CompanyCountBodySearchParamsSortType0Item
+        from ..models.company_count_body_search_params_sort_type_0_item import (
+            CompanyCountBodySearchParamsSortType0Item,  # noqa: PLC0415
+        )
         from ..models.company_count_body_search_params_special_flags_type_0 import (
-            CompanyCountBodySearchParamsSpecialFlagsType0,
+            CompanyCountBodySearchParamsSpecialFlagsType0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_stage_type_0 import CompanyCountBodySearchParamsStageType0
-        from ..models.company_count_body_search_params_status_type_0 import CompanyCountBodySearchParamsStatusType0
-        from ..models.company_count_body_search_params_tags_type_0 import CompanyCountBodySearchParamsTagsType0
+        from ..models.company_count_body_search_params_stage_type_0 import (
+            CompanyCountBodySearchParamsStageType0,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_status_type_0 import (
+            CompanyCountBodySearchParamsStatusType0,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_tags_type_0 import (
+            CompanyCountBodySearchParamsTagsType0,  # noqa: PLC0415
+        )
         from ..models.company_count_body_search_params_technologies_type_0 import (
-            CompanyCountBodySearchParamsTechnologiesType0,
+            CompanyCountBodySearchParamsTechnologiesType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_technologies_v2_type_0 import (
-            CompanyCountBodySearchParamsTechnologiesV2Type0,
+            CompanyCountBodySearchParamsTechnologiesV2Type0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_tlds_type_0 import CompanyCountBodySearchParamsTldsType0
+        from ..models.company_count_body_search_params_tlds_type_0 import (
+            CompanyCountBodySearchParamsTldsType0,  # noqa: PLC0415
+        )
         from ..models.company_count_body_search_params_total_funding_usd_type_0 import (
-            CompanyCountBodySearchParamsTotalFundingUSDType0,
+            CompanyCountBodySearchParamsTotalFundingUSDType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

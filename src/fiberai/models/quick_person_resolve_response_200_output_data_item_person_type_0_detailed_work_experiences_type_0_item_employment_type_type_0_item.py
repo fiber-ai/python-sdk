@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class QuickPersonResolveResponse200OutputDataItemPersonType0DetailedWorkExperiencesType0ItemEmploymentTypeType0Item(
-    str, Enum
+    StrEnum
 ):
     CONTRACT = "Contract"
     FULL_TIME = "Full-time"

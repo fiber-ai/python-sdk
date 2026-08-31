@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType2Type(str, Enum):
+class CreateSavedSearchBodySearchParamsType2Type(StrEnum):
     PROFILES = "profiles"
 
     def __str__(self) -> str:

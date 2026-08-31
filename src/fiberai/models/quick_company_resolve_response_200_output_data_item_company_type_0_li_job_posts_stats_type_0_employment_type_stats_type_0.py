@@ -143,25 +143,25 @@ class QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsTyp
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_employment_type_stats_type_0_contract import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0EmploymentTypeStatsType0Contract,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0EmploymentTypeStatsType0Contract,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_employment_type_stats_type_0_full_time import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0EmploymentTypeStatsType0FullTime,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0EmploymentTypeStatsType0FullTime,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_employment_type_stats_type_0_internship import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0EmploymentTypeStatsType0Internship,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0EmploymentTypeStatsType0Internship,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_employment_type_stats_type_0_other import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0EmploymentTypeStatsType0Other,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0EmploymentTypeStatsType0Other,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_employment_type_stats_type_0_part_time import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0EmploymentTypeStatsType0PartTime,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0EmploymentTypeStatsType0PartTime,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_employment_type_stats_type_0_temporary import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0EmploymentTypeStatsType0Temporary,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0EmploymentTypeStatsType0Temporary,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_employment_type_stats_type_0_volunteer import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0EmploymentTypeStatsType0Volunteer,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0EmploymentTypeStatsType0Volunteer,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

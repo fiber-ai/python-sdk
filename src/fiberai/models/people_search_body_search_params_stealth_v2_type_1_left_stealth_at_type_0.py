@@ -34,7 +34,7 @@ class PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_body_search_params_stealth_v2_type_1_left_stealth_at_type_0_range_type_0 import (
-            PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0RangeType0,
+            PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -62,7 +62,7 @@ class PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_stealth_v2_type_1_left_stealth_at_type_0_range_type_0 import (
-            PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0RangeType0,
+            PeopleSearchBodySearchParamsStealthV2Type1LeftStealthAtType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

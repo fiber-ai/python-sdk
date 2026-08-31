@@ -58,16 +58,16 @@ class FlightBookingOptionsResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.flight_booking_options_response_200_charge_info_type_0 import (
-            FlightBookingOptionsResponse200ChargeInfoType0,
+            FlightBookingOptionsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.flight_booking_options_response_200_charge_info_type_1 import (
-            FlightBookingOptionsResponse200ChargeInfoType1,
+            FlightBookingOptionsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.flight_booking_options_response_200_charge_info_type_2 import (
-            FlightBookingOptionsResponse200ChargeInfoType2,
+            FlightBookingOptionsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.flight_booking_options_response_200_charge_info_type_3 import (
-            FlightBookingOptionsResponse200ChargeInfoType3,
+            FlightBookingOptionsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class FlightBookingOptionsResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.flight_booking_options_response_200_charge_info_type_0 import (
-            FlightBookingOptionsResponse200ChargeInfoType0,
+            FlightBookingOptionsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.flight_booking_options_response_200_charge_info_type_1 import (
-            FlightBookingOptionsResponse200ChargeInfoType1,
+            FlightBookingOptionsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.flight_booking_options_response_200_charge_info_type_2 import (
-            FlightBookingOptionsResponse200ChargeInfoType2,
+            FlightBookingOptionsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.flight_booking_options_response_200_charge_info_type_3 import (
-            FlightBookingOptionsResponse200ChargeInfoType3,
+            FlightBookingOptionsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.flight_booking_options_response_200_charge_info_type_4 import (
-            FlightBookingOptionsResponse200ChargeInfoType4,
+            FlightBookingOptionsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.flight_booking_options_response_200_output import FlightBookingOptionsResponse200Output
+        from ..models.flight_booking_options_response_200_output import (
+            FlightBookingOptionsResponse200Output,  # noqa: PLC0415
+        )
         from ..models.flight_booking_options_response_200_warnings_type_0_item import (
-            FlightBookingOptionsResponse200WarningsType0Item,
+            FlightBookingOptionsResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

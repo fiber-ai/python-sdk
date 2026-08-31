@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AllOfType0ItemType5Rule(str, Enum):
+class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AllOfType0ItemType5Rule(StrEnum):
     LOCATION_TYPE = "location-type"
 
     def __str__(self) -> str:

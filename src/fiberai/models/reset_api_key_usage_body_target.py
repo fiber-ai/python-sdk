@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ResetApiKeyUsageBodyTarget(str, Enum):
+class ResetApiKeyUsageBodyTarget(StrEnum):
     OTHER = "OTHER"
     SELF = "SELF"
 

@@ -56,7 +56,7 @@ class ListSavedSearchResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.list_saved_search_response_200_output_saved_searches_item import (
-            ListSavedSearchResponse200OutputSavedSearchesItem,
+            ListSavedSearchResponse200OutputSavedSearchesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

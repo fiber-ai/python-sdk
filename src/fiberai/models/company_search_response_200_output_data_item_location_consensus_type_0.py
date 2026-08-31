@@ -53,7 +53,7 @@ class CompanySearchResponse200OutputDataItemLocationConsensusType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_search_response_200_output_data_item_location_consensus_type_0_coordinates_type_0 import (
-            CompanySearchResponse200OutputDataItemLocationConsensusType0CoordinatesType0,
+            CompanySearchResponse200OutputDataItemLocationConsensusType0CoordinatesType0,  # noqa: PLC0415
         )
 
         street_address: None | str | Unset
@@ -171,7 +171,7 @@ class CompanySearchResponse200OutputDataItemLocationConsensusType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_response_200_output_data_item_location_consensus_type_0_coordinates_type_0 import (
-            CompanySearchResponse200OutputDataItemLocationConsensusType0CoordinatesType0,
+            CompanySearchResponse200OutputDataItemLocationConsensusType0CoordinatesType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

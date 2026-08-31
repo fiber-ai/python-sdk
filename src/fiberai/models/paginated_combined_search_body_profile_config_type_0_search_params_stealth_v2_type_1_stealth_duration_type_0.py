@@ -50,7 +50,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1Ste
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_stealth_v2_type_1_stealth_duration_type_0_range import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1StealthDurationType0Range,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStealthV2Type1StealthDurationType0Range,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

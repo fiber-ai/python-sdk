@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class MultiSourceSearchBodySearchType0CompanyFiltersType0WebsiteTrafficType0Item(str, Enum):
+class MultiSourceSearchBodySearchType0CompanyFiltersType0WebsiteTrafficType0Item(StrEnum):
     UNKNOWN = "unknown"
     VALUE_0 = "<1K"
     VALUE_1 = "1K-10K"

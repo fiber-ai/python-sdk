@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0Strategy(
-    str, Enum
+    StrEnum
 ):
     ALL_BATCHES = "all-batches"
 

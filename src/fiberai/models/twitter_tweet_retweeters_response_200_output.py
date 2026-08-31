@@ -58,7 +58,7 @@ class TwitterTweetRetweetersResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.twitter_tweet_retweeters_response_200_output_users_item import (
-            TwitterTweetRetweetersResponse200OutputUsersItem,
+            TwitterTweetRetweetersResponse200OutputUsersItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

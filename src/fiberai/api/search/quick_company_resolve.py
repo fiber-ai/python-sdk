@@ -147,15 +147,15 @@ def sync_detailed(
     | QuickCompanyResolveResponse500
     | QuickCompanyResolveResponse503
 ]:
-    r"""Quickly resolve company identifiers
+    """Quickly resolve company identifiers
 
      Resolves many company identifiers — LinkedIn slug, LinkedIn organization ID, LinkedIn company URL,
     or domain — to full company records in a single request.
 
     <span>⚡ <strong>Rate limit:</strong> 1500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company resolved&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company resolved&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (QuickCompanyResolveBody):
@@ -196,15 +196,15 @@ def sync(
     | QuickCompanyResolveResponse503
     | None
 ):
-    r"""Quickly resolve company identifiers
+    """Quickly resolve company identifiers
 
      Resolves many company identifiers — LinkedIn slug, LinkedIn organization ID, LinkedIn company URL,
     or domain — to full company records in a single request.
 
     <span>⚡ <strong>Rate limit:</strong> 1500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company resolved&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company resolved&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (QuickCompanyResolveBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | QuickCompanyResolveResponse500
     | QuickCompanyResolveResponse503
 ]:
-    r"""Quickly resolve company identifiers
+    """Quickly resolve company identifiers
 
      Resolves many company identifiers — LinkedIn slug, LinkedIn organization ID, LinkedIn company URL,
     or domain — to full company records in a single request.
 
     <span>⚡ <strong>Rate limit:</strong> 1500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company resolved&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company resolved&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (QuickCompanyResolveBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | QuickCompanyResolveResponse503
     | None
 ):
-    r"""Quickly resolve company identifiers
+    """Quickly resolve company identifiers
 
      Resolves many company identifiers — LinkedIn slug, LinkedIn organization ID, LinkedIn company URL,
     or domain — to full company records in a single request.
 
     <span>⚡ <strong>Rate limit:</strong> 1500 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per company resolved&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per company resolved&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (QuickCompanyResolveBody):

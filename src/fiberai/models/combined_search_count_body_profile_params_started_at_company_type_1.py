@@ -48,13 +48,13 @@ class CombinedSearchCountBodyProfileParamsStartedAtCompanyType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_started_at_company_type_1_window_type_0 import (
-            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1WindowType0,
+            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1WindowType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_started_at_company_type_1_window_type_1 import (
-            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1WindowType1,
+            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1WindowType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_started_at_company_type_1_window_type_2 import (
-            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1WindowType2,
+            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -86,13 +86,13 @@ class CombinedSearchCountBodyProfileParamsStartedAtCompanyType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_started_at_company_type_1_window_type_0 import (
-            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1WindowType0,
+            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1WindowType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_started_at_company_type_1_window_type_1 import (
-            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1WindowType1,
+            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1WindowType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_started_at_company_type_1_window_type_2 import (
-            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1WindowType2,
+            CombinedSearchCountBodyProfileParamsStartedAtCompanyType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -83,22 +83,22 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_country_location_stats_type_0 import (
-            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0CountryLocationStatsType0,
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0CountryLocationStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0 import (
-            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0,
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_job_location_type_stats_type_0 import (
-            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0JobLocationTypeStatsType0,
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0JobLocationTypeStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0 import (
-            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0,
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_seniority_stats_type_0 import (
-            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0SeniorityStatsType0,
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0SeniorityStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_standard_industries_stats_type_0 import (
-            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0StandardIndustriesStatsType0,
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0StandardIndustriesStatsType0,  # noqa: PLC0415
         )
 
         total_count = self.total_count
@@ -194,22 +194,22 @@ class KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_country_location_stats_type_0 import (
-            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0CountryLocationStatsType0,
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0CountryLocationStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_employment_type_stats_type_0 import (
-            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0,
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0EmploymentTypeStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_job_location_type_stats_type_0 import (
-            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0JobLocationTypeStatsType0,
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0JobLocationTypeStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0 import (
-            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0,
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0PureeJobFunctionsStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_seniority_stats_type_0 import (
-            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0SeniorityStatsType0,
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0SeniorityStatsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_response_200_output_data_item_item_li_job_posts_stats_type_0_standard_industries_stats_type_0 import (
-            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0StandardIndustriesStatsType0,
+            KitchenSinkBulkCompanyResponse200OutputDataItemItemLiJobPostsStatsType0StandardIndustriesStatsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

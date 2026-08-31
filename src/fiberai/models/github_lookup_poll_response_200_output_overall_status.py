@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GithubLookupPollResponse200OutputOverallStatus(str, Enum):
+class GithubLookupPollResponse200OutputOverallStatus(StrEnum):
     DONE = "DONE"
     FAILED = "FAILED"
     NOT_STARTED = "NOT_STARTED"

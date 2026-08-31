@@ -70,10 +70,10 @@ class PeopleSearchCountBodySearchParamsExactProfileType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_body_search_params_exact_profile_type_0_any_of_type_0_item import (
-            PeopleSearchCountBodySearchParamsExactProfileType0AnyOfType0Item,
+            PeopleSearchCountBodySearchParamsExactProfileType0AnyOfType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_exact_profile_type_0_none_of_type_0_item import (
-            PeopleSearchCountBodySearchParamsExactProfileType0NoneOfType0Item,
+            PeopleSearchCountBodySearchParamsExactProfileType0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

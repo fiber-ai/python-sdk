@@ -693,136 +693,136 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsSt
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_accounting import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Accounting,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_administrative import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Administrative,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_advertising import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Advertising,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_analyst import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Analyst,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_art_creative import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtCreative,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_arts_and_design import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ArtsAndDesign,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_business_development import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0BusinessDevelopment,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_community_social_services import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CommunitySocialServices,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_consulting import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Consulting,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_customer_service import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0CustomerService,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_design import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Design,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_distribution import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Distribution,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_education import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Education,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_engineering import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Engineering,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_entrepreneurship import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Entrepreneurship,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_finance import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Finance,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_general_business import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0GeneralBusiness,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_health_care_provider import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthCareProvider,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_healthcare_services import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HealthcareServices,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_human_resources import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0HumanResources,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_information_technology import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0InformationTechnology,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_legal import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Legal,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_management import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Management,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_manufacturing import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Manufacturing,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_marketing import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Marketing,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_military_protective_services import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0MilitaryProtectiveServices,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_operations import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Operations,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_other import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Other,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_product_management import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProductManagement,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_production import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Production,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_program_product_management import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProgramProductManagement,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_project_management import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0ProjectManagement,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_public_relations import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0PublicRelations,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_purchasing import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Purchasing,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_quality_assurance import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0QualityAssurance,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_real_estate import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0RealEstate,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_research import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Research,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_sales import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Sales,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_science import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Science,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_strategy_planning import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0StrategyPlanning,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_supply_chain import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0SupplyChain,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_support import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Support,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_training import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0Training,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_puree_job_functions_stats_type_0_writing_editing import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0PureeJobFunctionsStatsType0WritingEditing,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

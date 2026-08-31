@@ -147,7 +147,7 @@ def sync_detailed(
     | FlightBookingOptionsResponse500
     | FlightBookingOptionsResponse503
 ]:
-    r"""Get flight booking options
+    """Get flight booking options
 
      Retrieves booking options (providers, fares, booking links, and available cabin classes) for a
     single itinerary selected from a flight search. Pass the `bookingToken` returned on an itinerary
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per lookup&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per lookup&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (FlightBookingOptionsBody):
@@ -197,7 +197,7 @@ def sync(
     | FlightBookingOptionsResponse503
     | None
 ):
-    r"""Get flight booking options
+    """Get flight booking options
 
      Retrieves booking options (providers, fares, booking links, and available cabin classes) for a
     single itinerary selected from a flight search. Pass the `bookingToken` returned on an itinerary
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per lookup&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per lookup&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (FlightBookingOptionsBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | FlightBookingOptionsResponse500
     | FlightBookingOptionsResponse503
 ]:
-    r"""Get flight booking options
+    """Get flight booking options
 
      Retrieves booking options (providers, fares, booking links, and available cabin classes) for a
     single itinerary selected from a flight search. Pass the `bookingToken` returned on an itinerary
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per lookup&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per lookup&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (FlightBookingOptionsBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | FlightBookingOptionsResponse503
     | None
 ):
-    r"""Get flight booking options
+    """Get flight booking options
 
      Retrieves booking options (providers, fares, booking links, and available cabin classes) for a
     single itinerary selected from a flight search. Pass the `bookingToken` returned on an itinerary
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per lookup&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per lookup&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (FlightBookingOptionsBody):

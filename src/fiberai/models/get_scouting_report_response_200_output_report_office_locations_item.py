@@ -33,7 +33,7 @@ class GetScoutingReportResponse200OutputReportOfficeLocationsItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_scouting_report_response_200_output_report_office_locations_item_location_type_0 import (
-            GetScoutingReportResponse200OutputReportOfficeLocationsItemLocationType0,
+            GetScoutingReportResponse200OutputReportOfficeLocationsItemLocationType0,  # noqa: PLC0415
         )
 
         address: None | str | Unset
@@ -71,7 +71,7 @@ class GetScoutingReportResponse200OutputReportOfficeLocationsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_scouting_report_response_200_output_report_office_locations_item_location_type_0 import (
-            GetScoutingReportResponse200OutputReportOfficeLocationsItemLocationType0,
+            GetScoutingReportResponse200OutputReportOfficeLocationsItemLocationType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

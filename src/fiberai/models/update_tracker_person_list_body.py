@@ -160,34 +160,34 @@ class UpdateTrackerPersonListBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.person_became_influencer import PersonBecameInfluencer
-        from ..models.person_became_premium import PersonBecamePremium
-        from ..models.person_became_top_voice import PersonBecameTopVoice
-        from ..models.person_became_verified import PersonBecameVerified
-        from ..models.person_changed_company import PersonChangedCompany
-        from ..models.person_commented_on_post import PersonCommentedOnPost
-        from ..models.person_connections_milestone import PersonConnectionsMilestone
-        from ..models.person_employment_type_changed import PersonEmploymentTypeChanged
-        from ..models.person_follower_milestone import PersonFollowerMilestone
-        from ..models.person_got_demoted import PersonGotDemoted
-        from ..models.person_got_promoted import PersonGotPromoted
-        from ..models.person_headline_changed import PersonHeadlineChanged
-        from ..models.person_is_hiring import PersonIsHiring
-        from ..models.person_location_changed import PersonLocationChanged
-        from ..models.person_new_certification import PersonNewCertification
-        from ..models.person_open_to_work import PersonOpenToWork
-        from ..models.person_posted import PersonPosted
-        from ..models.person_posted_with_keyword import PersonPostedWithKeyword
-        from ..models.person_reacted_to_post import PersonReactedToPost
-        from ..models.person_skills_added import PersonSkillsAdded
-        from ..models.person_started_company import PersonStartedCompany
-        from ..models.person_stealth_changed import PersonStealthChanged
-        from ..models.person_stuck_in_role import PersonStuckInRole
-        from ..models.person_summary_changed import PersonSummaryChanged
-        from ..models.person_tag_gained import PersonTagGained
-        from ..models.person_title_changed import PersonTitleChanged
+        from ..models.person_became_influencer import PersonBecameInfluencer  # noqa: PLC0415
+        from ..models.person_became_premium import PersonBecamePremium  # noqa: PLC0415
+        from ..models.person_became_top_voice import PersonBecameTopVoice  # noqa: PLC0415
+        from ..models.person_became_verified import PersonBecameVerified  # noqa: PLC0415
+        from ..models.person_changed_company import PersonChangedCompany  # noqa: PLC0415
+        from ..models.person_commented_on_post import PersonCommentedOnPost  # noqa: PLC0415
+        from ..models.person_connections_milestone import PersonConnectionsMilestone  # noqa: PLC0415
+        from ..models.person_employment_type_changed import PersonEmploymentTypeChanged  # noqa: PLC0415
+        from ..models.person_follower_milestone import PersonFollowerMilestone  # noqa: PLC0415
+        from ..models.person_got_demoted import PersonGotDemoted  # noqa: PLC0415
+        from ..models.person_got_promoted import PersonGotPromoted  # noqa: PLC0415
+        from ..models.person_headline_changed import PersonHeadlineChanged  # noqa: PLC0415
+        from ..models.person_is_hiring import PersonIsHiring  # noqa: PLC0415
+        from ..models.person_location_changed import PersonLocationChanged  # noqa: PLC0415
+        from ..models.person_new_certification import PersonNewCertification  # noqa: PLC0415
+        from ..models.person_open_to_work import PersonOpenToWork  # noqa: PLC0415
+        from ..models.person_posted import PersonPosted  # noqa: PLC0415
+        from ..models.person_posted_with_keyword import PersonPostedWithKeyword  # noqa: PLC0415
+        from ..models.person_reacted_to_post import PersonReactedToPost  # noqa: PLC0415
+        from ..models.person_skills_added import PersonSkillsAdded  # noqa: PLC0415
+        from ..models.person_started_company import PersonStartedCompany  # noqa: PLC0415
+        from ..models.person_stealth_changed import PersonStealthChanged  # noqa: PLC0415
+        from ..models.person_stuck_in_role import PersonStuckInRole  # noqa: PLC0415
+        from ..models.person_summary_changed import PersonSummaryChanged  # noqa: PLC0415
+        from ..models.person_tag_gained import PersonTagGained  # noqa: PLC0415
+        from ..models.person_title_changed import PersonTitleChanged  # noqa: PLC0415
         from ..models.update_tracker_person_list_body_initial_signals_type_0 import (
-            UpdateTrackerPersonListBodyInitialSignalsType0,
+            UpdateTrackerPersonListBodyInitialSignalsType0,  # noqa: PLC0415
         )
 
         api_key = self.api_key
@@ -409,38 +409,38 @@ class UpdateTrackerPersonListBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.person_became_influencer import PersonBecameInfluencer
-        from ..models.person_became_premium import PersonBecamePremium
-        from ..models.person_became_top_voice import PersonBecameTopVoice
-        from ..models.person_became_verified import PersonBecameVerified
-        from ..models.person_changed_company import PersonChangedCompany
-        from ..models.person_commented_on_post import PersonCommentedOnPost
-        from ..models.person_connections_milestone import PersonConnectionsMilestone
-        from ..models.person_employment_type_changed import PersonEmploymentTypeChanged
-        from ..models.person_follower_milestone import PersonFollowerMilestone
-        from ..models.person_got_demoted import PersonGotDemoted
-        from ..models.person_got_promoted import PersonGotPromoted
-        from ..models.person_headline_changed import PersonHeadlineChanged
-        from ..models.person_is_hiring import PersonIsHiring
-        from ..models.person_location_changed import PersonLocationChanged
-        from ..models.person_new_certification import PersonNewCertification
-        from ..models.person_open_to_work import PersonOpenToWork
-        from ..models.person_posted import PersonPosted
-        from ..models.person_posted_with_keyword import PersonPostedWithKeyword
-        from ..models.person_reacted_to_post import PersonReactedToPost
-        from ..models.person_skills_added import PersonSkillsAdded
-        from ..models.person_started_company import PersonStartedCompany
-        from ..models.person_stealth_changed import PersonStealthChanged
-        from ..models.person_stuck_in_role import PersonStuckInRole
-        from ..models.person_summary_changed import PersonSummaryChanged
-        from ..models.person_tag_gained import PersonTagGained
-        from ..models.person_tenure_milestone import PersonTenureMilestone
-        from ..models.person_title_changed import PersonTitleChanged
+        from ..models.person_became_influencer import PersonBecameInfluencer  # noqa: PLC0415
+        from ..models.person_became_premium import PersonBecamePremium  # noqa: PLC0415
+        from ..models.person_became_top_voice import PersonBecameTopVoice  # noqa: PLC0415
+        from ..models.person_became_verified import PersonBecameVerified  # noqa: PLC0415
+        from ..models.person_changed_company import PersonChangedCompany  # noqa: PLC0415
+        from ..models.person_commented_on_post import PersonCommentedOnPost  # noqa: PLC0415
+        from ..models.person_connections_milestone import PersonConnectionsMilestone  # noqa: PLC0415
+        from ..models.person_employment_type_changed import PersonEmploymentTypeChanged  # noqa: PLC0415
+        from ..models.person_follower_milestone import PersonFollowerMilestone  # noqa: PLC0415
+        from ..models.person_got_demoted import PersonGotDemoted  # noqa: PLC0415
+        from ..models.person_got_promoted import PersonGotPromoted  # noqa: PLC0415
+        from ..models.person_headline_changed import PersonHeadlineChanged  # noqa: PLC0415
+        from ..models.person_is_hiring import PersonIsHiring  # noqa: PLC0415
+        from ..models.person_location_changed import PersonLocationChanged  # noqa: PLC0415
+        from ..models.person_new_certification import PersonNewCertification  # noqa: PLC0415
+        from ..models.person_open_to_work import PersonOpenToWork  # noqa: PLC0415
+        from ..models.person_posted import PersonPosted  # noqa: PLC0415
+        from ..models.person_posted_with_keyword import PersonPostedWithKeyword  # noqa: PLC0415
+        from ..models.person_reacted_to_post import PersonReactedToPost  # noqa: PLC0415
+        from ..models.person_skills_added import PersonSkillsAdded  # noqa: PLC0415
+        from ..models.person_started_company import PersonStartedCompany  # noqa: PLC0415
+        from ..models.person_stealth_changed import PersonStealthChanged  # noqa: PLC0415
+        from ..models.person_stuck_in_role import PersonStuckInRole  # noqa: PLC0415
+        from ..models.person_summary_changed import PersonSummaryChanged  # noqa: PLC0415
+        from ..models.person_tag_gained import PersonTagGained  # noqa: PLC0415
+        from ..models.person_tenure_milestone import PersonTenureMilestone  # noqa: PLC0415
+        from ..models.person_title_changed import PersonTitleChanged  # noqa: PLC0415
         from ..models.update_tracker_person_list_body_initial_signals_type_0 import (
-            UpdateTrackerPersonListBodyInitialSignalsType0,
+            UpdateTrackerPersonListBodyInitialSignalsType0,  # noqa: PLC0415
         )
         from ..models.update_tracker_person_list_body_update_rule_flags_type_0_item import (
-            UpdateTrackerPersonListBodyUpdateRuleFlagsType0Item,
+            UpdateTrackerPersonListBodyUpdateRuleFlagsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

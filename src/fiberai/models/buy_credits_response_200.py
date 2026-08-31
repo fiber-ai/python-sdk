@@ -45,10 +45,18 @@ class BuyCreditsResponse200:
     advice: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.buy_credits_response_200_charge_info_type_0 import BuyCreditsResponse200ChargeInfoType0
-        from ..models.buy_credits_response_200_charge_info_type_1 import BuyCreditsResponse200ChargeInfoType1
-        from ..models.buy_credits_response_200_charge_info_type_2 import BuyCreditsResponse200ChargeInfoType2
-        from ..models.buy_credits_response_200_charge_info_type_3 import BuyCreditsResponse200ChargeInfoType3
+        from ..models.buy_credits_response_200_charge_info_type_0 import (
+            BuyCreditsResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.buy_credits_response_200_charge_info_type_1 import (
+            BuyCreditsResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.buy_credits_response_200_charge_info_type_2 import (
+            BuyCreditsResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.buy_credits_response_200_charge_info_type_3 import (
+            BuyCreditsResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
 
         output = self.output.to_dict()
 
@@ -102,13 +110,25 @@ class BuyCreditsResponse200:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.buy_credits_response_200_charge_info_type_0 import BuyCreditsResponse200ChargeInfoType0
-        from ..models.buy_credits_response_200_charge_info_type_1 import BuyCreditsResponse200ChargeInfoType1
-        from ..models.buy_credits_response_200_charge_info_type_2 import BuyCreditsResponse200ChargeInfoType2
-        from ..models.buy_credits_response_200_charge_info_type_3 import BuyCreditsResponse200ChargeInfoType3
-        from ..models.buy_credits_response_200_charge_info_type_4 import BuyCreditsResponse200ChargeInfoType4
-        from ..models.buy_credits_response_200_output import BuyCreditsResponse200Output
-        from ..models.buy_credits_response_200_warnings_type_0_item import BuyCreditsResponse200WarningsType0Item
+        from ..models.buy_credits_response_200_charge_info_type_0 import (
+            BuyCreditsResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.buy_credits_response_200_charge_info_type_1 import (
+            BuyCreditsResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.buy_credits_response_200_charge_info_type_2 import (
+            BuyCreditsResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.buy_credits_response_200_charge_info_type_3 import (
+            BuyCreditsResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
+        from ..models.buy_credits_response_200_charge_info_type_4 import (
+            BuyCreditsResponse200ChargeInfoType4,  # noqa: PLC0415
+        )
+        from ..models.buy_credits_response_200_output import BuyCreditsResponse200Output  # noqa: PLC0415
+        from ..models.buy_credits_response_200_warnings_type_0_item import (
+            BuyCreditsResponse200WarningsType0Item,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         output = BuyCreditsResponse200Output.from_dict(d.pop("output"))

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class UpdateApiKeyLimitBodyOperation(str, Enum):
+class UpdateApiKeyLimitBodyOperation(StrEnum):
     DECREASE = "decrease"
     DIVIDE = "divide"
     INCREASE = "increase"

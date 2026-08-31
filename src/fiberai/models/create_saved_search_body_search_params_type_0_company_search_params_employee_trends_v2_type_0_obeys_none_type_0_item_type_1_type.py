@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType1Type(
-    str, Enum
+    StrEnum
 ):
     NUMERIC_CHANGE = "numeric_change"
 

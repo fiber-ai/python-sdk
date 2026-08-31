@@ -58,16 +58,16 @@ class TiktokSearchHashtagResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.tiktok_search_hashtag_response_200_charge_info_type_0 import (
-            TiktokSearchHashtagResponse200ChargeInfoType0,
+            TiktokSearchHashtagResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.tiktok_search_hashtag_response_200_charge_info_type_1 import (
-            TiktokSearchHashtagResponse200ChargeInfoType1,
+            TiktokSearchHashtagResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.tiktok_search_hashtag_response_200_charge_info_type_2 import (
-            TiktokSearchHashtagResponse200ChargeInfoType2,
+            TiktokSearchHashtagResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.tiktok_search_hashtag_response_200_charge_info_type_3 import (
-            TiktokSearchHashtagResponse200ChargeInfoType3,
+            TiktokSearchHashtagResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class TiktokSearchHashtagResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.tiktok_search_hashtag_response_200_charge_info_type_0 import (
-            TiktokSearchHashtagResponse200ChargeInfoType0,
+            TiktokSearchHashtagResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.tiktok_search_hashtag_response_200_charge_info_type_1 import (
-            TiktokSearchHashtagResponse200ChargeInfoType1,
+            TiktokSearchHashtagResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.tiktok_search_hashtag_response_200_charge_info_type_2 import (
-            TiktokSearchHashtagResponse200ChargeInfoType2,
+            TiktokSearchHashtagResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.tiktok_search_hashtag_response_200_charge_info_type_3 import (
-            TiktokSearchHashtagResponse200ChargeInfoType3,
+            TiktokSearchHashtagResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.tiktok_search_hashtag_response_200_charge_info_type_4 import (
-            TiktokSearchHashtagResponse200ChargeInfoType4,
+            TiktokSearchHashtagResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.tiktok_search_hashtag_response_200_output import TiktokSearchHashtagResponse200Output
+        from ..models.tiktok_search_hashtag_response_200_output import (
+            TiktokSearchHashtagResponse200Output,  # noqa: PLC0415
+        )
         from ..models.tiktok_search_hashtag_response_200_warnings_type_0_item import (
-            TiktokSearchHashtagResponse200WarningsType0Item,
+            TiktokSearchHashtagResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

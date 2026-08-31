@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class AccountVerifyOtpResponse200OutputStatus(str, Enum):
+class AccountVerifyOtpResponse200OutputStatus(StrEnum):
     CREATED = "created"
 
     def __str__(self) -> str:

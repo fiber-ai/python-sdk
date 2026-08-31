@@ -58,7 +58,7 @@ class FlightSearchResponse200OutputPriceInsightsType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.flight_search_response_200_output_price_insights_type_0_typical_price_range_type_0 import (
-            FlightSearchResponse200OutputPriceInsightsType0TypicalPriceRangeType0,
+            FlightSearchResponse200OutputPriceInsightsType0TypicalPriceRangeType0,  # noqa: PLC0415
         )
 
         history = []
@@ -113,10 +113,10 @@ class FlightSearchResponse200OutputPriceInsightsType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.flight_search_response_200_output_price_insights_type_0_history_item import (
-            FlightSearchResponse200OutputPriceInsightsType0HistoryItem,
+            FlightSearchResponse200OutputPriceInsightsType0HistoryItem,  # noqa: PLC0415
         )
         from ..models.flight_search_response_200_output_price_insights_type_0_typical_price_range_type_0 import (
-            FlightSearchResponse200OutputPriceInsightsType0TypicalPriceRangeType0,
+            FlightSearchResponse200OutputPriceInsightsType0TypicalPriceRangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

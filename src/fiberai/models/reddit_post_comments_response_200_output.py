@@ -41,7 +41,7 @@ class RedditPostCommentsResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.reddit_post_comments_response_200_output_post_type_0 import (
-            RedditPostCommentsResponse200OutputPostType0,
+            RedditPostCommentsResponse200OutputPostType0,  # noqa: PLC0415
         )
 
         comments = []
@@ -80,10 +80,10 @@ class RedditPostCommentsResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.reddit_post_comments_response_200_output_comments_item import (
-            RedditPostCommentsResponse200OutputCommentsItem,
+            RedditPostCommentsResponse200OutputCommentsItem,  # noqa: PLC0415
         )
         from ..models.reddit_post_comments_response_200_output_post_type_0 import (
-            RedditPostCommentsResponse200OutputPostType0,
+            RedditPostCommentsResponse200OutputPostType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

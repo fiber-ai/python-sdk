@@ -42,7 +42,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_keywords_v2_type_0_options_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0OptionsType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0OptionsType0,  # noqa: PLC0415
         )
 
         clauses = []
@@ -81,10 +81,10 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_keywords_v2_type_0_clauses_item import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0ClausesItem,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0ClausesItem,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_keywords_v2_type_0_options_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0OptionsType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0OptionsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -45,7 +45,7 @@ class BlueCollarJobsSearchResponse200OutputJobsItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.blue_collar_jobs_search_response_200_output_jobs_item_salary_type_0 import (
-            BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0,
+            BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0,  # noqa: PLC0415
         )
 
         id = self.id
@@ -101,7 +101,7 @@ class BlueCollarJobsSearchResponse200OutputJobsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.blue_collar_jobs_search_response_200_output_jobs_item_salary_type_0 import (
-            BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0,
+            BlueCollarJobsSearchResponse200OutputJobsItemSalaryType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

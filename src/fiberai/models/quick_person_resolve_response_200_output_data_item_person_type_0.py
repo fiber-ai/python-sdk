@@ -197,16 +197,16 @@ class QuickPersonResolveResponse200OutputDataItemPersonType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_current_job_type_0 import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0CurrentJobType0,
+            QuickPersonResolveResponse200OutputDataItemPersonType0CurrentJobType0,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_custom_data_type_0 import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0CustomDataType0,
+            QuickPersonResolveResponse200OutputDataItemPersonType0CustomDataType0,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_inferred_location_type_0 import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0InferredLocationType0,
+            QuickPersonResolveResponse200OutputDataItemPersonType0InferredLocationType0,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_verifications_type_0 import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0VerificationsType0,
+            QuickPersonResolveResponse200OutputDataItemPersonType0VerificationsType0,  # noqa: PLC0415
         )
 
         primary_slug = self.primary_slug
@@ -723,58 +723,58 @@ class QuickPersonResolveResponse200OutputDataItemPersonType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_articles_type_0_item import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0ArticlesType0Item,
+            QuickPersonResolveResponse200OutputDataItemPersonType0ArticlesType0Item,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_certifications_type_0_item import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0CertificationsType0Item,
+            QuickPersonResolveResponse200OutputDataItemPersonType0CertificationsType0Item,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_courses_type_0_item import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0CoursesType0Item,
+            QuickPersonResolveResponse200OutputDataItemPersonType0CoursesType0Item,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_current_job_type_0 import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0CurrentJobType0,
+            QuickPersonResolveResponse200OutputDataItemPersonType0CurrentJobType0,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_custom_data_type_0 import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0CustomDataType0,
+            QuickPersonResolveResponse200OutputDataItemPersonType0CustomDataType0,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_detailed_education_type_0_item import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0DetailedEducationType0Item,
+            QuickPersonResolveResponse200OutputDataItemPersonType0DetailedEducationType0Item,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_detailed_work_experiences_type_0_item import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0DetailedWorkExperiencesType0Item,
+            QuickPersonResolveResponse200OutputDataItemPersonType0DetailedWorkExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_education_type_0_item import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0EducationType0Item,
+            QuickPersonResolveResponse200OutputDataItemPersonType0EducationType0Item,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_experiences_type_0_item import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0ExperiencesType0Item,
+            QuickPersonResolveResponse200OutputDataItemPersonType0ExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_inferred_location_type_0 import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0InferredLocationType0,
+            QuickPersonResolveResponse200OutputDataItemPersonType0InferredLocationType0,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_languages_type_0_item import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0LanguagesType0Item,
+            QuickPersonResolveResponse200OutputDataItemPersonType0LanguagesType0Item,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_organizations_type_0_item import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0OrganizationsType0Item,
+            QuickPersonResolveResponse200OutputDataItemPersonType0OrganizationsType0Item,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_patents_type_0_item import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0PatentsType0Item,
+            QuickPersonResolveResponse200OutputDataItemPersonType0PatentsType0Item,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_projects_type_0_item import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0ProjectsType0Item,
+            QuickPersonResolveResponse200OutputDataItemPersonType0ProjectsType0Item,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_publications_type_0_item import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0PublicationsType0Item,
+            QuickPersonResolveResponse200OutputDataItemPersonType0PublicationsType0Item,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_tenures_type_0_item import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0TenuresType0Item,
+            QuickPersonResolveResponse200OutputDataItemPersonType0TenuresType0Item,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_verifications_type_0 import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0VerificationsType0,
+            QuickPersonResolveResponse200OutputDataItemPersonType0VerificationsType0,  # noqa: PLC0415
         )
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_volunteering_type_0_item import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0VolunteeringType0Item,
+            QuickPersonResolveResponse200OutputDataItemPersonType0VolunteeringType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

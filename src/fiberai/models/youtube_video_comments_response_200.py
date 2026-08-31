@@ -58,16 +58,16 @@ class YoutubeVideoCommentsResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.youtube_video_comments_response_200_charge_info_type_0 import (
-            YoutubeVideoCommentsResponse200ChargeInfoType0,
+            YoutubeVideoCommentsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.youtube_video_comments_response_200_charge_info_type_1 import (
-            YoutubeVideoCommentsResponse200ChargeInfoType1,
+            YoutubeVideoCommentsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.youtube_video_comments_response_200_charge_info_type_2 import (
-            YoutubeVideoCommentsResponse200ChargeInfoType2,
+            YoutubeVideoCommentsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.youtube_video_comments_response_200_charge_info_type_3 import (
-            YoutubeVideoCommentsResponse200ChargeInfoType3,
+            YoutubeVideoCommentsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class YoutubeVideoCommentsResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.youtube_video_comments_response_200_charge_info_type_0 import (
-            YoutubeVideoCommentsResponse200ChargeInfoType0,
+            YoutubeVideoCommentsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.youtube_video_comments_response_200_charge_info_type_1 import (
-            YoutubeVideoCommentsResponse200ChargeInfoType1,
+            YoutubeVideoCommentsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.youtube_video_comments_response_200_charge_info_type_2 import (
-            YoutubeVideoCommentsResponse200ChargeInfoType2,
+            YoutubeVideoCommentsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.youtube_video_comments_response_200_charge_info_type_3 import (
-            YoutubeVideoCommentsResponse200ChargeInfoType3,
+            YoutubeVideoCommentsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.youtube_video_comments_response_200_charge_info_type_4 import (
-            YoutubeVideoCommentsResponse200ChargeInfoType4,
+            YoutubeVideoCommentsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.youtube_video_comments_response_200_output import YoutubeVideoCommentsResponse200Output
+        from ..models.youtube_video_comments_response_200_output import (
+            YoutubeVideoCommentsResponse200Output,  # noqa: PLC0415
+        )
         from ..models.youtube_video_comments_response_200_warnings_type_0_item import (
-            YoutubeVideoCommentsResponse200WarningsType0Item,
+            YoutubeVideoCommentsResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

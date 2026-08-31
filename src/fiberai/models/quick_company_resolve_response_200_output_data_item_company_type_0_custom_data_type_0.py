@@ -11,8 +11,6 @@ T = TypeVar("T", bound="QuickCompanyResolveResponse200OutputDataItemCompanyType0
 
 @_attrs_define
 class QuickCompanyResolveResponse200OutputDataItemCompanyType0CustomDataType0:
-    """ """
-
     additional_properties: dict[str, str] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

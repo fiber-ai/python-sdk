@@ -147,7 +147,7 @@ def sync_detailed(
     | DomainLookupTriggerResponse500
     | DomainLookupTriggerResponse503
 ]:
-    r"""Start Domain lookup
+    """Start Domain lookup
 
      Use our AI agent to find a company's domain and email domains using a variety of parameters such as
     company name, country, state, city, address, other context, and description. NOTE: Maximum 400
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (DomainLookupTriggerBody):
@@ -197,7 +197,7 @@ def sync(
     | DomainLookupTriggerResponse503
     | None
 ):
-    r"""Start Domain lookup
+    """Start Domain lookup
 
      Use our AI agent to find a company's domain and email domains using a variety of parameters such as
     company name, country, state, city, address, other context, and description. NOTE: Maximum 400
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (DomainLookupTriggerBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | DomainLookupTriggerResponse500
     | DomainLookupTriggerResponse503
 ]:
-    r"""Start Domain lookup
+    """Start Domain lookup
 
      Use our AI agent to find a company's domain and email domains using a variety of parameters such as
     company name, country, state, city, address, other context, and description. NOTE: Maximum 400
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (DomainLookupTriggerBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | DomainLookupTriggerResponse503
     | None
 ):
-    r"""Start Domain lookup
+    """Start Domain lookup
 
      Use our AI agent to find a company's domain and email domains using a variety of parameters such as
     company name, country, state, city, address, other context, and description. NOTE: Maximum 400
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per company&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (DomainLookupTriggerBody):

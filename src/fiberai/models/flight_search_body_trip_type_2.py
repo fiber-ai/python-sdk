@@ -48,7 +48,9 @@ class FlightSearchBodyTripType2:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.flight_search_body_trip_type_2_segments_item import FlightSearchBodyTripType2SegmentsItem
+        from ..models.flight_search_body_trip_type_2_segments_item import (
+            FlightSearchBodyTripType2SegmentsItem,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         flight_type = FlightSearchBodyTripType2FlightType(d.pop("flightType"))

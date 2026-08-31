@@ -119,13 +119,13 @@ class HotelSearchResponse200OutputPropertiesItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.hotel_search_response_200_output_properties_item_coordinates_type_0 import (
-            HotelSearchResponse200OutputPropertiesItemCoordinatesType0,
+            HotelSearchResponse200OutputPropertiesItemCoordinatesType0,  # noqa: PLC0415
         )
         from ..models.hotel_search_response_200_output_properties_item_rate_per_night_type_0 import (
-            HotelSearchResponse200OutputPropertiesItemRatePerNightType0,
+            HotelSearchResponse200OutputPropertiesItemRatePerNightType0,  # noqa: PLC0415
         )
         from ..models.hotel_search_response_200_output_properties_item_total_rate_type_0 import (
-            HotelSearchResponse200OutputPropertiesItemTotalRateType0,
+            HotelSearchResponse200OutputPropertiesItemTotalRateType0,  # noqa: PLC0415
         )
 
         property_token = self.property_token
@@ -313,22 +313,22 @@ class HotelSearchResponse200OutputPropertiesItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.hotel_search_response_200_output_properties_item_coordinates_type_0 import (
-            HotelSearchResponse200OutputPropertiesItemCoordinatesType0,
+            HotelSearchResponse200OutputPropertiesItemCoordinatesType0,  # noqa: PLC0415
         )
         from ..models.hotel_search_response_200_output_properties_item_images_item import (
-            HotelSearchResponse200OutputPropertiesItemImagesItem,
+            HotelSearchResponse200OutputPropertiesItemImagesItem,  # noqa: PLC0415
         )
         from ..models.hotel_search_response_200_output_properties_item_nearby_places_item import (
-            HotelSearchResponse200OutputPropertiesItemNearbyPlacesItem,
+            HotelSearchResponse200OutputPropertiesItemNearbyPlacesItem,  # noqa: PLC0415
         )
         from ..models.hotel_search_response_200_output_properties_item_rate_per_night_type_0 import (
-            HotelSearchResponse200OutputPropertiesItemRatePerNightType0,
+            HotelSearchResponse200OutputPropertiesItemRatePerNightType0,  # noqa: PLC0415
         )
         from ..models.hotel_search_response_200_output_properties_item_reviews_breakdown_item import (
-            HotelSearchResponse200OutputPropertiesItemReviewsBreakdownItem,
+            HotelSearchResponse200OutputPropertiesItemReviewsBreakdownItem,  # noqa: PLC0415
         )
         from ..models.hotel_search_response_200_output_properties_item_total_rate_type_0 import (
-            HotelSearchResponse200OutputPropertiesItemTotalRateType0,
+            HotelSearchResponse200OutputPropertiesItemTotalRateType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

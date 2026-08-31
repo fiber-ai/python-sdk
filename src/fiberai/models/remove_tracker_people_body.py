@@ -42,7 +42,7 @@ class RemoveTrackerPeopleBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.remove_tracker_people_body_people_item import RemoveTrackerPeopleBodyPeopleItem
+        from ..models.remove_tracker_people_body_people_item import RemoveTrackerPeopleBodyPeopleItem  # noqa: PLC0415
 
         d = dict(src_dict)
         people = []

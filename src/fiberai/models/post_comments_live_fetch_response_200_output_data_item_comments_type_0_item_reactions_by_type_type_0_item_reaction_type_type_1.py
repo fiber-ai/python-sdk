@@ -1,9 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PostCommentsLiveFetchResponse200OutputDataItemCommentsType0ItemReactionsByTypeType0ItemReactionTypeType1(
-    str, Enum
-):
+class PostCommentsLiveFetchResponse200OutputDataItemCommentsType0ItemReactionsByTypeType0ItemReactionTypeType1(StrEnum):
     CELEBRATE = "CELEBRATE"
     FUNNY = "FUNNY"
     INSIGHTFUL = "INSIGHTFUL"

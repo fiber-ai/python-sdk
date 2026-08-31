@@ -57,7 +57,7 @@ class TiktokCommentRepliesResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.tiktok_comment_replies_response_200_output_comments_item import (
-            TiktokCommentRepliesResponse200OutputCommentsItem,
+            TiktokCommentRepliesResponse200OutputCommentsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

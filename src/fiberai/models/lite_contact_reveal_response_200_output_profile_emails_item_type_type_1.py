@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class LiteContactRevealResponse200OutputProfileEmailsItemTypeType1(str, Enum):
+class LiteContactRevealResponse200OutputProfileEmailsItemTypeType1(StrEnum):
     PERSONAL = "personal"
     WORK = "work"
 

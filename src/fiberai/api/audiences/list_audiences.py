@@ -147,7 +147,7 @@ def sync_detailed(
     | ListAudiencesResponse500
     | ListAudiencesResponse503
 ]:
-    r"""List all audiences
+    """List all audiences
 
      Lists all audiences for your organization. Returns basic info and counts for each audience. Only
     visible audiences are returned (hidden system audiences are excluded). Pass your apiKey in the query
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -197,7 +197,7 @@ def sync(
     | ListAudiencesResponse503
     | None
 ):
-    r"""List all audiences
+    """List all audiences
 
      Lists all audiences for your organization. Returns basic info and counts for each audience. Only
     visible audiences are returned (hidden system audiences are excluded). Pass your apiKey in the query
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | ListAudiencesResponse500
     | ListAudiencesResponse503
 ]:
-    r"""List all audiences
+    """List all audiences
 
      Lists all audiences for your organization. Returns basic info and counts for each audience. Only
     visible audiences are returned (hidden system audiences are excluded). Pass your apiKey in the query
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -289,7 +289,7 @@ async def asyncio(
     | ListAudiencesResponse503
     | None
 ):
-    r"""List all audiences
+    """List all audiences
 
      Lists all audiences for your organization. Returns basic info and counts for each audience. Only
     visible audiences are returned (hidden system audiences are excluded). Pass your apiKey in the query
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):

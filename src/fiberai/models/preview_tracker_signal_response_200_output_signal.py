@@ -60,7 +60,7 @@ class PreviewTrackerSignalResponse200OutputSignal:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.preview_tracker_signal_response_200_output_signal_change_data_item import (
-            PreviewTrackerSignalResponse200OutputSignalChangeDataItem,
+            PreviewTrackerSignalResponse200OutputSignalChangeDataItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJoinedLinkedInAtType1WindowType1Period(str, Enum):
+class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJoinedLinkedInAtType1WindowType1Period(StrEnum):
     DAY = "day"
     MONTH = "month"
     QUARTER = "quarter"

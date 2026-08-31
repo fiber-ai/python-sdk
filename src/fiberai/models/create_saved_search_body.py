@@ -37,8 +37,12 @@ class CreateSavedSearchBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.create_saved_search_body_search_params_type_0 import CreateSavedSearchBodySearchParamsType0
-        from ..models.create_saved_search_body_search_params_type_1 import CreateSavedSearchBodySearchParamsType1
+        from ..models.create_saved_search_body_search_params_type_0 import (
+            CreateSavedSearchBodySearchParamsType0,  # noqa: PLC0415
+        )
+        from ..models.create_saved_search_body_search_params_type_1 import (
+            CreateSavedSearchBodySearchParamsType1,  # noqa: PLC0415
+        )
 
         api_key = self.api_key
 
@@ -69,9 +73,15 @@ class CreateSavedSearchBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.create_saved_search_body_search_params_type_0 import CreateSavedSearchBodySearchParamsType0
-        from ..models.create_saved_search_body_search_params_type_1 import CreateSavedSearchBodySearchParamsType1
-        from ..models.create_saved_search_body_search_params_type_2 import CreateSavedSearchBodySearchParamsType2
+        from ..models.create_saved_search_body_search_params_type_0 import (
+            CreateSavedSearchBodySearchParamsType0,  # noqa: PLC0415
+        )
+        from ..models.create_saved_search_body_search_params_type_1 import (
+            CreateSavedSearchBodySearchParamsType1,  # noqa: PLC0415
+        )
+        from ..models.create_saved_search_body_search_params_type_2 import (
+            CreateSavedSearchBodySearchParamsType2,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

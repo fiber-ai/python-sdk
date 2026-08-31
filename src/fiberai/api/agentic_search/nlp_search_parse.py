@@ -138,7 +138,7 @@ def sync_detailed(
     | NlpSearchParseResponse500
     | NlpSearchParseResponse503
 ]:
-    r"""Parse natural language to search params
+    """Parse natural language to search params
 
      Parses a natural language query into structured search parameters without executing the search.
 
@@ -158,8 +158,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (NlpSearchParseBody):
@@ -199,7 +199,7 @@ def sync(
     | NlpSearchParseResponse503
     | None
 ):
-    r"""Parse natural language to search params
+    """Parse natural language to search params
 
      Parses a natural language query into structured search parameters without executing the search.
 
@@ -219,8 +219,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (NlpSearchParseBody):
@@ -254,7 +254,7 @@ async def asyncio_detailed(
     | NlpSearchParseResponse500
     | NlpSearchParseResponse503
 ]:
-    r"""Parse natural language to search params
+    """Parse natural language to search params
 
      Parses a natural language query into structured search parameters without executing the search.
 
@@ -274,8 +274,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (NlpSearchParseBody):
@@ -313,7 +313,7 @@ async def asyncio(
     | NlpSearchParseResponse503
     | None
 ):
-    r"""Parse natural language to search params
+    """Parse natural language to search params
 
      Parses a natural language query into structured search parameters without executing the search.
 
@@ -333,8 +333,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (NlpSearchParseBody):

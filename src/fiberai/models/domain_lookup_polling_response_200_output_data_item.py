@@ -99,7 +99,7 @@ class DomainLookupPollingResponse200OutputDataItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.domain_lookup_polling_response_200_output_data_item_email_domains_type_0_item import (
-            DomainLookupPollingResponse200OutputDataItemEmailDomainsType0Item,
+            DomainLookupPollingResponse200OutputDataItemEmailDomainsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

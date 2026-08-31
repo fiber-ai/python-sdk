@@ -48,13 +48,13 @@ class PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_count_body_search_params_joined_linked_in_at_type_1_window_type_0 import (
-            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1WindowType0,
+            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_joined_linked_in_at_type_1_window_type_1 import (
-            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1WindowType1,
+            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_joined_linked_in_at_type_1_window_type_2 import (
-            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1WindowType2,
+            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -86,13 +86,13 @@ class PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_body_search_params_joined_linked_in_at_type_1_window_type_0 import (
-            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1WindowType0,
+            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_joined_linked_in_at_type_1_window_type_1 import (
-            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1WindowType1,
+            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_joined_linked_in_at_type_1_window_type_2 import (
-            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1WindowType2,
+            PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -147,15 +147,15 @@ def sync_detailed(
     | GetCompanyRevenueResponse500
     | GetCompanyRevenueResponse503
 ]:
-    r"""Get company revenue estimate
+    """Get company revenue estimate
 
      Fetches the most recent annual revenue estimate for a company. Pass a LinkedIn company URL, domain,
     and/or company name.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 4 credits per company lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 4 credits per company lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCompanyRevenueBody):
@@ -196,15 +196,15 @@ def sync(
     | GetCompanyRevenueResponse503
     | None
 ):
-    r"""Get company revenue estimate
+    """Get company revenue estimate
 
      Fetches the most recent annual revenue estimate for a company. Pass a LinkedIn company URL, domain,
     and/or company name.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 4 credits per company lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 4 credits per company lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCompanyRevenueBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | GetCompanyRevenueResponse500
     | GetCompanyRevenueResponse503
 ]:
-    r"""Get company revenue estimate
+    """Get company revenue estimate
 
      Fetches the most recent annual revenue estimate for a company. Pass a LinkedIn company URL, domain,
     and/or company name.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 4 credits per company lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 4 credits per company lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCompanyRevenueBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | GetCompanyRevenueResponse503
     | None
 ):
-    r"""Get company revenue estimate
+    """Get company revenue estimate
 
      Fetches the most recent annual revenue estimate for a company. Pass a LinkedIn company URL, domain,
     and/or company name.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 4 credits per company lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 4 credits per company lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GetCompanyRevenueBody):

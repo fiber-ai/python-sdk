@@ -147,7 +147,7 @@ def sync_detailed(
     | GithubToLinkedInTriggerResponse500
     | GithubToLinkedInTriggerResponse503
 ]:
-    r"""Start GitHub to LinkedIn lookup
+    """Start GitHub to LinkedIn lookup
 
      Convert GitHub usernames to LinkedIn profiles or get emailIds. Use outputType flag to specify what
     to retrieve.
@@ -155,8 +155,8 @@ def sync_detailed(
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per person for LinkedIn lookup OR email extraction. 2
-    credits per person if outputType='both'.&nbsp;<span title=\"Pricing shown is default pricing. Actual
-    pricing may vary.\">ⓘ</span></span>
+    credits per person if outputType='both'.&nbsp;<span title="Pricing shown is default pricing. Actual
+    pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GithubToLinkedInTriggerBody):
@@ -197,7 +197,7 @@ def sync(
     | GithubToLinkedInTriggerResponse503
     | None
 ):
-    r"""Start GitHub to LinkedIn lookup
+    """Start GitHub to LinkedIn lookup
 
      Convert GitHub usernames to LinkedIn profiles or get emailIds. Use outputType flag to specify what
     to retrieve.
@@ -205,8 +205,8 @@ def sync(
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per person for LinkedIn lookup OR email extraction. 2
-    credits per person if outputType='both'.&nbsp;<span title=\"Pricing shown is default pricing. Actual
-    pricing may vary.\">ⓘ</span></span>
+    credits per person if outputType='both'.&nbsp;<span title="Pricing shown is default pricing. Actual
+    pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GithubToLinkedInTriggerBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | GithubToLinkedInTriggerResponse500
     | GithubToLinkedInTriggerResponse503
 ]:
-    r"""Start GitHub to LinkedIn lookup
+    """Start GitHub to LinkedIn lookup
 
      Convert GitHub usernames to LinkedIn profiles or get emailIds. Use outputType flag to specify what
     to retrieve.
@@ -249,8 +249,8 @@ async def asyncio_detailed(
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per person for LinkedIn lookup OR email extraction. 2
-    credits per person if outputType='both'.&nbsp;<span title=\"Pricing shown is default pricing. Actual
-    pricing may vary.\">ⓘ</span></span>
+    credits per person if outputType='both'.&nbsp;<span title="Pricing shown is default pricing. Actual
+    pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GithubToLinkedInTriggerBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | GithubToLinkedInTriggerResponse503
     | None
 ):
-    r"""Start GitHub to LinkedIn lookup
+    """Start GitHub to LinkedIn lookup
 
      Convert GitHub usernames to LinkedIn profiles or get emailIds. Use outputType flag to specify what
     to retrieve.
@@ -297,8 +297,8 @@ async def asyncio(
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 1 credit per person for LinkedIn lookup OR email extraction. 2
-    credits per person if outputType='both'.&nbsp;<span title=\"Pricing shown is default pricing. Actual
-    pricing may vary.\">ⓘ</span></span>
+    credits per person if outputType='both'.&nbsp;<span title="Pricing shown is default pricing. Actual
+    pricing may vary.">ⓘ</span></span>
 
     Args:
         body (GithubToLinkedInTriggerBody):

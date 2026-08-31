@@ -42,7 +42,7 @@ class CombinedSearchCountBodyProfileParamsKeywordsV2Type0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_profile_params_keywords_v2_type_0_options_type_0 import (
-            CombinedSearchCountBodyProfileParamsKeywordsV2Type0OptionsType0,
+            CombinedSearchCountBodyProfileParamsKeywordsV2Type0OptionsType0,  # noqa: PLC0415
         )
 
         clauses = []
@@ -79,10 +79,10 @@ class CombinedSearchCountBodyProfileParamsKeywordsV2Type0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_keywords_v2_type_0_clauses_item import (
-            CombinedSearchCountBodyProfileParamsKeywordsV2Type0ClausesItem,
+            CombinedSearchCountBodyProfileParamsKeywordsV2Type0ClausesItem,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_profile_params_keywords_v2_type_0_options_type_0 import (
-            CombinedSearchCountBodyProfileParamsKeywordsV2Type0OptionsType0,
+            CombinedSearchCountBodyProfileParamsKeywordsV2Type0OptionsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

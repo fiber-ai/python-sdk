@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PersonOpenToWorkDirection(str, Enum):
+class PersonOpenToWorkDirection(StrEnum):
     EITHER = "either"
     STARTED = "started"
     STOPPED = "stopped"

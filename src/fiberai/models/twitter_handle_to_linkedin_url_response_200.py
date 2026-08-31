@@ -58,16 +58,16 @@ class TwitterHandleToLinkedinUrlResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.twitter_handle_to_linkedin_url_response_200_charge_info_type_0 import (
-            TwitterHandleToLinkedinUrlResponse200ChargeInfoType0,
+            TwitterHandleToLinkedinUrlResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.twitter_handle_to_linkedin_url_response_200_charge_info_type_1 import (
-            TwitterHandleToLinkedinUrlResponse200ChargeInfoType1,
+            TwitterHandleToLinkedinUrlResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.twitter_handle_to_linkedin_url_response_200_charge_info_type_2 import (
-            TwitterHandleToLinkedinUrlResponse200ChargeInfoType2,
+            TwitterHandleToLinkedinUrlResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.twitter_handle_to_linkedin_url_response_200_charge_info_type_3 import (
-            TwitterHandleToLinkedinUrlResponse200ChargeInfoType3,
+            TwitterHandleToLinkedinUrlResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,25 +123,25 @@ class TwitterHandleToLinkedinUrlResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.twitter_handle_to_linkedin_url_response_200_charge_info_type_0 import (
-            TwitterHandleToLinkedinUrlResponse200ChargeInfoType0,
+            TwitterHandleToLinkedinUrlResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.twitter_handle_to_linkedin_url_response_200_charge_info_type_1 import (
-            TwitterHandleToLinkedinUrlResponse200ChargeInfoType1,
+            TwitterHandleToLinkedinUrlResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.twitter_handle_to_linkedin_url_response_200_charge_info_type_2 import (
-            TwitterHandleToLinkedinUrlResponse200ChargeInfoType2,
+            TwitterHandleToLinkedinUrlResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.twitter_handle_to_linkedin_url_response_200_charge_info_type_3 import (
-            TwitterHandleToLinkedinUrlResponse200ChargeInfoType3,
+            TwitterHandleToLinkedinUrlResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.twitter_handle_to_linkedin_url_response_200_charge_info_type_4 import (
-            TwitterHandleToLinkedinUrlResponse200ChargeInfoType4,
+            TwitterHandleToLinkedinUrlResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.twitter_handle_to_linkedin_url_response_200_output import (
-            TwitterHandleToLinkedinUrlResponse200Output,
+            TwitterHandleToLinkedinUrlResponse200Output,  # noqa: PLC0415
         )
         from ..models.twitter_handle_to_linkedin_url_response_200_warnings_type_0_item import (
-            TwitterHandleToLinkedinUrlResponse200WarningsType0Item,
+            TwitterHandleToLinkedinUrlResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

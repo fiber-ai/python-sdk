@@ -182,16 +182,16 @@ class PeopleSearchResponse200OutputDataItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_response_200_output_data_item_current_job_type_0 import (
-            PeopleSearchResponse200OutputDataItemCurrentJobType0,
+            PeopleSearchResponse200OutputDataItemCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_custom_data_type_0 import (
-            PeopleSearchResponse200OutputDataItemCustomDataType0,
+            PeopleSearchResponse200OutputDataItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_inferred_location_type_0 import (
-            PeopleSearchResponse200OutputDataItemInferredLocationType0,
+            PeopleSearchResponse200OutputDataItemInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_verifications_type_0 import (
-            PeopleSearchResponse200OutputDataItemVerificationsType0,
+            PeopleSearchResponse200OutputDataItemVerificationsType0,  # noqa: PLC0415
         )
 
         primary_slug = self.primary_slug
@@ -706,58 +706,58 @@ class PeopleSearchResponse200OutputDataItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_response_200_output_data_item_articles_type_0_item import (
-            PeopleSearchResponse200OutputDataItemArticlesType0Item,
+            PeopleSearchResponse200OutputDataItemArticlesType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_certifications_type_0_item import (
-            PeopleSearchResponse200OutputDataItemCertificationsType0Item,
+            PeopleSearchResponse200OutputDataItemCertificationsType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_courses_type_0_item import (
-            PeopleSearchResponse200OutputDataItemCoursesType0Item,
+            PeopleSearchResponse200OutputDataItemCoursesType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_current_job_type_0 import (
-            PeopleSearchResponse200OutputDataItemCurrentJobType0,
+            PeopleSearchResponse200OutputDataItemCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_custom_data_type_0 import (
-            PeopleSearchResponse200OutputDataItemCustomDataType0,
+            PeopleSearchResponse200OutputDataItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_detailed_education_type_0_item import (
-            PeopleSearchResponse200OutputDataItemDetailedEducationType0Item,
+            PeopleSearchResponse200OutputDataItemDetailedEducationType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_detailed_work_experiences_type_0_item import (
-            PeopleSearchResponse200OutputDataItemDetailedWorkExperiencesType0Item,
+            PeopleSearchResponse200OutputDataItemDetailedWorkExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_education_type_0_item import (
-            PeopleSearchResponse200OutputDataItemEducationType0Item,
+            PeopleSearchResponse200OutputDataItemEducationType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_experiences_type_0_item import (
-            PeopleSearchResponse200OutputDataItemExperiencesType0Item,
+            PeopleSearchResponse200OutputDataItemExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_inferred_location_type_0 import (
-            PeopleSearchResponse200OutputDataItemInferredLocationType0,
+            PeopleSearchResponse200OutputDataItemInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_languages_type_0_item import (
-            PeopleSearchResponse200OutputDataItemLanguagesType0Item,
+            PeopleSearchResponse200OutputDataItemLanguagesType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_organizations_type_0_item import (
-            PeopleSearchResponse200OutputDataItemOrganizationsType0Item,
+            PeopleSearchResponse200OutputDataItemOrganizationsType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_patents_type_0_item import (
-            PeopleSearchResponse200OutputDataItemPatentsType0Item,
+            PeopleSearchResponse200OutputDataItemPatentsType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_projects_type_0_item import (
-            PeopleSearchResponse200OutputDataItemProjectsType0Item,
+            PeopleSearchResponse200OutputDataItemProjectsType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_publications_type_0_item import (
-            PeopleSearchResponse200OutputDataItemPublicationsType0Item,
+            PeopleSearchResponse200OutputDataItemPublicationsType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_tenures_type_0_item import (
-            PeopleSearchResponse200OutputDataItemTenuresType0Item,
+            PeopleSearchResponse200OutputDataItemTenuresType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_verifications_type_0 import (
-            PeopleSearchResponse200OutputDataItemVerificationsType0,
+            PeopleSearchResponse200OutputDataItemVerificationsType0,  # noqa: PLC0415
         )
         from ..models.people_search_response_200_output_data_item_volunteering_type_0_item import (
-            PeopleSearchResponse200OutputDataItemVolunteeringType0Item,
+            PeopleSearchResponse200OutputDataItemVolunteeringType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

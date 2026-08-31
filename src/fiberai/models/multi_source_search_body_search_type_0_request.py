@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class MultiSourceSearchBodySearchType0Request(str, Enum):
+class MultiSourceSearchBodySearchType0Request(StrEnum):
     INITIAL = "initial"
 
     def __str__(self) -> str:

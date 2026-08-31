@@ -147,7 +147,7 @@ def sync_detailed(
     | LiteReverseEmailLookupResponse500
     | LiteReverseEmailLookupResponse503
 ]:
-    r"""Find person by email (lite, high-volume)
+    """Find person by email (lite, high-volume)
 
      Given an email address, find the person's LinkedIn profile.
     Lite version optimized for high-volume usage at lower cost. Skips expensive yield increasing
@@ -155,11 +155,11 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 3000 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per email lookup (lite)&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per email lookup (lite)&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (LiteReverseEmailLookupBody):
@@ -200,7 +200,7 @@ def sync(
     | LiteReverseEmailLookupResponse503
     | None
 ):
-    r"""Find person by email (lite, high-volume)
+    """Find person by email (lite, high-volume)
 
      Given an email address, find the person's LinkedIn profile.
     Lite version optimized for high-volume usage at lower cost. Skips expensive yield increasing
@@ -208,11 +208,11 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 3000 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per email lookup (lite)&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per email lookup (lite)&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (LiteReverseEmailLookupBody):
@@ -247,7 +247,7 @@ async def asyncio_detailed(
     | LiteReverseEmailLookupResponse500
     | LiteReverseEmailLookupResponse503
 ]:
-    r"""Find person by email (lite, high-volume)
+    """Find person by email (lite, high-volume)
 
      Given an email address, find the person's LinkedIn profile.
     Lite version optimized for high-volume usage at lower cost. Skips expensive yield increasing
@@ -255,11 +255,11 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 3000 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per email lookup (lite)&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per email lookup (lite)&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (LiteReverseEmailLookupBody):
@@ -298,7 +298,7 @@ async def asyncio(
     | LiteReverseEmailLookupResponse503
     | None
 ):
-    r"""Find person by email (lite, high-volume)
+    """Find person by email (lite, high-volume)
 
      Given an email address, find the person's LinkedIn profile.
     Lite version optimized for high-volume usage at lower cost. Skips expensive yield increasing
@@ -306,11 +306,11 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 3000 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per email lookup (lite)&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per email lookup (lite)&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 30 seconds for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 30 seconds&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 30 seconds for this endpoint.">ⓘ</span></span>
 
     Args:
         body (LiteReverseEmailLookupBody):

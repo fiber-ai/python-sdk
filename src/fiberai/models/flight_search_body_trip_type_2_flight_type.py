@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FlightSearchBodyTripType2FlightType(str, Enum):
+class FlightSearchBodyTripType2FlightType(StrEnum):
     MULTI_CITY = "multi_city"
 
     def __str__(self) -> str:

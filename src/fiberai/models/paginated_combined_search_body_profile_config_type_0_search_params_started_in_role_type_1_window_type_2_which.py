@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStartedInRoleType1WindowType2Which(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsStartedInRoleType1WindowType2Which(StrEnum):
     CURRENT = "current"
     PREVIOUS = "previous"
 

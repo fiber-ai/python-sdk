@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanySearchBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemAcceleratorName(str, Enum):
+class CompanySearchBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemAcceleratorName(StrEnum):
     A16Z_SPEEDRUN = "a16z_speedrun"
     ACCEL_ATOMS = "accel_atoms"
     AI2_INCUBATOR = "ai2_incubator"

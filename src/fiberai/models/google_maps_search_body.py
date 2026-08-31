@@ -38,8 +38,8 @@ class GoogleMapsSearchBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.google_maps_search_body_strategy_type_0 import GoogleMapsSearchBodyStrategyType0
-        from ..models.google_maps_search_body_strategy_type_1 import GoogleMapsSearchBodyStrategyType1
+        from ..models.google_maps_search_body_strategy_type_0 import GoogleMapsSearchBodyStrategyType0  # noqa: PLC0415
+        from ..models.google_maps_search_body_strategy_type_1 import GoogleMapsSearchBodyStrategyType1  # noqa: PLC0415
 
         api_key = self.api_key
 
@@ -79,9 +79,9 @@ class GoogleMapsSearchBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.google_maps_search_body_strategy_type_0 import GoogleMapsSearchBodyStrategyType0
-        from ..models.google_maps_search_body_strategy_type_1 import GoogleMapsSearchBodyStrategyType1
-        from ..models.google_maps_search_body_strategy_type_2 import GoogleMapsSearchBodyStrategyType2
+        from ..models.google_maps_search_body_strategy_type_0 import GoogleMapsSearchBodyStrategyType0  # noqa: PLC0415
+        from ..models.google_maps_search_body_strategy_type_1 import GoogleMapsSearchBodyStrategyType1  # noqa: PLC0415
+        from ..models.google_maps_search_body_strategy_type_2 import GoogleMapsSearchBodyStrategyType2  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

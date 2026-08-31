@@ -52,10 +52,10 @@ class SocialMediaLookupBatchTriggerBody:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.social_media_lookup_batch_trigger_body_people_item_type_0 import (
-            SocialMediaLookupBatchTriggerBodyPeopleItemType0,
+            SocialMediaLookupBatchTriggerBodyPeopleItemType0,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_batch_trigger_body_people_item_type_1 import (
-            SocialMediaLookupBatchTriggerBodyPeopleItemType1,
+            SocialMediaLookupBatchTriggerBodyPeopleItemType1,  # noqa: PLC0415
         )
 
         api_key = self.api_key
@@ -103,13 +103,13 @@ class SocialMediaLookupBatchTriggerBody:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.social_media_lookup_batch_trigger_body_people_item_type_0 import (
-            SocialMediaLookupBatchTriggerBodyPeopleItemType0,
+            SocialMediaLookupBatchTriggerBodyPeopleItemType0,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_batch_trigger_body_people_item_type_1 import (
-            SocialMediaLookupBatchTriggerBodyPeopleItemType1,
+            SocialMediaLookupBatchTriggerBodyPeopleItemType1,  # noqa: PLC0415
         )
         from ..models.social_media_lookup_batch_trigger_body_people_item_type_2 import (
-            SocialMediaLookupBatchTriggerBodyPeopleItemType2,
+            SocialMediaLookupBatchTriggerBodyPeopleItemType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

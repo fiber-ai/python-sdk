@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class HealthCheckResponse200Status(str, Enum):
+class HealthCheckResponse200Status(StrEnum):
     HEALTHY = "healthy"
 
     def __str__(self) -> str:

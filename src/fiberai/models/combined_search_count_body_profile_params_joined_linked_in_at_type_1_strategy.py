@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyProfileParamsJoinedLinkedInAtType1Strategy(str, Enum):
+class CombinedSearchCountBodyProfileParamsJoinedLinkedInAtType1Strategy(StrEnum):
     RELATIVE = "relative"
 
     def __str__(self) -> str:

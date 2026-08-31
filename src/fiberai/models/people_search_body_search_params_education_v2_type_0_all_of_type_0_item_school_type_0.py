@@ -45,13 +45,13 @@ class PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_body_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0 import (
-            PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0,
+            PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_name_keywords_type_0 import (
-            PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0NameKeywordsType0,
+            PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0NameKeywordsType0,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_properties_type_0 import (
-            PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0PropertiesType0,
+            PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0PropertiesType0,  # noqa: PLC0415
         )
 
         exact: dict[str, Any] | None | Unset
@@ -97,13 +97,13 @@ class PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_exact_type_0 import (
-            PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0,
+            PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0ExactType0,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_name_keywords_type_0 import (
-            PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0NameKeywordsType0,
+            PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0NameKeywordsType0,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_education_v2_type_0_all_of_type_0_item_school_type_0_properties_type_0 import (
-            PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0PropertiesType0,
+            PeopleSearchBodySearchParamsEducationV2Type0AllOfType0ItemSchoolType0PropertiesType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class DomainLookupPollingResponse200OutputStatus(str, Enum):
+class DomainLookupPollingResponse200OutputStatus(StrEnum):
     DONE = "DONE"
     FAILED = "FAILED"
     NOT_STARTED = "NOT_STARTED"

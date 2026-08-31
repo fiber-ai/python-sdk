@@ -44,7 +44,7 @@ class GithubToLinkedinSingleResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.github_to_linkedin_single_response_200_output_github_profile_type_0 import (
-            GithubToLinkedinSingleResponse200OutputGithubProfileType0,
+            GithubToLinkedinSingleResponse200OutputGithubProfileType0,  # noqa: PLC0415
         )
 
         github_username = self.github_username
@@ -110,7 +110,7 @@ class GithubToLinkedinSingleResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.github_to_linkedin_single_response_200_output_github_profile_type_0 import (
-            GithubToLinkedinSingleResponse200OutputGithubProfileType0,
+            GithubToLinkedinSingleResponse200OutputGithubProfileType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

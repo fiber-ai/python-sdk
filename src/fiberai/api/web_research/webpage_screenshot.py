@@ -147,18 +147,18 @@ def sync_detailed(
     | WebpageScreenshotResponse500
     | WebpageScreenshotResponse503
 ]:
-    r"""Capture webpage screenshot
+    """Capture webpage screenshot
 
      Captures a screenshot of a public webpage and returns a hosted image URL. Supports both viewport-
     only and full-page captures. The returned URL is permanent and does not expire.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per screenshot&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per screenshot&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (WebpageScreenshotBody):
@@ -199,18 +199,18 @@ def sync(
     | WebpageScreenshotResponse503
     | None
 ):
-    r"""Capture webpage screenshot
+    """Capture webpage screenshot
 
      Captures a screenshot of a public webpage and returns a hosted image URL. Supports both viewport-
     only and full-page captures. The returned URL is permanent and does not expire.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per screenshot&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per screenshot&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (WebpageScreenshotBody):
@@ -245,18 +245,18 @@ async def asyncio_detailed(
     | WebpageScreenshotResponse500
     | WebpageScreenshotResponse503
 ]:
-    r"""Capture webpage screenshot
+    """Capture webpage screenshot
 
      Captures a screenshot of a public webpage and returns a hosted image URL. Supports both viewport-
     only and full-page captures. The returned URL is permanent and does not expire.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per screenshot&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per screenshot&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (WebpageScreenshotBody):
@@ -295,18 +295,18 @@ async def asyncio(
     | WebpageScreenshotResponse503
     | None
 ):
-    r"""Capture webpage screenshot
+    """Capture webpage screenshot
 
      Captures a screenshot of a public webpage and returns a hosted image URL. Supports both viewport-
     only and full-page captures. The returned URL is permanent and does not expire.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per screenshot&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per screenshot&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (WebpageScreenshotBody):

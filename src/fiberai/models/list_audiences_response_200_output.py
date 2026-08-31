@@ -47,7 +47,7 @@ class ListAudiencesResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.list_audiences_response_200_output_audiences_item import (
-            ListAudiencesResponse200OutputAudiencesItem,
+            ListAudiencesResponse200OutputAudiencesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

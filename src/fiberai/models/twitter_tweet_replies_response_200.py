@@ -58,16 +58,16 @@ class TwitterTweetRepliesResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.twitter_tweet_replies_response_200_charge_info_type_0 import (
-            TwitterTweetRepliesResponse200ChargeInfoType0,
+            TwitterTweetRepliesResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.twitter_tweet_replies_response_200_charge_info_type_1 import (
-            TwitterTweetRepliesResponse200ChargeInfoType1,
+            TwitterTweetRepliesResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.twitter_tweet_replies_response_200_charge_info_type_2 import (
-            TwitterTweetRepliesResponse200ChargeInfoType2,
+            TwitterTweetRepliesResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.twitter_tweet_replies_response_200_charge_info_type_3 import (
-            TwitterTweetRepliesResponse200ChargeInfoType3,
+            TwitterTweetRepliesResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class TwitterTweetRepliesResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.twitter_tweet_replies_response_200_charge_info_type_0 import (
-            TwitterTweetRepliesResponse200ChargeInfoType0,
+            TwitterTweetRepliesResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.twitter_tweet_replies_response_200_charge_info_type_1 import (
-            TwitterTweetRepliesResponse200ChargeInfoType1,
+            TwitterTweetRepliesResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.twitter_tweet_replies_response_200_charge_info_type_2 import (
-            TwitterTweetRepliesResponse200ChargeInfoType2,
+            TwitterTweetRepliesResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.twitter_tweet_replies_response_200_charge_info_type_3 import (
-            TwitterTweetRepliesResponse200ChargeInfoType3,
+            TwitterTweetRepliesResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.twitter_tweet_replies_response_200_charge_info_type_4 import (
-            TwitterTweetRepliesResponse200ChargeInfoType4,
+            TwitterTweetRepliesResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.twitter_tweet_replies_response_200_output import TwitterTweetRepliesResponse200Output
+        from ..models.twitter_tweet_replies_response_200_output import (
+            TwitterTweetRepliesResponse200Output,  # noqa: PLC0415
+        )
         from ..models.twitter_tweet_replies_response_200_warnings_type_0_item import (
-            TwitterTweetRepliesResponse200WarningsType0Item,
+            TwitterTweetRepliesResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

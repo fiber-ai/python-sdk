@@ -57,7 +57,7 @@ class InstagramUserPostsResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.instagram_user_posts_response_200_output_posts_item import (
-            InstagramUserPostsResponse200OutputPostsItem,
+            InstagramUserPostsResponse200OutputPostsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

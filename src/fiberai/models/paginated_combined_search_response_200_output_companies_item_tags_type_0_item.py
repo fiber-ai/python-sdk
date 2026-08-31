@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchResponse200OutputCompaniesItemTagsType0Item(str, Enum):
+class PaginatedCombinedSearchResponse200OutputCompaniesItemTagsType0Item(StrEnum):
     IS_GOVERNMENT = "is-government"
     IS_SCHOOL = "is-school"
     RAISED_FROM_TOP_VC = "raised-from-top-vc"

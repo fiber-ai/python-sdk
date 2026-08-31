@@ -66,22 +66,22 @@ class KitchenSinkBulkCompanyBodyCompaniesItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.kitchen_sink_bulk_company_body_companies_item_company_domain_type_0 import (
-            KitchenSinkBulkCompanyBodyCompaniesItemCompanyDomainType0,
+            KitchenSinkBulkCompanyBodyCompaniesItemCompanyDomainType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_body_companies_item_company_identifier_type_0 import (
-            KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType0,
+            KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_body_companies_item_company_identifier_type_1 import (
-            KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType1,
+            KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_body_companies_item_company_identifier_type_2 import (
-            KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType2,
+            KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType2,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_body_companies_item_company_location_type_0 import (
-            KitchenSinkBulkCompanyBodyCompaniesItemCompanyLocationType0,
+            KitchenSinkBulkCompanyBodyCompaniesItemCompanyLocationType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_body_companies_item_company_name_type_0 import (
-            KitchenSinkBulkCompanyBodyCompaniesItemCompanyNameType0,
+            KitchenSinkBulkCompanyBodyCompaniesItemCompanyNameType0,  # noqa: PLC0415
         )
 
         company_identifier: dict[str, Any] | None | Unset
@@ -141,22 +141,22 @@ class KitchenSinkBulkCompanyBodyCompaniesItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_bulk_company_body_companies_item_company_domain_type_0 import (
-            KitchenSinkBulkCompanyBodyCompaniesItemCompanyDomainType0,
+            KitchenSinkBulkCompanyBodyCompaniesItemCompanyDomainType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_body_companies_item_company_identifier_type_0 import (
-            KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType0,
+            KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_body_companies_item_company_identifier_type_1 import (
-            KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType1,
+            KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType1,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_body_companies_item_company_identifier_type_2 import (
-            KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType2,
+            KitchenSinkBulkCompanyBodyCompaniesItemCompanyIdentifierType2,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_body_companies_item_company_location_type_0 import (
-            KitchenSinkBulkCompanyBodyCompaniesItemCompanyLocationType0,
+            KitchenSinkBulkCompanyBodyCompaniesItemCompanyLocationType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_bulk_company_body_companies_item_company_name_type_0 import (
-            KitchenSinkBulkCompanyBodyCompaniesItemCompanyNameType0,
+            KitchenSinkBulkCompanyBodyCompaniesItemCompanyNameType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

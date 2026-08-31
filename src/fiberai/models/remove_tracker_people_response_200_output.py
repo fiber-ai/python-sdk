@@ -55,7 +55,7 @@ class RemoveTrackerPeopleResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.remove_tracker_people_response_200_output_failed_identifiers_item import (
-            RemoveTrackerPeopleResponse200OutputFailedIdentifiersItem,
+            RemoveTrackerPeopleResponse200OutputFailedIdentifiersItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

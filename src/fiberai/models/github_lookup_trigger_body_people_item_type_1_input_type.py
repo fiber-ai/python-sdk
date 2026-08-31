@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GithubLookupTriggerBodyPeopleItemType1InputType(str, Enum):
+class GithubLookupTriggerBodyPeopleItemType1InputType(StrEnum):
     LINKEDINUSERID = "linkedinUserId"
 
     def __str__(self) -> str:

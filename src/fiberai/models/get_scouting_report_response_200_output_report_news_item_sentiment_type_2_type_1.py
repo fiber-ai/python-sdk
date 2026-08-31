@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetScoutingReportResponse200OutputReportNewsItemSentimentType2Type1(str, Enum):
+class GetScoutingReportResponse200OutputReportNewsItemSentimentType2Type1(StrEnum):
     NEGATIVE = "negative"
     NEUTRAL = "neutral"
     POSITIVE = "positive"

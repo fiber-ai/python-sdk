@@ -48,16 +48,16 @@ class GoogleMapsSearchResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.google_maps_search_response_200_charge_info_type_0 import (
-            GoogleMapsSearchResponse200ChargeInfoType0,
+            GoogleMapsSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.google_maps_search_response_200_charge_info_type_1 import (
-            GoogleMapsSearchResponse200ChargeInfoType1,
+            GoogleMapsSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.google_maps_search_response_200_charge_info_type_2 import (
-            GoogleMapsSearchResponse200ChargeInfoType2,
+            GoogleMapsSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.google_maps_search_response_200_charge_info_type_3 import (
-            GoogleMapsSearchResponse200ChargeInfoType3,
+            GoogleMapsSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class GoogleMapsSearchResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.google_maps_search_response_200_charge_info_type_0 import (
-            GoogleMapsSearchResponse200ChargeInfoType0,
+            GoogleMapsSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.google_maps_search_response_200_charge_info_type_1 import (
-            GoogleMapsSearchResponse200ChargeInfoType1,
+            GoogleMapsSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.google_maps_search_response_200_charge_info_type_2 import (
-            GoogleMapsSearchResponse200ChargeInfoType2,
+            GoogleMapsSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.google_maps_search_response_200_charge_info_type_3 import (
-            GoogleMapsSearchResponse200ChargeInfoType3,
+            GoogleMapsSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.google_maps_search_response_200_charge_info_type_4 import (
-            GoogleMapsSearchResponse200ChargeInfoType4,
+            GoogleMapsSearchResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.google_maps_search_response_200_output import GoogleMapsSearchResponse200Output
+        from ..models.google_maps_search_response_200_output import GoogleMapsSearchResponse200Output  # noqa: PLC0415
         from ..models.google_maps_search_response_200_warnings_type_0_item import (
-            GoogleMapsSearchResponse200WarningsType0Item,
+            GoogleMapsSearchResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

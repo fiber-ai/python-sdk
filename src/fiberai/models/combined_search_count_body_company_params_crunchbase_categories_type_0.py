@@ -89,13 +89,13 @@ class CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_company_params_crunchbase_categories_type_0_all_of_type_0_item import (
-            CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0AllOfType0Item,
+            CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0AllOfType0Item,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_crunchbase_categories_type_0_any_of_type_0_item import (
-            CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0AnyOfType0Item,
+            CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0AnyOfType0Item,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_crunchbase_categories_type_0_none_of_type_0_item import (
-            CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0NoneOfType0Item,
+            CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

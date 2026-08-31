@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class KitchenSinkBulkProfileBodyThoroughnessType1(str, Enum):
+class KitchenSinkBulkProfileBodyThoroughnessType1(StrEnum):
     HIGH = "high"
     LOW = "low"
 

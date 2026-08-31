@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetMetroAreasResponse200OutputMetroAreasItemType1Slug(str, Enum):
+class GetMetroAreasResponse200OutputMetroAreasItemType1Slug(StrEnum):
     BOSTON_ROUTE_128 = "boston-route-128"
     CHICAGOLAND = "chicagoland"
     DALLAS_FORT_WORTH = "dallas-fort-worth"

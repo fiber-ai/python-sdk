@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class QuickCompanyResolveResponse200OutputDataItemCompanyType0LiCategoryType2Type1(str, Enum):
+class QuickCompanyResolveResponse200OutputDataItemCompanyType0LiCategoryType2Type1(StrEnum):
     C = "C"
     S = "S"
     W = "W"

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class TriggerEnrichmentResponse200OutputStatus(str, Enum):
+class TriggerEnrichmentResponse200OutputStatus(StrEnum):
     NOT_STARTED = "NOT_STARTED"
 
     def __str__(self) -> str:

@@ -147,7 +147,7 @@ def sync_detailed(
     | BuyCreditsResponse500
     | BuyCreditsResponse503
 ]:
-    r"""Buy credits
+    """Buy credits
 
      Purchase additional credits for your organization at $20.00 per 1,000 credits. This endpoint
     immediately charges real money to your organization's saved payment method via Stripe. AI agents are
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 2 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (BuyCreditsBody):
@@ -197,7 +197,7 @@ def sync(
     | BuyCreditsResponse503
     | None
 ):
-    r"""Buy credits
+    """Buy credits
 
      Purchase additional credits for your organization at $20.00 per 1,000 credits. This endpoint
     immediately charges real money to your organization's saved payment method via Stripe. AI agents are
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 2 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (BuyCreditsBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | BuyCreditsResponse500
     | BuyCreditsResponse503
 ]:
-    r"""Buy credits
+    """Buy credits
 
      Purchase additional credits for your organization at $20.00 per 1,000 credits. This endpoint
     immediately charges real money to your organization's saved payment method via Stripe. AI agents are
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 2 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (BuyCreditsBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | BuyCreditsResponse503
     | None
 ):
-    r"""Buy credits
+    """Buy credits
 
      Purchase additional credits for your organization at $20.00 per 1,000 credits. This endpoint
     immediately charges real money to your organization's saved payment method via Stripe. AI agents are
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 2 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (BuyCreditsBody):

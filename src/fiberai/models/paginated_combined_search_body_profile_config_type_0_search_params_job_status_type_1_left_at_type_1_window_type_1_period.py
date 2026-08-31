@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobStatusType1LeftAtType1WindowType1Period(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobStatusType1LeftAtType1WindowType1Period(StrEnum):
     DAY = "day"
     MONTH = "month"
     QUARTER = "quarter"

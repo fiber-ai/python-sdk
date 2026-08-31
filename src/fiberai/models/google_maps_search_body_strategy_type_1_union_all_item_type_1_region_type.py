@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GoogleMapsSearchBodyStrategyType1UnionAllItemType1RegionType(str, Enum):
+class GoogleMapsSearchBodyStrategyType1UnionAllItemType1RegionType(StrEnum):
     RECTANGLE = "rectangle"
 
     def __str__(self) -> str:

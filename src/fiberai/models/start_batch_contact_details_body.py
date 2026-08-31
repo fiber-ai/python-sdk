@@ -61,10 +61,10 @@ class StartBatchContactDetailsBody:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.start_batch_contact_details_body_enrichment_types import (
-            StartBatchContactDetailsBodyEnrichmentTypes,
+            StartBatchContactDetailsBodyEnrichmentTypes,  # noqa: PLC0415
         )
         from ..models.start_batch_contact_details_body_person_details_item import (
-            StartBatchContactDetailsBodyPersonDetailsItem,
+            StartBatchContactDetailsBodyPersonDetailsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

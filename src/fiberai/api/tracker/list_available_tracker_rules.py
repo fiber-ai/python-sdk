@@ -147,7 +147,7 @@ def sync_detailed(
     | ListAvailableTrackerRulesResponse500
     | ListAvailableTrackerRulesResponse503
 ]:
-    r"""List available tracker rules
+    """List available tracker rules
 
      Returns all available tracker rule types with descriptions, configuration schemas, example configs,
     and example signal payloads. Use this to discover what rules exist before creating tracker lists.
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -197,7 +197,7 @@ def sync(
     | ListAvailableTrackerRulesResponse503
     | None
 ):
-    r"""List available tracker rules
+    """List available tracker rules
 
      Returns all available tracker rule types with descriptions, configuration schemas, example configs,
     and example signal payloads. Use this to discover what rules exist before creating tracker lists.
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | ListAvailableTrackerRulesResponse500
     | ListAvailableTrackerRulesResponse503
 ]:
-    r"""List available tracker rules
+    """List available tracker rules
 
      Returns all available tracker rule types with descriptions, configuration schemas, example configs,
     and example signal payloads. Use this to discover what rules exist before creating tracker lists.
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -289,7 +289,7 @@ async def asyncio(
     | ListAvailableTrackerRulesResponse503
     | None
 ):
-    r"""List available tracker rules
+    """List available tracker rules
 
      Returns all available tracker rule types with descriptions, configuration schemas, example configs,
     and example signal payloads. Use this to discover what rules exist before creating tracker lists.
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):

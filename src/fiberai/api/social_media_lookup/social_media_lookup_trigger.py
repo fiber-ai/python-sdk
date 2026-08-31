@@ -147,15 +147,15 @@ def sync_detailed(
     | SocialMediaLookupTriggerResponse500
     | SocialMediaLookupTriggerResponse503
 ]:
-    r"""Start social media lookup
+    """Start social media lookup
 
      Use our AI agent to find social media profiles (Twitter, Instagram) for a person using name and
     optional context like LinkedIn URL, work email, company, and job title.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per platform searched&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per platform searched&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SocialMediaLookupTriggerBody):
@@ -196,15 +196,15 @@ def sync(
     | SocialMediaLookupTriggerResponse503
     | None
 ):
-    r"""Start social media lookup
+    """Start social media lookup
 
      Use our AI agent to find social media profiles (Twitter, Instagram) for a person using name and
     optional context like LinkedIn URL, work email, company, and job title.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per platform searched&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per platform searched&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SocialMediaLookupTriggerBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | SocialMediaLookupTriggerResponse500
     | SocialMediaLookupTriggerResponse503
 ]:
-    r"""Start social media lookup
+    """Start social media lookup
 
      Use our AI agent to find social media profiles (Twitter, Instagram) for a person using name and
     optional context like LinkedIn URL, work email, company, and job title.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per platform searched&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per platform searched&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SocialMediaLookupTriggerBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | SocialMediaLookupTriggerResponse503
     | None
 ):
-    r"""Start social media lookup
+    """Start social media lookup
 
      Use our AI agent to find social media profiles (Twitter, Instagram) for a person using name and
     optional context like LinkedIn URL, work email, company, and job title.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 3 credits per platform searched&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 3 credits per platform searched&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (SocialMediaLookupTriggerBody):

@@ -1,9 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AllOfType0ItemType5LocationType(
-    str, Enum
-):
+class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AllOfType0ItemType5LocationType(StrEnum):
     HYBRID = "Hybrid"
     ON_SITE = "On-site"
     REMOTE = "Remote"

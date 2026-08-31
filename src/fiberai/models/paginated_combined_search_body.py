@@ -36,10 +36,10 @@ class PaginatedCombinedSearchBody:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_company_config_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0,
+            PaginatedCombinedSearchBodyProfileConfigType0,  # noqa: PLC0415
         )
 
         api_key = self.api_key
@@ -77,10 +77,10 @@ class PaginatedCombinedSearchBody:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0,
+            PaginatedCombinedSearchBodyProfileConfigType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

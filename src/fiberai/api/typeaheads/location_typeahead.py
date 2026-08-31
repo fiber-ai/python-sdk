@@ -147,15 +147,15 @@ def sync_detailed(
     | LocationTypeaheadResponse500
     | LocationTypeaheadResponse503
 ]:
-    r"""Location typeahead
+    """Location typeahead
 
      Get the latitude/longitude of a given city, including prefixes (e.g. 'san fr'). This makes it good
     for typeaheads in your UI.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (LocationTypeaheadBody):
@@ -196,15 +196,15 @@ def sync(
     | LocationTypeaheadResponse503
     | None
 ):
-    r"""Location typeahead
+    """Location typeahead
 
      Get the latitude/longitude of a given city, including prefixes (e.g. 'san fr'). This makes it good
     for typeaheads in your UI.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (LocationTypeaheadBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | LocationTypeaheadResponse500
     | LocationTypeaheadResponse503
 ]:
-    r"""Location typeahead
+    """Location typeahead
 
      Get the latitude/longitude of a given city, including prefixes (e.g. 'san fr'). This makes it good
     for typeaheads in your UI.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (LocationTypeaheadBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | LocationTypeaheadResponse503
     | None
 ):
-    r"""Location typeahead
+    """Location typeahead
 
      Get the latitude/longitude of a given city, including prefixes (e.g. 'san fr'). This makes it good
     for typeaheads in your UI.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (LocationTypeaheadBody):

@@ -50,7 +50,7 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type1Ste
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_stealth_v2_type_1_stealth_duration_type_0_range import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type1StealthDurationType0Range,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type1StealthDurationType0Range,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

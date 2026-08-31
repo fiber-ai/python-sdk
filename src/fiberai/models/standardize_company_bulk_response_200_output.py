@@ -51,7 +51,7 @@ class StandardizeCompanyBulkResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.standardize_company_bulk_response_200_output_companies_found_item import (
-            StandardizeCompanyBulkResponse200OutputCompaniesFoundItem,
+            StandardizeCompanyBulkResponse200OutputCompaniesFoundItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

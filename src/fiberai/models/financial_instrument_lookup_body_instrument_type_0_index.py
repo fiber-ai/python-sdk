@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class FinancialInstrumentLookupBodyInstrumentType0Index(str, Enum):
+class FinancialInstrumentLookupBodyInstrumentType0Index(StrEnum):
     DOW_JONES = "DOW_JONES"
     FTSE_100 = "FTSE_100"
     NASDAQ_100 = "NASDAQ_100"

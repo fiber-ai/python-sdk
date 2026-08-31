@@ -45,7 +45,7 @@ class PollLocalBusinessSearchResponse200OutputData:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_local_business_search_response_200_output_data_observations_item import (
-            PollLocalBusinessSearchResponse200OutputDataObservationsItem,
+            PollLocalBusinessSearchResponse200OutputDataObservationsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

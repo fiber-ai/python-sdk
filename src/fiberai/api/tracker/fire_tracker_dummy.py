@@ -152,7 +152,7 @@ def sync_detailed(
     | FireTrackerDummyResponse500
     | FireTrackerDummyResponse503
 ]:
-    r"""Fire test signals
+    """Fire test signals
 
      Send test signals to validate your integration end-to-end. Add rules with `isDummy: true` to your
     list, then call this endpoint. Each dummy rule produces a synthetic signal and persists it to your
@@ -171,8 +171,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -216,7 +216,7 @@ def sync(
     | FireTrackerDummyResponse503
     | None
 ):
-    r"""Fire test signals
+    """Fire test signals
 
      Send test signals to validate your integration end-to-end. Add rules with `isDummy: true` to your
     list, then call this endpoint. Each dummy rule produces a synthetic signal and persists it to your
@@ -235,8 +235,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -274,7 +274,7 @@ async def asyncio_detailed(
     | FireTrackerDummyResponse500
     | FireTrackerDummyResponse503
 ]:
-    r"""Fire test signals
+    """Fire test signals
 
      Send test signals to validate your integration end-to-end. Add rules with `isDummy: true` to your
     list, then call this endpoint. Each dummy rule produces a synthetic signal and persists it to your
@@ -293,8 +293,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -336,7 +336,7 @@ async def asyncio(
     | FireTrackerDummyResponse503
     | None
 ):
-    r"""Fire test signals
+    """Fire test signals
 
      Send test signals to validate your integration end-to-end. Add rules with `isDummy: true` to your
     list, then call this endpoint. Each dummy rule produces a synthetic signal and persists it to your
@@ -355,8 +355,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):

@@ -147,15 +147,15 @@ def sync_detailed(
     | TwitterUserMentionsResponse500
     | TwitterUserMentionsResponse503
 ]:
-    r"""Fetch Twitter/X user mentions
+    """Fetch Twitter/X user mentions
 
      Fetches a page of tweets that mention a Twitter/X user. Use the `cursor` field from the response to
     retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterUserMentionsBody):
@@ -196,15 +196,15 @@ def sync(
     | TwitterUserMentionsResponse503
     | None
 ):
-    r"""Fetch Twitter/X user mentions
+    """Fetch Twitter/X user mentions
 
      Fetches a page of tweets that mention a Twitter/X user. Use the `cursor` field from the response to
     retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterUserMentionsBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TwitterUserMentionsResponse500
     | TwitterUserMentionsResponse503
 ]:
-    r"""Fetch Twitter/X user mentions
+    """Fetch Twitter/X user mentions
 
      Fetches a page of tweets that mention a Twitter/X user. Use the `cursor` field from the response to
     retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterUserMentionsBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TwitterUserMentionsResponse503
     | None
 ):
-    r"""Fetch Twitter/X user mentions
+    """Fetch Twitter/X user mentions
 
      Fetches a page of tweets that mention a Twitter/X user. Use the `cursor` field from the response to
     retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterUserMentionsBody):

@@ -58,13 +58,13 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Typ
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_accelerators_v2_type_0_any_of_type_0_item_years_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0,  # noqa: PLC0415
         )
 
         accelerator_name = self.accelerator_name.value
@@ -113,13 +113,13 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Typ
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_accelerators_v2_type_0_any_of_type_0_item_years_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsAcceleratorsV2Type0AnyOfType0ItemYearsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

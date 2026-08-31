@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class AddProspectsToExclusionListResponse200ChargeInfoType0Method(str, Enum):
+class AddProspectsToExclusionListResponse200ChargeInfoType0Method(StrEnum):
     CHARGED_NOW = "charged-now"
 
     def __str__(self) -> str:

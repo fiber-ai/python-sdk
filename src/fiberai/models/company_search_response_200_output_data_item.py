@@ -288,43 +288,43 @@ class CompanySearchResponse200OutputDataItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_search_response_200_output_data_item_best_funding_round_type_0 import (
-            CompanySearchResponse200OutputDataItemBestFundingRoundType0,
+            CompanySearchResponse200OutputDataItemBestFundingRoundType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_custom_data_type_0 import (
-            CompanySearchResponse200OutputDataItemCustomDataType0,
+            CompanySearchResponse200OutputDataItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_employee_count_consensus_type_0 import (
-            CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0,
+            CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_funding_round_stats_type_0 import (
-            CompanySearchResponse200OutputDataItemFundingRoundStatsType0,
+            CompanySearchResponse200OutputDataItemFundingRoundStatsType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_historical_headcount_type_0 import (
-            CompanySearchResponse200OutputDataItemHistoricalHeadcountType0,
+            CompanySearchResponse200OutputDataItemHistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_investment_stats_type_0 import (
-            CompanySearchResponse200OutputDataItemInvestmentStatsType0,
+            CompanySearchResponse200OutputDataItemInvestmentStatsType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0 import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_location_consensus_type_0 import (
-            CompanySearchResponse200OutputDataItemLocationConsensusType0,
+            CompanySearchResponse200OutputDataItemLocationConsensusType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_locations_stats_type_0 import (
-            CompanySearchResponse200OutputDataItemLocationsStatsType0,
+            CompanySearchResponse200OutputDataItemLocationsStatsType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_num_matching_locations_type_0 import (
-            CompanySearchResponse200OutputDataItemNumMatchingLocationsType0,
+            CompanySearchResponse200OutputDataItemNumMatchingLocationsType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_platforms_type_0 import (
-            CompanySearchResponse200OutputDataItemPlatformsType0,
+            CompanySearchResponse200OutputDataItemPlatformsType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_revenue_estimate_type_0 import (
-            CompanySearchResponse200OutputDataItemRevenueEstimateType0,
+            CompanySearchResponse200OutputDataItemRevenueEstimateType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_stock_info_consensus_type_0 import (
-            CompanySearchResponse200OutputDataItemStockInfoConsensusType0,
+            CompanySearchResponse200OutputDataItemStockInfoConsensusType0,  # noqa: PLC0415
         )
 
         linkedin_id: None | str | Unset
@@ -1190,79 +1190,79 @@ class CompanySearchResponse200OutputDataItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_response_200_output_data_item_accelerators_type_0_item import (
-            CompanySearchResponse200OutputDataItemAcceleratorsType0Item,
+            CompanySearchResponse200OutputDataItemAcceleratorsType0Item,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_acquisitions_type_0_item import (
-            CompanySearchResponse200OutputDataItemAcquisitionsType0Item,
+            CompanySearchResponse200OutputDataItemAcquisitionsType0Item,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_best_funding_round_type_0 import (
-            CompanySearchResponse200OutputDataItemBestFundingRoundType0,
+            CompanySearchResponse200OutputDataItemBestFundingRoundType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_custom_data_type_0 import (
-            CompanySearchResponse200OutputDataItemCustomDataType0,
+            CompanySearchResponse200OutputDataItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_employee_count_consensus_type_0 import (
-            CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0,
+            CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_employee_trends_type_0_item import (
-            CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item,
+            CompanySearchResponse200OutputDataItemEmployeeTrendsType0Item,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_fortune_rankings_type_0_item import (
-            CompanySearchResponse200OutputDataItemFortuneRankingsType0Item,
+            CompanySearchResponse200OutputDataItemFortuneRankingsType0Item,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_full_funding_rounds_type_0_item import (
-            CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item,
+            CompanySearchResponse200OutputDataItemFullFundingRoundsType0Item,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_funding_round_stats_type_0 import (
-            CompanySearchResponse200OutputDataItemFundingRoundStatsType0,
+            CompanySearchResponse200OutputDataItemFundingRoundStatsType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_funding_rounds_type_0_item import (
-            CompanySearchResponse200OutputDataItemFundingRoundsType0Item,
+            CompanySearchResponse200OutputDataItemFundingRoundsType0Item,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_historical_headcount_type_0 import (
-            CompanySearchResponse200OutputDataItemHistoricalHeadcountType0,
+            CompanySearchResponse200OutputDataItemHistoricalHeadcountType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_investment_stats_type_0 import (
-            CompanySearchResponse200OutputDataItemInvestmentStatsType0,
+            CompanySearchResponse200OutputDataItemInvestmentStatsType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_investors_type_0_item import (
-            CompanySearchResponse200OutputDataItemInvestorsType0Item,
+            CompanySearchResponse200OutputDataItemInvestorsType0Item,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_industries_type_0_item import (
-            CompanySearchResponse200OutputDataItemLiIndustriesType0Item,
+            CompanySearchResponse200OutputDataItemLiIndustriesType0Item,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0 import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_locations_type_0_item import (
-            CompanySearchResponse200OutputDataItemLiLocationsType0Item,
+            CompanySearchResponse200OutputDataItemLiLocationsType0Item,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_location_consensus_type_0 import (
-            CompanySearchResponse200OutputDataItemLocationConsensusType0,
+            CompanySearchResponse200OutputDataItemLocationConsensusType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_locations_stats_type_0 import (
-            CompanySearchResponse200OutputDataItemLocationsStatsType0,
+            CompanySearchResponse200OutputDataItemLocationsStatsType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_num_matching_locations_type_0 import (
-            CompanySearchResponse200OutputDataItemNumMatchingLocationsType0,
+            CompanySearchResponse200OutputDataItemNumMatchingLocationsType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_platforms_type_0 import (
-            CompanySearchResponse200OutputDataItemPlatformsType0,
+            CompanySearchResponse200OutputDataItemPlatformsType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_revenue_estimate_type_0 import (
-            CompanySearchResponse200OutputDataItemRevenueEstimateType0,
+            CompanySearchResponse200OutputDataItemRevenueEstimateType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_role_count_matches_type_0_item import (
-            CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item,
+            CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_similar_companies_type_0_item import (
-            CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item,
+            CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_stock_info_consensus_type_0 import (
-            CompanySearchResponse200OutputDataItemStockInfoConsensusType0,
+            CompanySearchResponse200OutputDataItemStockInfoConsensusType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_technologies_used_type_0_item import (
-            CompanySearchResponse200OutputDataItemTechnologiesUsedType0Item,
+            CompanySearchResponse200OutputDataItemTechnologiesUsedType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -147,15 +147,15 @@ def sync_detailed(
     | TwitterTweetRetweetersResponse500
     | TwitterTweetRetweetersResponse503
 ]:
-    r"""Fetch Twitter/X tweet retweeters
+    """Fetch Twitter/X tweet retweeters
 
      Fetches a page of users who retweeted a tweet. Use the `cursor` field from the response to retrieve
     subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterTweetRetweetersBody):
@@ -196,15 +196,15 @@ def sync(
     | TwitterTweetRetweetersResponse503
     | None
 ):
-    r"""Fetch Twitter/X tweet retweeters
+    """Fetch Twitter/X tweet retweeters
 
      Fetches a page of users who retweeted a tweet. Use the `cursor` field from the response to retrieve
     subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterTweetRetweetersBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TwitterTweetRetweetersResponse500
     | TwitterTweetRetweetersResponse503
 ]:
-    r"""Fetch Twitter/X tweet retweeters
+    """Fetch Twitter/X tweet retweeters
 
      Fetches a page of users who retweeted a tweet. Use the `cursor` field from the response to retrieve
     subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterTweetRetweetersBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TwitterTweetRetweetersResponse503
     | None
 ):
-    r"""Fetch Twitter/X tweet retweeters
+    """Fetch Twitter/X tweet retweeters
 
      Fetches a page of users who retweeted a tweet. Use the `cursor` field from the response to retrieve
     subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TwitterTweetRetweetersBody):

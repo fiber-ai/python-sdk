@@ -147,15 +147,15 @@ def sync_detailed(
     | TiktokTrendingFeedResponse500
     | TiktokTrendingFeedResponse503
 ]:
-    r"""Fetch TikTok trending feed
+    """Fetch TikTok trending feed
 
      Fetches the current TikTok trending feed. Returns a paginated list of trending videos. Use the
     `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokTrendingFeedBody):
@@ -196,15 +196,15 @@ def sync(
     | TiktokTrendingFeedResponse503
     | None
 ):
-    r"""Fetch TikTok trending feed
+    """Fetch TikTok trending feed
 
      Fetches the current TikTok trending feed. Returns a paginated list of trending videos. Use the
     `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokTrendingFeedBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TiktokTrendingFeedResponse500
     | TiktokTrendingFeedResponse503
 ]:
-    r"""Fetch TikTok trending feed
+    """Fetch TikTok trending feed
 
      Fetches the current TikTok trending feed. Returns a paginated list of trending videos. Use the
     `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokTrendingFeedBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TiktokTrendingFeedResponse503
     | None
 ):
-    r"""Fetch TikTok trending feed
+    """Fetch TikTok trending feed
 
      Fetches the current TikTok trending feed. Returns a paginated list of trending videos. Use the
     `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokTrendingFeedBody):

@@ -35,7 +35,7 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_post_type_0_author_type_0 import (
-            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0AuthorType0,
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0AuthorType0,  # noqa: PLC0415
         )
 
         post_urn: None | str | Unset
@@ -81,7 +81,7 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item_post_type_0_author_type_0 import (
-            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0AuthorType0,
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemPostType0AuthorType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

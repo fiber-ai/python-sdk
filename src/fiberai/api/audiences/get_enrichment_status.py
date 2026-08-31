@@ -152,7 +152,7 @@ def sync_detailed(
     | GetEnrichmentStatusResponse500
     | GetEnrichmentStatusResponse503
 ]:
-    r"""Get enrichment status
+    """Get enrichment status
 
      Gets the current status of an audience enrichment run. Returns progress information including
     current stage, progress percentage, completed steps, and remaining steps. Use this endpoint to poll
@@ -160,8 +160,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -205,7 +205,7 @@ def sync(
     | GetEnrichmentStatusResponse503
     | None
 ):
-    r"""Get enrichment status
+    """Get enrichment status
 
      Gets the current status of an audience enrichment run. Returns progress information including
     current stage, progress percentage, completed steps, and remaining steps. Use this endpoint to poll
@@ -213,8 +213,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -252,7 +252,7 @@ async def asyncio_detailed(
     | GetEnrichmentStatusResponse500
     | GetEnrichmentStatusResponse503
 ]:
-    r"""Get enrichment status
+    """Get enrichment status
 
      Gets the current status of an audience enrichment run. Returns progress information including
     current stage, progress percentage, completed steps, and remaining steps. Use this endpoint to poll
@@ -260,8 +260,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):
@@ -303,7 +303,7 @@ async def asyncio(
     | GetEnrichmentStatusResponse503
     | None
 ):
-    r"""Get enrichment status
+    """Get enrichment status
 
      Gets the current status of an audience enrichment run. Returns progress information including
     current stage, progress percentage, completed steps, and remaining steps. Use this endpoint to poll
@@ -311,8 +311,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         audience_id (str):

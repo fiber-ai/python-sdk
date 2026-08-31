@@ -50,7 +50,7 @@ class CombinedSearchCountBodyProfileParamsStealthV2Type1StealthDurationType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_profile_params_stealth_v2_type_1_stealth_duration_type_0_range import (
-            CombinedSearchCountBodyProfileParamsStealthV2Type1StealthDurationType0Range,
+            CombinedSearchCountBodyProfileParamsStealthV2Type1StealthDurationType0Range,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

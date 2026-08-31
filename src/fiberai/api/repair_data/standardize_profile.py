@@ -147,7 +147,7 @@ def sync_detailed(
     | StandardizeProfileResponse500
     | StandardizeProfileResponse503
 ]:
-    r"""Standardize LinkedIn profile entity URN
+    """Standardize LinkedIn profile entity URN
 
      Resolves a LinkedIn entity URN to a proper LinkedIn profile URL. Supports a variety of URN formats
     from different LinkedIn sources (including ACoAA... and ACwAA... prefixes). Accepts either a raw
@@ -156,8 +156,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per profile standardization&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per profile standardization&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StandardizeProfileBody):
@@ -198,7 +198,7 @@ def sync(
     | StandardizeProfileResponse503
     | None
 ):
-    r"""Standardize LinkedIn profile entity URN
+    """Standardize LinkedIn profile entity URN
 
      Resolves a LinkedIn entity URN to a proper LinkedIn profile URL. Supports a variety of URN formats
     from different LinkedIn sources (including ACoAA... and ACwAA... prefixes). Accepts either a raw
@@ -207,8 +207,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per profile standardization&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per profile standardization&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StandardizeProfileBody):
@@ -243,7 +243,7 @@ async def asyncio_detailed(
     | StandardizeProfileResponse500
     | StandardizeProfileResponse503
 ]:
-    r"""Standardize LinkedIn profile entity URN
+    """Standardize LinkedIn profile entity URN
 
      Resolves a LinkedIn entity URN to a proper LinkedIn profile URL. Supports a variety of URN formats
     from different LinkedIn sources (including ACoAA... and ACwAA... prefixes). Accepts either a raw
@@ -252,8 +252,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per profile standardization&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per profile standardization&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StandardizeProfileBody):
@@ -292,7 +292,7 @@ async def asyncio(
     | StandardizeProfileResponse503
     | None
 ):
-    r"""Standardize LinkedIn profile entity URN
+    """Standardize LinkedIn profile entity URN
 
      Resolves a LinkedIn entity URN to a proper LinkedIn profile URL. Supports a variety of URN formats
     from different LinkedIn sources (including ACoAA... and ACwAA... prefixes). Accepts either a raw
@@ -301,8 +301,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per profile standardization&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per profile standardization&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (StandardizeProfileBody):

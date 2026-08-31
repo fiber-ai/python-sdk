@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyProfileParamsStealthV2Type1LeftStealthAtType1WindowType2Which(str, Enum):
+class CombinedSearchCountBodyProfileParamsStealthV2Type1LeftStealthAtType1WindowType2Which(StrEnum):
     CURRENT = "current"
     PREVIOUS = "previous"
 

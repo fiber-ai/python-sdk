@@ -60,16 +60,16 @@ class GetProspectExclusionListsResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_0 import (
-            GetProspectExclusionListsResponse200ChargeInfoType0,
+            GetProspectExclusionListsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_1 import (
-            GetProspectExclusionListsResponse200ChargeInfoType1,
+            GetProspectExclusionListsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_2 import (
-            GetProspectExclusionListsResponse200ChargeInfoType2,
+            GetProspectExclusionListsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_3 import (
-            GetProspectExclusionListsResponse200ChargeInfoType3,
+            GetProspectExclusionListsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = []
@@ -128,25 +128,25 @@ class GetProspectExclusionListsResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_0 import (
-            GetProspectExclusionListsResponse200ChargeInfoType0,
+            GetProspectExclusionListsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_1 import (
-            GetProspectExclusionListsResponse200ChargeInfoType1,
+            GetProspectExclusionListsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_2 import (
-            GetProspectExclusionListsResponse200ChargeInfoType2,
+            GetProspectExclusionListsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_3 import (
-            GetProspectExclusionListsResponse200ChargeInfoType3,
+            GetProspectExclusionListsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.get_prospect_exclusion_lists_response_200_charge_info_type_4 import (
-            GetProspectExclusionListsResponse200ChargeInfoType4,
+            GetProspectExclusionListsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.get_prospect_exclusion_lists_response_200_output_item import (
-            GetProspectExclusionListsResponse200OutputItem,
+            GetProspectExclusionListsResponse200OutputItem,  # noqa: PLC0415
         )
         from ..models.get_prospect_exclusion_lists_response_200_warnings_type_0_item import (
-            GetProspectExclusionListsResponse200WarningsType0Item,
+            GetProspectExclusionListsResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

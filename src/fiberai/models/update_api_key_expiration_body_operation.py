@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class UpdateApiKeyExpirationBodyOperation(str, Enum):
+class UpdateApiKeyExpirationBodyOperation(StrEnum):
     EXTEND = "extend"
     PREPONE = "prepone"
     REMOVE = "remove"

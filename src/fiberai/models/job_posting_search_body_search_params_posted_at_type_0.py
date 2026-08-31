@@ -34,7 +34,7 @@ class JobPostingSearchBodySearchParamsPostedAtType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.job_posting_search_body_search_params_posted_at_type_0_range_type_0 import (
-            JobPostingSearchBodySearchParamsPostedAtType0RangeType0,
+            JobPostingSearchBodySearchParamsPostedAtType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -62,7 +62,7 @@ class JobPostingSearchBodySearchParamsPostedAtType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.job_posting_search_body_search_params_posted_at_type_0_range_type_0 import (
-            JobPostingSearchBodySearchParamsPostedAtType0RangeType0,
+            JobPostingSearchBodySearchParamsPostedAtType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

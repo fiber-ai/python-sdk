@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeeTrendsV2Type0ObeysAllType0ItemType0Type(str, Enum):
+class CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeeTrendsV2Type0ObeysAllType0ItemType0Type(StrEnum):
     PERCENT_CHANGE = "percent_change"
 
     def __str__(self) -> str:

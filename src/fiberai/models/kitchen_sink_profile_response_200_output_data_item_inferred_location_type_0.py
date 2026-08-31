@@ -53,7 +53,7 @@ class KitchenSinkProfileResponse200OutputDataItemInferredLocationType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.kitchen_sink_profile_response_200_output_data_item_inferred_location_type_0_coordinates_type_0 import (
-            KitchenSinkProfileResponse200OutputDataItemInferredLocationType0CoordinatesType0,
+            KitchenSinkProfileResponse200OutputDataItemInferredLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         street_address: None | str | Unset
@@ -173,7 +173,7 @@ class KitchenSinkProfileResponse200OutputDataItemInferredLocationType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_profile_response_200_output_data_item_inferred_location_type_0_coordinates_type_0 import (
-            KitchenSinkProfileResponse200OutputDataItemInferredLocationType0CoordinatesType0,
+            KitchenSinkProfileResponse200OutputDataItemInferredLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

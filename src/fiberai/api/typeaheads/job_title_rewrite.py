@@ -147,15 +147,15 @@ def sync_detailed(
     | JobTitleRewriteResponse500
     | JobTitleRewriteResponse503
 ]:
-    r"""Job Title Synonym Expansion
+    """Job Title Synonym Expansion
 
      Expand a job title into synonyms and related variations. Useful for broadening job title searches to
     improve yield.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (JobTitleRewriteBody):
@@ -196,15 +196,15 @@ def sync(
     | JobTitleRewriteResponse503
     | None
 ):
-    r"""Job Title Synonym Expansion
+    """Job Title Synonym Expansion
 
      Expand a job title into synonyms and related variations. Useful for broadening job title searches to
     improve yield.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (JobTitleRewriteBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | JobTitleRewriteResponse500
     | JobTitleRewriteResponse503
 ]:
-    r"""Job Title Synonym Expansion
+    """Job Title Synonym Expansion
 
      Expand a job title into synonyms and related variations. Useful for broadening job title searches to
     improve yield.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (JobTitleRewriteBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | JobTitleRewriteResponse503
     | None
 ):
-    r"""Job Title Synonym Expansion
+    """Job Title Synonym Expansion
 
      Expand a job title into synonyms and related variations. Useful for broadening job title searches to
     improve yield.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per request&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (JobTitleRewriteBody):

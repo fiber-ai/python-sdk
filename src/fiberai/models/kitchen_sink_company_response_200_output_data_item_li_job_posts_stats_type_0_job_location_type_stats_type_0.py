@@ -70,13 +70,13 @@ class KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0JobLocation
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_job_location_type_stats_type_0_hybrid import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0JobLocationTypeStatsType0Hybrid,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0JobLocationTypeStatsType0Hybrid,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_job_location_type_stats_type_0_on_site import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0JobLocationTypeStatsType0OnSite,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0JobLocationTypeStatsType0OnSite,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_company_response_200_output_data_item_li_job_posts_stats_type_0_job_location_type_stats_type_0_remote import (
-            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0JobLocationTypeStatsType0Remote,
+            KitchenSinkCompanyResponse200OutputDataItemLiJobPostsStatsType0JobLocationTypeStatsType0Remote,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

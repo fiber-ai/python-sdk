@@ -58,16 +58,16 @@ class DomainLookupPollingResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.domain_lookup_polling_response_200_charge_info_type_0 import (
-            DomainLookupPollingResponse200ChargeInfoType0,
+            DomainLookupPollingResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.domain_lookup_polling_response_200_charge_info_type_1 import (
-            DomainLookupPollingResponse200ChargeInfoType1,
+            DomainLookupPollingResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.domain_lookup_polling_response_200_charge_info_type_2 import (
-            DomainLookupPollingResponse200ChargeInfoType2,
+            DomainLookupPollingResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.domain_lookup_polling_response_200_charge_info_type_3 import (
-            DomainLookupPollingResponse200ChargeInfoType3,
+            DomainLookupPollingResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class DomainLookupPollingResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.domain_lookup_polling_response_200_charge_info_type_0 import (
-            DomainLookupPollingResponse200ChargeInfoType0,
+            DomainLookupPollingResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.domain_lookup_polling_response_200_charge_info_type_1 import (
-            DomainLookupPollingResponse200ChargeInfoType1,
+            DomainLookupPollingResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.domain_lookup_polling_response_200_charge_info_type_2 import (
-            DomainLookupPollingResponse200ChargeInfoType2,
+            DomainLookupPollingResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.domain_lookup_polling_response_200_charge_info_type_3 import (
-            DomainLookupPollingResponse200ChargeInfoType3,
+            DomainLookupPollingResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.domain_lookup_polling_response_200_charge_info_type_4 import (
-            DomainLookupPollingResponse200ChargeInfoType4,
+            DomainLookupPollingResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.domain_lookup_polling_response_200_output import DomainLookupPollingResponse200Output
+        from ..models.domain_lookup_polling_response_200_output import (
+            DomainLookupPollingResponse200Output,  # noqa: PLC0415
+        )
         from ..models.domain_lookup_polling_response_200_warnings_type_0_item import (
-            DomainLookupPollingResponse200WarningsType0Item,
+            DomainLookupPollingResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

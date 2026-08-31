@@ -62,16 +62,16 @@ class TriggerExhaustiveContactEnrichmentResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.trigger_exhaustive_contact_enrichment_response_200_charge_info_type_0 import (
-            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType0,
+            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.trigger_exhaustive_contact_enrichment_response_200_charge_info_type_1 import (
-            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType1,
+            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.trigger_exhaustive_contact_enrichment_response_200_charge_info_type_2 import (
-            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType2,
+            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.trigger_exhaustive_contact_enrichment_response_200_charge_info_type_3 import (
-            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType3,
+            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -127,25 +127,25 @@ class TriggerExhaustiveContactEnrichmentResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.trigger_exhaustive_contact_enrichment_response_200_charge_info_type_0 import (
-            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType0,
+            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.trigger_exhaustive_contact_enrichment_response_200_charge_info_type_1 import (
-            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType1,
+            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.trigger_exhaustive_contact_enrichment_response_200_charge_info_type_2 import (
-            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType2,
+            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.trigger_exhaustive_contact_enrichment_response_200_charge_info_type_3 import (
-            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType3,
+            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.trigger_exhaustive_contact_enrichment_response_200_charge_info_type_4 import (
-            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType4,
+            TriggerExhaustiveContactEnrichmentResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.trigger_exhaustive_contact_enrichment_response_200_output import (
-            TriggerExhaustiveContactEnrichmentResponse200Output,
+            TriggerExhaustiveContactEnrichmentResponse200Output,  # noqa: PLC0415
         )
         from ..models.trigger_exhaustive_contact_enrichment_response_200_warnings_type_0_item import (
-            TriggerExhaustiveContactEnrichmentResponse200WarningsType0Item,
+            TriggerExhaustiveContactEnrichmentResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

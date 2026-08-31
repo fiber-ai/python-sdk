@@ -147,15 +147,15 @@ def sync_detailed(
     | YoutubeSearchResponse500
     | YoutubeSearchResponse503
 ]:
-    r"""Search YouTube videos
+    """Search YouTube videos
 
      Searches YouTube for videos matching a query. Returns video titles, links, channel information, view
     counts, and durations.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeSearchBody):
@@ -196,15 +196,15 @@ def sync(
     | YoutubeSearchResponse503
     | None
 ):
-    r"""Search YouTube videos
+    """Search YouTube videos
 
      Searches YouTube for videos matching a query. Returns video titles, links, channel information, view
     counts, and durations.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeSearchBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | YoutubeSearchResponse500
     | YoutubeSearchResponse503
 ]:
-    r"""Search YouTube videos
+    """Search YouTube videos
 
      Searches YouTube for videos matching a query. Returns video titles, links, channel information, view
     counts, and durations.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeSearchBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | YoutubeSearchResponse503
     | None
 ):
-    r"""Search YouTube videos
+    """Search YouTube videos
 
      Searches YouTube for videos matching a query. Returns video titles, links, channel information, view
     counts, and durations.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (YoutubeSearchBody):

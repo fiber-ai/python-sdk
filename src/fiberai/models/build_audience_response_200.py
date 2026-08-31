@@ -45,10 +45,18 @@ class BuildAudienceResponse200:
     advice: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.build_audience_response_200_charge_info_type_0 import BuildAudienceResponse200ChargeInfoType0
-        from ..models.build_audience_response_200_charge_info_type_1 import BuildAudienceResponse200ChargeInfoType1
-        from ..models.build_audience_response_200_charge_info_type_2 import BuildAudienceResponse200ChargeInfoType2
-        from ..models.build_audience_response_200_charge_info_type_3 import BuildAudienceResponse200ChargeInfoType3
+        from ..models.build_audience_response_200_charge_info_type_0 import (
+            BuildAudienceResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.build_audience_response_200_charge_info_type_1 import (
+            BuildAudienceResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.build_audience_response_200_charge_info_type_2 import (
+            BuildAudienceResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.build_audience_response_200_charge_info_type_3 import (
+            BuildAudienceResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
 
         output = self.output.to_dict()
 
@@ -102,13 +110,25 @@ class BuildAudienceResponse200:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.build_audience_response_200_charge_info_type_0 import BuildAudienceResponse200ChargeInfoType0
-        from ..models.build_audience_response_200_charge_info_type_1 import BuildAudienceResponse200ChargeInfoType1
-        from ..models.build_audience_response_200_charge_info_type_2 import BuildAudienceResponse200ChargeInfoType2
-        from ..models.build_audience_response_200_charge_info_type_3 import BuildAudienceResponse200ChargeInfoType3
-        from ..models.build_audience_response_200_charge_info_type_4 import BuildAudienceResponse200ChargeInfoType4
-        from ..models.build_audience_response_200_output import BuildAudienceResponse200Output
-        from ..models.build_audience_response_200_warnings_type_0_item import BuildAudienceResponse200WarningsType0Item
+        from ..models.build_audience_response_200_charge_info_type_0 import (
+            BuildAudienceResponse200ChargeInfoType0,  # noqa: PLC0415
+        )
+        from ..models.build_audience_response_200_charge_info_type_1 import (
+            BuildAudienceResponse200ChargeInfoType1,  # noqa: PLC0415
+        )
+        from ..models.build_audience_response_200_charge_info_type_2 import (
+            BuildAudienceResponse200ChargeInfoType2,  # noqa: PLC0415
+        )
+        from ..models.build_audience_response_200_charge_info_type_3 import (
+            BuildAudienceResponse200ChargeInfoType3,  # noqa: PLC0415
+        )
+        from ..models.build_audience_response_200_charge_info_type_4 import (
+            BuildAudienceResponse200ChargeInfoType4,  # noqa: PLC0415
+        )
+        from ..models.build_audience_response_200_output import BuildAudienceResponse200Output  # noqa: PLC0415
+        from ..models.build_audience_response_200_warnings_type_0_item import (
+            BuildAudienceResponse200WarningsType0Item,  # noqa: PLC0415
+        )
 
         d = dict(src_dict)
         output = BuildAudienceResponse200Output.from_dict(d.pop("output"))

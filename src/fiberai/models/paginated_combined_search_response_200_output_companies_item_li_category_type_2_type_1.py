@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchResponse200OutputCompaniesItemLiCategoryType2Type1(str, Enum):
+class PaginatedCombinedSearchResponse200OutputCompaniesItemLiCategoryType2Type1(StrEnum):
     C = "C"
     S = "S"
     W = "W"

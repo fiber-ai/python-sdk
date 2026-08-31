@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType1CountryCode(
-    str, Enum
+    StrEnum
 ):
     ABW = "ABW"
     AFG = "AFG"

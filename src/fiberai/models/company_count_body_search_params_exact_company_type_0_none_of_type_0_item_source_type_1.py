@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanyCountBodySearchParamsExactCompanyType0NoneOfType0ItemSourceType1(str, Enum):
+class CompanyCountBodySearchParamsExactCompanyType0NoneOfType0ItemSourceType1(StrEnum):
     CSV = "csv"
 
     def __str__(self) -> str:

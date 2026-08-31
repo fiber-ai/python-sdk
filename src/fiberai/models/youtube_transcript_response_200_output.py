@@ -62,10 +62,10 @@ class YoutubeTranscriptResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.youtube_transcript_response_200_output_available_languages_item import (
-            YoutubeTranscriptResponse200OutputAvailableLanguagesItem,
+            YoutubeTranscriptResponse200OutputAvailableLanguagesItem,  # noqa: PLC0415
         )
         from ..models.youtube_transcript_response_200_output_segments_type_0_item import (
-            YoutubeTranscriptResponse200OutputSegmentsType0Item,
+            YoutubeTranscriptResponse200OutputSegmentsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

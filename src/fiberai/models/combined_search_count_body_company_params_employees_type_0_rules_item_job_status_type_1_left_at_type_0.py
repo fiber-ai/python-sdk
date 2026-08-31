@@ -37,7 +37,7 @@ class CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType1L
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_company_params_employees_type_0_rules_item_job_status_type_1_left_at_type_0_range_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType1LeftAtType0RangeType0,
+            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType1LeftAtType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -67,7 +67,7 @@ class CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType1L
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_company_params_employees_type_0_rules_item_job_status_type_1_left_at_type_0_range_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType1LeftAtType0RangeType0,
+            CombinedSearchCountBodyCompanyParamsEmployeesType0RulesItemJobStatusType1LeftAtType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

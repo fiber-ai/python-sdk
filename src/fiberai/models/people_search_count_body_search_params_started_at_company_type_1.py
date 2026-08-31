@@ -48,13 +48,13 @@ class PeopleSearchCountBodySearchParamsStartedAtCompanyType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_count_body_search_params_started_at_company_type_1_window_type_0 import (
-            PeopleSearchCountBodySearchParamsStartedAtCompanyType1WindowType0,
+            PeopleSearchCountBodySearchParamsStartedAtCompanyType1WindowType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_at_company_type_1_window_type_1 import (
-            PeopleSearchCountBodySearchParamsStartedAtCompanyType1WindowType1,
+            PeopleSearchCountBodySearchParamsStartedAtCompanyType1WindowType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_at_company_type_1_window_type_2 import (
-            PeopleSearchCountBodySearchParamsStartedAtCompanyType1WindowType2,
+            PeopleSearchCountBodySearchParamsStartedAtCompanyType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -86,13 +86,13 @@ class PeopleSearchCountBodySearchParamsStartedAtCompanyType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_body_search_params_started_at_company_type_1_window_type_0 import (
-            PeopleSearchCountBodySearchParamsStartedAtCompanyType1WindowType0,
+            PeopleSearchCountBodySearchParamsStartedAtCompanyType1WindowType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_at_company_type_1_window_type_1 import (
-            PeopleSearchCountBodySearchParamsStartedAtCompanyType1WindowType1,
+            PeopleSearchCountBodySearchParamsStartedAtCompanyType1WindowType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_started_at_company_type_1_window_type_2 import (
-            PeopleSearchCountBodySearchParamsStartedAtCompanyType1WindowType2,
+            PeopleSearchCountBodySearchParamsStartedAtCompanyType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

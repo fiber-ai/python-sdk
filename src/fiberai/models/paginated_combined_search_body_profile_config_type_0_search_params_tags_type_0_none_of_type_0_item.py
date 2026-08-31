@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsTagsType0NoneOfType0Item(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsTagsType0NoneOfType0Item(StrEnum):
     ATTENDED_TOP_GLOBAL_UNIVERSITY = "attended-top-global-university"
     ATTENDED_TOP_US_UNIVERSITY = "attended-top-us-university"
     BOARD_MEMBER = "board-member"

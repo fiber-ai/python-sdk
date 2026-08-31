@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType5RangeType0Type(str, Enum):
+class CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType5RangeType0Type(StrEnum):
     COUNT_RANGE = "count-range"
 
     def __str__(self) -> str:

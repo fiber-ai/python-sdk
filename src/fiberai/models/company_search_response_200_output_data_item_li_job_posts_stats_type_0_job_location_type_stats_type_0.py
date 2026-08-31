@@ -63,13 +63,13 @@ class CompanySearchResponse200OutputDataItemLiJobPostsStatsType0JobLocationTypeS
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_job_location_type_stats_type_0_hybrid import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0JobLocationTypeStatsType0Hybrid,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0JobLocationTypeStatsType0Hybrid,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_job_location_type_stats_type_0_on_site import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0JobLocationTypeStatsType0OnSite,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0JobLocationTypeStatsType0OnSite,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_job_location_type_stats_type_0_remote import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0JobLocationTypeStatsType0Remote,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0JobLocationTypeStatsType0Remote,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

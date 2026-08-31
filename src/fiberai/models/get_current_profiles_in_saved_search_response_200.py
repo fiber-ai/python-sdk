@@ -62,16 +62,16 @@ class GetCurrentProfilesInSavedSearchResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_current_profiles_in_saved_search_response_200_charge_info_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType0,
+            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_charge_info_type_1 import (
-            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType1,
+            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_charge_info_type_2 import (
-            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType2,
+            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_charge_info_type_3 import (
-            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType3,
+            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -127,25 +127,25 @@ class GetCurrentProfilesInSavedSearchResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_profiles_in_saved_search_response_200_charge_info_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType0,
+            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_charge_info_type_1 import (
-            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType1,
+            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_charge_info_type_2 import (
-            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType2,
+            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_charge_info_type_3 import (
-            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType3,
+            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_charge_info_type_4 import (
-            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType4,
+            GetCurrentProfilesInSavedSearchResponse200ChargeInfoType4,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output import (
-            GetCurrentProfilesInSavedSearchResponse200Output,
+            GetCurrentProfilesInSavedSearchResponse200Output,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_warnings_type_0_item import (
-            GetCurrentProfilesInSavedSearchResponse200WarningsType0Item,
+            GetCurrentProfilesInSavedSearchResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyCompanyParamsLastFundedOnType1WindowType0Method(str, Enum):
+class CombinedSearchCountBodyCompanyParamsLastFundedOnType1WindowType0Method(StrEnum):
     LASTN = "lastN"
 
     def __str__(self) -> str:

@@ -58,16 +58,16 @@ class ListAvailableTrackerRulesResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.list_available_tracker_rules_response_200_charge_info_type_0 import (
-            ListAvailableTrackerRulesResponse200ChargeInfoType0,
+            ListAvailableTrackerRulesResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.list_available_tracker_rules_response_200_charge_info_type_1 import (
-            ListAvailableTrackerRulesResponse200ChargeInfoType1,
+            ListAvailableTrackerRulesResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.list_available_tracker_rules_response_200_charge_info_type_2 import (
-            ListAvailableTrackerRulesResponse200ChargeInfoType2,
+            ListAvailableTrackerRulesResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.list_available_tracker_rules_response_200_charge_info_type_3 import (
-            ListAvailableTrackerRulesResponse200ChargeInfoType3,
+            ListAvailableTrackerRulesResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class ListAvailableTrackerRulesResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.list_available_tracker_rules_response_200_charge_info_type_0 import (
-            ListAvailableTrackerRulesResponse200ChargeInfoType0,
+            ListAvailableTrackerRulesResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.list_available_tracker_rules_response_200_charge_info_type_1 import (
-            ListAvailableTrackerRulesResponse200ChargeInfoType1,
+            ListAvailableTrackerRulesResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.list_available_tracker_rules_response_200_charge_info_type_2 import (
-            ListAvailableTrackerRulesResponse200ChargeInfoType2,
+            ListAvailableTrackerRulesResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.list_available_tracker_rules_response_200_charge_info_type_3 import (
-            ListAvailableTrackerRulesResponse200ChargeInfoType3,
+            ListAvailableTrackerRulesResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.list_available_tracker_rules_response_200_charge_info_type_4 import (
-            ListAvailableTrackerRulesResponse200ChargeInfoType4,
+            ListAvailableTrackerRulesResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.list_available_tracker_rules_response_200_output import ListAvailableTrackerRulesResponse200Output
+        from ..models.list_available_tracker_rules_response_200_output import (
+            ListAvailableTrackerRulesResponse200Output,  # noqa: PLC0415
+        )
         from ..models.list_available_tracker_rules_response_200_warnings_type_0_item import (
-            ListAvailableTrackerRulesResponse200WarningsType0Item,
+            ListAvailableTrackerRulesResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

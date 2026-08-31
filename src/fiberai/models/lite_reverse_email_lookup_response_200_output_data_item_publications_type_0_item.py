@@ -114,7 +114,7 @@ class LiteReverseEmailLookupResponse200OutputDataItemPublicationsType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.lite_reverse_email_lookup_response_200_output_data_item_publications_type_0_item_collaborators_type_0_item import (
-            LiteReverseEmailLookupResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item,
+            LiteReverseEmailLookupResponse200OutputDataItemPublicationsType0ItemCollaboratorsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

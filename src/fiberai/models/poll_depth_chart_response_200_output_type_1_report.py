@@ -114,16 +114,16 @@ class PollDepthChartResponse200OutputType1Report:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_depth_chart_response_200_output_type_1_report_buckets_item import (
-            PollDepthChartResponse200OutputType1ReportBucketsItem,
+            PollDepthChartResponse200OutputType1ReportBucketsItem,  # noqa: PLC0415
         )
         from ..models.poll_depth_chart_response_200_output_type_1_report_company_info import (
-            PollDepthChartResponse200OutputType1ReportCompanyInfo,
+            PollDepthChartResponse200OutputType1ReportCompanyInfo,  # noqa: PLC0415
         )
         from ..models.poll_depth_chart_response_200_output_type_1_report_function_stats_item import (
-            PollDepthChartResponse200OutputType1ReportFunctionStatsItem,
+            PollDepthChartResponse200OutputType1ReportFunctionStatsItem,  # noqa: PLC0415
         )
         from ..models.poll_depth_chart_response_200_output_type_1_report_seniority_stats_item import (
-            PollDepthChartResponse200OutputType1ReportSeniorityStatsItem,
+            PollDepthChartResponse200OutputType1ReportSeniorityStatsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

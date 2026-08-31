@@ -54,7 +54,7 @@ class QuickPersonResolveResponse200OutputDataItemPersonType0DetailedEducationTyp
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_detailed_education_type_0_item_school_details_type_0 import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0DetailedEducationType0ItemSchoolDetailsType0,
+            QuickPersonResolveResponse200OutputDataItemPersonType0DetailedEducationType0ItemSchoolDetailsType0,  # noqa: PLC0415
         )
 
         school_details: dict[str, Any] | None | Unset
@@ -159,7 +159,7 @@ class QuickPersonResolveResponse200OutputDataItemPersonType0DetailedEducationTyp
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.quick_person_resolve_response_200_output_data_item_person_type_0_detailed_education_type_0_item_school_details_type_0 import (
-            QuickPersonResolveResponse200OutputDataItemPersonType0DetailedEducationType0ItemSchoolDetailsType0,
+            QuickPersonResolveResponse200OutputDataItemPersonType0DetailedEducationType0ItemSchoolDetailsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -46,7 +46,7 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0An
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_posting_stats_type_0_any_of_type_0_item_type_4_range_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType4RangeType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType4RangeType0,  # noqa: PLC0415
         )
 
         rule = self.rule.value
@@ -77,10 +77,10 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0An
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_posting_stats_type_0_any_of_type_0_item_type_4_range_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType4RangeType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType4RangeType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_posting_stats_type_0_any_of_type_0_item_type_4_range_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType4RangeType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType4RangeType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

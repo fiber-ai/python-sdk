@@ -147,15 +147,15 @@ def sync_detailed(
     | GetAutoTopupSettingsResponse500
     | GetAutoTopupSettingsResponse503
 ]:
-    r"""Get auto top-up settings
+    """Get auto top-up settings
 
      Get the organization's auto top-up configuration. When configured is false, no auto top-up settings
     exist yet.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -196,15 +196,15 @@ def sync(
     | GetAutoTopupSettingsResponse503
     | None
 ):
-    r"""Get auto top-up settings
+    """Get auto top-up settings
 
      Get the organization's auto top-up configuration. When configured is false, no auto top-up settings
     exist yet.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | GetAutoTopupSettingsResponse500
     | GetAutoTopupSettingsResponse503
 ]:
-    r"""Get auto top-up settings
+    """Get auto top-up settings
 
      Get the organization's auto top-up configuration. When configured is false, no auto top-up settings
     exist yet.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -286,15 +286,15 @@ async def asyncio(
     | GetAutoTopupSettingsResponse503
     | None
 ):
-    r"""Get auto top-up settings
+    """Get auto top-up settings
 
      Get the organization's auto top-up configuration. When configured is false, no auto top-up settings
     exist yet.
 
     <span>⚡ <strong>Rate limit:</strong> 10 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):

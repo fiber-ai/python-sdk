@@ -45,7 +45,7 @@ class CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_company_params_job_posting_stats_type_0_all_of_type_0_item_type_4_range_type_0 import (
-            CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType4RangeType0,
+            CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType4RangeType0,  # noqa: PLC0415
         )
 
         rule = self.rule.value
@@ -75,10 +75,10 @@ class CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_company_params_job_posting_stats_type_0_all_of_type_0_item_type_4_range_type_0 import (
-            CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType4RangeType0,
+            CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType4RangeType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_job_posting_stats_type_0_all_of_type_0_item_type_4_range_type_1 import (
-            CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType4RangeType1,
+            CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AllOfType0ItemType4RangeType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

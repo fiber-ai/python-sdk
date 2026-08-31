@@ -58,16 +58,16 @@ class TiktokVideoCommentsResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.tiktok_video_comments_response_200_charge_info_type_0 import (
-            TiktokVideoCommentsResponse200ChargeInfoType0,
+            TiktokVideoCommentsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.tiktok_video_comments_response_200_charge_info_type_1 import (
-            TiktokVideoCommentsResponse200ChargeInfoType1,
+            TiktokVideoCommentsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.tiktok_video_comments_response_200_charge_info_type_2 import (
-            TiktokVideoCommentsResponse200ChargeInfoType2,
+            TiktokVideoCommentsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.tiktok_video_comments_response_200_charge_info_type_3 import (
-            TiktokVideoCommentsResponse200ChargeInfoType3,
+            TiktokVideoCommentsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class TiktokVideoCommentsResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.tiktok_video_comments_response_200_charge_info_type_0 import (
-            TiktokVideoCommentsResponse200ChargeInfoType0,
+            TiktokVideoCommentsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.tiktok_video_comments_response_200_charge_info_type_1 import (
-            TiktokVideoCommentsResponse200ChargeInfoType1,
+            TiktokVideoCommentsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.tiktok_video_comments_response_200_charge_info_type_2 import (
-            TiktokVideoCommentsResponse200ChargeInfoType2,
+            TiktokVideoCommentsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.tiktok_video_comments_response_200_charge_info_type_3 import (
-            TiktokVideoCommentsResponse200ChargeInfoType3,
+            TiktokVideoCommentsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.tiktok_video_comments_response_200_charge_info_type_4 import (
-            TiktokVideoCommentsResponse200ChargeInfoType4,
+            TiktokVideoCommentsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.tiktok_video_comments_response_200_output import TiktokVideoCommentsResponse200Output
+        from ..models.tiktok_video_comments_response_200_output import (
+            TiktokVideoCommentsResponse200Output,  # noqa: PLC0415
+        )
         from ..models.tiktok_video_comments_response_200_warnings_type_0_item import (
-            TiktokVideoCommentsResponse200WarningsType0Item,
+            TiktokVideoCommentsResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

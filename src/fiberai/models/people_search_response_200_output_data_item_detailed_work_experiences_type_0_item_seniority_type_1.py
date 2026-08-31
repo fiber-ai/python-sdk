@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PeopleSearchResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1(str, Enum):
+class PeopleSearchResponse200OutputDataItemDetailedWorkExperiencesType0ItemSeniorityType1(StrEnum):
     ASSOCIATE = "Associate"
     DIRECTOR = "Director"
     ENTRY_LEVEL = "Entry level"

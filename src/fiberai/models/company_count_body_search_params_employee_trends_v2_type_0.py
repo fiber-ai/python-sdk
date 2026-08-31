@@ -72,13 +72,13 @@ class CompanyCountBodySearchParamsEmployeeTrendsV2Type0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_count_body_search_params_employee_trends_v2_type_0_obeys_all_type_0_item_type_0 import (
-            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,
+            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employee_trends_v2_type_0_obeys_any_type_0_item_type_0 import (
-            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,
+            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employee_trends_v2_type_0_obeys_none_type_0_item_type_0 import (
-            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,
+            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,  # noqa: PLC0415
         )
 
         obeys_all: list[dict[str, Any]] | None | Unset
@@ -154,22 +154,22 @@ class CompanyCountBodySearchParamsEmployeeTrendsV2Type0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_count_body_search_params_employee_trends_v2_type_0_obeys_all_type_0_item_type_0 import (
-            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,
+            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employee_trends_v2_type_0_obeys_all_type_0_item_type_1 import (
-            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType1,
+            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employee_trends_v2_type_0_obeys_any_type_0_item_type_0 import (
-            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,
+            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employee_trends_v2_type_0_obeys_any_type_0_item_type_1 import (
-            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType1,
+            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType1,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employee_trends_v2_type_0_obeys_none_type_0_item_type_0 import (
-            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,
+            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_employee_trends_v2_type_0_obeys_none_type_0_item_type_1 import (
-            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType1,
+            CompanyCountBodySearchParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

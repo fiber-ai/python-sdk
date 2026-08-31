@@ -48,16 +48,16 @@ class GetAudienceStatusResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_audience_status_response_200_charge_info_type_0 import (
-            GetAudienceStatusResponse200ChargeInfoType0,
+            GetAudienceStatusResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_audience_status_response_200_charge_info_type_1 import (
-            GetAudienceStatusResponse200ChargeInfoType1,
+            GetAudienceStatusResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_audience_status_response_200_charge_info_type_2 import (
-            GetAudienceStatusResponse200ChargeInfoType2,
+            GetAudienceStatusResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_audience_status_response_200_charge_info_type_3 import (
-            GetAudienceStatusResponse200ChargeInfoType3,
+            GetAudienceStatusResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -113,23 +113,23 @@ class GetAudienceStatusResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_audience_status_response_200_charge_info_type_0 import (
-            GetAudienceStatusResponse200ChargeInfoType0,
+            GetAudienceStatusResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.get_audience_status_response_200_charge_info_type_1 import (
-            GetAudienceStatusResponse200ChargeInfoType1,
+            GetAudienceStatusResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.get_audience_status_response_200_charge_info_type_2 import (
-            GetAudienceStatusResponse200ChargeInfoType2,
+            GetAudienceStatusResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.get_audience_status_response_200_charge_info_type_3 import (
-            GetAudienceStatusResponse200ChargeInfoType3,
+            GetAudienceStatusResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.get_audience_status_response_200_charge_info_type_4 import (
-            GetAudienceStatusResponse200ChargeInfoType4,
+            GetAudienceStatusResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.get_audience_status_response_200_output import GetAudienceStatusResponse200Output
+        from ..models.get_audience_status_response_200_output import GetAudienceStatusResponse200Output  # noqa: PLC0415
         from ..models.get_audience_status_response_200_warnings_type_0_item import (
-            GetAudienceStatusResponse200WarningsType0Item,
+            GetAudienceStatusResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

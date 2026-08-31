@@ -2536,457 +2536,457 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsSt
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hrv import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HRV,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hti import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HTI,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hun import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HUN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0idn import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IDN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0imn import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IMN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ind import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IND,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0iot import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IOT,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irl import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRL,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irn import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irq import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRQ,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0isl import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISL,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0isr import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISR,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ita import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ITA,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jam import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JAM,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jey import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JEY,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jor import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JOR,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jpn import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JPN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kaz import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KAZ,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ken import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KEN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kgz import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KGZ,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0khm import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KHM,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kir import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KIR,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kna import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KNA,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kor import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KOR,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kwt import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KWT,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lao import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LAO,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lbn import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lbr import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBR,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lby import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBY,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lca import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LCA,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lie import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LIE,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lka import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LKA,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lso import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LSO,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ltu import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LTU,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lux import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LUX,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lva import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LVA,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mac import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAC,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0maf import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAF,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mar import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAR,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mco import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MCO,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mda import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDA,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mdg import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDG,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mdv import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDV,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mex import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MEX,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mhl import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MHL,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mkd import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MKD,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mli import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLI,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mlt import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLT,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mmr import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MMR,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mne import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNE,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mng import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNG,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mnp import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNP,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0moz import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MOZ,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mrt import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MRT,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0msr import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MSR,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mtq import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MTQ,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mus import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mwi import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MWI,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mys import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYS,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0myt import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYT,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nam import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NAM,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ncl import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NCL,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ner import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NER,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nfk import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NFK,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nga import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NGA,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nic import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIC,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0niu import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIU,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nld import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NLD,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nor import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NOR,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0npl import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NPL,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nru import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NRU,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nzl import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NZL,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0omn import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0OMN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pak import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAK,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pan import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pcn import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PCN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0per import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PER,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0phl import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PHL,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0plw import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PLW,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0png import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PNG,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pol import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0POL,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pri import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRI,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0prk import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRK,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0prt import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRT,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pry import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRY,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pse import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PSE,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pyf import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PYF,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0qat import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0QAT,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0reu import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0REU,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rou import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ROU,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rus import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RUS,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rwa import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RWA,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sau import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SAU,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sdn import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SDN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sen import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SEN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sgp import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGP,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sgs import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGS,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0shn import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SHN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sjm import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SJM,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0slb import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLB,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sle import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLE,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0slv import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLV,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0smr import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SMR,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0som import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SOM,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0spm import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SPM,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0srb import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SRB,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ssd import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SSD,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0stp import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0STP,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sur import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SUR,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0svk import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVK,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0svn import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0swe import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWE,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0swz import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWZ,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sxm import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SXM,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0syc import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYC,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0syr import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYR,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tca import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCA,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tcd import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCD,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tgo import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TGO,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tha import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0THA,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tjk import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TJK,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tkl import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKL,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tkm import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKM,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tls import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TLS,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ton import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TON,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tto import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TTO,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tun import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tur import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUR,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tuv import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUV,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0twn import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TWN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tza import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TZA,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0uga import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UGA,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ukr import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UKR,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0umi import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UMI,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ury import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0URY,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0usa import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0USA,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0uzb import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UZB,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vat import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VAT,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vct import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VCT,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ven import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VEN,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vgb import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VGB,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vir import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VIR,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vnm import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VNM,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vut import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VUT,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0wlf import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WLF,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0wsm import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WSM,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0xkx import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0XKX,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0yem import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0YEM,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zaf import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZAF,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zmb import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZMB,
-        )
+        )  # noqa: PLC0415
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zwe import (
             GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZWE,
-        )
+        )  # noqa: PLC0415
 
         usa: dict[str, Any] | Unset = UNSET
         if not isinstance(self.usa, Unset):
@@ -4503,757 +4503,757 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsSt
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0abw import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ABW,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ABW,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0afg import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AFG,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AFG,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ago import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AGO,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AGO,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aia import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AIA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AIA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ala import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0alb import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALB,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ALB,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0and import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AND,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AND,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ant import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ANT,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ANT,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0are import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARE,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARE,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0arg import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARG,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARG,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0arm import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ARM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0asm import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ASM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ASM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ata import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0atf import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATF,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATF,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0atg import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATG,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ATG,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aus import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUS,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUS,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aut import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUT,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AUT,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0aze import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AZE,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0AZE,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bdi import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BDI,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BDI,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bel import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEL,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEL,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ben import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BEN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bes import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BES,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BES,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bfa import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BFA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BFA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bgd import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGD,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGD,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bgr import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BGR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bhr import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bhs import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHS,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BHS,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bih import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BIH,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BIH,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0blm import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0blr import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0blz import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLZ,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BLZ,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bmu import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BMU,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BMU,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bol import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BOL,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BOL,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bra import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0brb import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRB,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRB,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0brn import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BRN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0btn import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BTN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BTN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bvt import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BVT,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BVT,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0bwa import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BWA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0BWA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0caf import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAF,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAF,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0can import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CAN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cck import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CCK,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CCK,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0che import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHE,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHE,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0chl import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHL,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHL,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0chn import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CHN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0civ import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CIV,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CIV,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cmr import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CMR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CMR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cod import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COD,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COD,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cog import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COG,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COG,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cok import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COK,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COK,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0col import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COL,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COL,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0com import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0COM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cpv import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CPV,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CPV,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cri import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CRI,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CRI,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cub import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUB,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUB,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cuw import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUW,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CUW,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cxr import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CXR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CXR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cym import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cyp import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYP,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CYP,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0cze import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CZE,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0CZE,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0deu import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DEU,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DEU,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dji import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DJI,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DJI,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dma import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DMA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DMA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dnk import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DNK,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DNK,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dom import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DOM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DOM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0dza import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DZA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0DZA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ecu import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ECU,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ECU,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0egy import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EGY,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EGY,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0eri import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ERI,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ERI,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0esh import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESH,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESH,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0esp import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESP,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ESP,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0est import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EST,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0EST,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0eth import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ETH,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ETH,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fin import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FIN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FIN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fji import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FJI,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FJI,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0flk import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FLK,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FLK,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fra import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fro import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRO,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FRO,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0fsm import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FSM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0FSM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gab import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GAB,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GAB,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gbr import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GBR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GBR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0geo import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GEO,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GEO,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ggy import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GGY,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GGY,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gha import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GHA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GHA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gib import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIB,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIB,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gin import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GIN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0glp import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GLP,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GLP,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gmb import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GMB,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GMB,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gnb import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNB,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNB,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gnq import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNQ,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GNQ,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0grc import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRC,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRC,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0grd import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRD,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRD,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0grl import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRL,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GRL,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gtm import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GTM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GTM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0guf import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUF,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUF,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0gum import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0guy import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUY,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0GUY,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hkg import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HKG,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HKG,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hmd import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HMD,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HMD,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hnd import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HND,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HND,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hrv import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HRV,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HRV,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hti import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HTI,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HTI,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0hun import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HUN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0HUN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0idn import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IDN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IDN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0imn import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IMN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IMN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ind import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IND,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IND,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0iot import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IOT,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IOT,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irl import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRL,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRL,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irn import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0irq import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRQ,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0IRQ,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0isl import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISL,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISL,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0isr import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ISR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ita import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ITA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ITA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jam import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JAM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JAM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jey import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JEY,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JEY,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jor import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JOR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JOR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0jpn import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JPN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0JPN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kaz import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KAZ,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KAZ,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ken import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KEN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KEN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kgz import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KGZ,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KGZ,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0khm import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KHM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KHM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kir import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KIR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KIR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kna import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KNA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KNA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kor import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KOR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KOR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0kwt import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KWT,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0KWT,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lao import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LAO,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LAO,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lbn import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lbr import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lby import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBY,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LBY,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lca import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LCA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LCA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lie import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LIE,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LIE,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lka import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LKA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LKA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lso import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LSO,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LSO,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ltu import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LTU,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LTU,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lux import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LUX,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LUX,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0lva import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LVA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0LVA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mac import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAC,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAC,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0maf import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAF,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAF,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mar import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MAR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mco import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MCO,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MCO,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mda import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mdg import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDG,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDG,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mdv import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDV,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MDV,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mex import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MEX,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MEX,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mhl import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MHL,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MHL,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mkd import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MKD,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MKD,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mli import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLI,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLI,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mlt import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLT,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MLT,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mmr import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MMR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MMR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mne import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNE,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNE,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mng import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNG,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNG,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mnp import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNP,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MNP,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0moz import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MOZ,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MOZ,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mrt import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MRT,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MRT,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0msr import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MSR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MSR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mtq import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MTQ,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MTQ,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mus import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MUS,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mwi import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MWI,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MWI,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0mys import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYS,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYS,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0myt import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYT,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0MYT,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nam import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NAM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NAM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ncl import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NCL,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NCL,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ner import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NER,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NER,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nfk import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NFK,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NFK,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nga import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NGA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NGA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nic import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIC,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIC,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0niu import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIU,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NIU,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nld import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NLD,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NLD,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nor import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NOR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NOR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0npl import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NPL,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NPL,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nru import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NRU,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NRU,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0nzl import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NZL,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0NZL,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0omn import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0OMN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0OMN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pak import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAK,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAK,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pan import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PAN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pcn import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PCN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PCN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0per import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PER,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PER,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0phl import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PHL,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PHL,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0plw import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PLW,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PLW,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0png import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PNG,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PNG,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pol import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0POL,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0POL,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pri import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRI,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRI,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0prk import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRK,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRK,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0prt import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRT,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRT,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pry import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRY,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PRY,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pse import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PSE,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PSE,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0pyf import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PYF,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0PYF,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0qat import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0QAT,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0QAT,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0reu import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0REU,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0REU,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rou import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ROU,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ROU,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rus import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RUS,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RUS,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0rwa import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RWA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0RWA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sau import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SAU,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SAU,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sdn import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SDN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SDN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sen import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SEN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SEN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sgp import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGP,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGP,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sgs import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGS,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SGS,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0shn import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SHN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SHN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sjm import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SJM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SJM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0slb import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLB,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLB,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sle import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLE,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLE,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0slv import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLV,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SLV,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0smr import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SMR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SMR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0som import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SOM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SOM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0spm import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SPM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SPM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0srb import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SRB,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SRB,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ssd import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SSD,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SSD,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0stp import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0STP,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0STP,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sur import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SUR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SUR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0svk import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVK,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVK,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0svn import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SVN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0swe import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWE,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWE,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0swz import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWZ,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SWZ,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0sxm import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SXM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SXM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0syc import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYC,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYC,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0syr import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0SYR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tca import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tcd import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCD,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TCD,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tgo import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TGO,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TGO,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tha import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0THA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0THA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tjk import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TJK,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TJK,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tkl import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKL,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKL,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tkm import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TKM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tls import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TLS,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TLS,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ton import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TON,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TON,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tto import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TTO,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TTO,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tun import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tur import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tuv import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUV,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TUV,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0twn import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TWN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TWN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0tza import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TZA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0TZA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0uga import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UGA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UGA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ukr import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UKR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UKR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0umi import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UMI,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UMI,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ury import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0URY,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0URY,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0usa import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0USA,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0USA,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0uzb import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UZB,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0UZB,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vat import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VAT,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VAT,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vct import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VCT,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VCT,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0ven import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VEN,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VEN,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vgb import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VGB,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VGB,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vir import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VIR,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VIR,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vnm import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VNM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VNM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0vut import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VUT,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0VUT,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0wlf import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WLF,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WLF,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0wsm import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WSM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0WSM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0xkx import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0XKX,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0XKX,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0yem import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0YEM,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0YEM,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zaf import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZAF,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZAF,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zmb import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZMB,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZMB,  # noqa: PLC0415
         )
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_li_job_posts_stats_type_0_country_location_stats_type_0zwe import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZWE,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0CountryLocationStatsType0ZWE,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

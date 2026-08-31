@@ -88,28 +88,28 @@ class QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcoun
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_1m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth1MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth1MType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_2m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth2MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth2MType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_3m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth3MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth3MType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_6m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth6MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth6MType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_12m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth12MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth12MType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_18m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth18MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth18MType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_24m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth24MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth24MType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_36m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth36MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth36MType0,  # noqa: PLC0415
         )
 
         field_1m: dict[str, Any] | None | Unset
@@ -221,28 +221,28 @@ class QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcoun
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_1m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth1MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth1MType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_2m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth2MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth2MType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_3m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth3MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth3MType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_6m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth6MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth6MType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_12m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth12MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth12MType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_18m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth18MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth18MType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_24m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth24MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth24MType0,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_historical_headcount_type_0_growth_36m_type_0 import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth36MType0,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0HistoricalHeadcountType0Growth36MType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

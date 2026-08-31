@@ -55,7 +55,7 @@ class AddProspectsToExclusionListBody:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.add_prospects_to_exclusion_list_body_prospects_item import (
-            AddProspectsToExclusionListBodyProspectsItem,
+            AddProspectsToExclusionListBodyProspectsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

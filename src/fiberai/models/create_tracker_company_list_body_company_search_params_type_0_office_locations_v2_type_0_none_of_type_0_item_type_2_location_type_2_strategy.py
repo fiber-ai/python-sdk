@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0NoneOfType0ItemType2LocationType2Strategy(
-    str, Enum
+    StrEnum
 ):
     POLYGON = "polygon"
 

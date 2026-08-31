@@ -88,28 +88,28 @@ class ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadco
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_1m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth1MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth1MType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_2m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth2MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth2MType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_3m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth3MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth3MType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_6m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth6MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth6MType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_12m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth12MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth12MType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_18m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth18MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth18MType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_24m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth24MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth24MType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_36m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth36MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth36MType0,  # noqa: PLC0415
         )
 
         field_1m: dict[str, Any] | None | Unset
@@ -225,28 +225,28 @@ class ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadco
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_1m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth1MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth1MType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_2m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth2MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth2MType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_3m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth3MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth3MType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_6m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth6MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth6MType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_12m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth12MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth12MType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_18m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth18MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth18MType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_24m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth24MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth24MType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1_company_historical_headcount_type_0_growth_36m_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth36MType0,
+            ReversePhoneLookupResponse200OutputResultsItemType1CompanyHistoricalHeadcountType0Growth36MType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

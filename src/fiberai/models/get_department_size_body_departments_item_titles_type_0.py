@@ -65,10 +65,10 @@ class GetDepartmentSizeBodyDepartmentsItemTitlesType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_department_size_body_departments_item_titles_type_0_exclude import (
-            GetDepartmentSizeBodyDepartmentsItemTitlesType0Exclude,
+            GetDepartmentSizeBodyDepartmentsItemTitlesType0Exclude,  # noqa: PLC0415
         )
         from ..models.get_department_size_body_departments_item_titles_type_0_include import (
-            GetDepartmentSizeBodyDepartmentsItemTitlesType0Include,
+            GetDepartmentSizeBodyDepartmentsItemTitlesType0Include,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

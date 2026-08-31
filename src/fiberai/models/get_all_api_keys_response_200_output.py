@@ -42,7 +42,7 @@ class GetAllApiKeysResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_all_api_keys_response_200_output_api_keys_item import (
-            GetAllApiKeysResponse200OutputApiKeysItem,
+            GetAllApiKeysResponse200OutputApiKeysItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

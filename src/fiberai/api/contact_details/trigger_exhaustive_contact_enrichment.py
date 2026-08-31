@@ -147,7 +147,7 @@ def sync_detailed(
     | TriggerExhaustiveContactEnrichmentResponse500
     | TriggerExhaustiveContactEnrichmentResponse503
 ]:
-    r"""Start exhaustive contact details reveal
+    """Start exhaustive contact details reveal
 
      Maximum-coverage contact reveal — runs all parallel enrichment branches to get the most
     comprehensive results. This is asynchronous: call this endpoint to start the task, then poll
@@ -162,9 +162,9 @@ def sync_detailed(
     <span>💰 <strong>Cost:</strong> Pay only for the data you request (exhaustive mode):<br />• 12
     credits for all phone numbers AND all emails<br />• 5 credits for work email only<br />• 5 credits
     for personal email only<br />• 4 credits for phone only<br />• 9 credits for all emails&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary. Credits are charged upfront for
+    title="Pricing shown is default pricing. Actual pricing may vary. Credits are charged upfront for
     the requested exhaustive bundle. Undelivered data is refunded per operation after the reveal
-    completes, so partial reveals only bill for delivered data.\">ⓘ</span></span>
+    completes, so partial reveals only bill for delivered data.">ⓘ</span></span>
 
     Args:
         body (TriggerExhaustiveContactEnrichmentBody):
@@ -205,7 +205,7 @@ def sync(
     | TriggerExhaustiveContactEnrichmentResponse503
     | None
 ):
-    r"""Start exhaustive contact details reveal
+    """Start exhaustive contact details reveal
 
      Maximum-coverage contact reveal — runs all parallel enrichment branches to get the most
     comprehensive results. This is asynchronous: call this endpoint to start the task, then poll
@@ -220,9 +220,9 @@ def sync(
     <span>💰 <strong>Cost:</strong> Pay only for the data you request (exhaustive mode):<br />• 12
     credits for all phone numbers AND all emails<br />• 5 credits for work email only<br />• 5 credits
     for personal email only<br />• 4 credits for phone only<br />• 9 credits for all emails&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary. Credits are charged upfront for
+    title="Pricing shown is default pricing. Actual pricing may vary. Credits are charged upfront for
     the requested exhaustive bundle. Undelivered data is refunded per operation after the reveal
-    completes, so partial reveals only bill for delivered data.\">ⓘ</span></span>
+    completes, so partial reveals only bill for delivered data.">ⓘ</span></span>
 
     Args:
         body (TriggerExhaustiveContactEnrichmentBody):
@@ -257,7 +257,7 @@ async def asyncio_detailed(
     | TriggerExhaustiveContactEnrichmentResponse500
     | TriggerExhaustiveContactEnrichmentResponse503
 ]:
-    r"""Start exhaustive contact details reveal
+    """Start exhaustive contact details reveal
 
      Maximum-coverage contact reveal — runs all parallel enrichment branches to get the most
     comprehensive results. This is asynchronous: call this endpoint to start the task, then poll
@@ -272,9 +272,9 @@ async def asyncio_detailed(
     <span>💰 <strong>Cost:</strong> Pay only for the data you request (exhaustive mode):<br />• 12
     credits for all phone numbers AND all emails<br />• 5 credits for work email only<br />• 5 credits
     for personal email only<br />• 4 credits for phone only<br />• 9 credits for all emails&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary. Credits are charged upfront for
+    title="Pricing shown is default pricing. Actual pricing may vary. Credits are charged upfront for
     the requested exhaustive bundle. Undelivered data is refunded per operation after the reveal
-    completes, so partial reveals only bill for delivered data.\">ⓘ</span></span>
+    completes, so partial reveals only bill for delivered data.">ⓘ</span></span>
 
     Args:
         body (TriggerExhaustiveContactEnrichmentBody):
@@ -313,7 +313,7 @@ async def asyncio(
     | TriggerExhaustiveContactEnrichmentResponse503
     | None
 ):
-    r"""Start exhaustive contact details reveal
+    """Start exhaustive contact details reveal
 
      Maximum-coverage contact reveal — runs all parallel enrichment branches to get the most
     comprehensive results. This is asynchronous: call this endpoint to start the task, then poll
@@ -328,9 +328,9 @@ async def asyncio(
     <span>💰 <strong>Cost:</strong> Pay only for the data you request (exhaustive mode):<br />• 12
     credits for all phone numbers AND all emails<br />• 5 credits for work email only<br />• 5 credits
     for personal email only<br />• 4 credits for phone only<br />• 9 credits for all emails&nbsp;<span
-    title=\"Pricing shown is default pricing. Actual pricing may vary. Credits are charged upfront for
+    title="Pricing shown is default pricing. Actual pricing may vary. Credits are charged upfront for
     the requested exhaustive bundle. Undelivered data is refunded per operation after the reveal
-    completes, so partial reveals only bill for delivered data.\">ⓘ</span></span>
+    completes, so partial reveals only bill for delivered data.">ⓘ</span></span>
 
     Args:
         body (TriggerExhaustiveContactEnrichmentBody):

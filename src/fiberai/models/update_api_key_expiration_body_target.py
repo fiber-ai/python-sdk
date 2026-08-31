@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class UpdateApiKeyExpirationBodyTarget(str, Enum):
+class UpdateApiKeyExpirationBodyTarget(StrEnum):
     OTHER = "OTHER"
     SELF = "SELF"
 

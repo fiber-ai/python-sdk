@@ -118,25 +118,25 @@ class CompanySearchResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeSt
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_employment_type_stats_type_0_contract import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Contract,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_employment_type_stats_type_0_full_time import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0FullTime,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_employment_type_stats_type_0_internship import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Internship,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_employment_type_stats_type_0_other import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Other,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Other,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_employment_type_stats_type_0_part_time import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0PartTime,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_employment_type_stats_type_0_temporary import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Temporary,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_employment_type_stats_type_0_volunteer import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0EmploymentTypeStatsType0Volunteer,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

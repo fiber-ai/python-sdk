@@ -147,7 +147,7 @@ def sync_detailed(
     | ListWebhookEventTypesResponse500
     | ListWebhookEventTypesResponse503
 ]:
-    r"""List webhook event types
+    """List webhook event types
 
      List every event type you can subscribe a webhook endpoint to. Each entry includes a description of
     when the event fires and an example payload so you can build and test your receiver before creating
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -197,7 +197,7 @@ def sync(
     | ListWebhookEventTypesResponse503
     | None
 ):
-    r"""List webhook event types
+    """List webhook event types
 
      List every event type you can subscribe a webhook endpoint to. Each entry includes a description of
     when the event fires and an example payload so you can build and test your receiver before creating
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | ListWebhookEventTypesResponse500
     | ListWebhookEventTypesResponse503
 ]:
-    r"""List webhook event types
+    """List webhook event types
 
      List every event type you can subscribe a webhook endpoint to. Each entry includes a description of
     when the event fires and an example payload so you can build and test your receiver before creating
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -289,7 +289,7 @@ async def asyncio(
     | ListWebhookEventTypesResponse503
     | None
 ):
-    r"""List webhook event types
+    """List webhook event types
 
      List every event type you can subscribe a webhook endpoint to. Each entry includes a description of
     when the event fires and an example payload so you can build and test your receiver before creating
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):

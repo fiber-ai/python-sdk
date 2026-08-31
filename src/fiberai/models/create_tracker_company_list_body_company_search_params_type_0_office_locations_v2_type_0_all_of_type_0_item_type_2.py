@@ -51,13 +51,13 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0AllOfType0ItemType2LocationType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0AllOfType0ItemType2LocationType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0AllOfType0ItemType2LocationType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0AllOfType0ItemType2LocationType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0AllOfType0ItemType2LocationType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0AllOfType0ItemType2LocationType2,  # noqa: PLC0415
         )
 
         type_ = self.type_.value
@@ -95,16 +95,16 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0AllOfType0ItemType2LocationType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0AllOfType0ItemType2LocationType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0AllOfType0ItemType2LocationType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0AllOfType0ItemType2LocationType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0AllOfType0ItemType2LocationType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0AllOfType0ItemType2LocationType2,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_office_locations_v2_type_0_all_of_type_0_item_type_2_location_type_3 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0AllOfType0ItemType2LocationType3,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0AllOfType0ItemType2LocationType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

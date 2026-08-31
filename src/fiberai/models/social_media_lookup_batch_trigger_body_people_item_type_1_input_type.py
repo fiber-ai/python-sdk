@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class SocialMediaLookupBatchTriggerBodyPeopleItemType1InputType(str, Enum):
+class SocialMediaLookupBatchTriggerBodyPeopleItemType1InputType(StrEnum):
     LINKEDINUSERID = "linkedinUserId"
 
     def __str__(self) -> str:

@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class NumericDeltaChangeDirection(str, Enum):
+class NumericDeltaChangeDirection(StrEnum):
     DECREASED = "decreased"
     INCREASED = "increased"
 

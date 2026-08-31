@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class WebpageScreenshotResponse200OutputImageMediaType(str, Enum):
+class WebpageScreenshotResponse200OutputImageMediaType(StrEnum):
     IMAGEPNG = "image/png"
 
     def __str__(self) -> str:

@@ -1278,457 +1278,457 @@ class CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationS
     def to_dict(self) -> dict[str, Any]:
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hrv import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HRV,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hti import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HTI,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hun import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HUN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0idn import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IDN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0imn import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IMN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ind import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IND,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0iot import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IOT,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0irl import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRL,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0irn import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0irq import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRQ,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0isl import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ISL,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0isr import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ISR,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ita import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ITA,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jam import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JAM,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jey import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JEY,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jor import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JOR,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jpn import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JPN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kaz import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KAZ,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ken import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KEN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kgz import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KGZ,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0khm import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KHM,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kir import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KIR,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kna import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KNA,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kor import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KOR,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kwt import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KWT,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lao import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LAO,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lbn import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lbr import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBR,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lby import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBY,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lca import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LCA,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lie import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LIE,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lka import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LKA,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lso import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LSO,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ltu import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LTU,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lux import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LUX,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lva import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LVA,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mac import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAC,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0maf import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAF,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mar import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAR,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mco import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MCO,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mda import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDA,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mdg import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDG,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mdv import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDV,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mex import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MEX,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mhl import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MHL,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mkd import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MKD,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mli import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MLI,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mlt import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MLT,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mmr import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MMR,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mne import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNE,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mng import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNG,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mnp import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNP,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0moz import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MOZ,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mrt import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MRT,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0msr import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MSR,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mtq import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MTQ,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mus import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MUS,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mwi import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MWI,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mys import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MYS,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0myt import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MYT,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nam import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NAM,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ncl import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NCL,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ner import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NER,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nfk import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NFK,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nga import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NGA,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nic import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NIC,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0niu import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NIU,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nld import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NLD,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nor import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NOR,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0npl import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NPL,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nru import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NRU,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nzl import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NZL,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0omn import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0OMN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pak import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PAK,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pan import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PAN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pcn import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PCN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0per import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PER,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0phl import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PHL,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0plw import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PLW,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0png import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PNG,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pol import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0POL,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pri import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRI,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0prk import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRK,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0prt import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRT,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pry import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRY,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pse import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PSE,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pyf import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PYF,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0qat import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0QAT,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0reu import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0REU,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0rou import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ROU,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0rus import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0RUS,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0rwa import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0RWA,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sau import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SAU,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sdn import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SDN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sen import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SEN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sgp import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SGP,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sgs import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SGS,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0shn import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SHN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sjm import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SJM,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0slb import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLB,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sle import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLE,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0slv import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLV,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0smr import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SMR,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0som import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SOM,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0spm import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SPM,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0srb import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SRB,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ssd import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SSD,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0stp import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0STP,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sur import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SUR,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0svk import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SVK,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0svn import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SVN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0swe import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SWE,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0swz import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SWZ,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sxm import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SXM,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0syc import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SYC,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0syr import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SYR,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tca import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TCA,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tcd import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TCD,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tgo import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TGO,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tha import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0THA,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tjk import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TJK,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tkl import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TKL,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tkm import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TKM,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tls import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TLS,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ton import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TON,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tto import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TTO,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tun import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tur import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUR,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tuv import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUV,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0twn import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TWN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tza import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TZA,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0uga import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UGA,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ukr import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UKR,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0umi import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UMI,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ury import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0URY,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0usa import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0USA,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0uzb import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UZB,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vat import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VAT,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vct import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VCT,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ven import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VEN,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vgb import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VGB,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vir import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VIR,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vnm import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VNM,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vut import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VUT,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0wlf import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0WLF,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0wsm import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0WSM,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0xkx import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0XKX,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0yem import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0YEM,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0zaf import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZAF,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0zmb import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZMB,
-        )
+        )  # noqa: PLC0415
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0zwe import (
             CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZWE,
-        )
+        )  # noqa: PLC0415
 
         usa: dict[str, Any] | Unset = UNSET
         if not isinstance(self.usa, Unset):
@@ -3245,757 +3245,757 @@ class CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationS
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0abw import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ABW,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ABW,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0afg import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AFG,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AFG,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ago import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AGO,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AGO,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0aia import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AIA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AIA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ala import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ALA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ALA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0alb import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ALB,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ALB,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0and import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AND,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AND,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ant import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ANT,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ANT,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0are import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ARE,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ARE,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0arg import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ARG,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ARG,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0arm import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ARM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ARM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0asm import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ASM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ASM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ata import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ATA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ATA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0atf import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ATF,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ATF,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0atg import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ATG,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ATG,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0aus import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AUS,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AUS,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0aut import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AUT,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AUT,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0aze import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AZE,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0AZE,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bdi import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BDI,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BDI,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bel import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BEL,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BEL,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ben import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BEN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BEN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bes import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BES,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BES,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bfa import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BFA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BFA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bgd import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BGD,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BGD,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bgr import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BGR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BGR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bhr import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BHR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BHR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bhs import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BHS,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BHS,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bih import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BIH,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BIH,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0blm import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BLM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BLM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0blr import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BLR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BLR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0blz import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BLZ,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BLZ,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bmu import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BMU,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BMU,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bol import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BOL,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BOL,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bra import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BRA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BRA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0brb import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BRB,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BRB,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0brn import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BRN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BRN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0btn import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BTN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BTN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bvt import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BVT,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BVT,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0bwa import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BWA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0BWA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0caf import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CAF,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CAF,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0can import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CAN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CAN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cck import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CCK,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CCK,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0che import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CHE,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CHE,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0chl import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CHL,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CHL,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0chn import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CHN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CHN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0civ import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CIV,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CIV,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cmr import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CMR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CMR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cod import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COD,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COD,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cog import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COG,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COG,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cok import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COK,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COK,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0col import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COL,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COL,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0com import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0COM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cpv import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CPV,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CPV,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cri import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CRI,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CRI,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cub import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CUB,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CUB,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cuw import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CUW,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CUW,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cxr import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CXR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CXR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cym import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CYM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CYM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cyp import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CYP,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CYP,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0cze import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CZE,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0CZE,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0deu import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DEU,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DEU,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0dji import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DJI,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DJI,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0dma import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DMA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DMA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0dnk import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DNK,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DNK,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0dom import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DOM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DOM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0dza import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DZA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0DZA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ecu import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ECU,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ECU,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0egy import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0EGY,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0EGY,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0eri import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ERI,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ERI,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0esh import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ESH,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ESH,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0esp import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ESP,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ESP,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0est import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0EST,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0EST,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0eth import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ETH,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ETH,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0fin import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FIN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FIN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0fji import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FJI,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FJI,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0flk import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FLK,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FLK,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0fra import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FRA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FRA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0fro import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FRO,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FRO,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0fsm import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FSM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0FSM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gab import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GAB,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GAB,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gbr import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GBR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GBR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0geo import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GEO,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GEO,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ggy import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GGY,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GGY,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gha import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GHA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GHA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gib import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GIB,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GIB,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gin import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GIN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GIN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0glp import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GLP,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GLP,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gmb import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GMB,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GMB,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gnb import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GNB,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GNB,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gnq import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GNQ,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GNQ,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0grc import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GRC,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GRC,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0grd import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GRD,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GRD,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0grl import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GRL,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GRL,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gtm import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GTM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GTM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0guf import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GUF,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GUF,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0gum import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GUM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GUM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0guy import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GUY,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0GUY,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hkg import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HKG,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HKG,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hmd import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HMD,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HMD,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hnd import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HND,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HND,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hrv import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HRV,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HRV,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hti import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HTI,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HTI,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0hun import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HUN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0HUN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0idn import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IDN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IDN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0imn import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IMN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IMN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ind import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IND,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IND,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0iot import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IOT,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IOT,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0irl import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRL,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRL,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0irn import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0irq import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRQ,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0IRQ,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0isl import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ISL,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ISL,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0isr import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ISR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ISR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ita import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ITA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ITA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jam import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JAM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JAM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jey import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JEY,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JEY,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jor import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JOR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JOR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0jpn import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JPN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0JPN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kaz import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KAZ,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KAZ,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ken import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KEN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KEN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kgz import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KGZ,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KGZ,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0khm import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KHM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KHM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kir import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KIR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KIR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kna import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KNA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KNA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kor import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KOR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KOR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0kwt import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KWT,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0KWT,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lao import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LAO,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LAO,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lbn import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lbr import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lby import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBY,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LBY,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lca import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LCA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LCA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lie import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LIE,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LIE,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lka import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LKA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LKA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lso import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LSO,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LSO,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ltu import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LTU,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LTU,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lux import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LUX,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LUX,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0lva import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LVA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0LVA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mac import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAC,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAC,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0maf import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAF,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAF,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mar import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MAR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mco import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MCO,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MCO,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mda import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mdg import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDG,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDG,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mdv import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDV,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MDV,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mex import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MEX,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MEX,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mhl import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MHL,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MHL,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mkd import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MKD,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MKD,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mli import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MLI,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MLI,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mlt import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MLT,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MLT,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mmr import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MMR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MMR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mne import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNE,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNE,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mng import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNG,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNG,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mnp import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNP,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MNP,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0moz import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MOZ,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MOZ,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mrt import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MRT,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MRT,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0msr import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MSR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MSR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mtq import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MTQ,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MTQ,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mus import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MUS,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MUS,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mwi import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MWI,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MWI,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0mys import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MYS,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MYS,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0myt import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MYT,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0MYT,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nam import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NAM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NAM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ncl import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NCL,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NCL,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ner import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NER,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NER,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nfk import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NFK,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NFK,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nga import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NGA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NGA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nic import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NIC,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NIC,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0niu import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NIU,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NIU,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nld import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NLD,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NLD,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nor import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NOR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NOR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0npl import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NPL,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NPL,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nru import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NRU,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NRU,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0nzl import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NZL,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0NZL,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0omn import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0OMN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0OMN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pak import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PAK,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PAK,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pan import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PAN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PAN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pcn import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PCN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PCN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0per import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PER,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PER,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0phl import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PHL,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PHL,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0plw import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PLW,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PLW,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0png import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PNG,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PNG,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pol import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0POL,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0POL,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pri import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRI,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRI,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0prk import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRK,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRK,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0prt import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRT,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRT,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pry import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRY,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PRY,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pse import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PSE,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PSE,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0pyf import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PYF,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0PYF,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0qat import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0QAT,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0QAT,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0reu import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0REU,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0REU,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0rou import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ROU,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ROU,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0rus import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0RUS,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0RUS,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0rwa import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0RWA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0RWA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sau import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SAU,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SAU,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sdn import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SDN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SDN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sen import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SEN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SEN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sgp import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SGP,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SGP,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sgs import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SGS,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SGS,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0shn import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SHN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SHN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sjm import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SJM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SJM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0slb import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLB,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLB,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sle import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLE,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLE,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0slv import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLV,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SLV,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0smr import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SMR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SMR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0som import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SOM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SOM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0spm import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SPM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SPM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0srb import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SRB,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SRB,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ssd import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SSD,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SSD,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0stp import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0STP,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0STP,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sur import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SUR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SUR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0svk import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SVK,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SVK,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0svn import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SVN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SVN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0swe import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SWE,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SWE,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0swz import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SWZ,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SWZ,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0sxm import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SXM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SXM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0syc import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SYC,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SYC,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0syr import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SYR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0SYR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tca import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TCA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TCA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tcd import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TCD,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TCD,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tgo import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TGO,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TGO,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tha import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0THA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0THA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tjk import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TJK,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TJK,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tkl import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TKL,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TKL,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tkm import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TKM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TKM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tls import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TLS,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TLS,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ton import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TON,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TON,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tto import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TTO,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TTO,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tun import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tur import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tuv import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUV,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TUV,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0twn import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TWN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TWN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0tza import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TZA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0TZA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0uga import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UGA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UGA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ukr import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UKR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UKR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0umi import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UMI,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UMI,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ury import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0URY,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0URY,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0usa import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0USA,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0USA,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0uzb import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UZB,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0UZB,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vat import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VAT,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VAT,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vct import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VCT,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VCT,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0ven import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VEN,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VEN,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vgb import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VGB,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VGB,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vir import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VIR,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VIR,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vnm import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VNM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VNM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0vut import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VUT,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0VUT,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0wlf import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0WLF,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0WLF,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0wsm import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0WSM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0WSM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0xkx import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0XKX,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0XKX,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0yem import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0YEM,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0YEM,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0zaf import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZAF,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZAF,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0zmb import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZMB,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZMB,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_country_location_stats_type_0zwe import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZWE,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0CountryLocationStatsType0ZWE,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

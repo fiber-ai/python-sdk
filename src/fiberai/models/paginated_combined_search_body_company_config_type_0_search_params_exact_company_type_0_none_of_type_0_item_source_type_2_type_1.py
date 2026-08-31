@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsExactCompanyType0NoneOfType0ItemSourceType2Type1(
-    str, Enum
+    StrEnum
 ):
     CSV = "csv"
 

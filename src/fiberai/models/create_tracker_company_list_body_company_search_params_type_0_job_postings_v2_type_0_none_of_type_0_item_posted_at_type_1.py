@@ -53,13 +53,13 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0None
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_1_window_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0NoneOfType0ItemPostedAtType1WindowType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0NoneOfType0ItemPostedAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_1_window_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0NoneOfType0ItemPostedAtType1WindowType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0NoneOfType0ItemPostedAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_1_window_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0NoneOfType0ItemPostedAtType1WindowType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0NoneOfType0ItemPostedAtType1WindowType2,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -100,13 +100,13 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0None
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_1_window_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0NoneOfType0ItemPostedAtType1WindowType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0NoneOfType0ItemPostedAtType1WindowType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_1_window_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0NoneOfType0ItemPostedAtType1WindowType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0NoneOfType0ItemPostedAtType1WindowType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_none_of_type_0_item_posted_at_type_1_window_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0NoneOfType0ItemPostedAtType1WindowType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0NoneOfType0ItemPostedAtType1WindowType2,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

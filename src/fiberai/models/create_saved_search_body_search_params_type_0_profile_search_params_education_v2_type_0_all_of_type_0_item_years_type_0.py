@@ -58,16 +58,16 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0A
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_years_type_0_finished_school_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0FinishedSchoolAtType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0FinishedSchoolAtType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_years_type_0_finished_school_at_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0FinishedSchoolAtType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0FinishedSchoolAtType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_years_type_0_started_school_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0StartedSchoolAtType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0StartedSchoolAtType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_years_type_0_started_school_at_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0StartedSchoolAtType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0StartedSchoolAtType1,  # noqa: PLC0415
         )
 
         started_school_at: dict[str, Any] | None | Unset
@@ -123,16 +123,16 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0A
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_years_type_0_finished_school_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0FinishedSchoolAtType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0FinishedSchoolAtType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_years_type_0_finished_school_at_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0FinishedSchoolAtType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0FinishedSchoolAtType1,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_years_type_0_started_school_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0StartedSchoolAtType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0StartedSchoolAtType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_education_v2_type_0_all_of_type_0_item_years_type_0_started_school_at_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0StartedSchoolAtType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsEducationV2Type0AllOfType0ItemYearsType0StartedSchoolAtType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

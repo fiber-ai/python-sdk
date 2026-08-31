@@ -59,19 +59,19 @@ class PeopleSearchBodySearchParamsJobsType0AllOfType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_body_search_params_jobs_type_0_all_of_type_0_item_company_type_0 import (
-            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType0,
+            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType0,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_jobs_type_0_all_of_type_0_item_company_type_1 import (
-            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType1,
+            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType1,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_jobs_type_0_all_of_type_0_item_company_type_2 import (
-            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType2,
+            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType2,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_jobs_type_0_all_of_type_0_item_company_type_3 import (
-            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType3,
+            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType3,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_jobs_type_0_all_of_type_0_item_job_title_type_0 import (
-            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemJobTitleType0,
+            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemJobTitleType0,  # noqa: PLC0415
         )
 
         status = self.status.value
@@ -115,19 +115,19 @@ class PeopleSearchBodySearchParamsJobsType0AllOfType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_jobs_type_0_all_of_type_0_item_company_type_0 import (
-            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType0,
+            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType0,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_jobs_type_0_all_of_type_0_item_company_type_1 import (
-            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType1,
+            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType1,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_jobs_type_0_all_of_type_0_item_company_type_2 import (
-            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType2,
+            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType2,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_jobs_type_0_all_of_type_0_item_company_type_3 import (
-            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType3,
+            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemCompanyType3,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_jobs_type_0_all_of_type_0_item_job_title_type_0 import (
-            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemJobTitleType0,
+            PeopleSearchBodySearchParamsJobsType0AllOfType0ItemJobTitleType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

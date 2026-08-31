@@ -134,25 +134,25 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0S
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_seniority_stats_type_0_associate import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0Associate,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0Associate,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_seniority_stats_type_0_director import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0Director,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0Director,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_seniority_stats_type_0_entry_level import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_seniority_stats_type_0_executive import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0Executive,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0Executive,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_seniority_stats_type_0_internship import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0Internship,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0Internship,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_seniority_stats_type_0_mid_senior_level import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_li_job_posts_stats_type_0_seniority_stats_type_0_not_applicable import (
-            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable,
+            PaginatedCombinedSearchResponse200OutputCompaniesItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

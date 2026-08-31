@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0NoneOfType0ItemType5RangeType1Type(
-    str, Enum
+    StrEnum
 ):
     PERCENT_RANGE = "percent-range"
 

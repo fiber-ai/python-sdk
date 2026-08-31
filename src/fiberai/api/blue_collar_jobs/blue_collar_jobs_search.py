@@ -147,7 +147,7 @@ def sync_detailed(
     | BlueCollarJobsSearchResponse500
     | BlueCollarJobsSearchResponse503
 ]:
-    r"""Search blue collar job listings
+    """Search blue collar job listings
 
      Search blue collar and trade job postings. Ideal for finding service, manufacturing, trades, and
     other non-desk positions. Currently US-only. Supports search by company, job title/keyword, and
@@ -155,11 +155,11 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (BlueCollarJobsSearchBody):
@@ -200,7 +200,7 @@ def sync(
     | BlueCollarJobsSearchResponse503
     | None
 ):
-    r"""Search blue collar job listings
+    """Search blue collar job listings
 
      Search blue collar and trade job postings. Ideal for finding service, manufacturing, trades, and
     other non-desk positions. Currently US-only. Supports search by company, job title/keyword, and
@@ -208,11 +208,11 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (BlueCollarJobsSearchBody):
@@ -247,7 +247,7 @@ async def asyncio_detailed(
     | BlueCollarJobsSearchResponse500
     | BlueCollarJobsSearchResponse503
 ]:
-    r"""Search blue collar job listings
+    """Search blue collar job listings
 
      Search blue collar and trade job postings. Ideal for finding service, manufacturing, trades, and
     other non-desk positions. Currently US-only. Supports search by company, job title/keyword, and
@@ -255,11 +255,11 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (BlueCollarJobsSearchBody):
@@ -298,7 +298,7 @@ async def asyncio(
     | BlueCollarJobsSearchResponse503
     | None
 ):
-    r"""Search blue collar job listings
+    """Search blue collar job listings
 
      Search blue collar and trade job postings. Ideal for finding service, manufacturing, trades, and
     other non-desk positions. Currently US-only. Supports search by company, job title/keyword, and
@@ -306,11 +306,11 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title=\"Pricing shown is default
-    pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per search&nbsp;<span title="Pricing shown is default
+    pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 1 minute for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 1 minute for this endpoint.">ⓘ</span></span>
 
     Args:
         body (BlueCollarJobsSearchBody):

@@ -50,7 +50,7 @@ class PeopleSearchBodySearchParamsEducationType0AllOfType0ItemDegreeV2Type1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_degree_v2_type_1_criteria import (
-            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemDegreeV2Type1Criteria,
+            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemDegreeV2Type1Criteria,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

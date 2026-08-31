@@ -70,10 +70,10 @@ class ValidatePhoneNumberResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.validate_phone_number_response_200_output_current_carrier_type_0 import (
-            ValidatePhoneNumberResponse200OutputCurrentCarrierType0,
+            ValidatePhoneNumberResponse200OutputCurrentCarrierType0,  # noqa: PLC0415
         )
         from ..models.validate_phone_number_response_200_output_original_carrier_type_0 import (
-            ValidatePhoneNumberResponse200OutputOriginalCarrierType0,
+            ValidatePhoneNumberResponse200OutputOriginalCarrierType0,  # noqa: PLC0415
         )
 
         is_valid = self.is_valid
@@ -174,10 +174,10 @@ class ValidatePhoneNumberResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.validate_phone_number_response_200_output_current_carrier_type_0 import (
-            ValidatePhoneNumberResponse200OutputCurrentCarrierType0,
+            ValidatePhoneNumberResponse200OutputCurrentCarrierType0,  # noqa: PLC0415
         )
         from ..models.validate_phone_number_response_200_output_original_carrier_type_0 import (
-            ValidatePhoneNumberResponse200OutputOriginalCarrierType0,
+            ValidatePhoneNumberResponse200OutputOriginalCarrierType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

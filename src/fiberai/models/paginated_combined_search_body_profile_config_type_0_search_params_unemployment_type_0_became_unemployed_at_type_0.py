@@ -43,7 +43,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_unemployment_type_0_became_unemployed_at_type_0_range_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0BecameUnemployedAtType0RangeType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0BecameUnemployedAtType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -74,7 +74,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_unemployment_type_0_became_unemployed_at_type_0_range_type_0 import (
-            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0BecameUnemployedAtType0RangeType0,
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0BecameUnemployedAtType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

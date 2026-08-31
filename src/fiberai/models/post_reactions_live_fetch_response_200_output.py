@@ -56,7 +56,7 @@ class PostReactionsLiveFetchResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.post_reactions_live_fetch_response_200_output_data_item import (
-            PostReactionsLiveFetchResponse200OutputDataItem,
+            PostReactionsLiveFetchResponse200OutputDataItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

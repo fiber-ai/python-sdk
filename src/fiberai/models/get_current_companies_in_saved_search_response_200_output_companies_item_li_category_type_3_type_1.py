@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiCategoryType3Type1(str, Enum):
+class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLiCategoryType3Type1(StrEnum):
     C = "C"
     S = "S"
     W = "W"

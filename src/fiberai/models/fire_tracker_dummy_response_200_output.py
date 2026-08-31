@@ -44,7 +44,7 @@ class FireTrackerDummyResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.fire_tracker_dummy_response_200_output_signals_item import (
-            FireTrackerDummyResponse200OutputSignalsItem,
+            FireTrackerDummyResponse200OutputSignalsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

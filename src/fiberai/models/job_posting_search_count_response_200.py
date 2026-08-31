@@ -58,16 +58,16 @@ class JobPostingSearchCountResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.job_posting_search_count_response_200_charge_info_type_0 import (
-            JobPostingSearchCountResponse200ChargeInfoType0,
+            JobPostingSearchCountResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_count_response_200_charge_info_type_1 import (
-            JobPostingSearchCountResponse200ChargeInfoType1,
+            JobPostingSearchCountResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.job_posting_search_count_response_200_charge_info_type_2 import (
-            JobPostingSearchCountResponse200ChargeInfoType2,
+            JobPostingSearchCountResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.job_posting_search_count_response_200_charge_info_type_3 import (
-            JobPostingSearchCountResponse200ChargeInfoType3,
+            JobPostingSearchCountResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class JobPostingSearchCountResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.job_posting_search_count_response_200_charge_info_type_0 import (
-            JobPostingSearchCountResponse200ChargeInfoType0,
+            JobPostingSearchCountResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_count_response_200_charge_info_type_1 import (
-            JobPostingSearchCountResponse200ChargeInfoType1,
+            JobPostingSearchCountResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.job_posting_search_count_response_200_charge_info_type_2 import (
-            JobPostingSearchCountResponse200ChargeInfoType2,
+            JobPostingSearchCountResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.job_posting_search_count_response_200_charge_info_type_3 import (
-            JobPostingSearchCountResponse200ChargeInfoType3,
+            JobPostingSearchCountResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.job_posting_search_count_response_200_charge_info_type_4 import (
-            JobPostingSearchCountResponse200ChargeInfoType4,
+            JobPostingSearchCountResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.job_posting_search_count_response_200_output import JobPostingSearchCountResponse200Output
+        from ..models.job_posting_search_count_response_200_output import (
+            JobPostingSearchCountResponse200Output,  # noqa: PLC0415
+        )
         from ..models.job_posting_search_count_response_200_warnings_type_0_item import (
-            JobPostingSearchCountResponse200WarningsType0Item,
+            JobPostingSearchCountResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

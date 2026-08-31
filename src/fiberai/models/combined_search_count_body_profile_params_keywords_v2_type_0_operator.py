@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyProfileParamsKeywordsV2Type0Operator(str, Enum):
+class CombinedSearchCountBodyProfileParamsKeywordsV2Type0Operator(StrEnum):
     AND = "AND"
     OR = "OR"
 

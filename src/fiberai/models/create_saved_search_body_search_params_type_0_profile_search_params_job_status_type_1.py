@@ -43,10 +43,10 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType1:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_status_type_1_left_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType1LeftAtType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType1LeftAtType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_status_type_1_left_at_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType1LeftAtType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType1LeftAtType1,  # noqa: PLC0415
         )
 
         status = self.status.value
@@ -80,10 +80,10 @@ class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType1:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_status_type_1_left_at_type_0 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType1LeftAtType0,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType1LeftAtType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_0_profile_search_params_job_status_type_1_left_at_type_1 import (
-            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType1LeftAtType1,
+            CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJobStatusType1LeftAtType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

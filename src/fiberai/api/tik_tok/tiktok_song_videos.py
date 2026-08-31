@@ -147,15 +147,15 @@ def sync_detailed(
     | TiktokSongVideosResponse500
     | TiktokSongVideosResponse503
 ]:
-    r"""Fetch TikTok videos using a song
+    """Fetch TikTok videos using a song
 
      Fetches TikTok videos that use a specific song/sound. Returns a paginated list. Use the
     `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSongVideosBody):
@@ -196,15 +196,15 @@ def sync(
     | TiktokSongVideosResponse503
     | None
 ):
-    r"""Fetch TikTok videos using a song
+    """Fetch TikTok videos using a song
 
      Fetches TikTok videos that use a specific song/sound. Returns a paginated list. Use the
     `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSongVideosBody):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | TiktokSongVideosResponse500
     | TiktokSongVideosResponse503
 ]:
-    r"""Fetch TikTok videos using a song
+    """Fetch TikTok videos using a song
 
      Fetches TikTok videos that use a specific song/sound. Returns a paginated list. Use the
     `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSongVideosBody):
@@ -286,15 +286,15 @@ async def asyncio(
     | TiktokSongVideosResponse503
     | None
 ):
-    r"""Fetch TikTok videos using a song
+    """Fetch TikTok videos using a song
 
      Fetches TikTok videos that use a specific song/sound. Returns a paginated list. Use the
     `nextPageToken` field from the response to retrieve subsequent pages.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (TiktokSongVideosBody):

@@ -58,16 +58,16 @@ class PaginatedCombinedSearchResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_response_200_charge_info_type_0 import (
-            PaginatedCombinedSearchResponse200ChargeInfoType0,
+            PaginatedCombinedSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_charge_info_type_1 import (
-            PaginatedCombinedSearchResponse200ChargeInfoType1,
+            PaginatedCombinedSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_charge_info_type_2 import (
-            PaginatedCombinedSearchResponse200ChargeInfoType2,
+            PaginatedCombinedSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_charge_info_type_3 import (
-            PaginatedCombinedSearchResponse200ChargeInfoType3,
+            PaginatedCombinedSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class PaginatedCombinedSearchResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_response_200_charge_info_type_0 import (
-            PaginatedCombinedSearchResponse200ChargeInfoType0,
+            PaginatedCombinedSearchResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_charge_info_type_1 import (
-            PaginatedCombinedSearchResponse200ChargeInfoType1,
+            PaginatedCombinedSearchResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_charge_info_type_2 import (
-            PaginatedCombinedSearchResponse200ChargeInfoType2,
+            PaginatedCombinedSearchResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_charge_info_type_3 import (
-            PaginatedCombinedSearchResponse200ChargeInfoType3,
+            PaginatedCombinedSearchResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_response_200_charge_info_type_4 import (
-            PaginatedCombinedSearchResponse200ChargeInfoType4,
+            PaginatedCombinedSearchResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.paginated_combined_search_response_200_output import PaginatedCombinedSearchResponse200Output
+        from ..models.paginated_combined_search_response_200_output import (
+            PaginatedCombinedSearchResponse200Output,  # noqa: PLC0415
+        )
         from ..models.paginated_combined_search_response_200_warnings_type_0_item import (
-            PaginatedCombinedSearchResponse200WarningsType0Item,
+            PaginatedCombinedSearchResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

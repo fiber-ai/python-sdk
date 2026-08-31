@@ -86,7 +86,7 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0Rul
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_0_company_search_params_employees_type_0_rules_item_employee_filters_type_0_recently_hired_type_0_item import (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0Item,
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsEmployeesType0RulesItemEmployeeFiltersType0RecentlyHiredType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

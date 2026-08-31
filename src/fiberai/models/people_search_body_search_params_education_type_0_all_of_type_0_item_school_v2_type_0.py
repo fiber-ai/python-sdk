@@ -76,10 +76,10 @@ class PeopleSearchBodySearchParamsEducationType0AllOfType0ItemSchoolV2Type0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_school_v2_type_0_any_of_type_0_item import (
-            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemSchoolV2Type0AnyOfType0Item,
+            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemSchoolV2Type0AnyOfType0Item,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_education_type_0_all_of_type_0_item_school_v2_type_0_none_of_type_0_item import (
-            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemSchoolV2Type0NoneOfType0Item,
+            PeopleSearchBodySearchParamsEducationType0AllOfType0ItemSchoolV2Type0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

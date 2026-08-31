@@ -53,7 +53,7 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationTy
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_union_all_type_0_item_type_0_radius_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType0RadiusType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType0RadiusType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -84,13 +84,13 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationTy
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_union_all_type_0_item_type_0_center import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType0Center,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType0Center,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_union_all_type_0_item_type_0_radius_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType0RadiusType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType0RadiusType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_location_type_0_union_all_type_0_item_type_0_radius_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType0RadiusType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersLocationType0UnionAllType0ItemType0RadiusType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

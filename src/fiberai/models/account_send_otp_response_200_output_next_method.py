@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class AccountSendOtpResponse200OutputNextMethod(str, Enum):
+class AccountSendOtpResponse200OutputNextMethod(StrEnum):
     POST = "POST"
 
     def __str__(self) -> str:

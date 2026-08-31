@@ -42,7 +42,7 @@ class PollBatchContactDetailsResponse200OutputPageResultsItemInputs:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_batch_contact_details_response_200_output_page_results_item_inputs_linkedin_url import (
-            PollBatchContactDetailsResponse200OutputPageResultsItemInputsLinkedinUrl,
+            PollBatchContactDetailsResponse200OutputPageResultsItemInputsLinkedinUrl,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

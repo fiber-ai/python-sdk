@@ -147,15 +147,15 @@ def sync_detailed(
     | GetTechnologiesResponse500
     | GetTechnologiesResponse503
 ]:
-    r"""List technologies
+    """List technologies
 
      Get all searchable technologies and platforms with their synonyms. Useful for the technology search
     API.
 
     <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -196,15 +196,15 @@ def sync(
     | GetTechnologiesResponse503
     | None
 ):
-    r"""List technologies
+    """List technologies
 
      Get all searchable technologies and platforms with their synonyms. Useful for the technology search
     API.
 
     <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -239,15 +239,15 @@ async def asyncio_detailed(
     | GetTechnologiesResponse500
     | GetTechnologiesResponse503
 ]:
-    r"""List technologies
+    """List technologies
 
      Get all searchable technologies and platforms with their synonyms. Useful for the technology search
     API.
 
     <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):
@@ -286,15 +286,15 @@ async def asyncio(
     | GetTechnologiesResponse503
     | None
 ):
-    r"""List technologies
+    """List technologies
 
      Get all searchable technologies and platforms with their synonyms. Useful for the technology search
     API.
 
     <span>⚡ <strong>Rate limit:</strong> 50 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         api_key (str):

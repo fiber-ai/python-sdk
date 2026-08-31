@@ -35,10 +35,10 @@ class JobPostingSearchResponse200OutputDataItemCompensationRangeType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.job_posting_search_response_200_output_data_item_compensation_range_type_0_gte_type_0 import (
-            JobPostingSearchResponse200OutputDataItemCompensationRangeType0GteType0,
+            JobPostingSearchResponse200OutputDataItemCompensationRangeType0GteType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_output_data_item_compensation_range_type_0_lte_type_0 import (
-            JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0,
+            JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0,  # noqa: PLC0415
         )
 
         lte: dict[str, Any] | None | Unset
@@ -70,10 +70,10 @@ class JobPostingSearchResponse200OutputDataItemCompensationRangeType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.job_posting_search_response_200_output_data_item_compensation_range_type_0_gte_type_0 import (
-            JobPostingSearchResponse200OutputDataItemCompensationRangeType0GteType0,
+            JobPostingSearchResponse200OutputDataItemCompensationRangeType0GteType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_response_200_output_data_item_compensation_range_type_0_lte_type_0 import (
-            JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0,
+            JobPostingSearchResponse200OutputDataItemCompensationRangeType0LteType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

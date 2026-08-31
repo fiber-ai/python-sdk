@@ -147,7 +147,7 @@ def sync_detailed(
     | ResetApiKeyUsageResponse500
     | ResetApiKeyUsageResponse503
 ]:
-    r"""Reset API key usage
+    """Reset API key usage
 
      Reset an API key's lifetime usage back to zero. Acts on the key that authenticates this request
     unless target is OTHER. Use this after raising a key's limit, or to give a key a fresh allowance
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ResetApiKeyUsageBody):
@@ -197,7 +197,7 @@ def sync(
     | ResetApiKeyUsageResponse503
     | None
 ):
-    r"""Reset API key usage
+    """Reset API key usage
 
      Reset an API key's lifetime usage back to zero. Acts on the key that authenticates this request
     unless target is OTHER. Use this after raising a key's limit, or to give a key a fresh allowance
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ResetApiKeyUsageBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | ResetApiKeyUsageResponse500
     | ResetApiKeyUsageResponse503
 ]:
-    r"""Reset API key usage
+    """Reset API key usage
 
      Reset an API key's lifetime usage back to zero. Acts on the key that authenticates this request
     unless target is OTHER. Use this after raising a key's limit, or to give a key a fresh allowance
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ResetApiKeyUsageBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | ResetApiKeyUsageResponse503
     | None
 ):
-    r"""Reset API key usage
+    """Reset API key usage
 
      Reset an API key's lifetime usage back to zero. Acts on the key that authenticates this request
     unless target is OTHER. Use this after raising a key's limit, or to give a key a fresh allowance
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (ResetApiKeyUsageBody):

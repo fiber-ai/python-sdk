@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCompanyMatchModeType1Mode(str, Enum):
+class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsCompanyMatchModeType1Mode(StrEnum):
     LOOSE = "loose"
 
     def __str__(self) -> str:

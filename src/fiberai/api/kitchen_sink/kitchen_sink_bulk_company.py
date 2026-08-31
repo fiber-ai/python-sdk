@@ -147,18 +147,18 @@ def sync_detailed(
     | KitchenSinkBulkCompanyResponse500
     | KitchenSinkBulkCompanyResponse503
 ]:
-    r"""Kitchen sink bulk company lookup
+    """Kitchen sink bulk company lookup
 
      Search for many companies using a variety of parameters such as LinkedIn slug, LinkedIn URL, name,
     etc. Returns complete company data if found.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (KitchenSinkBulkCompanyBody):
@@ -199,18 +199,18 @@ def sync(
     | KitchenSinkBulkCompanyResponse503
     | None
 ):
-    r"""Kitchen sink bulk company lookup
+    """Kitchen sink bulk company lookup
 
      Search for many companies using a variety of parameters such as LinkedIn slug, LinkedIn URL, name,
     etc. Returns complete company data if found.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (KitchenSinkBulkCompanyBody):
@@ -245,18 +245,18 @@ async def asyncio_detailed(
     | KitchenSinkBulkCompanyResponse500
     | KitchenSinkBulkCompanyResponse503
 ]:
-    r"""Kitchen sink bulk company lookup
+    """Kitchen sink bulk company lookup
 
      Search for many companies using a variety of parameters such as LinkedIn slug, LinkedIn URL, name,
     etc. Returns complete company data if found.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (KitchenSinkBulkCompanyBody):
@@ -295,18 +295,18 @@ async def asyncio(
     | KitchenSinkBulkCompanyResponse503
     | None
 ):
-    r"""Kitchen sink bulk company lookup
+    """Kitchen sink bulk company lookup
 
      Search for many companies using a variety of parameters such as LinkedIn slug, LinkedIn URL, name,
     etc. Returns complete company data if found.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per company lookup&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 3 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 3 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 3 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (KitchenSinkBulkCompanyBody):

@@ -56,13 +56,13 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0Any
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_accelerators_v2_type_0_any_of_type_0_item_years_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemYearsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemYearsType0,  # noqa: PLC0415
         )
 
         accelerator_name = self.accelerator_name.value
@@ -110,13 +110,13 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0Any
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_accelerators_v2_type_0_any_of_type_0_item_batch_selection_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemBatchSelectionType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_accelerators_v2_type_0_any_of_type_0_item_years_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemYearsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0AcceleratorsV2Type0AnyOfType0ItemYearsType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

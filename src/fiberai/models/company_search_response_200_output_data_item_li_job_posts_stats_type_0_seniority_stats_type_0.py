@@ -113,25 +113,25 @@ class CompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsTy
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_associate import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Associate,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Associate,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_director import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Director,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Director,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_entry_level import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0EntryLevel,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_executive import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Executive,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Executive,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_internship import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Internship,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0Internship,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_mid_senior_level import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0MidSeniorLevel,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_li_job_posts_stats_type_0_seniority_stats_type_0_not_applicable import (
-            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable,
+            CompanySearchResponse200OutputDataItemLiJobPostsStatsType0SeniorityStatsType0NotApplicable,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

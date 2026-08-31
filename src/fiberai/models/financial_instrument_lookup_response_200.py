@@ -58,16 +58,16 @@ class FinancialInstrumentLookupResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.financial_instrument_lookup_response_200_charge_info_type_0 import (
-            FinancialInstrumentLookupResponse200ChargeInfoType0,
+            FinancialInstrumentLookupResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_charge_info_type_1 import (
-            FinancialInstrumentLookupResponse200ChargeInfoType1,
+            FinancialInstrumentLookupResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_charge_info_type_2 import (
-            FinancialInstrumentLookupResponse200ChargeInfoType2,
+            FinancialInstrumentLookupResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_charge_info_type_3 import (
-            FinancialInstrumentLookupResponse200ChargeInfoType3,
+            FinancialInstrumentLookupResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class FinancialInstrumentLookupResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.financial_instrument_lookup_response_200_charge_info_type_0 import (
-            FinancialInstrumentLookupResponse200ChargeInfoType0,
+            FinancialInstrumentLookupResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_charge_info_type_1 import (
-            FinancialInstrumentLookupResponse200ChargeInfoType1,
+            FinancialInstrumentLookupResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_charge_info_type_2 import (
-            FinancialInstrumentLookupResponse200ChargeInfoType2,
+            FinancialInstrumentLookupResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_charge_info_type_3 import (
-            FinancialInstrumentLookupResponse200ChargeInfoType3,
+            FinancialInstrumentLookupResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.financial_instrument_lookup_response_200_charge_info_type_4 import (
-            FinancialInstrumentLookupResponse200ChargeInfoType4,
+            FinancialInstrumentLookupResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.financial_instrument_lookup_response_200_output import FinancialInstrumentLookupResponse200Output
+        from ..models.financial_instrument_lookup_response_200_output import (
+            FinancialInstrumentLookupResponse200Output,  # noqa: PLC0415
+        )
         from ..models.financial_instrument_lookup_response_200_warnings_type_0_item import (
-            FinancialInstrumentLookupResponse200WarningsType0Item,
+            FinancialInstrumentLookupResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

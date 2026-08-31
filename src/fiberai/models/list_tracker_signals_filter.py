@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class ListTrackerSignalsFilter(str, Enum):
+class ListTrackerSignalsFilter(StrEnum):
     ALL = "all"
     DUMMY = "dummy"
     REAL = "real"

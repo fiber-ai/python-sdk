@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GithubLookupPollResponse200OutputPeopleItemGithubProfileType0Outcome(str, Enum):
+class GithubLookupPollResponse200OutputPeopleItemGithubProfileType0Outcome(StrEnum):
     FOUND = "found"
 
     def __str__(self) -> str:

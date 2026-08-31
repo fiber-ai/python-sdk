@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PollDepthChartResponse200OutputType1Status(str, Enum):
+class PollDepthChartResponse200OutputType1Status(StrEnum):
     COMPLETED = "completed"
 
     def __str__(self) -> str:

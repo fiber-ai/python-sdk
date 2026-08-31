@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsExactCompanyV2Type0AnyOfType0ItemType3Identifier(
-    str, Enum
+    StrEnum
 ):
     ADVANCED = "advanced"
 

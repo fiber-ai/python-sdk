@@ -96,37 +96,37 @@ class PeopleSearchCountBodySearchParamsEducationType0AllOfType0Item:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_degree_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemDegreeType0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemDegreeType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_degree_v2_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemDegreeV2Type0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemDegreeV2Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_degree_v2_type_1 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemDegreeV2Type1,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemDegreeV2Type1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_finished_school_at_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_finished_school_at_type_1 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_keywords_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemKeywordsType0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemKeywordsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_school_name_keywords_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_school_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemSchoolType0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemSchoolType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_school_v2_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemSchoolV2Type0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemSchoolV2Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1,  # noqa: PLC0415
         )
 
         school: dict[str, Any] | None | Unset
@@ -243,37 +243,37 @@ class PeopleSearchCountBodySearchParamsEducationType0AllOfType0Item:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_degree_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemDegreeType0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemDegreeType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_degree_v2_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemDegreeV2Type0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemDegreeV2Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_degree_v2_type_1 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemDegreeV2Type1,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemDegreeV2Type1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_finished_school_at_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_finished_school_at_type_1 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemFinishedSchoolAtType1,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_keywords_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemKeywordsType0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemKeywordsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_school_name_keywords_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemSchoolNameKeywordsType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_school_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemSchoolType0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemSchoolType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_school_v2_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemSchoolV2Type0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemSchoolV2Type0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_0 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType0,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType0,  # noqa: PLC0415
         )
         from ..models.people_search_count_body_search_params_education_type_0_all_of_type_0_item_started_school_at_type_1 import (
-            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1,
+            PeopleSearchCountBodySearchParamsEducationType0AllOfType0ItemStartedSchoolAtType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

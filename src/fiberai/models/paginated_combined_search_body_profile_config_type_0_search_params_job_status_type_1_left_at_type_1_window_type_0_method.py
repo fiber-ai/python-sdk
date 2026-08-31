@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobStatusType1LeftAtType1WindowType0Method(str, Enum):
+class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobStatusType1LeftAtType1WindowType0Method(StrEnum):
     LASTN = "lastN"
 
     def __str__(self) -> str:

@@ -2033,457 +2033,457 @@ class QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsTyp
     def to_dict(self) -> dict[str, Any]:
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0hrv import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0HRV,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0hti import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0HTI,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0hun import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0HUN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0idn import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IDN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0imn import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IMN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ind import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IND,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0iot import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IOT,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0irl import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IRL,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0irn import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IRN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0irq import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IRQ,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0isl import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ISL,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0isr import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ISR,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ita import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ITA,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0jam import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0JAM,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0jey import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0JEY,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0jor import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0JOR,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0jpn import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0JPN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0kaz import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KAZ,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ken import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KEN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0kgz import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KGZ,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0khm import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KHM,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0kir import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KIR,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0kna import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KNA,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0kor import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KOR,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0kwt import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KWT,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lao import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LAO,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lbn import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LBN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lbr import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LBR,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lby import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LBY,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lca import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LCA,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lie import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LIE,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lka import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LKA,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lso import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LSO,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ltu import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LTU,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lux import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LUX,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lva import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LVA,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mac import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MAC,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0maf import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MAF,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mar import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MAR,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mco import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MCO,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mda import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MDA,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mdg import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MDG,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mdv import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MDV,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mex import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MEX,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mhl import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MHL,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mkd import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MKD,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mli import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MLI,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mlt import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MLT,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mmr import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MMR,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mne import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MNE,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mng import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MNG,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mnp import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MNP,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0moz import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MOZ,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mrt import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MRT,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0msr import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MSR,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mtq import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MTQ,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mus import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MUS,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mwi import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MWI,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mys import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MYS,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0myt import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MYT,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nam import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NAM,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ncl import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NCL,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ner import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NER,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nfk import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NFK,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nga import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NGA,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nic import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NIC,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0niu import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NIU,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nld import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NLD,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nor import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NOR,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0npl import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NPL,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nru import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NRU,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nzl import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NZL,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0omn import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0OMN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pak import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PAK,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pan import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PAN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pcn import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PCN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0per import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PER,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0phl import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PHL,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0plw import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PLW,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0png import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PNG,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pol import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0POL,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pri import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PRI,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0prk import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PRK,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0prt import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PRT,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pry import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PRY,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pse import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PSE,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pyf import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PYF,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0qat import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0QAT,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0reu import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0REU,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0rou import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ROU,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0rus import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0RUS,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0rwa import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0RWA,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sau import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SAU,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sdn import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SDN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sen import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SEN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sgp import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SGP,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sgs import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SGS,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0shn import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SHN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sjm import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SJM,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0slb import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SLB,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sle import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SLE,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0slv import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SLV,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0smr import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SMR,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0som import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SOM,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0spm import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SPM,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0srb import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SRB,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ssd import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SSD,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0stp import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0STP,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sur import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SUR,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0svk import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SVK,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0svn import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SVN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0swe import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SWE,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0swz import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SWZ,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sxm import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SXM,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0syc import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SYC,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0syr import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SYR,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tca import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TCA,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tcd import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TCD,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tgo import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TGO,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tha import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0THA,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tjk import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TJK,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tkl import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TKL,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tkm import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TKM,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tls import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TLS,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ton import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TON,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tto import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TTO,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tun import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TUN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tur import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TUR,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tuv import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TUV,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0twn import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TWN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tza import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TZA,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0uga import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0UGA,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ukr import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0UKR,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0umi import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0UMI,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ury import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0URY,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0usa import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0USA,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0uzb import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0UZB,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0vat import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VAT,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0vct import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VCT,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ven import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VEN,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0vgb import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VGB,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0vir import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VIR,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0vnm import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VNM,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0vut import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VUT,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0wlf import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0WLF,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0wsm import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0WSM,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0xkx import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0XKX,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0yem import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0YEM,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0zaf import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ZAF,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0zmb import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ZMB,
-        )
+        )  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0zwe import (
             QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ZWE,
-        )
+        )  # noqa: PLC0415
 
         usa: dict[str, Any] | Unset = UNSET
         if not isinstance(self.usa, Unset):
@@ -4000,757 +4000,757 @@ class QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsTyp
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0abw import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ABW,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ABW,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0afg import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0AFG,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0AFG,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ago import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0AGO,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0AGO,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0aia import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0AIA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0AIA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ala import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ALA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ALA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0alb import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ALB,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ALB,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0and import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0AND,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0AND,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ant import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ANT,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ANT,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0are import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ARE,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ARE,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0arg import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ARG,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ARG,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0arm import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ARM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ARM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0asm import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ASM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ASM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ata import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ATA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ATA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0atf import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ATF,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ATF,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0atg import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ATG,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ATG,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0aus import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0AUS,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0AUS,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0aut import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0AUT,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0AUT,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0aze import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0AZE,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0AZE,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0bdi import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BDI,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BDI,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0bel import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BEL,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BEL,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ben import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BEN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BEN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0bes import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BES,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BES,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0bfa import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BFA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BFA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0bgd import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BGD,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BGD,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0bgr import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BGR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BGR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0bhr import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BHR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BHR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0bhs import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BHS,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BHS,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0bih import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BIH,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BIH,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0blm import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BLM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BLM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0blr import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BLR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BLR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0blz import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BLZ,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BLZ,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0bmu import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BMU,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BMU,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0bol import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BOL,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BOL,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0bra import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BRA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BRA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0brb import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BRB,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BRB,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0brn import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BRN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BRN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0btn import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BTN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BTN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0bvt import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BVT,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BVT,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0bwa import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BWA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0BWA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0caf import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CAF,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CAF,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0can import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CAN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CAN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0cck import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CCK,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CCK,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0che import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CHE,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CHE,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0chl import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CHL,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CHL,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0chn import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CHN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CHN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0civ import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CIV,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CIV,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0cmr import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CMR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CMR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0cod import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0COD,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0COD,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0cog import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0COG,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0COG,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0cok import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0COK,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0COK,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0col import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0COL,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0COL,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0com import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0COM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0COM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0cpv import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CPV,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CPV,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0cri import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CRI,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CRI,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0cub import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CUB,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CUB,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0cuw import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CUW,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CUW,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0cxr import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CXR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CXR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0cym import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CYM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CYM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0cyp import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CYP,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CYP,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0cze import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CZE,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0CZE,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0deu import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0DEU,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0DEU,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0dji import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0DJI,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0DJI,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0dma import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0DMA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0DMA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0dnk import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0DNK,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0DNK,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0dom import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0DOM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0DOM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0dza import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0DZA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0DZA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ecu import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ECU,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ECU,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0egy import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0EGY,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0EGY,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0eri import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ERI,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ERI,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0esh import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ESH,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ESH,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0esp import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ESP,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ESP,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0est import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0EST,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0EST,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0eth import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ETH,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ETH,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0fin import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0FIN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0FIN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0fji import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0FJI,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0FJI,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0flk import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0FLK,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0FLK,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0fra import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0FRA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0FRA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0fro import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0FRO,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0FRO,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0fsm import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0FSM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0FSM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0gab import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GAB,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GAB,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0gbr import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GBR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GBR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0geo import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GEO,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GEO,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ggy import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GGY,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GGY,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0gha import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GHA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GHA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0gib import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GIB,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GIB,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0gin import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GIN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GIN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0glp import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GLP,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GLP,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0gmb import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GMB,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GMB,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0gnb import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GNB,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GNB,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0gnq import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GNQ,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GNQ,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0grc import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GRC,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GRC,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0grd import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GRD,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GRD,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0grl import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GRL,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GRL,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0gtm import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GTM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GTM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0guf import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GUF,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GUF,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0gum import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GUM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GUM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0guy import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GUY,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0GUY,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0hkg import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0HKG,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0HKG,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0hmd import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0HMD,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0HMD,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0hnd import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0HND,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0HND,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0hrv import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0HRV,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0HRV,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0hti import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0HTI,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0HTI,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0hun import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0HUN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0HUN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0idn import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IDN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IDN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0imn import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IMN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IMN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ind import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IND,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IND,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0iot import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IOT,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IOT,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0irl import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IRL,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IRL,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0irn import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IRN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IRN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0irq import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IRQ,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0IRQ,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0isl import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ISL,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ISL,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0isr import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ISR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ISR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ita import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ITA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ITA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0jam import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0JAM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0JAM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0jey import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0JEY,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0JEY,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0jor import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0JOR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0JOR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0jpn import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0JPN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0JPN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0kaz import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KAZ,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KAZ,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ken import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KEN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KEN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0kgz import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KGZ,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KGZ,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0khm import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KHM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KHM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0kir import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KIR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KIR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0kna import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KNA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KNA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0kor import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KOR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KOR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0kwt import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KWT,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0KWT,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lao import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LAO,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LAO,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lbn import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LBN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LBN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lbr import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LBR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LBR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lby import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LBY,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LBY,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lca import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LCA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LCA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lie import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LIE,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LIE,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lka import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LKA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LKA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lso import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LSO,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LSO,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ltu import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LTU,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LTU,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lux import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LUX,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LUX,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0lva import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LVA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0LVA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mac import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MAC,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MAC,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0maf import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MAF,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MAF,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mar import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MAR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MAR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mco import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MCO,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MCO,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mda import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MDA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MDA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mdg import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MDG,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MDG,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mdv import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MDV,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MDV,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mex import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MEX,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MEX,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mhl import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MHL,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MHL,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mkd import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MKD,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MKD,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mli import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MLI,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MLI,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mlt import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MLT,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MLT,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mmr import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MMR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MMR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mne import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MNE,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MNE,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mng import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MNG,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MNG,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mnp import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MNP,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MNP,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0moz import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MOZ,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MOZ,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mrt import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MRT,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MRT,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0msr import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MSR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MSR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mtq import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MTQ,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MTQ,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mus import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MUS,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MUS,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mwi import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MWI,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MWI,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0mys import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MYS,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MYS,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0myt import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MYT,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0MYT,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nam import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NAM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NAM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ncl import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NCL,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NCL,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ner import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NER,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NER,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nfk import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NFK,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NFK,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nga import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NGA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NGA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nic import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NIC,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NIC,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0niu import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NIU,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NIU,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nld import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NLD,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NLD,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nor import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NOR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NOR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0npl import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NPL,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NPL,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nru import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NRU,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NRU,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0nzl import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NZL,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0NZL,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0omn import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0OMN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0OMN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pak import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PAK,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PAK,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pan import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PAN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PAN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pcn import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PCN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PCN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0per import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PER,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PER,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0phl import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PHL,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PHL,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0plw import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PLW,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PLW,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0png import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PNG,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PNG,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pol import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0POL,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0POL,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pri import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PRI,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PRI,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0prk import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PRK,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PRK,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0prt import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PRT,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PRT,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pry import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PRY,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PRY,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pse import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PSE,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PSE,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0pyf import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PYF,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0PYF,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0qat import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0QAT,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0QAT,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0reu import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0REU,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0REU,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0rou import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ROU,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ROU,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0rus import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0RUS,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0RUS,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0rwa import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0RWA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0RWA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sau import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SAU,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SAU,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sdn import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SDN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SDN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sen import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SEN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SEN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sgp import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SGP,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SGP,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sgs import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SGS,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SGS,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0shn import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SHN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SHN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sjm import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SJM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SJM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0slb import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SLB,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SLB,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sle import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SLE,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SLE,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0slv import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SLV,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SLV,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0smr import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SMR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SMR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0som import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SOM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SOM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0spm import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SPM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SPM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0srb import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SRB,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SRB,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ssd import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SSD,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SSD,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0stp import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0STP,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0STP,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sur import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SUR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SUR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0svk import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SVK,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SVK,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0svn import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SVN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SVN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0swe import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SWE,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SWE,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0swz import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SWZ,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SWZ,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0sxm import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SXM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SXM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0syc import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SYC,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SYC,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0syr import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SYR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0SYR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tca import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TCA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TCA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tcd import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TCD,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TCD,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tgo import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TGO,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TGO,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tha import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0THA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0THA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tjk import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TJK,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TJK,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tkl import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TKL,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TKL,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tkm import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TKM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TKM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tls import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TLS,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TLS,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ton import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TON,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TON,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tto import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TTO,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TTO,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tun import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TUN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TUN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tur import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TUR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TUR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tuv import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TUV,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TUV,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0twn import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TWN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TWN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0tza import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TZA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0TZA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0uga import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0UGA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0UGA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ukr import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0UKR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0UKR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0umi import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0UMI,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0UMI,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ury import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0URY,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0URY,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0usa import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0USA,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0USA,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0uzb import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0UZB,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0UZB,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0vat import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VAT,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VAT,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0vct import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VCT,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VCT,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0ven import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VEN,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VEN,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0vgb import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VGB,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VGB,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0vir import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VIR,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VIR,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0vnm import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VNM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VNM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0vut import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VUT,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0VUT,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0wlf import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0WLF,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0WLF,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0wsm import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0WSM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0WSM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0xkx import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0XKX,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0XKX,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0yem import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0YEM,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0YEM,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0zaf import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ZAF,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ZAF,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0zmb import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ZMB,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ZMB,  # noqa: PLC0415
         )
         from ..models.quick_company_resolve_response_200_output_data_item_company_type_0_li_job_posts_stats_type_0_country_location_stats_type_0zwe import (
-            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ZWE,
+            QuickCompanyResolveResponse200OutputDataItemCompanyType0LiJobPostsStatsType0CountryLocationStatsType0ZWE,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -32,7 +32,7 @@ class StealthFoundersCountResponse402:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.stealth_founders_count_response_402_out_of_credits_alert_type_0 import (
-            StealthFoundersCountResponse402OutOfCreditsAlertType0,
+            StealthFoundersCountResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         message = self.message
@@ -60,7 +60,7 @@ class StealthFoundersCountResponse402:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.stealth_founders_count_response_402_out_of_credits_alert_type_0 import (
-            StealthFoundersCountResponse402OutOfCreditsAlertType0,
+            StealthFoundersCountResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

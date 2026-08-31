@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchResponse200OutputProfilesItemCurrentJobType0EmploymentTypeType0Item(str, Enum):
+class PaginatedCombinedSearchResponse200OutputProfilesItemCurrentJobType0EmploymentTypeType0Item(StrEnum):
     CONTRACT = "Contract"
     FULL_TIME = "Full-time"
     INTERNSHIP = "Internship"

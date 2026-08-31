@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesType0AllOfType0ItemType1Type(str, Enum):
+class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesType0AllOfType0ItemType1Type(StrEnum):
     CUSTOM = "custom"
 
     def __str__(self) -> str:

@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileV2Type0NoneOfType0ItemType2Identifier(
-    str, Enum
+    StrEnum
 ):
     LINKEDIN_USER_ID = "linkedin-user-id"
 

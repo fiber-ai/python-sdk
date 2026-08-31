@@ -45,7 +45,7 @@ class GetIndustriesResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_industries_response_200_output_company_counts_type_0 import (
-            GetIndustriesResponse200OutputCompanyCountsType0,
+            GetIndustriesResponse200OutputCompanyCountsType0,  # noqa: PLC0415
         )
 
         fiber_industries = self.fiber_industries
@@ -82,10 +82,10 @@ class GetIndustriesResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_industries_response_200_output_company_counts_type_0 import (
-            GetIndustriesResponse200OutputCompanyCountsType0,
+            GetIndustriesResponse200OutputCompanyCountsType0,  # noqa: PLC0415
         )
         from ..models.get_industries_response_200_output_crunchbase_industry_groups import (
-            GetIndustriesResponse200OutputCrunchbaseIndustryGroups,
+            GetIndustriesResponse200OutputCrunchbaseIndustryGroups,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

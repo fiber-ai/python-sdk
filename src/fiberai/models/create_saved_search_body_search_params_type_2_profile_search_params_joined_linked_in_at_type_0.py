@@ -37,7 +37,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtT
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_joined_linked_in_at_type_0_range_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0RangeType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0RangeType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -67,7 +67,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtT
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_joined_linked_in_at_type_0_range_type_0 import (
-            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0RangeType0,
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType0RangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

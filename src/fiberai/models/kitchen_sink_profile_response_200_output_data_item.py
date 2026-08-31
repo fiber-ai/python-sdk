@@ -184,16 +184,16 @@ class KitchenSinkProfileResponse200OutputDataItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.kitchen_sink_profile_response_200_output_data_item_current_job_type_0 import (
-            KitchenSinkProfileResponse200OutputDataItemCurrentJobType0,
+            KitchenSinkProfileResponse200OutputDataItemCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_custom_data_type_0 import (
-            KitchenSinkProfileResponse200OutputDataItemCustomDataType0,
+            KitchenSinkProfileResponse200OutputDataItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_inferred_location_type_0 import (
-            KitchenSinkProfileResponse200OutputDataItemInferredLocationType0,
+            KitchenSinkProfileResponse200OutputDataItemInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_verifications_type_0 import (
-            KitchenSinkProfileResponse200OutputDataItemVerificationsType0,
+            KitchenSinkProfileResponse200OutputDataItemVerificationsType0,  # noqa: PLC0415
         )
 
         primary_slug = self.primary_slug
@@ -708,58 +708,58 @@ class KitchenSinkProfileResponse200OutputDataItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.kitchen_sink_profile_response_200_output_data_item_articles_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemArticlesType0Item,
+            KitchenSinkProfileResponse200OutputDataItemArticlesType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_certifications_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemCertificationsType0Item,
+            KitchenSinkProfileResponse200OutputDataItemCertificationsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_courses_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemCoursesType0Item,
+            KitchenSinkProfileResponse200OutputDataItemCoursesType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_current_job_type_0 import (
-            KitchenSinkProfileResponse200OutputDataItemCurrentJobType0,
+            KitchenSinkProfileResponse200OutputDataItemCurrentJobType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_custom_data_type_0 import (
-            KitchenSinkProfileResponse200OutputDataItemCustomDataType0,
+            KitchenSinkProfileResponse200OutputDataItemCustomDataType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_education_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemDetailedEducationType0Item,
+            KitchenSinkProfileResponse200OutputDataItemDetailedEducationType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_detailed_work_experiences_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0Item,
+            KitchenSinkProfileResponse200OutputDataItemDetailedWorkExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_education_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemEducationType0Item,
+            KitchenSinkProfileResponse200OutputDataItemEducationType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item,
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_inferred_location_type_0 import (
-            KitchenSinkProfileResponse200OutputDataItemInferredLocationType0,
+            KitchenSinkProfileResponse200OutputDataItemInferredLocationType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_languages_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemLanguagesType0Item,
+            KitchenSinkProfileResponse200OutputDataItemLanguagesType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_organizations_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemOrganizationsType0Item,
+            KitchenSinkProfileResponse200OutputDataItemOrganizationsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_patents_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemPatentsType0Item,
+            KitchenSinkProfileResponse200OutputDataItemPatentsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_projects_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemProjectsType0Item,
+            KitchenSinkProfileResponse200OutputDataItemProjectsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_publications_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemPublicationsType0Item,
+            KitchenSinkProfileResponse200OutputDataItemPublicationsType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_tenures_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemTenuresType0Item,
+            KitchenSinkProfileResponse200OutputDataItemTenuresType0Item,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_verifications_type_0 import (
-            KitchenSinkProfileResponse200OutputDataItemVerificationsType0,
+            KitchenSinkProfileResponse200OutputDataItemVerificationsType0,  # noqa: PLC0415
         )
         from ..models.kitchen_sink_profile_response_200_output_data_item_volunteering_type_0_item import (
-            KitchenSinkProfileResponse200OutputDataItemVolunteeringType0Item,
+            KitchenSinkProfileResponse200OutputDataItemVolunteeringType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

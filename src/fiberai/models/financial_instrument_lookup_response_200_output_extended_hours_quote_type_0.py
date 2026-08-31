@@ -40,7 +40,7 @@ class FinancialInstrumentLookupResponse200OutputExtendedHoursQuoteType0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.financial_instrument_lookup_response_200_output_extended_hours_quote_type_0_price_change_type_0 import (
-            FinancialInstrumentLookupResponse200OutputExtendedHoursQuoteType0PriceChangeType0,
+            FinancialInstrumentLookupResponse200OutputExtendedHoursQuoteType0PriceChangeType0,  # noqa: PLC0415
         )
 
         price: float | None | Unset
@@ -88,7 +88,7 @@ class FinancialInstrumentLookupResponse200OutputExtendedHoursQuoteType0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.financial_instrument_lookup_response_200_output_extended_hours_quote_type_0_price_change_type_0 import (
-            FinancialInstrumentLookupResponse200OutputExtendedHoursQuoteType0PriceChangeType0,
+            FinancialInstrumentLookupResponse200OutputExtendedHoursQuoteType0PriceChangeType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

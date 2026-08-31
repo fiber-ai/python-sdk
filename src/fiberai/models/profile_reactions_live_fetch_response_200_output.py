@@ -61,7 +61,7 @@ class ProfileReactionsLiveFetchResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.profile_reactions_live_fetch_response_200_output_reactions_type_0_item import (
-            ProfileReactionsLiveFetchResponse200OutputReactionsType0Item,
+            ProfileReactionsLiveFetchResponse200OutputReactionsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

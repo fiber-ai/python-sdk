@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type1Status(str, Enum):
+class CreateSavedSearchBodySearchParamsType0ProfileSearchParamsStealthV2Type1Status(StrEnum):
     LEFT_STEALTH = "left-stealth"
 
     def __str__(self) -> str:

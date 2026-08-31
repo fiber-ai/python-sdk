@@ -51,7 +51,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_0_radius_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0RadiusType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0RadiusType0,  # noqa: PLC0415
         )
 
         strategy = self.strategy.value
@@ -82,13 +82,13 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_0_center import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0Center,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0Center,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_0_radius_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0RadiusType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0RadiusType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_office_locations_v2_type_0_none_of_type_0_item_type_2_location_type_0_radius_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0RadiusType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsOfficeLocationsV2Type0NoneOfType0ItemType2LocationType0RadiusType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

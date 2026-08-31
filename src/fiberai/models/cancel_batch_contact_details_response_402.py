@@ -32,7 +32,7 @@ class CancelBatchContactDetailsResponse402:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.cancel_batch_contact_details_response_402_out_of_credits_alert_type_0 import (
-            CancelBatchContactDetailsResponse402OutOfCreditsAlertType0,
+            CancelBatchContactDetailsResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         message = self.message
@@ -60,7 +60,7 @@ class CancelBatchContactDetailsResponse402:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.cancel_batch_contact_details_response_402_out_of_credits_alert_type_0 import (
-            CancelBatchContactDetailsResponse402OutOfCreditsAlertType0,
+            CancelBatchContactDetailsResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

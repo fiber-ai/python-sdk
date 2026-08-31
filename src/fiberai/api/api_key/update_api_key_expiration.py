@@ -147,7 +147,7 @@ def sync_detailed(
     | UpdateApiKeyExpirationResponse500
     | UpdateApiKeyExpirationResponse503
 ]:
-    r"""Update API key expiration
+    """Update API key expiration
 
      Change the expiration of an API key. Acts on the key that authenticates this request unless target
     is OTHER. Choose set to pin an absolute date, extend or prepone to move the date by a number of
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateApiKeyExpirationBody):
@@ -197,7 +197,7 @@ def sync(
     | UpdateApiKeyExpirationResponse503
     | None
 ):
-    r"""Update API key expiration
+    """Update API key expiration
 
      Change the expiration of an API key. Acts on the key that authenticates this request unless target
     is OTHER. Choose set to pin an absolute date, extend or prepone to move the date by a number of
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateApiKeyExpirationBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | UpdateApiKeyExpirationResponse500
     | UpdateApiKeyExpirationResponse503
 ]:
-    r"""Update API key expiration
+    """Update API key expiration
 
      Change the expiration of an API key. Acts on the key that authenticates this request unless target
     is OTHER. Choose set to pin an absolute date, extend or prepone to move the date by a number of
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateApiKeyExpirationBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | UpdateApiKeyExpirationResponse503
     | None
 ):
-    r"""Update API key expiration
+    """Update API key expiration
 
      Change the expiration of an API key. Acts on the key that authenticates this request unless target
     is OTHER. Choose set to pin an absolute date, extend or prepone to move the date by a number of
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (UpdateApiKeyExpirationBody):

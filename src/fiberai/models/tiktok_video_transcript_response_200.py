@@ -58,16 +58,16 @@ class TiktokVideoTranscriptResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.tiktok_video_transcript_response_200_charge_info_type_0 import (
-            TiktokVideoTranscriptResponse200ChargeInfoType0,
+            TiktokVideoTranscriptResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.tiktok_video_transcript_response_200_charge_info_type_1 import (
-            TiktokVideoTranscriptResponse200ChargeInfoType1,
+            TiktokVideoTranscriptResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.tiktok_video_transcript_response_200_charge_info_type_2 import (
-            TiktokVideoTranscriptResponse200ChargeInfoType2,
+            TiktokVideoTranscriptResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.tiktok_video_transcript_response_200_charge_info_type_3 import (
-            TiktokVideoTranscriptResponse200ChargeInfoType3,
+            TiktokVideoTranscriptResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class TiktokVideoTranscriptResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.tiktok_video_transcript_response_200_charge_info_type_0 import (
-            TiktokVideoTranscriptResponse200ChargeInfoType0,
+            TiktokVideoTranscriptResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.tiktok_video_transcript_response_200_charge_info_type_1 import (
-            TiktokVideoTranscriptResponse200ChargeInfoType1,
+            TiktokVideoTranscriptResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.tiktok_video_transcript_response_200_charge_info_type_2 import (
-            TiktokVideoTranscriptResponse200ChargeInfoType2,
+            TiktokVideoTranscriptResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.tiktok_video_transcript_response_200_charge_info_type_3 import (
-            TiktokVideoTranscriptResponse200ChargeInfoType3,
+            TiktokVideoTranscriptResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.tiktok_video_transcript_response_200_charge_info_type_4 import (
-            TiktokVideoTranscriptResponse200ChargeInfoType4,
+            TiktokVideoTranscriptResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.tiktok_video_transcript_response_200_output import TiktokVideoTranscriptResponse200Output
+        from ..models.tiktok_video_transcript_response_200_output import (
+            TiktokVideoTranscriptResponse200Output,  # noqa: PLC0415
+        )
         from ..models.tiktok_video_transcript_response_200_warnings_type_0_item import (
-            TiktokVideoTranscriptResponse200WarningsType0Item,
+            TiktokVideoTranscriptResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

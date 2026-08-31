@@ -55,7 +55,7 @@ class ListAllProfilesFromJobChangeListResponse200OutputProfilesItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.list_all_profiles_from_job_change_list_response_200_output_profiles_item_all_movements_item import (
-            ListAllProfilesFromJobChangeListResponse200OutputProfilesItemAllMovementsItem,
+            ListAllProfilesFromJobChangeListResponse200OutputProfilesItemAllMovementsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

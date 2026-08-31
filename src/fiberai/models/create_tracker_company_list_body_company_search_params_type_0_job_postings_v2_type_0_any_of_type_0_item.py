@@ -192,31 +192,31 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyO
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_annual_pay_usd_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemAnnualPayUSDType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemAnnualPayUSDType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType2,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_3 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType3,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType3,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_num_applicants_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemNumApplicantsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemNumApplicantsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemPostedAtType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemPostedAtType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_years_of_experience_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemYearsOfExperienceType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemYearsOfExperienceType0,  # noqa: PLC0415
         )
 
         job_posting_status: None | str | Unset
@@ -442,31 +442,31 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyO
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_annual_pay_usd_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemAnnualPayUSDType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemAnnualPayUSDType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_2 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType2,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType2,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_geo_location_type_3 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType3,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemGeoLocationType3,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_num_applicants_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemNumApplicantsType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemNumApplicantsType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemPostedAtType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemPostedAtType0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_job_postings_v2_type_0_any_of_type_0_item_years_of_experience_type_0 import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemYearsOfExperienceType0,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0AnyOfType0ItemYearsOfExperienceType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

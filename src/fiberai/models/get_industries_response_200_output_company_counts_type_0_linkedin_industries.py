@@ -11,8 +11,6 @@ T = TypeVar("T", bound="GetIndustriesResponse200OutputCompanyCountsType0Linkedin
 
 @_attrs_define
 class GetIndustriesResponse200OutputCompanyCountsType0LinkedinIndustries:
-    """ """
-
     additional_properties: dict[str, float] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

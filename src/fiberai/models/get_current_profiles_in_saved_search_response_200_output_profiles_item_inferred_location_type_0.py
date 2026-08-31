@@ -56,7 +56,7 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemInferredLocati
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_inferred_location_type_0_coordinates_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemInferredLocationType0CoordinatesType0,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemInferredLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         street_address: None | str | Unset
@@ -177,7 +177,7 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemInferredLocati
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_inferred_location_type_0_coordinates_type_0 import (
-            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemInferredLocationType0CoordinatesType0,
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemInferredLocationType0CoordinatesType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

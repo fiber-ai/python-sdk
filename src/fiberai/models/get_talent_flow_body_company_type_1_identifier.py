@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetTalentFlowBodyCompanyType1Identifier(str, Enum):
+class GetTalentFlowBodyCompanyType1Identifier(StrEnum):
     LINKEDINSLUG = "linkedinSlug"
 
     def __str__(self) -> str:

@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileV2Type0NoneOfType0ItemType0Identifier(
-    str, Enum
+    StrEnum
 ):
     LINKEDIN_SLUG = "linkedin-slug"
 

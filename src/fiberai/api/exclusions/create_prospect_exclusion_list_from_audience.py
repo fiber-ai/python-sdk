@@ -167,14 +167,14 @@ def sync_detailed(
     | CreateProspectExclusionListFromAudienceResponse500
     | CreateProspectExclusionListFromAudienceResponse503
 ]:
-    r"""Create prospect exclusion list from audience
+    """Create prospect exclusion list from audience
 
      Create a prospect exclusion list from an audience's prospects
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateProspectExclusionListFromAudienceBody):
@@ -215,14 +215,14 @@ def sync(
     | CreateProspectExclusionListFromAudienceResponse503
     | None
 ):
-    r"""Create prospect exclusion list from audience
+    """Create prospect exclusion list from audience
 
      Create a prospect exclusion list from an audience's prospects
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateProspectExclusionListFromAudienceBody):
@@ -257,14 +257,14 @@ async def asyncio_detailed(
     | CreateProspectExclusionListFromAudienceResponse500
     | CreateProspectExclusionListFromAudienceResponse503
 ]:
-    r"""Create prospect exclusion list from audience
+    """Create prospect exclusion list from audience
 
      Create a prospect exclusion list from an audience's prospects
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateProspectExclusionListFromAudienceBody):
@@ -303,14 +303,14 @@ async def asyncio(
     | CreateProspectExclusionListFromAudienceResponse503
     | None
 ):
-    r"""Create prospect exclusion list from audience
+    """Create prospect exclusion list from audience
 
      Create a prospect exclusion list from an audience's prospects
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (CreateProspectExclusionListFromAudienceBody):

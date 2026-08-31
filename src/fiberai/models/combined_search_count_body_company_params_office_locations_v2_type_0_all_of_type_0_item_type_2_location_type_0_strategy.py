@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Strategy(str, Enum):
+class CombinedSearchCountBodyCompanyParamsOfficeLocationsV2Type0AllOfType0ItemType2LocationType0Strategy(StrEnum):
     RADIAL_DISTANCE = "radial-distance"
 
     def __str__(self) -> str:

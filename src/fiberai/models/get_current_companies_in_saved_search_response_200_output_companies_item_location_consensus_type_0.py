@@ -59,7 +59,7 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLocationCons
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_location_consensus_type_0_coordinates_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLocationConsensusType0CoordinatesType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLocationConsensusType0CoordinatesType0,  # noqa: PLC0415
         )
 
         street_address: None | str | Unset
@@ -180,7 +180,7 @@ class GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLocationCons
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_companies_in_saved_search_response_200_output_companies_item_location_consensus_type_0_coordinates_type_0 import (
-            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLocationConsensusType0CoordinatesType0,
+            GetCurrentCompaniesInSavedSearchResponse200OutputCompaniesItemLocationConsensusType0CoordinatesType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

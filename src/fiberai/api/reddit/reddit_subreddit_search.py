@@ -147,7 +147,7 @@ def sync_detailed(
     | RedditSubredditSearchResponse500
     | RedditSubredditSearchResponse503
 ]:
-    r"""Search within a subreddit
+    """Search within a subreddit
 
      Search posts within a subreddit by query, optionally filtered by sort order and timeframe. Returns a
     paginated list of posts. Use the `nextPageToken` field from the response to retrieve subsequent
@@ -155,8 +155,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (RedditSubredditSearchBody):
@@ -197,7 +197,7 @@ def sync(
     | RedditSubredditSearchResponse503
     | None
 ):
-    r"""Search within a subreddit
+    """Search within a subreddit
 
      Search posts within a subreddit by query, optionally filtered by sort order and timeframe. Returns a
     paginated list of posts. Use the `nextPageToken` field from the response to retrieve subsequent
@@ -205,8 +205,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (RedditSubredditSearchBody):
@@ -241,7 +241,7 @@ async def asyncio_detailed(
     | RedditSubredditSearchResponse500
     | RedditSubredditSearchResponse503
 ]:
-    r"""Search within a subreddit
+    """Search within a subreddit
 
      Search posts within a subreddit by query, optionally filtered by sort order and timeframe. Returns a
     paginated list of posts. Use the `nextPageToken` field from the response to retrieve subsequent
@@ -249,8 +249,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (RedditSubredditSearchBody):
@@ -289,7 +289,7 @@ async def asyncio(
     | RedditSubredditSearchResponse503
     | None
 ):
-    r"""Search within a subreddit
+    """Search within a subreddit
 
      Search posts within a subreddit by query, optionally filtered by sort order and timeframe. Returns a
     paginated list of posts. Use the `nextPageToken` field from the response to retrieve subsequent
@@ -297,8 +297,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 2 credits per page of results&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (RedditSubredditSearchBody):

@@ -55,7 +55,7 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0FortuneRankingsType0An
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_fortune_rankings_type_0_any_of_type_0_item_range import (
-            CreateTrackerCompanyListBodyCompanySearchParamsType0FortuneRankingsType0AnyOfType0ItemRange,
+            CreateTrackerCompanyListBodyCompanySearchParamsType0FortuneRankingsType0AnyOfType0ItemRange,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

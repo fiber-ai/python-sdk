@@ -147,14 +147,14 @@ def sync_detailed(
     | BulkCompanyLogosResponse500
     | BulkCompanyLogosResponse503
 ]:
-    r"""Bulk company logos
+    """Bulk company logos
 
      Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (BulkCompanyLogosBody):
@@ -195,14 +195,14 @@ def sync(
     | BulkCompanyLogosResponse503
     | None
 ):
-    r"""Bulk company logos
+    """Bulk company logos
 
      Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (BulkCompanyLogosBody):
@@ -237,14 +237,14 @@ async def asyncio_detailed(
     | BulkCompanyLogosResponse500
     | BulkCompanyLogosResponse503
 ]:
-    r"""Bulk company logos
+    """Bulk company logos
 
      Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (BulkCompanyLogosBody):
@@ -283,14 +283,14 @@ async def asyncio(
     | BulkCompanyLogosResponse503
     | None
 ):
-    r"""Bulk company logos
+    """Bulk company logos
 
      Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title=\"Pricing shown
-    is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         body (BulkCompanyLogosBody):

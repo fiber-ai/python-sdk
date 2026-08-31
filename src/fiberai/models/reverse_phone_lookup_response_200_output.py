@@ -42,10 +42,10 @@ class ReversePhoneLookupResponse200Output:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.reverse_phone_lookup_response_200_output_rejection_reason_type_0 import (
-            ReversePhoneLookupResponse200OutputRejectionReasonType0,
+            ReversePhoneLookupResponse200OutputRejectionReasonType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType0,
+            ReversePhoneLookupResponse200OutputResultsItemType0,  # noqa: PLC0415
         )
 
         results = []
@@ -81,13 +81,13 @@ class ReversePhoneLookupResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.reverse_phone_lookup_response_200_output_rejection_reason_type_0 import (
-            ReversePhoneLookupResponse200OutputRejectionReasonType0,
+            ReversePhoneLookupResponse200OutputRejectionReasonType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_0 import (
-            ReversePhoneLookupResponse200OutputResultsItemType0,
+            ReversePhoneLookupResponse200OutputResultsItemType0,  # noqa: PLC0415
         )
         from ..models.reverse_phone_lookup_response_200_output_results_item_type_1 import (
-            ReversePhoneLookupResponse200OutputResultsItemType1,
+            ReversePhoneLookupResponse200OutputResultsItemType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

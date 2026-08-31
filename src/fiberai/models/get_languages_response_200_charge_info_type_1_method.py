@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class GetLanguagesResponse200ChargeInfoType1Method(str, Enum):
+class GetLanguagesResponse200ChargeInfoType1Method(StrEnum):
     CHARGING_LATER = "charging-later"
 
     def __str__(self) -> str:

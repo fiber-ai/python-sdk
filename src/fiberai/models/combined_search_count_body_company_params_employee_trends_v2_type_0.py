@@ -72,13 +72,13 @@ class CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.combined_search_count_body_company_params_employee_trends_v2_type_0_obeys_all_type_0_item_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,
+            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employee_trends_v2_type_0_obeys_any_type_0_item_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,
+            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employee_trends_v2_type_0_obeys_none_type_0_item_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,
+            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,  # noqa: PLC0415
         )
 
         obeys_all: list[dict[str, Any]] | None | Unset
@@ -156,22 +156,22 @@ class CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.combined_search_count_body_company_params_employee_trends_v2_type_0_obeys_all_type_0_item_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,
+            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employee_trends_v2_type_0_obeys_all_type_0_item_type_1 import (
-            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysAllType0ItemType1,
+            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employee_trends_v2_type_0_obeys_any_type_0_item_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,
+            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employee_trends_v2_type_0_obeys_any_type_0_item_type_1 import (
-            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType1,
+            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysAnyType0ItemType1,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employee_trends_v2_type_0_obeys_none_type_0_item_type_0 import (
-            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,
+            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType0,  # noqa: PLC0415
         )
         from ..models.combined_search_count_body_company_params_employee_trends_v2_type_0_obeys_none_type_0_item_type_1 import (
-            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType1,
+            CombinedSearchCountBodyCompanyParamsEmployeeTrendsV2Type0ObeysNoneType0ItemType1,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

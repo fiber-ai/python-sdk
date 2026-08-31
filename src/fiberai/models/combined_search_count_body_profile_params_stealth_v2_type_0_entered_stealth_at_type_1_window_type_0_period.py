@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType0Period(str, Enum):
+class CombinedSearchCountBodyProfileParamsStealthV2Type0EnteredStealthAtType1WindowType0Period(StrEnum):
     DAY = "day"
     MONTH = "month"
     QUARTER = "quarter"

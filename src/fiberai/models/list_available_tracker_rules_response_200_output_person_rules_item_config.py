@@ -52,10 +52,10 @@ class ListAvailableTrackerRulesResponse200OutputPersonRulesItemConfig:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.list_available_tracker_rules_response_200_output_person_rules_item_config_example import (
-            ListAvailableTrackerRulesResponse200OutputPersonRulesItemConfigExample,
+            ListAvailableTrackerRulesResponse200OutputPersonRulesItemConfigExample,  # noqa: PLC0415
         )
         from ..models.list_available_tracker_rules_response_200_output_person_rules_item_config_schema import (
-            ListAvailableTrackerRulesResponse200OutputPersonRulesItemConfigSchema,
+            ListAvailableTrackerRulesResponse200OutputPersonRulesItemConfigSchema,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

@@ -152,7 +152,7 @@ def sync_detailed(
     | RotateWebhookEndpointSecretResponse500
     | RotateWebhookEndpointSecretResponse503
 ]:
-    r"""Rotate webhook signing secret
+    """Rotate webhook signing secret
 
      Rotate a webhook endpoint's signing secret and return the new value. The previous secret stays valid
     for a 24-hour grace period so in-flight deliveries keep verifying — roll the new secret out to your
@@ -160,8 +160,8 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):
@@ -205,7 +205,7 @@ def sync(
     | RotateWebhookEndpointSecretResponse503
     | None
 ):
-    r"""Rotate webhook signing secret
+    """Rotate webhook signing secret
 
      Rotate a webhook endpoint's signing secret and return the new value. The previous secret stays valid
     for a 24-hour grace period so in-flight deliveries keep verifying — roll the new secret out to your
@@ -213,8 +213,8 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):
@@ -252,7 +252,7 @@ async def asyncio_detailed(
     | RotateWebhookEndpointSecretResponse500
     | RotateWebhookEndpointSecretResponse503
 ]:
-    r"""Rotate webhook signing secret
+    """Rotate webhook signing secret
 
      Rotate a webhook endpoint's signing secret and return the new value. The previous secret stays valid
     for a 24-hour grace period so in-flight deliveries keep verifying — roll the new secret out to your
@@ -260,8 +260,8 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):
@@ -303,7 +303,7 @@ async def asyncio(
     | RotateWebhookEndpointSecretResponse503
     | None
 ):
-    r"""Rotate webhook signing secret
+    """Rotate webhook signing secret
 
      Rotate a webhook endpoint's signing secret and return the new value. The previous secret stays valid
     for a 24-hour grace period so in-flight deliveries keep verifying — roll the new secret out to your
@@ -311,8 +311,8 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> FREE! No credits are charged for this API.&nbsp;<span title="Pricing
+    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         endpoint_id (str):

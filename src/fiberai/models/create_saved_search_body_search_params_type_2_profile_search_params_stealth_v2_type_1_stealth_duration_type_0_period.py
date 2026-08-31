@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type1StealthDurationType0Period(str, Enum):
+class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStealthV2Type1StealthDurationType0Period(StrEnum):
     DAY = "day"
     MONTH = "month"
     QUARTER = "quarter"

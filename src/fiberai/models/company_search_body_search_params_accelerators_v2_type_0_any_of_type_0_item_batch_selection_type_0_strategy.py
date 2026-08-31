@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CompanySearchBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0Strategy(str, Enum):
+class CompanySearchBodySearchParamsAcceleratorsV2Type0AnyOfType0ItemBatchSelectionType0Strategy(StrEnum):
     ALL_BATCHES = "all-batches"
 
     def __str__(self) -> str:

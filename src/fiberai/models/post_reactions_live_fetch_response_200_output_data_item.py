@@ -50,7 +50,7 @@ class PostReactionsLiveFetchResponse200OutputDataItem:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.post_reactions_live_fetch_response_200_output_data_item_reactor_type_0 import (
-            PostReactionsLiveFetchResponse200OutputDataItemReactorType0,
+            PostReactionsLiveFetchResponse200OutputDataItemReactorType0,  # noqa: PLC0415
         )
 
         reaction_type: None | str | Unset
@@ -86,7 +86,7 @@ class PostReactionsLiveFetchResponse200OutputDataItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.post_reactions_live_fetch_response_200_output_data_item_reactor_type_0 import (
-            PostReactionsLiveFetchResponse200OutputDataItemReactorType0,
+            PostReactionsLiveFetchResponse200OutputDataItemReactorType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

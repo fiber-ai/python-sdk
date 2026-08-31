@@ -1,8 +1,8 @@
-from enum import Enum
+from enum import StrEnum
 
 
 class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0AllOfType0ItemGeoLocationType1RadiusType0Unit(
-    str, Enum
+    StrEnum
 ):
     MILES = "miles"
 

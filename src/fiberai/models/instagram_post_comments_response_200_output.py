@@ -57,7 +57,7 @@ class InstagramPostCommentsResponse200Output:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.instagram_post_comments_response_200_output_comments_item import (
-            InstagramPostCommentsResponse200OutputCommentsItem,
+            InstagramPostCommentsResponse200OutputCommentsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

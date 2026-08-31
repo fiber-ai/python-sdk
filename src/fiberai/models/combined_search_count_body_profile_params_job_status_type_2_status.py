@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CombinedSearchCountBodyProfileParamsJobStatusType2Status(str, Enum):
+class CombinedSearchCountBodyProfileParamsJobStatusType2Status(StrEnum):
     EVER_EMPLOYED = "ever-employed"
 
     def __str__(self) -> str:

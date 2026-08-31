@@ -60,7 +60,7 @@ class GetSubdivisionsResponse200OutputSubdivisionsItem:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_subdivisions_response_200_output_subdivisions_item_alternate_names_item import (
-            GetSubdivisionsResponse200OutputSubdivisionsItemAlternateNamesItem,
+            GetSubdivisionsResponse200OutputSubdivisionsItemAlternateNamesItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

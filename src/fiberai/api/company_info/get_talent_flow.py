@@ -147,7 +147,7 @@ def sync_detailed(
     | GetTalentFlowResponse500
     | GetTalentFlowResponse503
 ]:
-    r"""Get talent flow analysis for a company
+    """Get talent flow analysis for a company
 
      Visualizes talent movement at a company. Use 'joiners' to see where a company is hiring from — which
     competitors, universities, and regions it pulls talent from during the time window. Use 'leavers' to
@@ -157,11 +157,11 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 5 credits per talent flow report&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 5 credits per talent flow report&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (GetTalentFlowBody):
@@ -202,7 +202,7 @@ def sync(
     | GetTalentFlowResponse503
     | None
 ):
-    r"""Get talent flow analysis for a company
+    """Get talent flow analysis for a company
 
      Visualizes talent movement at a company. Use 'joiners' to see where a company is hiring from — which
     competitors, universities, and regions it pulls talent from during the time window. Use 'leavers' to
@@ -212,11 +212,11 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 5 credits per talent flow report&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 5 credits per talent flow report&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (GetTalentFlowBody):
@@ -251,7 +251,7 @@ async def asyncio_detailed(
     | GetTalentFlowResponse500
     | GetTalentFlowResponse503
 ]:
-    r"""Get talent flow analysis for a company
+    """Get talent flow analysis for a company
 
      Visualizes talent movement at a company. Use 'joiners' to see where a company is hiring from — which
     competitors, universities, and regions it pulls talent from during the time window. Use 'leavers' to
@@ -261,11 +261,11 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 5 credits per talent flow report&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 5 credits per talent flow report&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (GetTalentFlowBody):
@@ -304,7 +304,7 @@ async def asyncio(
     | GetTalentFlowResponse503
     | None
 ):
-    r"""Get talent flow analysis for a company
+    """Get talent flow analysis for a company
 
      Visualizes talent movement at a company. Use 'joiners' to see where a company is hiring from — which
     competitors, universities, and regions it pulls talent from during the time window. Use 'leavers' to
@@ -314,11 +314,11 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 5 credits per talent flow report&nbsp;<span title=\"Pricing shown is
-    default pricing. Actual pricing may vary.\">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 5 credits per talent flow report&nbsp;<span title="Pricing shown is
+    default pricing. Actual pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (GetTalentFlowBody):

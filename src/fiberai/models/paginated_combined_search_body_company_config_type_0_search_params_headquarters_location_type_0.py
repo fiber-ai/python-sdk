@@ -80,22 +80,22 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocat
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0SubtractAllType0ItemType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0SubtractAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0SubtractAllType0ItemType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0SubtractAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_2 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0SubtractAllType0ItemType2,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0SubtractAllType0ItemType2,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0_union_all_type_0_item_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0_union_all_type_0_item_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0_union_all_type_0_item_type_2 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType2,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType2,  # noqa: PLC0415
         )
 
         union_all: list[dict[str, Any]] | None | Unset
@@ -171,28 +171,28 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocat
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0SubtractAllType0ItemType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0SubtractAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0SubtractAllType0ItemType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0SubtractAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_2 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0SubtractAllType0ItemType2,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0SubtractAllType0ItemType2,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0_subtract_all_type_0_item_type_3 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0SubtractAllType0ItemType3,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0SubtractAllType0ItemType3,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0_union_all_type_0_item_type_0 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType0,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0_union_all_type_0_item_type_1 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType1,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType1,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0_union_all_type_0_item_type_2 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType2,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType2,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_headquarters_location_type_0_union_all_type_0_item_type_3 import (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType3,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersLocationType0UnionAllType0ItemType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)

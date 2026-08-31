@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class PersonBecameTopVoiceDirection(str, Enum):
+class PersonBecameTopVoiceDirection(StrEnum):
     EITHER = "either"
     STARTED = "started"
     STOPPED = "stopped"

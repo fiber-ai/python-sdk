@@ -147,7 +147,7 @@ def sync_detailed(
     | SyncQuickContactRevealResponse500
     | SyncQuickContactRevealResponse503
 ]:
-    r"""Reveal contact details (standard)
+    """Reveal contact details (standard)
 
      Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Accepts a
     LinkedIn profile URL, slug, Sales Navigator URN, or numeric LinkedIn user ID; profile details are
@@ -159,12 +159,12 @@ def sync_detailed(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails<br />• 2 credits for work email only<br />• 2 credits for personal email
-    only<br />• 3 credits for phone only<br />• 3 credits for all emails&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
-    data.\">ⓘ</span></span>
+    only<br />• 3 credits for phone only<br />• 3 credits for all emails&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
+    data.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SyncQuickContactRevealBody):
@@ -205,7 +205,7 @@ def sync(
     | SyncQuickContactRevealResponse503
     | None
 ):
-    r"""Reveal contact details (standard)
+    """Reveal contact details (standard)
 
      Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Accepts a
     LinkedIn profile URL, slug, Sales Navigator URN, or numeric LinkedIn user ID; profile details are
@@ -217,12 +217,12 @@ def sync(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails<br />• 2 credits for work email only<br />• 2 credits for personal email
-    only<br />• 3 credits for phone only<br />• 3 credits for all emails&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
-    data.\">ⓘ</span></span>
+    only<br />• 3 credits for phone only<br />• 3 credits for all emails&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
+    data.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SyncQuickContactRevealBody):
@@ -257,7 +257,7 @@ async def asyncio_detailed(
     | SyncQuickContactRevealResponse500
     | SyncQuickContactRevealResponse503
 ]:
-    r"""Reveal contact details (standard)
+    """Reveal contact details (standard)
 
      Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Accepts a
     LinkedIn profile URL, slug, Sales Navigator URN, or numeric LinkedIn user ID; profile details are
@@ -269,12 +269,12 @@ async def asyncio_detailed(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails<br />• 2 credits for work email only<br />• 2 credits for personal email
-    only<br />• 3 credits for phone only<br />• 3 credits for all emails&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
-    data.\">ⓘ</span></span>
+    only<br />• 3 credits for phone only<br />• 3 credits for all emails&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
+    data.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SyncQuickContactRevealBody):
@@ -313,7 +313,7 @@ async def asyncio(
     | SyncQuickContactRevealResponse503
     | None
 ):
-    r"""Reveal contact details (standard)
+    """Reveal contact details (standard)
 
      Standard synchronous contact reveal — the best balance of speed, cost, and coverage. Accepts a
     LinkedIn profile URL, slug, Sales Navigator URN, or numeric LinkedIn user ID; profile details are
@@ -325,12 +325,12 @@ async def asyncio(
 
     <span>💰 <strong>Cost:</strong> Pay only for the data you request:<br />• 5 credits for all phone
     numbers AND all emails<br />• 2 credits for work email only<br />• 2 credits for personal email
-    only<br />• 3 credits for phone only<br />• 3 credits for all emails&nbsp;<span title=\"Pricing
-    shown is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
-    data.\">ⓘ</span></span>
+    only<br />• 3 credits for phone only<br />• 3 credits for all emails&nbsp;<span title="Pricing shown
+    is default pricing. Actual pricing may vary. Partial reveals only bill for delivered
+    data.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title=\"Recommended timeout: set
-    your HTTP client timeout to at least 2 minutes for this endpoint.\">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 2 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 2 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SyncQuickContactRevealBody):

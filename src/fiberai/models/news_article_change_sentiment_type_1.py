@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class NewsArticleChangeSentimentType1(str, Enum):
+class NewsArticleChangeSentimentType1(StrEnum):
     NEGATIVE = "negative"
     NEUTRAL = "neutral"
     POSITIVE = "positive"

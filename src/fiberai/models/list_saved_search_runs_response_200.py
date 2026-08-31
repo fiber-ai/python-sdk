@@ -58,16 +58,16 @@ class ListSavedSearchRunsResponse200:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.list_saved_search_runs_response_200_charge_info_type_0 import (
-            ListSavedSearchRunsResponse200ChargeInfoType0,
+            ListSavedSearchRunsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.list_saved_search_runs_response_200_charge_info_type_1 import (
-            ListSavedSearchRunsResponse200ChargeInfoType1,
+            ListSavedSearchRunsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.list_saved_search_runs_response_200_charge_info_type_2 import (
-            ListSavedSearchRunsResponse200ChargeInfoType2,
+            ListSavedSearchRunsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.list_saved_search_runs_response_200_charge_info_type_3 import (
-            ListSavedSearchRunsResponse200ChargeInfoType3,
+            ListSavedSearchRunsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
 
         output = self.output.to_dict()
@@ -123,23 +123,25 @@ class ListSavedSearchRunsResponse200:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.list_saved_search_runs_response_200_charge_info_type_0 import (
-            ListSavedSearchRunsResponse200ChargeInfoType0,
+            ListSavedSearchRunsResponse200ChargeInfoType0,  # noqa: PLC0415
         )
         from ..models.list_saved_search_runs_response_200_charge_info_type_1 import (
-            ListSavedSearchRunsResponse200ChargeInfoType1,
+            ListSavedSearchRunsResponse200ChargeInfoType1,  # noqa: PLC0415
         )
         from ..models.list_saved_search_runs_response_200_charge_info_type_2 import (
-            ListSavedSearchRunsResponse200ChargeInfoType2,
+            ListSavedSearchRunsResponse200ChargeInfoType2,  # noqa: PLC0415
         )
         from ..models.list_saved_search_runs_response_200_charge_info_type_3 import (
-            ListSavedSearchRunsResponse200ChargeInfoType3,
+            ListSavedSearchRunsResponse200ChargeInfoType3,  # noqa: PLC0415
         )
         from ..models.list_saved_search_runs_response_200_charge_info_type_4 import (
-            ListSavedSearchRunsResponse200ChargeInfoType4,
+            ListSavedSearchRunsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.list_saved_search_runs_response_200_output import ListSavedSearchRunsResponse200Output
+        from ..models.list_saved_search_runs_response_200_output import (
+            ListSavedSearchRunsResponse200Output,  # noqa: PLC0415
+        )
         from ..models.list_saved_search_runs_response_200_warnings_type_0_item import (
-            ListSavedSearchRunsResponse200WarningsType0Item,
+            ListSavedSearchRunsResponse200WarningsType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
