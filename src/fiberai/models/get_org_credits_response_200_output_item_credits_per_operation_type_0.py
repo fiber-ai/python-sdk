@@ -166,6 +166,12 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_hotel_search import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0HotelSearch,
     )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_instant_email_reveal import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0InstantEmailReveal,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_instant_phone_reveal import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0InstantPhoneReveal,
+    )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_job_title_rewrite import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0JobTitleRewrite,
     )
@@ -395,6 +401,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         lite_email_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LiteEmailReveal):
         lite_phone_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LitePhoneReveal):
         lite_reverse_email_lookup (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LiteReverseEmailLookup):
+        instant_email_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0InstantEmailReveal):
+        instant_phone_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0InstantPhoneReveal):
         all_email_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0AllEmailReveal):
         phone_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PhoneReveal):
         combined_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CombinedReveal):
@@ -530,6 +538,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
     lite_email_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LiteEmailReveal
     lite_phone_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LitePhoneReveal
     lite_reverse_email_lookup: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LiteReverseEmailLookup
+    instant_email_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0InstantEmailReveal
+    instant_phone_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0InstantPhoneReveal
     all_email_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0AllEmailReveal
     phone_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PhoneReveal
     combined_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CombinedReveal
@@ -640,6 +650,12 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_standardize_person_slug import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0StandardizePersonSlug,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_talent_flow import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TalentFlow,
+        )  # noqa: PLC0415
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_text_to_company_search_params import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TextToCompanySearchParams,
         )  # noqa: PLC0415
@@ -736,6 +752,10 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         lite_phone_reveal = self.lite_phone_reveal.to_dict()
 
         lite_reverse_email_lookup = self.lite_reverse_email_lookup.to_dict()
+
+        instant_email_reveal = self.instant_email_reveal.to_dict()
+
+        instant_phone_reveal = self.instant_phone_reveal.to_dict()
 
         all_email_reveal = self.all_email_reveal.to_dict()
 
@@ -956,6 +976,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
                 "liteEmailReveal": lite_email_reveal,
                 "litePhoneReveal": lite_phone_reveal,
                 "liteReverseEmailLookup": lite_reverse_email_lookup,
+                "instantEmailReveal": instant_email_reveal,
+                "instantPhoneReveal": instant_phone_reveal,
                 "allEmailReveal": all_email_reveal,
                 "phoneReveal": phone_reveal,
                 "combinedReveal": combined_reveal,
@@ -1218,6 +1240,12 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_hotel_search import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0HotelSearch,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_instant_email_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0InstantEmailReveal,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_instant_phone_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0InstantPhoneReveal,  # noqa: PLC0415
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_job_title_rewrite import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0JobTitleRewrite,  # noqa: PLC0415
@@ -1520,6 +1548,14 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LiteReverseEmailLookup.from_dict(
                 d.pop("liteReverseEmailLookup")
             )
+        )
+
+        instant_email_reveal = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0InstantEmailReveal.from_dict(
+            d.pop("instantEmailReveal")
+        )
+
+        instant_phone_reveal = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0InstantPhoneReveal.from_dict(
+            d.pop("instantPhoneReveal")
         )
 
         all_email_reveal = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0AllEmailReveal.from_dict(
@@ -2008,6 +2044,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             lite_email_reveal=lite_email_reveal,
             lite_phone_reveal=lite_phone_reveal,
             lite_reverse_email_lookup=lite_reverse_email_lookup,
+            instant_email_reveal=instant_email_reveal,
+            instant_phone_reveal=instant_phone_reveal,
             all_email_reveal=all_email_reveal,
             phone_reveal=phone_reveal,
             combined_reveal=combined_reveal,
