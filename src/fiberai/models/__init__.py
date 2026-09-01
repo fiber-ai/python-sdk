@@ -51075,6 +51075,15 @@ from .sync_quick_contact_reveal_response_200_output_profile import SyncQuickCont
 from .sync_quick_contact_reveal_response_200_output_profile_emails_item import (
     SyncQuickContactRevealResponse200OutputProfileEmailsItem,
 )
+from .sync_quick_contact_reveal_response_200_output_profile_emails_item_status_type_1 import (
+    SyncQuickContactRevealResponse200OutputProfileEmailsItemStatusType1,
+)
+from .sync_quick_contact_reveal_response_200_output_profile_emails_item_status_type_2_type_1 import (
+    SyncQuickContactRevealResponse200OutputProfileEmailsItemStatusType2Type1,
+)
+from .sync_quick_contact_reveal_response_200_output_profile_emails_item_status_type_3_type_1 import (
+    SyncQuickContactRevealResponse200OutputProfileEmailsItemStatusType3Type1,
+)
 from .sync_quick_contact_reveal_response_200_output_profile_phone_numbers_item import (
     SyncQuickContactRevealResponse200OutputProfilePhoneNumbersItem,
 )
@@ -73373,6 +73382,9 @@ __all__ = (
     "SyncQuickContactRevealResponse200Output",
     "SyncQuickContactRevealResponse200OutputProfile",
     "SyncQuickContactRevealResponse200OutputProfileEmailsItem",
+    "SyncQuickContactRevealResponse200OutputProfileEmailsItemStatusType1",
+    "SyncQuickContactRevealResponse200OutputProfileEmailsItemStatusType2Type1",
+    "SyncQuickContactRevealResponse200OutputProfileEmailsItemStatusType3Type1",
     "SyncQuickContactRevealResponse200OutputProfilePhoneNumbersItem",
     "SyncQuickContactRevealResponse200OutputProfileStatus",
     "SyncQuickContactRevealResponse200WarningsType0Item",
