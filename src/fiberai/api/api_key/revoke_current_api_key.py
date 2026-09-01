@@ -150,8 +150,10 @@ def sync_detailed(
     """Revoke API key
 
      Permanently revoke an API key. Acts on the key that authenticates this request unless target is
-    OTHER. The key stops working immediately and cannot be restored. Create a replacement key from the
-    dashboard before revoking a key that is still in use.
+    OTHER. The key stops working immediately and cannot be restored. Create a replacement sandbox key
+    via POST /v1/api-keys/create-sandbox, or a live key from the dashboard, before revoking a key that
+    is still in use. First-time users: create your initial API key at https://app.fiber.ai or via POST
+    /v1/account/send-otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -200,8 +202,10 @@ def sync(
     """Revoke API key
 
      Permanently revoke an API key. Acts on the key that authenticates this request unless target is
-    OTHER. The key stops working immediately and cannot be restored. Create a replacement key from the
-    dashboard before revoking a key that is still in use.
+    OTHER. The key stops working immediately and cannot be restored. Create a replacement sandbox key
+    via POST /v1/api-keys/create-sandbox, or a live key from the dashboard, before revoking a key that
+    is still in use. First-time users: create your initial API key at https://app.fiber.ai or via POST
+    /v1/account/send-otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -244,8 +248,10 @@ async def asyncio_detailed(
     """Revoke API key
 
      Permanently revoke an API key. Acts on the key that authenticates this request unless target is
-    OTHER. The key stops working immediately and cannot be restored. Create a replacement key from the
-    dashboard before revoking a key that is still in use.
+    OTHER. The key stops working immediately and cannot be restored. Create a replacement sandbox key
+    via POST /v1/api-keys/create-sandbox, or a live key from the dashboard, before revoking a key that
+    is still in use. First-time users: create your initial API key at https://app.fiber.ai or via POST
+    /v1/account/send-otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -292,8 +298,10 @@ async def asyncio(
     """Revoke API key
 
      Permanently revoke an API key. Acts on the key that authenticates this request unless target is
-    OTHER. The key stops working immediately and cannot be restored. Create a replacement key from the
-    dashboard before revoking a key that is still in use.
+    OTHER. The key stops working immediately and cannot be restored. Create a replacement sandbox key
+    via POST /v1/api-keys/create-sandbox, or a live key from the dashboard, before revoking a key that
+    is still in use. First-time users: create your initial API key at https://app.fiber.ai or via POST
+    /v1/account/send-otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 

@@ -155,6 +155,10 @@ def sync_detailed(
     To avoid 429 errors, space requests evenly (such as 1/60th the rate limit per second) rather than
     bursting them all at once.
 
+    Billing: you are charged for one lookup operation per request — a hit bills `emailToLinkedinUrl`, a
+    completed miss that queried providers bills `emailToLinkedinMiss`. Cached not-found results and
+    rejected inputs are not billed.
+
     <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title="Pricing shown is default
@@ -210,6 +214,10 @@ def sync(
     To avoid 429 errors, space requests evenly (such as 1/60th the rate limit per second) rather than
     bursting them all at once.
 
+    Billing: you are charged for one lookup operation per request — a hit bills `emailToLinkedinUrl`, a
+    completed miss that queried providers bills `emailToLinkedinMiss`. Cached not-found results and
+    rejected inputs are not billed.
+
     <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title="Pricing shown is default
@@ -258,6 +266,10 @@ async def asyncio_detailed(
     endpoint instead — it accepts all available signals and produces better matches.
     To avoid 429 errors, space requests evenly (such as 1/60th the rate limit per second) rather than
     bursting them all at once.
+
+    Billing: you are charged for one lookup operation per request — a hit bills `emailToLinkedinUrl`, a
+    completed miss that queried providers bills `emailToLinkedinMiss`. Cached not-found results and
+    rejected inputs are not billed.
 
     <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
 
@@ -311,6 +323,10 @@ async def asyncio(
     endpoint instead — it accepts all available signals and produces better matches.
     To avoid 429 errors, space requests evenly (such as 1/60th the rate limit per second) rather than
     bursting them all at once.
+
+    Billing: you are charged for one lookup operation per request — a hit bills `emailToLinkedinUrl`, a
+    completed miss that queried providers bills `emailToLinkedinMiss`. Cached not-found results and
+    rejected inputs are not billed.
 
     <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
 

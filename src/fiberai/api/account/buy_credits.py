@@ -149,9 +149,10 @@ def sync_detailed(
 ]:
     """Buy credits
 
-     Purchase additional credits for your organization at $20.00 per 1,000 credits. This endpoint
-    immediately charges real money to your organization's saved payment method via Stripe. AI agents are
-    strongly recommended to confirm with their human operator before calling this endpoint.
+     Purchase additional credits for your organization. Saved-card purchases cost $20.00 per 1,000
+    credits on a subscription, or $30.00 per 1,000 credits on a pay-as-you-go plan. A one-time payment
+    authorization charges the pay-as-you-go rate. This endpoint immediately charges real money. Confirm
+    with a human operator before calling it from an agent.
 
     <span>⚡ <strong>Rate limit:</strong> 2 requests per 1 minute</span>
 
@@ -199,9 +200,10 @@ def sync(
 ):
     """Buy credits
 
-     Purchase additional credits for your organization at $20.00 per 1,000 credits. This endpoint
-    immediately charges real money to your organization's saved payment method via Stripe. AI agents are
-    strongly recommended to confirm with their human operator before calling this endpoint.
+     Purchase additional credits for your organization. Saved-card purchases cost $20.00 per 1,000
+    credits on a subscription, or $30.00 per 1,000 credits on a pay-as-you-go plan. A one-time payment
+    authorization charges the pay-as-you-go rate. This endpoint immediately charges real money. Confirm
+    with a human operator before calling it from an agent.
 
     <span>⚡ <strong>Rate limit:</strong> 2 requests per 1 minute</span>
 
@@ -243,9 +245,10 @@ async def asyncio_detailed(
 ]:
     """Buy credits
 
-     Purchase additional credits for your organization at $20.00 per 1,000 credits. This endpoint
-    immediately charges real money to your organization's saved payment method via Stripe. AI agents are
-    strongly recommended to confirm with their human operator before calling this endpoint.
+     Purchase additional credits for your organization. Saved-card purchases cost $20.00 per 1,000
+    credits on a subscription, or $30.00 per 1,000 credits on a pay-as-you-go plan. A one-time payment
+    authorization charges the pay-as-you-go rate. This endpoint immediately charges real money. Confirm
+    with a human operator before calling it from an agent.
 
     <span>⚡ <strong>Rate limit:</strong> 2 requests per 1 minute</span>
 
@@ -291,9 +294,10 @@ async def asyncio(
 ):
     """Buy credits
 
-     Purchase additional credits for your organization at $20.00 per 1,000 credits. This endpoint
-    immediately charges real money to your organization's saved payment method via Stripe. AI agents are
-    strongly recommended to confirm with their human operator before calling this endpoint.
+     Purchase additional credits for your organization. Saved-card purchases cost $20.00 per 1,000
+    credits on a subscription, or $30.00 per 1,000 credits on a pay-as-you-go plan. A one-time payment
+    authorization charges the pay-as-you-go rate. This endpoint immediately charges real money. Confirm
+    with a human operator before calling it from an agent.
 
     <span>⚡ <strong>Rate limit:</strong> 2 requests per 1 minute</span>
 

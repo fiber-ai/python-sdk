@@ -6,8 +6,8 @@ from typing import TYPE_CHECKING, Any, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_posting_stats_type_0_none_of_type_0_item_type_6_industry import (
-    PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType6Industry,
+from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_posting_stats_type_0_none_of_type_0_item_type_6_modality import (
+    PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType6Modality,
 )
 from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_posting_stats_type_0_none_of_type_0_item_type_6_rule import (
     PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType6Rule,
@@ -32,15 +32,15 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsTy
     """
     Attributes:
         rule (PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType6Rule):
-        industry
-            (PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType6Industry):
+        modality
+            (PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType6Modality):
         range_
             (PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType6RangeType0 |
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType6RangeType1):
     """
 
     rule: PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType6Rule
-    industry: PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType6Industry
+    modality: PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType6Modality
     range_: (
         PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType6RangeType0
         | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType6RangeType1
@@ -54,7 +54,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsTy
 
         rule = self.rule.value
 
-        industry = self.industry.value
+        modality = self.modality.value
 
         range_: dict[str, Any]
         if isinstance(
@@ -70,7 +70,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsTy
         field_dict.update(
             {
                 "rule": rule,
-                "industry": industry,
+                "modality": modality,
                 "range": range_,
             }
         )
@@ -91,9 +91,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsTy
             d.pop("rule")
         )
 
-        industry = (
-            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType6Industry(
-                d.pop("industry")
+        modality = (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsType0NoneOfType0ItemType6Modality(
+                d.pop("modality")
             )
         )
 
@@ -125,7 +125,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingStatsTy
 
         paginated_combined_search_body_company_config_type_0_search_params_job_posting_stats_type_0_none_of_type_0_item_type_6 = cls(
             rule=rule,
-            industry=industry,
+            modality=modality,
             range_=range_,
         )
 

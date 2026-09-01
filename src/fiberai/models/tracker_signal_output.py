@@ -8,6 +8,7 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.tracker_signal_output_entity_type import TrackerSignalOutputEntityType
+from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.acquisition_change import AcquisitionChange
@@ -58,10 +59,14 @@ class TrackerSignalOutput:
             TenureChange | TrackedEmployeeChange]): Array of objects describing what changed. Shape depends on signal type.
         sources (list[str]): URLs providing proof or more information about this signal.
         methodology (str): Explanation of how this signal was detected and verified.
-        observed_at (datetime.datetime): When the signal was detected.
+        observed_at (datetime.datetime): When we detected the signal. For backfilled signals this reflects the detection
+            time, not when the event happened — use `eventDate` for the real-world event date.
         centi_credits_charged (int): Credits charged for the tracker check that produced this signal, in centi-credits
             (100 = 1 credit).
         is_dummy (bool): When true, this signal was generated synthetically via the `fire-dummy` endpoint.
+        event_date (datetime.datetime | None | Unset): The real-world date the underlying event occurred (e.g. when a
+            job was posted, a funding round announced, or a hire started), taken from `changeData`. Use this for time-series
+            analysis. Null for signal types that have no associated event date, such as headcount or status changes.
     """
 
     id: str
@@ -100,6 +105,7 @@ class TrackerSignalOutput:
     observed_at: datetime.datetime
     centi_credits_charged: int
     is_dummy: bool
+    event_date: datetime.datetime | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -201,6 +207,14 @@ class TrackerSignalOutput:
 
         is_dummy = self.is_dummy
 
+        event_date: None | str | Unset
+        if isinstance(self.event_date, Unset):
+            event_date = UNSET
+        elif isinstance(self.event_date, datetime.datetime):
+            event_date = self.event_date.isoformat()
+        else:
+            event_date = self.event_date
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -221,6 +235,8 @@ class TrackerSignalOutput:
                 "isDummy": is_dummy,
             }
         )
+        if event_date is not UNSET:
+            field_dict["eventDate"] = event_date
 
         return field_dict
 
@@ -489,6 +505,23 @@ class TrackerSignalOutput:
 
         is_dummy = d.pop("isDummy")
 
+        def _parse_event_date(data: object) -> datetime.datetime | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                event_date_type_0 = datetime.datetime.fromisoformat(data)
+
+                return event_date_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(datetime.datetime | None | Unset, data)
+
+        event_date = _parse_event_date(d.pop("eventDate", UNSET))
+
         tracker_signal_output = cls(
             id=id,
             entity_id=entity_id,
@@ -504,6 +537,7 @@ class TrackerSignalOutput:
             observed_at=observed_at,
             centi_credits_charged=centi_credits_charged,
             is_dummy=is_dummy,
+            event_date=event_date,
         )
 
         tracker_signal_output.additional_properties = d

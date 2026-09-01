@@ -32,7 +32,7 @@ class PeopleSearchCountBody:
         company_exclusion_list_i_ds (list[str] | None | Unset): Filter out people who work at companies which belong to
             the given company exclusion lists
         include_count (bool | None | Unset): When true, returns an estimated total count of matching prospects in the
-            response. The count does not account for exclusion lists.
+            response and charges one additional count credit. The count does not account for exclusion lists.
     """
 
     api_key: str

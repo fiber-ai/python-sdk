@@ -21,6 +21,9 @@ from ..models.create_saved_search_body_search_params_type_0_company_search_param
 from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_all_of_type_0_item_job_location_type_type_0_item import (
     CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AllOfType0ItemJobLocationTypeType0Item,
 )
+from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_all_of_type_0_item_job_modality_type_0_item import (
+    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AllOfType0ItemJobModalityType0Item,
+)
 from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_all_of_type_0_item_job_posting_status_type_1 import (
     CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AllOfType0ItemJobPostingStatusType1,
 )
@@ -110,6 +113,8 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
             Type0Item] | None | Unset):
         job_location_type (list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AllOfType0Ite
             mJobLocationTypeType0Item] | None | Unset):
+        job_modality (list[CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AllOfType0ItemJobM
+            odalityType0Item] | None | Unset):
     """
 
     job_posting_status: (
@@ -186,6 +191,13 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
     job_location_type: (
         list[
             CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AllOfType0ItemJobLocationTypeType0Item
+        ]
+        | None
+        | Unset
+    ) = UNSET
+    job_modality: (
+        list[
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AllOfType0ItemJobModalityType0Item
         ]
         | None
         | Unset
@@ -407,6 +419,18 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
         else:
             job_location_type = self.job_location_type
 
+        job_modality: list[str] | None | Unset
+        if isinstance(self.job_modality, Unset):
+            job_modality = UNSET
+        elif isinstance(self.job_modality, list):
+            job_modality = []
+            for job_modality_type_0_item_data in self.job_modality:
+                job_modality_type_0_item = job_modality_type_0_item_data.value
+                job_modality.append(job_modality_type_0_item)
+
+        else:
+            job_modality = self.job_modality
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -438,6 +462,8 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
             field_dict["industry"] = industry
         if job_location_type is not UNSET:
             field_dict["jobLocationType"] = job_location_type
+        if job_modality is not UNSET:
+            field_dict["jobModality"] = job_modality
 
         return field_dict
 
@@ -993,6 +1019,45 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
 
         job_location_type = _parse_job_location_type(d.pop("jobLocationType", UNSET))
 
+        def _parse_job_modality(
+            data: object,
+        ) -> (
+            list[
+                CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AllOfType0ItemJobModalityType0Item
+            ]
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                job_modality_type_0 = []
+                _job_modality_type_0 = data
+                for job_modality_type_0_item_data in _job_modality_type_0:
+                    job_modality_type_0_item = CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AllOfType0ItemJobModalityType0Item(
+                        job_modality_type_0_item_data
+                    )
+
+                    job_modality_type_0.append(job_modality_type_0_item)
+
+                return job_modality_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                list[
+                    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type0AllOfType0ItemJobModalityType0Item
+                ]
+                | None
+                | Unset,
+                data,
+            )
+
+        job_modality = _parse_job_modality(d.pop("jobModality", UNSET))
+
         create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_all_of_type_0_item = cls(
             job_posting_status=job_posting_status,
             job_title=job_title,
@@ -1008,6 +1073,7 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingsV2Type
             job_function=job_function,
             industry=industry,
             job_location_type=job_location_type,
+            job_modality=job_modality,
         )
 
         create_saved_search_body_search_params_type_0_company_search_params_job_postings_v2_type_0_all_of_type_0_item.additional_properties = d

@@ -79,6 +79,9 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_get_company_from_db import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyFromDb,
     )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_get_company_from_ranking_list import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyFromRankingList,
+    )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_get_company_latest_li_post import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyLatestLiPost,
     )
@@ -144,6 +147,12 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_get_profile_latest_li_post import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetProfileLatestLiPost,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_get_yelp_page import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetYelpPage,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_get_yelp_reviews import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetYelpReviews,
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_lookup_agent import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubLookupAgent,
@@ -246,6 +255,9 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_scouting_report_person import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ScoutingReportPerson,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_search_yelp import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SearchYelp,
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_media_finder_agent import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialMediaFinderAgent,
@@ -480,6 +492,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         find_person_lookalikes (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FindPersonLookalikes):
         hotel_search (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0HotelSearch):
         hotel_property_lookup (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0HotelPropertyLookup):
+        search_yelp (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SearchYelp):
+        get_yelp_page (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetYelpPage):
+        get_yelp_reviews (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetYelpReviews):
         get_department_size (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetDepartmentSize):
         flight_booking_page (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FlightBookingPage):
         financial_instrument_lookup
@@ -488,6 +503,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         talent_flow (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TalentFlow):
         lead_list_from_domain (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LeadListFromDomain):
         fetch_company_employee (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FetchCompanyEmployee):
+        get_company_from_ranking_list
+            (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyFromRankingList):
     """
 
     get_company_from_db: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyFromDb
@@ -609,6 +626,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
     find_person_lookalikes: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FindPersonLookalikes
     hotel_search: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0HotelSearch
     hotel_property_lookup: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0HotelPropertyLookup
+    search_yelp: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SearchYelp
+    get_yelp_page: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetYelpPage
+    get_yelp_reviews: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetYelpReviews
     get_department_size: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetDepartmentSize
     flight_booking_page: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FlightBookingPage
     financial_instrument_lookup: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FinancialInstrumentLookup
@@ -616,9 +636,22 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
     talent_flow: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TalentFlow
     lead_list_from_domain: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LeadListFromDomain
     fetch_company_employee: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FetchCompanyEmployee
+    get_company_from_ranking_list: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyFromRankingList
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_text_to_company_search_params import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TextToCompanySearchParams,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_text_to_person_search_params import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TextToPersonSearchParams,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_text_to_search_params import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TextToSearchParams,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_track_entity import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TrackEntity,
+        )  # noqa: PLC0415
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_track_entity_gold import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TrackEntityGold,
         )  # noqa: PLC0415
@@ -876,6 +909,12 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
 
         hotel_property_lookup = self.hotel_property_lookup.to_dict()
 
+        search_yelp = self.search_yelp.to_dict()
+
+        get_yelp_page = self.get_yelp_page.to_dict()
+
+        get_yelp_reviews = self.get_yelp_reviews.to_dict()
+
         get_department_size = self.get_department_size.to_dict()
 
         flight_booking_page = self.flight_booking_page.to_dict()
@@ -889,6 +928,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         lead_list_from_domain = self.lead_list_from_domain.to_dict()
 
         fetch_company_employee = self.fetch_company_employee.to_dict()
+
+        get_company_from_ranking_list = self.get_company_from_ranking_list.to_dict()
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -1001,6 +1042,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
                 "findPersonLookalikes": find_person_lookalikes,
                 "hotelSearch": hotel_search,
                 "hotelPropertyLookup": hotel_property_lookup,
+                "searchYelp": search_yelp,
+                "getYelpPage": get_yelp_page,
+                "getYelpReviews": get_yelp_reviews,
                 "getDepartmentSize": get_department_size,
                 "flightBookingPage": flight_booking_page,
                 "financialInstrumentLookup": financial_instrument_lookup,
@@ -1008,6 +1052,7 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
                 "talentFlow": talent_flow,
                 "leadListFromDomain": lead_list_from_domain,
                 "fetchCompanyEmployee": fetch_company_employee,
+                "getCompanyFromRankingList": get_company_from_ranking_list,
             }
         )
 
@@ -1087,6 +1132,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_get_company_from_db import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyFromDb,  # noqa: PLC0415
         )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_get_company_from_ranking_list import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyFromRankingList,  # noqa: PLC0415
+        )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_get_company_latest_li_post import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyLatestLiPost,  # noqa: PLC0415
         )
@@ -1152,6 +1200,12 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_get_profile_latest_li_post import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetProfileLatestLiPost,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_get_yelp_page import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetYelpPage,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_get_yelp_reviews import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetYelpReviews,  # noqa: PLC0415
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_lookup_agent import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubLookupAgent,  # noqa: PLC0415
@@ -1254,6 +1308,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_scouting_report_person import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ScoutingReportPerson,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_search_yelp import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SearchYelp,  # noqa: PLC0415
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_media_finder_agent import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialMediaFinderAgent,  # noqa: PLC0415
@@ -1877,6 +1934,18 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             d.pop("hotelPropertyLookup")
         )
 
+        search_yelp = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SearchYelp.from_dict(
+            d.pop("searchYelp")
+        )
+
+        get_yelp_page = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetYelpPage.from_dict(
+            d.pop("getYelpPage")
+        )
+
+        get_yelp_reviews = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetYelpReviews.from_dict(
+            d.pop("getYelpReviews")
+        )
+
         get_department_size = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetDepartmentSize.from_dict(
             d.pop("getDepartmentSize")
         )
@@ -1908,6 +1977,12 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         fetch_company_employee = (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FetchCompanyEmployee.from_dict(
                 d.pop("fetchCompanyEmployee")
+            )
+        )
+
+        get_company_from_ranking_list = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyFromRankingList.from_dict(
+                d.pop("getCompanyFromRankingList")
             )
         )
 
@@ -2019,6 +2094,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             find_person_lookalikes=find_person_lookalikes,
             hotel_search=hotel_search,
             hotel_property_lookup=hotel_property_lookup,
+            search_yelp=search_yelp,
+            get_yelp_page=get_yelp_page,
+            get_yelp_reviews=get_yelp_reviews,
             get_department_size=get_department_size,
             flight_booking_page=flight_booking_page,
             financial_instrument_lookup=financial_instrument_lookup,
@@ -2026,6 +2104,7 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             talent_flow=talent_flow,
             lead_list_from_domain=lead_list_from_domain,
             fetch_company_employee=fetch_company_employee,
+            get_company_from_ranking_list=get_company_from_ranking_list,
         )
 
         get_org_credits_response_200_output_item_credits_per_operation_type_0.additional_properties = d

@@ -1,18 +1,12 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, cast
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..types import UNSET, Unset
-
-if TYPE_CHECKING:
-    from ..models.buy_credits_response_402_out_of_credits_alert_type_0 import (
-        BuyCreditsResponse402OutOfCreditsAlertType0,
-    )
-
 
 T = TypeVar("T", bound="BuyCreditsResponse402")
 
@@ -22,28 +16,22 @@ class BuyCreditsResponse402:
     """
     Attributes:
         message (str): The error message.
-        out_of_credits_alert (BuyCreditsResponse402OutOfCreditsAlertType0 | None | Unset): Present on 402 responses.
-            Contains a link to get more credits.
+        decline_code (None | str | Unset): Why the payment was declined, when the reason is known — for example
+            'insufficient_funds' or 'expired_card'.
     """
 
     message: str
-    out_of_credits_alert: BuyCreditsResponse402OutOfCreditsAlertType0 | None | Unset = UNSET
+    decline_code: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.buy_credits_response_402_out_of_credits_alert_type_0 import (
-            BuyCreditsResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
-        )
-
         message = self.message
 
-        out_of_credits_alert: dict[str, Any] | None | Unset
-        if isinstance(self.out_of_credits_alert, Unset):
-            out_of_credits_alert = UNSET
-        elif isinstance(self.out_of_credits_alert, BuyCreditsResponse402OutOfCreditsAlertType0):
-            out_of_credits_alert = self.out_of_credits_alert.to_dict()
+        decline_code: None | str | Unset
+        if isinstance(self.decline_code, Unset):
+            decline_code = UNSET
         else:
-            out_of_credits_alert = self.out_of_credits_alert
+            decline_code = self.decline_code
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -52,40 +40,28 @@ class BuyCreditsResponse402:
                 "message": message,
             }
         )
-        if out_of_credits_alert is not UNSET:
-            field_dict["outOfCreditsAlert"] = out_of_credits_alert
+        if decline_code is not UNSET:
+            field_dict["declineCode"] = decline_code
 
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.buy_credits_response_402_out_of_credits_alert_type_0 import (
-            BuyCreditsResponse402OutOfCreditsAlertType0,  # noqa: PLC0415
-        )
-
         d = dict(src_dict)
         message = d.pop("message")
 
-        def _parse_out_of_credits_alert(data: object) -> BuyCreditsResponse402OutOfCreditsAlertType0 | None | Unset:
+        def _parse_decline_code(data: object) -> None | str | Unset:
             if data is None:
                 return data
             if isinstance(data, Unset):
                 return data
-            try:
-                if not isinstance(data, dict):
-                    raise TypeError()
-                out_of_credits_alert_type_0 = BuyCreditsResponse402OutOfCreditsAlertType0.from_dict(data)
+            return cast(None | str | Unset, data)
 
-                return out_of_credits_alert_type_0
-            except (TypeError, ValueError, AttributeError, KeyError):
-                pass
-            return cast(BuyCreditsResponse402OutOfCreditsAlertType0 | None | Unset, data)
-
-        out_of_credits_alert = _parse_out_of_credits_alert(d.pop("outOfCreditsAlert", UNSET))
+        decline_code = _parse_decline_code(d.pop("declineCode", UNSET))
 
         buy_credits_response_402 = cls(
             message=message,
-            out_of_credits_alert=out_of_credits_alert,
+            decline_code=decline_code,
         )
 
         buy_credits_response_402.additional_properties = d

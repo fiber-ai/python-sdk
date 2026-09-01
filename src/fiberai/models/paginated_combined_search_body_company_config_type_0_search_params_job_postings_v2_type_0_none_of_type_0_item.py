@@ -21,6 +21,9 @@ from ..models.paginated_combined_search_body_company_config_type_0_search_params
 from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_none_of_type_0_item_job_location_type_type_0_item import (
     PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0NoneOfType0ItemJobLocationTypeType0Item,
 )
+from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_none_of_type_0_item_job_modality_type_0_item import (
+    PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0NoneOfType0ItemJobModalityType0Item,
+)
 from ..models.paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_none_of_type_0_item_job_posting_status_type_1 import (
     PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0NoneOfType0ItemJobPostingStatusType1,
 )
@@ -110,6 +113,8 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
             yType0Item] | None | Unset):
         job_location_type (list[PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0NoneOfType0It
             emJobLocationTypeType0Item] | None | Unset):
+        job_modality (list[PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0NoneOfType0ItemJob
+            ModalityType0Item] | None | Unset):
     """
 
     job_posting_status: (
@@ -188,6 +193,13 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
     job_location_type: (
         list[
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0NoneOfType0ItemJobLocationTypeType0Item
+        ]
+        | None
+        | Unset
+    ) = UNSET
+    job_modality: (
+        list[
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0NoneOfType0ItemJobModalityType0Item
         ]
         | None
         | Unset
@@ -409,6 +421,18 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
         else:
             job_location_type = self.job_location_type
 
+        job_modality: list[str] | None | Unset
+        if isinstance(self.job_modality, Unset):
+            job_modality = UNSET
+        elif isinstance(self.job_modality, list):
+            job_modality = []
+            for job_modality_type_0_item_data in self.job_modality:
+                job_modality_type_0_item = job_modality_type_0_item_data.value
+                job_modality.append(job_modality_type_0_item)
+
+        else:
+            job_modality = self.job_modality
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -440,6 +464,8 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
             field_dict["industry"] = industry
         if job_location_type is not UNSET:
             field_dict["jobLocationType"] = job_location_type
+        if job_modality is not UNSET:
+            field_dict["jobModality"] = job_modality
 
         return field_dict
 
@@ -995,6 +1021,45 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
 
         job_location_type = _parse_job_location_type(d.pop("jobLocationType", UNSET))
 
+        def _parse_job_modality(
+            data: object,
+        ) -> (
+            list[
+                PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0NoneOfType0ItemJobModalityType0Item
+            ]
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                job_modality_type_0 = []
+                _job_modality_type_0 = data
+                for job_modality_type_0_item_data in _job_modality_type_0:
+                    job_modality_type_0_item = PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0NoneOfType0ItemJobModalityType0Item(
+                        job_modality_type_0_item_data
+                    )
+
+                    job_modality_type_0.append(job_modality_type_0_item)
+
+                return job_modality_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                list[
+                    PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type0NoneOfType0ItemJobModalityType0Item
+                ]
+                | None
+                | Unset,
+                data,
+            )
+
+        job_modality = _parse_job_modality(d.pop("jobModality", UNSET))
+
         paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_none_of_type_0_item = cls(
             job_posting_status=job_posting_status,
             job_title=job_title,
@@ -1010,6 +1075,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsJobPostingsV2Type
             job_function=job_function,
             industry=industry,
             job_location_type=job_location_type,
+            job_modality=job_modality,
         )
 
         paginated_combined_search_body_company_config_type_0_search_params_job_postings_v2_type_0_none_of_type_0_item.additional_properties = d

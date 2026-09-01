@@ -165,10 +165,13 @@ def sync_detailed(
     | AccountSendOtpResponse500
     | AccountSendOtpResponse503
 ]:
-    """Send verification code
+    """Start signup (send OTP)
 
-     Send a one-time verification code to a work email to start a cardless API trial. Optional firstName,
-    lastName, and companyName are stored for account creation after verify-otp.
+     Step 1 of signup. No API key is required. Send a one-time verification code to a work email to start
+    a Fiber API trial. Optional firstName, lastName, and companyName are stored and used when the
+    account is created. After the code arrives, call POST /v1/account/verify-otp with the returned
+    verificationId and the code from email. That completes signup and returns your live API key (and a
+    sandbox key when minted).
 
     <span>⚡ <strong>Rate limit:</strong> 6 requests per 1 minute</span>
 
@@ -216,10 +219,13 @@ def sync(
     | AccountSendOtpResponse503
     | None
 ):
-    """Send verification code
+    """Start signup (send OTP)
 
-     Send a one-time verification code to a work email to start a cardless API trial. Optional firstName,
-    lastName, and companyName are stored for account creation after verify-otp.
+     Step 1 of signup. No API key is required. Send a one-time verification code to a work email to start
+    a Fiber API trial. Optional firstName, lastName, and companyName are stored and used when the
+    account is created. After the code arrives, call POST /v1/account/verify-otp with the returned
+    verificationId and the code from email. That completes signup and returns your live API key (and a
+    sandbox key when minted).
 
     <span>⚡ <strong>Rate limit:</strong> 6 requests per 1 minute</span>
 
@@ -261,10 +267,13 @@ async def asyncio_detailed(
     | AccountSendOtpResponse500
     | AccountSendOtpResponse503
 ]:
-    """Send verification code
+    """Start signup (send OTP)
 
-     Send a one-time verification code to a work email to start a cardless API trial. Optional firstName,
-    lastName, and companyName are stored for account creation after verify-otp.
+     Step 1 of signup. No API key is required. Send a one-time verification code to a work email to start
+    a Fiber API trial. Optional firstName, lastName, and companyName are stored and used when the
+    account is created. After the code arrives, call POST /v1/account/verify-otp with the returned
+    verificationId and the code from email. That completes signup and returns your live API key (and a
+    sandbox key when minted).
 
     <span>⚡ <strong>Rate limit:</strong> 6 requests per 1 minute</span>
 
@@ -310,10 +319,13 @@ async def asyncio(
     | AccountSendOtpResponse503
     | None
 ):
-    """Send verification code
+    """Start signup (send OTP)
 
-     Send a one-time verification code to a work email to start a cardless API trial. Optional firstName,
-    lastName, and companyName are stored for account creation after verify-otp.
+     Step 1 of signup. No API key is required. Send a one-time verification code to a work email to start
+    a Fiber API trial. Optional firstName, lastName, and companyName are stored and used when the
+    account is created. After the code arrives, call POST /v1/account/verify-otp with the returned
+    verificationId and the code from email. That completes signup and returns your live API key (and a
+    sandbox key when minted).
 
     <span>⚡ <strong>Rate limit:</strong> 6 requests per 1 minute</span>
 

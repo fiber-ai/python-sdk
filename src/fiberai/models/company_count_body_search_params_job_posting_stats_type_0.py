@@ -30,6 +30,9 @@ if TYPE_CHECKING:
     from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_6 import (
         CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType6,
     )
+    from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_7 import (
+        CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType7,
+    )
     from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_0 import (
         CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType0,
     )
@@ -50,6 +53,9 @@ if TYPE_CHECKING:
     )
     from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_6 import (
         CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType6,
+    )
+    from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_7 import (
+        CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType7,
     )
     from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_0 import (
         CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType0,
@@ -72,6 +78,9 @@ if TYPE_CHECKING:
     from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_6 import (
         CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6,
     )
+    from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_7 import (
+        CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType7,
+    )
 
 
 T = TypeVar("T", bound="CompanyCountBodySearchParamsJobPostingStatsType0")
@@ -87,21 +96,24 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
             CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType3 |
             CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4 |
             CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType5 |
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType6] | None | Unset):
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType6 |
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType7] | None | Unset):
         all_of (list[CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType0 |
             CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType1 |
             CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType2 |
             CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType3 |
             CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType4 |
             CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType5 |
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType6] | None | Unset):
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType6 |
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType7] | None | Unset):
         none_of (list[CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType0 |
             CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType1 |
             CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType2 |
             CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType3 |
             CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType4 |
             CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType5 |
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6] | None | Unset):
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6 |
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType7] | None | Unset):
     """
 
     any_of: (
@@ -113,6 +125,7 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
             | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4
             | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType5
             | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType6
+            | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType7
         ]
         | None
         | Unset
@@ -126,6 +139,7 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
             | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType4
             | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType5
             | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType6
+            | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType7
         ]
         | None
         | Unset
@@ -139,6 +153,7 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
             | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType4
             | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType5
             | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6
+            | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType7
         ]
         | None
         | Unset
@@ -146,192 +161,6 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_0 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType0,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_1 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType1,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_2 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType2,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_3 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType3,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_4 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType4,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_5 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType5,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_0 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType0,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_1 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType1,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_2 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType2,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_3 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType3,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_5 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType5,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_0 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType0,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_1 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType1,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_2 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType2,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_3 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType3,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_4 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType4,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_5 import (
-            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType5,  # noqa: PLC0415
-        )
-
-        any_of: list[dict[str, Any]] | None | Unset
-        if isinstance(self.any_of, Unset):
-            any_of = UNSET
-        elif isinstance(self.any_of, list):
-            any_of = []
-            for any_of_type_0_item_data in self.any_of:
-                any_of_type_0_item: dict[str, Any]
-                if isinstance(
-                    any_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType0
-                ):
-                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
-                elif isinstance(
-                    any_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType1
-                ):
-                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
-                elif isinstance(
-                    any_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType2
-                ):
-                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
-                elif isinstance(
-                    any_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType3
-                ):
-                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
-                elif isinstance(
-                    any_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4
-                ):
-                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
-                elif isinstance(
-                    any_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType5
-                ):
-                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
-                else:
-                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
-
-                any_of.append(any_of_type_0_item)
-
-        else:
-            any_of = self.any_of
-
-        all_of: list[dict[str, Any]] | None | Unset
-        if isinstance(self.all_of, Unset):
-            all_of = UNSET
-        elif isinstance(self.all_of, list):
-            all_of = []
-            for all_of_type_0_item_data in self.all_of:
-                all_of_type_0_item: dict[str, Any]
-                if isinstance(
-                    all_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType0
-                ):
-                    all_of_type_0_item = all_of_type_0_item_data.to_dict()
-                elif isinstance(
-                    all_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType1
-                ):
-                    all_of_type_0_item = all_of_type_0_item_data.to_dict()
-                elif isinstance(
-                    all_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType2
-                ):
-                    all_of_type_0_item = all_of_type_0_item_data.to_dict()
-                elif isinstance(
-                    all_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType3
-                ):
-                    all_of_type_0_item = all_of_type_0_item_data.to_dict()
-                elif isinstance(
-                    all_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType4
-                ):
-                    all_of_type_0_item = all_of_type_0_item_data.to_dict()
-                elif isinstance(
-                    all_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType5
-                ):
-                    all_of_type_0_item = all_of_type_0_item_data.to_dict()
-                else:
-                    all_of_type_0_item = all_of_type_0_item_data.to_dict()
-
-                all_of.append(all_of_type_0_item)
-
-        else:
-            all_of = self.all_of
-
-        none_of: list[dict[str, Any]] | None | Unset
-        if isinstance(self.none_of, Unset):
-            none_of = UNSET
-        elif isinstance(self.none_of, list):
-            none_of = []
-            for none_of_type_0_item_data in self.none_of:
-                none_of_type_0_item: dict[str, Any]
-                if isinstance(
-                    none_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType0
-                ):
-                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
-                elif isinstance(
-                    none_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType1
-                ):
-                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
-                elif isinstance(
-                    none_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType2
-                ):
-                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
-                elif isinstance(
-                    none_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType3
-                ):
-                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
-                elif isinstance(
-                    none_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType4
-                ):
-                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
-                elif isinstance(
-                    none_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType5
-                ):
-                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
-                else:
-                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
-
-                none_of.append(none_of_type_0_item)
-
-        else:
-            none_of = self.none_of
-
-        field_dict: dict[str, Any] = {}
-        field_dict.update(self.additional_properties)
-        field_dict.update({})
-        if any_of is not UNSET:
-            field_dict["anyOf"] = any_of
-        if all_of is not UNSET:
-            field_dict["allOf"] = all_of
-        if none_of is not UNSET:
-            field_dict["noneOf"] = none_of
-
-        return field_dict
-
-    @classmethod
-    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_0 import (
             CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType0,  # noqa: PLC0415
         )
@@ -396,6 +225,222 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
             CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6,  # noqa: PLC0415
         )
 
+        any_of: list[dict[str, Any]] | None | Unset
+        if isinstance(self.any_of, Unset):
+            any_of = UNSET
+        elif isinstance(self.any_of, list):
+            any_of = []
+            for any_of_type_0_item_data in self.any_of:
+                any_of_type_0_item: dict[str, Any]
+                if isinstance(
+                    any_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType0
+                ):
+                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    any_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType1
+                ):
+                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    any_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType2
+                ):
+                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    any_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType3
+                ):
+                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    any_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4
+                ):
+                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    any_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType5
+                ):
+                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    any_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType6
+                ):
+                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
+                else:
+                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
+
+                any_of.append(any_of_type_0_item)
+
+        else:
+            any_of = self.any_of
+
+        all_of: list[dict[str, Any]] | None | Unset
+        if isinstance(self.all_of, Unset):
+            all_of = UNSET
+        elif isinstance(self.all_of, list):
+            all_of = []
+            for all_of_type_0_item_data in self.all_of:
+                all_of_type_0_item: dict[str, Any]
+                if isinstance(
+                    all_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType0
+                ):
+                    all_of_type_0_item = all_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    all_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType1
+                ):
+                    all_of_type_0_item = all_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    all_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType2
+                ):
+                    all_of_type_0_item = all_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    all_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType3
+                ):
+                    all_of_type_0_item = all_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    all_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType4
+                ):
+                    all_of_type_0_item = all_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    all_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType5
+                ):
+                    all_of_type_0_item = all_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    all_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType6
+                ):
+                    all_of_type_0_item = all_of_type_0_item_data.to_dict()
+                else:
+                    all_of_type_0_item = all_of_type_0_item_data.to_dict()
+
+                all_of.append(all_of_type_0_item)
+
+        else:
+            all_of = self.all_of
+
+        none_of: list[dict[str, Any]] | None | Unset
+        if isinstance(self.none_of, Unset):
+            none_of = UNSET
+        elif isinstance(self.none_of, list):
+            none_of = []
+            for none_of_type_0_item_data in self.none_of:
+                none_of_type_0_item: dict[str, Any]
+                if isinstance(
+                    none_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType0
+                ):
+                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    none_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType1
+                ):
+                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    none_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType2
+                ):
+                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    none_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType3
+                ):
+                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    none_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType4
+                ):
+                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    none_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType5
+                ):
+                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    none_of_type_0_item_data, CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6
+                ):
+                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
+                else:
+                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
+
+                none_of.append(none_of_type_0_item)
+
+        else:
+            none_of = self.none_of
+
+        field_dict: dict[str, Any] = {}
+        field_dict.update(self.additional_properties)
+        field_dict.update({})
+        if any_of is not UNSET:
+            field_dict["anyOf"] = any_of
+        if all_of is not UNSET:
+            field_dict["allOf"] = all_of
+        if none_of is not UNSET:
+            field_dict["noneOf"] = none_of
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_0 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType0,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_1 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType1,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_2 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType2,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_3 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType3,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_4 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType4,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_5 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType5,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_6 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType6,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_all_of_type_0_item_type_7 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType7,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_0 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType0,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_1 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType1,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_2 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType2,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_3 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType3,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_4 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_5 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType5,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_6 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType6,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_any_of_type_0_item_type_7 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType7,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_0 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType0,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_1 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType1,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_2 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType2,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_3 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType3,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_4 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType4,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_5 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType5,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_6 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6,  # noqa: PLC0415
+        )
+        from ..models.company_count_body_search_params_job_posting_stats_type_0_none_of_type_0_item_type_7 import (
+            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType7,  # noqa: PLC0415
+        )
+
         d = dict(src_dict)
 
         def _parse_any_of(
@@ -409,6 +454,7 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
                 | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4
                 | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType5
                 | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType6
+                | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType7
             ]
             | None
             | Unset
@@ -434,6 +480,7 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
                         | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4
                         | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType5
                         | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType6
+                        | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType7
                     ):
                         try:
                             if not isinstance(data, dict):
@@ -495,13 +542,23 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
                             return any_of_type_0_item_type_5
                         except (TypeError, ValueError, AttributeError, KeyError):
                             pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            any_of_type_0_item_type_6 = (
+                                CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType6.from_dict(data)
+                            )
+
+                            return any_of_type_0_item_type_6
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        any_of_type_0_item_type_6 = (
-                            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType6.from_dict(data)
+                        any_of_type_0_item_type_7 = (
+                            CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType7.from_dict(data)
                         )
 
-                        return any_of_type_0_item_type_6
+                        return any_of_type_0_item_type_7
 
                     any_of_type_0_item = _parse_any_of_type_0_item(any_of_type_0_item_data)
 
@@ -519,6 +576,7 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
                     | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType4
                     | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType5
                     | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType6
+                    | CompanyCountBodySearchParamsJobPostingStatsType0AnyOfType0ItemType7
                 ]
                 | None
                 | Unset,
@@ -538,6 +596,7 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
                 | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType4
                 | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType5
                 | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType6
+                | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType7
             ]
             | None
             | Unset
@@ -563,6 +622,7 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
                         | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType4
                         | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType5
                         | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType6
+                        | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType7
                     ):
                         try:
                             if not isinstance(data, dict):
@@ -624,13 +684,23 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
                             return all_of_type_0_item_type_5
                         except (TypeError, ValueError, AttributeError, KeyError):
                             pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            all_of_type_0_item_type_6 = (
+                                CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType6.from_dict(data)
+                            )
+
+                            return all_of_type_0_item_type_6
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        all_of_type_0_item_type_6 = (
-                            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType6.from_dict(data)
+                        all_of_type_0_item_type_7 = (
+                            CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType7.from_dict(data)
                         )
 
-                        return all_of_type_0_item_type_6
+                        return all_of_type_0_item_type_7
 
                     all_of_type_0_item = _parse_all_of_type_0_item(all_of_type_0_item_data)
 
@@ -648,6 +718,7 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
                     | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType4
                     | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType5
                     | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType6
+                    | CompanyCountBodySearchParamsJobPostingStatsType0AllOfType0ItemType7
                 ]
                 | None
                 | Unset,
@@ -667,6 +738,7 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
                 | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType4
                 | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType5
                 | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6
+                | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType7
             ]
             | None
             | Unset
@@ -692,6 +764,7 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
                         | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType4
                         | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType5
                         | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6
+                        | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType7
                     ):
                         try:
                             if not isinstance(data, dict):
@@ -753,13 +826,23 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
                             return none_of_type_0_item_type_5
                         except (TypeError, ValueError, AttributeError, KeyError):
                             pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            none_of_type_0_item_type_6 = (
+                                CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6.from_dict(data)
+                            )
+
+                            return none_of_type_0_item_type_6
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        none_of_type_0_item_type_6 = (
-                            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6.from_dict(data)
+                        none_of_type_0_item_type_7 = (
+                            CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType7.from_dict(data)
                         )
 
-                        return none_of_type_0_item_type_6
+                        return none_of_type_0_item_type_7
 
                     none_of_type_0_item = _parse_none_of_type_0_item(none_of_type_0_item_data)
 
@@ -777,6 +860,7 @@ class CompanyCountBodySearchParamsJobPostingStatsType0:
                     | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType4
                     | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType5
                     | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType6
+                    | CompanyCountBodySearchParamsJobPostingStatsType0NoneOfType0ItemType7
                 ]
                 | None
                 | Unset,

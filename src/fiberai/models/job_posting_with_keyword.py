@@ -7,6 +7,7 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.job_posting_with_keyword_location_types_type_0_item import JobPostingWithKeywordLocationTypesType0Item
+from ..models.job_posting_with_keyword_modalities_type_0_item import JobPostingWithKeywordModalitiesType0Item
 from ..models.job_posting_with_keyword_seniority_levels_type_0_item import JobPostingWithKeywordSeniorityLevelsType0Item
 from ..types import UNSET, Unset
 
@@ -26,8 +27,10 @@ class JobPostingWithKeyword:
             normal pipeline runs.
         seniority_levels (list[JobPostingWithKeywordSeniorityLevelsType0Item] | None | Unset): Only alert for these
             seniority levels. Omit for any level.
-        location_types (list[JobPostingWithKeywordLocationTypesType0Item] | None | Unset): Only alert for these location
-            types. Omit for any. Deprecated.
+        modalities (list[JobPostingWithKeywordModalitiesType0Item] | None | Unset): Only alert for these job modalities.
+            Omit for any.
+        location_types (list[JobPostingWithKeywordLocationTypesType0Item] | None | Unset): Deprecated. Use modalities
+            instead.
         min_postings (int | None | Unset): Only alert if at least this many NEW matching postings are detected in a
             single check cycle. Omit for 1 (any new match).
     """
@@ -38,6 +41,7 @@ class JobPostingWithKeyword:
     lookback_days: int | None | Unset = UNSET
     is_dummy: bool | Unset = UNSET
     seniority_levels: list[JobPostingWithKeywordSeniorityLevelsType0Item] | None | Unset = UNSET
+    modalities: list[JobPostingWithKeywordModalitiesType0Item] | None | Unset = UNSET
     location_types: list[JobPostingWithKeywordLocationTypesType0Item] | None | Unset = UNSET
     min_postings: int | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -68,6 +72,18 @@ class JobPostingWithKeyword:
 
         else:
             seniority_levels = self.seniority_levels
+
+        modalities: list[str] | None | Unset
+        if isinstance(self.modalities, Unset):
+            modalities = UNSET
+        elif isinstance(self.modalities, list):
+            modalities = []
+            for modalities_type_0_item_data in self.modalities:
+                modalities_type_0_item = modalities_type_0_item_data.value
+                modalities.append(modalities_type_0_item)
+
+        else:
+            modalities = self.modalities
 
         location_types: list[str] | None | Unset
         if isinstance(self.location_types, Unset):
@@ -102,6 +118,8 @@ class JobPostingWithKeyword:
             field_dict["isDummy"] = is_dummy
         if seniority_levels is not UNSET:
             field_dict["seniorityLevels"] = seniority_levels
+        if modalities is not UNSET:
+            field_dict["modalities"] = modalities
         if location_types is not UNSET:
             field_dict["locationTypes"] = location_types
         if min_postings is not UNSET:
@@ -157,6 +175,28 @@ class JobPostingWithKeyword:
 
         seniority_levels = _parse_seniority_levels(d.pop("seniorityLevels", UNSET))
 
+        def _parse_modalities(data: object) -> list[JobPostingWithKeywordModalitiesType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                modalities_type_0 = []
+                _modalities_type_0 = data
+                for modalities_type_0_item_data in _modalities_type_0:
+                    modalities_type_0_item = JobPostingWithKeywordModalitiesType0Item(modalities_type_0_item_data)
+
+                    modalities_type_0.append(modalities_type_0_item)
+
+                return modalities_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[JobPostingWithKeywordModalitiesType0Item] | None | Unset, data)
+
+        modalities = _parse_modalities(d.pop("modalities", UNSET))
+
         def _parse_location_types(data: object) -> list[JobPostingWithKeywordLocationTypesType0Item] | None | Unset:
             if data is None:
                 return data
@@ -197,6 +237,7 @@ class JobPostingWithKeyword:
             lookback_days=lookback_days,
             is_dummy=is_dummy,
             seniority_levels=seniority_levels,
+            modalities=modalities,
             location_types=location_types,
             min_postings=min_postings,
         )

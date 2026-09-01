@@ -1,0 +1,10 @@
+from enum import StrEnum
+
+
+class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0NoneOfType0ItemType6Modality(StrEnum):
+    HYBRID = "Hybrid"
+    ON_SITE = "On-site"
+    REMOTE = "Remote"
+
+    def __str__(self) -> str:
+        return str(self.value)

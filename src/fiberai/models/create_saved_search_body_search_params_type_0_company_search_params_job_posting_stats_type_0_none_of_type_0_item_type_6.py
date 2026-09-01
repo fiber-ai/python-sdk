@@ -6,8 +6,8 @@ from typing import TYPE_CHECKING, Any, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_posting_stats_type_0_none_of_type_0_item_type_6_industry import (
-    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType6Industry,
+from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_posting_stats_type_0_none_of_type_0_item_type_6_modality import (
+    CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType6Modality,
 )
 from ..models.create_saved_search_body_search_params_type_0_company_search_params_job_posting_stats_type_0_none_of_type_0_item_type_6_rule import (
     CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType6Rule,
@@ -32,15 +32,15 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsTy
     """
     Attributes:
         rule (CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType6Rule):
-        industry
-            (CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType6Industry):
+        modality
+            (CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType6Modality):
         range_
             (CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType6RangeType0 |
             CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType6RangeType1):
     """
 
     rule: CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType6Rule
-    industry: CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType6Industry
+    modality: CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType6Modality
     range_: (
         CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType6RangeType0
         | CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType6RangeType1
@@ -54,7 +54,7 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsTy
 
         rule = self.rule.value
 
-        industry = self.industry.value
+        modality = self.modality.value
 
         range_: dict[str, Any]
         if isinstance(
@@ -70,7 +70,7 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsTy
         field_dict.update(
             {
                 "rule": rule,
-                "industry": industry,
+                "modality": modality,
                 "range": range_,
             }
         )
@@ -91,9 +91,9 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsTy
             d.pop("rule")
         )
 
-        industry = (
-            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType6Industry(
-                d.pop("industry")
+        modality = (
+            CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsType0NoneOfType0ItemType6Modality(
+                d.pop("modality")
             )
         )
 
@@ -125,7 +125,7 @@ class CreateSavedSearchBodySearchParamsType0CompanySearchParamsJobPostingStatsTy
 
         create_saved_search_body_search_params_type_0_company_search_params_job_posting_stats_type_0_none_of_type_0_item_type_6 = cls(
             rule=rule,
-            industry=industry,
+            modality=modality,
             range_=range_,
         )
 

@@ -151,7 +151,8 @@ def sync_detailed(
 
      Reset an API key's lifetime usage back to zero. Acts on the key that authenticates this request
     unless target is OTHER. Use this after raising a key's limit, or to give a key a fresh allowance
-    without changing its ceiling.
+    without changing its ceiling. First-time users: create your initial API key at https://app.fiber.ai
+    or via POST /v1/account/send-otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -201,7 +202,8 @@ def sync(
 
      Reset an API key's lifetime usage back to zero. Acts on the key that authenticates this request
     unless target is OTHER. Use this after raising a key's limit, or to give a key a fresh allowance
-    without changing its ceiling.
+    without changing its ceiling. First-time users: create your initial API key at https://app.fiber.ai
+    or via POST /v1/account/send-otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -245,7 +247,8 @@ async def asyncio_detailed(
 
      Reset an API key's lifetime usage back to zero. Acts on the key that authenticates this request
     unless target is OTHER. Use this after raising a key's limit, or to give a key a fresh allowance
-    without changing its ceiling.
+    without changing its ceiling. First-time users: create your initial API key at https://app.fiber.ai
+    or via POST /v1/account/send-otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -293,7 +296,8 @@ async def asyncio(
 
      Reset an API key's lifetime usage back to zero. Acts on the key that authenticates this request
     unless target is OTHER. Use this after raising a key's limit, or to give a key a fresh allowance
-    without changing its ceiling.
+    without changing its ceiling. First-time users: create your initial API key at https://app.fiber.ai
+    or via POST /v1/account/send-otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 

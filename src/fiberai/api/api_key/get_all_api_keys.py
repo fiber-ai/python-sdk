@@ -151,6 +151,8 @@ def sync_detailed(
 
      List all API keys for your organization, including each key's name, prefix, expiration, and per-key
     credit usage. The secret value of a key is only shown once at creation and is never returned here.
+    First-time users: create your initial API key at https://app.fiber.ai or via POST /v1/account/send-
+    otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -200,6 +202,8 @@ def sync(
 
      List all API keys for your organization, including each key's name, prefix, expiration, and per-key
     credit usage. The secret value of a key is only shown once at creation and is never returned here.
+    First-time users: create your initial API key at https://app.fiber.ai or via POST /v1/account/send-
+    otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -243,6 +247,8 @@ async def asyncio_detailed(
 
      List all API keys for your organization, including each key's name, prefix, expiration, and per-key
     credit usage. The secret value of a key is only shown once at creation and is never returned here.
+    First-time users: create your initial API key at https://app.fiber.ai or via POST /v1/account/send-
+    otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -290,6 +296,8 @@ async def asyncio(
 
      List all API keys for your organization, including each key's name, prefix, expiration, and per-key
     credit usage. The secret value of a key is only shown once at creation and is never returned here.
+    First-time users: create your initial API key at https://app.fiber.ai or via POST /v1/account/send-
+    otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 

@@ -88,7 +88,6 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
         first_name (None | str | Unset):
         follower_count (float | None | Unset):
         headline (None | str | Unset):
-        industry_name (None | str | Unset):
         inferred_location (GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemInferredLocationType0 | None |
             Unset):
         interests (list[str] | None | Unset):
@@ -126,6 +125,7 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
         custom_data (GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCustomDataType0 | None | Unset):
         relevance_score (float | None | Unset):
         last_sort_key (None | str | Unset):
+        industry_name (None | str | Unset):
         last_updated_at (None | str | Unset):
         languages (list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemLanguagesType0Item] | None | Unset):
         detailed_education (list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemDetailedEducationType0Item]
@@ -152,7 +152,6 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
     first_name: None | str | Unset = UNSET
     follower_count: float | None | Unset = UNSET
     headline: None | str | Unset = UNSET
-    industry_name: None | str | Unset = UNSET
     inferred_location: (
         GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemInferredLocationType0 | None | Unset
     ) = UNSET
@@ -194,6 +193,7 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
     custom_data: GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCustomDataType0 | None | Unset = UNSET
     relevance_score: float | None | Unset = UNSET
     last_sort_key: None | str | Unset = UNSET
+    industry_name: None | str | Unset = UNSET
     last_updated_at: None | str | Unset = UNSET
     languages: list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemLanguagesType0Item] | None | Unset = (
         UNSET
@@ -313,12 +313,6 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
             headline = UNSET
         else:
             headline = self.headline
-
-        industry_name: None | str | Unset
-        if isinstance(self.industry_name, Unset):
-            industry_name = UNSET
-        else:
-            industry_name = self.industry_name
 
         inferred_location: dict[str, Any] | None | Unset
         if isinstance(self.inferred_location, Unset):
@@ -587,6 +581,12 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
         else:
             last_sort_key = self.last_sort_key
 
+        industry_name: None | str | Unset
+        if isinstance(self.industry_name, Unset):
+            industry_name = UNSET
+        else:
+            industry_name = self.industry_name
+
         last_updated_at: None | str | Unset
         if isinstance(self.last_updated_at, Unset):
             last_updated_at = UNSET
@@ -656,8 +656,6 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
             field_dict["follower_count"] = follower_count
         if headline is not UNSET:
             field_dict["headline"] = headline
-        if industry_name is not UNSET:
-            field_dict["industry_name"] = industry_name
         if inferred_location is not UNSET:
             field_dict["inferred_location"] = inferred_location
         if interests is not UNSET:
@@ -724,6 +722,8 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
             field_dict["relevance_score"] = relevance_score
         if last_sort_key is not UNSET:
             field_dict["last_sort_key"] = last_sort_key
+        if industry_name is not UNSET:
+            field_dict["industry_name"] = industry_name
         if last_updated_at is not UNSET:
             field_dict["last_updated_at"] = last_updated_at
         if languages is not UNSET:
@@ -994,15 +994,6 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
             return cast(None | str | Unset, data)
 
         headline = _parse_headline(d.pop("headline", UNSET))
-
-        def _parse_industry_name(data: object) -> None | str | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(None | str | Unset, data)
-
-        industry_name = _parse_industry_name(d.pop("industry_name", UNSET))
 
         def _parse_inferred_location(
             data: object,
@@ -1545,6 +1536,15 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
 
         last_sort_key = _parse_last_sort_key(d.pop("last_sort_key", UNSET))
 
+        def _parse_industry_name(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        industry_name = _parse_industry_name(d.pop("industry_name", UNSET))
+
         def _parse_last_updated_at(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -1665,7 +1665,6 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
             first_name=first_name,
             follower_count=follower_count,
             headline=headline,
-            industry_name=industry_name,
             inferred_location=inferred_location,
             interests=interests,
             last_name=last_name,
@@ -1699,6 +1698,7 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
             custom_data=custom_data,
             relevance_score=relevance_score,
             last_sort_key=last_sort_key,
+            industry_name=industry_name,
             last_updated_at=last_updated_at,
             languages=languages,
             detailed_education=detailed_education,

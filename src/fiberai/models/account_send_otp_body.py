@@ -16,7 +16,8 @@ T = TypeVar("T", bound="AccountSendOtpBody")
 class AccountSendOtpBody:
     """
     Attributes:
-        email (str): Work email address to send the verification code to.
+        email (str): Work email to start signup. A one-time code is sent here; pass it to POST /v1/account/verify-otp
+            with the returned verificationId.
         purpose (AccountSendOtpBodyPurpose | Unset): Which product surface this trial is for. Defaults to agent-api for
             backward compatibility. Default: AccountSendOtpBodyPurpose.AGENT_API.
         first_name (None | str | Unset): Optional first name for the account. When omitted, derived from the email

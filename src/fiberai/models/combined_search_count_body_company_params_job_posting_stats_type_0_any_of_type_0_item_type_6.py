@@ -6,8 +6,8 @@ from typing import TYPE_CHECKING, Any, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.combined_search_count_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_6_industry import (
-    CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6Industry,
+from ..models.combined_search_count_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_6_modality import (
+    CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6Modality,
 )
 from ..models.combined_search_count_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_6_rule import (
     CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6Rule,
@@ -30,13 +30,13 @@ class CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType
     """
     Attributes:
         rule (CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6Rule):
-        industry (CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6Industry):
+        modality (CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6Modality):
         range_ (CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6RangeType0 |
             CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6RangeType1):
     """
 
     rule: CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6Rule
-    industry: CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6Industry
+    modality: CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6Modality
     range_: (
         CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6RangeType0
         | CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6RangeType1
@@ -50,7 +50,7 @@ class CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType
 
         rule = self.rule.value
 
-        industry = self.industry.value
+        modality = self.modality.value
 
         range_: dict[str, Any]
         if isinstance(
@@ -65,7 +65,7 @@ class CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType
         field_dict.update(
             {
                 "rule": rule,
-                "industry": industry,
+                "modality": modality,
                 "range": range_,
             }
         )
@@ -84,8 +84,8 @@ class CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType
         d = dict(src_dict)
         rule = CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6Rule(d.pop("rule"))
 
-        industry = CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6Industry(
-            d.pop("industry")
+        modality = CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType6Modality(
+            d.pop("modality")
         )
 
         def _parse_range_(
@@ -118,7 +118,7 @@ class CombinedSearchCountBodyCompanyParamsJobPostingStatsType0AnyOfType0ItemType
 
         combined_search_count_body_company_params_job_posting_stats_type_0_any_of_type_0_item_type_6 = cls(
             rule=rule,
-            industry=industry,
+            modality=modality,
             range_=range_,
         )
 

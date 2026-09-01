@@ -86,7 +86,6 @@ class KitchenSinkProfileResponse200OutputDataItem:
         first_name (None | str | Unset):
         follower_count (float | None | Unset):
         headline (None | str | Unset):
-        industry_name (None | str | Unset):
         inferred_location (KitchenSinkProfileResponse200OutputDataItemInferredLocationType0 | None | Unset):
         interests (list[str] | None | Unset):
         last_name (None | str | Unset):
@@ -120,6 +119,7 @@ class KitchenSinkProfileResponse200OutputDataItem:
         custom_data (KitchenSinkProfileResponse200OutputDataItemCustomDataType0 | None | Unset):
         relevance_score (float | None | Unset):
         last_sort_key (None | str | Unset):
+        industry_name (None | str | Unset):
         last_updated_at (None | str | Unset):
         languages (list[KitchenSinkProfileResponse200OutputDataItemLanguagesType0Item] | None | Unset):
         detailed_education (list[KitchenSinkProfileResponse200OutputDataItemDetailedEducationType0Item] | None | Unset):
@@ -138,7 +138,6 @@ class KitchenSinkProfileResponse200OutputDataItem:
     first_name: None | str | Unset = UNSET
     follower_count: float | None | Unset = UNSET
     headline: None | str | Unset = UNSET
-    industry_name: None | str | Unset = UNSET
     inferred_location: KitchenSinkProfileResponse200OutputDataItemInferredLocationType0 | None | Unset = UNSET
     interests: list[str] | None | Unset = UNSET
     last_name: None | str | Unset = UNSET
@@ -172,6 +171,7 @@ class KitchenSinkProfileResponse200OutputDataItem:
     custom_data: KitchenSinkProfileResponse200OutputDataItemCustomDataType0 | None | Unset = UNSET
     relevance_score: float | None | Unset = UNSET
     last_sort_key: None | str | Unset = UNSET
+    industry_name: None | str | Unset = UNSET
     last_updated_at: None | str | Unset = UNSET
     languages: list[KitchenSinkProfileResponse200OutputDataItemLanguagesType0Item] | None | Unset = UNSET
     detailed_education: list[KitchenSinkProfileResponse200OutputDataItemDetailedEducationType0Item] | None | Unset = (
@@ -287,12 +287,6 @@ class KitchenSinkProfileResponse200OutputDataItem:
             headline = UNSET
         else:
             headline = self.headline
-
-        industry_name: None | str | Unset
-        if isinstance(self.industry_name, Unset):
-            industry_name = UNSET
-        else:
-            industry_name = self.industry_name
 
         inferred_location: dict[str, Any] | None | Unset
         if isinstance(self.inferred_location, Unset):
@@ -557,6 +551,12 @@ class KitchenSinkProfileResponse200OutputDataItem:
         else:
             last_sort_key = self.last_sort_key
 
+        industry_name: None | str | Unset
+        if isinstance(self.industry_name, Unset):
+            industry_name = UNSET
+        else:
+            industry_name = self.industry_name
+
         last_updated_at: None | str | Unset
         if isinstance(self.last_updated_at, Unset):
             last_updated_at = UNSET
@@ -626,8 +626,6 @@ class KitchenSinkProfileResponse200OutputDataItem:
             field_dict["follower_count"] = follower_count
         if headline is not UNSET:
             field_dict["headline"] = headline
-        if industry_name is not UNSET:
-            field_dict["industry_name"] = industry_name
         if inferred_location is not UNSET:
             field_dict["inferred_location"] = inferred_location
         if interests is not UNSET:
@@ -694,6 +692,8 @@ class KitchenSinkProfileResponse200OutputDataItem:
             field_dict["relevance_score"] = relevance_score
         if last_sort_key is not UNSET:
             field_dict["last_sort_key"] = last_sort_key
+        if industry_name is not UNSET:
+            field_dict["industry_name"] = industry_name
         if last_updated_at is not UNSET:
             field_dict["last_updated_at"] = last_updated_at
         if languages is not UNSET:
@@ -941,15 +941,6 @@ class KitchenSinkProfileResponse200OutputDataItem:
             return cast(None | str | Unset, data)
 
         headline = _parse_headline(d.pop("headline", UNSET))
-
-        def _parse_industry_name(data: object) -> None | str | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(None | str | Unset, data)
-
-        industry_name = _parse_industry_name(d.pop("industry_name", UNSET))
 
         def _parse_inferred_location(
             data: object,
@@ -1451,6 +1442,15 @@ class KitchenSinkProfileResponse200OutputDataItem:
 
         last_sort_key = _parse_last_sort_key(d.pop("last_sort_key", UNSET))
 
+        def _parse_industry_name(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        industry_name = _parse_industry_name(d.pop("industry_name", UNSET))
+
         def _parse_last_updated_at(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -1558,7 +1558,6 @@ class KitchenSinkProfileResponse200OutputDataItem:
             first_name=first_name,
             follower_count=follower_count,
             headline=headline,
-            industry_name=industry_name,
             inferred_location=inferred_location,
             interests=interests,
             last_name=last_name,
@@ -1592,6 +1591,7 @@ class KitchenSinkProfileResponse200OutputDataItem:
             custom_data=custom_data,
             relevance_score=relevance_score,
             last_sort_key=last_sort_key,
+            industry_name=industry_name,
             last_updated_at=last_updated_at,
             languages=languages,
             detailed_education=detailed_education,

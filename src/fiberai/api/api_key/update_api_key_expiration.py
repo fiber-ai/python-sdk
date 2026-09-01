@@ -152,6 +152,8 @@ def sync_detailed(
      Change the expiration of an API key. Acts on the key that authenticates this request unless target
     is OTHER. Choose set to pin an absolute date, extend or prepone to move the date by a number of
     days, or remove to make the key never expire. Once a key expires it can no longer authenticate.
+    First-time users: create your initial API key at https://app.fiber.ai or via POST /v1/account/send-
+    otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -202,6 +204,8 @@ def sync(
      Change the expiration of an API key. Acts on the key that authenticates this request unless target
     is OTHER. Choose set to pin an absolute date, extend or prepone to move the date by a number of
     days, or remove to make the key never expire. Once a key expires it can no longer authenticate.
+    First-time users: create your initial API key at https://app.fiber.ai or via POST /v1/account/send-
+    otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -246,6 +250,8 @@ async def asyncio_detailed(
      Change the expiration of an API key. Acts on the key that authenticates this request unless target
     is OTHER. Choose set to pin an absolute date, extend or prepone to move the date by a number of
     days, or remove to make the key never expire. Once a key expires it can no longer authenticate.
+    First-time users: create your initial API key at https://app.fiber.ai or via POST /v1/account/send-
+    otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -294,6 +300,8 @@ async def asyncio(
      Change the expiration of an API key. Acts on the key that authenticates this request unless target
     is OTHER. Choose set to pin an absolute date, extend or prepone to move the date by a number of
     days, or remove to make the key never expire. Once a key expires it can no longer authenticate.
+    First-time users: create your initial API key at https://app.fiber.ai or via POST /v1/account/send-
+    otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 

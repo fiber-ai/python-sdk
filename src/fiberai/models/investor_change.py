@@ -17,15 +17,15 @@ class InvestorChange:
     Attributes:
         name (str): Investor name
         type_ (list[str]): Investor types
-        uuid (None | str | Unset): Unique identifier
         linkedin_slug (None | str | Unset): Investor LinkedIn profile slug
+        investor_linkedin_url (None | str | Unset): Full LinkedIn URL for the investor.
         crunchbase_url (None | str | Unset): Reference URL
     """
 
     name: str
     type_: list[str]
-    uuid: None | str | Unset = UNSET
     linkedin_slug: None | str | Unset = UNSET
+    investor_linkedin_url: None | str | Unset = UNSET
     crunchbase_url: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -34,17 +34,17 @@ class InvestorChange:
 
         type_ = self.type_
 
-        uuid: None | str | Unset
-        if isinstance(self.uuid, Unset):
-            uuid = UNSET
-        else:
-            uuid = self.uuid
-
         linkedin_slug: None | str | Unset
         if isinstance(self.linkedin_slug, Unset):
             linkedin_slug = UNSET
         else:
             linkedin_slug = self.linkedin_slug
+
+        investor_linkedin_url: None | str | Unset
+        if isinstance(self.investor_linkedin_url, Unset):
+            investor_linkedin_url = UNSET
+        else:
+            investor_linkedin_url = self.investor_linkedin_url
 
         crunchbase_url: None | str | Unset
         if isinstance(self.crunchbase_url, Unset):
@@ -60,10 +60,10 @@ class InvestorChange:
                 "type": type_,
             }
         )
-        if uuid is not UNSET:
-            field_dict["uuid"] = uuid
         if linkedin_slug is not UNSET:
             field_dict["linkedinSlug"] = linkedin_slug
+        if investor_linkedin_url is not UNSET:
+            field_dict["investorLinkedinUrl"] = investor_linkedin_url
         if crunchbase_url is not UNSET:
             field_dict["crunchbaseUrl"] = crunchbase_url
 
@@ -76,15 +76,6 @@ class InvestorChange:
 
         type_ = cast(list[str], d.pop("type"))
 
-        def _parse_uuid(data: object) -> None | str | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(None | str | Unset, data)
-
-        uuid = _parse_uuid(d.pop("uuid", UNSET))
-
         def _parse_linkedin_slug(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -93,6 +84,15 @@ class InvestorChange:
             return cast(None | str | Unset, data)
 
         linkedin_slug = _parse_linkedin_slug(d.pop("linkedinSlug", UNSET))
+
+        def _parse_investor_linkedin_url(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        investor_linkedin_url = _parse_investor_linkedin_url(d.pop("investorLinkedinUrl", UNSET))
 
         def _parse_crunchbase_url(data: object) -> None | str | Unset:
             if data is None:
@@ -106,8 +106,8 @@ class InvestorChange:
         investor_change = cls(
             name=name,
             type_=type_,
-            uuid=uuid,
             linkedin_slug=linkedin_slug,
+            investor_linkedin_url=investor_linkedin_url,
             crunchbase_url=crunchbase_url,
         )
 

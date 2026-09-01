@@ -25,6 +25,8 @@ class CreateWebhookEndpointBodyEventTypesItem(StrEnum):
     SAVED_SEARCH_RUN_COMPLETED = "saved_search.run_completed"
     SAVED_SEARCH_RUN_UPCOMING = "saved_search.run_upcoming"
     SOCIAL_MEDIA_LOOKUP_COMPLETED = "social_media_lookup.completed"
+    TRACKER_LIST_RUN_COMPLETED = "tracker.list_run_completed"
+    TRACKER_LIST_RUN_UPCOMING = "tracker.list_run_upcoming"
     TRACKER_SIGNAL_DETECTED = "tracker.signal_detected"
 
     def __str__(self) -> str:

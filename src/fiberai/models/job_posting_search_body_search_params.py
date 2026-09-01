@@ -29,6 +29,9 @@ from ..models.job_posting_search_body_search_params_job_functions_type_0_item im
 from ..models.job_posting_search_body_search_params_job_location_type_type_0_item import (
     JobPostingSearchBodySearchParamsJobLocationTypeType0Item,
 )
+from ..models.job_posting_search_body_search_params_job_modality_type_0_item import (
+    JobPostingSearchBodySearchParamsJobModalityType0Item,
+)
 from ..models.job_posting_search_body_search_params_seniority_level_type_0_item import (
     JobPostingSearchBodySearchParamsSeniorityLevelType0Item,
 )
@@ -90,8 +93,10 @@ class JobPostingSearchBodySearchParams:
             range in USD
         years_of_experience (JobPostingSearchBodySearchParamsYearsOfExperienceType0 | None | Unset): Filter by years of
             experience required
-        job_location_type (list[JobPostingSearchBodySearchParamsJobLocationTypeType0Item] | None | Unset): Filter by
-            work location type. Deprecated.
+        job_modality (list[JobPostingSearchBodySearchParamsJobModalityType0Item] | None | Unset): Lets you find jobs
+            that are on-site, remote, or hybrid. Pass several values to match any of them.
+        job_location_type (list[JobPostingSearchBodySearchParamsJobLocationTypeType0Item] | None | Unset): Deprecated.
+            Use jobModality instead.
         employment_type (list[JobPostingSearchBodySearchParamsEmploymentTypeType0Item] | None | Unset): Array of
             employment types (e.g., Full-time, Part-time, Contract, Internship)
         seniority_level (list[JobPostingSearchBodySearchParamsSeniorityLevelType0Item] | None | Unset): Array of
@@ -124,6 +129,7 @@ class JobPostingSearchBodySearchParams:
     industries: list[JobPostingSearchBodySearchParamsIndustriesType0Item] | None | Unset = UNSET
     annual_salary_usd: JobPostingSearchBodySearchParamsAnnualSalaryUsdType0 | None | Unset = UNSET
     years_of_experience: JobPostingSearchBodySearchParamsYearsOfExperienceType0 | None | Unset = UNSET
+    job_modality: list[JobPostingSearchBodySearchParamsJobModalityType0Item] | None | Unset = UNSET
     job_location_type: list[JobPostingSearchBodySearchParamsJobLocationTypeType0Item] | None | Unset = UNSET
     employment_type: list[JobPostingSearchBodySearchParamsEmploymentTypeType0Item] | None | Unset = UNSET
     seniority_level: list[JobPostingSearchBodySearchParamsSeniorityLevelType0Item] | None | Unset = UNSET
@@ -251,6 +257,18 @@ class JobPostingSearchBodySearchParams:
         else:
             years_of_experience = self.years_of_experience
 
+        job_modality: list[str] | None | Unset
+        if isinstance(self.job_modality, Unset):
+            job_modality = UNSET
+        elif isinstance(self.job_modality, list):
+            job_modality = []
+            for job_modality_type_0_item_data in self.job_modality:
+                job_modality_type_0_item = job_modality_type_0_item_data.value
+                job_modality.append(job_modality_type_0_item)
+
+        else:
+            job_modality = self.job_modality
+
         job_location_type: list[str] | None | Unset
         if isinstance(self.job_location_type, Unset):
             job_location_type = UNSET
@@ -320,6 +338,8 @@ class JobPostingSearchBodySearchParams:
             field_dict["annualSalaryUsd"] = annual_salary_usd
         if years_of_experience is not UNSET:
             field_dict["yearsOfExperience"] = years_of_experience
+        if job_modality is not UNSET:
+            field_dict["jobModality"] = job_modality
         if job_location_type is not UNSET:
             field_dict["jobLocationType"] = job_location_type
         if employment_type is not UNSET:
@@ -626,6 +646,32 @@ class JobPostingSearchBodySearchParams:
 
         years_of_experience = _parse_years_of_experience(d.pop("yearsOfExperience", UNSET))
 
+        def _parse_job_modality(
+            data: object,
+        ) -> list[JobPostingSearchBodySearchParamsJobModalityType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                job_modality_type_0 = []
+                _job_modality_type_0 = data
+                for job_modality_type_0_item_data in _job_modality_type_0:
+                    job_modality_type_0_item = JobPostingSearchBodySearchParamsJobModalityType0Item(
+                        job_modality_type_0_item_data
+                    )
+
+                    job_modality_type_0.append(job_modality_type_0_item)
+
+                return job_modality_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[JobPostingSearchBodySearchParamsJobModalityType0Item] | None | Unset, data)
+
+        job_modality = _parse_job_modality(d.pop("jobModality", UNSET))
+
         def _parse_job_location_type(
             data: object,
         ) -> list[JobPostingSearchBodySearchParamsJobLocationTypeType0Item] | None | Unset:
@@ -740,6 +786,7 @@ class JobPostingSearchBodySearchParams:
             industries=industries,
             annual_salary_usd=annual_salary_usd,
             years_of_experience=years_of_experience,
+            job_modality=job_modality,
             job_location_type=job_location_type,
             employment_type=employment_type,
             seniority_level=seniority_level,

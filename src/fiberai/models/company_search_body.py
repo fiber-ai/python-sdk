@@ -27,7 +27,7 @@ class CompanySearchBody:
         company_exclusion_list_i_ds (list[str] | Unset): The IDs of company exclusion lists to filter out matching
             companies.
         include_count (bool | None | Unset): When true, returns an estimated total count of matching companies in the
-            response. The count does not account for exclusion lists.
+            response and charges one additional count credit. The count does not account for exclusion lists.
     """
 
     api_key: str

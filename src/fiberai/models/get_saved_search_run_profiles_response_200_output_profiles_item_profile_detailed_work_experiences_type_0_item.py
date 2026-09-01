@@ -41,7 +41,6 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedWorkE
     Attributes:
         company_details (GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedWorkExperiencesType0ItemCo
             mpanyDetailsType0 | None | Unset):
-        crunchbase_slug (None | str | Unset):
         linkedin_company_id (None | str | Unset):
         is_current (bool | None | Unset):
         company_name (None | str | Unset):
@@ -71,7 +70,6 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedWorkE
         | None
         | Unset
     ) = UNSET
-    crunchbase_slug: None | str | Unset = UNSET
     linkedin_company_id: None | str | Unset = UNSET
     is_current: bool | None | Unset = UNSET
     company_name: None | str | Unset = UNSET
@@ -127,12 +125,6 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedWorkE
             company_details = self.company_details.to_dict()
         else:
             company_details = self.company_details
-
-        crunchbase_slug: None | str | Unset
-        if isinstance(self.crunchbase_slug, Unset):
-            crunchbase_slug = UNSET
-        else:
-            crunchbase_slug = self.crunchbase_slug
 
         linkedin_company_id: None | str | Unset
         if isinstance(self.linkedin_company_id, Unset):
@@ -256,8 +248,6 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedWorkE
         field_dict.update({})
         if company_details is not UNSET:
             field_dict["company_details"] = company_details
-        if crunchbase_slug is not UNSET:
-            field_dict["crunchbase_slug"] = crunchbase_slug
         if linkedin_company_id is not UNSET:
             field_dict["linkedin_company_id"] = linkedin_company_id
         if is_current is not UNSET:
@@ -326,15 +316,6 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedWorkE
             )
 
         company_details = _parse_company_details(d.pop("company_details", UNSET))
-
-        def _parse_crunchbase_slug(data: object) -> None | str | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(None | str | Unset, data)
-
-        crunchbase_slug = _parse_crunchbase_slug(d.pop("crunchbase_slug", UNSET))
 
         def _parse_linkedin_company_id(data: object) -> None | str | Unset:
             if data is None:
@@ -599,7 +580,6 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedWorkE
 
         get_saved_search_run_profiles_response_200_output_profiles_item_profile_detailed_work_experiences_type_0_item = cls(
             company_details=company_details,
-            crunchbase_slug=crunchbase_slug,
             linkedin_company_id=linkedin_company_id,
             is_current=is_current,
             company_name=company_name,

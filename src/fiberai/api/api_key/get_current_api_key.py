@@ -150,7 +150,9 @@ def sync_detailed(
     """Get API key
 
      Return details about an API key, including its name, prefix, expiration, and per-key credit usage.
-    Acts on the key that authenticates this request unless target is OTHER.
+    Acts on the key that authenticates this request unless target is OTHER. First-time users: create
+    your initial API key at https://app.fiber.ai or via POST /v1/account/send-otp + verify-otp. This
+    endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -199,7 +201,9 @@ def sync(
     """Get API key
 
      Return details about an API key, including its name, prefix, expiration, and per-key credit usage.
-    Acts on the key that authenticates this request unless target is OTHER.
+    Acts on the key that authenticates this request unless target is OTHER. First-time users: create
+    your initial API key at https://app.fiber.ai or via POST /v1/account/send-otp + verify-otp. This
+    endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -242,7 +246,9 @@ async def asyncio_detailed(
     """Get API key
 
      Return details about an API key, including its name, prefix, expiration, and per-key credit usage.
-    Acts on the key that authenticates this request unless target is OTHER.
+    Acts on the key that authenticates this request unless target is OTHER. First-time users: create
+    your initial API key at https://app.fiber.ai or via POST /v1/account/send-otp + verify-otp. This
+    endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -289,7 +295,9 @@ async def asyncio(
     """Get API key
 
      Return details about an API key, including its name, prefix, expiration, and per-key credit usage.
-    Acts on the key that authenticates this request unless target is OTHER.
+    Acts on the key that authenticates this request unless target is OTHER. First-time users: create
+    your initial API key at https://app.fiber.ai or via POST /v1/account/send-otp + verify-otp. This
+    endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 

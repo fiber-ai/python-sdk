@@ -18,6 +18,15 @@ from ..models.job_posting_search_response_200_output_data_item_job_location_type
 from ..models.job_posting_search_response_200_output_data_item_job_location_type_type_3_type_1 import (
     JobPostingSearchResponse200OutputDataItemJobLocationTypeType3Type1,
 )
+from ..models.job_posting_search_response_200_output_data_item_modality_type_1 import (
+    JobPostingSearchResponse200OutputDataItemModalityType1,
+)
+from ..models.job_posting_search_response_200_output_data_item_modality_type_2_type_1 import (
+    JobPostingSearchResponse200OutputDataItemModalityType2Type1,
+)
+from ..models.job_posting_search_response_200_output_data_item_modality_type_3_type_1 import (
+    JobPostingSearchResponse200OutputDataItemModalityType3Type1,
+)
 from ..models.job_posting_search_response_200_output_data_item_standard_industries_type_0_item import (
     JobPostingSearchResponse200OutputDataItemStandardIndustriesType0Item,
 )
@@ -78,7 +87,12 @@ class JobPostingSearchResponse200OutputDataItem:
             Standardized location with geo data including lat/lon
         job_location_type (JobPostingSearchResponse200OutputDataItemJobLocationTypeType1 |
             JobPostingSearchResponse200OutputDataItemJobLocationTypeType2Type1 |
-            JobPostingSearchResponse200OutputDataItemJobLocationTypeType3Type1 | None | Unset): Work location type
+            JobPostingSearchResponse200OutputDataItemJobLocationTypeType3Type1 | None | Unset): Deprecated. Use modality
+            instead.
+        modality (JobPostingSearchResponse200OutputDataItemModalityType1 |
+            JobPostingSearchResponse200OutputDataItemModalityType2Type1 |
+            JobPostingSearchResponse200OutputDataItemModalityType3Type1 | None | Unset): Whether the job is on-site, remote,
+            or hybrid.
     """
 
     job_id: str
@@ -105,6 +119,13 @@ class JobPostingSearchResponse200OutputDataItem:
         JobPostingSearchResponse200OutputDataItemJobLocationTypeType1
         | JobPostingSearchResponse200OutputDataItemJobLocationTypeType2Type1
         | JobPostingSearchResponse200OutputDataItemJobLocationTypeType3Type1
+        | None
+        | Unset
+    ) = UNSET
+    modality: (
+        JobPostingSearchResponse200OutputDataItemModalityType1
+        | JobPostingSearchResponse200OutputDataItemModalityType2Type1
+        | JobPostingSearchResponse200OutputDataItemModalityType3Type1
         | None
         | Unset
     ) = UNSET
@@ -261,6 +282,18 @@ class JobPostingSearchResponse200OutputDataItem:
         else:
             job_location_type = self.job_location_type
 
+        modality: None | str | Unset
+        if isinstance(self.modality, Unset):
+            modality = UNSET
+        elif isinstance(self.modality, JobPostingSearchResponse200OutputDataItemModalityType1):
+            modality = self.modality.value
+        elif isinstance(self.modality, JobPostingSearchResponse200OutputDataItemModalityType2Type1):
+            modality = self.modality.value
+        elif isinstance(self.modality, JobPostingSearchResponse200OutputDataItemModalityType3Type1):
+            modality = self.modality.value
+        else:
+            modality = self.modality
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -303,6 +336,8 @@ class JobPostingSearchResponse200OutputDataItem:
             field_dict["standardized_location"] = standardized_location
         if job_location_type is not UNSET:
             field_dict["job_location_type"] = job_location_type
+        if modality is not UNSET:
+            field_dict["modality"] = modality
 
         return field_dict
 
@@ -617,6 +652,54 @@ class JobPostingSearchResponse200OutputDataItem:
 
         job_location_type = _parse_job_location_type(d.pop("job_location_type", UNSET))
 
+        def _parse_modality(
+            data: object,
+        ) -> (
+            JobPostingSearchResponse200OutputDataItemModalityType1
+            | JobPostingSearchResponse200OutputDataItemModalityType2Type1
+            | JobPostingSearchResponse200OutputDataItemModalityType3Type1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                modality_type_1 = JobPostingSearchResponse200OutputDataItemModalityType1(data)
+
+                return modality_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                modality_type_2_type_1 = JobPostingSearchResponse200OutputDataItemModalityType2Type1(data)
+
+                return modality_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                modality_type_3_type_1 = JobPostingSearchResponse200OutputDataItemModalityType3Type1(data)
+
+                return modality_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                JobPostingSearchResponse200OutputDataItemModalityType1
+                | JobPostingSearchResponse200OutputDataItemModalityType2Type1
+                | JobPostingSearchResponse200OutputDataItemModalityType3Type1
+                | None
+                | Unset,
+                data,
+            )
+
+        modality = _parse_modality(d.pop("modality", UNSET))
+
         job_posting_search_response_200_output_data_item = cls(
             job_id=job_id,
             status=status,
@@ -637,6 +720,7 @@ class JobPostingSearchResponse200OutputDataItem:
             years_of_experience=years_of_experience,
             standardized_location=standardized_location,
             job_location_type=job_location_type,
+            modality=modality,
         )
 
         job_posting_search_response_200_output_data_item.additional_properties = d

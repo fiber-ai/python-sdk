@@ -165,9 +165,14 @@ def sync_detailed(
     | AccountVerifyOtpResponse500
     | AccountVerifyOtpResponse503
 ]:
-    """Verify OTP and complete signup
+    """Complete signup (verify OTP)
 
-     Verify the one-time code from send-otp and create a cardless API trial account.
+     Step 2 of signup. Completes the flow started by POST /v1/account/send-otp. Pass the verificationId
+    from that response and the one-time code from email. On success this creates the trial account and
+    returns a live API key (sk_live_...) plus a companion sandbox API key (sk_test_...) when one was
+    minted. Store both securely — they cannot be retrieved later. First-time users without a key yet
+    must start at send-otp; existing users create extra sandbox keys via POST /v1/api-keys/create-
+    sandbox.
 
     <span>⚡ <strong>Rate limit:</strong> 12 requests per 1 minute</span>
 
@@ -215,9 +220,14 @@ def sync(
     | AccountVerifyOtpResponse503
     | None
 ):
-    """Verify OTP and complete signup
+    """Complete signup (verify OTP)
 
-     Verify the one-time code from send-otp and create a cardless API trial account.
+     Step 2 of signup. Completes the flow started by POST /v1/account/send-otp. Pass the verificationId
+    from that response and the one-time code from email. On success this creates the trial account and
+    returns a live API key (sk_live_...) plus a companion sandbox API key (sk_test_...) when one was
+    minted. Store both securely — they cannot be retrieved later. First-time users without a key yet
+    must start at send-otp; existing users create extra sandbox keys via POST /v1/api-keys/create-
+    sandbox.
 
     <span>⚡ <strong>Rate limit:</strong> 12 requests per 1 minute</span>
 
@@ -259,9 +269,14 @@ async def asyncio_detailed(
     | AccountVerifyOtpResponse500
     | AccountVerifyOtpResponse503
 ]:
-    """Verify OTP and complete signup
+    """Complete signup (verify OTP)
 
-     Verify the one-time code from send-otp and create a cardless API trial account.
+     Step 2 of signup. Completes the flow started by POST /v1/account/send-otp. Pass the verificationId
+    from that response and the one-time code from email. On success this creates the trial account and
+    returns a live API key (sk_live_...) plus a companion sandbox API key (sk_test_...) when one was
+    minted. Store both securely — they cannot be retrieved later. First-time users without a key yet
+    must start at send-otp; existing users create extra sandbox keys via POST /v1/api-keys/create-
+    sandbox.
 
     <span>⚡ <strong>Rate limit:</strong> 12 requests per 1 minute</span>
 
@@ -307,9 +322,14 @@ async def asyncio(
     | AccountVerifyOtpResponse503
     | None
 ):
-    """Verify OTP and complete signup
+    """Complete signup (verify OTP)
 
-     Verify the one-time code from send-otp and create a cardless API trial account.
+     Step 2 of signup. Completes the flow started by POST /v1/account/send-otp. Pass the verificationId
+    from that response and the one-time code from email. On success this creates the trial account and
+    returns a live API key (sk_live_...) plus a companion sandbox API key (sk_test_...) when one was
+    minted. Store both securely — they cannot be retrieved later. First-time users without a key yet
+    must start at send-otp; existing users create extra sandbox keys via POST /v1/api-keys/create-
+    sandbox.
 
     <span>⚡ <strong>Rate limit:</strong> 12 requests per 1 minute</span>
 

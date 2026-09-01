@@ -32,6 +32,8 @@ class CompanyLocationChange:
         change_type (CompanyLocationChangeChangeTypeType1 | CompanyLocationChangeChangeTypeType2Type1 |
             CompanyLocationChangeChangeTypeType3Type1 | None | Unset): Marks a location as newly added. New office alerts
             report only net-new locations, so this is always 'added'; the field is unset in other location signals.
+        office_map_url (None | str | Unset): Map link for this specific office location, when there is enough address
+            data to build one.
     """
 
     city: None | str | Unset = UNSET
@@ -48,6 +50,7 @@ class CompanyLocationChange:
         | None
         | Unset
     ) = UNSET
+    office_map_url: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -111,6 +114,12 @@ class CompanyLocationChange:
         else:
             change_type = self.change_type
 
+        office_map_url: None | str | Unset
+        if isinstance(self.office_map_url, Unset):
+            office_map_url = UNSET
+        else:
+            office_map_url = self.office_map_url
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -130,6 +139,8 @@ class CompanyLocationChange:
             field_dict["postalCode"] = postal_code
         if change_type is not UNSET:
             field_dict["changeType"] = change_type
+        if office_map_url is not UNSET:
+            field_dict["officeMapUrl"] = office_map_url
 
         return field_dict
 
@@ -260,6 +271,15 @@ class CompanyLocationChange:
 
         change_type = _parse_change_type(d.pop("changeType", UNSET))
 
+        def _parse_office_map_url(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        office_map_url = _parse_office_map_url(d.pop("officeMapUrl", UNSET))
+
         company_location_change = cls(
             city=city,
             state=state,
@@ -269,6 +289,7 @@ class CompanyLocationChange:
             street_address=street_address,
             postal_code=postal_code,
             change_type=change_type,
+            office_map_url=office_map_url,
         )
 
         company_location_change.additional_properties = d

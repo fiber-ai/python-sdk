@@ -6,8 +6,8 @@ from typing import TYPE_CHECKING, Any, TypeVar
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.create_tracker_company_list_body_company_search_params_type_0_job_posting_stats_type_0_any_of_type_0_item_type_6_industry import (
-    CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType6Industry,
+from ..models.create_tracker_company_list_body_company_search_params_type_0_job_posting_stats_type_0_any_of_type_0_item_type_6_modality import (
+    CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType6Modality,
 )
 from ..models.create_tracker_company_list_body_company_search_params_type_0_job_posting_stats_type_0_any_of_type_0_item_type_6_rule import (
     CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType6Rule,
@@ -30,13 +30,13 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0An
     """
     Attributes:
         rule (CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType6Rule):
-        industry (CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType6Industry):
+        modality (CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType6Modality):
         range_ (CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType6RangeType0 |
             CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType6RangeType1):
     """
 
     rule: CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType6Rule
-    industry: CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType6Industry
+    modality: CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType6Modality
     range_: (
         CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType6RangeType0
         | CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType6RangeType1
@@ -50,7 +50,7 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0An
 
         rule = self.rule.value
 
-        industry = self.industry.value
+        modality = self.modality.value
 
         range_: dict[str, Any]
         if isinstance(
@@ -66,7 +66,7 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0An
         field_dict.update(
             {
                 "rule": rule,
-                "industry": industry,
+                "modality": modality,
                 "range": range_,
             }
         )
@@ -87,8 +87,8 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0An
             d.pop("rule")
         )
 
-        industry = CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType6Industry(
-            d.pop("industry")
+        modality = CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0AnyOfType0ItemType6Modality(
+            d.pop("modality")
         )
 
         def _parse_range_(
@@ -119,7 +119,7 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0An
 
         create_tracker_company_list_body_company_search_params_type_0_job_posting_stats_type_0_any_of_type_0_item_type_6 = cls(
             rule=rule,
-            industry=industry,
+            modality=modality,
             range_=range_,
         )
 

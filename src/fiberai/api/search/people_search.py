@@ -153,8 +153,9 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 180 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per profile found&nbsp;<span title="Pricing shown is default
-    pricing. Actual pricing may vary.">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per profile found, plus 1 credit when
+    includeCount=true&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary. Count
+    credits only apply when the includeCount flag is set.">ⓘ</span></span>
 
     Args:
         body (PeopleSearchBody):
@@ -201,8 +202,9 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 180 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per profile found&nbsp;<span title="Pricing shown is default
-    pricing. Actual pricing may vary.">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per profile found, plus 1 credit when
+    includeCount=true&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary. Count
+    credits only apply when the includeCount flag is set.">ⓘ</span></span>
 
     Args:
         body (PeopleSearchBody):
@@ -243,8 +245,9 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 180 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per profile found&nbsp;<span title="Pricing shown is default
-    pricing. Actual pricing may vary.">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per profile found, plus 1 credit when
+    includeCount=true&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary. Count
+    credits only apply when the includeCount flag is set.">ⓘ</span></span>
 
     Args:
         body (PeopleSearchBody):
@@ -289,8 +292,9 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 180 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per profile found&nbsp;<span title="Pricing shown is default
-    pricing. Actual pricing may vary.">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> 1 credit per profile found, plus 1 credit when
+    includeCount=true&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary. Count
+    credits only apply when the includeCount flag is set.">ⓘ</span></span>
 
     Args:
         body (PeopleSearchBody):

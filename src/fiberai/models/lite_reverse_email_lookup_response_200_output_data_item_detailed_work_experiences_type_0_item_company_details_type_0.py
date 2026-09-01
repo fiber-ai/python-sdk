@@ -6,6 +6,9 @@ from typing import Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.lite_reverse_email_lookup_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0_standard_industries_type_0_item import (
+    LiteReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0StandardIndustriesType0Item,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar(
@@ -22,6 +25,11 @@ class LiteReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType
         linkedin_primary_slug (None | str | Unset):
         domains (list[str] | None | Unset):
         preferred_name (None | str | Unset):
+        crunchbase_slug (None | str | Unset):
+        logo_url (None | str | Unset):
+        standard_industries (list[LiteReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompany
+            DetailsType0StandardIndustriesType0Item] | None | Unset):
+        li_industries (list[str] | None | Unset):
     """
 
     linkedin_ids: list[str] | None | Unset = UNSET
@@ -29,6 +37,16 @@ class LiteReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType
     linkedin_primary_slug: None | str | Unset = UNSET
     domains: list[str] | None | Unset = UNSET
     preferred_name: None | str | Unset = UNSET
+    crunchbase_slug: None | str | Unset = UNSET
+    logo_url: None | str | Unset = UNSET
+    standard_industries: (
+        list[
+            LiteReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0StandardIndustriesType0Item
+        ]
+        | None
+        | Unset
+    ) = UNSET
+    li_industries: list[str] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -68,6 +86,39 @@ class LiteReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType
         else:
             preferred_name = self.preferred_name
 
+        crunchbase_slug: None | str | Unset
+        if isinstance(self.crunchbase_slug, Unset):
+            crunchbase_slug = UNSET
+        else:
+            crunchbase_slug = self.crunchbase_slug
+
+        logo_url: None | str | Unset
+        if isinstance(self.logo_url, Unset):
+            logo_url = UNSET
+        else:
+            logo_url = self.logo_url
+
+        standard_industries: list[str] | None | Unset
+        if isinstance(self.standard_industries, Unset):
+            standard_industries = UNSET
+        elif isinstance(self.standard_industries, list):
+            standard_industries = []
+            for standard_industries_type_0_item_data in self.standard_industries:
+                standard_industries_type_0_item = standard_industries_type_0_item_data.value
+                standard_industries.append(standard_industries_type_0_item)
+
+        else:
+            standard_industries = self.standard_industries
+
+        li_industries: list[str] | None | Unset
+        if isinstance(self.li_industries, Unset):
+            li_industries = UNSET
+        elif isinstance(self.li_industries, list):
+            li_industries = self.li_industries
+
+        else:
+            li_industries = self.li_industries
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -81,6 +132,14 @@ class LiteReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType
             field_dict["domains"] = domains
         if preferred_name is not UNSET:
             field_dict["preferred_name"] = preferred_name
+        if crunchbase_slug is not UNSET:
+            field_dict["crunchbase_slug"] = crunchbase_slug
+        if logo_url is not UNSET:
+            field_dict["logo_url"] = logo_url
+        if standard_industries is not UNSET:
+            field_dict["standard_industries"] = standard_industries
+        if li_industries is not UNSET:
+            field_dict["li_industries"] = li_industries
 
         return field_dict
 
@@ -149,12 +208,90 @@ class LiteReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType
 
         preferred_name = _parse_preferred_name(d.pop("preferred_name", UNSET))
 
+        def _parse_crunchbase_slug(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        crunchbase_slug = _parse_crunchbase_slug(d.pop("crunchbase_slug", UNSET))
+
+        def _parse_logo_url(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        logo_url = _parse_logo_url(d.pop("logo_url", UNSET))
+
+        def _parse_standard_industries(
+            data: object,
+        ) -> (
+            list[
+                LiteReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0StandardIndustriesType0Item
+            ]
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                standard_industries_type_0 = []
+                _standard_industries_type_0 = data
+                for standard_industries_type_0_item_data in _standard_industries_type_0:
+                    standard_industries_type_0_item = LiteReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0StandardIndustriesType0Item(
+                        standard_industries_type_0_item_data
+                    )
+
+                    standard_industries_type_0.append(standard_industries_type_0_item)
+
+                return standard_industries_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                list[
+                    LiteReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0StandardIndustriesType0Item
+                ]
+                | None
+                | Unset,
+                data,
+            )
+
+        standard_industries = _parse_standard_industries(d.pop("standard_industries", UNSET))
+
+        def _parse_li_industries(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                li_industries_type_0 = cast(list[str], data)
+
+                return li_industries_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        li_industries = _parse_li_industries(d.pop("li_industries", UNSET))
+
         lite_reverse_email_lookup_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0 = cls(
             linkedin_ids=linkedin_ids,
             li_org_id=li_org_id,
             linkedin_primary_slug=linkedin_primary_slug,
             domains=domains,
             preferred_name=preferred_name,
+            crunchbase_slug=crunchbase_slug,
+            logo_url=logo_url,
+            standard_industries=standard_industries,
+            li_industries=li_industries,
         )
 
         lite_reverse_email_lookup_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0.additional_properties = d
