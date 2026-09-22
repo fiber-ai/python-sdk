@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -9,6 +9,7 @@ from attrs import field as _attrs_field
 from ..models.combined_search_count_body_profile_params_job_title_v3_type_0_none_of_type_0_item_type_0_type import (
     CombinedSearchCountBodyProfileParamsJobTitleV3Type0NoneOfType0ItemType0Type,
 )
+from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="CombinedSearchCountBodyProfileParamsJobTitleV3Type0NoneOfType0ItemType0")
 
@@ -19,16 +20,24 @@ class CombinedSearchCountBodyProfileParamsJobTitleV3Type0NoneOfType0ItemType0:
     Attributes:
         type_ (CombinedSearchCountBodyProfileParamsJobTitleV3Type0NoneOfType0ItemType0Type):
         term (str):
+        exact (bool | None | Unset):
     """
 
     type_: CombinedSearchCountBodyProfileParamsJobTitleV3Type0NoneOfType0ItemType0Type
     term: str
+    exact: bool | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         type_ = self.type_.value
 
         term = self.term
+
+        exact: bool | None | Unset
+        if isinstance(self.exact, Unset):
+            exact = UNSET
+        else:
+            exact = self.exact
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -38,6 +47,8 @@ class CombinedSearchCountBodyProfileParamsJobTitleV3Type0NoneOfType0ItemType0:
                 "term": term,
             }
         )
+        if exact is not UNSET:
+            field_dict["exact"] = exact
 
         return field_dict
 
@@ -48,9 +59,19 @@ class CombinedSearchCountBodyProfileParamsJobTitleV3Type0NoneOfType0ItemType0:
 
         term = d.pop("term")
 
+        def _parse_exact(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        exact = _parse_exact(d.pop("exact", UNSET))
+
         combined_search_count_body_profile_params_job_title_v3_type_0_none_of_type_0_item_type_0 = cls(
             type_=type_,
             term=term,
+            exact=exact,
         )
 
         combined_search_count_body_profile_params_job_title_v3_type_0_none_of_type_0_item_type_0.additional_properties = d

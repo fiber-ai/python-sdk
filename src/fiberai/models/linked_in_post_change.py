@@ -26,6 +26,8 @@ class LinkedInPostChange:
         poster_slug (None | str | Unset): LinkedIn slug of the poster (e.g. 'williamhgates')
         poster_url (None | str | Unset): Full LinkedIn profile URL of the poster
         poster_profile_picture (None | str | Unset): Profile picture URL of the poster
+        matched_keywords (list[str] | None | Unset): Keywords from your tracking rule that this post matched. Omitted
+            for rules without keywords.
     """
 
     post_id: str
@@ -39,6 +41,7 @@ class LinkedInPostChange:
     poster_slug: None | str | Unset = UNSET
     poster_url: None | str | Unset = UNSET
     poster_profile_picture: None | str | Unset = UNSET
+    matched_keywords: list[str] | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -104,6 +107,15 @@ class LinkedInPostChange:
         else:
             poster_profile_picture = self.poster_profile_picture
 
+        matched_keywords: list[str] | None | Unset
+        if isinstance(self.matched_keywords, Unset):
+            matched_keywords = UNSET
+        elif isinstance(self.matched_keywords, list):
+            matched_keywords = self.matched_keywords
+
+        else:
+            matched_keywords = self.matched_keywords
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -131,6 +143,8 @@ class LinkedInPostChange:
             field_dict["posterUrl"] = poster_url
         if poster_profile_picture is not UNSET:
             field_dict["posterProfilePicture"] = poster_profile_picture
+        if matched_keywords is not UNSET:
+            field_dict["matchedKeywords"] = matched_keywords
 
         return field_dict
 
@@ -229,6 +243,23 @@ class LinkedInPostChange:
 
         poster_profile_picture = _parse_poster_profile_picture(d.pop("posterProfilePicture", UNSET))
 
+        def _parse_matched_keywords(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                matched_keywords_type_0 = cast(list[str], data)
+
+                return matched_keywords_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        matched_keywords = _parse_matched_keywords(d.pop("matchedKeywords", UNSET))
+
         linked_in_post_change = cls(
             post_id=post_id,
             post_url=post_url,
@@ -241,6 +272,7 @@ class LinkedInPostChange:
             poster_slug=poster_slug,
             poster_url=poster_url,
             poster_profile_picture=poster_profile_picture,
+            matched_keywords=matched_keywords,
         )
 
         linked_in_post_change.additional_properties = d

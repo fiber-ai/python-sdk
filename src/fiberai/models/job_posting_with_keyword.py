@@ -8,6 +8,7 @@ from attrs import field as _attrs_field
 
 from ..models.job_posting_with_keyword_location_types_type_0_item import JobPostingWithKeywordLocationTypesType0Item
 from ..models.job_posting_with_keyword_modalities_type_0_item import JobPostingWithKeywordModalitiesType0Item
+from ..models.job_posting_with_keyword_search_fields_type_0_item import JobPostingWithKeywordSearchFieldsType0Item
 from ..models.job_posting_with_keyword_seniority_levels_type_0_item import JobPostingWithKeywordSeniorityLevelsType0Item
 from ..types import UNSET, Unset
 
@@ -20,11 +21,13 @@ class JobPostingWithKeyword:
     Attributes:
         type_ (Literal['job_posting_with_keyword']):
         entity_type (Literal['company']):
-        keywords (list[str]): Alert when a job posting title contains any of these keywords
+        keywords (list[str]): Alert when a job posting contains any of these keywords in the selected search fields.
         lookback_days (int | None | Unset): Compare against a snapshot from approximately N days ago instead of the most
             recent prior snapshot. Omit for the default previous-snapshot comparison. Maximum 90 days.
         is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
             normal pipeline runs.
+        search_fields (list[JobPostingWithKeywordSearchFieldsType0Item] | None | Unset): Job posting fields to search
+            for the keywords. Omit to search the title only.
         seniority_levels (list[JobPostingWithKeywordSeniorityLevelsType0Item] | None | Unset): Only alert for these
             seniority levels. Omit for any level.
         modalities (list[JobPostingWithKeywordModalitiesType0Item] | None | Unset): Only alert for these job modalities.
@@ -40,6 +43,7 @@ class JobPostingWithKeyword:
     keywords: list[str]
     lookback_days: int | None | Unset = UNSET
     is_dummy: bool | Unset = UNSET
+    search_fields: list[JobPostingWithKeywordSearchFieldsType0Item] | None | Unset = UNSET
     seniority_levels: list[JobPostingWithKeywordSeniorityLevelsType0Item] | None | Unset = UNSET
     modalities: list[JobPostingWithKeywordModalitiesType0Item] | None | Unset = UNSET
     location_types: list[JobPostingWithKeywordLocationTypesType0Item] | None | Unset = UNSET
@@ -60,6 +64,18 @@ class JobPostingWithKeyword:
             lookback_days = self.lookback_days
 
         is_dummy = self.is_dummy
+
+        search_fields: list[str] | None | Unset
+        if isinstance(self.search_fields, Unset):
+            search_fields = UNSET
+        elif isinstance(self.search_fields, list):
+            search_fields = []
+            for search_fields_type_0_item_data in self.search_fields:
+                search_fields_type_0_item = search_fields_type_0_item_data.value
+                search_fields.append(search_fields_type_0_item)
+
+        else:
+            search_fields = self.search_fields
 
         seniority_levels: list[str] | None | Unset
         if isinstance(self.seniority_levels, Unset):
@@ -116,6 +132,8 @@ class JobPostingWithKeyword:
             field_dict["lookbackDays"] = lookback_days
         if is_dummy is not UNSET:
             field_dict["isDummy"] = is_dummy
+        if search_fields is not UNSET:
+            field_dict["searchFields"] = search_fields
         if seniority_levels is not UNSET:
             field_dict["seniorityLevels"] = seniority_levels
         if modalities is not UNSET:
@@ -150,6 +168,30 @@ class JobPostingWithKeyword:
         lookback_days = _parse_lookback_days(d.pop("lookbackDays", UNSET))
 
         is_dummy = d.pop("isDummy", UNSET)
+
+        def _parse_search_fields(data: object) -> list[JobPostingWithKeywordSearchFieldsType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                search_fields_type_0 = []
+                _search_fields_type_0 = data
+                for search_fields_type_0_item_data in _search_fields_type_0:
+                    search_fields_type_0_item = JobPostingWithKeywordSearchFieldsType0Item(
+                        search_fields_type_0_item_data
+                    )
+
+                    search_fields_type_0.append(search_fields_type_0_item)
+
+                return search_fields_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[JobPostingWithKeywordSearchFieldsType0Item] | None | Unset, data)
+
+        search_fields = _parse_search_fields(d.pop("searchFields", UNSET))
 
         def _parse_seniority_levels(data: object) -> list[JobPostingWithKeywordSeniorityLevelsType0Item] | None | Unset:
             if data is None:
@@ -236,6 +278,7 @@ class JobPostingWithKeyword:
             keywords=keywords,
             lookback_days=lookback_days,
             is_dummy=is_dummy,
+            search_fields=search_fields,
             seniority_levels=seniority_levels,
             modalities=modalities,
             location_types=location_types,

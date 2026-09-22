@@ -150,7 +150,10 @@ def sync_detailed(
     """Poll batch live enrichment
 
      Polls a batch live enrichment task for progress and results. Returns paginated enrichment results as
-    they complete. Call repeatedly until status is 'completed' or 'failed'.
+    they complete. Call repeatedly until status is 'completed' or 'failed'. For profile batches, pass
+    `getDetailedEducation`/`getDetailedWorkExperience` on a given poll call to include deep
+    education/work-experience details in that page's results; this slows the call down, so only enable
+    it if you need it.
 
     <span>⚡ <strong>Rate limit:</strong> 360 requests per 1 minute</span>
 
@@ -196,7 +199,10 @@ def sync(
     """Poll batch live enrichment
 
      Polls a batch live enrichment task for progress and results. Returns paginated enrichment results as
-    they complete. Call repeatedly until status is 'completed' or 'failed'.
+    they complete. Call repeatedly until status is 'completed' or 'failed'. For profile batches, pass
+    `getDetailedEducation`/`getDetailedWorkExperience` on a given poll call to include deep
+    education/work-experience details in that page's results; this slows the call down, so only enable
+    it if you need it.
 
     <span>⚡ <strong>Rate limit:</strong> 360 requests per 1 minute</span>
 
@@ -236,7 +242,10 @@ async def asyncio_detailed(
     """Poll batch live enrichment
 
      Polls a batch live enrichment task for progress and results. Returns paginated enrichment results as
-    they complete. Call repeatedly until status is 'completed' or 'failed'.
+    they complete. Call repeatedly until status is 'completed' or 'failed'. For profile batches, pass
+    `getDetailedEducation`/`getDetailedWorkExperience` on a given poll call to include deep
+    education/work-experience details in that page's results; this slows the call down, so only enable
+    it if you need it.
 
     <span>⚡ <strong>Rate limit:</strong> 360 requests per 1 minute</span>
 
@@ -280,7 +289,10 @@ async def asyncio(
     """Poll batch live enrichment
 
      Polls a batch live enrichment task for progress and results. Returns paginated enrichment results as
-    they complete. Call repeatedly until status is 'completed' or 'failed'.
+    they complete. Call repeatedly until status is 'completed' or 'failed'. For profile batches, pass
+    `getDetailedEducation`/`getDetailedWorkExperience` on a given poll call to include deep
+    education/work-experience details in that page's results; this slows the call down, so only enable
+    it if you need it.
 
     <span>⚡ <strong>Rate limit:</strong> 360 requests per 1 minute</span>
 

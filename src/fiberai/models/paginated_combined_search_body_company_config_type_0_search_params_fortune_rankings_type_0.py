@@ -12,6 +12,9 @@ if TYPE_CHECKING:
     from ..models.paginated_combined_search_body_company_config_type_0_search_params_fortune_rankings_type_0_any_of_type_0_item import (
         PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0AnyOfType0Item,
     )
+    from ..models.paginated_combined_search_body_company_config_type_0_search_params_fortune_rankings_type_0_none_of_type_0_item import (
+        PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0NoneOfType0Item,
+    )
 
 
 T = TypeVar("T", bound="PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0")
@@ -23,10 +26,17 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsTy
     Attributes:
         any_of (list[PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0AnyOfType0Item] | None
             | Unset):
+        none_of (list[PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0NoneOfType0Item] |
+            None | Unset):
     """
 
     any_of: (
         list[PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0AnyOfType0Item] | None | Unset
+    ) = UNSET
+    none_of: (
+        list[PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0NoneOfType0Item]
+        | None
+        | Unset
     ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -43,11 +53,25 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsTy
         else:
             any_of = self.any_of
 
+        none_of: list[dict[str, Any]] | None | Unset
+        if isinstance(self.none_of, Unset):
+            none_of = UNSET
+        elif isinstance(self.none_of, list):
+            none_of = []
+            for none_of_type_0_item_data in self.none_of:
+                none_of_type_0_item = none_of_type_0_item_data.to_dict()
+                none_of.append(none_of_type_0_item)
+
+        else:
+            none_of = self.none_of
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
         if any_of is not UNSET:
             field_dict["anyOf"] = any_of
+        if none_of is not UNSET:
+            field_dict["noneOf"] = none_of
 
         return field_dict
 
@@ -55,6 +79,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsTy
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_fortune_rankings_type_0_any_of_type_0_item import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0AnyOfType0Item,  # noqa: PLC0415
+        )
+        from ..models.paginated_combined_search_body_company_config_type_0_search_params_fortune_rankings_type_0_none_of_type_0_item import (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0NoneOfType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -94,8 +121,44 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsTy
 
         any_of = _parse_any_of(d.pop("anyOf", UNSET))
 
+        def _parse_none_of(
+            data: object,
+        ) -> (
+            list[PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0NoneOfType0Item]
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                none_of_type_0 = []
+                _none_of_type_0 = data
+                for none_of_type_0_item_data in _none_of_type_0:
+                    none_of_type_0_item = PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0NoneOfType0Item.from_dict(
+                        none_of_type_0_item_data
+                    )
+
+                    none_of_type_0.append(none_of_type_0_item)
+
+                return none_of_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                list[PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFortuneRankingsType0NoneOfType0Item]
+                | None
+                | Unset,
+                data,
+            )
+
+        none_of = _parse_none_of(d.pop("noneOf", UNSET))
+
         paginated_combined_search_body_company_config_type_0_search_params_fortune_rankings_type_0 = cls(
             any_of=any_of,
+            none_of=none_of,
         )
 
         paginated_combined_search_body_company_config_type_0_search_params_fortune_rankings_type_0.additional_properties = d

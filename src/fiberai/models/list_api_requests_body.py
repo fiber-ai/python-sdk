@@ -18,7 +18,7 @@ class ListApiRequestsBody:
     Attributes:
         api_key (str): Your Fiber API key
         from_ (datetime.datetime | None | Unset): Only return requests received at or after this ISO 8601 timestamp.
-            Logs are retained for 7 days, so earlier timestamps simply return nothing.
+            Logs are retained for 14 days, so earlier timestamps simply return nothing.
         to (datetime.datetime | None | Unset): Only return requests received strictly before this ISO 8601 timestamp.
         route_path (None | str | Unset): Only return requests to this exact route template, e.g. "/v1/person/search".
         method (None | str | Unset): Only return requests using this HTTP method, e.g. "POST".

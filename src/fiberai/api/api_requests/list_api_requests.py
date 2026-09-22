@@ -152,7 +152,7 @@ def sync_detailed(
      List the API requests your organization has made, newest first, with the parameters you sent and how
     each call turned out. Use it to answer 'what did my agent actually run?' — debugging a failed run,
     auditing usage, or quoting an `errorCode` in a support request. Filter by time range, route, method,
-    status code, or error code, and page through results with `cursor`. History is retained for 7 days;
+    status code, or error code, and page through results with `cursor`. History is retained for 14 days;
     anything older has been purged. Response bodies are not returned — only the request side of each
     call.
 
@@ -205,7 +205,7 @@ def sync(
      List the API requests your organization has made, newest first, with the parameters you sent and how
     each call turned out. Use it to answer 'what did my agent actually run?' — debugging a failed run,
     auditing usage, or quoting an `errorCode` in a support request. Filter by time range, route, method,
-    status code, or error code, and page through results with `cursor`. History is retained for 7 days;
+    status code, or error code, and page through results with `cursor`. History is retained for 14 days;
     anything older has been purged. Response bodies are not returned — only the request side of each
     call.
 
@@ -252,7 +252,7 @@ async def asyncio_detailed(
      List the API requests your organization has made, newest first, with the parameters you sent and how
     each call turned out. Use it to answer 'what did my agent actually run?' — debugging a failed run,
     auditing usage, or quoting an `errorCode` in a support request. Filter by time range, route, method,
-    status code, or error code, and page through results with `cursor`. History is retained for 7 days;
+    status code, or error code, and page through results with `cursor`. History is retained for 14 days;
     anything older has been purged. Response bodies are not returned — only the request side of each
     call.
 
@@ -303,7 +303,7 @@ async def asyncio(
      List the API requests your organization has made, newest first, with the parameters you sent and how
     each call turned out. Use it to answer 'what did my agent actually run?' — debugging a failed run,
     auditing usage, or quoting an `errorCode` in a support request. Filter by time range, route, method,
-    status code, or error code, and page through results with `cursor`. History is retained for 7 days;
+    status code, or error code, and page through results with `cursor`. History is retained for 14 days;
     anything older has been purged. Response bodies are not returned — only the request side of each
     call.
 

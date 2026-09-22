@@ -152,7 +152,7 @@ def sync_detailed(
      Fetches the public profile for a Twitter/X user by handle. Returns follower/following counts, bio,
     verification status, and account metadata.
 
-    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary.">ⓘ</span></span>
@@ -201,7 +201,7 @@ def sync(
      Fetches the public profile for a Twitter/X user by handle. Returns follower/following counts, bio,
     verification status, and account metadata.
 
-    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary.">ⓘ</span></span>
@@ -244,7 +244,7 @@ async def asyncio_detailed(
      Fetches the public profile for a Twitter/X user by handle. Returns follower/following counts, bio,
     verification status, and account metadata.
 
-    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary.">ⓘ</span></span>
@@ -291,7 +291,7 @@ async def asyncio(
      Fetches the public profile for a Twitter/X user by handle. Returns follower/following counts, bio,
     verification status, and account metadata.
 
-    <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per request&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary.">ⓘ</span></span>

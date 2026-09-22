@@ -10,8 +10,17 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_all_email_reveal import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0AllEmailReveal,
     )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_basic_work_email_reveal import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BasicWorkEmailReveal,
+    )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_blue_collar_job_search import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BlueCollarJobSearch,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_booking_property_lookup import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BookingPropertyLookup,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_booking_search import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BookingSearch,
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_bulk_company_logo_lookup import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BulkCompanyLogoLookup,
@@ -24,6 +33,15 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_combined_reveal import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CombinedReveal,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_company_review_page import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviewPage,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_company_review_search import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviewSearch,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_company_reviews import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviews,
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_domain_lookup_agent import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0DomainLookupAgent,
@@ -63,6 +81,9 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_flight_booking_page import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FlightBookingPage,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_flight_deals import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FlightDeals,
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_flight_search import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FlightSearch,
@@ -157,6 +178,12 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_lookup_agent import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubLookupAgent,
     )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_google_maps_place import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsPlace,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_google_maps_reviews import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsReviews,
+    )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_google_maps_scrape import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsScrape,
     )
@@ -219,6 +246,15 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_phone_reveal import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PhoneReveal,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_place_page import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PlacePage,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_place_reviews import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PlaceReviews,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_place_search import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PlaceSearch,
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_premium_all_email_reveal import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PremiumAllEmailReveal,
@@ -397,6 +433,7 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         standardize_company_slug (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0StandardizeCompanySlug):
         standardize_person_slug (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0StandardizePersonSlug):
         work_email_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0WorkEmailReveal):
+        basic_work_email_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BasicWorkEmailReveal):
         personal_email_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PersonalEmailReveal):
         lite_email_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LiteEmailReveal):
         lite_phone_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LitePhoneReveal):
@@ -513,6 +550,17 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         fetch_company_employee (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FetchCompanyEmployee):
         get_company_from_ranking_list
             (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyFromRankingList):
+        flight_deals (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FlightDeals):
+        booking_search (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BookingSearch):
+        booking_property_lookup (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BookingPropertyLookup):
+        google_maps_place (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsPlace):
+        google_maps_reviews (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsReviews):
+        place_search (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PlaceSearch):
+        place_page (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PlacePage):
+        place_reviews (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PlaceReviews):
+        company_review_search (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviewSearch):
+        company_review_page (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviewPage):
+        company_reviews (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviews):
     """
 
     get_company_from_db: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyFromDb
@@ -534,6 +582,7 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
     standardize_company_slug: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0StandardizeCompanySlug
     standardize_person_slug: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0StandardizePersonSlug
     work_email_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0WorkEmailReveal
+    basic_work_email_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BasicWorkEmailReveal
     personal_email_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PersonalEmailReveal
     lite_email_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LiteEmailReveal
     lite_phone_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LitePhoneReveal
@@ -647,9 +696,56 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
     lead_list_from_domain: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LeadListFromDomain
     fetch_company_employee: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FetchCompanyEmployee
     get_company_from_ranking_list: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyFromRankingList
+    flight_deals: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FlightDeals
+    booking_search: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BookingSearch
+    booking_property_lookup: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BookingPropertyLookup
+    google_maps_place: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsPlace
+    google_maps_reviews: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsReviews
+    place_search: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PlaceSearch
+    place_page: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PlacePage
+    place_reviews: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PlaceReviews
+    company_review_search: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviewSearch
+    company_review_page: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviewPage
+    company_reviews: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviews
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_post_quotes import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialPostQuotes,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_post_reactions import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialPostReactions,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_post_replies import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialPostReplies,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_post_reposts import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialPostReposts,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_post_search import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialPostSearch,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_user_details import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialUserDetails,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_user_followers import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialUserFollowers,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_user_following import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialUserFollowing,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_user_mentions import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialUserMentions,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_user_posts import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialUserPosts,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_user_search import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialUserSearch,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_standardize_company_slug import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0StandardizeCompanySlug,
+        )  # noqa: PLC0415
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_standardize_person_slug import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0StandardizePersonSlug,
         )  # noqa: PLC0415
@@ -744,6 +840,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         standardize_person_slug = self.standardize_person_slug.to_dict()
 
         work_email_reveal = self.work_email_reveal.to_dict()
+
+        basic_work_email_reveal = self.basic_work_email_reveal.to_dict()
 
         personal_email_reveal = self.personal_email_reveal.to_dict()
 
@@ -951,6 +1049,28 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
 
         get_company_from_ranking_list = self.get_company_from_ranking_list.to_dict()
 
+        flight_deals = self.flight_deals.to_dict()
+
+        booking_search = self.booking_search.to_dict()
+
+        booking_property_lookup = self.booking_property_lookup.to_dict()
+
+        google_maps_place = self.google_maps_place.to_dict()
+
+        google_maps_reviews = self.google_maps_reviews.to_dict()
+
+        place_search = self.place_search.to_dict()
+
+        place_page = self.place_page.to_dict()
+
+        place_reviews = self.place_reviews.to_dict()
+
+        company_review_search = self.company_review_search.to_dict()
+
+        company_review_page = self.company_review_page.to_dict()
+
+        company_reviews = self.company_reviews.to_dict()
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -972,6 +1092,7 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
                 "standardizeCompanySlug": standardize_company_slug,
                 "standardizePersonSlug": standardize_person_slug,
                 "workEmailReveal": work_email_reveal,
+                "basicWorkEmailReveal": basic_work_email_reveal,
                 "personalEmailReveal": personal_email_reveal,
                 "liteEmailReveal": lite_email_reveal,
                 "litePhoneReveal": lite_phone_reveal,
@@ -1075,6 +1196,17 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
                 "leadListFromDomain": lead_list_from_domain,
                 "fetchCompanyEmployee": fetch_company_employee,
                 "getCompanyFromRankingList": get_company_from_ranking_list,
+                "flightDeals": flight_deals,
+                "bookingSearch": booking_search,
+                "bookingPropertyLookup": booking_property_lookup,
+                "googleMapsPlace": google_maps_place,
+                "googleMapsReviews": google_maps_reviews,
+                "placeSearch": place_search,
+                "placePage": place_page,
+                "placeReviews": place_reviews,
+                "companyReviewSearch": company_review_search,
+                "companyReviewPage": company_review_page,
+                "companyReviews": company_reviews,
             }
         )
 
@@ -1085,8 +1217,17 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_all_email_reveal import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0AllEmailReveal,  # noqa: PLC0415
         )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_basic_work_email_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BasicWorkEmailReveal,  # noqa: PLC0415
+        )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_blue_collar_job_search import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BlueCollarJobSearch,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_booking_property_lookup import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BookingPropertyLookup,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_booking_search import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BookingSearch,  # noqa: PLC0415
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_bulk_company_logo_lookup import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BulkCompanyLogoLookup,  # noqa: PLC0415
@@ -1099,6 +1240,15 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_combined_reveal import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CombinedReveal,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_company_review_page import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviewPage,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_company_review_search import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviewSearch,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_company_reviews import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviews,  # noqa: PLC0415
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_domain_lookup_agent import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0DomainLookupAgent,  # noqa: PLC0415
@@ -1138,6 +1288,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_flight_booking_page import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FlightBookingPage,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_flight_deals import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FlightDeals,  # noqa: PLC0415
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_flight_search import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FlightSearch,  # noqa: PLC0415
@@ -1232,6 +1385,12 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_lookup_agent import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubLookupAgent,  # noqa: PLC0415
         )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_google_maps_place import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsPlace,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_google_maps_reviews import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsReviews,  # noqa: PLC0415
+        )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_google_maps_scrape import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsScrape,  # noqa: PLC0415
         )
@@ -1294,6 +1453,15 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_phone_reveal import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PhoneReveal,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_place_page import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PlacePage,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_place_reviews import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PlaceReviews,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_place_search import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PlaceSearch,  # noqa: PLC0415
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_premium_all_email_reveal import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PremiumAllEmailReveal,  # noqa: PLC0415
@@ -1530,6 +1698,12 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
 
         work_email_reveal = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0WorkEmailReveal.from_dict(
             d.pop("workEmailReveal")
+        )
+
+        basic_work_email_reveal = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BasicWorkEmailReveal.from_dict(
+                d.pop("basicWorkEmailReveal")
+            )
         )
 
         personal_email_reveal = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PersonalEmailReveal.from_dict(
@@ -2022,6 +2196,50 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             )
         )
 
+        flight_deals = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0FlightDeals.from_dict(
+            d.pop("flightDeals")
+        )
+
+        booking_search = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BookingSearch.from_dict(
+            d.pop("bookingSearch")
+        )
+
+        booking_property_lookup = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0BookingPropertyLookup.from_dict(
+                d.pop("bookingPropertyLookup")
+            )
+        )
+
+        google_maps_place = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsPlace.from_dict(
+            d.pop("googleMapsPlace")
+        )
+
+        google_maps_reviews = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsReviews.from_dict(
+            d.pop("googleMapsReviews")
+        )
+
+        place_search = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PlaceSearch.from_dict(
+            d.pop("placeSearch")
+        )
+
+        place_page = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PlacePage.from_dict(d.pop("placePage"))
+
+        place_reviews = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PlaceReviews.from_dict(
+            d.pop("placeReviews")
+        )
+
+        company_review_search = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviewSearch.from_dict(
+            d.pop("companyReviewSearch")
+        )
+
+        company_review_page = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviewPage.from_dict(
+            d.pop("companyReviewPage")
+        )
+
+        company_reviews = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviews.from_dict(
+            d.pop("companyReviews")
+        )
+
         get_org_credits_response_200_output_item_credits_per_operation_type_0 = cls(
             get_company_from_db=get_company_from_db,
             get_person_from_db=get_person_from_db,
@@ -2040,6 +2258,7 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             standardize_company_slug=standardize_company_slug,
             standardize_person_slug=standardize_person_slug,
             work_email_reveal=work_email_reveal,
+            basic_work_email_reveal=basic_work_email_reveal,
             personal_email_reveal=personal_email_reveal,
             lite_email_reveal=lite_email_reveal,
             lite_phone_reveal=lite_phone_reveal,
@@ -2143,6 +2362,17 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             lead_list_from_domain=lead_list_from_domain,
             fetch_company_employee=fetch_company_employee,
             get_company_from_ranking_list=get_company_from_ranking_list,
+            flight_deals=flight_deals,
+            booking_search=booking_search,
+            booking_property_lookup=booking_property_lookup,
+            google_maps_place=google_maps_place,
+            google_maps_reviews=google_maps_reviews,
+            place_search=place_search,
+            place_page=place_page,
+            place_reviews=place_reviews,
+            company_review_search=company_review_search,
+            company_review_page=company_review_page,
+            company_reviews=company_reviews,
         )
 
         get_org_credits_response_200_output_item_credits_per_operation_type_0.additional_properties = d

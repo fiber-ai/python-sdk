@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import Any, TypeVar
+from typing import Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -9,6 +9,7 @@ from attrs import field as _attrs_field
 from ..models.combined_search_count_body_company_params_crunchbase_categories_type_0_any_of_type_0_item_type import (
     CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0AnyOfType0ItemType,
 )
+from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0AnyOfType0Item")
 
@@ -17,48 +18,60 @@ T = TypeVar("T", bound="CombinedSearchCountBodyCompanyParamsCrunchbaseCategories
 class CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0AnyOfType0Item:
     """
     Attributes:
-        group (str):
         category (str):
         type_ (CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0AnyOfType0ItemType):
+        group (None | str | Unset):
     """
 
-    group: str
     category: str
     type_: CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0AnyOfType0ItemType
+    group: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        group = self.group
-
         category = self.category
 
         type_ = self.type_.value
+
+        group: None | str | Unset
+        if isinstance(self.group, Unset):
+            group = UNSET
+        else:
+            group = self.group
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
-                "group": group,
                 "category": category,
                 "type": type_,
             }
         )
+        if group is not UNSET:
+            field_dict["group"] = group
 
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         d = dict(src_dict)
-        group = d.pop("group")
-
         category = d.pop("category")
 
         type_ = CombinedSearchCountBodyCompanyParamsCrunchbaseCategoriesType0AnyOfType0ItemType(d.pop("type"))
 
+        def _parse_group(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        group = _parse_group(d.pop("group", UNSET))
+
         combined_search_count_body_company_params_crunchbase_categories_type_0_any_of_type_0_item = cls(
-            group=group,
             category=category,
             type_=type_,
+            group=group,
         )
 
         combined_search_count_body_company_params_crunchbase_categories_type_0_any_of_type_0_item.additional_properties = d

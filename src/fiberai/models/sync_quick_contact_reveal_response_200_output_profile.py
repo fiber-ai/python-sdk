@@ -18,6 +18,9 @@ if TYPE_CHECKING:
     from ..models.sync_quick_contact_reveal_response_200_output_profile_phone_numbers_item import (
         SyncQuickContactRevealResponse200OutputProfilePhoneNumbersItem,
     )
+    from ..models.sync_quick_contact_reveal_response_200_output_profile_unmatched_work_emails_item import (
+        SyncQuickContactRevealResponse200OutputProfileUnmatchedWorkEmailsItem,
+    )
 
 
 T = TypeVar("T", bound="SyncQuickContactRevealResponse200OutputProfile")
@@ -34,6 +37,9 @@ class SyncQuickContactRevealResponse200OutputProfile:
         task_id (str):
         linkedin_url (str):
         name (None | str | Unset): The person's full name. Null when no resolved name is available.
+        unmatched_work_emails (list[SyncQuickContactRevealResponse200OutputProfileUnmatchedWorkEmailsItem] | Unset):
+            Work emails found for this person whose domain does not match the person's current company (or the company you
+            specified). These are not included in emails. Present only when at least one such email was found.
     """
 
     status: SyncQuickContactRevealResponse200OutputProfileStatus
@@ -43,6 +49,7 @@ class SyncQuickContactRevealResponse200OutputProfile:
     task_id: str
     linkedin_url: str
     name: None | str | Unset = UNSET
+    unmatched_work_emails: list[SyncQuickContactRevealResponse200OutputProfileUnmatchedWorkEmailsItem] | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -70,6 +77,13 @@ class SyncQuickContactRevealResponse200OutputProfile:
         else:
             name = self.name
 
+        unmatched_work_emails: list[dict[str, Any]] | Unset = UNSET
+        if not isinstance(self.unmatched_work_emails, Unset):
+            unmatched_work_emails = []
+            for unmatched_work_emails_item_data in self.unmatched_work_emails:
+                unmatched_work_emails_item = unmatched_work_emails_item_data.to_dict()
+                unmatched_work_emails.append(unmatched_work_emails_item)
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -84,6 +98,8 @@ class SyncQuickContactRevealResponse200OutputProfile:
         )
         if name is not UNSET:
             field_dict["name"] = name
+        if unmatched_work_emails is not UNSET:
+            field_dict["unmatchedWorkEmails"] = unmatched_work_emails
 
         return field_dict
 
@@ -94,6 +110,9 @@ class SyncQuickContactRevealResponse200OutputProfile:
         )
         from ..models.sync_quick_contact_reveal_response_200_output_profile_phone_numbers_item import (
             SyncQuickContactRevealResponse200OutputProfilePhoneNumbersItem,  # noqa: PLC0415
+        )
+        from ..models.sync_quick_contact_reveal_response_200_output_profile_unmatched_work_emails_item import (
+            SyncQuickContactRevealResponse200OutputProfileUnmatchedWorkEmailsItem,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -130,6 +149,21 @@ class SyncQuickContactRevealResponse200OutputProfile:
 
         name = _parse_name(d.pop("name", UNSET))
 
+        _unmatched_work_emails = d.pop("unmatchedWorkEmails", UNSET)
+        unmatched_work_emails: list[SyncQuickContactRevealResponse200OutputProfileUnmatchedWorkEmailsItem] | Unset = (
+            UNSET
+        )
+        if _unmatched_work_emails is not UNSET:
+            unmatched_work_emails = []
+            for unmatched_work_emails_item_data in _unmatched_work_emails:
+                unmatched_work_emails_item = (
+                    SyncQuickContactRevealResponse200OutputProfileUnmatchedWorkEmailsItem.from_dict(
+                        unmatched_work_emails_item_data
+                    )
+                )
+
+                unmatched_work_emails.append(unmatched_work_emails_item)
+
         sync_quick_contact_reveal_response_200_output_profile = cls(
             status=status,
             emails=emails,
@@ -138,6 +172,7 @@ class SyncQuickContactRevealResponse200OutputProfile:
             task_id=task_id,
             linkedin_url=linkedin_url,
             name=name,
+            unmatched_work_emails=unmatched_work_emails,
         )
 
         sync_quick_contact_reveal_response_200_output_profile.additional_properties = d
