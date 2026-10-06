@@ -5,6 +5,7 @@ class PostSearchByKeywordsResponse200OutputPostsItemEngagementType0ReactionsByTy
     StrEnum
 ):
     CELEBRATE = "CELEBRATE"
+    CURIOUS = "CURIOUS"
     FUNNY = "FUNNY"
     INSIGHTFUL = "INSIGHTFUL"
     LIKE = "LIKE"

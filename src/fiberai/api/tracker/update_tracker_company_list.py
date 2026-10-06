@@ -146,7 +146,9 @@ def sync_detailed(
     """Update company tracker list
 
      Update a company tracker list. Supports replace-all (`trackingRules`) or granular
-    (`addRules`/`removeRuleIds`) rule management — but not both in one request.
+    (`addRules`/`removeRuleIds`) rule management — but not both in one request. Adding a premium rule
+    (marked `isPremium` in GET /tracker/rules) makes the list bill at a minimum per-entity rate — see
+    your plan's pricing for rates.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -197,7 +199,9 @@ def sync(
     """Update company tracker list
 
      Update a company tracker list. Supports replace-all (`trackingRules`) or granular
-    (`addRules`/`removeRuleIds`) rule management — but not both in one request.
+    (`addRules`/`removeRuleIds`) rule management — but not both in one request. Adding a premium rule
+    (marked `isPremium` in GET /tracker/rules) makes the list bill at a minimum per-entity rate — see
+    your plan's pricing for rates.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -242,7 +246,9 @@ async def asyncio_detailed(
     """Update company tracker list
 
      Update a company tracker list. Supports replace-all (`trackingRules`) or granular
-    (`addRules`/`removeRuleIds`) rule management — but not both in one request.
+    (`addRules`/`removeRuleIds`) rule management — but not both in one request. Adding a premium rule
+    (marked `isPremium` in GET /tracker/rules) makes the list bill at a minimum per-entity rate — see
+    your plan's pricing for rates.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -291,7 +297,9 @@ async def asyncio(
     """Update company tracker list
 
      Update a company tracker list. Supports replace-all (`trackingRules`) or granular
-    (`addRules`/`removeRuleIds`) rule management — but not both in one request.
+    (`addRules`/`removeRuleIds`) rule management — but not both in one request. Adding a premium rule
+    (marked `isPremium` in GET /tracker/rules) makes the list bill at a minimum per-entity rate — see
+    your plan's pricing for rates.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 

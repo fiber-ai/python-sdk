@@ -5,6 +5,7 @@ class CompanyPostsLiveFetchResponse200OutputDataItemResharedPostType0EngagementT
     StrEnum
 ):
     CELEBRATE = "CELEBRATE"
+    CURIOUS = "CURIOUS"
     FUNNY = "FUNNY"
     INSIGHTFUL = "INSIGHTFUL"
     LIKE = "LIKE"

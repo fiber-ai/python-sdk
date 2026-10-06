@@ -3,6 +3,7 @@ from enum import StrEnum
 
 class ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemTypeType2Type1(StrEnum):
     CELEBRATE = "CELEBRATE"
+    CURIOUS = "CURIOUS"
     FUNNY = "FUNNY"
     INSIGHTFUL = "INSIGHTFUL"
     LIKE = "LIKE"

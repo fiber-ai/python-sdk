@@ -28,7 +28,7 @@ class GetTrackerOverviewResponse200OutputPersonListsItem:
         next_refresh_at (datetime.datetime | None): ISO timestamp when at least one entity in this list becomes due for
             its next check. Null if the list has no active entities.
         estimated_credits_per_refresh (float): Credits charged for a full refresh of this list at the org's current
-            pricing (entityCount × per-entity cost).
+            pricing (entityCount × per-entity cost). Reflects premium-rule pricing when the list contains premium rules.
     """
 
     id: str

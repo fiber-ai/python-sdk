@@ -30,6 +30,8 @@ class JobPostingChange:
         job_function (None | str | Unset): Department or function
         job_functions (list[str] | None | Unset): All job functions this posting belongs to
         posted_at (None | str | Unset): ISO date when posted
+        first_detected_at (None | str | Unset): When this posting was first detected as open. Can be later than postedAt
+            when a posting becomes visible after it was published
     """
 
     job_id: str
@@ -48,6 +50,7 @@ class JobPostingChange:
     job_function: None | str | Unset = UNSET
     job_functions: list[str] | None | Unset = UNSET
     posted_at: None | str | Unset = UNSET
+    first_detected_at: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -108,6 +111,12 @@ class JobPostingChange:
         else:
             posted_at = self.posted_at
 
+        first_detected_at: None | str | Unset
+        if isinstance(self.first_detected_at, Unset):
+            first_detected_at = UNSET
+        else:
+            first_detected_at = self.first_detected_at
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -131,6 +140,8 @@ class JobPostingChange:
             field_dict["jobFunctions"] = job_functions
         if posted_at is not UNSET:
             field_dict["postedAt"] = posted_at
+        if first_detected_at is not UNSET:
+            field_dict["firstDetectedAt"] = first_detected_at
 
         return field_dict
 
@@ -253,6 +264,15 @@ class JobPostingChange:
 
         posted_at = _parse_posted_at(d.pop("postedAt", UNSET))
 
+        def _parse_first_detected_at(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        first_detected_at = _parse_first_detected_at(d.pop("firstDetectedAt", UNSET))
+
         job_posting_change = cls(
             job_id=job_id,
             title=title,
@@ -264,6 +284,7 @@ class JobPostingChange:
             job_function=job_function,
             job_functions=job_functions,
             posted_at=posted_at,
+            first_detected_at=first_detected_at,
         )
 
         job_posting_change.additional_properties = d

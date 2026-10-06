@@ -33,8 +33,8 @@ class PostReactionsLiveFetchResponse200OutputDataItem:
         reaction_type (None | PostReactionsLiveFetchResponse200OutputDataItemReactionTypeType1 |
             PostReactionsLiveFetchResponse200OutputDataItemReactionTypeType2Type1 |
             PostReactionsLiveFetchResponse200OutputDataItemReactionTypeType3Type1 | Unset): One of LinkedIn's reaction
-            types. These match the tooltips on each of LinkedIn's six reaction buttons; for instance, 'Like' is the blue
-            thumbs-up.
+            types. These match the tooltips on LinkedIn's reaction buttons; for instance, 'Like' is the blue thumbs-up.
+            CURIOUS is LinkedIn's retired 'Curious' reaction, still present on older posts.
         reactor (None | PostReactionsLiveFetchResponse200OutputDataItemReactorType0 | Unset):
     """
 

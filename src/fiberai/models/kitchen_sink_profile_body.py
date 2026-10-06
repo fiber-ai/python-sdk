@@ -81,7 +81,7 @@ class KitchenSinkProfileBody:
             uncertain. Default: False.
         thoroughness (KitchenSinkProfileBodyThoroughnessType1 | KitchenSinkProfileBodyThoroughnessType2Type1 |
             KitchenSinkProfileBodyThoroughnessType3Type1 | None | Unset): Controls how thoroughly to search. Higher values
-            recover more matches at the cost of additional latency; lower values return faster. Omit to use the recommended
+            spend more time searching to recover more matches; lower values return faster. Omit to use the recommended
             default. Default: KitchenSinkProfileBodyThoroughnessType1.HIGH.
         get_detailed_education (bool | None | Unset): When true, returns detailed_education[] with school_details for
             each education entry. Default: False.

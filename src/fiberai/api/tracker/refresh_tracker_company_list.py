@@ -159,9 +159,9 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> Credits charged per entity processed (silver/gold tier based on org
-    volume).&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
-    vary.">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> Credits charged per entity processed, tiered by organization volume.
+    Lists containing premium rules bill at a minimum per-entity rate — see your plan's pricing for
+    rates.&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -212,9 +212,9 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> Credits charged per entity processed (silver/gold tier based on org
-    volume).&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
-    vary.">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> Credits charged per entity processed, tiered by organization volume.
+    Lists containing premium rules bill at a minimum per-entity rate — see your plan's pricing for
+    rates.&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -259,9 +259,9 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> Credits charged per entity processed (silver/gold tier based on org
-    volume).&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
-    vary.">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> Credits charged per entity processed, tiered by organization volume.
+    Lists containing premium rules bill at a minimum per-entity rate — see your plan's pricing for
+    rates.&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):
@@ -310,9 +310,9 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> Credits charged per entity processed (silver/gold tier based on org
-    volume).&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
-    vary.">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> Credits charged per entity processed, tiered by organization volume.
+    Lists containing premium rules bill at a minimum per-entity rate — see your plan's pricing for
+    rates.&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
         list_id (str):

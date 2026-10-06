@@ -27,6 +27,7 @@ if TYPE_CHECKING:
     from ..models.hq_location_changed import HQLocationChanged
     from ..models.job_posting_in_function import JobPostingInFunction
     from ..models.job_posting_with_keyword import JobPostingWithKeyword
+    from ..models.joined_an_accelerator import JoinedAnAccelerator
     from ..models.new_funding_round import NewFundingRound
     from ..models.new_investor import NewInvestor
     from ..models.new_office_location import NewOfficeLocation
@@ -60,17 +61,19 @@ class UpdateTrackerCompanyListBody:
             CompanyNews | CompanyPosted | CompanyPostedWithKeyword | CompanyStatusChanged | CompanyWentInactive |
             DepartmentSizeThreshold | EmployeeCountMilestone | FollowerCountGrowth | FundingStageChanged |
             HeadcountCrossedThreshold | HeadcountGrowthPercent | HQLocationChanged | JobPostingInFunction |
-            JobPostingWithKeyword | NewFundingRound | NewInvestor | NewOfficeLocation | NewsWithKeyword | RecentLayoffs |
-            RecentlyHiredWithTitle | TechnologyAdded] | None | Unset): Replace ALL existing rules with this set. Pass empty
-            array to clear all rules. Omit to leave unchanged. Cannot be used with `addRules`/`removeRuleIds`.
+            JobPostingWithKeyword | JoinedAnAccelerator | NewFundingRound | NewInvestor | NewOfficeLocation |
+            NewsWithKeyword | RecentLayoffs | RecentlyHiredWithTitle | TechnologyAdded] | None | Unset): Replace ALL
+            existing rules with this set. Pass empty array to clear all rules. Omit to leave unchanged. Cannot be used with
+            `addRules`/`removeRuleIds`. Rules marked `isPremium` in GET /tracker/rules make the list bill at a minimum per-
+            entity rate.
         add_rules (list[AcquiredCompany | CompanyDescriptionChanged | CompanyLogoChanged | CompanyNameChanged |
             CompanyNews | CompanyPosted | CompanyPostedWithKeyword | CompanyStatusChanged | CompanyWentInactive |
             DepartmentSizeThreshold | EmployeeCountMilestone | FollowerCountGrowth | FundingStageChanged |
             HeadcountCrossedThreshold | HeadcountGrowthPercent | HQLocationChanged | JobPostingInFunction |
-            JobPostingWithKeyword | NewFundingRound | NewInvestor | NewOfficeLocation | NewsWithKeyword | RecentLayoffs |
-            RecentlyHiredWithTitle | TechnologyAdded] | None | Unset): Add rules to the existing set without removing
-            others. The total active rules on the list (existing + added) must not exceed the per-list cap. Cannot be used
-            with `trackingRules`.
+            JobPostingWithKeyword | JoinedAnAccelerator | NewFundingRound | NewInvestor | NewOfficeLocation |
+            NewsWithKeyword | RecentLayoffs | RecentlyHiredWithTitle | TechnologyAdded] | None | Unset): Add rules to the
+            existing set without removing others. The total active rules on the list (existing + added) must not exceed the
+            per-list cap. Cannot be used with `trackingRules`.
         remove_rule_ids (list[str] | None | Unset): Rule IDs to remove. Cannot be used with `trackingRules`.
         update_rule_flags (list[UpdateTrackerCompanyListBodyUpdateRuleFlagsType0Item] | None | Unset): Toggle `isDummy`
             on existing rules by ID. Use this to convert a real rule into a dummy rule (or vice versa) without recreating
@@ -105,6 +108,7 @@ class UpdateTrackerCompanyListBody:
             | HQLocationChanged
             | JobPostingInFunction
             | JobPostingWithKeyword
+            | JoinedAnAccelerator
             | NewFundingRound
             | NewInvestor
             | NewOfficeLocation
@@ -136,6 +140,7 @@ class UpdateTrackerCompanyListBody:
             | HQLocationChanged
             | JobPostingInFunction
             | JobPostingWithKeyword
+            | JoinedAnAccelerator
             | NewFundingRound
             | NewInvestor
             | NewOfficeLocation
@@ -171,6 +176,7 @@ class UpdateTrackerCompanyListBody:
         from ..models.hq_location_changed import HQLocationChanged  # noqa: PLC0415
         from ..models.job_posting_in_function import JobPostingInFunction  # noqa: PLC0415
         from ..models.job_posting_with_keyword import JobPostingWithKeyword  # noqa: PLC0415
+        from ..models.joined_an_accelerator import JoinedAnAccelerator  # noqa: PLC0415
         from ..models.new_funding_round import NewFundingRound  # noqa: PLC0415
         from ..models.new_investor import NewInvestor  # noqa: PLC0415
         from ..models.new_office_location import NewOfficeLocation  # noqa: PLC0415
@@ -258,6 +264,8 @@ class UpdateTrackerCompanyListBody:
                     tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
                 elif isinstance(tracking_rules_type_0_item_data, NewInvestor):
                     tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
+                elif isinstance(tracking_rules_type_0_item_data, JoinedAnAccelerator):
+                    tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
                 elif isinstance(tracking_rules_type_0_item_data, RecentlyHiredWithTitle):
                     tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
                 elif isinstance(tracking_rules_type_0_item_data, DepartmentSizeThreshold):
@@ -320,6 +328,8 @@ class UpdateTrackerCompanyListBody:
                 elif isinstance(add_rules_type_0_item_data, AcquiredCompany):
                     add_rules_type_0_item = add_rules_type_0_item_data.to_dict()
                 elif isinstance(add_rules_type_0_item_data, NewInvestor):
+                    add_rules_type_0_item = add_rules_type_0_item_data.to_dict()
+                elif isinstance(add_rules_type_0_item_data, JoinedAnAccelerator):
                     add_rules_type_0_item = add_rules_type_0_item_data.to_dict()
                 elif isinstance(add_rules_type_0_item_data, RecentlyHiredWithTitle):
                     add_rules_type_0_item = add_rules_type_0_item_data.to_dict()
@@ -410,6 +420,7 @@ class UpdateTrackerCompanyListBody:
         from ..models.hq_location_changed import HQLocationChanged  # noqa: PLC0415
         from ..models.job_posting_in_function import JobPostingInFunction  # noqa: PLC0415
         from ..models.job_posting_with_keyword import JobPostingWithKeyword  # noqa: PLC0415
+        from ..models.joined_an_accelerator import JoinedAnAccelerator  # noqa: PLC0415
         from ..models.new_funding_round import NewFundingRound  # noqa: PLC0415
         from ..models.new_investor import NewInvestor  # noqa: PLC0415
         from ..models.new_office_location import NewOfficeLocation  # noqa: PLC0415
@@ -485,6 +496,7 @@ class UpdateTrackerCompanyListBody:
                 | HQLocationChanged
                 | JobPostingInFunction
                 | JobPostingWithKeyword
+                | JoinedAnAccelerator
                 | NewFundingRound
                 | NewInvestor
                 | NewOfficeLocation
@@ -528,6 +540,7 @@ class UpdateTrackerCompanyListBody:
                         | HQLocationChanged
                         | JobPostingInFunction
                         | JobPostingWithKeyword
+                        | JoinedAnAccelerator
                         | NewFundingRound
                         | NewInvestor
                         | NewOfficeLocation
@@ -715,7 +728,7 @@ class UpdateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_22 = RecentlyHiredWithTitle.from_dict(data)
+                            tracking_rules_type_0_item_type_22 = JoinedAnAccelerator.from_dict(data)
 
                             return tracking_rules_type_0_item_type_22
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -723,16 +736,24 @@ class UpdateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_23 = DepartmentSizeThreshold.from_dict(data)
+                            tracking_rules_type_0_item_type_23 = RecentlyHiredWithTitle.from_dict(data)
 
                             return tracking_rules_type_0_item_type_23
                         except (TypeError, ValueError, AttributeError, KeyError):
                             pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            tracking_rules_type_0_item_type_24 = DepartmentSizeThreshold.from_dict(data)
+
+                            return tracking_rules_type_0_item_type_24
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        tracking_rules_type_0_item_type_24 = RecentLayoffs.from_dict(data)
+                        tracking_rules_type_0_item_type_25 = RecentLayoffs.from_dict(data)
 
-                        return tracking_rules_type_0_item_type_24
+                        return tracking_rules_type_0_item_type_25
 
                     tracking_rules_type_0_item = _parse_tracking_rules_type_0_item(tracking_rules_type_0_item_data)
 
@@ -761,6 +782,7 @@ class UpdateTrackerCompanyListBody:
                     | HQLocationChanged
                     | JobPostingInFunction
                     | JobPostingWithKeyword
+                    | JoinedAnAccelerator
                     | NewFundingRound
                     | NewInvestor
                     | NewOfficeLocation
@@ -798,6 +820,7 @@ class UpdateTrackerCompanyListBody:
                 | HQLocationChanged
                 | JobPostingInFunction
                 | JobPostingWithKeyword
+                | JoinedAnAccelerator
                 | NewFundingRound
                 | NewInvestor
                 | NewOfficeLocation
@@ -841,6 +864,7 @@ class UpdateTrackerCompanyListBody:
                         | HQLocationChanged
                         | JobPostingInFunction
                         | JobPostingWithKeyword
+                        | JoinedAnAccelerator
                         | NewFundingRound
                         | NewInvestor
                         | NewOfficeLocation
@@ -1028,7 +1052,7 @@ class UpdateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            add_rules_type_0_item_type_22 = RecentlyHiredWithTitle.from_dict(data)
+                            add_rules_type_0_item_type_22 = JoinedAnAccelerator.from_dict(data)
 
                             return add_rules_type_0_item_type_22
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -1036,16 +1060,24 @@ class UpdateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            add_rules_type_0_item_type_23 = DepartmentSizeThreshold.from_dict(data)
+                            add_rules_type_0_item_type_23 = RecentlyHiredWithTitle.from_dict(data)
 
                             return add_rules_type_0_item_type_23
                         except (TypeError, ValueError, AttributeError, KeyError):
                             pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            add_rules_type_0_item_type_24 = DepartmentSizeThreshold.from_dict(data)
+
+                            return add_rules_type_0_item_type_24
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        add_rules_type_0_item_type_24 = RecentLayoffs.from_dict(data)
+                        add_rules_type_0_item_type_25 = RecentLayoffs.from_dict(data)
 
-                        return add_rules_type_0_item_type_24
+                        return add_rules_type_0_item_type_25
 
                     add_rules_type_0_item = _parse_add_rules_type_0_item(add_rules_type_0_item_data)
 
@@ -1074,6 +1106,7 @@ class UpdateTrackerCompanyListBody:
                     | HQLocationChanged
                     | JobPostingInFunction
                     | JobPostingWithKeyword
+                    | JoinedAnAccelerator
                     | NewFundingRound
                     | NewInvestor
                     | NewOfficeLocation

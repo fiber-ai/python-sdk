@@ -18,7 +18,8 @@ class GetFlightRegionsResponse200OutputRegionsItem:
             'X-NYC').
         name (str): Human-readable metro name (e.g. 'New York City').
         airport_iata_codes (list[str]): IATA codes covered by this metro alias (e.g. 'JFK', 'LGA', 'EWR').
-        freebase_id (str): Stable identifier for this metro. Also accepted as `departureAirports` / `arrivalAirports`.
+        freebase_id (str): Stable location identifier (Freebase ID) for this metro, beginning with '/m/' or '/g/' (e.g.
+            '/m/02_286'). Also accepted as `departureAirports` / `arrivalAirports`.
     """
 
     api_code: str

@@ -13,10 +13,18 @@ T = TypeVar("T", bound="CreateSavedSearchBodySearchParamsType1CompanySearchParam
 
 @_attrs_define
 class CreateSavedSearchBodySearchParamsType1CompanySearchParamsLinkedinIndustriesType0:
-    """
-    Attributes:
-        any_of (list[str] | None | Unset):
-        none_of (list[str] | None | Unset):
+    """Filter companies by the industries they are tagged with on LinkedIn. To get the list of valid values, each with its
+    company count, use the `getIndustries` endpoint (`GET /v1/enums/industries`), and hide values with very small counts
+    from your filter UI, since a value with only a handful of companies behind it is a no-op filter. Values must match
+    the enum exactly — a misspelled or retired value returns zero results with no error or warning. This filter matches
+    LinkedIn's own industry tags, which are narrow and granular. For broader matching use `industriesV2` (Fiber's
+    standardized categories, listed as `fiberIndustries` in the same response) or `crunchbaseCategories` /
+    `crunchbaseCategoryGroups` for Crunchbase's taxonomy — the three are separate classifications and are not
+    interchangeable.
+
+        Attributes:
+            any_of (list[str] | None | Unset):
+            none_of (list[str] | None | Unset):
     """
 
     any_of: list[str] | None | Unset = UNSET

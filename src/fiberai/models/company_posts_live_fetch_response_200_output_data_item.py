@@ -18,6 +18,9 @@ if TYPE_CHECKING:
     from ..models.company_posts_live_fetch_response_200_output_data_item_posted_at_type_0 import (
         CompanyPostsLiveFetchResponse200OutputDataItemPostedAtType0,
     )
+    from ..models.company_posts_live_fetch_response_200_output_data_item_reshared_by_type_0 import (
+        CompanyPostsLiveFetchResponse200OutputDataItemResharedByType0,
+    )
     from ..models.company_posts_live_fetch_response_200_output_data_item_reshared_post_type_0 import (
         CompanyPostsLiveFetchResponse200OutputDataItemResharedPostType0,
     )
@@ -43,6 +46,8 @@ class CompanyPostsLiveFetchResponse200OutputDataItem:
         caption (None | str | Unset):
         sub_text (None | str | Unset):
         reshared_post (CompanyPostsLiveFetchResponse200OutputDataItemResharedPostType0 | None | Unset):
+        reshared_by (CompanyPostsLiveFetchResponse200OutputDataItemResharedByType0 | None | Unset): The profile or
+            company page that reposted this post. Null when the post was published by the feed's owner rather than reposted.
     """
 
     post_id: str
@@ -55,6 +60,7 @@ class CompanyPostsLiveFetchResponse200OutputDataItem:
     caption: None | str | Unset = UNSET
     sub_text: None | str | Unset = UNSET
     reshared_post: CompanyPostsLiveFetchResponse200OutputDataItemResharedPostType0 | None | Unset = UNSET
+    reshared_by: CompanyPostsLiveFetchResponse200OutputDataItemResharedByType0 | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -66,6 +72,9 @@ class CompanyPostsLiveFetchResponse200OutputDataItem:
         )
         from ..models.company_posts_live_fetch_response_200_output_data_item_posted_at_type_0 import (
             CompanyPostsLiveFetchResponse200OutputDataItemPostedAtType0,  # noqa: PLC0415
+        )
+        from ..models.company_posts_live_fetch_response_200_output_data_item_reshared_by_type_0 import (
+            CompanyPostsLiveFetchResponse200OutputDataItemResharedByType0,  # noqa: PLC0415
         )
         from ..models.company_posts_live_fetch_response_200_output_data_item_reshared_post_type_0 import (
             CompanyPostsLiveFetchResponse200OutputDataItemResharedPostType0,  # noqa: PLC0415
@@ -143,6 +152,14 @@ class CompanyPostsLiveFetchResponse200OutputDataItem:
         else:
             reshared_post = self.reshared_post
 
+        reshared_by: dict[str, Any] | None | Unset
+        if isinstance(self.reshared_by, Unset):
+            reshared_by = UNSET
+        elif isinstance(self.reshared_by, CompanyPostsLiveFetchResponse200OutputDataItemResharedByType0):
+            reshared_by = self.reshared_by.to_dict()
+        else:
+            reshared_by = self.reshared_by
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -168,6 +185,8 @@ class CompanyPostsLiveFetchResponse200OutputDataItem:
             field_dict["subText"] = sub_text
         if reshared_post is not UNSET:
             field_dict["resharedPost"] = reshared_post
+        if reshared_by is not UNSET:
+            field_dict["resharedBy"] = reshared_by
 
         return field_dict
 
@@ -181,6 +200,9 @@ class CompanyPostsLiveFetchResponse200OutputDataItem:
         )
         from ..models.company_posts_live_fetch_response_200_output_data_item_posted_at_type_0 import (
             CompanyPostsLiveFetchResponse200OutputDataItemPostedAtType0,  # noqa: PLC0415
+        )
+        from ..models.company_posts_live_fetch_response_200_output_data_item_reshared_by_type_0 import (
+            CompanyPostsLiveFetchResponse200OutputDataItemResharedByType0,  # noqa: PLC0415
         )
         from ..models.company_posts_live_fetch_response_200_output_data_item_reshared_post_type_0 import (
             CompanyPostsLiveFetchResponse200OutputDataItemResharedPostType0,  # noqa: PLC0415
@@ -327,6 +349,25 @@ class CompanyPostsLiveFetchResponse200OutputDataItem:
 
         reshared_post = _parse_reshared_post(d.pop("resharedPost", UNSET))
 
+        def _parse_reshared_by(
+            data: object,
+        ) -> CompanyPostsLiveFetchResponse200OutputDataItemResharedByType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                reshared_by_type_0 = CompanyPostsLiveFetchResponse200OutputDataItemResharedByType0.from_dict(data)
+
+                return reshared_by_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CompanyPostsLiveFetchResponse200OutputDataItemResharedByType0 | None | Unset, data)
+
+        reshared_by = _parse_reshared_by(d.pop("resharedBy", UNSET))
+
         company_posts_live_fetch_response_200_output_data_item = cls(
             post_id=post_id,
             author=author,
@@ -338,6 +379,7 @@ class CompanyPostsLiveFetchResponse200OutputDataItem:
             caption=caption,
             sub_text=sub_text,
             reshared_post=reshared_post,
+            reshared_by=reshared_by,
         )
 
         company_posts_live_fetch_response_200_output_data_item.additional_properties = d

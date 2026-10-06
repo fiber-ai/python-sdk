@@ -18,6 +18,9 @@ if TYPE_CHECKING:
     from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_category_groups_type_0 import (
         PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0,
     )
+    from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_count_ranges_type_0 import (
+        PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountRangesType0,
+    )
     from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_count_v2_type_0 import (
         PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0,
     )
@@ -93,6 +96,9 @@ if TYPE_CHECKING:
     from ..models.paginated_combined_search_body_company_config_type_0_search_params_revenue_range_usd_type_0 import (
         PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangeUSDType0,
     )
+    from ..models.paginated_combined_search_body_company_config_type_0_search_params_revenue_ranges_usd_type_0 import (
+        PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangesUSDType0,
+    )
     from ..models.paginated_combined_search_body_company_config_type_0_search_params_sort_type_0_item import (
         PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSortType0Item,
     )
@@ -138,6 +144,8 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsHeadquartersStateNameType0 | Unset):
         employee_count_v2 (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0 |
             Unset):
+        employee_count_ranges (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountRangesType0
+            | Unset):
         keywords (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsKeywordsType0 | Unset):
         industries_v2 (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsIndustriesV2Type0 | Unset):
         stage (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStageType0 | Unset):
@@ -176,11 +184,20 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
         technologies_v2 (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTechnologiesV2Type0 | Unset):
         revenue_range_usd (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangeUSDType0 |
             Unset):
+        revenue_ranges_usd (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangesUSDType0 |
+            Unset):
         employee_trends_v2 (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0 |
             Unset):
         tags (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsTagsType0 | Unset):
         linkedin_industries (None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsLinkedinIndustriesType0 |
-            Unset):
+            Unset): Filter companies by the industries they are tagged with on LinkedIn. To get the list of valid values,
+            each with its company count, use the `getIndustries` endpoint (`GET /v1/enums/industries`), and hide values with
+            very small counts from your filter UI, since a value with only a handful of companies behind it is a no-op
+            filter. Values must match the enum exactly — a misspelled or retired value returns zero results with no error or
+            warning. This filter matches LinkedIn's own industry tags, which are narrow and granular. For broader matching
+            use `industriesV2` (Fiber's standardized categories, listed as `fiberIndustries` in the same response) or
+            `crunchbaseCategories` / `crunchbaseCategoryGroups` for Crunchbase's taxonomy — the three are separate
+            classifications and are not interchangeable.
         sort (list[PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSortType0Item] | None | Unset): Sort order
             for company results. Clauses are applied in order. Omit to use the default ranking. Note: changing the sort
             invalidates any existing cursor — start a new pagination run when the sort changes.
@@ -199,6 +216,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
     employee_count_v2: None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0 | Unset = (
         UNSET
     )
+    employee_count_ranges: (
+        None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountRangesType0 | Unset
+    ) = UNSET
     keywords: None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsKeywordsType0 | Unset = UNSET
     industries_v2: None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsIndustriesV2Type0 | Unset = UNSET
     stage: None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsStageType0 | Unset = UNSET
@@ -258,6 +278,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
     revenue_range_usd: None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangeUSDType0 | Unset = (
         UNSET
     )
+    revenue_ranges_usd: (
+        None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangesUSDType0 | Unset
+    ) = UNSET
     employee_trends_v2: (
         None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0 | Unset
     ) = UNSET
@@ -277,6 +300,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_category_groups_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0,  # noqa: PLC0415
+        )
+        from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_count_ranges_type_0 import (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountRangesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_count_v2_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0,  # noqa: PLC0415
@@ -353,6 +379,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_revenue_range_usd_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangeUSDType0,  # noqa: PLC0415
         )
+        from ..models.paginated_combined_search_body_company_config_type_0_search_params_revenue_ranges_usd_type_0 import (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangesUSDType0,  # noqa: PLC0415
+        )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_special_flags_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSpecialFlagsType0,  # noqa: PLC0415
         )
@@ -428,6 +457,17 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
             employee_count_v2 = self.employee_count_v2.to_dict()
         else:
             employee_count_v2 = self.employee_count_v2
+
+        employee_count_ranges: dict[str, Any] | None | Unset
+        if isinstance(self.employee_count_ranges, Unset):
+            employee_count_ranges = UNSET
+        elif isinstance(
+            self.employee_count_ranges,
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountRangesType0,
+        ):
+            employee_count_ranges = self.employee_count_ranges.to_dict()
+        else:
+            employee_count_ranges = self.employee_count_ranges
 
         keywords: dict[str, Any] | None | Unset
         if isinstance(self.keywords, Unset):
@@ -700,6 +740,16 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
         else:
             revenue_range_usd = self.revenue_range_usd
 
+        revenue_ranges_usd: dict[str, Any] | None | Unset
+        if isinstance(self.revenue_ranges_usd, Unset):
+            revenue_ranges_usd = UNSET
+        elif isinstance(
+            self.revenue_ranges_usd, PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangesUSDType0
+        ):
+            revenue_ranges_usd = self.revenue_ranges_usd.to_dict()
+        else:
+            revenue_ranges_usd = self.revenue_ranges_usd
+
         employee_trends_v2: dict[str, Any] | None | Unset
         if isinstance(self.employee_trends_v2, Unset):
             employee_trends_v2 = UNSET
@@ -753,6 +803,8 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
             field_dict["headquartersStateName"] = headquarters_state_name
         if employee_count_v2 is not UNSET:
             field_dict["employeeCountV2"] = employee_count_v2
+        if employee_count_ranges is not UNSET:
+            field_dict["employeeCountRanges"] = employee_count_ranges
         if keywords is not UNSET:
             field_dict["keywords"] = keywords
         if industries_v2 is not UNSET:
@@ -811,6 +863,8 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
             field_dict["technologiesV2"] = technologies_v2
         if revenue_range_usd is not UNSET:
             field_dict["revenueRangeUSD"] = revenue_range_usd
+        if revenue_ranges_usd is not UNSET:
+            field_dict["revenueRangesUSD"] = revenue_ranges_usd
         if employee_trends_v2 is not UNSET:
             field_dict["employeeTrendsV2"] = employee_trends_v2
         if tags is not UNSET:
@@ -832,6 +886,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_crunchbase_category_groups_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsCrunchbaseCategoryGroupsType0,  # noqa: PLC0415
+        )
+        from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_count_ranges_type_0 import (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountRangesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_employee_count_v2_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountV2Type0,  # noqa: PLC0415
@@ -907,6 +964,9 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_revenue_range_usd_type_0 import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangeUSDType0,  # noqa: PLC0415
+        )
+        from ..models.paginated_combined_search_body_company_config_type_0_search_params_revenue_ranges_usd_type_0 import (
+            PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangesUSDType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_company_config_type_0_search_params_sort_type_0_item import (
             PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsSortType0Item,  # noqa: PLC0415
@@ -1049,6 +1109,29 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
             )
 
         employee_count_v2 = _parse_employee_count_v2(d.pop("employeeCountV2", UNSET))
+
+        def _parse_employee_count_ranges(
+            data: object,
+        ) -> None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountRangesType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                employee_count_ranges_type_0 = (
+                    PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountRangesType0.from_dict(data)
+                )
+
+                return employee_count_ranges_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeCountRangesType0 | Unset, data
+            )
+
+        employee_count_ranges = _parse_employee_count_ranges(d.pop("employeeCountRanges", UNSET))
 
         def _parse_keywords(
             data: object,
@@ -1714,6 +1797,29 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
 
         revenue_range_usd = _parse_revenue_range_usd(d.pop("revenueRangeUSD", UNSET))
 
+        def _parse_revenue_ranges_usd(
+            data: object,
+        ) -> None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangesUSDType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                revenue_ranges_usd_type_0 = (
+                    PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangesUSDType0.from_dict(data)
+                )
+
+                return revenue_ranges_usd_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsRevenueRangesUSDType0 | Unset, data
+            )
+
+        revenue_ranges_usd = _parse_revenue_ranges_usd(d.pop("revenueRangesUSD", UNSET))
+
         def _parse_employee_trends_v2(
             data: object,
         ) -> None | PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsEmployeeTrendsV2Type0 | Unset:
@@ -1813,6 +1919,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
             headquarters_country_code=headquarters_country_code,
             headquarters_state_name=headquarters_state_name,
             employee_count_v2=employee_count_v2,
+            employee_count_ranges=employee_count_ranges,
             keywords=keywords,
             industries_v2=industries_v2,
             stage=stage,
@@ -1842,6 +1949,7 @@ class PaginatedCombinedSearchBodyCompanyConfigType0SearchParams:
             investors_v2=investors_v2,
             technologies_v2=technologies_v2,
             revenue_range_usd=revenue_range_usd,
+            revenue_ranges_usd=revenue_ranges_usd,
             employee_trends_v2=employee_trends_v2,
             tags=tags,
             linkedin_industries=linkedin_industries,

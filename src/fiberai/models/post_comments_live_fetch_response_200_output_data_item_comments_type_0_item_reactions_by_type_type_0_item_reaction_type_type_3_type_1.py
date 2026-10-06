@@ -5,6 +5,7 @@ class PostCommentsLiveFetchResponse200OutputDataItemCommentsType0ItemReactionsBy
     StrEnum
 ):
     CELEBRATE = "CELEBRATE"
+    CURIOUS = "CURIOUS"
     FUNNY = "FUNNY"
     INSIGHTFUL = "INSIGHTFUL"
     LIKE = "LIKE"

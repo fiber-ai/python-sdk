@@ -14,8 +14,9 @@ class RefreshTrackerCompanyListResponse200Output:
     """
     Attributes:
         entity_count (int): Number of entities that will be processed.
-        estimated_credits (float): Estimated credit cost for this refresh. Actual cost may vary based on organization
-            pricing or if tracked entities change before processing completes.
+        estimated_credits (float): Estimated credit cost for this refresh. Reflects premium-rule pricing when the list
+            contains premium rules. Actual cost may vary based on organization pricing or if tracked entities change before
+            processing completes.
         message (str): Human-readable confirmation of the refresh initiation.
     """
 

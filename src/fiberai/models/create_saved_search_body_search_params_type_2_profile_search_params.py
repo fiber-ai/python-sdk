@@ -47,6 +47,9 @@ if TYPE_CHECKING:
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_industry_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsIndustryType0,
     )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_function_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobFunctionType0,
+    )
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_status_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType0,
     )
@@ -107,6 +110,9 @@ if TYPE_CHECKING:
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_publications_type_0 import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPublicationsType0,
     )
+    from ..models.create_saved_search_body_search_params_type_2_profile_search_params_seniority_type_0 import (
+        CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSeniorityType0,
+    )
     from ..models.create_saved_search_body_search_params_type_2_profile_search_params_sort_type_0_item import (
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSortType0Item,
     )
@@ -163,6 +169,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         keyword_search_options (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0 |
             None | Unset):
         job_title_v2 (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV2Type0 | None | Unset):
+        job_function (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobFunctionType0 | None | Unset):
         exact_profile (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0 | None | Unset):
         exact_profile_v2 (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileV2Type0 | None | Unset):
         started_in_role (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedInRoleType0 |
@@ -188,6 +195,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         years_of_experience (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsYearsOfExperienceType0 | None |
             Unset):
         job_title_v3 (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0 | None | Unset):
+        seniority (CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSeniorityType0 | None | Unset):
         open_to_work (bool | None | Unset):
         is_hiring (bool | None | Unset):
         has_profile_picture (bool | None | Unset):
@@ -237,6 +245,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0 | None | Unset
     ) = UNSET
     job_title_v2: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV2Type0 | None | Unset = UNSET
+    job_function: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobFunctionType0 | None | Unset = UNSET
     exact_profile: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileType0 | None | Unset = UNSET
     exact_profile_v2: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsExactProfileV2Type0 | None | Unset = (
         UNSET
@@ -289,6 +298,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         CreateSavedSearchBodySearchParamsType2ProfileSearchParamsYearsOfExperienceType0 | None | Unset
     ) = UNSET
     job_title_v3: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV3Type0 | None | Unset = UNSET
+    seniority: CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSeniorityType0 | None | Unset = UNSET
     open_to_work: bool | None | Unset = UNSET
     is_hiring: bool | None | Unset = UNSET
     has_profile_picture: bool | None | Unset = UNSET
@@ -358,6 +368,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_industry_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsIndustryType0,  # noqa: PLC0415
         )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_function_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobFunctionType0,  # noqa: PLC0415
+        )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_status_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType0,  # noqa: PLC0415
         )
@@ -417,6 +430,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_publications_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPublicationsType0,  # noqa: PLC0415
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_seniority_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSeniorityType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_started_at_company_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsStartedAtCompanyType0,  # noqa: PLC0415
@@ -522,6 +538,14 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             job_title_v2 = self.job_title_v2.to_dict()
         else:
             job_title_v2 = self.job_title_v2
+
+        job_function: dict[str, Any] | None | Unset
+        if isinstance(self.job_function, Unset):
+            job_function = UNSET
+        elif isinstance(self.job_function, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobFunctionType0):
+            job_function = self.job_function.to_dict()
+        else:
+            job_function = self.job_function
 
         exact_profile: dict[str, Any] | None | Unset
         if isinstance(self.exact_profile, Unset):
@@ -690,6 +714,14 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             job_title_v3 = self.job_title_v3.to_dict()
         else:
             job_title_v3 = self.job_title_v3
+
+        seniority: dict[str, Any] | None | Unset
+        if isinstance(self.seniority, Unset):
+            seniority = UNSET
+        elif isinstance(self.seniority, CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSeniorityType0):
+            seniority = self.seniority.to_dict()
+        else:
+            seniority = self.seniority
 
         open_to_work: bool | None | Unset
         if isinstance(self.open_to_work, Unset):
@@ -888,6 +920,8 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             field_dict["keywordSearchOptions"] = keyword_search_options
         if job_title_v2 is not UNSET:
             field_dict["jobTitleV2"] = job_title_v2
+        if job_function is not UNSET:
+            field_dict["jobFunction"] = job_function
         if exact_profile is not UNSET:
             field_dict["exactProfile"] = exact_profile
         if exact_profile_v2 is not UNSET:
@@ -922,6 +956,8 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             field_dict["yearsOfExperience"] = years_of_experience
         if job_title_v3 is not UNSET:
             field_dict["jobTitleV3"] = job_title_v3
+        if seniority is not UNSET:
+            field_dict["seniority"] = seniority
         if open_to_work is not UNSET:
             field_dict["openToWork"] = open_to_work
         if is_hiring is not UNSET:
@@ -1012,6 +1048,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_industry_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsIndustryType0,  # noqa: PLC0415
         )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_function_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobFunctionType0,  # noqa: PLC0415
+        )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_job_status_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobStatusType0,  # noqa: PLC0415
         )
@@ -1071,6 +1110,9 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_publications_type_0 import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsPublicationsType0,  # noqa: PLC0415
+        )
+        from ..models.create_saved_search_body_search_params_type_2_profile_search_params_seniority_type_0 import (
+            CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSeniorityType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_2_profile_search_params_sort_type_0_item import (
             CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSortType0Item,  # noqa: PLC0415
@@ -1282,6 +1324,27 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobTitleV2Type0 | None | Unset, data)
 
         job_title_v2 = _parse_job_title_v2(d.pop("jobTitleV2", UNSET))
+
+        def _parse_job_function(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobFunctionType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_function_type_0 = (
+                    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobFunctionType0.from_dict(data)
+                )
+
+                return job_function_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJobFunctionType0 | None | Unset, data)
+
+        job_function = _parse_job_function(d.pop("jobFunction", UNSET))
 
         def _parse_exact_profile(
             data: object,
@@ -1768,6 +1831,27 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
 
         job_title_v3 = _parse_job_title_v3(d.pop("jobTitleV3", UNSET))
 
+        def _parse_seniority(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSeniorityType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                seniority_type_0 = CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSeniorityType0.from_dict(
+                    data
+                )
+
+                return seniority_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateSavedSearchBodySearchParamsType2ProfileSearchParamsSeniorityType0 | None | Unset, data)
+
+        seniority = _parse_seniority(d.pop("seniority", UNSET))
+
         def _parse_open_to_work(data: object) -> bool | None | Unset:
             if data is None:
                 return data
@@ -2164,6 +2248,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             keywords_v2=keywords_v2,
             keyword_search_options=keyword_search_options,
             job_title_v2=job_title_v2,
+            job_function=job_function,
             exact_profile=exact_profile,
             exact_profile_v2=exact_profile_v2,
             started_in_role=started_in_role,
@@ -2181,6 +2266,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParams:
             company_match_mode=company_match_mode,
             years_of_experience=years_of_experience,
             job_title_v3=job_title_v3,
+            seniority=seniority,
             open_to_work=open_to_work,
             is_hiring=is_hiring,
             has_profile_picture=has_profile_picture,

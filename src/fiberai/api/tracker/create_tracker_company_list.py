@@ -143,8 +143,9 @@ def sync_detailed(
      Create a new company tracker list. By default you add companies manually and we periodically check
     them for changes matching your tracking rules. Provide `companySearchParams` to instead create a
     DYNAMIC list that auto-populates with companies matching a query and refreshes over time. Credits
-    are charged per entity per refresh cycle (see your plan's pricing for exact rates). Creating the
-    list itself is free.
+    are charged per entity per refresh cycle; lists containing premium rules (marked `isPremium` in GET
+    /tracker/rules) bill at a minimum per-entity rate (see your plan's pricing for exact rates).
+    Creating the list itself is free.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -194,8 +195,9 @@ def sync(
      Create a new company tracker list. By default you add companies manually and we periodically check
     them for changes matching your tracking rules. Provide `companySearchParams` to instead create a
     DYNAMIC list that auto-populates with companies matching a query and refreshes over time. Credits
-    are charged per entity per refresh cycle (see your plan's pricing for exact rates). Creating the
-    list itself is free.
+    are charged per entity per refresh cycle; lists containing premium rules (marked `isPremium` in GET
+    /tracker/rules) bill at a minimum per-entity rate (see your plan's pricing for exact rates).
+    Creating the list itself is free.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -239,8 +241,9 @@ async def asyncio_detailed(
      Create a new company tracker list. By default you add companies manually and we periodically check
     them for changes matching your tracking rules. Provide `companySearchParams` to instead create a
     DYNAMIC list that auto-populates with companies matching a query and refreshes over time. Credits
-    are charged per entity per refresh cycle (see your plan's pricing for exact rates). Creating the
-    list itself is free.
+    are charged per entity per refresh cycle; lists containing premium rules (marked `isPremium` in GET
+    /tracker/rules) bill at a minimum per-entity rate (see your plan's pricing for exact rates).
+    Creating the list itself is free.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -288,8 +291,9 @@ async def asyncio(
      Create a new company tracker list. By default you add companies manually and we periodically check
     them for changes matching your tracking rules. Provide `companySearchParams` to instead create a
     DYNAMIC list that auto-populates with companies matching a query and refreshes over time. Credits
-    are charged per entity per refresh cycle (see your plan's pricing for exact rates). Creating the
-    list itself is free.
+    are charged per entity per refresh cycle; lists containing premium rules (marked `isPremium` in GET
+    /tracker/rules) bill at a minimum per-entity rate (see your plan's pricing for exact rates).
+    Creating the list itself is free.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 

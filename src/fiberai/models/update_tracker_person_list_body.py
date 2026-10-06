@@ -9,6 +9,8 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
+    from ..models.added_a_role import AddedARole
+    from ..models.contact_change import ContactChange
     from ..models.person_became_influencer import PersonBecameInfluencer
     from ..models.person_became_premium import PersonBecamePremium
     from ..models.person_became_top_voice import PersonBecameTopVoice
@@ -58,22 +60,23 @@ class UpdateTrackerPersonListBody:
         max_dynamic_members (int | None | Unset): For dynamic lists only: update the maximum number of people to keep in
             the list. Lowering it applies going forward (the refresh stops adding past the new cap; existing over-cap
             members are not evicted). Ignored for static lists.
-        tracking_rules (list[PersonBecameInfluencer | PersonBecamePremium | PersonBecameTopVoice | PersonBecameVerified
-            | PersonChangedCompany | PersonCommentedOnPost | PersonConnectionsMilestone | PersonEmploymentTypeChanged |
-            PersonFollowerMilestone | PersonGotDemoted | PersonGotPromoted | PersonHeadlineChanged | PersonIsHiring |
-            PersonLocationChanged | PersonNewCertification | PersonOpenToWork | PersonPosted | PersonPostedWithKeyword |
-            PersonReactedToPost | PersonSkillsAdded | PersonStartedCompany | PersonStealthChanged | PersonStuckInRole |
-            PersonSummaryChanged | PersonTagGained | PersonTenureMilestone | PersonTitleChanged] | None | Unset): Replace
-            ALL existing rules with this set. Pass empty array to clear all rules. Omit to leave unchanged. Cannot be used
-            with `addRules`/`removeRuleIds`.
-        add_rules (list[PersonBecameInfluencer | PersonBecamePremium | PersonBecameTopVoice | PersonBecameVerified |
-            PersonChangedCompany | PersonCommentedOnPost | PersonConnectionsMilestone | PersonEmploymentTypeChanged |
-            PersonFollowerMilestone | PersonGotDemoted | PersonGotPromoted | PersonHeadlineChanged | PersonIsHiring |
-            PersonLocationChanged | PersonNewCertification | PersonOpenToWork | PersonPosted | PersonPostedWithKeyword |
-            PersonReactedToPost | PersonSkillsAdded | PersonStartedCompany | PersonStealthChanged | PersonStuckInRole |
-            PersonSummaryChanged | PersonTagGained | PersonTenureMilestone | PersonTitleChanged] | None | Unset): Add rules
-            to the existing set without removing others. The total active rules on the list (existing + added) must not
-            exceed the per-list cap. Cannot be used with `trackingRules`.
+        tracking_rules (list[AddedARole | ContactChange | PersonBecameInfluencer | PersonBecamePremium |
+            PersonBecameTopVoice | PersonBecameVerified | PersonChangedCompany | PersonCommentedOnPost |
+            PersonConnectionsMilestone | PersonEmploymentTypeChanged | PersonFollowerMilestone | PersonGotDemoted |
+            PersonGotPromoted | PersonHeadlineChanged | PersonIsHiring | PersonLocationChanged | PersonNewCertification |
+            PersonOpenToWork | PersonPosted | PersonPostedWithKeyword | PersonReactedToPost | PersonSkillsAdded |
+            PersonStartedCompany | PersonStealthChanged | PersonStuckInRole | PersonSummaryChanged | PersonTagGained |
+            PersonTenureMilestone | PersonTitleChanged] | None | Unset): Replace ALL existing rules with this set. Pass
+            empty array to clear all rules. Omit to leave unchanged. Cannot be used with `addRules`/`removeRuleIds`. Rules
+            marked `isPremium` in GET /tracker/rules make the list bill at a minimum per-entity rate.
+        add_rules (list[AddedARole | ContactChange | PersonBecameInfluencer | PersonBecamePremium | PersonBecameTopVoice
+            | PersonBecameVerified | PersonChangedCompany | PersonCommentedOnPost | PersonConnectionsMilestone |
+            PersonEmploymentTypeChanged | PersonFollowerMilestone | PersonGotDemoted | PersonGotPromoted |
+            PersonHeadlineChanged | PersonIsHiring | PersonLocationChanged | PersonNewCertification | PersonOpenToWork |
+            PersonPosted | PersonPostedWithKeyword | PersonReactedToPost | PersonSkillsAdded | PersonStartedCompany |
+            PersonStealthChanged | PersonStuckInRole | PersonSummaryChanged | PersonTagGained | PersonTenureMilestone |
+            PersonTitleChanged] | None | Unset): Add rules to the existing set without removing others. The total active
+            rules on the list (existing + added) must not exceed the per-list cap. Cannot be used with `trackingRules`.
         remove_rule_ids (list[str] | None | Unset): Rule IDs to remove. Cannot be used with `trackingRules`.
         update_rule_flags (list[UpdateTrackerPersonListBodyUpdateRuleFlagsType0Item] | None | Unset): Toggle `isDummy`
             on existing rules by ID. Use this to convert a real rule into a dummy rule (or vice versa) without recreating
@@ -90,7 +93,9 @@ class UpdateTrackerPersonListBody:
     max_dynamic_members: int | None | Unset = UNSET
     tracking_rules: (
         list[
-            PersonBecameInfluencer
+            AddedARole
+            | ContactChange
+            | PersonBecameInfluencer
             | PersonBecamePremium
             | PersonBecameTopVoice
             | PersonBecameVerified
@@ -123,7 +128,9 @@ class UpdateTrackerPersonListBody:
     ) = UNSET
     add_rules: (
         list[
-            PersonBecameInfluencer
+            AddedARole
+            | ContactChange
+            | PersonBecameInfluencer
             | PersonBecamePremium
             | PersonBecameTopVoice
             | PersonBecameVerified
@@ -160,6 +167,7 @@ class UpdateTrackerPersonListBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.contact_change import ContactChange  # noqa: PLC0415
         from ..models.person_became_influencer import PersonBecameInfluencer  # noqa: PLC0415
         from ..models.person_became_premium import PersonBecamePremium  # noqa: PLC0415
         from ..models.person_became_top_voice import PersonBecameTopVoice  # noqa: PLC0415
@@ -185,6 +193,7 @@ class UpdateTrackerPersonListBody:
         from ..models.person_stuck_in_role import PersonStuckInRole  # noqa: PLC0415
         from ..models.person_summary_changed import PersonSummaryChanged  # noqa: PLC0415
         from ..models.person_tag_gained import PersonTagGained  # noqa: PLC0415
+        from ..models.person_tenure_milestone import PersonTenureMilestone  # noqa: PLC0415
         from ..models.person_title_changed import PersonTitleChanged  # noqa: PLC0415
         from ..models.update_tracker_person_list_body_initial_signals_type_0 import (
             UpdateTrackerPersonListBodyInitialSignalsType0,  # noqa: PLC0415
@@ -275,6 +284,10 @@ class UpdateTrackerPersonListBody:
                     tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
                 elif isinstance(tracking_rules_type_0_item_data, PersonStuckInRole):
                     tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
+                elif isinstance(tracking_rules_type_0_item_data, PersonTenureMilestone):
+                    tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
+                elif isinstance(tracking_rules_type_0_item_data, ContactChange):
+                    tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
                 else:
                     tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
 
@@ -341,6 +354,10 @@ class UpdateTrackerPersonListBody:
                 elif isinstance(add_rules_type_0_item_data, PersonGotDemoted):
                     add_rules_type_0_item = add_rules_type_0_item_data.to_dict()
                 elif isinstance(add_rules_type_0_item_data, PersonStuckInRole):
+                    add_rules_type_0_item = add_rules_type_0_item_data.to_dict()
+                elif isinstance(add_rules_type_0_item_data, PersonTenureMilestone):
+                    add_rules_type_0_item = add_rules_type_0_item_data.to_dict()
+                elif isinstance(add_rules_type_0_item_data, ContactChange):
                     add_rules_type_0_item = add_rules_type_0_item_data.to_dict()
                 else:
                     add_rules_type_0_item = add_rules_type_0_item_data.to_dict()
@@ -409,6 +426,8 @@ class UpdateTrackerPersonListBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.added_a_role import AddedARole  # noqa: PLC0415
+        from ..models.contact_change import ContactChange  # noqa: PLC0415
         from ..models.person_became_influencer import PersonBecameInfluencer  # noqa: PLC0415
         from ..models.person_became_premium import PersonBecamePremium  # noqa: PLC0415
         from ..models.person_became_top_voice import PersonBecameTopVoice  # noqa: PLC0415
@@ -486,7 +505,9 @@ class UpdateTrackerPersonListBody:
             data: object,
         ) -> (
             list[
-                PersonBecameInfluencer
+                AddedARole
+                | ContactChange
+                | PersonBecameInfluencer
                 | PersonBecamePremium
                 | PersonBecameTopVoice
                 | PersonBecameVerified
@@ -531,7 +552,9 @@ class UpdateTrackerPersonListBody:
                     def _parse_tracking_rules_type_0_item(
                         data: object,
                     ) -> (
-                        PersonBecameInfluencer
+                        AddedARole
+                        | ContactChange
+                        | PersonBecameInfluencer
                         | PersonBecamePremium
                         | PersonBecameTopVoice
                         | PersonBecameVerified
@@ -767,11 +790,27 @@ class UpdateTrackerPersonListBody:
                             return tracking_rules_type_0_item_type_25
                         except (TypeError, ValueError, AttributeError, KeyError):
                             pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            tracking_rules_type_0_item_type_26 = PersonTenureMilestone.from_dict(data)
+
+                            return tracking_rules_type_0_item_type_26
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            tracking_rules_type_0_item_type_27 = ContactChange.from_dict(data)
+
+                            return tracking_rules_type_0_item_type_27
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        tracking_rules_type_0_item_type_26 = PersonTenureMilestone.from_dict(data)
+                        tracking_rules_type_0_item_type_28 = AddedARole.from_dict(data)
 
-                        return tracking_rules_type_0_item_type_26
+                        return tracking_rules_type_0_item_type_28
 
                     tracking_rules_type_0_item = _parse_tracking_rules_type_0_item(tracking_rules_type_0_item_data)
 
@@ -782,7 +821,9 @@ class UpdateTrackerPersonListBody:
                 pass
             return cast(
                 list[
-                    PersonBecameInfluencer
+                    AddedARole
+                    | ContactChange
+                    | PersonBecameInfluencer
                     | PersonBecamePremium
                     | PersonBecameTopVoice
                     | PersonBecameVerified
@@ -821,7 +862,9 @@ class UpdateTrackerPersonListBody:
             data: object,
         ) -> (
             list[
-                PersonBecameInfluencer
+                AddedARole
+                | ContactChange
+                | PersonBecameInfluencer
                 | PersonBecamePremium
                 | PersonBecameTopVoice
                 | PersonBecameVerified
@@ -866,7 +909,9 @@ class UpdateTrackerPersonListBody:
                     def _parse_add_rules_type_0_item(
                         data: object,
                     ) -> (
-                        PersonBecameInfluencer
+                        AddedARole
+                        | ContactChange
+                        | PersonBecameInfluencer
                         | PersonBecamePremium
                         | PersonBecameTopVoice
                         | PersonBecameVerified
@@ -1102,11 +1147,27 @@ class UpdateTrackerPersonListBody:
                             return add_rules_type_0_item_type_25
                         except (TypeError, ValueError, AttributeError, KeyError):
                             pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            add_rules_type_0_item_type_26 = PersonTenureMilestone.from_dict(data)
+
+                            return add_rules_type_0_item_type_26
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            add_rules_type_0_item_type_27 = ContactChange.from_dict(data)
+
+                            return add_rules_type_0_item_type_27
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        add_rules_type_0_item_type_26 = PersonTenureMilestone.from_dict(data)
+                        add_rules_type_0_item_type_28 = AddedARole.from_dict(data)
 
-                        return add_rules_type_0_item_type_26
+                        return add_rules_type_0_item_type_28
 
                     add_rules_type_0_item = _parse_add_rules_type_0_item(add_rules_type_0_item_data)
 
@@ -1117,7 +1178,9 @@ class UpdateTrackerPersonListBody:
                 pass
             return cast(
                 list[
-                    PersonBecameInfluencer
+                    AddedARole
+                    | ContactChange
+                    | PersonBecameInfluencer
                     | PersonBecamePremium
                     | PersonBecameTopVoice
                     | PersonBecameVerified

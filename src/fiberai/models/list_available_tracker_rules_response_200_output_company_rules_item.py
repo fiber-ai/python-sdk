@@ -33,6 +33,9 @@ class ListAvailableTrackerRulesResponse200OutputCompanyRulesItem:
         description (str): What change this rule detects and when it fires.
         use_case (str): Sales-oriented example of why you would use this rule.
         supports_initial_signals (bool): Whether this rule supports immediate initial signals on entity addition.
+        is_premium (bool): Whether this is a premium rule. Premium rules monitor additional sources (news coverage and
+            LinkedIn activity) beyond the base profile; a list containing at least one premium rule is billed at a minimum
+            rate per entity per refresh. See https://docs.fiber.ai/monitoring/tracker#premium-rules for details.
         config (ListAvailableTrackerRulesResponse200OutputCompanyRulesItemConfig): Config schema and example for
             creating this rule type.
         signal (ListAvailableTrackerRulesResponse200OutputCompanyRulesItemSignal): Signal output schema and example for
@@ -45,6 +48,7 @@ class ListAvailableTrackerRulesResponse200OutputCompanyRulesItem:
     description: str
     use_case: str
     supports_initial_signals: bool
+    is_premium: bool
     config: ListAvailableTrackerRulesResponse200OutputCompanyRulesItemConfig
     signal: ListAvailableTrackerRulesResponse200OutputCompanyRulesItemSignal
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -62,6 +66,8 @@ class ListAvailableTrackerRulesResponse200OutputCompanyRulesItem:
 
         supports_initial_signals = self.supports_initial_signals
 
+        is_premium = self.is_premium
+
         config = self.config.to_dict()
 
         signal = self.signal.to_dict()
@@ -76,6 +82,7 @@ class ListAvailableTrackerRulesResponse200OutputCompanyRulesItem:
                 "description": description,
                 "useCase": use_case,
                 "supportsInitialSignals": supports_initial_signals,
+                "isPremium": is_premium,
                 "config": config,
                 "signal": signal,
             }
@@ -105,6 +112,8 @@ class ListAvailableTrackerRulesResponse200OutputCompanyRulesItem:
 
         supports_initial_signals = d.pop("supportsInitialSignals")
 
+        is_premium = d.pop("isPremium")
+
         config = ListAvailableTrackerRulesResponse200OutputCompanyRulesItemConfig.from_dict(d.pop("config"))
 
         signal = ListAvailableTrackerRulesResponse200OutputCompanyRulesItemSignal.from_dict(d.pop("signal"))
@@ -116,6 +125,7 @@ class ListAvailableTrackerRulesResponse200OutputCompanyRulesItem:
             description=description,
             use_case=use_case,
             supports_initial_signals=supports_initial_signals,
+            is_premium=is_premium,
             config=config,
             signal=signal,
         )

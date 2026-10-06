@@ -8,6 +8,7 @@ from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
     from ..models.acquired_company import AcquiredCompany
+    from ..models.added_a_role import AddedARole
     from ..models.company_description_changed import CompanyDescriptionChanged
     from ..models.company_logo_changed import CompanyLogoChanged
     from ..models.company_name_changed import CompanyNameChanged
@@ -16,6 +17,7 @@ if TYPE_CHECKING:
     from ..models.company_posted_with_keyword import CompanyPostedWithKeyword
     from ..models.company_status_changed import CompanyStatusChanged
     from ..models.company_went_inactive import CompanyWentInactive
+    from ..models.contact_change import ContactChange
     from ..models.department_size_threshold import DepartmentSizeThreshold
     from ..models.employee_count_milestone import EmployeeCountMilestone
     from ..models.follower_count_growth import FollowerCountGrowth
@@ -25,6 +27,7 @@ if TYPE_CHECKING:
     from ..models.hq_location_changed import HQLocationChanged
     from ..models.job_posting_in_function import JobPostingInFunction
     from ..models.job_posting_with_keyword import JobPostingWithKeyword
+    from ..models.joined_an_accelerator import JoinedAnAccelerator
     from ..models.new_funding_round import NewFundingRound
     from ..models.new_investor import NewInvestor
     from ..models.new_office_location import NewOfficeLocation
@@ -69,23 +72,24 @@ class PreviewTrackerSignalBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        config (AcquiredCompany | CompanyDescriptionChanged | CompanyLogoChanged | CompanyNameChanged | CompanyNews |
-            CompanyPosted | CompanyPostedWithKeyword | CompanyStatusChanged | CompanyWentInactive | DepartmentSizeThreshold
-            | EmployeeCountMilestone | FollowerCountGrowth | FundingStageChanged | HeadcountCrossedThreshold |
-            HeadcountGrowthPercent | HQLocationChanged | JobPostingInFunction | JobPostingWithKeyword | NewFundingRound |
-            NewInvestor | NewOfficeLocation | NewsWithKeyword | PersonBecameInfluencer | PersonBecamePremium |
-            PersonBecameTopVoice | PersonBecameVerified | PersonChangedCompany | PersonCommentedOnPost |
-            PersonConnectionsMilestone | PersonEmploymentTypeChanged | PersonFollowerMilestone | PersonGotDemoted |
-            PersonGotPromoted | PersonHeadlineChanged | PersonIsHiring | PersonLocationChanged | PersonNewCertification |
-            PersonOpenToWork | PersonPosted | PersonPostedWithKeyword | PersonReactedToPost | PersonSkillsAdded |
-            PersonStartedCompany | PersonStealthChanged | PersonStuckInRole | PersonSummaryChanged | PersonTagGained |
-            PersonTenureMilestone | PersonTitleChanged | RecentLayoffs | RecentlyHiredWithTitle | TechnologyAdded): Rule
-            configuration to preview. Same shape as when creating a rule.
+        config (AcquiredCompany | AddedARole | CompanyDescriptionChanged | CompanyLogoChanged | CompanyNameChanged |
+            CompanyNews | CompanyPosted | CompanyPostedWithKeyword | CompanyStatusChanged | CompanyWentInactive |
+            ContactChange | DepartmentSizeThreshold | EmployeeCountMilestone | FollowerCountGrowth | FundingStageChanged |
+            HeadcountCrossedThreshold | HeadcountGrowthPercent | HQLocationChanged | JobPostingInFunction |
+            JobPostingWithKeyword | JoinedAnAccelerator | NewFundingRound | NewInvestor | NewOfficeLocation |
+            NewsWithKeyword | PersonBecameInfluencer | PersonBecamePremium | PersonBecameTopVoice | PersonBecameVerified |
+            PersonChangedCompany | PersonCommentedOnPost | PersonConnectionsMilestone | PersonEmploymentTypeChanged |
+            PersonFollowerMilestone | PersonGotDemoted | PersonGotPromoted | PersonHeadlineChanged | PersonIsHiring |
+            PersonLocationChanged | PersonNewCertification | PersonOpenToWork | PersonPosted | PersonPostedWithKeyword |
+            PersonReactedToPost | PersonSkillsAdded | PersonStartedCompany | PersonStealthChanged | PersonStuckInRole |
+            PersonSummaryChanged | PersonTagGained | PersonTenureMilestone | PersonTitleChanged | RecentLayoffs |
+            RecentlyHiredWithTitle | TechnologyAdded): Rule configuration to preview. Same shape as when creating a rule.
     """
 
     api_key: str
     config: (
         AcquiredCompany
+        | AddedARole
         | CompanyDescriptionChanged
         | CompanyLogoChanged
         | CompanyNameChanged
@@ -94,6 +98,7 @@ class PreviewTrackerSignalBody:
         | CompanyPostedWithKeyword
         | CompanyStatusChanged
         | CompanyWentInactive
+        | ContactChange
         | DepartmentSizeThreshold
         | EmployeeCountMilestone
         | FollowerCountGrowth
@@ -103,6 +108,7 @@ class PreviewTrackerSignalBody:
         | HQLocationChanged
         | JobPostingInFunction
         | JobPostingWithKeyword
+        | JoinedAnAccelerator
         | NewFundingRound
         | NewInvestor
         | NewOfficeLocation
@@ -150,6 +156,7 @@ class PreviewTrackerSignalBody:
         from ..models.company_posted_with_keyword import CompanyPostedWithKeyword  # noqa: PLC0415
         from ..models.company_status_changed import CompanyStatusChanged  # noqa: PLC0415
         from ..models.company_went_inactive import CompanyWentInactive  # noqa: PLC0415
+        from ..models.contact_change import ContactChange  # noqa: PLC0415
         from ..models.department_size_threshold import DepartmentSizeThreshold  # noqa: PLC0415
         from ..models.employee_count_milestone import EmployeeCountMilestone  # noqa: PLC0415
         from ..models.follower_count_growth import FollowerCountGrowth  # noqa: PLC0415
@@ -159,6 +166,7 @@ class PreviewTrackerSignalBody:
         from ..models.hq_location_changed import HQLocationChanged  # noqa: PLC0415
         from ..models.job_posting_in_function import JobPostingInFunction  # noqa: PLC0415
         from ..models.job_posting_with_keyword import JobPostingWithKeyword  # noqa: PLC0415
+        from ..models.joined_an_accelerator import JoinedAnAccelerator  # noqa: PLC0415
         from ..models.new_funding_round import NewFundingRound  # noqa: PLC0415
         from ..models.new_investor import NewInvestor  # noqa: PLC0415
         from ..models.new_office_location import NewOfficeLocation  # noqa: PLC0415
@@ -188,6 +196,7 @@ class PreviewTrackerSignalBody:
         from ..models.person_stuck_in_role import PersonStuckInRole  # noqa: PLC0415
         from ..models.person_summary_changed import PersonSummaryChanged  # noqa: PLC0415
         from ..models.person_tag_gained import PersonTagGained  # noqa: PLC0415
+        from ..models.person_tenure_milestone import PersonTenureMilestone  # noqa: PLC0415
         from ..models.person_title_changed import PersonTitleChanged  # noqa: PLC0415
         from ..models.recent_layoffs import RecentLayoffs  # noqa: PLC0415
         from ..models.recently_hired_with_title import RecentlyHiredWithTitle  # noqa: PLC0415
@@ -239,6 +248,8 @@ class PreviewTrackerSignalBody:
         elif isinstance(self.config, AcquiredCompany):
             config = self.config.to_dict()
         elif isinstance(self.config, NewInvestor):
+            config = self.config.to_dict()
+        elif isinstance(self.config, JoinedAnAccelerator):
             config = self.config.to_dict()
         elif isinstance(self.config, RecentlyHiredWithTitle):
             config = self.config.to_dict()
@@ -298,6 +309,10 @@ class PreviewTrackerSignalBody:
             config = self.config.to_dict()
         elif isinstance(self.config, PersonStuckInRole):
             config = self.config.to_dict()
+        elif isinstance(self.config, PersonTenureMilestone):
+            config = self.config.to_dict()
+        elif isinstance(self.config, ContactChange):
+            config = self.config.to_dict()
         else:
             config = self.config.to_dict()
 
@@ -315,6 +330,7 @@ class PreviewTrackerSignalBody:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.acquired_company import AcquiredCompany  # noqa: PLC0415
+        from ..models.added_a_role import AddedARole  # noqa: PLC0415
         from ..models.company_description_changed import CompanyDescriptionChanged  # noqa: PLC0415
         from ..models.company_logo_changed import CompanyLogoChanged  # noqa: PLC0415
         from ..models.company_name_changed import CompanyNameChanged  # noqa: PLC0415
@@ -323,6 +339,7 @@ class PreviewTrackerSignalBody:
         from ..models.company_posted_with_keyword import CompanyPostedWithKeyword  # noqa: PLC0415
         from ..models.company_status_changed import CompanyStatusChanged  # noqa: PLC0415
         from ..models.company_went_inactive import CompanyWentInactive  # noqa: PLC0415
+        from ..models.contact_change import ContactChange  # noqa: PLC0415
         from ..models.department_size_threshold import DepartmentSizeThreshold  # noqa: PLC0415
         from ..models.employee_count_milestone import EmployeeCountMilestone  # noqa: PLC0415
         from ..models.follower_count_growth import FollowerCountGrowth  # noqa: PLC0415
@@ -332,6 +349,7 @@ class PreviewTrackerSignalBody:
         from ..models.hq_location_changed import HQLocationChanged  # noqa: PLC0415
         from ..models.job_posting_in_function import JobPostingInFunction  # noqa: PLC0415
         from ..models.job_posting_with_keyword import JobPostingWithKeyword  # noqa: PLC0415
+        from ..models.joined_an_accelerator import JoinedAnAccelerator  # noqa: PLC0415
         from ..models.new_funding_round import NewFundingRound  # noqa: PLC0415
         from ..models.new_investor import NewInvestor  # noqa: PLC0415
         from ..models.new_office_location import NewOfficeLocation  # noqa: PLC0415
@@ -374,6 +392,7 @@ class PreviewTrackerSignalBody:
             data: object,
         ) -> (
             AcquiredCompany
+            | AddedARole
             | CompanyDescriptionChanged
             | CompanyLogoChanged
             | CompanyNameChanged
@@ -382,6 +401,7 @@ class PreviewTrackerSignalBody:
             | CompanyPostedWithKeyword
             | CompanyStatusChanged
             | CompanyWentInactive
+            | ContactChange
             | DepartmentSizeThreshold
             | EmployeeCountMilestone
             | FollowerCountGrowth
@@ -391,6 +411,7 @@ class PreviewTrackerSignalBody:
             | HQLocationChanged
             | JobPostingInFunction
             | JobPostingWithKeyword
+            | JoinedAnAccelerator
             | NewFundingRound
             | NewInvestor
             | NewOfficeLocation
@@ -605,7 +626,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_22 = RecentlyHiredWithTitle.from_dict(data)
+                config_type_22 = JoinedAnAccelerator.from_dict(data)
 
                 return config_type_22
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -613,7 +634,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_23 = DepartmentSizeThreshold.from_dict(data)
+                config_type_23 = RecentlyHiredWithTitle.from_dict(data)
 
                 return config_type_23
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -621,7 +642,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_24 = RecentLayoffs.from_dict(data)
+                config_type_24 = DepartmentSizeThreshold.from_dict(data)
 
                 return config_type_24
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -629,7 +650,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_25 = PersonChangedCompany.from_dict(data)
+                config_type_25 = RecentLayoffs.from_dict(data)
 
                 return config_type_25
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -637,7 +658,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_26 = PersonTitleChanged.from_dict(data)
+                config_type_26 = PersonChangedCompany.from_dict(data)
 
                 return config_type_26
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -645,7 +666,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_27 = PersonStealthChanged.from_dict(data)
+                config_type_27 = PersonTitleChanged.from_dict(data)
 
                 return config_type_27
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -653,7 +674,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_28 = PersonOpenToWork.from_dict(data)
+                config_type_28 = PersonStealthChanged.from_dict(data)
 
                 return config_type_28
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -661,7 +682,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_29 = PersonIsHiring.from_dict(data)
+                config_type_29 = PersonOpenToWork.from_dict(data)
 
                 return config_type_29
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -669,7 +690,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_30 = PersonHeadlineChanged.from_dict(data)
+                config_type_30 = PersonIsHiring.from_dict(data)
 
                 return config_type_30
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -677,7 +698,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_31 = PersonLocationChanged.from_dict(data)
+                config_type_31 = PersonHeadlineChanged.from_dict(data)
 
                 return config_type_31
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -685,7 +706,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_32 = PersonTagGained.from_dict(data)
+                config_type_32 = PersonLocationChanged.from_dict(data)
 
                 return config_type_32
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -693,7 +714,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_33 = PersonPosted.from_dict(data)
+                config_type_33 = PersonTagGained.from_dict(data)
 
                 return config_type_33
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -701,7 +722,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_34 = PersonPostedWithKeyword.from_dict(data)
+                config_type_34 = PersonPosted.from_dict(data)
 
                 return config_type_34
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -709,7 +730,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_35 = PersonReactedToPost.from_dict(data)
+                config_type_35 = PersonPostedWithKeyword.from_dict(data)
 
                 return config_type_35
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -717,7 +738,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_36 = PersonCommentedOnPost.from_dict(data)
+                config_type_36 = PersonReactedToPost.from_dict(data)
 
                 return config_type_36
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -725,7 +746,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_37 = PersonSkillsAdded.from_dict(data)
+                config_type_37 = PersonCommentedOnPost.from_dict(data)
 
                 return config_type_37
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -733,7 +754,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_38 = PersonGotPromoted.from_dict(data)
+                config_type_38 = PersonSkillsAdded.from_dict(data)
 
                 return config_type_38
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -741,7 +762,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_39 = PersonStartedCompany.from_dict(data)
+                config_type_39 = PersonGotPromoted.from_dict(data)
 
                 return config_type_39
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -749,7 +770,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_40 = PersonEmploymentTypeChanged.from_dict(data)
+                config_type_40 = PersonStartedCompany.from_dict(data)
 
                 return config_type_40
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -757,7 +778,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_41 = PersonConnectionsMilestone.from_dict(data)
+                config_type_41 = PersonEmploymentTypeChanged.from_dict(data)
 
                 return config_type_41
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -765,7 +786,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_42 = PersonFollowerMilestone.from_dict(data)
+                config_type_42 = PersonConnectionsMilestone.from_dict(data)
 
                 return config_type_42
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -773,7 +794,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_43 = PersonSummaryChanged.from_dict(data)
+                config_type_43 = PersonFollowerMilestone.from_dict(data)
 
                 return config_type_43
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -781,7 +802,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_44 = PersonNewCertification.from_dict(data)
+                config_type_44 = PersonSummaryChanged.from_dict(data)
 
                 return config_type_44
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -789,7 +810,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_45 = PersonBecameVerified.from_dict(data)
+                config_type_45 = PersonNewCertification.from_dict(data)
 
                 return config_type_45
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -797,7 +818,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_46 = PersonBecamePremium.from_dict(data)
+                config_type_46 = PersonBecameVerified.from_dict(data)
 
                 return config_type_46
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -805,7 +826,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_47 = PersonBecameInfluencer.from_dict(data)
+                config_type_47 = PersonBecamePremium.from_dict(data)
 
                 return config_type_47
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -813,7 +834,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_48 = PersonBecameTopVoice.from_dict(data)
+                config_type_48 = PersonBecameInfluencer.from_dict(data)
 
                 return config_type_48
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -821,7 +842,7 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_49 = PersonGotDemoted.from_dict(data)
+                config_type_49 = PersonBecameTopVoice.from_dict(data)
 
                 return config_type_49
             except (TypeError, ValueError, AttributeError, KeyError):
@@ -829,16 +850,40 @@ class PreviewTrackerSignalBody:
             try:
                 if not isinstance(data, dict):
                     raise TypeError()
-                config_type_50 = PersonStuckInRole.from_dict(data)
+                config_type_50 = PersonGotDemoted.from_dict(data)
 
                 return config_type_50
             except (TypeError, ValueError, AttributeError, KeyError):
                 pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                config_type_51 = PersonStuckInRole.from_dict(data)
+
+                return config_type_51
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                config_type_52 = PersonTenureMilestone.from_dict(data)
+
+                return config_type_52
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                config_type_53 = ContactChange.from_dict(data)
+
+                return config_type_53
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
             if not isinstance(data, dict):
                 raise TypeError()
-            config_type_51 = PersonTenureMilestone.from_dict(data)
+            config_type_54 = AddedARole.from_dict(data)
 
-            return config_type_51
+            return config_type_54
 
         config = _parse_config(d.pop("config"))
 

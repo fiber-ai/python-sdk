@@ -149,9 +149,10 @@ def sync_detailed(
 ]:
     """List available tracker rules
 
-     Returns all available tracker rule types with descriptions, configuration schemas, example configs,
-    and example signal payloads. Use this to discover what rules exist before creating tracker lists.
-    The response is deterministic — same output on every call.
+     Returns the tracker rule types available to your organization, with descriptions, configuration
+    schemas, example configs, and example signal payloads. Use this to discover what rules exist before
+    creating tracker lists. Rules flagged `isPremium` monitor additional sources (news coverage and
+    LinkedIn activity) — a list containing at least one bills at a minimum per-entity rate per refresh.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -199,9 +200,10 @@ def sync(
 ):
     """List available tracker rules
 
-     Returns all available tracker rule types with descriptions, configuration schemas, example configs,
-    and example signal payloads. Use this to discover what rules exist before creating tracker lists.
-    The response is deterministic — same output on every call.
+     Returns the tracker rule types available to your organization, with descriptions, configuration
+    schemas, example configs, and example signal payloads. Use this to discover what rules exist before
+    creating tracker lists. Rules flagged `isPremium` monitor additional sources (news coverage and
+    LinkedIn activity) — a list containing at least one bills at a minimum per-entity rate per refresh.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -243,9 +245,10 @@ async def asyncio_detailed(
 ]:
     """List available tracker rules
 
-     Returns all available tracker rule types with descriptions, configuration schemas, example configs,
-    and example signal payloads. Use this to discover what rules exist before creating tracker lists.
-    The response is deterministic — same output on every call.
+     Returns the tracker rule types available to your organization, with descriptions, configuration
+    schemas, example configs, and example signal payloads. Use this to discover what rules exist before
+    creating tracker lists. Rules flagged `isPremium` monitor additional sources (news coverage and
+    LinkedIn activity) — a list containing at least one bills at a minimum per-entity rate per refresh.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -291,9 +294,10 @@ async def asyncio(
 ):
     """List available tracker rules
 
-     Returns all available tracker rule types with descriptions, configuration schemas, example configs,
-    and example signal payloads. Use this to discover what rules exist before creating tracker lists.
-    The response is deterministic — same output on every call.
+     Returns the tracker rule types available to your organization, with descriptions, configuration
+    schemas, example configs, and example signal payloads. Use this to discover what rules exist before
+    creating tracker lists. Rules flagged `isPremium` monitor additional sources (news coverage and
+    LinkedIn activity) — a list containing at least one bills at a minimum per-entity rate per refresh.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 

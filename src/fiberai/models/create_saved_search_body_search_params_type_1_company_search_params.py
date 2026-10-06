@@ -18,6 +18,9 @@ if TYPE_CHECKING:
     from ..models.create_saved_search_body_search_params_type_1_company_search_params_crunchbase_category_groups_type_0 import (
         CreateSavedSearchBodySearchParamsType1CompanySearchParamsCrunchbaseCategoryGroupsType0,
     )
+    from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_count_ranges_type_0 import (
+        CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountRangesType0,
+    )
     from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_count_v2_type_0 import (
         CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountV2Type0,
     )
@@ -93,6 +96,9 @@ if TYPE_CHECKING:
     from ..models.create_saved_search_body_search_params_type_1_company_search_params_revenue_range_usd_type_0 import (
         CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangeUSDType0,
     )
+    from ..models.create_saved_search_body_search_params_type_1_company_search_params_revenue_ranges_usd_type_0 import (
+        CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangesUSDType0,
+    )
     from ..models.create_saved_search_body_search_params_type_1_company_search_params_sort_type_0_item import (
         CreateSavedSearchBodySearchParamsType1CompanySearchParamsSortType0Item,
     )
@@ -138,6 +144,8 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
             None | Unset):
         employee_count_v2 (CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountV2Type0 | None |
             Unset):
+        employee_count_ranges (CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountRangesType0 | None
+            | Unset):
         keywords (CreateSavedSearchBodySearchParamsType1CompanySearchParamsKeywordsType0 | None | Unset):
         industries_v2 (CreateSavedSearchBodySearchParamsType1CompanySearchParamsIndustriesV2Type0 | None | Unset):
         stage (CreateSavedSearchBodySearchParamsType1CompanySearchParamsStageType0 | None | Unset):
@@ -176,11 +184,20 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
         technologies_v2 (CreateSavedSearchBodySearchParamsType1CompanySearchParamsTechnologiesV2Type0 | None | Unset):
         revenue_range_usd (CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangeUSDType0 | None |
             Unset):
+        revenue_ranges_usd (CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangesUSDType0 | None |
+            Unset):
         employee_trends_v2 (CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsV2Type0 | None |
             Unset):
         tags (CreateSavedSearchBodySearchParamsType1CompanySearchParamsTagsType0 | None | Unset):
         linkedin_industries (CreateSavedSearchBodySearchParamsType1CompanySearchParamsLinkedinIndustriesType0 | None |
-            Unset):
+            Unset): Filter companies by the industries they are tagged with on LinkedIn. To get the list of valid values,
+            each with its company count, use the `getIndustries` endpoint (`GET /v1/enums/industries`), and hide values with
+            very small counts from your filter UI, since a value with only a handful of companies behind it is a no-op
+            filter. Values must match the enum exactly — a misspelled or retired value returns zero results with no error or
+            warning. This filter matches LinkedIn's own industry tags, which are narrow and granular. For broader matching
+            use `industriesV2` (Fiber's standardized categories, listed as `fiberIndustries` in the same response) or
+            `crunchbaseCategories` / `crunchbaseCategoryGroups` for Crunchbase's taxonomy — the three are separate
+            classifications and are not interchangeable.
         sort (list[CreateSavedSearchBodySearchParamsType1CompanySearchParamsSortType0Item] | None | Unset): Sort order
             for company results. Clauses are applied in order. Omit to use the default ranking. Note: changing the sort
             invalidates any existing cursor — start a new pagination run when the sort changes.
@@ -199,6 +216,9 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
     employee_count_v2: CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountV2Type0 | None | Unset = (
         UNSET
     )
+    employee_count_ranges: (
+        CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountRangesType0 | None | Unset
+    ) = UNSET
     keywords: CreateSavedSearchBodySearchParamsType1CompanySearchParamsKeywordsType0 | None | Unset = UNSET
     industries_v2: CreateSavedSearchBodySearchParamsType1CompanySearchParamsIndustriesV2Type0 | None | Unset = UNSET
     stage: CreateSavedSearchBodySearchParamsType1CompanySearchParamsStageType0 | None | Unset = UNSET
@@ -258,6 +278,9 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
     revenue_range_usd: CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangeUSDType0 | None | Unset = (
         UNSET
     )
+    revenue_ranges_usd: (
+        CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangesUSDType0 | None | Unset
+    ) = UNSET
     employee_trends_v2: (
         CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsV2Type0 | None | Unset
     ) = UNSET
@@ -277,6 +300,9 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_crunchbase_category_groups_type_0 import (
             CreateSavedSearchBodySearchParamsType1CompanySearchParamsCrunchbaseCategoryGroupsType0,  # noqa: PLC0415
+        )
+        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_count_ranges_type_0 import (
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountRangesType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_count_v2_type_0 import (
             CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountV2Type0,  # noqa: PLC0415
@@ -353,6 +379,9 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_revenue_range_usd_type_0 import (
             CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangeUSDType0,  # noqa: PLC0415
         )
+        from ..models.create_saved_search_body_search_params_type_1_company_search_params_revenue_ranges_usd_type_0 import (
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangesUSDType0,  # noqa: PLC0415
+        )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_special_flags_type_0 import (
             CreateSavedSearchBodySearchParamsType1CompanySearchParamsSpecialFlagsType0,  # noqa: PLC0415
         )
@@ -428,6 +457,17 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
             employee_count_v2 = self.employee_count_v2.to_dict()
         else:
             employee_count_v2 = self.employee_count_v2
+
+        employee_count_ranges: dict[str, Any] | None | Unset
+        if isinstance(self.employee_count_ranges, Unset):
+            employee_count_ranges = UNSET
+        elif isinstance(
+            self.employee_count_ranges,
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountRangesType0,
+        ):
+            employee_count_ranges = self.employee_count_ranges.to_dict()
+        else:
+            employee_count_ranges = self.employee_count_ranges
 
         keywords: dict[str, Any] | None | Unset
         if isinstance(self.keywords, Unset):
@@ -700,6 +740,16 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
         else:
             revenue_range_usd = self.revenue_range_usd
 
+        revenue_ranges_usd: dict[str, Any] | None | Unset
+        if isinstance(self.revenue_ranges_usd, Unset):
+            revenue_ranges_usd = UNSET
+        elif isinstance(
+            self.revenue_ranges_usd, CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangesUSDType0
+        ):
+            revenue_ranges_usd = self.revenue_ranges_usd.to_dict()
+        else:
+            revenue_ranges_usd = self.revenue_ranges_usd
+
         employee_trends_v2: dict[str, Any] | None | Unset
         if isinstance(self.employee_trends_v2, Unset):
             employee_trends_v2 = UNSET
@@ -753,6 +803,8 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
             field_dict["headquartersStateName"] = headquarters_state_name
         if employee_count_v2 is not UNSET:
             field_dict["employeeCountV2"] = employee_count_v2
+        if employee_count_ranges is not UNSET:
+            field_dict["employeeCountRanges"] = employee_count_ranges
         if keywords is not UNSET:
             field_dict["keywords"] = keywords
         if industries_v2 is not UNSET:
@@ -811,6 +863,8 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
             field_dict["technologiesV2"] = technologies_v2
         if revenue_range_usd is not UNSET:
             field_dict["revenueRangeUSD"] = revenue_range_usd
+        if revenue_ranges_usd is not UNSET:
+            field_dict["revenueRangesUSD"] = revenue_ranges_usd
         if employee_trends_v2 is not UNSET:
             field_dict["employeeTrendsV2"] = employee_trends_v2
         if tags is not UNSET:
@@ -832,6 +886,9 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_crunchbase_category_groups_type_0 import (
             CreateSavedSearchBodySearchParamsType1CompanySearchParamsCrunchbaseCategoryGroupsType0,  # noqa: PLC0415
+        )
+        from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_count_ranges_type_0 import (
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountRangesType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_employee_count_v2_type_0 import (
             CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountV2Type0,  # noqa: PLC0415
@@ -907,6 +964,9 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_revenue_range_usd_type_0 import (
             CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangeUSDType0,  # noqa: PLC0415
+        )
+        from ..models.create_saved_search_body_search_params_type_1_company_search_params_revenue_ranges_usd_type_0 import (
+            CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangesUSDType0,  # noqa: PLC0415
         )
         from ..models.create_saved_search_body_search_params_type_1_company_search_params_sort_type_0_item import (
             CreateSavedSearchBodySearchParamsType1CompanySearchParamsSortType0Item,  # noqa: PLC0415
@@ -1049,6 +1109,29 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
             )
 
         employee_count_v2 = _parse_employee_count_v2(d.pop("employeeCountV2", UNSET))
+
+        def _parse_employee_count_ranges(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountRangesType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                employee_count_ranges_type_0 = (
+                    CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountRangesType0.from_dict(data)
+                )
+
+                return employee_count_ranges_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeCountRangesType0 | None | Unset, data
+            )
+
+        employee_count_ranges = _parse_employee_count_ranges(d.pop("employeeCountRanges", UNSET))
 
         def _parse_keywords(
             data: object,
@@ -1714,6 +1797,29 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
 
         revenue_range_usd = _parse_revenue_range_usd(d.pop("revenueRangeUSD", UNSET))
 
+        def _parse_revenue_ranges_usd(
+            data: object,
+        ) -> CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangesUSDType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                revenue_ranges_usd_type_0 = (
+                    CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangesUSDType0.from_dict(data)
+                )
+
+                return revenue_ranges_usd_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                CreateSavedSearchBodySearchParamsType1CompanySearchParamsRevenueRangesUSDType0 | None | Unset, data
+            )
+
+        revenue_ranges_usd = _parse_revenue_ranges_usd(d.pop("revenueRangesUSD", UNSET))
+
         def _parse_employee_trends_v2(
             data: object,
         ) -> CreateSavedSearchBodySearchParamsType1CompanySearchParamsEmployeeTrendsV2Type0 | None | Unset:
@@ -1813,6 +1919,7 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
             headquarters_country_code=headquarters_country_code,
             headquarters_state_name=headquarters_state_name,
             employee_count_v2=employee_count_v2,
+            employee_count_ranges=employee_count_ranges,
             keywords=keywords,
             industries_v2=industries_v2,
             stage=stage,
@@ -1842,6 +1949,7 @@ class CreateSavedSearchBodySearchParamsType1CompanySearchParams:
             investors_v2=investors_v2,
             technologies_v2=technologies_v2,
             revenue_range_usd=revenue_range_usd,
+            revenue_ranges_usd=revenue_ranges_usd,
             employee_trends_v2=employee_trends_v2,
             tags=tags,
             linkedin_industries=linkedin_industries,

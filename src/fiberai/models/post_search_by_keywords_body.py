@@ -19,10 +19,10 @@ class PostSearchByKeywordsBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        keywords (str): Keywords to search for in LinkedIn posts (comma-separated)
+        keywords (str): Boolean keyword query for LinkedIn posts. See the endpoint description for syntax.
         recency (None | PostSearchByKeywordsBodyRecencyType1 | PostSearchByKeywordsBodyRecencyType2Type1 |
-            PostSearchByKeywordsBodyRecencyType3Type1 | Unset): Filter by post age. Options: Day, Week, Month, Quarter,
-            HalfYear, Year. Defaults to all time if omitted.
+            PostSearchByKeywordsBodyRecencyType3Type1 | Unset): Filter posts by how recently they were published. Omit to
+            search posts from any time. Windows longer than a month can return fewer posts per page.
         cursor (None | str | Unset): Pagination cursor for fetching additional pages of posts
     """
 

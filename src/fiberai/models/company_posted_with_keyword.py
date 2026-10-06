@@ -22,6 +22,9 @@ class CompanyPostedWithKeyword:
         is_dummy (bool | Unset): When true, this rule only fires via the fire-dummy endpoint and is skipped during
             normal pipeline runs.
         keywords (list[str] | None | Unset): Alert for posts matching these keywords.
+        excluded_keywords (list[str] | None | Unset): Suppress posts containing any of these keywords. A post that
+            matches an exclusion keyword never alerts, even when it also matches the rule's keywords. Omit for no
+            exclusions.
         min_reactions (int | None | Unset): Only alert for posts with at least this many reactions. Omit for any.
     """
 
@@ -30,6 +33,7 @@ class CompanyPostedWithKeyword:
     lookback_days: int | None | Unset = UNSET
     is_dummy: bool | Unset = UNSET
     keywords: list[str] | None | Unset = UNSET
+    excluded_keywords: list[str] | None | Unset = UNSET
     min_reactions: int | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -55,6 +59,15 @@ class CompanyPostedWithKeyword:
         else:
             keywords = self.keywords
 
+        excluded_keywords: list[str] | None | Unset
+        if isinstance(self.excluded_keywords, Unset):
+            excluded_keywords = UNSET
+        elif isinstance(self.excluded_keywords, list):
+            excluded_keywords = self.excluded_keywords
+
+        else:
+            excluded_keywords = self.excluded_keywords
+
         min_reactions: int | None | Unset
         if isinstance(self.min_reactions, Unset):
             min_reactions = UNSET
@@ -75,6 +88,8 @@ class CompanyPostedWithKeyword:
             field_dict["isDummy"] = is_dummy
         if keywords is not UNSET:
             field_dict["keywords"] = keywords
+        if excluded_keywords is not UNSET:
+            field_dict["excludedKeywords"] = excluded_keywords
         if min_reactions is not UNSET:
             field_dict["minReactions"] = min_reactions
 
@@ -119,6 +134,23 @@ class CompanyPostedWithKeyword:
 
         keywords = _parse_keywords(d.pop("keywords", UNSET))
 
+        def _parse_excluded_keywords(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                excluded_keywords_type_0 = cast(list[str], data)
+
+                return excluded_keywords_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        excluded_keywords = _parse_excluded_keywords(d.pop("excludedKeywords", UNSET))
+
         def _parse_min_reactions(data: object) -> int | None | Unset:
             if data is None:
                 return data
@@ -134,6 +166,7 @@ class CompanyPostedWithKeyword:
             lookback_days=lookback_days,
             is_dummy=is_dummy,
             keywords=keywords,
+            excluded_keywords=excluded_keywords,
             min_reactions=min_reactions,
         )
 

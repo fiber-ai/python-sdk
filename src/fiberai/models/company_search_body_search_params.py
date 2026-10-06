@@ -18,6 +18,9 @@ if TYPE_CHECKING:
     from ..models.company_search_body_search_params_crunchbase_category_groups_type_0 import (
         CompanySearchBodySearchParamsCrunchbaseCategoryGroupsType0,
     )
+    from ..models.company_search_body_search_params_employee_count_ranges_type_0 import (
+        CompanySearchBodySearchParamsEmployeeCountRangesType0,
+    )
     from ..models.company_search_body_search_params_employee_count_v2_type_0 import (
         CompanySearchBodySearchParamsEmployeeCountV2Type0,
     )
@@ -83,6 +86,9 @@ if TYPE_CHECKING:
     from ..models.company_search_body_search_params_revenue_range_usd_type_0 import (
         CompanySearchBodySearchParamsRevenueRangeUSDType0,
     )
+    from ..models.company_search_body_search_params_revenue_ranges_usd_type_0 import (
+        CompanySearchBodySearchParamsRevenueRangesUSDType0,
+    )
     from ..models.company_search_body_search_params_sort_type_0_item import CompanySearchBodySearchParamsSortType0Item
     from ..models.company_search_body_search_params_special_flags_type_0 import (
         CompanySearchBodySearchParamsSpecialFlagsType0,
@@ -115,6 +121,7 @@ class CompanySearchBodySearchParams:
         headquarters_country_code (CompanySearchBodySearchParamsHeadquartersCountryCodeType0 | None | Unset):
         headquarters_state_name (CompanySearchBodySearchParamsHeadquartersStateNameType0 | None | Unset):
         employee_count_v2 (CompanySearchBodySearchParamsEmployeeCountV2Type0 | None | Unset):
+        employee_count_ranges (CompanySearchBodySearchParamsEmployeeCountRangesType0 | None | Unset):
         keywords (CompanySearchBodySearchParamsKeywordsType0 | None | Unset):
         industries_v2 (CompanySearchBodySearchParamsIndustriesV2Type0 | None | Unset):
         stage (CompanySearchBodySearchParamsStageType0 | None | Unset):
@@ -146,9 +153,18 @@ class CompanySearchBodySearchParams:
         investors_v2 (CompanySearchBodySearchParamsInvestorsV2Type0 | None | Unset):
         technologies_v2 (CompanySearchBodySearchParamsTechnologiesV2Type0 | None | Unset):
         revenue_range_usd (CompanySearchBodySearchParamsRevenueRangeUSDType0 | None | Unset):
+        revenue_ranges_usd (CompanySearchBodySearchParamsRevenueRangesUSDType0 | None | Unset):
         employee_trends_v2 (CompanySearchBodySearchParamsEmployeeTrendsV2Type0 | None | Unset):
         tags (CompanySearchBodySearchParamsTagsType0 | None | Unset):
-        linkedin_industries (CompanySearchBodySearchParamsLinkedinIndustriesType0 | None | Unset):
+        linkedin_industries (CompanySearchBodySearchParamsLinkedinIndustriesType0 | None | Unset): Filter companies by
+            the industries they are tagged with on LinkedIn. To get the list of valid values, each with its company count,
+            use the `getIndustries` endpoint (`GET /v1/enums/industries`), and hide values with very small counts from your
+            filter UI, since a value with only a handful of companies behind it is a no-op filter. Values must match the
+            enum exactly — a misspelled or retired value returns zero results with no error or warning. This filter matches
+            LinkedIn's own industry tags, which are narrow and granular. For broader matching use `industriesV2` (Fiber's
+            standardized categories, listed as `fiberIndustries` in the same response) or `crunchbaseCategories` /
+            `crunchbaseCategoryGroups` for Crunchbase's taxonomy — the three are separate classifications and are not
+            interchangeable.
         sort (list[CompanySearchBodySearchParamsSortType0Item] | None | Unset): Sort order for company results. Clauses
             are applied in order. Omit to use the default ranking. Note: changing the sort invalidates any existing cursor —
             start a new pagination run when the sort changes.
@@ -159,6 +175,7 @@ class CompanySearchBodySearchParams:
     headquarters_country_code: CompanySearchBodySearchParamsHeadquartersCountryCodeType0 | None | Unset = UNSET
     headquarters_state_name: CompanySearchBodySearchParamsHeadquartersStateNameType0 | None | Unset = UNSET
     employee_count_v2: CompanySearchBodySearchParamsEmployeeCountV2Type0 | None | Unset = UNSET
+    employee_count_ranges: CompanySearchBodySearchParamsEmployeeCountRangesType0 | None | Unset = UNSET
     keywords: CompanySearchBodySearchParamsKeywordsType0 | None | Unset = UNSET
     industries_v2: CompanySearchBodySearchParamsIndustriesV2Type0 | None | Unset = UNSET
     stage: CompanySearchBodySearchParamsStageType0 | None | Unset = UNSET
@@ -192,6 +209,7 @@ class CompanySearchBodySearchParams:
     investors_v2: CompanySearchBodySearchParamsInvestorsV2Type0 | None | Unset = UNSET
     technologies_v2: CompanySearchBodySearchParamsTechnologiesV2Type0 | None | Unset = UNSET
     revenue_range_usd: CompanySearchBodySearchParamsRevenueRangeUSDType0 | None | Unset = UNSET
+    revenue_ranges_usd: CompanySearchBodySearchParamsRevenueRangesUSDType0 | None | Unset = UNSET
     employee_trends_v2: CompanySearchBodySearchParamsEmployeeTrendsV2Type0 | None | Unset = UNSET
     tags: CompanySearchBodySearchParamsTagsType0 | None | Unset = UNSET
     linkedin_industries: CompanySearchBodySearchParamsLinkedinIndustriesType0 | None | Unset = UNSET
@@ -207,6 +225,9 @@ class CompanySearchBodySearchParams:
         )
         from ..models.company_search_body_search_params_crunchbase_category_groups_type_0 import (
             CompanySearchBodySearchParamsCrunchbaseCategoryGroupsType0,  # noqa: PLC0415
+        )
+        from ..models.company_search_body_search_params_employee_count_ranges_type_0 import (
+            CompanySearchBodySearchParamsEmployeeCountRangesType0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_employee_count_v2_type_0 import (
             CompanySearchBodySearchParamsEmployeeCountV2Type0,  # noqa: PLC0415
@@ -283,6 +304,9 @@ class CompanySearchBodySearchParams:
         from ..models.company_search_body_search_params_revenue_range_usd_type_0 import (
             CompanySearchBodySearchParamsRevenueRangeUSDType0,  # noqa: PLC0415
         )
+        from ..models.company_search_body_search_params_revenue_ranges_usd_type_0 import (
+            CompanySearchBodySearchParamsRevenueRangesUSDType0,  # noqa: PLC0415
+        )
         from ..models.company_search_body_search_params_special_flags_type_0 import (
             CompanySearchBodySearchParamsSpecialFlagsType0,  # noqa: PLC0415
         )
@@ -348,6 +372,14 @@ class CompanySearchBodySearchParams:
             employee_count_v2 = self.employee_count_v2.to_dict()
         else:
             employee_count_v2 = self.employee_count_v2
+
+        employee_count_ranges: dict[str, Any] | None | Unset
+        if isinstance(self.employee_count_ranges, Unset):
+            employee_count_ranges = UNSET
+        elif isinstance(self.employee_count_ranges, CompanySearchBodySearchParamsEmployeeCountRangesType0):
+            employee_count_ranges = self.employee_count_ranges.to_dict()
+        else:
+            employee_count_ranges = self.employee_count_ranges
 
         keywords: dict[str, Any] | None | Unset
         if isinstance(self.keywords, Unset):
@@ -587,6 +619,14 @@ class CompanySearchBodySearchParams:
         else:
             revenue_range_usd = self.revenue_range_usd
 
+        revenue_ranges_usd: dict[str, Any] | None | Unset
+        if isinstance(self.revenue_ranges_usd, Unset):
+            revenue_ranges_usd = UNSET
+        elif isinstance(self.revenue_ranges_usd, CompanySearchBodySearchParamsRevenueRangesUSDType0):
+            revenue_ranges_usd = self.revenue_ranges_usd.to_dict()
+        else:
+            revenue_ranges_usd = self.revenue_ranges_usd
+
         employee_trends_v2: dict[str, Any] | None | Unset
         if isinstance(self.employee_trends_v2, Unset):
             employee_trends_v2 = UNSET
@@ -636,6 +676,8 @@ class CompanySearchBodySearchParams:
             field_dict["headquartersStateName"] = headquarters_state_name
         if employee_count_v2 is not UNSET:
             field_dict["employeeCountV2"] = employee_count_v2
+        if employee_count_ranges is not UNSET:
+            field_dict["employeeCountRanges"] = employee_count_ranges
         if keywords is not UNSET:
             field_dict["keywords"] = keywords
         if industries_v2 is not UNSET:
@@ -694,6 +736,8 @@ class CompanySearchBodySearchParams:
             field_dict["technologiesV2"] = technologies_v2
         if revenue_range_usd is not UNSET:
             field_dict["revenueRangeUSD"] = revenue_range_usd
+        if revenue_ranges_usd is not UNSET:
+            field_dict["revenueRangesUSD"] = revenue_ranges_usd
         if employee_trends_v2 is not UNSET:
             field_dict["employeeTrendsV2"] = employee_trends_v2
         if tags is not UNSET:
@@ -715,6 +759,9 @@ class CompanySearchBodySearchParams:
         )
         from ..models.company_search_body_search_params_crunchbase_category_groups_type_0 import (
             CompanySearchBodySearchParamsCrunchbaseCategoryGroupsType0,  # noqa: PLC0415
+        )
+        from ..models.company_search_body_search_params_employee_count_ranges_type_0 import (
+            CompanySearchBodySearchParamsEmployeeCountRangesType0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_employee_count_v2_type_0 import (
             CompanySearchBodySearchParamsEmployeeCountV2Type0,  # noqa: PLC0415
@@ -790,6 +837,9 @@ class CompanySearchBodySearchParams:
         )
         from ..models.company_search_body_search_params_revenue_range_usd_type_0 import (
             CompanySearchBodySearchParamsRevenueRangeUSDType0,  # noqa: PLC0415
+        )
+        from ..models.company_search_body_search_params_revenue_ranges_usd_type_0 import (
+            CompanySearchBodySearchParamsRevenueRangesUSDType0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_sort_type_0_item import (
             CompanySearchBodySearchParamsSortType0Item,  # noqa: PLC0415
@@ -911,6 +961,25 @@ class CompanySearchBodySearchParams:
             return cast(CompanySearchBodySearchParamsEmployeeCountV2Type0 | None | Unset, data)
 
         employee_count_v2 = _parse_employee_count_v2(d.pop("employeeCountV2", UNSET))
+
+        def _parse_employee_count_ranges(
+            data: object,
+        ) -> CompanySearchBodySearchParamsEmployeeCountRangesType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                employee_count_ranges_type_0 = CompanySearchBodySearchParamsEmployeeCountRangesType0.from_dict(data)
+
+                return employee_count_ranges_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CompanySearchBodySearchParamsEmployeeCountRangesType0 | None | Unset, data)
+
+        employee_count_ranges = _parse_employee_count_ranges(d.pop("employeeCountRanges", UNSET))
 
         def _parse_keywords(data: object) -> CompanySearchBodySearchParamsKeywordsType0 | None | Unset:
             if data is None:
@@ -1452,6 +1521,25 @@ class CompanySearchBodySearchParams:
 
         revenue_range_usd = _parse_revenue_range_usd(d.pop("revenueRangeUSD", UNSET))
 
+        def _parse_revenue_ranges_usd(
+            data: object,
+        ) -> CompanySearchBodySearchParamsRevenueRangesUSDType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                revenue_ranges_usd_type_0 = CompanySearchBodySearchParamsRevenueRangesUSDType0.from_dict(data)
+
+                return revenue_ranges_usd_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CompanySearchBodySearchParamsRevenueRangesUSDType0 | None | Unset, data)
+
+        revenue_ranges_usd = _parse_revenue_ranges_usd(d.pop("revenueRangesUSD", UNSET))
+
         def _parse_employee_trends_v2(
             data: object,
         ) -> CompanySearchBodySearchParamsEmployeeTrendsV2Type0 | None | Unset:
@@ -1535,6 +1623,7 @@ class CompanySearchBodySearchParams:
             headquarters_country_code=headquarters_country_code,
             headquarters_state_name=headquarters_state_name,
             employee_count_v2=employee_count_v2,
+            employee_count_ranges=employee_count_ranges,
             keywords=keywords,
             industries_v2=industries_v2,
             stage=stage,
@@ -1564,6 +1653,7 @@ class CompanySearchBodySearchParams:
             investors_v2=investors_v2,
             technologies_v2=technologies_v2,
             revenue_range_usd=revenue_range_usd,
+            revenue_ranges_usd=revenue_ranges_usd,
             employee_trends_v2=employee_trends_v2,
             tags=tags,
             linkedin_industries=linkedin_industries,

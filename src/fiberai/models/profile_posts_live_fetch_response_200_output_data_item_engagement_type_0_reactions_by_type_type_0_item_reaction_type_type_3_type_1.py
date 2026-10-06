@@ -5,6 +5,7 @@ class ProfilePostsLiveFetchResponse200OutputDataItemEngagementType0ReactionsByTy
     StrEnum
 ):
     CELEBRATE = "CELEBRATE"
+    CURIOUS = "CURIOUS"
     FUNNY = "FUNNY"
     INSIGHTFUL = "INSIGHTFUL"
     LIKE = "LIKE"

@@ -3,6 +3,7 @@ from enum import StrEnum
 
 class PostCommentsLiveFetchResponse200OutputDataItemCommentsType0ItemReactionsByTypeType0ItemReactionTypeType1(StrEnum):
     CELEBRATE = "CELEBRATE"
+    CURIOUS = "CURIOUS"
     FUNNY = "FUNNY"
     INSIGHTFUL = "INSIGHTFUL"
     LIKE = "LIKE"

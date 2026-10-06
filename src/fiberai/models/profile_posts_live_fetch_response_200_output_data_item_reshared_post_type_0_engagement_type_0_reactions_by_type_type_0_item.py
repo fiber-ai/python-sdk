@@ -31,7 +31,8 @@ class ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0EngagementT
             ypeType0ItemReactionTypeType1 | ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0EngagementType0Re
             actionsByTypeType0ItemReactionTypeType2Type1 | ProfilePostsLiveFetchResponse200OutputDataItemResharedPostType0En
             gagementType0ReactionsByTypeType0ItemReactionTypeType3Type1 | Unset): One of LinkedIn's reaction types. These
-            match the tooltips on each of LinkedIn's six reaction buttons; for instance, 'Like' is the blue thumbs-up.
+            match the tooltips on LinkedIn's reaction buttons; for instance, 'Like' is the blue thumbs-up. CURIOUS is
+            LinkedIn's retired 'Curious' reaction, still present on older posts.
     """
 
     num_reactions: float | None | Unset = UNSET

@@ -3,6 +3,7 @@ from enum import StrEnum
 
 class PostReactionsLiveFetchBodyReactionTypeType1(StrEnum):
     CELEBRATE = "CELEBRATE"
+    CURIOUS = "CURIOUS"
     FUNNY = "FUNNY"
     INSIGHTFUL = "INSIGHTFUL"
     LIKE = "LIKE"

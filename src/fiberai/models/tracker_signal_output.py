@@ -11,9 +11,11 @@ from ..models.tracker_signal_output_entity_type import TrackerSignalOutputEntity
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
+    from ..models.accelerator_change import AcceleratorChange
     from ..models.acquisition_change import AcquisitionChange
     from ..models.certification_change import CertificationChange
     from ..models.company_location_change import CompanyLocationChange
+    from ..models.contact_update_change import ContactUpdateChange
     from ..models.departed_from_list_change import DepartedFromListChange
     from ..models.department_size_change import DepartmentSizeChange
     from ..models.funding_round_change import FundingRoundChange
@@ -52,11 +54,12 @@ class TrackerSignalOutput:
             people.
         type_ (str): Signal type (e.g. headcount_crossed_threshold).
         summary (None | str): Human-readable description of what changed.
-        change_data (list[AcquisitionChange | CertificationChange | CompanyLocationChange | DepartedFromListChange |
-            DepartmentSizeChange | FundingRoundChange | FundingStageChange | InvestorChange | JobPostingChange |
-            LayoffEventChange | LinkedInPostChange | LocationDeltaChange | NamedItemChange | NewsArticleChange |
-            NumericDeltaChange | PersonCommentChange | PersonExperienceChange | PersonReactionChange | ScalarDeltaChange |
-            TenureChange | TrackedEmployeeChange]): Array of objects describing what changed. Shape depends on signal type.
+        change_data (list[AcceleratorChange | AcquisitionChange | CertificationChange | CompanyLocationChange |
+            ContactUpdateChange | DepartedFromListChange | DepartmentSizeChange | FundingRoundChange | FundingStageChange |
+            InvestorChange | JobPostingChange | LayoffEventChange | LinkedInPostChange | LocationDeltaChange |
+            NamedItemChange | NewsArticleChange | NumericDeltaChange | PersonCommentChange | PersonExperienceChange |
+            PersonReactionChange | ScalarDeltaChange | TenureChange | TrackedEmployeeChange]): Array of objects describing
+            what changed. Shape depends on signal type.
         sources (list[str]): URLs providing proof or more information about this signal.
         methodology (str): Explanation of how this signal was detected and verified.
         observed_at (datetime.datetime): When we detected the signal. For backfilled signals this reflects the detection
@@ -78,9 +81,11 @@ class TrackerSignalOutput:
     type_: str
     summary: None | str
     change_data: list[
-        AcquisitionChange
+        AcceleratorChange
+        | AcquisitionChange
         | CertificationChange
         | CompanyLocationChange
+        | ContactUpdateChange
         | DepartedFromListChange
         | DepartmentSizeChange
         | FundingRoundChange
@@ -109,9 +114,11 @@ class TrackerSignalOutput:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.accelerator_change import AcceleratorChange  # noqa: PLC0415
         from ..models.acquisition_change import AcquisitionChange  # noqa: PLC0415
         from ..models.certification_change import CertificationChange  # noqa: PLC0415
         from ..models.company_location_change import CompanyLocationChange  # noqa: PLC0415
+        from ..models.contact_update_change import ContactUpdateChange  # noqa: PLC0415
         from ..models.departed_from_list_change import DepartedFromListChange  # noqa: PLC0415
         from ..models.department_size_change import DepartmentSizeChange  # noqa: PLC0415
         from ..models.funding_round_change import FundingRoundChange  # noqa: PLC0415
@@ -166,6 +173,8 @@ class TrackerSignalOutput:
                 change_data_item = change_data_item_data.to_dict()
             elif isinstance(change_data_item_data, LinkedInPostChange):
                 change_data_item = change_data_item_data.to_dict()
+            elif isinstance(change_data_item_data, ContactUpdateChange):
+                change_data_item = change_data_item_data.to_dict()
             elif isinstance(change_data_item_data, PersonExperienceChange):
                 change_data_item = change_data_item_data.to_dict()
             elif isinstance(change_data_item_data, TenureChange):
@@ -177,6 +186,8 @@ class TrackerSignalOutput:
             elif isinstance(change_data_item_data, InvestorChange):
                 change_data_item = change_data_item_data.to_dict()
             elif isinstance(change_data_item_data, AcquisitionChange):
+                change_data_item = change_data_item_data.to_dict()
+            elif isinstance(change_data_item_data, AcceleratorChange):
                 change_data_item = change_data_item_data.to_dict()
             elif isinstance(change_data_item_data, CertificationChange):
                 change_data_item = change_data_item_data.to_dict()
@@ -242,9 +253,11 @@ class TrackerSignalOutput:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.accelerator_change import AcceleratorChange  # noqa: PLC0415
         from ..models.acquisition_change import AcquisitionChange  # noqa: PLC0415
         from ..models.certification_change import CertificationChange  # noqa: PLC0415
         from ..models.company_location_change import CompanyLocationChange  # noqa: PLC0415
+        from ..models.contact_update_change import ContactUpdateChange  # noqa: PLC0415
         from ..models.departed_from_list_change import DepartedFromListChange  # noqa: PLC0415
         from ..models.department_size_change import DepartmentSizeChange  # noqa: PLC0415
         from ..models.funding_round_change import FundingRoundChange  # noqa: PLC0415
@@ -303,9 +316,11 @@ class TrackerSignalOutput:
             def _parse_change_data_item(
                 data: object,
             ) -> (
-                AcquisitionChange
+                AcceleratorChange
+                | AcquisitionChange
                 | CertificationChange
                 | CompanyLocationChange
+                | ContactUpdateChange
                 | DepartedFromListChange
                 | DepartmentSizeChange
                 | FundingRoundChange
@@ -384,7 +399,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_7 = PersonExperienceChange.from_dict(data)
+                    change_data_item_type_7 = ContactUpdateChange.from_dict(data)
 
                     return change_data_item_type_7
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -392,23 +407,23 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_9 = TenureChange.from_dict(data)
+                    change_data_item_type_8 = PersonExperienceChange.from_dict(data)
 
-                    return change_data_item_type_9
+                    return change_data_item_type_8
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_11 = LayoffEventChange.from_dict(data)
+                    change_data_item_type_10 = TenureChange.from_dict(data)
 
-                    return change_data_item_type_11
+                    return change_data_item_type_10
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_12 = TrackedEmployeeChange.from_dict(data)
+                    change_data_item_type_12 = LayoffEventChange.from_dict(data)
 
                     return change_data_item_type_12
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -416,7 +431,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_13 = InvestorChange.from_dict(data)
+                    change_data_item_type_13 = TrackedEmployeeChange.from_dict(data)
 
                     return change_data_item_type_13
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -424,7 +439,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_14 = AcquisitionChange.from_dict(data)
+                    change_data_item_type_14 = InvestorChange.from_dict(data)
 
                     return change_data_item_type_14
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -432,7 +447,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_15 = CertificationChange.from_dict(data)
+                    change_data_item_type_15 = AcquisitionChange.from_dict(data)
 
                     return change_data_item_type_15
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -440,7 +455,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_16 = DepartmentSizeChange.from_dict(data)
+                    change_data_item_type_16 = AcceleratorChange.from_dict(data)
 
                     return change_data_item_type_16
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -448,7 +463,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_17 = PersonReactionChange.from_dict(data)
+                    change_data_item_type_17 = CertificationChange.from_dict(data)
 
                     return change_data_item_type_17
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -456,7 +471,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_18 = PersonCommentChange.from_dict(data)
+                    change_data_item_type_18 = DepartmentSizeChange.from_dict(data)
 
                     return change_data_item_type_18
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -464,7 +479,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_19 = DepartedFromListChange.from_dict(data)
+                    change_data_item_type_19 = PersonReactionChange.from_dict(data)
 
                     return change_data_item_type_19
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -472,7 +487,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_20 = ScalarDeltaChange.from_dict(data)
+                    change_data_item_type_20 = PersonCommentChange.from_dict(data)
 
                     return change_data_item_type_20
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -480,16 +495,32 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_23 = NumericDeltaChange.from_dict(data)
+                    change_data_item_type_21 = DepartedFromListChange.from_dict(data)
 
-                    return change_data_item_type_23
+                    return change_data_item_type_21
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    change_data_item_type_22 = ScalarDeltaChange.from_dict(data)
+
+                    return change_data_item_type_22
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    change_data_item_type_25 = NumericDeltaChange.from_dict(data)
+
+                    return change_data_item_type_25
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                change_data_item_type_24 = NamedItemChange.from_dict(data)
+                change_data_item_type_26 = NamedItemChange.from_dict(data)
 
-                return change_data_item_type_24
+                return change_data_item_type_26
 
             change_data_item = _parse_change_data_item(change_data_item_data)
 

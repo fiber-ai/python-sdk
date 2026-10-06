@@ -178,6 +178,21 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_lookup_agent import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubLookupAgent,
     )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_org_contributors import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubOrgContributors,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_repo_contributors import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoContributors,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_repo_search import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoSearch,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_user_profile import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubUserProfile,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_user_repo_activity import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubUserRepoActivity,
+    )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_google_maps_place import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsPlace,
     )
@@ -186,6 +201,9 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_google_maps_scrape import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsScrape,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_hem_lookup import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0HemLookup,
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_hotel_property_lookup import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0HotelPropertyLookup,
@@ -561,6 +579,12 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         company_review_search (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviewSearch):
         company_review_page (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviewPage):
         company_reviews (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviews):
+        hem_lookup (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0HemLookup):
+        github_repo_contributors (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoContributors):
+        github_org_contributors (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubOrgContributors):
+        github_user_profile (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubUserProfile):
+        github_user_repo_activity (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubUserRepoActivity):
+        github_repo_search (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoSearch):
     """
 
     get_company_from_db: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyFromDb
@@ -707,9 +731,33 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
     company_review_search: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviewSearch
     company_review_page: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviewPage
     company_reviews: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviews
+    hem_lookup: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0HemLookup
+    github_repo_contributors: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoContributors
+    github_org_contributors: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubOrgContributors
+    github_user_profile: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubUserProfile
+    github_user_repo_activity: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubUserRepoActivity
+    github_repo_search: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoSearch
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_saved_search_prospect import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SavedSearchProspect,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_scouting_report_company import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ScoutingReportCompany,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_scouting_report_person import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ScoutingReportPerson,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_search_yelp import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SearchYelp,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_media_finder_agent import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialMediaFinderAgent,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_post_details import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialPostDetails,
+        )  # noqa: PLC0415
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_social_post_quotes import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SocialPostQuotes,
         )  # noqa: PLC0415
@@ -1071,6 +1119,18 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
 
         company_reviews = self.company_reviews.to_dict()
 
+        hem_lookup = self.hem_lookup.to_dict()
+
+        github_repo_contributors = self.github_repo_contributors.to_dict()
+
+        github_org_contributors = self.github_org_contributors.to_dict()
+
+        github_user_profile = self.github_user_profile.to_dict()
+
+        github_user_repo_activity = self.github_user_repo_activity.to_dict()
+
+        github_repo_search = self.github_repo_search.to_dict()
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -1207,6 +1267,12 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
                 "companyReviewSearch": company_review_search,
                 "companyReviewPage": company_review_page,
                 "companyReviews": company_reviews,
+                "hemLookup": hem_lookup,
+                "githubRepoContributors": github_repo_contributors,
+                "githubOrgContributors": github_org_contributors,
+                "githubUserProfile": github_user_profile,
+                "githubUserRepoActivity": github_user_repo_activity,
+                "githubRepoSearch": github_repo_search,
             }
         )
 
@@ -1385,6 +1451,21 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_lookup_agent import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubLookupAgent,  # noqa: PLC0415
         )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_org_contributors import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubOrgContributors,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_repo_contributors import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoContributors,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_repo_search import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoSearch,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_user_profile import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubUserProfile,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_user_repo_activity import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubUserRepoActivity,  # noqa: PLC0415
+        )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_google_maps_place import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsPlace,  # noqa: PLC0415
         )
@@ -1393,6 +1474,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_google_maps_scrape import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GoogleMapsScrape,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_hem_lookup import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0HemLookup,  # noqa: PLC0415
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_hotel_property_lookup import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0HotelPropertyLookup,  # noqa: PLC0415
@@ -2240,6 +2324,34 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             d.pop("companyReviews")
         )
 
+        hem_lookup = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0HemLookup.from_dict(d.pop("hemLookup"))
+
+        github_repo_contributors = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoContributors.from_dict(
+                d.pop("githubRepoContributors")
+            )
+        )
+
+        github_org_contributors = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubOrgContributors.from_dict(
+                d.pop("githubOrgContributors")
+            )
+        )
+
+        github_user_profile = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubUserProfile.from_dict(
+            d.pop("githubUserProfile")
+        )
+
+        github_user_repo_activity = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubUserRepoActivity.from_dict(
+                d.pop("githubUserRepoActivity")
+            )
+        )
+
+        github_repo_search = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoSearch.from_dict(
+            d.pop("githubRepoSearch")
+        )
+
         get_org_credits_response_200_output_item_credits_per_operation_type_0 = cls(
             get_company_from_db=get_company_from_db,
             get_person_from_db=get_person_from_db,
@@ -2373,6 +2485,12 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             company_review_search=company_review_search,
             company_review_page=company_review_page,
             company_reviews=company_reviews,
+            hem_lookup=hem_lookup,
+            github_repo_contributors=github_repo_contributors,
+            github_org_contributors=github_org_contributors,
+            github_user_profile=github_user_profile,
+            github_user_repo_activity=github_user_repo_activity,
+            github_repo_search=github_repo_search,
         )
 
         get_org_credits_response_200_output_item_credits_per_operation_type_0.additional_properties = d

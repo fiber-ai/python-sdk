@@ -19,8 +19,9 @@ class RedditSearchBody:
     Attributes:
         api_key (str): Your Fiber API key
         query (str): Search query.
-        sort (RedditSearchBodySort | Unset): Sort order for global Reddit post search. Default:
-            RedditSearchBodySort.RELEVANCE.
+        sort (RedditSearchBodySort | Unset): Sort order for global Reddit post search. Use `relevance` for research
+            queries and `new` for monitoring a topic. `new` can include off-topic posts and posts outside `timeframe`, so
+            check `publishedAt`. Default: RedditSearchBodySort.RELEVANCE.
         timeframe (RedditSearchBodyTimeframe | Unset): Time window for global search filtering. Default:
             RedditSearchBodyTimeframe.ALL.
         next_page_token (None | str | Unset): Pagination token from a previous response to retrieve the next page. Omit

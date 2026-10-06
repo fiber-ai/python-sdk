@@ -15,10 +15,13 @@ class CombinedSearchCountResponse200Output:
     Attributes:
         num_companies (float):
         num_profiles (float):
+        is_estimate (bool): True when numProfiles is a statistical estimate (much faster, targeted at ±5% relative
+            accuracy); false when the count is exact. Pass getFastEstimate: false to always get an exact count.
     """
 
     num_companies: float
     num_profiles: float
+    is_estimate: bool
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -26,12 +29,15 @@ class CombinedSearchCountResponse200Output:
 
         num_profiles = self.num_profiles
 
+        is_estimate = self.is_estimate
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
                 "numCompanies": num_companies,
                 "numProfiles": num_profiles,
+                "isEstimate": is_estimate,
             }
         )
 
@@ -44,9 +50,12 @@ class CombinedSearchCountResponse200Output:
 
         num_profiles = d.pop("numProfiles")
 
+        is_estimate = d.pop("isEstimate")
+
         combined_search_count_response_200_output = cls(
             num_companies=num_companies,
             num_profiles=num_profiles,
+            is_estimate=is_estimate,
         )
 
         combined_search_count_response_200_output.additional_properties = d

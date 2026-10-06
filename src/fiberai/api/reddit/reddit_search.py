@@ -151,7 +151,7 @@ def sync_detailed(
 
      Search Reddit posts across all subreddits by query, optionally filtered by sort order and timeframe.
     Returns a paginated list of posts. Use the `nextPageToken` field from the response to retrieve
-    subsequent pages. Queries with no matching posts return an empty list and are not charged credits.
+    subsequent pages. A query with no matching posts returns an empty list and is still charged.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
@@ -201,7 +201,7 @@ def sync(
 
      Search Reddit posts across all subreddits by query, optionally filtered by sort order and timeframe.
     Returns a paginated list of posts. Use the `nextPageToken` field from the response to retrieve
-    subsequent pages. Queries with no matching posts return an empty list and are not charged credits.
+    subsequent pages. A query with no matching posts returns an empty list and is still charged.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
@@ -245,7 +245,7 @@ async def asyncio_detailed(
 
      Search Reddit posts across all subreddits by query, optionally filtered by sort order and timeframe.
     Returns a paginated list of posts. Use the `nextPageToken` field from the response to retrieve
-    subsequent pages. Queries with no matching posts return an empty list and are not charged credits.
+    subsequent pages. A query with no matching posts returns an empty list and is still charged.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
@@ -293,7 +293,7 @@ async def asyncio(
 
      Search Reddit posts across all subreddits by query, optionally filtered by sort order and timeframe.
     Returns a paginated list of posts. Use the `nextPageToken` field from the response to retrieve
-    subsequent pages. Queries with no matching posts return an empty list and are not charged credits.
+    subsequent pages. A query with no matching posts returns an empty list and is still charged.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 

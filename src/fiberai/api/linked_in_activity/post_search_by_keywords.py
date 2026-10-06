@@ -149,13 +149,13 @@ def sync_detailed(
 ]:
     """Search LinkedIn posts by keywords
 
-     Search LinkedIn posts using keyword-based queries. Returns a paginated list of posts matching the
-    search criteria, up to 50 per page.
+     Search LinkedIn posts using keyword-based queries. Returns a paginated list of matching posts. A
+    page contains at most 50 posts and may contain fewer.
 
     **Keyword Search Syntax:**
-    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. "head of sales" matches the
-    exact phrase, not the individual words.
-    - **AND:** Use **AND** between keywords to require both terms. sales **AND** engineering matches
+    - **Quoted phrase:** Wrap keywords in quotes to search for a phrase rather than the individual
+    words, e.g. "head of sales".
+    - **AND:** Use **AND** between keywords to look for both terms. sales **AND** engineering looks for
     posts containing both words.
     - **OR:** Use **OR** between keywords to match posts containing any of the terms. sales **OR**
     marketing matches posts with either word.
@@ -165,12 +165,15 @@ def sync_detailed(
     "series A" finds posts about either sales or marketing that also mention "series A".
 
     **Order of precedence:**
-    1. **Quotes (" "):** Exact phrase match. Phrase matching occurs before any Boolean logic is applied.
+    1. **Quotes (" "):** Phrase matching occurs before any Boolean logic is applied.
     2. **Parentheses (()):** Used to explicitly group Boolean logic. Grouped expressions are evaluated
     before ungrouped logic.
     3. **NOT:** Applied after any parentheses or quoted phrases are resolved.
     4. **AND:** Evaluated after **NOT** but before **OR**.
     5. **OR:** Lowest precedence among Boolean operators.
+
+    **Note:** Quoted phrases and AND are applied loosely, so a post can match only part of a phrase or
+    only one side of an AND. Check each post's `content` and `publishedAt`.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
@@ -221,13 +224,13 @@ def sync(
 ):
     """Search LinkedIn posts by keywords
 
-     Search LinkedIn posts using keyword-based queries. Returns a paginated list of posts matching the
-    search criteria, up to 50 per page.
+     Search LinkedIn posts using keyword-based queries. Returns a paginated list of matching posts. A
+    page contains at most 50 posts and may contain fewer.
 
     **Keyword Search Syntax:**
-    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. "head of sales" matches the
-    exact phrase, not the individual words.
-    - **AND:** Use **AND** between keywords to require both terms. sales **AND** engineering matches
+    - **Quoted phrase:** Wrap keywords in quotes to search for a phrase rather than the individual
+    words, e.g. "head of sales".
+    - **AND:** Use **AND** between keywords to look for both terms. sales **AND** engineering looks for
     posts containing both words.
     - **OR:** Use **OR** between keywords to match posts containing any of the terms. sales **OR**
     marketing matches posts with either word.
@@ -237,12 +240,15 @@ def sync(
     "series A" finds posts about either sales or marketing that also mention "series A".
 
     **Order of precedence:**
-    1. **Quotes (" "):** Exact phrase match. Phrase matching occurs before any Boolean logic is applied.
+    1. **Quotes (" "):** Phrase matching occurs before any Boolean logic is applied.
     2. **Parentheses (()):** Used to explicitly group Boolean logic. Grouped expressions are evaluated
     before ungrouped logic.
     3. **NOT:** Applied after any parentheses or quoted phrases are resolved.
     4. **AND:** Evaluated after **NOT** but before **OR**.
     5. **OR:** Lowest precedence among Boolean operators.
+
+    **Note:** Quoted phrases and AND are applied loosely, so a post can match only part of a phrase or
+    only one side of an AND. Check each post's `content` and `publishedAt`.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
@@ -287,13 +293,13 @@ async def asyncio_detailed(
 ]:
     """Search LinkedIn posts by keywords
 
-     Search LinkedIn posts using keyword-based queries. Returns a paginated list of posts matching the
-    search criteria, up to 50 per page.
+     Search LinkedIn posts using keyword-based queries. Returns a paginated list of matching posts. A
+    page contains at most 50 posts and may contain fewer.
 
     **Keyword Search Syntax:**
-    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. "head of sales" matches the
-    exact phrase, not the individual words.
-    - **AND:** Use **AND** between keywords to require both terms. sales **AND** engineering matches
+    - **Quoted phrase:** Wrap keywords in quotes to search for a phrase rather than the individual
+    words, e.g. "head of sales".
+    - **AND:** Use **AND** between keywords to look for both terms. sales **AND** engineering looks for
     posts containing both words.
     - **OR:** Use **OR** between keywords to match posts containing any of the terms. sales **OR**
     marketing matches posts with either word.
@@ -303,12 +309,15 @@ async def asyncio_detailed(
     "series A" finds posts about either sales or marketing that also mention "series A".
 
     **Order of precedence:**
-    1. **Quotes (" "):** Exact phrase match. Phrase matching occurs before any Boolean logic is applied.
+    1. **Quotes (" "):** Phrase matching occurs before any Boolean logic is applied.
     2. **Parentheses (()):** Used to explicitly group Boolean logic. Grouped expressions are evaluated
     before ungrouped logic.
     3. **NOT:** Applied after any parentheses or quoted phrases are resolved.
     4. **AND:** Evaluated after **NOT** but before **OR**.
     5. **OR:** Lowest precedence among Boolean operators.
+
+    **Note:** Quoted phrases and AND are applied loosely, so a post can match only part of a phrase or
+    only one side of an AND. Check each post's `content` and `publishedAt`.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 
@@ -357,13 +366,13 @@ async def asyncio(
 ):
     """Search LinkedIn posts by keywords
 
-     Search LinkedIn posts using keyword-based queries. Returns a paginated list of posts matching the
-    search criteria, up to 50 per page.
+     Search LinkedIn posts using keyword-based queries. Returns a paginated list of matching posts. A
+    page contains at most 50 posts and may contain fewer.
 
     **Keyword Search Syntax:**
-    - **Exact phrase:** Wrap keywords in quotes for exact phrase matching. "head of sales" matches the
-    exact phrase, not the individual words.
-    - **AND:** Use **AND** between keywords to require both terms. sales **AND** engineering matches
+    - **Quoted phrase:** Wrap keywords in quotes to search for a phrase rather than the individual
+    words, e.g. "head of sales".
+    - **AND:** Use **AND** between keywords to look for both terms. sales **AND** engineering looks for
     posts containing both words.
     - **OR:** Use **OR** between keywords to match posts containing any of the terms. sales **OR**
     marketing matches posts with either word.
@@ -373,12 +382,15 @@ async def asyncio(
     "series A" finds posts about either sales or marketing that also mention "series A".
 
     **Order of precedence:**
-    1. **Quotes (" "):** Exact phrase match. Phrase matching occurs before any Boolean logic is applied.
+    1. **Quotes (" "):** Phrase matching occurs before any Boolean logic is applied.
     2. **Parentheses (()):** Used to explicitly group Boolean logic. Grouped expressions are evaluated
     before ungrouped logic.
     3. **NOT:** Applied after any parentheses or quoted phrases are resolved.
     4. **AND:** Evaluated after **NOT** but before **OR**.
     5. **OR:** Lowest precedence among Boolean operators.
+
+    **Note:** Quoted phrases and AND are applied loosely, so a post can match only part of a phrase or
+    only one side of an AND. Check each post's `content` and `publishedAt`.
 
     <span>⚡ <strong>Rate limit:</strong> 300 requests per 1 minute</span>
 

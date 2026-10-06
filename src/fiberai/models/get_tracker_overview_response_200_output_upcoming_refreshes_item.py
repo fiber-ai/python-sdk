@@ -24,7 +24,8 @@ class GetTrackerOverviewResponse200OutputUpcomingRefreshesItem:
             list.
         refresh_at (datetime.datetime): ISO timestamp when the next refresh of this list will run.
         entity_count (int): Number of entities in the list that will be refreshed.
-        estimated_credits (float): Credits that will be charged for this refresh.
+        estimated_credits (float): Credits that will be charged for this refresh. Reflects premium-rule pricing when the
+            list contains premium rules.
     """
 
     list_id: str

@@ -35,10 +35,9 @@ class KitchenSinkBulkProfileBody:
         fuzzy_search (bool | None | Unset): When true, enables fuzzy name matching. Useful when exact name spelling is
             uncertain. Default: False.
         thoroughness (KitchenSinkBulkProfileBodyThoroughnessType1 | KitchenSinkBulkProfileBodyThoroughnessType2Type1 |
-            KitchenSinkBulkProfileBodyThoroughnessType3Type1 | None | Unset): Controls how thoroughly to search across all
-            profiles in the batch. Higher values recover more matches at the cost of additional per-row latency; lower
-            values return faster. Omit to use the recommended default. Default:
-            KitchenSinkBulkProfileBodyThoroughnessType1.LOW.
+            KitchenSinkBulkProfileBodyThoroughnessType3Type1 | None | Unset): Controls how thoroughly to search. Higher
+            values spend more time searching to recover more matches; lower values return faster. Omit to use the
+            recommended default. Default: KitchenSinkBulkProfileBodyThoroughnessType1.LOW.
         get_detailed_education (bool | None | Unset): When true, returns detailed_education[] with school_details for
             each education entry. Default: False.
         get_detailed_work_experience (bool | None | Unset): When true, returns detailed_work_experiences[] with

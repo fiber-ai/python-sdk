@@ -23,7 +23,8 @@ class PeopleSearchResponse200Output:
         estimated_count (float | None | Unset): The estimated total number of people who match your search parameters.
             Note that this does not account for exclusion lists.
         next_cursor (None | str | Unset): The pagination cursor for the next page. Provide this in the next request to
-            continue paginating.
+            continue paginating. Pages of one search are served from a fixed snapshot of results, so rows created while you
+            paginate may not appear until you start a new search.
     """
 
     data: list[PeopleSearchResponse200OutputDataItem]

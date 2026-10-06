@@ -149,9 +149,17 @@ def sync_detailed(
 ]:
     """Search Twitter/X tweets
 
-     Searches for tweets matching a query. Supports standard Twitter search operators (e.g. 'TypeScript
-    from:elonmusk lang:en'). Returns a paginated list of matching tweets. Use the `cursor` field from
-    the response to retrieve subsequent pages.
+     Searches for tweets matching a query. Returns a paginated list of matching tweets. Use the `cursor`
+    field from the response to retrieve subsequent pages.
+
+    **Query behavior:**
+    - The query is run as written and supports X search operators, e.g. `lang:en`, `from:handle`,
+    `since:2026-01-01`, `-filter:retweets`.
+    - A broad OR term matches any tweet that contains it, so prefer specific phrases.
+    - Very long exact phrases rarely match.
+
+    A page with no matching tweets is still charged. To narrow results, check each tweet's `lang`,
+    `isRetweet`, `isReply`, `createdAt`, and engagement counts.
 
     <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 
@@ -199,9 +207,17 @@ def sync(
 ):
     """Search Twitter/X tweets
 
-     Searches for tweets matching a query. Supports standard Twitter search operators (e.g. 'TypeScript
-    from:elonmusk lang:en'). Returns a paginated list of matching tweets. Use the `cursor` field from
-    the response to retrieve subsequent pages.
+     Searches for tweets matching a query. Returns a paginated list of matching tweets. Use the `cursor`
+    field from the response to retrieve subsequent pages.
+
+    **Query behavior:**
+    - The query is run as written and supports X search operators, e.g. `lang:en`, `from:handle`,
+    `since:2026-01-01`, `-filter:retweets`.
+    - A broad OR term matches any tweet that contains it, so prefer specific phrases.
+    - Very long exact phrases rarely match.
+
+    A page with no matching tweets is still charged. To narrow results, check each tweet's `lang`,
+    `isRetweet`, `isReply`, `createdAt`, and engagement counts.
 
     <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 
@@ -243,9 +259,17 @@ async def asyncio_detailed(
 ]:
     """Search Twitter/X tweets
 
-     Searches for tweets matching a query. Supports standard Twitter search operators (e.g. 'TypeScript
-    from:elonmusk lang:en'). Returns a paginated list of matching tweets. Use the `cursor` field from
-    the response to retrieve subsequent pages.
+     Searches for tweets matching a query. Returns a paginated list of matching tweets. Use the `cursor`
+    field from the response to retrieve subsequent pages.
+
+    **Query behavior:**
+    - The query is run as written and supports X search operators, e.g. `lang:en`, `from:handle`,
+    `since:2026-01-01`, `-filter:retweets`.
+    - A broad OR term matches any tweet that contains it, so prefer specific phrases.
+    - Very long exact phrases rarely match.
+
+    A page with no matching tweets is still charged. To narrow results, check each tweet's `lang`,
+    `isRetweet`, `isReply`, `createdAt`, and engagement counts.
 
     <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 
@@ -291,9 +315,17 @@ async def asyncio(
 ):
     """Search Twitter/X tweets
 
-     Searches for tweets matching a query. Supports standard Twitter search operators (e.g. 'TypeScript
-    from:elonmusk lang:en'). Returns a paginated list of matching tweets. Use the `cursor` field from
-    the response to retrieve subsequent pages.
+     Searches for tweets matching a query. Returns a paginated list of matching tweets. Use the `cursor`
+    field from the response to retrieve subsequent pages.
+
+    **Query behavior:**
+    - The query is run as written and supports X search operators, e.g. `lang:en`, `from:handle`,
+    `since:2026-01-01`, `-filter:retweets`.
+    - A broad OR term matches any tweet that contains it, so prefer specific phrases.
+    - Very long exact phrases rarely match.
+
+    A page with no matching tweets is still charged. To narrow results, check each tweet's `lang`,
+    `isRetweet`, `isReply`, `createdAt`, and engagement counts.
 
     <span>⚡ <strong>Rate limit:</strong> 500 requests per 1 minute</span>
 

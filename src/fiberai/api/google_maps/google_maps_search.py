@@ -149,7 +149,10 @@ def sync_detailed(
 ]:
     """Start a search on Google Maps
 
-     Start a search for local businesses or other places of interest on Google Maps
+     Start a background search for local businesses or other places of interest on Google Maps, polled
+    for results and able to collect far more than one page. Describe the search either with 'query' plus
+    'strategy', or with a 'googleMapsUrl' copied from the address bar of a Google Maps search. For a
+    single page of results returned immediately, use POST /v1/google-maps/search instead.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -197,7 +200,10 @@ def sync(
 ):
     """Start a search on Google Maps
 
-     Start a search for local businesses or other places of interest on Google Maps
+     Start a background search for local businesses or other places of interest on Google Maps, polled
+    for results and able to collect far more than one page. Describe the search either with 'query' plus
+    'strategy', or with a 'googleMapsUrl' copied from the address bar of a Google Maps search. For a
+    single page of results returned immediately, use POST /v1/google-maps/search instead.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -239,7 +245,10 @@ async def asyncio_detailed(
 ]:
     """Start a search on Google Maps
 
-     Start a search for local businesses or other places of interest on Google Maps
+     Start a background search for local businesses or other places of interest on Google Maps, polled
+    for results and able to collect far more than one page. Describe the search either with 'query' plus
+    'strategy', or with a 'googleMapsUrl' copied from the address bar of a Google Maps search. For a
+    single page of results returned immediately, use POST /v1/google-maps/search instead.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -285,7 +294,10 @@ async def asyncio(
 ):
     """Start a search on Google Maps
 
-     Start a search for local businesses or other places of interest on Google Maps
+     Start a background search for local businesses or other places of interest on Google Maps, polled
+    for results and able to collect far more than one page. Describe the search either with 'query' plus
+    'strategy', or with a 'googleMapsUrl' copied from the address bar of a Google Maps search. For a
+    single page of results returned immediately, use POST /v1/google-maps/search instead.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
