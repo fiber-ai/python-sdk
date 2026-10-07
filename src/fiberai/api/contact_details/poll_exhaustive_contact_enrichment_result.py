@@ -170,13 +170,13 @@ def sync_detailed(
     """Poll exhaustive contact details reveal result
 
      Polls the status of an exhaustive contact reveal task. Pass the task ID returned by /contact-
-    details/exhaustive/start. This is intentionally slow (completion typically takes approximately 4–8
-    minutes), as we run multiple enrichment sources in parallel to maximize yield. Do NOT use this in
-    time-sensitive applications -- try any of our other contact detail grabbing endpoints instead.
-    Returns the current status and, once complete, the full set of discovered emails and phone numbers.
-    Includes both high-quality emails and low-quality emails (risky/undeliverable). Low-quality emails
-    failed our internal validation checks and should be filtered out before use, but are included for
-    transparency.
+    details/exhaustive/start. Exhaustive reveal is our slowest, maximum-coverage endpoint — expect the
+    full run to take roughly 2–3 minutes (most tasks finish sooner). Poll every 15–30 seconds until done
+    is true. If you need fast results, use /contact-details/turbo/sync, /contact-details/single, or
+    /contact-details/lite instead. Returns the current status and, once complete, the full set of
+    discovered emails and phone numbers. Includes both high-quality emails and low-quality emails
+    (risky/undeliverable). Low-quality emails failed our internal validation checks and should be
+    filtered out before use, but are included for transparency.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
@@ -222,13 +222,13 @@ def sync(
     """Poll exhaustive contact details reveal result
 
      Polls the status of an exhaustive contact reveal task. Pass the task ID returned by /contact-
-    details/exhaustive/start. This is intentionally slow (completion typically takes approximately 4–8
-    minutes), as we run multiple enrichment sources in parallel to maximize yield. Do NOT use this in
-    time-sensitive applications -- try any of our other contact detail grabbing endpoints instead.
-    Returns the current status and, once complete, the full set of discovered emails and phone numbers.
-    Includes both high-quality emails and low-quality emails (risky/undeliverable). Low-quality emails
-    failed our internal validation checks and should be filtered out before use, but are included for
-    transparency.
+    details/exhaustive/start. Exhaustive reveal is our slowest, maximum-coverage endpoint — expect the
+    full run to take roughly 2–3 minutes (most tasks finish sooner). Poll every 15–30 seconds until done
+    is true. If you need fast results, use /contact-details/turbo/sync, /contact-details/single, or
+    /contact-details/lite instead. Returns the current status and, once complete, the full set of
+    discovered emails and phone numbers. Includes both high-quality emails and low-quality emails
+    (risky/undeliverable). Low-quality emails failed our internal validation checks and should be
+    filtered out before use, but are included for transparency.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
@@ -268,13 +268,13 @@ async def asyncio_detailed(
     """Poll exhaustive contact details reveal result
 
      Polls the status of an exhaustive contact reveal task. Pass the task ID returned by /contact-
-    details/exhaustive/start. This is intentionally slow (completion typically takes approximately 4–8
-    minutes), as we run multiple enrichment sources in parallel to maximize yield. Do NOT use this in
-    time-sensitive applications -- try any of our other contact detail grabbing endpoints instead.
-    Returns the current status and, once complete, the full set of discovered emails and phone numbers.
-    Includes both high-quality emails and low-quality emails (risky/undeliverable). Low-quality emails
-    failed our internal validation checks and should be filtered out before use, but are included for
-    transparency.
+    details/exhaustive/start. Exhaustive reveal is our slowest, maximum-coverage endpoint — expect the
+    full run to take roughly 2–3 minutes (most tasks finish sooner). Poll every 15–30 seconds until done
+    is true. If you need fast results, use /contact-details/turbo/sync, /contact-details/single, or
+    /contact-details/lite instead. Returns the current status and, once complete, the full set of
+    discovered emails and phone numbers. Includes both high-quality emails and low-quality emails
+    (risky/undeliverable). Low-quality emails failed our internal validation checks and should be
+    filtered out before use, but are included for transparency.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 
@@ -318,13 +318,13 @@ async def asyncio(
     """Poll exhaustive contact details reveal result
 
      Polls the status of an exhaustive contact reveal task. Pass the task ID returned by /contact-
-    details/exhaustive/start. This is intentionally slow (completion typically takes approximately 4–8
-    minutes), as we run multiple enrichment sources in parallel to maximize yield. Do NOT use this in
-    time-sensitive applications -- try any of our other contact detail grabbing endpoints instead.
-    Returns the current status and, once complete, the full set of discovered emails and phone numbers.
-    Includes both high-quality emails and low-quality emails (risky/undeliverable). Low-quality emails
-    failed our internal validation checks and should be filtered out before use, but are included for
-    transparency.
+    details/exhaustive/start. Exhaustive reveal is our slowest, maximum-coverage endpoint — expect the
+    full run to take roughly 2–3 minutes (most tasks finish sooner). Poll every 15–30 seconds until done
+    is true. If you need fast results, use /contact-details/turbo/sync, /contact-details/single, or
+    /contact-details/lite instead. Returns the current status and, once complete, the full set of
+    discovered emails and phone numbers. Includes both high-quality emails and low-quality emails
+    (risky/undeliverable). Low-quality emails failed our internal validation checks and should be
+    filtered out before use, but are included for transparency.
 
     <span>⚡ <strong>Rate limit:</strong> 240 requests per 1 minute</span>
 

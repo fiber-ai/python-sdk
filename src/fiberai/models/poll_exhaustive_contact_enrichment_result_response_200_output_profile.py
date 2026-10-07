@@ -15,6 +15,9 @@ if TYPE_CHECKING:
     from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_emails_item import (
         PollExhaustiveContactEnrichmentResultResponse200OutputProfileEmailsItem,
     )
+    from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_found_other_types_type_0 import (
+        PollExhaustiveContactEnrichmentResultResponse200OutputProfileFoundOtherTypesType0,
+    )
     from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_low_quality_emails_type_0_item import (
         PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0Item,
     )
@@ -38,6 +41,10 @@ class PollExhaustiveContactEnrichmentResultResponse200OutputProfile:
         low_quality_emails (list[PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0Item]
             | None | Unset): Emails that failed internal validation checks (risky or undeliverable). These are included for
             transparency but should be filtered out before use.
+        found_other_types (None | PollExhaustiveContactEnrichmentResultResponse200OutputProfileFoundOtherTypesType0 |
+            Unset): Counts of contact details discovered but not returned because they were not part of the requested
+            enrichmentType set. Only present when at least one unrequested type was found; request the corresponding
+            enrichment types and run the task again to receive them.
     """
 
     emails: list[PollExhaustiveContactEnrichmentResultResponse200OutputProfileEmailsItem]
@@ -48,9 +55,16 @@ class PollExhaustiveContactEnrichmentResultResponse200OutputProfile:
     low_quality_emails: (
         list[PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0Item] | None | Unset
     ) = UNSET
+    found_other_types: (
+        None | PollExhaustiveContactEnrichmentResultResponse200OutputProfileFoundOtherTypesType0 | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_found_other_types_type_0 import (
+            PollExhaustiveContactEnrichmentResultResponse200OutputProfileFoundOtherTypesType0,  # noqa: PLC0415
+        )
+
         emails = []
         for emails_item_data in self.emails:
             emails_item = emails_item_data.to_dict()
@@ -83,6 +97,16 @@ class PollExhaustiveContactEnrichmentResultResponse200OutputProfile:
         else:
             low_quality_emails = self.low_quality_emails
 
+        found_other_types: dict[str, Any] | None | Unset
+        if isinstance(self.found_other_types, Unset):
+            found_other_types = UNSET
+        elif isinstance(
+            self.found_other_types, PollExhaustiveContactEnrichmentResultResponse200OutputProfileFoundOtherTypesType0
+        ):
+            found_other_types = self.found_other_types.to_dict()
+        else:
+            found_other_types = self.found_other_types
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -98,6 +122,8 @@ class PollExhaustiveContactEnrichmentResultResponse200OutputProfile:
             field_dict["exhaustive"] = exhaustive
         if low_quality_emails is not UNSET:
             field_dict["lowQualityEmails"] = low_quality_emails
+        if found_other_types is not UNSET:
+            field_dict["foundOtherTypes"] = found_other_types
 
         return field_dict
 
@@ -105,6 +131,9 @@ class PollExhaustiveContactEnrichmentResultResponse200OutputProfile:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_emails_item import (
             PollExhaustiveContactEnrichmentResultResponse200OutputProfileEmailsItem,  # noqa: PLC0415
+        )
+        from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_found_other_types_type_0 import (
+            PollExhaustiveContactEnrichmentResultResponse200OutputProfileFoundOtherTypesType0,  # noqa: PLC0415
         )
         from ..models.poll_exhaustive_contact_enrichment_result_response_200_output_profile_low_quality_emails_type_0_item import (
             PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0Item,  # noqa: PLC0415
@@ -180,6 +209,29 @@ class PollExhaustiveContactEnrichmentResultResponse200OutputProfile:
 
         low_quality_emails = _parse_low_quality_emails(d.pop("lowQualityEmails", UNSET))
 
+        def _parse_found_other_types(
+            data: object,
+        ) -> None | PollExhaustiveContactEnrichmentResultResponse200OutputProfileFoundOtherTypesType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                found_other_types_type_0 = (
+                    PollExhaustiveContactEnrichmentResultResponse200OutputProfileFoundOtherTypesType0.from_dict(data)
+                )
+
+                return found_other_types_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | PollExhaustiveContactEnrichmentResultResponse200OutputProfileFoundOtherTypesType0 | Unset, data
+            )
+
+        found_other_types = _parse_found_other_types(d.pop("foundOtherTypes", UNSET))
+
         poll_exhaustive_contact_enrichment_result_response_200_output_profile = cls(
             emails=emails,
             phone_numbers=phone_numbers,
@@ -187,6 +239,7 @@ class PollExhaustiveContactEnrichmentResultResponse200OutputProfile:
             error=error,
             exhaustive=exhaustive,
             low_quality_emails=low_quality_emails,
+            found_other_types=found_other_types,
         )
 
         poll_exhaustive_contact_enrichment_result_response_200_output_profile.additional_properties = d

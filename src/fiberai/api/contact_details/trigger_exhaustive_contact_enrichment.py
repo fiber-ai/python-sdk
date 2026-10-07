@@ -149,13 +149,13 @@ def sync_detailed(
 ]:
     """Start exhaustive contact details reveal
 
-     Maximum-coverage contact reveal — runs all parallel enrichment branches to get the most
-    comprehensive results. This is asynchronous: call this endpoint to start the task, then poll
-    /contact-details/exhaustive/poll with the returned task ID. Results typically arrive within seconds
-    to a few minutes; worst case can take up to about 4–8 minutes. Slower and more expensive than the
-    synchronous endpoints, but returns more emails and phone numbers on average. For faster or lower-
-    cost options, use /contact-details/turbo/sync (fastest), /contact-details/single (balanced), or
-    /contact-details/lite (cheapest).
+     Maximum-coverage contact reveal — runs multiple enrichment sources in parallel for the highest
+    yield. This is our SLOWEST endpoint by design: expect to wait roughly 2–3 minutes for results. This
+    is an asynchronous operation — call it to start the task, then poll /contact-details/exhaustive/poll
+    with the returned task ID every 15–30 seconds. Do NOT use this endpoint in time-sensitive flows. If
+    speed matters, use /contact-details/turbo/sync (fastest), /contact-details/single (balanced), or
+    /contact-details/lite (cheapest) instead — exhaustive is for when maximum coverage is worth the
+    wait.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -207,13 +207,13 @@ def sync(
 ):
     """Start exhaustive contact details reveal
 
-     Maximum-coverage contact reveal — runs all parallel enrichment branches to get the most
-    comprehensive results. This is asynchronous: call this endpoint to start the task, then poll
-    /contact-details/exhaustive/poll with the returned task ID. Results typically arrive within seconds
-    to a few minutes; worst case can take up to about 4–8 minutes. Slower and more expensive than the
-    synchronous endpoints, but returns more emails and phone numbers on average. For faster or lower-
-    cost options, use /contact-details/turbo/sync (fastest), /contact-details/single (balanced), or
-    /contact-details/lite (cheapest).
+     Maximum-coverage contact reveal — runs multiple enrichment sources in parallel for the highest
+    yield. This is our SLOWEST endpoint by design: expect to wait roughly 2–3 minutes for results. This
+    is an asynchronous operation — call it to start the task, then poll /contact-details/exhaustive/poll
+    with the returned task ID every 15–30 seconds. Do NOT use this endpoint in time-sensitive flows. If
+    speed matters, use /contact-details/turbo/sync (fastest), /contact-details/single (balanced), or
+    /contact-details/lite (cheapest) instead — exhaustive is for when maximum coverage is worth the
+    wait.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -259,13 +259,13 @@ async def asyncio_detailed(
 ]:
     """Start exhaustive contact details reveal
 
-     Maximum-coverage contact reveal — runs all parallel enrichment branches to get the most
-    comprehensive results. This is asynchronous: call this endpoint to start the task, then poll
-    /contact-details/exhaustive/poll with the returned task ID. Results typically arrive within seconds
-    to a few minutes; worst case can take up to about 4–8 minutes. Slower and more expensive than the
-    synchronous endpoints, but returns more emails and phone numbers on average. For faster or lower-
-    cost options, use /contact-details/turbo/sync (fastest), /contact-details/single (balanced), or
-    /contact-details/lite (cheapest).
+     Maximum-coverage contact reveal — runs multiple enrichment sources in parallel for the highest
+    yield. This is our SLOWEST endpoint by design: expect to wait roughly 2–3 minutes for results. This
+    is an asynchronous operation — call it to start the task, then poll /contact-details/exhaustive/poll
+    with the returned task ID every 15–30 seconds. Do NOT use this endpoint in time-sensitive flows. If
+    speed matters, use /contact-details/turbo/sync (fastest), /contact-details/single (balanced), or
+    /contact-details/lite (cheapest) instead — exhaustive is for when maximum coverage is worth the
+    wait.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -315,13 +315,13 @@ async def asyncio(
 ):
     """Start exhaustive contact details reveal
 
-     Maximum-coverage contact reveal — runs all parallel enrichment branches to get the most
-    comprehensive results. This is asynchronous: call this endpoint to start the task, then poll
-    /contact-details/exhaustive/poll with the returned task ID. Results typically arrive within seconds
-    to a few minutes; worst case can take up to about 4–8 minutes. Slower and more expensive than the
-    synchronous endpoints, but returns more emails and phone numbers on average. For faster or lower-
-    cost options, use /contact-details/turbo/sync (fastest), /contact-details/single (balanced), or
-    /contact-details/lite (cheapest).
+     Maximum-coverage contact reveal — runs multiple enrichment sources in parallel for the highest
+    yield. This is our SLOWEST endpoint by design: expect to wait roughly 2–3 minutes for results. This
+    is an asynchronous operation — call it to start the task, then poll /contact-details/exhaustive/poll
+    with the returned task ID every 15–30 seconds. Do NOT use this endpoint in time-sensitive flows. If
+    speed matters, use /contact-details/turbo/sync (fastest), /contact-details/single (balanced), or
+    /contact-details/lite (cheapest) instead — exhaustive is for when maximum coverage is worth the
+    wait.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 

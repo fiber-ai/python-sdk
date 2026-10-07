@@ -47359,6 +47359,9 @@ from .poll_exhaustive_contact_enrichment_result_response_200_output_profile_emai
 from .poll_exhaustive_contact_enrichment_result_response_200_output_profile_emails_item_type import (
     PollExhaustiveContactEnrichmentResultResponse200OutputProfileEmailsItemType,
 )
+from .poll_exhaustive_contact_enrichment_result_response_200_output_profile_found_other_types_type_0 import (
+    PollExhaustiveContactEnrichmentResultResponse200OutputProfileFoundOtherTypesType0,
+)
 from .poll_exhaustive_contact_enrichment_result_response_200_output_profile_low_quality_emails_type_0_item import (
     PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0Item,
 )
@@ -73113,6 +73116,7 @@ __all__ = (
     "PollExhaustiveContactEnrichmentResultResponse200OutputProfileEmailsItem",
     "PollExhaustiveContactEnrichmentResultResponse200OutputProfileEmailsItemStatus",
     "PollExhaustiveContactEnrichmentResultResponse200OutputProfileEmailsItemType",
+    "PollExhaustiveContactEnrichmentResultResponse200OutputProfileFoundOtherTypesType0",
     "PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0Item",
     "PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0ItemStatus",
     "PollExhaustiveContactEnrichmentResultResponse200OutputProfileLowQualityEmailsType0ItemType",
