@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import Any, TypeVar, cast
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -10,6 +10,15 @@ from ..models.reverse_email_lookup_response_200_output_data_item_detailed_work_e
     ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0StandardIndustriesType0Item,
 )
 from ..types import UNSET, Unset
+
+if TYPE_CHECKING:
+    from ..models.reverse_email_lookup_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0_employee_count_consensus_type_0 import (
+        ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0EmployeeCountConsensusType0,
+    )
+    from ..models.reverse_email_lookup_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0_revenue_estimate_type_0 import (
+        ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0RevenueEstimateType0,
+    )
+
 
 T = TypeVar("T", bound="ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0")
 
@@ -28,6 +37,10 @@ class ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0Ite
         standard_industries (list[ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDeta
             ilsType0StandardIndustriesType0Item] | None | Unset):
         li_industries (list[str] | None | Unset):
+        employee_count_consensus (None | ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemComp
+            anyDetailsType0EmployeeCountConsensusType0 | Unset):
+        revenue_estimate (None | ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetai
+            lsType0RevenueEstimateType0 | Unset):
     """
 
     linkedin_ids: list[str] | None | Unset = UNSET
@@ -45,9 +58,26 @@ class ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0Ite
         | Unset
     ) = UNSET
     li_industries: list[str] | None | Unset = UNSET
+    employee_count_consensus: (
+        None
+        | ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0EmployeeCountConsensusType0
+        | Unset
+    ) = UNSET
+    revenue_estimate: (
+        None
+        | ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0RevenueEstimateType0
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.reverse_email_lookup_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0_employee_count_consensus_type_0 import (
+            ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0EmployeeCountConsensusType0,  # noqa: PLC0415
+        )
+        from ..models.reverse_email_lookup_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0_revenue_estimate_type_0 import (
+            ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0RevenueEstimateType0,  # noqa: PLC0415
+        )
+
         linkedin_ids: list[str] | None | Unset
         if isinstance(self.linkedin_ids, Unset):
             linkedin_ids = UNSET
@@ -117,6 +147,28 @@ class ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0Ite
         else:
             li_industries = self.li_industries
 
+        employee_count_consensus: dict[str, Any] | None | Unset
+        if isinstance(self.employee_count_consensus, Unset):
+            employee_count_consensus = UNSET
+        elif isinstance(
+            self.employee_count_consensus,
+            ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0EmployeeCountConsensusType0,
+        ):
+            employee_count_consensus = self.employee_count_consensus.to_dict()
+        else:
+            employee_count_consensus = self.employee_count_consensus
+
+        revenue_estimate: dict[str, Any] | None | Unset
+        if isinstance(self.revenue_estimate, Unset):
+            revenue_estimate = UNSET
+        elif isinstance(
+            self.revenue_estimate,
+            ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0RevenueEstimateType0,
+        ):
+            revenue_estimate = self.revenue_estimate.to_dict()
+        else:
+            revenue_estimate = self.revenue_estimate
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -138,11 +190,22 @@ class ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0Ite
             field_dict["standard_industries"] = standard_industries
         if li_industries is not UNSET:
             field_dict["li_industries"] = li_industries
+        if employee_count_consensus is not UNSET:
+            field_dict["employee_count_consensus"] = employee_count_consensus
+        if revenue_estimate is not UNSET:
+            field_dict["revenue_estimate"] = revenue_estimate
 
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.reverse_email_lookup_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0_employee_count_consensus_type_0 import (
+            ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0EmployeeCountConsensusType0,  # noqa: PLC0415
+        )
+        from ..models.reverse_email_lookup_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0_revenue_estimate_type_0 import (
+            ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0RevenueEstimateType0,  # noqa: PLC0415
+        )
+
         d = dict(src_dict)
 
         def _parse_linkedin_ids(data: object) -> list[str] | None | Unset:
@@ -280,6 +343,66 @@ class ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0Ite
 
         li_industries = _parse_li_industries(d.pop("li_industries", UNSET))
 
+        def _parse_employee_count_consensus(
+            data: object,
+        ) -> (
+            None
+            | ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0EmployeeCountConsensusType0
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                employee_count_consensus_type_0 = ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0EmployeeCountConsensusType0.from_dict(
+                    data
+                )
+
+                return employee_count_consensus_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0EmployeeCountConsensusType0
+                | Unset,
+                data,
+            )
+
+        employee_count_consensus = _parse_employee_count_consensus(d.pop("employee_count_consensus", UNSET))
+
+        def _parse_revenue_estimate(
+            data: object,
+        ) -> (
+            None
+            | ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0RevenueEstimateType0
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                revenue_estimate_type_0 = ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0RevenueEstimateType0.from_dict(
+                    data
+                )
+
+                return revenue_estimate_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0ItemCompanyDetailsType0RevenueEstimateType0
+                | Unset,
+                data,
+            )
+
+        revenue_estimate = _parse_revenue_estimate(d.pop("revenue_estimate", UNSET))
+
         reverse_email_lookup_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0 = cls(
             linkedin_ids=linkedin_ids,
             li_org_id=li_org_id,
@@ -290,6 +413,8 @@ class ReverseEmailLookupResponse200OutputDataItemDetailedWorkExperiencesType0Ite
             logo_url=logo_url,
             standard_industries=standard_industries,
             li_industries=li_industries,
+            employee_count_consensus=employee_count_consensus,
+            revenue_estimate=revenue_estimate,
         )
 
         reverse_email_lookup_response_200_output_data_item_detailed_work_experiences_type_0_item_company_details_type_0.additional_properties = d

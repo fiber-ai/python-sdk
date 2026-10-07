@@ -86,8 +86,9 @@ class KitchenSinkProfileBody:
         get_detailed_education (bool | None | Unset): When true, returns detailed_education[] with school_details for
             each education entry. Default: False.
         get_detailed_work_experience (bool | None | Unset): When true, returns detailed_work_experiences[] with
-            company_details (domains, preferred_name, linkedin_primary_slug, li_org_id) for each work experience. Use this
-            to get company domains for a person. Default: False.
+            company_details (domains, preferred_name, linkedin_primary_slug, li_org_id, employee_count_consensus,
+            revenue_estimate) for each work experience. Use this to get company domains, size, and revenue for a person.
+            Default: False.
     """
 
     api_key: str
