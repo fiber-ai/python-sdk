@@ -17,12 +17,16 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0:
     Attributes:
         linkedin_url (None | str | Unset):
         profile_picture (None | str | Unset):
+        linkedin_slug (None | str | Unset):
         entity_urn (None | str | Unset):
+        linkedin_id (float | None | Unset):
     """
 
     linkedin_url: None | str | Unset = UNSET
     profile_picture: None | str | Unset = UNSET
+    linkedin_slug: None | str | Unset = UNSET
     entity_urn: None | str | Unset = UNSET
+    linkedin_id: float | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -38,11 +42,23 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0:
         else:
             profile_picture = self.profile_picture
 
+        linkedin_slug: None | str | Unset
+        if isinstance(self.linkedin_slug, Unset):
+            linkedin_slug = UNSET
+        else:
+            linkedin_slug = self.linkedin_slug
+
         entity_urn: None | str | Unset
         if isinstance(self.entity_urn, Unset):
             entity_urn = UNSET
         else:
             entity_urn = self.entity_urn
+
+        linkedin_id: float | None | Unset
+        if isinstance(self.linkedin_id, Unset):
+            linkedin_id = UNSET
+        else:
+            linkedin_id = self.linkedin_id
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -51,8 +67,12 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0:
             field_dict["linkedinUrl"] = linkedin_url
         if profile_picture is not UNSET:
             field_dict["profilePicture"] = profile_picture
+        if linkedin_slug is not UNSET:
+            field_dict["linkedinSlug"] = linkedin_slug
         if entity_urn is not UNSET:
             field_dict["entityUrn"] = entity_urn
+        if linkedin_id is not UNSET:
+            field_dict["linkedinId"] = linkedin_id
 
         return field_dict
 
@@ -78,6 +98,15 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0:
 
         profile_picture = _parse_profile_picture(d.pop("profilePicture", UNSET))
 
+        def _parse_linkedin_slug(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        linkedin_slug = _parse_linkedin_slug(d.pop("linkedinSlug", UNSET))
+
         def _parse_entity_urn(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -87,10 +116,21 @@ class ProfileReactionsLiveFetchResponse200OutputReactionsType0ItemReactorType0:
 
         entity_urn = _parse_entity_urn(d.pop("entityUrn", UNSET))
 
+        def _parse_linkedin_id(data: object) -> float | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(float | None | Unset, data)
+
+        linkedin_id = _parse_linkedin_id(d.pop("linkedinId", UNSET))
+
         profile_reactions_live_fetch_response_200_output_reactions_type_0_item_reactor_type_0 = cls(
             linkedin_url=linkedin_url,
             profile_picture=profile_picture,
+            linkedin_slug=linkedin_slug,
             entity_urn=entity_urn,
+            linkedin_id=linkedin_id,
         )
 
         profile_reactions_live_fetch_response_200_output_reactions_type_0_item_reactor_type_0.additional_properties = d

@@ -19,12 +19,16 @@ class CompanyPostsLiveFetchResponse200OutputDataItemResharedPostType0AuthorType0
         name (None | str | Unset):
         profile_picture (None | str | Unset):
         linkedin_slug (None | str | Unset):
+        entity_urn (None | str | Unset):
+        linkedin_id (float | None | Unset):
     """
 
     linkedin_url: None | str | Unset = UNSET
     name: None | str | Unset = UNSET
     profile_picture: None | str | Unset = UNSET
     linkedin_slug: None | str | Unset = UNSET
+    entity_urn: None | str | Unset = UNSET
+    linkedin_id: float | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -52,6 +56,18 @@ class CompanyPostsLiveFetchResponse200OutputDataItemResharedPostType0AuthorType0
         else:
             linkedin_slug = self.linkedin_slug
 
+        entity_urn: None | str | Unset
+        if isinstance(self.entity_urn, Unset):
+            entity_urn = UNSET
+        else:
+            entity_urn = self.entity_urn
+
+        linkedin_id: float | None | Unset
+        if isinstance(self.linkedin_id, Unset):
+            linkedin_id = UNSET
+        else:
+            linkedin_id = self.linkedin_id
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -63,6 +79,10 @@ class CompanyPostsLiveFetchResponse200OutputDataItemResharedPostType0AuthorType0
             field_dict["profilePicture"] = profile_picture
         if linkedin_slug is not UNSET:
             field_dict["linkedinSlug"] = linkedin_slug
+        if entity_urn is not UNSET:
+            field_dict["entityUrn"] = entity_urn
+        if linkedin_id is not UNSET:
+            field_dict["linkedinId"] = linkedin_id
 
         return field_dict
 
@@ -106,11 +126,31 @@ class CompanyPostsLiveFetchResponse200OutputDataItemResharedPostType0AuthorType0
 
         linkedin_slug = _parse_linkedin_slug(d.pop("linkedinSlug", UNSET))
 
+        def _parse_entity_urn(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        entity_urn = _parse_entity_urn(d.pop("entityUrn", UNSET))
+
+        def _parse_linkedin_id(data: object) -> float | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(float | None | Unset, data)
+
+        linkedin_id = _parse_linkedin_id(d.pop("linkedinId", UNSET))
+
         company_posts_live_fetch_response_200_output_data_item_reshared_post_type_0_author_type_0 = cls(
             linkedin_url=linkedin_url,
             name=name,
             profile_picture=profile_picture,
             linkedin_slug=linkedin_slug,
+            entity_urn=entity_urn,
+            linkedin_id=linkedin_id,
         )
 
         company_posts_live_fetch_response_200_output_data_item_reshared_post_type_0_author_type_0.additional_properties = d

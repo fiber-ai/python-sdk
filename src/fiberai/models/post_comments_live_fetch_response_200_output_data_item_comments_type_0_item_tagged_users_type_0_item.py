@@ -21,6 +21,7 @@ class PostCommentsLiveFetchResponse200OutputDataItemCommentsType0ItemTaggedUsers
         linkedin_url (None | str | Unset):
         linkedin_slug (None | str | Unset):
         entity_urn (None | str | Unset):
+        linkedin_id (float | None | Unset):
     """
 
     name: None | str | Unset = UNSET
@@ -29,6 +30,7 @@ class PostCommentsLiveFetchResponse200OutputDataItemCommentsType0ItemTaggedUsers
     linkedin_url: None | str | Unset = UNSET
     linkedin_slug: None | str | Unset = UNSET
     entity_urn: None | str | Unset = UNSET
+    linkedin_id: float | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -68,6 +70,12 @@ class PostCommentsLiveFetchResponse200OutputDataItemCommentsType0ItemTaggedUsers
         else:
             entity_urn = self.entity_urn
 
+        linkedin_id: float | None | Unset
+        if isinstance(self.linkedin_id, Unset):
+            linkedin_id = UNSET
+        else:
+            linkedin_id = self.linkedin_id
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -83,6 +91,8 @@ class PostCommentsLiveFetchResponse200OutputDataItemCommentsType0ItemTaggedUsers
             field_dict["linkedinSlug"] = linkedin_slug
         if entity_urn is not UNSET:
             field_dict["entityUrn"] = entity_urn
+        if linkedin_id is not UNSET:
+            field_dict["linkedinId"] = linkedin_id
 
         return field_dict
 
@@ -144,6 +154,15 @@ class PostCommentsLiveFetchResponse200OutputDataItemCommentsType0ItemTaggedUsers
 
         entity_urn = _parse_entity_urn(d.pop("entityUrn", UNSET))
 
+        def _parse_linkedin_id(data: object) -> float | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(float | None | Unset, data)
+
+        linkedin_id = _parse_linkedin_id(d.pop("linkedinId", UNSET))
+
         post_comments_live_fetch_response_200_output_data_item_comments_type_0_item_tagged_users_type_0_item = cls(
             name=name,
             first_name=first_name,
@@ -151,6 +170,7 @@ class PostCommentsLiveFetchResponse200OutputDataItemCommentsType0ItemTaggedUsers
             linkedin_url=linkedin_url,
             linkedin_slug=linkedin_slug,
             entity_urn=entity_urn,
+            linkedin_id=linkedin_id,
         )
 
         post_comments_live_fetch_response_200_output_data_item_comments_type_0_item_tagged_users_type_0_item.additional_properties = d

@@ -17,6 +17,8 @@ class PostReactionsLiveFetchResponse200OutputDataItemReactorType0:
     Attributes:
         user_id (float | None | Unset):
         entity_urn (None | str | Unset):
+        linkedin_url (None | str | Unset):
+        linkedin_slug (None | str | Unset):
         profile_picture (None | str | Unset):
         name (None | str | Unset):
         headline (None | str | Unset):
@@ -24,6 +26,8 @@ class PostReactionsLiveFetchResponse200OutputDataItemReactorType0:
 
     user_id: float | None | Unset = UNSET
     entity_urn: None | str | Unset = UNSET
+    linkedin_url: None | str | Unset = UNSET
+    linkedin_slug: None | str | Unset = UNSET
     profile_picture: None | str | Unset = UNSET
     name: None | str | Unset = UNSET
     headline: None | str | Unset = UNSET
@@ -41,6 +45,18 @@ class PostReactionsLiveFetchResponse200OutputDataItemReactorType0:
             entity_urn = UNSET
         else:
             entity_urn = self.entity_urn
+
+        linkedin_url: None | str | Unset
+        if isinstance(self.linkedin_url, Unset):
+            linkedin_url = UNSET
+        else:
+            linkedin_url = self.linkedin_url
+
+        linkedin_slug: None | str | Unset
+        if isinstance(self.linkedin_slug, Unset):
+            linkedin_slug = UNSET
+        else:
+            linkedin_slug = self.linkedin_slug
 
         profile_picture: None | str | Unset
         if isinstance(self.profile_picture, Unset):
@@ -67,6 +83,10 @@ class PostReactionsLiveFetchResponse200OutputDataItemReactorType0:
             field_dict["userId"] = user_id
         if entity_urn is not UNSET:
             field_dict["entityUrn"] = entity_urn
+        if linkedin_url is not UNSET:
+            field_dict["linkedinUrl"] = linkedin_url
+        if linkedin_slug is not UNSET:
+            field_dict["linkedinSlug"] = linkedin_slug
         if profile_picture is not UNSET:
             field_dict["profilePicture"] = profile_picture
         if name is not UNSET:
@@ -98,6 +118,24 @@ class PostReactionsLiveFetchResponse200OutputDataItemReactorType0:
 
         entity_urn = _parse_entity_urn(d.pop("entityUrn", UNSET))
 
+        def _parse_linkedin_url(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        linkedin_url = _parse_linkedin_url(d.pop("linkedinUrl", UNSET))
+
+        def _parse_linkedin_slug(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        linkedin_slug = _parse_linkedin_slug(d.pop("linkedinSlug", UNSET))
+
         def _parse_profile_picture(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -128,6 +166,8 @@ class PostReactionsLiveFetchResponse200OutputDataItemReactorType0:
         post_reactions_live_fetch_response_200_output_data_item_reactor_type_0 = cls(
             user_id=user_id,
             entity_urn=entity_urn,
+            linkedin_url=linkedin_url,
+            linkedin_slug=linkedin_slug,
             profile_picture=profile_picture,
             name=name,
             headline=headline,
