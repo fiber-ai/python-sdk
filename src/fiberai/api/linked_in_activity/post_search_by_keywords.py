@@ -163,6 +163,8 @@ def sync_detailed(
     recruiter matches posts with "sales" but without "recruiter".
     - **Parentheses:** Group terms to control operator precedence. (sales **OR** marketing) **AND**
     "series A" finds posts about either sales or marketing that also mention "series A".
+    - **Operator limit:** A query can contain at most 5 **AND**/**OR**/**NOT** operators in total. A
+    query with more is rejected with a 400; split it into several searches instead.
 
     **Order of precedence:**
     1. **Quotes (" "):** Phrase matching occurs before any Boolean logic is applied.
@@ -238,6 +240,8 @@ def sync(
     recruiter matches posts with "sales" but without "recruiter".
     - **Parentheses:** Group terms to control operator precedence. (sales **OR** marketing) **AND**
     "series A" finds posts about either sales or marketing that also mention "series A".
+    - **Operator limit:** A query can contain at most 5 **AND**/**OR**/**NOT** operators in total. A
+    query with more is rejected with a 400; split it into several searches instead.
 
     **Order of precedence:**
     1. **Quotes (" "):** Phrase matching occurs before any Boolean logic is applied.
@@ -307,6 +311,8 @@ async def asyncio_detailed(
     recruiter matches posts with "sales" but without "recruiter".
     - **Parentheses:** Group terms to control operator precedence. (sales **OR** marketing) **AND**
     "series A" finds posts about either sales or marketing that also mention "series A".
+    - **Operator limit:** A query can contain at most 5 **AND**/**OR**/**NOT** operators in total. A
+    query with more is rejected with a 400; split it into several searches instead.
 
     **Order of precedence:**
     1. **Quotes (" "):** Phrase matching occurs before any Boolean logic is applied.
@@ -380,6 +386,8 @@ async def asyncio(
     recruiter matches posts with "sales" but without "recruiter".
     - **Parentheses:** Group terms to control operator precedence. (sales **OR** marketing) **AND**
     "series A" finds posts about either sales or marketing that also mention "series A".
+    - **Operator limit:** A query can contain at most 5 **AND**/**OR**/**NOT** operators in total. A
+    query with more is rejected with a 400; split it into several searches instead.
 
     **Order of precedence:**
     1. **Quotes (" "):** Phrase matching occurs before any Boolean logic is applied.

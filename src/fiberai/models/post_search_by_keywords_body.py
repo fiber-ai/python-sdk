@@ -19,7 +19,8 @@ class PostSearchByKeywordsBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        keywords (str): Boolean keyword query for LinkedIn posts. See the endpoint description for syntax.
+        keywords (str): Boolean keyword query for LinkedIn posts. Use at most 5 AND/OR/NOT operators in total; operators
+            inside quoted phrases don't count. See the endpoint description for syntax.
         recency (None | PostSearchByKeywordsBodyRecencyType1 | PostSearchByKeywordsBodyRecencyType2Type1 |
             PostSearchByKeywordsBodyRecencyType3Type1 | Unset): Filter posts by how recently they were published. Omit to
             search posts from any time. Windows longer than a month can return fewer posts per page.
