@@ -21,6 +21,8 @@ class PersonExperienceChange:
         company_linkedin_url (None | str | Unset): Company LinkedIn URL
         linkedin_company_slug (None | str | Unset): LinkedIn company vanity slug
         company_domains (list[str] | None | Unset): Known company domains
+        crunchbase_slug (None | str | Unset): Crunchbase organization slug — permalink
+            https://www.crunchbase.com/organization/{slug}. Null when not known.
         title (None | str | Unset): Job title
         start_date (None | str | Unset): ISO start date
         end_date (None | str | Unset): ISO end date
@@ -35,6 +37,7 @@ class PersonExperienceChange:
     company_linkedin_url: None | str | Unset = UNSET
     linkedin_company_slug: None | str | Unset = UNSET
     company_domains: list[str] | None | Unset = UNSET
+    crunchbase_slug: None | str | Unset = UNSET
     title: None | str | Unset = UNSET
     start_date: None | str | Unset = UNSET
     end_date: None | str | Unset = UNSET
@@ -78,6 +81,12 @@ class PersonExperienceChange:
 
         else:
             company_domains = self.company_domains
+
+        crunchbase_slug: None | str | Unset
+        if isinstance(self.crunchbase_slug, Unset):
+            crunchbase_slug = UNSET
+        else:
+            crunchbase_slug = self.crunchbase_slug
 
         title: None | str | Unset
         if isinstance(self.title, Unset):
@@ -132,6 +141,8 @@ class PersonExperienceChange:
             field_dict["linkedinCompanySlug"] = linkedin_company_slug
         if company_domains is not UNSET:
             field_dict["companyDomains"] = company_domains
+        if crunchbase_slug is not UNSET:
+            field_dict["crunchbaseSlug"] = crunchbase_slug
         if title is not UNSET:
             field_dict["title"] = title
         if start_date is not UNSET:
@@ -205,6 +216,15 @@ class PersonExperienceChange:
 
         company_domains = _parse_company_domains(d.pop("companyDomains", UNSET))
 
+        def _parse_crunchbase_slug(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        crunchbase_slug = _parse_crunchbase_slug(d.pop("crunchbaseSlug", UNSET))
+
         def _parse_title(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -266,6 +286,7 @@ class PersonExperienceChange:
             company_linkedin_url=company_linkedin_url,
             linkedin_company_slug=linkedin_company_slug,
             company_domains=company_domains,
+            crunchbase_slug=crunchbase_slug,
             title=title,
             start_date=start_date,
             end_date=end_date,
