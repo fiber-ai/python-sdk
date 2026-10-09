@@ -38,9 +38,7 @@ class LiteContactRevealResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.lite_contact_reveal_response_200_output_profile import (
-            LiteContactRevealResponse200OutputProfile,  # noqa: PLC0415
-        )
+        from ..models.lite_contact_reveal_response_200_output_profile import LiteContactRevealResponse200OutputProfile  # noqa: PLC0415
 
         d = dict(src_dict)
         profile = LiteContactRevealResponse200OutputProfile.from_dict(d.pop("profile"))

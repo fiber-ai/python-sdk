@@ -137,9 +137,7 @@ class StandardizeProfileResponse200:
         from ..models.standardize_profile_response_200_charge_info_type_4 import (
             StandardizeProfileResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.standardize_profile_response_200_output import (
-            StandardizeProfileResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.standardize_profile_response_200_output import StandardizeProfileResponse200Output  # noqa: PLC0415
         from ..models.standardize_profile_response_200_warnings_type_0_item import (
             StandardizeProfileResponse200WarningsType0Item,  # noqa: PLC0415
         )

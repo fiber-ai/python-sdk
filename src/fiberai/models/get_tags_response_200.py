@@ -106,9 +106,7 @@ class GetTagsResponse200:
         from ..models.get_tags_response_200_charge_info_type_3 import GetTagsResponse200ChargeInfoType3  # noqa: PLC0415
         from ..models.get_tags_response_200_charge_info_type_4 import GetTagsResponse200ChargeInfoType4  # noqa: PLC0415
         from ..models.get_tags_response_200_output import GetTagsResponse200Output  # noqa: PLC0415
-        from ..models.get_tags_response_200_warnings_type_0_item import (
-            GetTagsResponse200WarningsType0Item,  # noqa: PLC0415
-        )
+        from ..models.get_tags_response_200_warnings_type_0_item import GetTagsResponse200WarningsType0Item  # noqa: PLC0415
 
         d = dict(src_dict)
         output = GetTagsResponse200Output.from_dict(d.pop("output"))

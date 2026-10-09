@@ -137,9 +137,7 @@ class RevokeCurrentApiKeyResponse200:
         from ..models.revoke_current_api_key_response_200_charge_info_type_4 import (
             RevokeCurrentApiKeyResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.revoke_current_api_key_response_200_output import (
-            RevokeCurrentApiKeyResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.revoke_current_api_key_response_200_output import RevokeCurrentApiKeyResponse200Output  # noqa: PLC0415
         from ..models.revoke_current_api_key_response_200_warnings_type_0_item import (
             RevokeCurrentApiKeyResponse200WarningsType0Item,  # noqa: PLC0415
         )

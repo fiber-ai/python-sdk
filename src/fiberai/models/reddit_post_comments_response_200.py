@@ -137,9 +137,7 @@ class RedditPostCommentsResponse200:
         from ..models.reddit_post_comments_response_200_charge_info_type_4 import (
             RedditPostCommentsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.reddit_post_comments_response_200_output import (
-            RedditPostCommentsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.reddit_post_comments_response_200_output import RedditPostCommentsResponse200Output  # noqa: PLC0415
         from ..models.reddit_post_comments_response_200_warnings_type_0_item import (
             RedditPostCommentsResponse200WarningsType0Item,  # noqa: PLC0415
         )

@@ -137,9 +137,7 @@ class ListWebhookEndpointsResponse200:
         from ..models.list_webhook_endpoints_response_200_charge_info_type_4 import (
             ListWebhookEndpointsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.list_webhook_endpoints_response_200_output import (
-            ListWebhookEndpointsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.list_webhook_endpoints_response_200_output import ListWebhookEndpointsResponse200Output  # noqa: PLC0415
         from ..models.list_webhook_endpoints_response_200_warnings_type_0_item import (
             ListWebhookEndpointsResponse200WarningsType0Item,  # noqa: PLC0415
         )

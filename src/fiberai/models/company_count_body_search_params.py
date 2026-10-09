@@ -272,9 +272,7 @@ class CompanyCountBodySearchParams:
         from ..models.company_count_body_search_params_job_postings_v2_type_0 import (
             CompanyCountBodySearchParamsJobPostingsV2Type0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_keywords_type_0 import (
-            CompanyCountBodySearchParamsKeywordsType0,  # noqa: PLC0415
-        )
+        from ..models.company_count_body_search_params_keywords_type_0 import CompanyCountBodySearchParamsKeywordsType0  # noqa: PLC0415
         from ..models.company_count_body_search_params_last_funded_on_type_0 import (
             CompanyCountBodySearchParamsLastFundedOnType0,  # noqa: PLC0415
         )
@@ -290,9 +288,7 @@ class CompanyCountBodySearchParams:
         from ..models.company_count_body_search_params_naics_codes_type_0 import (
             CompanyCountBodySearchParamsNaicsCodesType0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_name_like_type_0 import (
-            CompanyCountBodySearchParamsNameLikeType0,  # noqa: PLC0415
-        )
+        from ..models.company_count_body_search_params_name_like_type_0 import CompanyCountBodySearchParamsNameLikeType0  # noqa: PLC0415
         from ..models.company_count_body_search_params_num_words_in_name_type_0 import (
             CompanyCountBodySearchParamsNumWordsInNameType0,  # noqa: PLC0415
         )
@@ -308,24 +304,16 @@ class CompanyCountBodySearchParams:
         from ..models.company_count_body_search_params_special_flags_type_0 import (
             CompanyCountBodySearchParamsSpecialFlagsType0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_stage_type_0 import (
-            CompanyCountBodySearchParamsStageType0,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_status_type_0 import (
-            CompanyCountBodySearchParamsStatusType0,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_tags_type_0 import (
-            CompanyCountBodySearchParamsTagsType0,  # noqa: PLC0415
-        )
+        from ..models.company_count_body_search_params_stage_type_0 import CompanyCountBodySearchParamsStageType0  # noqa: PLC0415
+        from ..models.company_count_body_search_params_status_type_0 import CompanyCountBodySearchParamsStatusType0  # noqa: PLC0415
+        from ..models.company_count_body_search_params_tags_type_0 import CompanyCountBodySearchParamsTagsType0  # noqa: PLC0415
         from ..models.company_count_body_search_params_technologies_type_0 import (
             CompanyCountBodySearchParamsTechnologiesType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_technologies_v2_type_0 import (
             CompanyCountBodySearchParamsTechnologiesV2Type0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_tlds_type_0 import (
-            CompanyCountBodySearchParamsTldsType0,  # noqa: PLC0415
-        )
+        from ..models.company_count_body_search_params_tlds_type_0 import CompanyCountBodySearchParamsTldsType0  # noqa: PLC0415
         from ..models.company_count_body_search_params_total_funding_usd_type_0 import (
             CompanyCountBodySearchParamsTotalFundingUSDType0,  # noqa: PLC0415
         )
@@ -806,9 +794,7 @@ class CompanyCountBodySearchParams:
         from ..models.company_count_body_search_params_job_postings_v2_type_0 import (
             CompanyCountBodySearchParamsJobPostingsV2Type0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_keywords_type_0 import (
-            CompanyCountBodySearchParamsKeywordsType0,  # noqa: PLC0415
-        )
+        from ..models.company_count_body_search_params_keywords_type_0 import CompanyCountBodySearchParamsKeywordsType0  # noqa: PLC0415
         from ..models.company_count_body_search_params_last_funded_on_type_0 import (
             CompanyCountBodySearchParamsLastFundedOnType0,  # noqa: PLC0415
         )
@@ -824,9 +810,7 @@ class CompanyCountBodySearchParams:
         from ..models.company_count_body_search_params_naics_codes_type_0 import (
             CompanyCountBodySearchParamsNaicsCodesType0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_name_like_type_0 import (
-            CompanyCountBodySearchParamsNameLikeType0,  # noqa: PLC0415
-        )
+        from ..models.company_count_body_search_params_name_like_type_0 import CompanyCountBodySearchParamsNameLikeType0  # noqa: PLC0415
         from ..models.company_count_body_search_params_num_words_in_name_type_0 import (
             CompanyCountBodySearchParamsNumWordsInNameType0,  # noqa: PLC0415
         )
@@ -839,30 +823,20 @@ class CompanyCountBodySearchParams:
         from ..models.company_count_body_search_params_revenue_ranges_usd_type_0 import (
             CompanyCountBodySearchParamsRevenueRangesUSDType0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_sort_type_0_item import (
-            CompanyCountBodySearchParamsSortType0Item,  # noqa: PLC0415
-        )
+        from ..models.company_count_body_search_params_sort_type_0_item import CompanyCountBodySearchParamsSortType0Item  # noqa: PLC0415
         from ..models.company_count_body_search_params_special_flags_type_0 import (
             CompanyCountBodySearchParamsSpecialFlagsType0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_stage_type_0 import (
-            CompanyCountBodySearchParamsStageType0,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_status_type_0 import (
-            CompanyCountBodySearchParamsStatusType0,  # noqa: PLC0415
-        )
-        from ..models.company_count_body_search_params_tags_type_0 import (
-            CompanyCountBodySearchParamsTagsType0,  # noqa: PLC0415
-        )
+        from ..models.company_count_body_search_params_stage_type_0 import CompanyCountBodySearchParamsStageType0  # noqa: PLC0415
+        from ..models.company_count_body_search_params_status_type_0 import CompanyCountBodySearchParamsStatusType0  # noqa: PLC0415
+        from ..models.company_count_body_search_params_tags_type_0 import CompanyCountBodySearchParamsTagsType0  # noqa: PLC0415
         from ..models.company_count_body_search_params_technologies_type_0 import (
             CompanyCountBodySearchParamsTechnologiesType0,  # noqa: PLC0415
         )
         from ..models.company_count_body_search_params_technologies_v2_type_0 import (
             CompanyCountBodySearchParamsTechnologiesV2Type0,  # noqa: PLC0415
         )
-        from ..models.company_count_body_search_params_tlds_type_0 import (
-            CompanyCountBodySearchParamsTldsType0,  # noqa: PLC0415
-        )
+        from ..models.company_count_body_search_params_tlds_type_0 import CompanyCountBodySearchParamsTldsType0  # noqa: PLC0415
         from ..models.company_count_body_search_params_total_funding_usd_type_0 import (
             CompanyCountBodySearchParamsTotalFundingUSDType0,  # noqa: PLC0415
         )

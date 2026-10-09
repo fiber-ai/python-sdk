@@ -137,9 +137,7 @@ class TwitterUserMentionsResponse200:
         from ..models.twitter_user_mentions_response_200_charge_info_type_4 import (
             TwitterUserMentionsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.twitter_user_mentions_response_200_output import (
-            TwitterUserMentionsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.twitter_user_mentions_response_200_output import TwitterUserMentionsResponse200Output  # noqa: PLC0415
         from ..models.twitter_user_mentions_response_200_warnings_type_0_item import (
             TwitterUserMentionsResponse200WarningsType0Item,  # noqa: PLC0415
         )

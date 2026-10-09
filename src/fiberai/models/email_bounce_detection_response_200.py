@@ -137,9 +137,7 @@ class EmailBounceDetectionResponse200:
         from ..models.email_bounce_detection_response_200_charge_info_type_4 import (
             EmailBounceDetectionResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.email_bounce_detection_response_200_output import (
-            EmailBounceDetectionResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.email_bounce_detection_response_200_output import EmailBounceDetectionResponse200Output  # noqa: PLC0415
         from ..models.email_bounce_detection_response_200_warnings_type_0_item import (
             EmailBounceDetectionResponse200WarningsType0Item,  # noqa: PLC0415
         )

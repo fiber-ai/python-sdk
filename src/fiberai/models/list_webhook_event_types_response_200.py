@@ -137,9 +137,7 @@ class ListWebhookEventTypesResponse200:
         from ..models.list_webhook_event_types_response_200_charge_info_type_4 import (
             ListWebhookEventTypesResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.list_webhook_event_types_response_200_output import (
-            ListWebhookEventTypesResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.list_webhook_event_types_response_200_output import ListWebhookEventTypesResponse200Output  # noqa: PLC0415
         from ..models.list_webhook_event_types_response_200_warnings_type_0_item import (
             ListWebhookEventTypesResponse200WarningsType0Item,  # noqa: PLC0415
         )

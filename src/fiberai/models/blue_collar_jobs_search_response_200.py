@@ -137,9 +137,7 @@ class BlueCollarJobsSearchResponse200:
         from ..models.blue_collar_jobs_search_response_200_charge_info_type_4 import (
             BlueCollarJobsSearchResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.blue_collar_jobs_search_response_200_output import (
-            BlueCollarJobsSearchResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.blue_collar_jobs_search_response_200_output import BlueCollarJobsSearchResponse200Output  # noqa: PLC0415
         from ..models.blue_collar_jobs_search_response_200_warnings_type_0_item import (
             BlueCollarJobsSearchResponse200WarningsType0Item,  # noqa: PLC0415
         )

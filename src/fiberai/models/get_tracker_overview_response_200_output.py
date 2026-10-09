@@ -80,9 +80,7 @@ class GetTrackerOverviewResponse200Output:
         from ..models.get_tracker_overview_response_200_output_person_lists_item import (
             GetTrackerOverviewResponse200OutputPersonListsItem,  # noqa: PLC0415
         )
-        from ..models.get_tracker_overview_response_200_output_summary import (
-            GetTrackerOverviewResponse200OutputSummary,  # noqa: PLC0415
-        )
+        from ..models.get_tracker_overview_response_200_output_summary import GetTrackerOverviewResponse200OutputSummary  # noqa: PLC0415
         from ..models.get_tracker_overview_response_200_output_upcoming_refreshes_item import (
             GetTrackerOverviewResponse200OutputUpcomingRefreshesItem,  # noqa: PLC0415
         )

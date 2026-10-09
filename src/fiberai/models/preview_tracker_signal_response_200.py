@@ -137,9 +137,7 @@ class PreviewTrackerSignalResponse200:
         from ..models.preview_tracker_signal_response_200_charge_info_type_4 import (
             PreviewTrackerSignalResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.preview_tracker_signal_response_200_output import (
-            PreviewTrackerSignalResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.preview_tracker_signal_response_200_output import PreviewTrackerSignalResponse200Output  # noqa: PLC0415
         from ..models.preview_tracker_signal_response_200_warnings_type_0_item import (
             PreviewTrackerSignalResponse200WarningsType0Item,  # noqa: PLC0415
         )

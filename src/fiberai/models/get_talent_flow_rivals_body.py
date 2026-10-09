@@ -45,15 +45,9 @@ class GetTalentFlowRivalsBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.get_talent_flow_rivals_body_company_type_0 import (
-            GetTalentFlowRivalsBodyCompanyType0,  # noqa: PLC0415
-        )
-        from ..models.get_talent_flow_rivals_body_company_type_1 import (
-            GetTalentFlowRivalsBodyCompanyType1,  # noqa: PLC0415
-        )
-        from ..models.get_talent_flow_rivals_body_company_type_2 import (
-            GetTalentFlowRivalsBodyCompanyType2,  # noqa: PLC0415
-        )
+        from ..models.get_talent_flow_rivals_body_company_type_0 import GetTalentFlowRivalsBodyCompanyType0  # noqa: PLC0415
+        from ..models.get_talent_flow_rivals_body_company_type_1 import GetTalentFlowRivalsBodyCompanyType1  # noqa: PLC0415
+        from ..models.get_talent_flow_rivals_body_company_type_2 import GetTalentFlowRivalsBodyCompanyType2  # noqa: PLC0415
 
         api_key = self.api_key
 
@@ -87,18 +81,10 @@ class GetTalentFlowRivalsBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_talent_flow_rivals_body_company_type_0 import (
-            GetTalentFlowRivalsBodyCompanyType0,  # noqa: PLC0415
-        )
-        from ..models.get_talent_flow_rivals_body_company_type_1 import (
-            GetTalentFlowRivalsBodyCompanyType1,  # noqa: PLC0415
-        )
-        from ..models.get_talent_flow_rivals_body_company_type_2 import (
-            GetTalentFlowRivalsBodyCompanyType2,  # noqa: PLC0415
-        )
-        from ..models.get_talent_flow_rivals_body_company_type_3 import (
-            GetTalentFlowRivalsBodyCompanyType3,  # noqa: PLC0415
-        )
+        from ..models.get_talent_flow_rivals_body_company_type_0 import GetTalentFlowRivalsBodyCompanyType0  # noqa: PLC0415
+        from ..models.get_talent_flow_rivals_body_company_type_1 import GetTalentFlowRivalsBodyCompanyType1  # noqa: PLC0415
+        from ..models.get_talent_flow_rivals_body_company_type_2 import GetTalentFlowRivalsBodyCompanyType2  # noqa: PLC0415
+        from ..models.get_talent_flow_rivals_body_company_type_3 import GetTalentFlowRivalsBodyCompanyType3  # noqa: PLC0415
         from ..models.get_talent_flow_rivals_body_date_range import GetTalentFlowRivalsBodyDateRange  # noqa: PLC0415
 
         d = dict(src_dict)

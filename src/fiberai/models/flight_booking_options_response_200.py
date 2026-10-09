@@ -137,9 +137,7 @@ class FlightBookingOptionsResponse200:
         from ..models.flight_booking_options_response_200_charge_info_type_4 import (
             FlightBookingOptionsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.flight_booking_options_response_200_output import (
-            FlightBookingOptionsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.flight_booking_options_response_200_output import FlightBookingOptionsResponse200Output  # noqa: PLC0415
         from ..models.flight_booking_options_response_200_warnings_type_0_item import (
             FlightBookingOptionsResponse200WarningsType0Item,  # noqa: PLC0415
         )

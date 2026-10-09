@@ -137,9 +137,7 @@ class CreateSandboxApiKeyResponse200:
         from ..models.create_sandbox_api_key_response_200_charge_info_type_4 import (
             CreateSandboxApiKeyResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.create_sandbox_api_key_response_200_output import (
-            CreateSandboxApiKeyResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.create_sandbox_api_key_response_200_output import CreateSandboxApiKeyResponse200Output  # noqa: PLC0415
         from ..models.create_sandbox_api_key_response_200_warnings_type_0_item import (
             CreateSandboxApiKeyResponse200WarningsType0Item,  # noqa: PLC0415
         )

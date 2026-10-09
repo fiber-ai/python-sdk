@@ -64,9 +64,7 @@ class YelpReviewsResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.yelp_reviews_response_200_output_reviews_item import (
-            YelpReviewsResponse200OutputReviewsItem,  # noqa: PLC0415
-        )
+        from ..models.yelp_reviews_response_200_output_reviews_item import YelpReviewsResponse200OutputReviewsItem  # noqa: PLC0415
 
         d = dict(src_dict)
         reviews = []

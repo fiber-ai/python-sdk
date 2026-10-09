@@ -137,9 +137,7 @@ class YoutubeVideoCommentsResponse200:
         from ..models.youtube_video_comments_response_200_charge_info_type_4 import (
             YoutubeVideoCommentsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.youtube_video_comments_response_200_output import (
-            YoutubeVideoCommentsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.youtube_video_comments_response_200_output import YoutubeVideoCommentsResponse200Output  # noqa: PLC0415
         from ..models.youtube_video_comments_response_200_warnings_type_0_item import (
             YoutubeVideoCommentsResponse200WarningsType0Item,  # noqa: PLC0415
         )

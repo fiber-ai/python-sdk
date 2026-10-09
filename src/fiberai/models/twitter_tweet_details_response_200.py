@@ -137,9 +137,7 @@ class TwitterTweetDetailsResponse200:
         from ..models.twitter_tweet_details_response_200_charge_info_type_4 import (
             TwitterTweetDetailsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.twitter_tweet_details_response_200_output import (
-            TwitterTweetDetailsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.twitter_tweet_details_response_200_output import TwitterTweetDetailsResponse200Output  # noqa: PLC0415
         from ..models.twitter_tweet_details_response_200_warnings_type_0_item import (
             TwitterTweetDetailsResponse200WarningsType0Item,  # noqa: PLC0415
         )

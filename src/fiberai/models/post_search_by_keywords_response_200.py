@@ -137,9 +137,7 @@ class PostSearchByKeywordsResponse200:
         from ..models.post_search_by_keywords_response_200_charge_info_type_4 import (
             PostSearchByKeywordsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.post_search_by_keywords_response_200_output import (
-            PostSearchByKeywordsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.post_search_by_keywords_response_200_output import PostSearchByKeywordsResponse200Output  # noqa: PLC0415
         from ..models.post_search_by_keywords_response_200_warnings_type_0_item import (
             PostSearchByKeywordsResponse200WarningsType0Item,  # noqa: PLC0415
         )

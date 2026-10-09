@@ -60,9 +60,7 @@ class GetCompanyRevenueResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_company_revenue_response_200_output_company import (
-            GetCompanyRevenueResponse200OutputCompany,  # noqa: PLC0415
-        )
+        from ..models.get_company_revenue_response_200_output_company import GetCompanyRevenueResponse200OutputCompany  # noqa: PLC0415
         from ..models.get_company_revenue_response_200_output_revenue_info_type_0 import (
             GetCompanyRevenueResponse200OutputRevenueInfoType0,  # noqa: PLC0415
         )

@@ -137,9 +137,7 @@ class GithubToLinkedInTriggerResponse200:
         from ..models.github_to_linked_in_trigger_response_200_charge_info_type_4 import (
             GithubToLinkedInTriggerResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.github_to_linked_in_trigger_response_200_output import (
-            GithubToLinkedInTriggerResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.github_to_linked_in_trigger_response_200_output import GithubToLinkedInTriggerResponse200Output  # noqa: PLC0415
         from ..models.github_to_linked_in_trigger_response_200_warnings_type_0_item import (
             GithubToLinkedInTriggerResponse200WarningsType0Item,  # noqa: PLC0415
         )

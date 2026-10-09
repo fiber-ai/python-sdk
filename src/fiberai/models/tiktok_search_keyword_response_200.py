@@ -137,9 +137,7 @@ class TiktokSearchKeywordResponse200:
         from ..models.tiktok_search_keyword_response_200_charge_info_type_4 import (
             TiktokSearchKeywordResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.tiktok_search_keyword_response_200_output import (
-            TiktokSearchKeywordResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.tiktok_search_keyword_response_200_output import TiktokSearchKeywordResponse200Output  # noqa: PLC0415
         from ..models.tiktok_search_keyword_response_200_warnings_type_0_item import (
             TiktokSearchKeywordResponse200WarningsType0Item,  # noqa: PLC0415
         )

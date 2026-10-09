@@ -52,9 +52,7 @@ class CompanyLiveEnrichResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.company_live_enrich_response_200_output_company import (
-            CompanyLiveEnrichResponse200OutputCompany,  # noqa: PLC0415
-        )
+        from ..models.company_live_enrich_response_200_output_company import CompanyLiveEnrichResponse200OutputCompany  # noqa: PLC0415
 
         d = dict(src_dict)
         company = CompanyLiveEnrichResponse200OutputCompany.from_dict(d.pop("company"))

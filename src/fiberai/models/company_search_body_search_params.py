@@ -310,24 +310,16 @@ class CompanySearchBodySearchParams:
         from ..models.company_search_body_search_params_special_flags_type_0 import (
             CompanySearchBodySearchParamsSpecialFlagsType0,  # noqa: PLC0415
         )
-        from ..models.company_search_body_search_params_stage_type_0 import (
-            CompanySearchBodySearchParamsStageType0,  # noqa: PLC0415
-        )
-        from ..models.company_search_body_search_params_status_type_0 import (
-            CompanySearchBodySearchParamsStatusType0,  # noqa: PLC0415
-        )
-        from ..models.company_search_body_search_params_tags_type_0 import (
-            CompanySearchBodySearchParamsTagsType0,  # noqa: PLC0415
-        )
+        from ..models.company_search_body_search_params_stage_type_0 import CompanySearchBodySearchParamsStageType0  # noqa: PLC0415
+        from ..models.company_search_body_search_params_status_type_0 import CompanySearchBodySearchParamsStatusType0  # noqa: PLC0415
+        from ..models.company_search_body_search_params_tags_type_0 import CompanySearchBodySearchParamsTagsType0  # noqa: PLC0415
         from ..models.company_search_body_search_params_technologies_type_0 import (
             CompanySearchBodySearchParamsTechnologiesType0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_technologies_v2_type_0 import (
             CompanySearchBodySearchParamsTechnologiesV2Type0,  # noqa: PLC0415
         )
-        from ..models.company_search_body_search_params_tlds_type_0 import (
-            CompanySearchBodySearchParamsTldsType0,  # noqa: PLC0415
-        )
+        from ..models.company_search_body_search_params_tlds_type_0 import CompanySearchBodySearchParamsTldsType0  # noqa: PLC0415
         from ..models.company_search_body_search_params_total_funding_usd_type_0 import (
             CompanySearchBodySearchParamsTotalFundingUSDType0,  # noqa: PLC0415
         )
@@ -847,24 +839,16 @@ class CompanySearchBodySearchParams:
         from ..models.company_search_body_search_params_special_flags_type_0 import (
             CompanySearchBodySearchParamsSpecialFlagsType0,  # noqa: PLC0415
         )
-        from ..models.company_search_body_search_params_stage_type_0 import (
-            CompanySearchBodySearchParamsStageType0,  # noqa: PLC0415
-        )
-        from ..models.company_search_body_search_params_status_type_0 import (
-            CompanySearchBodySearchParamsStatusType0,  # noqa: PLC0415
-        )
-        from ..models.company_search_body_search_params_tags_type_0 import (
-            CompanySearchBodySearchParamsTagsType0,  # noqa: PLC0415
-        )
+        from ..models.company_search_body_search_params_stage_type_0 import CompanySearchBodySearchParamsStageType0  # noqa: PLC0415
+        from ..models.company_search_body_search_params_status_type_0 import CompanySearchBodySearchParamsStatusType0  # noqa: PLC0415
+        from ..models.company_search_body_search_params_tags_type_0 import CompanySearchBodySearchParamsTagsType0  # noqa: PLC0415
         from ..models.company_search_body_search_params_technologies_type_0 import (
             CompanySearchBodySearchParamsTechnologiesType0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_technologies_v2_type_0 import (
             CompanySearchBodySearchParamsTechnologiesV2Type0,  # noqa: PLC0415
         )
-        from ..models.company_search_body_search_params_tlds_type_0 import (
-            CompanySearchBodySearchParamsTldsType0,  # noqa: PLC0415
-        )
+        from ..models.company_search_body_search_params_tlds_type_0 import CompanySearchBodySearchParamsTldsType0  # noqa: PLC0415
         from ..models.company_search_body_search_params_total_funding_usd_type_0 import (
             CompanySearchBodySearchParamsTotalFundingUSDType0,  # noqa: PLC0415
         )

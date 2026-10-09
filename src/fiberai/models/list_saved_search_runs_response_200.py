@@ -137,9 +137,7 @@ class ListSavedSearchRunsResponse200:
         from ..models.list_saved_search_runs_response_200_charge_info_type_4 import (
             ListSavedSearchRunsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.list_saved_search_runs_response_200_output import (
-            ListSavedSearchRunsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.list_saved_search_runs_response_200_output import ListSavedSearchRunsResponse200Output  # noqa: PLC0415
         from ..models.list_saved_search_runs_response_200_warnings_type_0_item import (
             ListSavedSearchRunsResponse200WarningsType0Item,  # noqa: PLC0415
         )

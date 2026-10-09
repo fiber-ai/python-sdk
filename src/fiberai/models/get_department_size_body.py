@@ -79,9 +79,7 @@ class GetDepartmentSizeBody:
         from ..models.get_department_size_body_company_type_1 import GetDepartmentSizeBodyCompanyType1  # noqa: PLC0415
         from ..models.get_department_size_body_company_type_2 import GetDepartmentSizeBodyCompanyType2  # noqa: PLC0415
         from ..models.get_department_size_body_company_type_3 import GetDepartmentSizeBodyCompanyType3  # noqa: PLC0415
-        from ..models.get_department_size_body_departments_item import (
-            GetDepartmentSizeBodyDepartmentsItem,  # noqa: PLC0415
-        )
+        from ..models.get_department_size_body_departments_item import GetDepartmentSizeBodyDepartmentsItem  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

@@ -137,9 +137,7 @@ class QuickCompanyResolveResponse200:
         from ..models.quick_company_resolve_response_200_charge_info_type_4 import (
             QuickCompanyResolveResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.quick_company_resolve_response_200_output import (
-            QuickCompanyResolveResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.quick_company_resolve_response_200_output import QuickCompanyResolveResponse200Output  # noqa: PLC0415
         from ..models.quick_company_resolve_response_200_warnings_type_0_item import (
             QuickCompanyResolveResponse200WarningsType0Item,  # noqa: PLC0415
         )

@@ -137,9 +137,7 @@ class SyncQuickContactRevealResponse200:
         from ..models.sync_quick_contact_reveal_response_200_charge_info_type_4 import (
             SyncQuickContactRevealResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.sync_quick_contact_reveal_response_200_output import (
-            SyncQuickContactRevealResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.sync_quick_contact_reveal_response_200_output import SyncQuickContactRevealResponse200Output  # noqa: PLC0415
         from ..models.sync_quick_contact_reveal_response_200_warnings_type_0_item import (
             SyncQuickContactRevealResponse200WarningsType0Item,  # noqa: PLC0415
         )

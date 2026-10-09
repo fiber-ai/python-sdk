@@ -137,9 +137,7 @@ class StartBatchContactDetailsResponse200:
         from ..models.start_batch_contact_details_response_200_charge_info_type_4 import (
             StartBatchContactDetailsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.start_batch_contact_details_response_200_output import (
-            StartBatchContactDetailsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.start_batch_contact_details_response_200_output import StartBatchContactDetailsResponse200Output  # noqa: PLC0415
         from ..models.start_batch_contact_details_response_200_warnings_type_0_item import (
             StartBatchContactDetailsResponse200WarningsType0Item,  # noqa: PLC0415
         )

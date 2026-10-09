@@ -67,18 +67,10 @@ class SyncQuickContactRevealBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.sync_quick_contact_reveal_body_company_type_0 import (
-            SyncQuickContactRevealBodyCompanyType0,  # noqa: PLC0415
-        )
-        from ..models.sync_quick_contact_reveal_body_company_type_1 import (
-            SyncQuickContactRevealBodyCompanyType1,  # noqa: PLC0415
-        )
-        from ..models.sync_quick_contact_reveal_body_company_type_2 import (
-            SyncQuickContactRevealBodyCompanyType2,  # noqa: PLC0415
-        )
-        from ..models.sync_quick_contact_reveal_body_company_type_3 import (
-            SyncQuickContactRevealBodyCompanyType3,  # noqa: PLC0415
-        )
+        from ..models.sync_quick_contact_reveal_body_company_type_0 import SyncQuickContactRevealBodyCompanyType0  # noqa: PLC0415
+        from ..models.sync_quick_contact_reveal_body_company_type_1 import SyncQuickContactRevealBodyCompanyType1  # noqa: PLC0415
+        from ..models.sync_quick_contact_reveal_body_company_type_2 import SyncQuickContactRevealBodyCompanyType2  # noqa: PLC0415
+        from ..models.sync_quick_contact_reveal_body_company_type_3 import SyncQuickContactRevealBodyCompanyType3  # noqa: PLC0415
 
         api_key = self.api_key
 
@@ -141,21 +133,11 @@ class SyncQuickContactRevealBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.sync_quick_contact_reveal_body_company_type_0 import (
-            SyncQuickContactRevealBodyCompanyType0,  # noqa: PLC0415
-        )
-        from ..models.sync_quick_contact_reveal_body_company_type_1 import (
-            SyncQuickContactRevealBodyCompanyType1,  # noqa: PLC0415
-        )
-        from ..models.sync_quick_contact_reveal_body_company_type_2 import (
-            SyncQuickContactRevealBodyCompanyType2,  # noqa: PLC0415
-        )
-        from ..models.sync_quick_contact_reveal_body_company_type_3 import (
-            SyncQuickContactRevealBodyCompanyType3,  # noqa: PLC0415
-        )
-        from ..models.sync_quick_contact_reveal_body_enrichment_type import (
-            SyncQuickContactRevealBodyEnrichmentType,  # noqa: PLC0415
-        )
+        from ..models.sync_quick_contact_reveal_body_company_type_0 import SyncQuickContactRevealBodyCompanyType0  # noqa: PLC0415
+        from ..models.sync_quick_contact_reveal_body_company_type_1 import SyncQuickContactRevealBodyCompanyType1  # noqa: PLC0415
+        from ..models.sync_quick_contact_reveal_body_company_type_2 import SyncQuickContactRevealBodyCompanyType2  # noqa: PLC0415
+        from ..models.sync_quick_contact_reveal_body_company_type_3 import SyncQuickContactRevealBodyCompanyType3  # noqa: PLC0415
+        from ..models.sync_quick_contact_reveal_body_enrichment_type import SyncQuickContactRevealBodyEnrichmentType  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

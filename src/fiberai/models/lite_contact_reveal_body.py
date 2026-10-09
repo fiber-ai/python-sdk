@@ -131,9 +131,7 @@ class LiteContactRevealBody:
         from ..models.lite_contact_reveal_body_company_type_1 import LiteContactRevealBodyCompanyType1  # noqa: PLC0415
         from ..models.lite_contact_reveal_body_company_type_2 import LiteContactRevealBodyCompanyType2  # noqa: PLC0415
         from ..models.lite_contact_reveal_body_company_type_3 import LiteContactRevealBodyCompanyType3  # noqa: PLC0415
-        from ..models.lite_contact_reveal_body_enrichment_type import (
-            LiteContactRevealBodyEnrichmentType,  # noqa: PLC0415
-        )
+        from ..models.lite_contact_reveal_body_enrichment_type import LiteContactRevealBodyEnrichmentType  # noqa: PLC0415
         from ..models.lite_contact_reveal_body_input_type_0 import LiteContactRevealBodyInputType0  # noqa: PLC0415
         from ..models.lite_contact_reveal_body_input_type_1 import LiteContactRevealBodyInputType1  # noqa: PLC0415
 

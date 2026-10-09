@@ -109,9 +109,7 @@ class FlightSearchResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.flight_search_response_200_output_airports_item import (
-            FlightSearchResponse200OutputAirportsItem,  # noqa: PLC0415
-        )
+        from ..models.flight_search_response_200_output_airports_item import FlightSearchResponse200OutputAirportsItem  # noqa: PLC0415
         from ..models.flight_search_response_200_output_best_flights_item import (
             FlightSearchResponse200OutputBestFlightsItem,  # noqa: PLC0415
         )

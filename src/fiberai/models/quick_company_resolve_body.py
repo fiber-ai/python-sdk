@@ -37,15 +37,9 @@ class QuickCompanyResolveBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.quick_company_resolve_body_companies_item_type_0 import (
-            QuickCompanyResolveBodyCompaniesItemType0,  # noqa: PLC0415
-        )
-        from ..models.quick_company_resolve_body_companies_item_type_1 import (
-            QuickCompanyResolveBodyCompaniesItemType1,  # noqa: PLC0415
-        )
-        from ..models.quick_company_resolve_body_companies_item_type_2 import (
-            QuickCompanyResolveBodyCompaniesItemType2,  # noqa: PLC0415
-        )
+        from ..models.quick_company_resolve_body_companies_item_type_0 import QuickCompanyResolveBodyCompaniesItemType0  # noqa: PLC0415
+        from ..models.quick_company_resolve_body_companies_item_type_1 import QuickCompanyResolveBodyCompaniesItemType1  # noqa: PLC0415
+        from ..models.quick_company_resolve_body_companies_item_type_2 import QuickCompanyResolveBodyCompaniesItemType2  # noqa: PLC0415
 
         api_key = self.api_key
 
@@ -76,18 +70,10 @@ class QuickCompanyResolveBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.quick_company_resolve_body_companies_item_type_0 import (
-            QuickCompanyResolveBodyCompaniesItemType0,  # noqa: PLC0415
-        )
-        from ..models.quick_company_resolve_body_companies_item_type_1 import (
-            QuickCompanyResolveBodyCompaniesItemType1,  # noqa: PLC0415
-        )
-        from ..models.quick_company_resolve_body_companies_item_type_2 import (
-            QuickCompanyResolveBodyCompaniesItemType2,  # noqa: PLC0415
-        )
-        from ..models.quick_company_resolve_body_companies_item_type_3 import (
-            QuickCompanyResolveBodyCompaniesItemType3,  # noqa: PLC0415
-        )
+        from ..models.quick_company_resolve_body_companies_item_type_0 import QuickCompanyResolveBodyCompaniesItemType0  # noqa: PLC0415
+        from ..models.quick_company_resolve_body_companies_item_type_1 import QuickCompanyResolveBodyCompaniesItemType1  # noqa: PLC0415
+        from ..models.quick_company_resolve_body_companies_item_type_2 import QuickCompanyResolveBodyCompaniesItemType2  # noqa: PLC0415
+        from ..models.quick_company_resolve_body_companies_item_type_3 import QuickCompanyResolveBodyCompaniesItemType3  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

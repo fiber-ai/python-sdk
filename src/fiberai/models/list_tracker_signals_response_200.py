@@ -137,9 +137,7 @@ class ListTrackerSignalsResponse200:
         from ..models.list_tracker_signals_response_200_charge_info_type_4 import (
             ListTrackerSignalsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.list_tracker_signals_response_200_output import (
-            ListTrackerSignalsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.list_tracker_signals_response_200_output import ListTrackerSignalsResponse200Output  # noqa: PLC0415
         from ..models.list_tracker_signals_response_200_warnings_type_0_item import (
             ListTrackerSignalsResponse200WarningsType0Item,  # noqa: PLC0415
         )

@@ -137,9 +137,7 @@ class DeleteWebhookEndpointResponse200:
         from ..models.delete_webhook_endpoint_response_200_charge_info_type_4 import (
             DeleteWebhookEndpointResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.delete_webhook_endpoint_response_200_output import (
-            DeleteWebhookEndpointResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.delete_webhook_endpoint_response_200_output import DeleteWebhookEndpointResponse200Output  # noqa: PLC0415
         from ..models.delete_webhook_endpoint_response_200_warnings_type_0_item import (
             DeleteWebhookEndpointResponse200WarningsType0Item,  # noqa: PLC0415
         )

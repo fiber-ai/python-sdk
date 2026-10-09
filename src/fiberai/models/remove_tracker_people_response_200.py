@@ -137,9 +137,7 @@ class RemoveTrackerPeopleResponse200:
         from ..models.remove_tracker_people_response_200_charge_info_type_4 import (
             RemoveTrackerPeopleResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.remove_tracker_people_response_200_output import (
-            RemoveTrackerPeopleResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.remove_tracker_people_response_200_output import RemoveTrackerPeopleResponse200Output  # noqa: PLC0415
         from ..models.remove_tracker_people_response_200_warnings_type_0_item import (
             RemoveTrackerPeopleResponse200WarningsType0Item,  # noqa: PLC0415
         )

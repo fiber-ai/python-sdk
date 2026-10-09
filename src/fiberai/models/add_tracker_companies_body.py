@@ -68,9 +68,7 @@ class AddTrackerCompaniesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.add_tracker_companies_body_companies_item import (
-            AddTrackerCompaniesBodyCompaniesItem,  # noqa: PLC0415
-        )
+        from ..models.add_tracker_companies_body_companies_item import AddTrackerCompaniesBodyCompaniesItem  # noqa: PLC0415
         from ..models.add_tracker_companies_body_initial_signals_type_0 import (
             AddTrackerCompaniesBodyInitialSignalsType0,  # noqa: PLC0415
         )

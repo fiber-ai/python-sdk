@@ -137,9 +137,7 @@ class SkipNextSavedSearchRunResponse200:
         from ..models.skip_next_saved_search_run_response_200_charge_info_type_4 import (
             SkipNextSavedSearchRunResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.skip_next_saved_search_run_response_200_output import (
-            SkipNextSavedSearchRunResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.skip_next_saved_search_run_response_200_output import SkipNextSavedSearchRunResponse200Output  # noqa: PLC0415
         from ..models.skip_next_saved_search_run_response_200_warnings_type_0_item import (
             SkipNextSavedSearchRunResponse200WarningsType0Item,  # noqa: PLC0415
         )

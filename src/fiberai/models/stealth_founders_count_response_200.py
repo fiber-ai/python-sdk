@@ -137,9 +137,7 @@ class StealthFoundersCountResponse200:
         from ..models.stealth_founders_count_response_200_charge_info_type_4 import (
             StealthFoundersCountResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.stealth_founders_count_response_200_output import (
-            StealthFoundersCountResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.stealth_founders_count_response_200_output import StealthFoundersCountResponse200Output  # noqa: PLC0415
         from ..models.stealth_founders_count_response_200_warnings_type_0_item import (
             StealthFoundersCountResponse200WarningsType0Item,  # noqa: PLC0415
         )

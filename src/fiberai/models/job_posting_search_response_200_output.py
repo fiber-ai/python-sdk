@@ -54,9 +54,7 @@ class JobPostingSearchResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.job_posting_search_response_200_output_data_item import (
-            JobPostingSearchResponse200OutputDataItem,  # noqa: PLC0415
-        )
+        from ..models.job_posting_search_response_200_output_data_item import JobPostingSearchResponse200OutputDataItem  # noqa: PLC0415
 
         d = dict(src_dict)
         data = []

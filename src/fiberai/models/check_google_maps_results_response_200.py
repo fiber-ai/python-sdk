@@ -137,9 +137,7 @@ class CheckGoogleMapsResultsResponse200:
         from ..models.check_google_maps_results_response_200_charge_info_type_4 import (
             CheckGoogleMapsResultsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.check_google_maps_results_response_200_output import (
-            CheckGoogleMapsResultsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.check_google_maps_results_response_200_output import CheckGoogleMapsResultsResponse200Output  # noqa: PLC0415
         from ..models.check_google_maps_results_response_200_warnings_type_0_item import (
             CheckGoogleMapsResultsResponse200WarningsType0Item,  # noqa: PLC0415
         )

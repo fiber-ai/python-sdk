@@ -39,9 +39,7 @@ class BookingPropertyResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.booking_property_response_200_output_property import (
-            BookingPropertyResponse200OutputProperty,  # noqa: PLC0415
-        )
+        from ..models.booking_property_response_200_output_property import BookingPropertyResponse200OutputProperty  # noqa: PLC0415
 
         d = dict(src_dict)
         property_ = BookingPropertyResponse200OutputProperty.from_dict(d.pop("property"))

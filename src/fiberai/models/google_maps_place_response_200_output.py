@@ -38,9 +38,7 @@ class GoogleMapsPlaceResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.google_maps_place_response_200_output_place import (
-            GoogleMapsPlaceResponse200OutputPlace,  # noqa: PLC0415
-        )
+        from ..models.google_maps_place_response_200_output_place import GoogleMapsPlaceResponse200OutputPlace  # noqa: PLC0415
 
         d = dict(src_dict)
         place = GoogleMapsPlaceResponse200OutputPlace.from_dict(d.pop("place"))

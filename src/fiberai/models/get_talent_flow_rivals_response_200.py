@@ -137,9 +137,7 @@ class GetTalentFlowRivalsResponse200:
         from ..models.get_talent_flow_rivals_response_200_charge_info_type_4 import (
             GetTalentFlowRivalsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.get_talent_flow_rivals_response_200_output import (
-            GetTalentFlowRivalsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.get_talent_flow_rivals_response_200_output import GetTalentFlowRivalsResponse200Output  # noqa: PLC0415
         from ..models.get_talent_flow_rivals_response_200_warnings_type_0_item import (
             GetTalentFlowRivalsResponse200WarningsType0Item,  # noqa: PLC0415
         )

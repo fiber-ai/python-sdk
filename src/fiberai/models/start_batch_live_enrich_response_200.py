@@ -137,9 +137,7 @@ class StartBatchLiveEnrichResponse200:
         from ..models.start_batch_live_enrich_response_200_charge_info_type_4 import (
             StartBatchLiveEnrichResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.start_batch_live_enrich_response_200_output import (
-            StartBatchLiveEnrichResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.start_batch_live_enrich_response_200_output import StartBatchLiveEnrichResponse200Output  # noqa: PLC0415
         from ..models.start_batch_live_enrich_response_200_warnings_type_0_item import (
             StartBatchLiveEnrichResponse200WarningsType0Item,  # noqa: PLC0415
         )

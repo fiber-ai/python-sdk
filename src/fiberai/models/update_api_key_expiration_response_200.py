@@ -137,9 +137,7 @@ class UpdateApiKeyExpirationResponse200:
         from ..models.update_api_key_expiration_response_200_charge_info_type_4 import (
             UpdateApiKeyExpirationResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.update_api_key_expiration_response_200_output import (
-            UpdateApiKeyExpirationResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.update_api_key_expiration_response_200_output import UpdateApiKeyExpirationResponse200Output  # noqa: PLC0415
         from ..models.update_api_key_expiration_response_200_warnings_type_0_item import (
             UpdateApiKeyExpirationResponse200WarningsType0Item,  # noqa: PLC0415
         )

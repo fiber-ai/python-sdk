@@ -130,9 +130,7 @@ class CompanyTypeaheadResponse200:
         from ..models.company_typeahead_response_200_charge_info_type_4 import (
             CompanyTypeaheadResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.company_typeahead_response_200_output_item import (
-            CompanyTypeaheadResponse200OutputItem,  # noqa: PLC0415
-        )
+        from ..models.company_typeahead_response_200_output_item import CompanyTypeaheadResponse200OutputItem  # noqa: PLC0415
         from ..models.company_typeahead_response_200_warnings_type_0_item import (
             CompanyTypeaheadResponse200WarningsType0Item,  # noqa: PLC0415
         )

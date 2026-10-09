@@ -137,9 +137,7 @@ class TiktokVideoCommentsResponse200:
         from ..models.tiktok_video_comments_response_200_charge_info_type_4 import (
             TiktokVideoCommentsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.tiktok_video_comments_response_200_output import (
-            TiktokVideoCommentsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.tiktok_video_comments_response_200_output import TiktokVideoCommentsResponse200Output  # noqa: PLC0415
         from ..models.tiktok_video_comments_response_200_warnings_type_0_item import (
             TiktokVideoCommentsResponse200WarningsType0Item,  # noqa: PLC0415
         )

@@ -33,9 +33,7 @@ class BasicWorkEmailRevealBody:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.basic_work_email_reveal_body_company_type_0 import (
-            BasicWorkEmailRevealBodyCompanyType0,  # noqa: PLC0415
-        )
+        from ..models.basic_work_email_reveal_body_company_type_0 import BasicWorkEmailRevealBodyCompanyType0  # noqa: PLC0415
         from ..models.basic_work_email_reveal_body_name_type_0 import BasicWorkEmailRevealBodyNameType0  # noqa: PLC0415
 
         api_key = self.api_key
@@ -66,12 +64,8 @@ class BasicWorkEmailRevealBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.basic_work_email_reveal_body_company_type_0 import (
-            BasicWorkEmailRevealBodyCompanyType0,  # noqa: PLC0415
-        )
-        from ..models.basic_work_email_reveal_body_company_type_1 import (
-            BasicWorkEmailRevealBodyCompanyType1,  # noqa: PLC0415
-        )
+        from ..models.basic_work_email_reveal_body_company_type_0 import BasicWorkEmailRevealBodyCompanyType0  # noqa: PLC0415
+        from ..models.basic_work_email_reveal_body_company_type_1 import BasicWorkEmailRevealBodyCompanyType1  # noqa: PLC0415
         from ..models.basic_work_email_reveal_body_name_type_0 import BasicWorkEmailRevealBodyNameType0  # noqa: PLC0415
         from ..models.basic_work_email_reveal_body_name_type_1 import BasicWorkEmailRevealBodyNameType1  # noqa: PLC0415
 

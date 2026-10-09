@@ -137,9 +137,7 @@ class GithubLookupTriggerResponse200:
         from ..models.github_lookup_trigger_response_200_charge_info_type_4 import (
             GithubLookupTriggerResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.github_lookup_trigger_response_200_output import (
-            GithubLookupTriggerResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.github_lookup_trigger_response_200_output import GithubLookupTriggerResponse200Output  # noqa: PLC0415
         from ..models.github_lookup_trigger_response_200_warnings_type_0_item import (
             GithubLookupTriggerResponse200WarningsType0Item,  # noqa: PLC0415
         )

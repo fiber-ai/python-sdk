@@ -137,9 +137,7 @@ class AddTrackerCompaniesResponse200:
         from ..models.add_tracker_companies_response_200_charge_info_type_4 import (
             AddTrackerCompaniesResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.add_tracker_companies_response_200_output import (
-            AddTrackerCompaniesResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.add_tracker_companies_response_200_output import AddTrackerCompaniesResponse200Output  # noqa: PLC0415
         from ..models.add_tracker_companies_response_200_warnings_type_0_item import (
             AddTrackerCompaniesResponse200WarningsType0Item,  # noqa: PLC0415
         )

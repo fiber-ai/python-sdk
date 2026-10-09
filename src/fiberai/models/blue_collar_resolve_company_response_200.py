@@ -137,9 +137,7 @@ class BlueCollarResolveCompanyResponse200:
         from ..models.blue_collar_resolve_company_response_200_charge_info_type_4 import (
             BlueCollarResolveCompanyResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.blue_collar_resolve_company_response_200_output import (
-            BlueCollarResolveCompanyResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.blue_collar_resolve_company_response_200_output import BlueCollarResolveCompanyResponse200Output  # noqa: PLC0415
         from ..models.blue_collar_resolve_company_response_200_warnings_type_0_item import (
             BlueCollarResolveCompanyResponse200WarningsType0Item,  # noqa: PLC0415
         )

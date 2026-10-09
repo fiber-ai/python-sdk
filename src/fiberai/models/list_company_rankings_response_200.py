@@ -137,9 +137,7 @@ class ListCompanyRankingsResponse200:
         from ..models.list_company_rankings_response_200_charge_info_type_4 import (
             ListCompanyRankingsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.list_company_rankings_response_200_output import (
-            ListCompanyRankingsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.list_company_rankings_response_200_output import ListCompanyRankingsResponse200Output  # noqa: PLC0415
         from ..models.list_company_rankings_response_200_warnings_type_0_item import (
             ListCompanyRankingsResponse200WarningsType0Item,  # noqa: PLC0415
         )

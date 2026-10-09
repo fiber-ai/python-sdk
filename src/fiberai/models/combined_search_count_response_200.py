@@ -137,9 +137,7 @@ class CombinedSearchCountResponse200:
         from ..models.combined_search_count_response_200_charge_info_type_4 import (
             CombinedSearchCountResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.combined_search_count_response_200_output import (
-            CombinedSearchCountResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.combined_search_count_response_200_output import CombinedSearchCountResponse200Output  # noqa: PLC0415
         from ..models.combined_search_count_response_200_warnings_type_0_item import (
             CombinedSearchCountResponse200WarningsType0Item,  # noqa: PLC0415
         )

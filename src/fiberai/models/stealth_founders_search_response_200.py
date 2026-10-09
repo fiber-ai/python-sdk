@@ -137,9 +137,7 @@ class StealthFoundersSearchResponse200:
         from ..models.stealth_founders_search_response_200_charge_info_type_4 import (
             StealthFoundersSearchResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.stealth_founders_search_response_200_output import (
-            StealthFoundersSearchResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.stealth_founders_search_response_200_output import StealthFoundersSearchResponse200Output  # noqa: PLC0415
         from ..models.stealth_founders_search_response_200_warnings_type_0_item import (
             StealthFoundersSearchResponse200WarningsType0Item,  # noqa: PLC0415
         )

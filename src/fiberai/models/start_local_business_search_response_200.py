@@ -137,9 +137,7 @@ class StartLocalBusinessSearchResponse200:
         from ..models.start_local_business_search_response_200_charge_info_type_4 import (
             StartLocalBusinessSearchResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.start_local_business_search_response_200_output import (
-            StartLocalBusinessSearchResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.start_local_business_search_response_200_output import StartLocalBusinessSearchResponse200Output  # noqa: PLC0415
         from ..models.start_local_business_search_response_200_warnings_type_0_item import (
             StartLocalBusinessSearchResponse200WarningsType0Item,  # noqa: PLC0415
         )

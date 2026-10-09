@@ -137,9 +137,7 @@ class CancelBatchContactDetailsResponse200:
         from ..models.cancel_batch_contact_details_response_200_charge_info_type_4 import (
             CancelBatchContactDetailsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.cancel_batch_contact_details_response_200_output import (
-            CancelBatchContactDetailsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.cancel_batch_contact_details_response_200_output import CancelBatchContactDetailsResponse200Output  # noqa: PLC0415
         from ..models.cancel_batch_contact_details_response_200_warnings_type_0_item import (
             CancelBatchContactDetailsResponse200WarningsType0Item,  # noqa: PLC0415
         )

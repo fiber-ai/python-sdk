@@ -137,9 +137,7 @@ class UpdateWebhookEndpointResponse200:
         from ..models.update_webhook_endpoint_response_200_charge_info_type_4 import (
             UpdateWebhookEndpointResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.update_webhook_endpoint_response_200_output import (
-            UpdateWebhookEndpointResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.update_webhook_endpoint_response_200_output import UpdateWebhookEndpointResponse200Output  # noqa: PLC0415
         from ..models.update_webhook_endpoint_response_200_warnings_type_0_item import (
             UpdateWebhookEndpointResponse200WarningsType0Item,  # noqa: PLC0415
         )

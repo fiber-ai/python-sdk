@@ -137,9 +137,7 @@ class YoutubeVideoDetailsResponse200:
         from ..models.youtube_video_details_response_200_charge_info_type_4 import (
             YoutubeVideoDetailsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.youtube_video_details_response_200_output import (
-            YoutubeVideoDetailsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.youtube_video_details_response_200_output import YoutubeVideoDetailsResponse200Output  # noqa: PLC0415
         from ..models.youtube_video_details_response_200_warnings_type_0_item import (
             YoutubeVideoDetailsResponse200WarningsType0Item,  # noqa: PLC0415
         )

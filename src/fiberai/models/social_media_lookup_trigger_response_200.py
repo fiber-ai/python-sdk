@@ -137,9 +137,7 @@ class SocialMediaLookupTriggerResponse200:
         from ..models.social_media_lookup_trigger_response_200_charge_info_type_4 import (
             SocialMediaLookupTriggerResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.social_media_lookup_trigger_response_200_output import (
-            SocialMediaLookupTriggerResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.social_media_lookup_trigger_response_200_output import SocialMediaLookupTriggerResponse200Output  # noqa: PLC0415
         from ..models.social_media_lookup_trigger_response_200_warnings_type_0_item import (
             SocialMediaLookupTriggerResponse200WarningsType0Item,  # noqa: PLC0415
         )

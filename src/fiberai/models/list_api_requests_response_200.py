@@ -45,18 +45,10 @@ class ListApiRequestsResponse200:
     advice: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.list_api_requests_response_200_charge_info_type_0 import (
-            ListApiRequestsResponse200ChargeInfoType0,  # noqa: PLC0415
-        )
-        from ..models.list_api_requests_response_200_charge_info_type_1 import (
-            ListApiRequestsResponse200ChargeInfoType1,  # noqa: PLC0415
-        )
-        from ..models.list_api_requests_response_200_charge_info_type_2 import (
-            ListApiRequestsResponse200ChargeInfoType2,  # noqa: PLC0415
-        )
-        from ..models.list_api_requests_response_200_charge_info_type_3 import (
-            ListApiRequestsResponse200ChargeInfoType3,  # noqa: PLC0415
-        )
+        from ..models.list_api_requests_response_200_charge_info_type_0 import ListApiRequestsResponse200ChargeInfoType0  # noqa: PLC0415
+        from ..models.list_api_requests_response_200_charge_info_type_1 import ListApiRequestsResponse200ChargeInfoType1  # noqa: PLC0415
+        from ..models.list_api_requests_response_200_charge_info_type_2 import ListApiRequestsResponse200ChargeInfoType2  # noqa: PLC0415
+        from ..models.list_api_requests_response_200_charge_info_type_3 import ListApiRequestsResponse200ChargeInfoType3  # noqa: PLC0415
 
         output = self.output.to_dict()
 
@@ -110,21 +102,11 @@ class ListApiRequestsResponse200:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.list_api_requests_response_200_charge_info_type_0 import (
-            ListApiRequestsResponse200ChargeInfoType0,  # noqa: PLC0415
-        )
-        from ..models.list_api_requests_response_200_charge_info_type_1 import (
-            ListApiRequestsResponse200ChargeInfoType1,  # noqa: PLC0415
-        )
-        from ..models.list_api_requests_response_200_charge_info_type_2 import (
-            ListApiRequestsResponse200ChargeInfoType2,  # noqa: PLC0415
-        )
-        from ..models.list_api_requests_response_200_charge_info_type_3 import (
-            ListApiRequestsResponse200ChargeInfoType3,  # noqa: PLC0415
-        )
-        from ..models.list_api_requests_response_200_charge_info_type_4 import (
-            ListApiRequestsResponse200ChargeInfoType4,  # noqa: PLC0415
-        )
+        from ..models.list_api_requests_response_200_charge_info_type_0 import ListApiRequestsResponse200ChargeInfoType0  # noqa: PLC0415
+        from ..models.list_api_requests_response_200_charge_info_type_1 import ListApiRequestsResponse200ChargeInfoType1  # noqa: PLC0415
+        from ..models.list_api_requests_response_200_charge_info_type_2 import ListApiRequestsResponse200ChargeInfoType2  # noqa: PLC0415
+        from ..models.list_api_requests_response_200_charge_info_type_3 import ListApiRequestsResponse200ChargeInfoType3  # noqa: PLC0415
+        from ..models.list_api_requests_response_200_charge_info_type_4 import ListApiRequestsResponse200ChargeInfoType4  # noqa: PLC0415
         from ..models.list_api_requests_response_200_output import ListApiRequestsResponse200Output  # noqa: PLC0415
         from ..models.list_api_requests_response_200_warnings_type_0_item import (
             ListApiRequestsResponse200WarningsType0Item,  # noqa: PLC0415

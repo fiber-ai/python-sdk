@@ -137,9 +137,7 @@ class DomainLookupPollingResponse200:
         from ..models.domain_lookup_polling_response_200_charge_info_type_4 import (
             DomainLookupPollingResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.domain_lookup_polling_response_200_output import (
-            DomainLookupPollingResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.domain_lookup_polling_response_200_output import DomainLookupPollingResponse200Output  # noqa: PLC0415
         from ..models.domain_lookup_polling_response_200_warnings_type_0_item import (
             DomainLookupPollingResponse200WarningsType0Item,  # noqa: PLC0415
         )

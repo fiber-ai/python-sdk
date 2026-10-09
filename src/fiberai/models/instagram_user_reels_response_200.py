@@ -137,9 +137,7 @@ class InstagramUserReelsResponse200:
         from ..models.instagram_user_reels_response_200_charge_info_type_4 import (
             InstagramUserReelsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.instagram_user_reels_response_200_output import (
-            InstagramUserReelsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.instagram_user_reels_response_200_output import InstagramUserReelsResponse200Output  # noqa: PLC0415
         from ..models.instagram_user_reels_response_200_warnings_type_0_item import (
             InstagramUserReelsResponse200WarningsType0Item,  # noqa: PLC0415
         )

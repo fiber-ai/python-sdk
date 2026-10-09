@@ -137,9 +137,7 @@ class BasicWorkEmailRevealResponse200:
         from ..models.basic_work_email_reveal_response_200_charge_info_type_4 import (
             BasicWorkEmailRevealResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.basic_work_email_reveal_response_200_output import (
-            BasicWorkEmailRevealResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.basic_work_email_reveal_response_200_output import BasicWorkEmailRevealResponse200Output  # noqa: PLC0415
         from ..models.basic_work_email_reveal_response_200_warnings_type_0_item import (
             BasicWorkEmailRevealResponse200WarningsType0Item,  # noqa: PLC0415
         )

@@ -137,9 +137,7 @@ class TwitterUserFollowersResponse200:
         from ..models.twitter_user_followers_response_200_charge_info_type_4 import (
             TwitterUserFollowersResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.twitter_user_followers_response_200_output import (
-            TwitterUserFollowersResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.twitter_user_followers_response_200_output import TwitterUserFollowersResponse200Output  # noqa: PLC0415
         from ..models.twitter_user_followers_response_200_warnings_type_0_item import (
             TwitterUserFollowersResponse200WarningsType0Item,  # noqa: PLC0415
         )

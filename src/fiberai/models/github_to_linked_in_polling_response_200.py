@@ -137,9 +137,7 @@ class GithubToLinkedInPollingResponse200:
         from ..models.github_to_linked_in_polling_response_200_charge_info_type_4 import (
             GithubToLinkedInPollingResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.github_to_linked_in_polling_response_200_output import (
-            GithubToLinkedInPollingResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.github_to_linked_in_polling_response_200_output import GithubToLinkedInPollingResponse200Output  # noqa: PLC0415
         from ..models.github_to_linked_in_polling_response_200_warnings_type_0_item import (
             GithubToLinkedInPollingResponse200WarningsType0Item,  # noqa: PLC0415
         )

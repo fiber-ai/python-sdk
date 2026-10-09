@@ -137,9 +137,7 @@ class KitchenSinkBulkCompanyResponse200:
         from ..models.kitchen_sink_bulk_company_response_200_charge_info_type_4 import (
             KitchenSinkBulkCompanyResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.kitchen_sink_bulk_company_response_200_output import (
-            KitchenSinkBulkCompanyResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.kitchen_sink_bulk_company_response_200_output import KitchenSinkBulkCompanyResponse200Output  # noqa: PLC0415
         from ..models.kitchen_sink_bulk_company_response_200_warnings_type_0_item import (
             KitchenSinkBulkCompanyResponse200WarningsType0Item,  # noqa: PLC0415
         )

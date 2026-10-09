@@ -137,9 +137,7 @@ class SendTestWebhookEventResponse200:
         from ..models.send_test_webhook_event_response_200_charge_info_type_4 import (
             SendTestWebhookEventResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.send_test_webhook_event_response_200_output import (
-            SendTestWebhookEventResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.send_test_webhook_event_response_200_output import SendTestWebhookEventResponse200Output  # noqa: PLC0415
         from ..models.send_test_webhook_event_response_200_warnings_type_0_item import (
             SendTestWebhookEventResponse200WarningsType0Item,  # noqa: PLC0415
         )

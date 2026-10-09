@@ -137,9 +137,7 @@ class InstantContactRevealResponse200:
         from ..models.instant_contact_reveal_response_200_charge_info_type_4 import (
             InstantContactRevealResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.instant_contact_reveal_response_200_output import (
-            InstantContactRevealResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.instant_contact_reveal_response_200_output import InstantContactRevealResponse200Output  # noqa: PLC0415
         from ..models.instant_contact_reveal_response_200_warnings_type_0_item import (
             InstantContactRevealResponse200WarningsType0Item,  # noqa: PLC0415
         )

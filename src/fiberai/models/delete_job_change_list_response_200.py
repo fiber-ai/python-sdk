@@ -137,9 +137,7 @@ class DeleteJobChangeListResponse200:
         from ..models.delete_job_change_list_response_200_charge_info_type_4 import (
             DeleteJobChangeListResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.delete_job_change_list_response_200_output import (
-            DeleteJobChangeListResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.delete_job_change_list_response_200_output import DeleteJobChangeListResponse200Output  # noqa: PLC0415
         from ..models.delete_job_change_list_response_200_warnings_type_0_item import (
             DeleteJobChangeListResponse200WarningsType0Item,  # noqa: PLC0415
         )

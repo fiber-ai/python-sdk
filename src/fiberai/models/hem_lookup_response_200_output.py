@@ -27,9 +27,7 @@ class HemLookupResponse200Output:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.hem_lookup_response_200_output_data_item_type_0 import (
-            HemLookupResponse200OutputDataItemType0,  # noqa: PLC0415
-        )
+        from ..models.hem_lookup_response_200_output_data_item_type_0 import HemLookupResponse200OutputDataItemType0  # noqa: PLC0415
 
         data = []
         for data_item_data in self.data:
@@ -53,12 +51,8 @@ class HemLookupResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.hem_lookup_response_200_output_data_item_type_0 import (
-            HemLookupResponse200OutputDataItemType0,  # noqa: PLC0415
-        )
-        from ..models.hem_lookup_response_200_output_data_item_type_1 import (
-            HemLookupResponse200OutputDataItemType1,  # noqa: PLC0415
-        )
+        from ..models.hem_lookup_response_200_output_data_item_type_0 import HemLookupResponse200OutputDataItemType0  # noqa: PLC0415
+        from ..models.hem_lookup_response_200_output_data_item_type_1 import HemLookupResponse200OutputDataItemType1  # noqa: PLC0415
 
         d = dict(src_dict)
         data = []

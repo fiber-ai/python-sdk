@@ -77,9 +77,7 @@ class EstimateEnrichmentCostBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.estimate_enrichment_cost_body_enrichment_type import (
-            EstimateEnrichmentCostBodyEnrichmentType,  # noqa: PLC0415
-        )
+        from ..models.estimate_enrichment_cost_body_enrichment_type import EstimateEnrichmentCostBodyEnrichmentType  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

@@ -137,9 +137,7 @@ class StandardizeCompanyBulkResponse200:
         from ..models.standardize_company_bulk_response_200_charge_info_type_4 import (
             StandardizeCompanyBulkResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.standardize_company_bulk_response_200_output import (
-            StandardizeCompanyBulkResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.standardize_company_bulk_response_200_output import StandardizeCompanyBulkResponse200Output  # noqa: PLC0415
         from ..models.standardize_company_bulk_response_200_warnings_type_0_item import (
             StandardizeCompanyBulkResponse200WarningsType0Item,  # noqa: PLC0415
         )

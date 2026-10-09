@@ -123,18 +123,10 @@ class FlightSearchBody:
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.flight_search_body_airlines_type_0 import FlightSearchBodyAirlinesType0  # noqa: PLC0415
-        from ..models.flight_search_body_connecting_airports_type_0 import (
-            FlightSearchBodyConnectingAirportsType0,  # noqa: PLC0415
-        )
-        from ..models.flight_search_body_layover_duration_type_0 import (
-            FlightSearchBodyLayoverDurationType0,  # noqa: PLC0415
-        )
-        from ..models.flight_search_body_outbound_time_window_type_0 import (
-            FlightSearchBodyOutboundTimeWindowType0,  # noqa: PLC0415
-        )
-        from ..models.flight_search_body_return_time_window_type_0 import (
-            FlightSearchBodyReturnTimeWindowType0,  # noqa: PLC0415
-        )
+        from ..models.flight_search_body_connecting_airports_type_0 import FlightSearchBodyConnectingAirportsType0  # noqa: PLC0415
+        from ..models.flight_search_body_layover_duration_type_0 import FlightSearchBodyLayoverDurationType0  # noqa: PLC0415
+        from ..models.flight_search_body_outbound_time_window_type_0 import FlightSearchBodyOutboundTimeWindowType0  # noqa: PLC0415
+        from ..models.flight_search_body_return_time_window_type_0 import FlightSearchBodyReturnTimeWindowType0  # noqa: PLC0415
         from ..models.flight_search_body_trip_type_0 import FlightSearchBodyTripType0  # noqa: PLC0415
         from ..models.flight_search_body_trip_type_1 import FlightSearchBodyTripType1  # noqa: PLC0415
 
@@ -328,18 +320,10 @@ class FlightSearchBody:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.flight_search_body_airlines_type_0 import FlightSearchBodyAirlinesType0  # noqa: PLC0415
-        from ..models.flight_search_body_connecting_airports_type_0 import (
-            FlightSearchBodyConnectingAirportsType0,  # noqa: PLC0415
-        )
-        from ..models.flight_search_body_layover_duration_type_0 import (
-            FlightSearchBodyLayoverDurationType0,  # noqa: PLC0415
-        )
-        from ..models.flight_search_body_outbound_time_window_type_0 import (
-            FlightSearchBodyOutboundTimeWindowType0,  # noqa: PLC0415
-        )
-        from ..models.flight_search_body_return_time_window_type_0 import (
-            FlightSearchBodyReturnTimeWindowType0,  # noqa: PLC0415
-        )
+        from ..models.flight_search_body_connecting_airports_type_0 import FlightSearchBodyConnectingAirportsType0  # noqa: PLC0415
+        from ..models.flight_search_body_layover_duration_type_0 import FlightSearchBodyLayoverDurationType0  # noqa: PLC0415
+        from ..models.flight_search_body_outbound_time_window_type_0 import FlightSearchBodyOutboundTimeWindowType0  # noqa: PLC0415
+        from ..models.flight_search_body_return_time_window_type_0 import FlightSearchBodyReturnTimeWindowType0  # noqa: PLC0415
         from ..models.flight_search_body_trip_type_0 import FlightSearchBodyTripType0  # noqa: PLC0415
         from ..models.flight_search_body_trip_type_1 import FlightSearchBodyTripType1  # noqa: PLC0415
         from ..models.flight_search_body_trip_type_2 import FlightSearchBodyTripType2  # noqa: PLC0415

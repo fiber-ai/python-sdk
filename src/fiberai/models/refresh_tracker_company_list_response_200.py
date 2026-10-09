@@ -137,9 +137,7 @@ class RefreshTrackerCompanyListResponse200:
         from ..models.refresh_tracker_company_list_response_200_charge_info_type_4 import (
             RefreshTrackerCompanyListResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.refresh_tracker_company_list_response_200_output import (
-            RefreshTrackerCompanyListResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.refresh_tracker_company_list_response_200_output import RefreshTrackerCompanyListResponse200Output  # noqa: PLC0415
         from ..models.refresh_tracker_company_list_response_200_warnings_type_0_item import (
             RefreshTrackerCompanyListResponse200WarningsType0Item,  # noqa: PLC0415
         )

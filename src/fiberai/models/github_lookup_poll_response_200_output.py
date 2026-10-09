@@ -63,9 +63,7 @@ class GithubLookupPollResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.github_lookup_poll_response_200_output_counts import (
-            GithubLookupPollResponse200OutputCounts,  # noqa: PLC0415
-        )
+        from ..models.github_lookup_poll_response_200_output_counts import GithubLookupPollResponse200OutputCounts  # noqa: PLC0415
         from ..models.github_lookup_poll_response_200_output_people_item import (
             GithubLookupPollResponse200OutputPeopleItem,  # noqa: PLC0415
         )

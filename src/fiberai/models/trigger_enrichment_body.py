@@ -87,9 +87,7 @@ class TriggerEnrichmentBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.trigger_enrichment_body_enrichment_type import (
-            TriggerEnrichmentBodyEnrichmentType,  # noqa: PLC0415
-        )
+        from ..models.trigger_enrichment_body_enrichment_type import TriggerEnrichmentBodyEnrichmentType  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

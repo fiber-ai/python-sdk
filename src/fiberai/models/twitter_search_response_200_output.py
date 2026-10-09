@@ -55,9 +55,7 @@ class TwitterSearchResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.twitter_search_response_200_output_tweets_item import (
-            TwitterSearchResponse200OutputTweetsItem,  # noqa: PLC0415
-        )
+        from ..models.twitter_search_response_200_output_tweets_item import TwitterSearchResponse200OutputTweetsItem  # noqa: PLC0415
 
         d = dict(src_dict)
         tweets = []

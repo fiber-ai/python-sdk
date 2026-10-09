@@ -137,9 +137,7 @@ class GithubToLinkedinSingleResponse200:
         from ..models.github_to_linkedin_single_response_200_charge_info_type_4 import (
             GithubToLinkedinSingleResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.github_to_linkedin_single_response_200_output import (
-            GithubToLinkedinSingleResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.github_to_linkedin_single_response_200_output import GithubToLinkedinSingleResponse200Output  # noqa: PLC0415
         from ..models.github_to_linkedin_single_response_200_warnings_type_0_item import (
             GithubToLinkedinSingleResponse200WarningsType0Item,  # noqa: PLC0415
         )

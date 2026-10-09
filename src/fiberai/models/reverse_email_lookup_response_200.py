@@ -137,9 +137,7 @@ class ReverseEmailLookupResponse200:
         from ..models.reverse_email_lookup_response_200_charge_info_type_4 import (
             ReverseEmailLookupResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.reverse_email_lookup_response_200_output import (
-            ReverseEmailLookupResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.reverse_email_lookup_response_200_output import ReverseEmailLookupResponse200Output  # noqa: PLC0415
         from ..models.reverse_email_lookup_response_200_warnings_type_0_item import (
             ReverseEmailLookupResponse200WarningsType0Item,  # noqa: PLC0415
         )

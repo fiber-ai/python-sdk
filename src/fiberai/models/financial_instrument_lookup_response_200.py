@@ -137,9 +137,7 @@ class FinancialInstrumentLookupResponse200:
         from ..models.financial_instrument_lookup_response_200_charge_info_type_4 import (
             FinancialInstrumentLookupResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.financial_instrument_lookup_response_200_output import (
-            FinancialInstrumentLookupResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.financial_instrument_lookup_response_200_output import FinancialInstrumentLookupResponse200Output  # noqa: PLC0415
         from ..models.financial_instrument_lookup_response_200_warnings_type_0_item import (
             FinancialInstrumentLookupResponse200WarningsType0Item,  # noqa: PLC0415
         )

@@ -137,9 +137,7 @@ class DeleteTrackerCompanyListResponse200:
         from ..models.delete_tracker_company_list_response_200_charge_info_type_4 import (
             DeleteTrackerCompanyListResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.delete_tracker_company_list_response_200_output import (
-            DeleteTrackerCompanyListResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.delete_tracker_company_list_response_200_output import DeleteTrackerCompanyListResponse200Output  # noqa: PLC0415
         from ..models.delete_tracker_company_list_response_200_warnings_type_0_item import (
             DeleteTrackerCompanyListResponse200WarningsType0Item,  # noqa: PLC0415
         )

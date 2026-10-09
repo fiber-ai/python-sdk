@@ -72,15 +72,9 @@ class YoutubeSearchResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.youtube_search_response_200_output_channels_item import (
-            YoutubeSearchResponse200OutputChannelsItem,  # noqa: PLC0415
-        )
-        from ..models.youtube_search_response_200_output_shorts_item import (
-            YoutubeSearchResponse200OutputShortsItem,  # noqa: PLC0415
-        )
-        from ..models.youtube_search_response_200_output_videos_item import (
-            YoutubeSearchResponse200OutputVideosItem,  # noqa: PLC0415
-        )
+        from ..models.youtube_search_response_200_output_channels_item import YoutubeSearchResponse200OutputChannelsItem  # noqa: PLC0415
+        from ..models.youtube_search_response_200_output_shorts_item import YoutubeSearchResponse200OutputShortsItem  # noqa: PLC0415
+        from ..models.youtube_search_response_200_output_videos_item import YoutubeSearchResponse200OutputVideosItem  # noqa: PLC0415
 
         d = dict(src_dict)
         videos = []

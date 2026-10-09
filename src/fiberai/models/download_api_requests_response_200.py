@@ -137,9 +137,7 @@ class DownloadApiRequestsResponse200:
         from ..models.download_api_requests_response_200_charge_info_type_4 import (
             DownloadApiRequestsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.download_api_requests_response_200_output import (
-            DownloadApiRequestsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.download_api_requests_response_200_output import DownloadApiRequestsResponse200Output  # noqa: PLC0415
         from ..models.download_api_requests_response_200_warnings_type_0_item import (
             DownloadApiRequestsResponse200WarningsType0Item,  # noqa: PLC0415
         )

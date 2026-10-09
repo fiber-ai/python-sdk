@@ -137,9 +137,7 @@ class CreateJobChangeListResponse200:
         from ..models.create_job_change_list_response_200_charge_info_type_4 import (
             CreateJobChangeListResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.create_job_change_list_response_200_output import (
-            CreateJobChangeListResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.create_job_change_list_response_200_output import CreateJobChangeListResponse200Output  # noqa: PLC0415
         from ..models.create_job_change_list_response_200_warnings_type_0_item import (
             CreateJobChangeListResponse200WarningsType0Item,  # noqa: PLC0415
         )

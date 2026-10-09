@@ -91,12 +91,8 @@ class CombinedSearchCountBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.combined_search_count_body_company_params import (
-            CombinedSearchCountBodyCompanyParams,  # noqa: PLC0415
-        )
-        from ..models.combined_search_count_body_profile_params import (
-            CombinedSearchCountBodyProfileParams,  # noqa: PLC0415
-        )
+        from ..models.combined_search_count_body_company_params import CombinedSearchCountBodyCompanyParams  # noqa: PLC0415
+        from ..models.combined_search_count_body_profile_params import CombinedSearchCountBodyProfileParams  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

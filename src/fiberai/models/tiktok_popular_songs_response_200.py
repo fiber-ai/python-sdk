@@ -137,9 +137,7 @@ class TiktokPopularSongsResponse200:
         from ..models.tiktok_popular_songs_response_200_charge_info_type_4 import (
             TiktokPopularSongsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.tiktok_popular_songs_response_200_output import (
-            TiktokPopularSongsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.tiktok_popular_songs_response_200_output import TiktokPopularSongsResponse200Output  # noqa: PLC0415
         from ..models.tiktok_popular_songs_response_200_warnings_type_0_item import (
             TiktokPopularSongsResponse200WarningsType0Item,  # noqa: PLC0415
         )

@@ -137,9 +137,7 @@ class GetEnrichmentStatusResponse200:
         from ..models.get_enrichment_status_response_200_charge_info_type_4 import (
             GetEnrichmentStatusResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.get_enrichment_status_response_200_output import (
-            GetEnrichmentStatusResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.get_enrichment_status_response_200_output import GetEnrichmentStatusResponse200Output  # noqa: PLC0415
         from ..models.get_enrichment_status_response_200_warnings_type_0_item import (
             GetEnrichmentStatusResponse200WarningsType0Item,  # noqa: PLC0415
         )

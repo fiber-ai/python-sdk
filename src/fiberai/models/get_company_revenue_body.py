@@ -43,9 +43,7 @@ class GetCompanyRevenueBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.get_company_revenue_body_company_metadata import (
-            GetCompanyRevenueBodyCompanyMetadata,  # noqa: PLC0415
-        )
+        from ..models.get_company_revenue_body_company_metadata import GetCompanyRevenueBodyCompanyMetadata  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")

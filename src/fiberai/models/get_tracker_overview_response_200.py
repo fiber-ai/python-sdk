@@ -137,9 +137,7 @@ class GetTrackerOverviewResponse200:
         from ..models.get_tracker_overview_response_200_charge_info_type_4 import (
             GetTrackerOverviewResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.get_tracker_overview_response_200_output import (
-            GetTrackerOverviewResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.get_tracker_overview_response_200_output import GetTrackerOverviewResponse200Output  # noqa: PLC0415
         from ..models.get_tracker_overview_response_200_warnings_type_0_item import (
             GetTrackerOverviewResponse200WarningsType0Item,  # noqa: PLC0415
         )

@@ -137,9 +137,7 @@ class PollLocalBusinessSearchResponse200:
         from ..models.poll_local_business_search_response_200_charge_info_type_4 import (
             PollLocalBusinessSearchResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.poll_local_business_search_response_200_output import (
-            PollLocalBusinessSearchResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.poll_local_business_search_response_200_output import PollLocalBusinessSearchResponse200Output  # noqa: PLC0415
         from ..models.poll_local_business_search_response_200_warnings_type_0_item import (
             PollLocalBusinessSearchResponse200WarningsType0Item,  # noqa: PLC0415
         )

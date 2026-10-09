@@ -45,18 +45,10 @@ class YelpReviewsResponse200:
     advice: list[str] | None | Unset = UNSET
 
     def to_dict(self) -> dict[str, Any]:
-        from ..models.yelp_reviews_response_200_charge_info_type_0 import (
-            YelpReviewsResponse200ChargeInfoType0,  # noqa: PLC0415
-        )
-        from ..models.yelp_reviews_response_200_charge_info_type_1 import (
-            YelpReviewsResponse200ChargeInfoType1,  # noqa: PLC0415
-        )
-        from ..models.yelp_reviews_response_200_charge_info_type_2 import (
-            YelpReviewsResponse200ChargeInfoType2,  # noqa: PLC0415
-        )
-        from ..models.yelp_reviews_response_200_charge_info_type_3 import (
-            YelpReviewsResponse200ChargeInfoType3,  # noqa: PLC0415
-        )
+        from ..models.yelp_reviews_response_200_charge_info_type_0 import YelpReviewsResponse200ChargeInfoType0  # noqa: PLC0415
+        from ..models.yelp_reviews_response_200_charge_info_type_1 import YelpReviewsResponse200ChargeInfoType1  # noqa: PLC0415
+        from ..models.yelp_reviews_response_200_charge_info_type_2 import YelpReviewsResponse200ChargeInfoType2  # noqa: PLC0415
+        from ..models.yelp_reviews_response_200_charge_info_type_3 import YelpReviewsResponse200ChargeInfoType3  # noqa: PLC0415
 
         output = self.output.to_dict()
 
@@ -110,25 +102,13 @@ class YelpReviewsResponse200:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.yelp_reviews_response_200_charge_info_type_0 import (
-            YelpReviewsResponse200ChargeInfoType0,  # noqa: PLC0415
-        )
-        from ..models.yelp_reviews_response_200_charge_info_type_1 import (
-            YelpReviewsResponse200ChargeInfoType1,  # noqa: PLC0415
-        )
-        from ..models.yelp_reviews_response_200_charge_info_type_2 import (
-            YelpReviewsResponse200ChargeInfoType2,  # noqa: PLC0415
-        )
-        from ..models.yelp_reviews_response_200_charge_info_type_3 import (
-            YelpReviewsResponse200ChargeInfoType3,  # noqa: PLC0415
-        )
-        from ..models.yelp_reviews_response_200_charge_info_type_4 import (
-            YelpReviewsResponse200ChargeInfoType4,  # noqa: PLC0415
-        )
+        from ..models.yelp_reviews_response_200_charge_info_type_0 import YelpReviewsResponse200ChargeInfoType0  # noqa: PLC0415
+        from ..models.yelp_reviews_response_200_charge_info_type_1 import YelpReviewsResponse200ChargeInfoType1  # noqa: PLC0415
+        from ..models.yelp_reviews_response_200_charge_info_type_2 import YelpReviewsResponse200ChargeInfoType2  # noqa: PLC0415
+        from ..models.yelp_reviews_response_200_charge_info_type_3 import YelpReviewsResponse200ChargeInfoType3  # noqa: PLC0415
+        from ..models.yelp_reviews_response_200_charge_info_type_4 import YelpReviewsResponse200ChargeInfoType4  # noqa: PLC0415
         from ..models.yelp_reviews_response_200_output import YelpReviewsResponse200Output  # noqa: PLC0415
-        from ..models.yelp_reviews_response_200_warnings_type_0_item import (
-            YelpReviewsResponse200WarningsType0Item,  # noqa: PLC0415
-        )
+        from ..models.yelp_reviews_response_200_warnings_type_0_item import YelpReviewsResponse200WarningsType0Item  # noqa: PLC0415
 
         d = dict(src_dict)
         output = YelpReviewsResponse200Output.from_dict(d.pop("output"))

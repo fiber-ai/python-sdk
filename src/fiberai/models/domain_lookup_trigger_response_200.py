@@ -137,9 +137,7 @@ class DomainLookupTriggerResponse200:
         from ..models.domain_lookup_trigger_response_200_charge_info_type_4 import (
             DomainLookupTriggerResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.domain_lookup_trigger_response_200_output import (
-            DomainLookupTriggerResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.domain_lookup_trigger_response_200_output import DomainLookupTriggerResponse200Output  # noqa: PLC0415
         from ..models.domain_lookup_trigger_response_200_warnings_type_0_item import (
             DomainLookupTriggerResponse200WarningsType0Item,  # noqa: PLC0415
         )

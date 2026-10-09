@@ -137,9 +137,7 @@ class EstimateEnrichmentCostResponse200:
         from ..models.estimate_enrichment_cost_response_200_charge_info_type_4 import (
             EstimateEnrichmentCostResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.estimate_enrichment_cost_response_200_output import (
-            EstimateEnrichmentCostResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.estimate_enrichment_cost_response_200_output import EstimateEnrichmentCostResponse200Output  # noqa: PLC0415
         from ..models.estimate_enrichment_cost_response_200_warnings_type_0_item import (
             EstimateEnrichmentCostResponse200WarningsType0Item,  # noqa: PLC0415
         )

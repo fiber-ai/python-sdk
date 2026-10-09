@@ -137,9 +137,7 @@ class PostReactionsLiveFetchResponse200:
         from ..models.post_reactions_live_fetch_response_200_charge_info_type_4 import (
             PostReactionsLiveFetchResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.post_reactions_live_fetch_response_200_output import (
-            PostReactionsLiveFetchResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.post_reactions_live_fetch_response_200_output import PostReactionsLiveFetchResponse200Output  # noqa: PLC0415
         from ..models.post_reactions_live_fetch_response_200_warnings_type_0_item import (
             PostReactionsLiveFetchResponse200WarningsType0Item,  # noqa: PLC0415
         )

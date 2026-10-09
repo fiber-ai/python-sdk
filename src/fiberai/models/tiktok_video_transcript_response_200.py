@@ -137,9 +137,7 @@ class TiktokVideoTranscriptResponse200:
         from ..models.tiktok_video_transcript_response_200_charge_info_type_4 import (
             TiktokVideoTranscriptResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.tiktok_video_transcript_response_200_output import (
-            TiktokVideoTranscriptResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.tiktok_video_transcript_response_200_output import TiktokVideoTranscriptResponse200Output  # noqa: PLC0415
         from ..models.tiktok_video_transcript_response_200_warnings_type_0_item import (
             TiktokVideoTranscriptResponse200WarningsType0Item,  # noqa: PLC0415
         )

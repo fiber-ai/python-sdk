@@ -137,9 +137,7 @@ class ValidatePhoneNumberResponse200:
         from ..models.validate_phone_number_response_200_charge_info_type_4 import (
             ValidatePhoneNumberResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.validate_phone_number_response_200_output import (
-            ValidatePhoneNumberResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.validate_phone_number_response_200_output import ValidatePhoneNumberResponse200Output  # noqa: PLC0415
         from ..models.validate_phone_number_response_200_warnings_type_0_item import (
             ValidatePhoneNumberResponse200WarningsType0Item,  # noqa: PLC0415
         )

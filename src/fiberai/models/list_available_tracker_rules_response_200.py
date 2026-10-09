@@ -137,9 +137,7 @@ class ListAvailableTrackerRulesResponse200:
         from ..models.list_available_tracker_rules_response_200_charge_info_type_4 import (
             ListAvailableTrackerRulesResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.list_available_tracker_rules_response_200_output import (
-            ListAvailableTrackerRulesResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.list_available_tracker_rules_response_200_output import ListAvailableTrackerRulesResponse200Output  # noqa: PLC0415
         from ..models.list_available_tracker_rules_response_200_warnings_type_0_item import (
             ListAvailableTrackerRulesResponse200WarningsType0Item,  # noqa: PLC0415
         )

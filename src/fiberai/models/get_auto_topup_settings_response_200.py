@@ -137,9 +137,7 @@ class GetAutoTopupSettingsResponse200:
         from ..models.get_auto_topup_settings_response_200_charge_info_type_4 import (
             GetAutoTopupSettingsResponse200ChargeInfoType4,  # noqa: PLC0415
         )
-        from ..models.get_auto_topup_settings_response_200_output import (
-            GetAutoTopupSettingsResponse200Output,  # noqa: PLC0415
-        )
+        from ..models.get_auto_topup_settings_response_200_output import GetAutoTopupSettingsResponse200Output  # noqa: PLC0415
         from ..models.get_auto_topup_settings_response_200_warnings_type_0_item import (
             GetAutoTopupSettingsResponse200WarningsType0Item,  # noqa: PLC0415
         )
