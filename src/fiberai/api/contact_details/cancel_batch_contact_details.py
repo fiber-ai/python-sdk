@@ -149,8 +149,9 @@ def sync_detailed(
 ]:
     """Cancel batch contact details
 
-     Cancels a batch contact details job that is in progress. Only unclaimed profiles will be cancelled.
-    Profiles already processed will be charged for. Credits are refunded for cancelled profiles.
+     Cancels a batch contact details job that is in progress. Profiles not yet delivered — queued or in-
+    flight — are cancelled and refunded immediately at the requested bundle price. Profiles already
+    delivered before the cancel are charged for and remain available via the poll endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
@@ -195,8 +196,9 @@ def sync(
 ):
     """Cancel batch contact details
 
-     Cancels a batch contact details job that is in progress. Only unclaimed profiles will be cancelled.
-    Profiles already processed will be charged for. Credits are refunded for cancelled profiles.
+     Cancels a batch contact details job that is in progress. Profiles not yet delivered — queued or in-
+    flight — are cancelled and refunded immediately at the requested bundle price. Profiles already
+    delivered before the cancel are charged for and remain available via the poll endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
@@ -235,8 +237,9 @@ async def asyncio_detailed(
 ]:
     """Cancel batch contact details
 
-     Cancels a batch contact details job that is in progress. Only unclaimed profiles will be cancelled.
-    Profiles already processed will be charged for. Credits are refunded for cancelled profiles.
+     Cancels a batch contact details job that is in progress. Profiles not yet delivered — queued or in-
+    flight — are cancelled and refunded immediately at the requested bundle price. Profiles already
+    delivered before the cancel are charged for and remain available via the poll endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
@@ -279,8 +282,9 @@ async def asyncio(
 ):
     """Cancel batch contact details
 
-     Cancels a batch contact details job that is in progress. Only unclaimed profiles will be cancelled.
-    Profiles already processed will be charged for. Credits are refunded for cancelled profiles.
+     Cancels a batch contact details job that is in progress. Profiles not yet delivered — queued or in-
+    flight — are cancelled and refunded immediately at the requested bundle price. Profiles already
+    delivered before the cancel are charged for and remain available via the poll endpoint.
 
     <span>⚡ <strong>Rate limit:</strong> 60 requests per 1 minute</span>
 
