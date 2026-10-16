@@ -3,7 +3,7 @@
 Official Python SDK for the [Fiber AI API](https://fiber.ai). Auto-generated from the [OpenAPI specification](https://api.fiber.ai/openapi.json).
 
 [![PyPI version](https://badge.fury.io/py/fiberai.svg)](https://pypi.org/project/fiberai/)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## For AI agents (Cursor / Claude / Codex / ChatGPT / Copilot)
@@ -21,7 +21,7 @@ Do NOT guess operation names — read the canonical agent-facing docs first:
   (send `Accept: text/markdown` for the agent-friendly variant)
 - **MCP server:** `https://mcp.fiber.ai/mcp/v2` (also see [fiber-ai/mcp](https://github.com/fiber-ai/mcp))
 
-See also [`llms.txt`](./llms.txt) in this repo for the SDK-specific quickstart, including notes on operations not yet covered by the generated SDK (e.g. `syncQuickContactReveal`, `syncTurboContactEnrichment`).
+See also [`llms.txt`](./llms.txt) in this repo for the SDK-specific quickstart.
 
 ## Table of contents
 
@@ -44,7 +44,7 @@ See also [`llms.txt`](./llms.txt) in this repo for the SDK-specific quickstart, 
 pip install fiberai
 ```
 
-Requires Python 3.9 or newer. Runtime dependencies: `httpx`, `attrs`, `python-dateutil`.
+Requires Python 3.11 or newer. Runtime dependencies: `httpx`, `attrs`, `python-dateutil`.
 
 ## Quick start
 
@@ -83,7 +83,7 @@ else:
 
 ## Authentication
 
-The Fiber API authenticates per-request via an `apiKey` field in the **request body**, not via a header. You always use the unauthenticated `Client`:
+Every generated operation takes your key as a required `apiKey` field (in the request body, or as the `api_key` argument for GET operations), so the plain `Client` is all you need:
 
 ```python
 from fiberai import Client
@@ -91,7 +91,7 @@ from fiberai import Client
 client: Client = Client(base_url="https://api.fiber.ai")
 ```
 
-`AuthenticatedClient` is also exported (it sets a `Bearer` `Authorization` header) but the Fiber API does not use bearer tokens — **do not use it**. Pass your key inside each `*Body.from_dict({"apiKey": ..., ...})` call instead.
+`AuthenticatedClient` is also exported. It sends the key as an `Authorization: Bearer` header, which the API accepts too, but the generated models still require `apiKey`, so it adds nothing over `Client`.
 
 Get an API key at https://fiber.ai/app/api. Production keys start with `sk_live_`, sandbox keys with `sk_test_`. Treat them like passwords — never commit them; load from `os.environ` or a secrets manager.
 

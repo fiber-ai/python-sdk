@@ -28,7 +28,7 @@ are NOT in this README.
 pip install fiberai
 ```
 
-Requires Python 3.9+.
+Requires Python 3.11+.
 
 ## Minimum viable snippet
 
@@ -52,32 +52,24 @@ companies = company_search.sync(
 
 ### Contact reveal (email + phone from a LinkedIn URL)
 
-The Python SDK has not yet been regenerated against the current
-public `syncQuickContactReveal` / `syncTurboContactEnrichment`
-operations. Two options until the next release:
+```python
+import os
+from fiberai import Client
+from fiberai.api.contact_details import sync_quick_contact_reveal
+from fiberai.models import SyncQuickContactRevealBody
 
-1. Call the endpoint directly with `httpx`:
+client = Client(base_url="https://api.fiber.ai")
 
-   ```python
-   import os
-   import httpx
+contact = sync_quick_contact_reveal.sync(
+    client=client,
+    body=SyncQuickContactRevealBody.from_dict({
+        "apiKey": os.environ["FIBER_API_KEY"],
+        "linkedinUrl": "https://www.linkedin.com/in/example",
+    }),
+)
+```
 
-   with httpx.Client(base_url="https://api.fiber.ai", timeout=60.0) as client:
-       response = client.post(
-           "/v1/contact-details/single",
-           json={
-               "apiKey": os.environ["FIBER_API_KEY"],
-               "linkedinUrl": "https://www.linkedin.com/in/example",
-           },
-       )
-       response.raise_for_status()
-       print(response.json())
-   ```
-
-2. Use the MCP server (`https://mcp.fiber.ai/mcp/v2` or
-   `https://mcp.fiber.ai/mcp/v3`) so the operation is exposed as a typed
-   tool to your agent.
-
+`sync_turbo_contact_enrichment` (same module) is the premium, fastest variant.
 See `https://api.fiber.ai/ai-docs/syncQuickContactReveal.md` and
 `https://api.fiber.ai/ai-docs/syncTurboContactEnrichment.md` for the
 schema.
@@ -112,7 +104,7 @@ schema.
 
 ## Authentication
 
-Pass `apiKey` in the request body of every call. Get one at
+Pass `apiKey` in the request body (or `api_key` for GET operations) of every call. Get one at
 https://fiber.ai/app/api. Keys start with `sk_live_` (production) or
 `sk_test_` (sandbox).
 

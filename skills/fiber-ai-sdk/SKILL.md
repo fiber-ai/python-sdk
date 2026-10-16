@@ -15,9 +15,9 @@ Use the official `fiberai` package to call Fiber AI APIs from Python.
 
 ## Instructions
 
-1. Ensure the user has installed `fiberai`: `pip install fiberai`.
-2. Every request needs an `apiKey`.
-3. Use the `Client` or `AuthenticatedClient` for requests.
+1. Ensure the user has installed `fiberai` (Python 3.11+): `pip install fiberai`.
+2. Every request needs an `apiKey` (request body, or `api_key` for GET operations).
+3. Use the plain `Client` for requests.
 4. Methods are organized by sub-modules: `fiberai.api.search`, `fiberai.api.contact_details`, etc.
 
 ## Examples
@@ -26,15 +26,14 @@ Use the official `fiberai` package to call Fiber AI APIs from Python.
 ```python
 from fiberai import Client
 from fiberai.api.search import company_search
-from fiberai.models import CompanySearchBody, CompanySearchBodySearchParams
+from fiberai.models import CompanySearchBody
 
 client = Client(base_url="https://api.fiber.ai")
-body = CompanySearchBody(
-    api_key="sk_live_...",
-    search_params=CompanySearchBodySearchParams.from_dict({
-        "standardIndustries": {"anyOf": [{"slug": "software"}]}
-    })
-)
+body = CompanySearchBody.from_dict({
+    "apiKey": "sk_live_...",
+    "searchParams": {"industriesV2": {"anyOf": ["Software"]}},
+    "pageSize": 10,
+})
 
 response = company_search.sync(client=client, body=body)
 ```
@@ -42,6 +41,7 @@ response = company_search.sync(client=client, body=body)
 ### 2. Async Usage
 ```python
 import asyncio
+from fiberai import Client
 from fiberai.api.search import company_search
 
 async def search():
