@@ -19,6 +19,7 @@ echo "⚙️  Generating Python SDK..."
 openapi-python-client generate \
   --path "$PROJECT_DIR/openapi.json" \
   --config "$PROJECT_DIR/config.yaml" \
+  --custom-template-path "$PROJECT_DIR/templates" \
   --meta none \
   --output-path "$PROJECT_DIR/src/fiberai" \
   --overwrite

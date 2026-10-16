@@ -27,7 +27,8 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install openapi-python-client
+        # Pinned: templates/client.py.jinja is a copy of this version's template.
+        run: pip install openapi-python-client==0.29.1
 
       - name: Download latest OpenAPI spec
         run: curl -sf https://api.fiber.ai/openapi.json -o openapi.json
@@ -43,6 +44,7 @@ jobs:
           openapi-python-client generate \
             --path openapi.json \
             --config config.yaml \
+            --custom-template-path templates \
             --meta none \
             --output-path src/fiberai \
             --overwrite

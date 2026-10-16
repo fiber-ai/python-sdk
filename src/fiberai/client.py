@@ -4,6 +4,8 @@ from typing import Any, Self
 import httpx
 from attrs import define, evolve, field
 
+from ._client_attribution import with_client_attribution_headers
+
 
 @define
 class Client:
@@ -37,7 +39,9 @@ class Client:
     raise_on_unexpected_status: bool = field(default=False, kw_only=True)
     _base_url: str = field(alias="base_url")
     _cookies: dict[str, str] = field(factory=dict, kw_only=True, alias="cookies")
-    _headers: dict[str, str] = field(factory=dict, kw_only=True, alias="headers")
+    _headers: dict[str, str] = field(
+        factory=dict, converter=with_client_attribution_headers, kw_only=True, alias="headers"
+    )
     _timeout: httpx.Timeout | None = field(default=None, kw_only=True, alias="timeout")
     _verify_ssl: str | bool | ssl.SSLContext = field(default=True, kw_only=True, alias="verify_ssl")
     _follow_redirects: bool = field(default=False, kw_only=True, alias="follow_redirects")
@@ -167,7 +171,9 @@ class AuthenticatedClient:
     raise_on_unexpected_status: bool = field(default=False, kw_only=True)
     _base_url: str = field(alias="base_url")
     _cookies: dict[str, str] = field(factory=dict, kw_only=True, alias="cookies")
-    _headers: dict[str, str] = field(factory=dict, kw_only=True, alias="headers")
+    _headers: dict[str, str] = field(
+        factory=dict, converter=with_client_attribution_headers, kw_only=True, alias="headers"
+    )
     _timeout: httpx.Timeout | None = field(default=None, kw_only=True, alias="timeout")
     _verify_ssl: str | bool | ssl.SSLContext = field(default=True, kw_only=True, alias="verify_ssl")
     _follow_redirects: bool = field(default=False, kw_only=True, alias="follow_redirects")
