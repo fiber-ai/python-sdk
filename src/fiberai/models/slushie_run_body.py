@@ -18,8 +18,7 @@ class SlushieRunBody:
         api_key (str): Your Fiber API key
         query (None | str | Unset): Natural language search query. Required on the first request. Ignored when pageToken
             is provided.
-        page_size (int | Unset): Number of results per page (1-1000). Applied to whichever result type is returned.
-            Default: 25.
+        page_size (int | Unset): Number of results per page. Applied to whichever result type is returned. Default: 25.
         company_exclusion_list_i_ds (list[str] | None | Unset): IDs of exclusion lists to filter out companies. Applied
             when returning companies, or to narrow company-based profile filtering.
         people_exclusion_list_i_ds (list[str] | None | Unset): IDs of exclusion lists to filter out people.
