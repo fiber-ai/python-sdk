@@ -28,6 +28,8 @@ class GithubToLinkedInPollingResponse200OutputDataItem:
         status (GithubToLinkedInPollingResponse200OutputDataItemStatus):
         confidence_out_of_10 (int):
         extracted_emails (list[str]):
+        opted_out (bool): True when this person has opted out of data processing. No data is returned for them and you
+            are not charged for this row.
         customer_provided_id (None | str | Unset):
         linked_in_url (None | str | Unset):
         linked_in_slug (None | str | Unset):
@@ -40,6 +42,7 @@ class GithubToLinkedInPollingResponse200OutputDataItem:
     status: GithubToLinkedInPollingResponse200OutputDataItemStatus
     confidence_out_of_10: int
     extracted_emails: list[str]
+    opted_out: bool
     customer_provided_id: None | str | Unset = UNSET
     linked_in_url: None | str | Unset = UNSET
     linked_in_slug: None | str | Unset = UNSET
@@ -60,6 +63,8 @@ class GithubToLinkedInPollingResponse200OutputDataItem:
         confidence_out_of_10 = self.confidence_out_of_10
 
         extracted_emails = self.extracted_emails
+
+        opted_out = self.opted_out
 
         customer_provided_id: None | str | Unset
         if isinstance(self.customer_provided_id, Unset):
@@ -107,6 +112,7 @@ class GithubToLinkedInPollingResponse200OutputDataItem:
                 "status": status,
                 "confidenceOutOf10": confidence_out_of_10,
                 "extractedEmails": extracted_emails,
+                "optedOut": opted_out,
             }
         )
         if customer_provided_id is not UNSET:
@@ -138,6 +144,8 @@ class GithubToLinkedInPollingResponse200OutputDataItem:
         confidence_out_of_10 = d.pop("confidenceOutOf10")
 
         extracted_emails = cast(list[str], d.pop("extractedEmails"))
+
+        opted_out = d.pop("optedOut")
 
         def _parse_customer_provided_id(data: object) -> None | str | Unset:
             if data is None:
@@ -210,6 +218,7 @@ class GithubToLinkedInPollingResponse200OutputDataItem:
             status=status,
             confidence_out_of_10=confidence_out_of_10,
             extracted_emails=extracted_emails,
+            opted_out=opted_out,
             customer_provided_id=customer_provided_id,
             linked_in_url=linked_in_url,
             linked_in_slug=linked_in_slug,

@@ -22,7 +22,8 @@ class PremiumPhoneRevealBody:
         linkedin_url (str): LinkedIn profile identifier. Accepts a full URL, a bare slug, or a LinkedIn entity URN.
         patience (None | PremiumPhoneRevealBodyPatienceType1 | PremiumPhoneRevealBodyPatienceType2Type1 |
             PremiumPhoneRevealBodyPatienceType3Type1 | Unset): How long to wait for phone-number verification after a number
-            is found. Higher patience increases average response time but improves identity and reachability accuracy.
+            is found: LOW waits up to 15 seconds, MEDIUM 30 seconds, HIGH 60 seconds, EXTREME 2 minutes, and MAXIMUM 10
+            minutes. Higher patience increases average response time but improves identity and reachability accuracy.
             MINIMUM is the least thorough verification option.
     """
 

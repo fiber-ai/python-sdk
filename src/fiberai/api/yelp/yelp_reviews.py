@@ -150,7 +150,7 @@ def sync_detailed(
     """Get Yelp business reviews
 
      Get reviews of a Yelp business, paginated, with reviewer details, ratings, and full review text.
-    Obtain the business ID via the /yelp/search endpoint.
+    Obtain the business ID via the /yelp/search endpoint. Reviews can be up to 7 days old.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -199,7 +199,7 @@ def sync(
     """Get Yelp business reviews
 
      Get reviews of a Yelp business, paginated, with reviewer details, ratings, and full review text.
-    Obtain the business ID via the /yelp/search endpoint.
+    Obtain the business ID via the /yelp/search endpoint. Reviews can be up to 7 days old.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -242,7 +242,7 @@ async def asyncio_detailed(
     """Get Yelp business reviews
 
      Get reviews of a Yelp business, paginated, with reviewer details, ratings, and full review text.
-    Obtain the business ID via the /yelp/search endpoint.
+    Obtain the business ID via the /yelp/search endpoint. Reviews can be up to 7 days old.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -289,7 +289,7 @@ async def asyncio(
     """Get Yelp business reviews
 
      Get reviews of a Yelp business, paginated, with reviewer details, ratings, and full review text.
-    Obtain the business ID via the /yelp/search endpoint.
+    Obtain the business ID via the /yelp/search endpoint. Reviews can be up to 7 days old.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 

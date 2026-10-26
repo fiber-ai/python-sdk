@@ -28,12 +28,15 @@ class QuickPersonResolveResponse200OutputDataItem:
             back.
         value (str): The identifier value you supplied, echoed back.
         found (bool):
+        opted_out (bool): True when this person has opted out of data processing. No data is returned for them and you
+            are not charged for this row.
         person (None | QuickPersonResolveResponse200OutputDataItemPersonType0 | Unset):
     """
 
     identifier: QuickPersonResolveResponse200OutputDataItemIdentifier
     value: str
     found: bool
+    opted_out: bool
     person: None | QuickPersonResolveResponse200OutputDataItemPersonType0 | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -47,6 +50,8 @@ class QuickPersonResolveResponse200OutputDataItem:
         value = self.value
 
         found = self.found
+
+        opted_out = self.opted_out
 
         person: dict[str, Any] | None | Unset
         if isinstance(self.person, Unset):
@@ -63,6 +68,7 @@ class QuickPersonResolveResponse200OutputDataItem:
                 "identifier": identifier,
                 "value": value,
                 "found": found,
+                "optedOut": opted_out,
             }
         )
         if person is not UNSET:
@@ -82,6 +88,8 @@ class QuickPersonResolveResponse200OutputDataItem:
         value = d.pop("value")
 
         found = d.pop("found")
+
+        opted_out = d.pop("optedOut")
 
         def _parse_person(data: object) -> None | QuickPersonResolveResponse200OutputDataItemPersonType0 | Unset:
             if data is None:
@@ -104,6 +112,7 @@ class QuickPersonResolveResponse200OutputDataItem:
             identifier=identifier,
             value=value,
             found=found,
+            opted_out=opted_out,
             person=person,
         )
 

@@ -12,6 +12,7 @@ from ...models.profile_live_enrich_response_401 import ProfileLiveEnrichResponse
 from ...models.profile_live_enrich_response_402 import ProfileLiveEnrichResponse402
 from ...models.profile_live_enrich_response_403 import ProfileLiveEnrichResponse403
 from ...models.profile_live_enrich_response_404 import ProfileLiveEnrichResponse404
+from ...models.profile_live_enrich_response_410 import ProfileLiveEnrichResponse410
 from ...models.profile_live_enrich_response_422 import ProfileLiveEnrichResponse422
 from ...models.profile_live_enrich_response_429 import ProfileLiveEnrichResponse429
 from ...models.profile_live_enrich_response_500 import ProfileLiveEnrichResponse500
@@ -47,6 +48,7 @@ def _parse_response(
     | ProfileLiveEnrichResponse402
     | ProfileLiveEnrichResponse403
     | ProfileLiveEnrichResponse404
+    | ProfileLiveEnrichResponse410
     | ProfileLiveEnrichResponse422
     | ProfileLiveEnrichResponse429
     | ProfileLiveEnrichResponse500
@@ -83,6 +85,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 410:
+        response_410 = ProfileLiveEnrichResponse410.from_dict(response.json())
+
+        return response_410
+
     if response.status_code == 422:
         response_422 = ProfileLiveEnrichResponse422.from_dict(response.json())
 
@@ -118,6 +125,7 @@ def _build_response(
     | ProfileLiveEnrichResponse402
     | ProfileLiveEnrichResponse403
     | ProfileLiveEnrichResponse404
+    | ProfileLiveEnrichResponse410
     | ProfileLiveEnrichResponse422
     | ProfileLiveEnrichResponse429
     | ProfileLiveEnrichResponse500
@@ -142,6 +150,7 @@ def sync_detailed(
     | ProfileLiveEnrichResponse402
     | ProfileLiveEnrichResponse403
     | ProfileLiveEnrichResponse404
+    | ProfileLiveEnrichResponse410
     | ProfileLiveEnrichResponse422
     | ProfileLiveEnrichResponse429
     | ProfileLiveEnrichResponse500
@@ -152,9 +161,7 @@ def sync_detailed(
      Returns an enriched profile with details (work experience, education, skills, location, etc.) for a
     given LinkedIn profile identifier. **Note:** This endpoint does NOT return emails or phone numbers.
     To retrieve a person's contact details (emails and phone numbers), use the `POST /contact-
-    details/single` endpoint (synchronous, recommended) or the `POST /individual-reveal/start` + `POST
-    /individual-reveal/poll` pair (asynchronous). These can be found under the **Contact details**
-    section.
+    details/single` endpoint (synchronous). These can be found under the **Contact details** section.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
@@ -172,7 +179,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ProfileLiveEnrichResponse200 | ProfileLiveEnrichResponse400 | ProfileLiveEnrichResponse401 | ProfileLiveEnrichResponse402 | ProfileLiveEnrichResponse403 | ProfileLiveEnrichResponse404 | ProfileLiveEnrichResponse422 | ProfileLiveEnrichResponse429 | ProfileLiveEnrichResponse500 | ProfileLiveEnrichResponse503]
+        Response[ProfileLiveEnrichResponse200 | ProfileLiveEnrichResponse400 | ProfileLiveEnrichResponse401 | ProfileLiveEnrichResponse402 | ProfileLiveEnrichResponse403 | ProfileLiveEnrichResponse404 | ProfileLiveEnrichResponse410 | ProfileLiveEnrichResponse422 | ProfileLiveEnrichResponse429 | ProfileLiveEnrichResponse500 | ProfileLiveEnrichResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -197,6 +204,7 @@ def sync(
     | ProfileLiveEnrichResponse402
     | ProfileLiveEnrichResponse403
     | ProfileLiveEnrichResponse404
+    | ProfileLiveEnrichResponse410
     | ProfileLiveEnrichResponse422
     | ProfileLiveEnrichResponse429
     | ProfileLiveEnrichResponse500
@@ -208,9 +216,7 @@ def sync(
      Returns an enriched profile with details (work experience, education, skills, location, etc.) for a
     given LinkedIn profile identifier. **Note:** This endpoint does NOT return emails or phone numbers.
     To retrieve a person's contact details (emails and phone numbers), use the `POST /contact-
-    details/single` endpoint (synchronous, recommended) or the `POST /individual-reveal/start` + `POST
-    /individual-reveal/poll` pair (asynchronous). These can be found under the **Contact details**
-    section.
+    details/single` endpoint (synchronous). These can be found under the **Contact details** section.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
@@ -228,7 +234,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ProfileLiveEnrichResponse200 | ProfileLiveEnrichResponse400 | ProfileLiveEnrichResponse401 | ProfileLiveEnrichResponse402 | ProfileLiveEnrichResponse403 | ProfileLiveEnrichResponse404 | ProfileLiveEnrichResponse422 | ProfileLiveEnrichResponse429 | ProfileLiveEnrichResponse500 | ProfileLiveEnrichResponse503
+        ProfileLiveEnrichResponse200 | ProfileLiveEnrichResponse400 | ProfileLiveEnrichResponse401 | ProfileLiveEnrichResponse402 | ProfileLiveEnrichResponse403 | ProfileLiveEnrichResponse404 | ProfileLiveEnrichResponse410 | ProfileLiveEnrichResponse422 | ProfileLiveEnrichResponse429 | ProfileLiveEnrichResponse500 | ProfileLiveEnrichResponse503
     """
 
     return sync_detailed(
@@ -248,6 +254,7 @@ async def asyncio_detailed(
     | ProfileLiveEnrichResponse402
     | ProfileLiveEnrichResponse403
     | ProfileLiveEnrichResponse404
+    | ProfileLiveEnrichResponse410
     | ProfileLiveEnrichResponse422
     | ProfileLiveEnrichResponse429
     | ProfileLiveEnrichResponse500
@@ -258,9 +265,7 @@ async def asyncio_detailed(
      Returns an enriched profile with details (work experience, education, skills, location, etc.) for a
     given LinkedIn profile identifier. **Note:** This endpoint does NOT return emails or phone numbers.
     To retrieve a person's contact details (emails and phone numbers), use the `POST /contact-
-    details/single` endpoint (synchronous, recommended) or the `POST /individual-reveal/start` + `POST
-    /individual-reveal/poll` pair (asynchronous). These can be found under the **Contact details**
-    section.
+    details/single` endpoint (synchronous). These can be found under the **Contact details** section.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
@@ -278,7 +283,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ProfileLiveEnrichResponse200 | ProfileLiveEnrichResponse400 | ProfileLiveEnrichResponse401 | ProfileLiveEnrichResponse402 | ProfileLiveEnrichResponse403 | ProfileLiveEnrichResponse404 | ProfileLiveEnrichResponse422 | ProfileLiveEnrichResponse429 | ProfileLiveEnrichResponse500 | ProfileLiveEnrichResponse503]
+        Response[ProfileLiveEnrichResponse200 | ProfileLiveEnrichResponse400 | ProfileLiveEnrichResponse401 | ProfileLiveEnrichResponse402 | ProfileLiveEnrichResponse403 | ProfileLiveEnrichResponse404 | ProfileLiveEnrichResponse410 | ProfileLiveEnrichResponse422 | ProfileLiveEnrichResponse429 | ProfileLiveEnrichResponse500 | ProfileLiveEnrichResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -301,6 +306,7 @@ async def asyncio(
     | ProfileLiveEnrichResponse402
     | ProfileLiveEnrichResponse403
     | ProfileLiveEnrichResponse404
+    | ProfileLiveEnrichResponse410
     | ProfileLiveEnrichResponse422
     | ProfileLiveEnrichResponse429
     | ProfileLiveEnrichResponse500
@@ -312,9 +318,7 @@ async def asyncio(
      Returns an enriched profile with details (work experience, education, skills, location, etc.) for a
     given LinkedIn profile identifier. **Note:** This endpoint does NOT return emails or phone numbers.
     To retrieve a person's contact details (emails and phone numbers), use the `POST /contact-
-    details/single` endpoint (synchronous, recommended) or the `POST /individual-reveal/start` + `POST
-    /individual-reveal/poll` pair (asynchronous). These can be found under the **Contact details**
-    section.
+    details/single` endpoint (synchronous). These can be found under the **Contact details** section.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
@@ -332,7 +336,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ProfileLiveEnrichResponse200 | ProfileLiveEnrichResponse400 | ProfileLiveEnrichResponse401 | ProfileLiveEnrichResponse402 | ProfileLiveEnrichResponse403 | ProfileLiveEnrichResponse404 | ProfileLiveEnrichResponse422 | ProfileLiveEnrichResponse429 | ProfileLiveEnrichResponse500 | ProfileLiveEnrichResponse503
+        ProfileLiveEnrichResponse200 | ProfileLiveEnrichResponse400 | ProfileLiveEnrichResponse401 | ProfileLiveEnrichResponse402 | ProfileLiveEnrichResponse403 | ProfileLiveEnrichResponse404 | ProfileLiveEnrichResponse410 | ProfileLiveEnrichResponse422 | ProfileLiveEnrichResponse429 | ProfileLiveEnrichResponse500 | ProfileLiveEnrichResponse503
     """
 
     return (

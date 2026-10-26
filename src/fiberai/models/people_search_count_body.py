@@ -25,8 +25,12 @@ class PeopleSearchCountBody:
         api_key (str): Your Fiber API key
         search_params (PeopleSearchCountBodySearchParams | Unset): Search parameters for people search.
         current_companies (list[PeopleSearchCountBodyCurrentCompaniesType0Item] | None | Unset): Filter people by the
-            companies they are currently working for. If you want to search over many companies, we suggest using the
-            Combined Search API, which is optimized for this use case.
+            companies they are currently working for. Results include people at every company that can be matched; companies
+            that can't be matched are skipped. If none of the companies can be matched, the search returns no results and no
+            credits are charged. If a company can't be looked up right now, the request fails with a 503 and no credits are
+            charged, so it is safe to retry. A LinkedIn company URL (e.g., 'https://www.linkedin.com/company/stripe/') gives
+            the most reliable match. If you want to search over many companies, we suggest using the Combined Search API,
+            which is optimized for this use case.
         prospect_exclusion_list_i_ds (list[str] | None | Unset): Filter out people which belong to the given prospect
             exclusion lists
         company_exclusion_list_i_ds (list[str] | None | Unset): Filter out people who work at companies which belong to

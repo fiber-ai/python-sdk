@@ -1,0 +1,191 @@
+from __future__ import annotations
+
+from collections.abc import Mapping
+from typing import TYPE_CHECKING, Any, TypeVar, cast
+
+from attrs import define as _attrs_define
+from attrs import field as _attrs_field
+
+from ..models.lookalikes_trigger_body_filters_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_strategy import (
+    LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1Strategy,
+)
+from ..types import UNSET, Unset
+
+if TYPE_CHECKING:
+    from ..models.lookalikes_trigger_body_filters_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_0 import (
+        LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0,
+    )
+    from ..models.lookalikes_trigger_body_filters_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_1 import (
+        LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1,
+    )
+    from ..models.lookalikes_trigger_body_filters_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_2 import (
+        LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2,
+    )
+
+
+T = TypeVar("T", bound="LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1")
+
+
+@_attrs_define
+class LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1:
+    """
+    Attributes:
+        strategy (LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1Strategy):
+        window (LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0 |
+            LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1 |
+            LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2 | None | Unset):
+    """
+
+    strategy: LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1Strategy
+    window: (
+        LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0
+        | LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1
+        | LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2
+        | None
+        | Unset
+    ) = UNSET
+    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        from ..models.lookalikes_trigger_body_filters_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_0 import (
+            LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0,  # noqa: PLC0415
+        )
+        from ..models.lookalikes_trigger_body_filters_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_1 import (
+            LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1,  # noqa: PLC0415
+        )
+        from ..models.lookalikes_trigger_body_filters_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_2 import (
+            LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2,  # noqa: PLC0415
+        )
+
+        strategy = self.strategy.value
+
+        window: dict[str, Any] | None | Unset
+        if isinstance(self.window, Unset):
+            window = UNSET
+        elif isinstance(
+            self.window, LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0
+        ):
+            window = self.window.to_dict()
+        elif isinstance(
+            self.window, LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1
+        ):
+            window = self.window.to_dict()
+        elif isinstance(
+            self.window, LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2
+        ):
+            window = self.window.to_dict()
+        else:
+            window = self.window
+
+        field_dict: dict[str, Any] = {}
+        field_dict.update(self.additional_properties)
+        field_dict.update(
+            {
+                "strategy": strategy,
+            }
+        )
+        if window is not UNSET:
+            field_dict["window"] = window
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.lookalikes_trigger_body_filters_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_0 import (
+            LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0,  # noqa: PLC0415
+        )
+        from ..models.lookalikes_trigger_body_filters_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_1 import (
+            LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1,  # noqa: PLC0415
+        )
+        from ..models.lookalikes_trigger_body_filters_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1_window_type_2 import (
+            LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2,  # noqa: PLC0415
+        )
+
+        d = dict(src_dict)
+        strategy = LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1Strategy(
+            d.pop("strategy")
+        )
+
+        def _parse_window(
+            data: object,
+        ) -> (
+            LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0
+            | LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1
+            | LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                window_type_0 = (
+                    LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0.from_dict(
+                        data
+                    )
+                )
+
+                return window_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                window_type_1 = (
+                    LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1.from_dict(
+                        data
+                    )
+                )
+
+                return window_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                window_type_2 = (
+                    LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2.from_dict(
+                        data
+                    )
+                )
+
+                return window_type_2
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType0
+                | LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType1
+                | LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AnyOfType0ItemPostedAtType1WindowType2
+                | None
+                | Unset,
+                data,
+            )
+
+        window = _parse_window(d.pop("window", UNSET))
+
+        lookalikes_trigger_body_filters_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1 = cls(
+            strategy=strategy,
+            window=window,
+        )
+
+        lookalikes_trigger_body_filters_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1.additional_properties = d
+        return lookalikes_trigger_body_filters_type_0_job_postings_v2_type_0_any_of_type_0_item_posted_at_type_1
+
+    @property
+    def additional_keys(self) -> list[str]:
+        return list(self.additional_properties.keys())
+
+    def __getitem__(self, key: str) -> Any:
+        return self.additional_properties[key]
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        self.additional_properties[key] = value
+
+    def __delitem__(self, key: str) -> None:
+        del self.additional_properties[key]
+
+    def __contains__(self, key: str) -> bool:
+        return key in self.additional_properties

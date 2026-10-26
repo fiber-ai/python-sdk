@@ -47,7 +47,7 @@ def sync_detailed(
     large, so we don't recommend feeding it into LLMs directly. Agents should instead fetch `/llms.txt`
     for routing instructions and `/ai-docs/<operationId>.md` for per-operation context. If you'd like to
     work with Fiber from Claude, ChatGPT, or another LLM, you can also use our MCP server, explained at
-    <https://docs.fiber.ai/article/using-mcp-in-llms>.
+    <https://docs.fiber.ai/build/mcp>.
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -76,7 +76,7 @@ async def asyncio_detailed(
     large, so we don't recommend feeding it into LLMs directly. Agents should instead fetch `/llms.txt`
     for routing instructions and `/ai-docs/<operationId>.md` for per-operation context. If you'd like to
     work with Fiber from Claude, ChatGPT, or another LLM, you can also use our MCP server, explained at
-    <https://docs.fiber.ai/article/using-mcp-in-llms>.
+    <https://docs.fiber.ai/build/mcp>.
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

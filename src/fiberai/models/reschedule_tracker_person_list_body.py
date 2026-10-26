@@ -15,7 +15,7 @@ class RescheduleTrackerPersonListBody:
     Attributes:
         api_key (str): Your Fiber API key
         next_refresh_date (str): The date (YYYY-MM-DD, UTC) on which the next scheduled refresh should run. Must be
-            tomorrow (UTC) or later, and at most 360 days ahead. To refresh a list immediately, use the refresh endpoint
+            tomorrow (UTC) or later, and at most 90 days ahead. To refresh a list immediately, use the refresh endpoint
             instead. Subsequent refreshes continue at the list's regular interval, counted from this run.
     """
 

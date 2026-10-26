@@ -53,6 +53,9 @@ if TYPE_CHECKING:
     from ..models.job_posting_search_count_body_search_params_companies_type_3 import (
         JobPostingSearchCountBodySearchParamsCompaniesType3,
     )
+    from ..models.job_posting_search_count_body_search_params_job_categories_type_0 import (
+        JobPostingSearchCountBodySearchParamsJobCategoriesType0,
+    )
     from ..models.job_posting_search_count_body_search_params_num_applicants_type_0 import (
         JobPostingSearchCountBodySearchParamsNumApplicantsType0,
     )
@@ -89,8 +92,9 @@ class JobPostingSearchCountBodySearchParams:
             relative and absolute dates)
         num_applicants (JobPostingSearchCountBodySearchParamsNumApplicantsType0 | None | Unset): Filter by number of
             applicants (range)
-        job_functions (list[JobPostingSearchCountBodySearchParamsJobFunctionsType0Item] | None | Unset): Array of job
-            functions
+        job_functions (list[JobPostingSearchCountBodySearchParamsJobFunctionsType0Item] | None | Unset): Deprecated. Use
+            jobCategories instead if you'd like to filter on job functions.
+        job_categories (JobPostingSearchCountBodySearchParamsJobCategoriesType0 | None | Unset):
         industries (list[JobPostingSearchCountBodySearchParamsIndustriesType0Item] | None | Unset): Array of industries
         annual_salary_usd (JobPostingSearchCountBodySearchParamsAnnualSalaryUsdType0 | None | Unset): Filter by annual
             salary range in USD
@@ -132,6 +136,7 @@ class JobPostingSearchCountBodySearchParams:
     ) = UNSET
     num_applicants: JobPostingSearchCountBodySearchParamsNumApplicantsType0 | None | Unset = UNSET
     job_functions: list[JobPostingSearchCountBodySearchParamsJobFunctionsType0Item] | None | Unset = UNSET
+    job_categories: JobPostingSearchCountBodySearchParamsJobCategoriesType0 | None | Unset = UNSET
     industries: list[JobPostingSearchCountBodySearchParamsIndustriesType0Item] | None | Unset = UNSET
     annual_salary_usd: JobPostingSearchCountBodySearchParamsAnnualSalaryUsdType0 | None | Unset = UNSET
     years_of_experience: JobPostingSearchCountBodySearchParamsYearsOfExperienceType0 | None | Unset = UNSET
@@ -158,6 +163,9 @@ class JobPostingSearchCountBodySearchParams:
         )
         from ..models.job_posting_search_count_body_search_params_companies_type_3 import (
             JobPostingSearchCountBodySearchParamsCompaniesType3,  # noqa: PLC0415
+        )
+        from ..models.job_posting_search_count_body_search_params_job_categories_type_0 import (
+            JobPostingSearchCountBodySearchParamsJobCategoriesType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_count_body_search_params_num_applicants_type_0 import (
             JobPostingSearchCountBodySearchParamsNumApplicantsType0,  # noqa: PLC0415
@@ -236,6 +244,14 @@ class JobPostingSearchCountBodySearchParams:
 
         else:
             job_functions = self.job_functions
+
+        job_categories: dict[str, Any] | None | Unset
+        if isinstance(self.job_categories, Unset):
+            job_categories = UNSET
+        elif isinstance(self.job_categories, JobPostingSearchCountBodySearchParamsJobCategoriesType0):
+            job_categories = self.job_categories.to_dict()
+        else:
+            job_categories = self.job_categories
 
         industries: list[str] | None | Unset
         if isinstance(self.industries, Unset):
@@ -340,6 +356,8 @@ class JobPostingSearchCountBodySearchParams:
             field_dict["numApplicants"] = num_applicants
         if job_functions is not UNSET:
             field_dict["jobFunctions"] = job_functions
+        if job_categories is not UNSET:
+            field_dict["jobCategories"] = job_categories
         if industries is not UNSET:
             field_dict["industries"] = industries
         if annual_salary_usd is not UNSET:
@@ -375,6 +393,9 @@ class JobPostingSearchCountBodySearchParams:
         )
         from ..models.job_posting_search_count_body_search_params_companies_type_3 import (
             JobPostingSearchCountBodySearchParamsCompaniesType3,  # noqa: PLC0415
+        )
+        from ..models.job_posting_search_count_body_search_params_job_categories_type_0 import (
+            JobPostingSearchCountBodySearchParamsJobCategoriesType0,  # noqa: PLC0415
         )
         from ..models.job_posting_search_count_body_search_params_num_applicants_type_0 import (
             JobPostingSearchCountBodySearchParamsNumApplicantsType0,  # noqa: PLC0415
@@ -597,6 +618,25 @@ class JobPostingSearchCountBodySearchParams:
 
         job_functions = _parse_job_functions(d.pop("jobFunctions", UNSET))
 
+        def _parse_job_categories(
+            data: object,
+        ) -> JobPostingSearchCountBodySearchParamsJobCategoriesType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_categories_type_0 = JobPostingSearchCountBodySearchParamsJobCategoriesType0.from_dict(data)
+
+                return job_categories_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(JobPostingSearchCountBodySearchParamsJobCategoriesType0 | None | Unset, data)
+
+        job_categories = _parse_job_categories(d.pop("jobCategories", UNSET))
+
         def _parse_industries(
             data: object,
         ) -> list[JobPostingSearchCountBodySearchParamsIndustriesType0Item] | None | Unset:
@@ -800,6 +840,7 @@ class JobPostingSearchCountBodySearchParams:
             posted_at=posted_at,
             num_applicants=num_applicants,
             job_functions=job_functions,
+            job_categories=job_categories,
             industries=industries,
             annual_salary_usd=annual_salary_usd,
             years_of_experience=years_of_experience,

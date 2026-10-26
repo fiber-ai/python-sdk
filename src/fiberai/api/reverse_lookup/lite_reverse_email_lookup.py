@@ -12,6 +12,7 @@ from ...models.lite_reverse_email_lookup_response_401 import LiteReverseEmailLoo
 from ...models.lite_reverse_email_lookup_response_402 import LiteReverseEmailLookupResponse402
 from ...models.lite_reverse_email_lookup_response_403 import LiteReverseEmailLookupResponse403
 from ...models.lite_reverse_email_lookup_response_404 import LiteReverseEmailLookupResponse404
+from ...models.lite_reverse_email_lookup_response_410 import LiteReverseEmailLookupResponse410
 from ...models.lite_reverse_email_lookup_response_422 import LiteReverseEmailLookupResponse422
 from ...models.lite_reverse_email_lookup_response_429 import LiteReverseEmailLookupResponse429
 from ...models.lite_reverse_email_lookup_response_500 import LiteReverseEmailLookupResponse500
@@ -47,6 +48,7 @@ def _parse_response(
     | LiteReverseEmailLookupResponse402
     | LiteReverseEmailLookupResponse403
     | LiteReverseEmailLookupResponse404
+    | LiteReverseEmailLookupResponse410
     | LiteReverseEmailLookupResponse422
     | LiteReverseEmailLookupResponse429
     | LiteReverseEmailLookupResponse500
@@ -83,6 +85,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 410:
+        response_410 = LiteReverseEmailLookupResponse410.from_dict(response.json())
+
+        return response_410
+
     if response.status_code == 422:
         response_422 = LiteReverseEmailLookupResponse422.from_dict(response.json())
 
@@ -118,6 +125,7 @@ def _build_response(
     | LiteReverseEmailLookupResponse402
     | LiteReverseEmailLookupResponse403
     | LiteReverseEmailLookupResponse404
+    | LiteReverseEmailLookupResponse410
     | LiteReverseEmailLookupResponse422
     | LiteReverseEmailLookupResponse429
     | LiteReverseEmailLookupResponse500
@@ -142,6 +150,7 @@ def sync_detailed(
     | LiteReverseEmailLookupResponse402
     | LiteReverseEmailLookupResponse403
     | LiteReverseEmailLookupResponse404
+    | LiteReverseEmailLookupResponse410
     | LiteReverseEmailLookupResponse422
     | LiteReverseEmailLookupResponse429
     | LiteReverseEmailLookupResponse500
@@ -169,7 +178,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[LiteReverseEmailLookupResponse200 | LiteReverseEmailLookupResponse400 | LiteReverseEmailLookupResponse401 | LiteReverseEmailLookupResponse402 | LiteReverseEmailLookupResponse403 | LiteReverseEmailLookupResponse404 | LiteReverseEmailLookupResponse422 | LiteReverseEmailLookupResponse429 | LiteReverseEmailLookupResponse500 | LiteReverseEmailLookupResponse503]
+        Response[LiteReverseEmailLookupResponse200 | LiteReverseEmailLookupResponse400 | LiteReverseEmailLookupResponse401 | LiteReverseEmailLookupResponse402 | LiteReverseEmailLookupResponse403 | LiteReverseEmailLookupResponse404 | LiteReverseEmailLookupResponse410 | LiteReverseEmailLookupResponse422 | LiteReverseEmailLookupResponse429 | LiteReverseEmailLookupResponse500 | LiteReverseEmailLookupResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -194,6 +203,7 @@ def sync(
     | LiteReverseEmailLookupResponse402
     | LiteReverseEmailLookupResponse403
     | LiteReverseEmailLookupResponse404
+    | LiteReverseEmailLookupResponse410
     | LiteReverseEmailLookupResponse422
     | LiteReverseEmailLookupResponse429
     | LiteReverseEmailLookupResponse500
@@ -222,7 +232,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        LiteReverseEmailLookupResponse200 | LiteReverseEmailLookupResponse400 | LiteReverseEmailLookupResponse401 | LiteReverseEmailLookupResponse402 | LiteReverseEmailLookupResponse403 | LiteReverseEmailLookupResponse404 | LiteReverseEmailLookupResponse422 | LiteReverseEmailLookupResponse429 | LiteReverseEmailLookupResponse500 | LiteReverseEmailLookupResponse503
+        LiteReverseEmailLookupResponse200 | LiteReverseEmailLookupResponse400 | LiteReverseEmailLookupResponse401 | LiteReverseEmailLookupResponse402 | LiteReverseEmailLookupResponse403 | LiteReverseEmailLookupResponse404 | LiteReverseEmailLookupResponse410 | LiteReverseEmailLookupResponse422 | LiteReverseEmailLookupResponse429 | LiteReverseEmailLookupResponse500 | LiteReverseEmailLookupResponse503
     """
 
     return sync_detailed(
@@ -242,6 +252,7 @@ async def asyncio_detailed(
     | LiteReverseEmailLookupResponse402
     | LiteReverseEmailLookupResponse403
     | LiteReverseEmailLookupResponse404
+    | LiteReverseEmailLookupResponse410
     | LiteReverseEmailLookupResponse422
     | LiteReverseEmailLookupResponse429
     | LiteReverseEmailLookupResponse500
@@ -269,7 +280,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[LiteReverseEmailLookupResponse200 | LiteReverseEmailLookupResponse400 | LiteReverseEmailLookupResponse401 | LiteReverseEmailLookupResponse402 | LiteReverseEmailLookupResponse403 | LiteReverseEmailLookupResponse404 | LiteReverseEmailLookupResponse422 | LiteReverseEmailLookupResponse429 | LiteReverseEmailLookupResponse500 | LiteReverseEmailLookupResponse503]
+        Response[LiteReverseEmailLookupResponse200 | LiteReverseEmailLookupResponse400 | LiteReverseEmailLookupResponse401 | LiteReverseEmailLookupResponse402 | LiteReverseEmailLookupResponse403 | LiteReverseEmailLookupResponse404 | LiteReverseEmailLookupResponse410 | LiteReverseEmailLookupResponse422 | LiteReverseEmailLookupResponse429 | LiteReverseEmailLookupResponse500 | LiteReverseEmailLookupResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -292,6 +303,7 @@ async def asyncio(
     | LiteReverseEmailLookupResponse402
     | LiteReverseEmailLookupResponse403
     | LiteReverseEmailLookupResponse404
+    | LiteReverseEmailLookupResponse410
     | LiteReverseEmailLookupResponse422
     | LiteReverseEmailLookupResponse429
     | LiteReverseEmailLookupResponse500
@@ -320,7 +332,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        LiteReverseEmailLookupResponse200 | LiteReverseEmailLookupResponse400 | LiteReverseEmailLookupResponse401 | LiteReverseEmailLookupResponse402 | LiteReverseEmailLookupResponse403 | LiteReverseEmailLookupResponse404 | LiteReverseEmailLookupResponse422 | LiteReverseEmailLookupResponse429 | LiteReverseEmailLookupResponse500 | LiteReverseEmailLookupResponse503
+        LiteReverseEmailLookupResponse200 | LiteReverseEmailLookupResponse400 | LiteReverseEmailLookupResponse401 | LiteReverseEmailLookupResponse402 | LiteReverseEmailLookupResponse403 | LiteReverseEmailLookupResponse404 | LiteReverseEmailLookupResponse410 | LiteReverseEmailLookupResponse422 | LiteReverseEmailLookupResponse429 | LiteReverseEmailLookupResponse500 | LiteReverseEmailLookupResponse503
     """
 
     return (

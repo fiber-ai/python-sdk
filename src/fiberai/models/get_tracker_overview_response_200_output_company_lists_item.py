@@ -10,6 +10,16 @@ from attrs import field as _attrs_field
 from ..models.get_tracker_overview_response_200_output_company_lists_item_entity_type import (
     GetTrackerOverviewResponse200OutputCompanyListsItemEntityType,
 )
+from ..models.get_tracker_overview_response_200_output_company_lists_item_tier_type_1 import (
+    GetTrackerOverviewResponse200OutputCompanyListsItemTierType1,
+)
+from ..models.get_tracker_overview_response_200_output_company_lists_item_tier_type_2_type_1 import (
+    GetTrackerOverviewResponse200OutputCompanyListsItemTierType2Type1,
+)
+from ..models.get_tracker_overview_response_200_output_company_lists_item_tier_type_3_type_1 import (
+    GetTrackerOverviewResponse200OutputCompanyListsItemTierType3Type1,
+)
+from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="GetTrackerOverviewResponse200OutputCompanyListsItem")
 
@@ -29,6 +39,11 @@ class GetTrackerOverviewResponse200OutputCompanyListsItem:
             its next check. Null if the list has no active entities.
         estimated_credits_per_refresh (float): Credits charged for a full refresh of this list at the org's current
             pricing (entityCount × per-entity cost). Reflects premium-rule pricing when the list contains premium rules.
+        tier (GetTrackerOverviewResponse200OutputCompanyListsItemTierType1 |
+            GetTrackerOverviewResponse200OutputCompanyListsItemTierType2Type1 |
+            GetTrackerOverviewResponse200OutputCompanyListsItemTierType3Type1 | None | Unset): Pricing tier the list's next
+            scheduled refresh will be billed at. Null when a negotiated rate applies to your organization. See GET
+            /tracker/pricing-tiers for the rationale.
     """
 
     id: str
@@ -40,6 +55,13 @@ class GetTrackerOverviewResponse200OutputCompanyListsItem:
     rule_count: int
     next_refresh_at: datetime.datetime | None
     estimated_credits_per_refresh: float
+    tier: (
+        GetTrackerOverviewResponse200OutputCompanyListsItemTierType1
+        | GetTrackerOverviewResponse200OutputCompanyListsItemTierType2Type1
+        | GetTrackerOverviewResponse200OutputCompanyListsItemTierType3Type1
+        | None
+        | Unset
+    ) = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -65,6 +87,18 @@ class GetTrackerOverviewResponse200OutputCompanyListsItem:
 
         estimated_credits_per_refresh = self.estimated_credits_per_refresh
 
+        tier: None | str | Unset
+        if isinstance(self.tier, Unset):
+            tier = UNSET
+        elif isinstance(self.tier, GetTrackerOverviewResponse200OutputCompanyListsItemTierType1):
+            tier = self.tier.value
+        elif isinstance(self.tier, GetTrackerOverviewResponse200OutputCompanyListsItemTierType2Type1):
+            tier = self.tier.value
+        elif isinstance(self.tier, GetTrackerOverviewResponse200OutputCompanyListsItemTierType3Type1):
+            tier = self.tier.value
+        else:
+            tier = self.tier
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -80,6 +114,8 @@ class GetTrackerOverviewResponse200OutputCompanyListsItem:
                 "estimatedCreditsPerRefresh": estimated_credits_per_refresh,
             }
         )
+        if tier is not UNSET:
+            field_dict["tier"] = tier
 
         return field_dict
 
@@ -117,6 +153,54 @@ class GetTrackerOverviewResponse200OutputCompanyListsItem:
 
         estimated_credits_per_refresh = d.pop("estimatedCreditsPerRefresh")
 
+        def _parse_tier(
+            data: object,
+        ) -> (
+            GetTrackerOverviewResponse200OutputCompanyListsItemTierType1
+            | GetTrackerOverviewResponse200OutputCompanyListsItemTierType2Type1
+            | GetTrackerOverviewResponse200OutputCompanyListsItemTierType3Type1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                tier_type_1 = GetTrackerOverviewResponse200OutputCompanyListsItemTierType1(data)
+
+                return tier_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                tier_type_2_type_1 = GetTrackerOverviewResponse200OutputCompanyListsItemTierType2Type1(data)
+
+                return tier_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                tier_type_3_type_1 = GetTrackerOverviewResponse200OutputCompanyListsItemTierType3Type1(data)
+
+                return tier_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                GetTrackerOverviewResponse200OutputCompanyListsItemTierType1
+                | GetTrackerOverviewResponse200OutputCompanyListsItemTierType2Type1
+                | GetTrackerOverviewResponse200OutputCompanyListsItemTierType3Type1
+                | None
+                | Unset,
+                data,
+            )
+
+        tier = _parse_tier(d.pop("tier", UNSET))
+
         get_tracker_overview_response_200_output_company_lists_item = cls(
             id=id,
             name=name,
@@ -127,6 +211,7 @@ class GetTrackerOverviewResponse200OutputCompanyListsItem:
             rule_count=rule_count,
             next_refresh_at=next_refresh_at,
             estimated_credits_per_refresh=estimated_credits_per_refresh,
+            tier=tier,
         )
 
         get_tracker_overview_response_200_output_company_lists_item.additional_properties = d

@@ -9,6 +9,15 @@ from attrs import field as _attrs_field
 from ..models.job_posting_search_response_200_output_data_item_job_function_type_0_item import (
     JobPostingSearchResponse200OutputDataItemJobFunctionType0Item,
 )
+from ..models.job_posting_search_response_200_output_data_item_job_function_v2_type_1 import (
+    JobPostingSearchResponse200OutputDataItemJobFunctionV2Type1,
+)
+from ..models.job_posting_search_response_200_output_data_item_job_function_v2_type_2_type_1 import (
+    JobPostingSearchResponse200OutputDataItemJobFunctionV2Type2Type1,
+)
+from ..models.job_posting_search_response_200_output_data_item_job_function_v2_type_3_type_1 import (
+    JobPostingSearchResponse200OutputDataItemJobFunctionV2Type3Type1,
+)
 from ..models.job_posting_search_response_200_output_data_item_job_location_type_type_1 import (
     JobPostingSearchResponse200OutputDataItemJobLocationTypeType1,
 )
@@ -17,6 +26,15 @@ from ..models.job_posting_search_response_200_output_data_item_job_location_type
 )
 from ..models.job_posting_search_response_200_output_data_item_job_location_type_type_3_type_1 import (
     JobPostingSearchResponse200OutputDataItemJobLocationTypeType3Type1,
+)
+from ..models.job_posting_search_response_200_output_data_item_job_specialty_type_1 import (
+    JobPostingSearchResponse200OutputDataItemJobSpecialtyType1,
+)
+from ..models.job_posting_search_response_200_output_data_item_job_specialty_type_2_type_1 import (
+    JobPostingSearchResponse200OutputDataItemJobSpecialtyType2Type1,
+)
+from ..models.job_posting_search_response_200_output_data_item_job_specialty_type_3_type_1 import (
+    JobPostingSearchResponse200OutputDataItemJobSpecialtyType3Type1,
 )
 from ..models.job_posting_search_response_200_output_data_item_modality_type_1 import (
     JobPostingSearchResponse200OutputDataItemModalityType1,
@@ -74,6 +92,14 @@ class JobPostingSearchResponse200OutputDataItem:
         employment_type (None | str | Unset): Employment type (e.g., 'Full-time', 'Part-time')
         job_function (list[JobPostingSearchResponse200OutputDataItemJobFunctionType0Item] | None | Unset): Job function
             categories
+        job_function_v2 (JobPostingSearchResponse200OutputDataItemJobFunctionV2Type1 |
+            JobPostingSearchResponse200OutputDataItemJobFunctionV2Type2Type1 |
+            JobPostingSearchResponse200OutputDataItemJobFunctionV2Type3Type1 | None | Unset): Job function on the two-tier
+            taxonomy, derived from the title. Null when the posting has not been classified yet.
+        job_specialty (JobPostingSearchResponse200OutputDataItemJobSpecialtyType1 |
+            JobPostingSearchResponse200OutputDataItemJobSpecialtyType2Type1 |
+            JobPostingSearchResponse200OutputDataItemJobSpecialtyType3Type1 | None | Unset): Specialty under
+            job_function_v2, derived from the title. Null when the posting has not been classified yet.
         raw_industries (None | str | Unset): Raw industries string from LinkedIn
         standard_industries (list[JobPostingSearchResponse200OutputDataItemStandardIndustriesType0Item] | None | Unset):
             Standardized industry categories
@@ -107,6 +133,20 @@ class JobPostingSearchResponse200OutputDataItem:
     seniority_level: None | str | Unset = UNSET
     employment_type: None | str | Unset = UNSET
     job_function: list[JobPostingSearchResponse200OutputDataItemJobFunctionType0Item] | None | Unset = UNSET
+    job_function_v2: (
+        JobPostingSearchResponse200OutputDataItemJobFunctionV2Type1
+        | JobPostingSearchResponse200OutputDataItemJobFunctionV2Type2Type1
+        | JobPostingSearchResponse200OutputDataItemJobFunctionV2Type3Type1
+        | None
+        | Unset
+    ) = UNSET
+    job_specialty: (
+        JobPostingSearchResponse200OutputDataItemJobSpecialtyType1
+        | JobPostingSearchResponse200OutputDataItemJobSpecialtyType2Type1
+        | JobPostingSearchResponse200OutputDataItemJobSpecialtyType3Type1
+        | None
+        | Unset
+    ) = UNSET
     raw_industries: None | str | Unset = UNSET
     standard_industries: list[JobPostingSearchResponse200OutputDataItemStandardIndustriesType0Item] | None | Unset = (
         UNSET
@@ -220,6 +260,30 @@ class JobPostingSearchResponse200OutputDataItem:
         else:
             job_function = self.job_function
 
+        job_function_v2: None | str | Unset
+        if isinstance(self.job_function_v2, Unset):
+            job_function_v2 = UNSET
+        elif isinstance(self.job_function_v2, JobPostingSearchResponse200OutputDataItemJobFunctionV2Type1):
+            job_function_v2 = self.job_function_v2.value
+        elif isinstance(self.job_function_v2, JobPostingSearchResponse200OutputDataItemJobFunctionV2Type2Type1):
+            job_function_v2 = self.job_function_v2.value
+        elif isinstance(self.job_function_v2, JobPostingSearchResponse200OutputDataItemJobFunctionV2Type3Type1):
+            job_function_v2 = self.job_function_v2.value
+        else:
+            job_function_v2 = self.job_function_v2
+
+        job_specialty: None | str | Unset
+        if isinstance(self.job_specialty, Unset):
+            job_specialty = UNSET
+        elif isinstance(self.job_specialty, JobPostingSearchResponse200OutputDataItemJobSpecialtyType1):
+            job_specialty = self.job_specialty.value
+        elif isinstance(self.job_specialty, JobPostingSearchResponse200OutputDataItemJobSpecialtyType2Type1):
+            job_specialty = self.job_specialty.value
+        elif isinstance(self.job_specialty, JobPostingSearchResponse200OutputDataItemJobSpecialtyType3Type1):
+            job_specialty = self.job_specialty.value
+        else:
+            job_specialty = self.job_specialty
+
         raw_industries: None | str | Unset
         if isinstance(self.raw_industries, Unset):
             raw_industries = UNSET
@@ -322,6 +386,10 @@ class JobPostingSearchResponse200OutputDataItem:
             field_dict["employment_type"] = employment_type
         if job_function is not UNSET:
             field_dict["job_function"] = job_function
+        if job_function_v2 is not UNSET:
+            field_dict["job_function_v2"] = job_function_v2
+        if job_specialty is not UNSET:
+            field_dict["job_specialty"] = job_specialty
         if raw_industries is not UNSET:
             field_dict["raw_industries"] = raw_industries
         if standard_industries is not UNSET:
@@ -480,6 +548,102 @@ class JobPostingSearchResponse200OutputDataItem:
             return cast(list[JobPostingSearchResponse200OutputDataItemJobFunctionType0Item] | None | Unset, data)
 
         job_function = _parse_job_function(d.pop("job_function", UNSET))
+
+        def _parse_job_function_v2(
+            data: object,
+        ) -> (
+            JobPostingSearchResponse200OutputDataItemJobFunctionV2Type1
+            | JobPostingSearchResponse200OutputDataItemJobFunctionV2Type2Type1
+            | JobPostingSearchResponse200OutputDataItemJobFunctionV2Type3Type1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                job_function_v2_type_1 = JobPostingSearchResponse200OutputDataItemJobFunctionV2Type1(data)
+
+                return job_function_v2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                job_function_v2_type_2_type_1 = JobPostingSearchResponse200OutputDataItemJobFunctionV2Type2Type1(data)
+
+                return job_function_v2_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                job_function_v2_type_3_type_1 = JobPostingSearchResponse200OutputDataItemJobFunctionV2Type3Type1(data)
+
+                return job_function_v2_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                JobPostingSearchResponse200OutputDataItemJobFunctionV2Type1
+                | JobPostingSearchResponse200OutputDataItemJobFunctionV2Type2Type1
+                | JobPostingSearchResponse200OutputDataItemJobFunctionV2Type3Type1
+                | None
+                | Unset,
+                data,
+            )
+
+        job_function_v2 = _parse_job_function_v2(d.pop("job_function_v2", UNSET))
+
+        def _parse_job_specialty(
+            data: object,
+        ) -> (
+            JobPostingSearchResponse200OutputDataItemJobSpecialtyType1
+            | JobPostingSearchResponse200OutputDataItemJobSpecialtyType2Type1
+            | JobPostingSearchResponse200OutputDataItemJobSpecialtyType3Type1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                job_specialty_type_1 = JobPostingSearchResponse200OutputDataItemJobSpecialtyType1(data)
+
+                return job_specialty_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                job_specialty_type_2_type_1 = JobPostingSearchResponse200OutputDataItemJobSpecialtyType2Type1(data)
+
+                return job_specialty_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                job_specialty_type_3_type_1 = JobPostingSearchResponse200OutputDataItemJobSpecialtyType3Type1(data)
+
+                return job_specialty_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                JobPostingSearchResponse200OutputDataItemJobSpecialtyType1
+                | JobPostingSearchResponse200OutputDataItemJobSpecialtyType2Type1
+                | JobPostingSearchResponse200OutputDataItemJobSpecialtyType3Type1
+                | None
+                | Unset,
+                data,
+            )
+
+        job_specialty = _parse_job_specialty(d.pop("job_specialty", UNSET))
 
         def _parse_raw_industries(data: object) -> None | str | Unset:
             if data is None:
@@ -713,6 +877,8 @@ class JobPostingSearchResponse200OutputDataItem:
             seniority_level=seniority_level,
             employment_type=employment_type,
             job_function=job_function,
+            job_function_v2=job_function_v2,
+            job_specialty=job_specialty,
             raw_industries=raw_industries,
             standard_industries=standard_industries,
             compensation_range=compensation_range,

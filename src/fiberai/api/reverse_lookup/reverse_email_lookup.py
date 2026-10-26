@@ -12,6 +12,7 @@ from ...models.reverse_email_lookup_response_401 import ReverseEmailLookupRespon
 from ...models.reverse_email_lookup_response_402 import ReverseEmailLookupResponse402
 from ...models.reverse_email_lookup_response_403 import ReverseEmailLookupResponse403
 from ...models.reverse_email_lookup_response_404 import ReverseEmailLookupResponse404
+from ...models.reverse_email_lookup_response_410 import ReverseEmailLookupResponse410
 from ...models.reverse_email_lookup_response_422 import ReverseEmailLookupResponse422
 from ...models.reverse_email_lookup_response_429 import ReverseEmailLookupResponse429
 from ...models.reverse_email_lookup_response_500 import ReverseEmailLookupResponse500
@@ -47,6 +48,7 @@ def _parse_response(
     | ReverseEmailLookupResponse402
     | ReverseEmailLookupResponse403
     | ReverseEmailLookupResponse404
+    | ReverseEmailLookupResponse410
     | ReverseEmailLookupResponse422
     | ReverseEmailLookupResponse429
     | ReverseEmailLookupResponse500
@@ -83,6 +85,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 410:
+        response_410 = ReverseEmailLookupResponse410.from_dict(response.json())
+
+        return response_410
+
     if response.status_code == 422:
         response_422 = ReverseEmailLookupResponse422.from_dict(response.json())
 
@@ -118,6 +125,7 @@ def _build_response(
     | ReverseEmailLookupResponse402
     | ReverseEmailLookupResponse403
     | ReverseEmailLookupResponse404
+    | ReverseEmailLookupResponse410
     | ReverseEmailLookupResponse422
     | ReverseEmailLookupResponse429
     | ReverseEmailLookupResponse500
@@ -142,6 +150,7 @@ def sync_detailed(
     | ReverseEmailLookupResponse402
     | ReverseEmailLookupResponse403
     | ReverseEmailLookupResponse404
+    | ReverseEmailLookupResponse410
     | ReverseEmailLookupResponse422
     | ReverseEmailLookupResponse429
     | ReverseEmailLookupResponse500
@@ -175,7 +184,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ReverseEmailLookupResponse200 | ReverseEmailLookupResponse400 | ReverseEmailLookupResponse401 | ReverseEmailLookupResponse402 | ReverseEmailLookupResponse403 | ReverseEmailLookupResponse404 | ReverseEmailLookupResponse422 | ReverseEmailLookupResponse429 | ReverseEmailLookupResponse500 | ReverseEmailLookupResponse503]
+        Response[ReverseEmailLookupResponse200 | ReverseEmailLookupResponse400 | ReverseEmailLookupResponse401 | ReverseEmailLookupResponse402 | ReverseEmailLookupResponse403 | ReverseEmailLookupResponse404 | ReverseEmailLookupResponse410 | ReverseEmailLookupResponse422 | ReverseEmailLookupResponse429 | ReverseEmailLookupResponse500 | ReverseEmailLookupResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -200,6 +209,7 @@ def sync(
     | ReverseEmailLookupResponse402
     | ReverseEmailLookupResponse403
     | ReverseEmailLookupResponse404
+    | ReverseEmailLookupResponse410
     | ReverseEmailLookupResponse422
     | ReverseEmailLookupResponse429
     | ReverseEmailLookupResponse500
@@ -234,7 +244,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ReverseEmailLookupResponse200 | ReverseEmailLookupResponse400 | ReverseEmailLookupResponse401 | ReverseEmailLookupResponse402 | ReverseEmailLookupResponse403 | ReverseEmailLookupResponse404 | ReverseEmailLookupResponse422 | ReverseEmailLookupResponse429 | ReverseEmailLookupResponse500 | ReverseEmailLookupResponse503
+        ReverseEmailLookupResponse200 | ReverseEmailLookupResponse400 | ReverseEmailLookupResponse401 | ReverseEmailLookupResponse402 | ReverseEmailLookupResponse403 | ReverseEmailLookupResponse404 | ReverseEmailLookupResponse410 | ReverseEmailLookupResponse422 | ReverseEmailLookupResponse429 | ReverseEmailLookupResponse500 | ReverseEmailLookupResponse503
     """
 
     return sync_detailed(
@@ -254,6 +264,7 @@ async def asyncio_detailed(
     | ReverseEmailLookupResponse402
     | ReverseEmailLookupResponse403
     | ReverseEmailLookupResponse404
+    | ReverseEmailLookupResponse410
     | ReverseEmailLookupResponse422
     | ReverseEmailLookupResponse429
     | ReverseEmailLookupResponse500
@@ -287,7 +298,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ReverseEmailLookupResponse200 | ReverseEmailLookupResponse400 | ReverseEmailLookupResponse401 | ReverseEmailLookupResponse402 | ReverseEmailLookupResponse403 | ReverseEmailLookupResponse404 | ReverseEmailLookupResponse422 | ReverseEmailLookupResponse429 | ReverseEmailLookupResponse500 | ReverseEmailLookupResponse503]
+        Response[ReverseEmailLookupResponse200 | ReverseEmailLookupResponse400 | ReverseEmailLookupResponse401 | ReverseEmailLookupResponse402 | ReverseEmailLookupResponse403 | ReverseEmailLookupResponse404 | ReverseEmailLookupResponse410 | ReverseEmailLookupResponse422 | ReverseEmailLookupResponse429 | ReverseEmailLookupResponse500 | ReverseEmailLookupResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -310,6 +321,7 @@ async def asyncio(
     | ReverseEmailLookupResponse402
     | ReverseEmailLookupResponse403
     | ReverseEmailLookupResponse404
+    | ReverseEmailLookupResponse410
     | ReverseEmailLookupResponse422
     | ReverseEmailLookupResponse429
     | ReverseEmailLookupResponse500
@@ -344,7 +356,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ReverseEmailLookupResponse200 | ReverseEmailLookupResponse400 | ReverseEmailLookupResponse401 | ReverseEmailLookupResponse402 | ReverseEmailLookupResponse403 | ReverseEmailLookupResponse404 | ReverseEmailLookupResponse422 | ReverseEmailLookupResponse429 | ReverseEmailLookupResponse500 | ReverseEmailLookupResponse503
+        ReverseEmailLookupResponse200 | ReverseEmailLookupResponse400 | ReverseEmailLookupResponse401 | ReverseEmailLookupResponse402 | ReverseEmailLookupResponse403 | ReverseEmailLookupResponse404 | ReverseEmailLookupResponse410 | ReverseEmailLookupResponse422 | ReverseEmailLookupResponse429 | ReverseEmailLookupResponse500 | ReverseEmailLookupResponse503
     """
 
     return (

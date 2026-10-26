@@ -12,6 +12,7 @@ from ...models.trigger_exhaustive_contact_enrichment_response_401 import Trigger
 from ...models.trigger_exhaustive_contact_enrichment_response_402 import TriggerExhaustiveContactEnrichmentResponse402
 from ...models.trigger_exhaustive_contact_enrichment_response_403 import TriggerExhaustiveContactEnrichmentResponse403
 from ...models.trigger_exhaustive_contact_enrichment_response_404 import TriggerExhaustiveContactEnrichmentResponse404
+from ...models.trigger_exhaustive_contact_enrichment_response_410 import TriggerExhaustiveContactEnrichmentResponse410
 from ...models.trigger_exhaustive_contact_enrichment_response_422 import TriggerExhaustiveContactEnrichmentResponse422
 from ...models.trigger_exhaustive_contact_enrichment_response_429 import TriggerExhaustiveContactEnrichmentResponse429
 from ...models.trigger_exhaustive_contact_enrichment_response_500 import TriggerExhaustiveContactEnrichmentResponse500
@@ -47,6 +48,7 @@ def _parse_response(
     | TriggerExhaustiveContactEnrichmentResponse402
     | TriggerExhaustiveContactEnrichmentResponse403
     | TriggerExhaustiveContactEnrichmentResponse404
+    | TriggerExhaustiveContactEnrichmentResponse410
     | TriggerExhaustiveContactEnrichmentResponse422
     | TriggerExhaustiveContactEnrichmentResponse429
     | TriggerExhaustiveContactEnrichmentResponse500
@@ -83,6 +85,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 410:
+        response_410 = TriggerExhaustiveContactEnrichmentResponse410.from_dict(response.json())
+
+        return response_410
+
     if response.status_code == 422:
         response_422 = TriggerExhaustiveContactEnrichmentResponse422.from_dict(response.json())
 
@@ -118,6 +125,7 @@ def _build_response(
     | TriggerExhaustiveContactEnrichmentResponse402
     | TriggerExhaustiveContactEnrichmentResponse403
     | TriggerExhaustiveContactEnrichmentResponse404
+    | TriggerExhaustiveContactEnrichmentResponse410
     | TriggerExhaustiveContactEnrichmentResponse422
     | TriggerExhaustiveContactEnrichmentResponse429
     | TriggerExhaustiveContactEnrichmentResponse500
@@ -142,6 +150,7 @@ def sync_detailed(
     | TriggerExhaustiveContactEnrichmentResponse402
     | TriggerExhaustiveContactEnrichmentResponse403
     | TriggerExhaustiveContactEnrichmentResponse404
+    | TriggerExhaustiveContactEnrichmentResponse410
     | TriggerExhaustiveContactEnrichmentResponse422
     | TriggerExhaustiveContactEnrichmentResponse429
     | TriggerExhaustiveContactEnrichmentResponse500
@@ -174,7 +183,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TriggerExhaustiveContactEnrichmentResponse200 | TriggerExhaustiveContactEnrichmentResponse400 | TriggerExhaustiveContactEnrichmentResponse401 | TriggerExhaustiveContactEnrichmentResponse402 | TriggerExhaustiveContactEnrichmentResponse403 | TriggerExhaustiveContactEnrichmentResponse404 | TriggerExhaustiveContactEnrichmentResponse422 | TriggerExhaustiveContactEnrichmentResponse429 | TriggerExhaustiveContactEnrichmentResponse500 | TriggerExhaustiveContactEnrichmentResponse503]
+        Response[TriggerExhaustiveContactEnrichmentResponse200 | TriggerExhaustiveContactEnrichmentResponse400 | TriggerExhaustiveContactEnrichmentResponse401 | TriggerExhaustiveContactEnrichmentResponse402 | TriggerExhaustiveContactEnrichmentResponse403 | TriggerExhaustiveContactEnrichmentResponse404 | TriggerExhaustiveContactEnrichmentResponse410 | TriggerExhaustiveContactEnrichmentResponse422 | TriggerExhaustiveContactEnrichmentResponse429 | TriggerExhaustiveContactEnrichmentResponse500 | TriggerExhaustiveContactEnrichmentResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -199,6 +208,7 @@ def sync(
     | TriggerExhaustiveContactEnrichmentResponse402
     | TriggerExhaustiveContactEnrichmentResponse403
     | TriggerExhaustiveContactEnrichmentResponse404
+    | TriggerExhaustiveContactEnrichmentResponse410
     | TriggerExhaustiveContactEnrichmentResponse422
     | TriggerExhaustiveContactEnrichmentResponse429
     | TriggerExhaustiveContactEnrichmentResponse500
@@ -232,7 +242,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TriggerExhaustiveContactEnrichmentResponse200 | TriggerExhaustiveContactEnrichmentResponse400 | TriggerExhaustiveContactEnrichmentResponse401 | TriggerExhaustiveContactEnrichmentResponse402 | TriggerExhaustiveContactEnrichmentResponse403 | TriggerExhaustiveContactEnrichmentResponse404 | TriggerExhaustiveContactEnrichmentResponse422 | TriggerExhaustiveContactEnrichmentResponse429 | TriggerExhaustiveContactEnrichmentResponse500 | TriggerExhaustiveContactEnrichmentResponse503
+        TriggerExhaustiveContactEnrichmentResponse200 | TriggerExhaustiveContactEnrichmentResponse400 | TriggerExhaustiveContactEnrichmentResponse401 | TriggerExhaustiveContactEnrichmentResponse402 | TriggerExhaustiveContactEnrichmentResponse403 | TriggerExhaustiveContactEnrichmentResponse404 | TriggerExhaustiveContactEnrichmentResponse410 | TriggerExhaustiveContactEnrichmentResponse422 | TriggerExhaustiveContactEnrichmentResponse429 | TriggerExhaustiveContactEnrichmentResponse500 | TriggerExhaustiveContactEnrichmentResponse503
     """
 
     return sync_detailed(
@@ -252,6 +262,7 @@ async def asyncio_detailed(
     | TriggerExhaustiveContactEnrichmentResponse402
     | TriggerExhaustiveContactEnrichmentResponse403
     | TriggerExhaustiveContactEnrichmentResponse404
+    | TriggerExhaustiveContactEnrichmentResponse410
     | TriggerExhaustiveContactEnrichmentResponse422
     | TriggerExhaustiveContactEnrichmentResponse429
     | TriggerExhaustiveContactEnrichmentResponse500
@@ -284,7 +295,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TriggerExhaustiveContactEnrichmentResponse200 | TriggerExhaustiveContactEnrichmentResponse400 | TriggerExhaustiveContactEnrichmentResponse401 | TriggerExhaustiveContactEnrichmentResponse402 | TriggerExhaustiveContactEnrichmentResponse403 | TriggerExhaustiveContactEnrichmentResponse404 | TriggerExhaustiveContactEnrichmentResponse422 | TriggerExhaustiveContactEnrichmentResponse429 | TriggerExhaustiveContactEnrichmentResponse500 | TriggerExhaustiveContactEnrichmentResponse503]
+        Response[TriggerExhaustiveContactEnrichmentResponse200 | TriggerExhaustiveContactEnrichmentResponse400 | TriggerExhaustiveContactEnrichmentResponse401 | TriggerExhaustiveContactEnrichmentResponse402 | TriggerExhaustiveContactEnrichmentResponse403 | TriggerExhaustiveContactEnrichmentResponse404 | TriggerExhaustiveContactEnrichmentResponse410 | TriggerExhaustiveContactEnrichmentResponse422 | TriggerExhaustiveContactEnrichmentResponse429 | TriggerExhaustiveContactEnrichmentResponse500 | TriggerExhaustiveContactEnrichmentResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -307,6 +318,7 @@ async def asyncio(
     | TriggerExhaustiveContactEnrichmentResponse402
     | TriggerExhaustiveContactEnrichmentResponse403
     | TriggerExhaustiveContactEnrichmentResponse404
+    | TriggerExhaustiveContactEnrichmentResponse410
     | TriggerExhaustiveContactEnrichmentResponse422
     | TriggerExhaustiveContactEnrichmentResponse429
     | TriggerExhaustiveContactEnrichmentResponse500
@@ -340,7 +352,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TriggerExhaustiveContactEnrichmentResponse200 | TriggerExhaustiveContactEnrichmentResponse400 | TriggerExhaustiveContactEnrichmentResponse401 | TriggerExhaustiveContactEnrichmentResponse402 | TriggerExhaustiveContactEnrichmentResponse403 | TriggerExhaustiveContactEnrichmentResponse404 | TriggerExhaustiveContactEnrichmentResponse422 | TriggerExhaustiveContactEnrichmentResponse429 | TriggerExhaustiveContactEnrichmentResponse500 | TriggerExhaustiveContactEnrichmentResponse503
+        TriggerExhaustiveContactEnrichmentResponse200 | TriggerExhaustiveContactEnrichmentResponse400 | TriggerExhaustiveContactEnrichmentResponse401 | TriggerExhaustiveContactEnrichmentResponse402 | TriggerExhaustiveContactEnrichmentResponse403 | TriggerExhaustiveContactEnrichmentResponse404 | TriggerExhaustiveContactEnrichmentResponse410 | TriggerExhaustiveContactEnrichmentResponse422 | TriggerExhaustiveContactEnrichmentResponse429 | TriggerExhaustiveContactEnrichmentResponse500 | TriggerExhaustiveContactEnrichmentResponse503
     """
 
     return (

@@ -1,0 +1,8 @@
+from enum import StrEnum
+
+
+class LookalikesTriggerBodyFiltersType0EmployeeTrendsV2Type0ObeysAllType0ItemType0Type(StrEnum):
+    PERCENT_CHANGE = "percent_change"
+
+    def __str__(self) -> str:
+        return str(self.value)

@@ -150,6 +150,7 @@ def sync_detailed(
     """Get a Yelp business page
 
      Get detailed information about a Yelp Place. Search for Yelp places via /yelp/search endpoint.
+    Business details can be up to 7 days old.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -198,6 +199,7 @@ def sync(
     """Get a Yelp business page
 
      Get detailed information about a Yelp Place. Search for Yelp places via /yelp/search endpoint.
+    Business details can be up to 7 days old.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -240,6 +242,7 @@ async def asyncio_detailed(
     """Get a Yelp business page
 
      Get detailed information about a Yelp Place. Search for Yelp places via /yelp/search endpoint.
+    Business details can be up to 7 days old.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -286,6 +289,7 @@ async def asyncio(
     """Get a Yelp business page
 
      Get detailed information about a Yelp Place. Search for Yelp places via /yelp/search endpoint.
+    Business details can be up to 7 days old.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 

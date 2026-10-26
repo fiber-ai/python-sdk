@@ -23,8 +23,9 @@ class ValidatePhoneNumberBody:
             spaces, dashes, or parentheses are accepted.
         patience (None | Unset | ValidatePhoneNumberBodyPatienceType1 | ValidatePhoneNumberBodyPatienceType2Type1 |
             ValidatePhoneNumberBodyPatienceType3Type1): How long to wait for phone-number verification after a number is
-            found. Higher patience increases average response time but improves identity and reachability accuracy. MINIMUM
-            is the least thorough verification option.
+            found: LOW waits up to 15 seconds, MEDIUM 30 seconds, HIGH 60 seconds, EXTREME 2 minutes, and MAXIMUM 10
+            minutes. Higher patience increases average response time but improves identity and reachability accuracy.
+            MINIMUM is the least thorough verification option.
     """
 
     api_key: str

@@ -149,8 +149,9 @@ def sync_detailed(
 ]:
     """Get company revenue estimate
 
-     Fetches the most recent annual revenue estimate for a company. Pass a LinkedIn company URL, domain,
-    and/or company name.
+     Fetches the most recent annual revenue estimate for a company. Identify the company by its LinkedIn
+    company URL or organization ID; at least one is required. You aren't charged when the company or its
+    revenue estimate isn't found.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -198,8 +199,9 @@ def sync(
 ):
     """Get company revenue estimate
 
-     Fetches the most recent annual revenue estimate for a company. Pass a LinkedIn company URL, domain,
-    and/or company name.
+     Fetches the most recent annual revenue estimate for a company. Identify the company by its LinkedIn
+    company URL or organization ID; at least one is required. You aren't charged when the company or its
+    revenue estimate isn't found.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -241,8 +243,9 @@ async def asyncio_detailed(
 ]:
     """Get company revenue estimate
 
-     Fetches the most recent annual revenue estimate for a company. Pass a LinkedIn company URL, domain,
-    and/or company name.
+     Fetches the most recent annual revenue estimate for a company. Identify the company by its LinkedIn
+    company URL or organization ID; at least one is required. You aren't charged when the company or its
+    revenue estimate isn't found.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -288,8 +291,9 @@ async def asyncio(
 ):
     """Get company revenue estimate
 
-     Fetches the most recent annual revenue estimate for a company. Pass a LinkedIn company URL, domain,
-    and/or company name.
+     Fetches the most recent annual revenue estimate for a company. Identify the company by its LinkedIn
+    company URL or organization ID; at least one is required. You aren't charged when the company or its
+    revenue estimate isn't found.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 

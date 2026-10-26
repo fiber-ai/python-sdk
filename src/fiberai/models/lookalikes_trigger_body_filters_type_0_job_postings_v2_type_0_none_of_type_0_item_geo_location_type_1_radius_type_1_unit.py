@@ -1,0 +1,8 @@
+from enum import StrEnum
+
+
+class LookalikesTriggerBodyFiltersType0JobPostingsV2Type0NoneOfType0ItemGeoLocationType1RadiusType1Unit(StrEnum):
+    KILOMETERS = "kilometers"
+
+    def __str__(self) -> str:
+        return str(self.value)

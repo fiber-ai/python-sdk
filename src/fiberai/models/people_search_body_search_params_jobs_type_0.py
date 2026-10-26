@@ -25,9 +25,18 @@ T = TypeVar("T", bound="PeopleSearchBodySearchParamsJobsType0")
 
 @_attrs_define
 class PeopleSearchBodySearchParamsJobsType0:
-    """Filter by work experience: named companies (LinkedIn org ID, URL, slug, or domain), job titles, or both on the same
-    entry, with per-entry tenure. Replaces the deprecated pastJobs and currentJobs fields. Prefer jobs alone during
-    migration — sending jobs together with pastJobs or currentJobs ANDs them as separate query clauses.
+    """Filter by work experience. Each entry can name a company (LinkedIn org ID, URL, slug, domain, or company name), job
+    titles, job categories (tagged function or specialty entries, the same shape as the top-level jobCategories filter),
+    a job function from the older list, a seniority, or any combination, all matched against the same experience, with
+    its own tenure (status). A company name that can't be matched is skipped; if that leaves nothing to match, no one
+    matches. Because each entry has its own status, allOf can combine a current role with a past one, e.g. currently in
+    Sales AND previously in Engineering: allOf [{jobCategories: {anyOf: [{type: 'function', value: 'Sales'}]}, status:
+    'current'}, {jobCategories: {anyOf: [{type: 'function', value: 'Engineering'}]}, status: 'past'}]. Coverage: job
+    categories and seniority are populated on a growing share of the index, and less often on past roles than current
+    ones, so category and seniority entries return fewer people than the population they describe. Entries AND with the
+    top-level jobCategories, jobFunction and seniority filters, which stay scoped by jobStatus. Replaces the deprecated
+    pastJobs and currentJobs fields. Prefer jobs alone during migration — sending jobs together with pastJobs or
+    currentJobs ANDs them as separate query clauses.
 
         Attributes:
             any_of (list[PeopleSearchBodySearchParamsJobsType0AnyOfType0Item] | None | Unset): Match a person who satisfies

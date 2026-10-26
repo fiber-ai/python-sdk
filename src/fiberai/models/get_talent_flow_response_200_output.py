@@ -1,12 +1,13 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.get_talent_flow_response_200_output_direction import GetTalentFlowResponse200OutputDirection
+from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.get_talent_flow_response_200_output_breakdowns import GetTalentFlowResponse200OutputBreakdowns
@@ -14,6 +15,7 @@ if TYPE_CHECKING:
     from ..models.get_talent_flow_response_200_output_company_buckets_item import (
         GetTalentFlowResponse200OutputCompanyBucketsItem,
     )
+    from ..models.get_talent_flow_response_200_output_graphic_type_0 import GetTalentFlowResponse200OutputGraphicType0
     from ..models.get_talent_flow_response_200_output_tenure_months import GetTalentFlowResponse200OutputTenureMonths
     from ..models.get_talent_flow_response_200_output_window import GetTalentFlowResponse200OutputWindow
     from ..models.get_talent_flow_response_200_output_years_of_experience import (
@@ -41,6 +43,9 @@ class GetTalentFlowResponse200Output:
         breakdowns (GetTalentFlowResponse200OutputBreakdowns): Categorical breakdowns of the analyzed population.
         generated_at (str): ISO 8601 timestamp when the report was generated.
         markdown_summary (str): Human-readable markdown summary of the report, including tables and charts.
+        graphic (GetTalentFlowResponse200OutputGraphicType0 | None | Unset): Shareable talent-flow graphic image
+            covering both joiners and leavers. Present when renderImage.enabled was set and a graphic could be generated;
+            null otherwise (for example when no talent movement was found in the window).
     """
 
     direction: GetTalentFlowResponse200OutputDirection
@@ -53,9 +58,14 @@ class GetTalentFlowResponse200Output:
     breakdowns: GetTalentFlowResponse200OutputBreakdowns
     generated_at: str
     markdown_summary: str
+    graphic: GetTalentFlowResponse200OutputGraphicType0 | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.get_talent_flow_response_200_output_graphic_type_0 import (
+            GetTalentFlowResponse200OutputGraphicType0,  # noqa: PLC0415
+        )
+
         direction = self.direction.value
 
         company = self.company.to_dict()
@@ -79,6 +89,14 @@ class GetTalentFlowResponse200Output:
 
         markdown_summary = self.markdown_summary
 
+        graphic: dict[str, Any] | None | Unset
+        if isinstance(self.graphic, Unset):
+            graphic = UNSET
+        elif isinstance(self.graphic, GetTalentFlowResponse200OutputGraphicType0):
+            graphic = self.graphic.to_dict()
+        else:
+            graphic = self.graphic
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -95,6 +113,8 @@ class GetTalentFlowResponse200Output:
                 "markdownSummary": markdown_summary,
             }
         )
+        if graphic is not UNSET:
+            field_dict["graphic"] = graphic
 
         return field_dict
 
@@ -104,6 +124,9 @@ class GetTalentFlowResponse200Output:
         from ..models.get_talent_flow_response_200_output_company import GetTalentFlowResponse200OutputCompany  # noqa: PLC0415
         from ..models.get_talent_flow_response_200_output_company_buckets_item import (
             GetTalentFlowResponse200OutputCompanyBucketsItem,  # noqa: PLC0415
+        )
+        from ..models.get_talent_flow_response_200_output_graphic_type_0 import (
+            GetTalentFlowResponse200OutputGraphicType0,  # noqa: PLC0415
         )
         from ..models.get_talent_flow_response_200_output_tenure_months import (
             GetTalentFlowResponse200OutputTenureMonths,  # noqa: PLC0415
@@ -139,6 +162,23 @@ class GetTalentFlowResponse200Output:
 
         markdown_summary = d.pop("markdownSummary")
 
+        def _parse_graphic(data: object) -> GetTalentFlowResponse200OutputGraphicType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                graphic_type_0 = GetTalentFlowResponse200OutputGraphicType0.from_dict(data)
+
+                return graphic_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(GetTalentFlowResponse200OutputGraphicType0 | None | Unset, data)
+
+        graphic = _parse_graphic(d.pop("graphic", UNSET))
+
         get_talent_flow_response_200_output = cls(
             direction=direction,
             company=company,
@@ -150,6 +190,7 @@ class GetTalentFlowResponse200Output:
             breakdowns=breakdowns,
             generated_at=generated_at,
             markdown_summary=markdown_summary,
+            graphic=graphic,
         )
 
         get_talent_flow_response_200_output.additional_properties = d

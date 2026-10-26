@@ -12,6 +12,7 @@ from ...models.basic_work_email_reveal_response_401 import BasicWorkEmailRevealR
 from ...models.basic_work_email_reveal_response_402 import BasicWorkEmailRevealResponse402
 from ...models.basic_work_email_reveal_response_403 import BasicWorkEmailRevealResponse403
 from ...models.basic_work_email_reveal_response_404 import BasicWorkEmailRevealResponse404
+from ...models.basic_work_email_reveal_response_410 import BasicWorkEmailRevealResponse410
 from ...models.basic_work_email_reveal_response_422 import BasicWorkEmailRevealResponse422
 from ...models.basic_work_email_reveal_response_429 import BasicWorkEmailRevealResponse429
 from ...models.basic_work_email_reveal_response_500 import BasicWorkEmailRevealResponse500
@@ -47,6 +48,7 @@ def _parse_response(
     | BasicWorkEmailRevealResponse402
     | BasicWorkEmailRevealResponse403
     | BasicWorkEmailRevealResponse404
+    | BasicWorkEmailRevealResponse410
     | BasicWorkEmailRevealResponse422
     | BasicWorkEmailRevealResponse429
     | BasicWorkEmailRevealResponse500
@@ -83,6 +85,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 410:
+        response_410 = BasicWorkEmailRevealResponse410.from_dict(response.json())
+
+        return response_410
+
     if response.status_code == 422:
         response_422 = BasicWorkEmailRevealResponse422.from_dict(response.json())
 
@@ -118,6 +125,7 @@ def _build_response(
     | BasicWorkEmailRevealResponse402
     | BasicWorkEmailRevealResponse403
     | BasicWorkEmailRevealResponse404
+    | BasicWorkEmailRevealResponse410
     | BasicWorkEmailRevealResponse422
     | BasicWorkEmailRevealResponse429
     | BasicWorkEmailRevealResponse500
@@ -142,12 +150,13 @@ def sync_detailed(
     | BasicWorkEmailRevealResponse402
     | BasicWorkEmailRevealResponse403
     | BasicWorkEmailRevealResponse404
+    | BasicWorkEmailRevealResponse410
     | BasicWorkEmailRevealResponse422
     | BasicWorkEmailRevealResponse429
     | BasicWorkEmailRevealResponse500
     | BasicWorkEmailRevealResponse503
 ]:
-    """Find work email from name and company (no LinkedIn required)
+    """Find work email by name and company
 
      Finds a work email from a person's name and company information without requiring a LinkedIn
     profile. Useful when the person is not on LinkedIn.
@@ -168,7 +177,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[BasicWorkEmailRevealResponse200 | BasicWorkEmailRevealResponse400 | BasicWorkEmailRevealResponse401 | BasicWorkEmailRevealResponse402 | BasicWorkEmailRevealResponse403 | BasicWorkEmailRevealResponse404 | BasicWorkEmailRevealResponse422 | BasicWorkEmailRevealResponse429 | BasicWorkEmailRevealResponse500 | BasicWorkEmailRevealResponse503]
+        Response[BasicWorkEmailRevealResponse200 | BasicWorkEmailRevealResponse400 | BasicWorkEmailRevealResponse401 | BasicWorkEmailRevealResponse402 | BasicWorkEmailRevealResponse403 | BasicWorkEmailRevealResponse404 | BasicWorkEmailRevealResponse410 | BasicWorkEmailRevealResponse422 | BasicWorkEmailRevealResponse429 | BasicWorkEmailRevealResponse500 | BasicWorkEmailRevealResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -193,13 +202,14 @@ def sync(
     | BasicWorkEmailRevealResponse402
     | BasicWorkEmailRevealResponse403
     | BasicWorkEmailRevealResponse404
+    | BasicWorkEmailRevealResponse410
     | BasicWorkEmailRevealResponse422
     | BasicWorkEmailRevealResponse429
     | BasicWorkEmailRevealResponse500
     | BasicWorkEmailRevealResponse503
     | None
 ):
-    """Find work email from name and company (no LinkedIn required)
+    """Find work email by name and company
 
      Finds a work email from a person's name and company information without requiring a LinkedIn
     profile. Useful when the person is not on LinkedIn.
@@ -220,7 +230,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        BasicWorkEmailRevealResponse200 | BasicWorkEmailRevealResponse400 | BasicWorkEmailRevealResponse401 | BasicWorkEmailRevealResponse402 | BasicWorkEmailRevealResponse403 | BasicWorkEmailRevealResponse404 | BasicWorkEmailRevealResponse422 | BasicWorkEmailRevealResponse429 | BasicWorkEmailRevealResponse500 | BasicWorkEmailRevealResponse503
+        BasicWorkEmailRevealResponse200 | BasicWorkEmailRevealResponse400 | BasicWorkEmailRevealResponse401 | BasicWorkEmailRevealResponse402 | BasicWorkEmailRevealResponse403 | BasicWorkEmailRevealResponse404 | BasicWorkEmailRevealResponse410 | BasicWorkEmailRevealResponse422 | BasicWorkEmailRevealResponse429 | BasicWorkEmailRevealResponse500 | BasicWorkEmailRevealResponse503
     """
 
     return sync_detailed(
@@ -240,12 +250,13 @@ async def asyncio_detailed(
     | BasicWorkEmailRevealResponse402
     | BasicWorkEmailRevealResponse403
     | BasicWorkEmailRevealResponse404
+    | BasicWorkEmailRevealResponse410
     | BasicWorkEmailRevealResponse422
     | BasicWorkEmailRevealResponse429
     | BasicWorkEmailRevealResponse500
     | BasicWorkEmailRevealResponse503
 ]:
-    """Find work email from name and company (no LinkedIn required)
+    """Find work email by name and company
 
      Finds a work email from a person's name and company information without requiring a LinkedIn
     profile. Useful when the person is not on LinkedIn.
@@ -266,7 +277,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[BasicWorkEmailRevealResponse200 | BasicWorkEmailRevealResponse400 | BasicWorkEmailRevealResponse401 | BasicWorkEmailRevealResponse402 | BasicWorkEmailRevealResponse403 | BasicWorkEmailRevealResponse404 | BasicWorkEmailRevealResponse422 | BasicWorkEmailRevealResponse429 | BasicWorkEmailRevealResponse500 | BasicWorkEmailRevealResponse503]
+        Response[BasicWorkEmailRevealResponse200 | BasicWorkEmailRevealResponse400 | BasicWorkEmailRevealResponse401 | BasicWorkEmailRevealResponse402 | BasicWorkEmailRevealResponse403 | BasicWorkEmailRevealResponse404 | BasicWorkEmailRevealResponse410 | BasicWorkEmailRevealResponse422 | BasicWorkEmailRevealResponse429 | BasicWorkEmailRevealResponse500 | BasicWorkEmailRevealResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -289,13 +300,14 @@ async def asyncio(
     | BasicWorkEmailRevealResponse402
     | BasicWorkEmailRevealResponse403
     | BasicWorkEmailRevealResponse404
+    | BasicWorkEmailRevealResponse410
     | BasicWorkEmailRevealResponse422
     | BasicWorkEmailRevealResponse429
     | BasicWorkEmailRevealResponse500
     | BasicWorkEmailRevealResponse503
     | None
 ):
-    """Find work email from name and company (no LinkedIn required)
+    """Find work email by name and company
 
      Finds a work email from a person's name and company information without requiring a LinkedIn
     profile. Useful when the person is not on LinkedIn.
@@ -316,7 +328,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        BasicWorkEmailRevealResponse200 | BasicWorkEmailRevealResponse400 | BasicWorkEmailRevealResponse401 | BasicWorkEmailRevealResponse402 | BasicWorkEmailRevealResponse403 | BasicWorkEmailRevealResponse404 | BasicWorkEmailRevealResponse422 | BasicWorkEmailRevealResponse429 | BasicWorkEmailRevealResponse500 | BasicWorkEmailRevealResponse503
+        BasicWorkEmailRevealResponse200 | BasicWorkEmailRevealResponse400 | BasicWorkEmailRevealResponse401 | BasicWorkEmailRevealResponse402 | BasicWorkEmailRevealResponse403 | BasicWorkEmailRevealResponse404 | BasicWorkEmailRevealResponse410 | BasicWorkEmailRevealResponse422 | BasicWorkEmailRevealResponse429 | BasicWorkEmailRevealResponse500 | BasicWorkEmailRevealResponse503
     """
 
     return (

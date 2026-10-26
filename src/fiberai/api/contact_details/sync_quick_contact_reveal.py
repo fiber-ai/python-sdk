@@ -12,6 +12,7 @@ from ...models.sync_quick_contact_reveal_response_401 import SyncQuickContactRev
 from ...models.sync_quick_contact_reveal_response_402 import SyncQuickContactRevealResponse402
 from ...models.sync_quick_contact_reveal_response_403 import SyncQuickContactRevealResponse403
 from ...models.sync_quick_contact_reveal_response_404 import SyncQuickContactRevealResponse404
+from ...models.sync_quick_contact_reveal_response_410 import SyncQuickContactRevealResponse410
 from ...models.sync_quick_contact_reveal_response_422 import SyncQuickContactRevealResponse422
 from ...models.sync_quick_contact_reveal_response_429 import SyncQuickContactRevealResponse429
 from ...models.sync_quick_contact_reveal_response_500 import SyncQuickContactRevealResponse500
@@ -47,6 +48,7 @@ def _parse_response(
     | SyncQuickContactRevealResponse402
     | SyncQuickContactRevealResponse403
     | SyncQuickContactRevealResponse404
+    | SyncQuickContactRevealResponse410
     | SyncQuickContactRevealResponse422
     | SyncQuickContactRevealResponse429
     | SyncQuickContactRevealResponse500
@@ -83,6 +85,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 410:
+        response_410 = SyncQuickContactRevealResponse410.from_dict(response.json())
+
+        return response_410
+
     if response.status_code == 422:
         response_422 = SyncQuickContactRevealResponse422.from_dict(response.json())
 
@@ -118,6 +125,7 @@ def _build_response(
     | SyncQuickContactRevealResponse402
     | SyncQuickContactRevealResponse403
     | SyncQuickContactRevealResponse404
+    | SyncQuickContactRevealResponse410
     | SyncQuickContactRevealResponse422
     | SyncQuickContactRevealResponse429
     | SyncQuickContactRevealResponse500
@@ -142,6 +150,7 @@ def sync_detailed(
     | SyncQuickContactRevealResponse402
     | SyncQuickContactRevealResponse403
     | SyncQuickContactRevealResponse404
+    | SyncQuickContactRevealResponse410
     | SyncQuickContactRevealResponse422
     | SyncQuickContactRevealResponse429
     | SyncQuickContactRevealResponse500
@@ -174,7 +183,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse422 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503]
+        Response[SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse410 | SyncQuickContactRevealResponse422 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -199,6 +208,7 @@ def sync(
     | SyncQuickContactRevealResponse402
     | SyncQuickContactRevealResponse403
     | SyncQuickContactRevealResponse404
+    | SyncQuickContactRevealResponse410
     | SyncQuickContactRevealResponse422
     | SyncQuickContactRevealResponse429
     | SyncQuickContactRevealResponse500
@@ -232,7 +242,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse422 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503
+        SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse410 | SyncQuickContactRevealResponse422 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503
     """
 
     return sync_detailed(
@@ -252,6 +262,7 @@ async def asyncio_detailed(
     | SyncQuickContactRevealResponse402
     | SyncQuickContactRevealResponse403
     | SyncQuickContactRevealResponse404
+    | SyncQuickContactRevealResponse410
     | SyncQuickContactRevealResponse422
     | SyncQuickContactRevealResponse429
     | SyncQuickContactRevealResponse500
@@ -284,7 +295,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse422 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503]
+        Response[SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse410 | SyncQuickContactRevealResponse422 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -307,6 +318,7 @@ async def asyncio(
     | SyncQuickContactRevealResponse402
     | SyncQuickContactRevealResponse403
     | SyncQuickContactRevealResponse404
+    | SyncQuickContactRevealResponse410
     | SyncQuickContactRevealResponse422
     | SyncQuickContactRevealResponse429
     | SyncQuickContactRevealResponse500
@@ -340,7 +352,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse422 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503
+        SyncQuickContactRevealResponse200 | SyncQuickContactRevealResponse400 | SyncQuickContactRevealResponse401 | SyncQuickContactRevealResponse402 | SyncQuickContactRevealResponse403 | SyncQuickContactRevealResponse404 | SyncQuickContactRevealResponse410 | SyncQuickContactRevealResponse422 | SyncQuickContactRevealResponse429 | SyncQuickContactRevealResponse500 | SyncQuickContactRevealResponse503
     """
 
     return (

@@ -12,6 +12,7 @@ from ...models.instant_contact_reveal_response_401 import InstantContactRevealRe
 from ...models.instant_contact_reveal_response_402 import InstantContactRevealResponse402
 from ...models.instant_contact_reveal_response_403 import InstantContactRevealResponse403
 from ...models.instant_contact_reveal_response_404 import InstantContactRevealResponse404
+from ...models.instant_contact_reveal_response_410 import InstantContactRevealResponse410
 from ...models.instant_contact_reveal_response_422 import InstantContactRevealResponse422
 from ...models.instant_contact_reveal_response_429 import InstantContactRevealResponse429
 from ...models.instant_contact_reveal_response_500 import InstantContactRevealResponse500
@@ -47,6 +48,7 @@ def _parse_response(
     | InstantContactRevealResponse402
     | InstantContactRevealResponse403
     | InstantContactRevealResponse404
+    | InstantContactRevealResponse410
     | InstantContactRevealResponse422
     | InstantContactRevealResponse429
     | InstantContactRevealResponse500
@@ -83,6 +85,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 410:
+        response_410 = InstantContactRevealResponse410.from_dict(response.json())
+
+        return response_410
+
     if response.status_code == 422:
         response_422 = InstantContactRevealResponse422.from_dict(response.json())
 
@@ -118,6 +125,7 @@ def _build_response(
     | InstantContactRevealResponse402
     | InstantContactRevealResponse403
     | InstantContactRevealResponse404
+    | InstantContactRevealResponse410
     | InstantContactRevealResponse422
     | InstantContactRevealResponse429
     | InstantContactRevealResponse500
@@ -142,6 +150,7 @@ def sync_detailed(
     | InstantContactRevealResponse402
     | InstantContactRevealResponse403
     | InstantContactRevealResponse404
+    | InstantContactRevealResponse410
     | InstantContactRevealResponse422
     | InstantContactRevealResponse429
     | InstantContactRevealResponse500
@@ -170,7 +179,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[InstantContactRevealResponse200 | InstantContactRevealResponse400 | InstantContactRevealResponse401 | InstantContactRevealResponse402 | InstantContactRevealResponse403 | InstantContactRevealResponse404 | InstantContactRevealResponse422 | InstantContactRevealResponse429 | InstantContactRevealResponse500 | InstantContactRevealResponse503]
+        Response[InstantContactRevealResponse200 | InstantContactRevealResponse400 | InstantContactRevealResponse401 | InstantContactRevealResponse402 | InstantContactRevealResponse403 | InstantContactRevealResponse404 | InstantContactRevealResponse410 | InstantContactRevealResponse422 | InstantContactRevealResponse429 | InstantContactRevealResponse500 | InstantContactRevealResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -195,6 +204,7 @@ def sync(
     | InstantContactRevealResponse402
     | InstantContactRevealResponse403
     | InstantContactRevealResponse404
+    | InstantContactRevealResponse410
     | InstantContactRevealResponse422
     | InstantContactRevealResponse429
     | InstantContactRevealResponse500
@@ -224,7 +234,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        InstantContactRevealResponse200 | InstantContactRevealResponse400 | InstantContactRevealResponse401 | InstantContactRevealResponse402 | InstantContactRevealResponse403 | InstantContactRevealResponse404 | InstantContactRevealResponse422 | InstantContactRevealResponse429 | InstantContactRevealResponse500 | InstantContactRevealResponse503
+        InstantContactRevealResponse200 | InstantContactRevealResponse400 | InstantContactRevealResponse401 | InstantContactRevealResponse402 | InstantContactRevealResponse403 | InstantContactRevealResponse404 | InstantContactRevealResponse410 | InstantContactRevealResponse422 | InstantContactRevealResponse429 | InstantContactRevealResponse500 | InstantContactRevealResponse503
     """
 
     return sync_detailed(
@@ -244,6 +254,7 @@ async def asyncio_detailed(
     | InstantContactRevealResponse402
     | InstantContactRevealResponse403
     | InstantContactRevealResponse404
+    | InstantContactRevealResponse410
     | InstantContactRevealResponse422
     | InstantContactRevealResponse429
     | InstantContactRevealResponse500
@@ -272,7 +283,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[InstantContactRevealResponse200 | InstantContactRevealResponse400 | InstantContactRevealResponse401 | InstantContactRevealResponse402 | InstantContactRevealResponse403 | InstantContactRevealResponse404 | InstantContactRevealResponse422 | InstantContactRevealResponse429 | InstantContactRevealResponse500 | InstantContactRevealResponse503]
+        Response[InstantContactRevealResponse200 | InstantContactRevealResponse400 | InstantContactRevealResponse401 | InstantContactRevealResponse402 | InstantContactRevealResponse403 | InstantContactRevealResponse404 | InstantContactRevealResponse410 | InstantContactRevealResponse422 | InstantContactRevealResponse429 | InstantContactRevealResponse500 | InstantContactRevealResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -295,6 +306,7 @@ async def asyncio(
     | InstantContactRevealResponse402
     | InstantContactRevealResponse403
     | InstantContactRevealResponse404
+    | InstantContactRevealResponse410
     | InstantContactRevealResponse422
     | InstantContactRevealResponse429
     | InstantContactRevealResponse500
@@ -324,7 +336,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        InstantContactRevealResponse200 | InstantContactRevealResponse400 | InstantContactRevealResponse401 | InstantContactRevealResponse402 | InstantContactRevealResponse403 | InstantContactRevealResponse404 | InstantContactRevealResponse422 | InstantContactRevealResponse429 | InstantContactRevealResponse500 | InstantContactRevealResponse503
+        InstantContactRevealResponse200 | InstantContactRevealResponse400 | InstantContactRevealResponse401 | InstantContactRevealResponse402 | InstantContactRevealResponse403 | InstantContactRevealResponse404 | InstantContactRevealResponse410 | InstantContactRevealResponse422 | InstantContactRevealResponse429 | InstantContactRevealResponse500 | InstantContactRevealResponse503
     """
 
     return (

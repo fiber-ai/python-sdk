@@ -41,11 +41,20 @@ if TYPE_CHECKING:
     from ..models.paginated_combined_search_body_profile_config_type_0_search_params_exact_profile_v2_type_0 import (
         PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileV2Type0,
     )
+    from ..models.paginated_combined_search_body_profile_config_type_0_search_params_experience_industry_type_0 import (
+        PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExperienceIndustryType0,
+    )
     from ..models.paginated_combined_search_body_profile_config_type_0_search_params_fuzzy_name_type_0 import (
         PaginatedCombinedSearchBodyProfileConfigType0SearchParamsFuzzyNameType0,
     )
     from ..models.paginated_combined_search_body_profile_config_type_0_search_params_industry_type_0 import (
         PaginatedCombinedSearchBodyProfileConfigType0SearchParamsIndustryType0,
+    )
+    from ..models.paginated_combined_search_body_profile_config_type_0_search_params_industry_v2_type_0 import (
+        PaginatedCombinedSearchBodyProfileConfigType0SearchParamsIndustryV2Type0,
+    )
+    from ..models.paginated_combined_search_body_profile_config_type_0_search_params_job_categories_type_0 import (
+        PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobCategoriesType0,
     )
     from ..models.paginated_combined_search_body_profile_config_type_0_search_params_job_function_type_0 import (
         PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobFunctionType0,
@@ -197,6 +206,9 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
                 Unset):
             job_title_v3 (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobTitleV3Type0 | Unset):
             seniority (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSeniorityType0 | Unset):
+            job_categories (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobCategoriesType0 | Unset):
+            experience_industry (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExperienceIndustryType0 |
+                Unset):
             open_to_work (bool | None | Unset):
             is_hiring (bool | None | Unset):
             has_profile_picture (bool | None | Unset):
@@ -209,10 +221,15 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             has_premium (bool | None | Unset):
             is_influencer (bool | None | Unset):
             industry (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsIndustryType0 | Unset):
+            industry_v2 (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsIndustryV2Type0 | Unset):
             is_verified (bool | None | Unset):
             joined_linked_in_at (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJoinedLinkedInAtType0 |
                 PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJoinedLinkedInAtType1 | Unset):
             unemployment (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0 | Unset):
+            has_any_email_on_file (bool | None | Unset):
+            has_work_email_on_file (bool | None | Unset):
+            has_personal_email_on_file (bool | None | Unset):
+            has_phone_on_file (bool | None | Unset):
             get_detailed_education (bool | None | Unset): Whether to include deep details about each educational item, like
                 the school's LinkedIn URL, website, location, etc. That'll be put in the detailedEducation array. This slows
                 down the API call, so only enable this if you need it. Default: False.
@@ -222,9 +239,18 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             tags (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsTagsType0 | Unset):
             education (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationType0 | Unset):
             jobs (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobsType0 | Unset): Filter by work
-                experience: named companies (LinkedIn org ID, URL, slug, or domain), job titles, or both on the same entry, with
-                per-entry tenure. Replaces the deprecated pastJobs and currentJobs fields. Prefer jobs alone during migration —
-                sending jobs together with pastJobs or currentJobs ANDs them as separate query clauses.
+                experience. Each entry can name a company (LinkedIn org ID, URL, slug, domain, or company name), job titles, job
+                categories (tagged function or specialty entries, the same shape as the top-level jobCategories filter), a job
+                function from the older list, a seniority, or any combination, all matched against the same experience, with its
+                own tenure (status). A company name that can't be matched is skipped; if that leaves nothing to match, no one
+                matches. Because each entry has its own status, allOf can combine a current role with a past one, e.g. currently
+                in Sales AND previously in Engineering: allOf [{jobCategories: {anyOf: [{type: 'function', value: 'Sales'}]},
+                status: 'current'}, {jobCategories: {anyOf: [{type: 'function', value: 'Engineering'}]}, status: 'past'}].
+                Coverage: job categories and seniority are populated on a growing share of the index, and less often on past
+                roles than current ones, so category and seniority entries return fewer people than the population they
+                describe. Entries AND with the top-level jobCategories, jobFunction and seniority filters, which stay scoped by
+                jobStatus. Replaces the deprecated pastJobs and currentJobs fields. Prefer jobs alone during migration — sending
+                jobs together with pastJobs or currentJobs ANDs them as separate query clauses.
             past_jobs (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsPastJobsType0 | Unset): Deprecated.
                 Use jobs with status: 'past' instead.
             current_jobs (None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsCurrentJobsType0 | Unset):
@@ -300,6 +326,10 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
     ) = UNSET
     job_title_v3: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobTitleV3Type0 | Unset = UNSET
     seniority: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsSeniorityType0 | Unset = UNSET
+    job_categories: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobCategoriesType0 | Unset = UNSET
+    experience_industry: (
+        None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExperienceIndustryType0 | Unset
+    ) = UNSET
     open_to_work: bool | None | Unset = UNSET
     is_hiring: bool | None | Unset = UNSET
     has_profile_picture: bool | None | Unset = UNSET
@@ -312,6 +342,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
     has_premium: bool | None | Unset = UNSET
     is_influencer: bool | None | Unset = UNSET
     industry: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsIndustryType0 | Unset = UNSET
+    industry_v2: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsIndustryV2Type0 | Unset = UNSET
     is_verified: bool | None | Unset = UNSET
     joined_linked_in_at: (
         None
@@ -320,6 +351,10 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
         | Unset
     ) = UNSET
     unemployment: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0 | Unset = UNSET
+    has_any_email_on_file: bool | None | Unset = UNSET
+    has_work_email_on_file: bool | None | Unset = UNSET
+    has_personal_email_on_file: bool | None | Unset = UNSET
+    has_phone_on_file: bool | None | Unset = UNSET
     get_detailed_education: bool | None | Unset = False
     get_detailed_work_experience: bool | None | Unset = False
     tags: None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsTagsType0 | Unset = UNSET
@@ -363,11 +398,20 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_exact_profile_v2_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileV2Type0,  # noqa: PLC0415
         )
+        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_experience_industry_type_0 import (
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExperienceIndustryType0,  # noqa: PLC0415
+        )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_fuzzy_name_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsFuzzyNameType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_industry_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsIndustryType0,  # noqa: PLC0415
+        )
+        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_industry_v2_type_0 import (
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsIndustryV2Type0,  # noqa: PLC0415
+        )
+        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_job_categories_type_0 import (
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobCategoriesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_job_function_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobFunctionType0,  # noqa: PLC0415
@@ -724,6 +768,26 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
         else:
             seniority = self.seniority
 
+        job_categories: dict[str, Any] | None | Unset
+        if isinstance(self.job_categories, Unset):
+            job_categories = UNSET
+        elif isinstance(
+            self.job_categories, PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobCategoriesType0
+        ):
+            job_categories = self.job_categories.to_dict()
+        else:
+            job_categories = self.job_categories
+
+        experience_industry: dict[str, Any] | None | Unset
+        if isinstance(self.experience_industry, Unset):
+            experience_industry = UNSET
+        elif isinstance(
+            self.experience_industry, PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExperienceIndustryType0
+        ):
+            experience_industry = self.experience_industry.to_dict()
+        else:
+            experience_industry = self.experience_industry
+
         open_to_work: bool | None | Unset
         if isinstance(self.open_to_work, Unset):
             open_to_work = UNSET
@@ -810,6 +874,14 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
         else:
             industry = self.industry
 
+        industry_v2: dict[str, Any] | None | Unset
+        if isinstance(self.industry_v2, Unset):
+            industry_v2 = UNSET
+        elif isinstance(self.industry_v2, PaginatedCombinedSearchBodyProfileConfigType0SearchParamsIndustryV2Type0):
+            industry_v2 = self.industry_v2.to_dict()
+        else:
+            industry_v2 = self.industry_v2
+
         is_verified: bool | None | Unset
         if isinstance(self.is_verified, Unset):
             is_verified = UNSET
@@ -837,6 +909,30 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             unemployment = self.unemployment.to_dict()
         else:
             unemployment = self.unemployment
+
+        has_any_email_on_file: bool | None | Unset
+        if isinstance(self.has_any_email_on_file, Unset):
+            has_any_email_on_file = UNSET
+        else:
+            has_any_email_on_file = self.has_any_email_on_file
+
+        has_work_email_on_file: bool | None | Unset
+        if isinstance(self.has_work_email_on_file, Unset):
+            has_work_email_on_file = UNSET
+        else:
+            has_work_email_on_file = self.has_work_email_on_file
+
+        has_personal_email_on_file: bool | None | Unset
+        if isinstance(self.has_personal_email_on_file, Unset):
+            has_personal_email_on_file = UNSET
+        else:
+            has_personal_email_on_file = self.has_personal_email_on_file
+
+        has_phone_on_file: bool | None | Unset
+        if isinstance(self.has_phone_on_file, Unset):
+            has_phone_on_file = UNSET
+        else:
+            has_phone_on_file = self.has_phone_on_file
 
         get_detailed_education: bool | None | Unset
         if isinstance(self.get_detailed_education, Unset):
@@ -959,6 +1055,10 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             field_dict["jobTitleV3"] = job_title_v3
         if seniority is not UNSET:
             field_dict["seniority"] = seniority
+        if job_categories is not UNSET:
+            field_dict["jobCategories"] = job_categories
+        if experience_industry is not UNSET:
+            field_dict["experienceIndustry"] = experience_industry
         if open_to_work is not UNSET:
             field_dict["openToWork"] = open_to_work
         if is_hiring is not UNSET:
@@ -983,12 +1083,22 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             field_dict["isInfluencer"] = is_influencer
         if industry is not UNSET:
             field_dict["industry"] = industry
+        if industry_v2 is not UNSET:
+            field_dict["industryV2"] = industry_v2
         if is_verified is not UNSET:
             field_dict["isVerified"] = is_verified
         if joined_linked_in_at is not UNSET:
             field_dict["joinedLinkedInAt"] = joined_linked_in_at
         if unemployment is not UNSET:
             field_dict["unemployment"] = unemployment
+        if has_any_email_on_file is not UNSET:
+            field_dict["hasAnyEmailOnFile"] = has_any_email_on_file
+        if has_work_email_on_file is not UNSET:
+            field_dict["hasWorkEmailOnFile"] = has_work_email_on_file
+        if has_personal_email_on_file is not UNSET:
+            field_dict["hasPersonalEmailOnFile"] = has_personal_email_on_file
+        if has_phone_on_file is not UNSET:
+            field_dict["hasPhoneOnFile"] = has_phone_on_file
         if get_detailed_education is not UNSET:
             field_dict["getDetailedEducation"] = get_detailed_education
         if get_detailed_work_experience is not UNSET:
@@ -1043,11 +1153,20 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_exact_profile_v2_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExactProfileV2Type0,  # noqa: PLC0415
         )
+        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_experience_industry_type_0 import (
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExperienceIndustryType0,  # noqa: PLC0415
+        )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_fuzzy_name_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsFuzzyNameType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_industry_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsIndustryType0,  # noqa: PLC0415
+        )
+        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_industry_v2_type_0 import (
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsIndustryV2Type0,  # noqa: PLC0415
+        )
+        from ..models.paginated_combined_search_body_profile_config_type_0_search_params_job_categories_type_0 import (
+            PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobCategoriesType0,  # noqa: PLC0415
         )
         from ..models.paginated_combined_search_body_profile_config_type_0_search_params_job_function_type_0 import (
             PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobFunctionType0,  # noqa: PLC0415
@@ -1853,6 +1972,52 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
 
         seniority = _parse_seniority(d.pop("seniority", UNSET))
 
+        def _parse_job_categories(
+            data: object,
+        ) -> None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobCategoriesType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                job_categories_type_0 = (
+                    PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobCategoriesType0.from_dict(data)
+                )
+
+                return job_categories_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJobCategoriesType0 | Unset, data
+            )
+
+        job_categories = _parse_job_categories(d.pop("jobCategories", UNSET))
+
+        def _parse_experience_industry(
+            data: object,
+        ) -> None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExperienceIndustryType0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                experience_industry_type_0 = (
+                    PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExperienceIndustryType0.from_dict(data)
+                )
+
+                return experience_industry_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsExperienceIndustryType0 | Unset, data
+            )
+
+        experience_industry = _parse_experience_industry(d.pop("experienceIndustry", UNSET))
+
         def _parse_open_to_work(data: object) -> bool | None | Unset:
             if data is None:
                 return data
@@ -2021,6 +2186,27 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
 
         industry = _parse_industry(d.pop("industry", UNSET))
 
+        def _parse_industry_v2(
+            data: object,
+        ) -> None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsIndustryV2Type0 | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                industry_v2_type_0 = PaginatedCombinedSearchBodyProfileConfigType0SearchParamsIndustryV2Type0.from_dict(
+                    data
+                )
+
+                return industry_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsIndustryV2Type0 | Unset, data)
+
+        industry_v2 = _parse_industry_v2(d.pop("industryV2", UNSET))
+
         def _parse_is_verified(data: object) -> bool | None | Unset:
             if data is None:
                 return data
@@ -2092,6 +2278,42 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             return cast(None | PaginatedCombinedSearchBodyProfileConfigType0SearchParamsUnemploymentType0 | Unset, data)
 
         unemployment = _parse_unemployment(d.pop("unemployment", UNSET))
+
+        def _parse_has_any_email_on_file(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        has_any_email_on_file = _parse_has_any_email_on_file(d.pop("hasAnyEmailOnFile", UNSET))
+
+        def _parse_has_work_email_on_file(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        has_work_email_on_file = _parse_has_work_email_on_file(d.pop("hasWorkEmailOnFile", UNSET))
+
+        def _parse_has_personal_email_on_file(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        has_personal_email_on_file = _parse_has_personal_email_on_file(d.pop("hasPersonalEmailOnFile", UNSET))
+
+        def _parse_has_phone_on_file(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        has_phone_on_file = _parse_has_phone_on_file(d.pop("hasPhoneOnFile", UNSET))
 
         def _parse_get_detailed_education(data: object) -> bool | None | Unset:
             if data is None:
@@ -2268,6 +2490,8 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             years_of_experience=years_of_experience,
             job_title_v3=job_title_v3,
             seniority=seniority,
+            job_categories=job_categories,
+            experience_industry=experience_industry,
             open_to_work=open_to_work,
             is_hiring=is_hiring,
             has_profile_picture=has_profile_picture,
@@ -2280,9 +2504,14 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParams:
             has_premium=has_premium,
             is_influencer=is_influencer,
             industry=industry,
+            industry_v2=industry_v2,
             is_verified=is_verified,
             joined_linked_in_at=joined_linked_in_at,
             unemployment=unemployment,
+            has_any_email_on_file=has_any_email_on_file,
+            has_work_email_on_file=has_work_email_on_file,
+            has_personal_email_on_file=has_personal_email_on_file,
+            has_phone_on_file=has_phone_on_file,
             get_detailed_education=get_detailed_education,
             get_detailed_work_experience=get_detailed_work_experience,
             tags=tags,

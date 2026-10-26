@@ -13,6 +13,7 @@ class UpdateWebhookEndpointBodyEventTypesType0Item(StrEnum):
     DEPTH_CHART_COMPLETED = "depth_chart.completed"
     DOMAIN_LOOKUP_COMPLETED = "domain_lookup.completed"
     GITHUB_LOOKUP_COMPLETED = "github_lookup.completed"
+    GITHUB_ORG_CONTRIBUTORS_COMPLETED = "github_org_contributors.completed"
     GITHUB_TO_LINKEDIN_COMPLETED = "github_to_linkedin.completed"
     GOOGLE_MAPS_SEARCH_COMPLETED = "google_maps_search.completed"
     JOB_CHANGED = "job.changed"

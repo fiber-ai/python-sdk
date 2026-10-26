@@ -12,6 +12,7 @@ from ...models.twitter_handle_to_linkedin_url_response_401 import TwitterHandleT
 from ...models.twitter_handle_to_linkedin_url_response_402 import TwitterHandleToLinkedinUrlResponse402
 from ...models.twitter_handle_to_linkedin_url_response_403 import TwitterHandleToLinkedinUrlResponse403
 from ...models.twitter_handle_to_linkedin_url_response_404 import TwitterHandleToLinkedinUrlResponse404
+from ...models.twitter_handle_to_linkedin_url_response_410 import TwitterHandleToLinkedinUrlResponse410
 from ...models.twitter_handle_to_linkedin_url_response_422 import TwitterHandleToLinkedinUrlResponse422
 from ...models.twitter_handle_to_linkedin_url_response_429 import TwitterHandleToLinkedinUrlResponse429
 from ...models.twitter_handle_to_linkedin_url_response_500 import TwitterHandleToLinkedinUrlResponse500
@@ -47,6 +48,7 @@ def _parse_response(
     | TwitterHandleToLinkedinUrlResponse402
     | TwitterHandleToLinkedinUrlResponse403
     | TwitterHandleToLinkedinUrlResponse404
+    | TwitterHandleToLinkedinUrlResponse410
     | TwitterHandleToLinkedinUrlResponse422
     | TwitterHandleToLinkedinUrlResponse429
     | TwitterHandleToLinkedinUrlResponse500
@@ -83,6 +85,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 410:
+        response_410 = TwitterHandleToLinkedinUrlResponse410.from_dict(response.json())
+
+        return response_410
+
     if response.status_code == 422:
         response_422 = TwitterHandleToLinkedinUrlResponse422.from_dict(response.json())
 
@@ -118,6 +125,7 @@ def _build_response(
     | TwitterHandleToLinkedinUrlResponse402
     | TwitterHandleToLinkedinUrlResponse403
     | TwitterHandleToLinkedinUrlResponse404
+    | TwitterHandleToLinkedinUrlResponse410
     | TwitterHandleToLinkedinUrlResponse422
     | TwitterHandleToLinkedinUrlResponse429
     | TwitterHandleToLinkedinUrlResponse500
@@ -142,6 +150,7 @@ def sync_detailed(
     | TwitterHandleToLinkedinUrlResponse402
     | TwitterHandleToLinkedinUrlResponse403
     | TwitterHandleToLinkedinUrlResponse404
+    | TwitterHandleToLinkedinUrlResponse410
     | TwitterHandleToLinkedinUrlResponse422
     | TwitterHandleToLinkedinUrlResponse429
     | TwitterHandleToLinkedinUrlResponse500
@@ -168,7 +177,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TwitterHandleToLinkedinUrlResponse200 | TwitterHandleToLinkedinUrlResponse400 | TwitterHandleToLinkedinUrlResponse401 | TwitterHandleToLinkedinUrlResponse402 | TwitterHandleToLinkedinUrlResponse403 | TwitterHandleToLinkedinUrlResponse404 | TwitterHandleToLinkedinUrlResponse422 | TwitterHandleToLinkedinUrlResponse429 | TwitterHandleToLinkedinUrlResponse500 | TwitterHandleToLinkedinUrlResponse503]
+        Response[TwitterHandleToLinkedinUrlResponse200 | TwitterHandleToLinkedinUrlResponse400 | TwitterHandleToLinkedinUrlResponse401 | TwitterHandleToLinkedinUrlResponse402 | TwitterHandleToLinkedinUrlResponse403 | TwitterHandleToLinkedinUrlResponse404 | TwitterHandleToLinkedinUrlResponse410 | TwitterHandleToLinkedinUrlResponse422 | TwitterHandleToLinkedinUrlResponse429 | TwitterHandleToLinkedinUrlResponse500 | TwitterHandleToLinkedinUrlResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -193,6 +202,7 @@ def sync(
     | TwitterHandleToLinkedinUrlResponse402
     | TwitterHandleToLinkedinUrlResponse403
     | TwitterHandleToLinkedinUrlResponse404
+    | TwitterHandleToLinkedinUrlResponse410
     | TwitterHandleToLinkedinUrlResponse422
     | TwitterHandleToLinkedinUrlResponse429
     | TwitterHandleToLinkedinUrlResponse500
@@ -220,7 +230,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TwitterHandleToLinkedinUrlResponse200 | TwitterHandleToLinkedinUrlResponse400 | TwitterHandleToLinkedinUrlResponse401 | TwitterHandleToLinkedinUrlResponse402 | TwitterHandleToLinkedinUrlResponse403 | TwitterHandleToLinkedinUrlResponse404 | TwitterHandleToLinkedinUrlResponse422 | TwitterHandleToLinkedinUrlResponse429 | TwitterHandleToLinkedinUrlResponse500 | TwitterHandleToLinkedinUrlResponse503
+        TwitterHandleToLinkedinUrlResponse200 | TwitterHandleToLinkedinUrlResponse400 | TwitterHandleToLinkedinUrlResponse401 | TwitterHandleToLinkedinUrlResponse402 | TwitterHandleToLinkedinUrlResponse403 | TwitterHandleToLinkedinUrlResponse404 | TwitterHandleToLinkedinUrlResponse410 | TwitterHandleToLinkedinUrlResponse422 | TwitterHandleToLinkedinUrlResponse429 | TwitterHandleToLinkedinUrlResponse500 | TwitterHandleToLinkedinUrlResponse503
     """
 
     return sync_detailed(
@@ -240,6 +250,7 @@ async def asyncio_detailed(
     | TwitterHandleToLinkedinUrlResponse402
     | TwitterHandleToLinkedinUrlResponse403
     | TwitterHandleToLinkedinUrlResponse404
+    | TwitterHandleToLinkedinUrlResponse410
     | TwitterHandleToLinkedinUrlResponse422
     | TwitterHandleToLinkedinUrlResponse429
     | TwitterHandleToLinkedinUrlResponse500
@@ -266,7 +277,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[TwitterHandleToLinkedinUrlResponse200 | TwitterHandleToLinkedinUrlResponse400 | TwitterHandleToLinkedinUrlResponse401 | TwitterHandleToLinkedinUrlResponse402 | TwitterHandleToLinkedinUrlResponse403 | TwitterHandleToLinkedinUrlResponse404 | TwitterHandleToLinkedinUrlResponse422 | TwitterHandleToLinkedinUrlResponse429 | TwitterHandleToLinkedinUrlResponse500 | TwitterHandleToLinkedinUrlResponse503]
+        Response[TwitterHandleToLinkedinUrlResponse200 | TwitterHandleToLinkedinUrlResponse400 | TwitterHandleToLinkedinUrlResponse401 | TwitterHandleToLinkedinUrlResponse402 | TwitterHandleToLinkedinUrlResponse403 | TwitterHandleToLinkedinUrlResponse404 | TwitterHandleToLinkedinUrlResponse410 | TwitterHandleToLinkedinUrlResponse422 | TwitterHandleToLinkedinUrlResponse429 | TwitterHandleToLinkedinUrlResponse500 | TwitterHandleToLinkedinUrlResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -289,6 +300,7 @@ async def asyncio(
     | TwitterHandleToLinkedinUrlResponse402
     | TwitterHandleToLinkedinUrlResponse403
     | TwitterHandleToLinkedinUrlResponse404
+    | TwitterHandleToLinkedinUrlResponse410
     | TwitterHandleToLinkedinUrlResponse422
     | TwitterHandleToLinkedinUrlResponse429
     | TwitterHandleToLinkedinUrlResponse500
@@ -316,7 +328,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        TwitterHandleToLinkedinUrlResponse200 | TwitterHandleToLinkedinUrlResponse400 | TwitterHandleToLinkedinUrlResponse401 | TwitterHandleToLinkedinUrlResponse402 | TwitterHandleToLinkedinUrlResponse403 | TwitterHandleToLinkedinUrlResponse404 | TwitterHandleToLinkedinUrlResponse422 | TwitterHandleToLinkedinUrlResponse429 | TwitterHandleToLinkedinUrlResponse500 | TwitterHandleToLinkedinUrlResponse503
+        TwitterHandleToLinkedinUrlResponse200 | TwitterHandleToLinkedinUrlResponse400 | TwitterHandleToLinkedinUrlResponse401 | TwitterHandleToLinkedinUrlResponse402 | TwitterHandleToLinkedinUrlResponse403 | TwitterHandleToLinkedinUrlResponse404 | TwitterHandleToLinkedinUrlResponse410 | TwitterHandleToLinkedinUrlResponse422 | TwitterHandleToLinkedinUrlResponse429 | TwitterHandleToLinkedinUrlResponse500 | TwitterHandleToLinkedinUrlResponse503
     """
 
     return (

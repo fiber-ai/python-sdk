@@ -1,0 +1,136 @@
+from __future__ import annotations
+
+from collections.abc import Mapping
+from typing import TYPE_CHECKING, Any, TypeVar
+
+from attrs import define as _attrs_define
+from attrs import field as _attrs_field
+
+from ..models.lookalikes_trigger_body_filters_type_0_job_posting_stats_type_0_none_of_type_0_item_type_6_modality import (
+    LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6Modality,
+)
+from ..models.lookalikes_trigger_body_filters_type_0_job_posting_stats_type_0_none_of_type_0_item_type_6_rule import (
+    LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6Rule,
+)
+
+if TYPE_CHECKING:
+    from ..models.lookalikes_trigger_body_filters_type_0_job_posting_stats_type_0_none_of_type_0_item_type_6_range_type_0 import (
+        LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6RangeType0,
+    )
+    from ..models.lookalikes_trigger_body_filters_type_0_job_posting_stats_type_0_none_of_type_0_item_type_6_range_type_1 import (
+        LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6RangeType1,
+    )
+
+
+T = TypeVar("T", bound="LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6")
+
+
+@_attrs_define
+class LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6:
+    """
+    Attributes:
+        rule (LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6Rule):
+        modality (LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6Modality):
+        range_ (LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6RangeType0 |
+            LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6RangeType1):
+    """
+
+    rule: LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6Rule
+    modality: LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6Modality
+    range_: (
+        LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6RangeType0
+        | LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6RangeType1
+    )
+    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        from ..models.lookalikes_trigger_body_filters_type_0_job_posting_stats_type_0_none_of_type_0_item_type_6_range_type_0 import (
+            LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6RangeType0,  # noqa: PLC0415
+        )
+
+        rule = self.rule.value
+
+        modality = self.modality.value
+
+        range_: dict[str, Any]
+        if isinstance(self.range_, LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6RangeType0):
+            range_ = self.range_.to_dict()
+        else:
+            range_ = self.range_.to_dict()
+
+        field_dict: dict[str, Any] = {}
+        field_dict.update(self.additional_properties)
+        field_dict.update(
+            {
+                "rule": rule,
+                "modality": modality,
+                "range": range_,
+            }
+        )
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.lookalikes_trigger_body_filters_type_0_job_posting_stats_type_0_none_of_type_0_item_type_6_range_type_0 import (
+            LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6RangeType0,  # noqa: PLC0415
+        )
+        from ..models.lookalikes_trigger_body_filters_type_0_job_posting_stats_type_0_none_of_type_0_item_type_6_range_type_1 import (
+            LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6RangeType1,  # noqa: PLC0415
+        )
+
+        d = dict(src_dict)
+        rule = LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6Rule(d.pop("rule"))
+
+        modality = LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6Modality(d.pop("modality"))
+
+        def _parse_range_(
+            data: object,
+        ) -> (
+            LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6RangeType0
+            | LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6RangeType1
+        ):
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                range_type_0 = (
+                    LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6RangeType0.from_dict(data)
+                )
+
+                return range_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            if not isinstance(data, dict):
+                raise TypeError()
+            range_type_1 = (
+                LookalikesTriggerBodyFiltersType0JobPostingStatsType0NoneOfType0ItemType6RangeType1.from_dict(data)
+            )
+
+            return range_type_1
+
+        range_ = _parse_range_(d.pop("range"))
+
+        lookalikes_trigger_body_filters_type_0_job_posting_stats_type_0_none_of_type_0_item_type_6 = cls(
+            rule=rule,
+            modality=modality,
+            range_=range_,
+        )
+
+        lookalikes_trigger_body_filters_type_0_job_posting_stats_type_0_none_of_type_0_item_type_6.additional_properties = d
+        return lookalikes_trigger_body_filters_type_0_job_posting_stats_type_0_none_of_type_0_item_type_6
+
+    @property
+    def additional_keys(self) -> list[str]:
+        return list(self.additional_properties.keys())
+
+    def __getitem__(self, key: str) -> Any:
+        return self.additional_properties[key]
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        self.additional_properties[key] = value
+
+    def __delitem__(self, key: str) -> None:
+        del self.additional_properties[key]
+
+    def __contains__(self, key: str) -> bool:
+        return key in self.additional_properties

@@ -12,8 +12,35 @@ from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_typ
 from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_employment_type_type_0_item import (
     KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEmploymentTypeType0Item,
 )
+from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_end_date_precision_type_1 import (
+    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType1,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_end_date_precision_type_2_type_1 import (
+    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType2Type1,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_end_date_precision_type_3_type_1 import (
+    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType3Type1,
+)
 from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_job_function_type_0_item import (
     KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionType0Item,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_job_function_v2_type_1 import (
+    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type1,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_job_function_v2_type_2_type_1 import (
+    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type2Type1,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_job_function_v2_type_3_type_1 import (
+    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type3Type1,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_job_specialty_type_1 import (
+    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType1,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_job_specialty_type_2_type_1 import (
+    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType2Type1,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_job_specialty_type_3_type_1 import (
+    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType3Type1,
 )
 from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_seniority_type_1 import (
     KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemSeniorityType1,
@@ -23,6 +50,15 @@ from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_typ
 )
 from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_seniority_type_3_type_1 import (
     KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemSeniorityType3Type1,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_start_date_precision_type_1 import (
+    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType1,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_start_date_precision_type_2_type_1 import (
+    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType2Type1,
+)
+from ..models.kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item_start_date_precision_type_3_type_1 import (
+    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType3Type1,
 )
 from ..types import UNSET, Unset
 
@@ -39,6 +75,12 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
         locality (None | str | Unset):
         start_date (None | str | Unset):
         end_date (None | str | Unset):
+        start_date_precision (KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType1 |
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType2Type1 |
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType3Type1 | None | Unset):
+        end_date_precision (KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType1 |
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType2Type1 |
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType3Type1 | None | Unset):
         summary (None | str | Unset):
         title (None | str | Unset):
         seniority (KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemSeniorityType1 |
@@ -46,6 +88,12 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
             KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemSeniorityType3Type1 | None | Unset):
         job_function (list[KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionType0Item] | None |
             Unset):
+        job_function_v2 (KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type1 |
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type2Type1 |
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type3Type1 | None | Unset):
+        job_specialty (KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType1 |
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType2Type1 |
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType3Type1 | None | Unset):
         employment_type (list[KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEmploymentTypeType0Item] |
             None | Unset):
         academic_qualification
@@ -53,6 +101,10 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
             Unset):
         company_start_date (None | str | Unset):
         company_end_date (None | str | Unset):
+        company_org_id (None | str | Unset):
+        company_linkedin_ids (list[str] | None | Unset):
+        industry (None | str | Unset):
+        cleaned_title (None | str | Unset):
     """
 
     linkedin_company_id: None | str | Unset = UNSET
@@ -61,6 +113,20 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
     locality: None | str | Unset = UNSET
     start_date: None | str | Unset = UNSET
     end_date: None | str | Unset = UNSET
+    start_date_precision: (
+        KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType1
+        | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType2Type1
+        | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType3Type1
+        | None
+        | Unset
+    ) = UNSET
+    end_date_precision: (
+        KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType1
+        | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType2Type1
+        | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType3Type1
+        | None
+        | Unset
+    ) = UNSET
     summary: None | str | Unset = UNSET
     title: None | str | Unset = UNSET
     seniority: (
@@ -73,6 +139,20 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
     job_function: (
         list[KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionType0Item] | None | Unset
     ) = UNSET
+    job_function_v2: (
+        KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type1
+        | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type2Type1
+        | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type3Type1
+        | None
+        | Unset
+    ) = UNSET
+    job_specialty: (
+        KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType1
+        | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType2Type1
+        | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType3Type1
+        | None
+        | Unset
+    ) = UNSET
     employment_type: (
         list[KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEmploymentTypeType0Item] | None | Unset
     ) = UNSET
@@ -83,6 +163,10 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
     ) = UNSET
     company_start_date: None | str | Unset = UNSET
     company_end_date: None | str | Unset = UNSET
+    company_org_id: None | str | Unset = UNSET
+    company_linkedin_ids: list[str] | None | Unset = UNSET
+    industry: None | str | Unset = UNSET
+    cleaned_title: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -121,6 +205,48 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
             end_date = UNSET
         else:
             end_date = self.end_date
+
+        start_date_precision: None | str | Unset
+        if isinstance(self.start_date_precision, Unset):
+            start_date_precision = UNSET
+        elif isinstance(
+            self.start_date_precision,
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType1,
+        ):
+            start_date_precision = self.start_date_precision.value
+        elif isinstance(
+            self.start_date_precision,
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType2Type1,
+        ):
+            start_date_precision = self.start_date_precision.value
+        elif isinstance(
+            self.start_date_precision,
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType3Type1,
+        ):
+            start_date_precision = self.start_date_precision.value
+        else:
+            start_date_precision = self.start_date_precision
+
+        end_date_precision: None | str | Unset
+        if isinstance(self.end_date_precision, Unset):
+            end_date_precision = UNSET
+        elif isinstance(
+            self.end_date_precision,
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType1,
+        ):
+            end_date_precision = self.end_date_precision.value
+        elif isinstance(
+            self.end_date_precision,
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType2Type1,
+        ):
+            end_date_precision = self.end_date_precision.value
+        elif isinstance(
+            self.end_date_precision,
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType3Type1,
+        ):
+            end_date_precision = self.end_date_precision.value
+        else:
+            end_date_precision = self.end_date_precision
 
         summary: None | str | Unset
         if isinstance(self.summary, Unset):
@@ -162,6 +288,42 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
         else:
             job_function = self.job_function
 
+        job_function_v2: None | str | Unset
+        if isinstance(self.job_function_v2, Unset):
+            job_function_v2 = UNSET
+        elif isinstance(
+            self.job_function_v2, KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type1
+        ):
+            job_function_v2 = self.job_function_v2.value
+        elif isinstance(
+            self.job_function_v2, KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type2Type1
+        ):
+            job_function_v2 = self.job_function_v2.value
+        elif isinstance(
+            self.job_function_v2, KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type3Type1
+        ):
+            job_function_v2 = self.job_function_v2.value
+        else:
+            job_function_v2 = self.job_function_v2
+
+        job_specialty: None | str | Unset
+        if isinstance(self.job_specialty, Unset):
+            job_specialty = UNSET
+        elif isinstance(
+            self.job_specialty, KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType1
+        ):
+            job_specialty = self.job_specialty.value
+        elif isinstance(
+            self.job_specialty, KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType2Type1
+        ):
+            job_specialty = self.job_specialty.value
+        elif isinstance(
+            self.job_specialty, KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType3Type1
+        ):
+            job_specialty = self.job_specialty.value
+        else:
+            job_specialty = self.job_specialty
+
         employment_type: list[str] | None | Unset
         if isinstance(self.employment_type, Unset):
             employment_type = UNSET
@@ -198,6 +360,33 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
         else:
             company_end_date = self.company_end_date
 
+        company_org_id: None | str | Unset
+        if isinstance(self.company_org_id, Unset):
+            company_org_id = UNSET
+        else:
+            company_org_id = self.company_org_id
+
+        company_linkedin_ids: list[str] | None | Unset
+        if isinstance(self.company_linkedin_ids, Unset):
+            company_linkedin_ids = UNSET
+        elif isinstance(self.company_linkedin_ids, list):
+            company_linkedin_ids = self.company_linkedin_ids
+
+        else:
+            company_linkedin_ids = self.company_linkedin_ids
+
+        industry: None | str | Unset
+        if isinstance(self.industry, Unset):
+            industry = UNSET
+        else:
+            industry = self.industry
+
+        cleaned_title: None | str | Unset
+        if isinstance(self.cleaned_title, Unset):
+            cleaned_title = UNSET
+        else:
+            cleaned_title = self.cleaned_title
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -213,6 +402,10 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
             field_dict["start_date"] = start_date
         if end_date is not UNSET:
             field_dict["end_date"] = end_date
+        if start_date_precision is not UNSET:
+            field_dict["start_date_precision"] = start_date_precision
+        if end_date_precision is not UNSET:
+            field_dict["end_date_precision"] = end_date_precision
         if summary is not UNSET:
             field_dict["summary"] = summary
         if title is not UNSET:
@@ -221,6 +414,10 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
             field_dict["seniority"] = seniority
         if job_function is not UNSET:
             field_dict["job_function"] = job_function
+        if job_function_v2 is not UNSET:
+            field_dict["job_function_v2"] = job_function_v2
+        if job_specialty is not UNSET:
+            field_dict["job_specialty"] = job_specialty
         if employment_type is not UNSET:
             field_dict["employment_type"] = employment_type
         if academic_qualification is not UNSET:
@@ -229,6 +426,14 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
             field_dict["company_start_date"] = company_start_date
         if company_end_date is not UNSET:
             field_dict["company_end_date"] = company_end_date
+        if company_org_id is not UNSET:
+            field_dict["company_org_id"] = company_org_id
+        if company_linkedin_ids is not UNSET:
+            field_dict["company_linkedin_ids"] = company_linkedin_ids
+        if industry is not UNSET:
+            field_dict["industry"] = industry
+        if cleaned_title is not UNSET:
+            field_dict["cleaned_title"] = cleaned_title
 
         return field_dict
 
@@ -289,6 +494,114 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
             return cast(None | str | Unset, data)
 
         end_date = _parse_end_date(d.pop("end_date", UNSET))
+
+        def _parse_start_date_precision(
+            data: object,
+        ) -> (
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType1
+            | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType2Type1
+            | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType3Type1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                start_date_precision_type_1 = (
+                    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType1(data)
+                )
+
+                return start_date_precision_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                start_date_precision_type_2_type_1 = (
+                    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType2Type1(data)
+                )
+
+                return start_date_precision_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                start_date_precision_type_3_type_1 = (
+                    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType3Type1(data)
+                )
+
+                return start_date_precision_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType1
+                | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType2Type1
+                | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemStartDatePrecisionType3Type1
+                | None
+                | Unset,
+                data,
+            )
+
+        start_date_precision = _parse_start_date_precision(d.pop("start_date_precision", UNSET))
+
+        def _parse_end_date_precision(
+            data: object,
+        ) -> (
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType1
+            | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType2Type1
+            | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType3Type1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                end_date_precision_type_1 = (
+                    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType1(data)
+                )
+
+                return end_date_precision_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                end_date_precision_type_2_type_1 = (
+                    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType2Type1(data)
+                )
+
+                return end_date_precision_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                end_date_precision_type_3_type_1 = (
+                    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType3Type1(data)
+                )
+
+                return end_date_precision_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType1
+                | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType2Type1
+                | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemEndDatePrecisionType3Type1
+                | None
+                | Unset,
+                data,
+            )
+
+        end_date_precision = _parse_end_date_precision(d.pop("end_date_precision", UNSET))
 
         def _parse_summary(data: object) -> None | str | Unset:
             if data is None:
@@ -393,6 +706,114 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
 
         job_function = _parse_job_function(d.pop("job_function", UNSET))
 
+        def _parse_job_function_v2(
+            data: object,
+        ) -> (
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type1
+            | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type2Type1
+            | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type3Type1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                job_function_v2_type_1 = (
+                    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type1(data)
+                )
+
+                return job_function_v2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                job_function_v2_type_2_type_1 = (
+                    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type2Type1(data)
+                )
+
+                return job_function_v2_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                job_function_v2_type_3_type_1 = (
+                    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type3Type1(data)
+                )
+
+                return job_function_v2_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type1
+                | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type2Type1
+                | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobFunctionV2Type3Type1
+                | None
+                | Unset,
+                data,
+            )
+
+        job_function_v2 = _parse_job_function_v2(d.pop("job_function_v2", UNSET))
+
+        def _parse_job_specialty(
+            data: object,
+        ) -> (
+            KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType1
+            | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType2Type1
+            | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType3Type1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                job_specialty_type_1 = KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType1(
+                    data
+                )
+
+                return job_specialty_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                job_specialty_type_2_type_1 = (
+                    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType2Type1(data)
+                )
+
+                return job_specialty_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                job_specialty_type_3_type_1 = (
+                    KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType3Type1(data)
+                )
+
+                return job_specialty_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType1
+                | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType2Type1
+                | KitchenSinkProfileResponse200OutputDataItemExperiencesType0ItemJobSpecialtyType3Type1
+                | None
+                | Unset,
+                data,
+            )
+
+        job_specialty = _parse_job_specialty(d.pop("job_specialty", UNSET))
+
         def _parse_employment_type(
             data: object,
         ) -> (
@@ -483,6 +904,50 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
 
         company_end_date = _parse_company_end_date(d.pop("company_end_date", UNSET))
 
+        def _parse_company_org_id(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        company_org_id = _parse_company_org_id(d.pop("company_org_id", UNSET))
+
+        def _parse_company_linkedin_ids(data: object) -> list[str] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                company_linkedin_ids_type_0 = cast(list[str], data)
+
+                return company_linkedin_ids_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[str] | None | Unset, data)
+
+        company_linkedin_ids = _parse_company_linkedin_ids(d.pop("company_linkedin_ids", UNSET))
+
+        def _parse_industry(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        industry = _parse_industry(d.pop("industry", UNSET))
+
+        def _parse_cleaned_title(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        cleaned_title = _parse_cleaned_title(d.pop("cleaned_title", UNSET))
+
         kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item = cls(
             linkedin_company_id=linkedin_company_id,
             is_current=is_current,
@@ -490,14 +955,22 @@ class KitchenSinkProfileResponse200OutputDataItemExperiencesType0Item:
             locality=locality,
             start_date=start_date,
             end_date=end_date,
+            start_date_precision=start_date_precision,
+            end_date_precision=end_date_precision,
             summary=summary,
             title=title,
             seniority=seniority,
             job_function=job_function,
+            job_function_v2=job_function_v2,
+            job_specialty=job_specialty,
             employment_type=employment_type,
             academic_qualification=academic_qualification,
             company_start_date=company_start_date,
             company_end_date=company_end_date,
+            company_org_id=company_org_id,
+            company_linkedin_ids=company_linkedin_ids,
+            industry=industry,
+            cleaned_title=cleaned_title,
         )
 
         kitchen_sink_profile_response_200_output_data_item_experiences_type_0_item.additional_properties = d

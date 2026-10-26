@@ -32,8 +32,8 @@ class InstantContactRevealResponse200OutputProfile:
         phone_numbers (list[InstantContactRevealResponse200OutputProfilePhoneNumbersItem]): All phone numbers found for
             this profile.
         unmatched_work_emails (list[InstantContactRevealResponse200OutputProfileUnmatchedWorkEmailsItem] | Unset): Work
-            emails found for this person whose domain does not match the person's current company (or the company you
-            specified). These are not included in emails. Present only when at least one such email was found.
+            emails whose domain does not match the person's current company (or the company you specified). Not included in
+            emails; present only when at least one was found.
     """
 
     emails: list[InstantContactRevealResponse200OutputProfileEmailsItem]

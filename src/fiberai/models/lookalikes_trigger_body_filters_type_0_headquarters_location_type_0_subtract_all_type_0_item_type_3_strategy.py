@@ -1,0 +1,8 @@
+from enum import StrEnum
+
+
+class LookalikesTriggerBodyFiltersType0HeadquartersLocationType0SubtractAllType0ItemType3Strategy(StrEnum):
+    PRESET_REGION = "preset-region"
+
+    def __str__(self) -> str:
+        return str(self.value)

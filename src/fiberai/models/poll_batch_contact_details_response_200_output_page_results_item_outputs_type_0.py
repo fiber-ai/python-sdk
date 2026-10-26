@@ -22,7 +22,7 @@ T = TypeVar("T", bound="PollBatchContactDetailsResponse200OutputPageResultsItemO
 
 @_attrs_define
 class PollBatchContactDetailsResponse200OutputPageResultsItemOutputsType0:
-    """The reveal result for this person.
+    """The reveal result for this person. Null when nothing was found or when the person has opted out.
 
     Attributes:
         emails (list[PollBatchContactDetailsResponse200OutputPageResultsItemOutputsType0EmailsItem]):

@@ -1,0 +1,12 @@
+from enum import StrEnum
+
+
+class LookalikesTriggerBodyFiltersType0JobPostingsV2Type0AllOfType0ItemPostedAtType1WindowType0Period(StrEnum):
+    DAY = "day"
+    MONTH = "month"
+    QUARTER = "quarter"
+    WEEK = "week"
+    YEAR = "year"
+
+    def __str__(self) -> str:
+        return str(self.value)

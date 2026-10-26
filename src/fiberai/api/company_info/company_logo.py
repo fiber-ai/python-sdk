@@ -150,11 +150,11 @@ def sync_detailed(
     """Company logo
 
      Get the logo for a single company. Accepts a LinkedIn company URL, slug, numeric organization ID, or
-    domain — the format is auto-detected.
+    domain — the format is auto-detected. You are charged only when a logo is found.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo found&nbsp;<span title="Pricing shown
     is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
@@ -202,11 +202,11 @@ def sync(
     """Company logo
 
      Get the logo for a single company. Accepts a LinkedIn company URL, slug, numeric organization ID, or
-    domain — the format is auto-detected.
+    domain — the format is auto-detected. You are charged only when a logo is found.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo found&nbsp;<span title="Pricing shown
     is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
@@ -248,11 +248,11 @@ async def asyncio_detailed(
     """Company logo
 
      Get the logo for a single company. Accepts a LinkedIn company URL, slug, numeric organization ID, or
-    domain — the format is auto-detected.
+    domain — the format is auto-detected. You are charged only when a logo is found.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo found&nbsp;<span title="Pricing shown
     is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set
@@ -298,11 +298,11 @@ async def asyncio(
     """Company logo
 
      Get the logo for a single company. Accepts a LinkedIn company URL, slug, numeric organization ID, or
-    domain — the format is auto-detected.
+    domain — the format is auto-detected. You are charged only when a logo is found.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo found&nbsp;<span title="Pricing shown
     is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     <span>⏱ <strong>Recommended timeout:</strong> 1 minute&nbsp;<span title="Recommended timeout: set

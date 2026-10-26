@@ -12,6 +12,7 @@ from ...models.reverse_phone_lookup_response_401 import ReversePhoneLookupRespon
 from ...models.reverse_phone_lookup_response_402 import ReversePhoneLookupResponse402
 from ...models.reverse_phone_lookup_response_403 import ReversePhoneLookupResponse403
 from ...models.reverse_phone_lookup_response_404 import ReversePhoneLookupResponse404
+from ...models.reverse_phone_lookup_response_410 import ReversePhoneLookupResponse410
 from ...models.reverse_phone_lookup_response_422 import ReversePhoneLookupResponse422
 from ...models.reverse_phone_lookup_response_429 import ReversePhoneLookupResponse429
 from ...models.reverse_phone_lookup_response_500 import ReversePhoneLookupResponse500
@@ -47,6 +48,7 @@ def _parse_response(
     | ReversePhoneLookupResponse402
     | ReversePhoneLookupResponse403
     | ReversePhoneLookupResponse404
+    | ReversePhoneLookupResponse410
     | ReversePhoneLookupResponse422
     | ReversePhoneLookupResponse429
     | ReversePhoneLookupResponse500
@@ -83,6 +85,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 410:
+        response_410 = ReversePhoneLookupResponse410.from_dict(response.json())
+
+        return response_410
+
     if response.status_code == 422:
         response_422 = ReversePhoneLookupResponse422.from_dict(response.json())
 
@@ -118,6 +125,7 @@ def _build_response(
     | ReversePhoneLookupResponse402
     | ReversePhoneLookupResponse403
     | ReversePhoneLookupResponse404
+    | ReversePhoneLookupResponse410
     | ReversePhoneLookupResponse422
     | ReversePhoneLookupResponse429
     | ReversePhoneLookupResponse500
@@ -142,6 +150,7 @@ def sync_detailed(
     | ReversePhoneLookupResponse402
     | ReversePhoneLookupResponse403
     | ReversePhoneLookupResponse404
+    | ReversePhoneLookupResponse410
     | ReversePhoneLookupResponse422
     | ReversePhoneLookupResponse429
     | ReversePhoneLookupResponse500
@@ -154,7 +163,7 @@ def sync_detailed(
     Mobile and home phones typically resolve to people, while front desk or business phones may resolve
     to companies.
 
-    Only charges 1 credit when a result is found. No charge for invalid numbers or misses.
+    Credits are charged only when a result is found. No charge for invalid numbers or misses.
 
     If you have additional identifiers (name, company, email) beyond just the phone number, use the
     Kitchen Sink endpoint instead for better match quality.
@@ -175,7 +184,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ReversePhoneLookupResponse200 | ReversePhoneLookupResponse400 | ReversePhoneLookupResponse401 | ReversePhoneLookupResponse402 | ReversePhoneLookupResponse403 | ReversePhoneLookupResponse404 | ReversePhoneLookupResponse422 | ReversePhoneLookupResponse429 | ReversePhoneLookupResponse500 | ReversePhoneLookupResponse503]
+        Response[ReversePhoneLookupResponse200 | ReversePhoneLookupResponse400 | ReversePhoneLookupResponse401 | ReversePhoneLookupResponse402 | ReversePhoneLookupResponse403 | ReversePhoneLookupResponse404 | ReversePhoneLookupResponse410 | ReversePhoneLookupResponse422 | ReversePhoneLookupResponse429 | ReversePhoneLookupResponse500 | ReversePhoneLookupResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -200,6 +209,7 @@ def sync(
     | ReversePhoneLookupResponse402
     | ReversePhoneLookupResponse403
     | ReversePhoneLookupResponse404
+    | ReversePhoneLookupResponse410
     | ReversePhoneLookupResponse422
     | ReversePhoneLookupResponse429
     | ReversePhoneLookupResponse500
@@ -213,7 +223,7 @@ def sync(
     Mobile and home phones typically resolve to people, while front desk or business phones may resolve
     to companies.
 
-    Only charges 1 credit when a result is found. No charge for invalid numbers or misses.
+    Credits are charged only when a result is found. No charge for invalid numbers or misses.
 
     If you have additional identifiers (name, company, email) beyond just the phone number, use the
     Kitchen Sink endpoint instead for better match quality.
@@ -234,7 +244,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ReversePhoneLookupResponse200 | ReversePhoneLookupResponse400 | ReversePhoneLookupResponse401 | ReversePhoneLookupResponse402 | ReversePhoneLookupResponse403 | ReversePhoneLookupResponse404 | ReversePhoneLookupResponse422 | ReversePhoneLookupResponse429 | ReversePhoneLookupResponse500 | ReversePhoneLookupResponse503
+        ReversePhoneLookupResponse200 | ReversePhoneLookupResponse400 | ReversePhoneLookupResponse401 | ReversePhoneLookupResponse402 | ReversePhoneLookupResponse403 | ReversePhoneLookupResponse404 | ReversePhoneLookupResponse410 | ReversePhoneLookupResponse422 | ReversePhoneLookupResponse429 | ReversePhoneLookupResponse500 | ReversePhoneLookupResponse503
     """
 
     return sync_detailed(
@@ -254,6 +264,7 @@ async def asyncio_detailed(
     | ReversePhoneLookupResponse402
     | ReversePhoneLookupResponse403
     | ReversePhoneLookupResponse404
+    | ReversePhoneLookupResponse410
     | ReversePhoneLookupResponse422
     | ReversePhoneLookupResponse429
     | ReversePhoneLookupResponse500
@@ -266,7 +277,7 @@ async def asyncio_detailed(
     Mobile and home phones typically resolve to people, while front desk or business phones may resolve
     to companies.
 
-    Only charges 1 credit when a result is found. No charge for invalid numbers or misses.
+    Credits are charged only when a result is found. No charge for invalid numbers or misses.
 
     If you have additional identifiers (name, company, email) beyond just the phone number, use the
     Kitchen Sink endpoint instead for better match quality.
@@ -287,7 +298,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[ReversePhoneLookupResponse200 | ReversePhoneLookupResponse400 | ReversePhoneLookupResponse401 | ReversePhoneLookupResponse402 | ReversePhoneLookupResponse403 | ReversePhoneLookupResponse404 | ReversePhoneLookupResponse422 | ReversePhoneLookupResponse429 | ReversePhoneLookupResponse500 | ReversePhoneLookupResponse503]
+        Response[ReversePhoneLookupResponse200 | ReversePhoneLookupResponse400 | ReversePhoneLookupResponse401 | ReversePhoneLookupResponse402 | ReversePhoneLookupResponse403 | ReversePhoneLookupResponse404 | ReversePhoneLookupResponse410 | ReversePhoneLookupResponse422 | ReversePhoneLookupResponse429 | ReversePhoneLookupResponse500 | ReversePhoneLookupResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -310,6 +321,7 @@ async def asyncio(
     | ReversePhoneLookupResponse402
     | ReversePhoneLookupResponse403
     | ReversePhoneLookupResponse404
+    | ReversePhoneLookupResponse410
     | ReversePhoneLookupResponse422
     | ReversePhoneLookupResponse429
     | ReversePhoneLookupResponse500
@@ -323,7 +335,7 @@ async def asyncio(
     Mobile and home phones typically resolve to people, while front desk or business phones may resolve
     to companies.
 
-    Only charges 1 credit when a result is found. No charge for invalid numbers or misses.
+    Credits are charged only when a result is found. No charge for invalid numbers or misses.
 
     If you have additional identifiers (name, company, email) beyond just the phone number, use the
     Kitchen Sink endpoint instead for better match quality.
@@ -344,7 +356,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        ReversePhoneLookupResponse200 | ReversePhoneLookupResponse400 | ReversePhoneLookupResponse401 | ReversePhoneLookupResponse402 | ReversePhoneLookupResponse403 | ReversePhoneLookupResponse404 | ReversePhoneLookupResponse422 | ReversePhoneLookupResponse429 | ReversePhoneLookupResponse500 | ReversePhoneLookupResponse503
+        ReversePhoneLookupResponse200 | ReversePhoneLookupResponse400 | ReversePhoneLookupResponse401 | ReversePhoneLookupResponse402 | ReversePhoneLookupResponse403 | ReversePhoneLookupResponse404 | ReversePhoneLookupResponse410 | ReversePhoneLookupResponse422 | ReversePhoneLookupResponse429 | ReversePhoneLookupResponse500 | ReversePhoneLookupResponse503
     """
 
     return (

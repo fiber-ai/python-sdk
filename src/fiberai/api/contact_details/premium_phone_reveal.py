@@ -12,6 +12,7 @@ from ...models.premium_phone_reveal_response_401 import PremiumPhoneRevealRespon
 from ...models.premium_phone_reveal_response_402 import PremiumPhoneRevealResponse402
 from ...models.premium_phone_reveal_response_403 import PremiumPhoneRevealResponse403
 from ...models.premium_phone_reveal_response_404 import PremiumPhoneRevealResponse404
+from ...models.premium_phone_reveal_response_410 import PremiumPhoneRevealResponse410
 from ...models.premium_phone_reveal_response_422 import PremiumPhoneRevealResponse422
 from ...models.premium_phone_reveal_response_429 import PremiumPhoneRevealResponse429
 from ...models.premium_phone_reveal_response_500 import PremiumPhoneRevealResponse500
@@ -47,6 +48,7 @@ def _parse_response(
     | PremiumPhoneRevealResponse402
     | PremiumPhoneRevealResponse403
     | PremiumPhoneRevealResponse404
+    | PremiumPhoneRevealResponse410
     | PremiumPhoneRevealResponse422
     | PremiumPhoneRevealResponse429
     | PremiumPhoneRevealResponse500
@@ -83,6 +85,11 @@ def _parse_response(
 
         return response_404
 
+    if response.status_code == 410:
+        response_410 = PremiumPhoneRevealResponse410.from_dict(response.json())
+
+        return response_410
+
     if response.status_code == 422:
         response_422 = PremiumPhoneRevealResponse422.from_dict(response.json())
 
@@ -118,6 +125,7 @@ def _build_response(
     | PremiumPhoneRevealResponse402
     | PremiumPhoneRevealResponse403
     | PremiumPhoneRevealResponse404
+    | PremiumPhoneRevealResponse410
     | PremiumPhoneRevealResponse422
     | PremiumPhoneRevealResponse429
     | PremiumPhoneRevealResponse500
@@ -142,6 +150,7 @@ def sync_detailed(
     | PremiumPhoneRevealResponse402
     | PremiumPhoneRevealResponse403
     | PremiumPhoneRevealResponse404
+    | PremiumPhoneRevealResponse410
     | PremiumPhoneRevealResponse422
     | PremiumPhoneRevealResponse429
     | PremiumPhoneRevealResponse500
@@ -167,7 +176,7 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PremiumPhoneRevealResponse200 | PremiumPhoneRevealResponse400 | PremiumPhoneRevealResponse401 | PremiumPhoneRevealResponse402 | PremiumPhoneRevealResponse403 | PremiumPhoneRevealResponse404 | PremiumPhoneRevealResponse422 | PremiumPhoneRevealResponse429 | PremiumPhoneRevealResponse500 | PremiumPhoneRevealResponse503]
+        Response[PremiumPhoneRevealResponse200 | PremiumPhoneRevealResponse400 | PremiumPhoneRevealResponse401 | PremiumPhoneRevealResponse402 | PremiumPhoneRevealResponse403 | PremiumPhoneRevealResponse404 | PremiumPhoneRevealResponse410 | PremiumPhoneRevealResponse422 | PremiumPhoneRevealResponse429 | PremiumPhoneRevealResponse500 | PremiumPhoneRevealResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -192,6 +201,7 @@ def sync(
     | PremiumPhoneRevealResponse402
     | PremiumPhoneRevealResponse403
     | PremiumPhoneRevealResponse404
+    | PremiumPhoneRevealResponse410
     | PremiumPhoneRevealResponse422
     | PremiumPhoneRevealResponse429
     | PremiumPhoneRevealResponse500
@@ -218,7 +228,7 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PremiumPhoneRevealResponse200 | PremiumPhoneRevealResponse400 | PremiumPhoneRevealResponse401 | PremiumPhoneRevealResponse402 | PremiumPhoneRevealResponse403 | PremiumPhoneRevealResponse404 | PremiumPhoneRevealResponse422 | PremiumPhoneRevealResponse429 | PremiumPhoneRevealResponse500 | PremiumPhoneRevealResponse503
+        PremiumPhoneRevealResponse200 | PremiumPhoneRevealResponse400 | PremiumPhoneRevealResponse401 | PremiumPhoneRevealResponse402 | PremiumPhoneRevealResponse403 | PremiumPhoneRevealResponse404 | PremiumPhoneRevealResponse410 | PremiumPhoneRevealResponse422 | PremiumPhoneRevealResponse429 | PremiumPhoneRevealResponse500 | PremiumPhoneRevealResponse503
     """
 
     return sync_detailed(
@@ -238,6 +248,7 @@ async def asyncio_detailed(
     | PremiumPhoneRevealResponse402
     | PremiumPhoneRevealResponse403
     | PremiumPhoneRevealResponse404
+    | PremiumPhoneRevealResponse410
     | PremiumPhoneRevealResponse422
     | PremiumPhoneRevealResponse429
     | PremiumPhoneRevealResponse500
@@ -263,7 +274,7 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[PremiumPhoneRevealResponse200 | PremiumPhoneRevealResponse400 | PremiumPhoneRevealResponse401 | PremiumPhoneRevealResponse402 | PremiumPhoneRevealResponse403 | PremiumPhoneRevealResponse404 | PremiumPhoneRevealResponse422 | PremiumPhoneRevealResponse429 | PremiumPhoneRevealResponse500 | PremiumPhoneRevealResponse503]
+        Response[PremiumPhoneRevealResponse200 | PremiumPhoneRevealResponse400 | PremiumPhoneRevealResponse401 | PremiumPhoneRevealResponse402 | PremiumPhoneRevealResponse403 | PremiumPhoneRevealResponse404 | PremiumPhoneRevealResponse410 | PremiumPhoneRevealResponse422 | PremiumPhoneRevealResponse429 | PremiumPhoneRevealResponse500 | PremiumPhoneRevealResponse503]
     """
 
     kwargs = _get_kwargs(
@@ -286,6 +297,7 @@ async def asyncio(
     | PremiumPhoneRevealResponse402
     | PremiumPhoneRevealResponse403
     | PremiumPhoneRevealResponse404
+    | PremiumPhoneRevealResponse410
     | PremiumPhoneRevealResponse422
     | PremiumPhoneRevealResponse429
     | PremiumPhoneRevealResponse500
@@ -312,7 +324,7 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        PremiumPhoneRevealResponse200 | PremiumPhoneRevealResponse400 | PremiumPhoneRevealResponse401 | PremiumPhoneRevealResponse402 | PremiumPhoneRevealResponse403 | PremiumPhoneRevealResponse404 | PremiumPhoneRevealResponse422 | PremiumPhoneRevealResponse429 | PremiumPhoneRevealResponse500 | PremiumPhoneRevealResponse503
+        PremiumPhoneRevealResponse200 | PremiumPhoneRevealResponse400 | PremiumPhoneRevealResponse401 | PremiumPhoneRevealResponse402 | PremiumPhoneRevealResponse403 | PremiumPhoneRevealResponse404 | PremiumPhoneRevealResponse410 | PremiumPhoneRevealResponse422 | PremiumPhoneRevealResponse429 | PremiumPhoneRevealResponse500 | PremiumPhoneRevealResponse503
     """
 
     return (

@@ -26,11 +26,14 @@ class PollBatchContactDetailsResponse200OutputPageResultsItem:
     Attributes:
         inputs (PollBatchContactDetailsResponse200OutputPageResultsItemInputs): The input details provided for this
             person.
+        opted_out (bool): True when this person has opted out of data processing. No data is returned for them and you
+            are not charged for this row.
         outputs (None | PollBatchContactDetailsResponse200OutputPageResultsItemOutputsType0 | Unset): The reveal result
-            for this person.
+            for this person. Null when nothing was found or when the person has opted out.
     """
 
     inputs: PollBatchContactDetailsResponse200OutputPageResultsItemInputs
+    opted_out: bool
     outputs: None | PollBatchContactDetailsResponse200OutputPageResultsItemOutputsType0 | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -40,6 +43,8 @@ class PollBatchContactDetailsResponse200OutputPageResultsItem:
         )
 
         inputs = self.inputs.to_dict()
+
+        opted_out = self.opted_out
 
         outputs: dict[str, Any] | None | Unset
         if isinstance(self.outputs, Unset):
@@ -54,6 +59,7 @@ class PollBatchContactDetailsResponse200OutputPageResultsItem:
         field_dict.update(
             {
                 "inputs": inputs,
+                "optedOut": opted_out,
             }
         )
         if outputs is not UNSET:
@@ -72,6 +78,8 @@ class PollBatchContactDetailsResponse200OutputPageResultsItem:
 
         d = dict(src_dict)
         inputs = PollBatchContactDetailsResponse200OutputPageResultsItemInputs.from_dict(d.pop("inputs"))
+
+        opted_out = d.pop("optedOut")
 
         def _parse_outputs(
             data: object,
@@ -94,6 +102,7 @@ class PollBatchContactDetailsResponse200OutputPageResultsItem:
 
         poll_batch_contact_details_response_200_output_page_results_item = cls(
             inputs=inputs,
+            opted_out=opted_out,
             outputs=outputs,
         )
 

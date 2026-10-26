@@ -13,7 +13,8 @@ T = TypeVar("T", bound="PeopleSearchCountResponse200Output")
 class PeopleSearchCountResponse200Output:
     """
     Attributes:
-        total_profiles_found (int): Total number of profiles matching the search criteria including exclusion lists
+        total_profiles_found (int): Total number of profiles matching the search criteria. Exclusion lists are not
+            applied to counts.
     """
 
     total_profiles_found: int

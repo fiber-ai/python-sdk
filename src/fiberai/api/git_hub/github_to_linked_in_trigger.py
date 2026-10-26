@@ -154,9 +154,10 @@ def sync_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per person for LinkedIn lookup OR email extraction. 2
-    credits per person if outputType='both'.&nbsp;<span title="Pricing shown is default pricing. Actual
-    pricing may vary.">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> Charged per person, based on outputType:<br />• 5 credits for
+    outputType='linkedin'<br />• 3 credits for outputType='email'<br />• 8 credits for
+    outputType='both'&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary.">ⓘ</span></span>
 
     Args:
         body (GithubToLinkedInTriggerBody):
@@ -204,9 +205,10 @@ def sync(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per person for LinkedIn lookup OR email extraction. 2
-    credits per person if outputType='both'.&nbsp;<span title="Pricing shown is default pricing. Actual
-    pricing may vary.">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> Charged per person, based on outputType:<br />• 5 credits for
+    outputType='linkedin'<br />• 3 credits for outputType='email'<br />• 8 credits for
+    outputType='both'&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary.">ⓘ</span></span>
 
     Args:
         body (GithubToLinkedInTriggerBody):
@@ -248,9 +250,10 @@ async def asyncio_detailed(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per person for LinkedIn lookup OR email extraction. 2
-    credits per person if outputType='both'.&nbsp;<span title="Pricing shown is default pricing. Actual
-    pricing may vary.">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> Charged per person, based on outputType:<br />• 5 credits for
+    outputType='linkedin'<br />• 3 credits for outputType='email'<br />• 8 credits for
+    outputType='both'&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary.">ⓘ</span></span>
 
     Args:
         body (GithubToLinkedInTriggerBody):
@@ -296,9 +299,10 @@ async def asyncio(
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 1 credit per person for LinkedIn lookup OR email extraction. 2
-    credits per person if outputType='both'.&nbsp;<span title="Pricing shown is default pricing. Actual
-    pricing may vary.">ⓘ</span></span>
+    <span>💰 <strong>Cost:</strong> Charged per person, based on outputType:<br />• 5 credits for
+    outputType='linkedin'<br />• 3 credits for outputType='email'<br />• 8 credits for
+    outputType='both'&nbsp;<span title="Pricing shown is default pricing. Actual pricing may
+    vary.">ⓘ</span></span>
 
     Args:
         body (GithubToLinkedInTriggerBody):

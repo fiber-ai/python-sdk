@@ -123,6 +123,10 @@ class PaginatedCombinedSearchResponse200OutputProfilesItem:
         industry_name (None | str | Unset):
         last_updated_at (None | str | Unset):
         languages (list[PaginatedCombinedSearchResponse200OutputProfilesItemLanguagesType0Item] | None | Unset):
+        has_any_email_on_file (bool | None | Unset):
+        has_work_email_on_file (bool | None | Unset):
+        has_personal_email_on_file (bool | None | Unset):
+        has_phone_on_file (bool | None | Unset):
         detailed_education (list[PaginatedCombinedSearchResponse200OutputProfilesItemDetailedEducationType0Item] | None
             | Unset):
         detailed_work_experiences
@@ -180,6 +184,10 @@ class PaginatedCombinedSearchResponse200OutputProfilesItem:
     industry_name: None | str | Unset = UNSET
     last_updated_at: None | str | Unset = UNSET
     languages: list[PaginatedCombinedSearchResponse200OutputProfilesItemLanguagesType0Item] | None | Unset = UNSET
+    has_any_email_on_file: bool | None | Unset = UNSET
+    has_work_email_on_file: bool | None | Unset = UNSET
+    has_personal_email_on_file: bool | None | Unset = UNSET
+    has_phone_on_file: bool | None | Unset = UNSET
     detailed_education: (
         list[PaginatedCombinedSearchResponse200OutputProfilesItemDetailedEducationType0Item] | None | Unset
     ) = UNSET
@@ -583,6 +591,30 @@ class PaginatedCombinedSearchResponse200OutputProfilesItem:
         else:
             languages = self.languages
 
+        has_any_email_on_file: bool | None | Unset
+        if isinstance(self.has_any_email_on_file, Unset):
+            has_any_email_on_file = UNSET
+        else:
+            has_any_email_on_file = self.has_any_email_on_file
+
+        has_work_email_on_file: bool | None | Unset
+        if isinstance(self.has_work_email_on_file, Unset):
+            has_work_email_on_file = UNSET
+        else:
+            has_work_email_on_file = self.has_work_email_on_file
+
+        has_personal_email_on_file: bool | None | Unset
+        if isinstance(self.has_personal_email_on_file, Unset):
+            has_personal_email_on_file = UNSET
+        else:
+            has_personal_email_on_file = self.has_personal_email_on_file
+
+        has_phone_on_file: bool | None | Unset
+        if isinstance(self.has_phone_on_file, Unset):
+            has_phone_on_file = UNSET
+        else:
+            has_phone_on_file = self.has_phone_on_file
+
         detailed_education: list[dict[str, Any]] | None | Unset
         if isinstance(self.detailed_education, Unset):
             detailed_education = UNSET
@@ -706,6 +738,14 @@ class PaginatedCombinedSearchResponse200OutputProfilesItem:
             field_dict["last_updated_at"] = last_updated_at
         if languages is not UNSET:
             field_dict["languages"] = languages
+        if has_any_email_on_file is not UNSET:
+            field_dict["has_any_email_on_file"] = has_any_email_on_file
+        if has_work_email_on_file is not UNSET:
+            field_dict["has_work_email_on_file"] = has_work_email_on_file
+        if has_personal_email_on_file is not UNSET:
+            field_dict["has_personal_email_on_file"] = has_personal_email_on_file
+        if has_phone_on_file is not UNSET:
+            field_dict["has_phone_on_file"] = has_phone_on_file
         if detailed_education is not UNSET:
             field_dict["detailed_education"] = detailed_education
         if detailed_work_experiences is not UNSET:
@@ -1534,6 +1574,42 @@ class PaginatedCombinedSearchResponse200OutputProfilesItem:
 
         languages = _parse_languages(d.pop("languages", UNSET))
 
+        def _parse_has_any_email_on_file(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        has_any_email_on_file = _parse_has_any_email_on_file(d.pop("has_any_email_on_file", UNSET))
+
+        def _parse_has_work_email_on_file(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        has_work_email_on_file = _parse_has_work_email_on_file(d.pop("has_work_email_on_file", UNSET))
+
+        def _parse_has_personal_email_on_file(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        has_personal_email_on_file = _parse_has_personal_email_on_file(d.pop("has_personal_email_on_file", UNSET))
+
+        def _parse_has_phone_on_file(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        has_phone_on_file = _parse_has_phone_on_file(d.pop("has_phone_on_file", UNSET))
+
         def _parse_detailed_education(
             data: object,
         ) -> list[PaginatedCombinedSearchResponse200OutputProfilesItemDetailedEducationType0Item] | None | Unset:
@@ -1646,6 +1722,10 @@ class PaginatedCombinedSearchResponse200OutputProfilesItem:
             industry_name=industry_name,
             last_updated_at=last_updated_at,
             languages=languages,
+            has_any_email_on_file=has_any_email_on_file,
+            has_work_email_on_file=has_work_email_on_file,
+            has_personal_email_on_file=has_personal_email_on_file,
+            has_phone_on_file=has_phone_on_file,
             detailed_education=detailed_education,
             detailed_work_experiences=detailed_work_experiences,
         )

@@ -152,8 +152,9 @@ def sync_detailed(
      Visualizes talent movement at a company. Use 'joiners' to see where a company is hiring from — which
     competitors, universities, and regions it pulls talent from during the time window. Use 'leavers' to
     see where a company's alumni are going — which companies or startups are attracting its former
-    employees. Processes up to 10,000 profiles per request. Large companies may take up to two minutes
-    to analyze.
+    employees. Set renderImage.enabled to also generate a shareable talent-flow graphic image covering
+    both joiners and leavers, hosted at the URL returned in the graphic field. Processes up to 10,000
+    profiles per request. Large companies may take up to two minutes to analyze.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -207,8 +208,9 @@ def sync(
      Visualizes talent movement at a company. Use 'joiners' to see where a company is hiring from — which
     competitors, universities, and regions it pulls talent from during the time window. Use 'leavers' to
     see where a company's alumni are going — which companies or startups are attracting its former
-    employees. Processes up to 10,000 profiles per request. Large companies may take up to two minutes
-    to analyze.
+    employees. Set renderImage.enabled to also generate a shareable talent-flow graphic image covering
+    both joiners and leavers, hosted at the URL returned in the graphic field. Processes up to 10,000
+    profiles per request. Large companies may take up to two minutes to analyze.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -256,8 +258,9 @@ async def asyncio_detailed(
      Visualizes talent movement at a company. Use 'joiners' to see where a company is hiring from — which
     competitors, universities, and regions it pulls talent from during the time window. Use 'leavers' to
     see where a company's alumni are going — which companies or startups are attracting its former
-    employees. Processes up to 10,000 profiles per request. Large companies may take up to two minutes
-    to analyze.
+    employees. Set renderImage.enabled to also generate a shareable talent-flow graphic image covering
+    both joiners and leavers, hosted at the URL returned in the graphic field. Processes up to 10,000
+    profiles per request. Large companies may take up to two minutes to analyze.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -309,8 +312,9 @@ async def asyncio(
      Visualizes talent movement at a company. Use 'joiners' to see where a company is hiring from — which
     competitors, universities, and regions it pulls talent from during the time window. Use 'leavers' to
     see where a company's alumni are going — which companies or startups are attracting its former
-    employees. Processes up to 10,000 profiles per request. Large companies may take up to two minutes
-    to analyze.
+    employees. Set renderImage.enabled to also generate a shareable talent-flow graphic image covering
+    both joiners and leavers, hosted at the URL returned in the graphic field. Processes up to 10,000
+    profiles per request. Large companies may take up to two minutes to analyze.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 

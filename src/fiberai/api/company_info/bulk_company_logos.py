@@ -149,11 +149,12 @@ def sync_detailed(
 ]:
     """Bulk company logos
 
-     Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time.
+     Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time. You are
+    charged only for logos found.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo found&nbsp;<span title="Pricing shown
     is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
@@ -197,11 +198,12 @@ def sync(
 ):
     """Bulk company logos
 
-     Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time.
+     Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time. You are
+    charged only for logos found.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo found&nbsp;<span title="Pricing shown
     is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
@@ -239,11 +241,12 @@ async def asyncio_detailed(
 ]:
     """Bulk company logos
 
-     Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time.
+     Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time. You are
+    charged only for logos found.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo found&nbsp;<span title="Pricing shown
     is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
@@ -285,11 +288,12 @@ async def asyncio(
 ):
     """Bulk company logos
 
-     Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time.
+     Get logo URLs for a list of companies. Max 10,000 companies can be looked up at a time. You are
+    charged only for logos found.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
-    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo lookup&nbsp;<span title="Pricing shown
+    <span>💰 <strong>Cost:</strong> 0.33 credits per company logo found&nbsp;<span title="Pricing shown
     is default pricing. Actual pricing may vary.">ⓘ</span></span>
 
     Args:
