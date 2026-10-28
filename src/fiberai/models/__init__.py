@@ -28491,6 +28491,54 @@ from .get_industries_response_422 import GetIndustriesResponse422
 from .get_industries_response_429 import GetIndustriesResponse429
 from .get_industries_response_500 import GetIndustriesResponse500
 from .get_industries_response_503 import GetIndustriesResponse503
+from .get_job_categories_response_200 import GetJobCategoriesResponse200
+from .get_job_categories_response_200_charge_info_type_0 import GetJobCategoriesResponse200ChargeInfoType0
+from .get_job_categories_response_200_charge_info_type_0_low_credit_alert_type_0 import (
+    GetJobCategoriesResponse200ChargeInfoType0LowCreditAlertType0,
+)
+from .get_job_categories_response_200_charge_info_type_0_method import GetJobCategoriesResponse200ChargeInfoType0Method
+from .get_job_categories_response_200_charge_info_type_1 import GetJobCategoriesResponse200ChargeInfoType1
+from .get_job_categories_response_200_charge_info_type_1_low_credit_alert_type_0 import (
+    GetJobCategoriesResponse200ChargeInfoType1LowCreditAlertType0,
+)
+from .get_job_categories_response_200_charge_info_type_1_method import GetJobCategoriesResponse200ChargeInfoType1Method
+from .get_job_categories_response_200_charge_info_type_2 import GetJobCategoriesResponse200ChargeInfoType2
+from .get_job_categories_response_200_charge_info_type_2_low_credit_alert_type_0 import (
+    GetJobCategoriesResponse200ChargeInfoType2LowCreditAlertType0,
+)
+from .get_job_categories_response_200_charge_info_type_2_method import GetJobCategoriesResponse200ChargeInfoType2Method
+from .get_job_categories_response_200_charge_info_type_3 import GetJobCategoriesResponse200ChargeInfoType3
+from .get_job_categories_response_200_charge_info_type_3_low_credit_alert_type_0 import (
+    GetJobCategoriesResponse200ChargeInfoType3LowCreditAlertType0,
+)
+from .get_job_categories_response_200_charge_info_type_3_method import GetJobCategoriesResponse200ChargeInfoType3Method
+from .get_job_categories_response_200_charge_info_type_4 import GetJobCategoriesResponse200ChargeInfoType4
+from .get_job_categories_response_200_charge_info_type_4_low_credit_alert_type_0 import (
+    GetJobCategoriesResponse200ChargeInfoType4LowCreditAlertType0,
+)
+from .get_job_categories_response_200_charge_info_type_4_method import GetJobCategoriesResponse200ChargeInfoType4Method
+from .get_job_categories_response_200_output import GetJobCategoriesResponse200Output
+from .get_job_categories_response_200_output_job_functions_item import GetJobCategoriesResponse200OutputJobFunctionsItem
+from .get_job_categories_response_200_output_job_functions_item_function import (
+    GetJobCategoriesResponse200OutputJobFunctionsItemFunction,
+)
+from .get_job_categories_response_200_output_job_functions_item_specialties_item import (
+    GetJobCategoriesResponse200OutputJobFunctionsItemSpecialtiesItem,
+)
+from .get_job_categories_response_200_output_seniorities_item import GetJobCategoriesResponse200OutputSenioritiesItem
+from .get_job_categories_response_200_warnings_type_0_item import GetJobCategoriesResponse200WarningsType0Item
+from .get_job_categories_response_400 import GetJobCategoriesResponse400
+from .get_job_categories_response_401 import GetJobCategoriesResponse401
+from .get_job_categories_response_402 import GetJobCategoriesResponse402
+from .get_job_categories_response_402_out_of_credits_alert_type_0 import (
+    GetJobCategoriesResponse402OutOfCreditsAlertType0,
+)
+from .get_job_categories_response_403 import GetJobCategoriesResponse403
+from .get_job_categories_response_404 import GetJobCategoriesResponse404
+from .get_job_categories_response_422 import GetJobCategoriesResponse422
+from .get_job_categories_response_429 import GetJobCategoriesResponse429
+from .get_job_categories_response_500 import GetJobCategoriesResponse500
+from .get_job_categories_response_503 import GetJobCategoriesResponse503
 from .get_job_change_list_body import GetJobChangeListBody
 from .get_job_change_list_response_200 import GetJobChangeListResponse200
 from .get_job_change_list_response_200_charge_info_type_0 import GetJobChangeListResponse200ChargeInfoType0
@@ -71728,6 +71776,38 @@ __all__ = (
     "GetIndustriesResponse429",
     "GetIndustriesResponse500",
     "GetIndustriesResponse503",
+    "GetJobCategoriesResponse200",
+    "GetJobCategoriesResponse200ChargeInfoType0",
+    "GetJobCategoriesResponse200ChargeInfoType0LowCreditAlertType0",
+    "GetJobCategoriesResponse200ChargeInfoType0Method",
+    "GetJobCategoriesResponse200ChargeInfoType1",
+    "GetJobCategoriesResponse200ChargeInfoType1LowCreditAlertType0",
+    "GetJobCategoriesResponse200ChargeInfoType1Method",
+    "GetJobCategoriesResponse200ChargeInfoType2",
+    "GetJobCategoriesResponse200ChargeInfoType2LowCreditAlertType0",
+    "GetJobCategoriesResponse200ChargeInfoType2Method",
+    "GetJobCategoriesResponse200ChargeInfoType3",
+    "GetJobCategoriesResponse200ChargeInfoType3LowCreditAlertType0",
+    "GetJobCategoriesResponse200ChargeInfoType3Method",
+    "GetJobCategoriesResponse200ChargeInfoType4",
+    "GetJobCategoriesResponse200ChargeInfoType4LowCreditAlertType0",
+    "GetJobCategoriesResponse200ChargeInfoType4Method",
+    "GetJobCategoriesResponse200Output",
+    "GetJobCategoriesResponse200OutputJobFunctionsItem",
+    "GetJobCategoriesResponse200OutputJobFunctionsItemFunction",
+    "GetJobCategoriesResponse200OutputJobFunctionsItemSpecialtiesItem",
+    "GetJobCategoriesResponse200OutputSenioritiesItem",
+    "GetJobCategoriesResponse200WarningsType0Item",
+    "GetJobCategoriesResponse400",
+    "GetJobCategoriesResponse401",
+    "GetJobCategoriesResponse402",
+    "GetJobCategoriesResponse402OutOfCreditsAlertType0",
+    "GetJobCategoriesResponse403",
+    "GetJobCategoriesResponse404",
+    "GetJobCategoriesResponse422",
+    "GetJobCategoriesResponse429",
+    "GetJobCategoriesResponse500",
+    "GetJobCategoriesResponse503",
     "GetJobChangeListBody",
     "GetJobChangeListResponse200",
     "GetJobChangeListResponse200ChargeInfoType0",
