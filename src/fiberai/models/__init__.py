@@ -5043,6 +5043,9 @@ from .combined_search_count_body_profile_params_joined_linked_in_at_type_1_windo
 from .combined_search_count_body_profile_params_keyword_search_options_type_0 import (
     CombinedSearchCountBodyProfileParamsKeywordSearchOptionsType0,
 )
+from .combined_search_count_body_profile_params_keyword_search_options_type_0_field_selection_mode import (
+    CombinedSearchCountBodyProfileParamsKeywordSearchOptionsType0FieldSelectionMode,
+)
 from .combined_search_count_body_profile_params_keyword_search_options_type_0_fields_to_search_over_type_0 import (
     CombinedSearchCountBodyProfileParamsKeywordSearchOptionsType0FieldsToSearchOverType0,
 )
@@ -5061,6 +5064,9 @@ from .combined_search_count_body_profile_params_keywords_v2_type_0_operator impo
 )
 from .combined_search_count_body_profile_params_keywords_v2_type_0_options_type_0 import (
     CombinedSearchCountBodyProfileParamsKeywordsV2Type0OptionsType0,
+)
+from .combined_search_count_body_profile_params_keywords_v2_type_0_options_type_0_field_selection_mode import (
+    CombinedSearchCountBodyProfileParamsKeywordsV2Type0OptionsType0FieldSelectionMode,
 )
 from .combined_search_count_body_profile_params_keywords_v2_type_0_options_type_0_fields_to_search_over_type_0 import (
     CombinedSearchCountBodyProfileParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0,
@@ -16582,6 +16588,9 @@ from .create_saved_search_body_search_params_type_0_profile_search_params_joined
 from .create_saved_search_body_search_params_type_0_profile_search_params_keyword_search_options_type_0 import (
     CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOptionsType0,
 )
+from .create_saved_search_body_search_params_type_0_profile_search_params_keyword_search_options_type_0_field_selection_mode import (
+    CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOptionsType0FieldSelectionMode,
+)
 from .create_saved_search_body_search_params_type_0_profile_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import (
     CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,
 )
@@ -16602,6 +16611,9 @@ from .create_saved_search_body_search_params_type_0_profile_search_params_keywor
 )
 from .create_saved_search_body_search_params_type_0_profile_search_params_keywords_v2_type_0_options_type_0 import (
     CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsV2Type0OptionsType0,
+)
+from .create_saved_search_body_search_params_type_0_profile_search_params_keywords_v2_type_0_options_type_0_field_selection_mode import (
+    CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsV2Type0OptionsType0FieldSelectionMode,
 )
 from .create_saved_search_body_search_params_type_0_profile_search_params_keywords_v2_type_0_options_type_0_fields_to_search_over_type_0 import (
     CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0,
@@ -21173,6 +21185,9 @@ from .create_saved_search_body_search_params_type_2_profile_search_params_joined
 from .create_saved_search_body_search_params_type_2_profile_search_params_keyword_search_options_type_0 import (
     CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0,
 )
+from .create_saved_search_body_search_params_type_2_profile_search_params_keyword_search_options_type_0_field_selection_mode import (
+    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0FieldSelectionMode,
+)
 from .create_saved_search_body_search_params_type_2_profile_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import (
     CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,
 )
@@ -21193,6 +21208,9 @@ from .create_saved_search_body_search_params_type_2_profile_search_params_keywor
 )
 from .create_saved_search_body_search_params_type_2_profile_search_params_keywords_v2_type_0_options_type_0 import (
     CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0OptionsType0,
+)
+from .create_saved_search_body_search_params_type_2_profile_search_params_keywords_v2_type_0_options_type_0_field_selection_mode import (
+    CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0OptionsType0FieldSelectionMode,
 )
 from .create_saved_search_body_search_params_type_2_profile_search_params_keywords_v2_type_0_options_type_0_fields_to_search_over_type_0 import (
     CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0,
@@ -29244,6 +29262,12 @@ from .get_org_credits_response_200_output_item_credits_per_operation_type_0_loca
 )
 from .get_org_credits_response_200_output_item_credits_per_operation_type_0_local_business_research_agent_levels_item import (
     GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessResearchAgentLevelsItem,
+)
+from .get_org_credits_response_200_output_item_credits_per_operation_type_0_local_business_search import (
+    GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessSearch,
+)
+from .get_org_credits_response_200_output_item_credits_per_operation_type_0_local_business_search_levels_item import (
+    GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessSearchLevelsItem,
 )
 from .get_org_credits_response_200_output_item_credits_per_operation_type_0_mosaic_row import (
     GetOrgCreditsResponse200OutputItemCreditsPerOperationType0MosaicRow,
@@ -45421,6 +45445,9 @@ from .paginated_combined_search_body_profile_config_type_0_search_params_joined_
 from .paginated_combined_search_body_profile_config_type_0_search_params_keyword_search_options_type_0 import (
     PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordSearchOptionsType0,
 )
+from .paginated_combined_search_body_profile_config_type_0_search_params_keyword_search_options_type_0_field_selection_mode import (
+    PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordSearchOptionsType0FieldSelectionMode,
+)
 from .paginated_combined_search_body_profile_config_type_0_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import (
     PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,
 )
@@ -45441,6 +45468,9 @@ from .paginated_combined_search_body_profile_config_type_0_search_params_keyword
 )
 from .paginated_combined_search_body_profile_config_type_0_search_params_keywords_v2_type_0_options_type_0 import (
     PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0OptionsType0,
+)
+from .paginated_combined_search_body_profile_config_type_0_search_params_keywords_v2_type_0_options_type_0_field_selection_mode import (
+    PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0OptionsType0FieldSelectionMode,
 )
 from .paginated_combined_search_body_profile_config_type_0_search_params_keywords_v2_type_0_options_type_0_fields_to_search_over_type_0 import (
     PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0,
@@ -49134,6 +49164,9 @@ from .people_search_body_search_params_joined_linked_in_at_type_1_window_type_2_
 from .people_search_body_search_params_keyword_search_options_type_0 import (
     PeopleSearchBodySearchParamsKeywordSearchOptionsType0,
 )
+from .people_search_body_search_params_keyword_search_options_type_0_field_selection_mode import (
+    PeopleSearchBodySearchParamsKeywordSearchOptionsType0FieldSelectionMode,
+)
 from .people_search_body_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import (
     PeopleSearchBodySearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,
 )
@@ -49150,6 +49183,9 @@ from .people_search_body_search_params_keywords_v2_type_0_operator import (
 )
 from .people_search_body_search_params_keywords_v2_type_0_options_type_0 import (
     PeopleSearchBodySearchParamsKeywordsV2Type0OptionsType0,
+)
+from .people_search_body_search_params_keywords_v2_type_0_options_type_0_field_selection_mode import (
+    PeopleSearchBodySearchParamsKeywordsV2Type0OptionsType0FieldSelectionMode,
 )
 from .people_search_body_search_params_keywords_v2_type_0_options_type_0_fields_to_search_over_type_0 import (
     PeopleSearchBodySearchParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0,
@@ -51203,6 +51239,9 @@ from .people_search_count_body_search_params_joined_linked_in_at_type_1_window_t
 from .people_search_count_body_search_params_keyword_search_options_type_0 import (
     PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0,
 )
+from .people_search_count_body_search_params_keyword_search_options_type_0_field_selection_mode import (
+    PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0FieldSelectionMode,
+)
 from .people_search_count_body_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import (
     PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,
 )
@@ -51219,6 +51258,9 @@ from .people_search_count_body_search_params_keywords_v2_type_0_operator import 
 )
 from .people_search_count_body_search_params_keywords_v2_type_0_options_type_0 import (
     PeopleSearchCountBodySearchParamsKeywordsV2Type0OptionsType0,
+)
+from .people_search_count_body_search_params_keywords_v2_type_0_options_type_0_field_selection_mode import (
+    PeopleSearchCountBodySearchParamsKeywordsV2Type0OptionsType0FieldSelectionMode,
 )
 from .people_search_count_body_search_params_keywords_v2_type_0_options_type_0_fields_to_search_over_type_0 import (
     PeopleSearchCountBodySearchParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0,
@@ -63138,6 +63180,7 @@ __all__ = (
     "CombinedSearchCountBodyProfileParamsJoinedLinkedInAtType1WindowType2Period",
     "CombinedSearchCountBodyProfileParamsJoinedLinkedInAtType1WindowType2Which",
     "CombinedSearchCountBodyProfileParamsKeywordSearchOptionsType0",
+    "CombinedSearchCountBodyProfileParamsKeywordSearchOptionsType0FieldSelectionMode",
     "CombinedSearchCountBodyProfileParamsKeywordSearchOptionsType0FieldsToSearchOverType0",
     "CombinedSearchCountBodyProfileParamsKeywordsType0",
     "CombinedSearchCountBodyProfileParamsKeywordsV2Type0",
@@ -63145,6 +63188,7 @@ __all__ = (
     "CombinedSearchCountBodyProfileParamsKeywordsV2Type0ClausesItemOperator",
     "CombinedSearchCountBodyProfileParamsKeywordsV2Type0Operator",
     "CombinedSearchCountBodyProfileParamsKeywordsV2Type0OptionsType0",
+    "CombinedSearchCountBodyProfileParamsKeywordsV2Type0OptionsType0FieldSelectionMode",
     "CombinedSearchCountBodyProfileParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0",
     "CombinedSearchCountBodyProfileParamsLanguagesType0",
     "CombinedSearchCountBodyProfileParamsLanguagesType0AllOfType0Item",
@@ -67213,6 +67257,7 @@ __all__ = (
     "CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJoinedLinkedInAtType1WindowType2Period",
     "CreateSavedSearchBodySearchParamsType0ProfileSearchParamsJoinedLinkedInAtType1WindowType2Which",
     "CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOptionsType0",
+    "CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOptionsType0FieldSelectionMode",
     "CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0",
     "CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsType0",
     "CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsV2Type0",
@@ -67220,6 +67265,7 @@ __all__ = (
     "CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsV2Type0ClausesItemOperator",
     "CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsV2Type0Operator",
     "CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsV2Type0OptionsType0",
+    "CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsV2Type0OptionsType0FieldSelectionMode",
     "CreateSavedSearchBodySearchParamsType0ProfileSearchParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0",
     "CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLanguagesType0",
     "CreateSavedSearchBodySearchParamsType0ProfileSearchParamsLanguagesType0AllOfType0Item",
@@ -68746,6 +68792,7 @@ __all__ = (
     "CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType1WindowType2Period",
     "CreateSavedSearchBodySearchParamsType2ProfileSearchParamsJoinedLinkedInAtType1WindowType2Which",
     "CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0",
+    "CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0FieldSelectionMode",
     "CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0",
     "CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsType0",
     "CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0",
@@ -68753,6 +68800,7 @@ __all__ = (
     "CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0ClausesItemOperator",
     "CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0Operator",
     "CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0OptionsType0",
+    "CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0OptionsType0FieldSelectionMode",
     "CreateSavedSearchBodySearchParamsType2ProfileSearchParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0",
     "CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLanguagesType0",
     "CreateSavedSearchBodySearchParamsType2ProfileSearchParamsLanguagesType0AllOfType0Item",
@@ -72120,6 +72168,8 @@ __all__ = (
     "GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LiveEnrichPersonLevelsItem",
     "GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessResearchAgent",
     "GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessResearchAgentLevelsItem",
+    "GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessSearch",
+    "GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessSearchLevelsItem",
     "GetOrgCreditsResponse200OutputItemCreditsPerOperationType0MosaicRow",
     "GetOrgCreditsResponse200OutputItemCreditsPerOperationType0MosaicRowLevelsItem",
     "GetOrgCreditsResponse200OutputItemCreditsPerOperationType0MultiSourceCompanySearch",
@@ -78566,6 +78616,7 @@ __all__ = (
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJoinedLinkedInAtType1WindowType2Period",
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsJoinedLinkedInAtType1WindowType2Which",
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordSearchOptionsType0",
+    "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordSearchOptionsType0FieldSelectionMode",
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0",
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsType0",
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0",
@@ -78573,6 +78624,7 @@ __all__ = (
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0ClausesItemOperator",
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0Operator",
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0OptionsType0",
+    "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0OptionsType0FieldSelectionMode",
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0",
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLanguagesType0",
     "PaginatedCombinedSearchBodyProfileConfigType0SearchParamsLanguagesType0AllOfType0Item",
@@ -79831,6 +79883,7 @@ __all__ = (
     "PeopleSearchBodySearchParamsJoinedLinkedInAtType1WindowType2Period",
     "PeopleSearchBodySearchParamsJoinedLinkedInAtType1WindowType2Which",
     "PeopleSearchBodySearchParamsKeywordSearchOptionsType0",
+    "PeopleSearchBodySearchParamsKeywordSearchOptionsType0FieldSelectionMode",
     "PeopleSearchBodySearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0",
     "PeopleSearchBodySearchParamsKeywordsType0",
     "PeopleSearchBodySearchParamsKeywordsV2Type0",
@@ -79838,6 +79891,7 @@ __all__ = (
     "PeopleSearchBodySearchParamsKeywordsV2Type0ClausesItemOperator",
     "PeopleSearchBodySearchParamsKeywordsV2Type0Operator",
     "PeopleSearchBodySearchParamsKeywordsV2Type0OptionsType0",
+    "PeopleSearchBodySearchParamsKeywordsV2Type0OptionsType0FieldSelectionMode",
     "PeopleSearchBodySearchParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0",
     "PeopleSearchBodySearchParamsLanguagesType0",
     "PeopleSearchBodySearchParamsLanguagesType0AllOfType0Item",
@@ -80546,6 +80600,7 @@ __all__ = (
     "PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1WindowType2Period",
     "PeopleSearchCountBodySearchParamsJoinedLinkedInAtType1WindowType2Which",
     "PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0",
+    "PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0FieldSelectionMode",
     "PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0",
     "PeopleSearchCountBodySearchParamsKeywordsType0",
     "PeopleSearchCountBodySearchParamsKeywordsV2Type0",
@@ -80553,6 +80608,7 @@ __all__ = (
     "PeopleSearchCountBodySearchParamsKeywordsV2Type0ClausesItemOperator",
     "PeopleSearchCountBodySearchParamsKeywordsV2Type0Operator",
     "PeopleSearchCountBodySearchParamsKeywordsV2Type0OptionsType0",
+    "PeopleSearchCountBodySearchParamsKeywordsV2Type0OptionsType0FieldSelectionMode",
     "PeopleSearchCountBodySearchParamsKeywordsV2Type0OptionsType0FieldsToSearchOverType0",
     "PeopleSearchCountBodySearchParamsLanguagesType0",
     "PeopleSearchCountBodySearchParamsLanguagesType0AllOfType0Item",

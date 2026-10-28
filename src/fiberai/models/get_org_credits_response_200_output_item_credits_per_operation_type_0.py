@@ -250,6 +250,9 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_local_business_research_agent import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessResearchAgent,
     )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_local_business_search import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessSearch,
+    )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_mosaic_row import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0MosaicRow,
     )
@@ -478,6 +481,7 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         local_business_research_agent
             (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessResearchAgent):
         github_lookup_agent (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubLookupAgent):
+        local_business_search (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessSearch):
         get_li_profile_from_github_username
             (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetLiProfileFromGithubUsername):
         get_email_from_github_username
@@ -633,6 +637,7 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
     domain_lookup_agent: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0DomainLookupAgent
     local_business_research_agent: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessResearchAgent
     github_lookup_agent: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubLookupAgent
+    local_business_search: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessSearch
     get_li_profile_from_github_username: (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetLiProfileFromGithubUsername
     )
@@ -740,6 +745,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_saved_search_company import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SavedSearchCompany,
+        )  # noqa: PLC0415
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_saved_search_prospect import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SavedSearchProspect,
         )  # noqa: PLC0415
@@ -938,6 +946,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         local_business_research_agent = self.local_business_research_agent.to_dict()
 
         github_lookup_agent = self.github_lookup_agent.to_dict()
+
+        local_business_search = self.local_business_search.to_dict()
 
         get_li_profile_from_github_username = self.get_li_profile_from_github_username.to_dict()
 
@@ -1177,6 +1187,7 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
                 "domainLookupAgent": domain_lookup_agent,
                 "localBusinessResearchAgent": local_business_research_agent,
                 "githubLookupAgent": github_lookup_agent,
+                "localBusinessSearch": local_business_search,
                 "getLiProfileFromGithubUsername": get_li_profile_from_github_username,
                 "getEmailFromGithubUsername": get_email_from_github_username,
                 "socialMediaFinderAgent": social_media_finder_agent,
@@ -1522,6 +1533,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_local_business_research_agent import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessResearchAgent,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_local_business_search import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessSearch,  # noqa: PLC0415
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_mosaic_row import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0MosaicRow,  # noqa: PLC0415
@@ -1894,6 +1908,10 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
 
         github_lookup_agent = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubLookupAgent.from_dict(
             d.pop("githubLookupAgent")
+        )
+
+        local_business_search = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0LocalBusinessSearch.from_dict(
+            d.pop("localBusinessSearch")
         )
 
         get_li_profile_from_github_username = (
@@ -2395,6 +2413,7 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             domain_lookup_agent=domain_lookup_agent,
             local_business_research_agent=local_business_research_agent,
             github_lookup_agent=github_lookup_agent,
+            local_business_search=local_business_search,
             get_li_profile_from_github_username=get_li_profile_from_github_username,
             get_email_from_github_username=get_email_from_github_username,
             social_media_finder_agent=social_media_finder_agent,

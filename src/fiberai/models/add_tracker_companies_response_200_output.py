@@ -1,10 +1,13 @@
 from __future__ import annotations
 
+import datetime
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
+
+from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.add_tracker_companies_response_200_output_initial_signals_type_0 import (
@@ -31,6 +34,9 @@ class AddTrackerCompaniesResponse200Output:
             that could not be added.
         initial_signals (AddTrackerCompaniesResponse200OutputInitialSignalsType0 |
             AddTrackerCompaniesResponse200OutputInitialSignalsType1): Status of the initial signals request.
+        next_refresh_at (datetime.datetime | None | Unset): When the list is next scheduled to refresh — the first check
+            that can produce signals for the entities you just added. Null for a list that has not been scheduled yet; its
+            first check runs within about an hour and sets the schedule.
     """
 
     added: int
@@ -40,6 +46,7 @@ class AddTrackerCompaniesResponse200Output:
         AddTrackerCompaniesResponse200OutputInitialSignalsType0
         | AddTrackerCompaniesResponse200OutputInitialSignalsType1
     )
+    next_refresh_at: datetime.datetime | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -62,6 +69,14 @@ class AddTrackerCompaniesResponse200Output:
         else:
             initial_signals = self.initial_signals.to_dict()
 
+        next_refresh_at: None | str | Unset
+        if isinstance(self.next_refresh_at, Unset):
+            next_refresh_at = UNSET
+        elif isinstance(self.next_refresh_at, datetime.datetime):
+            next_refresh_at = self.next_refresh_at.isoformat()
+        else:
+            next_refresh_at = self.next_refresh_at
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -72,6 +87,8 @@ class AddTrackerCompaniesResponse200Output:
                 "initialSignals": initial_signals,
             }
         )
+        if next_refresh_at is not UNSET:
+            field_dict["nextRefreshAt"] = next_refresh_at
 
         return field_dict
 
@@ -123,11 +140,29 @@ class AddTrackerCompaniesResponse200Output:
 
         initial_signals = _parse_initial_signals(d.pop("initialSignals"))
 
+        def _parse_next_refresh_at(data: object) -> datetime.datetime | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                next_refresh_at_type_0 = datetime.datetime.fromisoformat(data)
+
+                return next_refresh_at_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(datetime.datetime | None | Unset, data)
+
+        next_refresh_at = _parse_next_refresh_at(d.pop("nextRefreshAt", UNSET))
+
         add_tracker_companies_response_200_output = cls(
             added=added,
             skipped=skipped,
             invalid_companies=invalid_companies,
             initial_signals=initial_signals,
+            next_refresh_at=next_refresh_at,
         )
 
         add_tracker_companies_response_200_output.additional_properties = d

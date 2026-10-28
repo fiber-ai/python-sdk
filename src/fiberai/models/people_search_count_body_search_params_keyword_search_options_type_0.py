@@ -6,6 +6,9 @@ from typing import TYPE_CHECKING, Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.people_search_count_body_search_params_keyword_search_options_type_0_field_selection_mode import (
+    PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0FieldSelectionMode,
+)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -21,10 +24,15 @@ T = TypeVar("T", bound="PeopleSearchCountBodySearchParamsKeywordSearchOptionsTyp
 class PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0:
     """
     Attributes:
+        field_selection_mode (PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0FieldSelectionMode | Unset):
+            Default: PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0FieldSelectionMode.DEFAULT.
         fields_to_search_over (None | PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0
             | Unset):
     """
 
+    field_selection_mode: PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0FieldSelectionMode | Unset = (
+        PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0FieldSelectionMode.DEFAULT
+    )
     fields_to_search_over: (
         None | PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0 | Unset
     ) = UNSET
@@ -34,6 +42,10 @@ class PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0:
         from ..models.people_search_count_body_search_params_keyword_search_options_type_0_fields_to_search_over_type_0 import (
             PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0FieldsToSearchOverType0,  # noqa: PLC0415
         )
+
+        field_selection_mode: str | Unset = UNSET
+        if not isinstance(self.field_selection_mode, Unset):
+            field_selection_mode = self.field_selection_mode.value
 
         fields_to_search_over: dict[str, Any] | None | Unset
         if isinstance(self.fields_to_search_over, Unset):
@@ -49,6 +61,8 @@ class PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0:
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
+        if field_selection_mode is not UNSET:
+            field_dict["fieldSelectionMode"] = field_selection_mode
         if fields_to_search_over is not UNSET:
             field_dict["fieldsToSearchOver"] = fields_to_search_over
 
@@ -61,6 +75,14 @@ class PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0:
         )
 
         d = dict(src_dict)
+        _field_selection_mode = d.pop("fieldSelectionMode", UNSET)
+        field_selection_mode: PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0FieldSelectionMode | Unset
+        if isinstance(_field_selection_mode, Unset):
+            field_selection_mode = UNSET
+        else:
+            field_selection_mode = PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0FieldSelectionMode(
+                _field_selection_mode
+            )
 
         def _parse_fields_to_search_over(
             data: object,
@@ -86,6 +108,7 @@ class PeopleSearchCountBodySearchParamsKeywordSearchOptionsType0:
         fields_to_search_over = _parse_fields_to_search_over(d.pop("fieldsToSearchOver", UNSET))
 
         people_search_count_body_search_params_keyword_search_options_type_0 = cls(
+            field_selection_mode=field_selection_mode,
             fields_to_search_over=fields_to_search_over,
         )
 
