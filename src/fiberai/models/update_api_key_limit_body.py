@@ -8,6 +8,7 @@ from attrs import field as _attrs_field
 
 from ..models.update_api_key_limit_body_operation import UpdateApiKeyLimitBodyOperation
 from ..models.update_api_key_limit_body_target import UpdateApiKeyLimitBodyTarget
+from ..models.update_api_key_limit_body_window import UpdateApiKeyLimitBodyWindow
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="UpdateApiKeyLimitBody")
@@ -18,15 +19,19 @@ class UpdateApiKeyLimitBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        operation (UpdateApiKeyLimitBodyOperation): set: pin an absolute credit ceiling. increase/decrease: adjust the
-            current ceiling by a number of credits. multiply/divide: scale the current ceiling by a factor. remove: make the
-            key unlimited. increase, decrease, multiply, and divide have no effect on an already-unlimited key; use set to
-            establish a ceiling first.
+        operation (UpdateApiKeyLimitBodyOperation): set: pin an absolute credit limit. increase/decrease: adjust the
+            current limit by a number of credits. multiply/divide: scale the current limit by a factor. remove: remove the
+            limit. increase, decrease, multiply, and divide have no effect when there is no limit; use set to establish one
+            first. Applies to the limit chosen by window.
         target (UpdateApiKeyLimitBodyTarget | Unset): Which key to act on. SELF acts on the key that authenticates this
             request. OTHER acts on a different key in your organization, supplied in targetApiKey. Default:
             UpdateApiKeyLimitBodyTarget.SELF.
         target_api_key (None | str | Unset): The key to act on when target is OTHER. Must belong to your organization.
             You can pass prefix, id, or the raw key. Omit when target is SELF.
+        window (UpdateApiKeyLimitBodyWindow | Unset): Which limit to change. lifetime: the key's total ceiling, which
+            never resets. day: a daily limit that resets at midnight UTC. week: a weekly limit that resets Monday at
+            midnight UTC. Each is independent; a request is blocked once any of them is reached. Defaults to lifetime.
+            Default: UpdateApiKeyLimitBodyWindow.LIFETIME.
         credits_ (float | None | Unset): The credit amount. Required for set (zero or greater), increase, and decrease
             (greater than zero); ignored otherwise.
         factor (float | None | Unset): The factor to scale the current ceiling by. Required for multiply and divide;
@@ -37,6 +42,7 @@ class UpdateApiKeyLimitBody:
     operation: UpdateApiKeyLimitBodyOperation
     target: UpdateApiKeyLimitBodyTarget | Unset = UpdateApiKeyLimitBodyTarget.SELF
     target_api_key: None | str | Unset = UNSET
+    window: UpdateApiKeyLimitBodyWindow | Unset = UpdateApiKeyLimitBodyWindow.LIFETIME
     credits_: float | None | Unset = UNSET
     factor: float | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -55,6 +61,10 @@ class UpdateApiKeyLimitBody:
             target_api_key = UNSET
         else:
             target_api_key = self.target_api_key
+
+        window: str | Unset = UNSET
+        if not isinstance(self.window, Unset):
+            window = self.window.value
 
         credits_: float | None | Unset
         if isinstance(self.credits_, Unset):
@@ -80,6 +90,8 @@ class UpdateApiKeyLimitBody:
             field_dict["target"] = target
         if target_api_key is not UNSET:
             field_dict["targetApiKey"] = target_api_key
+        if window is not UNSET:
+            field_dict["window"] = window
         if credits_ is not UNSET:
             field_dict["credits"] = credits_
         if factor is not UNSET:
@@ -110,6 +122,13 @@ class UpdateApiKeyLimitBody:
 
         target_api_key = _parse_target_api_key(d.pop("targetApiKey", UNSET))
 
+        _window = d.pop("window", UNSET)
+        window: UpdateApiKeyLimitBodyWindow | Unset
+        if isinstance(_window, Unset):
+            window = UNSET
+        else:
+            window = UpdateApiKeyLimitBodyWindow(_window)
+
         def _parse_credits_(data: object) -> float | None | Unset:
             if data is None:
                 return data
@@ -133,6 +152,7 @@ class UpdateApiKeyLimitBody:
             operation=operation,
             target=target,
             target_api_key=target_api_key,
+            window=window,
             credits_=credits_,
             factor=factor,
         )

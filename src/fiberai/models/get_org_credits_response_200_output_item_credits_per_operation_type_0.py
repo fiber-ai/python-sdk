@@ -292,6 +292,12 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_premium_work_email_reveal import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PremiumWorkEmailReveal,
     )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_preview_company_from_db import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PreviewCompanyFromDb,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_preview_person_from_db import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PreviewPersonFromDb,
+    )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_real_estate_search import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0RealEstateSearch,
     )
@@ -439,6 +445,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         get_job_posting_count_from_db
             (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetJobPostingCountFromDb):
         get_person_count_from_db (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetPersonCountFromDb):
+        preview_person_from_db (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PreviewPersonFromDb):
+        preview_company_from_db (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PreviewCompanyFromDb):
         get_investor_from_db (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetInvestorFromDb):
         get_investment_from_db (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetInvestmentFromDb):
         get_job_posting_from_db (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetJobPostingFromDb):
@@ -596,6 +604,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
     get_company_count_from_db: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyCountFromDb
     get_job_posting_count_from_db: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetJobPostingCountFromDb
     get_person_count_from_db: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetPersonCountFromDb
+    preview_person_from_db: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PreviewPersonFromDb
+    preview_company_from_db: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PreviewCompanyFromDb
     get_investor_from_db: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetInvestorFromDb
     get_investment_from_db: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetInvestmentFromDb
     get_job_posting_from_db: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetJobPostingFromDb
@@ -745,6 +755,12 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_sales_nav_person_scrape import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SalesNavPersonScrape,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_sales_nav_person_scrape_without_live_fetch import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SalesNavPersonScrapeWithoutLiveFetch,
+        )  # noqa: PLC0415
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_saved_search_company import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SavedSearchCompany,
         )  # noqa: PLC0415
@@ -872,6 +888,10 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         get_job_posting_count_from_db = self.get_job_posting_count_from_db.to_dict()
 
         get_person_count_from_db = self.get_person_count_from_db.to_dict()
+
+        preview_person_from_db = self.preview_person_from_db.to_dict()
+
+        preview_company_from_db = self.preview_company_from_db.to_dict()
 
         get_investor_from_db = self.get_investor_from_db.to_dict()
 
@@ -1150,6 +1170,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
                 "getCompanyCountFromDb": get_company_count_from_db,
                 "getJobPostingCountFromDb": get_job_posting_count_from_db,
                 "getPersonCountFromDb": get_person_count_from_db,
+                "previewPersonFromDb": preview_person_from_db,
+                "previewCompanyFromDb": preview_company_from_db,
                 "getInvestorFromDb": get_investor_from_db,
                 "getInvestmentFromDb": get_investment_from_db,
                 "getJobPostingFromDb": get_job_posting_from_db,
@@ -1576,6 +1598,12 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_premium_work_email_reveal import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PremiumWorkEmailReveal,  # noqa: PLC0415
         )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_preview_company_from_db import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PreviewCompanyFromDb,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_preview_person_from_db import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PreviewPersonFromDb,  # noqa: PLC0415
+        )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_real_estate_search import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0RealEstateSearch,  # noqa: PLC0415
         )
@@ -1733,6 +1761,18 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         get_person_count_from_db = (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetPersonCountFromDb.from_dict(
                 d.pop("getPersonCountFromDb")
+            )
+        )
+
+        preview_person_from_db = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PreviewPersonFromDb.from_dict(
+                d.pop("previewPersonFromDb")
+            )
+        )
+
+        preview_company_from_db = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PreviewCompanyFromDb.from_dict(
+                d.pop("previewCompanyFromDb")
             )
         )
 
@@ -2376,6 +2416,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             get_company_count_from_db=get_company_count_from_db,
             get_job_posting_count_from_db=get_job_posting_count_from_db,
             get_person_count_from_db=get_person_count_from_db,
+            preview_person_from_db=preview_person_from_db,
+            preview_company_from_db=preview_company_from_db,
             get_investor_from_db=get_investor_from_db,
             get_investment_from_db=get_investment_from_db,
             get_job_posting_from_db=get_job_posting_from_db,

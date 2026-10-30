@@ -21,6 +21,18 @@ class UpdateApiKeyExpirationResponse200Output:
         max_credits (float | None): The lifetime credit ceiling for this key. Null implies key has no per-key credit
             limit.
         credits_used (float): Credits consumed by this key so far over its lifetime.
+        daily_max_credits (float | None): The daily credit limit for this key. Resets at midnight UTC. Null implies no
+            daily limit.
+        weekly_max_credits (float | None): The weekly credit limit for this key. Resets Monday at midnight UTC. Null
+            implies no weekly limit.
+        daily_credits_used (float | None): Credits consumed by this key so far today (UTC). Null when the key has no
+            daily limit.
+        weekly_credits_used (float | None): Credits consumed by this key so far this week (Monday to Sunday, UTC). Null
+            when the key has no weekly limit.
+        daily_resets_at (datetime.datetime | None): When daily usage next resets, as an ISO 8601 timestamp. Null when
+            the key has no daily limit.
+        weekly_resets_at (datetime.datetime | None): When weekly usage next resets, as an ISO 8601 timestamp. Null when
+            the key has no weekly limit.
         created_at (datetime.datetime): When the key was created, as an ISO 8601 timestamp.
         is_revoked (bool): Whether the key has been revoked. Revoked keys can no longer authenticate. Only ever true in
             listings that include revoked keys.
@@ -32,6 +44,12 @@ class UpdateApiKeyExpirationResponse200Output:
     expires_at: datetime.datetime | None
     max_credits: float | None
     credits_used: float
+    daily_max_credits: float | None
+    weekly_max_credits: float | None
+    daily_credits_used: float | None
+    weekly_credits_used: float | None
+    daily_resets_at: datetime.datetime | None
+    weekly_resets_at: datetime.datetime | None
     created_at: datetime.datetime
     is_revoked: bool
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -54,6 +72,30 @@ class UpdateApiKeyExpirationResponse200Output:
 
         credits_used = self.credits_used
 
+        daily_max_credits: float | None
+        daily_max_credits = self.daily_max_credits
+
+        weekly_max_credits: float | None
+        weekly_max_credits = self.weekly_max_credits
+
+        daily_credits_used: float | None
+        daily_credits_used = self.daily_credits_used
+
+        weekly_credits_used: float | None
+        weekly_credits_used = self.weekly_credits_used
+
+        daily_resets_at: None | str
+        if isinstance(self.daily_resets_at, datetime.datetime):
+            daily_resets_at = self.daily_resets_at.isoformat()
+        else:
+            daily_resets_at = self.daily_resets_at
+
+        weekly_resets_at: None | str
+        if isinstance(self.weekly_resets_at, datetime.datetime):
+            weekly_resets_at = self.weekly_resets_at.isoformat()
+        else:
+            weekly_resets_at = self.weekly_resets_at
+
         created_at = self.created_at.isoformat()
 
         is_revoked = self.is_revoked
@@ -68,6 +110,12 @@ class UpdateApiKeyExpirationResponse200Output:
                 "expiresAt": expires_at,
                 "maxCredits": max_credits,
                 "creditsUsed": credits_used,
+                "dailyMaxCredits": daily_max_credits,
+                "weeklyMaxCredits": weekly_max_credits,
+                "dailyCreditsUsed": daily_credits_used,
+                "weeklyCreditsUsed": weekly_credits_used,
+                "dailyResetsAt": daily_resets_at,
+                "weeklyResetsAt": weekly_resets_at,
                 "createdAt": created_at,
                 "isRevoked": is_revoked,
             }
@@ -108,6 +156,64 @@ class UpdateApiKeyExpirationResponse200Output:
 
         credits_used = d.pop("creditsUsed")
 
+        def _parse_daily_max_credits(data: object) -> float | None:
+            if data is None:
+                return data
+            return cast(float | None, data)
+
+        daily_max_credits = _parse_daily_max_credits(d.pop("dailyMaxCredits"))
+
+        def _parse_weekly_max_credits(data: object) -> float | None:
+            if data is None:
+                return data
+            return cast(float | None, data)
+
+        weekly_max_credits = _parse_weekly_max_credits(d.pop("weeklyMaxCredits"))
+
+        def _parse_daily_credits_used(data: object) -> float | None:
+            if data is None:
+                return data
+            return cast(float | None, data)
+
+        daily_credits_used = _parse_daily_credits_used(d.pop("dailyCreditsUsed"))
+
+        def _parse_weekly_credits_used(data: object) -> float | None:
+            if data is None:
+                return data
+            return cast(float | None, data)
+
+        weekly_credits_used = _parse_weekly_credits_used(d.pop("weeklyCreditsUsed"))
+
+        def _parse_daily_resets_at(data: object) -> datetime.datetime | None:
+            if data is None:
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                daily_resets_at_type_0 = datetime.datetime.fromisoformat(data)
+
+                return daily_resets_at_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(datetime.datetime | None, data)
+
+        daily_resets_at = _parse_daily_resets_at(d.pop("dailyResetsAt"))
+
+        def _parse_weekly_resets_at(data: object) -> datetime.datetime | None:
+            if data is None:
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                weekly_resets_at_type_0 = datetime.datetime.fromisoformat(data)
+
+                return weekly_resets_at_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(datetime.datetime | None, data)
+
+        weekly_resets_at = _parse_weekly_resets_at(d.pop("weeklyResetsAt"))
+
         created_at = datetime.datetime.fromisoformat(d.pop("createdAt"))
 
         is_revoked = d.pop("isRevoked")
@@ -119,6 +225,12 @@ class UpdateApiKeyExpirationResponse200Output:
             expires_at=expires_at,
             max_credits=max_credits,
             credits_used=credits_used,
+            daily_max_credits=daily_max_credits,
+            weekly_max_credits=weekly_max_credits,
+            daily_credits_used=daily_credits_used,
+            weekly_credits_used=weekly_credits_used,
+            daily_resets_at=daily_resets_at,
+            weekly_resets_at=weekly_resets_at,
             created_at=created_at,
             is_revoked=is_revoked,
         )

@@ -147,14 +147,16 @@ def sync_detailed(
     | UpdateApiKeyLimitResponse500
     | UpdateApiKeyLimitResponse503
 ]:
-    """Update API key credit limit
+    """Update API key credit limits
 
-     Change the lifetime credit ceiling of an API key. Acts on the key that authenticates this request
-    unless target is OTHER. Use set to pin an absolute limit, increase or decrease to adjust it by a
-    number of credits, multiply or divide to scale it, or remove to make the key unlimited. Once a key's
-    usage reaches its limit it can no longer authenticate until the limit is raised or removed. First-
-    time users: create your initial API key at https://app.fiber.ai or via POST /v1/account/send-otp +
-    verify-otp. This endpoint manages keys once you have one.
+     Change a credit limit of an API key: its lifetime limit (default), its daily limit (resets at
+    midnight UTC), or its weekly limit (resets Monday at midnight UTC), chosen with window. Acts on the
+    key that authenticates this request unless target is OTHER. Use set to pin an absolute limit,
+    increase or decrease to adjust it by a number of credits, multiply or divide to scale it, or remove
+    to drop the limit. Once a key's usage reaches a limit, charged requests are rejected until that
+    limit resets, is raised, or is removed. A daily or weekly limit change can take up to 30 seconds to
+    apply everywhere. First-time users: create your initial API key at https://app.fiber.ai or via POST
+    /v1/account/send-otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -200,14 +202,16 @@ def sync(
     | UpdateApiKeyLimitResponse503
     | None
 ):
-    """Update API key credit limit
+    """Update API key credit limits
 
-     Change the lifetime credit ceiling of an API key. Acts on the key that authenticates this request
-    unless target is OTHER. Use set to pin an absolute limit, increase or decrease to adjust it by a
-    number of credits, multiply or divide to scale it, or remove to make the key unlimited. Once a key's
-    usage reaches its limit it can no longer authenticate until the limit is raised or removed. First-
-    time users: create your initial API key at https://app.fiber.ai or via POST /v1/account/send-otp +
-    verify-otp. This endpoint manages keys once you have one.
+     Change a credit limit of an API key: its lifetime limit (default), its daily limit (resets at
+    midnight UTC), or its weekly limit (resets Monday at midnight UTC), chosen with window. Acts on the
+    key that authenticates this request unless target is OTHER. Use set to pin an absolute limit,
+    increase or decrease to adjust it by a number of credits, multiply or divide to scale it, or remove
+    to drop the limit. Once a key's usage reaches a limit, charged requests are rejected until that
+    limit resets, is raised, or is removed. A daily or weekly limit change can take up to 30 seconds to
+    apply everywhere. First-time users: create your initial API key at https://app.fiber.ai or via POST
+    /v1/account/send-otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -247,14 +251,16 @@ async def asyncio_detailed(
     | UpdateApiKeyLimitResponse500
     | UpdateApiKeyLimitResponse503
 ]:
-    """Update API key credit limit
+    """Update API key credit limits
 
-     Change the lifetime credit ceiling of an API key. Acts on the key that authenticates this request
-    unless target is OTHER. Use set to pin an absolute limit, increase or decrease to adjust it by a
-    number of credits, multiply or divide to scale it, or remove to make the key unlimited. Once a key's
-    usage reaches its limit it can no longer authenticate until the limit is raised or removed. First-
-    time users: create your initial API key at https://app.fiber.ai or via POST /v1/account/send-otp +
-    verify-otp. This endpoint manages keys once you have one.
+     Change a credit limit of an API key: its lifetime limit (default), its daily limit (resets at
+    midnight UTC), or its weekly limit (resets Monday at midnight UTC), chosen with window. Acts on the
+    key that authenticates this request unless target is OTHER. Use set to pin an absolute limit,
+    increase or decrease to adjust it by a number of credits, multiply or divide to scale it, or remove
+    to drop the limit. Once a key's usage reaches a limit, charged requests are rejected until that
+    limit resets, is raised, or is removed. A daily or weekly limit change can take up to 30 seconds to
+    apply everywhere. First-time users: create your initial API key at https://app.fiber.ai or via POST
+    /v1/account/send-otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -298,14 +304,16 @@ async def asyncio(
     | UpdateApiKeyLimitResponse503
     | None
 ):
-    """Update API key credit limit
+    """Update API key credit limits
 
-     Change the lifetime credit ceiling of an API key. Acts on the key that authenticates this request
-    unless target is OTHER. Use set to pin an absolute limit, increase or decrease to adjust it by a
-    number of credits, multiply or divide to scale it, or remove to make the key unlimited. Once a key's
-    usage reaches its limit it can no longer authenticate until the limit is raised or removed. First-
-    time users: create your initial API key at https://app.fiber.ai or via POST /v1/account/send-otp +
-    verify-otp. This endpoint manages keys once you have one.
+     Change a credit limit of an API key: its lifetime limit (default), its daily limit (resets at
+    midnight UTC), or its weekly limit (resets Monday at midnight UTC), chosen with window. Acts on the
+    key that authenticates this request unless target is OTHER. Use set to pin an absolute limit,
+    increase or decrease to adjust it by a number of credits, multiply or divide to scale it, or remove
+    to drop the limit. Once a key's usage reaches a limit, charged requests are rejected until that
+    limit resets, is raised, or is removed. A daily or weekly limit change can take up to 30 seconds to
+    apply everywhere. First-time users: create your initial API key at https://app.fiber.ai or via POST
+    /v1/account/send-otp + verify-otp. This endpoint manages keys once you have one.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
