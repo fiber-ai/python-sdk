@@ -1,0 +1,138 @@
+from __future__ import annotations
+
+from collections.abc import Mapping
+from typing import TYPE_CHECKING, Any, TypeVar
+
+from attrs import define as _attrs_define
+from attrs import field as _attrs_field
+
+from ..models.lookalikes_single_body_filters_type_0_job_posting_stats_type_0_all_of_type_0_item_type_4_job_function import (
+    LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4JobFunction,
+)
+from ..models.lookalikes_single_body_filters_type_0_job_posting_stats_type_0_all_of_type_0_item_type_4_rule import (
+    LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4Rule,
+)
+
+if TYPE_CHECKING:
+    from ..models.lookalikes_single_body_filters_type_0_job_posting_stats_type_0_all_of_type_0_item_type_4_range_type_0 import (
+        LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4RangeType0,
+    )
+    from ..models.lookalikes_single_body_filters_type_0_job_posting_stats_type_0_all_of_type_0_item_type_4_range_type_1 import (
+        LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4RangeType1,
+    )
+
+
+T = TypeVar("T", bound="LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4")
+
+
+@_attrs_define
+class LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4:
+    """
+    Attributes:
+        rule (LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4Rule):
+        job_function (LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4JobFunction):
+        range_ (LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4RangeType0 |
+            LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4RangeType1):
+    """
+
+    rule: LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4Rule
+    job_function: LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4JobFunction
+    range_: (
+        LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4RangeType0
+        | LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4RangeType1
+    )
+    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        from ..models.lookalikes_single_body_filters_type_0_job_posting_stats_type_0_all_of_type_0_item_type_4_range_type_0 import (
+            LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4RangeType0,  # noqa: PLC0415
+        )
+
+        rule = self.rule.value
+
+        job_function = self.job_function.value
+
+        range_: dict[str, Any]
+        if isinstance(self.range_, LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4RangeType0):
+            range_ = self.range_.to_dict()
+        else:
+            range_ = self.range_.to_dict()
+
+        field_dict: dict[str, Any] = {}
+        field_dict.update(self.additional_properties)
+        field_dict.update(
+            {
+                "rule": rule,
+                "jobFunction": job_function,
+                "range": range_,
+            }
+        )
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.lookalikes_single_body_filters_type_0_job_posting_stats_type_0_all_of_type_0_item_type_4_range_type_0 import (
+            LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4RangeType0,  # noqa: PLC0415
+        )
+        from ..models.lookalikes_single_body_filters_type_0_job_posting_stats_type_0_all_of_type_0_item_type_4_range_type_1 import (
+            LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4RangeType1,  # noqa: PLC0415
+        )
+
+        d = dict(src_dict)
+        rule = LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4Rule(d.pop("rule"))
+
+        job_function = LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4JobFunction(
+            d.pop("jobFunction")
+        )
+
+        def _parse_range_(
+            data: object,
+        ) -> (
+            LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4RangeType0
+            | LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4RangeType1
+        ):
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                range_type_0 = (
+                    LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4RangeType0.from_dict(data)
+                )
+
+                return range_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            if not isinstance(data, dict):
+                raise TypeError()
+            range_type_1 = LookalikesSingleBodyFiltersType0JobPostingStatsType0AllOfType0ItemType4RangeType1.from_dict(
+                data
+            )
+
+            return range_type_1
+
+        range_ = _parse_range_(d.pop("range"))
+
+        lookalikes_single_body_filters_type_0_job_posting_stats_type_0_all_of_type_0_item_type_4 = cls(
+            rule=rule,
+            job_function=job_function,
+            range_=range_,
+        )
+
+        lookalikes_single_body_filters_type_0_job_posting_stats_type_0_all_of_type_0_item_type_4.additional_properties = d
+        return lookalikes_single_body_filters_type_0_job_posting_stats_type_0_all_of_type_0_item_type_4
+
+    @property
+    def additional_keys(self) -> list[str]:
+        return list(self.additional_properties.keys())
+
+    def __getitem__(self, key: str) -> Any:
+        return self.additional_properties[key]
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        self.additional_properties[key] = value
+
+    def __delitem__(self, key: str) -> None:
+        del self.additional_properties[key]
+
+    def __contains__(self, key: str) -> bool:
+        return key in self.additional_properties

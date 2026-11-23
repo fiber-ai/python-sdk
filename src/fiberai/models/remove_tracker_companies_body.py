@@ -18,7 +18,7 @@ class RemoveTrackerCompaniesBody:
     """
     Attributes:
         companies (list[RemoveTrackerCompaniesBodyCompaniesItem]): Companies to remove. Uses the same identifier format
-            as add-companies.
+            as add-companies. Up to 10,000 per call.
     """
 
     companies: list[RemoveTrackerCompaniesBodyCompaniesItem]

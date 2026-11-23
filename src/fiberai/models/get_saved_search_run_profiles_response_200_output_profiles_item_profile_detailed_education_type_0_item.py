@@ -6,6 +6,15 @@ from typing import TYPE_CHECKING, Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_detailed_education_type_0_item_degree_level_type_1 import (
+    GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType1,
+)
+from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_detailed_education_type_0_item_degree_level_type_2_type_1 import (
+    GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType2Type1,
+)
+from ..models.get_saved_search_run_profiles_response_200_output_profiles_item_profile_detailed_education_type_0_item_degree_level_type_3_type_1 import (
+    GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType3Type1,
+)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -29,6 +38,11 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEduca
         field_of_study_id (None | str | Unset):
         field_of_study_name (None | str | Unset):
         degree (None | str | Unset):
+        degree_level
+            (GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType1 |
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType2Type1 |
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType3Type1 |
+            None | Unset):
         grade (None | str | Unset):
         start_date (None | str | Unset):
         end_date (None | str | Unset):
@@ -46,6 +60,13 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEduca
     field_of_study_id: None | str | Unset = UNSET
     field_of_study_name: None | str | Unset = UNSET
     degree: None | str | Unset = UNSET
+    degree_level: (
+        GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType1
+        | GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType2Type1
+        | GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType3Type1
+        | None
+        | Unset
+    ) = UNSET
     grade: None | str | Unset = UNSET
     start_date: None | str | Unset = UNSET
     end_date: None | str | Unset = UNSET
@@ -99,6 +120,27 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEduca
         else:
             degree = self.degree
 
+        degree_level: None | str | Unset
+        if isinstance(self.degree_level, Unset):
+            degree_level = UNSET
+        elif isinstance(
+            self.degree_level,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType1,
+        ):
+            degree_level = self.degree_level.value
+        elif isinstance(
+            self.degree_level,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType2Type1,
+        ):
+            degree_level = self.degree_level.value
+        elif isinstance(
+            self.degree_level,
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType3Type1,
+        ):
+            degree_level = self.degree_level.value
+        else:
+            degree_level = self.degree_level
+
         grade: None | str | Unset
         if isinstance(self.grade, Unset):
             grade = UNSET
@@ -144,6 +186,8 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEduca
             field_dict["field_of_study_name"] = field_of_study_name
         if degree is not UNSET:
             field_dict["degree"] = degree
+        if degree_level is not UNSET:
+            field_dict["degree_level"] = degree_level
         if grade is not UNSET:
             field_dict["grade"] = grade
         if start_date is not UNSET:
@@ -240,6 +284,60 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEduca
 
         degree = _parse_degree(d.pop("degree", UNSET))
 
+        def _parse_degree_level(
+            data: object,
+        ) -> (
+            GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType1
+            | GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType2Type1
+            | GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType3Type1
+            | None
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                degree_level_type_1 = GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType1(
+                    data
+                )
+
+                return degree_level_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                degree_level_type_2_type_1 = GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType2Type1(
+                    data
+                )
+
+                return degree_level_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                degree_level_type_3_type_1 = GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType3Type1(
+                    data
+                )
+
+                return degree_level_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType1
+                | GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType2Type1
+                | GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEducationType0ItemDegreeLevelType3Type1
+                | None
+                | Unset,
+                data,
+            )
+
+        degree_level = _parse_degree_level(d.pop("degree_level", UNSET))
+
         def _parse_grade(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -292,6 +390,7 @@ class GetSavedSearchRunProfilesResponse200OutputProfilesItemProfileDetailedEduca
             field_of_study_id=field_of_study_id,
             field_of_study_name=field_of_study_name,
             degree=degree,
+            degree_level=degree_level,
             grade=grade,
             start_date=start_date,
             end_date=end_date,

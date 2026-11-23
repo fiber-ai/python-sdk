@@ -15,6 +15,9 @@ if TYPE_CHECKING:
     from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_articles_type_0_item import (
         GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemArticlesType0Item,
     )
+    from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_awards_type_0_item import (
+        GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemAwardsType0Item,
+    )
     from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_certifications_type_0_item import (
         GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCertificationsType0Item,
     )
@@ -60,6 +63,9 @@ if TYPE_CHECKING:
     from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_tenures_type_0_item import (
         GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemTenuresType0Item,
     )
+    from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_test_scores_type_0_item import (
+        GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemTestScoresType0Item,
+    )
     from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_verifications_type_0 import (
         GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemVerificationsType0,
     )
@@ -77,6 +83,7 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
     Attributes:
         primary_slug (str):
         articles (list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemArticlesType0Item] | None | Unset):
+        awards (list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemAwardsType0Item] | None | Unset):
         certifications (list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCertificationsType0Item] | None
             | Unset):
         connection_count (float | None | Unset):
@@ -102,6 +109,8 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
         skills (list[str] | None | Unset):
         slugs (list[str] | None | Unset):
         summary (None | str | Unset):
+        test_scores (list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemTestScoresType0Item] | None |
+            Unset):
         url (None | str | Unset):
         user_id (None | str | Unset):
         volunteering (list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemVolunteeringType0Item] | None |
@@ -121,6 +130,7 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
         is_verified (bool | None | Unset):
         verifications (GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemVerificationsType0 | None | Unset):
         is_top_voice (bool | None | Unset):
+        pronouns (None | str | Unset):
         current_job (GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCurrentJobType0 | None | Unset):
         custom_data (GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCustomDataType0 | None | Unset):
         relevance_score (float | None | Unset):
@@ -141,6 +151,7 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
 
     primary_slug: str
     articles: list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemArticlesType0Item] | None | Unset = UNSET
+    awards: list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemAwardsType0Item] | None | Unset = UNSET
     certifications: (
         list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCertificationsType0Item] | None | Unset
     ) = UNSET
@@ -172,6 +183,9 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
     skills: list[str] | None | Unset = UNSET
     slugs: list[str] | None | Unset = UNSET
     summary: None | str | Unset = UNSET
+    test_scores: (
+        list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemTestScoresType0Item] | None | Unset
+    ) = UNSET
     url: None | str | Unset = UNSET
     user_id: None | str | Unset = UNSET
     volunteering: (
@@ -193,6 +207,7 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
     is_verified: bool | None | Unset = UNSET
     verifications: GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemVerificationsType0 | None | Unset = UNSET
     is_top_voice: bool | None | Unset = UNSET
+    pronouns: None | str | Unset = UNSET
     current_job: GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCurrentJobType0 | None | Unset = UNSET
     custom_data: GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCustomDataType0 | None | Unset = UNSET
     relevance_score: float | None | Unset = UNSET
@@ -243,6 +258,18 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
 
         else:
             articles = self.articles
+
+        awards: list[dict[str, Any]] | None | Unset
+        if isinstance(self.awards, Unset):
+            awards = UNSET
+        elif isinstance(self.awards, list):
+            awards = []
+            for awards_type_0_item_data in self.awards:
+                awards_type_0_item = awards_type_0_item_data.to_dict()
+                awards.append(awards_type_0_item)
+
+        else:
+            awards = self.awards
 
         certifications: list[dict[str, Any]] | None | Unset
         if isinstance(self.certifications, Unset):
@@ -425,6 +452,18 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
         else:
             summary = self.summary
 
+        test_scores: list[dict[str, Any]] | None | Unset
+        if isinstance(self.test_scores, Unset):
+            test_scores = UNSET
+        elif isinstance(self.test_scores, list):
+            test_scores = []
+            for test_scores_type_0_item_data in self.test_scores:
+                test_scores_type_0_item = test_scores_type_0_item_data.to_dict()
+                test_scores.append(test_scores_type_0_item)
+
+        else:
+            test_scores = self.test_scores
+
         url: None | str | Unset
         if isinstance(self.url, Unset):
             url = UNSET
@@ -561,6 +600,12 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
         else:
             is_top_voice = self.is_top_voice
 
+        pronouns: None | str | Unset
+        if isinstance(self.pronouns, Unset):
+            pronouns = UNSET
+        else:
+            pronouns = self.pronouns
+
         current_job: dict[str, Any] | None | Unset
         if isinstance(self.current_job, Unset):
             current_job = UNSET
@@ -670,6 +715,8 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
         )
         if articles is not UNSET:
             field_dict["articles"] = articles
+        if awards is not UNSET:
+            field_dict["awards"] = awards
         if certifications is not UNSET:
             field_dict["certifications"] = certifications
         if connection_count is not UNSET:
@@ -712,6 +759,8 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
             field_dict["slugs"] = slugs
         if summary is not UNSET:
             field_dict["summary"] = summary
+        if test_scores is not UNSET:
+            field_dict["test_scores"] = test_scores
         if url is not UNSET:
             field_dict["url"] = url
         if user_id is not UNSET:
@@ -746,6 +795,8 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
             field_dict["verifications"] = verifications
         if is_top_voice is not UNSET:
             field_dict["is_top_voice"] = is_top_voice
+        if pronouns is not UNSET:
+            field_dict["pronouns"] = pronouns
         if current_job is not UNSET:
             field_dict["current_job"] = current_job
         if custom_data is not UNSET:
@@ -779,6 +830,9 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_articles_type_0_item import (
             GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemArticlesType0Item,  # noqa: PLC0415
+        )
+        from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_awards_type_0_item import (
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemAwardsType0Item,  # noqa: PLC0415
         )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_certifications_type_0_item import (
             GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCertificationsType0Item,  # noqa: PLC0415
@@ -825,6 +879,9 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_tenures_type_0_item import (
             GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemTenuresType0Item,  # noqa: PLC0415
         )
+        from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_test_scores_type_0_item import (
+            GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemTestScoresType0Item,  # noqa: PLC0415
+        )
         from ..models.get_current_profiles_in_saved_search_response_200_output_profiles_item_verifications_type_0 import (
             GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemVerificationsType0,  # noqa: PLC0415
         )
@@ -864,6 +921,36 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
             )
 
         articles = _parse_articles(d.pop("articles", UNSET))
+
+        def _parse_awards(
+            data: object,
+        ) -> list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemAwardsType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                awards_type_0 = []
+                _awards_type_0 = data
+                for awards_type_0_item_data in _awards_type_0:
+                    awards_type_0_item = (
+                        GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemAwardsType0Item.from_dict(
+                            awards_type_0_item_data
+                        )
+                    )
+
+                    awards_type_0.append(awards_type_0_item)
+
+                return awards_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemAwardsType0Item] | None | Unset, data
+            )
+
+        awards = _parse_awards(d.pop("awards", UNSET))
 
         def _parse_certifications(
             data: object,
@@ -1245,6 +1332,37 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
 
         summary = _parse_summary(d.pop("summary", UNSET))
 
+        def _parse_test_scores(
+            data: object,
+        ) -> list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemTestScoresType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                test_scores_type_0 = []
+                _test_scores_type_0 = data
+                for test_scores_type_0_item_data in _test_scores_type_0:
+                    test_scores_type_0_item = (
+                        GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemTestScoresType0Item.from_dict(
+                            test_scores_type_0_item_data
+                        )
+                    )
+
+                    test_scores_type_0.append(test_scores_type_0_item)
+
+                return test_scores_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                list[GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemTestScoresType0Item] | None | Unset,
+                data,
+            )
+
+        test_scores = _parse_test_scores(d.pop("test_scores", UNSET))
+
         def _parse_url(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -1512,6 +1630,15 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
 
         is_top_voice = _parse_is_top_voice(d.pop("is_top_voice", UNSET))
 
+        def _parse_pronouns(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        pronouns = _parse_pronouns(d.pop("pronouns", UNSET))
+
         def _parse_current_job(
             data: object,
         ) -> GetCurrentProfilesInSavedSearchResponse200OutputProfilesItemCurrentJobType0 | None | Unset:
@@ -1732,6 +1859,7 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
         get_current_profiles_in_saved_search_response_200_output_profiles_item = cls(
             primary_slug=primary_slug,
             articles=articles,
+            awards=awards,
             certifications=certifications,
             connection_count=connection_count,
             courses=courses,
@@ -1753,6 +1881,7 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
             skills=skills,
             slugs=slugs,
             summary=summary,
+            test_scores=test_scores,
             url=url,
             user_id=user_id,
             volunteering=volunteering,
@@ -1770,6 +1899,7 @@ class GetCurrentProfilesInSavedSearchResponse200OutputProfilesItem:
             is_verified=is_verified,
             verifications=verifications,
             is_top_voice=is_top_voice,
+            pronouns=pronouns,
             current_job=current_job,
             custom_data=custom_data,
             relevance_score=relevance_score,

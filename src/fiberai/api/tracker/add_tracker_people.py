@@ -154,8 +154,8 @@ def sync_detailed(
 ]:
     """Add people to tracker list
 
-     Add people to a person tracker list. Identify people by LinkedIn URL, user ID, or slug. At least one
-    identifier is required per person.
+     Add people to a person tracker list. Identify each person by LinkedIn URL, user ID or slug, or by
+    Crunchbase person slug. At least one identifier is required per person.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -206,8 +206,8 @@ def sync(
 ):
     """Add people to tracker list
 
-     Add people to a person tracker list. Identify people by LinkedIn URL, user ID, or slug. At least one
-    identifier is required per person.
+     Add people to a person tracker list. Identify each person by LinkedIn URL, user ID or slug, or by
+    Crunchbase person slug. At least one identifier is required per person.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -252,8 +252,8 @@ async def asyncio_detailed(
 ]:
     """Add people to tracker list
 
-     Add people to a person tracker list. Identify people by LinkedIn URL, user ID, or slug. At least one
-    identifier is required per person.
+     Add people to a person tracker list. Identify each person by LinkedIn URL, user ID or slug, or by
+    Crunchbase person slug. At least one identifier is required per person.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 
@@ -302,8 +302,8 @@ async def asyncio(
 ):
     """Add people to tracker list
 
-     Add people to a person tracker list. Identify people by LinkedIn URL, user ID, or slug. At least one
-    identifier is required per person.
+     Add people to a person tracker list. Identify each person by LinkedIn URL, user ID or slug, or by
+    Crunchbase person slug. At least one identifier is required per person.
 
     <span>⚡ <strong>Rate limit:</strong> 120 requests per 1 minute</span>
 

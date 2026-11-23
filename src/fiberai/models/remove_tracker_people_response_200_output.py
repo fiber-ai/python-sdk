@@ -20,7 +20,8 @@ class RemoveTrackerPeopleResponse200Output:
     """
     Attributes:
         removed (int): Number of people successfully deactivated.
-        not_found (int): Number of identifiers not found or already inactive.
+        not_found (int): Number of people that could not be removed: not found, already inactive, or not a valid
+            identifier.
         failed_identifiers (list[RemoveTrackerPeopleResponse200OutputFailedIdentifiersItem]): Details on identifiers
             that could not be removed.
     """

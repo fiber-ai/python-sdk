@@ -39,6 +39,9 @@ if TYPE_CHECKING:
     )
     from ..models.company_search_body_search_params_founded_on_type_0 import CompanySearchBodySearchParamsFoundedOnType0
     from ..models.company_search_body_search_params_founded_on_type_1 import CompanySearchBodySearchParamsFoundedOnType1
+    from ..models.company_search_body_search_params_funding_rounds_v2_type_0 import (
+        CompanySearchBodySearchParamsFundingRoundsV2Type0,
+    )
     from ..models.company_search_body_search_params_headquarters_country_code_type_0 import (
         CompanySearchBodySearchParamsHeadquartersCountryCodeType0,
     )
@@ -89,6 +92,7 @@ if TYPE_CHECKING:
     from ..models.company_search_body_search_params_revenue_ranges_usd_type_0 import (
         CompanySearchBodySearchParamsRevenueRangesUSDType0,
     )
+    from ..models.company_search_body_search_params_salaries_type_0 import CompanySearchBodySearchParamsSalariesType0
     from ..models.company_search_body_search_params_sort_type_0_item import CompanySearchBodySearchParamsSortType0Item
     from ..models.company_search_body_search_params_special_flags_type_0 import (
         CompanySearchBodySearchParamsSpecialFlagsType0,
@@ -105,6 +109,9 @@ if TYPE_CHECKING:
     from ..models.company_search_body_search_params_tlds_type_0 import CompanySearchBodySearchParamsTldsType0
     from ..models.company_search_body_search_params_total_funding_usd_type_0 import (
         CompanySearchBodySearchParamsTotalFundingUSDType0,
+    )
+    from ..models.company_search_body_search_params_vesting_schedule_type_0 import (
+        CompanySearchBodySearchParamsVestingScheduleType0,
     )
 
 
@@ -140,6 +147,8 @@ class CompanySearchBodySearchParams:
         employees (CompanySearchBodySearchParamsEmployeesType0 | None | Unset):
         naics_codes (CompanySearchBodySearchParamsNaicsCodesType0 | None | Unset):
         fortune_rankings (CompanySearchBodySearchParamsFortuneRankingsType0 | None | Unset):
+        vesting_schedule (CompanySearchBodySearchParamsVestingScheduleType0 | None | Unset):
+        salaries (CompanySearchBodySearchParamsSalariesType0 | None | Unset):
         job_postings_v2 (CompanySearchBodySearchParamsJobPostingsV2Type0 | None | Unset):
         job_posting_stats (CompanySearchBodySearchParamsJobPostingStatsType0 | None | Unset):
         office_locations_v2 (CompanySearchBodySearchParamsOfficeLocationsV2Type0 | None | Unset):
@@ -152,6 +161,7 @@ class CompanySearchBodySearchParams:
         crunchbase_slugs (list[str] | None | Unset):
         investors_v2 (CompanySearchBodySearchParamsInvestorsV2Type0 | None | Unset):
         technologies_v2 (CompanySearchBodySearchParamsTechnologiesV2Type0 | None | Unset):
+        funding_rounds_v2 (CompanySearchBodySearchParamsFundingRoundsV2Type0 | None | Unset):
         revenue_range_usd (CompanySearchBodySearchParamsRevenueRangeUSDType0 | None | Unset):
         revenue_ranges_usd (CompanySearchBodySearchParamsRevenueRangesUSDType0 | None | Unset):
         employee_trends_v2 (CompanySearchBodySearchParamsEmployeeTrendsV2Type0 | None | Unset):
@@ -159,8 +169,7 @@ class CompanySearchBodySearchParams:
         linkedin_industries (CompanySearchBodySearchParamsLinkedinIndustriesType0 | None | Unset): Filter companies by
             the industries they are tagged with on LinkedIn. To get the list of valid values, each with its company count,
             use the `getIndustries` endpoint (`GET /v1/enums/industries`), and hide values with very small counts from your
-            filter UI, since a value with only a handful of companies behind it is a no-op filter. Values must match the
-            enum exactly — a misspelled or retired value returns zero results with no error or warning. This filter matches
+            filter UI, since a value with only a handful of companies behind it is a no-op filter. This filter matches
             LinkedIn's own industry tags, which are narrow and granular. For broader matching use `industriesV2` (Fiber's
             standardized categories, listed as `fiberIndustries` in the same response) or `crunchbaseCategories` /
             `crunchbaseCategoryGroups` for Crunchbase's taxonomy — the three are separate classifications and are not
@@ -196,6 +205,8 @@ class CompanySearchBodySearchParams:
     employees: CompanySearchBodySearchParamsEmployeesType0 | None | Unset = UNSET
     naics_codes: CompanySearchBodySearchParamsNaicsCodesType0 | None | Unset = UNSET
     fortune_rankings: CompanySearchBodySearchParamsFortuneRankingsType0 | None | Unset = UNSET
+    vesting_schedule: CompanySearchBodySearchParamsVestingScheduleType0 | None | Unset = UNSET
+    salaries: CompanySearchBodySearchParamsSalariesType0 | None | Unset = UNSET
     job_postings_v2: CompanySearchBodySearchParamsJobPostingsV2Type0 | None | Unset = UNSET
     job_posting_stats: CompanySearchBodySearchParamsJobPostingStatsType0 | None | Unset = UNSET
     office_locations_v2: CompanySearchBodySearchParamsOfficeLocationsV2Type0 | None | Unset = UNSET
@@ -208,6 +219,7 @@ class CompanySearchBodySearchParams:
     crunchbase_slugs: list[str] | None | Unset = UNSET
     investors_v2: CompanySearchBodySearchParamsInvestorsV2Type0 | None | Unset = UNSET
     technologies_v2: CompanySearchBodySearchParamsTechnologiesV2Type0 | None | Unset = UNSET
+    funding_rounds_v2: CompanySearchBodySearchParamsFundingRoundsV2Type0 | None | Unset = UNSET
     revenue_range_usd: CompanySearchBodySearchParamsRevenueRangeUSDType0 | None | Unset = UNSET
     revenue_ranges_usd: CompanySearchBodySearchParamsRevenueRangesUSDType0 | None | Unset = UNSET
     employee_trends_v2: CompanySearchBodySearchParamsEmployeeTrendsV2Type0 | None | Unset = UNSET
@@ -252,6 +264,9 @@ class CompanySearchBodySearchParams:
         )
         from ..models.company_search_body_search_params_founded_on_type_1 import (
             CompanySearchBodySearchParamsFoundedOnType1,  # noqa: PLC0415
+        )
+        from ..models.company_search_body_search_params_funding_rounds_v2_type_0 import (
+            CompanySearchBodySearchParamsFundingRoundsV2Type0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_headquarters_country_code_type_0 import (
             CompanySearchBodySearchParamsHeadquartersCountryCodeType0,  # noqa: PLC0415
@@ -307,6 +322,9 @@ class CompanySearchBodySearchParams:
         from ..models.company_search_body_search_params_revenue_ranges_usd_type_0 import (
             CompanySearchBodySearchParamsRevenueRangesUSDType0,  # noqa: PLC0415
         )
+        from ..models.company_search_body_search_params_salaries_type_0 import (
+            CompanySearchBodySearchParamsSalariesType0,  # noqa: PLC0415
+        )
         from ..models.company_search_body_search_params_special_flags_type_0 import (
             CompanySearchBodySearchParamsSpecialFlagsType0,  # noqa: PLC0415
         )
@@ -322,6 +340,9 @@ class CompanySearchBodySearchParams:
         from ..models.company_search_body_search_params_tlds_type_0 import CompanySearchBodySearchParamsTldsType0  # noqa: PLC0415
         from ..models.company_search_body_search_params_total_funding_usd_type_0 import (
             CompanySearchBodySearchParamsTotalFundingUSDType0,  # noqa: PLC0415
+        )
+        from ..models.company_search_body_search_params_vesting_schedule_type_0 import (
+            CompanySearchBodySearchParamsVestingScheduleType0,  # noqa: PLC0415
         )
 
         exact_company_v2: dict[str, Any] | None | Unset
@@ -506,6 +527,22 @@ class CompanySearchBodySearchParams:
         else:
             fortune_rankings = self.fortune_rankings
 
+        vesting_schedule: dict[str, Any] | None | Unset
+        if isinstance(self.vesting_schedule, Unset):
+            vesting_schedule = UNSET
+        elif isinstance(self.vesting_schedule, CompanySearchBodySearchParamsVestingScheduleType0):
+            vesting_schedule = self.vesting_schedule.to_dict()
+        else:
+            vesting_schedule = self.vesting_schedule
+
+        salaries: dict[str, Any] | None | Unset
+        if isinstance(self.salaries, Unset):
+            salaries = UNSET
+        elif isinstance(self.salaries, CompanySearchBodySearchParamsSalariesType0):
+            salaries = self.salaries.to_dict()
+        else:
+            salaries = self.salaries
+
         job_postings_v2: dict[str, Any] | None | Unset
         if isinstance(self.job_postings_v2, Unset):
             job_postings_v2 = UNSET
@@ -602,6 +639,14 @@ class CompanySearchBodySearchParams:
             technologies_v2 = self.technologies_v2.to_dict()
         else:
             technologies_v2 = self.technologies_v2
+
+        funding_rounds_v2: dict[str, Any] | None | Unset
+        if isinstance(self.funding_rounds_v2, Unset):
+            funding_rounds_v2 = UNSET
+        elif isinstance(self.funding_rounds_v2, CompanySearchBodySearchParamsFundingRoundsV2Type0):
+            funding_rounds_v2 = self.funding_rounds_v2.to_dict()
+        else:
+            funding_rounds_v2 = self.funding_rounds_v2
 
         revenue_range_usd: dict[str, Any] | None | Unset
         if isinstance(self.revenue_range_usd, Unset):
@@ -702,6 +747,10 @@ class CompanySearchBodySearchParams:
             field_dict["naicsCodes"] = naics_codes
         if fortune_rankings is not UNSET:
             field_dict["fortuneRankings"] = fortune_rankings
+        if vesting_schedule is not UNSET:
+            field_dict["vestingSchedule"] = vesting_schedule
+        if salaries is not UNSET:
+            field_dict["salaries"] = salaries
         if job_postings_v2 is not UNSET:
             field_dict["jobPostingsV2"] = job_postings_v2
         if job_posting_stats is not UNSET:
@@ -726,6 +775,8 @@ class CompanySearchBodySearchParams:
             field_dict["investorsV2"] = investors_v2
         if technologies_v2 is not UNSET:
             field_dict["technologiesV2"] = technologies_v2
+        if funding_rounds_v2 is not UNSET:
+            field_dict["fundingRoundsV2"] = funding_rounds_v2
         if revenue_range_usd is not UNSET:
             field_dict["revenueRangeUSD"] = revenue_range_usd
         if revenue_ranges_usd is not UNSET:
@@ -778,6 +829,9 @@ class CompanySearchBodySearchParams:
         )
         from ..models.company_search_body_search_params_founded_on_type_1 import (
             CompanySearchBodySearchParamsFoundedOnType1,  # noqa: PLC0415
+        )
+        from ..models.company_search_body_search_params_funding_rounds_v2_type_0 import (
+            CompanySearchBodySearchParamsFundingRoundsV2Type0,  # noqa: PLC0415
         )
         from ..models.company_search_body_search_params_headquarters_country_code_type_0 import (
             CompanySearchBodySearchParamsHeadquartersCountryCodeType0,  # noqa: PLC0415
@@ -833,6 +887,9 @@ class CompanySearchBodySearchParams:
         from ..models.company_search_body_search_params_revenue_ranges_usd_type_0 import (
             CompanySearchBodySearchParamsRevenueRangesUSDType0,  # noqa: PLC0415
         )
+        from ..models.company_search_body_search_params_salaries_type_0 import (
+            CompanySearchBodySearchParamsSalariesType0,  # noqa: PLC0415
+        )
         from ..models.company_search_body_search_params_sort_type_0_item import (
             CompanySearchBodySearchParamsSortType0Item,  # noqa: PLC0415
         )
@@ -851,6 +908,9 @@ class CompanySearchBodySearchParams:
         from ..models.company_search_body_search_params_tlds_type_0 import CompanySearchBodySearchParamsTldsType0  # noqa: PLC0415
         from ..models.company_search_body_search_params_total_funding_usd_type_0 import (
             CompanySearchBodySearchParamsTotalFundingUSDType0,  # noqa: PLC0415
+        )
+        from ..models.company_search_body_search_params_vesting_schedule_type_0 import (
+            CompanySearchBodySearchParamsVestingScheduleType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -1276,6 +1336,40 @@ class CompanySearchBodySearchParams:
 
         fortune_rankings = _parse_fortune_rankings(d.pop("fortuneRankings", UNSET))
 
+        def _parse_vesting_schedule(data: object) -> CompanySearchBodySearchParamsVestingScheduleType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                vesting_schedule_type_0 = CompanySearchBodySearchParamsVestingScheduleType0.from_dict(data)
+
+                return vesting_schedule_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CompanySearchBodySearchParamsVestingScheduleType0 | None | Unset, data)
+
+        vesting_schedule = _parse_vesting_schedule(d.pop("vestingSchedule", UNSET))
+
+        def _parse_salaries(data: object) -> CompanySearchBodySearchParamsSalariesType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                salaries_type_0 = CompanySearchBodySearchParamsSalariesType0.from_dict(data)
+
+                return salaries_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CompanySearchBodySearchParamsSalariesType0 | None | Unset, data)
+
+        salaries = _parse_salaries(d.pop("salaries", UNSET))
+
         def _parse_job_postings_v2(data: object) -> CompanySearchBodySearchParamsJobPostingsV2Type0 | None | Unset:
             if data is None:
                 return data
@@ -1488,6 +1582,23 @@ class CompanySearchBodySearchParams:
 
         technologies_v2 = _parse_technologies_v2(d.pop("technologiesV2", UNSET))
 
+        def _parse_funding_rounds_v2(data: object) -> CompanySearchBodySearchParamsFundingRoundsV2Type0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                funding_rounds_v2_type_0 = CompanySearchBodySearchParamsFundingRoundsV2Type0.from_dict(data)
+
+                return funding_rounds_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CompanySearchBodySearchParamsFundingRoundsV2Type0 | None | Unset, data)
+
+        funding_rounds_v2 = _parse_funding_rounds_v2(d.pop("fundingRoundsV2", UNSET))
+
         def _parse_revenue_range_usd(data: object) -> CompanySearchBodySearchParamsRevenueRangeUSDType0 | None | Unset:
             if data is None:
                 return data
@@ -1624,6 +1735,8 @@ class CompanySearchBodySearchParams:
             employees=employees,
             naics_codes=naics_codes,
             fortune_rankings=fortune_rankings,
+            vesting_schedule=vesting_schedule,
+            salaries=salaries,
             job_postings_v2=job_postings_v2,
             job_posting_stats=job_posting_stats,
             office_locations_v2=office_locations_v2,
@@ -1636,6 +1749,7 @@ class CompanySearchBodySearchParams:
             crunchbase_slugs=crunchbase_slugs,
             investors_v2=investors_v2,
             technologies_v2=technologies_v2,
+            funding_rounds_v2=funding_rounds_v2,
             revenue_range_usd=revenue_range_usd,
             revenue_ranges_usd=revenue_ranges_usd,
             employee_trends_v2=employee_trends_v2,

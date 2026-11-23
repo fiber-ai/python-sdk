@@ -22,7 +22,7 @@ class AddTrackerCompaniesBody:
     Attributes:
         api_key (str): Your Fiber API key
         companies (list[AddTrackerCompaniesBodyCompaniesItem]): Companies to add. At least one identifier required per
-            company.
+            company. Up to 10,000 per call.
         initial_signals (AddTrackerCompaniesBodyInitialSignalsType0 | None | Unset): When provided, generates signals
             immediately for recent events (funding rounds, news, job postings, social posts) without waiting for the first
             tracking cycle. Only certain rule types support initial signals.

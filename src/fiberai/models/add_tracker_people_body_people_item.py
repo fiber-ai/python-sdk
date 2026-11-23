@@ -20,11 +20,15 @@ class AddTrackerPeopleBodyPeopleItem:
             profile URL — retrieve it from a live enrichment lookup. Digits only.
         linkedin_slug (None | str | Unset): The handle in a profile URL — e.g. `williamhgates` in
             https://www.linkedin.com/in/williamhgates/.
+        crunchbase_slug (None | str | Unset): The person's unique identifier from their Crunchbase URL — e.g. `bill-
+            gates` in https://www.crunchbase.com/person/bill-gates. The full URL is accepted too. When a LinkedIn identifier
+            is also given, the LinkedIn identifier decides who is tracked.
     """
 
     linkedin_url: None | str | Unset = UNSET
     linkedin_user_id: None | str | Unset = UNSET
     linkedin_slug: None | str | Unset = UNSET
+    crunchbase_slug: None | str | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -46,6 +50,12 @@ class AddTrackerPeopleBodyPeopleItem:
         else:
             linkedin_slug = self.linkedin_slug
 
+        crunchbase_slug: None | str | Unset
+        if isinstance(self.crunchbase_slug, Unset):
+            crunchbase_slug = UNSET
+        else:
+            crunchbase_slug = self.crunchbase_slug
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -55,6 +65,8 @@ class AddTrackerPeopleBodyPeopleItem:
             field_dict["linkedinUserId"] = linkedin_user_id
         if linkedin_slug is not UNSET:
             field_dict["linkedinSlug"] = linkedin_slug
+        if crunchbase_slug is not UNSET:
+            field_dict["crunchbaseSlug"] = crunchbase_slug
 
         return field_dict
 
@@ -89,10 +101,20 @@ class AddTrackerPeopleBodyPeopleItem:
 
         linkedin_slug = _parse_linkedin_slug(d.pop("linkedinSlug", UNSET))
 
+        def _parse_crunchbase_slug(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        crunchbase_slug = _parse_crunchbase_slug(d.pop("crunchbaseSlug", UNSET))
+
         add_tracker_people_body_people_item = cls(
             linkedin_url=linkedin_url,
             linkedin_user_id=linkedin_user_id,
             linkedin_slug=linkedin_slug,
+            crunchbase_slug=crunchbase_slug,
         )
 
         add_tracker_people_body_people_item.additional_properties = d

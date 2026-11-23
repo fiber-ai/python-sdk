@@ -8,6 +8,7 @@ class PaginatedCombinedSearchBodyProfileConfigType0SearchParamsEducationType0All
     ASSOCIATE = "Associate"
     BACHELOR = "Bachelor"
     BUSINESS = "Business"
+    CERTIFICATE = "Certificate"
     DENTISTRY = "Dentistry"
     DIVINITY = "Divinity"
     DOCTORATE = "Doctorate"

@@ -15,6 +15,9 @@ if TYPE_CHECKING:
     from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_articles_type_0_item import (
         ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileArticlesType0Item,
     )
+    from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_awards_type_0_item import (
+        ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileAwardsType0Item,
+    )
     from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_certifications_type_0_item import (
         ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCertificationsType0Item,
     )
@@ -60,6 +63,9 @@ if TYPE_CHECKING:
     from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_tenures_type_0_item import (
         ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileTenuresType0Item,
     )
+    from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_test_scores_type_0_item import (
+        ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileTestScoresType0Item,
+    )
     from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_verifications_type_0 import (
         ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileVerificationsType0,
     )
@@ -77,6 +83,7 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
     Attributes:
         primary_slug (str):
         articles (list[ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileArticlesType0Item] | None | Unset):
+        awards (list[ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileAwardsType0Item] | None | Unset):
         certifications (list[ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCertificationsType0Item] | None |
             Unset):
         connection_count (float | None | Unset):
@@ -102,6 +109,8 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
         skills (list[str] | None | Unset):
         slugs (list[str] | None | Unset):
         summary (None | str | Unset):
+        test_scores (list[ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileTestScoresType0Item] | None |
+            Unset):
         url (None | str | Unset):
         user_id (None | str | Unset):
         volunteering (list[ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileVolunteeringType0Item] | None |
@@ -121,6 +130,7 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
         is_verified (bool | None | Unset):
         verifications (None | ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileVerificationsType0 | Unset):
         is_top_voice (bool | None | Unset):
+        pronouns (None | str | Unset):
         current_job (None | ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCurrentJobType0 | Unset):
         custom_data (None | ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCustomDataType0 | Unset):
         relevance_score (float | None | Unset):
@@ -141,6 +151,7 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
 
     primary_slug: str
     articles: list[ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileArticlesType0Item] | None | Unset = UNSET
+    awards: list[ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileAwardsType0Item] | None | Unset = UNSET
     certifications: (
         list[ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCertificationsType0Item] | None | Unset
     ) = UNSET
@@ -170,6 +181,9 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
     skills: list[str] | None | Unset = UNSET
     slugs: list[str] | None | Unset = UNSET
     summary: None | str | Unset = UNSET
+    test_scores: list[ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileTestScoresType0Item] | None | Unset = (
+        UNSET
+    )
     url: None | str | Unset = UNSET
     user_id: None | str | Unset = UNSET
     volunteering: (
@@ -191,6 +205,7 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
     is_verified: bool | None | Unset = UNSET
     verifications: None | ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileVerificationsType0 | Unset = UNSET
     is_top_voice: bool | None | Unset = UNSET
+    pronouns: None | str | Unset = UNSET
     current_job: None | ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCurrentJobType0 | Unset = UNSET
     custom_data: None | ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCustomDataType0 | Unset = UNSET
     relevance_score: float | None | Unset = UNSET
@@ -237,6 +252,18 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
 
         else:
             articles = self.articles
+
+        awards: list[dict[str, Any]] | None | Unset
+        if isinstance(self.awards, Unset):
+            awards = UNSET
+        elif isinstance(self.awards, list):
+            awards = []
+            for awards_type_0_item_data in self.awards:
+                awards_type_0_item = awards_type_0_item_data.to_dict()
+                awards.append(awards_type_0_item)
+
+        else:
+            awards = self.awards
 
         certifications: list[dict[str, Any]] | None | Unset
         if isinstance(self.certifications, Unset):
@@ -419,6 +446,18 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
         else:
             summary = self.summary
 
+        test_scores: list[dict[str, Any]] | None | Unset
+        if isinstance(self.test_scores, Unset):
+            test_scores = UNSET
+        elif isinstance(self.test_scores, list):
+            test_scores = []
+            for test_scores_type_0_item_data in self.test_scores:
+                test_scores_type_0_item = test_scores_type_0_item_data.to_dict()
+                test_scores.append(test_scores_type_0_item)
+
+        else:
+            test_scores = self.test_scores
+
         url: None | str | Unset
         if isinstance(self.url, Unset):
             url = UNSET
@@ -555,6 +594,12 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
         else:
             is_top_voice = self.is_top_voice
 
+        pronouns: None | str | Unset
+        if isinstance(self.pronouns, Unset):
+            pronouns = UNSET
+        else:
+            pronouns = self.pronouns
+
         current_job: dict[str, Any] | None | Unset
         if isinstance(self.current_job, Unset):
             current_job = UNSET
@@ -664,6 +709,8 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
         )
         if articles is not UNSET:
             field_dict["articles"] = articles
+        if awards is not UNSET:
+            field_dict["awards"] = awards
         if certifications is not UNSET:
             field_dict["certifications"] = certifications
         if connection_count is not UNSET:
@@ -706,6 +753,8 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
             field_dict["slugs"] = slugs
         if summary is not UNSET:
             field_dict["summary"] = summary
+        if test_scores is not UNSET:
+            field_dict["test_scores"] = test_scores
         if url is not UNSET:
             field_dict["url"] = url
         if user_id is not UNSET:
@@ -740,6 +789,8 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
             field_dict["verifications"] = verifications
         if is_top_voice is not UNSET:
             field_dict["is_top_voice"] = is_top_voice
+        if pronouns is not UNSET:
+            field_dict["pronouns"] = pronouns
         if current_job is not UNSET:
             field_dict["current_job"] = current_job
         if custom_data is not UNSET:
@@ -773,6 +824,9 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_articles_type_0_item import (
             ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileArticlesType0Item,  # noqa: PLC0415
+        )
+        from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_awards_type_0_item import (
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileAwardsType0Item,  # noqa: PLC0415
         )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_certifications_type_0_item import (
             ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCertificationsType0Item,  # noqa: PLC0415
@@ -819,6 +873,9 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_tenures_type_0_item import (
             ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileTenuresType0Item,  # noqa: PLC0415
         )
+        from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_test_scores_type_0_item import (
+            ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileTestScoresType0Item,  # noqa: PLC0415
+        )
         from ..models.profile_live_enrich_response_200_profile_found_and_enriched_profile_verifications_type_0 import (
             ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileVerificationsType0,  # noqa: PLC0415
         )
@@ -858,6 +915,36 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
             )
 
         articles = _parse_articles(d.pop("articles", UNSET))
+
+        def _parse_awards(
+            data: object,
+        ) -> list[ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileAwardsType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                awards_type_0 = []
+                _awards_type_0 = data
+                for awards_type_0_item_data in _awards_type_0:
+                    awards_type_0_item = (
+                        ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileAwardsType0Item.from_dict(
+                            awards_type_0_item_data
+                        )
+                    )
+
+                    awards_type_0.append(awards_type_0_item)
+
+                return awards_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                list[ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileAwardsType0Item] | None | Unset, data
+            )
+
+        awards = _parse_awards(d.pop("awards", UNSET))
 
         def _parse_certifications(
             data: object,
@@ -1236,6 +1323,36 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
 
         summary = _parse_summary(d.pop("summary", UNSET))
 
+        def _parse_test_scores(
+            data: object,
+        ) -> list[ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileTestScoresType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                test_scores_type_0 = []
+                _test_scores_type_0 = data
+                for test_scores_type_0_item_data in _test_scores_type_0:
+                    test_scores_type_0_item = (
+                        ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileTestScoresType0Item.from_dict(
+                            test_scores_type_0_item_data
+                        )
+                    )
+
+                    test_scores_type_0.append(test_scores_type_0_item)
+
+                return test_scores_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                list[ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileTestScoresType0Item] | None | Unset, data
+            )
+
+        test_scores = _parse_test_scores(d.pop("test_scores", UNSET))
+
         def _parse_url(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -1503,6 +1620,15 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
 
         is_top_voice = _parse_is_top_voice(d.pop("is_top_voice", UNSET))
 
+        def _parse_pronouns(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        pronouns = _parse_pronouns(d.pop("pronouns", UNSET))
+
         def _parse_current_job(
             data: object,
         ) -> None | ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfileCurrentJobType0 | Unset:
@@ -1718,6 +1844,7 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
         profile_live_enrich_response_200_profile_found_and_enriched_profile = cls(
             primary_slug=primary_slug,
             articles=articles,
+            awards=awards,
             certifications=certifications,
             connection_count=connection_count,
             courses=courses,
@@ -1739,6 +1866,7 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
             skills=skills,
             slugs=slugs,
             summary=summary,
+            test_scores=test_scores,
             url=url,
             user_id=user_id,
             volunteering=volunteering,
@@ -1756,6 +1884,7 @@ class ProfileLiveEnrichResponse200ProfileFoundAndEnrichedProfile:
             is_verified=is_verified,
             verifications=verifications,
             is_top_voice=is_top_voice,
+            pronouns=pronouns,
             current_job=current_job,
             custom_data=custom_data,
             relevance_score=relevance_score,

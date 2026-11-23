@@ -24,6 +24,9 @@ if TYPE_CHECKING:
     from ..models.get_scouting_report_response_200_output_report_funding_info_type_0 import (
         GetScoutingReportResponse200OutputReportFundingInfoType0,
     )
+    from ..models.get_scouting_report_response_200_output_report_headquarters_location_type_0 import (
+        GetScoutingReportResponse200OutputReportHeadquartersLocationType0,
+    )
     from ..models.get_scouting_report_response_200_output_report_historical_headcount_type_0 import (
         GetScoutingReportResponse200OutputReportHistoricalHeadcountType0,
     )
@@ -64,6 +67,8 @@ class GetScoutingReportResponse200OutputReport:
         company_profile (GetScoutingReportResponse200OutputReportCompanyProfileType0 | None):
         office_locations (list[GetScoutingReportResponse200OutputReportOfficeLocationsItem]): Company office locations
             with structured address details and coordinates. Empty when no office data is available.
+        headquarters_location (GetScoutingReportResponse200OutputReportHeadquartersLocationType0 | None): The company's
+            headquarters: the geocoded, primary-marked office location. Null when no primary location is known.
         about_description (None | str | Unset):
         funding_info (GetScoutingReportResponse200OutputReportFundingInfoType0 | None | Unset):
     """
@@ -79,6 +84,7 @@ class GetScoutingReportResponse200OutputReport:
     company_summary: None | str
     company_profile: GetScoutingReportResponse200OutputReportCompanyProfileType0 | None
     office_locations: list[GetScoutingReportResponse200OutputReportOfficeLocationsItem]
+    headquarters_location: GetScoutingReportResponse200OutputReportHeadquartersLocationType0 | None
     about_description: None | str | Unset = UNSET
     funding_info: GetScoutingReportResponse200OutputReportFundingInfoType0 | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
@@ -89,6 +95,9 @@ class GetScoutingReportResponse200OutputReport:
         )
         from ..models.get_scouting_report_response_200_output_report_funding_info_type_0 import (
             GetScoutingReportResponse200OutputReportFundingInfoType0,  # noqa: PLC0415
+        )
+        from ..models.get_scouting_report_response_200_output_report_headquarters_location_type_0 import (
+            GetScoutingReportResponse200OutputReportHeadquartersLocationType0,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_output_report_historical_headcount_type_0 import (
             GetScoutingReportResponse200OutputReportHistoricalHeadcountType0,  # noqa: PLC0415
@@ -149,6 +158,12 @@ class GetScoutingReportResponse200OutputReport:
             office_locations_item = office_locations_item_data.to_dict()
             office_locations.append(office_locations_item)
 
+        headquarters_location: dict[str, Any] | None
+        if isinstance(self.headquarters_location, GetScoutingReportResponse200OutputReportHeadquartersLocationType0):
+            headquarters_location = self.headquarters_location.to_dict()
+        else:
+            headquarters_location = self.headquarters_location
+
         about_description: None | str | Unset
         if isinstance(self.about_description, Unset):
             about_description = UNSET
@@ -178,6 +193,7 @@ class GetScoutingReportResponse200OutputReport:
                 "companySummary": company_summary,
                 "companyProfile": company_profile,
                 "officeLocations": office_locations,
+                "headquartersLocation": headquarters_location,
             }
         )
         if about_description is not UNSET:
@@ -203,6 +219,9 @@ class GetScoutingReportResponse200OutputReport:
         )
         from ..models.get_scouting_report_response_200_output_report_funding_info_type_0 import (
             GetScoutingReportResponse200OutputReportFundingInfoType0,  # noqa: PLC0415
+        )
+        from ..models.get_scouting_report_response_200_output_report_headquarters_location_type_0 import (
+            GetScoutingReportResponse200OutputReportHeadquartersLocationType0,  # noqa: PLC0415
         )
         from ..models.get_scouting_report_response_200_output_report_historical_headcount_type_0 import (
             GetScoutingReportResponse200OutputReportHistoricalHeadcountType0,  # noqa: PLC0415
@@ -325,6 +344,25 @@ class GetScoutingReportResponse200OutputReport:
 
             office_locations.append(office_locations_item)
 
+        def _parse_headquarters_location(
+            data: object,
+        ) -> GetScoutingReportResponse200OutputReportHeadquartersLocationType0 | None:
+            if data is None:
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                headquarters_location_type_0 = (
+                    GetScoutingReportResponse200OutputReportHeadquartersLocationType0.from_dict(data)
+                )
+
+                return headquarters_location_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(GetScoutingReportResponse200OutputReportHeadquartersLocationType0 | None, data)
+
+        headquarters_location = _parse_headquarters_location(d.pop("headquartersLocation"))
+
         def _parse_about_description(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -365,6 +403,7 @@ class GetScoutingReportResponse200OutputReport:
             company_summary=company_summary,
             company_profile=company_profile,
             office_locations=office_locations,
+            headquarters_location=headquarters_location,
             about_description=about_description,
             funding_info=funding_info,
         )

@@ -18,7 +18,7 @@ class RemoveTrackerPeopleBody:
     """
     Attributes:
         people (list[RemoveTrackerPeopleBodyPeopleItem]): People to remove. Uses the same identifier format as add-
-            people.
+            people. Up to 10,000 per call.
     """
 
     people: list[RemoveTrackerPeopleBodyPeopleItem]

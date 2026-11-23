@@ -43,6 +43,9 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_company_reviews import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviews,
     )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_company_social_profile_lookup import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanySocialProfileLookup,
+    )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_domain_lookup_agent import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0DomainLookupAgent,
     )
@@ -184,6 +187,9 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_repo_contributors import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoContributors,
     )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_repo_forkers import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoForkers,
+    )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_repo_search import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoSearch,
     )
@@ -216,6 +222,21 @@ if TYPE_CHECKING:
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_instant_phone_reveal import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0InstantPhoneReveal,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_intensive_all_email_reveal import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensiveAllEmailReveal,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_intensive_combined_reveal import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensiveCombinedReveal,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_intensive_personal_email_reveal import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensivePersonalEmailReveal,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_intensive_phone_reveal import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensivePhoneReveal,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_intensive_work_email_reveal import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensiveWorkEmailReveal,
     )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_job_title_rewrite import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0JobTitleRewrite,
@@ -400,6 +421,21 @@ if TYPE_CHECKING:
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_track_persons_job_changes import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TrackPersonsJobChanges,
     )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_ultimate_all_email_reveal import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateAllEmailReveal,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_ultimate_combined_reveal import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateCombinedReveal,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_ultimate_personal_email_reveal import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimatePersonalEmailReveal,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_ultimate_phone_reveal import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimatePhoneReveal,
+    )
+    from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_ultimate_work_email_reveal import (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateWorkEmailReveal,
+    )
     from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_validate_email import (
         GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ValidateEmail,
     )
@@ -525,6 +561,19 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ExhaustiveAllEmailReveal):
         exhaustive_phone_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ExhaustivePhoneReveal):
         exhaustive_combined_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ExhaustiveCombinedReveal):
+        intensive_work_email_reveal
+            (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensiveWorkEmailReveal):
+        intensive_personal_email_reveal
+            (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensivePersonalEmailReveal):
+        intensive_all_email_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensiveAllEmailReveal):
+        intensive_phone_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensivePhoneReveal):
+        intensive_combined_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensiveCombinedReveal):
+        ultimate_work_email_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateWorkEmailReveal):
+        ultimate_personal_email_reveal
+            (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimatePersonalEmailReveal):
+        ultimate_all_email_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateAllEmailReveal):
+        ultimate_phone_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimatePhoneReveal):
+        ultimate_combined_reveal (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateCombinedReveal):
         get_company_revenue (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyRevenue):
         multi_source_company_search
             (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0MultiSourceCompanySearch):
@@ -597,6 +646,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         github_user_profile (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubUserProfile):
         github_user_repo_activity (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubUserRepoActivity):
         github_repo_search (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoSearch):
+        github_repo_forkers (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoForkers):
+        company_social_profile_lookup
+            (GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanySocialProfileLookup):
     """
 
     get_company_from_db: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyFromDb
@@ -683,6 +735,20 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
     exhaustive_all_email_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ExhaustiveAllEmailReveal
     exhaustive_phone_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ExhaustivePhoneReveal
     exhaustive_combined_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ExhaustiveCombinedReveal
+    intensive_work_email_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensiveWorkEmailReveal
+    intensive_personal_email_reveal: (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensivePersonalEmailReveal
+    )
+    intensive_all_email_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensiveAllEmailReveal
+    intensive_phone_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensivePhoneReveal
+    intensive_combined_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensiveCombinedReveal
+    ultimate_work_email_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateWorkEmailReveal
+    ultimate_personal_email_reveal: (
+        GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimatePersonalEmailReveal
+    )
+    ultimate_all_email_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateAllEmailReveal
+    ultimate_phone_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimatePhoneReveal
+    ultimate_combined_reveal: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateCombinedReveal
     get_company_revenue: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyRevenue
     multi_source_company_search: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0MultiSourceCompanySearch
     multi_source_person_search: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0MultiSourcePersonSearch
@@ -752,9 +818,32 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
     github_user_profile: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubUserProfile
     github_user_repo_activity: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubUserRepoActivity
     github_repo_search: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoSearch
+    github_repo_forkers: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoForkers
+    company_social_profile_lookup: GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanySocialProfileLookup
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_premium_phone_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PremiumPhoneReveal,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_premium_work_email_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PremiumWorkEmailReveal,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_preview_company_from_db import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PreviewCompanyFromDb,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_preview_person_from_db import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0PreviewPersonFromDb,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_real_estate_search import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0RealEstateSearch,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_reverse_phone_lookup import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ReversePhoneLookup,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_sales_nav_company_scrape import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SalesNavCompanyScrape,
+        )  # noqa: PLC0415
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_sales_nav_person_scrape import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0SalesNavPersonScrape,
         )  # noqa: PLC0415
@@ -847,6 +936,21 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )  # noqa: PLC0415
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_track_persons_job_changes import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TrackPersonsJobChanges,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_ultimate_all_email_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateAllEmailReveal,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_ultimate_combined_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateCombinedReveal,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_ultimate_personal_email_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimatePersonalEmailReveal,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_ultimate_phone_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimatePhoneReveal,
+        )  # noqa: PLC0415
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_ultimate_work_email_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateWorkEmailReveal,
         )  # noqa: PLC0415
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_validate_email import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ValidateEmail,
@@ -1023,6 +1127,26 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
 
         exhaustive_combined_reveal = self.exhaustive_combined_reveal.to_dict()
 
+        intensive_work_email_reveal = self.intensive_work_email_reveal.to_dict()
+
+        intensive_personal_email_reveal = self.intensive_personal_email_reveal.to_dict()
+
+        intensive_all_email_reveal = self.intensive_all_email_reveal.to_dict()
+
+        intensive_phone_reveal = self.intensive_phone_reveal.to_dict()
+
+        intensive_combined_reveal = self.intensive_combined_reveal.to_dict()
+
+        ultimate_work_email_reveal = self.ultimate_work_email_reveal.to_dict()
+
+        ultimate_personal_email_reveal = self.ultimate_personal_email_reveal.to_dict()
+
+        ultimate_all_email_reveal = self.ultimate_all_email_reveal.to_dict()
+
+        ultimate_phone_reveal = self.ultimate_phone_reveal.to_dict()
+
+        ultimate_combined_reveal = self.ultimate_combined_reveal.to_dict()
+
         get_company_revenue = self.get_company_revenue.to_dict()
 
         multi_source_company_search = self.multi_source_company_search.to_dict()
@@ -1161,6 +1285,10 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
 
         github_repo_search = self.github_repo_search.to_dict()
 
+        github_repo_forkers = self.github_repo_forkers.to_dict()
+
+        company_social_profile_lookup = self.company_social_profile_lookup.to_dict()
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -1237,6 +1365,16 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
                 "exhaustiveAllEmailReveal": exhaustive_all_email_reveal,
                 "exhaustivePhoneReveal": exhaustive_phone_reveal,
                 "exhaustiveCombinedReveal": exhaustive_combined_reveal,
+                "intensiveWorkEmailReveal": intensive_work_email_reveal,
+                "intensivePersonalEmailReveal": intensive_personal_email_reveal,
+                "intensiveAllEmailReveal": intensive_all_email_reveal,
+                "intensivePhoneReveal": intensive_phone_reveal,
+                "intensiveCombinedReveal": intensive_combined_reveal,
+                "ultimateWorkEmailReveal": ultimate_work_email_reveal,
+                "ultimatePersonalEmailReveal": ultimate_personal_email_reveal,
+                "ultimateAllEmailReveal": ultimate_all_email_reveal,
+                "ultimatePhoneReveal": ultimate_phone_reveal,
+                "ultimateCombinedReveal": ultimate_combined_reveal,
                 "getCompanyRevenue": get_company_revenue,
                 "multiSourceCompanySearch": multi_source_company_search,
                 "multiSourcePersonSearch": multi_source_person_search,
@@ -1306,6 +1444,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
                 "githubUserProfile": github_user_profile,
                 "githubUserRepoActivity": github_user_repo_activity,
                 "githubRepoSearch": github_repo_search,
+                "githubRepoForkers": github_repo_forkers,
+                "companySocialProfileLookup": company_social_profile_lookup,
             }
         )
 
@@ -1348,6 +1488,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_company_reviews import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanyReviews,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_company_social_profile_lookup import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanySocialProfileLookup,  # noqa: PLC0415
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_domain_lookup_agent import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0DomainLookupAgent,  # noqa: PLC0415
@@ -1490,6 +1633,9 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_repo_contributors import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoContributors,  # noqa: PLC0415
         )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_repo_forkers import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoForkers,  # noqa: PLC0415
+        )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_github_repo_search import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoSearch,  # noqa: PLC0415
         )
@@ -1522,6 +1668,21 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_instant_phone_reveal import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0InstantPhoneReveal,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_intensive_all_email_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensiveAllEmailReveal,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_intensive_combined_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensiveCombinedReveal,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_intensive_personal_email_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensivePersonalEmailReveal,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_intensive_phone_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensivePhoneReveal,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_intensive_work_email_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensiveWorkEmailReveal,  # noqa: PLC0415
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_job_title_rewrite import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0JobTitleRewrite,  # noqa: PLC0415
@@ -1705,6 +1866,21 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_track_persons_job_changes import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0TrackPersonsJobChanges,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_ultimate_all_email_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateAllEmailReveal,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_ultimate_combined_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateCombinedReveal,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_ultimate_personal_email_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimatePersonalEmailReveal,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_ultimate_phone_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimatePhoneReveal,  # noqa: PLC0415
+        )
+        from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_ultimate_work_email_reveal import (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateWorkEmailReveal,  # noqa: PLC0415
         )
         from ..models.get_org_credits_response_200_output_item_credits_per_operation_type_0_validate_email import (
             GetOrgCreditsResponse200OutputItemCreditsPerOperationType0ValidateEmail,  # noqa: PLC0415
@@ -2102,6 +2278,64 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             )
         )
 
+        intensive_work_email_reveal = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensiveWorkEmailReveal.from_dict(
+                d.pop("intensiveWorkEmailReveal")
+            )
+        )
+
+        intensive_personal_email_reveal = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensivePersonalEmailReveal.from_dict(
+                d.pop("intensivePersonalEmailReveal")
+            )
+        )
+
+        intensive_all_email_reveal = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensiveAllEmailReveal.from_dict(
+                d.pop("intensiveAllEmailReveal")
+            )
+        )
+
+        intensive_phone_reveal = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensivePhoneReveal.from_dict(
+                d.pop("intensivePhoneReveal")
+            )
+        )
+
+        intensive_combined_reveal = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0IntensiveCombinedReveal.from_dict(
+                d.pop("intensiveCombinedReveal")
+            )
+        )
+
+        ultimate_work_email_reveal = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateWorkEmailReveal.from_dict(
+                d.pop("ultimateWorkEmailReveal")
+            )
+        )
+
+        ultimate_personal_email_reveal = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimatePersonalEmailReveal.from_dict(
+                d.pop("ultimatePersonalEmailReveal")
+            )
+        )
+
+        ultimate_all_email_reveal = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateAllEmailReveal.from_dict(
+                d.pop("ultimateAllEmailReveal")
+            )
+        )
+
+        ultimate_phone_reveal = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimatePhoneReveal.from_dict(
+            d.pop("ultimatePhoneReveal")
+        )
+
+        ultimate_combined_reveal = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0UltimateCombinedReveal.from_dict(
+                d.pop("ultimateCombinedReveal")
+            )
+        )
+
         get_company_revenue = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GetCompanyRevenue.from_dict(
             d.pop("getCompanyRevenue")
         )
@@ -2410,6 +2644,16 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             d.pop("githubRepoSearch")
         )
 
+        github_repo_forkers = GetOrgCreditsResponse200OutputItemCreditsPerOperationType0GithubRepoForkers.from_dict(
+            d.pop("githubRepoForkers")
+        )
+
+        company_social_profile_lookup = (
+            GetOrgCreditsResponse200OutputItemCreditsPerOperationType0CompanySocialProfileLookup.from_dict(
+                d.pop("companySocialProfileLookup")
+            )
+        )
+
         get_org_credits_response_200_output_item_credits_per_operation_type_0 = cls(
             get_company_from_db=get_company_from_db,
             get_person_from_db=get_person_from_db,
@@ -2483,6 +2727,16 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             exhaustive_all_email_reveal=exhaustive_all_email_reveal,
             exhaustive_phone_reveal=exhaustive_phone_reveal,
             exhaustive_combined_reveal=exhaustive_combined_reveal,
+            intensive_work_email_reveal=intensive_work_email_reveal,
+            intensive_personal_email_reveal=intensive_personal_email_reveal,
+            intensive_all_email_reveal=intensive_all_email_reveal,
+            intensive_phone_reveal=intensive_phone_reveal,
+            intensive_combined_reveal=intensive_combined_reveal,
+            ultimate_work_email_reveal=ultimate_work_email_reveal,
+            ultimate_personal_email_reveal=ultimate_personal_email_reveal,
+            ultimate_all_email_reveal=ultimate_all_email_reveal,
+            ultimate_phone_reveal=ultimate_phone_reveal,
+            ultimate_combined_reveal=ultimate_combined_reveal,
             get_company_revenue=get_company_revenue,
             multi_source_company_search=multi_source_company_search,
             multi_source_person_search=multi_source_person_search,
@@ -2552,6 +2806,8 @@ class GetOrgCreditsResponse200OutputItemCreditsPerOperationType0:
             github_user_profile=github_user_profile,
             github_user_repo_activity=github_user_repo_activity,
             github_repo_search=github_repo_search,
+            github_repo_forkers=github_repo_forkers,
+            company_social_profile_lookup=company_social_profile_lookup,
         )
 
         get_org_credits_response_200_output_item_credits_per_operation_type_0.additional_properties = d

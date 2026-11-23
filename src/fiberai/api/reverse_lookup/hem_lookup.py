@@ -152,8 +152,7 @@ def sync_detailed(
      Given up to 100 hashed email addresses (HEMs), return the address each one belongs to, plus the
     LinkedIn identifiers we have for that person.
 
-    The response is one result per supplied hash, in the same order, each tagged `found`, `not_found`,
-    or `rejected`.
+    The response is one result per supplied hash, in the same order.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
@@ -204,8 +203,7 @@ def sync(
      Given up to 100 hashed email addresses (HEMs), return the address each one belongs to, plus the
     LinkedIn identifiers we have for that person.
 
-    The response is one result per supplied hash, in the same order, each tagged `found`, `not_found`,
-    or `rejected`.
+    The response is one result per supplied hash, in the same order.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
@@ -250,8 +248,7 @@ async def asyncio_detailed(
      Given up to 100 hashed email addresses (HEMs), return the address each one belongs to, plus the
     LinkedIn identifiers we have for that person.
 
-    The response is one result per supplied hash, in the same order, each tagged `found`, `not_found`,
-    or `rejected`.
+    The response is one result per supplied hash, in the same order.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
@@ -300,8 +297,7 @@ async def asyncio(
      Given up to 100 hashed email addresses (HEMs), return the address each one belongs to, plus the
     LinkedIn identifiers we have for that person.
 
-    The response is one result per supplied hash, in the same order, each tagged `found`, `not_found`,
-    or `rejected`.
+    The response is one result per supplied hash, in the same order.
 
     <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 

@@ -149,8 +149,9 @@ def sync_detailed(
 ]:
     """Quickly resolve person identifiers
 
-     Resolves many person identifiers — LinkedIn slug, numeric LinkedIn user ID, LinkedIn profile URL, or
-    LinkedIn entity URN — to full profile records in a single request.
+     Resolves many person identifiers — LinkedIn slug, numeric LinkedIn user ID, LinkedIn profile URL,
+    LinkedIn entity URN, or Crunchbase person slug — to full profile records in a single request. The
+    response is one result per supplied person, in the same order.
 
     <span>⚡ <strong>Rate limit:</strong> 1500 requests per 1 minute</span>
 
@@ -198,8 +199,9 @@ def sync(
 ):
     """Quickly resolve person identifiers
 
-     Resolves many person identifiers — LinkedIn slug, numeric LinkedIn user ID, LinkedIn profile URL, or
-    LinkedIn entity URN — to full profile records in a single request.
+     Resolves many person identifiers — LinkedIn slug, numeric LinkedIn user ID, LinkedIn profile URL,
+    LinkedIn entity URN, or Crunchbase person slug — to full profile records in a single request. The
+    response is one result per supplied person, in the same order.
 
     <span>⚡ <strong>Rate limit:</strong> 1500 requests per 1 minute</span>
 
@@ -241,8 +243,9 @@ async def asyncio_detailed(
 ]:
     """Quickly resolve person identifiers
 
-     Resolves many person identifiers — LinkedIn slug, numeric LinkedIn user ID, LinkedIn profile URL, or
-    LinkedIn entity URN — to full profile records in a single request.
+     Resolves many person identifiers — LinkedIn slug, numeric LinkedIn user ID, LinkedIn profile URL,
+    LinkedIn entity URN, or Crunchbase person slug — to full profile records in a single request. The
+    response is one result per supplied person, in the same order.
 
     <span>⚡ <strong>Rate limit:</strong> 1500 requests per 1 minute</span>
 
@@ -288,8 +291,9 @@ async def asyncio(
 ):
     """Quickly resolve person identifiers
 
-     Resolves many person identifiers — LinkedIn slug, numeric LinkedIn user ID, LinkedIn profile URL, or
-    LinkedIn entity URN — to full profile records in a single request.
+     Resolves many person identifiers — LinkedIn slug, numeric LinkedIn user ID, LinkedIn profile URL,
+    LinkedIn entity URN, or Crunchbase person slug — to full profile records in a single request. The
+    response is one result per supplied person, in the same order.
 
     <span>⚡ <strong>Rate limit:</strong> 1500 requests per 1 minute</span>
 

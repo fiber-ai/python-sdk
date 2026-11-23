@@ -21,7 +21,8 @@ class AddTrackerPeopleBody:
     """
     Attributes:
         api_key (str): Your Fiber API key
-        people (list[AddTrackerPeopleBodyPeopleItem]): People to add. At least one identifier required per person.
+        people (list[AddTrackerPeopleBodyPeopleItem]): People to add. At least one identifier required per person. Up to
+            10,000 per call.
         initial_signals (AddTrackerPeopleBodyInitialSignalsType0 | None | Unset): When provided, generates signals
             immediately for recent events (funding rounds, news, job postings, social posts) without waiting for the first
             tracking cycle. Only certain rule types support initial signals.

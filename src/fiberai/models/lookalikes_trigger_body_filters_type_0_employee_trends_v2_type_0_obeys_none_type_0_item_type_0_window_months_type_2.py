@@ -1,8 +1,0 @@
-from enum import IntEnum
-
-
-class LookalikesTriggerBodyFiltersType0EmployeeTrendsV2Type0ObeysNoneType0ItemType0WindowMonthsType2(IntEnum):
-    VALUE_3 = 3
-
-    def __str__(self) -> str:
-        return str(self.value)

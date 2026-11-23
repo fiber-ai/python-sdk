@@ -38,7 +38,7 @@ class SyncBudgetedContactRevealBodyType2:
         linkedin_url (str): The person's LinkedIn identifier. Accepts a full LinkedIn profile URL (e.g.
             'https://www.linkedin.com/in/williamhgates/'), a bare slug (e.g. 'williamhgates'), a Sales Navigator URN (e.g.
             'ACwAAA-001MBbIvJon'), or a numeric LinkedIn user ID (e.g. '443105112').
-        depth (SyncBudgetedContactRevealBodyType2Depth): Stored contact details plus the broadest live search. Waits 90
+        depth (SyncBudgetedContactRevealBodyType2Depth): Stored contact details plus a broader live search. Waits 90
             seconds when timeBudgetMs is omitted. Priced by this choice and what is delivered, not by how long the lookup
             takes.
         enrichment_type (SyncBudgetedContactRevealBodyType2EnrichmentType | Unset): Which email and phone types to look

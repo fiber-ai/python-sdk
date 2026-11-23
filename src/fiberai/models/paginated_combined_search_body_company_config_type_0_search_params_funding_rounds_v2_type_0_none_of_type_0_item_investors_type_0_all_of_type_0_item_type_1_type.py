@@ -1,0 +1,10 @@
+from enum import StrEnum
+
+
+class PaginatedCombinedSearchBodyCompanyConfigType0SearchParamsFundingRoundsV2Type0NoneOfType0ItemInvestorsType0AllOfType0ItemType1Type(
+    StrEnum
+):
+    LINKEDIN_URL = "linkedin-url"
+
+    def __str__(self) -> str:
+        return str(self.value)

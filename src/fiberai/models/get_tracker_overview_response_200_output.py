@@ -1,14 +1,19 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar
+from typing import TYPE_CHECKING, Any, TypeVar, cast
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..types import UNSET, Unset
+
 if TYPE_CHECKING:
     from ..models.get_tracker_overview_response_200_output_company_lists_item import (
         GetTrackerOverviewResponse200OutputCompanyListsItem,
+    )
+    from ..models.get_tracker_overview_response_200_output_entity_limits_type_0 import (
+        GetTrackerOverviewResponse200OutputEntityLimitsType0,
     )
     from ..models.get_tracker_overview_response_200_output_person_lists_item import (
         GetTrackerOverviewResponse200OutputPersonListsItem,
@@ -33,15 +38,22 @@ class GetTrackerOverviewResponse200Output:
             with refresh estimates. May include inactive lists.
         upcoming_refreshes (list[GetTrackerOverviewResponse200OutputUpcomingRefreshesItem]): Next refreshes across all
             lists, sorted earliest first. Use this to forecast upcoming charges.
+        entity_limits (GetTrackerOverviewResponse200OutputEntityLimitsType0 | None | Unset): Your organization's limits
+            on tracked companies and people, with current usage. Change them with POST /v1/tracker/entity-limit.
     """
 
     summary: GetTrackerOverviewResponse200OutputSummary
     company_lists: list[GetTrackerOverviewResponse200OutputCompanyListsItem]
     person_lists: list[GetTrackerOverviewResponse200OutputPersonListsItem]
     upcoming_refreshes: list[GetTrackerOverviewResponse200OutputUpcomingRefreshesItem]
+    entity_limits: GetTrackerOverviewResponse200OutputEntityLimitsType0 | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.get_tracker_overview_response_200_output_entity_limits_type_0 import (
+            GetTrackerOverviewResponse200OutputEntityLimitsType0,  # noqa: PLC0415
+        )
+
         summary = self.summary.to_dict()
 
         company_lists = []
@@ -59,6 +71,14 @@ class GetTrackerOverviewResponse200Output:
             upcoming_refreshes_item = upcoming_refreshes_item_data.to_dict()
             upcoming_refreshes.append(upcoming_refreshes_item)
 
+        entity_limits: dict[str, Any] | None | Unset
+        if isinstance(self.entity_limits, Unset):
+            entity_limits = UNSET
+        elif isinstance(self.entity_limits, GetTrackerOverviewResponse200OutputEntityLimitsType0):
+            entity_limits = self.entity_limits.to_dict()
+        else:
+            entity_limits = self.entity_limits
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -69,6 +89,8 @@ class GetTrackerOverviewResponse200Output:
                 "upcomingRefreshes": upcoming_refreshes,
             }
         )
+        if entity_limits is not UNSET:
+            field_dict["entityLimits"] = entity_limits
 
         return field_dict
 
@@ -76,6 +98,9 @@ class GetTrackerOverviewResponse200Output:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.get_tracker_overview_response_200_output_company_lists_item import (
             GetTrackerOverviewResponse200OutputCompanyListsItem,  # noqa: PLC0415
+        )
+        from ..models.get_tracker_overview_response_200_output_entity_limits_type_0 import (
+            GetTrackerOverviewResponse200OutputEntityLimitsType0,  # noqa: PLC0415
         )
         from ..models.get_tracker_overview_response_200_output_person_lists_item import (
             GetTrackerOverviewResponse200OutputPersonListsItem,  # noqa: PLC0415
@@ -111,11 +136,29 @@ class GetTrackerOverviewResponse200Output:
 
             upcoming_refreshes.append(upcoming_refreshes_item)
 
+        def _parse_entity_limits(data: object) -> GetTrackerOverviewResponse200OutputEntityLimitsType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                entity_limits_type_0 = GetTrackerOverviewResponse200OutputEntityLimitsType0.from_dict(data)
+
+                return entity_limits_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(GetTrackerOverviewResponse200OutputEntityLimitsType0 | None | Unset, data)
+
+        entity_limits = _parse_entity_limits(d.pop("entityLimits", UNSET))
+
         get_tracker_overview_response_200_output = cls(
             summary=summary,
             company_lists=company_lists,
             person_lists=person_lists,
             upcoming_refreshes=upcoming_refreshes,
+            entity_limits=entity_limits,
         )
 
         get_tracker_overview_response_200_output.additional_properties = d

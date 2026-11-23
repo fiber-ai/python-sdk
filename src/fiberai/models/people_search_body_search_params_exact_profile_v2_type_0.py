@@ -18,6 +18,9 @@ if TYPE_CHECKING:
     from ..models.people_search_body_search_params_exact_profile_v2_type_0_any_of_type_0_item_type_2 import (
         PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2,
     )
+    from ..models.people_search_body_search_params_exact_profile_v2_type_0_any_of_type_0_item_type_3 import (
+        PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType3,
+    )
     from ..models.people_search_body_search_params_exact_profile_v2_type_0_none_of_type_0_item_type_0 import (
         PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType0,
     )
@@ -26,6 +29,9 @@ if TYPE_CHECKING:
     )
     from ..models.people_search_body_search_params_exact_profile_v2_type_0_none_of_type_0_item_type_2 import (
         PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType2,
+    )
+    from ..models.people_search_body_search_params_exact_profile_v2_type_0_none_of_type_0_item_type_3 import (
+        PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType3,
     )
 
 
@@ -38,10 +44,12 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
     Attributes:
         any_of (list[PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType0 |
             PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType1 |
-            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2] | None | Unset):
+            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2 |
+            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType3] | None | Unset):
         none_of (list[PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType0 |
             PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType1 |
-            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType2] | None | Unset):
+            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType2 |
+            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType3] | None | Unset):
     """
 
     any_of: (
@@ -49,6 +57,7 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
             PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType0
             | PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType1
             | PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2
+            | PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType3
         ]
         | None
         | Unset
@@ -58,6 +67,7 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
             PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType0
             | PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType1
             | PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType2
+            | PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType3
         ]
         | None
         | Unset
@@ -71,11 +81,17 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_any_of_type_0_item_type_1 import (
             PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType1,  # noqa: PLC0415
         )
+        from ..models.people_search_body_search_params_exact_profile_v2_type_0_any_of_type_0_item_type_2 import (
+            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2,  # noqa: PLC0415
+        )
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_none_of_type_0_item_type_0 import (
             PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType0,  # noqa: PLC0415
         )
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_none_of_type_0_item_type_1 import (
             PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType1,  # noqa: PLC0415
+        )
+        from ..models.people_search_body_search_params_exact_profile_v2_type_0_none_of_type_0_item_type_2 import (
+            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType2,  # noqa: PLC0415
         )
 
         any_of: list[dict[str, Any]] | None | Unset
@@ -91,6 +107,10 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
                     any_of_type_0_item = any_of_type_0_item_data.to_dict()
                 elif isinstance(
                     any_of_type_0_item_data, PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType1
+                ):
+                    any_of_type_0_item = any_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    any_of_type_0_item_data, PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2
                 ):
                     any_of_type_0_item = any_of_type_0_item_data.to_dict()
                 else:
@@ -114,6 +134,10 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
                     none_of_type_0_item = none_of_type_0_item_data.to_dict()
                 elif isinstance(
                     none_of_type_0_item_data, PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType1
+                ):
+                    none_of_type_0_item = none_of_type_0_item_data.to_dict()
+                elif isinstance(
+                    none_of_type_0_item_data, PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType2
                 ):
                     none_of_type_0_item = none_of_type_0_item_data.to_dict()
                 else:
@@ -145,6 +169,9 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_any_of_type_0_item_type_2 import (
             PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2,  # noqa: PLC0415
         )
+        from ..models.people_search_body_search_params_exact_profile_v2_type_0_any_of_type_0_item_type_3 import (
+            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType3,  # noqa: PLC0415
+        )
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_none_of_type_0_item_type_0 import (
             PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType0,  # noqa: PLC0415
         )
@@ -153,6 +180,9 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
         )
         from ..models.people_search_body_search_params_exact_profile_v2_type_0_none_of_type_0_item_type_2 import (
             PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType2,  # noqa: PLC0415
+        )
+        from ..models.people_search_body_search_params_exact_profile_v2_type_0_none_of_type_0_item_type_3 import (
+            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -164,6 +194,7 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
                 PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType0
                 | PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType1
                 | PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2
+                | PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType3
             ]
             | None
             | Unset
@@ -185,6 +216,7 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
                         PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType0
                         | PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType1
                         | PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2
+                        | PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType3
                     ):
                         try:
                             if not isinstance(data, dict):
@@ -206,13 +238,23 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
                             return any_of_type_0_item_type_1
                         except (TypeError, ValueError, AttributeError, KeyError):
                             pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            any_of_type_0_item_type_2 = (
+                                PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2.from_dict(data)
+                            )
+
+                            return any_of_type_0_item_type_2
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        any_of_type_0_item_type_2 = (
-                            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2.from_dict(data)
+                        any_of_type_0_item_type_3 = (
+                            PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType3.from_dict(data)
                         )
 
-                        return any_of_type_0_item_type_2
+                        return any_of_type_0_item_type_3
 
                     any_of_type_0_item = _parse_any_of_type_0_item(any_of_type_0_item_data)
 
@@ -226,6 +268,7 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
                     PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType0
                     | PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType1
                     | PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType2
+                    | PeopleSearchBodySearchParamsExactProfileV2Type0AnyOfType0ItemType3
                 ]
                 | None
                 | Unset,
@@ -241,6 +284,7 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
                 PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType0
                 | PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType1
                 | PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType2
+                | PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType3
             ]
             | None
             | Unset
@@ -262,6 +306,7 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
                         PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType0
                         | PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType1
                         | PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType2
+                        | PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType3
                     ):
                         try:
                             if not isinstance(data, dict):
@@ -283,13 +328,23 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
                             return none_of_type_0_item_type_1
                         except (TypeError, ValueError, AttributeError, KeyError):
                             pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            none_of_type_0_item_type_2 = (
+                                PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType2.from_dict(data)
+                            )
+
+                            return none_of_type_0_item_type_2
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        none_of_type_0_item_type_2 = (
-                            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType2.from_dict(data)
+                        none_of_type_0_item_type_3 = (
+                            PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType3.from_dict(data)
                         )
 
-                        return none_of_type_0_item_type_2
+                        return none_of_type_0_item_type_3
 
                     none_of_type_0_item = _parse_none_of_type_0_item(none_of_type_0_item_data)
 
@@ -303,6 +358,7 @@ class PeopleSearchBodySearchParamsExactProfileV2Type0:
                     PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType0
                     | PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType1
                     | PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType2
+                    | PeopleSearchBodySearchParamsExactProfileV2Type0NoneOfType0ItemType3
                 ]
                 | None
                 | Unset,

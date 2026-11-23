@@ -8,6 +8,9 @@ from ...client import AuthenticatedClient, Client
 from ...models.sync_budgeted_contact_reveal_body_type_0 import SyncBudgetedContactRevealBodyType0
 from ...models.sync_budgeted_contact_reveal_body_type_1 import SyncBudgetedContactRevealBodyType1
 from ...models.sync_budgeted_contact_reveal_body_type_2 import SyncBudgetedContactRevealBodyType2
+from ...models.sync_budgeted_contact_reveal_body_type_3 import SyncBudgetedContactRevealBodyType3
+from ...models.sync_budgeted_contact_reveal_body_type_4 import SyncBudgetedContactRevealBodyType4
+from ...models.sync_budgeted_contact_reveal_body_type_5 import SyncBudgetedContactRevealBodyType5
 from ...models.sync_budgeted_contact_reveal_response_200 import SyncBudgetedContactRevealResponse200
 from ...models.sync_budgeted_contact_reveal_response_400 import SyncBudgetedContactRevealResponse400
 from ...models.sync_budgeted_contact_reveal_response_401 import SyncBudgetedContactRevealResponse401
@@ -23,7 +26,12 @@ from ...types import Response
 
 def _get_kwargs(
     *,
-    body: SyncBudgetedContactRevealBodyType0 | SyncBudgetedContactRevealBodyType1 | SyncBudgetedContactRevealBodyType2,
+    body: SyncBudgetedContactRevealBodyType0
+    | SyncBudgetedContactRevealBodyType1
+    | SyncBudgetedContactRevealBodyType2
+    | SyncBudgetedContactRevealBodyType3
+    | SyncBudgetedContactRevealBodyType4
+    | SyncBudgetedContactRevealBodyType5,
 ) -> dict[str, Any]:
     headers: dict[str, Any] = {}
 
@@ -35,6 +43,12 @@ def _get_kwargs(
     if isinstance(body, SyncBudgetedContactRevealBodyType0):
         _kwargs["json"] = body.to_dict()
     elif isinstance(body, SyncBudgetedContactRevealBodyType1):
+        _kwargs["json"] = body.to_dict()
+    elif isinstance(body, SyncBudgetedContactRevealBodyType2):
+        _kwargs["json"] = body.to_dict()
+    elif isinstance(body, SyncBudgetedContactRevealBodyType3):
+        _kwargs["json"] = body.to_dict()
+    elif isinstance(body, SyncBudgetedContactRevealBodyType4):
         _kwargs["json"] = body.to_dict()
     else:
         _kwargs["json"] = body.to_dict()
@@ -141,7 +155,12 @@ def _build_response(
 def sync_detailed(
     *,
     client: AuthenticatedClient | Client,
-    body: SyncBudgetedContactRevealBodyType0 | SyncBudgetedContactRevealBodyType1 | SyncBudgetedContactRevealBodyType2,
+    body: SyncBudgetedContactRevealBodyType0
+    | SyncBudgetedContactRevealBodyType1
+    | SyncBudgetedContactRevealBodyType2
+    | SyncBudgetedContactRevealBodyType3
+    | SyncBudgetedContactRevealBodyType4
+    | SyncBudgetedContactRevealBodyType5,
 ) -> Response[
     SyncBudgetedContactRevealResponse200
     | SyncBudgetedContactRevealResponse400
@@ -167,15 +186,22 @@ def sync_detailed(
     charged. Prices by depth:<br />• instant — 1 credit(s) per email type, 1 if phone numbers are
     delivered.<br />• quick — 1 credit(s) per email type, 2 if phone numbers are delivered.<br />•
     medium — flat bundle: 5 credit(s) for emails + phone, 3 all emails, 2 work email only, 2 personal
-    email only, 3 phone only, 5 work email + phone, 5 personal email + phone.&nbsp;<span title="Pricing
-    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
+    email only, 3 phone only, 5 work email + phone, 5 personal email + phone.<br />• thorough — flat
+    bundle: 7 credit(s) for emails + phone, 5 all emails, 3 work email only, 3 personal email only, 5
+    phone only, 8 work email + phone, 8 personal email + phone.<br />• intensive — flat bundle: 12
+    credit(s) for emails + phone, 8 all emails, 5 work email only, 5 personal email only, 7 phone only,
+    12 work email + phone, 12 personal email + phone.<br />• ultimate — flat bundle: 28 credit(s) for
+    emails + phone, 12 all emails, 8 work email only, 8 personal email only, 20 phone only, 28 work
+    email + phone, 28 personal email + phone.&nbsp;<span title="Pricing shown is default pricing. Actual
+    pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title="Recommended timeout: set
-    your HTTP client timeout to at least 90 seconds for this endpoint.">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 5 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 5 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SyncBudgetedContactRevealBodyType0 | SyncBudgetedContactRevealBodyType1 |
-            SyncBudgetedContactRevealBodyType2):
+            SyncBudgetedContactRevealBodyType2 | SyncBudgetedContactRevealBodyType3 |
+            SyncBudgetedContactRevealBodyType4 | SyncBudgetedContactRevealBodyType5):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -199,7 +225,12 @@ def sync_detailed(
 def sync(
     *,
     client: AuthenticatedClient | Client,
-    body: SyncBudgetedContactRevealBodyType0 | SyncBudgetedContactRevealBodyType1 | SyncBudgetedContactRevealBodyType2,
+    body: SyncBudgetedContactRevealBodyType0
+    | SyncBudgetedContactRevealBodyType1
+    | SyncBudgetedContactRevealBodyType2
+    | SyncBudgetedContactRevealBodyType3
+    | SyncBudgetedContactRevealBodyType4
+    | SyncBudgetedContactRevealBodyType5,
 ) -> (
     SyncBudgetedContactRevealResponse200
     | SyncBudgetedContactRevealResponse400
@@ -226,15 +257,22 @@ def sync(
     charged. Prices by depth:<br />• instant — 1 credit(s) per email type, 1 if phone numbers are
     delivered.<br />• quick — 1 credit(s) per email type, 2 if phone numbers are delivered.<br />•
     medium — flat bundle: 5 credit(s) for emails + phone, 3 all emails, 2 work email only, 2 personal
-    email only, 3 phone only, 5 work email + phone, 5 personal email + phone.&nbsp;<span title="Pricing
-    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
+    email only, 3 phone only, 5 work email + phone, 5 personal email + phone.<br />• thorough — flat
+    bundle: 7 credit(s) for emails + phone, 5 all emails, 3 work email only, 3 personal email only, 5
+    phone only, 8 work email + phone, 8 personal email + phone.<br />• intensive — flat bundle: 12
+    credit(s) for emails + phone, 8 all emails, 5 work email only, 5 personal email only, 7 phone only,
+    12 work email + phone, 12 personal email + phone.<br />• ultimate — flat bundle: 28 credit(s) for
+    emails + phone, 12 all emails, 8 work email only, 8 personal email only, 20 phone only, 28 work
+    email + phone, 28 personal email + phone.&nbsp;<span title="Pricing shown is default pricing. Actual
+    pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title="Recommended timeout: set
-    your HTTP client timeout to at least 90 seconds for this endpoint.">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 5 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 5 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SyncBudgetedContactRevealBodyType0 | SyncBudgetedContactRevealBodyType1 |
-            SyncBudgetedContactRevealBodyType2):
+            SyncBudgetedContactRevealBodyType2 | SyncBudgetedContactRevealBodyType3 |
+            SyncBudgetedContactRevealBodyType4 | SyncBudgetedContactRevealBodyType5):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -253,7 +291,12 @@ def sync(
 async def asyncio_detailed(
     *,
     client: AuthenticatedClient | Client,
-    body: SyncBudgetedContactRevealBodyType0 | SyncBudgetedContactRevealBodyType1 | SyncBudgetedContactRevealBodyType2,
+    body: SyncBudgetedContactRevealBodyType0
+    | SyncBudgetedContactRevealBodyType1
+    | SyncBudgetedContactRevealBodyType2
+    | SyncBudgetedContactRevealBodyType3
+    | SyncBudgetedContactRevealBodyType4
+    | SyncBudgetedContactRevealBodyType5,
 ) -> Response[
     SyncBudgetedContactRevealResponse200
     | SyncBudgetedContactRevealResponse400
@@ -279,15 +322,22 @@ async def asyncio_detailed(
     charged. Prices by depth:<br />• instant — 1 credit(s) per email type, 1 if phone numbers are
     delivered.<br />• quick — 1 credit(s) per email type, 2 if phone numbers are delivered.<br />•
     medium — flat bundle: 5 credit(s) for emails + phone, 3 all emails, 2 work email only, 2 personal
-    email only, 3 phone only, 5 work email + phone, 5 personal email + phone.&nbsp;<span title="Pricing
-    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
+    email only, 3 phone only, 5 work email + phone, 5 personal email + phone.<br />• thorough — flat
+    bundle: 7 credit(s) for emails + phone, 5 all emails, 3 work email only, 3 personal email only, 5
+    phone only, 8 work email + phone, 8 personal email + phone.<br />• intensive — flat bundle: 12
+    credit(s) for emails + phone, 8 all emails, 5 work email only, 5 personal email only, 7 phone only,
+    12 work email + phone, 12 personal email + phone.<br />• ultimate — flat bundle: 28 credit(s) for
+    emails + phone, 12 all emails, 8 work email only, 8 personal email only, 20 phone only, 28 work
+    email + phone, 28 personal email + phone.&nbsp;<span title="Pricing shown is default pricing. Actual
+    pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title="Recommended timeout: set
-    your HTTP client timeout to at least 90 seconds for this endpoint.">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 5 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 5 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SyncBudgetedContactRevealBodyType0 | SyncBudgetedContactRevealBodyType1 |
-            SyncBudgetedContactRevealBodyType2):
+            SyncBudgetedContactRevealBodyType2 | SyncBudgetedContactRevealBodyType3 |
+            SyncBudgetedContactRevealBodyType4 | SyncBudgetedContactRevealBodyType5):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -309,7 +359,12 @@ async def asyncio_detailed(
 async def asyncio(
     *,
     client: AuthenticatedClient | Client,
-    body: SyncBudgetedContactRevealBodyType0 | SyncBudgetedContactRevealBodyType1 | SyncBudgetedContactRevealBodyType2,
+    body: SyncBudgetedContactRevealBodyType0
+    | SyncBudgetedContactRevealBodyType1
+    | SyncBudgetedContactRevealBodyType2
+    | SyncBudgetedContactRevealBodyType3
+    | SyncBudgetedContactRevealBodyType4
+    | SyncBudgetedContactRevealBodyType5,
 ) -> (
     SyncBudgetedContactRevealResponse200
     | SyncBudgetedContactRevealResponse400
@@ -336,15 +391,22 @@ async def asyncio(
     charged. Prices by depth:<br />• instant — 1 credit(s) per email type, 1 if phone numbers are
     delivered.<br />• quick — 1 credit(s) per email type, 2 if phone numbers are delivered.<br />•
     medium — flat bundle: 5 credit(s) for emails + phone, 3 all emails, 2 work email only, 2 personal
-    email only, 3 phone only, 5 work email + phone, 5 personal email + phone.&nbsp;<span title="Pricing
-    shown is default pricing. Actual pricing may vary.">ⓘ</span></span>
+    email only, 3 phone only, 5 work email + phone, 5 personal email + phone.<br />• thorough — flat
+    bundle: 7 credit(s) for emails + phone, 5 all emails, 3 work email only, 3 personal email only, 5
+    phone only, 8 work email + phone, 8 personal email + phone.<br />• intensive — flat bundle: 12
+    credit(s) for emails + phone, 8 all emails, 5 work email only, 5 personal email only, 7 phone only,
+    12 work email + phone, 12 personal email + phone.<br />• ultimate — flat bundle: 28 credit(s) for
+    emails + phone, 12 all emails, 8 work email only, 8 personal email only, 20 phone only, 28 work
+    email + phone, 28 personal email + phone.&nbsp;<span title="Pricing shown is default pricing. Actual
+    pricing may vary.">ⓘ</span></span>
 
-    <span>⏱ <strong>Recommended timeout:</strong> 90 seconds&nbsp;<span title="Recommended timeout: set
-    your HTTP client timeout to at least 90 seconds for this endpoint.">ⓘ</span></span>
+    <span>⏱ <strong>Recommended timeout:</strong> 5 minutes&nbsp;<span title="Recommended timeout: set
+    your HTTP client timeout to at least 5 minutes for this endpoint.">ⓘ</span></span>
 
     Args:
         body (SyncBudgetedContactRevealBodyType0 | SyncBudgetedContactRevealBodyType1 |
-            SyncBudgetedContactRevealBodyType2):
+            SyncBudgetedContactRevealBodyType2 | SyncBudgetedContactRevealBodyType3 |
+            SyncBudgetedContactRevealBodyType4 | SyncBudgetedContactRevealBodyType5):
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

@@ -90,6 +90,9 @@ if TYPE_CHECKING:
     from ..models.paginated_combined_search_response_200_output_companies_item_role_count_matches_type_0_item import (
         PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0Item,
     )
+    from ..models.paginated_combined_search_response_200_output_companies_item_salary_levels_type_0_item import (
+        PaginatedCombinedSearchResponse200OutputCompaniesItemSalaryLevelsType0Item,
+    )
     from ..models.paginated_combined_search_response_200_output_companies_item_similar_companies_type_0_item import (
         PaginatedCombinedSearchResponse200OutputCompaniesItemSimilarCompaniesType0Item,
     )
@@ -98,6 +101,9 @@ if TYPE_CHECKING:
     )
     from ..models.paginated_combined_search_response_200_output_companies_item_technologies_used_type_0_item import (
         PaginatedCombinedSearchResponse200OutputCompaniesItemTechnologiesUsedType0Item,
+    )
+    from ..models.paginated_combined_search_response_200_output_companies_item_vesting_schedules_type_0_item import (
+        PaginatedCombinedSearchResponse200OutputCompaniesItemVestingSchedulesType0Item,
     )
 
 
@@ -121,6 +127,9 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItem:
         facebook_urls (list[str] | None | Unset):
         fortune_rankings (list[PaginatedCombinedSearchResponse200OutputCompaniesItemFortuneRankingsType0Item] | None |
             Unset):
+        vesting_schedules (list[PaginatedCombinedSearchResponse200OutputCompaniesItemVestingSchedulesType0Item] | None |
+            Unset):
+        salary_levels (list[PaginatedCombinedSearchResponse200OutputCompaniesItemSalaryLevelsType0Item] | None | Unset):
         founded_on_consensus (None | str | Unset):
         github_usernames (list[str] | None | Unset):
         instagram_handles (list[str] | None | Unset):
@@ -225,6 +234,12 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItem:
     fortune_rankings: (
         list[PaginatedCombinedSearchResponse200OutputCompaniesItemFortuneRankingsType0Item] | None | Unset
     ) = UNSET
+    vesting_schedules: (
+        list[PaginatedCombinedSearchResponse200OutputCompaniesItemVestingSchedulesType0Item] | None | Unset
+    ) = UNSET
+    salary_levels: list[PaginatedCombinedSearchResponse200OutputCompaniesItemSalaryLevelsType0Item] | None | Unset = (
+        UNSET
+    )
     founded_on_consensus: None | str | Unset = UNSET
     github_usernames: list[str] | None | Unset = UNSET
     instagram_handles: list[str] | None | Unset = UNSET
@@ -478,6 +493,30 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItem:
 
         else:
             fortune_rankings = self.fortune_rankings
+
+        vesting_schedules: list[dict[str, Any]] | None | Unset
+        if isinstance(self.vesting_schedules, Unset):
+            vesting_schedules = UNSET
+        elif isinstance(self.vesting_schedules, list):
+            vesting_schedules = []
+            for vesting_schedules_type_0_item_data in self.vesting_schedules:
+                vesting_schedules_type_0_item = vesting_schedules_type_0_item_data.to_dict()
+                vesting_schedules.append(vesting_schedules_type_0_item)
+
+        else:
+            vesting_schedules = self.vesting_schedules
+
+        salary_levels: list[dict[str, Any]] | None | Unset
+        if isinstance(self.salary_levels, Unset):
+            salary_levels = UNSET
+        elif isinstance(self.salary_levels, list):
+            salary_levels = []
+            for salary_levels_type_0_item_data in self.salary_levels:
+                salary_levels_type_0_item = salary_levels_type_0_item_data.to_dict()
+                salary_levels.append(salary_levels_type_0_item)
+
+        else:
+            salary_levels = self.salary_levels
 
         founded_on_consensus: None | str | Unset
         if isinstance(self.founded_on_consensus, Unset):
@@ -1108,6 +1147,10 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItem:
             field_dict["facebook_urls"] = facebook_urls
         if fortune_rankings is not UNSET:
             field_dict["fortune_rankings"] = fortune_rankings
+        if vesting_schedules is not UNSET:
+            field_dict["vesting_schedules"] = vesting_schedules
+        if salary_levels is not UNSET:
+            field_dict["salary_levels"] = salary_levels
         if founded_on_consensus is not UNSET:
             field_dict["founded_on_consensus"] = founded_on_consensus
         if github_usernames is not UNSET:
@@ -1323,6 +1366,9 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItem:
         from ..models.paginated_combined_search_response_200_output_companies_item_role_count_matches_type_0_item import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemRoleCountMatchesType0Item,  # noqa: PLC0415
         )
+        from ..models.paginated_combined_search_response_200_output_companies_item_salary_levels_type_0_item import (
+            PaginatedCombinedSearchResponse200OutputCompaniesItemSalaryLevelsType0Item,  # noqa: PLC0415
+        )
         from ..models.paginated_combined_search_response_200_output_companies_item_similar_companies_type_0_item import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemSimilarCompaniesType0Item,  # noqa: PLC0415
         )
@@ -1331,6 +1377,9 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItem:
         )
         from ..models.paginated_combined_search_response_200_output_companies_item_technologies_used_type_0_item import (
             PaginatedCombinedSearchResponse200OutputCompaniesItemTechnologiesUsedType0Item,  # noqa: PLC0415
+        )
+        from ..models.paginated_combined_search_response_200_output_companies_item_vesting_schedules_type_0_item import (
+            PaginatedCombinedSearchResponse200OutputCompaniesItemVestingSchedulesType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -1549,6 +1598,67 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItem:
             )
 
         fortune_rankings = _parse_fortune_rankings(d.pop("fortune_rankings", UNSET))
+
+        def _parse_vesting_schedules(
+            data: object,
+        ) -> list[PaginatedCombinedSearchResponse200OutputCompaniesItemVestingSchedulesType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                vesting_schedules_type_0 = []
+                _vesting_schedules_type_0 = data
+                for vesting_schedules_type_0_item_data in _vesting_schedules_type_0:
+                    vesting_schedules_type_0_item = (
+                        PaginatedCombinedSearchResponse200OutputCompaniesItemVestingSchedulesType0Item.from_dict(
+                            vesting_schedules_type_0_item_data
+                        )
+                    )
+
+                    vesting_schedules_type_0.append(vesting_schedules_type_0_item)
+
+                return vesting_schedules_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                list[PaginatedCombinedSearchResponse200OutputCompaniesItemVestingSchedulesType0Item] | None | Unset,
+                data,
+            )
+
+        vesting_schedules = _parse_vesting_schedules(d.pop("vesting_schedules", UNSET))
+
+        def _parse_salary_levels(
+            data: object,
+        ) -> list[PaginatedCombinedSearchResponse200OutputCompaniesItemSalaryLevelsType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                salary_levels_type_0 = []
+                _salary_levels_type_0 = data
+                for salary_levels_type_0_item_data in _salary_levels_type_0:
+                    salary_levels_type_0_item = (
+                        PaginatedCombinedSearchResponse200OutputCompaniesItemSalaryLevelsType0Item.from_dict(
+                            salary_levels_type_0_item_data
+                        )
+                    )
+
+                    salary_levels_type_0.append(salary_levels_type_0_item)
+
+                return salary_levels_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                list[PaginatedCombinedSearchResponse200OutputCompaniesItemSalaryLevelsType0Item] | None | Unset, data
+            )
+
+        salary_levels = _parse_salary_levels(d.pop("salary_levels", UNSET))
 
         def _parse_founded_on_consensus(data: object) -> None | str | Unset:
             if data is None:
@@ -2790,6 +2900,8 @@ class PaginatedCombinedSearchResponse200OutputCompaniesItem:
             employee_count_consensus=employee_count_consensus,
             facebook_urls=facebook_urls,
             fortune_rankings=fortune_rankings,
+            vesting_schedules=vesting_schedules,
+            salary_levels=salary_levels,
             founded_on_consensus=founded_on_consensus,
             github_usernames=github_usernames,
             instagram_handles=instagram_handles,

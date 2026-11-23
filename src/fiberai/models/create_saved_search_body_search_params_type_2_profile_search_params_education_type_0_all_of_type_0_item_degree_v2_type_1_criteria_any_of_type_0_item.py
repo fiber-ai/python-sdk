@@ -8,6 +8,7 @@ class CreateSavedSearchBodySearchParamsType2ProfileSearchParamsEducationType0All
     ASSOCIATE = "Associate"
     BACHELOR = "Bachelor"
     BUSINESS = "Business"
+    CERTIFICATE = "Certificate"
     DENTISTRY = "Dentistry"
     DIVINITY = "Divinity"
     DOCTORATE = "Doctorate"

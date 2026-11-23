@@ -1,0 +1,8 @@
+from enum import StrEnum
+
+
+class LookalikesBulkStartBodyFiltersType0HeadquartersLocationType0UnionAllType0ItemType0Strategy(StrEnum):
+    RADIAL_DISTANCE = "radial-distance"
+
+    def __str__(self) -> str:
+        return str(self.value)

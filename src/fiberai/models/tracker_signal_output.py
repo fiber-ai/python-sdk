@@ -13,6 +13,7 @@ from ..types import UNSET, Unset
 if TYPE_CHECKING:
     from ..models.accelerator_change import AcceleratorChange
     from ..models.acquisition_change import AcquisitionChange
+    from ..models.baseline_captured_change import BaselineCapturedChange
     from ..models.certification_change import CertificationChange
     from ..models.company_location_change import CompanyLocationChange
     from ..models.contact_update_change import ContactUpdateChange
@@ -54,12 +55,12 @@ class TrackerSignalOutput:
             people.
         type_ (str): Signal type (e.g. headcount_crossed_threshold).
         summary (None | str): Human-readable description of what changed.
-        change_data (list[AcceleratorChange | AcquisitionChange | CertificationChange | CompanyLocationChange |
-            ContactUpdateChange | DepartedFromListChange | DepartmentSizeChange | FundingRoundChange | FundingStageChange |
-            InvestorChange | JobPostingChange | LayoffEventChange | LinkedInPostChange | LocationDeltaChange |
-            NamedItemChange | NewsArticleChange | NumericDeltaChange | PersonCommentChange | PersonExperienceChange |
-            PersonReactionChange | ScalarDeltaChange | TenureChange | TrackedEmployeeChange]): Array of objects describing
-            what changed. Shape depends on signal type.
+        change_data (list[AcceleratorChange | AcquisitionChange | BaselineCapturedChange | CertificationChange |
+            CompanyLocationChange | ContactUpdateChange | DepartedFromListChange | DepartmentSizeChange | FundingRoundChange
+            | FundingStageChange | InvestorChange | JobPostingChange | LayoffEventChange | LinkedInPostChange |
+            LocationDeltaChange | NamedItemChange | NewsArticleChange | NumericDeltaChange | PersonCommentChange |
+            PersonExperienceChange | PersonReactionChange | ScalarDeltaChange | TenureChange | TrackedEmployeeChange]):
+            Array of objects describing what changed. Shape depends on signal type.
         sources (list[str]): URLs providing proof or more information about this signal.
         methodology (str): Explanation of how this signal was detected and verified.
         observed_at (datetime.datetime): When we detected the signal. For backfilled signals this reflects the detection
@@ -67,6 +68,9 @@ class TrackerSignalOutput:
         centi_credits_charged (int): Credits charged for the tracker check that produced this signal, in centi-credits
             (100 = 1 credit).
         is_dummy (bool): When true, this signal was generated synthetically via the `fire-dummy` endpoint.
+        crunchbase_slug (None | str | Unset): The tracked company's or person's Crunchbase slug — e.g. `bill-gates` in
+            https://www.crunchbase.com/person/bill-gates. Null when not known. For people, only set when they were added by
+            their Crunchbase slug.
         event_date (datetime.datetime | None | Unset): The real-world date the underlying event occurred (e.g. when a
             job was posted, a funding round announced, or a hire started), taken from `changeData`. Use this for time-series
             analysis. Null for signal types that have no associated event date, such as headcount or status changes.
@@ -83,6 +87,7 @@ class TrackerSignalOutput:
     change_data: list[
         AcceleratorChange
         | AcquisitionChange
+        | BaselineCapturedChange
         | CertificationChange
         | CompanyLocationChange
         | ContactUpdateChange
@@ -110,12 +115,14 @@ class TrackerSignalOutput:
     observed_at: datetime.datetime
     centi_credits_charged: int
     is_dummy: bool
+    crunchbase_slug: None | str | Unset = UNSET
     event_date: datetime.datetime | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         from ..models.accelerator_change import AcceleratorChange  # noqa: PLC0415
         from ..models.acquisition_change import AcquisitionChange  # noqa: PLC0415
+        from ..models.baseline_captured_change import BaselineCapturedChange  # noqa: PLC0415
         from ..models.certification_change import CertificationChange  # noqa: PLC0415
         from ..models.company_location_change import CompanyLocationChange  # noqa: PLC0415
         from ..models.contact_update_change import ContactUpdateChange  # noqa: PLC0415
@@ -199,6 +206,8 @@ class TrackerSignalOutput:
                 change_data_item = change_data_item_data.to_dict()
             elif isinstance(change_data_item_data, DepartedFromListChange):
                 change_data_item = change_data_item_data.to_dict()
+            elif isinstance(change_data_item_data, BaselineCapturedChange):
+                change_data_item = change_data_item_data.to_dict()
             elif isinstance(change_data_item_data, ScalarDeltaChange):
                 change_data_item = change_data_item_data.to_dict()
             elif isinstance(change_data_item_data, NumericDeltaChange):
@@ -217,6 +226,12 @@ class TrackerSignalOutput:
         centi_credits_charged = self.centi_credits_charged
 
         is_dummy = self.is_dummy
+
+        crunchbase_slug: None | str | Unset
+        if isinstance(self.crunchbase_slug, Unset):
+            crunchbase_slug = UNSET
+        else:
+            crunchbase_slug = self.crunchbase_slug
 
         event_date: None | str | Unset
         if isinstance(self.event_date, Unset):
@@ -246,6 +261,8 @@ class TrackerSignalOutput:
                 "isDummy": is_dummy,
             }
         )
+        if crunchbase_slug is not UNSET:
+            field_dict["crunchbaseSlug"] = crunchbase_slug
         if event_date is not UNSET:
             field_dict["eventDate"] = event_date
 
@@ -255,6 +272,7 @@ class TrackerSignalOutput:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.accelerator_change import AcceleratorChange  # noqa: PLC0415
         from ..models.acquisition_change import AcquisitionChange  # noqa: PLC0415
+        from ..models.baseline_captured_change import BaselineCapturedChange  # noqa: PLC0415
         from ..models.certification_change import CertificationChange  # noqa: PLC0415
         from ..models.company_location_change import CompanyLocationChange  # noqa: PLC0415
         from ..models.contact_update_change import ContactUpdateChange  # noqa: PLC0415
@@ -318,6 +336,7 @@ class TrackerSignalOutput:
             ) -> (
                 AcceleratorChange
                 | AcquisitionChange
+                | BaselineCapturedChange
                 | CertificationChange
                 | CompanyLocationChange
                 | ContactUpdateChange
@@ -383,15 +402,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_5 = NewsArticleChange.from_dict(data)
-
-                    return change_data_item_type_5
-                except (TypeError, ValueError, AttributeError, KeyError):
-                    pass
-                try:
-                    if not isinstance(data, dict):
-                        raise TypeError()
-                    change_data_item_type_6 = LinkedInPostChange.from_dict(data)
+                    change_data_item_type_6 = NewsArticleChange.from_dict(data)
 
                     return change_data_item_type_6
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -399,7 +410,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_7 = ContactUpdateChange.from_dict(data)
+                    change_data_item_type_7 = LinkedInPostChange.from_dict(data)
 
                     return change_data_item_type_7
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -407,7 +418,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_8 = PersonExperienceChange.from_dict(data)
+                    change_data_item_type_8 = ContactUpdateChange.from_dict(data)
 
                     return change_data_item_type_8
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -415,23 +426,23 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_10 = TenureChange.from_dict(data)
+                    change_data_item_type_9 = PersonExperienceChange.from_dict(data)
 
-                    return change_data_item_type_10
+                    return change_data_item_type_9
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_12 = LayoffEventChange.from_dict(data)
+                    change_data_item_type_11 = TenureChange.from_dict(data)
 
-                    return change_data_item_type_12
+                    return change_data_item_type_11
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_13 = TrackedEmployeeChange.from_dict(data)
+                    change_data_item_type_13 = LayoffEventChange.from_dict(data)
 
                     return change_data_item_type_13
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -439,7 +450,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_14 = InvestorChange.from_dict(data)
+                    change_data_item_type_14 = TrackedEmployeeChange.from_dict(data)
 
                     return change_data_item_type_14
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -447,7 +458,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_15 = AcquisitionChange.from_dict(data)
+                    change_data_item_type_15 = InvestorChange.from_dict(data)
 
                     return change_data_item_type_15
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -455,7 +466,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_16 = AcceleratorChange.from_dict(data)
+                    change_data_item_type_16 = AcquisitionChange.from_dict(data)
 
                     return change_data_item_type_16
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -463,7 +474,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_17 = CertificationChange.from_dict(data)
+                    change_data_item_type_17 = AcceleratorChange.from_dict(data)
 
                     return change_data_item_type_17
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -471,7 +482,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_18 = DepartmentSizeChange.from_dict(data)
+                    change_data_item_type_18 = CertificationChange.from_dict(data)
 
                     return change_data_item_type_18
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -479,7 +490,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_19 = PersonReactionChange.from_dict(data)
+                    change_data_item_type_19 = DepartmentSizeChange.from_dict(data)
 
                     return change_data_item_type_19
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -487,7 +498,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_20 = PersonCommentChange.from_dict(data)
+                    change_data_item_type_20 = PersonReactionChange.from_dict(data)
 
                     return change_data_item_type_20
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -495,7 +506,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_21 = DepartedFromListChange.from_dict(data)
+                    change_data_item_type_21 = PersonCommentChange.from_dict(data)
 
                     return change_data_item_type_21
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -503,7 +514,7 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_22 = ScalarDeltaChange.from_dict(data)
+                    change_data_item_type_22 = DepartedFromListChange.from_dict(data)
 
                     return change_data_item_type_22
                 except (TypeError, ValueError, AttributeError, KeyError):
@@ -511,16 +522,32 @@ class TrackerSignalOutput:
                 try:
                     if not isinstance(data, dict):
                         raise TypeError()
-                    change_data_item_type_25 = NumericDeltaChange.from_dict(data)
+                    change_data_item_type_23 = BaselineCapturedChange.from_dict(data)
 
-                    return change_data_item_type_25
+                    return change_data_item_type_23
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    change_data_item_type_24 = ScalarDeltaChange.from_dict(data)
+
+                    return change_data_item_type_24
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    change_data_item_type_27 = NumericDeltaChange.from_dict(data)
+
+                    return change_data_item_type_27
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                change_data_item_type_26 = NamedItemChange.from_dict(data)
+                change_data_item_type_28 = NamedItemChange.from_dict(data)
 
-                return change_data_item_type_26
+                return change_data_item_type_28
 
             change_data_item = _parse_change_data_item(change_data_item_data)
 
@@ -535,6 +562,15 @@ class TrackerSignalOutput:
         centi_credits_charged = d.pop("centiCreditsCharged")
 
         is_dummy = d.pop("isDummy")
+
+        def _parse_crunchbase_slug(data: object) -> None | str | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(None | str | Unset, data)
+
+        crunchbase_slug = _parse_crunchbase_slug(d.pop("crunchbaseSlug", UNSET))
 
         def _parse_event_date(data: object) -> datetime.datetime | None | Unset:
             if data is None:
@@ -568,6 +604,7 @@ class TrackerSignalOutput:
             observed_at=observed_at,
             centi_credits_charged=centi_credits_charged,
             is_dummy=is_dummy,
+            crunchbase_slug=crunchbase_slug,
             event_date=event_date,
         )
 

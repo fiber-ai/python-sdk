@@ -28,6 +28,7 @@ if TYPE_CHECKING:
     from ..models.headcount_crossed_threshold import HeadcountCrossedThreshold
     from ..models.headcount_growth_percent import HeadcountGrowthPercent
     from ..models.hq_location_changed import HQLocationChanged
+    from ..models.job_posting_closed import JobPostingClosed
     from ..models.job_posting_in_function import JobPostingInFunction
     from ..models.job_posting_with_keyword import JobPostingWithKeyword
     from ..models.joined_an_accelerator import JoinedAnAccelerator
@@ -53,8 +54,8 @@ class CreateTrackerCompanyListBody:
         tracking_rules (list[AcquiredCompany | CompanyDescriptionChanged | CompanyLogoChanged | CompanyNameChanged |
             CompanyNews | CompanyPosted | CompanyPostedWithKeyword | CompanyStatusChanged | CompanyWentInactive |
             DepartmentSizeThreshold | EmployeeCountMilestone | FollowerCountGrowth | FundingStageChanged |
-            HeadcountCrossedThreshold | HeadcountGrowthPercent | HQLocationChanged | JobPostingInFunction |
-            JobPostingWithKeyword | JoinedAnAccelerator | NewFundingRound | NewInvestor | NewOfficeLocation |
+            HeadcountCrossedThreshold | HeadcountGrowthPercent | HQLocationChanged | JobPostingClosed | JobPostingInFunction
+            | JobPostingWithKeyword | JoinedAnAccelerator | NewFundingRound | NewInvestor | NewOfficeLocation |
             NewsWithKeyword | RecentLayoffs | RecentlyHiredWithTitle | TechnologyAdded] | None | Unset): Tracking rules to
             evaluate against this list's entities. Multiple rules can be active simultaneously. Rules marked `isPremium` in
             GET /tracker/rules make the list bill at a minimum per-entity rate — see your plan's pricing for rates.
@@ -87,6 +88,7 @@ class CreateTrackerCompanyListBody:
             | HeadcountCrossedThreshold
             | HeadcountGrowthPercent
             | HQLocationChanged
+            | JobPostingClosed
             | JobPostingInFunction
             | JobPostingWithKeyword
             | JoinedAnAccelerator
@@ -125,6 +127,7 @@ class CreateTrackerCompanyListBody:
         from ..models.headcount_crossed_threshold import HeadcountCrossedThreshold  # noqa: PLC0415
         from ..models.headcount_growth_percent import HeadcountGrowthPercent  # noqa: PLC0415
         from ..models.hq_location_changed import HQLocationChanged  # noqa: PLC0415
+        from ..models.job_posting_closed import JobPostingClosed  # noqa: PLC0415
         from ..models.job_posting_in_function import JobPostingInFunction  # noqa: PLC0415
         from ..models.job_posting_with_keyword import JobPostingWithKeyword  # noqa: PLC0415
         from ..models.joined_an_accelerator import JoinedAnAccelerator  # noqa: PLC0415
@@ -159,6 +162,8 @@ class CreateTrackerCompanyListBody:
                 elif isinstance(tracking_rules_type_0_item_data, JobPostingWithKeyword):
                     tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
                 elif isinstance(tracking_rules_type_0_item_data, JobPostingInFunction):
+                    tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
+                elif isinstance(tracking_rules_type_0_item_data, JobPostingClosed):
                     tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
                 elif isinstance(tracking_rules_type_0_item_data, NewsWithKeyword):
                     tracking_rules_type_0_item = tracking_rules_type_0_item_data.to_dict()
@@ -259,6 +264,7 @@ class CreateTrackerCompanyListBody:
         from ..models.headcount_crossed_threshold import HeadcountCrossedThreshold  # noqa: PLC0415
         from ..models.headcount_growth_percent import HeadcountGrowthPercent  # noqa: PLC0415
         from ..models.hq_location_changed import HQLocationChanged  # noqa: PLC0415
+        from ..models.job_posting_closed import JobPostingClosed  # noqa: PLC0415
         from ..models.job_posting_in_function import JobPostingInFunction  # noqa: PLC0415
         from ..models.job_posting_with_keyword import JobPostingWithKeyword  # noqa: PLC0415
         from ..models.joined_an_accelerator import JoinedAnAccelerator  # noqa: PLC0415
@@ -297,6 +303,7 @@ class CreateTrackerCompanyListBody:
                 | HeadcountCrossedThreshold
                 | HeadcountGrowthPercent
                 | HQLocationChanged
+                | JobPostingClosed
                 | JobPostingInFunction
                 | JobPostingWithKeyword
                 | JoinedAnAccelerator
@@ -341,6 +348,7 @@ class CreateTrackerCompanyListBody:
                         | HeadcountCrossedThreshold
                         | HeadcountGrowthPercent
                         | HQLocationChanged
+                        | JobPostingClosed
                         | JobPostingInFunction
                         | JobPostingWithKeyword
                         | JoinedAnAccelerator
@@ -403,7 +411,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_6 = NewsWithKeyword.from_dict(data)
+                            tracking_rules_type_0_item_type_6 = JobPostingClosed.from_dict(data)
 
                             return tracking_rules_type_0_item_type_6
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -411,7 +419,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_7 = CompanyNews.from_dict(data)
+                            tracking_rules_type_0_item_type_7 = NewsWithKeyword.from_dict(data)
 
                             return tracking_rules_type_0_item_type_7
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -419,7 +427,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_8 = HQLocationChanged.from_dict(data)
+                            tracking_rules_type_0_item_type_8 = CompanyNews.from_dict(data)
 
                             return tracking_rules_type_0_item_type_8
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -427,7 +435,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_9 = CompanyStatusChanged.from_dict(data)
+                            tracking_rules_type_0_item_type_9 = HQLocationChanged.from_dict(data)
 
                             return tracking_rules_type_0_item_type_9
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -435,7 +443,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_10 = TechnologyAdded.from_dict(data)
+                            tracking_rules_type_0_item_type_10 = CompanyStatusChanged.from_dict(data)
 
                             return tracking_rules_type_0_item_type_10
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -443,7 +451,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_11 = CompanyPosted.from_dict(data)
+                            tracking_rules_type_0_item_type_11 = TechnologyAdded.from_dict(data)
 
                             return tracking_rules_type_0_item_type_11
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -451,7 +459,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_12 = CompanyPostedWithKeyword.from_dict(data)
+                            tracking_rules_type_0_item_type_12 = CompanyPosted.from_dict(data)
 
                             return tracking_rules_type_0_item_type_12
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -459,7 +467,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_13 = FollowerCountGrowth.from_dict(data)
+                            tracking_rules_type_0_item_type_13 = CompanyPostedWithKeyword.from_dict(data)
 
                             return tracking_rules_type_0_item_type_13
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -467,7 +475,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_14 = CompanyNameChanged.from_dict(data)
+                            tracking_rules_type_0_item_type_14 = FollowerCountGrowth.from_dict(data)
 
                             return tracking_rules_type_0_item_type_14
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -475,7 +483,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_15 = CompanyDescriptionChanged.from_dict(data)
+                            tracking_rules_type_0_item_type_15 = CompanyNameChanged.from_dict(data)
 
                             return tracking_rules_type_0_item_type_15
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -483,7 +491,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_16 = CompanyWentInactive.from_dict(data)
+                            tracking_rules_type_0_item_type_16 = CompanyDescriptionChanged.from_dict(data)
 
                             return tracking_rules_type_0_item_type_16
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -491,7 +499,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_17 = EmployeeCountMilestone.from_dict(data)
+                            tracking_rules_type_0_item_type_17 = CompanyWentInactive.from_dict(data)
 
                             return tracking_rules_type_0_item_type_17
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -499,7 +507,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_18 = NewOfficeLocation.from_dict(data)
+                            tracking_rules_type_0_item_type_18 = EmployeeCountMilestone.from_dict(data)
 
                             return tracking_rules_type_0_item_type_18
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -507,7 +515,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_19 = CompanyLogoChanged.from_dict(data)
+                            tracking_rules_type_0_item_type_19 = NewOfficeLocation.from_dict(data)
 
                             return tracking_rules_type_0_item_type_19
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -515,7 +523,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_20 = AcquiredCompany.from_dict(data)
+                            tracking_rules_type_0_item_type_20 = CompanyLogoChanged.from_dict(data)
 
                             return tracking_rules_type_0_item_type_20
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -523,7 +531,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_21 = NewInvestor.from_dict(data)
+                            tracking_rules_type_0_item_type_21 = AcquiredCompany.from_dict(data)
 
                             return tracking_rules_type_0_item_type_21
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -531,7 +539,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_22 = JoinedAnAccelerator.from_dict(data)
+                            tracking_rules_type_0_item_type_22 = NewInvestor.from_dict(data)
 
                             return tracking_rules_type_0_item_type_22
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -539,7 +547,7 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_23 = RecentlyHiredWithTitle.from_dict(data)
+                            tracking_rules_type_0_item_type_23 = JoinedAnAccelerator.from_dict(data)
 
                             return tracking_rules_type_0_item_type_23
                         except (TypeError, ValueError, AttributeError, KeyError):
@@ -547,16 +555,24 @@ class CreateTrackerCompanyListBody:
                         try:
                             if not isinstance(data, dict):
                                 raise TypeError()
-                            tracking_rules_type_0_item_type_24 = DepartmentSizeThreshold.from_dict(data)
+                            tracking_rules_type_0_item_type_24 = RecentlyHiredWithTitle.from_dict(data)
 
                             return tracking_rules_type_0_item_type_24
                         except (TypeError, ValueError, AttributeError, KeyError):
                             pass
+                        try:
+                            if not isinstance(data, dict):
+                                raise TypeError()
+                            tracking_rules_type_0_item_type_25 = DepartmentSizeThreshold.from_dict(data)
+
+                            return tracking_rules_type_0_item_type_25
+                        except (TypeError, ValueError, AttributeError, KeyError):
+                            pass
                         if not isinstance(data, dict):
                             raise TypeError()
-                        tracking_rules_type_0_item_type_25 = RecentLayoffs.from_dict(data)
+                        tracking_rules_type_0_item_type_26 = RecentLayoffs.from_dict(data)
 
-                        return tracking_rules_type_0_item_type_25
+                        return tracking_rules_type_0_item_type_26
 
                     tracking_rules_type_0_item = _parse_tracking_rules_type_0_item(tracking_rules_type_0_item_data)
 
@@ -583,6 +599,7 @@ class CreateTrackerCompanyListBody:
                     | HeadcountCrossedThreshold
                     | HeadcountGrowthPercent
                     | HQLocationChanged
+                    | JobPostingClosed
                     | JobPostingInFunction
                     | JobPostingWithKeyword
                     | JoinedAnAccelerator

@@ -45,6 +45,9 @@ if TYPE_CHECKING:
     from ..models.create_tracker_company_list_body_company_search_params_type_0_founded_on_type_1 import (
         CreateTrackerCompanyListBodyCompanySearchParamsType0FoundedOnType1,
     )
+    from ..models.create_tracker_company_list_body_company_search_params_type_0_funding_rounds_v2_type_0 import (
+        CreateTrackerCompanyListBodyCompanySearchParamsType0FundingRoundsV2Type0,
+    )
     from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_country_code_type_0 import (
         CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersCountryCodeType0,
     )
@@ -99,6 +102,9 @@ if TYPE_CHECKING:
     from ..models.create_tracker_company_list_body_company_search_params_type_0_revenue_ranges_usd_type_0 import (
         CreateTrackerCompanyListBodyCompanySearchParamsType0RevenueRangesUSDType0,
     )
+    from ..models.create_tracker_company_list_body_company_search_params_type_0_salaries_type_0 import (
+        CreateTrackerCompanyListBodyCompanySearchParamsType0SalariesType0,
+    )
     from ..models.create_tracker_company_list_body_company_search_params_type_0_sort_type_0_item import (
         CreateTrackerCompanyListBodyCompanySearchParamsType0SortType0Item,
     )
@@ -125,6 +131,9 @@ if TYPE_CHECKING:
     )
     from ..models.create_tracker_company_list_body_company_search_params_type_0_total_funding_usd_type_0 import (
         CreateTrackerCompanyListBodyCompanySearchParamsType0TotalFundingUSDType0,
+    )
+    from ..models.create_tracker_company_list_body_company_search_params_type_0_vesting_schedule_type_0 import (
+        CreateTrackerCompanyListBodyCompanySearchParamsType0VestingScheduleType0,
     )
 
 
@@ -166,6 +175,8 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
             employees (CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0 | None | Unset):
             naics_codes (CreateTrackerCompanyListBodyCompanySearchParamsType0NaicsCodesType0 | None | Unset):
             fortune_rankings (CreateTrackerCompanyListBodyCompanySearchParamsType0FortuneRankingsType0 | None | Unset):
+            vesting_schedule (CreateTrackerCompanyListBodyCompanySearchParamsType0VestingScheduleType0 | None | Unset):
+            salaries (CreateTrackerCompanyListBodyCompanySearchParamsType0SalariesType0 | None | Unset):
             job_postings_v2 (CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0 | None | Unset):
             job_posting_stats (CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0 | None | Unset):
             office_locations_v2 (CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0 | None | Unset):
@@ -180,6 +191,7 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
             crunchbase_slugs (list[str] | None | Unset):
             investors_v2 (CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0 | None | Unset):
             technologies_v2 (CreateTrackerCompanyListBodyCompanySearchParamsType0TechnologiesV2Type0 | None | Unset):
+            funding_rounds_v2 (CreateTrackerCompanyListBodyCompanySearchParamsType0FundingRoundsV2Type0 | None | Unset):
             revenue_range_usd (CreateTrackerCompanyListBodyCompanySearchParamsType0RevenueRangeUSDType0 | None | Unset):
             revenue_ranges_usd (CreateTrackerCompanyListBodyCompanySearchParamsType0RevenueRangesUSDType0 | None | Unset):
             employee_trends_v2 (CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeeTrendsV2Type0 | None | Unset):
@@ -188,8 +200,7 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
                 Unset): Filter companies by the industries they are tagged with on LinkedIn. To get the list of valid values,
                 each with its company count, use the `getIndustries` endpoint (`GET /v1/enums/industries`), and hide values with
                 very small counts from your filter UI, since a value with only a handful of companies behind it is a no-op
-                filter. Values must match the enum exactly — a misspelled or retired value returns zero results with no error or
-                warning. This filter matches LinkedIn's own industry tags, which are narrow and granular. For broader matching
+                filter. This filter matches LinkedIn's own industry tags, which are narrow and granular. For broader matching
                 use `industriesV2` (Fiber's standardized categories, listed as `fiberIndustries` in the same response) or
                 `crunchbaseCategories` / `crunchbaseCategoryGroups` for Crunchbase's taxonomy — the three are separate
                 classifications and are not interchangeable.
@@ -238,6 +249,8 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
     employees: CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeesType0 | None | Unset = UNSET
     naics_codes: CreateTrackerCompanyListBodyCompanySearchParamsType0NaicsCodesType0 | None | Unset = UNSET
     fortune_rankings: CreateTrackerCompanyListBodyCompanySearchParamsType0FortuneRankingsType0 | None | Unset = UNSET
+    vesting_schedule: CreateTrackerCompanyListBodyCompanySearchParamsType0VestingScheduleType0 | None | Unset = UNSET
+    salaries: CreateTrackerCompanyListBodyCompanySearchParamsType0SalariesType0 | None | Unset = UNSET
     job_postings_v2: CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0 | None | Unset = UNSET
     job_posting_stats: CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingStatsType0 | None | Unset = UNSET
     office_locations_v2: CreateTrackerCompanyListBodyCompanySearchParamsType0OfficeLocationsV2Type0 | None | Unset = (
@@ -256,6 +269,7 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
     crunchbase_slugs: list[str] | None | Unset = UNSET
     investors_v2: CreateTrackerCompanyListBodyCompanySearchParamsType0InvestorsV2Type0 | None | Unset = UNSET
     technologies_v2: CreateTrackerCompanyListBodyCompanySearchParamsType0TechnologiesV2Type0 | None | Unset = UNSET
+    funding_rounds_v2: CreateTrackerCompanyListBodyCompanySearchParamsType0FundingRoundsV2Type0 | None | Unset = UNSET
     revenue_range_usd: CreateTrackerCompanyListBodyCompanySearchParamsType0RevenueRangeUSDType0 | None | Unset = UNSET
     revenue_ranges_usd: CreateTrackerCompanyListBodyCompanySearchParamsType0RevenueRangesUSDType0 | None | Unset = UNSET
     employee_trends_v2: CreateTrackerCompanyListBodyCompanySearchParamsType0EmployeeTrendsV2Type0 | None | Unset = UNSET
@@ -302,6 +316,9 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_founded_on_type_1 import (
             CreateTrackerCompanyListBodyCompanySearchParamsType0FoundedOnType1,  # noqa: PLC0415
+        )
+        from ..models.create_tracker_company_list_body_company_search_params_type_0_funding_rounds_v2_type_0 import (
+            CreateTrackerCompanyListBodyCompanySearchParamsType0FundingRoundsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_country_code_type_0 import (
             CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersCountryCodeType0,  # noqa: PLC0415
@@ -357,6 +374,9 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_revenue_ranges_usd_type_0 import (
             CreateTrackerCompanyListBodyCompanySearchParamsType0RevenueRangesUSDType0,  # noqa: PLC0415
         )
+        from ..models.create_tracker_company_list_body_company_search_params_type_0_salaries_type_0 import (
+            CreateTrackerCompanyListBodyCompanySearchParamsType0SalariesType0,  # noqa: PLC0415
+        )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_special_flags_type_0 import (
             CreateTrackerCompanyListBodyCompanySearchParamsType0SpecialFlagsType0,  # noqa: PLC0415
         )
@@ -380,6 +400,9 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_total_funding_usd_type_0 import (
             CreateTrackerCompanyListBodyCompanySearchParamsType0TotalFundingUSDType0,  # noqa: PLC0415
+        )
+        from ..models.create_tracker_company_list_body_company_search_params_type_0_vesting_schedule_type_0 import (
+            CreateTrackerCompanyListBodyCompanySearchParamsType0VestingScheduleType0,  # noqa: PLC0415
         )
 
         exact_company_v2: dict[str, Any] | None | Unset
@@ -579,6 +602,24 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
         else:
             fortune_rankings = self.fortune_rankings
 
+        vesting_schedule: dict[str, Any] | None | Unset
+        if isinstance(self.vesting_schedule, Unset):
+            vesting_schedule = UNSET
+        elif isinstance(
+            self.vesting_schedule, CreateTrackerCompanyListBodyCompanySearchParamsType0VestingScheduleType0
+        ):
+            vesting_schedule = self.vesting_schedule.to_dict()
+        else:
+            vesting_schedule = self.vesting_schedule
+
+        salaries: dict[str, Any] | None | Unset
+        if isinstance(self.salaries, Unset):
+            salaries = UNSET
+        elif isinstance(self.salaries, CreateTrackerCompanyListBodyCompanySearchParamsType0SalariesType0):
+            salaries = self.salaries.to_dict()
+        else:
+            salaries = self.salaries
+
         job_postings_v2: dict[str, Any] | None | Unset
         if isinstance(self.job_postings_v2, Unset):
             job_postings_v2 = UNSET
@@ -687,6 +728,16 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
         else:
             technologies_v2 = self.technologies_v2
 
+        funding_rounds_v2: dict[str, Any] | None | Unset
+        if isinstance(self.funding_rounds_v2, Unset):
+            funding_rounds_v2 = UNSET
+        elif isinstance(
+            self.funding_rounds_v2, CreateTrackerCompanyListBodyCompanySearchParamsType0FundingRoundsV2Type0
+        ):
+            funding_rounds_v2 = self.funding_rounds_v2.to_dict()
+        else:
+            funding_rounds_v2 = self.funding_rounds_v2
+
         revenue_range_usd: dict[str, Any] | None | Unset
         if isinstance(self.revenue_range_usd, Unset):
             revenue_range_usd = UNSET
@@ -794,6 +845,10 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
             field_dict["naicsCodes"] = naics_codes
         if fortune_rankings is not UNSET:
             field_dict["fortuneRankings"] = fortune_rankings
+        if vesting_schedule is not UNSET:
+            field_dict["vestingSchedule"] = vesting_schedule
+        if salaries is not UNSET:
+            field_dict["salaries"] = salaries
         if job_postings_v2 is not UNSET:
             field_dict["jobPostingsV2"] = job_postings_v2
         if job_posting_stats is not UNSET:
@@ -818,6 +873,8 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
             field_dict["investorsV2"] = investors_v2
         if technologies_v2 is not UNSET:
             field_dict["technologiesV2"] = technologies_v2
+        if funding_rounds_v2 is not UNSET:
+            field_dict["fundingRoundsV2"] = funding_rounds_v2
         if revenue_range_usd is not UNSET:
             field_dict["revenueRangeUSD"] = revenue_range_usd
         if revenue_ranges_usd is not UNSET:
@@ -870,6 +927,9 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_founded_on_type_1 import (
             CreateTrackerCompanyListBodyCompanySearchParamsType0FoundedOnType1,  # noqa: PLC0415
+        )
+        from ..models.create_tracker_company_list_body_company_search_params_type_0_funding_rounds_v2_type_0 import (
+            CreateTrackerCompanyListBodyCompanySearchParamsType0FundingRoundsV2Type0,  # noqa: PLC0415
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_headquarters_country_code_type_0 import (
             CreateTrackerCompanyListBodyCompanySearchParamsType0HeadquartersCountryCodeType0,  # noqa: PLC0415
@@ -925,6 +985,9 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
         from ..models.create_tracker_company_list_body_company_search_params_type_0_revenue_ranges_usd_type_0 import (
             CreateTrackerCompanyListBodyCompanySearchParamsType0RevenueRangesUSDType0,  # noqa: PLC0415
         )
+        from ..models.create_tracker_company_list_body_company_search_params_type_0_salaries_type_0 import (
+            CreateTrackerCompanyListBodyCompanySearchParamsType0SalariesType0,  # noqa: PLC0415
+        )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_sort_type_0_item import (
             CreateTrackerCompanyListBodyCompanySearchParamsType0SortType0Item,  # noqa: PLC0415
         )
@@ -951,6 +1014,9 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
         )
         from ..models.create_tracker_company_list_body_company_search_params_type_0_total_funding_usd_type_0 import (
             CreateTrackerCompanyListBodyCompanySearchParamsType0TotalFundingUSDType0,  # noqa: PLC0415
+        )
+        from ..models.create_tracker_company_list_body_company_search_params_type_0_vesting_schedule_type_0 import (
+            CreateTrackerCompanyListBodyCompanySearchParamsType0VestingScheduleType0,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -1443,6 +1509,46 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
 
         fortune_rankings = _parse_fortune_rankings(d.pop("fortuneRankings", UNSET))
 
+        def _parse_vesting_schedule(
+            data: object,
+        ) -> CreateTrackerCompanyListBodyCompanySearchParamsType0VestingScheduleType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                vesting_schedule_type_0 = (
+                    CreateTrackerCompanyListBodyCompanySearchParamsType0VestingScheduleType0.from_dict(data)
+                )
+
+                return vesting_schedule_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateTrackerCompanyListBodyCompanySearchParamsType0VestingScheduleType0 | None | Unset, data)
+
+        vesting_schedule = _parse_vesting_schedule(d.pop("vestingSchedule", UNSET))
+
+        def _parse_salaries(
+            data: object,
+        ) -> CreateTrackerCompanyListBodyCompanySearchParamsType0SalariesType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                salaries_type_0 = CreateTrackerCompanyListBodyCompanySearchParamsType0SalariesType0.from_dict(data)
+
+                return salaries_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateTrackerCompanyListBodyCompanySearchParamsType0SalariesType0 | None | Unset, data)
+
+        salaries = _parse_salaries(d.pop("salaries", UNSET))
+
         def _parse_job_postings_v2(
             data: object,
         ) -> CreateTrackerCompanyListBodyCompanySearchParamsType0JobPostingsV2Type0 | None | Unset:
@@ -1689,6 +1795,27 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
 
         technologies_v2 = _parse_technologies_v2(d.pop("technologiesV2", UNSET))
 
+        def _parse_funding_rounds_v2(
+            data: object,
+        ) -> CreateTrackerCompanyListBodyCompanySearchParamsType0FundingRoundsV2Type0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                funding_rounds_v2_type_0 = (
+                    CreateTrackerCompanyListBodyCompanySearchParamsType0FundingRoundsV2Type0.from_dict(data)
+                )
+
+                return funding_rounds_v2_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CreateTrackerCompanyListBodyCompanySearchParamsType0FundingRoundsV2Type0 | None | Unset, data)
+
+        funding_rounds_v2 = _parse_funding_rounds_v2(d.pop("fundingRoundsV2", UNSET))
+
         def _parse_revenue_range_usd(
             data: object,
         ) -> CreateTrackerCompanyListBodyCompanySearchParamsType0RevenueRangeUSDType0 | None | Unset:
@@ -1841,6 +1968,8 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
             employees=employees,
             naics_codes=naics_codes,
             fortune_rankings=fortune_rankings,
+            vesting_schedule=vesting_schedule,
+            salaries=salaries,
             job_postings_v2=job_postings_v2,
             job_posting_stats=job_posting_stats,
             office_locations_v2=office_locations_v2,
@@ -1853,6 +1982,7 @@ class CreateTrackerCompanyListBodyCompanySearchParamsType0:
             crunchbase_slugs=crunchbase_slugs,
             investors_v2=investors_v2,
             technologies_v2=technologies_v2,
+            funding_rounds_v2=funding_rounds_v2,
             revenue_range_usd=revenue_range_usd,
             revenue_ranges_usd=revenue_ranges_usd,
             employee_trends_v2=employee_trends_v2,

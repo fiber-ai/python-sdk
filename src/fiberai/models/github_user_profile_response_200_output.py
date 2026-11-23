@@ -22,7 +22,7 @@ class GithubUserProfileResponse200Output:
     """
     Attributes:
         username (str): GitHub username.
-        profile_url (str): Profile URL.
+        profile_url (str): Profile URL, for example 'https://github.com/torvalds'.
         languages (list[GithubUserProfileResponse200OutputLanguagesItem]): Languages across the user's own non-fork
             repositories, using the 100 most recently pushed. Repositories with no detected language are excluded. Ordered
             by `repoCount`, highest first.

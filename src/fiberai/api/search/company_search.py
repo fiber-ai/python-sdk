@@ -155,7 +155,8 @@ def sync_detailed(
 
     <span>💰 <strong>Cost:</strong> 1 credit per company found, plus 1 credit when
     includeCount=true&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary. Count
-    credits only apply when the includeCount flag is set.">ⓘ</span></span>
+    credits only apply when the includeCount flag is set. includeMatches is free: the match proof adds
+    no credits.">ⓘ</span></span>
 
     Args:
         body (CompanySearchBody):
@@ -204,7 +205,8 @@ def sync(
 
     <span>💰 <strong>Cost:</strong> 1 credit per company found, plus 1 credit when
     includeCount=true&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary. Count
-    credits only apply when the includeCount flag is set.">ⓘ</span></span>
+    credits only apply when the includeCount flag is set. includeMatches is free: the match proof adds
+    no credits.">ⓘ</span></span>
 
     Args:
         body (CompanySearchBody):
@@ -247,7 +249,8 @@ async def asyncio_detailed(
 
     <span>💰 <strong>Cost:</strong> 1 credit per company found, plus 1 credit when
     includeCount=true&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary. Count
-    credits only apply when the includeCount flag is set.">ⓘ</span></span>
+    credits only apply when the includeCount flag is set. includeMatches is free: the match proof adds
+    no credits.">ⓘ</span></span>
 
     Args:
         body (CompanySearchBody):
@@ -294,7 +297,8 @@ async def asyncio(
 
     <span>💰 <strong>Cost:</strong> 1 credit per company found, plus 1 credit when
     includeCount=true&nbsp;<span title="Pricing shown is default pricing. Actual pricing may vary. Count
-    credits only apply when the includeCount flag is set.">ⓘ</span></span>
+    credits only apply when the includeCount flag is set. includeMatches is free: the match proof adds
+    no credits.">ⓘ</span></span>
 
     Args:
         body (CompanySearchBody):

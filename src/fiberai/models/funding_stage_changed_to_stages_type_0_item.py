@@ -14,6 +14,9 @@ class FundingStageChangedToStagesType0Item(StrEnum):
     SERIES_E = "series_e"
     SERIES_F = "series_f"
     SERIES_G = "series_g"
+    SERIES_H = "series_h"
+    SERIES_I = "series_i"
+    SERIES_J = "series_j"
 
     def __str__(self) -> str:
         return str(self.value)

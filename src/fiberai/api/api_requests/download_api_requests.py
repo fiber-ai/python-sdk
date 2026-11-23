@@ -150,9 +150,10 @@ def sync_detailed(
     """Download your past API requests
 
      Download the API requests your organization has made, newest first, with the parameters you sent and
-    how each call turned out. Up to 5000 matching requests are returned in one call; if more exist,
-    `truncated` is true — narrow `from`/`to` and retry. History is retained for 14 days. Response bodies
-    are not returned.
+    how each call turned out. Each entry also carries the credits that call charged or refunded and the
+    API key that made it, so you can reconcile individual requests against your credit balance. Up to
+    5000 matching requests are returned in one call; if more exist, `truncated` is true — narrow
+    `from`/`to` and retry. History is retained for 14 days. Response bodies are not returned.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -201,9 +202,10 @@ def sync(
     """Download your past API requests
 
      Download the API requests your organization has made, newest first, with the parameters you sent and
-    how each call turned out. Up to 5000 matching requests are returned in one call; if more exist,
-    `truncated` is true — narrow `from`/`to` and retry. History is retained for 14 days. Response bodies
-    are not returned.
+    how each call turned out. Each entry also carries the credits that call charged or refunded and the
+    API key that made it, so you can reconcile individual requests against your credit balance. Up to
+    5000 matching requests are returned in one call; if more exist, `truncated` is true — narrow
+    `from`/`to` and retry. History is retained for 14 days. Response bodies are not returned.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -246,9 +248,10 @@ async def asyncio_detailed(
     """Download your past API requests
 
      Download the API requests your organization has made, newest first, with the parameters you sent and
-    how each call turned out. Up to 5000 matching requests are returned in one call; if more exist,
-    `truncated` is true — narrow `from`/`to` and retry. History is retained for 14 days. Response bodies
-    are not returned.
+    how each call turned out. Each entry also carries the credits that call charged or refunded and the
+    API key that made it, so you can reconcile individual requests against your credit balance. Up to
+    5000 matching requests are returned in one call; if more exist, `truncated` is true — narrow
+    `from`/`to` and retry. History is retained for 14 days. Response bodies are not returned.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 
@@ -295,9 +298,10 @@ async def asyncio(
     """Download your past API requests
 
      Download the API requests your organization has made, newest first, with the parameters you sent and
-    how each call turned out. Up to 5000 matching requests are returned in one call; if more exist,
-    `truncated` is true — narrow `from`/`to` and retry. History is retained for 14 days. Response bodies
-    are not returned.
+    how each call turned out. Each entry also carries the credits that call charged or refunded and the
+    API key that made it, so you can reconcile individual requests against your credit balance. Up to
+    5000 matching requests are returned in one call; if more exist, `truncated` is true — narrow
+    `from`/`to` and retry. History is retained for 14 days. Response bodies are not returned.
 
     <span>⚡ <strong>Rate limit:</strong> 30 requests per 1 minute</span>
 

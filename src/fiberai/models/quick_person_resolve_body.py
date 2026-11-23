@@ -11,6 +11,7 @@ if TYPE_CHECKING:
     from ..models.quick_person_resolve_body_people_item_type_1 import QuickPersonResolveBodyPeopleItemType1
     from ..models.quick_person_resolve_body_people_item_type_2 import QuickPersonResolveBodyPeopleItemType2
     from ..models.quick_person_resolve_body_people_item_type_3 import QuickPersonResolveBodyPeopleItemType3
+    from ..models.quick_person_resolve_body_people_item_type_4 import QuickPersonResolveBodyPeopleItemType4
 
 
 T = TypeVar("T", bound="QuickPersonResolveBody")
@@ -22,9 +23,10 @@ class QuickPersonResolveBody:
     Attributes:
         api_key (str): Your Fiber API key
         people (list[QuickPersonResolveBodyPeopleItemType0 | QuickPersonResolveBodyPeopleItemType1 |
-            QuickPersonResolveBodyPeopleItemType2 | QuickPersonResolveBodyPeopleItemType3]): People to resolve. Each entry
-            is an { identifier, value } pair where identifier is "linkedinSlug", "linkedinUserId", "linkedinUrl", or
-            "entityUrn". Max 100 per request. You are charged only for the ones that resolve.
+            QuickPersonResolveBodyPeopleItemType2 | QuickPersonResolveBodyPeopleItemType3 |
+            QuickPersonResolveBodyPeopleItemType4]): People to resolve. Each entry is an { identifier, value } pair where
+            identifier is "linkedinSlug", "linkedinUserId", "linkedinUrl", "entityUrn", or "crunchbaseSlug". Max 100 per
+            request. You are charged only for the ones that resolve.
     """
 
     api_key: str
@@ -33,6 +35,7 @@ class QuickPersonResolveBody:
         | QuickPersonResolveBodyPeopleItemType1
         | QuickPersonResolveBodyPeopleItemType2
         | QuickPersonResolveBodyPeopleItemType3
+        | QuickPersonResolveBodyPeopleItemType4
     ]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
@@ -40,6 +43,7 @@ class QuickPersonResolveBody:
         from ..models.quick_person_resolve_body_people_item_type_0 import QuickPersonResolveBodyPeopleItemType0  # noqa: PLC0415
         from ..models.quick_person_resolve_body_people_item_type_1 import QuickPersonResolveBodyPeopleItemType1  # noqa: PLC0415
         from ..models.quick_person_resolve_body_people_item_type_2 import QuickPersonResolveBodyPeopleItemType2  # noqa: PLC0415
+        from ..models.quick_person_resolve_body_people_item_type_3 import QuickPersonResolveBodyPeopleItemType3  # noqa: PLC0415
 
         api_key = self.api_key
 
@@ -51,6 +55,8 @@ class QuickPersonResolveBody:
             elif isinstance(people_item_data, QuickPersonResolveBodyPeopleItemType1):
                 people_item = people_item_data.to_dict()
             elif isinstance(people_item_data, QuickPersonResolveBodyPeopleItemType2):
+                people_item = people_item_data.to_dict()
+            elif isinstance(people_item_data, QuickPersonResolveBodyPeopleItemType3):
                 people_item = people_item_data.to_dict()
             else:
                 people_item = people_item_data.to_dict()
@@ -74,6 +80,7 @@ class QuickPersonResolveBody:
         from ..models.quick_person_resolve_body_people_item_type_1 import QuickPersonResolveBodyPeopleItemType1  # noqa: PLC0415
         from ..models.quick_person_resolve_body_people_item_type_2 import QuickPersonResolveBodyPeopleItemType2  # noqa: PLC0415
         from ..models.quick_person_resolve_body_people_item_type_3 import QuickPersonResolveBodyPeopleItemType3  # noqa: PLC0415
+        from ..models.quick_person_resolve_body_people_item_type_4 import QuickPersonResolveBodyPeopleItemType4  # noqa: PLC0415
 
         d = dict(src_dict)
         api_key = d.pop("apiKey")
@@ -89,6 +96,7 @@ class QuickPersonResolveBody:
                 | QuickPersonResolveBodyPeopleItemType1
                 | QuickPersonResolveBodyPeopleItemType2
                 | QuickPersonResolveBodyPeopleItemType3
+                | QuickPersonResolveBodyPeopleItemType4
             ):
                 try:
                     if not isinstance(data, dict):
@@ -114,11 +122,19 @@ class QuickPersonResolveBody:
                     return people_item_type_2
                 except (TypeError, ValueError, AttributeError, KeyError):
                     pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    people_item_type_3 = QuickPersonResolveBodyPeopleItemType3.from_dict(data)
+
+                    return people_item_type_3
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
                 if not isinstance(data, dict):
                     raise TypeError()
-                people_item_type_3 = QuickPersonResolveBodyPeopleItemType3.from_dict(data)
+                people_item_type_4 = QuickPersonResolveBodyPeopleItemType4.from_dict(data)
 
-                return people_item_type_3
+                return people_item_type_4
 
             people_item = _parse_people_item(people_item_data)
 

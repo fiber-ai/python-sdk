@@ -6,6 +6,7 @@ class PeopleSearchCountBodySearchParamsEducationType0AnyOfType0ItemDegreeV2Type1
     ASSOCIATE = "Associate"
     BACHELOR = "Bachelor"
     BUSINESS = "Business"
+    CERTIFICATE = "Certificate"
     DENTISTRY = "Dentistry"
     DIVINITY = "Divinity"
     DOCTORATE = "Doctorate"

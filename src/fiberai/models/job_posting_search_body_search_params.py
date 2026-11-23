@@ -84,7 +84,7 @@ class JobPostingSearchBodySearchParams:
         title (list[str] | None | Unset): Array of job titles for partial match (e.g., 'Software Engineer', 'Manager')
         is_active (JobPostingSearchBodySearchParamsIsActiveType1 | JobPostingSearchBodySearchParamsIsActiveType2Type1 |
             JobPostingSearchBodySearchParamsIsActiveType3Type1 | None | Unset): Filter by job status: true=active,
-            false=closed, no_preference=both
+            false=closed, no_preference=both. Defaults to true (active only) when omitted.
         posted_at (JobPostingSearchBodySearchParamsPostedAtType0 | JobPostingSearchBodySearchParamsPostedAtType1 | None
             | Unset): Filter by job posting date (supports relative and absolute dates)
         num_applicants (JobPostingSearchBodySearchParamsNumApplicantsType0 | None | Unset): Filter by number of

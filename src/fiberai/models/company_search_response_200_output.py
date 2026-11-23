@@ -21,7 +21,8 @@ class CompanySearchResponse200Output:
     Attributes:
         data (list[CompanySearchResponse200OutputDataItem]):
         estimated_count (float | None | Unset): The estimated total number of companies who match your search
-            parameters. Note that this does not account for exclusion lists.
+            parameters. Note that this does not account for exclusion lists. Null when an `employees` filter is used,
+            because the estimate does not reflect it — a `warnings` entry explains when this happens.
         next_cursor (None | str | Unset): The pagination cursor for the next page. Provide this in the next request to
             continue paginating.
     """

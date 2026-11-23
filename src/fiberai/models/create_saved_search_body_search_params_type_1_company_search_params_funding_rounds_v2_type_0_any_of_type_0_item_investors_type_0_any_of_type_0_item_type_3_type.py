@@ -1,0 +1,10 @@
+from enum import StrEnum
+
+
+class CreateSavedSearchBodySearchParamsType1CompanySearchParamsFundingRoundsV2Type0AnyOfType0ItemInvestorsType0AnyOfType0ItemType3Type(
+    StrEnum
+):
+    LINKEDIN_ORG_ID = "linkedin-org-id"
+
+    def __str__(self) -> str:
+        return str(self.value)

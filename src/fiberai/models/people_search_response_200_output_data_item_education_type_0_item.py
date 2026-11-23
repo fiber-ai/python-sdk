@@ -6,6 +6,15 @@ from typing import Any, TypeVar, cast
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
+from ..models.people_search_response_200_output_data_item_education_type_0_item_degree_level_type_1 import (
+    PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType1,
+)
+from ..models.people_search_response_200_output_data_item_education_type_0_item_degree_level_type_2_type_1 import (
+    PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType2Type1,
+)
+from ..models.people_search_response_200_output_data_item_education_type_0_item_degree_level_type_3_type_1 import (
+    PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType3Type1,
+)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PeopleSearchResponse200OutputDataItemEducationType0Item")
@@ -20,6 +29,9 @@ class PeopleSearchResponse200OutputDataItemEducationType0Item:
         field_of_study_id (None | str | Unset):
         field_of_study_name (None | str | Unset):
         degree (None | str | Unset):
+        degree_level (None | PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType1 |
+            PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType2Type1 |
+            PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType3Type1 | Unset):
         grade (None | str | Unset):
         start_date (None | str | Unset):
         end_date (None | str | Unset):
@@ -32,6 +44,13 @@ class PeopleSearchResponse200OutputDataItemEducationType0Item:
     field_of_study_id: None | str | Unset = UNSET
     field_of_study_name: None | str | Unset = UNSET
     degree: None | str | Unset = UNSET
+    degree_level: (
+        None
+        | PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType1
+        | PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType2Type1
+        | PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType3Type1
+        | Unset
+    ) = UNSET
     grade: None | str | Unset = UNSET
     start_date: None | str | Unset = UNSET
     end_date: None | str | Unset = UNSET
@@ -69,6 +88,22 @@ class PeopleSearchResponse200OutputDataItemEducationType0Item:
             degree = UNSET
         else:
             degree = self.degree
+
+        degree_level: None | str | Unset
+        if isinstance(self.degree_level, Unset):
+            degree_level = UNSET
+        elif isinstance(self.degree_level, PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType1):
+            degree_level = self.degree_level.value
+        elif isinstance(
+            self.degree_level, PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType2Type1
+        ):
+            degree_level = self.degree_level.value
+        elif isinstance(
+            self.degree_level, PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType3Type1
+        ):
+            degree_level = self.degree_level.value
+        else:
+            degree_level = self.degree_level
 
         grade: None | str | Unset
         if isinstance(self.grade, Unset):
@@ -113,6 +148,8 @@ class PeopleSearchResponse200OutputDataItemEducationType0Item:
             field_dict["field_of_study_name"] = field_of_study_name
         if degree is not UNSET:
             field_dict["degree"] = degree
+        if degree_level is not UNSET:
+            field_dict["degree_level"] = degree_level
         if grade is not UNSET:
             field_dict["grade"] = grade
         if start_date is not UNSET:
@@ -175,6 +212,58 @@ class PeopleSearchResponse200OutputDataItemEducationType0Item:
 
         degree = _parse_degree(d.pop("degree", UNSET))
 
+        def _parse_degree_level(
+            data: object,
+        ) -> (
+            None
+            | PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType1
+            | PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType2Type1
+            | PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType3Type1
+            | Unset
+        ):
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                degree_level_type_1 = PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType1(data)
+
+                return degree_level_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                degree_level_type_2_type_1 = (
+                    PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType2Type1(data)
+                )
+
+                return degree_level_type_2_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            try:
+                if not isinstance(data, str):
+                    raise TypeError()
+                degree_level_type_3_type_1 = (
+                    PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType3Type1(data)
+                )
+
+                return degree_level_type_3_type_1
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(
+                None
+                | PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType1
+                | PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType2Type1
+                | PeopleSearchResponse200OutputDataItemEducationType0ItemDegreeLevelType3Type1
+                | Unset,
+                data,
+            )
+
+        degree_level = _parse_degree_level(d.pop("degree_level", UNSET))
+
         def _parse_grade(data: object) -> None | str | Unset:
             if data is None:
                 return data
@@ -226,6 +315,7 @@ class PeopleSearchResponse200OutputDataItemEducationType0Item:
             field_of_study_id=field_of_study_id,
             field_of_study_name=field_of_study_name,
             degree=degree,
+            degree_level=degree_level,
             grade=grade,
             start_date=start_date,
             end_date=end_date,

@@ -1,8 +1,0 @@
-from enum import StrEnum
-
-
-class LookalikesTriggerBodyFiltersType0InvestorsV2Type0NoneOfType0ItemInvestedAtType1WindowType1Method(StrEnum):
-    WITHIN = "within"
-
-    def __str__(self) -> str:
-        return str(self.value)

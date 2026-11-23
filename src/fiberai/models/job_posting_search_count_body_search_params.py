@@ -86,7 +86,7 @@ class JobPostingSearchCountBodySearchParams:
         is_active (JobPostingSearchCountBodySearchParamsIsActiveType1 |
             JobPostingSearchCountBodySearchParamsIsActiveType2Type1 |
             JobPostingSearchCountBodySearchParamsIsActiveType3Type1 | None | Unset): Filter by job status: true=active,
-            false=closed, no_preference=both
+            false=closed, no_preference=both. Defaults to true (active only) when omitted.
         posted_at (JobPostingSearchCountBodySearchParamsPostedAtType0 |
             JobPostingSearchCountBodySearchParamsPostedAtType1 | None | Unset): Filter by job posting date (supports
             relative and absolute dates)

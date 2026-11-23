@@ -78,6 +78,9 @@ if TYPE_CHECKING:
     from ..models.company_search_response_200_output_data_item_locations_stats_type_0 import (
         CompanySearchResponse200OutputDataItemLocationsStatsType0,
     )
+    from ..models.company_search_response_200_output_data_item_matches_type_0 import (
+        CompanySearchResponse200OutputDataItemMatchesType0,
+    )
     from ..models.company_search_response_200_output_data_item_num_matching_locations_type_0 import (
         CompanySearchResponse200OutputDataItemNumMatchingLocationsType0,
     )
@@ -90,6 +93,9 @@ if TYPE_CHECKING:
     from ..models.company_search_response_200_output_data_item_role_count_matches_type_0_item import (
         CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item,
     )
+    from ..models.company_search_response_200_output_data_item_salary_levels_type_0_item import (
+        CompanySearchResponse200OutputDataItemSalaryLevelsType0Item,
+    )
     from ..models.company_search_response_200_output_data_item_similar_companies_type_0_item import (
         CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item,
     )
@@ -98,6 +104,9 @@ if TYPE_CHECKING:
     )
     from ..models.company_search_response_200_output_data_item_technologies_used_type_0_item import (
         CompanySearchResponse200OutputDataItemTechnologiesUsedType0Item,
+    )
+    from ..models.company_search_response_200_output_data_item_vesting_schedules_type_0_item import (
+        CompanySearchResponse200OutputDataItemVestingSchedulesType0Item,
     )
 
 
@@ -119,6 +128,8 @@ class CompanySearchResponse200OutputDataItem:
         employee_count_consensus (CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0 | None | Unset):
         facebook_urls (list[str] | None | Unset):
         fortune_rankings (list[CompanySearchResponse200OutputDataItemFortuneRankingsType0Item] | None | Unset):
+        vesting_schedules (list[CompanySearchResponse200OutputDataItemVestingSchedulesType0Item] | None | Unset):
+        salary_levels (list[CompanySearchResponse200OutputDataItemSalaryLevelsType0Item] | None | Unset):
         founded_on_consensus (None | str | Unset):
         github_usernames (list[str] | None | Unset):
         instagram_handles (list[str] | None | Unset):
@@ -193,6 +204,8 @@ class CompanySearchResponse200OutputDataItem:
         investor_categories (list[str] | None | Unset):
         technologies_used (list[CompanySearchResponse200OutputDataItemTechnologiesUsedType0Item] | None | Unset):
         platforms (CompanySearchResponse200OutputDataItemPlatformsType0 | None | Unset):
+        matches (CompanySearchResponse200OutputDataItemMatchesType0 | None | Unset): The people and job postings that
+            made this company match. Only returned when `includeMatches` is true.
     """
 
     linkedin_id: None | str | Unset = UNSET
@@ -206,6 +219,8 @@ class CompanySearchResponse200OutputDataItem:
     employee_count_consensus: CompanySearchResponse200OutputDataItemEmployeeCountConsensusType0 | None | Unset = UNSET
     facebook_urls: list[str] | None | Unset = UNSET
     fortune_rankings: list[CompanySearchResponse200OutputDataItemFortuneRankingsType0Item] | None | Unset = UNSET
+    vesting_schedules: list[CompanySearchResponse200OutputDataItemVestingSchedulesType0Item] | None | Unset = UNSET
+    salary_levels: list[CompanySearchResponse200OutputDataItemSalaryLevelsType0Item] | None | Unset = UNSET
     founded_on_consensus: None | str | Unset = UNSET
     github_usernames: list[str] | None | Unset = UNSET
     instagram_handles: list[str] | None | Unset = UNSET
@@ -284,6 +299,7 @@ class CompanySearchResponse200OutputDataItem:
     investor_categories: list[str] | None | Unset = UNSET
     technologies_used: list[CompanySearchResponse200OutputDataItemTechnologiesUsedType0Item] | None | Unset = UNSET
     platforms: CompanySearchResponse200OutputDataItemPlatformsType0 | None | Unset = UNSET
+    matches: CompanySearchResponse200OutputDataItemMatchesType0 | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -313,6 +329,9 @@ class CompanySearchResponse200OutputDataItem:
         )
         from ..models.company_search_response_200_output_data_item_locations_stats_type_0 import (
             CompanySearchResponse200OutputDataItemLocationsStatsType0,  # noqa: PLC0415
+        )
+        from ..models.company_search_response_200_output_data_item_matches_type_0 import (
+            CompanySearchResponse200OutputDataItemMatchesType0,  # noqa: PLC0415
         )
         from ..models.company_search_response_200_output_data_item_num_matching_locations_type_0 import (
             CompanySearchResponse200OutputDataItemNumMatchingLocationsType0,  # noqa: PLC0415
@@ -428,6 +447,30 @@ class CompanySearchResponse200OutputDataItem:
 
         else:
             fortune_rankings = self.fortune_rankings
+
+        vesting_schedules: list[dict[str, Any]] | None | Unset
+        if isinstance(self.vesting_schedules, Unset):
+            vesting_schedules = UNSET
+        elif isinstance(self.vesting_schedules, list):
+            vesting_schedules = []
+            for vesting_schedules_type_0_item_data in self.vesting_schedules:
+                vesting_schedules_type_0_item = vesting_schedules_type_0_item_data.to_dict()
+                vesting_schedules.append(vesting_schedules_type_0_item)
+
+        else:
+            vesting_schedules = self.vesting_schedules
+
+        salary_levels: list[dict[str, Any]] | None | Unset
+        if isinstance(self.salary_levels, Unset):
+            salary_levels = UNSET
+        elif isinstance(self.salary_levels, list):
+            salary_levels = []
+            for salary_levels_type_0_item_data in self.salary_levels:
+                salary_levels_type_0_item = salary_levels_type_0_item_data.to_dict()
+                salary_levels.append(salary_levels_type_0_item)
+
+        else:
+            salary_levels = self.salary_levels
 
         founded_on_consensus: None | str | Unset
         if isinstance(self.founded_on_consensus, Unset):
@@ -1015,6 +1058,14 @@ class CompanySearchResponse200OutputDataItem:
         else:
             platforms = self.platforms
 
+        matches: dict[str, Any] | None | Unset
+        if isinstance(self.matches, Unset):
+            matches = UNSET
+        elif isinstance(self.matches, CompanySearchResponse200OutputDataItemMatchesType0):
+            matches = self.matches.to_dict()
+        else:
+            matches = self.matches
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -1040,6 +1091,10 @@ class CompanySearchResponse200OutputDataItem:
             field_dict["facebook_urls"] = facebook_urls
         if fortune_rankings is not UNSET:
             field_dict["fortune_rankings"] = fortune_rankings
+        if vesting_schedules is not UNSET:
+            field_dict["vesting_schedules"] = vesting_schedules
+        if salary_levels is not UNSET:
+            field_dict["salary_levels"] = salary_levels
         if founded_on_consensus is not UNSET:
             field_dict["founded_on_consensus"] = founded_on_consensus
         if github_usernames is not UNSET:
@@ -1184,6 +1239,8 @@ class CompanySearchResponse200OutputDataItem:
             field_dict["technologies_used"] = technologies_used
         if platforms is not UNSET:
             field_dict["platforms"] = platforms
+        if matches is not UNSET:
+            field_dict["matches"] = matches
 
         return field_dict
 
@@ -1243,6 +1300,9 @@ class CompanySearchResponse200OutputDataItem:
         from ..models.company_search_response_200_output_data_item_locations_stats_type_0 import (
             CompanySearchResponse200OutputDataItemLocationsStatsType0,  # noqa: PLC0415
         )
+        from ..models.company_search_response_200_output_data_item_matches_type_0 import (
+            CompanySearchResponse200OutputDataItemMatchesType0,  # noqa: PLC0415
+        )
         from ..models.company_search_response_200_output_data_item_num_matching_locations_type_0 import (
             CompanySearchResponse200OutputDataItemNumMatchingLocationsType0,  # noqa: PLC0415
         )
@@ -1255,6 +1315,9 @@ class CompanySearchResponse200OutputDataItem:
         from ..models.company_search_response_200_output_data_item_role_count_matches_type_0_item import (
             CompanySearchResponse200OutputDataItemRoleCountMatchesType0Item,  # noqa: PLC0415
         )
+        from ..models.company_search_response_200_output_data_item_salary_levels_type_0_item import (
+            CompanySearchResponse200OutputDataItemSalaryLevelsType0Item,  # noqa: PLC0415
+        )
         from ..models.company_search_response_200_output_data_item_similar_companies_type_0_item import (
             CompanySearchResponse200OutputDataItemSimilarCompaniesType0Item,  # noqa: PLC0415
         )
@@ -1263,6 +1326,9 @@ class CompanySearchResponse200OutputDataItem:
         )
         from ..models.company_search_response_200_output_data_item_technologies_used_type_0_item import (
             CompanySearchResponse200OutputDataItemTechnologiesUsedType0Item,  # noqa: PLC0415
+        )
+        from ..models.company_search_response_200_output_data_item_vesting_schedules_type_0_item import (
+            CompanySearchResponse200OutputDataItemVestingSchedulesType0Item,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
@@ -1469,6 +1535,60 @@ class CompanySearchResponse200OutputDataItem:
             return cast(list[CompanySearchResponse200OutputDataItemFortuneRankingsType0Item] | None | Unset, data)
 
         fortune_rankings = _parse_fortune_rankings(d.pop("fortune_rankings", UNSET))
+
+        def _parse_vesting_schedules(
+            data: object,
+        ) -> list[CompanySearchResponse200OutputDataItemVestingSchedulesType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                vesting_schedules_type_0 = []
+                _vesting_schedules_type_0 = data
+                for vesting_schedules_type_0_item_data in _vesting_schedules_type_0:
+                    vesting_schedules_type_0_item = (
+                        CompanySearchResponse200OutputDataItemVestingSchedulesType0Item.from_dict(
+                            vesting_schedules_type_0_item_data
+                        )
+                    )
+
+                    vesting_schedules_type_0.append(vesting_schedules_type_0_item)
+
+                return vesting_schedules_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[CompanySearchResponse200OutputDataItemVestingSchedulesType0Item] | None | Unset, data)
+
+        vesting_schedules = _parse_vesting_schedules(d.pop("vesting_schedules", UNSET))
+
+        def _parse_salary_levels(
+            data: object,
+        ) -> list[CompanySearchResponse200OutputDataItemSalaryLevelsType0Item] | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, list):
+                    raise TypeError()
+                salary_levels_type_0 = []
+                _salary_levels_type_0 = data
+                for salary_levels_type_0_item_data in _salary_levels_type_0:
+                    salary_levels_type_0_item = CompanySearchResponse200OutputDataItemSalaryLevelsType0Item.from_dict(
+                        salary_levels_type_0_item_data
+                    )
+
+                    salary_levels_type_0.append(salary_levels_type_0_item)
+
+                return salary_levels_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(list[CompanySearchResponse200OutputDataItemSalaryLevelsType0Item] | None | Unset, data)
+
+        salary_levels = _parse_salary_levels(d.pop("salary_levels", UNSET))
 
         def _parse_founded_on_consensus(data: object) -> None | str | Unset:
             if data is None:
@@ -2627,6 +2747,23 @@ class CompanySearchResponse200OutputDataItem:
 
         platforms = _parse_platforms(d.pop("platforms", UNSET))
 
+        def _parse_matches(data: object) -> CompanySearchResponse200OutputDataItemMatchesType0 | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            try:
+                if not isinstance(data, dict):
+                    raise TypeError()
+                matches_type_0 = CompanySearchResponse200OutputDataItemMatchesType0.from_dict(data)
+
+                return matches_type_0
+            except (TypeError, ValueError, AttributeError, KeyError):
+                pass
+            return cast(CompanySearchResponse200OutputDataItemMatchesType0 | None | Unset, data)
+
+        matches = _parse_matches(d.pop("matches", UNSET))
+
         company_search_response_200_output_data_item = cls(
             linkedin_id=linkedin_id,
             accelerator_statuses=accelerator_statuses,
@@ -2639,6 +2776,8 @@ class CompanySearchResponse200OutputDataItem:
             employee_count_consensus=employee_count_consensus,
             facebook_urls=facebook_urls,
             fortune_rankings=fortune_rankings,
+            vesting_schedules=vesting_schedules,
+            salary_levels=salary_levels,
             founded_on_consensus=founded_on_consensus,
             github_usernames=github_usernames,
             instagram_handles=instagram_handles,
@@ -2711,6 +2850,7 @@ class CompanySearchResponse200OutputDataItem:
             investor_categories=investor_categories,
             technologies_used=technologies_used,
             platforms=platforms,
+            matches=matches,
         )
 
         company_search_response_200_output_data_item.additional_properties = d

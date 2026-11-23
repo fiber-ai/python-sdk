@@ -7,7 +7,18 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.quick_person_resolve_response_200_output_data_item import QuickPersonResolveResponse200OutputDataItem
+    from ..models.quick_person_resolve_response_200_output_data_item_type_0 import (
+        QuickPersonResolveResponse200OutputDataItemType0,
+    )
+    from ..models.quick_person_resolve_response_200_output_data_item_type_1 import (
+        QuickPersonResolveResponse200OutputDataItemType1,
+    )
+    from ..models.quick_person_resolve_response_200_output_data_item_type_2 import (
+        QuickPersonResolveResponse200OutputDataItemType2,
+    )
+    from ..models.quick_person_resolve_response_200_output_data_item_type_3 import (
+        QuickPersonResolveResponse200OutputDataItemType3,
+    )
 
 
 T = TypeVar("T", bound="QuickPersonResolveResponse200Output")
@@ -17,16 +28,42 @@ T = TypeVar("T", bound="QuickPersonResolveResponse200Output")
 class QuickPersonResolveResponse200Output:
     """
     Attributes:
-        data (list[QuickPersonResolveResponse200OutputDataItem]):
+        data (list[QuickPersonResolveResponse200OutputDataItemType0 | QuickPersonResolveResponse200OutputDataItemType1 |
+            QuickPersonResolveResponse200OutputDataItemType2 | QuickPersonResolveResponse200OutputDataItemType3]): One
+            result per supplied person, in the same order.
     """
 
-    data: list[QuickPersonResolveResponse200OutputDataItem]
+    data: list[
+        QuickPersonResolveResponse200OutputDataItemType0
+        | QuickPersonResolveResponse200OutputDataItemType1
+        | QuickPersonResolveResponse200OutputDataItemType2
+        | QuickPersonResolveResponse200OutputDataItemType3
+    ]
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
+        from ..models.quick_person_resolve_response_200_output_data_item_type_0 import (
+            QuickPersonResolveResponse200OutputDataItemType0,  # noqa: PLC0415
+        )
+        from ..models.quick_person_resolve_response_200_output_data_item_type_1 import (
+            QuickPersonResolveResponse200OutputDataItemType1,  # noqa: PLC0415
+        )
+        from ..models.quick_person_resolve_response_200_output_data_item_type_2 import (
+            QuickPersonResolveResponse200OutputDataItemType2,  # noqa: PLC0415
+        )
+
         data = []
         for data_item_data in self.data:
-            data_item = data_item_data.to_dict()
+            data_item: dict[str, Any]
+            if isinstance(data_item_data, QuickPersonResolveResponse200OutputDataItemType0):
+                data_item = data_item_data.to_dict()
+            elif isinstance(data_item_data, QuickPersonResolveResponse200OutputDataItemType1):
+                data_item = data_item_data.to_dict()
+            elif isinstance(data_item_data, QuickPersonResolveResponse200OutputDataItemType2):
+                data_item = data_item_data.to_dict()
+            else:
+                data_item = data_item_data.to_dict()
+
             data.append(data_item)
 
         field_dict: dict[str, Any] = {}
@@ -41,15 +78,63 @@ class QuickPersonResolveResponse200Output:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.quick_person_resolve_response_200_output_data_item import (
-            QuickPersonResolveResponse200OutputDataItem,  # noqa: PLC0415
+        from ..models.quick_person_resolve_response_200_output_data_item_type_0 import (
+            QuickPersonResolveResponse200OutputDataItemType0,  # noqa: PLC0415
+        )
+        from ..models.quick_person_resolve_response_200_output_data_item_type_1 import (
+            QuickPersonResolveResponse200OutputDataItemType1,  # noqa: PLC0415
+        )
+        from ..models.quick_person_resolve_response_200_output_data_item_type_2 import (
+            QuickPersonResolveResponse200OutputDataItemType2,  # noqa: PLC0415
+        )
+        from ..models.quick_person_resolve_response_200_output_data_item_type_3 import (
+            QuickPersonResolveResponse200OutputDataItemType3,  # noqa: PLC0415
         )
 
         d = dict(src_dict)
         data = []
         _data = d.pop("data")
         for data_item_data in _data:
-            data_item = QuickPersonResolveResponse200OutputDataItem.from_dict(data_item_data)
+
+            def _parse_data_item(
+                data: object,
+            ) -> (
+                QuickPersonResolveResponse200OutputDataItemType0
+                | QuickPersonResolveResponse200OutputDataItemType1
+                | QuickPersonResolveResponse200OutputDataItemType2
+                | QuickPersonResolveResponse200OutputDataItemType3
+            ):
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    data_item_type_0 = QuickPersonResolveResponse200OutputDataItemType0.from_dict(data)
+
+                    return data_item_type_0
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    data_item_type_1 = QuickPersonResolveResponse200OutputDataItemType1.from_dict(data)
+
+                    return data_item_type_1
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                try:
+                    if not isinstance(data, dict):
+                        raise TypeError()
+                    data_item_type_2 = QuickPersonResolveResponse200OutputDataItemType2.from_dict(data)
+
+                    return data_item_type_2
+                except (TypeError, ValueError, AttributeError, KeyError):
+                    pass
+                if not isinstance(data, dict):
+                    raise TypeError()
+                data_item_type_3 = QuickPersonResolveResponse200OutputDataItemType3.from_dict(data)
+
+                return data_item_type_3
+
+            data_item = _parse_data_item(data_item_data)
 
             data.append(data_item)
 
