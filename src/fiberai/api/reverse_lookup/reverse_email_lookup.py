@@ -168,7 +168,7 @@ def sync_detailed(
     completed miss that queried providers bills `emailToLinkedinMiss`. Cached not-found results and
     rejected inputs are not billed.
 
-    <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary.">ⓘ</span></span>
@@ -228,7 +228,7 @@ def sync(
     completed miss that queried providers bills `emailToLinkedinMiss`. Cached not-found results and
     rejected inputs are not billed.
 
-    <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary.">ⓘ</span></span>
@@ -282,7 +282,7 @@ async def asyncio_detailed(
     completed miss that queried providers bills `emailToLinkedinMiss`. Cached not-found results and
     rejected inputs are not billed.
 
-    <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary.">ⓘ</span></span>
@@ -340,7 +340,7 @@ async def asyncio(
     completed miss that queried providers bills `emailToLinkedinMiss`. Cached not-found results and
     rejected inputs are not billed.
 
-    <span>⚡ <strong>Rate limit:</strong> 3500 requests per 1 minute</span>
+    <span>⚡ <strong>Rate limit:</strong> 600 requests per 1 minute</span>
 
     <span>💰 <strong>Cost:</strong> 2 credits per email lookup&nbsp;<span title="Pricing shown is default
     pricing. Actual pricing may vary.">ⓘ</span></span>
